@@ -15,423 +15,525 @@
 # a√b の形では、b をできるだけ小さい自然数にする。選択肢に、値は等しいが形のちがう式（√60 と 2√15 など）を並べない。
 # 平方根は、三平方の定理（G-019）、2 次方程式の解（A-017）、標準偏差（S-029 の先）、物理の公式（周期、速さ）の計算に使う（D-026）。
 # 前提の更新（2026-11-08）：作ったあとで地図の前提が増え、上の注で「前提にない」とした N-020 は、いまは前提のたどりに入っている。問題はそのときの前提の範囲で作ってあり、この道具を使う問題は足してよい。
+# 図（D-131 で足した）：√a は「面積 a の正方形の 1 辺の長さ」として見せる（見本）。ヒントの図は、上に数、下にその 2 乗をならべた数直線
+#   （大小と、整数の間）、同じ数の 2 つ組を √ の外へ出す図、面積 2 や 3 の小さな正方形に分けた図（√ の外に出す数、たし算・ひき算）、
+#   たてが √a の長方形の面積（√a × √b）、分母と分子に同じ数をかける図、4 つのますの表と正方形の面積（展開）。答えそのものは図にかかない。
 
 id: A-016
 days:
   - day: 1
     items:
       - part: 見本
+        id: "2ee4b7db3a"
         text: 2 乗すると 9 になる数を、すべて求めてみましょう。
-        explain: 3² = 9、(−3)² = 9 なので、2 乗すると 9 になる数は 3 と −3 の 2 つです。2 乗すると a になる数を、a の平方根といいます。正の数の平方根は、正と負の 2 つあり、絶対値は等しくなります。正のほうを √a（ルート a と読む）、負のほうを −√a と書き、2 つをまとめて ±√a と書きます。9 の平方根は ±3 で、√9 = 3 です。2 の平方根は ±√2 で、√2 は 1 と 2 の間にある数です。0 の平方根は 0 だけです。√a は 2 乗すると a になる正の数なので、(√a)² = a です。正の数どうしでは、2 乗が大きいほうが、もとの数も大きいので、√a と √b の大小は、a と b の大小と同じです。3 と √7 をくらべるときは、3 = √9 と見て、√7 < √9 から √7 < 3 です。
+        svg: '<svg viewBox="0 0 320 230" xmlns="http://www.w3.org/2000/svg"><rect x="22" y="14" width="52" height="34" rx="6" fill="#7fc8f8" fill-opacity="0.45" stroke="currentColor" stroke-width="2"/><text x="48" y="37" font-size="18" text-anchor="middle" fill="currentColor">3</text><line x1="80" y1="31" x2="131" y2="31" stroke="currentColor" stroke-width="2"/><polygon points="138,31 130,35.4 130,26.6" fill="currentColor"/><text x="108" y="24" font-size="13" text-anchor="middle" fill="currentColor">2 乗</text><rect x="144" y="14" width="52" height="34" rx="6" fill="#f3c969" fill-opacity="0.5" stroke="currentColor" stroke-width="2"/><text x="170" y="37" font-size="18" text-anchor="middle" fill="currentColor">9</text><rect x="22" y="58" width="52" height="34" rx="6" fill="#7fc8f8" fill-opacity="0.45" stroke="currentColor" stroke-width="2"/><text x="48" y="81" font-size="18" text-anchor="middle" fill="currentColor">−3</text><line x1="80" y1="75" x2="131" y2="75" stroke="currentColor" stroke-width="2"/><polygon points="138,75 130,79.4 130,70.6" fill="currentColor"/><text x="108" y="68" font-size="13" text-anchor="middle" fill="currentColor">2 乗</text><rect x="144" y="58" width="52" height="34" rx="6" fill="#f3c969" fill-opacity="0.5" stroke="currentColor" stroke-width="2"/><text x="170" y="81" font-size="18" text-anchor="middle" fill="currentColor">9</text><text x="262" y="46" font-size="15" text-anchor="middle" fill="currentColor">3 と −3 は</text><text x="262" y="68" font-size="15" text-anchor="middle" fill="currentColor" font-weight="bold">9 の平方根</text><line x1="14" y1="106" x2="306" y2="106" stroke="currentColor" stroke-width="2" stroke-dasharray="4 4" stroke-opacity="0.4"/><text x="160" y="128" font-size="15" text-anchor="middle" fill="currentColor">面積 7 の正方形の 1 辺が √7</text><rect x="52" y="156" width="44" height="44" fill="#c8ccd6" fill-opacity="0.45" stroke="currentColor" stroke-width="2"/><text x="74" y="183" font-size="15" text-anchor="middle" fill="currentColor">4</text><text x="74" y="220" font-size="15" text-anchor="middle" fill="currentColor">2</text><rect x="120" y="141.8" width="58.2" height="58.2" fill="#7bc96f" fill-opacity="0.45" stroke="currentColor" stroke-width="2"/><text x="149.1" y="175.9" font-size="15" text-anchor="middle" fill="currentColor">7</text><text x="149.1" y="220" font-size="15" text-anchor="middle" fill="currentColor" font-weight="bold">√7</text><rect x="202.2" y="134" width="66" height="66" fill="#c8ccd6" fill-opacity="0.45" stroke="currentColor" stroke-width="2"/><text x="235.2" y="172" font-size="15" text-anchor="middle" fill="currentColor">9</text><text x="235.2" y="220" font-size="15" text-anchor="middle" fill="currentColor">3</text></svg>'
+        explain: 3² = 9、(−3)² = 9 なので、2 乗すると 9 になる数は 3 と −3 の 2 つです。2 乗すると a になる数を a の平方根といい、正のほうを √a（ルート a と読む）、負のほうを −√a と書きます。√9 = 3 です。図のように、面積 7 の正方形の 1 辺の長さが √7 で、(√7)² = 7 です。7 は 4 と 9 の間なので、√7 は 2 と 3 の間にあります。正方形は面積が大きいほど 1 辺も長いので、√a と √b の大小は、a と b の大小と同じです。3 と √7 なら、3 = √9 と見てくらべます。
       - part: 思い出す
+        id: "4a963cbbfc"
         text: (−7)² の値はいくつですか。
         answer: 49
         check: "(-7) ** 2"
         hints:
           - (−7)² は (−7) × (−7) のことです。
-          - 負の数どうしのかけ算の符号は、どうなるでしょう。
+          - 負の数どうしをかけると、答えは正の数と負の数のどちらになるでしょう。
           - 7 × 7 を計算しましょう。
         paths:
-          - [(−7) × (−7), 符号は正, 49]
+          - [(−7) × (−7), 負の数どうしの積は正, 49]
       - part: 思い出す
+        id: "b04c011598"
         text: 180 を素因数分解すると、どれになりますか。
         choices: [2² × 3² × 5, 2 × 3 × 30, 2² × 45]
         answer: 2² × 3² × 5
         check: "[c for c, fs in {'2² × 3² × 5': ((2, 2), (3, 2), (5, 1)), '2 × 3 × 30': ((2, 1), (3, 1), (30, 1)), '2² × 45': ((2, 2), (45, 1))}.items() if all(all(p % d for d in range(2, p)) for p, e in fs) and math.prod(p ** e for p, e in fs) == 180][0]"
         hints:
           - 素因数分解は、素数だけの積に表すことです。
-          - 180 を、小さい素数から順にわっていきましょう。
-          - 30 や 45 は素数でしょうか。
+          - text: 180 を、小さい素数から順にわっていきましょう。
+            svg: '<svg viewBox="0 0 320 200" xmlns="http://www.w3.org/2000/svg"><text x="70" y="34" font-size="18" text-anchor="middle" fill="currentColor" font-weight="bold">180</text><line x1="62" y1="40" x2="40" y2="58" stroke="currentColor" stroke-width="2"/><line x1="78" y1="40" x2="100" y2="58" stroke="currentColor" stroke-width="2"/><circle cx="34" cy="74" r="15" fill="#7bc96f" fill-opacity="0.5" stroke="currentColor" stroke-width="2"/><text x="34" y="80" font-size="17" text-anchor="middle" fill="currentColor">2</text><text x="106" y="80" font-size="18" text-anchor="middle" fill="currentColor">90</text><line x1="98" y1="86" x2="76" y2="104" stroke="currentColor" stroke-width="2"/><line x1="114" y1="86" x2="136" y2="104" stroke="currentColor" stroke-width="2"/><circle cx="70" cy="120" r="15" fill="#7bc96f" fill-opacity="0.5" stroke="currentColor" stroke-width="2"/><text x="70" y="126" font-size="17" text-anchor="middle" fill="currentColor">2</text><text x="142" y="126" font-size="18" text-anchor="middle" fill="currentColor">45</text><line x1="134" y1="132" x2="112" y2="150" stroke="currentColor" stroke-width="2"/><line x1="150" y1="132" x2="172" y2="150" stroke="currentColor" stroke-width="2"/><circle cx="106" cy="166" r="15" fill="none" stroke="currentColor" stroke-width="2" stroke-dasharray="4 3"/><text x="106" y="172" font-size="17" text-anchor="middle" fill="currentColor">?</text><circle cx="178" cy="166" r="15" fill="none" stroke="currentColor" stroke-width="2" stroke-dasharray="4 3"/><text x="178" y="172" font-size="17" text-anchor="middle" fill="currentColor">?</text><text x="256" y="44" font-size="14" text-anchor="middle" fill="currentColor">小さい素数で</text><text x="256" y="64" font-size="14" text-anchor="middle" fill="currentColor">じゅんにわる</text><circle cx="222" cy="94" r="11" fill="#7bc96f" fill-opacity="0.5" stroke="currentColor" stroke-width="2"/><text x="262" y="99" font-size="14" text-anchor="middle" fill="currentColor">は素数</text></svg>'
+          - 図の 45 も、小さい素数から順にわります。わった答えが素数になるまでつづけましょう。
         paths:
           - [180 = 2 × 90 = 2 × 2 × 45, 45 = 3 × 3 × 5, 2² × 3² × 5]
       - part: 今日
+        id: "44e7e96f07"
         text: 10 より大きく 15 より小さい整数は、何こありますか。
+        svg: '<svg viewBox="0 0 320 150" xmlns="http://www.w3.org/2000/svg"><line x1="12" y1="104" x2="77.4" y2="104" stroke="currentColor" stroke-width="2"/><line x1="91.4" y1="104" x2="228.6" y2="104" stroke="currentColor" stroke-width="2"/><line x1="242.6" y1="104" x2="308" y2="104" stroke="currentColor" stroke-width="2"/><line x1="24" y1="97" x2="24" y2="111" stroke="currentColor" stroke-width="2"/><line x1="54.2" y1="97" x2="54.2" y2="111" stroke="currentColor" stroke-width="2"/><text x="84.4" y="134" font-size="15" text-anchor="middle" fill="currentColor">10</text><line x1="114.7" y1="97" x2="114.7" y2="111" stroke="currentColor" stroke-width="2"/><line x1="144.9" y1="97" x2="144.9" y2="111" stroke="currentColor" stroke-width="2"/><line x1="175.1" y1="97" x2="175.1" y2="111" stroke="currentColor" stroke-width="2"/><line x1="205.3" y1="97" x2="205.3" y2="111" stroke="currentColor" stroke-width="2"/><text x="235.6" y="134" font-size="15" text-anchor="middle" fill="currentColor">15</text><line x1="265.8" y1="97" x2="265.8" y2="111" stroke="currentColor" stroke-width="2"/><line x1="296" y1="97" x2="296" y2="111" stroke="currentColor" stroke-width="2"/><circle cx="84.4" cy="104" r="7" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="235.6" cy="104" r="7" fill="none" stroke="currentColor" stroke-width="2"/><text x="160" y="32" font-size="15" text-anchor="middle" fill="currentColor">○ の数は、ふくまれない</text></svg>'
         answer: 4
         check: "sum(1 for n in range(0, 30) if 10 < n < 15)"
         hints:
           - 「10 より大きい」数の中に、10 そのものはふくまれるでしょうか。
-          - 10 の次の整数から、順に書き出しましょう。
+          - text: 10 の次の整数から、順に書き出しましょう。
+            svg: '<svg viewBox="0 0 320 150" xmlns="http://www.w3.org/2000/svg"><line x1="12" y1="104" x2="77.4" y2="104" stroke="currentColor" stroke-width="2"/><line x1="91.4" y1="104" x2="228.6" y2="104" stroke="currentColor" stroke-width="2"/><line x1="242.6" y1="104" x2="308" y2="104" stroke="currentColor" stroke-width="2"/><line x1="24" y1="97" x2="24" y2="111" stroke="currentColor" stroke-width="2"/><line x1="54.2" y1="97" x2="54.2" y2="111" stroke="currentColor" stroke-width="2"/><text x="84.4" y="134" font-size="15" text-anchor="middle" fill="currentColor">10</text><line x1="114.7" y1="97" x2="114.7" y2="111" stroke="currentColor" stroke-width="2"/><text x="114.7" y="134" font-size="15" text-anchor="middle" fill="currentColor">11</text><line x1="144.9" y1="97" x2="144.9" y2="111" stroke="currentColor" stroke-width="2"/><line x1="175.1" y1="97" x2="175.1" y2="111" stroke="currentColor" stroke-width="2"/><line x1="205.3" y1="97" x2="205.3" y2="111" stroke="currentColor" stroke-width="2"/><text x="235.6" y="134" font-size="15" text-anchor="middle" fill="currentColor">15</text><line x1="265.8" y1="97" x2="265.8" y2="111" stroke="currentColor" stroke-width="2"/><line x1="296" y1="97" x2="296" y2="111" stroke="currentColor" stroke-width="2"/><circle cx="84.4" cy="104" r="7" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="235.6" cy="104" r="7" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="114.7" cy="104" r="6" fill="#7bc96f" fill-opacity="0.9" stroke="currentColor" stroke-width="2"/><text x="160" y="32" font-size="15" text-anchor="middle" fill="currentColor">10 の次の整数から</text></svg>'
           - 15 の手前で止めて、書いた数を数えましょう。
         paths:
           - [11、12、13、14 と書き出す, 数える, 4 こ]
           - [15 − 10 = 5 は 11 から 15 までの数, 15 は入らないので 1 をひく, 4 こ]
         note: 15 − 10 = 5 こ、または 10 と 15 もふくめて 6 こ、としやすい。√n の大小で整数 n を数える問題の足場。
       - part: 今日
+        id: "20b14acf13"
         text: 49 の平方根はどれですか。
+        svg: '<svg viewBox="0 0 320 170" xmlns="http://www.w3.org/2000/svg"><rect x="52" y="90" width="48" height="40" rx="6" fill="#7fc8f8" fill-opacity="0.45" stroke="currentColor" stroke-width="2"/><text x="76" y="117" font-size="18" text-anchor="middle" fill="currentColor">?</text><line x1="103" y1="110" x2="114" y2="110" stroke="currentColor" stroke-width="2"/><polygon points="121,110 113,114.4 113,105.6" fill="currentColor"/><polygon points="145,68 175,68 166,82 154,82" fill="#b39ddb" fill-opacity=".35" stroke="currentColor" stroke-width="2"/><rect x="124" y="82" width="72" height="56" rx="10" fill="#b39ddb" fill-opacity="0.35" stroke="currentColor" stroke-width="2"/><text x="160" y="116" font-size="17" text-anchor="middle" fill="currentColor" font-weight="bold">2 乗</text><circle cx="134" cy="128" r="3" fill="currentColor" fill-opacity="1" stroke="currentColor" stroke-width="0"/><circle cx="186" cy="128" r="3" fill="currentColor" fill-opacity="1" stroke="currentColor" stroke-width="0"/><line x1="199" y1="110" x2="210" y2="110" stroke="currentColor" stroke-width="2"/><polygon points="217,110 209,114.4 209,105.6" fill="currentColor"/><rect x="220" y="90" width="48" height="40" rx="6" fill="#f3c969" fill-opacity="0.45" stroke="currentColor" stroke-width="2"/><text x="244" y="117" font-size="18" text-anchor="middle" fill="currentColor">49</text><text x="160" y="36" font-size="15" text-anchor="middle" fill="currentColor">入れると 49 が出てくる数は？</text></svg>'
         choices: [7 と −7, 7, −7]
         answer: 7 と −7
         check: "[c for c, vs in {'7 と −7': (7, -7), '7': (7,), '−7': (-7,)}.items() if set(vs) == set(x for x in range(-60, 61) if x * x == 49)][0]"
         hints:
-          - 平方根は、2 乗すると 49 になる数です。
-          - 7² はいくつでしょう。
-          - (−7)² はいくつでしょう。
+          - 平方根は、2 乗すると 49 になる数です。図の機械に入れると 49 が出てくる数です。
+          - えらぶ 3 つの中にある数を 1 つずつ機械に入れて、49 が出てくる数をすべてさがしましょう。
+          - text: (−7)² はいくつでしょう。
+            svg: '<svg viewBox="0 0 320 170" xmlns="http://www.w3.org/2000/svg"><rect x="52" y="90" width="48" height="40" rx="6" fill="#7fc8f8" fill-opacity="0.45" stroke="currentColor" stroke-width="2"/><text x="76" y="117" font-size="18" text-anchor="middle" fill="currentColor">−7</text><line x1="103" y1="110" x2="114" y2="110" stroke="currentColor" stroke-width="2"/><polygon points="121,110 113,114.4 113,105.6" fill="currentColor"/><polygon points="145,68 175,68 166,82 154,82" fill="#b39ddb" fill-opacity=".35" stroke="currentColor" stroke-width="2"/><rect x="124" y="82" width="72" height="56" rx="10" fill="#b39ddb" fill-opacity="0.35" stroke="currentColor" stroke-width="2"/><text x="160" y="116" font-size="17" text-anchor="middle" fill="currentColor" font-weight="bold">2 乗</text><circle cx="134" cy="128" r="3" fill="currentColor" fill-opacity="1" stroke="currentColor" stroke-width="0"/><circle cx="186" cy="128" r="3" fill="currentColor" fill-opacity="1" stroke="currentColor" stroke-width="0"/><line x1="199" y1="110" x2="210" y2="110" stroke="currentColor" stroke-width="2"/><polygon points="217,110 209,114.4 209,105.6" fill="currentColor"/><rect x="220" y="90" width="48" height="40" rx="6" fill="#f3c969" fill-opacity="0.45" stroke="currentColor" stroke-width="2"/><text x="244" y="117" font-size="18" text-anchor="middle" fill="currentColor">?</text></svg>'
         paths:
           - [7² = 49, (−7)² = 49, 49 の平方根は 7 と −7]
         note: 7 だけを答えやすい。平方根は正と負の 2 つあり、√49 = 7 は正のほうだけを表す。
       - part: 今日
-        text: √64 の値はいくつですか。
+        id: "a70da17c41"
+        text: √64 の値はいくつですか。図は、面積 64 の正方形です。
+        svg: '<svg viewBox="0 0 320 200" xmlns="http://www.w3.org/2000/svg"><rect x="102" y="22" width="116" height="116" fill="#f3c969" fill-opacity="0.45" stroke="currentColor" stroke-width="2"/><text x="160" y="86" font-size="17" text-anchor="middle" fill="currentColor">面積 64</text><line x1="102" y1="150" x2="218" y2="150" stroke="currentColor" stroke-width="2"/><line x1="102" y1="145" x2="102" y2="155" stroke="currentColor" stroke-width="2"/><line x1="218" y1="145" x2="218" y2="155" stroke="currentColor" stroke-width="2"/><text x="160" y="169" font-size="16" text-anchor="middle" fill="currentColor">√64 = ?</text></svg>'
         answer: 8
         check: "[k for k in range(0, 100) if k * k == 64][0]"
         hints:
-          - √64 は、2 乗すると 64 になる正の数です。
-          - 九九で、同じ数をかけて 64 になるものをさがしましょう。
-          - 答えは正の数です。
+          - √64 は、2 乗すると 64 になる正の数です。面積 64 の正方形の 1 辺の長さです。
+          - text: 九九で、同じ数をかけて 64 になるものをさがしましょう。
+            svg: '<svg viewBox="0 0 320 200" xmlns="http://www.w3.org/2000/svg"><rect x="16" y="86" width="72" height="72" fill="#c8ccd6" fill-opacity="0.45" stroke="currentColor" stroke-width="2"/><text x="52" y="128" font-size="16" text-anchor="middle" fill="currentColor">36</text><text x="52" y="180" font-size="16" text-anchor="middle" fill="currentColor">6</text><rect x="106" y="74" width="84" height="84" fill="#c8ccd6" fill-opacity="0.45" stroke="currentColor" stroke-width="2"/><text x="148" y="122" font-size="16" text-anchor="middle" fill="currentColor">49</text><text x="148" y="180" font-size="16" text-anchor="middle" fill="currentColor">7</text><rect x="208" y="62" width="96" height="96" fill="#f3c969" fill-opacity="0.45" stroke="currentColor" stroke-width="2"/><text x="256" y="116" font-size="16" text-anchor="middle" fill="currentColor" font-weight="bold">64</text><text x="256" y="180" font-size="16" text-anchor="middle" fill="currentColor" font-weight="bold">?</text><text x="160" y="24" font-size="14" text-anchor="middle" fill="currentColor">下は 1 辺の長さ、中は面積</text></svg>'
+          - √ は、2 でわることではありません。
         paths:
           - [2 乗して 64 になる正の数, 8 × 8 = 64, 8]
         note: 64 ÷ 2 = 32 としやすい。√ は 2 でわることではない。
       - part: 今日
+        id: "a4a735f32f"
         text: 次の 3 つの数のうち、いちばん大きいものはどれですか。
         choices: [3, √10, √8]
         answer: √10
         check: "[c for c, v in {'3': 3, '√10': math.sqrt(10), '√8': math.sqrt(8)}.items() if v == max(3, math.sqrt(10), math.sqrt(8))][0]"
         hints:
-          - 3 を、√ を使って表しましょう。
-          - 3 は、2 乗すると 9 になる正の数です。
-          - 根号の中の数をくらべましょう。
+          - 3 を、√ を使って表しましょう。3 は、2 乗すると 9 になる正の数です。
+          - text: 上の線の数を 2 乗すると、下の線の数になります。8 と 10 は、下の線のどこに入るでしょう。
+            svg: '<svg viewBox="0 0 320 200" xmlns="http://www.w3.org/2000/svg"><text x="30" y="79" font-size="14" text-anchor="middle" fill="currentColor">数</text><text x="30" y="145" font-size="14" text-anchor="middle" fill="currentColor">2 乗</text><line x1="52" y1="74" x2="314" y2="74" stroke="currentColor" stroke-width="2"/><line x1="52" y1="140" x2="314" y2="140" stroke="currentColor" stroke-width="2"/><line x1="104" y1="83" x2="104" y2="131" stroke="currentColor" stroke-width="2" stroke-dasharray="4 4" stroke-opacity="0.45"/><line x1="104" y1="68" x2="104" y2="80" stroke="currentColor" stroke-width="2"/><line x1="104" y1="134" x2="104" y2="146" stroke="currentColor" stroke-width="2"/><text x="104" y="61" font-size="15" text-anchor="middle" fill="currentColor">2</text><text x="104" y="164" font-size="15" text-anchor="middle" fill="currentColor">4</text><line x1="184" y1="83" x2="184" y2="131" stroke="currentColor" stroke-width="2" stroke-dasharray="4 4" stroke-opacity="0.45"/><line x1="184" y1="68" x2="184" y2="80" stroke="currentColor" stroke-width="2"/><line x1="184" y1="134" x2="184" y2="146" stroke="currentColor" stroke-width="2"/><text x="184" y="61" font-size="15" text-anchor="middle" fill="currentColor">3</text><text x="184" y="164" font-size="15" text-anchor="middle" fill="currentColor">9</text><line x1="264" y1="83" x2="264" y2="131" stroke="currentColor" stroke-width="2" stroke-dasharray="4 4" stroke-opacity="0.45"/><line x1="264" y1="68" x2="264" y2="80" stroke="currentColor" stroke-width="2"/><line x1="264" y1="134" x2="264" y2="146" stroke="currentColor" stroke-width="2"/><text x="264" y="61" font-size="15" text-anchor="middle" fill="currentColor">4</text><text x="264" y="164" font-size="15" text-anchor="middle" fill="currentColor">16</text></svg>'
+          - √ の中の数が大きいほど、√ のついた数も大きくなります。
         paths:
           - [3 = √9, √8 < √9 < √10, √10]
       - part: 挑戦
+        id: "a7ca25e65c"
         text: √n が 4 より大きく 5 より小さくなる《整数》 n は、何こありますか。
+        svg: '<svg viewBox="0 0 320 200" xmlns="http://www.w3.org/2000/svg"><text x="30" y="79" font-size="14" text-anchor="middle" fill="currentColor">数</text><text x="30" y="145" font-size="14" text-anchor="middle" fill="currentColor">2 乗</text><line x1="52" y1="74" x2="147" y2="74" stroke="currentColor" stroke-width="2"/><line x1="161" y1="74" x2="207" y2="74" stroke="currentColor" stroke-width="2"/><line x1="221" y1="74" x2="314" y2="74" stroke="currentColor" stroke-width="2"/><line x1="52" y1="140" x2="314" y2="140" stroke="currentColor" stroke-width="2"/><line x1="94" y1="83" x2="94" y2="131" stroke="currentColor" stroke-width="2" stroke-dasharray="4 4" stroke-opacity="0.45"/><line x1="94" y1="68" x2="94" y2="80" stroke="currentColor" stroke-width="2"/><line x1="94" y1="134" x2="94" y2="146" stroke="currentColor" stroke-width="2"/><text x="94" y="61" font-size="15" text-anchor="middle" fill="currentColor">3</text><text x="94" y="164" font-size="15" text-anchor="middle" fill="currentColor">9</text><line x1="154" y1="83" x2="154" y2="131" stroke="currentColor" stroke-width="2" stroke-dasharray="4 4" stroke-opacity="0.45"/><line x1="154" y1="134" x2="154" y2="146" stroke="currentColor" stroke-width="2"/><text x="154" y="61" font-size="15" text-anchor="middle" fill="currentColor">4</text><text x="154" y="164" font-size="15" text-anchor="middle" fill="currentColor">16</text><line x1="214" y1="83" x2="214" y2="131" stroke="currentColor" stroke-width="2" stroke-dasharray="4 4" stroke-opacity="0.45"/><line x1="214" y1="134" x2="214" y2="146" stroke="currentColor" stroke-width="2"/><text x="214" y="61" font-size="15" text-anchor="middle" fill="currentColor">5</text><text x="214" y="164" font-size="15" text-anchor="middle" fill="currentColor">25</text><line x1="274" y1="83" x2="274" y2="131" stroke="currentColor" stroke-width="2" stroke-dasharray="4 4" stroke-opacity="0.45"/><line x1="274" y1="68" x2="274" y2="80" stroke="currentColor" stroke-width="2"/><line x1="274" y1="134" x2="274" y2="146" stroke="currentColor" stroke-width="2"/><text x="274" y="61" font-size="15" text-anchor="middle" fill="currentColor">6</text><text x="274" y="164" font-size="15" text-anchor="middle" fill="currentColor">36</text><line x1="162" y1="74" x2="206" y2="74" stroke="#f08080" stroke-width="7" stroke-opacity="0.85"/><circle cx="154" cy="74" r="7" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="214" cy="74" r="7" fill="none" stroke="currentColor" stroke-width="2"/><text x="184" y="38" font-size="15" text-anchor="middle" fill="currentColor" font-weight="bold">√n はここ</text></svg>'
         answer: 8
         check: "sum(1 for n in range(1, 100) if 4 < math.sqrt(n) < 5)"
         hints:
-          - 4 と 5 を、√ を使って表しましょう。
-          - √16 < √n < √25 となる n を考えます。
+          - 4 と 5 を、√ を使って表しましょう。図の下の線を見ましょう。
+          - text: √16 < √n < √25 となる n を考えます。n は、16 と 25 の間の整数です。
+            svg: '<svg viewBox="0 0 320 150" xmlns="http://www.w3.org/2000/svg"><line x1="12" y1="104" x2="308" y2="104" stroke="currentColor" stroke-width="2"/><line x1="24" y1="97" x2="24" y2="111" stroke="currentColor" stroke-width="2"/><line x1="48.7" y1="97" x2="48.7" y2="111" stroke="currentColor" stroke-width="2"/><text x="48.7" y="134" font-size="15" text-anchor="middle" fill="currentColor">16</text><line x1="73.5" y1="97" x2="73.5" y2="111" stroke="currentColor" stroke-width="2"/><line x1="98.2" y1="97" x2="98.2" y2="111" stroke="currentColor" stroke-width="2"/><line x1="122.9" y1="97" x2="122.9" y2="111" stroke="currentColor" stroke-width="2"/><line x1="147.6" y1="97" x2="147.6" y2="111" stroke="currentColor" stroke-width="2"/><line x1="172.4" y1="97" x2="172.4" y2="111" stroke="currentColor" stroke-width="2"/><line x1="197.1" y1="97" x2="197.1" y2="111" stroke="currentColor" stroke-width="2"/><line x1="221.8" y1="97" x2="221.8" y2="111" stroke="currentColor" stroke-width="2"/><line x1="246.5" y1="97" x2="246.5" y2="111" stroke="currentColor" stroke-width="2"/><line x1="271.3" y1="97" x2="271.3" y2="111" stroke="currentColor" stroke-width="2"/><text x="271.3" y="134" font-size="15" text-anchor="middle" fill="currentColor">25</text><line x1="296" y1="97" x2="296" y2="111" stroke="currentColor" stroke-width="2"/><line x1="48.7" y1="82" x2="271.3" y2="82" stroke="currentColor" stroke-width="2"/><line x1="48.7" y1="76" x2="48.7" y2="88" stroke="currentColor" stroke-width="2"/><line x1="271.3" y1="76" x2="271.3" y2="88" stroke="currentColor" stroke-width="2"/><text x="160" y="72" font-size="15" text-anchor="middle" fill="currentColor">n はこの間の整数</text></svg>'
           - 16 と 25 はふくまれるでしょうか。
         paths:
           - [4 = √16、5 = √25, 16 < n < 25, 17 から 24 までの 8 こ]
+          - [25 − 16 = 9 は 17 から 25 までの数, 25 は入らないので 1 をひく, 8 こ]
         note: 16 と 25 も数えて 10 こ、としやすい。
     extra:
       - part: 今日
-        text: (√7)² の値はいくつですか。
+        id: "45dc408488"
+        text: (√7)² の値はいくつですか。図は、1 辺が √7 の正方形です。
+        svg: '<svg viewBox="0 0 320 200" xmlns="http://www.w3.org/2000/svg"><rect x="110" y="22" width="116" height="116" fill="#f3c969" fill-opacity="0.45" stroke="currentColor" stroke-width="2"/><text x="168" y="74" font-size="17" text-anchor="middle" fill="currentColor">面積は</text><text x="168" y="98" font-size="17" text-anchor="middle" fill="currentColor">(√7)²</text><line x1="110" y1="150" x2="226" y2="150" stroke="currentColor" stroke-width="2"/><line x1="110" y1="145" x2="110" y2="155" stroke="currentColor" stroke-width="2"/><line x1="226" y1="145" x2="226" y2="155" stroke="currentColor" stroke-width="2"/><text x="168" y="169" font-size="16" text-anchor="middle" fill="currentColor">√7</text><line x1="96" y1="22" x2="96" y2="138" stroke="currentColor" stroke-width="2"/><line x1="91" y1="22" x2="101" y2="22" stroke="currentColor" stroke-width="2"/><line x1="91" y1="138" x2="101" y2="138" stroke="currentColor" stroke-width="2"/><text x="87" y="85" font-size="16" text-anchor="end" fill="currentColor">√7</text></svg>'
         answer: 7
         check: "[k for k in range(0, 50) if math.isclose(math.sqrt(7) ** 2, k)][0]"
         hints:
           - √7 は、2 乗すると何になる数でしょう。
-          - √7 の意味を、そのまま思い出しましょう。
-          - (√7)² は √7 × √7 です。
+          - text: 1 辺が √4 = 2 の正方形と、√9 = 3 の正方形の面積は、いくつでしょう。
+            svg: '<svg viewBox="0 0 320 200" xmlns="http://www.w3.org/2000/svg"><rect x="36.8" y="104" width="54" height="54" fill="#c8ccd6" fill-opacity="0.45" stroke="currentColor" stroke-width="2"/><text x="63.8" y="137" font-size="15" text-anchor="middle" fill="currentColor">4</text><text x="63.8" y="180" font-size="16" text-anchor="middle" fill="currentColor">√4</text><rect x="110.8" y="86.6" width="71.4" height="71.4" fill="#f3c969" fill-opacity="0.45" stroke="currentColor" stroke-width="2"/><text x="146.5" y="128.3" font-size="15" text-anchor="middle" fill="currentColor">?</text><text x="146.5" y="180" font-size="16" text-anchor="middle" fill="currentColor">√7</text><rect x="202.2" y="77" width="81" height="81" fill="#c8ccd6" fill-opacity="0.45" stroke="currentColor" stroke-width="2"/><text x="242.7" y="123.5" font-size="15" text-anchor="middle" fill="currentColor">9</text><text x="242.7" y="180" font-size="16" text-anchor="middle" fill="currentColor">√9</text><text x="160" y="24" font-size="14" text-anchor="middle" fill="currentColor">下は 1 辺の長さ、中は面積</text></svg>'
+          - (√7)² は √7 × √7 で、1 辺が √7 の正方形の面積です。
         paths:
           - [√7 は 2 乗すると 7 になる数, (√7)² = 7]
       - part: 今日
+        id: "7c6517583a"
         text: √((−5)²) の値はいくつですか。
+        svg: '<svg viewBox="0 0 320 170" xmlns="http://www.w3.org/2000/svg"><rect x="8" y="90" width="40" height="40" rx="6" fill="#7fc8f8" fill-opacity="0.45" stroke="currentColor" stroke-width="2"/><text x="28" y="117" font-size="18" text-anchor="middle" fill="currentColor">−5</text><line x1="51" y1="110" x2="55" y2="110" stroke="currentColor" stroke-width="2"/><polygon points="62,110 54,114.4 54,105.6" fill="currentColor"/><polygon points="79,68 109,68 100,82 88,82" fill="#b39ddb" fill-opacity=".35" stroke="currentColor" stroke-width="2"/><rect x="65" y="82" width="58" height="56" rx="10" fill="#b39ddb" fill-opacity="0.35" stroke="currentColor" stroke-width="2"/><text x="94" y="116" font-size="17" text-anchor="middle" fill="currentColor" font-weight="bold">2 乗</text><circle cx="75" cy="128" r="3" fill="currentColor" fill-opacity="1" stroke="currentColor" stroke-width="0"/><circle cx="113" cy="128" r="3" fill="currentColor" fill-opacity="1" stroke="currentColor" stroke-width="0"/><line x1="126" y1="110" x2="130" y2="110" stroke="currentColor" stroke-width="2"/><polygon points="137,110 129,114.4 129,105.6" fill="currentColor"/><rect x="140" y="90" width="40" height="40" rx="6" fill="#c8ccd6" fill-opacity="0.45" stroke="currentColor" stroke-width="2"/><text x="160" y="117" font-size="18" text-anchor="middle" fill="currentColor">?</text><line x1="183" y1="110" x2="187" y2="110" stroke="currentColor" stroke-width="2"/><polygon points="194,110 186,114.4 186,105.6" fill="currentColor"/><polygon points="211,68 241,68 232,82 220,82" fill="#b39ddb" fill-opacity=".35" stroke="currentColor" stroke-width="2"/><rect x="197" y="82" width="58" height="56" rx="10" fill="#b39ddb" fill-opacity="0.35" stroke="currentColor" stroke-width="2"/><text x="226" y="116" font-size="17" text-anchor="middle" fill="currentColor" font-weight="bold">√</text><circle cx="207" cy="128" r="3" fill="currentColor" fill-opacity="1" stroke="currentColor" stroke-width="0"/><circle cx="245" cy="128" r="3" fill="currentColor" fill-opacity="1" stroke="currentColor" stroke-width="0"/><line x1="258" y1="110" x2="262" y2="110" stroke="currentColor" stroke-width="2"/><polygon points="269,110 261,114.4 261,105.6" fill="currentColor"/><rect x="272" y="90" width="40" height="40" rx="6" fill="#f3c969" fill-opacity="0.45" stroke="currentColor" stroke-width="2"/><text x="292" y="117" font-size="18" text-anchor="middle" fill="currentColor">?</text><text x="160" y="36" font-size="15" text-anchor="middle" fill="currentColor">左から じゅんに 機械を通す</text></svg>'
         answer: 5
         check: "[k for k in range(0, 50) if k * k == (-5) ** 2][0]"
         hints:
           - まず、根号の中の (−5)² を計算しましょう。
-          - √25 は、2 乗すると 25 になる正の数です。
+          - text: √25 は、2 乗すると 25 になる正の数です。面積 25 の正方形の 1 辺の長さです。
+            svg: '<svg viewBox="0 0 320 200" xmlns="http://www.w3.org/2000/svg"><rect x="102" y="22" width="116" height="116" fill="#f3c969" fill-opacity="0.45" stroke="currentColor" stroke-width="2"/><text x="160" y="86" font-size="17" text-anchor="middle" fill="currentColor">面積 25</text><line x1="102" y1="150" x2="218" y2="150" stroke="currentColor" stroke-width="2"/><line x1="102" y1="145" x2="102" y2="155" stroke="currentColor" stroke-width="2"/><line x1="218" y1="145" x2="218" y2="155" stroke="currentColor" stroke-width="2"/><text x="160" y="169" font-size="16" text-anchor="middle" fill="currentColor">1 辺 ?</text></svg>'
           - √ のついた数は、0 か正の数です。
         paths:
           - [(−5)² = 25, √25, 5]
         note: −5 と答えやすい。√ は正のほうの平方根を表す。
       - part: 挑戦
+        id: "16268ccfab"
         text: √n が整数になる、50 以下の自然数 n は何こありますか。
         answer: 7
         check: "sum(1 for n in range(1, 51) if math.isqrt(n) ** 2 == n)"
         hints:
           - √n が整数になるのは、n がどんな数のときでしょう。
-          - n は、ある整数の 2 乗です。
+          - text: n は、ある整数の 2 乗です。1 辺が整数の正方形の面積と同じです。
+            svg: '<svg viewBox="0 0 320 180" xmlns="http://www.w3.org/2000/svg"><rect x="22" y="130" width="20" height="20" fill="#f3c969" fill-opacity="0.45" stroke="currentColor" stroke-width="2"/><text x="32" y="145" font-size="14" text-anchor="middle" fill="currentColor">1</text><text x="32" y="170" font-size="13" text-anchor="middle" fill="currentColor">1 × 1</text><rect x="58" y="110" width="40" height="40" fill="#f3c969" fill-opacity="0.45" stroke="currentColor" stroke-width="2"/><text x="78" y="135" font-size="14" text-anchor="middle" fill="currentColor">4</text><text x="78" y="170" font-size="13" text-anchor="middle" fill="currentColor">2 × 2</text><rect x="114" y="90" width="60" height="60" fill="#f3c969" fill-opacity="0.45" stroke="currentColor" stroke-width="2"/><text x="144" y="125" font-size="14" text-anchor="middle" fill="currentColor">9</text><text x="144" y="170" font-size="13" text-anchor="middle" fill="currentColor">3 × 3</text><rect x="190" y="70" width="80" height="80" fill="#f3c969" fill-opacity="0.45" stroke="currentColor" stroke-width="2"/><text x="230" y="115" font-size="14" text-anchor="middle" fill="currentColor">16</text><text x="230" y="170" font-size="13" text-anchor="middle" fill="currentColor">4 × 4</text><text x="298" y="126" font-size="20" text-anchor="middle" fill="currentColor">…</text><text x="160" y="26" font-size="15" text-anchor="middle" fill="currentColor">1 辺が整数の正方形の面積</text></svg>'
           - 1²、2²、3²、… と、50 をこえるまで書き出しましょう。
         paths:
           - [n は整数の 2 乗, 1、4、9、16、25、36、49, 7 こ]
+          - [√n が 1、2、3、… になる n を考える, 7² = 49 は 50 以下で、8² = 64 は 50 をこえる, √n は 1 から 7 までの 7 こ]
 
   - day: 2
     items:
       - part: 見本
+        id: "17df529fa9"
         text: √2 × √3、√12、1/√2、√8 + √2 を、くふうして表してみましょう。
-        explain: a、b が正の数のとき、√a × √b = √(ab)、√a ÷ √b = √(a/b) です。たとえば √2 × √3 = √6、√15 ÷ √3 = √5 です。根号の中に 2 乗の因数があるときは、素因数分解（N-021）して外に出します。12 = 2² × 3 なので、√12 = √(2²) × √3 = 2√3 です。a√b の形にするときは、根号の中の数をできるだけ小さい自然数にします。分母に根号がある数は、分母と分子に同じ数をかけて、分母に根号がない形にします。これを分母の有理化といいます。1/√2 = (1 × √2)/(√2 × √2) = √2/2 です。たし算とひき算は、同類項（A-010）と同じように、根号の中が同じものどうしをまとめます。2√3 + 5√3 = 7√3、√8 + √2 = 2√2 + √2 = 3√2 です。√2 + √3 は √5 にはなりません。
+        svg: '<svg viewBox="0 0 320 200" xmlns="http://www.w3.org/2000/svg"><text x="60" y="34" font-size="15" text-anchor="middle" fill="currentColor">面積 12</text><rect x="18" y="50" width="84" height="84" fill="#f3c969" fill-opacity="0.4" stroke="currentColor" stroke-width="2"/><line x1="60" y1="50" x2="60" y2="134" stroke="currentColor" stroke-width="1.5"/><line x1="18" y1="92" x2="102" y2="92" stroke="currentColor" stroke-width="1.5"/><text x="39" y="76" font-size="15" text-anchor="middle" fill="currentColor">3</text><text x="39" y="118" font-size="15" text-anchor="middle" fill="currentColor">3</text><text x="81" y="76" font-size="15" text-anchor="middle" fill="currentColor">3</text><text x="81" y="118" font-size="15" text-anchor="middle" fill="currentColor">3</text><text x="39" y="154" font-size="15" text-anchor="middle" fill="currentColor">√3</text><text x="81" y="154" font-size="15" text-anchor="middle" fill="currentColor">√3</text><text x="60" y="182" font-size="16" text-anchor="middle" fill="currentColor" font-weight="bold">√12 = 2√3</text><line x1="124" y1="20" x2="124" y2="196" stroke="currentColor" stroke-width="2" stroke-dasharray="4 4" stroke-opacity="0.4"/><text x="180" y="46" font-size="14" text-anchor="middle" fill="currentColor">面積 8</text><rect x="140" y="54" width="80" height="80" fill="#7fc8f8" fill-opacity="0.4" stroke="currentColor" stroke-width="2"/><line x1="180" y1="54" x2="180" y2="134" stroke="currentColor" stroke-width="1.5"/><line x1="140" y1="94" x2="220" y2="94" stroke="currentColor" stroke-width="1.5"/><text x="160" y="79" font-size="14" text-anchor="middle" fill="currentColor">2</text><text x="160" y="119" font-size="14" text-anchor="middle" fill="currentColor">2</text><text x="200" y="79" font-size="14" text-anchor="middle" fill="currentColor">2</text><text x="200" y="119" font-size="14" text-anchor="middle" fill="currentColor">2</text><rect x="220" y="94" width="40" height="40" fill="#7bc96f" fill-opacity="0.45" stroke="currentColor" stroke-width="2"/><text x="240" y="119" font-size="14" text-anchor="middle" fill="currentColor">2</text><text x="266" y="119" font-size="14" text-anchor="start" fill="currentColor">面積 2</text><text x="160" y="154" font-size="15" text-anchor="middle" fill="currentColor">√2</text><text x="200" y="154" font-size="15" text-anchor="middle" fill="currentColor">√2</text><text x="240" y="154" font-size="15" text-anchor="middle" fill="currentColor">√2</text><text x="200" y="182" font-size="16" text-anchor="middle" fill="currentColor" font-weight="bold">√8 + √2 = 3√2</text></svg>'
+        explain: a、b が正の数のとき、√a × √b = √(ab)、√a ÷ √b = √(a/b) です。たとえば √2 × √3 = √6、√15 ÷ √3 = √5 です。図の左のように、面積 12 の正方形は、面積 3 の正方形 4 こに分けられるので、1 辺は √3 の 2 つ分で、√12 = 2√3 です。12 = 2² × 3 と素因数分解（N-021）して、2² の 2 を根号の外に出すと考えても同じです。a√b の形では、根号の中の数をできるだけ小さい自然数にします。分母に根号があるときは、分母と分子に同じ数をかけて、分母に根号がない形にします。これを分母の有理化といいます。1/√2 = (1 × √2)/(√2 × √2) = √2/2 です。たし算とひき算は、根号の中が同じものどうしをまとめます。図の右のように、√8 + √2 = 2√2 + √2 = 3√2 です。√2 + √3 は √5 にはなりません。
       - part: 思い出す
-        text: √81 の値はいくつですか。
+        id: "13e5cba7d3"
+        text: √81 の値はいくつですか。図は、面積 81 の正方形です。
+        svg: '<svg viewBox="0 0 320 200" xmlns="http://www.w3.org/2000/svg"><rect x="102" y="22" width="116" height="116" fill="#f3c969" fill-opacity="0.45" stroke="currentColor" stroke-width="2"/><text x="160" y="86" font-size="17" text-anchor="middle" fill="currentColor">面積 81</text><line x1="102" y1="150" x2="218" y2="150" stroke="currentColor" stroke-width="2"/><line x1="102" y1="145" x2="102" y2="155" stroke="currentColor" stroke-width="2"/><line x1="218" y1="145" x2="218" y2="155" stroke="currentColor" stroke-width="2"/><text x="160" y="169" font-size="16" text-anchor="middle" fill="currentColor">√81 = ?</text></svg>'
         answer: 9
         check: "[k for k in range(0, 100) if k * k == 81][0]"
         hints:
           - √81 は、2 乗すると 81 になる正の数です。
-          - 九九で、同じ数をかけて 81 になるものをさがしましょう。
-          - 答えは正の数です。
+          - text: 九九で、同じ数をかけて 81 になるものをさがしましょう。
+            svg: '<svg viewBox="0 0 320 200" xmlns="http://www.w3.org/2000/svg"><rect x="16" y="84.5" width="73.5" height="73.5" fill="#c8ccd6" fill-opacity="0.45" stroke="currentColor" stroke-width="2"/><text x="52.8" y="127.2" font-size="16" text-anchor="middle" fill="currentColor">49</text><text x="52.8" y="180" font-size="16" text-anchor="middle" fill="currentColor">7</text><rect x="107.5" y="74" width="84" height="84" fill="#c8ccd6" fill-opacity="0.45" stroke="currentColor" stroke-width="2"/><text x="149.5" y="122" font-size="16" text-anchor="middle" fill="currentColor">64</text><text x="149.5" y="180" font-size="16" text-anchor="middle" fill="currentColor">8</text><rect x="209.5" y="63.5" width="94.5" height="94.5" fill="#f3c969" fill-opacity="0.45" stroke="currentColor" stroke-width="2"/><text x="256.8" y="116.8" font-size="16" text-anchor="middle" fill="currentColor" font-weight="bold">81</text><text x="256.8" y="180" font-size="16" text-anchor="middle" fill="currentColor" font-weight="bold">?</text><text x="160" y="24" font-size="14" text-anchor="middle" fill="currentColor">下は 1 辺の長さ、中は面積</text></svg>'
+          - 8 × 8 = 64 より大きい数です。
         paths:
           - [9 × 9 = 81, 9]
       - part: 思い出す
+        id: "f7f6e77189"
         text: 次の 3 つの数のうち、いちばん小さいものはどれですか。
         choices: [√5, 2, √3]
         answer: √3
         check: "[c for c, v in {'√5': math.sqrt(5), '2': 2, '√3': math.sqrt(3)}.items() if v == min(math.sqrt(5), 2, math.sqrt(3))][0]"
         hints:
-          - 2 を、√ を使って表しましょう。
-          - 2 は、2 乗すると 4 になる正の数です。
-          - 根号の中の数をくらべましょう。
+          - 2 を、√ を使って表しましょう。2 は、2 乗すると 4 になる正の数です。
+          - text: 上の線の数を 2 乗すると、下の線の数になります。3 と 5 は、下の線のどこに入るでしょう。
+            svg: '<svg viewBox="0 0 320 200" xmlns="http://www.w3.org/2000/svg"><text x="30" y="79" font-size="14" text-anchor="middle" fill="currentColor">数</text><text x="30" y="145" font-size="14" text-anchor="middle" fill="currentColor">2 乗</text><line x1="52" y1="74" x2="314" y2="74" stroke="currentColor" stroke-width="2"/><line x1="52" y1="140" x2="314" y2="140" stroke="currentColor" stroke-width="2"/><line x1="104" y1="83" x2="104" y2="131" stroke="currentColor" stroke-width="2" stroke-dasharray="4 4" stroke-opacity="0.45"/><line x1="104" y1="68" x2="104" y2="80" stroke="currentColor" stroke-width="2"/><line x1="104" y1="134" x2="104" y2="146" stroke="currentColor" stroke-width="2"/><text x="104" y="61" font-size="15" text-anchor="middle" fill="currentColor">1</text><text x="104" y="164" font-size="15" text-anchor="middle" fill="currentColor">1</text><line x1="184" y1="83" x2="184" y2="131" stroke="currentColor" stroke-width="2" stroke-dasharray="4 4" stroke-opacity="0.45"/><line x1="184" y1="68" x2="184" y2="80" stroke="currentColor" stroke-width="2"/><line x1="184" y1="134" x2="184" y2="146" stroke="currentColor" stroke-width="2"/><text x="184" y="61" font-size="15" text-anchor="middle" fill="currentColor">2</text><text x="184" y="164" font-size="15" text-anchor="middle" fill="currentColor">4</text><line x1="264" y1="83" x2="264" y2="131" stroke="currentColor" stroke-width="2" stroke-dasharray="4 4" stroke-opacity="0.45"/><line x1="264" y1="68" x2="264" y2="80" stroke="currentColor" stroke-width="2"/><line x1="264" y1="134" x2="264" y2="146" stroke="currentColor" stroke-width="2"/><text x="264" y="61" font-size="15" text-anchor="middle" fill="currentColor">3</text><text x="264" y="164" font-size="15" text-anchor="middle" fill="currentColor">9</text></svg>'
+          - √ の中の数が小さいほど、√ のついた数も小さくなります。
         paths:
           - [2 = √4, √3 < √4 < √5, √3]
       - part: 今日
+        id: "62cc084fef"
         text: √(4² × 5) = a√5 のとき、a はいくつですか。
         answer: 4
         check: "[a for a in range(1, 30) if math.isclose(a * math.sqrt(5), math.sqrt(4 ** 2 * 5))][0]"
         hints:
           - √(4² × 5) を、√(4²) × √5 と分けましょう。
+          - text: 4² は 4 × 4 です。同じ数の 2 つ組は、√ の外へ 1 つだけ出ます。
+            svg: '<svg viewBox="0 0 320 190" xmlns="http://www.w3.org/2000/svg"><polyline points="67,86 74,82 83,112 95,46 257,46" fill="none" stroke="currentColor" stroke-width="2.5"/><rect x="103" y="61" width="92" height="42" rx="14" fill="#7bc96f" fill-opacity="0.3" stroke="currentColor" stroke-width="2"/><circle cx="123" cy="82" r="16" fill="#7bc96f" fill-opacity="0.6" stroke="currentColor" stroke-width="2"/><text x="123" y="88" font-size="16" text-anchor="middle" fill="currentColor">4</text><text x="149" y="87" font-size="14" text-anchor="middle" fill="currentColor">×</text><circle cx="175" cy="82" r="16" fill="#7bc96f" fill-opacity="0.6" stroke="currentColor" stroke-width="2"/><text x="175" y="88" font-size="16" text-anchor="middle" fill="currentColor">4</text><text x="201" y="87" font-size="14" text-anchor="middle" fill="currentColor">×</text><circle cx="227" cy="82" r="16" fill="#c8ccd6" fill-opacity="0.6" stroke="currentColor" stroke-width="2"/><text x="227" y="88" font-size="16" text-anchor="middle" fill="currentColor">5</text><line x1="149" y1="106" x2="149" y2="129" stroke="currentColor" stroke-width="2"/><polygon points="149,136 144.6,128 153.4,128" fill="currentColor"/><rect x="132" y="138" width="34" height="34" rx="6" fill="#7bc96f" fill-opacity="0.45" stroke="currentColor" stroke-width="2"/><text x="149" y="161" font-size="18" text-anchor="middle" fill="currentColor">?</text><text x="160" y="24" font-size="14" text-anchor="middle" fill="currentColor">同じ数の 2 つ組は、√ の外へ 1 つ出る</text></svg>'
           - √(4²) は、2 乗すると 4² になる正の数です。
-          - 外に出るのは、4² を計算した数ではなく、2 乗する前の数です。
         paths:
           - [√(4² × 5) = √(4²) × √5, √(4²) は 2 乗する前の数, a は 4]
           - [a√5 は正の数で、2 乗すると a² × 5 になる, これが √(4² × 5) を 2 乗した 4² × 5 に等しい, a² × 5 と 4² × 5 が等しいので a は 4]
         note: 外に出すのは 4² の 4 で、16 ではない。√50 を 5√2 と表す前の足場。
       - part: 今日
-        text: √3 × √12 の値はいくつですか。
+        id: "6f12747a65"
+        text: √3 × √12 の値はいくつですか。図の長方形の面積と同じです。
+        svg: '<svg viewBox="0 0 320 190" xmlns="http://www.w3.org/2000/svg"><rect x="88" y="37" width="168" height="84" fill="#f3c969" fill-opacity="0.45" stroke="currentColor" stroke-width="2"/><text x="172" y="85" font-size="16" text-anchor="middle" fill="currentColor">面積 ?</text><line x1="88" y1="133" x2="256" y2="133" stroke="currentColor" stroke-width="2"/><line x1="88" y1="128" x2="88" y2="138" stroke="currentColor" stroke-width="2"/><line x1="256" y1="128" x2="256" y2="138" stroke="currentColor" stroke-width="2"/><text x="172" y="152" font-size="16" text-anchor="middle" fill="currentColor">√12</text><line x1="74" y1="37" x2="74" y2="121" stroke="currentColor" stroke-width="2"/><line x1="69" y1="37" x2="79" y2="37" stroke="currentColor" stroke-width="2"/><line x1="69" y1="121" x2="79" y2="121" stroke="currentColor" stroke-width="2"/><text x="65" y="84" font-size="15" text-anchor="end" fill="currentColor">√3</text></svg>'
         answer: 6
         check: "[k for k in range(0, 100) if k * k == 3 * 12][0]"
         hints:
-          - √a × √b = √(ab) を使いましょう。
-          - 根号の中は 3 × 12 です。
+          - √a × √b = √(ab) を使いましょう。根号の中は 3 × 12 です。
+          - text: 長方形を、1 辺が √3 の正方形に分けてみましょう。
+            svg: '<svg viewBox="0 0 320 190" xmlns="http://www.w3.org/2000/svg"><rect x="88" y="37" width="84" height="84" fill="#f3c969" fill-opacity="0.45" stroke="currentColor" stroke-width="2"/><text x="130" y="85" font-size="14" text-anchor="middle" fill="currentColor">(√3)²</text><rect x="172" y="37" width="84" height="84" fill="#7bc96f" fill-opacity="0.45" stroke="currentColor" stroke-width="2"/><text x="214" y="85" font-size="14" text-anchor="middle" fill="currentColor">(√3)²</text><line x1="88" y1="131" x2="172" y2="131" stroke="currentColor" stroke-width="2"/><line x1="88" y1="126" x2="88" y2="136" stroke="currentColor" stroke-width="2"/><line x1="172" y1="126" x2="172" y2="136" stroke="currentColor" stroke-width="2"/><text x="130" y="150" font-size="14" text-anchor="middle" fill="currentColor">√3</text><line x1="88" y1="165" x2="256" y2="165" stroke="currentColor" stroke-width="2"/><line x1="88" y1="160" x2="88" y2="170" stroke="currentColor" stroke-width="2"/><line x1="256" y1="160" x2="256" y2="170" stroke="currentColor" stroke-width="2"/><text x="172" y="184" font-size="15" text-anchor="middle" fill="currentColor">√12</text><line x1="74" y1="37" x2="74" y2="121" stroke="currentColor" stroke-width="2"/><line x1="69" y1="37" x2="79" y2="37" stroke="currentColor" stroke-width="2"/><line x1="69" y1="121" x2="79" y2="121" stroke="currentColor" stroke-width="2"/><text x="65" y="84" font-size="15" text-anchor="end" fill="currentColor">√3</text></svg>'
           - 根号の中の数が、ある《整数》の 2 乗になっていないか見ましょう。
         paths:
           - [√(3 × 12) = √36, 6]
           - [√12 = 2√3, √3 × 2√3 = 2 × 3, 6]
       - part: 今日
+        id: "7757fb0729"
         text: √50 を a√b の形（b はできるだけ小さい自然数）に表すと、どれになりますか。
         choices: [5√2, 2√5, 25√2]
         answer: 5√2
         check: "[c for c, v in {'5√2': 5 * math.sqrt(2), '2√5': 2 * math.sqrt(5), '25√2': 25 * math.sqrt(2)}.items() if math.isclose(v, math.sqrt(50))][0]"
         hints:
           - 50 を素因数分解しましょう。
-          - 50 の中に、2 乗の因数はあるでしょうか。
-          - √(5²) は根号の外に出せます。
+          - text: 50 = 2 × 5 × 5 です。同じ数の 2 つ組を見つけて、√ の外に 1 つ出しましょう。
+            svg: '<svg viewBox="0 0 320 190" xmlns="http://www.w3.org/2000/svg"><polyline points="67,86 74,82 83,112 95,46 257,46" fill="none" stroke="currentColor" stroke-width="2.5"/><rect x="155" y="61" width="92" height="42" rx="14" fill="#7bc96f" fill-opacity="0.3" stroke="currentColor" stroke-width="2"/><circle cx="123" cy="82" r="16" fill="#c8ccd6" fill-opacity="0.6" stroke="currentColor" stroke-width="2"/><text x="123" y="88" font-size="16" text-anchor="middle" fill="currentColor">2</text><text x="149" y="87" font-size="14" text-anchor="middle" fill="currentColor">×</text><circle cx="175" cy="82" r="16" fill="#7bc96f" fill-opacity="0.6" stroke="currentColor" stroke-width="2"/><text x="175" y="88" font-size="16" text-anchor="middle" fill="currentColor">5</text><text x="201" y="87" font-size="14" text-anchor="middle" fill="currentColor">×</text><circle cx="227" cy="82" r="16" fill="#7bc96f" fill-opacity="0.6" stroke="currentColor" stroke-width="2"/><text x="227" y="88" font-size="16" text-anchor="middle" fill="currentColor">5</text><line x1="201" y1="106" x2="201" y2="129" stroke="currentColor" stroke-width="2"/><polygon points="201,136 196.6,128 205.4,128" fill="currentColor"/><rect x="184" y="138" width="34" height="34" rx="6" fill="#7bc96f" fill-opacity="0.45" stroke="currentColor" stroke-width="2"/><text x="201" y="161" font-size="18" text-anchor="middle" fill="currentColor">?</text><text x="160" y="24" font-size="14" text-anchor="middle" fill="currentColor">同じ数の 2 つ組は、√ の外へ 1 つ出る</text></svg>'
+          - 外に出したあと、根号の中にのこる数はいくつでしょう。
         paths:
           - [50 = 5² × 2, √(5²) × √2, 5√2]
         note: 25√2 としやすい。外に出すのは 5² の 5 で、25 ではない。
       - part: 今日
+        id: "8cb8af748c"
         text: 6/√3 の分母を有理化すると、どれになりますか。
         choices: [2√3, 6√3, √2]
         answer: 2√3
         check: "[c for c, v in {'2√3': 2 * math.sqrt(3), '6√3': 6 * math.sqrt(3), '√2': math.sqrt(2)}.items() if math.isclose(v, 6 / math.sqrt(3))][0]"
         hints:
-          - 分母と分子に、同じ数をかけましょう。
+          - text: 分母と分子に、同じ数をかけましょう。
+            svg: '<svg viewBox="0 0 320 190" xmlns="http://www.w3.org/2000/svg"><text x="160" y="26" font-size="15" text-anchor="middle" fill="currentColor">分母と分子に、同じ数をかける</text><text x="62" y="84" font-size="20" text-anchor="middle" fill="currentColor">6</text><line x1="34" y1="94" x2="90" y2="94" stroke="currentColor" stroke-width="2"/><text x="62" y="120" font-size="20" text-anchor="middle" fill="currentColor">√3</text><line x1="102" y1="96" x2="135" y2="96" stroke="currentColor" stroke-width="2"/><polygon points="142,96 134,100.4 134,91.6" fill="currentColor"/><rect x="212" y="63" width="56" height="28" rx="6" fill="#f3c969" fill-opacity="0.55" stroke="currentColor" stroke-width="2"/><rect x="212" y="101" width="56" height="28" rx="6" fill="#f3c969" fill-opacity="0.55" stroke="currentColor" stroke-width="2"/><text x="186" y="84" font-size="20" text-anchor="middle" fill="currentColor">6</text><text x="240" y="83" font-size="15" text-anchor="middle" fill="currentColor">× √3</text><line x1="158" y1="95" x2="274" y2="95" stroke="currentColor" stroke-width="2"/><text x="186" y="122" font-size="20" text-anchor="middle" fill="currentColor">√3</text><text x="240" y="121" font-size="15" text-anchor="middle" fill="currentColor">× √3</text><text x="160" y="168" font-size="15" text-anchor="middle" fill="currentColor">分母の √ がなくなるように</text></svg>'
           - √3 × √3 はいくつでしょう。
           - 分母が整数になったら、約分しましょう。
         paths:
           - [(6 × √3)/(√3 × √3), 6√3/3, 2√3]
-        note: 分子に √3 をかけ忘れて 6/3 = 2 としやすい。分母と分子の両方にかける。
+        note: 分子に √3 をかけるのをわすれて 6/3 = 2 としやすい。分母と分子の両方にかける。
       - part: 挑戦
-        text: √8 + √18 を計算すると、どれになりますか。
+        id: "b06cfbd847"
+        text: √8 + √18 を計算すると、どれになりますか。図の 2 つの正方形の 1 辺をつないだ長さです。
+        svg: '<svg viewBox="0 0 320 200" xmlns="http://www.w3.org/2000/svg"><rect x="60" y="76" width="80" height="80" fill="#7fc8f8" fill-opacity="0.4" stroke="currentColor" stroke-width="2"/><text x="100" y="121" font-size="14" text-anchor="middle" fill="currentColor">面積 8</text><rect x="140" y="36" width="120" height="120" fill="#7bc96f" fill-opacity="0.4" stroke="currentColor" stroke-width="2"/><text x="200" y="101" font-size="14" text-anchor="middle" fill="currentColor">面積 18</text><line x1="60" y1="166" x2="140" y2="166" stroke="currentColor" stroke-width="2"/><line x1="60" y1="161" x2="60" y2="171" stroke="currentColor" stroke-width="2"/><line x1="140" y1="161" x2="140" y2="171" stroke="currentColor" stroke-width="2"/><text x="100" y="185" font-size="15" text-anchor="middle" fill="currentColor">√8</text><line x1="140" y1="166" x2="260" y2="166" stroke="currentColor" stroke-width="2"/><line x1="140" y1="161" x2="140" y2="171" stroke="currentColor" stroke-width="2"/><line x1="260" y1="161" x2="260" y2="171" stroke="currentColor" stroke-width="2"/><text x="200" y="185" font-size="15" text-anchor="middle" fill="currentColor">√18</text><text x="160" y="20" font-size="14" text-anchor="middle" fill="currentColor">2 つの正方形の 1 辺を つないだ長さ</text></svg>'
         choices: [5√2, √26, 6√2]
         answer: 5√2
         check: "[c for c, v in {'5√2': 5 * math.sqrt(2), '√26': math.sqrt(26), '6√2': 6 * math.sqrt(2)}.items() if math.isclose(v, math.sqrt(8) + math.sqrt(18))][0]"
         hints:
           - √8 と √18 を、それぞれ a√b の形にしましょう。
-          - 根号の中が同じになったら、同類項のようにまとめます。
+          - text: どちらの正方形も、面積 2 の正方形に分けられます。下の辺に、√2 が何こならぶでしょう。
+            svg: '<svg viewBox="0 0 320 200" xmlns="http://www.w3.org/2000/svg"><rect x="60" y="76" width="80" height="80" fill="#7fc8f8" fill-opacity="0.4" stroke="currentColor" stroke-width="2"/><line x1="100" y1="76" x2="100" y2="156" stroke="currentColor" stroke-width="1.5"/><line x1="60" y1="116" x2="140" y2="116" stroke="currentColor" stroke-width="1.5"/><text x="80" y="101" font-size="14" text-anchor="middle" fill="currentColor">2</text><text x="80" y="141" font-size="14" text-anchor="middle" fill="currentColor">2</text><text x="120" y="101" font-size="14" text-anchor="middle" fill="currentColor">2</text><text x="120" y="141" font-size="14" text-anchor="middle" fill="currentColor">2</text><rect x="140" y="36" width="120" height="120" fill="#7bc96f" fill-opacity="0.4" stroke="currentColor" stroke-width="2"/><line x1="180" y1="36" x2="180" y2="156" stroke="currentColor" stroke-width="1.5"/><line x1="140" y1="76" x2="260" y2="76" stroke="currentColor" stroke-width="1.5"/><line x1="220" y1="36" x2="220" y2="156" stroke="currentColor" stroke-width="1.5"/><line x1="140" y1="116" x2="260" y2="116" stroke="currentColor" stroke-width="1.5"/><text x="160" y="61" font-size="14" text-anchor="middle" fill="currentColor">2</text><text x="160" y="101" font-size="14" text-anchor="middle" fill="currentColor">2</text><text x="160" y="141" font-size="14" text-anchor="middle" fill="currentColor">2</text><text x="200" y="61" font-size="14" text-anchor="middle" fill="currentColor">2</text><text x="200" y="101" font-size="14" text-anchor="middle" fill="currentColor">2</text><text x="200" y="141" font-size="14" text-anchor="middle" fill="currentColor">2</text><text x="240" y="61" font-size="14" text-anchor="middle" fill="currentColor">2</text><text x="240" y="101" font-size="14" text-anchor="middle" fill="currentColor">2</text><text x="240" y="141" font-size="14" text-anchor="middle" fill="currentColor">2</text><line x1="60" y1="166" x2="100" y2="166" stroke="currentColor" stroke-width="2"/><line x1="60" y1="161" x2="60" y2="171" stroke="currentColor" stroke-width="2"/><line x1="100" y1="161" x2="100" y2="171" stroke="currentColor" stroke-width="2"/><text x="80" y="185" font-size="14" text-anchor="middle" fill="currentColor">√2</text><text x="160" y="20" font-size="14" text-anchor="middle" fill="currentColor">どちらも、面積 2 の正方形に分けた</text></svg>'
           - √8 + √18 は √26 になるでしょうか。
         paths:
           - [√8 = 2√2、√18 = 3√2, 2√2 + 3√2, 5√2]
+          - [図で、面積 2 の正方形の 1 辺 √2 が、下に 2 こと 3 こならぶ, あわせて 5 こ, 5√2]
         note: 根号の中どうしを足して √26 としやすい。√4 + √9 = 2 + 3 = 5 で、√13 ではないことと見くらべさせる。
     extra:
       - part: 今日
+        id: "6d8bc116ec"
         text: √45 = a√5 のとき、a はいくつですか。
         answer: 3
         check: "[a for a in range(1, 20) if a * a * 5 == 45][0]"
         hints:
           - 45 を素因数分解しましょう。
-          - 45 の中にある、2 乗の因数をさがしましょう。
+          - text: 45 の中にある、2 乗の因数をさがしましょう。45 = 3 × 3 × 5 です。
+            svg: '<svg viewBox="0 0 320 190" xmlns="http://www.w3.org/2000/svg"><polyline points="67,86 74,82 83,112 95,46 257,46" fill="none" stroke="currentColor" stroke-width="2.5"/><rect x="103" y="61" width="92" height="42" rx="14" fill="#7bc96f" fill-opacity="0.3" stroke="currentColor" stroke-width="2"/><circle cx="123" cy="82" r="16" fill="#7bc96f" fill-opacity="0.6" stroke="currentColor" stroke-width="2"/><text x="123" y="88" font-size="16" text-anchor="middle" fill="currentColor">3</text><text x="149" y="87" font-size="14" text-anchor="middle" fill="currentColor">×</text><circle cx="175" cy="82" r="16" fill="#7bc96f" fill-opacity="0.6" stroke="currentColor" stroke-width="2"/><text x="175" y="88" font-size="16" text-anchor="middle" fill="currentColor">3</text><text x="201" y="87" font-size="14" text-anchor="middle" fill="currentColor">×</text><circle cx="227" cy="82" r="16" fill="#c8ccd6" fill-opacity="0.6" stroke="currentColor" stroke-width="2"/><text x="227" y="88" font-size="16" text-anchor="middle" fill="currentColor">5</text><line x1="149" y1="106" x2="149" y2="129" stroke="currentColor" stroke-width="2"/><polygon points="149,136 144.6,128 153.4,128" fill="currentColor"/><rect x="132" y="138" width="34" height="34" rx="6" fill="#7bc96f" fill-opacity="0.45" stroke="currentColor" stroke-width="2"/><text x="149" y="161" font-size="18" text-anchor="middle" fill="currentColor">?</text><text x="160" y="24" font-size="14" text-anchor="middle" fill="currentColor">同じ数の 2 つ組は、√ の外へ 1 つ出る</text></svg>'
           - 2 乗の因数を、根号の外に出しましょう。
         paths:
           - [45 = 3² × 5, √(3²) × √5, 3√5 で a = 3]
       - part: 今日
+        id: "258f65d97f"
         text: √6 × √10 を a√b の形（b はできるだけ小さい自然数）に表すと、どれになりますか。
         choices: [2√15, 15√2, 4√15]
         answer: 2√15
         check: "[c for c, v in {'2√15': 2 * math.sqrt(15), '15√2': 15 * math.sqrt(2), '4√15': 4 * math.sqrt(15)}.items() if math.isclose(v, math.sqrt(6) * math.sqrt(10))][0]"
         hints:
           - √a × √b = √(ab) を使いましょう。
-          - 6 × 10 を素因数分解しましょう。
-          - 2 乗の因数を、根号の外に出しましょう。
+          - text: 6 × 10 を素因数分解して、同じ数の 2 つ組をさがしましょう。
+            svg: '<svg viewBox="0 0 320 190" xmlns="http://www.w3.org/2000/svg"><polyline points="41,86 48,82 57,112 69,46 283,46" fill="none" stroke="currentColor" stroke-width="2.5"/><rect x="77" y="61" width="92" height="42" rx="14" fill="#7bc96f" fill-opacity="0.3" stroke="currentColor" stroke-width="2"/><circle cx="97" cy="82" r="16" fill="#7bc96f" fill-opacity="0.6" stroke="currentColor" stroke-width="2"/><text x="97" y="88" font-size="16" text-anchor="middle" fill="currentColor">2</text><text x="123" y="87" font-size="14" text-anchor="middle" fill="currentColor">×</text><circle cx="149" cy="82" r="16" fill="#7bc96f" fill-opacity="0.6" stroke="currentColor" stroke-width="2"/><text x="149" y="88" font-size="16" text-anchor="middle" fill="currentColor">2</text><text x="175" y="87" font-size="14" text-anchor="middle" fill="currentColor">×</text><circle cx="201" cy="82" r="16" fill="#c8ccd6" fill-opacity="0.6" stroke="currentColor" stroke-width="2"/><text x="201" y="88" font-size="16" text-anchor="middle" fill="currentColor">3</text><text x="227" y="87" font-size="14" text-anchor="middle" fill="currentColor">×</text><circle cx="253" cy="82" r="16" fill="#c8ccd6" fill-opacity="0.6" stroke="currentColor" stroke-width="2"/><text x="253" y="88" font-size="16" text-anchor="middle" fill="currentColor">5</text><line x1="123" y1="106" x2="123" y2="129" stroke="currentColor" stroke-width="2"/><polygon points="123,136 118.6,128 127.4,128" fill="currentColor"/><rect x="106" y="138" width="34" height="34" rx="6" fill="#7bc96f" fill-opacity="0.45" stroke="currentColor" stroke-width="2"/><text x="123" y="161" font-size="18" text-anchor="middle" fill="currentColor">?</text><text x="160" y="24" font-size="14" text-anchor="middle" fill="currentColor">6 × 10 = 2 × 2 × 3 × 5</text></svg>'
+          - 2 つ組は根号の外に 1 つ出ます。のこりは根号の中でかけ合わせます。
         paths:
           - [√60, 60 = 2² × 15, 2√15]
           - [√6 × √10 = √2 × √3 × √2 × √5, √2 × √2 = 2, 2√15]
       - part: 挑戦
+        id: "819d5d8e33"
         text: 5√3 − √27 + √12 を計算すると、どれになりますか。
         choices: [4√3, 2√3, 6√3]
         answer: 4√3
         check: "[c for c, v in {'4√3': 4 * math.sqrt(3), '2√3': 2 * math.sqrt(3), '6√3': 6 * math.sqrt(3)}.items() if math.isclose(v, 5 * math.sqrt(3) - math.sqrt(27) + math.sqrt(12))][0]"
         hints:
           - √27 と √12 を、それぞれ a√3 の形にしましょう。
-          - 根号の中がそろったら、係数を計算しましょう。
-          - ひく項の符号に気をつけましょう。
+          - text: 面積 27 と 12 の正方形を、面積 3 の正方形に分けました。1 辺に √3 がいくつならぶでしょう。
+            svg: '<svg viewBox="0 0 320 180" xmlns="http://www.w3.org/2000/svg"><rect x="55" y="48" width="102" height="102" fill="#7fc8f8" fill-opacity="0.4" stroke="currentColor" stroke-width="2"/><line x1="89" y1="48" x2="89" y2="150" stroke="currentColor" stroke-width="1.5"/><line x1="55" y1="82" x2="157" y2="82" stroke="currentColor" stroke-width="1.5"/><line x1="123" y1="48" x2="123" y2="150" stroke="currentColor" stroke-width="1.5"/><line x1="55" y1="116" x2="157" y2="116" stroke="currentColor" stroke-width="1.5"/><text x="72" y="70" font-size="14" text-anchor="middle" fill="currentColor">3</text><text x="72" y="104" font-size="14" text-anchor="middle" fill="currentColor">3</text><text x="72" y="138" font-size="14" text-anchor="middle" fill="currentColor">3</text><text x="106" y="70" font-size="14" text-anchor="middle" fill="currentColor">3</text><text x="106" y="104" font-size="14" text-anchor="middle" fill="currentColor">3</text><text x="106" y="138" font-size="14" text-anchor="middle" fill="currentColor">3</text><text x="140" y="70" font-size="14" text-anchor="middle" fill="currentColor">3</text><text x="140" y="104" font-size="14" text-anchor="middle" fill="currentColor">3</text><text x="140" y="138" font-size="14" text-anchor="middle" fill="currentColor">3</text><text x="106" y="172" font-size="14" text-anchor="middle" fill="currentColor">面積 27</text><rect x="197" y="82" width="68" height="68" fill="#7bc96f" fill-opacity="0.4" stroke="currentColor" stroke-width="2"/><line x1="231" y1="82" x2="231" y2="150" stroke="currentColor" stroke-width="1.5"/><line x1="197" y1="116" x2="265" y2="116" stroke="currentColor" stroke-width="1.5"/><text x="214" y="104" font-size="14" text-anchor="middle" fill="currentColor">3</text><text x="214" y="138" font-size="14" text-anchor="middle" fill="currentColor">3</text><text x="248" y="104" font-size="14" text-anchor="middle" fill="currentColor">3</text><text x="248" y="138" font-size="14" text-anchor="middle" fill="currentColor">3</text><text x="231" y="172" font-size="14" text-anchor="middle" fill="currentColor">面積 12</text><text x="160" y="22" font-size="14" text-anchor="middle" fill="currentColor">どちらも、面積 3 の正方形に分けた</text></svg>'
+          - ひくのは √27 だけです。たすものとひくものを分けて、√3 がいくつになるか数えましょう。
         paths:
           - [√27 = 3√3、√12 = 2√3, 5√3 − 3√3 + 2√3, 4√3]
+          - [√27 − √12 = 3√3 − 2√3 = √3 を先にまとめる, 5√3 − √3, 4√3]
 
   - day: 3
     items:
       - part: 思い出す
+        id: "b21997bdb9"
         text: √72 を a√b の形（b はできるだけ小さい自然数）に表すと、どれになりますか。
         choices: [6√2, 2√6, 36√2]
         answer: 6√2
         check: "[c for c, v in {'6√2': 6 * math.sqrt(2), '2√6': 2 * math.sqrt(6), '36√2': 36 * math.sqrt(2)}.items() if math.isclose(v, math.sqrt(72))][0]"
         hints:
           - 72 を素因数分解しましょう。
-          - 72 の中で、いちばん大きい 2 乗の因数をさがしましょう。
-          - 2 乗の因数を、根号の外に出しましょう。
+          - text: 72 = 2 × 2 × 2 × 3 × 3 です。同じ数の 2 つ組を、できるだけ多く作りましょう。
+            svg: '<svg viewBox="0 0 320 190" xmlns="http://www.w3.org/2000/svg"><polyline points="15,86 22,82 31,112 43,46 309,46" fill="none" stroke="currentColor" stroke-width="2.5"/><rect x="51" y="61" width="92" height="42" rx="14" fill="#7bc96f" fill-opacity="0.3" stroke="currentColor" stroke-width="2"/><rect x="207" y="61" width="92" height="42" rx="14" fill="#7fc8f8" fill-opacity="0.3" stroke="currentColor" stroke-width="2"/><circle cx="71" cy="82" r="16" fill="#7bc96f" fill-opacity="0.6" stroke="currentColor" stroke-width="2"/><text x="71" y="88" font-size="16" text-anchor="middle" fill="currentColor">2</text><text x="97" y="87" font-size="14" text-anchor="middle" fill="currentColor">×</text><circle cx="123" cy="82" r="16" fill="#7bc96f" fill-opacity="0.6" stroke="currentColor" stroke-width="2"/><text x="123" y="88" font-size="16" text-anchor="middle" fill="currentColor">2</text><text x="149" y="87" font-size="14" text-anchor="middle" fill="currentColor">×</text><circle cx="175" cy="82" r="16" fill="#c8ccd6" fill-opacity="0.6" stroke="currentColor" stroke-width="2"/><text x="175" y="88" font-size="16" text-anchor="middle" fill="currentColor">2</text><text x="201" y="87" font-size="14" text-anchor="middle" fill="currentColor">×</text><circle cx="227" cy="82" r="16" fill="#7fc8f8" fill-opacity="0.6" stroke="currentColor" stroke-width="2"/><text x="227" y="88" font-size="16" text-anchor="middle" fill="currentColor">3</text><text x="253" y="87" font-size="14" text-anchor="middle" fill="currentColor">×</text><circle cx="279" cy="82" r="16" fill="#7fc8f8" fill-opacity="0.6" stroke="currentColor" stroke-width="2"/><text x="279" y="88" font-size="16" text-anchor="middle" fill="currentColor">3</text><line x1="97" y1="106" x2="97" y2="129" stroke="currentColor" stroke-width="2"/><polygon points="97,136 92.6,128 101.4,128" fill="currentColor"/><rect x="80" y="138" width="34" height="34" rx="6" fill="#7bc96f" fill-opacity="0.45" stroke="currentColor" stroke-width="2"/><text x="97" y="161" font-size="18" text-anchor="middle" fill="currentColor">?</text><line x1="253" y1="106" x2="253" y2="129" stroke="currentColor" stroke-width="2"/><polygon points="253,136 248.6,128 257.4,128" fill="currentColor"/><rect x="236" y="138" width="34" height="34" rx="6" fill="#7fc8f8" fill-opacity="0.45" stroke="currentColor" stroke-width="2"/><text x="253" y="161" font-size="18" text-anchor="middle" fill="currentColor">?</text><text x="175" y="160" font-size="15" text-anchor="middle" fill="currentColor">×</text><text x="160" y="24" font-size="14" text-anchor="middle" fill="currentColor">同じ数の 2 つ組は、√ の外へ 1 つ出る</text></svg>'
+          - 外に出た数どうしをかけます。根号の中には、組にならなかった数がのこります。
         paths:
           - [72 = 6² × 2, √(6²) × √2, 6√2]
           - [72 = 2³ × 3², 2 × 3 を外に出す, 6√2]
       - part: 思い出す
-        text: √5 × √20 の値はいくつですか。
+        id: "22ec6def25"
+        text: √5 × √20 の値はいくつですか。図の長方形の面積と同じです。
+        svg: '<svg viewBox="0 0 320 190" xmlns="http://www.w3.org/2000/svg"><rect x="88" y="37" width="168" height="84" fill="#f3c969" fill-opacity="0.45" stroke="currentColor" stroke-width="2"/><text x="172" y="85" font-size="16" text-anchor="middle" fill="currentColor">面積 ?</text><line x1="88" y1="133" x2="256" y2="133" stroke="currentColor" stroke-width="2"/><line x1="88" y1="128" x2="88" y2="138" stroke="currentColor" stroke-width="2"/><line x1="256" y1="128" x2="256" y2="138" stroke="currentColor" stroke-width="2"/><text x="172" y="152" font-size="16" text-anchor="middle" fill="currentColor">√20</text><line x1="74" y1="37" x2="74" y2="121" stroke="currentColor" stroke-width="2"/><line x1="69" y1="37" x2="79" y2="37" stroke="currentColor" stroke-width="2"/><line x1="69" y1="121" x2="79" y2="121" stroke="currentColor" stroke-width="2"/><text x="65" y="84" font-size="15" text-anchor="end" fill="currentColor">√5</text></svg>'
         answer: 10
         check: "[k for k in range(0, 100) if k * k == 5 * 20][0]"
         hints:
-          - √a × √b = √(ab) を使いましょう。
-          - 根号の中は 5 × 20 です。
+          - √a × √b = √(ab) を使いましょう。根号の中は 5 × 20 です。
+          - text: 長方形を、1 辺が √5 の正方形に分けてみましょう。
+            svg: '<svg viewBox="0 0 320 190" xmlns="http://www.w3.org/2000/svg"><rect x="88" y="37" width="84" height="84" fill="#f3c969" fill-opacity="0.45" stroke="currentColor" stroke-width="2"/><text x="130" y="85" font-size="14" text-anchor="middle" fill="currentColor">(√5)²</text><rect x="172" y="37" width="84" height="84" fill="#7bc96f" fill-opacity="0.45" stroke="currentColor" stroke-width="2"/><text x="214" y="85" font-size="14" text-anchor="middle" fill="currentColor">(√5)²</text><line x1="88" y1="131" x2="172" y2="131" stroke="currentColor" stroke-width="2"/><line x1="88" y1="126" x2="88" y2="136" stroke="currentColor" stroke-width="2"/><line x1="172" y1="126" x2="172" y2="136" stroke="currentColor" stroke-width="2"/><text x="130" y="150" font-size="14" text-anchor="middle" fill="currentColor">√5</text><line x1="88" y1="165" x2="256" y2="165" stroke="currentColor" stroke-width="2"/><line x1="88" y1="160" x2="88" y2="170" stroke="currentColor" stroke-width="2"/><line x1="256" y1="160" x2="256" y2="170" stroke="currentColor" stroke-width="2"/><text x="172" y="184" font-size="15" text-anchor="middle" fill="currentColor">√20</text><line x1="74" y1="37" x2="74" y2="121" stroke="currentColor" stroke-width="2"/><line x1="69" y1="37" x2="79" y2="37" stroke="currentColor" stroke-width="2"/><line x1="69" y1="121" x2="79" y2="121" stroke="currentColor" stroke-width="2"/><text x="65" y="84" font-size="15" text-anchor="end" fill="currentColor">√5</text></svg>'
           - 根号の中の数が、ある《整数》の 2 乗になっていないか見ましょう。
         paths:
           - [√(5 × 20) = √100, 10]
       - part: 今日
+        id: "954c390be3"
         text: 10/√5 の分母を有理化すると、どれになりますか。
         choices: [2√5, 10√5, √2]
         answer: 2√5
         check: "[c for c, v in {'2√5': 2 * math.sqrt(5), '10√5': 10 * math.sqrt(5), '√2': math.sqrt(2)}.items() if math.isclose(v, 10 / math.sqrt(5))][0]"
         hints:
-          - 分母と分子に、同じ数をかけましょう。
+          - text: 分母と分子に、同じ数をかけましょう。
+            svg: '<svg viewBox="0 0 320 190" xmlns="http://www.w3.org/2000/svg"><text x="160" y="26" font-size="15" text-anchor="middle" fill="currentColor">分母と分子に、同じ数をかける</text><text x="62" y="84" font-size="20" text-anchor="middle" fill="currentColor">10</text><line x1="34" y1="94" x2="90" y2="94" stroke="currentColor" stroke-width="2"/><text x="62" y="120" font-size="20" text-anchor="middle" fill="currentColor">√5</text><line x1="102" y1="96" x2="135" y2="96" stroke="currentColor" stroke-width="2"/><polygon points="142,96 134,100.4 134,91.6" fill="currentColor"/><rect x="212" y="63" width="56" height="28" rx="6" fill="#f3c969" fill-opacity="0.55" stroke="currentColor" stroke-width="2"/><rect x="212" y="101" width="56" height="28" rx="6" fill="#f3c969" fill-opacity="0.55" stroke="currentColor" stroke-width="2"/><text x="186" y="84" font-size="20" text-anchor="middle" fill="currentColor">10</text><text x="240" y="83" font-size="15" text-anchor="middle" fill="currentColor">× √5</text><line x1="158" y1="95" x2="274" y2="95" stroke="currentColor" stroke-width="2"/><text x="186" y="122" font-size="20" text-anchor="middle" fill="currentColor">√5</text><text x="240" y="121" font-size="15" text-anchor="middle" fill="currentColor">× √5</text><text x="160" y="168" font-size="15" text-anchor="middle" fill="currentColor">分母の √ がなくなるように</text></svg>'
           - √5 × √5 はいくつでしょう。
           - 分母が整数になったら、約分しましょう。
         paths:
           - [(10 × √5)/(√5 × √5), 10√5/5, 2√5]
       - part: 今日
-        text: √27 − √12 を計算すると、どれになりますか。
+        id: "f9d5364e29"
+        text: √27 − √12 を計算すると、どれになりますか。図の赤い線の長さです。
+        svg: '<svg viewBox="0 0 320 190" xmlns="http://www.w3.org/2000/svg"><rect x="113" y="38" width="114" height="114" fill="#c8ccd6" fill-opacity="0.4" stroke="currentColor" stroke-width="2"/><rect x="113" y="76" width="76" height="76" fill="#7fc8f8" fill-opacity="0.5" stroke="currentColor" stroke-width="2"/><text x="170" y="63" font-size="14" text-anchor="middle" fill="currentColor">面積 27</text><text x="151" y="119" font-size="14" text-anchor="middle" fill="currentColor">面積 12</text><line x1="189" y1="152" x2="227" y2="152" stroke="#f08080" stroke-width="5"/><line x1="113" y1="162" x2="189" y2="162" stroke="currentColor" stroke-width="2"/><line x1="113" y1="157" x2="113" y2="167" stroke="currentColor" stroke-width="2"/><line x1="189" y1="157" x2="189" y2="167" stroke="currentColor" stroke-width="2"/><text x="151" y="181" font-size="14" text-anchor="middle" fill="currentColor">√12</text><text x="208" y="182" font-size="17" text-anchor="middle" fill="currentColor" font-weight="bold">?</text><line x1="99" y1="38" x2="99" y2="152" stroke="currentColor" stroke-width="2"/><line x1="94" y1="38" x2="104" y2="38" stroke="currentColor" stroke-width="2"/><line x1="94" y1="152" x2="104" y2="152" stroke="currentColor" stroke-width="2"/><text x="90" y="100" font-size="14" text-anchor="end" fill="currentColor">√27</text></svg>'
         choices: [√3, √15, 5√3]
         answer: √3
         check: "[c for c, v in {'√3': math.sqrt(3), '√15': math.sqrt(15), '5√3': 5 * math.sqrt(3)}.items() if math.isclose(v, math.sqrt(27) - math.sqrt(12))][0]"
         hints:
           - √27 と √12 を、それぞれ a√3 の形にしましょう。
-          - 根号の中がそろったら、係数をひきましょう。
+          - text: 2 つの正方形を、面積 3 の正方形に分けました。大きい正方形と小さい正方形の 1 辺には、√3 がそれぞれいくつならぶでしょう。
+            svg: '<svg viewBox="0 0 320 190" xmlns="http://www.w3.org/2000/svg"><rect x="113" y="38" width="114" height="114" fill="#c8ccd6" fill-opacity="0.4" stroke="currentColor" stroke-width="2"/><rect x="113" y="76" width="76" height="76" fill="#7fc8f8" fill-opacity="0.55" stroke="currentColor" stroke-width="0"/><rect x="113" y="38" width="114" height="114" fill="none" stroke="currentColor" stroke-width="2"/><line x1="151" y1="38" x2="151" y2="152" stroke="currentColor" stroke-width="1.5"/><line x1="113" y1="76" x2="227" y2="76" stroke="currentColor" stroke-width="1.5"/><line x1="189" y1="38" x2="189" y2="152" stroke="currentColor" stroke-width="1.5"/><line x1="113" y1="114" x2="227" y2="114" stroke="currentColor" stroke-width="1.5"/><text x="132" y="62" font-size="13" text-anchor="middle" fill="currentColor">3</text><text x="132" y="100" font-size="13" text-anchor="middle" fill="currentColor">3</text><text x="132" y="138" font-size="13" text-anchor="middle" fill="currentColor">3</text><text x="170" y="62" font-size="13" text-anchor="middle" fill="currentColor">3</text><text x="170" y="100" font-size="13" text-anchor="middle" fill="currentColor">3</text><text x="170" y="138" font-size="13" text-anchor="middle" fill="currentColor">3</text><text x="208" y="62" font-size="13" text-anchor="middle" fill="currentColor">3</text><text x="208" y="100" font-size="13" text-anchor="middle" fill="currentColor">3</text><text x="208" y="138" font-size="13" text-anchor="middle" fill="currentColor">3</text><rect x="113" y="76" width="76" height="76" fill="none" stroke="currentColor" stroke-width="3"/><line x1="113" y1="162" x2="151" y2="162" stroke="currentColor" stroke-width="2"/><line x1="113" y1="157" x2="113" y2="167" stroke="currentColor" stroke-width="2"/><line x1="151" y1="157" x2="151" y2="167" stroke="currentColor" stroke-width="2"/><text x="132" y="181" font-size="14" text-anchor="middle" fill="currentColor">√3</text><line x1="99" y1="38" x2="99" y2="152" stroke="currentColor" stroke-width="2"/><line x1="94" y1="38" x2="104" y2="38" stroke="currentColor" stroke-width="2"/><line x1="94" y1="152" x2="104" y2="152" stroke="currentColor" stroke-width="2"/><text x="90" y="100" font-size="14" text-anchor="end" fill="currentColor">√27</text></svg>'
           - √27 − √12 は √15 になるでしょうか。
         paths:
           - [√27 = 3√3、√12 = 2√3, 3√3 − 2√3, √3]
       - part: わけ
-        text: √2 × √3 = √6 となるわけを、平方根の意味（√a は、2 乗すると a になる正の数）を使って、筋道を立てて書きましょう。
-        explain: 例：「P = √2 × √3 とする。P を 2 乗すると、P² = (√2 × √3)² = (√2)² × (√3)²（積の 2 乗は 2 乗の積、A-009）= 2 × 3 = 6（平方根の意味）。また、√2 も √3 も正の数なので、その積 P も正の数である。2 乗すると 6 になる正の数は √6 なので、P = √6、つまり √2 × √3 = √6 である。」と書ければよい。①「〜とする」で P を決める、② 2 乗して式を変形する、③ 約束した事実（平方根の意味、積の累乗、正の数どうしの積は正）で結ぶ、の 3 つがそろっているかを見る。「P は正の数」を書き落としていたら、2 乗して 6 になる数には −√6 もあるので、正であることが要ると話す。同じ筋道で、正の数 a、b について √a × √b = √(ab) が言えることにも触れる。
+        id: "833084db4c"
+        text: √2 × √3 = √6 となるわけを、平方根の意味（√a は、2 乗すると a になる正の数）を使って、すじ道を立てて書きましょう。
+        explain: 例：「P = √2 × √3 とする。P を 2 乗すると、P² = (√2 × √3)² = (√2)² × (√3)²（積の 2 乗は 2 乗の積、A-009）= 2 × 3 = 6（平方根の意味）。また、√2 も √3 も正の数なので、その積 P も正の数である。2 乗すると 6 になる正の数は √6 なので、P = √6、つまり √2 × √3 = √6 である。」と書ければよい。①「〜とする」で P を決める、② 2 乗して式を変形する、③ 約束した事実（平方根の意味、積の累乗、正の数どうしの積は正）で結ぶ、の 3 つがそろっているかを見る。「P は正の数」を書き落としていたら、2 乗して 6 になる数には −√6 もあるので、正であることが要ると話す。同じすじ道で、正の数 a、b について √a × √b = √(ab) が言えることにもふれる。
         hints:
           - 「P = √2 × √3 とする」から書き始め、P を 2 乗しましょう。
           - (√2)² と (√3)² は、平方根の意味から、それぞれいくつでしょう。
           - P が正の数であることも書いて、√6 と結びましょう。
         paths:
           - [P = √2 × √3 とする, P² = (√2)² × (√3)² = 6, P は正の数, 2 乗して 6 になる正の数は √6]
+          - [√2 × √3 を 2 乗すると (√2)² × (√3)² = 6, √6 を 2 乗しても 6, どちらも正の数で、2 乗が同じなので等しい]
       - part: わけ
-        text: √12 = 2√3 となるわけを、平方根の意味を使って、筋道を立てて書きましょう。
-        explain: 例：「Q = 2√3 とする。Q を 2 乗すると、Q² = 2² × (√3)² = 4 × 3 = 12。また、2 も √3 も正の数なので、Q は正の数である。2 乗すると 12 になる正の数は √12 なので、Q = √12、つまり √12 = 2√3 である。」と書ければよい。①「〜とする」、② 2 乗する変形、③ 平方根の意味と、正の数どうしの積は正、で結ぶ、がそろっているかを見る。前の問題の √a × √b = √(ab) を使って、√12 = √(4 × 3) = √4 × √3 = 2√3 と書いてもよい（約束した事実として使ってよいことを確かめる）。12 = 2² × 3 と素因数分解して、2² の 2 が外に出ることを言えていれば、なおよい。
+        id: "05e32ea48e"
+        text: √12 = 2√3 となるわけを、平方根の意味を使って、すじ道を立てて書きましょう。
+        explain: 例：「Q = 2√3 とする。Q を 2 乗すると、Q² = 2² × (√3)² = 4 × 3 = 12。また、2 も √3 も正の数なので、Q は正の数である。2 乗すると 12 になる正の数は √12 なので、Q = √12、つまり √12 = 2√3 である。」と書ければよい。①「〜とする」、② 2 乗する変形、③ 平方根の意味と、正の数どうしの積は正、で結ぶ、がそろっているかを見る。前の問題の √a × √b = √(ab) を使って、√12 = √(4 × 3) = √4 × √3 = 2√3 と書いてもよい（約束した事実として使ってよいことをたしかめる）。12 = 2² × 3 と素因数分解して、2² の 2 が外に出ることを言えていれば、なおよい。ヒントの図は、1 辺が 2√3 の正方形の面積が 12 になることを見せている。
         hints:
           - 「Q = 2√3 とする」から書き始め、Q を 2 乗しましょう。
-          - 2² と (√3)² を、それぞれ計算しましょう。
+          - text: 2² と (√3)² を、それぞれ計算しましょう。図のように、1 辺が Q = 2√3 の正方形は、1 辺が √3 の正方形 4 こに分けられます。
+            svg: '<svg viewBox="0 0 320 200" xmlns="http://www.w3.org/2000/svg"><rect x="114" y="34" width="58" height="58" fill="#f3c969" fill-opacity="0.45" stroke="currentColor" stroke-width="2"/><text x="143" y="69" font-size="14" text-anchor="middle" fill="currentColor">(√3)²</text><rect x="114" y="92" width="58" height="58" fill="#7bc96f" fill-opacity="0.45" stroke="currentColor" stroke-width="2"/><text x="143" y="127" font-size="14" text-anchor="middle" fill="currentColor">(√3)²</text><rect x="172" y="34" width="58" height="58" fill="#7bc96f" fill-opacity="0.45" stroke="currentColor" stroke-width="2"/><text x="201" y="69" font-size="14" text-anchor="middle" fill="currentColor">(√3)²</text><rect x="172" y="92" width="58" height="58" fill="#f3c969" fill-opacity="0.45" stroke="currentColor" stroke-width="2"/><text x="201" y="127" font-size="14" text-anchor="middle" fill="currentColor">(√3)²</text><text x="143" y="24" font-size="15" text-anchor="middle" fill="currentColor">√3</text><text x="201" y="24" font-size="15" text-anchor="middle" fill="currentColor">√3</text><line x1="114" y1="162" x2="230" y2="162" stroke="currentColor" stroke-width="2"/><line x1="114" y1="157" x2="114" y2="167" stroke="currentColor" stroke-width="2"/><line x1="230" y1="157" x2="230" y2="167" stroke="currentColor" stroke-width="2"/><text x="172" y="181" font-size="15" text-anchor="middle" fill="currentColor">Q = 2√3</text><line x1="100" y1="34" x2="100" y2="150" stroke="currentColor" stroke-width="2"/><line x1="95" y1="34" x2="105" y2="34" stroke="currentColor" stroke-width="2"/><line x1="95" y1="150" x2="105" y2="150" stroke="currentColor" stroke-width="2"/><text x="91" y="97" font-size="15" text-anchor="end" fill="currentColor">Q</text></svg>'
           - Q が正の数であることも書いて、√12 と結びましょう。
         paths:
           - [Q = 2√3 とする, Q² = 4 × 3 = 12, Q は正の数, 2 乗して 12 になる正の数は √12]
           - [√12 = √(4 × 3), √4 × √3（前の問題）, 2√3]
       - part: わけ
+        id: "850580be81"
         text: √10 が 3 と 4 の間にあるわけを、3² と 4² を使って、文で書きましょう。
-        explain: 例：「3² = 9、4² = 16 で、9 < 10 < 16。正の数では、2 乗が大きいほうが、もとの数も大きい。√10 は 2 乗すると 10 になる正の数なので、2 乗した 9、10、16 の順と同じに、3 < √10 < 4 となる。」と書ければよい。「正の数では、2 乗の大小と、もとの数の大小が同じ」が書けているかを見る（代表の例で書くわけ ②）。面積 9、10、16 の正方形をならべると、一辺も 3、√10、4 の順にならぶ、と説明してもよい。
+        svg: '<svg viewBox="0 0 320 200" xmlns="http://www.w3.org/2000/svg"><rect x="13" y="83" width="75" height="75" fill="#c8ccd6" fill-opacity="0.45" stroke="currentColor" stroke-width="2"/><text x="50.5" y="126.5" font-size="15" text-anchor="middle" fill="currentColor">面積 9</text><text x="50.5" y="180" font-size="16" text-anchor="middle" fill="currentColor">3</text><rect x="108" y="78.9" width="79.1" height="79.1" fill="#7bc96f" fill-opacity="0.45" stroke="currentColor" stroke-width="2"/><text x="147.5" y="124.5" font-size="15" text-anchor="middle" fill="currentColor">面積 10</text><text x="147.5" y="180" font-size="16" text-anchor="middle" fill="currentColor">√10</text><rect x="207" y="58" width="100" height="100" fill="#c8ccd6" fill-opacity="0.45" stroke="currentColor" stroke-width="2"/><text x="257" y="114" font-size="15" text-anchor="middle" fill="currentColor">面積 16</text><text x="257" y="180" font-size="16" text-anchor="middle" fill="currentColor">4</text><text x="160" y="24" font-size="14" text-anchor="middle" fill="currentColor">中は面積、下は 1 辺の長さ</text></svg>'
+        explain: 例：「3² = 9、4² = 16 で、9 < 10 < 16。正の数では、2 乗が大きいほうが、もとの数も大きい。√10 は 2 乗すると 10 になる正の数なので、2 乗した 9、10、16 の順と同じに、3 < √10 < 4 となる。」と書ければよい。「正の数では、2 乗の大小と、もとの数の大小が同じ」が書けているかを見る（代表の例で書くわけ ②）。図のように、面積 9、10、16 の正方形をならべると、1 辺も 3、√10、4 の順にならぶ、と説明してもよい。
         hints:
           - 3² と 4² を計算しましょう。
           - 10 は、9 と 16 の間にあるでしょうか。
-          - 正の数では、2 乗の大小と、もとの数の大小はどんな関係でしょう。
+          - text: 正の数では、2 乗の大小と、もとの数の大小はどんな関係でしょう。
+            svg: '<svg viewBox="0 0 320 200" xmlns="http://www.w3.org/2000/svg"><text x="30" y="79" font-size="14" text-anchor="middle" fill="currentColor">数</text><text x="30" y="145" font-size="14" text-anchor="middle" fill="currentColor">2 乗</text><line x1="52" y1="74" x2="314" y2="74" stroke="currentColor" stroke-width="2"/><line x1="52" y1="140" x2="314" y2="140" stroke="currentColor" stroke-width="2"/><line x1="94" y1="83" x2="94" y2="131" stroke="currentColor" stroke-width="2" stroke-dasharray="4 4" stroke-opacity="0.45"/><line x1="94" y1="68" x2="94" y2="80" stroke="currentColor" stroke-width="2"/><line x1="94" y1="134" x2="94" y2="146" stroke="currentColor" stroke-width="2"/><text x="94" y="61" font-size="15" text-anchor="middle" fill="currentColor">2</text><text x="94" y="164" font-size="15" text-anchor="middle" fill="currentColor">4</text><line x1="154" y1="83" x2="154" y2="131" stroke="currentColor" stroke-width="2" stroke-dasharray="4 4" stroke-opacity="0.45"/><line x1="154" y1="68" x2="154" y2="80" stroke="currentColor" stroke-width="2"/><line x1="154" y1="134" x2="154" y2="146" stroke="currentColor" stroke-width="2"/><text x="154" y="61" font-size="15" text-anchor="middle" fill="currentColor">3</text><text x="154" y="164" font-size="15" text-anchor="middle" fill="currentColor">9</text><line x1="214" y1="83" x2="214" y2="131" stroke="currentColor" stroke-width="2" stroke-dasharray="4 4" stroke-opacity="0.45"/><line x1="214" y1="68" x2="214" y2="80" stroke="currentColor" stroke-width="2"/><line x1="214" y1="134" x2="214" y2="146" stroke="currentColor" stroke-width="2"/><text x="214" y="61" font-size="15" text-anchor="middle" fill="currentColor">4</text><text x="214" y="164" font-size="15" text-anchor="middle" fill="currentColor">16</text><line x1="274" y1="83" x2="274" y2="131" stroke="currentColor" stroke-width="2" stroke-dasharray="4 4" stroke-opacity="0.45"/><line x1="274" y1="68" x2="274" y2="80" stroke="currentColor" stroke-width="2"/><line x1="274" y1="134" x2="274" y2="146" stroke="currentColor" stroke-width="2"/><text x="274" y="61" font-size="15" text-anchor="middle" fill="currentColor">5</text><text x="274" y="164" font-size="15" text-anchor="middle" fill="currentColor">25</text><line x1="163.7" y1="74" x2="163.7" y2="140" stroke="#7bc96f" stroke-width="2.5"/><circle cx="163.7" cy="74" r="5" fill="#7bc96f" fill-opacity="0.9" stroke="currentColor" stroke-width="2"/><circle cx="163.7" cy="140" r="5" fill="#7bc96f" fill-opacity="0.9" stroke="currentColor" stroke-width="2"/><text x="163.7" y="38" font-size="15" text-anchor="middle" fill="currentColor" font-weight="bold">?</text><text x="163.7" y="186" font-size="15" text-anchor="middle" fill="currentColor" font-weight="bold">10</text></svg>'
         paths:
           - [3² = 9、4² = 16, 9 < 10 < 16, 正の数は 2 乗の順と同じ, 3 < √10 < 4]
+          - [面積 9、10、16 の正方形をならべる, 面積が大きいほど 1 辺も長い, 1 辺は 3、√10、4 の順]
     extra:
       - part: 今日
-        text: √2 × √32 の値はいくつですか。
+        id: "350d268c57"
+        text: √2 × √32 の値はいくつですか。図の長方形の面積と同じです。
+        svg: '<svg viewBox="0 0 320 190" xmlns="http://www.w3.org/2000/svg"><rect x="66" y="52.5" width="212" height="53" fill="#f3c969" fill-opacity="0.45" stroke="currentColor" stroke-width="2"/><text x="172" y="85" font-size="16" text-anchor="middle" fill="currentColor">面積 ?</text><line x1="66" y1="117.5" x2="278" y2="117.5" stroke="currentColor" stroke-width="2"/><line x1="66" y1="112.5" x2="66" y2="122.5" stroke="currentColor" stroke-width="2"/><line x1="278" y1="112.5" x2="278" y2="122.5" stroke="currentColor" stroke-width="2"/><text x="172" y="136.5" font-size="16" text-anchor="middle" fill="currentColor">√32</text><line x1="52" y1="52.5" x2="52" y2="105.5" stroke="currentColor" stroke-width="2"/><line x1="47" y1="52.5" x2="57" y2="52.5" stroke="currentColor" stroke-width="2"/><line x1="47" y1="105.5" x2="57" y2="105.5" stroke="currentColor" stroke-width="2"/><text x="43" y="84" font-size="15" text-anchor="end" fill="currentColor">√2</text></svg>'
         answer: 8
         check: "[k for k in range(0, 100) if k * k == 2 * 32][0]"
         hints:
-          - √a × √b = √(ab) を使いましょう。
-          - 根号の中は 2 × 32 です。
+          - √a × √b = √(ab) を使いましょう。根号の中は 2 × 32 です。
+          - text: 長方形を、1 辺が √2 の正方形に分けてみましょう。
+            svg: '<svg viewBox="0 0 320 190" xmlns="http://www.w3.org/2000/svg"><rect x="66" y="52.5" width="53" height="53" fill="#f3c969" fill-opacity="0.45" stroke="currentColor" stroke-width="2"/><text x="92.5" y="85" font-size="14" text-anchor="middle" fill="currentColor">(√2)²</text><rect x="119" y="52.5" width="53" height="53" fill="#7bc96f" fill-opacity="0.45" stroke="currentColor" stroke-width="2"/><text x="145.5" y="85" font-size="14" text-anchor="middle" fill="currentColor">(√2)²</text><rect x="172" y="52.5" width="53" height="53" fill="#f3c969" fill-opacity="0.45" stroke="currentColor" stroke-width="2"/><text x="198.5" y="85" font-size="14" text-anchor="middle" fill="currentColor">(√2)²</text><rect x="225" y="52.5" width="53" height="53" fill="#7bc96f" fill-opacity="0.45" stroke="currentColor" stroke-width="2"/><text x="251.5" y="85" font-size="14" text-anchor="middle" fill="currentColor">(√2)²</text><line x1="66" y1="115.5" x2="119" y2="115.5" stroke="currentColor" stroke-width="2"/><line x1="66" y1="110.5" x2="66" y2="120.5" stroke="currentColor" stroke-width="2"/><line x1="119" y1="110.5" x2="119" y2="120.5" stroke="currentColor" stroke-width="2"/><text x="92.5" y="134.5" font-size="14" text-anchor="middle" fill="currentColor">√2</text><line x1="66" y1="149.5" x2="278" y2="149.5" stroke="currentColor" stroke-width="2"/><line x1="66" y1="144.5" x2="66" y2="154.5" stroke="currentColor" stroke-width="2"/><line x1="278" y1="144.5" x2="278" y2="154.5" stroke="currentColor" stroke-width="2"/><text x="172" y="168.5" font-size="15" text-anchor="middle" fill="currentColor">√32</text><line x1="52" y1="52.5" x2="52" y2="105.5" stroke="currentColor" stroke-width="2"/><line x1="47" y1="52.5" x2="57" y2="52.5" stroke="currentColor" stroke-width="2"/><line x1="47" y1="105.5" x2="57" y2="105.5" stroke="currentColor" stroke-width="2"/><text x="43" y="84" font-size="15" text-anchor="end" fill="currentColor">√2</text></svg>'
           - 根号の中の数が、ある整数の 2 乗になっていないか見ましょう。
         paths:
           - [√(2 × 32) = √64, 8]
       - part: 今日
-        text: √20 + √45 を計算すると、どれになりますか。
+        id: "9e56e380bb"
+        text: √20 + √45 を計算すると、どれになりますか。図の 2 つの正方形の 1 辺をつないだ長さです。
+        svg: '<svg viewBox="0 0 320 200" xmlns="http://www.w3.org/2000/svg"><rect x="60" y="76" width="80" height="80" fill="#7fc8f8" fill-opacity="0.4" stroke="currentColor" stroke-width="2"/><text x="100" y="121" font-size="14" text-anchor="middle" fill="currentColor">面積 20</text><rect x="140" y="36" width="120" height="120" fill="#7bc96f" fill-opacity="0.4" stroke="currentColor" stroke-width="2"/><text x="200" y="101" font-size="14" text-anchor="middle" fill="currentColor">面積 45</text><line x1="60" y1="166" x2="140" y2="166" stroke="currentColor" stroke-width="2"/><line x1="60" y1="161" x2="60" y2="171" stroke="currentColor" stroke-width="2"/><line x1="140" y1="161" x2="140" y2="171" stroke="currentColor" stroke-width="2"/><text x="100" y="185" font-size="15" text-anchor="middle" fill="currentColor">√20</text><line x1="140" y1="166" x2="260" y2="166" stroke="currentColor" stroke-width="2"/><line x1="140" y1="161" x2="140" y2="171" stroke="currentColor" stroke-width="2"/><line x1="260" y1="161" x2="260" y2="171" stroke="currentColor" stroke-width="2"/><text x="200" y="185" font-size="15" text-anchor="middle" fill="currentColor">√45</text><text x="160" y="20" font-size="14" text-anchor="middle" fill="currentColor">2 つの正方形の 1 辺を つないだ長さ</text></svg>'
         choices: [5√5, √65, 13√5]
         answer: 5√5
         check: "[c for c, v in {'5√5': 5 * math.sqrt(5), '√65': math.sqrt(65), '13√5': 13 * math.sqrt(5)}.items() if math.isclose(v, math.sqrt(20) + math.sqrt(45))][0]"
         hints:
           - √20 と √45 を、それぞれ a√5 の形にしましょう。
-          - 根号の中がそろったら、係数を足しましょう。
+          - text: どちらの正方形も、面積 5 の正方形に分けられます。下の辺に、√5 が何こならぶでしょう。
+            svg: '<svg viewBox="0 0 320 200" xmlns="http://www.w3.org/2000/svg"><rect x="60" y="76" width="80" height="80" fill="#7fc8f8" fill-opacity="0.4" stroke="currentColor" stroke-width="2"/><line x1="100" y1="76" x2="100" y2="156" stroke="currentColor" stroke-width="1.5"/><line x1="60" y1="116" x2="140" y2="116" stroke="currentColor" stroke-width="1.5"/><text x="80" y="101" font-size="14" text-anchor="middle" fill="currentColor">5</text><text x="80" y="141" font-size="14" text-anchor="middle" fill="currentColor">5</text><text x="120" y="101" font-size="14" text-anchor="middle" fill="currentColor">5</text><text x="120" y="141" font-size="14" text-anchor="middle" fill="currentColor">5</text><rect x="140" y="36" width="120" height="120" fill="#7bc96f" fill-opacity="0.4" stroke="currentColor" stroke-width="2"/><line x1="180" y1="36" x2="180" y2="156" stroke="currentColor" stroke-width="1.5"/><line x1="140" y1="76" x2="260" y2="76" stroke="currentColor" stroke-width="1.5"/><line x1="220" y1="36" x2="220" y2="156" stroke="currentColor" stroke-width="1.5"/><line x1="140" y1="116" x2="260" y2="116" stroke="currentColor" stroke-width="1.5"/><text x="160" y="61" font-size="14" text-anchor="middle" fill="currentColor">5</text><text x="160" y="101" font-size="14" text-anchor="middle" fill="currentColor">5</text><text x="160" y="141" font-size="14" text-anchor="middle" fill="currentColor">5</text><text x="200" y="61" font-size="14" text-anchor="middle" fill="currentColor">5</text><text x="200" y="101" font-size="14" text-anchor="middle" fill="currentColor">5</text><text x="200" y="141" font-size="14" text-anchor="middle" fill="currentColor">5</text><text x="240" y="61" font-size="14" text-anchor="middle" fill="currentColor">5</text><text x="240" y="101" font-size="14" text-anchor="middle" fill="currentColor">5</text><text x="240" y="141" font-size="14" text-anchor="middle" fill="currentColor">5</text><line x1="60" y1="166" x2="100" y2="166" stroke="currentColor" stroke-width="2"/><line x1="60" y1="161" x2="60" y2="171" stroke="currentColor" stroke-width="2"/><line x1="100" y1="161" x2="100" y2="171" stroke="currentColor" stroke-width="2"/><text x="80" y="185" font-size="14" text-anchor="middle" fill="currentColor">√5</text><text x="160" y="20" font-size="14" text-anchor="middle" fill="currentColor">どちらも、面積 5 の正方形に分けた</text></svg>'
           - 根号の中どうしを足してはいけません。
         paths:
           - [√20 = 2√5、√45 = 3√5, 2√5 + 3√5, 5√5]
       - part: 挑戦
+        id: "6c0dee5abc"
         text: √n が 6 より大きく 7 より小さくなる整数 n のうち、いちばん大きいものはいくつですか。
+        svg: '<svg viewBox="0 0 320 200" xmlns="http://www.w3.org/2000/svg"><text x="30" y="79" font-size="14" text-anchor="middle" fill="currentColor">数</text><text x="30" y="145" font-size="14" text-anchor="middle" fill="currentColor">2 乗</text><line x1="52" y1="74" x2="147" y2="74" stroke="currentColor" stroke-width="2"/><line x1="161" y1="74" x2="207" y2="74" stroke="currentColor" stroke-width="2"/><line x1="221" y1="74" x2="314" y2="74" stroke="currentColor" stroke-width="2"/><line x1="52" y1="140" x2="314" y2="140" stroke="currentColor" stroke-width="2"/><line x1="94" y1="83" x2="94" y2="131" stroke="currentColor" stroke-width="2" stroke-dasharray="4 4" stroke-opacity="0.45"/><line x1="94" y1="68" x2="94" y2="80" stroke="currentColor" stroke-width="2"/><line x1="94" y1="134" x2="94" y2="146" stroke="currentColor" stroke-width="2"/><text x="94" y="61" font-size="15" text-anchor="middle" fill="currentColor">5</text><text x="94" y="164" font-size="15" text-anchor="middle" fill="currentColor">25</text><line x1="154" y1="83" x2="154" y2="131" stroke="currentColor" stroke-width="2" stroke-dasharray="4 4" stroke-opacity="0.45"/><line x1="154" y1="134" x2="154" y2="146" stroke="currentColor" stroke-width="2"/><text x="154" y="61" font-size="15" text-anchor="middle" fill="currentColor">6</text><text x="154" y="164" font-size="15" text-anchor="middle" fill="currentColor">36</text><line x1="214" y1="83" x2="214" y2="131" stroke="currentColor" stroke-width="2" stroke-dasharray="4 4" stroke-opacity="0.45"/><line x1="214" y1="134" x2="214" y2="146" stroke="currentColor" stroke-width="2"/><text x="214" y="61" font-size="15" text-anchor="middle" fill="currentColor">7</text><text x="214" y="164" font-size="15" text-anchor="middle" fill="currentColor">49</text><line x1="274" y1="83" x2="274" y2="131" stroke="currentColor" stroke-width="2" stroke-dasharray="4 4" stroke-opacity="0.45"/><line x1="274" y1="68" x2="274" y2="80" stroke="currentColor" stroke-width="2"/><line x1="274" y1="134" x2="274" y2="146" stroke="currentColor" stroke-width="2"/><text x="274" y="61" font-size="15" text-anchor="middle" fill="currentColor">8</text><text x="274" y="164" font-size="15" text-anchor="middle" fill="currentColor">64</text><line x1="162" y1="74" x2="206" y2="74" stroke="#f08080" stroke-width="7" stroke-opacity="0.85"/><circle cx="154" cy="74" r="7" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="214" cy="74" r="7" fill="none" stroke="currentColor" stroke-width="2"/><text x="184" y="38" font-size="15" text-anchor="middle" fill="currentColor" font-weight="bold">√n はここ</text></svg>'
         answer: 48
         check: "max(n for n in range(1, 100) if 6 < math.sqrt(n) < 7)"
         hints:
-          - 6 と 7 を、√ を使って表しましょう。
-          - √36 < √n < √49 となる n を考えます。
+          - 6 と 7 を、√ を使って表しましょう。図の下の線を見ましょう。
+          - text: √36 < √n < √49 となる n を考えます。
+            svg: '<svg viewBox="0 0 320 150" xmlns="http://www.w3.org/2000/svg"><line x1="12" y1="104" x2="308" y2="104" stroke="currentColor" stroke-width="2"/><line x1="24" y1="97" x2="24" y2="111" stroke="currentColor" stroke-width="2"/><line x1="42.1" y1="97" x2="42.1" y2="111" stroke="currentColor" stroke-width="2"/><text x="42.1" y="134" font-size="15" text-anchor="middle" fill="currentColor">36</text><line x1="60.3" y1="97" x2="60.3" y2="111" stroke="currentColor" stroke-width="2"/><line x1="78.4" y1="97" x2="78.4" y2="111" stroke="currentColor" stroke-width="2"/><line x1="96.5" y1="97" x2="96.5" y2="111" stroke="currentColor" stroke-width="2"/><line x1="114.7" y1="97" x2="114.7" y2="111" stroke="currentColor" stroke-width="2"/><line x1="132.8" y1="97" x2="132.8" y2="111" stroke="currentColor" stroke-width="2"/><line x1="150.9" y1="97" x2="150.9" y2="111" stroke="currentColor" stroke-width="2"/><line x1="169.1" y1="97" x2="169.1" y2="111" stroke="currentColor" stroke-width="2"/><line x1="187.2" y1="97" x2="187.2" y2="111" stroke="currentColor" stroke-width="2"/><line x1="205.3" y1="97" x2="205.3" y2="111" stroke="currentColor" stroke-width="2"/><line x1="223.5" y1="97" x2="223.5" y2="111" stroke="currentColor" stroke-width="2"/><line x1="241.6" y1="97" x2="241.6" y2="111" stroke="currentColor" stroke-width="2"/><line x1="259.7" y1="97" x2="259.7" y2="111" stroke="currentColor" stroke-width="2"/><line x1="277.9" y1="97" x2="277.9" y2="111" stroke="currentColor" stroke-width="2"/><text x="277.9" y="134" font-size="15" text-anchor="middle" fill="currentColor">49</text><line x1="296" y1="97" x2="296" y2="111" stroke="currentColor" stroke-width="2"/><line x1="42.1" y1="82" x2="277.9" y2="82" stroke="currentColor" stroke-width="2"/><line x1="42.1" y1="76" x2="42.1" y2="88" stroke="currentColor" stroke-width="2"/><line x1="277.9" y1="76" x2="277.9" y2="88" stroke="currentColor" stroke-width="2"/><text x="160" y="72" font-size="15" text-anchor="middle" fill="currentColor">n はこの間の整数</text></svg>'
           - 49 はふくまれるでしょうか。
         paths:
           - [6 = √36、7 = √49, 36 < n < 49, いちばん大きいのは 48]
+          - [7² = 49 なので、n = 49 だと √n は 7 になって入らない, 48 は 36 より大きく 49 より小さい, 48]
 
   - day: 4
     items:
       - part: 思い出す
+        id: "3baf9d3632"
         text: (x + 3)(x − 3) を展開すると、どれになりますか。
         choices: [x² − 9, x² + 9, x² − 6x − 9]
         answer: x² − 9
         check: "[c for c, f in {'x² − 9': lambda x: x ** 2 - 9, 'x² + 9': lambda x: x ** 2 + 9, 'x² − 6x − 9': lambda x: x ** 2 - 6 * x - 9}.items() if all(f(x) == (x + 3) * (x - 3) for x in range(-5, 6))][0]"
         hints:
           - (a + b)(a − b) の形です。
-          - x の項は、−3x と 3x で消えます。
-          - 数の項は 3 × (−3) です。
+          - text: 表のように、4 つに分けてかけましょう。
+            svg: '<svg viewBox="0 0 320 190" xmlns="http://www.w3.org/2000/svg"><rect x="34" y="18" width="64" height="42" fill="none" stroke="currentColor" stroke-width="2"/><text x="66" y="45" font-size="17" text-anchor="middle" fill="currentColor">×</text><rect x="98" y="18" width="94" height="42" fill="#f3c969" fill-opacity="0.45" stroke="currentColor" stroke-width="2"/><text x="145" y="45" font-size="17" text-anchor="middle" fill="currentColor">x</text><rect x="192" y="18" width="94" height="42" fill="#f3c969" fill-opacity="0.45" stroke="currentColor" stroke-width="2"/><text x="239" y="45" font-size="17" text-anchor="middle" fill="currentColor">−3</text><rect x="34" y="60" width="64" height="42" fill="#7fc8f8" fill-opacity="0.45" stroke="currentColor" stroke-width="2"/><text x="66" y="87" font-size="17" text-anchor="middle" fill="currentColor">x</text><rect x="34" y="102" width="64" height="42" fill="#7fc8f8" fill-opacity="0.45" stroke="currentColor" stroke-width="2"/><text x="66" y="129" font-size="17" text-anchor="middle" fill="currentColor">+3</text><rect x="98" y="60" width="94" height="42" fill="none" stroke="currentColor" stroke-width="2"/><text x="145" y="87" font-size="17" text-anchor="middle" fill="currentColor">x²</text><rect x="192" y="60" width="94" height="42" fill="none" stroke="currentColor" stroke-width="2"/><text x="239" y="87" font-size="17" text-anchor="middle" fill="currentColor">−3x</text><rect x="98" y="102" width="94" height="42" fill="none" stroke="currentColor" stroke-width="2"/><text x="145" y="129" font-size="17" text-anchor="middle" fill="currentColor">3x</text><rect x="192" y="102" width="94" height="42" fill="#f08080" fill-opacity="0.3" stroke="currentColor" stroke-width="2"/><text x="239" y="129" font-size="17" text-anchor="middle" fill="currentColor">?</text><text x="160" y="174" font-size="15" text-anchor="middle" fill="currentColor">4 つのますの数をたす</text></svg>'
+          - −3x と 3x をたすと、どうなるでしょう。
         paths:
           - [x² − 3x + 3x − 9, x² − 9]
       - part: 思い出す
+        id: "1ab74348cb"
         text: 252 を素因数分解すると、どれになりますか。
         choices: [2² × 3² × 7, 2 × 3 × 42, 4 × 63]
         answer: 2² × 3² × 7
         check: "[c for c, fs in {'2² × 3² × 7': ((2, 2), (3, 2), (7, 1)), '2 × 3 × 42': ((2, 1), (3, 1), (42, 1)), '4 × 63': ((4, 1), (63, 1))}.items() if all(all(p % d for d in range(2, p)) for p, e in fs) and math.prod(p ** e for p, e in fs) == 252][0]"
         hints:
           - 素因数分解は、素数だけの積に表すことです。
-          - 252 を、小さい素数から順にわっていきましょう。
-          - 4、42、63 は素数でしょうか。
+          - text: 252 を、小さい素数から順にわっていきましょう。
+            svg: '<svg viewBox="0 0 320 200" xmlns="http://www.w3.org/2000/svg"><text x="70" y="34" font-size="18" text-anchor="middle" fill="currentColor" font-weight="bold">252</text><line x1="62" y1="40" x2="40" y2="58" stroke="currentColor" stroke-width="2"/><line x1="78" y1="40" x2="100" y2="58" stroke="currentColor" stroke-width="2"/><circle cx="34" cy="74" r="15" fill="#7bc96f" fill-opacity="0.5" stroke="currentColor" stroke-width="2"/><text x="34" y="80" font-size="17" text-anchor="middle" fill="currentColor">2</text><text x="106" y="80" font-size="18" text-anchor="middle" fill="currentColor">126</text><line x1="98" y1="86" x2="76" y2="104" stroke="currentColor" stroke-width="2"/><line x1="114" y1="86" x2="136" y2="104" stroke="currentColor" stroke-width="2"/><circle cx="70" cy="120" r="15" fill="#7bc96f" fill-opacity="0.5" stroke="currentColor" stroke-width="2"/><text x="70" y="126" font-size="17" text-anchor="middle" fill="currentColor">2</text><text x="142" y="126" font-size="18" text-anchor="middle" fill="currentColor">63</text><line x1="134" y1="132" x2="112" y2="150" stroke="currentColor" stroke-width="2"/><line x1="150" y1="132" x2="172" y2="150" stroke="currentColor" stroke-width="2"/><circle cx="106" cy="166" r="15" fill="none" stroke="currentColor" stroke-width="2" stroke-dasharray="4 3"/><text x="106" y="172" font-size="17" text-anchor="middle" fill="currentColor">?</text><circle cx="178" cy="166" r="15" fill="none" stroke="currentColor" stroke-width="2" stroke-dasharray="4 3"/><text x="178" y="172" font-size="17" text-anchor="middle" fill="currentColor">?</text><text x="256" y="44" font-size="14" text-anchor="middle" fill="currentColor">小さい素数で</text><text x="256" y="64" font-size="14" text-anchor="middle" fill="currentColor">じゅんにわる</text><circle cx="222" cy="94" r="11" fill="#7bc96f" fill-opacity="0.5" stroke="currentColor" stroke-width="2"/><text x="262" y="99" font-size="14" text-anchor="middle" fill="currentColor">は素数</text></svg>'
+          - 図の 63 も、小さい素数から順にわります。わった答えが素数になるまでつづけましょう。
         paths:
           - [252 = 2 × 2 × 63, 63 = 3 × 3 × 7, 2² × 3² × 7]
       - part: 今日
+        id: "a2573d1ee3"
         text: 次の 3 つの数のうち、ある整数の 2 乗になっているものはどれですか。
         choices: [2² × 3 × 5², 2⁴ × 5², 2³ × 7²]
         answer: 2⁴ × 5²
         check: "[c for c, v in {'2² × 3 × 5²': 2 ** 2 * 3 * 5 ** 2, '2⁴ × 5²': 2 ** 4 * 5 ** 2, '2³ × 7²': 2 ** 3 * 7 ** 2}.items() if math.isqrt(v) ** 2 == v][0]"
         hints:
           - 整数の 2 乗は、同じ整数を 2 つかけた数です。
-          - 素数それぞれが、何回かけられているか見ましょう。
+          - text: 素数それぞれが、何回かけられているか見ましょう。図は、2² × 3 × 5² の素数を 2 つずつ組にしたところです。
+            svg: '<svg viewBox="0 0 320 170" xmlns="http://www.w3.org/2000/svg"><rect x="36" y="61" width="92" height="42" rx="14" fill="#7bc96f" fill-opacity="0.3" stroke="currentColor" stroke-width="2"/><rect x="192" y="61" width="92" height="42" rx="14" fill="#7fc8f8" fill-opacity="0.3" stroke="currentColor" stroke-width="2"/><circle cx="56" cy="82" r="16" fill="#7bc96f" fill-opacity="0.6" stroke="currentColor" stroke-width="2"/><text x="56" y="88" font-size="16" text-anchor="middle" fill="currentColor">2</text><text x="82" y="87" font-size="14" text-anchor="middle" fill="currentColor">×</text><circle cx="108" cy="82" r="16" fill="#7bc96f" fill-opacity="0.6" stroke="currentColor" stroke-width="2"/><text x="108" y="88" font-size="16" text-anchor="middle" fill="currentColor">2</text><text x="134" y="87" font-size="14" text-anchor="middle" fill="currentColor">×</text><circle cx="160" cy="82" r="16" fill="#f08080" fill-opacity="0.6" stroke="currentColor" stroke-width="2"/><text x="160" y="88" font-size="16" text-anchor="middle" fill="currentColor">3</text><text x="186" y="87" font-size="14" text-anchor="middle" fill="currentColor">×</text><circle cx="212" cy="82" r="16" fill="#7fc8f8" fill-opacity="0.6" stroke="currentColor" stroke-width="2"/><text x="212" y="88" font-size="16" text-anchor="middle" fill="currentColor">5</text><text x="238" y="87" font-size="14" text-anchor="middle" fill="currentColor">×</text><circle cx="264" cy="82" r="16" fill="#7fc8f8" fill-opacity="0.6" stroke="currentColor" stroke-width="2"/><text x="264" y="88" font-size="16" text-anchor="middle" fill="currentColor">5</text><text x="160" y="24" font-size="14" text-anchor="middle" fill="currentColor">2² × 3 × 5² を 2 つ組に分けると</text><text x="160" y="150" font-size="14" text-anchor="middle" fill="currentColor">赤い数は、組のあいてがいない</text></svg>'
           - 素数を 2 つずつ組にして、あまる素数がないものをさがしましょう。
         paths:
           - [素数がかけられた回数を見る, 3 や 2³ は 2 つずつ組にならない, 2⁴ × 5² は 4 回と 2 回]
           - [それぞれ計算する, 300、400、392, 400 = 20²]
         note: 3 が 1 回だけ、2 が 3 回など、組にならない素数があると整数の 2 乗にならない。√(60n) の n をさがす前の足場。
       - part: 今日
-        text: (√3 + 1)² を展開すると、どれになりますか。
+        id: "6442f8ffbc"
+        text: (√3 + 1)² を展開すると、どれになりますか。図は、1 辺が √3 + 1 の正方形です。
+        svg: '<svg viewBox="0 0 320 200" xmlns="http://www.w3.org/2000/svg"><rect x="93.5" y="36" width="97" height="97" fill="#f3c969" fill-opacity="0.45" stroke="currentColor" stroke-width="2"/><rect x="190.5" y="36" width="56" height="97" fill="#7bc96f" fill-opacity="0.45" stroke="currentColor" stroke-width="2"/><rect x="93.5" y="133" width="97" height="56" fill="#7bc96f" fill-opacity="0.45" stroke="currentColor" stroke-width="2"/><rect x="190.5" y="133" width="56" height="56" fill="#7fc8f8" fill-opacity="0.45" stroke="currentColor" stroke-width="2"/><text x="142" y="26" font-size="15" text-anchor="middle" fill="currentColor">√3</text><text x="218.5" y="26" font-size="15" text-anchor="middle" fill="currentColor">1</text><text x="83.5" y="89.5" font-size="15" text-anchor="end" fill="currentColor">√3</text><text x="83.5" y="166" font-size="15" text-anchor="end" fill="currentColor">1</text></svg>'
         choices: [4 + 2√3, 4, 3 + 2√3]
         answer: 4 + 2√3
         check: "[c for c, v in {'4 + 2√3': 4 + 2 * math.sqrt(3), '4': 4, '3 + 2√3': 3 + 2 * math.sqrt(3)}.items() if math.isclose(v, (math.sqrt(3) + 1) ** 2)][0]"
         hints:
           - (a + b)² = a² + 2ab + b² の公式で、a = √3、b = 1 です。
-          - (√3)² はいくつでしょう。
-          - 数どうしをまとめ、√3 の項は残します。
+          - text: 正方形を 4 つに分けました。それぞれの面積を求めて、たしましょう。
+            svg: '<svg viewBox="0 0 320 200" xmlns="http://www.w3.org/2000/svg"><rect x="93.5" y="36" width="97" height="97" fill="#f3c969" fill-opacity="0.45" stroke="currentColor" stroke-width="2"/><text x="142" y="89.5" font-size="15" text-anchor="middle" fill="currentColor">√3 × √3</text><rect x="190.5" y="36" width="56" height="97" fill="#7bc96f" fill-opacity="0.45" stroke="currentColor" stroke-width="2"/><text x="218.5" y="89.5" font-size="13" text-anchor="middle" fill="currentColor">√3 × 1</text><rect x="93.5" y="133" width="97" height="56" fill="#7bc96f" fill-opacity="0.45" stroke="currentColor" stroke-width="2"/><text x="142" y="166" font-size="15" text-anchor="middle" fill="currentColor">1 × √3</text><rect x="190.5" y="133" width="56" height="56" fill="#7fc8f8" fill-opacity="0.45" stroke="currentColor" stroke-width="2"/><text x="218.5" y="166" font-size="13" text-anchor="middle" fill="currentColor">1 × 1</text><text x="142" y="26" font-size="15" text-anchor="middle" fill="currentColor">√3</text><text x="218.5" y="26" font-size="15" text-anchor="middle" fill="currentColor">1</text><text x="83.5" y="89.5" font-size="15" text-anchor="end" fill="currentColor">√3</text><text x="83.5" y="166" font-size="15" text-anchor="end" fill="currentColor">1</text></svg>'
+          - 数どうしをまとめ、√3 のつくものはそのまま残します。
         paths:
           - [(√3)² + 2 × √3 × 1 + 1², 3 + 2√3 + 1, 4 + 2√3]
-        note: (√3)² + 1² だけで 4 としやすい。まん中の 2ab の項を忘れない（A-015）。
+          - [図の 4 つの面積は 3、√3、√3、1, たして 4 + 2√3]
+        note: (√3)² + 1² だけで 4 としやすい。まん中の 2ab をわすれない（A-015）。図の 2 つの長方形が 2ab にあたる。
       - part: 今日
+        id: "f0cbaea6a4"
         text: (√5 + √2)(√5 − √2) の値はいくつですか。
         answer: 3
         check: "[k for k in range(-20, 21) if math.isclose((math.sqrt(5) + math.sqrt(2)) * (math.sqrt(5) - math.sqrt(2)), k)][0]"
         hints:
-          - (a + b)(a − b) = a² − b² の公式が使えます。
-          - a = √5、b = √2 です。
+          - (a + b)(a − b) = a² − b² の公式が使えます。a = √5、b = √2 です。
+          - text: 表のように、4 つに分けてかけましょう。
+            svg: '<svg viewBox="0 0 320 190" xmlns="http://www.w3.org/2000/svg"><rect x="34" y="18" width="64" height="42" fill="none" stroke="currentColor" stroke-width="2"/><text x="66" y="45" font-size="17" text-anchor="middle" fill="currentColor">×</text><rect x="98" y="18" width="94" height="42" fill="#f3c969" fill-opacity="0.45" stroke="currentColor" stroke-width="2"/><text x="145" y="45" font-size="17" text-anchor="middle" fill="currentColor">√5</text><rect x="192" y="18" width="94" height="42" fill="#f3c969" fill-opacity="0.45" stroke="currentColor" stroke-width="2"/><text x="239" y="45" font-size="17" text-anchor="middle" fill="currentColor">−√2</text><rect x="34" y="60" width="64" height="42" fill="#7fc8f8" fill-opacity="0.45" stroke="currentColor" stroke-width="2"/><text x="66" y="87" font-size="17" text-anchor="middle" fill="currentColor">√5</text><rect x="34" y="102" width="64" height="42" fill="#7fc8f8" fill-opacity="0.45" stroke="currentColor" stroke-width="2"/><text x="66" y="129" font-size="17" text-anchor="middle" fill="currentColor">+√2</text><rect x="98" y="60" width="94" height="42" fill="none" stroke="currentColor" stroke-width="2"/><text x="145" y="87" font-size="17" text-anchor="middle" fill="currentColor">(√5)²</text><rect x="192" y="60" width="94" height="42" fill="none" stroke="currentColor" stroke-width="2"/><text x="239" y="87" font-size="17" text-anchor="middle" fill="currentColor">−√10</text><rect x="98" y="102" width="94" height="42" fill="none" stroke="currentColor" stroke-width="2"/><text x="145" y="129" font-size="17" text-anchor="middle" fill="currentColor">√10</text><rect x="192" y="102" width="94" height="42" fill="#f08080" fill-opacity="0.3" stroke="currentColor" stroke-width="2"/><text x="239" y="129" font-size="17" text-anchor="middle" fill="currentColor">?</text><text x="160" y="174" font-size="15" text-anchor="middle" fill="currentColor">4 つのますの数をたす</text></svg>'
           - (√5)² と (√2)² を、それぞれ計算しましょう。
         paths:
           - [(√5)² − (√2)², 5 − 2, 3]
       - part: 今日
+        id: "8f6bf45ad2"
         text: √(60n) が《整数》になるような自然数 n のうち、いちばん小さいものはいくつですか。
         answer: 15
         check: "min(n for n in range(1, 200) if math.isqrt(60 * n) ** 2 == 60 * n)"
         hints:
           - 60 を素因数分解しましょう。
           - √(60n) が整数になるのは、60n がある整数の 2 乗になるときです。
-          - どの素因数も 2 回ずつ（偶数回）かけられた形にするには、何をかければよいでしょう。
+          - text: どの素因数も 2 つずつ組になるようにするには、60 に何をかければよいでしょう。
+            svg: '<svg viewBox="0 0 320 170" xmlns="http://www.w3.org/2000/svg"><polyline points="15,86 22,82 31,112 43,46 309,46" fill="none" stroke="currentColor" stroke-width="2.5"/><rect x="51" y="61" width="92" height="42" rx="14" fill="#7bc96f" fill-opacity="0.3" stroke="currentColor" stroke-width="2"/><circle cx="71" cy="82" r="16" fill="#7bc96f" fill-opacity="0.6" stroke="currentColor" stroke-width="2"/><text x="71" y="88" font-size="16" text-anchor="middle" fill="currentColor">2</text><text x="97" y="87" font-size="14" text-anchor="middle" fill="currentColor">×</text><circle cx="123" cy="82" r="16" fill="#7bc96f" fill-opacity="0.6" stroke="currentColor" stroke-width="2"/><text x="123" y="88" font-size="16" text-anchor="middle" fill="currentColor">2</text><text x="149" y="87" font-size="14" text-anchor="middle" fill="currentColor">×</text><circle cx="175" cy="82" r="16" fill="#f08080" fill-opacity="0.6" stroke="currentColor" stroke-width="2"/><text x="175" y="88" font-size="16" text-anchor="middle" fill="currentColor">3</text><text x="201" y="87" font-size="14" text-anchor="middle" fill="currentColor">×</text><circle cx="227" cy="82" r="16" fill="#f08080" fill-opacity="0.6" stroke="currentColor" stroke-width="2"/><text x="227" y="88" font-size="16" text-anchor="middle" fill="currentColor">5</text><text x="253" y="87" font-size="14" text-anchor="middle" fill="currentColor">×</text><rect x="261" y="64" width="36" height="36" rx="6" fill="none" stroke="currentColor" stroke-width="2" stroke-dasharray="5 4"/><text x="279" y="88" font-size="16" text-anchor="middle" fill="currentColor">n</text><text x="160" y="24" font-size="14" text-anchor="middle" fill="currentColor">60 × n = 2 × 2 × 3 × 5 × n</text><text x="160" y="150" font-size="14" text-anchor="middle" fill="currentColor">赤い数には、組のあいてがいない</text></svg>'
         paths:
           - [60 = 2² × 3 × 5, 3 と 5 が 1 回ずつ, n = 3 × 5 = 15]
-        note: 60n = 900 = 30² になることを確かめさせる。
+        note: 60n = 900 = 30² になることをたしかめさせる。
       - part: 挑戦
+        id: "6ddb160c22"
         text: x = √3 + 1 のとき、x² − 2x + 4 の値はいくつですか。
         answer: 6
         check: "[k for k in range(-20, 21) if math.isclose((math.sqrt(3) + 1) ** 2 - 2 * (math.sqrt(3) + 1) + 4, k)][0]"
@@ -445,155 +547,190 @@ days:
         note: そのまま代入してもできるが、式の形を変えてから代入すると計算が楽になる（A-015）。
     extra:
       - part: 今日
+        id: "45fa22cb92"
         text: √2(√6 + √2) を計算すると、どれになりますか。
         choices: [2√3 + 2, 2√2 + 2, 2√3 + √2]
         answer: 2√3 + 2
         check: "[c for c, v in {'2√3 + 2': 2 * math.sqrt(3) + 2, '2√2 + 2': 2 * math.sqrt(2) + 2, '2√3 + √2': 2 * math.sqrt(3) + math.sqrt(2)}.items() if math.isclose(v, math.sqrt(2) * (math.sqrt(6) + math.sqrt(2)))][0]"
         hints:
-          - 分配法則で、√6 にも √2 にも √2 をかけます。
+          - text: 分配法則で、√6 にも √2 にも √2 をかけます。長方形の面積で見ると、図のようになります。
+            svg: '<svg viewBox="0 0 320 170" xmlns="http://www.w3.org/2000/svg"><rect x="65.7" y="44" width="132.3" height="76.4" fill="#f3c969" fill-opacity="0.45" stroke="currentColor" stroke-width="2"/><rect x="198" y="44" width="76.4" height="76.4" fill="#7bc96f" fill-opacity="0.45" stroke="currentColor" stroke-width="2"/><text x="131.8" y="88.2" font-size="15" text-anchor="middle" fill="currentColor">√2 × √6</text><text x="236.1" y="88.2" font-size="14" text-anchor="middle" fill="currentColor">√2 × √2</text><text x="131.8" y="34" font-size="15" text-anchor="middle" fill="currentColor">√6</text><text x="236.1" y="34" font-size="15" text-anchor="middle" fill="currentColor">√2</text><line x1="51.7" y1="44" x2="51.7" y2="120.4" stroke="currentColor" stroke-width="2"/><line x1="46.7" y1="44" x2="56.7" y2="44" stroke="currentColor" stroke-width="2"/><line x1="46.7" y1="120.4" x2="56.7" y2="120.4" stroke="currentColor" stroke-width="2"/><text x="42.7" y="87.2" font-size="15" text-anchor="end" fill="currentColor">√2</text><line x1="65.7" y1="134.4" x2="274.3" y2="134.4" stroke="currentColor" stroke-width="2"/><line x1="65.7" y1="129.4" x2="65.7" y2="139.4" stroke="currentColor" stroke-width="2"/><line x1="274.3" y1="129.4" x2="274.3" y2="139.4" stroke="currentColor" stroke-width="2"/><text x="170" y="153.4" font-size="15" text-anchor="middle" fill="currentColor">√6 + √2</text></svg>'
           - √2 × √6 = √12 を、a√b の形にしましょう。
           - √2 × √2 はいくつでしょう。
         paths:
           - [√12 + √4, 2√3 + 2]
       - part: 今日
+        id: "8e89753e08"
         text: √(2² × 3² × 5) = a√5 のとき、a はいくつですか。
         answer: 6
         check: "[a for a in range(1, 50) if a * a * 5 == 2 ** 2 * 3 ** 2 * 5][0]"
         hints:
           - 2 乗の因数は、根号の外に出せます。
-          - 2² と 3² は、それぞれ外に出すと何になるでしょう。
+          - text: 2² と 3² は、それぞれ外に出すと何になるでしょう。
+            svg: '<svg viewBox="0 0 320 190" xmlns="http://www.w3.org/2000/svg"><polyline points="15,86 22,82 31,112 43,46 309,46" fill="none" stroke="currentColor" stroke-width="2.5"/><rect x="51" y="61" width="92" height="42" rx="14" fill="#7bc96f" fill-opacity="0.3" stroke="currentColor" stroke-width="2"/><rect x="155" y="61" width="92" height="42" rx="14" fill="#7fc8f8" fill-opacity="0.3" stroke="currentColor" stroke-width="2"/><circle cx="71" cy="82" r="16" fill="#7bc96f" fill-opacity="0.6" stroke="currentColor" stroke-width="2"/><text x="71" y="88" font-size="16" text-anchor="middle" fill="currentColor">2</text><text x="97" y="87" font-size="14" text-anchor="middle" fill="currentColor">×</text><circle cx="123" cy="82" r="16" fill="#7bc96f" fill-opacity="0.6" stroke="currentColor" stroke-width="2"/><text x="123" y="88" font-size="16" text-anchor="middle" fill="currentColor">2</text><text x="149" y="87" font-size="14" text-anchor="middle" fill="currentColor">×</text><circle cx="175" cy="82" r="16" fill="#7fc8f8" fill-opacity="0.6" stroke="currentColor" stroke-width="2"/><text x="175" y="88" font-size="16" text-anchor="middle" fill="currentColor">3</text><text x="201" y="87" font-size="14" text-anchor="middle" fill="currentColor">×</text><circle cx="227" cy="82" r="16" fill="#7fc8f8" fill-opacity="0.6" stroke="currentColor" stroke-width="2"/><text x="227" y="88" font-size="16" text-anchor="middle" fill="currentColor">3</text><text x="253" y="87" font-size="14" text-anchor="middle" fill="currentColor">×</text><circle cx="279" cy="82" r="16" fill="#c8ccd6" fill-opacity="0.6" stroke="currentColor" stroke-width="2"/><text x="279" y="88" font-size="16" text-anchor="middle" fill="currentColor">5</text><line x1="97" y1="106" x2="97" y2="129" stroke="currentColor" stroke-width="2"/><polygon points="97,136 92.6,128 101.4,128" fill="currentColor"/><rect x="80" y="138" width="34" height="34" rx="6" fill="#7bc96f" fill-opacity="0.45" stroke="currentColor" stroke-width="2"/><text x="97" y="161" font-size="18" text-anchor="middle" fill="currentColor">?</text><line x1="201" y1="106" x2="201" y2="129" stroke="currentColor" stroke-width="2"/><polygon points="201,136 196.6,128 205.4,128" fill="currentColor"/><rect x="184" y="138" width="34" height="34" rx="6" fill="#7fc8f8" fill-opacity="0.45" stroke="currentColor" stroke-width="2"/><text x="201" y="161" font-size="18" text-anchor="middle" fill="currentColor">?</text><text x="149" y="160" font-size="15" text-anchor="middle" fill="currentColor">×</text><text x="160" y="24" font-size="14" text-anchor="middle" fill="currentColor">同じ数の 2 つ組は、√ の外へ 1 つ出る</text></svg>'
           - 外に出た数どうしをかけましょう。
         paths:
           - [√(2²) × √(3²) × √5, 2 × 3 × √5, a = 6]
       - part: 挑戦
+        id: "5a8d96ddfa"
         text: √(24n) が整数になるような自然数 n のうち、いちばん小さいものはいくつですか。
         answer: 6
         check: "min(n for n in range(1, 200) if math.isqrt(24 * n) ** 2 == 24 * n)"
         hints:
           - 24 を素因数分解しましょう。
-          - どの素因数も、偶数回かけられた形にします。
-          - 2 は 3 回かけられています。あと何回いるでしょう。
+          - text: どの素因数も、2 つずつ組になる形にします。
+            svg: '<svg viewBox="0 0 320 170" xmlns="http://www.w3.org/2000/svg"><polyline points="15,86 22,82 31,112 43,46 309,46" fill="none" stroke="currentColor" stroke-width="2.5"/><rect x="51" y="61" width="92" height="42" rx="14" fill="#7bc96f" fill-opacity="0.3" stroke="currentColor" stroke-width="2"/><circle cx="71" cy="82" r="16" fill="#7bc96f" fill-opacity="0.6" stroke="currentColor" stroke-width="2"/><text x="71" y="88" font-size="16" text-anchor="middle" fill="currentColor">2</text><text x="97" y="87" font-size="14" text-anchor="middle" fill="currentColor">×</text><circle cx="123" cy="82" r="16" fill="#7bc96f" fill-opacity="0.6" stroke="currentColor" stroke-width="2"/><text x="123" y="88" font-size="16" text-anchor="middle" fill="currentColor">2</text><text x="149" y="87" font-size="14" text-anchor="middle" fill="currentColor">×</text><circle cx="175" cy="82" r="16" fill="#f08080" fill-opacity="0.6" stroke="currentColor" stroke-width="2"/><text x="175" y="88" font-size="16" text-anchor="middle" fill="currentColor">2</text><text x="201" y="87" font-size="14" text-anchor="middle" fill="currentColor">×</text><circle cx="227" cy="82" r="16" fill="#f08080" fill-opacity="0.6" stroke="currentColor" stroke-width="2"/><text x="227" y="88" font-size="16" text-anchor="middle" fill="currentColor">3</text><text x="253" y="87" font-size="14" text-anchor="middle" fill="currentColor">×</text><rect x="261" y="64" width="36" height="36" rx="6" fill="none" stroke="currentColor" stroke-width="2" stroke-dasharray="5 4"/><text x="279" y="88" font-size="16" text-anchor="middle" fill="currentColor">n</text><text x="160" y="24" font-size="14" text-anchor="middle" fill="currentColor">24 × n = 2 × 2 × 2 × 3 × n</text><text x="160" y="150" font-size="14" text-anchor="middle" fill="currentColor">赤い数には、組のあいてがいない</text></svg>'
+          - 2 は 3 回かけられています。あと何回いるでしょう。3 はどうでしょう。
         paths:
           - [24 = 2³ × 3, 2 と 3 があと 1 回ずつ, n = 6]
+          - [n = 1、2、3、… と順にためす, 24、48、72、96、120 は整数の 2 乗でない, 24 × 6 = 144 = 12² で n = 6]
 
   - day: 5
     items:
       - part: 今日
+        id: "ef91505ec0"
         text: 25 の平方根はどれですか。
+        svg: '<svg viewBox="0 0 320 170" xmlns="http://www.w3.org/2000/svg"><rect x="52" y="90" width="48" height="40" rx="6" fill="#7fc8f8" fill-opacity="0.45" stroke="currentColor" stroke-width="2"/><text x="76" y="117" font-size="18" text-anchor="middle" fill="currentColor">?</text><line x1="103" y1="110" x2="114" y2="110" stroke="currentColor" stroke-width="2"/><polygon points="121,110 113,114.4 113,105.6" fill="currentColor"/><polygon points="145,68 175,68 166,82 154,82" fill="#b39ddb" fill-opacity=".35" stroke="currentColor" stroke-width="2"/><rect x="124" y="82" width="72" height="56" rx="10" fill="#b39ddb" fill-opacity="0.35" stroke="currentColor" stroke-width="2"/><text x="160" y="116" font-size="17" text-anchor="middle" fill="currentColor" font-weight="bold">2 乗</text><circle cx="134" cy="128" r="3" fill="currentColor" fill-opacity="1" stroke="currentColor" stroke-width="0"/><circle cx="186" cy="128" r="3" fill="currentColor" fill-opacity="1" stroke="currentColor" stroke-width="0"/><line x1="199" y1="110" x2="210" y2="110" stroke="currentColor" stroke-width="2"/><polygon points="217,110 209,114.4 209,105.6" fill="currentColor"/><rect x="220" y="90" width="48" height="40" rx="6" fill="#f3c969" fill-opacity="0.45" stroke="currentColor" stroke-width="2"/><text x="244" y="117" font-size="18" text-anchor="middle" fill="currentColor">25</text><text x="160" y="36" font-size="15" text-anchor="middle" fill="currentColor">入れると 25 が出てくる数は？</text></svg>'
         choices: [5 と −5, 5, 25 と −25]
         answer: 5 と −5
         check: "[c for c, vs in {'5 と −5': (5, -5), '5': (5,), '25 と −25': (25, -25)}.items() if set(vs) == set(x for x in range(-60, 61) if x * x == 25)][0]"
         hints:
           - 平方根は、2 乗すると 25 になる数です。
           - 正の数の平方根は、いくつありますか。
-          - (−5)² はいくつでしょう。
+          - text: 図のように、−3 を機械に入れると 9 が出てくるので、−3 も 9 の平方根です。えらぶ 3 つの中にある数も 1 つずつ入れて、25 が出てくるかたしかめましょう。
+            svg: '<svg viewBox="0 0 320 170" xmlns="http://www.w3.org/2000/svg"><rect x="52" y="90" width="48" height="40" rx="6" fill="#7fc8f8" fill-opacity="0.45" stroke="currentColor" stroke-width="2"/><text x="76" y="117" font-size="18" text-anchor="middle" fill="currentColor">−3</text><line x1="103" y1="110" x2="114" y2="110" stroke="currentColor" stroke-width="2"/><polygon points="121,110 113,114.4 113,105.6" fill="currentColor"/><polygon points="145,68 175,68 166,82 154,82" fill="#b39ddb" fill-opacity=".35" stroke="currentColor" stroke-width="2"/><rect x="124" y="82" width="72" height="56" rx="10" fill="#b39ddb" fill-opacity="0.35" stroke="currentColor" stroke-width="2"/><text x="160" y="116" font-size="17" text-anchor="middle" fill="currentColor" font-weight="bold">2 乗</text><circle cx="134" cy="128" r="3" fill="currentColor" fill-opacity="1" stroke="currentColor" stroke-width="0"/><circle cx="186" cy="128" r="3" fill="currentColor" fill-opacity="1" stroke="currentColor" stroke-width="0"/><line x1="199" y1="110" x2="210" y2="110" stroke="currentColor" stroke-width="2"/><polygon points="217,110 209,114.4 209,105.6" fill="currentColor"/><rect x="220" y="90" width="48" height="40" rx="6" fill="#f3c969" fill-opacity="0.45" stroke="currentColor" stroke-width="2"/><text x="244" y="117" font-size="18" text-anchor="middle" fill="currentColor">9</text></svg>'
         paths:
           - [5² = 25、(−5)² = 25, 5 と −5]
       - part: 今日
-        text: √121 の値はいくつですか。
+        id: "e477fef6f6"
+        text: √121 の値はいくつですか。図は、面積 121 の正方形です。
+        svg: '<svg viewBox="0 0 320 200" xmlns="http://www.w3.org/2000/svg"><rect x="102" y="22" width="116" height="116" fill="#f3c969" fill-opacity="0.45" stroke="currentColor" stroke-width="2"/><text x="160" y="86" font-size="17" text-anchor="middle" fill="currentColor">面積 121</text><line x1="102" y1="150" x2="218" y2="150" stroke="currentColor" stroke-width="2"/><line x1="102" y1="145" x2="102" y2="155" stroke="currentColor" stroke-width="2"/><line x1="218" y1="145" x2="218" y2="155" stroke="currentColor" stroke-width="2"/><text x="160" y="169" font-size="16" text-anchor="middle" fill="currentColor">√121 = ?</text></svg>'
         answer: 11
         check: "[k for k in range(0, 100) if k * k == 121][0]"
         hints:
           - √121 は、2 乗すると 121 になる正の数です。
-          - 10² = 100 より大きい数です。
+          - text: 10² = 100 より大きい数です。
+            svg: '<svg viewBox="0 0 320 200" xmlns="http://www.w3.org/2000/svg"><rect x="7" y="77" width="81" height="81" fill="#c8ccd6" fill-opacity="0.45" stroke="currentColor" stroke-width="2"/><text x="47.5" y="123.5" font-size="16" text-anchor="middle" fill="currentColor">81</text><text x="47.5" y="180" font-size="16" text-anchor="middle" fill="currentColor">9</text><rect x="106" y="68" width="90" height="90" fill="#c8ccd6" fill-opacity="0.45" stroke="currentColor" stroke-width="2"/><text x="151" y="119" font-size="16" text-anchor="middle" fill="currentColor">100</text><text x="151" y="180" font-size="16" text-anchor="middle" fill="currentColor">10</text><rect x="214" y="59" width="99" height="99" fill="#f3c969" fill-opacity="0.45" stroke="currentColor" stroke-width="2"/><text x="263.5" y="114.5" font-size="16" text-anchor="middle" fill="currentColor" font-weight="bold">121</text><text x="263.5" y="180" font-size="16" text-anchor="middle" fill="currentColor" font-weight="bold">?</text><text x="160" y="24" font-size="14" text-anchor="middle" fill="currentColor">下は 1 辺の長さ、中は面積</text></svg>'
           - 1 つずつ 2 乗して、さがしましょう。
         paths:
           - [10² = 100, 11² = 121, 11]
       - part: 今日
+        id: "fd53515c52"
         text: 次の 3 つの数のうち、いちばん大きいものはどれですか。
         choices: [4, √15, √17]
         answer: √17
         check: "[c for c, v in {'4': 4, '√15': math.sqrt(15), '√17': math.sqrt(17)}.items() if v == max(4, math.sqrt(15), math.sqrt(17))][0]"
         hints:
-          - 4 を、√ を使って表しましょう。
-          - 4 は、2 乗すると 16 になる正の数です。
-          - 根号の中の数をくらべましょう。
+          - 4 を、√ を使って表しましょう。4 は、2 乗すると 16 になる正の数です。
+          - text: 上の線の数を 2 乗すると、下の線の数になります。15 と 17 は、下の線のどこに入るでしょう。
+            svg: '<svg viewBox="0 0 320 200" xmlns="http://www.w3.org/2000/svg"><text x="30" y="79" font-size="14" text-anchor="middle" fill="currentColor">数</text><text x="30" y="145" font-size="14" text-anchor="middle" fill="currentColor">2 乗</text><line x1="52" y1="74" x2="314" y2="74" stroke="currentColor" stroke-width="2"/><line x1="52" y1="140" x2="314" y2="140" stroke="currentColor" stroke-width="2"/><line x1="104" y1="83" x2="104" y2="131" stroke="currentColor" stroke-width="2" stroke-dasharray="4 4" stroke-opacity="0.45"/><line x1="104" y1="68" x2="104" y2="80" stroke="currentColor" stroke-width="2"/><line x1="104" y1="134" x2="104" y2="146" stroke="currentColor" stroke-width="2"/><text x="104" y="61" font-size="15" text-anchor="middle" fill="currentColor">3</text><text x="104" y="164" font-size="15" text-anchor="middle" fill="currentColor">9</text><line x1="184" y1="83" x2="184" y2="131" stroke="currentColor" stroke-width="2" stroke-dasharray="4 4" stroke-opacity="0.45"/><line x1="184" y1="68" x2="184" y2="80" stroke="currentColor" stroke-width="2"/><line x1="184" y1="134" x2="184" y2="146" stroke="currentColor" stroke-width="2"/><text x="184" y="61" font-size="15" text-anchor="middle" fill="currentColor">4</text><text x="184" y="164" font-size="15" text-anchor="middle" fill="currentColor">16</text><line x1="264" y1="83" x2="264" y2="131" stroke="currentColor" stroke-width="2" stroke-dasharray="4 4" stroke-opacity="0.45"/><line x1="264" y1="68" x2="264" y2="80" stroke="currentColor" stroke-width="2"/><line x1="264" y1="134" x2="264" y2="146" stroke="currentColor" stroke-width="2"/><text x="264" y="61" font-size="15" text-anchor="middle" fill="currentColor">5</text><text x="264" y="164" font-size="15" text-anchor="middle" fill="currentColor">25</text></svg>'
+          - √ の中の数が大きいほど、√ のついた数も大きくなります。
         paths:
           - [4 = √16, √15 < √16 < √17, √17]
       - part: 今日
+        id: "eef1464e84"
         text: √n が 5 より大きく 6 より小さくなる《整数》 n は、何こありますか。
+        svg: '<svg viewBox="0 0 320 200" xmlns="http://www.w3.org/2000/svg"><text x="30" y="79" font-size="14" text-anchor="middle" fill="currentColor">数</text><text x="30" y="145" font-size="14" text-anchor="middle" fill="currentColor">2 乗</text><line x1="52" y1="74" x2="147" y2="74" stroke="currentColor" stroke-width="2"/><line x1="161" y1="74" x2="207" y2="74" stroke="currentColor" stroke-width="2"/><line x1="221" y1="74" x2="314" y2="74" stroke="currentColor" stroke-width="2"/><line x1="52" y1="140" x2="314" y2="140" stroke="currentColor" stroke-width="2"/><line x1="94" y1="83" x2="94" y2="131" stroke="currentColor" stroke-width="2" stroke-dasharray="4 4" stroke-opacity="0.45"/><line x1="94" y1="68" x2="94" y2="80" stroke="currentColor" stroke-width="2"/><line x1="94" y1="134" x2="94" y2="146" stroke="currentColor" stroke-width="2"/><text x="94" y="61" font-size="15" text-anchor="middle" fill="currentColor">4</text><text x="94" y="164" font-size="15" text-anchor="middle" fill="currentColor">16</text><line x1="154" y1="83" x2="154" y2="131" stroke="currentColor" stroke-width="2" stroke-dasharray="4 4" stroke-opacity="0.45"/><line x1="154" y1="134" x2="154" y2="146" stroke="currentColor" stroke-width="2"/><text x="154" y="61" font-size="15" text-anchor="middle" fill="currentColor">5</text><text x="154" y="164" font-size="15" text-anchor="middle" fill="currentColor">25</text><line x1="214" y1="83" x2="214" y2="131" stroke="currentColor" stroke-width="2" stroke-dasharray="4 4" stroke-opacity="0.45"/><line x1="214" y1="134" x2="214" y2="146" stroke="currentColor" stroke-width="2"/><text x="214" y="61" font-size="15" text-anchor="middle" fill="currentColor">6</text><text x="214" y="164" font-size="15" text-anchor="middle" fill="currentColor">36</text><line x1="274" y1="83" x2="274" y2="131" stroke="currentColor" stroke-width="2" stroke-dasharray="4 4" stroke-opacity="0.45"/><line x1="274" y1="68" x2="274" y2="80" stroke="currentColor" stroke-width="2"/><line x1="274" y1="134" x2="274" y2="146" stroke="currentColor" stroke-width="2"/><text x="274" y="61" font-size="15" text-anchor="middle" fill="currentColor">7</text><text x="274" y="164" font-size="15" text-anchor="middle" fill="currentColor">49</text><line x1="162" y1="74" x2="206" y2="74" stroke="#f08080" stroke-width="7" stroke-opacity="0.85"/><circle cx="154" cy="74" r="7" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="214" cy="74" r="7" fill="none" stroke="currentColor" stroke-width="2"/><text x="184" y="38" font-size="15" text-anchor="middle" fill="currentColor" font-weight="bold">√n はここ</text></svg>'
         answer: 10
         check: "sum(1 for n in range(1, 100) if 5 < math.sqrt(n) < 6)"
         hints:
-          - 5 と 6 を、√ を使って表しましょう。
-          - √25 < √n < √36 となる n を考えます。
+          - 5 と 6 を、√ を使って表しましょう。図の下の線を見ましょう。
+          - text: √25 < √n < √36 となる n を考えます。n は、25 と 36 の間の整数です。
+            svg: '<svg viewBox="0 0 320 150" xmlns="http://www.w3.org/2000/svg"><line x1="12" y1="104" x2="308" y2="104" stroke="currentColor" stroke-width="2"/><line x1="24" y1="97" x2="24" y2="111" stroke="currentColor" stroke-width="2"/><line x1="44.9" y1="97" x2="44.9" y2="111" stroke="currentColor" stroke-width="2"/><text x="44.9" y="134" font-size="15" text-anchor="middle" fill="currentColor">25</text><line x1="65.8" y1="97" x2="65.8" y2="111" stroke="currentColor" stroke-width="2"/><line x1="86.8" y1="97" x2="86.8" y2="111" stroke="currentColor" stroke-width="2"/><line x1="107.7" y1="97" x2="107.7" y2="111" stroke="currentColor" stroke-width="2"/><line x1="128.6" y1="97" x2="128.6" y2="111" stroke="currentColor" stroke-width="2"/><line x1="149.5" y1="97" x2="149.5" y2="111" stroke="currentColor" stroke-width="2"/><line x1="170.5" y1="97" x2="170.5" y2="111" stroke="currentColor" stroke-width="2"/><line x1="191.4" y1="97" x2="191.4" y2="111" stroke="currentColor" stroke-width="2"/><line x1="212.3" y1="97" x2="212.3" y2="111" stroke="currentColor" stroke-width="2"/><line x1="233.2" y1="97" x2="233.2" y2="111" stroke="currentColor" stroke-width="2"/><line x1="254.2" y1="97" x2="254.2" y2="111" stroke="currentColor" stroke-width="2"/><line x1="275.1" y1="97" x2="275.1" y2="111" stroke="currentColor" stroke-width="2"/><text x="275.1" y="134" font-size="15" text-anchor="middle" fill="currentColor">36</text><line x1="296" y1="97" x2="296" y2="111" stroke="currentColor" stroke-width="2"/><line x1="44.9" y1="82" x2="275.1" y2="82" stroke="currentColor" stroke-width="2"/><line x1="44.9" y1="76" x2="44.9" y2="88" stroke="currentColor" stroke-width="2"/><line x1="275.1" y1="76" x2="275.1" y2="88" stroke="currentColor" stroke-width="2"/><text x="160" y="72" font-size="15" text-anchor="middle" fill="currentColor">n はこの間の整数</text></svg>'
           - 25 と 36 はふくまれるでしょうか。
         paths:
           - [25 < n < 36, 26 から 35 まで, 10 こ]
       - part: 今日
-        text: √6 × √24 の値はいくつですか。
+        id: "7fe300477d"
+        text: √6 × √24 の値はいくつですか。図の長方形の面積と同じです。
+        svg: '<svg viewBox="0 0 320 190" xmlns="http://www.w3.org/2000/svg"><rect x="88" y="37" width="168" height="84" fill="#f3c969" fill-opacity="0.45" stroke="currentColor" stroke-width="2"/><text x="172" y="85" font-size="16" text-anchor="middle" fill="currentColor">面積 ?</text><line x1="88" y1="133" x2="256" y2="133" stroke="currentColor" stroke-width="2"/><line x1="88" y1="128" x2="88" y2="138" stroke="currentColor" stroke-width="2"/><line x1="256" y1="128" x2="256" y2="138" stroke="currentColor" stroke-width="2"/><text x="172" y="152" font-size="16" text-anchor="middle" fill="currentColor">√24</text><line x1="74" y1="37" x2="74" y2="121" stroke="currentColor" stroke-width="2"/><line x1="69" y1="37" x2="79" y2="37" stroke="currentColor" stroke-width="2"/><line x1="69" y1="121" x2="79" y2="121" stroke="currentColor" stroke-width="2"/><text x="65" y="84" font-size="15" text-anchor="end" fill="currentColor">√6</text></svg>'
         answer: 12
         check: "[k for k in range(0, 100) if k * k == 6 * 24][0]"
         hints:
-          - √a × √b = √(ab) を使いましょう。
-          - 根号の中は 6 × 24 です。
+          - √a × √b = √(ab) を使いましょう。根号の中は 6 × 24 です。
+          - text: 長方形を、1 辺が √6 の正方形に分けてみましょう。
+            svg: '<svg viewBox="0 0 320 190" xmlns="http://www.w3.org/2000/svg"><rect x="88" y="37" width="84" height="84" fill="#f3c969" fill-opacity="0.45" stroke="currentColor" stroke-width="2"/><text x="130" y="85" font-size="14" text-anchor="middle" fill="currentColor">(√6)²</text><rect x="172" y="37" width="84" height="84" fill="#7bc96f" fill-opacity="0.45" stroke="currentColor" stroke-width="2"/><text x="214" y="85" font-size="14" text-anchor="middle" fill="currentColor">(√6)²</text><line x1="88" y1="131" x2="172" y2="131" stroke="currentColor" stroke-width="2"/><line x1="88" y1="126" x2="88" y2="136" stroke="currentColor" stroke-width="2"/><line x1="172" y1="126" x2="172" y2="136" stroke="currentColor" stroke-width="2"/><text x="130" y="150" font-size="14" text-anchor="middle" fill="currentColor">√6</text><line x1="88" y1="165" x2="256" y2="165" stroke="currentColor" stroke-width="2"/><line x1="88" y1="160" x2="88" y2="170" stroke="currentColor" stroke-width="2"/><line x1="256" y1="160" x2="256" y2="170" stroke="currentColor" stroke-width="2"/><text x="172" y="184" font-size="15" text-anchor="middle" fill="currentColor">√24</text><line x1="74" y1="37" x2="74" y2="121" stroke="currentColor" stroke-width="2"/><line x1="69" y1="37" x2="79" y2="37" stroke="currentColor" stroke-width="2"/><line x1="69" y1="121" x2="79" y2="121" stroke="currentColor" stroke-width="2"/><text x="65" y="84" font-size="15" text-anchor="end" fill="currentColor">√6</text></svg>'
           - 根号の中の数が、ある整数の 2 乗になっていないか見ましょう。
         paths:
           - [√(6 × 24) = √144, 12]
           - [√24 = 2√6, √6 × 2√6 = 2 × 6, 12]
       - part: 今日
+        id: "fdcaa85f1e"
         text: √98 を a√b の形（b はできるだけ小さい自然数）に表すと、どれになりますか。
         choices: [7√2, 2√7, 49√2]
         answer: 7√2
         check: "[c for c, v in {'7√2': 7 * math.sqrt(2), '2√7': 2 * math.sqrt(7), '49√2': 49 * math.sqrt(2)}.items() if math.isclose(v, math.sqrt(98))][0]"
         hints:
           - 98 を素因数分解しましょう。
-          - 98 の中に、2 乗の因数はあるでしょうか。
-          - 2 乗の因数を、根号の外に出しましょう。
+          - text: 98 = 2 × 7 × 7 です。同じ数の 2 つ組を見つけましょう。
+            svg: '<svg viewBox="0 0 320 190" xmlns="http://www.w3.org/2000/svg"><polyline points="67,86 74,82 83,112 95,46 257,46" fill="none" stroke="currentColor" stroke-width="2.5"/><rect x="155" y="61" width="92" height="42" rx="14" fill="#7bc96f" fill-opacity="0.3" stroke="currentColor" stroke-width="2"/><circle cx="123" cy="82" r="16" fill="#c8ccd6" fill-opacity="0.6" stroke="currentColor" stroke-width="2"/><text x="123" y="88" font-size="16" text-anchor="middle" fill="currentColor">2</text><text x="149" y="87" font-size="14" text-anchor="middle" fill="currentColor">×</text><circle cx="175" cy="82" r="16" fill="#7bc96f" fill-opacity="0.6" stroke="currentColor" stroke-width="2"/><text x="175" y="88" font-size="16" text-anchor="middle" fill="currentColor">7</text><text x="201" y="87" font-size="14" text-anchor="middle" fill="currentColor">×</text><circle cx="227" cy="82" r="16" fill="#7bc96f" fill-opacity="0.6" stroke="currentColor" stroke-width="2"/><text x="227" y="88" font-size="16" text-anchor="middle" fill="currentColor">7</text><line x1="201" y1="106" x2="201" y2="129" stroke="currentColor" stroke-width="2"/><polygon points="201,136 196.6,128 205.4,128" fill="currentColor"/><rect x="184" y="138" width="34" height="34" rx="6" fill="#7bc96f" fill-opacity="0.45" stroke="currentColor" stroke-width="2"/><text x="201" y="161" font-size="18" text-anchor="middle" fill="currentColor">?</text><text x="160" y="24" font-size="14" text-anchor="middle" fill="currentColor">同じ数の 2 つ組は、√ の外へ 1 つ出る</text></svg>'
+          - 2 乗の因数を、根号の外に出しましょう。外に出るのは、2 乗する前の数です。
         paths:
           - [98 = 7² × 2, 7√2]
       - part: 今日
+        id: "78e741a29f"
         text: 12/√6 の分母を有理化すると、どれになりますか。
         choices: [2√6, 12√6, √2]
         answer: 2√6
         check: "[c for c, v in {'2√6': 2 * math.sqrt(6), '12√6': 12 * math.sqrt(6), '√2': math.sqrt(2)}.items() if math.isclose(v, 12 / math.sqrt(6))][0]"
         hints:
-          - 分母と分子に、同じ数をかけましょう。
+          - text: 分母と分子に、同じ数をかけましょう。
+            svg: '<svg viewBox="0 0 320 190" xmlns="http://www.w3.org/2000/svg"><text x="160" y="26" font-size="15" text-anchor="middle" fill="currentColor">分母と分子に、同じ数をかける</text><text x="62" y="84" font-size="20" text-anchor="middle" fill="currentColor">12</text><line x1="34" y1="94" x2="90" y2="94" stroke="currentColor" stroke-width="2"/><text x="62" y="120" font-size="20" text-anchor="middle" fill="currentColor">√6</text><line x1="102" y1="96" x2="135" y2="96" stroke="currentColor" stroke-width="2"/><polygon points="142,96 134,100.4 134,91.6" fill="currentColor"/><rect x="212" y="63" width="56" height="28" rx="6" fill="#f3c969" fill-opacity="0.55" stroke="currentColor" stroke-width="2"/><rect x="212" y="101" width="56" height="28" rx="6" fill="#f3c969" fill-opacity="0.55" stroke="currentColor" stroke-width="2"/><text x="186" y="84" font-size="20" text-anchor="middle" fill="currentColor">12</text><text x="240" y="83" font-size="15" text-anchor="middle" fill="currentColor">× √6</text><line x1="158" y1="95" x2="274" y2="95" stroke="currentColor" stroke-width="2"/><text x="186" y="122" font-size="20" text-anchor="middle" fill="currentColor">√6</text><text x="240" y="121" font-size="15" text-anchor="middle" fill="currentColor">× √6</text><text x="160" y="168" font-size="15" text-anchor="middle" fill="currentColor">分母の √ がなくなるように</text></svg>'
           - √6 × √6 はいくつでしょう。
           - 分母が整数になったら、約分しましょう。
         paths:
           - [(12 × √6)/(√6 × √6), 12√6/6, 2√6]
       - part: 今日
-        text: √75 − √27 を計算すると、どれになりますか。
+        id: "b0a71037d3"
+        text: √75 − √27 を計算すると、どれになりますか。図の赤い線の長さです。
+        svg: '<svg viewBox="0 0 320 190" xmlns="http://www.w3.org/2000/svg"><rect x="107.5" y="27" width="125" height="125" fill="#c8ccd6" fill-opacity="0.4" stroke="currentColor" stroke-width="2"/><rect x="107.5" y="77" width="75" height="75" fill="#7fc8f8" fill-opacity="0.5" stroke="currentColor" stroke-width="2"/><text x="170" y="58" font-size="14" text-anchor="middle" fill="currentColor">面積 75</text><text x="145" y="119.5" font-size="14" text-anchor="middle" fill="currentColor">面積 27</text><line x1="182.5" y1="152" x2="232.5" y2="152" stroke="#f08080" stroke-width="5"/><line x1="107.5" y1="162" x2="182.5" y2="162" stroke="currentColor" stroke-width="2"/><line x1="107.5" y1="157" x2="107.5" y2="167" stroke="currentColor" stroke-width="2"/><line x1="182.5" y1="157" x2="182.5" y2="167" stroke="currentColor" stroke-width="2"/><text x="145" y="181" font-size="14" text-anchor="middle" fill="currentColor">√27</text><text x="207.5" y="182" font-size="17" text-anchor="middle" fill="currentColor" font-weight="bold">?</text><line x1="93.5" y1="27" x2="93.5" y2="152" stroke="currentColor" stroke-width="2"/><line x1="88.5" y1="27" x2="98.5" y2="27" stroke="currentColor" stroke-width="2"/><line x1="88.5" y1="152" x2="98.5" y2="152" stroke="currentColor" stroke-width="2"/><text x="84.5" y="94.5" font-size="14" text-anchor="end" fill="currentColor">√75</text></svg>'
         choices: [2√3, √48, 8√3]
         answer: 2√3
         check: "[c for c, v in {'2√3': 2 * math.sqrt(3), '√48': math.sqrt(48), '8√3': 8 * math.sqrt(3)}.items() if math.isclose(v, math.sqrt(75) - math.sqrt(27))][0]"
         hints:
           - √75 と √27 を、それぞれ a√3 の形にしましょう。
-          - 根号の中がそろったら、係数をひきましょう。
+          - text: 2 つの正方形を、面積 3 の正方形に分けました。大きい正方形と小さい正方形の 1 辺には、√3 がそれぞれいくつならぶでしょう。
+            svg: '<svg viewBox="0 0 320 190" xmlns="http://www.w3.org/2000/svg"><rect x="107.5" y="27" width="125" height="125" fill="#c8ccd6" fill-opacity="0.4" stroke="currentColor" stroke-width="2"/><rect x="107.5" y="77" width="75" height="75" fill="#7fc8f8" fill-opacity="0.55" stroke="currentColor" stroke-width="0"/><rect x="107.5" y="27" width="125" height="125" fill="none" stroke="currentColor" stroke-width="2"/><line x1="132.5" y1="27" x2="132.5" y2="152" stroke="currentColor" stroke-width="1.5"/><line x1="107.5" y1="52" x2="232.5" y2="52" stroke="currentColor" stroke-width="1.5"/><line x1="157.5" y1="27" x2="157.5" y2="152" stroke="currentColor" stroke-width="1.5"/><line x1="107.5" y1="77" x2="232.5" y2="77" stroke="currentColor" stroke-width="1.5"/><line x1="182.5" y1="27" x2="182.5" y2="152" stroke="currentColor" stroke-width="1.5"/><line x1="107.5" y1="102" x2="232.5" y2="102" stroke="currentColor" stroke-width="1.5"/><line x1="207.5" y1="27" x2="207.5" y2="152" stroke="currentColor" stroke-width="1.5"/><line x1="107.5" y1="127" x2="232.5" y2="127" stroke="currentColor" stroke-width="1.5"/><text x="120" y="44.5" font-size="13" text-anchor="middle" fill="currentColor">3</text><text x="120" y="69.5" font-size="13" text-anchor="middle" fill="currentColor">3</text><text x="120" y="94.5" font-size="13" text-anchor="middle" fill="currentColor">3</text><text x="120" y="119.5" font-size="13" text-anchor="middle" fill="currentColor">3</text><text x="120" y="144.5" font-size="13" text-anchor="middle" fill="currentColor">3</text><text x="145" y="44.5" font-size="13" text-anchor="middle" fill="currentColor">3</text><text x="145" y="69.5" font-size="13" text-anchor="middle" fill="currentColor">3</text><text x="145" y="94.5" font-size="13" text-anchor="middle" fill="currentColor">3</text><text x="145" y="119.5" font-size="13" text-anchor="middle" fill="currentColor">3</text><text x="145" y="144.5" font-size="13" text-anchor="middle" fill="currentColor">3</text><text x="170" y="44.5" font-size="13" text-anchor="middle" fill="currentColor">3</text><text x="170" y="69.5" font-size="13" text-anchor="middle" fill="currentColor">3</text><text x="170" y="94.5" font-size="13" text-anchor="middle" fill="currentColor">3</text><text x="170" y="119.5" font-size="13" text-anchor="middle" fill="currentColor">3</text><text x="170" y="144.5" font-size="13" text-anchor="middle" fill="currentColor">3</text><text x="195" y="44.5" font-size="13" text-anchor="middle" fill="currentColor">3</text><text x="195" y="69.5" font-size="13" text-anchor="middle" fill="currentColor">3</text><text x="195" y="94.5" font-size="13" text-anchor="middle" fill="currentColor">3</text><text x="195" y="119.5" font-size="13" text-anchor="middle" fill="currentColor">3</text><text x="195" y="144.5" font-size="13" text-anchor="middle" fill="currentColor">3</text><text x="220" y="44.5" font-size="13" text-anchor="middle" fill="currentColor">3</text><text x="220" y="69.5" font-size="13" text-anchor="middle" fill="currentColor">3</text><text x="220" y="94.5" font-size="13" text-anchor="middle" fill="currentColor">3</text><text x="220" y="119.5" font-size="13" text-anchor="middle" fill="currentColor">3</text><text x="220" y="144.5" font-size="13" text-anchor="middle" fill="currentColor">3</text><rect x="107.5" y="77" width="75" height="75" fill="none" stroke="currentColor" stroke-width="3"/><line x1="107.5" y1="162" x2="132.5" y2="162" stroke="currentColor" stroke-width="2"/><line x1="107.5" y1="157" x2="107.5" y2="167" stroke="currentColor" stroke-width="2"/><line x1="132.5" y1="157" x2="132.5" y2="167" stroke="currentColor" stroke-width="2"/><text x="120" y="181" font-size="14" text-anchor="middle" fill="currentColor">√3</text><line x1="93.5" y1="27" x2="93.5" y2="152" stroke="currentColor" stroke-width="2"/><line x1="88.5" y1="27" x2="98.5" y2="27" stroke="currentColor" stroke-width="2"/><line x1="88.5" y1="152" x2="98.5" y2="152" stroke="currentColor" stroke-width="2"/><text x="84.5" y="94.5" font-size="14" text-anchor="end" fill="currentColor">√75</text></svg>'
           - 根号の中どうしをひいてはいけません。
         paths:
           - [√75 = 5√3、√27 = 3√3, 5√3 − 3√3, 2√3]
         note: √(75 − 27) = √48 としやすい。√48 = 4√3 で、答えとちがう。
     extra:
       - part: 今日
-        text: (√11)² の値はいくつですか。
+        id: "f4893bbefb"
+        text: (√11)² の値はいくつですか。図は、1 辺が √11 の正方形です。
+        svg: '<svg viewBox="0 0 320 200" xmlns="http://www.w3.org/2000/svg"><rect x="110" y="22" width="116" height="116" fill="#f3c969" fill-opacity="0.45" stroke="currentColor" stroke-width="2"/><text x="168" y="74" font-size="17" text-anchor="middle" fill="currentColor">面積は</text><text x="168" y="98" font-size="17" text-anchor="middle" fill="currentColor">(√11)²</text><line x1="110" y1="150" x2="226" y2="150" stroke="currentColor" stroke-width="2"/><line x1="110" y1="145" x2="110" y2="155" stroke="currentColor" stroke-width="2"/><line x1="226" y1="145" x2="226" y2="155" stroke="currentColor" stroke-width="2"/><text x="168" y="169" font-size="16" text-anchor="middle" fill="currentColor">√11</text><line x1="96" y1="22" x2="96" y2="138" stroke="currentColor" stroke-width="2"/><line x1="91" y1="22" x2="101" y2="22" stroke="currentColor" stroke-width="2"/><line x1="91" y1="138" x2="101" y2="138" stroke="currentColor" stroke-width="2"/><text x="87" y="85" font-size="16" text-anchor="end" fill="currentColor">√11</text></svg>'
         answer: 11
         check: "[k for k in range(0, 50) if math.isclose(math.sqrt(11) ** 2, k)][0]"
         hints:
           - √11 は、2 乗すると何になる数でしょう。
-          - √11 の意味を、そのまま思い出しましょう。
-          - (√11)² は √11 × √11 です。
+          - text: 1 辺が √9 = 3 の正方形と、√16 = 4 の正方形の面積は、いくつでしょう。
+            svg: '<svg viewBox="0 0 320 200" xmlns="http://www.w3.org/2000/svg"><rect x="21.4" y="89" width="69" height="69" fill="#c8ccd6" fill-opacity="0.45" stroke="currentColor" stroke-width="2"/><text x="55.9" y="129.5" font-size="15" text-anchor="middle" fill="currentColor">9</text><text x="55.9" y="180" font-size="16" text-anchor="middle" fill="currentColor">√9</text><rect x="110.4" y="81.7" width="76.3" height="76.3" fill="#f3c969" fill-opacity="0.45" stroke="currentColor" stroke-width="2"/><text x="148.5" y="125.9" font-size="15" text-anchor="middle" fill="currentColor">?</text><text x="148.5" y="180" font-size="16" text-anchor="middle" fill="currentColor">√11</text><rect x="206.6" y="66" width="92" height="92" fill="#c8ccd6" fill-opacity="0.45" stroke="currentColor" stroke-width="2"/><text x="252.6" y="118" font-size="15" text-anchor="middle" fill="currentColor">16</text><text x="252.6" y="180" font-size="16" text-anchor="middle" fill="currentColor">√16</text><text x="160" y="24" font-size="14" text-anchor="middle" fill="currentColor">下は 1 辺の長さ、中は面積</text></svg>'
+          - (√11)² は √11 × √11 で、1 辺が √11 の正方形の面積です。
         paths:
           - [√11 は 2 乗すると 11 になる数, (√11)² = 11]
       - part: 今日
+        id: "607b8ab563"
         text: √3(√3 − 2) を計算すると、どれになりますか。
         choices: [3 − 2√3, 1, 3 − √6]
         answer: 3 − 2√3
         check: "[c for c, v in {'3 − 2√3': 3 - 2 * math.sqrt(3), '1': 1, '3 − √6': 3 - math.sqrt(6)}.items() if math.isclose(v, math.sqrt(3) * (math.sqrt(3) - 2))][0]"
         hints:
-          - 分配法則で、√3 にも −2 にも √3 をかけます。
+          - text: 分配法則で、√3 にも −2 にも √3 をかけます。
+            svg: '<svg viewBox="0 0 320 190" xmlns="http://www.w3.org/2000/svg"><text x="62" y="132" font-size="26" text-anchor="middle" fill="currentColor">√3</text><text x="102" y="132" font-size="26" text-anchor="middle" fill="currentColor">(</text><text x="138" y="132" font-size="26" text-anchor="middle" fill="currentColor">√3</text><text x="180" y="132" font-size="26" text-anchor="middle" fill="currentColor">−</text><text x="210" y="132" font-size="26" text-anchor="middle" fill="currentColor">2</text><text x="240" y="132" font-size="26" text-anchor="middle" fill="currentColor">)</text><path d="M60 102 Q98 50 132.5 97.2" fill="none" stroke="currentColor" stroke-width="2"/><polygon points="136,102 127.7,98.1 134.8,92.9" fill="currentColor"/><path d="M66 102 Q132 6 192.7 97" fill="none" stroke="currentColor" stroke-width="2"/><polygon points="196,102 187.9,97.8 195.2,92.9" fill="currentColor"/><text x="160" y="176" font-size="15" text-anchor="middle" fill="currentColor">かっこの中の 2 つに、それぞれ √3 をかける</text></svg>'
           - √3 × √3 はいくつでしょう。
-          - √3 × (−2) は、−2√3 です。
+          - −2 に √3 をかけると、負の数になります。
         paths:
           - [√3 × √3 − √3 × 2, 3 − 2√3]
       - part: 今日
+        id: "96b15d5a59"
         text: √(90n) が整数になるような自然数 n のうち、いちばん小さいものはいくつですか。
         answer: 10
         check: "min(n for n in range(1, 200) if math.isqrt(90 * n) ** 2 == 90 * n)"
         hints:
           - 90 を素因数分解しましょう。
-          - どの素因数も、偶数回かけられた形にします。
+          - text: どの素因数も、2 つずつ組になる形にします。
+            svg: '<svg viewBox="0 0 320 170" xmlns="http://www.w3.org/2000/svg"><polyline points="15,86 22,82 31,112 43,46 309,46" fill="none" stroke="currentColor" stroke-width="2.5"/><rect x="103" y="61" width="92" height="42" rx="14" fill="#7bc96f" fill-opacity="0.3" stroke="currentColor" stroke-width="2"/><circle cx="71" cy="82" r="16" fill="#f08080" fill-opacity="0.6" stroke="currentColor" stroke-width="2"/><text x="71" y="88" font-size="16" text-anchor="middle" fill="currentColor">2</text><text x="97" y="87" font-size="14" text-anchor="middle" fill="currentColor">×</text><circle cx="123" cy="82" r="16" fill="#7bc96f" fill-opacity="0.6" stroke="currentColor" stroke-width="2"/><text x="123" y="88" font-size="16" text-anchor="middle" fill="currentColor">3</text><text x="149" y="87" font-size="14" text-anchor="middle" fill="currentColor">×</text><circle cx="175" cy="82" r="16" fill="#7bc96f" fill-opacity="0.6" stroke="currentColor" stroke-width="2"/><text x="175" y="88" font-size="16" text-anchor="middle" fill="currentColor">3</text><text x="201" y="87" font-size="14" text-anchor="middle" fill="currentColor">×</text><circle cx="227" cy="82" r="16" fill="#f08080" fill-opacity="0.6" stroke="currentColor" stroke-width="2"/><text x="227" y="88" font-size="16" text-anchor="middle" fill="currentColor">5</text><text x="253" y="87" font-size="14" text-anchor="middle" fill="currentColor">×</text><rect x="261" y="64" width="36" height="36" rx="6" fill="none" stroke="currentColor" stroke-width="2" stroke-dasharray="5 4"/><text x="279" y="88" font-size="16" text-anchor="middle" fill="currentColor">n</text><text x="160" y="24" font-size="14" text-anchor="middle" fill="currentColor">90 × n = 2 × 3 × 3 × 5 × n</text><text x="160" y="150" font-size="14" text-anchor="middle" fill="currentColor">赤い数には、組のあいてがいない</text></svg>'
           - 1 回しかかけられていない素因数をさがしましょう。
         paths:
           - [90 = 2 × 3² × 5, 2 と 5 が 1 回ずつ, n = 10]
@@ -601,40 +738,40 @@ days:
 # 腕だめし（離、D-047）：型を離れた問題。単元が済になってから開き、済の判定には入れない。
 ri:
   - part: 離
+    id: "25ea27ece4"
     kinds: [総動員]
     uses: [G-005, G-008]
-    text: 面積が 50 cm² の正方形と、面積が 18 cm² の正方形を、図のように下をそろえて横にくっつけて並べました。この図形のまわりの長さは何 cm ですか。
-    svg: |
-      <svg viewBox="0 0 200 140" xmlns="http://www.w3.org/2000/svg">
-        <rect x="20" y="20" width="100" height="100" fill="#f3c969" fill-opacity=".35" stroke="currentColor" stroke-width="2"/>
-        <rect x="120" y="60" width="60" height="60" fill="#f3c969" fill-opacity=".35" stroke="currentColor" stroke-width="2"/>
-        <text x="70" y="75" font-size="14" text-anchor="middle">50 cm²</text>
-        <text x="150" y="95" font-size="12" text-anchor="middle">18 cm²</text>
-      </svg>
+    text: 面積が 50 cm² の正方形と、面積が 18 cm² の正方形を、図のように下をそろえて横にくっつけてならべました。この図形のまわりの長さは何 cm ですか。
+    svg: '<svg viewBox="0 0 320 200" xmlns="http://www.w3.org/2000/svg"><rect x="60" y="52" width="110" height="110" fill="#f3c969" fill-opacity="0.35" stroke="currentColor" stroke-width="2"/><rect x="170" y="96" width="66" height="66" fill="#f3c969" fill-opacity="0.35" stroke="currentColor" stroke-width="2"/><text x="115" y="113" font-size="16" text-anchor="middle" fill="currentColor">50 cm²</text><text x="203" y="135" font-size="14" text-anchor="middle" fill="currentColor">18 cm²</text></svg>'
     choices: [26√2, 29√2, 32√2]
     answer: 26√2
     check: "[c for c, v in {'26√2': 26 * math.sqrt(2), '29√2': 29 * math.sqrt(2), '32√2': 32 * math.sqrt(2)}.items() if math.isclose(v, 4 * math.sqrt(50) + 2 * math.sqrt(18))][0]"
     hints:
       - 面積が 50 cm² の正方形の 1 辺は、2 乗すると 50 になる数だね。a√b の形にしよう。
-      - 2 つの正方形の 1 辺を求めたら、図形のまわりを 1 周たどって、辺を足そう。
-      - 大きい正方形の右の辺は、一部だけがまわりになるよ。
+      - text: 2 つの正方形の 1 辺を求めたら、図形のまわりを 1 から 6 の順にたどって、辺を足そう。
+        svg: '<svg viewBox="0 0 320 200" xmlns="http://www.w3.org/2000/svg"><rect x="60" y="52" width="110" height="110" fill="#f3c969" fill-opacity="0.35" stroke="currentColor" stroke-width="2"/><rect x="170" y="96" width="66" height="66" fill="#f3c969" fill-opacity="0.35" stroke="currentColor" stroke-width="2"/><text x="115" y="113" font-size="16" text-anchor="middle" fill="currentColor">50 cm²</text><text x="203" y="135" font-size="14" text-anchor="middle" fill="currentColor">18 cm²</text><polyline points="60,162 60,52 170,52 170,96 236,96 236,162 60,162" fill="none" stroke="#f08080" stroke-width="4" stroke-opacity=".9"/><text x="46" y="112" font-size="16" text-anchor="middle" fill="currentColor" font-weight="bold">1</text><text x="115" y="42" font-size="16" text-anchor="middle" fill="currentColor" font-weight="bold">2</text><text x="182" y="79" font-size="16" text-anchor="middle" fill="currentColor" font-weight="bold">3</text><text x="203" y="86" font-size="16" text-anchor="middle" fill="currentColor" font-weight="bold">4</text><text x="250" y="134" font-size="16" text-anchor="middle" fill="currentColor" font-weight="bold">5</text><text x="148" y="184" font-size="16" text-anchor="middle" fill="currentColor" font-weight="bold">6</text></svg>'
+      - 大きい正方形の右の辺は、上の一部だけがまわりになるよ（図の 3）。
     paths:
-      - [1 辺は √50 = 5√2 cm と √18 = 3√2 cm, 下 8√2、左 5√2、上 5√2 と 3√2、右 3√2、段差 2√2, 合わせて 26√2 cm]
-      - [段差の辺を右へ、小さい正方形の上の辺を上へずらすと 外側の長方形と同じまわりになる, 長方形は たて 5√2、横 8√2, 2 × (5√2 + 8√2) = 26√2 cm]
+      - [1 辺は √50 = 5√2 cm と √18 = 3√2 cm, 下 8√2、左 5√2、上 5√2 と 3√2、右 3√2、大きい正方形の右の辺の上の部分 2√2, 合わせて 26√2 cm]
+      - [大きい正方形の右の辺の上の部分を右へ、小さい正方形の上の辺を上へずらすと、外がわの長方形と同じまわりになる, 長方形は たて 5√2、横 8√2, 2 × (5√2 + 8√2) = 26√2 cm]
     note: 面積（G-008）から 1 辺を平方根で出し、まわりの長さ（G-005）をたどる。2 つの正方形のまわりをそのまま足した 32√2 や、くっついた辺を 1 回分しかひかない 29√2 を選びやすい。√50 + √18 を √68 とまとめてしまう間ちがいにも注意。
   - part: 離
+    id: "0a5942bd42"
     kinds: [道筋]
     text: √(2026 − 3n) が《整数》になるような自然数 n のうち、いちばん小さいものはいくつですか。
     answer: 30
     check: "min(n for n in range(1, 676) if math.isqrt(2026 - 3 * n) ** 2 == 2026 - 3 * n)"
     hints:
-      - n が小さいほど、根号の中の数は大きくなるね。
+      - text: n が小さいほど、根号の中の数は大きくなるね。2026 から 3n だけもどった数が、ある整数の 2 乗になればよい。
+        svg: '<svg viewBox="0 0 320 160" xmlns="http://www.w3.org/2000/svg"><line x1="16" y1="112" x2="306" y2="112" stroke="currentColor" stroke-width="2"/><line x1="84" y1="105" x2="84" y2="119" stroke="currentColor" stroke-width="2"/><text x="84" y="140" font-size="15" text-anchor="middle" fill="currentColor">44²</text><line x1="238" y1="105" x2="238" y2="119" stroke="currentColor" stroke-width="2"/><text x="238" y="140" font-size="15" text-anchor="middle" fill="currentColor">45²</text><line x1="288" y1="105" x2="288" y2="119" stroke="currentColor" stroke-width="2"/><text x="288" y="140" font-size="15" text-anchor="middle" fill="currentColor">2026</text><circle cx="288" cy="112" r="5" fill="#f08080" fill-opacity="0.9" stroke="currentColor" stroke-width="2"/><path d="M288 100 Q186 42 89.2 97" fill="none" stroke="currentColor" stroke-width="2"/><polygon points="84,100 88.8,92.2 93.1,99.9" fill="currentColor"/><text x="186" y="60" font-size="15" text-anchor="middle" fill="currentColor">3n だけ もどる</text><text x="160" y="26" font-size="14" text-anchor="middle" fill="currentColor">もどった先が、ある整数の 2 乗になればよい</text></svg>'
       - 2026 より小さい平方数を、大きいほうから順に調べよう。45² はいくつかな。
       - 2026 − (平方数) が 3 でわり切れれば、n が求められるよ。
     paths:
       - [2026 − 3n が平方数になればよい, 45² = 2025 なら 3n = 1 で n は自然数にならない, 44² = 1936 なら 3n = 90 で n = 30, 30]
-    note: n を 1 から順にためすと大変。根号の中が大きいほど n が小さいので、2026 以下の大きい平方数から逆に調べるのが道筋。45² = 2025 で 3n = 1 となり、n が自然数にならないことを確かめる一手間がある。
+      - [2026 は 3 でわると 1 あまるので、2026 − 3n も 3 でわると 1 あまる, 45² = 2025 は 3 でわり切れるのでだめ, 44² = 1936 は 3 でわると 1 あまり、3n = 90 で n = 30]
+    note: n を 1 から順にためすと大変。根号の中が大きいほど n が小さいので、2026 以下の平方数を、大きいほうから順に調べるのがすじ道。45² = 2025 で 3n = 1 となり、n が自然数にならないことをたしかめる一手間がある。
   - part: 離
+    id: "16c22f115f"
     kinds: [数, 手数]
     text: x = 3 − 2√2 のとき、x² + 1/x² の値はいくつですか。
     answer: 34
@@ -646,9 +783,10 @@ ri:
     paths:
       - [1/x = 1/(3 − 2√2) = 3 + 2√2, x + 1/x = 6, (x + 1/x)² = x² + 2 + 1/x² = 36, x² + 1/x² = 34]
       - [x² = 17 − 12√2、1/x² = (3 + 2√2)² = 17 + 12√2, 足して 34]
-    note: 分母の有理化（(3 − 2√2)(3 + 2√2) = 1）、乗法公式、根号の計算を続けて使う。x + 1/x = 6 を作ってから 2 乗すると楽だが、2 乗したときの「+ 2」を忘れて 36 と答えやすい。
+    note: 分母の有理化（(3 − 2√2)(3 + 2√2) = 1）、乗法公式、根号の計算を続けて使う。x + 1/x = 6 を作ってから 2 乗すると楽だが、2 乗したときの「+ 2」をわすれて 36 と答えやすい。
 
   - part: 離
+    id: "c9870f9db1"
     kinds: [総動員]
     uses: [N-017]
     text: √(45n) が整数になるような自然数 n のうち、いちばん小さいものはいくつですか。
@@ -656,36 +794,46 @@ ri:
     check: "[n for n in range(1, 100) if math.isqrt(45 * n) ** 2 == 45 * n][0]"
     hints:
       - 45 を素因数分解しよう。
-      - 45 = 3² × 5 なので、√45n が整数になるには 5 がもう 1 つ必要。
-      - n に 5 を入れて確かめよう。
+      - text: 45 = 3 × 3 × 5 だよ。どの素因数も、2 つずつ組にしたいね。
+        svg: '<svg viewBox="0 0 320 170" xmlns="http://www.w3.org/2000/svg"><polyline points="41,86 48,82 57,112 69,46 283,46" fill="none" stroke="currentColor" stroke-width="2.5"/><rect x="77" y="61" width="92" height="42" rx="14" fill="#7bc96f" fill-opacity="0.3" stroke="currentColor" stroke-width="2"/><circle cx="97" cy="82" r="16" fill="#7bc96f" fill-opacity="0.6" stroke="currentColor" stroke-width="2"/><text x="97" y="88" font-size="16" text-anchor="middle" fill="currentColor">3</text><text x="123" y="87" font-size="14" text-anchor="middle" fill="currentColor">×</text><circle cx="149" cy="82" r="16" fill="#7bc96f" fill-opacity="0.6" stroke="currentColor" stroke-width="2"/><text x="149" y="88" font-size="16" text-anchor="middle" fill="currentColor">3</text><text x="175" y="87" font-size="14" text-anchor="middle" fill="currentColor">×</text><circle cx="201" cy="82" r="16" fill="#f08080" fill-opacity="0.6" stroke="currentColor" stroke-width="2"/><text x="201" y="88" font-size="16" text-anchor="middle" fill="currentColor">5</text><text x="227" y="87" font-size="14" text-anchor="middle" fill="currentColor">×</text><rect x="235" y="64" width="36" height="36" rx="6" fill="none" stroke="currentColor" stroke-width="2" stroke-dasharray="5 4"/><text x="253" y="88" font-size="16" text-anchor="middle" fill="currentColor">n</text><text x="160" y="24" font-size="14" text-anchor="middle" fill="currentColor">45 × n = 3 × 3 × 5 × n</text><text x="160" y="150" font-size="14" text-anchor="middle" fill="currentColor">赤い数には、組のあいてがいない</text></svg>'
+      - n をかけた 45n が、ある整数の 2 乗になっているか、計算してたしかめよう。
     paths:
       - [45 = 3² × 5, √(45n) = 3√(5n), 5n が平方数になる最小の n は 5, √225 = 15]
+      - [n = 1、2、3、… と順にためす, 45、90、135、180 は整数の 2 乗でない, 45 × 5 = 225 = 15² で n = 5]
     note: 根号の中の素因数を、2 乗のペアにそろえる。3² はすでに外に出せる。
   - part: 離
+    id: "ae6b5811b0"
     kinds: [総動員]
     uses: [G-008, G-019]
     text: 対角線の長さが 2√6 cm の正方形の面積は何 cm² ですか。
+    svg: '<svg viewBox="0 0 320 195" xmlns="http://www.w3.org/2000/svg"><rect x="102" y="30" width="120" height="120" fill="#f3c969" fill-opacity="0.35" stroke="currentColor" stroke-width="2"/><line x1="102" y1="150" x2="222" y2="30" stroke="#f08080" stroke-width="3"/><text x="140" y="74" font-size="15" text-anchor="middle" fill="currentColor">2√6 cm</text><text x="160" y="180" font-size="15" text-anchor="middle" fill="currentColor">面積は？</text></svg>'
     answer: 12
     check: "2 * 2 * 6 // 2"
     hints:
-      - 正方形の対角線を d とすると、面積は d² ÷ 2。
-      - d = 2√6 なので、d² = 4 × 6。
-      - 24 ÷ 2 を計算しよう。
+      - text: 正方形の対角線を d とすると、面積は d² ÷ 2。図のように、対角線と同じ長さの辺をもつ大きな正方形の、ちょうど半分になるよ。
+        svg: '<svg viewBox="0 0 320 200" xmlns="http://www.w3.org/2000/svg"><rect x="92" y="14" width="150" height="150" fill="none" stroke="currentColor" stroke-width="2" stroke-dasharray="5 4"/><polygon points="167,14 242,89 167,164 92,89" fill="#7fc8f8" fill-opacity=".45" stroke="currentColor" stroke-width="2"/><line x1="92" y1="89" x2="242" y2="89" stroke="#f08080" stroke-width="3"/><line x1="167" y1="14" x2="167" y2="164" stroke="currentColor" stroke-width="2" stroke-dasharray="4 4"/><text x="200" y="81" font-size="15" text-anchor="middle" fill="currentColor" font-weight="bold">2√6</text><line x1="92" y1="174" x2="242" y2="174" stroke="currentColor" stroke-width="2"/><line x1="92" y1="169" x2="92" y2="179" stroke="currentColor" stroke-width="2"/><line x1="242" y1="169" x2="242" y2="179" stroke="currentColor" stroke-width="2"/><text x="167" y="193" font-size="15" text-anchor="middle" fill="currentColor">2√6</text></svg>'
+      - d = 2√6 なので、d² = 2² × (√6)² だね。
+      - 大きな正方形の面積を求めて、その半分にしよう。
     paths:
       - [対角線 d = 2√6, 面積は d²/2, d² = 24, 24 ÷ 2 = 12]
+      - [1 辺を a cm とすると、三平方の定理で a² + a² = (2√6)² = 24, a² = 12, 面積は a² なので 12 cm²]
     note: 正方形はひし形でもあるので、面積は「対角線 × 対角線 ÷ 2」で求められる。
 
   - part: 離
+    id: "d79a7b8bf0"
     kinds: [読み取り]
     uses: [G-008]
     text: 面積が 72 cm² の正方形の 1 辺の長さはどれですか。
+    svg: '<svg viewBox="0 0 320 200" xmlns="http://www.w3.org/2000/svg"><rect x="102" y="22" width="116" height="116" fill="#f3c969" fill-opacity="0.45" stroke="currentColor" stroke-width="2"/><text x="160" y="86" font-size="17" text-anchor="middle" fill="currentColor">72 cm²</text><line x1="102" y1="150" x2="218" y2="150" stroke="currentColor" stroke-width="2"/><line x1="102" y1="145" x2="102" y2="155" stroke="currentColor" stroke-width="2"/><line x1="218" y1="145" x2="218" y2="155" stroke="currentColor" stroke-width="2"/><text x="160" y="169" font-size="16" text-anchor="middle" fill="currentColor">? cm</text></svg>'
     choices: ["6√2 cm", "6 cm", "8√2 cm", "12√2 cm"]
     answer: "6√2 cm"
     check: "[ch for ch, f in {'6√2 cm': lambda: 6 * math.sqrt(2), '6 cm': lambda: 6, '8√2 cm': lambda: 8 * math.sqrt(2), '12√2 cm': lambda: 12 * math.sqrt(2)}.items() if math.isclose(f() ** 2, 72, abs_tol=1e-9)][0]"
     hints:
       - 正方形の面積は、1 辺 × 1 辺。
       - 1 辺を x cm とすると、x² = 72。
-      - √72 を a√b の形に直そう。
+      - text: √72 を a√b の形に直そう。72 = 2 × 2 × 2 × 3 × 3 だよ。
+        svg: '<svg viewBox="0 0 320 190" xmlns="http://www.w3.org/2000/svg"><polyline points="15,86 22,82 31,112 43,46 309,46" fill="none" stroke="currentColor" stroke-width="2.5"/><rect x="51" y="61" width="92" height="42" rx="14" fill="#7bc96f" fill-opacity="0.3" stroke="currentColor" stroke-width="2"/><rect x="207" y="61" width="92" height="42" rx="14" fill="#7fc8f8" fill-opacity="0.3" stroke="currentColor" stroke-width="2"/><circle cx="71" cy="82" r="16" fill="#7bc96f" fill-opacity="0.6" stroke="currentColor" stroke-width="2"/><text x="71" y="88" font-size="16" text-anchor="middle" fill="currentColor">2</text><text x="97" y="87" font-size="14" text-anchor="middle" fill="currentColor">×</text><circle cx="123" cy="82" r="16" fill="#7bc96f" fill-opacity="0.6" stroke="currentColor" stroke-width="2"/><text x="123" y="88" font-size="16" text-anchor="middle" fill="currentColor">2</text><text x="149" y="87" font-size="14" text-anchor="middle" fill="currentColor">×</text><circle cx="175" cy="82" r="16" fill="#c8ccd6" fill-opacity="0.6" stroke="currentColor" stroke-width="2"/><text x="175" y="88" font-size="16" text-anchor="middle" fill="currentColor">2</text><text x="201" y="87" font-size="14" text-anchor="middle" fill="currentColor">×</text><circle cx="227" cy="82" r="16" fill="#7fc8f8" fill-opacity="0.6" stroke="currentColor" stroke-width="2"/><text x="227" y="88" font-size="16" text-anchor="middle" fill="currentColor">3</text><text x="253" y="87" font-size="14" text-anchor="middle" fill="currentColor">×</text><circle cx="279" cy="82" r="16" fill="#7fc8f8" fill-opacity="0.6" stroke="currentColor" stroke-width="2"/><text x="279" y="88" font-size="16" text-anchor="middle" fill="currentColor">3</text><line x1="97" y1="106" x2="97" y2="129" stroke="currentColor" stroke-width="2"/><polygon points="97,136 92.6,128 101.4,128" fill="currentColor"/><rect x="80" y="138" width="34" height="34" rx="6" fill="#7bc96f" fill-opacity="0.45" stroke="currentColor" stroke-width="2"/><text x="97" y="161" font-size="18" text-anchor="middle" fill="currentColor">?</text><line x1="253" y1="106" x2="253" y2="129" stroke="currentColor" stroke-width="2"/><polygon points="253,136 248.6,128 257.4,128" fill="currentColor"/><rect x="236" y="138" width="34" height="34" rx="6" fill="#7fc8f8" fill-opacity="0.45" stroke="currentColor" stroke-width="2"/><text x="253" y="161" font-size="18" text-anchor="middle" fill="currentColor">?</text><text x="175" y="160" font-size="15" text-anchor="middle" fill="currentColor">×</text><text x="160" y="24" font-size="14" text-anchor="middle" fill="currentColor">同じ数の 2 つ組は、√ の外へ 1 つ出る</text></svg>'
     paths:
       - [1 辺を x とする, x² = 72, x = √72, √72 = 6√2]
+      - [4 つの答えを、それぞれ 2 乗する, (6√2)² = 72、6² = 36、(8√2)² = 128、(12√2)² = 288, 6√2 cm]
     note: 長さは正なので、負の平方根は使わない。√72 は 36 × 2 とみて 6√2。
