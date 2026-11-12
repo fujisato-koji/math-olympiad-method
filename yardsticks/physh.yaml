@@ -483,7 +483,7 @@ items:
     parent: "2bd35371"
     name: "Polymer behavior"
     ja: "高分子の挙動"
-    units: [P-262, P-263, P-264]
+    units: [P-262, P-263, P-264, H-107]
     sources: [Y01]
   - id: "5eb78870"
     parent: "2bd35371"
@@ -527,7 +527,7 @@ items:
     parent: "2bd35371"
     name: "Polymer aging"
     ja: "高分子のエイジング"
-    units: [P-264]
+    units: [P-264, H-107]
     sources: [Y01]
   - id: "c256fda5"
     parent: "2bd35371"
