@@ -1100,6 +1100,7 @@
     flat.scrollTo({ left: ox + x - flat.clientWidth / 2, top: oy + y - flat.clientHeight / 2, behavior });
   }
 
+  const openBtn = id => `<a class="tip-open" href="#/unit/${id}">単元を開く</a>`;
   function tip(html, ms = 6000) {
     const t = $('#cosmos-tip');
     if (!t) return;
@@ -1132,7 +1133,7 @@
     if (!combine.on) {
       if (X.sel === id && !X.pair) { location.hash = '#/unit/' + id; return; }
       X.sel = id; X.pair = null; card(''); paint();
-      tip(`<b>${short(UNITS[id])}</b>　もう一度押すと、単元のページを開きます`);
+      tip(`<b>${short(UNITS[id])}</b> ${openBtn(id)}　もう一度押しても開きます`);
       // ダブルクリックの 2 回目が同じ星に当たるよう、少し待ってから回転の中心を移す
       clearTimeout(pick.t);
       if (X.view === '3d') pick.t = setTimeout(() => { if (X.sel === id && X.view === '3d' && parse().name === 'map' && cosmos) orbitSel(id); }, 450);
@@ -1356,7 +1357,9 @@
     // Enter はその星へ飛んで鎖を光らせるだけ。開くのは星を押したとき（D-108）。言葉は窓に残し、次の Enter で次の星へ
     X.hits = null;
     X.sel = id; X.pair = null; card(''); paint(true);
-    tip(n > 1 ? `${hitAt + 1} / ${n}　${esc(u.title.split('（')[0])}　Enter で次へ（Shift+Enter で前へ）` : esc(u.title.split('（')[0]), 0);
+    // 案内の名前の横の「単元を開く」で、その単元のページへ行ける（施主「この状態でこの単元を見に行けるようにしたい」）
+    const name = `<b>${esc(u.title.split('（')[0])}</b> ${openBtn(id)}`;
+    tip(n > 1 ? `${hitAt + 1} / ${n}　${name}　Enter で次へ（Shift+Enter で前へ）` : name, 0);
   });
   document.addEventListener('fullscreenchange', () => { setBarH(); if (cosmos) cosmos.resize(); if (X.view === '2d' && parse().name === 'map') paint(); });
 
