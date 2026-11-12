@@ -17,6 +17,7 @@
 #   5 日目 G-016 と 1〜3 日目を混ぜる　6 日目 確認
 # check：角と長さは計算の式。逆の文、正しいかどうか、合同条件、平行四辺形になる条件を選ぶ問題は約束ごとなので check を付けない。
 # 前提の更新（2026-11-08）：作ったあとで地図の前提が増え、上の注で「前提にない」とした G-008、G-012 は、いまは前提のたどりに入っている。問題はそのときの前提の範囲で作ってあり、この道具を使う問題は足してよい。
+# ただし腕だめしの最難関（正方形の中の正三角形と EF のまん中 M の ∠BMC）だけは例外で、uses に G-018、G-019、G-020、A-016、A-017 を挙げて、円周角の定理とその逆（直径に対する円周角、同じ弧に対する円周角）、三平方の定理、中点連結定理、平方根、2 次方程式を使う。
 
 id: G-017
 days:
@@ -706,3 +707,35 @@ ri:
       - [錯角で ∠AEB = ∠DAE = ∠BAE, △ABE は BA = BE の二等辺三角形で BE = 7.8, 同じように CF = CD = 7.8, BC = AD = 12.5, EF = 7.8 + 7.8 − 12.5 = 3.1, 3.1 cm]
       - [BE = 7.8 なので EC = 12.5 − 7.8 = 4.7, CF = 7.8 なので EF = CF − EC = 7.8 − 4.7 = 3.1, 3.1 cm]
     note: 平行線の錯角（G-016）と二等辺三角形（この単元）で長さを移し、小数で計算する。B に近いのが F、C に近いのが E という並びを図で確かめるところでつまずきやすい。BE + CF が BC より長いので、2 本の二等分線は辺 BC より上で交わる。
+  - part: 離
+    kinds:
+    - 最難関
+    level: 10
+    time: 1500
+    uses:
+    - G-016
+    - G-018
+    - G-019
+    - G-020
+    - A-016
+    - A-017
+    text: 正方形 ABCD の辺 BC の上に点 E、辺 CD の上に点 F をとったところ、三角形 AEF が正三角形になりました。辺 EF のまん中の点を M とします。∠BMC（∠x）は何度ですか。
+    svg: <svg viewBox="0 0 200 158" xmlns="http://www.w3.org/2000/svg"><polygon points="40.0,140.0 160.0,140.0 160.0,20.0 40.0,20.0" stroke="currentColor" stroke-width="2" fill="none"/><polygon points="40.0,140.0 160.0,107.8 72.2,20.0" stroke="currentColor" stroke-width="1.5" fill="none"/><circle cx="160.0" cy="107.8" r="2.2" fill="currentColor"/><circle cx="72.2" cy="20.0" r="2.2" fill="currentColor"/><circle cx="116.1" cy="63.9" r="2.2" fill="currentColor"/><text x="31.0" y="152.0" font-size="12" text-anchor="middle">A</text><text x="169.0" y="152.0" font-size="12" text-anchor="middle">B</text><text x="169.0" y="16.0" font-size="12" text-anchor="middle">C</text><text x="31.0" y="16.0" font-size="12" text-anchor="middle">D</text><text x="170.0" y="111.8" font-size="12" text-anchor="middle">E</text><text x="70.2" y="13.0" font-size="12" text-anchor="middle">F</text><text x="126.1" y="58.9" font-size="12" text-anchor="middle">M</text></svg>
+    answer: 105
+    check: '(lambda a: (lambda F: (lambda E: (lambda M: (lambda x: min(k for k in range(181) if abs(x - k) < 1e-6))(math.degrees(math.acos(((1 - M[0]) * (1 - M[0]) + M[1] * (M[1] - 1)) / math.hypot(1 - M[0], M[1]) / math.hypot(1 - M[0], 1 - M[1])))))(((E[0] + F[0]) / 2, (E[1] + F[1]) / 2)))((F[0] * math.cos(a) + math.sin(a), -F[0] * math.sin(a) + math.cos(a))))(((1 - math.sin(a)) / math.cos(a), 1)))(math.pi / 3)'
+    hints:
+    - 三角形 ABE と三角形 ADF をくらべよう。
+    - A と M を結んでみよう。∠AMB は、図のどこかの角と同じ大きさにならないかな。
+    - EF の向きをしらべてみよう。
+    paths:
+    - - AB = AD、AE = AF、∠ABE = ∠ADF = 90° なので、直角三角形の合同（斜辺と他の 1 辺）から △ABE ≡ △ADF。∠BAE = ∠DAF で、∠EAF = 60° なので ∠BAE = (90° − 60°) ÷ 2 = 15°。∠AEB = 90° − 15° = 75°。BE = DF なので CE = CF
+      - △AEF は正三角形で M は EF のまん中なので、AM ⊥ EF、∠AME = 90°。∠ABE = 90° でもある。AE を見る角が 90° の点 B、M は、AE を直径とする円の上にある（円周角の定理の逆）
+      - この円で、M と E は直線 AB について同じがわ（どちらも正方形の中か辺の上）にある。同じ弧 AB に対する円周角なので ∠AMB = ∠AEB = 75°
+      - △CEF は CE = CF の直角二等辺三角形なので ∠CEF = 45°。正方形の対角線 BD で ∠CBD = 45° なので、同位角が等しく EF ∥ BD。AC ⊥ BD なので AC ⊥ EF。A から EF にひいた垂線は 1 本しかなく、AM も EF に垂直なので、A、M、C は一直線（M は正方形の中にあるので A と C の間）
+      - A、M、C が一直線なので、∠BMC = 180° − ∠AMB = 180° − 75° = 105°
+    - - AB = 1 とし、BE = x とする。△ABE と △ADF で AE² = 1 + x²、AF² = 1 + DF²。AE = AF なので DF = x。よって CE = CF = 1 − x
+      - △CEF で EF² = (1 − x)² + (1 − x)² = 2(1 − x)²。AE = EF から 1 + x² = 2(1 − x)²。整理すると x² − 4x + 1 = 0、(x − 2)² = 3。x < 1 なので x = 2 − √3
+      - M から BC に垂線 MP をひく。FC ⊥ BC で M は EF のまん中なので、P は EC のまん中（中点連結定理）。MP = FC ÷ 2 = (1 − x) ÷ 2 = PC。△MPC は直角二等辺三角形なので ∠MCB = 45°
+      - BP = x + (1 − x) ÷ 2 = (1 + x) ÷ 2 = (3 − √3) ÷ 2。MP = (1 − x) ÷ 2 = (√3 − 1) ÷ 2。√3 × (√3 − 1) = 3 − √3 なので BP = √3 × MP。BM² = BP² + MP² = 3MP² + MP² = 4MP² で BM = 2MP。3 辺の長さが MP の 1 倍、2 倍、√3 倍なので、△MBP は正三角形の半分と同じ形で ∠MBC = 30°
+      - △MBC の内角の和から ∠BMC = 180° − 30° − 45° = 105°
+    note: 考えどころは 3 つ：①直角三角形の合同で ∠BAE = 15°、∠AEB = 75° を出す（正方形の中の正三角形で 15° は受験の定番）、②正三角形の中線は辺に垂直なので、B と M はどちらも AE を見る角が 90° で、AE を直径とする円の上にある。円周角から ∠AMB = 75°、③EF ∥ BD と AC ⊥ BD から A、M、C が一直線であることを見つけ、∠BMC = 180° − 75° = 105°。2 本目は円も一直線も使わず、AB = 1 として AE = EF から x² − 4x + 1 = 0 を求め、M から BC への垂線で ∠MCB = 45°（直角二等辺三角形）、∠MBC = 30°（3 辺が 1 倍、2 倍、√3 倍）を出す（1 本目は角と円、2 本目は長さと 30°・45° の直角三角形）。check は A = (0, 0)、B = (1, 0)、C = (1, 1)、D = (0, 1) の点を使い、F = (f, 1) を A のまわりに 60° 回した点が辺 BC の上（x = 1）にあるように f を決めて E を出し、M と ∠BMC を計算して整数に近い値を返す（105）。既出・出典：正方形の中の正三角形（∠BAE = 15°）は定番で、この問題はその先に、円と一直線の 2 つの気づきを足した形。G-023（垂線の足と 2 つの円）も「直角が 2 つで同じ円」を使うが、あちらは三角形の垂線の足から九点円の性質へ進み、こちらは正方形と正三角形で、問う角と 3 つ目の気づき（A、M、C が一直線）がちがう。わな：∠AEB = 75° や ∠BAE = 15° でとまる、∠BMC を ∠AMB と同じ 75° と取りちがえる。図に AM、BM、CM、対角線、円は描かない（M が AC の上にあることが、正しい大きさの図だと見えてしまうため）。 M が AC の上にあることは正しい大きさの図からも見えるが、道すじではわけ（EF ∥ BD と AC ⊥ BD）を示す。

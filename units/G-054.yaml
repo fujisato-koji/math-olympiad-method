@@ -39,6 +39,7 @@
 # この単元の ①〜③ は、G-030（方べきの定理）、G-023（11・12 日目）、G-028（内接円）で約束した事実として使われる。
 # D-026：4 日目の挑戦の「ひもを円に巻く長さ」は、ベルトと滑車の長さや、円い障害物をよけて進むロボットや車の
 #   最短の道（接線と弧でできる）を求める計算と同じ形。接線が接点で半径に垂直なことは、のちの微分（接線の傾き）の入口にもなる。
+# ただし腕だめしの最難関（2 つの円と弦）だけは例外で、uses に G-016、G-017、G-018 を挙げ、2 つの円が点 T で接するとは T で両方の円に共通の接線がひけることとして、その接線と半径の垂直（①）から、2 つの円の中心と T が一直線にならぶことを使う。
 
 id: G-054
 days:
@@ -639,3 +640,32 @@ ri:
     paths:
       - [各頂点から接点までの長さを a、b、c、d、e、f とする, AB + CD + EF = a + b + c + d + e + f, BC + DE + FA = b + c + d + e + f + a, だから AB + CD + EF = BC + DE + FA, 4.75 + 5 + 3.1 = 12.85、4.5 + 4.35 = 8.85, FA = 12.85 − 8.85 = 4 cm]
     note: 4 日目の「4 つの辺に接する円では、向かい合う辺の和が等しい」を六角形に広げ、1 つおきの辺の和が等しいことを自分で見つける。小数のたし算とひき算が続くので、たす組とひく組を分けて書くとまちがえにくい。答えが《整数》 4 になるのは、計算が合っているかの目印になる。
+  - part: 離
+    kinds:
+    - 最難関
+    level: 10
+    time: 1500
+    uses:
+    - G-016
+    - G-017
+    - G-018
+    text: 円 O の中に弦 AB があります。円 ω は弦 AB に点 K で接し、円 O に点 T で内がわから接しています（円 ω は円 O の内がわにあり、T と円 ω は直線 AB について同じがわにあります）。∠TAB = 40°、∠TBA = 70° のとき、∠AKT は何度ですか。
+    svg: <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg"><circle cx="100.0" cy="100.0" r="78.0" stroke="currentColor" stroke-width="2" fill="none"/><circle cx="100.0" cy="72.5" r="50.5" stroke="currentColor" stroke-width="1.5" fill="none"/><line x1="49.9" y1="159.8" x2="176.8" y2="86.5" stroke="currentColor" stroke-width="2" fill="none"/><line x1="100.0" y1="22.0" x2="49.9" y2="159.8" stroke="currentColor" stroke-width="1.5" fill="none"/><line x1="100.0" y1="22.0" x2="176.8" y2="86.5" stroke="currentColor" stroke-width="1.5" fill="none"/><line x1="100.0" y1="22.0" x2="125.2" y2="116.2" stroke="currentColor" stroke-width="1.5" fill="none"/><circle cx="49.9" cy="159.8" r="2.2" fill="currentColor"/><circle cx="176.8" cy="86.5" r="2.2" fill="currentColor"/><circle cx="100.0" cy="22.0" r="2.2" fill="currentColor"/><circle cx="125.2" cy="116.2" r="2.2" fill="currentColor"/><circle cx="100.0" cy="100.0" r="1.8" fill="currentColor"/><text x="100.0" y="15.0" font-size="12" text-anchor="middle">T</text><text x="40.9" y="171.8" font-size="12" text-anchor="middle">A</text><text x="186.8" y="89.5" font-size="12" text-anchor="middle">B</text><text x="127.2" y="131.2" font-size="12" text-anchor="middle">K</text><text x="109.0" y="104.0" font-size="12" text-anchor="middle">O</text><text x="157.7" y="151.5" font-size="12" text-anchor="middle">円 O</text><text x="100.0" y="76.5" font-size="12" text-anchor="middle">ω</text></svg>
+    answer: 105
+    check: 'min(min(k for k in range(181) if abs(x - k) < 1e-6) for P in (lambda a: (math.cos(math.radians(a)), math.sin(math.radians(a))),) for T in (P(90),) for A in (P(90 + 2 * 70),) for B in (P(90 - 2 * 40),) for ux in (B[0] - A[0],) for uy in (B[1] - A[1],) for L in (math.hypot(ux, uy),) for s in (1 if (T[0] - A[0]) * (-uy) + (T[1] - A[1]) * ux > 0 else -1,) for nx in (-s * uy / L,) for ny in (s * ux / L,) for d0 in (-(A[0] * nx + A[1] * ny),) for Tn in (T[0] * nx + T[1] * ny,) for rho in ((d0 + Tn) / (1 + Tn),) for K in (((1 - rho) * T[0] - rho * nx, (1 - rho) * T[1] - rho * ny),) for x in (math.degrees(math.acos(((A[0] - K[0]) * (T[0] - K[0]) + (A[1] - K[1]) * (T[1] - K[1])) / math.hypot(A[0] - K[0], A[1] - K[1]) / math.hypot(T[0] - K[0], T[1] - K[1]))),))'
+    hints:
+    - T で、円 O と円 ω は、どんなふうにふれ合っているかな。
+    - ∠ATB は何度かな。三角形 TAK の角を、1 つずつうめていけないかな。
+    - T でひける接線は、円 O の接線でも、円 ω の接線でもあるよ。
+    paths:
+    - - T で円 O と円 ω に共通の接線をひく（2 つの円が T で接するとは、T で同じ接線をもつこと）。T で ∠TAB = 40°、∠TBA = 70° の三角形 TAB があり、接線のうち B の側へ向かう半直線を TX とする。接弦定理で、接線 TX と弦 TB のつくる角は、弧 TB に対する A での円周角に等しく、∠XTB = ∠TAB = 40°
+      - 半直線 TX と、直線 AB を B の先へのばした半直線は、B での角が 180° − 70° = 110°、T での角が 40° で、和の 150° が 180° より小さいので、B の先で交わる。この交点を X とする（直線の上に A、K、B、X の順にならぶ）
+      - ∠TBA = 70° は三角形 TBX の外角で、となり合わない 2 つの内角の和に等しいから、∠TXB = 70° − 40° = 30°
+      - X は円 ω の外の点で、XT と XK は ω の接線（K は接点）。外の点からの 2 本の接線の長さは等しいので XT = XK。三角形 XTK は二等辺三角形で、頂角 ∠TXK = 30°（K は X から見て B と同じ向き）。底角は (180° − 30°) ÷ 2 = 75° なので ∠XKT = 75°
+      - A、K、X は一直線なので、∠AKT = 180° − ∠XKT = 180° − 75° = 105°
+    - - TK をのばして円 O と交わる点を M とする。円 O の中心 O、円 ω の中心 O′ は、T でひいた共通の接線にどちらも垂直な半径の上にあるので、O、O′、T は一直線。O′ は OT の上で、K は TM の上
+      - OT = OM なので ∠OMT = ∠OTM。O′T = O′K なので ∠O′KT = ∠O′TK。∠OTM と ∠O′TK は同じ角なので ∠OMT = ∠O′KT。同位角が等しいので OM ∥ O′K
+      - K は AB の接点だから O′K ⊥ AB。よって OM ⊥ AB。O から AB への垂線の足を H とすると、直角三角形 OAH と OBH は、OA = OB（半径）、OH が共通で合同なので AH = BH。M は直線 OH の上にあるから MA = MB。三角形 OAM と OBM は 3 組の辺が等しく合同なので、∠AOM = ∠BOM、弧 AM = 弧 MB
+      - 等しい弧に対する円周角は等しいので、T から見て ∠ATM = ∠MTB、つまり ∠ATK = ∠KTB。三角形 TAB の内角の和から ∠ATB = 180° − 40° − 70° = 70° なので、∠ATK = 70° ÷ 2 = 35°
+      - 三角形 ATK の内角の和から ∠AKT = 180° − ∠TAK − ∠ATK = 180° − 40° − 35° = 105°（∠TAK = ∠TAB = 40°。K は AB の上にある）
+    note: 考えどころは 3 つ：①T で 2 つの円に共通の接線をひき、AB との交点 X をつくる（接弦定理で ∠XTB = 40°、外角で ∠TXB = 30°）、②X から ω にひいた 2 本の接線の長さが等しい（XT = XK）ので三角形 XTK が二等辺三角形、底角 75°、③一直線の角で ∠AKT = 105°。2 本目は接線を使わず、共通の接線から出る「中心 O、O′、T が一直線」だけを使い、平行 OM ∥ O′K から M が弧 AB のまん中とわかり、TK が ∠ATB を 2 等分する、と進む（1 本目は接線の長さと外角、2 本目は平行と等しい弧）。どちらも、ω を直接は計算せずに角だけで答えを出す。check は円 O を半径 1 の円とし、弧の大きさから A、T、B を円の上に置いて、AB に接し T で円 O に内接する円 ω の中心と K を、点の位置（x、y の数）で計算して ∠AKT を出す（円周角の定理は使わない）。既出・出典：アルキメデスのほだい（弦に接し、外の円に内がわから接する円では、TK が ∠ATB を 2 等分し、弧 AB のまん中を通る）の数を入れた形。ほだいを知っていれば ∠ATK = 35° からすぐ出るが、知らなければ、接弦定理・外角・接線の長さの 3 段（1 本目）か、平行と等しい弧（2 本目、ほだいのわけそのもの）がいる。わな：X が A の側に出ると考えて ∠TXA を 30° としてしまう。接線 TX は B の側で AB と交わる（弧 TB のほうが弧 TA より短い）。

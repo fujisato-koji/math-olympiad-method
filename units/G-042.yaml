@@ -686,3 +686,32 @@ ri:
     paths:
       - [AE:EC = 4:5 で、AE は AC の 4/9, AF:FB = 6:5 で、AF は AB の 6/11, △AEB は △ACB の 4/9（B からの高さが同じ）, △AEF は △AEB の 6/11（E からの高さが同じ）, 4/9 × 6/11 = 24/99 = 8/33]
     note: 角の二等分線の定理を 2 本の二等分線に使い、比を覚えておいて面積の比（G-008、G-012）を 2 段でかける手数の問題。AE:EC = BA:BC の対応（B から見た 2 辺）を取りちがえやすい。辺の長さだけで面積の比が決まり、面積そのものは要らない。
+  - part: 離
+    kinds:
+    - 最難関
+    level: 10
+    time: 1500
+    uses:
+    - G-016
+    - G-017
+    - G-020
+    text: 三角形 ABC は BC = 18 cm、CA = 24 cm、AB = 30 cm で、角 C が直角で、面積は 216 cm² です。3 つの角の二等分線は 1 点 I で交わります。I を通って 3 つの辺に平行な直線を 1 本ずつ引くと、三角形 ABC の中に、I を頂点にもつ小さな三角形が 3 つできます（底辺は、BC、CA、AB の上に 1 つずつあります）。この 3 つの三角形の面積の和は何 cm² ですか。
+    svg: <svg viewBox="0 0 200 175" xmlns="http://www.w3.org/2000/svg"><polygon points="50.0,30.0 140.0,150.0 50.0,150.0" stroke="currentColor" stroke-width="2" fill="none"/><rect x="50.0" y="141.0" width="9.0" height="9.0" stroke="currentColor" stroke-width="1" fill="none"/><circle cx="80.0" cy="120.0" r="2.2" fill="currentColor"/><text x="50.0" y="23.0" font-size="12" text-anchor="middle">A</text><text x="148.0" y="164.0" font-size="12" text-anchor="middle">B</text><text x="41.0" y="164.0" font-size="12" text-anchor="middle">C</text><text x="89.0" y="116.0" font-size="12" text-anchor="middle">I</text><text x="119.0" y="86.0" font-size="12" text-anchor="middle">30 cm</text><text x="95.0" y="165.0" font-size="12" text-anchor="middle">18 cm</text><text x="24.0" y="94.0" font-size="12" text-anchor="middle">24 cm</text></svg>
+    answer: 75
+    check: sum(abs((X1[0] - I[0]) * (X2[1] - I[1]) - (X1[1] - I[1]) * (X2[0] - I[0])) / 2 for V in (((Fraction(18), Fraction(0)), (Fraction(0), Fraction(0)), (Fraction(0), Fraction(24))),) for W in ([math.hypot(V[(j + 1) % 3][0] - V[(j + 2) % 3][0], V[(j + 1) % 3][1] - V[(j + 2) % 3][1]) for j in range(3)],) for I in ((sum(Fraction(W[j]) * V[j][0] for j in range(3)) / sum(Fraction(W[j]) for j in range(3)), sum(Fraction(W[j]) * V[j][1] for j in range(3)) / sum(Fraction(W[j]) for j in range(3))),) for i in range(3) for P in (V[i],) for Q in (V[(i + 1) % 3],) for R in (V[(i + 2) % 3],) for d1 in ((Q[0] - R[0], Q[1] - R[1]),) for d2 in ((R[0] - P[0], R[1] - P[1]),) for e in ((Q[0] - P[0], Q[1] - P[1]),) for t1 in (((P[0] - I[0]) * e[1] - (P[1] - I[1]) * e[0]) / (d1[0] * e[1] - d1[1] * e[0]),) for t2 in (((P[0] - I[0]) * e[1] - (P[1] - I[1]) * e[0]) / (d2[0] * e[1] - d2[1] * e[0]),) for X1 in ((I[0] + t1 * d1[0], I[1] + t1 * d1[1]),) for X2 in ((I[0] + t2 * d2[0], I[1] + t2 * d2[1]),))
+    hints:
+    - BC の上にできる小さい三角形の、I での角を見てみよう。
+    - その角と、B での角の二等分線の間に、等しい角はないかな。平行線の角も使えそうだよ。
+    - 小さい三角形は三角形 ABC と形が同じだね。3 辺の長さの和と BC の長さに、どんな関係があるかな。
+    paths:
+    - - BC の上の小さい三角形を IRS とする（R、S は BC の上で B に近い順、IR ∥ AB、IS ∥ AC）。BI は ∠B の二等分線なので ∠RBI = ∠IBA。IR ∥ AB でさっ角が等しいから ∠RIB = ∠IBA。よって ∠RIB = ∠RBI で、三角形 RBI は二等辺三角形、RB = RI。同じように SC = SI
+      - IR ∥ AB、IS ∥ AC なので、同位角が等しく、三角形 IRS は三角形 ABC と相似（IR は AB に、IS は AC に、RS は BC に重なる辺）。相似比を k とすると、IR = k × AB、IS = k × AC、RS = k × BC
+      - BC = BR + RS + SC = RI + RS + SI = k × (AB + BC + CA) = k × 72（RI = k × AB、SI = k × AC、RS = k × BC）。BC = 18 cm なので k = 18 ÷ 72 = 1/4
+      - CA の上の三角形も同じように考えて、CA = k × 72 から相似比 24 ÷ 72 = 1/3。AB の上の三角形は 30 ÷ 72 = 5/12
+      - 相似な図形の面積の比は相似比を 2 回かけた比。面積の和 = 216 × (1/4 × 1/4 + 1/3 × 1/3 + 5/12 × 5/12) = 216 × (9/144 + 16/144 + 25/144) = 216 × 50/144 = 75 cm²
+    - - I は 3 つの角の二等分線の上にあるので、I から 3 つの辺までのきょりは等しい（角の二等分線の上の点は、角の 2 辺から同じきょり。直角三角形の合同でいえる）。そのきょりを r cm とおく
+      - 三角形 ABC を、I と 3 つの頂点を結んで 3 つの三角形 IBC、ICA、IAB に分ける。高さはどれも r で、面積の和は r × 18 ÷ 2 + r × 24 ÷ 2 + r × 30 ÷ 2 = r × 72 ÷ 2。これが 216 cm² なので r = 216 × 2 ÷ 72 = 6 cm
+      - BC の上の小さい三角形 IRS の高さは、I から BC までのきょり r = 6 cm。三角形 ABC の BC に対する高さは CA = 24 cm（角 C が直角）。IRS と ABC は相似（IR ∥ AB、IS ∥ AC で同位角が等しい）で、同じ位置の高さの比が相似比なので 6 ÷ 24 = 1/4
+      - 同じように、CA の上の小さい三角形の高さは 6 cm、三角形 ABC の CA に対する高さは BC = 18 cm なので相似比 6 ÷ 18 = 1/3。AB の上は、AB に対する高さが 216 × 2 ÷ 30 = 72/5 cm なので 6 ÷ 72/5 = 5/12
+      - 相似な図形の面積の比は相似比を 2 回かけた比。面積の和 = 216 × (1/16 + 1/9 + 25/144) = 216 × 50/144 = 75 cm²
+    note: 考えどころは 3 つ：①BC の上の小さい三角形 IRS で、平行線のさっ角と角の二等分で ∠RIB = ∠RBI、RB = RI（SC = SI も同じ）、②三角形 IRS は ABC と相似で、BC = BR + RS + SC = 相似比 × (3 辺の和) から、相似比が 辺の長さ ÷ 72（1/4、1/3、5/12）、③面積の比は相似比を 2 回かけた比なので 216 × (1/16 + 1/9 + 25/144) = 75。3 つの相似比の和 1/4 + 1/3 + 5/12 = 1 になるのは、どの辺の上でも「辺の長さ ÷ 3 辺の和」で、3 辺の長さを足すと 3 辺の和になるから。2 本目は二等辺三角形も辺の長さの和も使わず、I から 3 辺までのきょり r を面積 216 = r × 72 ÷ 2 から出し、小さい三角形の高さ r と ABC の高さの比で相似比を出す（1 本目は二等辺と辺の長さ、2 本目は面積と高さ）。角 C が直角なので、C を原点にして B = (18, 0)、A = (0, 24) とおけば、I = (6, 6) が出て、3 本の平行線と辺の交点から 3 つの三角形の面積を足す、という確かめ方もできる（check はこれを I の位置を辺の長さの重みつき平均で出す形で行う。Fraction で 75）。わな：3 つの三角形の面積を、相似比でなく辺の比（1/4 + 1/3 + 5/12 = 1）をそのまま使って 216 としてしまう。面積の比は相似比を 2 回かけた比。 既出：3 つの角の二等分線が交わる点を通る平行線で RB = RI となるのは入試の定番で、この問題はそれを 3 本の平行線と 3 つの三角形の面積に広げた形。
