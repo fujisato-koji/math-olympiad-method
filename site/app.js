@@ -877,14 +877,13 @@
   let cosmos = null, POS2D = {}, CARD = '', hits = [], hintAt = Math.floor(Math.random() * 997);
   const combine = { on: false, from: null };
   // 範囲：島が多いので、分野ごとに見られるようにする。分野は関係から見つけた 16 の分野（D-124 の (5)）で、地図の色と同じ。
-  // 領域はその分野（build が relations/region-order.yaml から入れる rg.f）で絞る。違う分野を「〇と〇」で抱き合わせない（D-033）
+  // 単元はその単元の分野（u.f）で絞る。違う分野を「〇と〇」で抱き合わせない（D-033）
   const MAP_GROUPS = [
     ['all', 'すべて', () => true],
-    ...(R.fields || []).map(f => [f.id, f.name, rg => rg.f === f.id]),
+    ...(R.fields || []).map(f => [f.id, f.name, fid => fid === f.id]),
   ];
-  const REGION = Object.fromEntries((R.regions || []).map(r => [r.id, r]));
   const group = () => MAP_GROUPS.find(g => g[0] === prefs.mapGroup) || MAP_GROUPS[0];
-  const inGroup = id => { const rg = REGION[UNITS[id].region]; return !rg || group()[2](rg); };
+  const inGroup = id => group()[0] === 'all' || group()[2](UNITS[id].f);
   const cssLane = l => getComputedStyle($('#cosmos') || document.documentElement).getPropertyValue('--lane-' + l).trim() || '#9fb4ff';
   // 関係から見つけた分野（D-122、D-124）：色は relations/fields.yaml の並びの 1〜16（style.css の --field-N）。分野がない単元は流れの色
   const FIELDS = Object.fromEntries((R.fields || []).map((f, i) => [f.id, { ...f, n: f.c || i + 1 }]));   // n は色の番号（relations/fields.yaml の color）
@@ -1361,17 +1360,22 @@
   });
   document.addEventListener('fullscreenchange', () => { setBarH(); if (cosmos) cosmos.resize(); if (X.view === '2d' && parse().name === 'map') paint(); });
 
-  // 平面の関係図（2D）：横は理解の深さ（前提の鎖の長さ）、縦は名前を付けた領域（D-019）。
-  // 領域は関係から見つけた分野ごとにまとめ、前提の線が縦に短くなる順に並ぶ（D-124、並びは build が relations/region-order.yaml から入れる）
+  // 平面の関係図（2D）：横は理解の深さ（前提の鎖の長さ）、縦は関係から見つけた分野と、その中の細かい分野（D-124、施主「分野と領域を統一できないのか」）。
+  // 並びは build が relations/row-order.yaml から入れる（前提の線が縦に短くなる順）。分野がまだない単元（分野を作りなおす前に足した単元）は、最後に領域ごとに並べる
   function drawMap() {
     const host = $('#map');
     if (!host) return;
-    // 目標を選んでいるときは、その目標の単元と、その単元がある島だけで描き直す（D-015）
-    const grp = group()[2];
-    const shown = id => inGoal(id) || inChoice(id);
-    const shownRegions = (R.regions || []).filter(grp).filter(rg => R.units.some(u => u.region === rg.id && shown(u.id)));
-    const shownIds = new Set(shownRegions.map(r => r.id));
-    const shownUnits = R.units.filter(u => shownIds.has(u.region) && shown(u.id));
+    // 目標を選んでいるときは、その目標の単元と、その単元がある行だけで描き直す（D-015）
+    const grp = group(), shown = id => inGoal(id) || inChoice(id);
+    const SUBNAME = Object.fromEntries((R.fields || []).flatMap(f => f.subs.map(s => [s.id, s.name])));
+    const defs = [];
+    (R.rows || []).forEach(([fid, sids]) => {
+      if (grp[0] !== 'all' && grp[0] !== fid) return;
+      sids.forEach(sid => defs.push({ f: fid, name: SUBNAME[sid] || sid, has: u => u.s === sid }));
+    });
+    if (grp[0] === 'all') (R.regions || []).forEach(rg => defs.push({ f: null, name: rg.name, lane: rg.lane, has: u => !u.s && u.region === rg.id }));
+    const rowsUnits = defs.map(r => ({ ...r, us: R.units.filter(u => r.has(u) && shown(u.id)).sort(order) })).filter(r => r.us.length);
+    const shownUnits = rowsUnits.flatMap(r => r.us);
     if (!shownUnits.length) {
       host.innerHTML = `<p class="muted">${prefs.goal === 'all' ? 'この切り替えの単元はまだありません。' : 'この範囲には、選んでいる目標の単元がありません。範囲を「すべて」にすると見えます。'}</p>`;
       return;
@@ -1381,22 +1385,20 @@
     const X0 = 168, span = Math.max(1, maxD - minD), avail = Math.max(host.clientWidth, 820);
     const XS = Math.min(140, Math.max(22, (avail - X0 - 70) / span)), W = Math.max(avail, Math.ceil(X0 + span * XS + 70));
     const YS = 18, PAD = 13, TOP = 44, pos = {}, boxes = [];
-    let y = TOP, prevF = null;
+    let y = TOP, prevF;
     const heads = [];
-    shownRegions.forEach(rg => {
-      const us = shownUnits.filter(u => u.region === rg.id).sort(order);
-      if (!us.length) return;
+    rowsUnits.forEach(r => {
       // 分野がかわるところに、分野の名前の見出し
-      if (rg.f && rg.f !== prevF && FIELDS[rg.f]) { heads.push({ f: rg.f, y: y + 15 }); y += 26; }
-      prevF = rg.f;
+      if (r.f !== prevF) { heads.push({ f: r.f, y: y + 15 }); y += 26; }
+      prevF = r.f;
       const byD = {};
-      us.forEach(u => (byD[DEPTH[u.id]] = byD[DEPTH[u.id]] || []).push(u));
+      r.us.forEach(u => (byD[DEPTH[u.id]] = byD[DEPTH[u.id]] || []).push(u));
       const rows = Math.max(...Object.values(byD).map(a => a.length)), h = rows * YS + PAD * 2;
       Object.entries(byD).forEach(([d, a]) => a.forEach((u, i) => {
         pos[u.id] = [X0 + (d - minD) * XS, y + PAD + YS / 2 + (i + (rows - a.length) / 2) * YS];
       }));
-      const xs = us.map(u => pos[u.id][0]);
-      boxes.push({ rg, x: Math.min(...xs) - 15, x2: Math.max(...xs) + 15, y, h });
+      const xs = r.us.map(u => pos[u.id][0]);
+      boxes.push({ r, x: Math.min(...xs) - 15, x2: Math.max(...xs) + 15, y, h });
       y += h + 8;
     });
     const H = y + 6;
@@ -1409,16 +1411,17 @@
     // 選んだ単元の線の向きは、前提へ入る線と先へ出ていく線の色で見せる（D-116。矢じりは付けない）
     svg += marks.map((m, i) => `<g class="level-mark"><line x1="${m.x}" y1="${TOP - 6}" x2="${m.x}" y2="${H}"/>
       </g>`).join('');
-    svg += heads.map(h => `<g class="field-head" style="${fc(h)}"><text x="8" y="${h.y}">${esc(FIELDS[h.f].name)}</text><line x1="8" y1="${h.y + 6}" x2="${W - 8}" y2="${h.y + 6}"/></g>`).join('');
-    svg += boxes.map(b => `<g class="region" style="${fc(b.rg)}"><rect x="${b.x}" y="${b.y}" width="${b.x2 - b.x}" height="${b.h}" rx="14"/>
+    svg += heads.map(h => `<g class="field-head" style="${h.f ? fc(h) : '--c: var(--muted)'}"><text x="8" y="${h.y}">${esc(h.f ? FIELDS[h.f].name : 'まだ分野のない単元')}</text><line x1="8" y1="${h.y + 6}" x2="${W - 8}" y2="${h.y + 6}"/></g>`).join('');
+    svg += boxes.map(b => `<g class="region" style="${fc(b.r)}"><rect x="${b.x}" y="${b.y}" width="${b.x2 - b.x}" height="${b.h}" rx="14"/>
       <line x1="${X0 - 26}" y1="${b.y + b.h / 2}" x2="${b.x}" y2="${b.y + b.h / 2}" class="leader"/>
-      <text x="8" y="${b.y + b.h / 2 + 4}">${esc(b.rg.name)}</text></g>`).join('');
-    // 前提の線：同じ領域は「深める」、ほかの領域は「組み合わせる」（x）。代わりになる前提（alt）は点線
+      <text x="8" y="${b.y + b.h / 2 + 4}">${esc(b.r.name)}</text></g>`).join('');
+    // 前提の線：同じ行（細かい分野）は「深める」、ほかの行は「組み合わせる」（x）。代わりになる前提（alt）は点線
+    const rowOf = u => u.s || u.region;
     const edge = (n, u, cls) => {
       const a = pos[n], b = pos[u.id];
       if (!a || !b) return '';
       const mx = (a[0] + b[0]) / 2;
-      return `<path class="${cls}${UNITS[n].region !== u.region ? ' x' : ''}" data-a="${n}" data-b="${u.id}" d="M${a[0]},${a[1]} C${mx},${a[1]} ${mx},${b[1]} ${b[0]},${b[1]}"/>`;
+      return `<path class="${cls}${rowOf(UNITS[n]) !== rowOf(u) ? ' x' : ''}" data-a="${n}" data-b="${u.id}" d="M${a[0]},${a[1]} C${mx},${a[1]} ${mx},${b[1]} ${b[0]},${b[1]}"/>`;
     };
     // 前提の線は強さ（s3・s2・s1、relations/needs.yaml）で太さを変える。代わりの前提（alt）は点線
     svg += '<g class="edges">' + R.units.flatMap(u => [...u.needs.map((n, k) => edge(n, u, 'need s' + ((u.nw || [])[k] || 2))),

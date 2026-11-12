@@ -12,7 +12,7 @@
     python tools/fields/run.py --write    # relations/fields.yaml も書きかえる（付けなければ out/fields.yaml だけ）
     python tools/fields/place3d.py --check  # 3D の配置だけ作り、乱数の初めと関係を 1 割抜いた配置とくらべる
     python tools/fields/place3d.py --site   # サイトの 3D の地図の位置（tools/space-layout.json）を書く（D-124）。向きは、いま公開している配置に回転と裏返しだけで合わせる
-    python tools/fields/order2d.py          # 2D の地図の縦の並び（relations/region-order.yaml）を書く（D-124。relations/fields.yaml のあとに）
+    python tools/fields/order2d.py          # 2D の地図の縦の並び（relations/row-order.yaml）を書く（D-124。行は細かい分野。relations/fields.yaml のあとに）
 
 順番：(a) 3 設定（typed、typed_topic2、typed_use2。どれも前提の線を強さ×種類で重み付け、α=1.0）の合意の分け方 → (b) 3 設定の合意（cross.py、out/fields.json）→
 (c) 2 段目（level2.py）→ (d) 3D の配置（place3d.py、out/X_3d.npy）→ (e) out/fields.yaml を書く（save_fields.py。`--write` で relations/fields.yaml も）。
@@ -27,7 +27,7 @@ place3d.py --check は 15 分ほど。
 ## 出力
 
 - `relations/fields.yaml`（版管理する）
-- `relations/region-order.yaml`（版管理する。order2d.py）、`tools/space-layout.json`（版管理する。place3d.py --site）。build はどちらも読むだけ
+- `relations/row-order.yaml`（版管理する。order2d.py）、`tools/space-layout.json`（版管理する。place3d.py --site）。build はどちらも読むだけ
 - `tools/fields/out/`（.gitignore）：cl_<設定>_a1.0.json、fields.json、X_3d.npy、place3d.json、fields.yaml、preview-data.json（プレビュー用）
 
 ## 決まっている数

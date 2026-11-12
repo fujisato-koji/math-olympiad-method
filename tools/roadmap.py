@@ -618,8 +618,8 @@ def build_coverage(goal, cov, titles):
 
 
 def load_fields():
-    """関係から見つけた分野（D-122）と 2D の縦の並び（D-124）を読む。どちらも tools/fields/ が作り、build は読むだけ。"""
-    fy, ro = ROOT / "relations" / "fields.yaml", ROOT / "relations" / "region-order.yaml"
+    """関係から見つけた分野（D-122）と、2D の地図の行の並び（分野と細かい分野、D-124）を読む。どちらも tools/fields/ が作り、build は読むだけ。"""
+    fy, ro = ROOT / "relations" / "fields.yaml", ROOT / "relations" / "row-order.yaml"
     F = (yaml.safe_load(fy.read_text(encoding="utf-8")) or {}).get("fields", []) if fy.exists() else []
     f_of, s_of = {}, {}
     for f in F:
@@ -628,16 +628,9 @@ def load_fields():
                 f_of[x], s_of[x] = f["id"], s["id"]
     fields = [{"id": f["id"], "name": f["name"], "en": f.get("name_en") or "", "about": f.get("about") or "", "c": f.get("color") or k + 1,
                "subs": [{"id": s["id"], "name": s["name"]} for s in f["subs"]]} for k, f in enumerate(F)]
-    RO = (yaml.safe_load(ro.read_text(encoding="utf-8")) or {}).get("fields", []) if ro.exists() else []
-    region_order = {r: (g["field"], k) for k, (g, r) in enumerate((g, r) for g in RO for r in g["regions"])}
-    return fields, f_of, s_of, region_order
-
-
-def order_regions(regions, region_order):
-    """2D の地図の縦の並び：relations/region-order.yaml の順（分野ごと）。並びにない領域は、もとの順でうしろに置く。"""
-    known = sorted((r for r in regions if r["id"] in region_order), key=lambda r: region_order[r["id"]][1])
-    rest = [r for r in regions if r["id"] not in region_order]
-    return [{**r, "f": region_order[r["id"]][0]} for r in known] + rest
+    RO = (yaml.safe_load(ro.read_text(encoding="utf-8")) or {}).get("rows", []) if ro.exists() else []
+    rows = [[g["field"], g["subs"]] for g in RO] or [[f["id"], [s["id"] for s in f["subs"]]] for f in F]
+    return fields, f_of, s_of, rows
 
 
 def build(data, problems):
@@ -649,7 +642,7 @@ def build(data, problems):
     pos, added = space.place_missing(data["units"], json.loads(lay.read_text(encoding="utf-8")) if lay.exists() else {})
     if added:
         print(f"警告: 知の宇宙の配置にない単元 {len(added)}（仮に前提の近くに置いた。python tools/fields/run.py と python tools/fields/place3d.py --site で作り直す）：" + "、".join(added[:10]))
-    fields, f_of, s_of, region_order = load_fields()
+    fields, f_of, s_of, rows = load_fields()
     # 前提の線の強さ（relations/needs.yaml、3・2・1）を、地図の線の太さと濃さに使う（D-116 の追記）
     ny = ROOT / "relations" / "needs.yaml"
     NW = ((yaml.safe_load(ny.read_text(encoding="utf-8")) or {}).get("lines") or {}) if ny.exists() else {}
@@ -684,7 +677,7 @@ def build(data, problems):
                       **({"choices": cov["choices"]} if cov.get("choices") else {}),
                       "units": sorted(gu.get(g["id"], [])), "items": items,
                       **({"choiceUnits": sorted(gc[g["id"]] - gu[g["id"]])} if gc.get(g["id"], set()) - gu.get(g["id"], set()) else {})})
-    payload = {"lanes": data["lanes"], "stages": data["stages"], "regions": order_regions(data.get("regions", []), region_order), "kinds": data["kinds"], "fields": fields,
+    payload = {"lanes": data["lanes"], "stages": data["stages"], "regions": data.get("regions", []), "kinds": data["kinds"], "fields": fields, "rows": rows,
                "glossary": data.get("glossary", []),
                "goals": goals, "levels": THINKING_LEVELS,
                "combLayer": combination.layer(data["units"], data.get("catalog", []), comb), "goalKinds": list(GOAL_KINDS), "goalFields": list(GOAL_FIELDS), "units": out_units, "renamed": data["renamed"]}

@@ -261,1000 +261,834 @@ window.ROADMAP = {
  ],
  "regions": [
   {
-   "id": "kikai",
-   "name": "機械のしくみ",
-   "lane": "E",
-   "f": "F15"
-  },
-  {
-   "id": "sekkei",
-   "name": "設計とものづくり",
-   "lane": "E",
-   "f": "F15"
-  },
-  {
-   "id": "wakusei",
-   "name": "惑星科学",
-   "lane": "W",
-   "f": "F05"
-  },
-  {
-   "id": "chikyu-kagaku",
-   "name": "地球化学",
-   "lane": "W",
-   "f": "F05"
-  },
-  {
-   "id": "shigen",
-   "name": "資源工学",
-   "lane": "E",
-   "f": "F05"
-  },
-  {
-   "id": "ganseki",
-   "name": "鉱物と岩石",
-   "lane": "W",
-   "f": "F05"
-  },
-  {
-   "id": "jishin-kazan",
-   "name": "地震と火山",
-   "lane": "W",
-   "f": "F05"
-  },
-  {
-   "id": "chikyu-naibu",
-   "name": "地球の内部と変動",
-   "lane": "W",
-   "f": "F05"
-  },
-  {
-   "id": "chiso",
-   "name": "地層と地球の歴史",
-   "lane": "W",
-   "f": "F05"
-  },
-  {
-   "id": "mizu-kori",
-   "name": "水と氷",
-   "lane": "W",
-   "f": "F05"
-  },
-  {
-   "id": "chikyu-system",
-   "name": "地球システム科学",
-   "lane": "W",
-   "f": "F05"
-  },
-  {
-   "id": "chikyu",
-   "name": "気象と気候",
-   "lane": "P",
-   "f": "F05"
-  },
-  {
-   "id": "tenki",
-   "name": "天気と水のめぐり",
-   "lane": "W",
-   "f": "F05"
-  },
-  {
-   "id": "kankyo-kogaku",
-   "name": "環境工学",
-   "lane": "E",
-   "f": "F05"
-  },
-  {
-   "id": "busshitsu",
-   "name": "物質と変化",
-   "lane": "H",
-   "f": "F08"
-  },
-  {
-   "id": "bunseki",
-   "name": "分析と実験",
-   "lane": "H",
-   "f": "F08"
-  },
-  {
-   "id": "yuki",
-   "name": "有機化学",
-   "lane": "H",
-   "f": "F08"
-  },
-  {
-   "id": "genshi-ketsugo",
-   "name": "原子と結合",
-   "lane": "H",
-   "f": "F08"
-  },
-  {
-   "id": "hanno",
-   "name": "化学反応と平衡",
-   "lane": "H",
-   "f": "F08"
-  },
-  {
-   "id": "muki",
-   "name": "無機化学",
-   "lane": "H",
-   "f": "F08"
-  },
-  {
-   "id": "butsuri-kagaku",
-   "name": "物理化学",
-   "lane": "H",
-   "f": "F08"
-  },
-  {
-   "id": "zairyo",
-   "name": "材料と高分子",
-   "lane": "H",
-   "f": "F08"
-  },
-  {
-   "id": "kagaku-kogaku",
-   "name": "化学工学",
-   "lane": "E",
-   "f": "F08"
-  },
-  {
-   "id": "ryutai-butsuri",
-   "name": "流体物理",
-   "lane": "P",
-   "f": "F04"
-  },
-  {
-   "id": "soft-matter",
-   "name": "ソフトマター",
-   "lane": "P",
-   "f": "F04"
-  },
-  {
-   "id": "zairyo-device",
-   "name": "材料とデバイス",
-   "lane": "E",
-   "f": "F04"
-  },
-  {
-   "id": "netsu",
-   "name": "熱と統計",
-   "lane": "P",
-   "f": "F04"
-  },
-  {
-   "id": "bussei",
-   "name": "物性",
-   "lane": "P",
-   "f": "F04"
-  },
-  {
-   "id": "genshi",
-   "name": "原子・分子・光の物理",
-   "lane": "P",
-   "f": "F04"
-  },
-  {
-   "id": "ryoshi",
-   "name": "量子",
-   "lane": "P",
-   "f": "F04"
-  },
-  {
-   "id": "kaiseki-rikigaku",
-   "name": "解析力学",
-   "lane": "P",
-   "f": "F04"
-  },
-  {
-   "id": "soryushi",
-   "name": "素粒子と場",
-   "lane": "P",
-   "f": "F04"
-  },
-  {
-   "id": "jikken",
-   "name": "物理の計測と計算の方法",
-   "lane": "P",
-   "f": "F04"
-  },
-  {
-   "id": "denjiki",
-   "name": "電磁気",
-   "lane": "P",
-   "f": "F04"
-  },
-  {
-   "id": "soutai",
-   "name": "相対論と宇宙",
-   "lane": "P",
-   "f": "F04"
-  },
-  {
-   "id": "tenmon",
-   "name": "天文と天体物理",
-   "lane": "P",
-   "f": "F04"
-  },
-  {
-   "id": "hado",
-   "name": "波と光",
-   "lane": "P",
-   "f": "F04"
-  },
-  {
-   "id": "uchu-kukan",
-   "name": "宇宙空間物理",
-   "lane": "P",
-   "f": "F04"
-  },
-  {
-   "id": "sora",
-   "name": "空と星",
-   "lane": "W",
-   "f": "F04"
-  },
-  {
-   "id": "netsu-suishin",
-   "name": "熱と推進",
-   "lane": "E",
-   "f": "F10"
-  },
-  {
-   "id": "ryutai",
-   "name": "流体",
-   "lane": "E",
-   "f": "F10"
-  },
-  {
-   "id": "rikigaku",
-   "name": "力学",
-   "lane": "P",
-   "f": "F10"
-  },
-  {
-   "id": "kido",
-   "name": "軌道と宇宙機",
-   "lane": "E",
-   "f": "F10"
-  },
-  {
-   "id": "suchi",
-   "name": "数値計算と最適化",
-   "lane": "K",
-   "f": "F10"
-  },
-  {
-   "id": "onkyo",
-   "name": "音響",
-   "lane": "E",
-   "f": "F10"
-  },
-  {
-   "id": "doboku",
-   "name": "土木と建築",
-   "lane": "E",
-   "f": "F11"
-  },
-  {
-   "id": "kozo-zairyo",
-   "name": "構造と材料",
-   "lane": "E",
-   "f": "F11"
-  },
-  {
-   "id": "energy",
-   "name": "エネルギーの変換",
-   "lane": "E",
-   "f": "F12"
-  },
-  {
-   "id": "seigyo",
-   "name": "制御",
-   "lane": "E",
-   "f": "F12"
-  },
-  {
-   "id": "kairo-shingo",
-   "name": "回路と信号",
-   "lane": "E",
-   "f": "F12"
-  },
-  {
-   "id": "tsushin",
-   "name": "通信",
-   "lane": "E",
-   "f": "F12"
-  },
-  {
-   "id": "risan-kika",
-   "name": "離散幾何",
-   "lane": "G",
-   "f": "F01"
-  },
-  {
-   "id": "totsu-kika",
-   "name": "凸幾何",
-   "lane": "G",
-   "f": "F01"
-  },
-  {
-   "id": "senkei-chusho",
-   "name": "線形代数（抽象）",
-   "lane": "M",
-   "f": "F01"
-  },
-  {
-   "id": "senkei-keisan",
-   "name": "行列と線形の計算",
-   "lane": "M",
-   "f": "F01"
-  },
-  {
-   "id": "fukuzatsukei",
-   "name": "複雑系",
-   "lane": "P",
-   "f": "F01"
-  },
-  {
-   "id": "bibun-hoteishiki",
-   "name": "微分方程式と力学系",
-   "lane": "D",
-   "f": "F01"
-  },
-  {
-   "id": "bisekibun",
-   "name": "微積分",
-   "lane": "D",
-   "f": "F01"
-  },
-  {
-   "id": "jitsukaiseki",
-   "name": "実解析と測度",
-   "lane": "D",
-   "f": "F01"
-  },
-  {
-   "id": "kansu-kaiseki",
-   "name": "関数解析",
-   "lane": "D",
-   "f": "F01"
-  },
-  {
-   "id": "fukuso",
-   "name": "複素解析",
-   "lane": "D",
-   "f": "F01"
-  },
-  {
-   "id": "kaisekiteki-seisuron",
-   "name": "解析的整数論",
-   "lane": "N",
-   "f": "F01"
-  },
-  {
-   "id": "tayotai",
-   "name": "多様体と微分幾何",
-   "lane": "T",
-   "f": "F01"
-  },
-  {
-   "id": "iso",
-   "name": "位相",
-   "lane": "T",
-   "f": "F01"
-  },
-  {
-   "id": "hyogen",
-   "name": "表現とリー理論",
-   "lane": "R",
-   "f": "F01"
-  },
-  {
-   "id": "hokei",
-   "name": "保型形式とガロア表現",
-   "lane": "N",
-   "f": "F01"
-  },
-  {
-   "id": "daisuteki-iso",
-   "name": "代数的位相",
-   "lane": "T",
-   "f": "F01"
-  },
-  {
-   "id": "kenron",
-   "name": "圏論",
-   "lane": "R",
-   "f": "F01"
-  },
-  {
-   "id": "kakan-homology",
-   "name": "可換環とホモロジー代数",
-   "lane": "R",
-   "f": "F01"
-  },
-  {
-   "id": "gunkantai",
-   "name": "群・環・体",
-   "lane": "R",
-   "f": "F01"
-  },
-  {
-   "id": "daisuteki-seisuron",
-   "name": "代数的整数論",
-   "lane": "N",
-   "f": "F01"
-  },
-  {
-   "id": "daisu-kika",
-   "name": "代数幾何",
-   "lane": "T",
-   "f": "F01"
-  },
-  {
-   "id": "fuhen-daisu",
-   "name": "普遍代数",
-   "lane": "R",
-   "f": "F01"
-  },
-  {
-   "id": "graph",
-   "name": "グラフと盤面",
-   "lane": "C",
-   "f": "F01"
-  },
-  {
-   "id": "zahyo",
-   "name": "三角法と座標",
-   "lane": "G",
-   "f": "F03"
-  },
-  {
-   "id": "haichi",
-   "name": "円と配置",
-   "lane": "G",
-   "f": "F03"
-  },
-  {
-   "id": "shomei-zukei",
-   "name": "図形の証明",
-   "lane": "G",
-   "f": "F03"
-  },
-  {
-   "id": "katachi",
-   "name": "かたち",
-   "lane": "G",
-   "f": "F03"
-  },
-  {
-   "id": "hakaru",
-   "name": "はかる",
-   "lane": "G",
-   "f": "F03"
-  },
-  {
-   "id": "suiri",
-   "name": "推理",
-   "lane": "L",
-   "f": "F03"
-  },
-  {
    "id": "kazu",
    "name": "数のはじまり",
-   "lane": "N",
-   "f": "F03"
-  },
-  {
-   "id": "seisuron",
-   "name": "整数論",
-   "lane": "N",
-   "f": "F03"
-  },
-  {
-   "id": "seisu",
-   "name": "整数の性質",
-   "lane": "N",
-   "f": "F03"
+   "lane": "N"
   },
   {
    "id": "keisan",
    "name": "計算",
-   "lane": "N",
-   "f": "F03"
+   "lane": "N"
+  },
+  {
+   "id": "seisu",
+   "name": "整数の性質",
+   "lane": "N"
+  },
+  {
+   "id": "seisuron",
+   "name": "整数論",
+   "lane": "N"
   },
   {
    "id": "houteishiki",
    "name": "方程式",
-   "lane": "A",
-   "f": "F03"
-  },
-  {
-   "id": "shiki",
-   "name": "式と多項式",
-   "lane": "A",
-   "f": "F03"
-  },
-  {
-   "id": "kazoekata",
-   "name": "数え方",
-   "lane": "C",
-   "f": "F03"
-  },
-  {
-   "id": "ronpo",
-   "name": "論法",
-   "lane": "L",
-   "f": "F03"
+   "lane": "A"
   },
   {
    "id": "kansu",
    "name": "比と関数",
-   "lane": "A",
-   "f": "F03"
+   "lane": "A"
+  },
+  {
+   "id": "shiki",
+   "name": "式と多項式",
+   "lane": "A"
   },
   {
    "id": "futoshiki",
    "name": "不等式と関数方程式",
-   "lane": "A",
-   "f": "F03"
+   "lane": "A"
   },
   {
-   "id": "data",
-   "name": "データの活用",
-   "lane": "S",
-   "f": "F03"
+   "id": "kazoekata",
+   "name": "数え方",
+   "lane": "C"
   },
   {
    "id": "kakuritsu",
    "name": "確率",
-   "lane": "C",
-   "f": "F03"
+   "lane": "C"
+  },
+  {
+   "id": "graph",
+   "name": "グラフと盤面",
+   "lane": "C"
+  },
+  {
+   "id": "katachi",
+   "name": "かたち",
+   "lane": "G"
+  },
+  {
+   "id": "hakaru",
+   "name": "はかる",
+   "lane": "G"
+  },
+  {
+   "id": "shomei-zukei",
+   "name": "図形の証明",
+   "lane": "G"
+  },
+  {
+   "id": "zahyo",
+   "name": "三角法と座標",
+   "lane": "G"
+  },
+  {
+   "id": "haichi",
+   "name": "円と配置",
+   "lane": "G"
+  },
+  {
+   "id": "suiri",
+   "name": "推理",
+   "lane": "L"
+  },
+  {
+   "id": "ronpo",
+   "name": "論法",
+   "lane": "L"
   },
   {
    "id": "bisekibun-nyumon",
    "name": "微積分の入口",
-   "lane": "D",
-   "f": "F03"
+   "lane": "D"
   },
   {
-   "id": "keiei-kogaku",
-   "name": "経営工学",
-   "lane": "E",
-   "f": "F03"
+   "id": "bisekibun",
+   "name": "微積分",
+   "lane": "D"
   },
   {
-   "id": "kumiawase-daigaku",
-   "name": "組合せ論とグラフ（大学）",
-   "lane": "C",
-   "f": "F07"
+   "id": "jitsukaiseki",
+   "name": "実解析と測度",
+   "lane": "D"
   },
   {
-   "id": "suri-ronri",
-   "name": "数理論理と集合論",
-   "lane": "L",
-   "f": "F07"
+   "id": "fukuso",
+   "name": "複素解析",
+   "lane": "D"
   },
   {
-   "id": "keisan-kanousei",
-   "name": "計算可能性",
-   "lane": "L",
-   "f": "F07"
+   "id": "bibun-hoteishiki",
+   "name": "微分方程式と力学系",
+   "lane": "D"
   },
   {
-   "id": "keisan-riron",
-   "name": "計算理論",
-   "lane": "K",
-   "f": "F07"
+   "id": "kansu-kaiseki",
+   "name": "関数解析",
+   "lane": "D"
   },
   {
-   "id": "anzen",
-   "name": "暗号と安全",
-   "lane": "K",
-   "f": "F07"
+   "id": "senkei-keisan",
+   "name": "行列と線形の計算",
+   "lane": "M"
   },
   {
-   "id": "programming",
-   "name": "プログラミングとアルゴリズム",
-   "lane": "K",
-   "f": "F07"
+   "id": "senkei-chusho",
+   "name": "線形代数（抽象）",
+   "lane": "M"
   },
   {
-   "id": "keisanki-system",
-   "name": "計算機システム",
-   "lane": "K",
-   "f": "F07"
+   "id": "gunkantai",
+   "name": "群・環・体",
+   "lane": "R"
   },
   {
-   "id": "hardware",
-   "name": "ハードウェアの設計",
-   "lane": "K",
-   "f": "F07"
+   "id": "hyogen",
+   "name": "表現とリー理論",
+   "lane": "R"
   },
   {
-   "id": "fugo",
-   "name": "符号と情報",
-   "lane": "C",
-   "f": "F07"
+   "id": "kakan-homology",
+   "name": "可換環とホモロジー代数",
+   "lane": "R"
   },
   {
-   "id": "graphics",
-   "name": "コンピュータグラフィックス",
-   "lane": "K",
-   "f": "F13"
+   "id": "kenron",
+   "name": "圏論",
+   "lane": "R"
   },
   {
-   "id": "robotics",
-   "name": "ロボティクス",
-   "lane": "K",
-   "f": "F13"
+   "id": "fuhen-daisu",
+   "name": "普遍代数",
+   "lane": "R"
   },
   {
-   "id": "kikai-gakushu",
-   "name": "機械学習とデータ",
-   "lane": "K",
-   "f": "F13"
+   "id": "iso",
+   "name": "位相",
+   "lane": "T"
   },
   {
-   "id": "vision",
-   "name": "コンピュータビジョン",
-   "lane": "K",
-   "f": "F13"
+   "id": "tayotai",
+   "name": "多様体と微分幾何",
+   "lane": "T"
   },
   {
-   "id": "kakuritsu-katei",
-   "name": "確率過程",
-   "lane": "S",
-   "f": "F14"
+   "id": "daisuteki-iso",
+   "name": "代数的位相",
+   "lane": "T"
   },
   {
-   "id": "media",
-   "name": "メディア・コミュニケーション",
-   "lane": "Y",
-   "f": "F06"
-  },
-  {
-   "id": "shakai-hoho",
-   "name": "社会科学の方法",
-   "lane": "Y",
-   "f": "F06"
-  },
-  {
-   "id": "kyoiku",
-   "name": "教育学",
-   "lane": "Y",
-   "f": "F06"
-  },
-  {
-   "id": "tokei",
-   "name": "統計",
-   "lane": "S",
-   "f": "F06"
+   "id": "daisu-kika",
+   "name": "代数幾何",
+   "lane": "T"
   },
   {
    "id": "kakuritsu-daigaku",
    "name": "確率（大学）",
-   "lane": "S",
-   "f": "F06"
+   "lane": "S"
   },
   {
-   "id": "shinri-hoho",
-   "name": "心理学の方法と測定",
-   "lane": "Q",
-   "f": "F06"
+   "id": "tokei",
+   "name": "統計",
+   "lane": "S"
   },
   {
-   "id": "shinri-shakai",
-   "name": "社会心理学",
-   "lane": "Q",
-   "f": "F06"
+   "id": "kakuritsu-katei",
+   "name": "確率過程",
+   "lane": "S"
   },
   {
-   "id": "shinri-rinsho",
-   "name": "臨床心理学と健康心理学",
-   "lane": "Q",
-   "f": "F06"
+   "id": "daisuteki-seisuron",
+   "name": "代数的整数論",
+   "lane": "N"
   },
   {
-   "id": "shinri-gakushu",
-   "name": "計算論的認知科学",
-   "lane": "Q",
-   "f": "F06"
+   "id": "kaisekiteki-seisuron",
+   "name": "解析的整数論",
+   "lane": "N"
   },
   {
-   "id": "shinri-ninchi",
-   "name": "知覚と認知",
-   "lane": "Q",
-   "f": "F06"
+   "id": "kumiawase-daigaku",
+   "name": "組合せ論とグラフ（大学）",
+   "lane": "C"
   },
   {
-   "id": "kyoiku-shinri",
-   "name": "教育心理学",
-   "lane": "Q",
-   "f": "F06"
+   "id": "fugo",
+   "name": "符号と情報",
+   "lane": "C"
   },
   {
-   "id": "shinkei",
-   "name": "神経科学",
-   "lane": "B",
-   "f": "F06"
+   "id": "suri-ronri",
+   "name": "数理論理と集合論",
+   "lane": "L"
   },
   {
-   "id": "seitai-kogaku",
-   "name": "生体工学",
-   "lane": "E",
-   "f": "F06"
+   "id": "keisan-kanousei",
+   "name": "計算可能性",
+   "lane": "L"
   },
   {
-   "id": "hci",
-   "name": "ヒューマンコンピュータインタラクション",
-   "lane": "K",
-   "f": "F06"
+   "id": "suchi",
+   "name": "数値計算と最適化",
+   "lane": "K"
   },
   {
-   "id": "chiri-joho",
-   "name": "地理情報科学",
-   "lane": "W",
-   "f": "F02"
+   "id": "rikigaku",
+   "name": "力学",
+   "lane": "P"
   },
   {
-   "id": "kankyo-kagaku",
-   "name": "環境化学",
-   "lane": "H",
-   "f": "F02"
+   "id": "kaiseki-rikigaku",
+   "name": "解析力学",
+   "lane": "P"
   },
   {
-   "id": "shokuhin",
-   "name": "食品科学",
-   "lane": "V",
-   "f": "F02"
+   "id": "hado",
+   "name": "波と光",
+   "lane": "P"
   },
   {
-   "id": "kodo",
-   "name": "行動と認知",
-   "lane": "B",
-   "f": "F02"
+   "id": "denjiki",
+   "name": "電磁気",
+   "lane": "P"
   },
   {
-   "id": "umi-mizu",
-   "name": "海と陸水の生き物",
-   "lane": "B",
-   "f": "F02"
+   "id": "netsu",
+   "name": "熱と統計",
+   "lane": "P"
   },
   {
-   "id": "seitai",
-   "name": "生態",
-   "lane": "B",
-   "f": "F02"
+   "id": "ryoshi",
+   "name": "量子",
+   "lane": "P"
   },
   {
-   "id": "nouchi",
-   "name": "農業生態学",
-   "lane": "V",
-   "f": "F02"
+   "id": "soutai",
+   "name": "相対論と宇宙",
+   "lane": "P"
   },
   {
-   "id": "dobutsu-keito",
-   "name": "動物の多様性と系統",
-   "lane": "B",
-   "f": "F02"
+   "id": "bussei",
+   "name": "物性",
+   "lane": "P"
   },
   {
-   "id": "ikimono",
-   "name": "生き物のつくりとくらし",
-   "lane": "B",
-   "f": "F02"
+   "id": "soryushi",
+   "name": "素粒子と場",
+   "lane": "P"
   },
   {
-   "id": "kachiku-yoshoku",
-   "name": "家畜と養殖",
-   "lane": "V",
-   "f": "F02"
+   "id": "genshi",
+   "name": "原子・分子・光の物理",
+   "lane": "P"
   },
   {
-   "id": "sakumotsu",
-   "name": "作物と育種",
-   "lane": "V",
-   "f": "F02"
+   "id": "jikken",
+   "name": "物理の計測と計算の方法",
+   "lane": "P"
   },
   {
-   "id": "shokubutsu",
-   "name": "植物のはたらき",
-   "lane": "B",
-   "f": "F02"
+   "id": "fukuzatsukei",
+   "name": "複雑系",
+   "lane": "P"
   },
   {
-   "id": "iyaku",
-   "name": "微生物",
-   "lane": "B",
-   "f": "F02"
+   "id": "soft-matter",
+   "name": "ソフトマター",
+   "lane": "P"
   },
   {
-   "id": "biseibutsu",
-   "name": "微生物",
-   "lane": "B",
-   "f": "F02"
+   "id": "ryutai-butsuri",
+   "name": "流体物理",
+   "lane": "P"
   },
   {
-   "id": "iden-shinka",
-   "name": "遺伝と進化",
-   "lane": "B",
-   "f": "F02"
+   "id": "uchu-kukan",
+   "name": "宇宙空間物理",
+   "lane": "P"
+  },
+  {
+   "id": "ryutai",
+   "name": "流体",
+   "lane": "E"
+  },
+  {
+   "id": "netsu-suishin",
+   "name": "熱と推進",
+   "lane": "E"
+  },
+  {
+   "id": "kozo-zairyo",
+   "name": "構造と材料",
+   "lane": "E"
+  },
+  {
+   "id": "seigyo",
+   "name": "制御",
+   "lane": "E"
+  },
+  {
+   "id": "kido",
+   "name": "軌道と宇宙機",
+   "lane": "E"
+  },
+  {
+   "id": "kairo-shingo",
+   "name": "回路と信号",
+   "lane": "E"
+  },
+  {
+   "id": "tsushin",
+   "name": "通信",
+   "lane": "E"
+  },
+  {
+   "id": "doboku",
+   "name": "土木と建築",
+   "lane": "E"
+  },
+  {
+   "id": "onkyo",
+   "name": "音響",
+   "lane": "E"
+  },
+  {
+   "id": "programming",
+   "name": "プログラミングとアルゴリズム",
+   "lane": "K"
+  },
+  {
+   "id": "keisan-riron",
+   "name": "計算理論",
+   "lane": "K"
+  },
+  {
+   "id": "kikai-gakushu",
+   "name": "機械学習とデータ",
+   "lane": "K"
+  },
+  {
+   "id": "graphics",
+   "name": "コンピュータグラフィックス",
+   "lane": "K"
+  },
+  {
+   "id": "vision",
+   "name": "コンピュータビジョン",
+   "lane": "K"
+  },
+  {
+   "id": "robotics",
+   "name": "ロボティクス",
+   "lane": "K"
+  },
+  {
+   "id": "anzen",
+   "name": "暗号と安全",
+   "lane": "K"
   },
   {
    "id": "seibutsu-keisan",
    "name": "計算生物",
-   "lane": "K",
-   "f": "F02"
+   "lane": "K"
+  },
+  {
+   "id": "hardware",
+   "name": "ハードウェアの設計",
+   "lane": "K"
+  },
+  {
+   "id": "keisanki-system",
+   "name": "計算機システム",
+   "lane": "K"
+  },
+  {
+   "id": "hci",
+   "name": "ヒューマンコンピュータインタラクション",
+   "lane": "K"
+  },
+  {
+   "id": "chikyu",
+   "name": "気象と気候",
+   "lane": "P"
+  },
+  {
+   "id": "data",
+   "name": "データの活用",
+   "lane": "S"
   },
   {
    "id": "bunshi-saibo",
    "name": "分子と細胞の生物学",
-   "lane": "B",
-   "f": "F02"
-  },
-  {
-   "id": "hassei",
-   "name": "発生と再生",
-   "lane": "B",
-   "f": "F02"
-  },
-  {
-   "id": "sangyo-bio",
-   "name": "産業バイオ",
-   "lane": "E",
-   "f": "F02"
+   "lane": "B"
   },
   {
    "id": "seibutsu-butsuri",
    "name": "生物物理",
-   "lane": "B",
-   "f": "F02"
+   "lane": "B"
   },
   {
-   "id": "soyaku",
-   "name": "創薬の化学",
-   "lane": "H",
-   "f": "F02"
+   "id": "hokei",
+   "name": "保型形式とガロア表現",
+   "lane": "N"
   },
   {
-   "id": "iryo-saizensen",
-   "name": "医療の最前線",
-   "lane": "I",
-   "f": "F02"
+   "id": "risan-kika",
+   "name": "離散幾何",
+   "lane": "G"
   },
   {
-   "id": "kansen-meneki",
-   "name": "感染と免疫",
-   "lane": "I",
-   "f": "F02"
-  },
-  {
-   "id": "ekigaku",
-   "name": "疫学と公衆衛生",
-   "lane": "I",
-   "f": "F02"
-  },
-  {
-   "id": "hikaku-seiri",
-   "name": "比較の生理",
-   "lane": "B",
-   "f": "F02"
-  },
-  {
-   "id": "karada",
-   "name": "からだのはたらき",
-   "lane": "B",
-   "f": "F02"
-  },
-  {
-   "id": "kusuri-doku",
-   "name": "薬と毒",
-   "lane": "I",
-   "f": "F02"
-  },
-  {
-   "id": "juui-shoku",
-   "name": "獣医学",
-   "lane": "V",
-   "f": "F02"
-  },
-  {
-   "id": "byori",
-   "name": "病気のしくみ",
-   "lane": "I",
-   "f": "F02"
-  },
-  {
-   "id": "rinsho",
-   "name": "臨床医学",
-   "lane": "I",
-   "f": "F02"
-  },
-  {
-   "id": "jintai",
-   "name": "人体の構造と機能",
-   "lane": "I",
-   "f": "F02"
-  },
-  {
-   "id": "eiyo",
-   "name": "栄養",
-   "lane": "I",
-   "f": "F02"
-  },
-  {
-   "id": "shinri-hattatsu",
-   "name": "発達心理学",
-   "lane": "Q",
-   "f": "F02"
-  },
-  {
-   "id": "shakaigaku",
-   "name": "社会学",
-   "lane": "Y",
-   "f": "F09"
-  },
-  {
-   "id": "seijigaku",
-   "name": "政治学",
-   "lane": "Y",
-   "f": "F09"
-  },
-  {
-   "id": "keizai",
-   "name": "経済学",
-   "lane": "F",
-   "f": "F09"
-  },
-  {
-   "id": "ouyou-keizai",
-   "name": "応用経済学",
-   "lane": "F",
-   "f": "F09"
-  },
-  {
-   "id": "seimei-nenkin",
-   "name": "生命保険と年金の数理",
-   "lane": "F",
-   "f": "F09"
+   "id": "totsu-kika",
+   "name": "凸幾何",
+   "lane": "G"
   },
   {
    "id": "risoku",
    "name": "お金と利息",
-   "lane": "F",
-   "f": "F09"
+   "lane": "F"
   },
   {
    "id": "kaikei",
    "name": "会計と企業金融",
-   "lane": "F",
-   "f": "F09"
+   "lane": "F"
   },
   {
-   "id": "toshi",
-   "name": "投資と派生商品",
-   "lane": "F",
-   "f": "F09"
+   "id": "keizai",
+   "name": "経済学",
+   "lane": "F"
   },
   {
-   "id": "shokugyo-seido",
-   "name": "金融の実務",
-   "lane": "F",
-   "f": "F09"
-  },
-  {
-   "id": "keiryo-risk",
-   "name": "計量とリスク管理",
-   "lane": "F",
-   "f": "F09"
+   "id": "seimei-nenkin",
+   "name": "生命保険と年金の数理",
+   "lane": "F"
   },
   {
    "id": "songai",
    "name": "損害保険とリスク理論",
-   "lane": "F",
-   "f": "F09"
+   "lane": "F"
+  },
+  {
+   "id": "toshi",
+   "name": "投資と派生商品",
+   "lane": "F"
+  },
+  {
+   "id": "keiryo-risk",
+   "name": "計量とリスク管理",
+   "lane": "F"
+  },
+  {
+   "id": "shokugyo-seido",
+   "name": "金融の実務",
+   "lane": "F"
+  },
+  {
+   "id": "ouyou-keizai",
+   "name": "応用経済学",
+   "lane": "F"
+  },
+  {
+   "id": "keiei-kogaku",
+   "name": "経営工学",
+   "lane": "E"
+  },
+  {
+   "id": "ganseki",
+   "name": "鉱物と岩石",
+   "lane": "W"
+  },
+  {
+   "id": "chiso",
+   "name": "地層と地球の歴史",
+   "lane": "W"
+  },
+  {
+   "id": "chiri-joho",
+   "name": "地理情報科学",
+   "lane": "W"
+  },
+  {
+   "id": "chikyu-naibu",
+   "name": "地球の内部と変動",
+   "lane": "W"
+  },
+  {
+   "id": "jishin-kazan",
+   "name": "地震と火山",
+   "lane": "W"
+  },
+  {
+   "id": "chikyu-kagaku",
+   "name": "地球化学",
+   "lane": "W"
+  },
+  {
+   "id": "chikyu-system",
+   "name": "地球システム科学",
+   "lane": "W"
+  },
+  {
+   "id": "tenmon",
+   "name": "天文と天体物理",
+   "lane": "P"
+  },
+  {
+   "id": "zairyo-device",
+   "name": "材料とデバイス",
+   "lane": "E"
+  },
+  {
+   "id": "energy",
+   "name": "エネルギーの変換",
+   "lane": "E"
+  },
+  {
+   "id": "seitai-kogaku",
+   "name": "生体工学",
+   "lane": "E"
+  },
+  {
+   "id": "busshitsu",
+   "name": "物質と変化",
+   "lane": "H"
+  },
+  {
+   "id": "genshi-ketsugo",
+   "name": "原子と結合",
+   "lane": "H"
+  },
+  {
+   "id": "hanno",
+   "name": "化学反応と平衡",
+   "lane": "H"
+  },
+  {
+   "id": "muki",
+   "name": "無機化学",
+   "lane": "H"
+  },
+  {
+   "id": "kankyo-kagaku",
+   "name": "環境化学",
+   "lane": "H"
+  },
+  {
+   "id": "yuki",
+   "name": "有機化学",
+   "lane": "H"
+  },
+  {
+   "id": "bunseki",
+   "name": "分析と実験",
+   "lane": "H"
+  },
+  {
+   "id": "butsuri-kagaku",
+   "name": "物理化学",
+   "lane": "H"
+  },
+  {
+   "id": "zairyo",
+   "name": "材料と高分子",
+   "lane": "H"
+  },
+  {
+   "id": "soyaku",
+   "name": "創薬の化学",
+   "lane": "H"
+  },
+  {
+   "id": "ikimono",
+   "name": "生き物のつくりとくらし",
+   "lane": "B"
+  },
+  {
+   "id": "shokubutsu",
+   "name": "植物のはたらき",
+   "lane": "B"
+  },
+  {
+   "id": "karada",
+   "name": "からだのはたらき",
+   "lane": "B"
+  },
+  {
+   "id": "iden-shinka",
+   "name": "遺伝と進化",
+   "lane": "B"
+  },
+  {
+   "id": "seitai",
+   "name": "生態",
+   "lane": "B"
+  },
+  {
+   "id": "hassei",
+   "name": "発生と再生",
+   "lane": "B"
+  },
+  {
+   "id": "iyaku",
+   "name": "微生物",
+   "lane": "B"
+  },
+  {
+   "id": "shinkei",
+   "name": "神経科学",
+   "lane": "B"
+  },
+  {
+   "id": "sora",
+   "name": "空と星",
+   "lane": "W"
+  },
+  {
+   "id": "tenki",
+   "name": "天気と水のめぐり",
+   "lane": "W"
+  },
+  {
+   "id": "sekkei",
+   "name": "設計とものづくり",
+   "lane": "E"
+  },
+  {
+   "id": "kikai",
+   "name": "機械のしくみ",
+   "lane": "E"
+  },
+  {
+   "id": "jintai",
+   "name": "人体の構造と機能",
+   "lane": "I"
+  },
+  {
+   "id": "byori",
+   "name": "病気のしくみ",
+   "lane": "I"
+  },
+  {
+   "id": "kusuri-doku",
+   "name": "薬と毒",
+   "lane": "I"
+  },
+  {
+   "id": "kansen-meneki",
+   "name": "感染と免疫",
+   "lane": "I"
+  },
+  {
+   "id": "ekigaku",
+   "name": "疫学と公衆衛生",
+   "lane": "I"
+  },
+  {
+   "id": "rinsho",
+   "name": "臨床医学",
+   "lane": "I"
+  },
+  {
+   "id": "eiyo",
+   "name": "栄養",
+   "lane": "I"
+  },
+  {
+   "id": "iryo-saizensen",
+   "name": "医療の最前線",
+   "lane": "I"
+  },
+  {
+   "id": "shinri-ninchi",
+   "name": "知覚と認知",
+   "lane": "Q"
+  },
+  {
+   "id": "shinri-gakushu",
+   "name": "計算論的認知科学",
+   "lane": "Q"
+  },
+  {
+   "id": "shinri-hattatsu",
+   "name": "発達心理学",
+   "lane": "Q"
+  },
+  {
+   "id": "shinri-shakai",
+   "name": "社会心理学",
+   "lane": "Q"
+  },
+  {
+   "id": "shinri-rinsho",
+   "name": "臨床心理学と健康心理学",
+   "lane": "Q"
+  },
+  {
+   "id": "shinri-hoho",
+   "name": "心理学の方法と測定",
+   "lane": "Q"
+  },
+  {
+   "id": "kyoiku-shinri",
+   "name": "教育心理学",
+   "lane": "Q"
+  },
+  {
+   "id": "dobutsu-keito",
+   "name": "動物の多様性と系統",
+   "lane": "B"
+  },
+  {
+   "id": "hikaku-seiri",
+   "name": "比較の生理",
+   "lane": "B"
+  },
+  {
+   "id": "biseibutsu",
+   "name": "微生物",
+   "lane": "B"
+  },
+  {
+   "id": "umi-mizu",
+   "name": "海と陸水の生き物",
+   "lane": "B"
+  },
+  {
+   "id": "kodo",
+   "name": "行動と認知",
+   "lane": "B"
+  },
+  {
+   "id": "sakumotsu",
+   "name": "作物と育種",
+   "lane": "V"
+  },
+  {
+   "id": "nouchi",
+   "name": "農業生態学",
+   "lane": "V"
+  },
+  {
+   "id": "kachiku-yoshoku",
+   "name": "家畜と養殖",
+   "lane": "V"
+  },
+  {
+   "id": "juui-shoku",
+   "name": "獣医学",
+   "lane": "V"
+  },
+  {
+   "id": "shokuhin",
+   "name": "食品科学",
+   "lane": "V"
+  },
+  {
+   "id": "kagaku-kogaku",
+   "name": "化学工学",
+   "lane": "E"
+  },
+  {
+   "id": "kankyo-kogaku",
+   "name": "環境工学",
+   "lane": "E"
+  },
+  {
+   "id": "sangyo-bio",
+   "name": "産業バイオ",
+   "lane": "E"
+  },
+  {
+   "id": "shigen",
+   "name": "資源工学",
+   "lane": "E"
+  },
+  {
+   "id": "mizu-kori",
+   "name": "水と氷",
+   "lane": "W"
+  },
+  {
+   "id": "wakusei",
+   "name": "惑星科学",
+   "lane": "W"
+  },
+  {
+   "id": "shakai-hoho",
+   "name": "社会科学の方法",
+   "lane": "Y"
+  },
+  {
+   "id": "shakaigaku",
+   "name": "社会学",
+   "lane": "Y"
+  },
+  {
+   "id": "seijigaku",
+   "name": "政治学",
+   "lane": "Y"
+  },
+  {
+   "id": "media",
+   "name": "メディア・コミュニケーション",
+   "lane": "Y"
+  },
+  {
+   "id": "kyoiku",
+   "name": "教育学",
+   "lane": "Y"
   }
  ],
  "kinds": {
@@ -1956,6 +1790,222 @@ window.ROADMAP = {
     }
    ]
   }
+ ],
+ "rows": [
+  [
+   "F09",
+   [
+    "F09-06",
+    "F09-04",
+    "F09-10",
+    "F09-01",
+    "F09-02",
+    "F09-09",
+    "F09-07",
+    "F09-03",
+    "F09-05",
+    "F09-08"
+   ]
+  ],
+  [
+   "F06",
+   [
+    "F06-09",
+    "F06-03",
+    "F06-02",
+    "F06-01",
+    "F06-08",
+    "F06-07",
+    "F06-05",
+    "F06-04",
+    "F06-10",
+    "F06-06"
+   ]
+  ],
+  [
+   "F02",
+   [
+    "F02-02",
+    "F02-03",
+    "F02-11",
+    "F02-05",
+    "F02-01",
+    "F02-10",
+    "F02-08",
+    "F02-13",
+    "F02-15",
+    "F02-09",
+    "F02-12",
+    "F02-14",
+    "F02-16",
+    "F02-04",
+    "F02-06",
+    "F02-07"
+   ]
+  ],
+  [
+   "F13",
+   [
+    "F13-03",
+    "F13-05",
+    "F13-01",
+    "F13-02",
+    "F13-04",
+    "F13-06"
+   ]
+  ],
+  [
+   "F07",
+   [
+    "F07-13",
+    "F07-02",
+    "F07-03",
+    "F07-05",
+    "F07-08",
+    "F07-01",
+    "F07-12",
+    "F07-11",
+    "F07-06",
+    "F07-04",
+    "F07-07",
+    "F07-10",
+    "F07-09"
+   ]
+  ],
+  [
+   "F03",
+   [
+    "F03-14",
+    "F03-05",
+    "F03-13",
+    "F03-09",
+    "F03-01",
+    "F03-07",
+    "F03-10",
+    "F03-12",
+    "F03-11",
+    "F03-03",
+    "F03-06",
+    "F03-08",
+    "F03-04",
+    "F03-02"
+   ]
+  ],
+  [
+   "F15",
+   [
+    "F15-01"
+   ]
+  ],
+  [
+   "F14",
+   [
+    "F14-01"
+   ]
+  ],
+  [
+   "F01",
+   [
+    "F01-11",
+    "F01-12",
+    "F01-04",
+    "F01-02",
+    "F01-07",
+    "F01-08",
+    "F01-05",
+    "F01-03",
+    "F01-01",
+    "F01-09",
+    "F01-06",
+    "F01-13",
+    "F01-10"
+   ]
+  ],
+  [
+   "F08",
+   [
+    "F08-04",
+    "F08-03",
+    "F08-01",
+    "F08-06",
+    "F08-07",
+    "F08-09",
+    "F08-02",
+    "F08-05",
+    "F08-08"
+   ]
+  ],
+  [
+   "F04",
+   [
+    "F04-12",
+    "F04-03",
+    "F04-11",
+    "F04-09",
+    "F04-10",
+    "F04-02",
+    "F04-04",
+    "F04-01",
+    "F04-06",
+    "F04-07",
+    "F04-08",
+    "F04-05"
+   ]
+  ],
+  [
+   "F05",
+   [
+    "F05-07",
+    "F05-04",
+    "F05-05",
+    "F05-02",
+    "F05-06",
+    "F05-01",
+    "F05-09",
+    "F05-03",
+    "F05-08"
+   ]
+  ],
+  [
+   "F10",
+   [
+    "F10-01",
+    "F10-04",
+    "F10-08",
+    "F10-07",
+    "F10-02",
+    "F10-05",
+    "F10-06",
+    "F10-03"
+   ]
+  ],
+  [
+   "F12",
+   [
+    "F12-08",
+    "F12-02",
+    "F12-09",
+    "F12-07",
+    "F12-01",
+    "F12-06",
+    "F12-03",
+    "F12-04",
+    "F12-05"
+   ]
+  ],
+  [
+   "F11",
+   [
+    "F11-02",
+    "F11-01",
+    "F11-06",
+    "F11-07",
+    "F11-05",
+    "F11-08",
+    "F11-04",
+    "F11-03"
+   ]
+  ]
  ],
  "glossary": [
   {
