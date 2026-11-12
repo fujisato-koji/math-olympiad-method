@@ -162,6 +162,19 @@ days:
         paths:
           - [∠ACB = 90°（直径に対する円周角）, 180 − 90 − 35 = 55, 55°]
       - part: 今日
+        text: 円の外の点 P からひいた直線が、円と A、B で交わっています（P に近いほうが A）。PA = 3 cm、AB = 4 cm のとき、PB は何 cm ですか。
+        svg: '<svg viewBox="0 0 240 140" xmlns="http://www.w3.org/2000/svg"><circle cx="150" cy="80" r="52" stroke="currentColor" stroke-width="2" fill="none"/><line x1="78.3" y1="25.7" x2="188.6" y2="45.2" stroke="currentColor" stroke-width="2" fill="none"/><text x="67.3" y="30.7" font-size="14" text-anchor="middle">P</text><text x="124.7" y="24.3" font-size="14" text-anchor="middle">A</text><text x="193.7" y="35.4" font-size="14" text-anchor="middle">B</text><text x="100.1" y="44.7" font-size="12" text-anchor="middle">3</text><text x="155.2" y="54.5" font-size="12" text-anchor="middle">4</text></svg>'
+        answer: 7
+        check: "[p for p in range(1, 20) if p - 3 == 4][0]"
+        hints:
+          - P から B まで、図の線を指でたどってみよう。
+          - とちゅうに A があるね。P から A までと、A から B までの 2 つに分けられるよ。
+          - PB は、P から A までの長さと A から B までの長さを合わせた長さだよ。
+        paths:
+          - [P から A まで 3 cm、A から B までさらに 4 cm, PB = 3 + 4 = 7, 7 cm]
+          - [P を 0 の目もりとする数直線をかく, A の目もりは 3、B は A から 4 つ先, 3 から 4 つ進むと 7, 7 cm]
+        note: PB は P から B までの長さ。AB（円の中の部分）と取りちがえやすいので、PA に AB をたして出す足場。
+      - part: 今日
         text: 円の外の点 P からひいた 2 本の直線が、円と A、B と C、D で交わっています（P に近いほうが A、C）。PA = 5 cm、PB = 8 cm、PC = 4 cm のとき、PD は何 cm ですか。
         svg: '<svg viewBox="0 0 240 140" xmlns="http://www.w3.org/2000/svg"><circle cx="138" cy="70" r="52" stroke="currentColor" stroke-width="2" fill="none"/><line x1="50" y1="60.8" x2="130" y2="18.6" stroke="currentColor" stroke-width="2" fill="none"/><line x1="50" y1="60.8" x2="145.4" y2="121.5" stroke="currentColor" stroke-width="2" fill="none"/><text x="39" y="65.2" font-size="14" text-anchor="middle">P</text><text x="93.4" y="30.6" font-size="14" text-anchor="middle">A</text><text x="121.2" y="17" font-size="14" text-anchor="middle">B</text><text x="79.4" y="96.6" font-size="14" text-anchor="middle">C</text><text x="152.2" y="135" font-size="14" text-anchor="middle">D</text><text x="71" y="44.2" font-size="12" text-anchor="middle">5</text><text x="64.5" y="84.4" font-size="12" text-anchor="middle">4</text></svg>'
         answer: 10
@@ -370,6 +383,20 @@ days:
           - 2 回かけてその数になる数を探そう。
         paths:
           - [PA × PB = 64, PT × PT = 64, PT = 8, 8 cm]
+      - part: 今日
+        text: 半径 10 cm の円 O の中に、OP = 7 cm の点 P があります。P を通る直径 CD をひきます（C は P に近いほうのはし）。PC と PD の長さの組はどれですか。
+        svg: '<svg viewBox="0 0 240 140" xmlns="http://www.w3.org/2000/svg"><circle cx="120" cy="70" r="52" stroke="currentColor" stroke-width="2" fill="none"/><line x1="68" y1="70" x2="172" y2="70" stroke="currentColor" stroke-width="1.5" fill="none" stroke-dasharray="5 4"/><circle cx="120" cy="70" r="2.6" fill="currentColor"/><circle cx="156.4" cy="70" r="2.6" fill="currentColor"/><text x="113" y="62" font-size="14" text-anchor="middle">O</text><text x="162.4" y="62" font-size="14" text-anchor="middle">P</text><text x="183" y="75" font-size="14" text-anchor="middle">C</text><text x="57" y="75" font-size="14" text-anchor="middle">D</text><text x="139.2" y="87" font-size="12" text-anchor="middle">7</text><text x="94" y="87" font-size="12" text-anchor="middle">10</text></svg>'
+        choices: [PC = 7 cm、PD = 10 cm, PC = 3 cm、PD = 17 cm, PC = 17 cm、PD = 3 cm]
+        answer: PC = 3 cm、PD = 17 cm
+        check: "[c for c, v in (('PC = 7 cm、PD = 10 cm', (7, 10)), ('PC = 3 cm、PD = 17 cm', (3, 17)), ('PC = 17 cm、PD = 3 cm', (17, 3))) if v == (10 - 7, 10 + 7)][0]"
+        hints:
+          - 直径 CD は中心 O を通るよ。OC と OD は何 cm かな。
+          - P は O と C のあいだにあるね。PC は OC より短いかな、長いかな。PD は OD より短いかな、長いかな。
+          - PC は OC から OP をひいた長さ、PD は OD に OP をたした長さだよ。
+        paths:
+          - [OC = OD = 10 cm（半径）, PC = 10 − 7、PD = 10 + 7, PC = 3 cm、PD = 17 cm]
+          - [O を 0 の目もりとする数直線をかく, C は右へ 10、D は左へ 10、P は右へ 7, P から C までは 10 − 7、P から D までは 7 + 10, PC = 3 cm、PD = 17 cm]
+        note: 直径が P で分かれる 2 つの長さ（半径 − OP と半径 + OP）だけを試す足場。半径や OP をそのまま使うまちがいと、近いほうと遠いほうの取りちがえを選ぶ文に入れた。
       - part: 今日
         text: 半径 9 cm の円 O の中に、OP = 5 cm の点 P があります。P を通る弦 AB で、PA = 7 cm のとき、PB は何 cm ですか。
         svg: '<svg viewBox="0 0 240 140" xmlns="http://www.w3.org/2000/svg"><circle cx="120" cy="70" r="52" stroke="currentColor" stroke-width="2" fill="none"/><line x1="152.9" y1="110.2" x2="144.3" y2="24" stroke="currentColor" stroke-width="2" fill="none"/><line x1="172" y1="70" x2="68" y2="70" stroke="currentColor" stroke-width="1.5" fill="none" stroke-dasharray="5 4"/><circle cx="120" cy="70" r="2.6" fill="currentColor"/><text x="120" y="63.9" font-size="14" text-anchor="middle">O</text><text x="158.3" y="64.5" font-size="14" text-anchor="middle">P</text><text x="159.9" y="123.7" font-size="14" text-anchor="middle">A</text><text x="149.4" y="19.2" font-size="14" text-anchor="middle">B</text><text x="183" y="74.9" font-size="14" text-anchor="middle">C</text><text x="57" y="74.9" font-size="14" text-anchor="middle">D</text><text x="159.1" y="90.2" font-size="12" text-anchor="middle">7</text><text x="134.4" y="65.6" font-size="12" text-anchor="middle">5</text></svg>'
@@ -583,6 +610,18 @@ days:
           - その積を PA でわろう。
         paths:
           - [直径は 2 cm と 18 cm に分かれる, PA × PB = 36, PB = 36 ÷ 3 = 12, 12 cm]
+      - part: 今日
+        text: かけると 21、たすと 10 になる 2 つの正の整数があります。小さいほうの整数はいくつですか。
+        answer: 3
+        check: "[a for a in range(1, 10) if a * (10 - a) == 21 and a < 10 - a][0]"
+        hints:
+          - かけて 21 になる 2 つの数の組を、小さいほうから順に書き出そう。まず 1 と 21 だね。
+          - 組ごとに 2 つの数をたしてみよう。1 と 21 をたすといくつかな。10 になるかな。
+          - 10 にならなければ、次の組へ進もう。21 を 2、3、4、…とわっていって、わり切れる数が見つかったら、その組をたしてみよう。
+        paths:
+          - [かけて 21 になる組は 1 と 21、3 と 7, たすと 22、10, たして 10 になるのは 3 と 7, 小さいほうは 3]
+          - [たして 10 になる組を小さいほうから順に調べる：1 と 9、2 と 8、3 と 7, かけると 9、16、21。3 と 7 で 21 になったので、ここで止める, かけて 21 になるのは 3 と 7, 小さいほうは 3]
+        note: 弦が交わる問題で、PA × PB の積と PA + PB の和から PA を出す所の足場。図をぬきにして、かけて 21、たして 10 になる組を探すことだけを試す。かけ算だけを見て最初の組の 1 と答えたり、たし算だけを見て半分の 5 と答えたりしやすい。かけ算とたし算の両方をたしかめて、小さいほうを答える。
       - part: 今日
         text: 円 O の直径 AB を A の側に延ばした直線の上に、PA = 4 cm の点 P があります。円の半径は 6 cm です。P から円にひいた接線 PT（T は接点）は何 cm ですか。
         svg: '<svg viewBox="0 0 240 140" xmlns="http://www.w3.org/2000/svg"><circle cx="137.3" cy="70" r="52" stroke="currentColor" stroke-width="2" fill="none"/><line x1="50.7" y1="70" x2="189.3" y2="70" stroke="currentColor" stroke-width="2" fill="none"/><line x1="50.7" y1="70" x2="106.1" y2="111.6" stroke="currentColor" stroke-width="2" fill="none"/><circle cx="137.3" cy="70" r="2.6" fill="currentColor"/><text x="137.3" y="63.9" font-size="14" text-anchor="middle">O</text><text x="40.2" y="71.4" font-size="14" text-anchor="middle">P</text><text x="95.2" y="65" font-size="14" text-anchor="middle">A</text><text x="200.3" y="74.9" font-size="14" text-anchor="middle">B</text><text x="99.5" y="125.3" font-size="14" text-anchor="middle">T</text><text x="68" y="65.6" font-size="12" text-anchor="middle">4</text></svg>'

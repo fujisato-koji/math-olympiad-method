@@ -77,6 +77,20 @@ days:
         paths:
           - [∠x と 70° は同位角, ℓ ∥ m なので等しい, 70°]
       - part: 今日
+        text: 2 本の直線 ℓ、m に、直線 n が交わっています。∠s の錯角はどれですか。
+        svg: '<svg viewBox="0 0 240 150" xmlns="http://www.w3.org/2000/svg"><line x1="12" y1="43.8" x2="228" y2="43.8" stroke="currentColor" stroke-width="2" fill="none"/><line x1="12" y1="106.2" x2="228" y2="106.2" stroke="currentColor" stroke-width="2" fill="none"/><line x1="84" y1="14.8" x2="156" y2="135.2" stroke="currentColor" stroke-width="2" fill="none"/><text x="226" y="39.4" font-size="13" text-anchor="middle">ℓ</text><text x="226" y="101.7" font-size="13" text-anchor="middle">m</text><text x="166" y="140.2" font-size="13" text-anchor="middle">n</text><path d="M112.3 43.8 A11 11 0 0 0 95.7 34.4" stroke="currentColor" stroke-width="1.5" fill="none"/><text x="113.2" y="26.9" font-size="12" text-anchor="middle">q</text><path d="M95.7 34.4 A11 11 0 0 0 90.3 43.8" stroke="currentColor" stroke-width="1.5" fill="none"/><text x="80.5" y="36" font-size="12" text-anchor="middle">p</text><path d="M90.3 43.8 A11 11 0 0 0 107 53.2" stroke="currentColor" stroke-width="1.5" fill="none"/><text x="89.5" y="68.7" font-size="12" text-anchor="middle">s</text><path d="M107 53.2 A11 11 0 0 0 112.3 43.8" stroke="currentColor" stroke-width="1.5" fill="none"/><text x="122.2" y="59.6" font-size="12" text-anchor="middle">r</text><path d="M149.7 106.2 A11 11 0 0 0 133 96.8" stroke="currentColor" stroke-width="1.5" fill="none"/><text x="150.5" y="89.3" font-size="12" text-anchor="middle">u</text><path d="M133 96.8 A11 11 0 0 0 127.7 106.2" stroke="currentColor" stroke-width="1.5" fill="none"/><text x="117.8" y="98.4" font-size="12" text-anchor="middle">t</text><path d="M127.7 106.2 A11 11 0 0 0 144.3 115.6" stroke="currentColor" stroke-width="1.5" fill="none"/><text x="126.8" y="131.1" font-size="12" text-anchor="middle">w</text><path d="M144.3 115.6 A11 11 0 0 0 149.7 106.2" stroke="currentColor" stroke-width="1.5" fill="none"/><text x="159.5" y="122" font-size="12" text-anchor="middle">v</text></svg>'
+        choices: [∠t, ∠u, ∠v, ∠w]
+        answer: ∠u
+        check: "(lambda pos: [k for k in ['∠t', '∠u', '∠v', '∠w'] if pos[k][0] == 1 and pos[k][1] != pos['∠s'][1] and pos[k][2] != pos['∠s'][2]][0])({'∠s': (0, '下', '左'), '∠t': (1, '上', '左'), '∠u': (1, '上', '右'), '∠v': (1, '下', '右'), '∠w': (1, '下', '左')})"
+        hints:
+          - ∠s は、ℓ と n が交わる点のまわりの、左下の角だね。
+          - 錯角は、ℓ と m の内側で、n をはさんで反対がわにある角だよ。
+          - m と n が交わる点のまわりで、内側にあって、∠s と反対がわ（右）にある角を見つけよう。
+        paths:
+          - [∠s は ℓ の下がわで n の左がわ, 錯角は m の上がわで n の右がわ, ∠u]
+          - [∠w は ∠s と同じ位置なので同位角, ∠v は外側の角, ∠t は n の同じがわ, 残る ∠u]
+        note: 同位角は「同じ位置」、錯角は「内側で反対がわ」と、位置のことばで見分ける足場。
+      - part: 今日
         text: ℓ ∥ m です。∠x は何度ですか。
         svg: '<svg viewBox="0 0 240 150" xmlns="http://www.w3.org/2000/svg"><line x1="12" y1="43.8" x2="228" y2="43.8" stroke="currentColor" stroke-width="2" fill="none"/><line x1="12" y1="106.2" x2="228" y2="106.2" stroke="currentColor" stroke-width="2" fill="none"/><line x1="101.8" y1="135.2" x2="177.1" y2="14.8" stroke="currentColor" stroke-width="2" fill="none"/><polyline points="184.1,47.8 189.1,43.8 184.1,39.8" stroke="currentColor" stroke-width="1.5" fill="none"/><polyline points="184.1,110.2 189.1,106.2 184.1,102.2" stroke="currentColor" stroke-width="1.5" fill="none"/><text x="226" y="39.4" font-size="13" text-anchor="middle">ℓ</text><text x="226" y="101.7" font-size="13" text-anchor="middle">m</text><text x="186.1" y="23.3" font-size="13" text-anchor="middle">n</text><path d="M145.9 43.8 A13 13 0 0 0 152 54.9" stroke="currentColor" stroke-width="1.5" fill="none"/><text x="137.9" y="59.7" font-size="12" text-anchor="middle">58°</text><path d="M133 106.2 A13 13 0 0 0 126.9 95.1" stroke="currentColor" stroke-width="1.5" fill="none"/><text x="141" y="98.7" font-size="12" text-anchor="middle">x</text></svg>'
         answer: 58
@@ -163,6 +177,19 @@ days:
           - 180 から、その和をひこう。
         paths:
           - [45 + 60 = 105, 180 − 105 = 75]
+      - part: 今日
+        text: ℓ ∥ m です。点 P を通り、ℓ に平行な点線を引きました。∠x は何度ですか。
+        svg: '<svg viewBox="0 0 240 140" xmlns="http://www.w3.org/2000/svg"><line x1="26.1" y1="37.8" x2="213.9" y2="37.8" stroke="currentColor" stroke-width="2" fill="none"/><line x1="26.1" y1="102.2" x2="213.9" y2="102.2" stroke="currentColor" stroke-width="2" fill="none"/><polyline points="54.9,41.8 59.9,37.8 54.9,33.8" stroke="currentColor" stroke-width="1.5" fill="none"/><polyline points="54.9,106.2 59.9,102.2 54.9,98.2" stroke="currentColor" stroke-width="1.5" fill="none"/><text x="34.1" y="33.3" font-size="13" text-anchor="middle">ℓ</text><text x="34.1" y="97.8" font-size="13" text-anchor="middle">m</text><line x1="141.2" y1="37.8" x2="100" y2="70" stroke="currentColor" stroke-width="2" fill="none"/><line x1="150" y1="102.2" x2="100" y2="70" stroke="currentColor" stroke-width="2" fill="none"/><line x1="40" y1="70" x2="213.9" y2="70" stroke="currentColor" stroke-width="1.5" fill="none" stroke-dasharray="5 4"/><path d="M125.2 37.8 A16 16 0 0 0 128.6 47.7" stroke="currentColor" stroke-width="1.5" fill="none"/><text x="113.8" y="51.2" font-size="13" text-anchor="middle">38°</text><path d="M116 70 A16 16 0 0 0 112.6 60.1" stroke="currentColor" stroke-width="1.5" fill="none"/><text x="128.4" y="64.2" font-size="13" text-anchor="middle">x</text><text x="141.2" y="32" font-size="12" text-anchor="middle">A</text><text x="150" y="116.4" font-size="12" text-anchor="middle">B</text><text x="92" y="85" font-size="12" text-anchor="middle">P</text></svg>'
+        answer: 38
+        check: "math.floor(math.degrees(math.atan2(32.2, 41.2)) + 0.5)"
+        hints:
+          - 38° の角は ℓ と AP の間の角で、∠x は点線と AP の間の角だね。
+          - ℓ と点線は平行で、AP がその 2 本に交わっているね。
+          - ∠x と 38° は、平行な 2 本の内側で、AP をはさんで反対がわにある角だよ。
+        paths:
+          - [ℓ と点線は平行で AP が交わる, ∠x と 38° は錯角, 38°]
+          - [AP をのばすと、P の左下の角は 38°（同位角）, ∠x はその対頂角, 38°]
+        note: 補助線で分けた角を、錯角でもとの角へ移す一歩だけを取り出した足場。となりの角（142°）と取りちがえやすい。
       - part: 今日
         text: ℓ ∥ m です。∠x は何度ですか。
         svg: '<svg viewBox="0 0 240 140" xmlns="http://www.w3.org/2000/svg"><line x1="26.1" y1="37.8" x2="213.9" y2="37.8" stroke="currentColor" stroke-width="2" fill="none"/><line x1="26.1" y1="102.2" x2="213.9" y2="102.2" stroke="currentColor" stroke-width="2" fill="none"/><polyline points="54.9,41.8 59.9,37.8 54.9,33.8" stroke="currentColor" stroke-width="1.5" fill="none"/><polyline points="54.9,106.2 59.9,102.2 54.9,98.2" stroke="currentColor" stroke-width="1.5" fill="none"/><text x="34.1" y="33.3" font-size="13" text-anchor="middle">ℓ</text><text x="34.1" y="97.8" font-size="13" text-anchor="middle">m</text><line x1="103.4" y1="37.8" x2="149.5" y2="70" stroke="currentColor" stroke-width="2" fill="none"/><line x1="117.2" y1="102.2" x2="149.5" y2="70" stroke="currentColor" stroke-width="2" fill="none"/><path d="M116.5 47 A16 16 0 0 0 119.4 37.8" stroke="currentColor" stroke-width="1.5" fill="none"/><text x="132" y="51.3" font-size="13" text-anchor="middle">35°</text><path d="M133.2 102.2 A16 16 0 0 0 128.5 90.9" stroke="currentColor" stroke-width="1.5" fill="none"/><text x="144.9" y="95.3" font-size="13" text-anchor="middle">45°</text><path d="M138 62 A14 14 0 0 0 139.6 79.9" stroke="currentColor" stroke-width="1.5" fill="none"/><text x="123.6" y="76.8" font-size="13" text-anchor="middle">x</text><text x="103.4" y="32" font-size="12" text-anchor="middle">A</text><text x="117.2" y="116.4" font-size="12" text-anchor="middle">B</text><text x="159.5" y="74.2" font-size="12" text-anchor="middle">P</text></svg>'
@@ -403,6 +430,20 @@ days:
           - ∠C を、三角形の内角の和から求めよう。
         paths:
           - [R と C が対応, ∠C = 180 − 50 − 60 = 70, ∠R = 70]
+      - part: 今日
+        text: △PQR で、辺 QR と辺 PR の間の角はどれですか。
+        svg: '<svg viewBox="0 0 240 130" xmlns="http://www.w3.org/2000/svg"><line x1="112" y1="26" x2="40" y2="106" stroke="currentColor" stroke-width="2" fill="none"/><line x1="40" y1="106" x2="180" y2="96" stroke="currentColor" stroke-width="2" fill="none"/><line x1="180" y1="96" x2="112" y2="26" stroke="currentColor" stroke-width="2" fill="none"/><text x="112" y="20" font-size="13" text-anchor="middle">P</text><text x="32" y="118" font-size="13" text-anchor="middle">Q</text><text x="189" y="108" font-size="13" text-anchor="middle">R</text></svg>'
+        choices: [∠P, ∠Q, ∠R]
+        answer: ∠R
+        check: "'∠' + [v for v in 'PQR' if v in 'QR' and v in 'PR'][0]"
+        hints:
+          - 辺 QR と辺 PR を、図の上で指でなぞってみよう。
+          - 2 本の辺が出会う点が、間の角の頂点だね。
+          - QR と PR の両方にある文字を見つけよう。
+        paths:
+          - [QR と PR の両方にある文字は R, 頂点 R の角, ∠R]
+          - [図で辺 QR をなぞる, 辺 PR をなぞると R で出会う, ∠R]
+        note: 合同条件の「間の角」を、2 辺が出会う頂点として読む足場。図で辺をなぞって見つけ、文字の共通でも確かめる。
       - part: 今日
         text: 図の 2 つの三角形は、どの合同条件で合同といえますか。
         svg: '<svg viewBox="0 0 240 130" xmlns="http://www.w3.org/2000/svg"><line x1="57.6" y1="43.5" x2="36.1" y2="86.5" stroke="currentColor" stroke-width="2" fill="none"/><line x1="36.1" y1="86.5" x2="100.6" y2="86.5" stroke="currentColor" stroke-width="2" fill="none"/><line x1="100.6" y1="86.5" x2="57.6" y2="43.5" stroke="currentColor" stroke-width="2" fill="none"/><line x1="182.4" y1="43.5" x2="203.9" y2="86.5" stroke="currentColor" stroke-width="2" fill="none"/><line x1="203.9" y1="86.5" x2="139.4" y2="86.5" stroke="currentColor" stroke-width="2" fill="none"/><line x1="139.4" y1="86.5" x2="182.4" y2="43.5" stroke="currentColor" stroke-width="2" fill="none"/><line x1="51.4" y1="67.2" x2="42.4" y2="62.8" stroke="currentColor" stroke-width="1.5" fill="none"/><line x1="197.6" y1="62.8" x2="188.6" y2="67.2" stroke="currentColor" stroke-width="1.5" fill="none"/><line x1="66.4" y1="81.5" x2="66.4" y2="91.5" stroke="currentColor" stroke-width="1.5" fill="none"/><line x1="70.4" y1="81.5" x2="70.4" y2="91.5" stroke="currentColor" stroke-width="1.5" fill="none"/><line x1="173.6" y1="91.5" x2="173.6" y2="81.5" stroke="currentColor" stroke-width="1.5" fill="none"/><line x1="169.6" y1="91.5" x2="169.6" y2="81.5" stroke="currentColor" stroke-width="1.5" fill="none"/><path d="M50.1 86.5 A14 14 0 0 0 42.4 74" stroke="currentColor" stroke-width="1.5" fill="none"/><path d="M197.6 74 A14 14 0 0 0 189.9 86.5" stroke="currentColor" stroke-width="1.5" fill="none"/><text x="57.6" y="37" font-size="13" text-anchor="middle">A</text><text x="28.4" y="98.8" font-size="13" text-anchor="middle">B</text><text x="108.4" y="98.8" font-size="13" text-anchor="middle">C</text><text x="182.4" y="37" font-size="13" text-anchor="middle">D</text><text x="211.6" y="98.8" font-size="13" text-anchor="middle">E</text><text x="131.6" y="98.8" font-size="13" text-anchor="middle">F</text></svg>'

@@ -292,6 +292,20 @@ days:
           - 12 ÷ 3 を計算しよう。
         paths:
           - [12 ÷ 3 = 4, 4 cm]
+      - part: 今日
+        text: 三角形 ABC の辺 AB の上に点 D、辺 AC の上に点 E があります。三角形 ADE は、A を中心にした三角形 ABC の縮図です。ちぢめる前の三角形 ABC で、辺 AE に対応する線はどれですか。
+        svg: '<svg viewBox="0 0 240 140" xmlns="http://www.w3.org/2000/svg"><polygon points="120,16 92,51.3 148,51.3" stroke="currentColor" stroke-width="0" fill="#f3c969" fill-opacity=".35"/><polygon points="120,16 36,122 204,122" stroke="currentColor" stroke-width="2" fill="none"/><line x1="92" y1="51.3" x2="148" y2="51.3" stroke="currentColor" stroke-width="2" fill="none"/><text x="120" y="11.2" font-size="12" text-anchor="middle">A</text><text x="29" y="135.2" font-size="12" text-anchor="middle">B</text><text x="211" y="135.2" font-size="12" text-anchor="middle">C</text><text x="83" y="55.5" font-size="12" text-anchor="middle">D</text><text x="157" y="55.5" font-size="12" text-anchor="middle">E</text></svg>'
+        choices: [EC, AC, BC]
+        answer: AC
+        check: "(lambda A, B, C, D, E: [s for s, P in (('EC', (E, C)), ('AC', (A, C)), ('BC', (B, C))) if sorted(P) == sorted([A, (A[0] + (B[1] - A[1]) // (D[1] - A[1]) * (E[0] - A[0]), A[1] + (B[1] - A[1]) // (D[1] - A[1]) * (E[1] - A[1]))])][0])((0, 6), (-6, 0), (6, 0), (-2, 4), (2, 4))"
+        hints:
+          - 三角形 ADE は、三角形 ABC の 3 つの頂点 A、B、C をちぢめた点をむすんだ三角形だよ。B をちぢめた点と C をちぢめた点は、D と E のどちらかな。
+          - A を中心にちぢめると、A は動かず、B をちぢめた点は A と B をむすぶ線の上にくるよ。D は辺 AB の上、E は辺 AC の上だから、B をちぢめた点が D、C をちぢめた点が E だね。
+          - 辺 AE は、A と E をむすぶ線だね。A と E をちぢめる前の点を考えて、その 2 点をむすぶ線を選ぼう。
+        paths:
+          - [B をちぢめた点が D、C をちぢめた点が E, AE は A と E をむすぶ線だから、ちぢめる前は A と C をむすぶ線, AC]
+          - [A は中心だから、ちぢめても動かない, AE は A をふくむから、対応する線も A をふくむ, EC と BC は A をふくまない, AC]
+        note: E に対応する点が C だとわかると、E と C をむすんだ EC を選びやすい。でも対応させるのは線の両はしの点どうし。AE のはしは A と E だから、ちぢめる前のはしは A と C で、AC になる。EC は AC の一部にすぎない。
       - part: 挑戦
         text: 三角形 ABC の辺 AB の上に点 D、辺 AC の上に点 E があり、DE と BC は平行です。このとき、三角形 ADE は A を中心にした三角形 ABC の縮図になっています。AD は 4 cm、AB は 6 cm、BC は 15 cm です。DE は何 cm ですか。
         svg: '<svg viewBox="0 0 240 140" xmlns="http://www.w3.org/2000/svg"><polygon points="90.9,18 54.8,87.3 165.8,87.3" stroke="currentColor" stroke-width="0" fill="#f3c969" fill-opacity=".35"/><polygon points="90.9,18 36.8,122 203.2,122" stroke="currentColor" stroke-width="2" fill="none"/><line x1="54.8" y1="87.3" x2="165.8" y2="87.3" stroke="currentColor" stroke-width="2" fill="none"/><text x="90.9" y="13.2" font-size="12" text-anchor="middle">A</text><text x="29.8" y="135.2" font-size="12" text-anchor="middle">B</text><text x="210.2" y="135.2" font-size="12" text-anchor="middle">C</text><text x="45.8" y="91.5" font-size="12" text-anchor="middle">D</text><text x="174.8" y="91.5" font-size="12" text-anchor="middle">E</text><text x="62.9" y="56.9" font-size="12" text-anchor="end">4 cm</text><text x="120" y="139.2" font-size="12" text-anchor="middle">15 cm</text></svg>'
@@ -652,6 +666,19 @@ days:
         paths:
           - [10% は 12, 12 × 3 = 36]
       - part: 今日
+        text: A から B までのまっすぐな道の上に、点 D があります。DB の長さは AD の長さの 3 倍です。AD は、道のり AB の何分の何ですか。分数で答えましょう。
+        svg: '<svg viewBox="0 0 240 80" xmlns="http://www.w3.org/2000/svg"><line x1="20" y1="45" x2="220" y2="45" stroke="currentColor" stroke-width="3" fill="none"/><circle cx="20" cy="45" r="3" fill="currentColor"/><circle cx="70" cy="45" r="3" fill="currentColor"/><circle cx="220" cy="45" r="3" fill="currentColor"/><text x="20" y="32" font-size="12" text-anchor="middle">A</text><text x="70" y="32" font-size="12" text-anchor="middle">D</text><text x="220" y="32" font-size="12" text-anchor="middle">B</text></svg>'
+        answer: 1/4
+        check: "Fraction(1, 1 + 3)"
+        hints:
+          - DB の長さが AD の 3 倍なら、AD を 1 つ分とすると、DB は何つ分になるかな。
+          - 道のり AB 全体は、AD と同じ長さの何つ分になるかな。
+          - AD はそのうちの 1 つ分だね。全体を分母にして、分数で表そう。
+        paths:
+          - [AB 全体は 1 + 3 = 4 つ分, AD はそのうちの 1 つ分, 1/4]
+          - [AB を 12 cm と考える, AD は 3 cm、DB は 9 cm, AD ÷ AB = 3/12, 約分して 1/4]
+        note: DB が AD の 3 倍だからと、AD は AB の 1/3 としやすい。AB 全体は 1 + 3 = 4 つ分で、AD はその 1 つ分。
+      - part: 今日
         text: 三角形 DEF は、三角形 ABC の拡大図で、辺 DE の長さは辺 AB の 150% です。辺 BC は 8 cm です。辺 EF は何 cm ですか。
         answer: 12
         check: "8 * 150 // 100"
@@ -728,6 +755,20 @@ days:
 
   - day: 8
     items:
+      - part: 今日
+        text: 方眼の 1 目は 1 cm です。三角形「い」は、三角形「あ」の 2 倍の拡大図です。「い」の上の頂点は、「い」の下の辺の左はしから、右へ何目、上へ何目の所にありますか。
+        svg: '<svg viewBox="0 0 240 140" xmlns="http://www.w3.org/2000/svg"><line x1="20" y1="130" x2="20" y2="10" stroke="currentColor" stroke-width=".6" stroke-dasharray="2 2"/><line x1="40" y1="130" x2="40" y2="10" stroke="currentColor" stroke-width=".6" stroke-dasharray="2 2"/><line x1="60" y1="130" x2="60" y2="10" stroke="currentColor" stroke-width=".6" stroke-dasharray="2 2"/><line x1="80" y1="130" x2="80" y2="10" stroke="currentColor" stroke-width=".6" stroke-dasharray="2 2"/><line x1="100" y1="130" x2="100" y2="10" stroke="currentColor" stroke-width=".6" stroke-dasharray="2 2"/><line x1="120" y1="130" x2="120" y2="10" stroke="currentColor" stroke-width=".6" stroke-dasharray="2 2"/><line x1="140" y1="130" x2="140" y2="10" stroke="currentColor" stroke-width=".6" stroke-dasharray="2 2"/><line x1="160" y1="130" x2="160" y2="10" stroke="currentColor" stroke-width=".6" stroke-dasharray="2 2"/><line x1="180" y1="130" x2="180" y2="10" stroke="currentColor" stroke-width=".6" stroke-dasharray="2 2"/><line x1="200" y1="130" x2="200" y2="10" stroke="currentColor" stroke-width=".6" stroke-dasharray="2 2"/><line x1="220" y1="130" x2="220" y2="10" stroke="currentColor" stroke-width=".6" stroke-dasharray="2 2"/><line x1="20" y1="130" x2="220" y2="130" stroke="currentColor" stroke-width=".6" stroke-dasharray="2 2"/><line x1="20" y1="110" x2="220" y2="110" stroke="currentColor" stroke-width=".6" stroke-dasharray="2 2"/><line x1="20" y1="90" x2="220" y2="90" stroke="currentColor" stroke-width=".6" stroke-dasharray="2 2"/><line x1="20" y1="70" x2="220" y2="70" stroke="currentColor" stroke-width=".6" stroke-dasharray="2 2"/><line x1="20" y1="50" x2="220" y2="50" stroke="currentColor" stroke-width=".6" stroke-dasharray="2 2"/><line x1="20" y1="30" x2="220" y2="30" stroke="currentColor" stroke-width=".6" stroke-dasharray="2 2"/><line x1="20" y1="10" x2="220" y2="10" stroke="currentColor" stroke-width=".6" stroke-dasharray="2 2"/><polygon points="40,110 120,110 60,50" stroke="currentColor" stroke-width="2" fill="#f3c969" fill-opacity=".35"/><text x="74" y="98" font-size="12" text-anchor="middle">あ</text></svg>'
+        choices: [右へ 2 目、上へ 6 目, 右へ 1 目、上へ 6 目, 右へ 3 目、上へ 5 目, 右へ 2 目、上へ 3 目]
+        answer: 右へ 2 目、上へ 6 目
+        check: "(lambda P: '右へ %d 目、上へ %d 目' % (2 * (P[2][0] - P[0][0]), 2 * (P[2][1] - P[0][1])))(((1, 1), (5, 1), (2, 4)))"
+        hints:
+          - 「あ」の上の頂点は、下の辺の左はしから、右へ何目、上へ何目の所にあるかな。
+          - 「い」は「あ」の 2 倍の拡大図だから、右へ進む目の数も、上へ進む目の数も 2 倍になるよ。
+          - 下の辺の長さだけでなく、上の頂点の右への目の数も 2 倍にするんだよ。上への目の数も同じだね。
+        paths:
+          - [「あ」の上の頂点は右へ 1 目・上へ 3 目, 2 倍で右へ 2 目・上へ 6 目, 右へ 2 目、上へ 6 目]
+          - [下の辺は 4 目から 8 目, 上の頂点は下の辺の左から 1/4 の所なので 8 の 1/4 で 2 目, 高さは 3 目の 2 倍で 6 目, 右へ 2 目、上へ 6 目]
+        note: 下の辺と高さだけを 2 倍にして、上の頂点の右への目の数を 1 目のままにしやすい。右へも上へも、下の辺の左はしから同じ倍にする。
       - part: 今日
         text: 方眼の 1 目は 1 cm です。い、う、え のうち、あ の 2 倍の拡大図はどれですか。
         svg: '<svg viewBox="0 0 240 140" xmlns="http://www.w3.org/2000/svg"><line x1="14" y1="97.9" x2="14" y2="42.1" stroke="currentColor" stroke-width=".6" stroke-dasharray="2 2"/><line x1="25.2" y1="97.9" x2="25.2" y2="42.1" stroke="currentColor" stroke-width=".6" stroke-dasharray="2 2"/><line x1="36.3" y1="97.9" x2="36.3" y2="42.1" stroke="currentColor" stroke-width=".6" stroke-dasharray="2 2"/><line x1="47.5" y1="97.9" x2="47.5" y2="42.1" stroke="currentColor" stroke-width=".6" stroke-dasharray="2 2"/><line x1="58.6" y1="97.9" x2="58.6" y2="42.1" stroke="currentColor" stroke-width=".6" stroke-dasharray="2 2"/><line x1="69.8" y1="97.9" x2="69.8" y2="42.1" stroke="currentColor" stroke-width=".6" stroke-dasharray="2 2"/><line x1="80.9" y1="97.9" x2="80.9" y2="42.1" stroke="currentColor" stroke-width=".6" stroke-dasharray="2 2"/><line x1="92.1" y1="97.9" x2="92.1" y2="42.1" stroke="currentColor" stroke-width=".6" stroke-dasharray="2 2"/><line x1="103.3" y1="97.9" x2="103.3" y2="42.1" stroke="currentColor" stroke-width=".6" stroke-dasharray="2 2"/><line x1="114.4" y1="97.9" x2="114.4" y2="42.1" stroke="currentColor" stroke-width=".6" stroke-dasharray="2 2"/><line x1="125.6" y1="97.9" x2="125.6" y2="42.1" stroke="currentColor" stroke-width=".6" stroke-dasharray="2 2"/><line x1="136.7" y1="97.9" x2="136.7" y2="42.1" stroke="currentColor" stroke-width=".6" stroke-dasharray="2 2"/><line x1="147.9" y1="97.9" x2="147.9" y2="42.1" stroke="currentColor" stroke-width=".6" stroke-dasharray="2 2"/><line x1="159.1" y1="97.9" x2="159.1" y2="42.1" stroke="currentColor" stroke-width=".6" stroke-dasharray="2 2"/><line x1="170.2" y1="97.9" x2="170.2" y2="42.1" stroke="currentColor" stroke-width=".6" stroke-dasharray="2 2"/><line x1="181.4" y1="97.9" x2="181.4" y2="42.1" stroke="currentColor" stroke-width=".6" stroke-dasharray="2 2"/><line x1="192.5" y1="97.9" x2="192.5" y2="42.1" stroke="currentColor" stroke-width=".6" stroke-dasharray="2 2"/><line x1="203.7" y1="97.9" x2="203.7" y2="42.1" stroke="currentColor" stroke-width=".6" stroke-dasharray="2 2"/><line x1="214.8" y1="97.9" x2="214.8" y2="42.1" stroke="currentColor" stroke-width=".6" stroke-dasharray="2 2"/><line x1="226" y1="97.9" x2="226" y2="42.1" stroke="currentColor" stroke-width=".6" stroke-dasharray="2 2"/><line x1="14" y1="97.9" x2="226" y2="97.9" stroke="currentColor" stroke-width=".6" stroke-dasharray="2 2"/><line x1="14" y1="86.7" x2="226" y2="86.7" stroke="currentColor" stroke-width=".6" stroke-dasharray="2 2"/><line x1="14" y1="75.6" x2="226" y2="75.6" stroke="currentColor" stroke-width=".6" stroke-dasharray="2 2"/><line x1="14" y1="64.4" x2="226" y2="64.4" stroke="currentColor" stroke-width=".6" stroke-dasharray="2 2"/><line x1="14" y1="53.3" x2="226" y2="53.3" stroke="currentColor" stroke-width=".6" stroke-dasharray="2 2"/><line x1="14" y1="42.1" x2="226" y2="42.1" stroke="currentColor" stroke-width=".6" stroke-dasharray="2 2"/><polygon points="25.2,86.7 47.5,86.7 36.3,75.6" stroke="currentColor" stroke-width="2" fill="#f3c969" fill-opacity=".35"/><text x="36.3" y="87.2" font-size="12" text-anchor="middle">あ</text><polygon points="58.6,86.7 103.3,86.7 80.9,64.4" stroke="currentColor" stroke-width="2" fill="none"/><text x="80.9" y="83.5" font-size="12" text-anchor="middle">い</text><polygon points="114.4,86.7 159.1,86.7 147.9,64.4" stroke="currentColor" stroke-width="2" fill="none"/><text x="140.5" y="83.5" font-size="12" text-anchor="middle">う</text><polygon points="170.2,86.7 214.8,86.7 192.5,53.3" stroke="currentColor" stroke-width="2" fill="none"/><text x="192.5" y="79.8" font-size="12" text-anchor="middle">え</text></svg>'

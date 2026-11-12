@@ -54,6 +54,19 @@ days:
           - [PQ = ST、QR = TU, ∠Q = ∠T はその間の角, 2 組の辺とその間の角]
       - part: 今日
         text: AB = AC の二等辺三角形です。∠x は何度ですか。
+        svg: '<svg viewBox="0 0 240 150" xmlns="http://www.w3.org/2000/svg"><line x1="120" y1="27.4" x2="60.5" y2="122.6" stroke="currentColor" stroke-width="2" fill="none"/><line x1="60.5" y1="122.6" x2="179.5" y2="122.6" stroke="currentColor" stroke-width="2" fill="none"/><line x1="179.5" y1="122.6" x2="120" y2="27.4" stroke="currentColor" stroke-width="2" fill="none"/><line x1="94.5" y1="77.6" x2="86" y2="72.4" stroke="currentColor" stroke-width="1.5" fill="none"/><line x1="145.5" y1="77.6" x2="154" y2="72.4" stroke="currentColor" stroke-width="1.5" fill="none"/><path d="M76.5 122.6 A16 16 0 0 0 69 109" stroke="currentColor" stroke-width="1.5" fill="none"/><text x="84.5" y="111.6" font-size="13" text-anchor="middle">58°</text><path d="M171 109 A16 16 0 0 0 163.5 122.6" stroke="currentColor" stroke-width="1.5" fill="none"/><text x="160.5" y="111.6" font-size="13" text-anchor="middle">x</text><path d="M111.5 41 A16 16 0 0 0 128.5 41" stroke="currentColor" stroke-width="1.5" fill="none"/><text x="120" y="62" font-size="13" text-anchor="middle">64°</text><text x="120" y="21" font-size="13" text-anchor="middle">A</text><text x="52.7" y="134.9" font-size="13" text-anchor="middle">B</text><text x="187.3" y="134.9" font-size="13" text-anchor="middle">C</text></svg>'
+        answer: 58
+        check: "(180 - 64) // 2"
+        hints:
+          - しるしのついた、等しい辺はどれとどれかな。
+          - 等しい 2 辺の間の角が頂角で、BC の両端の角が底角だよ。
+          - 底角は等しいね。∠x と同じ大きさなのは、64° と 58° のどちらかな。
+        paths:
+          - [AB = AC なので BC の両端の ∠B と ∠x が底角, 底角は等しい, ∠x = 58°]
+          - [三角形の内角の和は 180° なので、底角 2 つの和は 180 − 64 = 116, 底角は等しいので 116 ÷ 2 = 58, ∠x = 58°]
+        note: 図に 2 つの角があり、等しい辺のしるしから ∠B と ∠x が底角どうしだと見分ける足場。頂角の 64° を答えにしやすい。
+      - part: 今日
+        text: AB = AC の二等辺三角形です。∠x は何度ですか。
         svg: '<svg viewBox="0 0 240 150" xmlns="http://www.w3.org/2000/svg"><line x1="120" y1="27.4" x2="85.4" y2="122.6" stroke="currentColor" stroke-width="2" fill="none"/><line x1="85.4" y1="122.6" x2="154.6" y2="122.6" stroke="currentColor" stroke-width="2" fill="none"/><line x1="154.6" y1="122.6" x2="120" y2="27.4" stroke="currentColor" stroke-width="2" fill="none"/><line x1="107.4" y1="76.7" x2="98" y2="73.3" stroke="currentColor" stroke-width="1.5" fill="none"/><line x1="142" y1="73.3" x2="132.6" y2="76.7" stroke="currentColor" stroke-width="1.5" fill="none"/><path d="M114.5 42.5 A16 16 0 0 0 125.5 42.5" stroke="currentColor" stroke-width="1.5" fill="none"/><text x="120" y="60" font-size="13" text-anchor="middle">40°</text><path d="M101.4 122.6 A16 16 0 0 0 90.8 107.5" stroke="currentColor" stroke-width="1.5" fill="none"/><text x="108.3" y="111.1" font-size="13" text-anchor="middle">x</text><text x="120" y="21" font-size="13" text-anchor="middle">A</text><text x="77.6" y="134.9" font-size="13" text-anchor="middle">B</text><text x="162.4" y="134.9" font-size="13" text-anchor="middle">C</text></svg>'
         answer: 70
         check: "(180 - 40) // 2"
@@ -276,6 +289,19 @@ days:
         paths:
           - [∠x のとなりは 70°（錯角）, 180 − 70 = 110]
       - part: 今日
+        text: 平行四辺形 ABCD で、∠A = 70° です。∠A と大きさが等しい角はどれですか。
+        svg: '<svg viewBox="0 0 240 140" xmlns="http://www.w3.org/2000/svg"><line x1="47.2" y1="34" x2="72.9" y2="104.5" stroke="currentColor" stroke-width="2" fill="none"/><line x1="72.9" y1="104.5" x2="192.9" y2="104.5" stroke="currentColor" stroke-width="2" fill="none"/><line x1="192.9" y1="104.5" x2="167.2" y2="34" stroke="currentColor" stroke-width="2" fill="none"/><line x1="167.2" y1="34" x2="47.2" y2="34" stroke="currentColor" stroke-width="2" fill="none"/><path d="M63.2 34 A16 16 0 0 1 52.7 49" stroke="currentColor" stroke-width="1.5" fill="none"/><text x="76.7" y="59.1" font-size="13" text-anchor="middle">70°</text><text x="36.4" y="33.3" font-size="13" text-anchor="middle">A</text><text x="63.2" y="116.2" font-size="13" text-anchor="middle">B</text><text x="203.7" y="114.2" font-size="13" text-anchor="middle">C</text><text x="176.8" y="31.3" font-size="13" text-anchor="middle">D</text></svg>'
+        choices: [∠B, ∠C, ∠D]
+        answer: ∠C
+        hints:
+          - 平行四辺形では、向かい合う角は対角というよ。
+          - 向かい合う角どうしの大きさは、どうなっているかな。
+          - 対角は等しいね。A の向かいがわにある頂点はどれかな。
+        paths:
+          - [∠A の対角を見つける, 平行四辺形の対角は等しい, ∠A と等しいのは ∠C]
+          - [となり合う角の和は 180° なので ∠B = 180 − 70 = 110, ∠D = 180 − 70 = 110, ∠C = 180 − 110 = 70 なので ∠A と同じ大きさなのは ∠C]
+        note: 平行四辺形で等しいのは対角、となり合う角は和が 180° と分けて見る足場。
+      - part: 今日
         text: 平行四辺形 ABCD で、∠A = 115° です。∠B は何度ですか。
         svg: '<svg viewBox="0 0 240 140" xmlns="http://www.w3.org/2000/svg"><line x1="76" y1="34.5" x2="42.9" y2="105.5" stroke="currentColor" stroke-width="2" fill="none"/><line x1="42.9" y1="105.5" x2="164" y2="105.5" stroke="currentColor" stroke-width="2" fill="none"/><line x1="164" y1="105.5" x2="197.1" y2="34.5" stroke="currentColor" stroke-width="2" fill="none"/><line x1="197.1" y1="34.5" x2="76" y2="34.5" stroke="currentColor" stroke-width="2" fill="none"/><path d="M69.3 49 A16 16 0 0 0 92 34.5" stroke="currentColor" stroke-width="1.5" fill="none"/><text x="91.1" y="62.7" font-size="13" text-anchor="middle">115°</text><path d="M58.9 105.5 A16 16 0 0 0 49.7 91" stroke="currentColor" stroke-width="1.5" fill="none"/><text x="66.5" y="95" font-size="13" text-anchor="middle">x</text><text x="68.2" y="31.3" font-size="13" text-anchor="middle">A</text><text x="35.1" y="117.8" font-size="13" text-anchor="middle">B</text><text x="171.8" y="117.8" font-size="13" text-anchor="middle">C</text><text x="204.9" y="31.3" font-size="13" text-anchor="middle">D</text></svg>'
         answer: 65
@@ -388,6 +414,18 @@ days:
           - BC は、2 つの三角形のどちらの辺でもあるね。
         paths:
           - [AB = DC（対辺）, BC は共通, ∠ABC = ∠DCB, △ABC ≡ △DCB, AC = DB]
+      - part: 今日
+        text: △ABC で ∠B = 80° です。∠B の二等分線が辺 AC と交わる点を D とします。∠ABD は何度ですか。
+        svg: '<svg viewBox="0 0 240 150" xmlns="http://www.w3.org/2000/svg"><line x1="57.4" y1="21.5" x2="40" y2="120" stroke="currentColor" stroke-width="2" fill="none"/><line x1="40" y1="120" x2="200" y2="120" stroke="currentColor" stroke-width="2" fill="none"/><line x1="200" y1="120" x2="57.4" y2="21.5" stroke="currentColor" stroke-width="2" fill="none"/><line x1="40" y1="120" x2="112.2" y2="59.4" stroke="currentColor" stroke-width="2" fill="none"/><path d="M59.9 103.3 A26 26 0 0 0 44.5 94.4" stroke="currentColor" stroke-width="1.5" fill="none"/><text x="50.9" y="15.9" font-size="13" text-anchor="middle">A</text><text x="29.5" y="130.3" font-size="13" text-anchor="middle">B</text><text x="211.4" y="128.2" font-size="13" text-anchor="middle">C</text><text x="117.3" y="53" font-size="13" text-anchor="middle">D</text></svg>'
+        answer: 40
+        check: "80 // 2"
+        hints:
+          - 二等分線は、角をどうする線だったかな。
+          - 二等分線は、角を同じ大きさの 2 つに分けるね。∠ABD はそのうちの 1 つだよ。
+          - ∠B の 80° を、同じ大きさの 2 つに分けよう。
+        paths:
+          - [∠B の二等分線は ∠B を半分にする, ∠ABD = 80 ÷ 2 = 40]
+        note: 角の二等分線は、角を同じ大きさの 2 つに分ける線。それだけを試す足場。∠ABD を ∠B と同じ 80° と答えやすい。
       - part: 今日
         text: AB = AC の二等辺三角形 ABC で、∠A = 36° です。∠B の二等分線が AC と交わる点を D とします。∠BDC は何度ですか。
         svg: '<svg viewBox="0 0 240 150" xmlns="http://www.w3.org/2000/svg"><line x1="120" y1="27.4" x2="89.1" y2="122.6" stroke="currentColor" stroke-width="2" fill="none"/><line x1="89.1" y1="122.6" x2="150.9" y2="122.6" stroke="currentColor" stroke-width="2" fill="none"/><line x1="150.9" y1="122.6" x2="120" y2="27.4" stroke="currentColor" stroke-width="2" fill="none"/><line x1="89.1" y1="122.6" x2="139.1" y2="86.2" stroke="currentColor" stroke-width="2" fill="none"/><line x1="109.3" y1="76.5" x2="99.8" y2="73.5" stroke="currentColor" stroke-width="1.5" fill="none"/><line x1="140.2" y1="73.5" x2="130.7" y2="76.5" stroke="currentColor" stroke-width="1.5" fill="none"/><path d="M115.4 41.7 A15 15 0 0 0 124.6 41.7" stroke="currentColor" stroke-width="1.5" fill="none"/><text x="120" y="59" font-size="13" text-anchor="middle">36°</text><path d="M127 95 A15 15 0 0 0 143.7 100.5" stroke="currentColor" stroke-width="1.5" fill="none"/><text x="130.8" y="116.5" font-size="13" text-anchor="middle">x</text><text x="120" y="21" font-size="13" text-anchor="middle">A</text><text x="81.3" y="134.9" font-size="13" text-anchor="middle">B</text><text x="158.7" y="134.9" font-size="13" text-anchor="middle">C</text><text x="150.1" y="90.8" font-size="13" text-anchor="middle">D</text></svg>'

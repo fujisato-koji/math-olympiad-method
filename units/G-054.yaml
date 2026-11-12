@@ -184,6 +184,19 @@ days:
         paths:
           - [∠ACB = 90°（半円の弧に対する円周角）, 180 − 90 − 58 = 32, 32°]
       - part: 今日
+        text: 円の上に 4 点 A、B、C、D がこの順にならんでいます。円周角とは、弧の外がわの円の上の点から、弧の両はしを見た角のことです。図の太い線の弧 AB（C と D をふくまない弧）に対する円周角は、どれですか。
+        svg: '<svg viewBox="0 0 240 140" xmlns="http://www.w3.org/2000/svg"><circle cx="120" cy="70" r="52" stroke="currentColor" stroke-width="2" fill="none"/><path d="M77.4 99.8 A52 52 0 0 0 164.1 97.6" stroke="currentColor" stroke-width="5" fill="none"/><polygon points="77.4,99.8 164.1,97.6 152,29 75.9,42.4" stroke="currentColor" stroke-width="1.5" fill="none"/><line x1="77.4" y1="99.8" x2="152" y2="29" stroke="currentColor" stroke-width="1.5" fill="none" stroke-dasharray="5 4"/><line x1="164.1" y1="97.6" x2="75.9" y2="42.4" stroke="currentColor" stroke-width="1.5" fill="none" stroke-dasharray="5 4"/><text x="66.8" y="112.3" font-size="14" text-anchor="middle">A</text><text x="175.1" y="109.4" font-size="14" text-anchor="middle">B</text><text x="160" y="23.8" font-size="14" text-anchor="middle">C</text><text x="64.9" y="40.6" font-size="14" text-anchor="middle">D</text></svg>'
+        choices: [∠ABC, ∠BCD, ∠ADB, ∠CAD]
+        answer: ∠ADB
+        hints:
+          - 弧 AB の両はしは、どの点とどの点かな。
+          - 角の頂点は、A でも B でもない点で、弧 AB の外がわにあるよ。C と D のどちらかな。
+          - その頂点から A と B を見る角を、4 つの中から選ぼう。
+        paths:
+          - [弧 AB の両はしは A と B, 頂点は A でも B でもない点で C か D, A と B を見る角は ∠ADB]
+          - [4 つの角が、それぞれどの弧に対する角かを見る, ∠ABC は弧 AC、∠BCD は弧 BD、∠CAD は弧 CD に対する角, 弧 AB に対する角は ∠ADB]
+        note: 弧に対する円周角の頂点は、弧の外の点で、弧の両はしにはならない。円周角のことばは問題文で説明する。接弦定理の前に、弧と頂点の見方だけを確かめる足場。∠ABC のように、弦の端を頂点にした角を選びやすい。
+      - part: 今日
         text: 3 点 A、B、C は円の上にあり、点 A での接線を ST とします。図のしるしの角 ∠TAB と等しい角はどれですか。
         svg: '<svg viewBox="0 0 240 140" xmlns="http://www.w3.org/2000/svg"><circle cx="120" cy="70" r="52" stroke="currentColor" stroke-width="2" fill="none"/><line x1="62.8" y1="122" x2="177.2" y2="122" stroke="currentColor" stroke-width="2" fill="none"/><line x1="120" y1="122" x2="168.9" y2="52.2" stroke="currentColor" stroke-width="2" fill="none"/><line x1="168.9" y1="52.2" x2="80.2" y2="36.6" stroke="currentColor" stroke-width="2" fill="none"/><line x1="80.2" y1="36.6" x2="120" y2="122" stroke="currentColor" stroke-width="2" fill="none"/><path d="M138 122 A18 18 0 0 0 130.3 107.3" stroke="currentColor" stroke-width="1.5" fill="none"/><text x="112.2" y="134.7" font-size="14" text-anchor="middle">A</text><text x="179.2" y="53.4" font-size="14" text-anchor="middle">B</text><text x="71.7" y="34.4" font-size="14" text-anchor="middle">C</text><text x="188.2" y="126.9" font-size="14" text-anchor="middle">T</text><text x="51.8" y="126.9" font-size="14" text-anchor="middle">S</text></svg>'
         choices: [∠ACB, ∠ABC, ∠BAC, ∠SAC]
@@ -301,6 +314,18 @@ days:
           - 鈍角のときは CD をひいて、∠ACB を ∠ACD と ∠DCB に分けよう。
         paths:
           - [∠TAD = 90°（わけ 1）, 直角のとき AB は直径で ∠ACB = 90°, 鋭角のとき ∠TAB = 90° − ∠a = ∠ADB = ∠ACB, 鈍角のとき ∠TAB = 90° + ∠a = ∠ACD + ∠DCB = ∠ACB]
+      - part: 今日
+        text: 円の外の点から円に 2 本の接線をひくと、その点から接点までの長さ（接線の長さ）は等しくなります。△ABC の 3 つの辺に、円が D（辺 BC の上）、E（辺 CA の上）、F（辺 AB の上）で接しています。AF = 2 cm、BD = 3 cm のとき、AB は何 cm ですか。
+        svg: '<svg viewBox="0 0 240 150" xmlns="http://www.w3.org/2000/svg"><circle cx="105" cy="84.2" r="40.8" stroke="currentColor" stroke-width="2" fill="none"/><polygon points="97.9,20 30,125 205,125" stroke="currentColor" stroke-width="2" fill="none"/><circle cx="105" cy="125" r="2.6" fill="currentColor"/><circle cx="133.6" cy="55" r="2.6" fill="currentColor"/><circle cx="70.7" cy="62" r="2.6" fill="currentColor"/><text x="99.9" y="13" font-size="14" text-anchor="middle">A</text><text x="20" y="134" font-size="14" text-anchor="middle">B</text><text x="215" y="134" font-size="14" text-anchor="middle">C</text><text x="105" y="141" font-size="14" text-anchor="middle">D</text><text x="142" y="51.4" font-size="14" text-anchor="middle">E</text><text x="60.6" y="60.5" font-size="14" text-anchor="middle">F</text><text x="74.2" y="38.5" font-size="12" text-anchor="middle">2</text><text x="67.5" y="141" font-size="12" text-anchor="middle">3</text></svg>'
+        answer: 5
+        check: "2 + 3"
+        hints:
+          - 辺 AB は、F で AF と FB の 2 つに分かれているね。
+          - B から円にひいた 2 本の接線は、BD と BF だね。この 2 本の長さをくらべよう。
+          - FB の長さがわかったら、AF にたそう。
+        paths:
+          - [AB = AF + FB（F で AF と FB の 2 つに分かれる）, FB = BD = 3（B からの 2 本の接線の長さは等しい。図に 3 と書きこむ）, 2 + 3 = 5, 5 cm]
+        note: AF の 2 だけ、または BD の 3 だけを答えにしてしまうことがある。AB は F で 2 つに分かれているので、FB の長さもいる。B から出る 2 本の接線 BD と BF の長さが等しいことを、図に 3 と書きこんでたしかめる。
       - part: 今日
         text: △ABC の 3 つの辺に、円が D（辺 BC の上）、E（辺 CA の上）、F（辺 AB の上）で接しています。AB = 10 cm、BC = 12 cm、CA = 8 cm のとき、BD は何 cm ですか。
         svg: '<svg viewBox="0 0 240 150" xmlns="http://www.w3.org/2000/svg"><circle cx="134.8" cy="84.8" r="39.2" stroke="currentColor" stroke-width="2" fill="none"/><polygon points="142.2,26 31.1,124 208.9,124" stroke="currentColor" stroke-width="2" fill="none"/><circle cx="134.8" cy="124" r="2.6" fill="currentColor"/><circle cx="167.2" cy="62.7" r="2.6" fill="currentColor"/><circle cx="108.9" cy="55.4" r="2.6" fill="currentColor"/><text x="143.6" y="20" font-size="14" text-anchor="middle">A</text><text x="101.6" y="52" font-size="14" text-anchor="middle">F</text><text x="20.8" y="132.8" font-size="14" text-anchor="middle">B</text><text x="134.8" y="139.9" font-size="14" text-anchor="middle">D</text><text x="218.6" y="134" font-size="14" text-anchor="middle">C</text><text x="176.3" y="61.5" font-size="14" text-anchor="middle">E</text><text x="78.6" y="70.1" font-size="12" text-anchor="middle">10</text><text x="105.8" y="140.4" font-size="12" text-anchor="middle">12</text><text x="182.7" y="74.4" font-size="12" text-anchor="middle">8</text></svg>'
@@ -420,6 +445,19 @@ days:
         paths:
           - [∠ABD = 90°（接線は半径に垂直）, ∠BAD = 180 − 90 − 52 = 38, 接弦定理で ∠CBD = ∠BAC = 38, 38°]
           - [∠ACB = 90°（半円の弧）なので ∠BCD = 90°, △BCD で 180 − 90 − 52 = 38, 38°]
+      - part: 今日
+        text: 円いピザを、中心 O から 2 本の切れ目 OA、OB で 2 つに切りました。小さいほうのピースの中心角 ∠AOB が 110° のとき、大きいほうのピースの中心角 ∠x は何度ですか。
+        svg: '<svg viewBox="0 0 240 140" xmlns="http://www.w3.org/2000/svg"><circle cx="120" cy="70" r="52" stroke="currentColor" stroke-width="2" fill="none"/><line x1="120" y1="70" x2="162.6" y2="40.2" stroke="currentColor" stroke-width="2" fill="none"/><line x1="120" y1="70" x2="77.4" y2="40.2" stroke="currentColor" stroke-width="2" fill="none"/><circle cx="120" cy="70" r="2.6" fill="currentColor"/><path d="M131.5 62 A14 14 0 0 0 108.5 62" stroke="currentColor" stroke-width="1.5" fill="none"/><text x="120" y="45" font-size="12" text-anchor="middle">110°</text><path d="M100.3 56.2 A24 24 0 1 0 139.7 56.2" stroke="currentColor" stroke-width="1.5" fill="none"/><text x="120" y="107" font-size="12" text-anchor="middle" font-style="italic" font-family="serif">x</text><text x="173.2" y="37.7" font-size="14" text-anchor="middle">A</text><text x="66.8" y="37.7" font-size="14" text-anchor="middle">B</text><text x="120" y="86" font-size="14" text-anchor="middle">O</text></svg>'
+        answer: 250
+        check: "360 - 110"
+        hints:
+          - 2 つのピースを合わせると、ピザ 1 まいの円になるね。
+          - 中心のまわりを 1 周する角は何度かな。
+          - 1 周の角から、小さいほうのピースの角をひこう。
+        paths:
+          - [中心のまわりの角は 1 周で 360°, 360 − 110 = 250, 250°]
+          - [半周は 180°、110° は半周より 180 − 110 = 70° 小さい, 大きいほうは半周より 70° 大きい, 180 + 70 = 250, 250°]
+        note: 大きいほうの弧や角を、小さいほうと取りちがえない足場。大きいほうの中心角は 180° をこえることを、ピザの絵で確かめさせる。次の「ひも」の問題で、大きいほうの弧の中心角を使う前に置く。
       - part: 挑戦
         text: 円 O の外の点 P から接線 PA、PB をひくと、∠APB = 90° でした。円の半径は 4 cm です。P から A までまっすぐ、A から大きいほうの弧 AB にそって B まで、B から P までまっすぐ、ひもを張ります。ひもの長さはどれですか。
         svg: '<svg viewBox="0 0 240 140" xmlns="http://www.w3.org/2000/svg"><circle cx="109.2" cy="70" r="52" stroke="currentColor" stroke-width="2" fill="none"/><line x1="182.8" y1="70" x2="146" y2="33.2" stroke="currentColor" stroke-width="2" fill="none"/><line x1="182.8" y1="70" x2="146" y2="106.8" stroke="currentColor" stroke-width="2" fill="none"/><line x1="109.2" y1="70" x2="146" y2="33.2" stroke="currentColor" stroke-width="2" fill="none"/><line x1="109.2" y1="70" x2="146" y2="106.8" stroke="currentColor" stroke-width="2" fill="none"/><polyline points="140.3,38.9 146,44.5 151.7,38.9" stroke="currentColor" stroke-width="1.5" fill="none"/><polyline points="140.3,101.1 146,95.5 151.7,101.1" stroke="currentColor" stroke-width="1.5" fill="none"/><polyline points="177.1,64.3 171.5,70 177.1,75.7" stroke="currentColor" stroke-width="1.5" fill="none"/><circle cx="109.2" cy="70" r="2.6" fill="currentColor"/><text x="98.2" y="74.9" font-size="14" text-anchor="middle">O</text><text x="193.8" y="74.9" font-size="14" text-anchor="middle">P</text><text x="153.8" y="30.4" font-size="14" text-anchor="middle">A</text><text x="153.8" y="119.4" font-size="14" text-anchor="middle">B</text><text x="121.5" y="49.7" font-size="12" text-anchor="middle">4</text></svg>'

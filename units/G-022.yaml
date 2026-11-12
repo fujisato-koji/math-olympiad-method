@@ -56,6 +56,18 @@ days:
           - [頂角の二等分線は底辺を垂直に 2 等分する, BD = 12 ÷ 2, 6 cm]
         note: この性質が、垂直二等分線の作図が正しいわけ（3 日目）のもとになる。
       - part: 今日
+        text: 長さ 6 cm の線分 CD があります。C を中心に半径 5 cm の弧をかき、D を中心に同じ半径の弧をかきます。2 つの弧が交わる点を、図のように Q とします。QD は何 cm ですか。
+        svg: '<svg viewBox="0 0 240 140" xmlns="http://www.w3.org/2000/svg"><line x1="90" y1="20" x2="90" y2="120" stroke="currentColor" stroke-width="2" fill="none"/><path d="M168.3 48.5 A83.3 83.3 0 0 1 137.8 88.3" stroke="currentColor" stroke-width="1.2" fill="none"/><path d="M137.8 51.7 A83.3 83.3 0 0 1 168.3 91.5" stroke="currentColor" stroke-width="1.2" fill="none"/><line x1="90" y1="20" x2="156.7" y2="70" stroke="currentColor" stroke-width="1.5" fill="none" stroke-dasharray="5 4"/><line x1="90" y1="120" x2="156.7" y2="70" stroke="currentColor" stroke-width="1.5" fill="none" stroke-dasharray="5 4"/><circle cx="90" cy="20" r="2.6" fill="currentColor"/><circle cx="90" cy="120" r="2.6" fill="currentColor"/><circle cx="156.7" cy="70" r="2.6" fill="currentColor"/><text x="78" y="24.9" font-size="14" text-anchor="middle">C</text><text x="78" y="124.9" font-size="14" text-anchor="middle">D</text><text x="174" y="75" font-size="14" text-anchor="middle">Q</text></svg>'
+        answer: 5
+        check: "sum(math.isqrt(x * x + (6 // 2) ** 2) for x in range(1, 10) if x * x + (6 // 2) ** 2 == 5 ** 2)"
+        hints:
+          - 弧の上の点は、どれも中心から同じ長さのところにあるね。
+          - Q は、C を中心にした弧の上にも、D を中心にした弧の上にもあるよ。
+          - D を中心にした弧の半径は何 cm かな。QD はその半径と同じ長さだよ。
+        paths:
+          - [Q は D を中心にした弧の上の点, 弧の上の点は中心 D から半径の長さのところ, 半径は C の弧と同じ 5 cm なので QD = 5 cm]
+        note: 同じ半径の弧の交点は、2 つの中心から同じ長さのところにある。垂直二等分線の作図でかく弧の交点が、両はしから等しい距離になるわけの手前の一歩。CD の 6 cm や、その半分の 3 cm と取りちがえやすい。
+      - part: 今日
         text: 長さ 9 cm の線分 AB の垂直二等分線をひき、AB との交点を M とします。AM は何 cm ですか。
         svg: '<svg viewBox="0 0 240 150" xmlns="http://www.w3.org/2000/svg"><path d="M129.4 42.7 A60.9 60.9 0 0 0 108.1 22.2" stroke="currentColor" stroke-width="1.2" fill="none"/><path d="M108.1 127.8 A60.9 60.9 0 0 0 129.4 107.3" stroke="currentColor" stroke-width="1.2" fill="none"/><path d="M131.9 22.2 A60.9 60.9 0 0 0 110.6 42.7" stroke="currentColor" stroke-width="1.2" fill="none"/><path d="M110.6 107.3 A60.9 60.9 0 0 0 131.9 127.8" stroke="currentColor" stroke-width="1.2" fill="none"/><line x1="77.7" y1="75" x2="162.3" y2="75" stroke="currentColor" stroke-width="2" fill="none"/><line x1="120" y1="132" x2="120" y2="18" stroke="currentColor" stroke-width="1.6" fill="none"/><polyline points="128,75 128,67 120,67" stroke="currentColor" stroke-width="1.5" fill="none"/><circle cx="77.7" cy="75" r="2.6" fill="currentColor"/><text x="65.7" y="79.9" font-size="14" text-anchor="middle">A</text><circle cx="162.3" cy="75" r="2.6" fill="currentColor"/><text x="174.3" y="79.9" font-size="14" text-anchor="middle">B</text><text x="132" y="36.1" font-size="14" text-anchor="middle">P</text><text x="132" y="123.7" font-size="14" text-anchor="middle">Q</text><text x="111.5" y="88.4" font-size="14" text-anchor="middle">M</text></svg>'
         answer: 4.5
@@ -165,6 +177,19 @@ days:
           - AB の上側と下側を考えよう。
         paths:
           - [点は垂直二等分線の上, 6 cm は半分の 5 cm より長い, 上と下に 1 つずつ, 2 つ]
+      - part: 今日
+        text: ぴったり重なる 2 つの三角形があり、△CDE ≡ △CFE と書きます。CD = 11 cm、DE = 8 cm、CE = 13 cm のとき、FE は何 cm ですか。
+        svg: '<svg viewBox="0 0 240 140" xmlns="http://www.w3.org/2000/svg"><polygon points="145.0,26.7 66.7,58.7 95.0,113.3 156.5,110.5" stroke="currentColor" stroke-width="2" fill="none"/><line x1="145.0" y1="26.7" x2="95.0" y2="113.3" stroke="currentColor" stroke-width="1.5" fill="none" stroke-dasharray="5 4"/><text x="151.5" y="20.4" font-size="14" text-anchor="middle">C</text><text x="54.5" y="59.1" font-size="14" text-anchor="middle">D</text><text x="88.5" y="129.6" font-size="14" text-anchor="middle">E</text><text x="166.5" y="123.8" font-size="14" text-anchor="middle">F</text></svg>'
+        answer: 8
+        check: "sum(v for s, v in {'CD': 11, 'DE': 8, 'CE': 13}.items() if set(s.replace('D', 'F')) == {'F', 'E'})"
+        hints:
+          - △CDE ≡ △CFE は、重なる頂点を同じ順に書いてあるね。C は C に、E は E に重なるよ。
+          - D はどの点に重なるかな。
+          - 重なる辺は同じ長さだね。辺 FE に重なるのは、△CDE のどの辺かな。
+        paths:
+          - [D は F に重なる（頂点を同じ順に読む）, 辺 FE に重なるのは辺 DE, FE = DE = 8 cm]
+          - [図の点線 CE で折ると △CDE と △CFE がぴったり重なる, D は F に、辺 DE は辺 FE に重なる, 長さも同じだから FE = 8 cm]
+        note: 合同の記号の頂点の順から、辺 FE に重なる辺を読む足場。CD の 11 cm や CE の 13 cm と取りちがえやすい。
       - part: 今日
         text: ∠XOY = 76° の二等分線を作図しました。二等分線と辺 OX がつくる角は何度ですか。
         svg: '<svg viewBox="0 0 240 140" xmlns="http://www.w3.org/2000/svg"><line x1="69.6" y1="115.8" x2="170.4" y2="115.8" stroke="currentColor" stroke-width="2" fill="none"/><line x1="69.6" y1="115.8" x2="94" y2="18" stroke="currentColor" stroke-width="2" fill="none"/><path d="M113.5 122 A44.4 44.4 0 0 0 74.2 71.7" stroke="currentColor" stroke-width="1.2" fill="none"/><path d="M125.9 81.5 A36.3 36.3 0 0 0 105.9 80.4" stroke="currentColor" stroke-width="1.2" fill="none"/><path d="M112.7 89.2 A36.3 36.3 0 0 0 116.5 69.5" stroke="currentColor" stroke-width="1.2" fill="none"/><line x1="69.6" y1="115.8" x2="152.2" y2="51.3" stroke="currentColor" stroke-width="1.6" fill="none"/><text x="58.3" y="124.8" font-size="14" text-anchor="middle">O</text><text x="181.4" y="120.7" font-size="14" text-anchor="middle">X</text><text x="96.6" y="12.2" font-size="14" text-anchor="middle">Y</text><text x="118.1" y="132" font-size="14" text-anchor="middle">P</text><text x="70.4" y="71" font-size="14" text-anchor="middle">Q</text><text x="126.2" y="90.8" font-size="14" text-anchor="middle">R</text></svg>'
@@ -367,6 +392,19 @@ days:
           - 長さが等しくなるのは、長方形の対角線だね。
         paths:
           - [ひし形は平行四辺形なので対角線は 2 等分し合う, ひし形の対角線は垂直, たがいに垂直に 2 等分し合う]
+      - part: 今日
+        text: AB = AC の二等辺三角形 ABC で、∠A = 36° です。∠B は何度ですか。
+        svg: '<svg viewBox="0 0 240 140" xmlns="http://www.w3.org/2000/svg"><polygon points="120,18 86.2,122 153.8,122" stroke="currentColor" stroke-width="2" fill="none"/><path d="M110.7 46.5 A30 30 0 0 0 129.3 46.5" stroke="currentColor" stroke-width="1.5" fill="none"/><text x="120" y="66" font-size="12" text-anchor="middle">36°</text><line x1="98.3" y1="68.5" x2="107.9" y2="71.5" stroke="currentColor" stroke-width="1.5" fill="none"/><line x1="132.1" y1="71.5" x2="141.7" y2="68.5" stroke="currentColor" stroke-width="1.5" fill="none"/><text x="120" y="11.9" font-size="14" text-anchor="middle">A</text><text x="77.3" y="133.3" font-size="14" text-anchor="middle">B</text><text x="162.7" y="133.3" font-size="14" text-anchor="middle">C</text></svg>'
+        answer: 72
+        check: "(180 - 36) // 2"
+        hints:
+          - 二等辺三角形の 2 つの底角は等しいね。∠B と ∠C はどんな関係かな。
+          - 三角形の 3 つの角の和は 180° だね。∠B と ∠C を合わせると何度になるかな。
+          - 合わせた角を、2 つの等しい角に分けよう。
+        paths:
+          - [∠B + ∠C = 180° − 36°, ∠B = ∠C だから 2 つに等しく分ける, ∠B = 144° ÷ 2 = 72°]
+          - [頂角の二等分線 AD をひく（∠BAD = 36° ÷ 2 = 18°）, AD は BC に垂直だから ∠ADB = 90°, ∠B = 180° − 90° − 18° = 72°]
+        note: 頂角から底角を出す向き（180° から頂角をひいて 2 でわる）の足場。
       - part: 今日
         text: 線分 AB の垂直二等分線の上に、PA = AB となる点 P をとります。∠PAB は何度ですか。
         svg: '<svg viewBox="0 0 240 170" xmlns="http://www.w3.org/2000/svg"><path d="M131.6 42.2 A59.5 59.5 0 0 0 106.6 27.8" stroke="currentColor" stroke-width="1.2" fill="none"/><path d="M106.6 142.2 A59.5 59.5 0 0 0 131.6 127.8" stroke="currentColor" stroke-width="1.2" fill="none"/><path d="M133.4 27.8 A59.5 59.5 0 0 0 108.4 42.2" stroke="currentColor" stroke-width="1.2" fill="none"/><path d="M108.4 127.8 A59.5 59.5 0 0 0 133.4 142.2" stroke="currentColor" stroke-width="1.2" fill="none"/><line x1="90.2" y1="85" x2="149.8" y2="85" stroke="currentColor" stroke-width="2" fill="none"/><line x1="120" y1="152" x2="120" y2="18" stroke="currentColor" stroke-width="1.6" fill="none"/><polyline points="128,85 128,77 120,77" stroke="currentColor" stroke-width="1.5" fill="none"/><circle cx="90.2" cy="85" r="2.6" fill="currentColor"/><text x="78.2" y="89.9" font-size="14" text-anchor="middle">A</text><circle cx="149.8" cy="85" r="2.6" fill="currentColor"/><text x="161.8" y="89.9" font-size="14" text-anchor="middle">B</text><text x="132" y="38.4" font-size="14" text-anchor="middle">P</text><text x="132" y="141.4" font-size="14" text-anchor="middle">Q</text><text x="111.5" y="98.4" font-size="14" text-anchor="middle">M</text></svg>'

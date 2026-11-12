@@ -256,6 +256,29 @@ days:
         paths:
           - [どれもとなり合うので全部ちがう色, ア 5 通り、イ 4 通り、ウ 3 通り, 5 × 4 = 20、20 × 3 = 20 + 20 + 20 = 60 通り]
       - part: 今日
+        text: 図のア、イ、ウ、エを、赤、青、黄、緑の 4 色でぬります。となり合う部分はちがう色にします。同じ色を何回使ってもかまいません。アは赤、イは青、エは黄にぬりました。ウにぬれる色は何色ありますか。
+        svg: |
+          <svg viewBox="0 0 240 140" xmlns="http://www.w3.org/2000/svg">
+            <rect x="20" y="40" width="50" height="60" stroke="currentColor" fill="#e06060" fill-opacity=".35" stroke-width="2"/>
+            <rect x="70" y="40" width="50" height="60" stroke="currentColor" fill="#6090e0" fill-opacity=".35" stroke-width="2"/>
+            <rect x="120" y="40" width="50" height="60" stroke="currentColor" fill="none" stroke-width="2"/>
+            <rect x="170" y="40" width="50" height="60" stroke="currentColor" fill="#f3c969" fill-opacity=".35" stroke-width="2"/>
+            <text x="45" y="76" font-size="16" text-anchor="middle">ア</text>
+            <text x="95" y="76" font-size="16" text-anchor="middle">イ</text>
+            <text x="145" y="76" font-size="16" text-anchor="middle">ウ</text>
+            <text x="195" y="76" font-size="16" text-anchor="middle">エ</text>
+          </svg>
+        answer: 2
+        check: "sum(1 for c in range(4) if all(c != (0, 1, 2)[j] for j in (1, 2)))"
+        hints:
+          - ウととなり合っている部分はどれかな。
+          - ウに使えないのは、そのとなりの部分にぬった色だけだね。
+          - 4 色から、使えない色をのぞくと、何色のこるかな。
+        paths:
+          - [ウととなり合うのは、イとエ, イは青でエは黄なので、この 2 色は使えない, 4 − 2 = 2 色]
+          - [赤、青、黄、緑を 1 つずつ、ウにぬってみる, 青はイととなり合うのでだめ、黄はエととなり合うのでだめ, 赤をぬったアは、ウととなり合っていない, ぬれるのは赤と緑の 2 色]
+        note: ぬってある 3 色を全部のぞいて、4 − 3 = 1 色と答えやすい。ウに使えないのは、となり合うイとエの色だけ。となり合っていないアの赤は、ウにぬってよい。
+      - part: 今日
         text: 上のアは、下のイ、ウ、エのどれともとなり合っています。ア、イ、ウ、エを 3 色でぬります。となり合う部分はちがう色にします。同じ色を何回使ってもかまいません。ぬり方は何通りですか。
         svg: |
           <svg viewBox="0 0 240 140" xmlns="http://www.w3.org/2000/svg">
@@ -300,6 +323,27 @@ days:
           - じゅんにかけていこう。
         paths:
           - [ア 3 通り, イ、ウ、エ、オはアの色だけ使えないので 2 通りずつ, 3 × 2 = 6、6 × 2 = 12、12 × 2 = 24、24 × 2 = 24 + 24 = 48 通り]
+      - part: 今日
+        text: たてに 3 つならんだ部分ア、イ、ウを、赤、青、黄の 3 色でぬります。となり合う部分はちがう色にします。アとウは、どちらも赤にぬりました。イにぬれる色は何色ありますか。
+        svg: |
+          <svg viewBox="0 0 240 140" xmlns="http://www.w3.org/2000/svg">
+            <rect x="80" y="8" width="80" height="41" stroke="currentColor" fill="#e06060" fill-opacity=".35" stroke-width="2"/>
+            <rect x="80" y="49" width="80" height="41" stroke="currentColor" fill="none" stroke-width="2"/>
+            <rect x="80" y="90" width="80" height="41" stroke="currentColor" fill="#e06060" fill-opacity=".35" stroke-width="2"/>
+            <text x="120" y="34" font-size="16" text-anchor="middle">ア</text>
+            <text x="120" y="75" font-size="16" text-anchor="middle">イ</text>
+            <text x="120" y="116" font-size="16" text-anchor="middle">ウ</text>
+          </svg>
+        answer: 2
+        check: "len(set(range(3)) - set((0, 0)))"
+        hints:
+          - イととなり合っている部分はどれかな。
+          - その 2 つの部分は、何色にぬってあるかな。
+          - 使えない色は、部分の数ではなく、色の数で数えよう。赤の他にも使えない色はあるかな。
+        paths:
+          - [イととなり合うのは、アとウ, どちらも赤なので、使えない色は赤の 1 つだけ, 3 − 1 = 2 色]
+          - [赤、青、黄を 1 つずつ、イにぬってみる, 赤はアともウともとなり合うのでだめ, 青と黄はぬれる, ぬれるのは青と黄の 2 色]
+        note: となり合う 2 つが同じ色のとき、使えない色は 2 つではなく 1 つだけと気づかせる足場。2 日目の挑戦で、ウがアと同じ色のときにつながる。
       - part: 挑戦
         text: ドーナツの形を 4 つに分けました。まん中の円はあなで、ぬりません。となり合うのは、アとイ、イとウ、ウとエ、エとアです。3 色でぬります。となり合う部分はちがう色にします。同じ色を何回使ってもかまいません。ぬり方は何通りですか。
         svg: |
@@ -591,6 +635,27 @@ days:
           - じゅんにかけていこう。
         paths:
           - [ア 3 通り, ほかは 2 通りずつ, 3 × 2 = 6、6 × 2 = 12、12 × 2 = 24 通り]
+      - part: 今日
+        text: ア、イ、ウの 3 つのふうせんを、赤、青、黄、緑、白の 5 色でぬります。3 つとも全部ちがう色にします。アは赤、イは青にぬりました。ウにぬれる色は何色ありますか。
+        svg: |
+          <svg viewBox="0 0 240 140" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="50" cy="70" r="30" stroke="currentColor" fill="#e06060" fill-opacity=".35" stroke-width="2"/>
+            <circle cx="120" cy="70" r="30" stroke="currentColor" fill="#6090e0" fill-opacity=".35" stroke-width="2"/>
+            <circle cx="190" cy="70" r="30" stroke="currentColor" fill="none" stroke-width="2"/>
+            <text x="50" y="76" font-size="16" text-anchor="middle">ア</text>
+            <text x="120" y="76" font-size="16" text-anchor="middle">イ</text>
+            <text x="190" y="76" font-size="16" text-anchor="middle">ウ</text>
+          </svg>
+        answer: 3
+        check: "sum(1 for c in range(5) if len({0, 1, c}) == 3)"
+        hints:
+          - 3 つとも全部ちがう色にするよ。ウは、アと同じ色でもいいかな。
+          - ウは、アの色もイの色も使えないね。
+          - 5 色から、使えない色をのぞくと、何色のこるかな。
+        paths:
+          - [ウはアの赤もイの青も使えない, 使えない色は 2 つ, 5 − 2 = 3 色]
+          - [赤、青、黄、緑、白を 1 つずつ、ウにあてはめてみる, 赤と青はだめ, ぬれるのは黄、緑、白の 3 色]
+        note: 全部ちがう色では、ウはイの色だけでなくアの色も使えないことを、数でたしかめる足場。
       - part: 今日
         text: ア、イ、ウの 3 つの部分を 4 色でぬります。こんどは、3 つとも全部ちがう色にします。ぬり方は何通りですか。
         svg: |

@@ -159,6 +159,19 @@ days:
         paths:
           - [16 = 4², (x + 4)(x − 4)]
       - part: 今日
+        text: 方程式 (x − 3)(x − 5) = 8 について、x = 3 は解といえますか。
+        choices: [いえる, いえない]
+        answer: いえない
+        check: "[c for c, ok in {'いえる': True, 'いえない': False}.items() if ok == ((3 - 3) * (3 - 5) == 8)][0]"
+        hints:
+          - x = 3 を、左辺の x に入れて計算してみましょう。
+          - 3 − 3 が 0 になるので、かけ算の答えはいくつになるでしょう。
+          - 左辺の値が右辺の 8 と等しいときだけ、その数は解といえます。
+        paths:
+          - [x = 3 を左辺に代入する, (3 − 3)(3 − 5) = 0 × (−2) = 0, 0 は 8 と等しくないので解ではない]
+          - [左辺を展開して 8 を移項する, x² − 8x + 7 = 0, (x − 1)(x − 7) = 0, 解は 1 と 7 なので 3 は解ではない]
+        note: 右辺が 0 でない積の式では、かっこの 1 つが 0 になる数を入れても解にならない。「どちらかが 0」が使えるのは、右辺が 0 のときだけ。
+      - part: 今日
         text: 方程式 (x − 2)(x + 7) = 0 を解くと、どれになりますか。
         choices: [x = 2、x = −7, x = −2、x = 7, x = 2、x = 7]
         answer: x = 2、x = −7
@@ -273,6 +286,36 @@ days:
           - 2 乗の因数を、根号の外に出しましょう。
         paths:
           - [20 = 2² × 5, 2√5]
+      - part: 今日
+        text: 図のように、1 辺が x の正方形 A の右に長方形 B を、A の下に長方形 C を、辺をぴったり合わせて置きます。B と C は同じ大きさで、面積の合計は 14x です。右下のあいている所にぴったり入る正方形 D の面積はいくつですか。
+        svg: |
+          <svg viewBox="0 0 240 220" xmlns="http://www.w3.org/2000/svg">
+            <rect x="40" y="36" width="90" height="90" fill="currentColor" fill-opacity="0.12" stroke="currentColor" stroke-width="2"/>
+            <rect x="130" y="36" width="70" height="90" fill="currentColor" fill-opacity="0.25" stroke="currentColor" stroke-width="2"/>
+            <rect x="40" y="126" width="90" height="70" fill="currentColor" fill-opacity="0.25" stroke="currentColor" stroke-width="2"/>
+            <rect x="130" y="126" width="70" height="70" fill="none" stroke="currentColor" stroke-width="2" stroke-dasharray="5 4"/>
+            <line x1="40" y1="26" x2="130" y2="26" stroke="currentColor" fill="none" stroke-width="1.5"/>
+            <line x1="40" y1="21" x2="40" y2="31" stroke="currentColor" fill="none" stroke-width="1.5"/>
+            <line x1="130" y1="21" x2="130" y2="31" stroke="currentColor" fill="none" stroke-width="1.5"/>
+            <line x1="30" y1="36" x2="30" y2="126" stroke="currentColor" fill="none" stroke-width="1.5"/>
+            <line x1="25" y1="36" x2="35" y2="36" stroke="currentColor" fill="none" stroke-width="1.5"/>
+            <line x1="25" y1="126" x2="35" y2="126" stroke="currentColor" fill="none" stroke-width="1.5"/>
+            <text x="85" y="14" font-size="18" text-anchor="middle"><tspan font-style="italic">x</tspan></text>
+            <text x="14" y="87" font-size="18" text-anchor="middle"><tspan font-style="italic">x</tspan></text>
+            <text x="85" y="88" font-size="20" text-anchor="middle">A</text>
+            <text x="165" y="88" font-size="20" text-anchor="middle">B</text>
+            <text x="85" y="166" font-size="20" text-anchor="middle">C</text>
+            <text x="165" y="166" font-size="20" text-anchor="middle">D</text>
+          </svg>
+        answer: 49
+        check: "[w * w for w in range(1, 100) if all(2 * w * x == 14 * x for x in range(1, 6))][0]"
+        hints:
+          - B と C は同じ大きさです。B 1 つ分の面積はいくつでしょう。
+          - 長方形の面積は、たての長さ × 横の長さです。B のたては x なので、B の横の長さを求めましょう。
+          - D の 1 辺は、B の横の長さと同じです。D の面積は、1 辺 × 1 辺で求めます。
+        paths:
+          - [B 1 つ分の面積は 14x ÷ 2 = 7x, B のたては x なので、横の長さは 7x ÷ x = 7, D の 1 辺は 7 なので、面積は 7 × 7 = 49]
+        note: 1 辺の長さ 7 を答えにしたり、14 を半分にしないで 14 × 14 = 196 としたりしやすい。聞かれているのは面積なので、1 辺の 7 を 2 回かける。この 49 は、A と B と C を合わせた形に足すと大きな正方形ができる数で、次の平方完成で使う。
       - part: 今日
         text: 方程式 x² − 4x − 1 = 0 を (x − 2)² = q の形に変形すると、q はいくつになりますか。
         answer: 5
@@ -486,6 +529,19 @@ days:
           - (√7)² と 2² を、それぞれ計算しましょう。
         paths:
           - [(√7)² − 2², 7 − 4, 3]
+      - part: 今日
+        text: ある数を x とします。x の 4 倍より 9 大きい数を、x の式で表すと、どれになりますか。
+        choices: [4x + 9, 4(x + 9), 4x − 9]
+        answer: 4x + 9
+        check: "[c for c, f in {'4x + 9': lambda x: 4 * x + 9, '4(x + 9)': lambda x: 4 * (x + 9), '4x − 9': lambda x: 4 * x - 9}.items() if all(f(x) == x * 4 + 9 for x in range(-5, 6))][0]"
+        hints:
+          - 「x の 4 倍」は、x に 4 をかけた数です。
+          - 「それより 9 大きい」は、その数に 9 を足すことです。
+          - x = 5 のとき、5 の 4 倍は 20 で、それより 9 大きい数は 29 です。5 を入れて 29 になる式を選びましょう。
+        paths:
+          - [x の 4 倍は 4x, それより 9 大きいので 9 を足す, 4x + 9]
+          - [x = 5 を入れて考える, 5 の 4 倍は 20 でそれより 9 大きいのは 29, 5 を入れて 29 になる式を選ぶ]
+        note: 「4 倍より 9 大きい」は、4 倍してから 9 を足す。先に 9 を足してから 4 倍すると、4(x + 9) になってしまう。
       - part: 今日
         text: ある正の数を 2 乗すると、もとの数の 5 倍より 14 大きくなります。この数はいくつですか。
         answer: 7

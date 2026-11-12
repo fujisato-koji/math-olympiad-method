@@ -97,6 +97,41 @@ days:
           - [40 点台は 48、41、49、45、44、47, 6 人]
         note: 数えながら印を付けると、数え落としと二重に数えるのを防げる。
       - part: 今日
+        text: ヒストグラムの柱が 1 本だけかいてあります。30 回以上 40 回未満の階級の度数は何人ですか。
+        svg: |
+          <svg viewBox="0 0 220 180" xmlns="http://www.w3.org/2000/svg">
+            <line x1="40" y1="126" x2="180" y2="126" stroke="currentColor" stroke-width="0.8" stroke-opacity=".35"/>
+            <line x1="40" y1="112" x2="180" y2="112" stroke="currentColor" stroke-width="0.8" stroke-opacity=".35"/>
+            <line x1="40" y1="98" x2="180" y2="98" stroke="currentColor" stroke-width="0.8" stroke-opacity=".35"/>
+            <line x1="40" y1="84" x2="180" y2="84" stroke="currentColor" stroke-width="0.8" stroke-opacity=".35"/>
+            <line x1="40" y1="70" x2="180" y2="70" stroke="currentColor" stroke-width="0.8" stroke-opacity=".35"/>
+            <line x1="40" y1="56" x2="180" y2="56" stroke="currentColor" stroke-width="0.8" stroke-opacity=".35"/>
+            <line x1="40" y1="42" x2="180" y2="42" stroke="currentColor" stroke-width="0.8" stroke-opacity=".35"/>
+            <line x1="40" y1="28" x2="180" y2="28" stroke="currentColor" stroke-width="0.8" stroke-opacity=".35"/>
+            <text x="34" y="144" font-size="11" text-anchor="end">0</text>
+            <text x="34" y="116" font-size="11" text-anchor="end">2</text>
+            <text x="34" y="88" font-size="11" text-anchor="end">4</text>
+            <text x="34" y="60" font-size="11" text-anchor="end">6</text>
+            <text x="34" y="32" font-size="11" text-anchor="end">8</text>
+            <rect x="44" y="70" width="80" height="70" stroke="currentColor" fill="#f3c969" fill-opacity=".35" stroke-width="1.5"/>
+            <text x="44" y="155" font-size="11" text-anchor="middle">30</text>
+            <text x="124" y="155" font-size="11" text-anchor="middle">40</text>
+            <line x1="40" y1="18" x2="40" y2="140" stroke="currentColor" stroke-width="2"/>
+            <line x1="40" y1="140" x2="180" y2="140" stroke="currentColor" stroke-width="2"/>
+            <text x="36" y="14" font-size="11" text-anchor="end">（人）</text>
+            <text x="212" y="171" font-size="11" text-anchor="end">（回）</text>
+          </svg>
+        answer: 5
+        check: sum(1 for h in range(1, 9) if 140 - 14 * h >= 70)
+        hints:
+          - 柱の上のはしは、たての目もりのどの高さにありますか。
+          - 数字は 2 ごとですが、線は 1 ごとに引いてあります。
+          - 柱の上の線は、4 の線と 6 の線の間にあります。その間の数はいくつでしょう。
+        paths:
+          - [柱の上は 4 の線の 1 つ上, 線は 1 ごとなので 4 より 1 大きい, 5 人]
+          - [0 の線から上へ 1 本ずつ数える, 柱の上は 5 本目の線, 5 人]
+        note: 柱の上が数字のない線にあると、近くの数字の 4 や 6 と答えやすい。線は 1 ごとに引いてあるので、数字と数字の間の線は、その真ん中の数を表す。
+      - part: 今日
         text: ある学年の 30 人の小テスト（50 点満点）の結果をヒストグラムにしました。30 点以上の人は何人ですか。
         svg: |
           <svg viewBox="0 0 280 180" xmlns="http://www.w3.org/2000/svg">
@@ -255,7 +290,7 @@ days:
         paths:
           - [いちばん低い柱は右はし（2 人）, 40 回以上 45 回未満]
       - part: 今日
-        text: 30 人の小テストの結果のヒストグラム（今日の 2 問目と同じもの）で、40 点未満の人は何人ですか。
+        text: 30 人の小テストの結果のヒストグラム（今日の 3 問目と同じもの）で、40 点未満の人は何人ですか。
         svg: |
           <svg viewBox="0 0 280 180" xmlns="http://www.w3.org/2000/svg">
             <line x1="40" y1="130.5" x2="250" y2="130.5" stroke="currentColor" stroke-width="0.8" stroke-opacity=".35"/>
@@ -429,6 +464,18 @@ days:
           - [60 点未満は 40 以上 50 未満と 50 以上 60 未満, 3 + 7 = 10 人]
         note: これが 50 点以上 60 点未満の階級の累積度数。
       - part: 今日
+        text: 階級値が 45 点の階級に 3 人、階級値が 55 点の階級に 2 人います。どの人も階級値の点数だったとみなすと、この 5 人の点数の合計は何点ですか。
+        answer: 245
+        check: sum([45] * 3 + [55] * 2)
+        hints:
+          - 階級値の点数の人が、人数の分だけいると考えます。
+          - 階級値が 45 点の 3 人の合計は、45 を 3 回たした数です。
+          - 55 点の 2 人の合計も同じように求めて、2 つの合計をたしましょう。
+        paths:
+          - [45 点の人が 3 人, 45 × 3 = 135, 55 点の人が 2 人, 55 × 2 = 110, 135 + 110 = 245 点]
+          - [書き出すと 45、45、45、55、55 の 5 人, 45 + 45 + 45 = 135, 55 + 55 = 110, 135 + 110 = 245 点]
+        note: 階級値をそのまま（45 + 55）たしてしまいやすい。階級値に度数をかけてから、たす。
+      - part: 今日
         text: 20 人の点数の度数分布表です。表から平均を求めると何点ですか。
         svg: |
           <svg viewBox="0 0 240 144" xmlns="http://www.w3.org/2000/svg">
@@ -599,6 +646,18 @@ days:
           - 5 番目と 6 番目の平均を求めましょう。
         paths:
           - [並べると 8、9、11、13、15、17、19、20、22、25, 5 番目と 6 番目は 15 と 17, (15 + 17) ÷ 2 = 16]
+      - part: 今日
+        text: 7 人の記録は、小さい順に 3、6、8、11、14、17、20（回）でした。第 1 四分位数は何回ですか。
+        answer: 6
+        check: "(lambda s: (lambda h: Fraction(h[(len(h) - 1) // 2] + h[len(h) // 2], 2))(s[:len(s) // 2]))(sorted([3, 6, 8, 11, 14, 17, 20]))"
+        hints:
+          - 7 人の真ん中の人は、小さいほうから何番目ですか。
+          - 真ん中の人（中央値）は前半にも後半にも入れず、除いて分けます。前半は何人になりますか。
+          - 前半の人の中央値を求めましょう。
+        paths:
+          - [中央値は 4 番目の 11 回, 4 番目を除いた前半は 3、6、8, その中央値は 6 回]
+          - [前半は (7 − 1) ÷ 2 = 3 人, 3 人の真ん中は 2 番目, 小さいほうから 2 番目は 6 回]
+        note: 中央値の 11 回を前半に入れて 4 人（3、6、8、11）で考えると、第 1 四分位数がずれてしまう。データの数が奇数のときは、中央値を除いて前半と後半に分ける。
       - part: 今日
         text: 10 人の点数は、23、15、31、18、27、12、35、20、29、16（点）でした。第 1 四分位数は何点ですか。
         answer: 16

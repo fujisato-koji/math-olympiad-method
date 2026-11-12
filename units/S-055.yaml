@@ -707,6 +707,58 @@ days:
           - [15% は 0.15, 60 × 0.15 = 9, 9 こ]
           - [60 この 1% は 0.6 こ, 0.6 × 15 = 9, 9 こ]
       - part: 今日
+        text: ある店で売れた果物の割合を、帯グラフに表します。帯グラフは、全体を 100% として、割合に合わせて帯を区切ったグラフで、左のはしが 0%、右のはしが 100% にあたります。左のはしから、みかん 50%、そのとなりにりんご 45% をかきます。りんごの右はしの区切りの線は、何 % の目もりのところにかきますか。
+        svg: |
+          <svg viewBox="0 0 280 80" xmlns="http://www.w3.org/2000/svg">
+            <rect x="14" y="8" width="252" height="28" stroke="currentColor" fill="none" stroke-width="2"/>
+            <line x1="140" y1="8" x2="140" y2="36" stroke="currentColor" stroke-width="1.5"/>
+            <text x="77" y="25.96" font-size="11" text-anchor="middle">みかん</text>
+            <line x1="14" y1="44" x2="266" y2="44" stroke="currentColor" stroke-width="1"/>
+            <line x1="14" y1="44" x2="14" y2="50" stroke="currentColor" stroke-width="1"/>
+            <text x="14" y="61" font-size="10" text-anchor="middle">0</text>
+            <line x1="26.6" y1="44" x2="26.6" y2="47" stroke="currentColor" stroke-width="1"/>
+            <line x1="39.2" y1="44" x2="39.2" y2="50" stroke="currentColor" stroke-width="1"/>
+            <text x="39.2" y="61" font-size="10" text-anchor="middle">10</text>
+            <line x1="51.8" y1="44" x2="51.8" y2="47" stroke="currentColor" stroke-width="1"/>
+            <line x1="64.4" y1="44" x2="64.4" y2="50" stroke="currentColor" stroke-width="1"/>
+            <text x="64.4" y="61" font-size="10" text-anchor="middle">20</text>
+            <line x1="77" y1="44" x2="77" y2="47" stroke="currentColor" stroke-width="1"/>
+            <line x1="89.6" y1="44" x2="89.6" y2="50" stroke="currentColor" stroke-width="1"/>
+            <text x="89.6" y="61" font-size="10" text-anchor="middle">30</text>
+            <line x1="102.2" y1="44" x2="102.2" y2="47" stroke="currentColor" stroke-width="1"/>
+            <line x1="114.8" y1="44" x2="114.8" y2="50" stroke="currentColor" stroke-width="1"/>
+            <text x="114.8" y="61" font-size="10" text-anchor="middle">40</text>
+            <line x1="127.4" y1="44" x2="127.4" y2="47" stroke="currentColor" stroke-width="1"/>
+            <line x1="140" y1="44" x2="140" y2="50" stroke="currentColor" stroke-width="1"/>
+            <text x="140" y="61" font-size="10" text-anchor="middle">50</text>
+            <line x1="152.6" y1="44" x2="152.6" y2="47" stroke="currentColor" stroke-width="1"/>
+            <line x1="165.2" y1="44" x2="165.2" y2="50" stroke="currentColor" stroke-width="1"/>
+            <text x="165.2" y="61" font-size="10" text-anchor="middle">60</text>
+            <line x1="177.8" y1="44" x2="177.8" y2="47" stroke="currentColor" stroke-width="1"/>
+            <line x1="190.4" y1="44" x2="190.4" y2="50" stroke="currentColor" stroke-width="1"/>
+            <text x="190.4" y="61" font-size="10" text-anchor="middle">70</text>
+            <line x1="203" y1="44" x2="203" y2="47" stroke="currentColor" stroke-width="1"/>
+            <line x1="215.6" y1="44" x2="215.6" y2="50" stroke="currentColor" stroke-width="1"/>
+            <text x="215.6" y="61" font-size="10" text-anchor="middle">80</text>
+            <line x1="228.2" y1="44" x2="228.2" y2="47" stroke="currentColor" stroke-width="1"/>
+            <line x1="240.8" y1="44" x2="240.8" y2="50" stroke="currentColor" stroke-width="1"/>
+            <text x="240.8" y="61" font-size="10" text-anchor="middle">90</text>
+            <line x1="253.4" y1="44" x2="253.4" y2="47" stroke="currentColor" stroke-width="1"/>
+            <line x1="266" y1="44" x2="266" y2="50" stroke="currentColor" stroke-width="1"/>
+            <text x="266" y="61" font-size="10" text-anchor="middle">100</text>
+            <text x="268" y="75" font-size="10" text-anchor="end">（%）</text>
+          </svg>
+        answer: 95
+        check: 50 + 45
+        hints:
+          - みかんは、左のはしの 0 から、何 % の目もりまでかな。
+          - りんごは、みかんの右はしから始まるよ。そこから 45% の長さだけ右へのびる。
+          - みかんの右はしの目もりに、りんごの 45% をたそう。
+        paths:
+          - [みかんは 0 から 50 まで、りんごは 50 から始まる, 50 + 45 = 95, 95% の目もり]
+          - [50 の目もりから 5% ずつ右へ数える, 45% は 5% の 9 目もり分なので、55、60、65、70、75、80、85、90、95 と進む, 95% の目もり]
+        note: りんごの割合の 45 や、みかんの右はしの 50 をそのまま答えやすい。区切りの線の目もりは、左はしから数えた割合の合計になる。
+      - part: 今日
         text: 図書室で 1 週間に借りられた本の種類を、帯グラフに表しました。図かんは、全体の何 % ですか。
         svg: |
           <svg viewBox="0 0 280 80" xmlns="http://www.w3.org/2000/svg">
@@ -1248,6 +1300,68 @@ days:
         paths:
           - [（ア）は時がたつにつれて変わる量で、変わり方は線のかたむきで見える, 折れ線グラフ, （イ）は全体の中のそれぞれの割合を見る, 円グラフ]
       - part: 今日
+        text: 東町と西町で、6 月から 9 月まで、毎月 1 日に気温をはかって、折れ線グラフに表しました。グラフには、東町と西町の 2 本の線があります。どちらの線かは、グラフの上のしるしで見分けます。7 月は、東町のほうが西町より何度高いですか。
+        svg: |
+          <svg viewBox="0 0 240 194" xmlns="http://www.w3.org/2000/svg">
+            <line x1="40" y1="151.0667" x2="196" y2="151.0667" stroke="currentColor" stroke-width="0.8" stroke-opacity=".35"/>
+            <line x1="40" y1="142.1333" x2="196" y2="142.1333" stroke="currentColor" stroke-width="0.8" stroke-opacity=".35"/>
+            <line x1="40" y1="133.2" x2="196" y2="133.2" stroke="currentColor" stroke-width="0.8" stroke-opacity=".35"/>
+            <line x1="40" y1="124.2667" x2="196" y2="124.2667" stroke="currentColor" stroke-width="0.8" stroke-opacity=".35"/>
+            <line x1="40" y1="115.3333" x2="196" y2="115.3333" stroke="currentColor" stroke-width="0.8" stroke-opacity=".35"/>
+            <line x1="40" y1="106.4" x2="196" y2="106.4" stroke="currentColor" stroke-width="0.8" stroke-opacity=".35"/>
+            <line x1="40" y1="97.4667" x2="196" y2="97.4667" stroke="currentColor" stroke-width="0.8" stroke-opacity=".35"/>
+            <line x1="40" y1="88.5333" x2="196" y2="88.5333" stroke="currentColor" stroke-width="0.8" stroke-opacity=".35"/>
+            <line x1="40" y1="79.6" x2="196" y2="79.6" stroke="currentColor" stroke-width="0.8" stroke-opacity=".35"/>
+            <line x1="40" y1="70.6667" x2="196" y2="70.6667" stroke="currentColor" stroke-width="0.8" stroke-opacity=".35"/>
+            <line x1="40" y1="61.7333" x2="196" y2="61.7333" stroke="currentColor" stroke-width="0.8" stroke-opacity=".35"/>
+            <line x1="40" y1="52.8" x2="196" y2="52.8" stroke="currentColor" stroke-width="0.8" stroke-opacity=".35"/>
+            <line x1="40" y1="43.8667" x2="196" y2="43.8667" stroke="currentColor" stroke-width="0.8" stroke-opacity=".35"/>
+            <line x1="40" y1="34.9333" x2="196" y2="34.9333" stroke="currentColor" stroke-width="0.8" stroke-opacity=".35"/>
+            <line x1="40" y1="26" x2="196" y2="26" stroke="currentColor" stroke-width="0.8" stroke-opacity=".35"/>
+            <text x="34" y="164" font-size="11" text-anchor="end">0</text>
+            <text x="34" y="119.3333" font-size="11" text-anchor="end">10</text>
+            <text x="34" y="74.6667" font-size="11" text-anchor="end">20</text>
+            <text x="34" y="30" font-size="11" text-anchor="end">30</text>
+            <line x1="60" y1="26" x2="60" y2="160" stroke="currentColor" stroke-width="0.8" stroke-opacity=".2"/>
+            <line x1="100" y1="26" x2="100" y2="160" stroke="currentColor" stroke-width="0.8" stroke-opacity=".2"/>
+            <line x1="140" y1="26" x2="140" y2="160" stroke="currentColor" stroke-width="0.8" stroke-opacity=".2"/>
+            <line x1="180" y1="26" x2="180" y2="160" stroke="currentColor" stroke-width="0.8" stroke-opacity=".2"/>
+            <text x="60" y="176" font-size="11" text-anchor="middle">6</text>
+            <text x="100" y="176" font-size="11" text-anchor="middle">7</text>
+            <text x="140" y="176" font-size="11" text-anchor="middle">8</text>
+            <text x="180" y="176" font-size="11" text-anchor="middle">9</text>
+            <line x1="40" y1="18" x2="40" y2="160" stroke="currentColor" stroke-width="2"/>
+            <line x1="40" y1="160" x2="200" y2="160" stroke="currentColor" stroke-width="2"/>
+            <polyline points="60,70.6667 100,34.9333 140,26 180,61.7333" stroke="currentColor" fill="none" stroke-width="2"/>
+            <circle cx="60" cy="70.6667" r="3" fill="currentColor"/>
+            <circle cx="100" cy="34.9333" r="3" fill="currentColor"/>
+            <circle cx="140" cy="26" r="3" fill="currentColor"/>
+            <circle cx="180" cy="61.7333" r="3" fill="currentColor"/>
+            <polyline points="60,79.6 100,79.6 140,52.8 180,70.6667" stroke="currentColor" fill="none" stroke-width="2" stroke-dasharray="5 3"/>
+            <rect x="57" y="76.6" width="6" height="6" fill="currentColor"/>
+            <rect x="97" y="76.6" width="6" height="6" fill="currentColor"/>
+            <rect x="137" y="49.8" width="6" height="6" fill="currentColor"/>
+            <rect x="177" y="67.6667" width="6" height="6" fill="currentColor"/>
+            <text x="167.8" y="14" font-size="11" text-anchor="start">西町</text>
+            <line x1="145.8" y1="10" x2="163.8" y2="10" stroke="currentColor" stroke-width="2" stroke-dasharray="5 3"/>
+            <rect x="151.8" y="7" width="6" height="6" fill="currentColor"/>
+            <text x="107.6" y="14" font-size="11" text-anchor="start">東町</text>
+            <line x1="85.6" y1="10" x2="103.6" y2="10" stroke="currentColor" stroke-width="2"/>
+            <circle cx="94.6" cy="10" r="3" fill="currentColor"/>
+            <text x="36" y="14" font-size="11" text-anchor="end">（度）</text>
+            <text x="200" y="188" font-size="11" text-anchor="end">（月）</text>
+          </svg>
+        answer: 10
+        check: "(lambda a, b: a[7 - 6] - b[7 - 6])([20, 28, 30, 22], [18, 18, 24, 20])"
+        hints:
+          - 1 目もりは何度かな。左の 0 と 10 の間の目もりの数を見よう。
+          - 上のしるしを見て、東町の線が、丸い点の線か四角い点の線かを調べよう。7 月の東町の点と西町の点を、それぞれ読もう。
+          - 高いほうの気温から、もう一方の気温をひこう。
+        paths:
+          - [1 目もりは 2 度, 7 月は東町が 28 度で西町が 18 度, 28 − 18 = 10, 10 度]
+          - [7 月の 2 つの点の高さの差は 5 目もり, 2 × 5 = 10, 10 度]
+        note: 7 月の東町の 28 度や西町の 18 度をそのまま答えたり、2 つの点の間の目もりの数 5 に 2 度をかけずに答えたりしやすい。2 本の線は上のしるしで見分け、差は、同じ月の 2 つの点の間の目もりの数に、1 目もりの 2 度をかけて出す。
+      - part: 今日
         text: ある店で売れたアイスの種類の割合を、帯グラフに表しました。売れたアイスは、去年が 400 こ、今年が 500 こで、バニラの割合は、去年が 30%、今年が 24% でした。バニラの売れた数は、去年と比べてどうなりましたか。
         svg: |
           <svg viewBox="0 0 280 122" xmlns="http://www.w3.org/2000/svg">
@@ -1602,6 +1716,18 @@ days:
           - 後ろの区切りの目もりから、前の区切りの目もりをひこう。
         paths:
           - [うめは 65 から 80 まで, 80 − 65 = 15, 15%]
+      - part: 今日
+        text: ある箱に入っているビー玉のうち、青いビー玉は 7 こで、全体の 25% です。ビー玉は全部で何こですか。
+        answer: 28
+        check: Fraction(7 * 100, 25)
+        hints:
+          - もとにする量は、全体の数だね。青いビー玉の 7 こより、多いかな、少ないかな。
+          - 式は、もとにする量 = 比べる量 ÷ 割合
+          - 25% を小数にした数で、7 をわろう。
+        paths:
+          - [25% は 0.25, 7 ÷ 0.25 = 28, 28 こ]
+          - [25% は全体の 4 分の 1, 全体は 7 この 4 倍で 7 × 4 = 28, 28 こ]
+        note: 7 × 0.25 のように、かけ算にしやすい。もとにする量（全体）は、比べる量の 7 こより多くなる。
       - part: 今日
         text: クラスの人に、好きな果物を 1 つずつ聞いて、棒グラフに表しました。みかんが好きな人は、クラス全体の何 % ですか。
         svg: |

@@ -49,6 +49,30 @@ days:
         paths:
           - [上 4 本, 下 4 本, たて 4 本, 4 + 4 + 4 = 12, 12 本]
       - part: 今日
+        text: 1 辺 4 cm の立方体の上の面 ABCD を、上から見た図です。辺 AB の長さと、面の対角線 AC の長さをくらべます。正しいものはどれですか。
+        svg: |
+          <svg viewBox="0 0 240 150" xmlns="http://www.w3.org/2000/svg">
+          <rect x="70" y="20" width="100" height="100" stroke="currentColor" stroke-width="2" fill="none"/>
+          <line x1="70" y1="120" x2="170" y2="120" stroke="#f3c969" stroke-width="5" fill="none"/>
+          <line x1="70" y1="120" x2="170" y2="20" stroke="#f3c969" stroke-width="5" fill="none"/>
+          <text x="60" y="130" font-size="13" text-anchor="end">A</text>
+          <text x="180" y="132" font-size="13" text-anchor="start">B</text>
+          <text x="180" y="18" font-size="13" text-anchor="start">C</text>
+          <text x="60" y="18" font-size="13" text-anchor="end">D</text>
+          <text x="120" y="144" font-size="12" text-anchor="middle">4 cm</text>
+          </svg>
+        choices: [辺 AB のほうが長い, 対角線 AC のほうが長い, 同じ長さ]
+        answer: 対角線 AC のほうが長い
+        check: "(lambda A, B, C, d2: '辺 AB のほうが長い' if d2(A, B) > d2(A, C) else '同じ長さ' if d2(A, B) == d2(A, C) else '対角線 AC のほうが長い')((0, 0), (4, 0), (4, 4), lambda a, b: (a[0] - b[0]) ** 2 + (a[1] - b[1]) ** 2)"
+        hints:
+          - 上の面は正方形で、1 辺は 4 cm だね。
+          - A から B へは、横に 4 cm 進むよ。A から C へは、どう進むかな。
+          - A から C へも、横に 4 cm 進むね。AC は、そのうえ図のたての向きにも進むよ。
+        paths:
+          - [AB は横に 4 cm 進む, AC は横に 4 cm 進みながら、図のたての向きにも進む, 横だけ進む AB より AC のほうが長い]
+          - [図の AB の長さを紙のはしにうつす, その紙を AC にあてる, 紙のはしより先まで AC がのびる, AC のほうが長い]
+        note: 同じ正方形の中なので、AB と AC を同じ長さと思いやすい。面の対角線は、同じ面の辺より長い。
+      - part: 今日
         text: 立方体を、3 つの頂点 A、C、G を通る平面で切ります。切り口の形はどれですか。
         svg: '<svg viewBox="0 0 240 140" xmlns="http://www.w3.org/2000/svg"><line x1="61.6" y1="42.9" x2="142.8" y2="42.9" stroke="currentColor" stroke-width="2" fill="none"/><line x1="142.8" y1="42.9" x2="178.4" y2="16" stroke="currentColor" stroke-width="2" fill="none"/><line x1="178.4" y1="16" x2="97.2" y2="16" stroke="currentColor" stroke-width="2" fill="none"/><line x1="97.2" y1="16" x2="61.6" y2="42.9" stroke="currentColor" stroke-width="2" fill="none"/><line x1="61.6" y1="124" x2="142.8" y2="124" stroke="currentColor" stroke-width="2" fill="none"/><line x1="142.8" y1="124" x2="178.4" y2="97.1" stroke="currentColor" stroke-width="2" fill="none"/><line x1="178.4" y1="97.1" x2="97.2" y2="97.1" stroke="currentColor" stroke-width="1.5" fill="none" stroke-dasharray="5 4"/><line x1="97.2" y1="97.1" x2="61.6" y2="124" stroke="currentColor" stroke-width="1.5" fill="none" stroke-dasharray="5 4"/><line x1="61.6" y1="42.9" x2="61.6" y2="124" stroke="currentColor" stroke-width="2" fill="none"/><line x1="142.8" y1="42.9" x2="142.8" y2="124" stroke="currentColor" stroke-width="2" fill="none"/><line x1="178.4" y1="16" x2="178.4" y2="97.1" stroke="currentColor" stroke-width="2" fill="none"/><line x1="97.2" y1="16" x2="97.2" y2="97.1" stroke="currentColor" stroke-width="1.5" fill="none" stroke-dasharray="5 4"/><text x="52.6" y="41.1" font-size="12" text-anchor="middle">A</text><text x="148.8" y="56.1" font-size="12" text-anchor="middle">B</text><text x="186.4" y="14.2" font-size="12" text-anchor="middle">C</text><text x="93.2" y="11.2" font-size="12" text-anchor="middle">D</text><text x="52.6" y="134.2" font-size="12" text-anchor="middle">E</text><text x="146.8" y="138.2" font-size="12" text-anchor="middle">F</text><text x="187.4" y="105.3" font-size="12" text-anchor="middle">G</text><text x="88.2" y="104.3" font-size="12" text-anchor="middle">H</text><circle cx="61.6" cy="42.9" r="2.8" fill="currentColor"/><text x="61.6" y="47.1" font-size="12" text-anchor="middle"></text><circle cx="178.4" cy="16" r="2.8" fill="currentColor"/><text x="178.4" y="20.2" font-size="12" text-anchor="middle"></text><circle cx="178.4" cy="97.1" r="2.8" fill="currentColor"/><text x="178.4" y="101.3" font-size="12" text-anchor="middle"></text></svg>'
         choices: [正三角形, 長方形, 正方形, 台形]
@@ -162,6 +186,45 @@ days:
           - 9 × 6 を計算しよう。
         paths:
           - [9 × 6 = 54, 54 cm²]
+      - part: 今日
+        text: 立方体の上の面に、対角線 BD があります。下の面の辺や対角線のうち、BD と平行（向きが同じ）なものはどれですか。
+        svg: |
+          <svg viewBox="0 0 240 140" xmlns="http://www.w3.org/2000/svg">
+          <line x1="61.6" y1="42.9" x2="142.8" y2="42.9" stroke="currentColor" stroke-width="2" fill="none"/>
+          <line x1="142.8" y1="42.9" x2="178.4" y2="16" stroke="currentColor" stroke-width="2" fill="none"/>
+          <line x1="178.4" y1="16" x2="97.2" y2="16" stroke="currentColor" stroke-width="2" fill="none"/>
+          <line x1="97.2" y1="16" x2="61.6" y2="42.9" stroke="currentColor" stroke-width="2" fill="none"/>
+          <line x1="61.6" y1="124" x2="142.8" y2="124" stroke="currentColor" stroke-width="2" fill="none"/>
+          <line x1="142.8" y1="124" x2="178.4" y2="97.1" stroke="currentColor" stroke-width="2" fill="none"/>
+          <line x1="178.4" y1="97.1" x2="97.2" y2="97.1" stroke="currentColor" stroke-width="1.5" fill="none" stroke-dasharray="5 4"/>
+          <line x1="97.2" y1="97.1" x2="61.6" y2="124" stroke="currentColor" stroke-width="1.5" fill="none" stroke-dasharray="5 4"/>
+          <line x1="61.6" y1="42.9" x2="61.6" y2="124" stroke="currentColor" stroke-width="2" fill="none"/>
+          <line x1="142.8" y1="42.9" x2="142.8" y2="124" stroke="currentColor" stroke-width="2" fill="none"/>
+          <line x1="178.4" y1="16" x2="178.4" y2="97.1" stroke="currentColor" stroke-width="2" fill="none"/>
+          <line x1="97.2" y1="16" x2="97.2" y2="97.1" stroke="currentColor" stroke-width="1.5" fill="none" stroke-dasharray="5 4"/>
+          <text x="52.6" y="41.1" font-size="12" text-anchor="middle">A</text>
+          <text x="148.8" y="56.1" font-size="12" text-anchor="middle">B</text>
+          <text x="186.4" y="14.2" font-size="12" text-anchor="middle">C</text>
+          <text x="93.2" y="11.2" font-size="12" text-anchor="middle">D</text>
+          <text x="52.6" y="134.2" font-size="12" text-anchor="middle">E</text>
+          <text x="146.8" y="138.2" font-size="12" text-anchor="middle">F</text>
+          <text x="187.4" y="105.3" font-size="12" text-anchor="middle">G</text>
+          <text x="88.2" y="104.3" font-size="12" text-anchor="middle">H</text>
+          <line x1="142.8" y1="42.9" x2="97.2" y2="16" stroke="#f3c969" stroke-width="5" fill="none"/>
+          <circle cx="142.8" cy="42.9" r="2.8" fill="currentColor"/>
+          <circle cx="97.2" cy="16" r="2.8" fill="currentColor"/>
+          </svg>
+        choices: [EG, FH, EF, FG]
+        answer: FH
+        check: "(lambda B, D: [n for n, (p, q) in (('EG', ((0, 0, 0), (4, 4, 0))), ('FH', ((4, 0, 0), (0, 4, 0))), ('EF', ((0, 0, 0), (4, 0, 0))), ('FG', ((4, 0, 0), (4, 4, 0)))) if (lambda u, v: all(c == 0 for c in (u[1] * v[2] - u[2] * v[1], u[2] * v[0] - u[0] * v[2], u[0] * v[1] - u[1] * v[0])))([D[i] - B[i] for i in range(3)], [q[i] - p[i] for i in range(3)])][0])((4, 0, 4), (0, 4, 4))"
+        hints:
+          - B の真下にある頂点は、下の面のどれかな。
+          - D の真下にある頂点も見つけよう。
+          - BD を、そのまま真下にずらした線を考えよう。
+        paths:
+          - [B の真下は F, D の真下は H, F と H を結ぶ, 線 FH]
+          - [図で BD は手前の右から奥の左へのびる, 下の面でも同じ向きの線をさがす, EG は手前の左から奥の右へのびる, FH は手前の右から奥の左へのびる, FH]
+        note: 上の面の線と平行な線を、向かい合う下の面のどこにひくかを考える前の練習。真下にずらすと、同じ向きの線になる。
       - part: 今日
         text: 立方体を、辺 AB のまん中の点 P、辺 AD のまん中の点 Q、頂点 G を通る平面で切ります。切り口の形はどれですか。
         svg: '<svg viewBox="0 0 240 140" xmlns="http://www.w3.org/2000/svg"><line x1="61.6" y1="42.9" x2="142.8" y2="42.9" stroke="currentColor" stroke-width="2" fill="none"/><line x1="142.8" y1="42.9" x2="178.4" y2="16" stroke="currentColor" stroke-width="2" fill="none"/><line x1="178.4" y1="16" x2="97.2" y2="16" stroke="currentColor" stroke-width="2" fill="none"/><line x1="97.2" y1="16" x2="61.6" y2="42.9" stroke="currentColor" stroke-width="2" fill="none"/><line x1="61.6" y1="124" x2="142.8" y2="124" stroke="currentColor" stroke-width="2" fill="none"/><line x1="142.8" y1="124" x2="178.4" y2="97.1" stroke="currentColor" stroke-width="2" fill="none"/><line x1="178.4" y1="97.1" x2="97.2" y2="97.1" stroke="currentColor" stroke-width="1.5" fill="none" stroke-dasharray="5 4"/><line x1="97.2" y1="97.1" x2="61.6" y2="124" stroke="currentColor" stroke-width="1.5" fill="none" stroke-dasharray="5 4"/><line x1="61.6" y1="42.9" x2="61.6" y2="124" stroke="currentColor" stroke-width="2" fill="none"/><line x1="142.8" y1="42.9" x2="142.8" y2="124" stroke="currentColor" stroke-width="2" fill="none"/><line x1="178.4" y1="16" x2="178.4" y2="97.1" stroke="currentColor" stroke-width="2" fill="none"/><line x1="97.2" y1="16" x2="97.2" y2="97.1" stroke="currentColor" stroke-width="1.5" fill="none" stroke-dasharray="5 4"/><text x="52.6" y="41.1" font-size="12" text-anchor="middle">A</text><text x="148.8" y="56.1" font-size="12" text-anchor="middle">B</text><text x="186.4" y="14.2" font-size="12" text-anchor="middle">C</text><text x="93.2" y="11.2" font-size="12" text-anchor="middle">D</text><text x="52.6" y="134.2" font-size="12" text-anchor="middle">E</text><text x="146.8" y="138.2" font-size="12" text-anchor="middle">F</text><text x="187.4" y="105.3" font-size="12" text-anchor="middle">G</text><text x="88.2" y="104.3" font-size="12" text-anchor="middle">H</text><circle cx="102.2" cy="42.9" r="2.8" fill="currentColor"/><text x="102.2" y="38.1" font-size="12" text-anchor="middle">P</text><circle cx="79.4" cy="29.4" r="2.8" fill="currentColor"/><text x="70.4" y="28.6" font-size="12" text-anchor="middle">Q</text><circle cx="178.4" cy="97.1" r="2.8" fill="currentColor"/><text x="178.4" y="101.3" font-size="12" text-anchor="middle"></text></svg>'
@@ -289,6 +352,32 @@ days:
           - 6 × 6 を先に計算しよう。
         paths:
           - [たて 6、横 6、高さ 2 の直方体, 36 × 2 = 72, 72 cm³]
+      - part: 今日
+        text: 正方形の紙 ABCD があります。頂点 A に集まる 2 つの辺 AB、AD のまん中の点 P、Q を通る直線で、頂点 A のある小さい三角形を切りとりました。のこった紙の頂点はいくつですか。
+        svg: |
+          <svg viewBox="0 0 240 150" xmlns="http://www.w3.org/2000/svg">
+          <polygon points="70,120 120,120 70,70" stroke="currentColor" stroke-width="0" fill="#f3c969" fill-opacity=".35"/>
+          <rect x="70" y="20" width="100" height="100" stroke="currentColor" stroke-width="2" fill="none"/>
+          <line x1="120" y1="120" x2="70" y2="70" stroke="currentColor" stroke-width="1.5" fill="none" stroke-dasharray="5 4"/>
+          <circle cx="120" cy="120" r="2.8" fill="currentColor"/>
+          <circle cx="70" cy="70" r="2.8" fill="currentColor"/>
+          <text x="60" y="132" font-size="13" text-anchor="end">A</text>
+          <text x="180" y="132" font-size="13" text-anchor="start">B</text>
+          <text x="180" y="18" font-size="13" text-anchor="start">C</text>
+          <text x="60" y="18" font-size="13" text-anchor="end">D</text>
+          <text x="120" y="136" font-size="13" text-anchor="middle">P</text>
+          <text x="60" y="72" font-size="13" text-anchor="end">Q</text>
+          </svg>
+        answer: 5
+        check: "sum(1 for v in [(0, 0), (4, 0), (4, 4), (0, 4)] if v[0] + v[1] > 2) + sum(1 for a, b in [((0, 0), (4, 0)), ((4, 0), (4, 4)), ((4, 4), (0, 4)), ((0, 4), (0, 0))] if (a[0] + a[1] - 2) * (b[0] + b[1] - 2) < 0)"
+        hints:
+          - もとの紙の頂点は 4 つだね。
+          - 切りとったとき、なくなる頂点はどれかな。
+          - P と Q も、のこった紙の頂点になるよ。
+        paths:
+          - [もとの頂点は 4 こ, なくなるのは A の 1 こ, 新しくできるのは P と Q の 2 こ, 4 − 1 + 2 = 5, 5 こ]
+          - [のこった紙の頂点を書き出す, P、B、C、D、Q, 数えると 5 こ]
+        note: 立体の角を切りとったあとの頂点の数を数える前の練習。なくなる頂点と新しくできる頂点を、両方数える。
       - part: 今日
         text: 立方体の頂点 A に集まる 3 本の辺 AB、AD、AE のまん中の点を通る平面で切り、頂点 A のある小さい立体を切りとりました。のこった立体の頂点はいくつですか。
         svg: '<svg viewBox="0 0 240 140" xmlns="http://www.w3.org/2000/svg"><polygon points="61.6,83.4 102.2,42.9 79.4,29.4" stroke="currentColor" stroke-width="0" fill="#f3c969" fill-opacity=".35"/><line x1="61.6" y1="42.9" x2="142.8" y2="42.9" stroke="currentColor" stroke-width="2" fill="none"/><line x1="142.8" y1="42.9" x2="178.4" y2="16" stroke="currentColor" stroke-width="2" fill="none"/><line x1="178.4" y1="16" x2="97.2" y2="16" stroke="currentColor" stroke-width="2" fill="none"/><line x1="97.2" y1="16" x2="61.6" y2="42.9" stroke="currentColor" stroke-width="2" fill="none"/><line x1="61.6" y1="124" x2="142.8" y2="124" stroke="currentColor" stroke-width="2" fill="none"/><line x1="142.8" y1="124" x2="178.4" y2="97.1" stroke="currentColor" stroke-width="2" fill="none"/><line x1="178.4" y1="97.1" x2="97.2" y2="97.1" stroke="currentColor" stroke-width="1.5" fill="none" stroke-dasharray="5 4"/><line x1="97.2" y1="97.1" x2="61.6" y2="124" stroke="currentColor" stroke-width="1.5" fill="none" stroke-dasharray="5 4"/><line x1="61.6" y1="42.9" x2="61.6" y2="124" stroke="currentColor" stroke-width="2" fill="none"/><line x1="142.8" y1="42.9" x2="142.8" y2="124" stroke="currentColor" stroke-width="2" fill="none"/><line x1="178.4" y1="16" x2="178.4" y2="97.1" stroke="currentColor" stroke-width="2" fill="none"/><line x1="97.2" y1="16" x2="97.2" y2="97.1" stroke="currentColor" stroke-width="1.5" fill="none" stroke-dasharray="5 4"/><line x1="61.6" y1="83.4" x2="102.2" y2="42.9" stroke="currentColor" stroke-width="2.5" fill="none"/><line x1="102.2" y1="42.9" x2="79.4" y2="29.4" stroke="currentColor" stroke-width="2.5" fill="none"/><line x1="79.4" y1="29.4" x2="61.6" y2="83.4" stroke="currentColor" stroke-width="2.5" fill="none" stroke-dasharray="5 4"/><text x="52.6" y="41.1" font-size="12" text-anchor="middle">A</text><text x="148.8" y="56.1" font-size="12" text-anchor="middle">B</text><text x="186.4" y="14.2" font-size="12" text-anchor="middle">C</text><text x="93.2" y="11.2" font-size="12" text-anchor="middle">D</text><text x="52.6" y="134.2" font-size="12" text-anchor="middle">E</text><text x="146.8" y="138.2" font-size="12" text-anchor="middle">F</text><text x="187.4" y="105.3" font-size="12" text-anchor="middle">G</text><text x="88.2" y="104.3" font-size="12" text-anchor="middle">H</text><circle cx="102.2" cy="42.9" r="2.8" fill="currentColor"/><text x="102.2" y="38.1" font-size="12" text-anchor="middle">P</text><circle cx="79.4" cy="29.4" r="2.8" fill="currentColor"/><text x="70.4" y="28.6" font-size="12" text-anchor="middle">Q</text><circle cx="61.6" cy="83.4" r="2.8" fill="currentColor"/><text x="52.6" y="87.6" font-size="12" text-anchor="middle">R</text></svg>'

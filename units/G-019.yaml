@@ -65,6 +65,20 @@ days:
         paths:
           - [8² + 15² = 64 + 225 = 289, 斜辺² = 289, 斜辺 = 17 cm]
       - part: 今日
+        text: 図の直角三角形 ABC で、斜辺 AB は 20 cm、辺 AC は 12 cm です。辺 BC の長さを求めるための式として、正しいものはどれですか。
+        svg: '<svg viewBox="0 0 240 140" xmlns="http://www.w3.org/2000/svg"><polygon points="97.6,45.2 40,122 200,122" stroke="currentColor" stroke-width="0" fill="#f3c969" fill-opacity=".35"/><polygon points="97.6,45.2 40,122 200,122" stroke="currentColor" stroke-width="2" fill="none"/><polyline points="92.8,51.6 99.2,56.4 104,50" stroke="currentColor" stroke-width="1.5" fill="none"/><text x="97.6" y="38.5" font-size="12" text-anchor="middle">C</text><text x="31.5" y="131.5" font-size="12" text-anchor="middle">A</text><text x="208.5" y="131.5" font-size="12" text-anchor="middle">B</text><text x="60" y="76" font-size="12" text-anchor="end">12 cm</text><text x="120" y="137.5" font-size="12" text-anchor="middle">20 cm</text></svg>'
+        choices: [12² + 20² = BC², 12² + BC² = 20², BC² + 20² = 12²]
+        answer: 12² + BC² = 20²
+        check: "[k for b in range(1, 20) for k, ok in {'12² + 20² = BC²': 12 * 12 + 20 * 20 == b * b, '12² + BC² = 20²': 12 * 12 + b * b == 20 * 20, 'BC² + 20² = 12²': b * b + 20 * 20 == 12 * 12}.items() if ok][0]"
+        hints:
+          - 図の直角のしるしは、どの頂点にあるでしょう。その向かい合う辺が斜辺です。
+          - ほかの 2 辺の 2 乗の和が、斜辺² になります。
+          - = の左と右を見くらべましょう。斜辺の 20² だけが一方にあり、もう一方に 12² と BC² の 2 つがある式はどれでしょう。
+        paths:
+          - [直角は C にあって向かい合う AB が斜辺, 斜辺² = 20², 12² + BC² = 20²]
+          - [AB の上の正方形の面積は、ほかの 2 辺の上の正方形の面積の和, 20² = 12² + BC², 12² + BC² = 20²]
+        note: 12² + 20² = BC² としやすい。わかっている 2 つの数を足して、求める BC² を答えのように = の右に置いてしまうため。足すのは斜辺ではない 2 辺（12 と BC）の 2 乗。斜辺 AB の 20² は足し算に入れず、= のもう一方に 20² だけを書く。
+      - part: 今日
         text: 図の直角三角形で、斜辺 AB は 13 cm、辺 AC は 5 cm です。辺 BC は何 cm ですか。
         svg: '<svg viewBox="0 0 240 140" xmlns="http://www.w3.org/2000/svg"><polygon points="46,39.2 194,100.8 46,100.8" stroke="currentColor" stroke-width="0" fill="#f3c969" fill-opacity=".35"/><polygon points="46,39.2 194,100.8 46,100.8" stroke="currentColor" stroke-width="2" fill="none"/><polyline points="46,92.8 54,92.8 54,100.8" stroke="currentColor" stroke-width="1.5" fill="none"/><text x="37.5" y="36.3" font-size="12" text-anchor="middle">A</text><text x="204.8" y="107.3" font-size="12" text-anchor="middle">B</text><text x="35.8" y="109.3" font-size="12" text-anchor="middle">C</text><text x="37.2" y="74.2" font-size="12" text-anchor="end">5 cm</text><text x="124.6" y="63.1" font-size="12" text-anchor="middle">13 cm</text></svg>'
         answer: 12
@@ -281,6 +295,19 @@ days:
         paths:
           - [(10 × √5)/(√5 × √5), 10√5/5, 2√5]
       - part: 今日
+        text: 図の台形 ABCD で AD ∥ BC、AB = DC、AD = 6 cm、BC = 14 cm です。A と D から BC に垂線 AP、DQ をひくと、PQ は AD と同じ 6 cm になります。BP は何 cm ですか。
+        svg: '<svg viewBox="0 0 240 140" xmlns="http://www.w3.org/2000/svg"><polygon points="84,30 36,100 204,100 156,30" stroke="currentColor" stroke-width="0" fill="#f3c969" fill-opacity=".35"/><polygon points="84,30 36,100 204,100 156,30" stroke="currentColor" stroke-width="2" fill="none"/><line x1="84" y1="30" x2="84" y2="100" stroke="currentColor" stroke-width="1.5" fill="none" stroke-dasharray="5 4"/><line x1="156" y1="30" x2="156" y2="100" stroke="currentColor" stroke-width="1.5" fill="none" stroke-dasharray="5 4"/><polyline points="84,92 92,92 92,100" stroke="currentColor" stroke-width="1.5" fill="none"/><polyline points="156,92 148,92 148,100" stroke="currentColor" stroke-width="1.5" fill="none"/><line x1="56.7" y1="62.7" x2="63.3" y2="67.3" stroke="currentColor" stroke-width="1.5" fill="none"/><line x1="176.7" y1="67.3" x2="183.3" y2="62.7" stroke="currentColor" stroke-width="1.5" fill="none"/><text x="79" y="25" font-size="12" text-anchor="middle">A</text><text x="161" y="25" font-size="12" text-anchor="middle">D</text><text x="28" y="113" font-size="12" text-anchor="middle">B</text><text x="212" y="113" font-size="12" text-anchor="middle">C</text><text x="84" y="114" font-size="12" text-anchor="middle">P</text><text x="156" y="114" font-size="12" text-anchor="middle">Q</text><text x="120" y="24" font-size="12" text-anchor="middle">6 cm</text><text x="120" y="130" font-size="12" text-anchor="middle">14 cm</text></svg>'
+        answer: 4
+        check: "[x for x in range(1, 14) if x + 6 + x == 14][0]"
+        hints:
+          - BC は BP、PQ、QC の 3 つに分かれます。
+          - AP = DQ です（APQD は長方形）。直角三角形 ABP と DCQ は、斜辺 AB = DC と、他の 1 辺 AP = DQ が等しいので合同です。だから BP = QC です。
+          - BP と QC を合わせた長さは何 cm でしょう。それを同じ長さの 2 つに分けます。
+        paths:
+          - [BP + QC = 14 − 6 = 8 cm, BP = QC なので 2 等分, BP = 8 ÷ 2 = 4 cm]
+          - [BP を 3 cm とすると BC = 3 + 6 + 3 = 12 cm で足りない, BP を 4 cm とすると BC = 4 + 6 + 4 = 14 cm でぴったり, BP = 4 cm]
+        note: 14 − 6 = 8 で止めて、BP を 8 cm としやすい。8 cm は BP と QC を合わせた長さなので、半分にする。台形に垂線をひくと底辺が 3 つに分かれることを読む。
+      - part: 今日
         text: 3 つの辺の長さが次のような三角形のうち、直角三角形はどれですか。
         choices: [6 cm、7 cm、9 cm, 9 cm、40 cm、41 cm, 4 cm、5 cm、6 cm]
         answer: 9 cm、40 cm、41 cm
@@ -478,6 +505,20 @@ days:
           - 根号の中どうしをたしてはいけません。
         paths:
           - [√12 = 2√3、√27 = 3√3, 2√3 + 3√3, 5√3]
+      - part: 今日
+        text: 図の △PQR の面積は 9 cm² です。辺 QR を底辺とみると QR = 4 cm です。P から QR に垂線 PH をひくとき、高さ PH は何 cm ですか。
+        svg: '<svg viewBox="0 0 240 140" xmlns="http://www.w3.org/2000/svg"><polygon points="84,16 60,106 140,106" stroke="currentColor" stroke-width="0" fill="#f3c969" fill-opacity=".35"/><polygon points="84,16 60,106 140,106" stroke="currentColor" stroke-width="2" fill="none"/><line x1="84" y1="16" x2="84" y2="106" stroke="currentColor" stroke-width="1.5" fill="none" stroke-dasharray="5 4"/><polyline points="84,98 92,98 92,106" stroke="currentColor" stroke-width="1.5" fill="none"/><text x="84" y="11" font-size="12" text-anchor="middle">P</text><text x="51" y="118.5" font-size="12" text-anchor="middle">Q</text><text x="149" y="118.5" font-size="12" text-anchor="middle">R</text><text x="84" y="120" font-size="12" text-anchor="middle">H</text><text x="106" y="92" font-size="12" text-anchor="middle">9 cm²</text><text x="100" y="134" font-size="12" text-anchor="middle">4 cm</text></svg>'
+        answer: 9/2
+        accept: [4.5]
+        check: "Fraction(2 * 9, 4)"
+        hints:
+          - 三角形の面積は、底辺 × 高さ ÷ 2 です。
+          - 底辺が 4 cm なので、4 × PH ÷ 2 が 9 になります。
+          - 4 × PH ÷ 2 は PH の何倍でしょう。9 をその数でわります。わりきれないときは分数で表します。
+        paths:
+          - [4 × PH ÷ 2 = 9, PH の 2 倍が 9, PH = 9 ÷ 2 = 9/2 cm]
+          - [同じ三角形を 2 つ合わせた平行四辺形の面積は 18 cm², 平行四辺形の面積 = 底辺 × 高さ, 4 × PH = 18, PH = 18 ÷ 4 = 9/2 cm]
+        note: 面積と底辺から高さを求める足場。わりきれないので答えは分数になる。
       - part: 今日
         text: 1 辺 4 cm の正三角形の面積はどれですか。
         svg: '<svg viewBox="0 0 240 140" xmlns="http://www.w3.org/2000/svg"><polygon points="120,18 60,122 180,122" stroke="currentColor" stroke-width="0" fill="#f3c969" fill-opacity=".35"/><polygon points="120,18 60,122 180,122" stroke="currentColor" stroke-width="2" fill="none"/><line x1="120" y1="18" x2="120" y2="122" stroke="currentColor" stroke-width="1.5" fill="none" stroke-dasharray="5 4"/><polyline points="120,114 128,114 128,122" stroke="currentColor" stroke-width="1.5" fill="none"/><text x="120" y="13.2" font-size="12" text-anchor="middle">A</text><text x="49.9" y="130.6" font-size="12" text-anchor="middle">B</text><text x="190.1" y="130.6" font-size="12" text-anchor="middle">C</text><text x="120" y="138.2" font-size="12" text-anchor="middle">H</text><text x="150" y="139.2" font-size="12" text-anchor="middle">4 cm</text></svg>'

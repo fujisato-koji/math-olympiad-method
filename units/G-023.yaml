@@ -166,6 +166,20 @@ days:
         paths:
           - [中心角は円周角の 2 倍, 38° × 2, 76°]
       - part: 今日
+        text: 円の上に 4 点 A、B、C、D があり、この順にならんでいます。∠CAD と等しい角は、∠ABD、∠CBD、∠ACD のどれですか。
+        svg: '<svg viewBox="0 0 240 140" xmlns="http://www.w3.org/2000/svg"><circle cx="120" cy="70" r="52" stroke="currentColor" stroke-width="2" fill="none"/><line x1="102.2" y1="21.1" x2="75" y2="96" stroke="currentColor" stroke-width="2" fill="none"/><line x1="75" y1="96" x2="137.8" y2="118.9" stroke="currentColor" stroke-width="2" fill="none"/><line x1="137.8" y1="118.9" x2="172" y2="70" stroke="currentColor" stroke-width="2" fill="none"/><line x1="172" y1="70" x2="102.2" y2="21.1" stroke="currentColor" stroke-width="2" fill="none"/><line x1="102.2" y1="21.1" x2="137.8" y2="118.9" stroke="currentColor" stroke-width="2" fill="none"/><line x1="75" y1="96" x2="172" y2="70" stroke="currentColor" stroke-width="2" fill="none"/><path d="M107.3 35.2 A15 15 0 0 0 114.5 29.7" stroke="currentColor" stroke-width="1.5" fill="none"/><text x="98.8" y="16.7" font-size="14" text-anchor="middle">A</text><text x="66.3" y="106" font-size="14" text-anchor="middle">B</text><text x="141.2" y="133.3" font-size="14" text-anchor="middle">C</text><text x="182" y="75" font-size="14" text-anchor="middle">D</text></svg>'
+        choices: [∠ABD, ∠CBD, ∠ACD]
+        answer: ∠CBD
+        check: "'∠' + sorted(s for s in ('ABD', 'CBD', 'ACD') if set(s[0] + s[2]) == set('CD'))[0]"
+        hints:
+          - ∠CAD は、どの弧に対する円周角かな。
+          - その弧の両はしの 2 点を、円の上のほかの点から見ている角をさがそう。
+          - 3 つの角が、それぞれどの 2 点を見ているかを書き出して、C と D を見ている角をさがそう。
+        paths:
+          - [∠CAD は弧 CD に対する円周角, B から C と D を見る角も弧 CD に対する円周角, ∠CBD]
+          - [∠ABD と ∠ACD は A と D を見る角で、弧 AD に対する円周角, ∠CAD が見ている弧 CD とはちがう弧なので、等しいとはいえない, 弧 CD に対する ∠CBD が等しい]
+        note: 同じ弧に対する円周角を見つける足場。弧の両はしの 2 点を見て、その 2 点を結ぶ角をさがす。
+      - part: 今日
         text: 円の上に 4 点 A、B、C、D があり、AC と BD の交点を E とします。∠ABD = 42°、∠BDC = 30° のとき、∠x（∠AEB）は何度ですか。
         svg: '<svg viewBox="0 0 240 140" xmlns="http://www.w3.org/2000/svg"><circle cx="120" cy="70" r="52" stroke="currentColor" stroke-width="2" fill="none"/><line x1="75" y1="44" x2="120" y2="122" stroke="currentColor" stroke-width="2" fill="none"/><line x1="165" y1="96" x2="141.2" y2="22.5" stroke="currentColor" stroke-width="2" fill="none"/><line x1="75" y1="44" x2="165" y2="96" stroke="currentColor" stroke-width="2" fill="none"/><line x1="120" y1="122" x2="141.2" y2="22.5" stroke="currentColor" stroke-width="2" fill="none"/><path d="M125 98.5 A24 24 0 0 0 108 101.2" stroke="currentColor" stroke-width="1.5" fill="none"/><text x="114.2" y="89.7" font-size="12" text-anchor="middle">42°</text><path d="M138 37.2 A15 15 0 0 0 145.8 36.8" stroke="currentColor" stroke-width="1.5" fill="none"/><text x="142.6" y="54.7" font-size="12" text-anchor="middle">30°</text><path d="M120.3 70.2 A11 11 0 0 0 127.6 86.4" stroke="currentColor" stroke-width="1.5" fill="none"/><text x="107.9" y="89.6" font-size="12" text-anchor="middle" font-style="italic" font-family="serif">x</text><text x="65.4" y="43.4" font-size="14" text-anchor="middle">A</text><text x="120" y="137.9" font-size="14" text-anchor="middle">B</text><text x="174.6" y="106.4" font-size="14" text-anchor="middle">C</text><text x="145.6" y="17.3" font-size="14" text-anchor="middle">D</text><text x="118.8" y="80.6" font-size="14" text-anchor="middle">E</text></svg>'
         answer: 108
@@ -382,6 +396,20 @@ days:
           - 47° を 2 倍しよう。
         paths:
           - [中心角は円周角の 2 倍, 47° × 2, 94°]
+      - part: 今日
+        text: 円に内接する四角形 PQRS で、4 点は P、Q、R、S の順にならんでいます。∠P = 85° のとき、180° − 85° で求められる角は、∠Q、∠R、∠S のどれですか。
+        svg: '<svg viewBox="0 0 240 140" xmlns="http://www.w3.org/2000/svg"><circle cx="120" cy="70" r="52" stroke="currentColor" stroke-width="2" fill="none"/><line x1="80.2" y1="36.6" x2="86.6" y2="109.8" stroke="currentColor" stroke-width="2" fill="none"/><line x1="86.6" y1="109.8" x2="146" y2="115" stroke="currentColor" stroke-width="2" fill="none"/><line x1="146" y1="115" x2="159.8" y2="36.6" stroke="currentColor" stroke-width="2" fill="none"/><line x1="159.8" y1="36.6" x2="80.2" y2="36.6" stroke="currentColor" stroke-width="2" fill="none"/><path d="M95.2 36.6 A15 15 0 0 1 81.5 51.5" stroke="currentColor" stroke-width="1.5" fill="none"/><text x="103.8" y="62.2" font-size="12" text-anchor="middle">85°</text><text x="72.5" y="35.1" font-size="14" text-anchor="middle">P</text><text x="80.1" y="122.5" font-size="14" text-anchor="middle">Q</text><text x="151" y="128.7" font-size="14" text-anchor="middle">R</text><text x="167.5" y="35.1" font-size="14" text-anchor="middle">S</text></svg>'
+        choices: [∠Q, ∠R, ∠S]
+        answer: ∠R
+        check: "'∠' + 'PQRS'[(0 + 2) % 4]"
+        hints:
+          - 円に内接する四角形で、和が 180° になるのは、どの 2 つの角だったかな。
+          - 向かい合う角は、P、Q、R、S の順にたどって、1 つとばした先の点の角だよ。
+          - P のとなりの点は Q と S だね。のこりの 1 つが向かい合う点だよ。
+        paths:
+          - [和が 180° になるのは向かい合う角, P の向かいの点を見つける, ∠R]
+          - [P のとなりの点は Q と S, となり合う角の和は 180° と決まらない, 残った ∠R]
+        note: 向かい合う角ととなり合う角を取りちがえない足場。いつも 180° になるのは向かい合う角の和。
       - part: 今日
         text: 円に内接する四角形 ABCD で、∠ABC = 96°、∠BCD = 79° です。∠x（∠BAD）は何度ですか。
         svg: '<svg viewBox="0 0 240 140" xmlns="http://www.w3.org/2000/svg"><circle cx="120" cy="70" r="52" stroke="currentColor" stroke-width="2" fill="none"/><line x1="111" y1="18.8" x2="69.1" y2="59.2" stroke="currentColor" stroke-width="2" fill="none"/><line x1="69.1" y1="59.2" x2="118.2" y2="122" stroke="currentColor" stroke-width="2" fill="none"/><line x1="118.2" y1="122" x2="171.2" y2="61" stroke="currentColor" stroke-width="2" fill="none"/><line x1="171.2" y1="61" x2="111" y2="18.8" stroke="currentColor" stroke-width="2" fill="none"/><path d="M78.4 71 A15 15 0 0 0 79.9 48.8" stroke="currentColor" stroke-width="1.5" fill="none"/><text x="97.1" y="65.3" font-size="12" text-anchor="middle">96°</text><path d="M128 110.6 A15 15 0 0 0 109 110.1" stroke="currentColor" stroke-width="1.5" fill="none"/><text x="118.9" y="98.2" font-size="12" text-anchor="middle">79°</text><path d="M100.2 29.2 A15 15 0 0 0 123.3 27.4" stroke="currentColor" stroke-width="1.5" fill="none"/><text x="113.2" y="50.9" font-size="12" text-anchor="middle" font-style="italic" font-family="serif">x</text><text x="109.1" y="12.9" font-size="14" text-anchor="middle">A</text><text x="58.4" y="61.8" font-size="14" text-anchor="middle">B</text><text x="117.8" y="137.9" font-size="14" text-anchor="middle">C</text><text x="182" y="64" font-size="14" text-anchor="middle">D</text></svg>'
@@ -1030,6 +1058,20 @@ days:
           - ∠BAD を求めよう。
         paths:
           - [∠DCE = ∠BAD, 36° + 41°, 77°]
+      - part: 今日
+        text: 点 A から点 B、C、D、E までの長さは、AB = 5 cm、AC = 8 cm、AD = 5 cm、AE = 3 cm です。A を中心として B を通る円をかくとき、B 以外でこの円の上にある点は、C、D、E のどれですか。
+        svg: '<svg viewBox="0 0 240 140" xmlns="http://www.w3.org/2000/svg"><line x1="115" y1="64" x2="149.5" y2="35.1" stroke="currentColor" stroke-width="2" fill="none"/><line x1="115" y1="64" x2="44.1" y2="51.5" stroke="currentColor" stroke-width="2" fill="none"/><line x1="115" y1="64" x2="154" y2="86.5" stroke="currentColor" stroke-width="2" fill="none"/><line x1="115" y1="64" x2="108" y2="90.1" stroke="currentColor" stroke-width="2" fill="none"/><circle cx="115" cy="64" r="2.6" fill="currentColor"/><text x="123.9" y="43.6" font-size="12" text-anchor="middle">5 cm</text><text x="81.5" y="50.9" font-size="12" text-anchor="middle">8 cm</text><text x="141" y="68" font-size="12" text-anchor="middle">5 cm</text><text x="92.2" y="75.9" font-size="12" text-anchor="middle">3 cm</text><text x="157.9" y="33" font-size="14" text-anchor="middle">B</text><text x="33.3" y="54.6" font-size="14" text-anchor="middle">C</text><text x="163.5" y="97" font-size="14" text-anchor="middle">D</text><text x="105.2" y="105.7" font-size="14" text-anchor="middle">E</text><text x="123" y="85" font-size="14" text-anchor="middle">A</text></svg>'
+        choices: [C, D, E]
+        answer: D
+        check: "sorted(k for k, v in {'C': 8, 'D': 5, 'E': 3}.items() if v == 5)[0]"
+        hints:
+          - A を中心とする円の上の点は、A からの長さがどうなっているかな。
+          - B を通る円は、A からの長さが何 cm の点を通るかな。
+          - C、D、E の中で、A からの長さが B と同じ点はどれかな。
+        paths:
+          - [円の上の点は A からの長さがみな同じ, AB = 5 cm なので A から 5 cm の点をさがす, AD = 5 cm の D]
+          - [AC = 8 cm と AE = 3 cm は 5 cm とちがう, 円の上ではない, 残りの D]
+        note: 同じ長さの線分から、同じ円の上の点に気づく足場。
       - part: 今日
         text: AB = AC = AD です。∠CAD = 76° のとき、∠x（∠CBD）は何度ですか。
         svg: '<svg viewBox="0 0 240 140" xmlns="http://www.w3.org/2000/svg"><line x1="121.1" y1="43.1" x2="31.4" y2="27.3" stroke="currentColor" stroke-width="2" fill="none"/><line x1="121.1" y1="43.1" x2="166.6" y2="122" stroke="currentColor" stroke-width="2" fill="none"/><line x1="121.1" y1="43.1" x2="208.6" y2="18" stroke="currentColor" stroke-width="2" fill="none"/><line x1="31.4" y1="27.3" x2="166.6" y2="122" stroke="currentColor" stroke-width="2" fill="none"/><line x1="31.4" y1="27.3" x2="208.6" y2="18" stroke="currentColor" stroke-width="2" fill="none"/><path d="M128.6 56.1 A15 15 0 0 0 135.5 39" stroke="currentColor" stroke-width="1.5" fill="none"/><text x="147" y="57.8" font-size="12" text-anchor="middle">76°</text><path d="M52.7 42.2 A26 26 0 0 0 57.3 25.9" stroke="currentColor" stroke-width="1.5" fill="none"/><text x="68.9" y="42.2" font-size="12" text-anchor="middle" font-style="italic" font-family="serif">x</text><line x1="77.1" y1="30.3" x2="75.3" y2="40.1" stroke="currentColor" stroke-width="1.5" fill="none"/><line x1="139.5" y1="85.1" x2="148.2" y2="80.1" stroke="currentColor" stroke-width="1.5" fill="none"/><line x1="166.2" y1="35.4" x2="163.5" y2="25.7" stroke="currentColor" stroke-width="1.5" fill="none"/><text x="121.1" y="37" font-size="14" text-anchor="middle">A</text><text x="20.7" y="29.5" font-size="14" text-anchor="middle">B</text><text x="171.5" y="136.7" font-size="14" text-anchor="middle">C</text><text x="218.7" y="18.4" font-size="14" text-anchor="middle">D</text></svg>'

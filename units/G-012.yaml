@@ -268,6 +268,19 @@ days:
         paths:
           - [三角形 PBC = 三角形 ABC, 平行四辺形の半分, 18 cm²]
       - part: 今日
+        text: 赤いテープと青いテープは、1 マスの長さが同じです。赤いテープは 4 マス分で 24 cm です。青いテープは 9 マス分です。青いテープは何 cm ですか。
+        figure: "🟥🟥🟥🟥\n🟦🟦🟦🟦🟦🟦🟦🟦🟦"
+        answer: 54
+        check: "[u * n('🟦') for u in range(1, 30) if u * n('🟥') == 24][0]"
+        hints:
+          - 24 cm は、赤いテープの 4 マス分の長さだね。
+          - 1 マスの長さは、24 ÷ 4 で出せるよ。
+          - 青いテープは 9 マス分だね。1 マスの長さを 9 倍しよう。
+        paths:
+          - [赤の 4 マス分が 24 cm, 1 マスは 24 ÷ 4 = 6 cm, 青は 9 マス分で 6 × 9 = 54, 54 cm]
+          - [赤の 4 マス分が 24 cm, 青の 9 マス分は 4 マス分が 2 つと 1 マス分, 1 マス分は 24 ÷ 4 = 6 cm, 24 + 24 + 6 = 54, 54 cm]
+        note: 24 cm を 1 マスの長さと思って、24 × 9 としやすい。24 cm は赤いテープ 4 マス分の長さ。まず 1 マスの長さを出す。
+      - part: 今日
         text: 点 D は辺 BC の上にあります。三角形 ABD と三角形 ADC の面積の比はどれですか。
         svg: '<svg viewBox="0 0 240 140" xmlns="http://www.w3.org/2000/svg"><polygon points="75,25 30,115 97.5,115" stroke="currentColor" stroke-width="0" fill="#f3c969" fill-opacity=".35"/><polygon points="75,25 30,115 210,115" stroke="currentColor" stroke-width="2" fill="none"/><line x1="75" y1="25" x2="97.5" y2="115" stroke="currentColor" stroke-width="2" fill="none"/><text x="75" y="20.2" font-size="12" text-anchor="middle">A</text><text x="23" y="128.2" font-size="12" text-anchor="middle">B</text><text x="217" y="128.2" font-size="12" text-anchor="middle">C</text><text x="97.5" y="131.2" font-size="12" text-anchor="middle">D</text><text x="63.8" y="132.2" font-size="12" text-anchor="middle">3 cm</text><text x="153.8" y="132.2" font-size="12" text-anchor="middle">5 cm</text></svg>'
         choices: ["3:5", "5:3", "3:8", "5:8"]
@@ -374,6 +387,19 @@ days:
           - その 2 つ分だね。
         paths:
           - [45 ÷ 5 = 9, 9 × 2 = 18]
+      - part: 今日
+        text: 三角形 ABC の面積は 32 cm² です。点 D は辺 AB を AD:DB = 5:3 に分けています。三角形 ADC（色のついた部分）の面積は何 cm² ですか。
+        svg: '<svg viewBox="0 0 240 140" xmlns="http://www.w3.org/2000/svg"><polygon points="87.8,18 53.7,83 206.7,122" stroke="currentColor" stroke-width="0" fill="#f3c969" fill-opacity=".35"/><polygon points="87.8,18 33.3,122 206.7,122" stroke="currentColor" stroke-width="2" fill="none"/><line x1="53.7" y1="83" x2="206.7" y2="122" stroke="currentColor" stroke-width="2" fill="none"/><text x="87.8" y="13.2" font-size="12" text-anchor="middle">A</text><text x="26.3" y="135.2" font-size="12" text-anchor="middle">B</text><text x="213.7" y="135.2" font-size="12" text-anchor="middle">C</text><text x="44.7" y="87.2" font-size="12" text-anchor="middle">D</text></svg>'
+        answer: 20
+        check: "32 * 5 // (5 + 3)"
+        hints:
+          - 三角形 ADC と三角形 DBC は、C から AB に直角にひいた高さが同じだね。
+          - 高さが同じなら、面積の比は底辺の比と同じだよ。底辺は AD と DB だね。
+          - 三角形 ABC を 5 + 3 = 8 つ分とみよう。ADC はそのうちの 5 つ分だよ。
+        paths:
+          - [ADC:DBC = AD:DB = 5:3, 32 ÷ 8 = 4, 4 × 5 = 20, 20 cm²]
+          - [DBC:ABC = DB:AB = 3:8, DBC は 32 ÷ 8 × 3 = 12 cm², ADC は ABC から DBC をひいて 32 − 12 = 20, 20 cm²]
+        note: ADC を 3 つ分の 12 cm² と答えやすい。12 cm² は DBC の面積。ADC の底辺は AD なので、AD:DB = 5:3 の 5 のほう。
       - part: 今日
         text: 三角形 ABC の面積は 36 cm² です。点 D は辺 AB を AD:DB = 1:2 に、点 E は辺 AC を AE:EC = 1:1 に分けています。三角形 ADE の面積は何 cm² ですか。
         svg: '<svg viewBox="0 0 240 140" xmlns="http://www.w3.org/2000/svg"><polygon points="87.8,18 69.7,52.7 147.2,70" stroke="currentColor" stroke-width="0" fill="#f3c969" fill-opacity=".35"/><polygon points="87.8,18 33.3,122 206.7,122" stroke="currentColor" stroke-width="2" fill="none"/><line x1="69.7" y1="52.7" x2="147.2" y2="70" stroke="currentColor" stroke-width="2" fill="none"/><line x1="69.7" y1="52.7" x2="206.7" y2="122" stroke="currentColor" stroke-width="2" fill="none"/><text x="87.8" y="13.2" font-size="12" text-anchor="middle">A</text><text x="26.3" y="135.2" font-size="12" text-anchor="middle">B</text><text x="213.7" y="135.2" font-size="12" text-anchor="middle">C</text><text x="60.7" y="56.9" font-size="12" text-anchor="middle">D</text><text x="156.2" y="72.2" font-size="12" text-anchor="middle">E</text></svg>'
@@ -666,6 +692,19 @@ days:
           - 40 を 4 つに分けた 1 つ分だよ。
         paths:
           - [25% = 1/4, 40 ÷ 4 = 10]
+      - part: 今日
+        text: 線分 PQ の上に点 R があります。PR の長さは 7 cm、RQ の長さは 3 cm です。PR の長さは、PQ の長さの何分の何ですか。《分数》で答えましょう。
+        svg: '<svg viewBox="0 0 240 140" xmlns="http://www.w3.org/2000/svg"><polygon points="30,69 156,69 156,81 30,81" stroke="currentColor" stroke-width="0" fill="#f3c969" fill-opacity=".35"/><line x1="30" y1="75" x2="210" y2="75" stroke="currentColor" stroke-width="2" fill="none"/><line x1="30" y1="67" x2="30" y2="83" stroke="currentColor" stroke-width="2" fill="none"/><line x1="156" y1="67" x2="156" y2="83" stroke="currentColor" stroke-width="2" fill="none"/><line x1="210" y1="67" x2="210" y2="83" stroke="currentColor" stroke-width="2" fill="none"/><text x="30" y="58" font-size="12" text-anchor="middle">P</text><text x="156" y="58" font-size="12" text-anchor="middle">R</text><text x="210" y="58" font-size="12" text-anchor="middle">Q</text><text x="93" y="100" font-size="12" text-anchor="middle">7 cm</text><text x="183" y="100" font-size="12" text-anchor="middle">3 cm</text></svg>'
+        answer: 7/10
+        check: "Fraction(7, 7 + 3)"
+        hints:
+          - PQ の長さは、PR と RQ を合わせた長さだね。
+          - PQ は 7 + 3 = 10 cm だね。PR はそのうちの 7 cm だよ。
+          - PQ を 10 こに分けた 7 こ分だから、分数で書こう。
+        paths:
+          - [PQ は 7 + 3 = 10 cm, PR は PQ のうちの 7 cm, 7/10]
+          - [PQ は 7 + 3 = 10 cm, RQ は PQ の 3/10, PR はのこりだから 10/10 − 3/10 = 7/10]
+        note: 7/3 や 7 ÷ 3 としやすい。これは PR を RQ とくらべた形。PQ とくらべるので、分母は PQ 全体の長さで、PR と RQ を合わせた 7 + 3 = 10 cm。
       - part: 今日
         text: 点 D は辺 BC を BD:DC = 3:2 に分けています。三角形 ABD の面積は、三角形 ABC の面積の何 % ですか。
         answer: 60

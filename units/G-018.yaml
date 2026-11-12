@@ -49,6 +49,19 @@ days:
         paths:
           - [60/360 = 1/6]
       - part: 今日
+        text: O は円の中心です。短い方の弧 AB に対する中心角は 70° です。長い方の弧 AB に対する中心角 ∠x は何度ですか。
+        svg: '<svg viewBox="0 0 240 200" xmlns="http://www.w3.org/2000/svg"><circle cx="120" cy="100" r="68.9" stroke="currentColor" stroke-width="2" fill="none"/><line x1="120" y1="100" x2="80.5" y2="43.6" stroke="currentColor" stroke-width="2" fill="none"/><line x1="120" y1="100" x2="159.5" y2="43.6" stroke="currentColor" stroke-width="2" fill="none"/><path d="M128 88.5 A14 14 0 0 0 112 88.5" stroke="currentColor" stroke-width="1.5" fill="none"/><text x="120" y="72" font-size="13" text-anchor="middle">70°</text><path d="M107.4 82 A22 22 0 1 0 132.6 82" stroke="currentColor" stroke-width="1.5" fill="none"/><text x="120" y="138" font-size="13" text-anchor="middle">x</text><text x="74.2" y="39" font-size="13" text-anchor="middle">A</text><text x="165.8" y="39" font-size="13" text-anchor="middle">B</text><text x="120" y="115.5" font-size="13" text-anchor="middle">O</text><circle cx="120" cy="100" r="2.5" fill="currentColor"/></svg>'
+        answer: 290
+        check: "360 - 70"
+        hints:
+          - O のまわりを 1 回転すると、角は全部で何度になるかな。
+          - 70° の角と ∠x を合わせると、どうなるかな。
+          - 1 回転の角から、70° をひこう。
+        paths:
+          - [1 回転は 360°, 70° と ∠x で 1 回転, ∠x = 360 − 70 = 290]
+          - [AO をのばして直線にする（半周は 180°）, のばした線と OB の間の角は 180 − 70 = 110°, ∠x は半周と 110° を合わせて 180 + 110 = 290]
+        note: 長い方の弧に対する中心角は、1 回転 360° から短い方の中心角をひいて出す足場。
+      - part: 今日
         text: O は円の中心です。∠x は何度ですか。
         svg: '<svg viewBox="0 0 240 200" xmlns="http://www.w3.org/2000/svg"><circle cx="120" cy="100" r="68.9" stroke="currentColor" stroke-width="2" fill="none"/><line x1="132" y1="32.2" x2="57.6" y2="129.1" stroke="currentColor" stroke-width="2" fill="none"/><line x1="132" y1="32.2" x2="182.4" y2="129.1" stroke="currentColor" stroke-width="2" fill="none"/><line x1="120" y1="100" x2="57.6" y2="129.1" stroke="currentColor" stroke-width="2" fill="none"/><line x1="120" y1="100" x2="182.4" y2="129.1" stroke="currentColor" stroke-width="2" fill="none"/><path d="M121 46.5 A18 18 0 0 0 140.3 48.2" stroke="currentColor" stroke-width="1.5" fill="none"/><text x="129.3" y="66.6" font-size="13" text-anchor="middle">x</text><path d="M107.3 105.9 A14 14 0 0 0 132.7 105.9" stroke="currentColor" stroke-width="1.5" fill="none"/><text x="120" y="130.6" font-size="13" text-anchor="middle">130°</text><text x="47.6" y="138.3" font-size="13" text-anchor="middle">A</text><text x="192.4" y="138.3" font-size="13" text-anchor="middle">B</text><text x="133.9" y="25.9" font-size="13" text-anchor="middle">P</text><text x="120" y="93.5" font-size="13" text-anchor="middle">O</text><circle cx="120" cy="100" r="2.5" fill="currentColor"/></svg>'
         answer: 65
@@ -264,6 +277,19 @@ days:
         paths:
           - [直径は 3 × 2 = 6, 円周は (6 × 円周率) cm]
       - part: 今日
+        text: 円周を 8 等分した点に、時計回りに 1〜8 の番号を付けました。点 2 から点 7 まで時計回りに進む弧は、となり合う 2 点の間の弧の何こ分ですか。
+        svg: '<svg viewBox="0 0 240 200" xmlns="http://www.w3.org/2000/svg"><circle cx="120" cy="100" r="68.9" stroke="currentColor" stroke-width="2" fill="none"/><path d="M188.9 100 A68.9 68.9 0 1 1 71.3 51.3" stroke="currentColor" stroke-width="4.5" fill="none"/><text x="177.6" y="46.9" font-size="13" text-anchor="middle">1</text><text x="201.4" y="104.5" font-size="13" text-anchor="middle">2</text><text x="177.6" y="162.1" font-size="13" text-anchor="middle">3</text><text x="120" y="185.9" font-size="13" text-anchor="middle">4</text><text x="62.4" y="162.1" font-size="13" text-anchor="middle">5</text><text x="38.6" y="104.5" font-size="13" text-anchor="middle">6</text><text x="62.4" y="46.9" font-size="13" text-anchor="middle">7</text><text x="120" y="23.1" font-size="13" text-anchor="middle">8</text><circle cx="168.7" cy="51.3" r="3" fill="currentColor"/><circle cx="188.9" cy="100" r="3" fill="currentColor"/><circle cx="168.7" cy="148.7" r="3" fill="currentColor"/><circle cx="120" cy="168.9" r="3" fill="currentColor"/><circle cx="71.3" cy="148.7" r="3" fill="currentColor"/><circle cx="51.1" cy="100" r="3" fill="currentColor"/><circle cx="71.3" cy="51.3" r="3" fill="currentColor"/><circle cx="120" cy="31.1" r="3" fill="currentColor"/></svg>'
+        answer: 5
+        check: "sum(1 for k in range(2, 7))"
+        hints:
+          - となり合う 2 点の間の弧を、1 こずつ数えてみよう。
+          - 点 2 から点 3、点 3 から点 4、と順に進もう。
+          - 点 7 に着くまでに、何こ進んだかな。
+        paths:
+          - [2 から 3、3 から 4、4 から 5、5 から 6、6 から 7 と 1 こずつ数える, 5 こ分]
+          - [番号の差を見る, 7 − 2 = 5]
+        note: 弧を「何こ分」で表すときに、点の数でなく、となり合う点の間の数で数える足場。
+      - part: 今日
         text: 弧 AB と弧 CD の長さは等しいです。∠APB = 27° のとき、∠x は何度ですか。
         svg: '<svg viewBox="0 0 240 200" xmlns="http://www.w3.org/2000/svg"><circle cx="120" cy="100" r="68.9" stroke="currentColor" stroke-width="2" fill="none"/><line x1="108" y1="32.2" x2="52.2" y2="112" stroke="currentColor" stroke-width="2" fill="none"/><line x1="108" y1="32.2" x2="89.8" y2="161.9" stroke="currentColor" stroke-width="2" fill="none"/><line x1="172.7" y1="55.7" x2="143.5" y2="164.7" stroke="currentColor" stroke-width="2" fill="none"/><line x1="172.7" y1="55.7" x2="186.2" y2="119" stroke="currentColor" stroke-width="2" fill="none"/><path d="M96.6 48.6 A20 20 0 0 0 105.3 52" stroke="currentColor" stroke-width="1.5" fill="none"/><text x="96.3" y="66.5" font-size="13" text-anchor="middle">27°</text><path d="M167.6 75.1 A20 20 0 0 0 176.9 75.3" stroke="currentColor" stroke-width="1.5" fill="none"/><text x="171.9" y="92.3" font-size="13" text-anchor="middle">x</text><text x="41.4" y="118.4" font-size="13" text-anchor="middle">A</text><text x="85" y="176.3" font-size="13" text-anchor="middle">B</text><text x="147.3" y="179.6" font-size="13" text-anchor="middle">C</text><text x="196.8" y="126.6" font-size="13" text-anchor="middle">D</text><text x="106.1" y="25.9" font-size="13" text-anchor="middle">P</text><text x="181.2" y="53.2" font-size="13" text-anchor="middle">Q</text></svg>'
         answer: 27
@@ -379,6 +405,19 @@ days:
         paths:
           - [OP を引く, ∠OAP = ∠OPA = ∠a、∠OBP = ∠OPB = ∠b, 2∠a + 2∠b = 180°, ∠a + ∠b = 90°]
           - [中心角 ∠AOB = 180°, 円周角はその半分で 90°]
+      - part: 今日
+        text: O は円の中心で、A と C は円周の上の点です。OA と OC を結ぶと、∠OAC = 37° でした。∠OCA は何度ですか。
+        svg: '<svg viewBox="0 0 240 200" xmlns="http://www.w3.org/2000/svg"><circle cx="120" cy="100" r="68.9" stroke="currentColor" stroke-width="2" fill="none"/><line x1="120" y1="100" x2="55.3" y2="123.6" stroke="currentColor" stroke-width="2" fill="none"/><line x1="120" y1="100" x2="115.2" y2="31.3" stroke="currentColor" stroke-width="2" fill="none"/><line x1="55.3" y1="123.6" x2="115.2" y2="31.3" stroke="currentColor" stroke-width="2" fill="none"/><path d="M74 116.7 A20 20 0 0 0 66.1 106.8" stroke="currentColor" stroke-width="1.5" fill="none"/><text x="88.6" y="103.2" font-size="13" text-anchor="middle">37°</text><path d="M116.4 49.2 A18 18 0 0 1 105.4 46.4" stroke="currentColor" stroke-width="1.5" fill="none"/><text x="105.7" y="72.6" font-size="13" text-anchor="middle">x</text><text x="44.9" y="131.5" font-size="13" text-anchor="middle">A</text><text x="114.5" y="25.8" font-size="13" text-anchor="middle">C</text><text x="130" y="103.5" font-size="13" text-anchor="middle">O</text><circle cx="120" cy="100" r="2.5" fill="currentColor"/></svg>'
+        answer: 37
+        check: "sum(math.floor(0.5 + math.degrees(math.acos((-cx * (1 - cx) + cy * cy) / math.hypot(1 - cx, cy)))) for t in range(1, 180) for cx, cy in [(math.cos(math.radians(t)), math.sin(math.radians(t)))] if abs(math.degrees(math.acos((1 - cx) / math.hypot(cx - 1, cy))) - 37) < 0.1)"
+        hints:
+          - OA と OC は、円の何かな。
+          - OA と OC が等しいとき、△OAC は何という三角形かな。
+          - 二等辺三角形の底角は等しいね。
+        paths:
+          - [OA = OC（半径）, △OAC は二等辺三角形, 底角が等しいので ∠OCA = ∠OAC = 37°]
+          - [∠AOC を 2 つに分ける線で、△OAC を半分におる, OA = OC（半径）なので A と C がぴったり重なる, ∠OCA は ∠OAC と重なるので 37°]
+        note: 半径 2 本でできる二等辺三角形に気づき、底角が等しいことだけを試す足場。
       - part: 今日
         text: 円 O で PB は直径です。∠APO = 28° のとき、∠AOB は何度ですか。
         svg: '<svg viewBox="0 0 240 200" xmlns="http://www.w3.org/2000/svg"><circle cx="120" cy="100" r="68.9" stroke="currentColor" stroke-width="2" fill="none"/><line x1="85.6" y1="40.4" x2="89.8" y2="161.9" stroke="currentColor" stroke-width="2" fill="none"/><line x1="85.6" y1="40.4" x2="154.4" y2="159.6" stroke="currentColor" stroke-width="2" fill="none"/><line x1="120" y1="100" x2="89.8" y2="161.9" stroke="currentColor" stroke-width="2" fill="none"/><path d="M86.3 62.4 A22 22 0 0 0 96.6 59.4" stroke="currentColor" stroke-width="1.5" fill="none"/><text x="94.9" y="77.6" font-size="13" text-anchor="middle">28°</text><path d="M113.9 112.6 A14 14 0 0 0 127 112.1" stroke="currentColor" stroke-width="1.5" fill="none"/><text x="120.9" y="130.5" font-size="13" text-anchor="middle">x</text><text x="85" y="176.3" font-size="13" text-anchor="middle">A</text><text x="159.9" y="173.7" font-size="13" text-anchor="middle">B</text><text x="80.1" y="35.4" font-size="13" text-anchor="middle">P</text><text x="127.8" y="96.8" font-size="13" text-anchor="middle">O</text><circle cx="120" cy="100" r="2.5" fill="currentColor"/></svg>'

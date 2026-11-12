@@ -54,6 +54,19 @@ days:
         paths:
           - [AB:AC = 6:9 = 2:3, BE:CD = 2:3, BE = 12 × 2/3 = 8, 8 cm]
       - part: 今日
+        text: 円に内接する四角形 ABCD で、AB = 4 cm、BC = 6 cm、CD = 5 cm、DA = 3 cm です。向かい合う辺の長さの積を 2 つ作って、その和を求めると、いくつになりますか。
+        svg: '<svg viewBox="0 0 240 140" xmlns="http://www.w3.org/2000/svg"><circle cx="120" cy="70" r="52" stroke="currentColor" stroke-width="2" fill="none"/><polygon points="94.0,25.0 69.8,83.4 163.5,98.6 141.4,22.6" stroke="currentColor" stroke-width="2" fill="none"/><text x="88.5" y="20.4" font-size="14" text-anchor="middle">A</text><text x="59.1" y="91.3" font-size="14" text-anchor="middle">B</text><text x="172.6" y="109.6" font-size="14" text-anchor="middle">C</text><text x="145.9" y="17.6" font-size="14" text-anchor="middle">D</text><text x="91.8" y="59.1" font-size="12" text-anchor="middle">4</text><text x="116.8" y="85.0" font-size="12" text-anchor="middle">6</text><text x="142.5" y="63.7" font-size="12" text-anchor="middle">5</text><text x="117.5" y="37.8" font-size="12" text-anchor="middle">3</text></svg>'
+        answer: 38
+        check: "4 * 5 + 6 * 3"
+        hints:
+          - AB と向かい合うのは、A も B も通らない辺だね。どれかな。
+          - AB と CD、AD と BC の、2 組の積をそれぞれ計算しよう。
+          - 2 つの積を足そう。
+        paths:
+          - [AB と向かい合うのは CD, AB × CD = 4 × 5 = 20, AD と向かい合うのは BC, AD × BC = 3 × 6 = 18, 20 + 18 = 38]
+          - [辺を A から順に 4、6、5、3 と書く, 1 つおきの辺が向かい合う（4 と 5、6 と 3）, 4 × 5 + 6 × 3 = 20 + 18, 38]
+        note: 向かい合う辺の組（AB と CD、AD と BC）を取りちがえず、積の和を作る足場。AB × BC のようにとなりあう辺の積を作りやすい。
+      - part: 今日
         text: 円に内接する四角形 ABCD で、AB = 3 cm、BC = 4 cm、CD = 4 cm、DA = 3 cm、対角線 AC = 5 cm です。対角線 BD は何 cm ですか。
         svg: '<svg viewBox="0 0 240 140" xmlns="http://www.w3.org/2000/svg"><circle cx="120" cy="70" r="52" stroke="currentColor" stroke-width="2" fill="none"/><polygon points="68,70 105.4,20.1 172,70 105.4,119.9" stroke="currentColor" stroke-width="2" fill="none"/><line x1="68" y1="70" x2="172" y2="70" stroke="currentColor" stroke-width="2" fill="none"/><line x1="105.4" y1="20.1" x2="105.4" y2="119.9" stroke="currentColor" stroke-width="2" fill="none"/><text x="57" y="74.9" font-size="14" text-anchor="middle">A</text><text x="97.5" y="17.4" font-size="14" text-anchor="middle">B</text><text x="183" y="74.9" font-size="14" text-anchor="middle">C</text><text x="99.7" y="134.2" font-size="14" text-anchor="middle">D</text><text x="93.6" y="54.4" font-size="12" text-anchor="middle">3</text><text x="143.9" y="42.4" font-size="12" text-anchor="middle">4</text><text x="143.9" y="106" font-size="12" text-anchor="middle">4</text><text x="93.6" y="94" font-size="12" text-anchor="middle">3</text><text x="120" y="65.6" font-size="12" text-anchor="middle">5</text></svg>'
         answer: 24/5
@@ -161,6 +174,19 @@ days:
         paths:
           - [∠APB と ∠ACB は弧 AB の円周角, ∠ACB = 60°, 60°]
       - part: 今日
+        text: 正三角形 ABC の 1 辺は 13 cm です。図のように、外接円の上で、辺 BC をはさんで A と反対がわに点 P をとります。PB = 7 cm、PC = 8 cm です。AB × PC + AC × PB = 13 × □ と書くとき、□ に入る数はいくつですか。
+        svg: '<svg viewBox="0 0 240 140" xmlns="http://www.w3.org/2000/svg"><circle cx="120" cy="70" r="52" stroke="currentColor" stroke-width="2" fill="none"/><polygon points="120,18 75,96 165,96" stroke="currentColor" stroke-width="2" fill="none"/><line x1="116" y1="121.8" x2="120" y2="18" stroke="currentColor" stroke-width="2" fill="none"/><line x1="116" y1="121.8" x2="75" y2="96" stroke="currentColor" stroke-width="2" fill="none"/><line x1="116" y1="121.8" x2="165" y2="96" stroke="currentColor" stroke-width="2" fill="none"/><text x="127.8" y="15.1" font-size="14" text-anchor="middle">A</text><text x="65.4" y="106.4" font-size="14" text-anchor="middle">B</text><text x="174.6" y="106.4" font-size="14" text-anchor="middle">C</text><text x="112.6" y="136.8" font-size="14" text-anchor="middle">P</text><text x="86" y="124" font-size="12" text-anchor="middle">7</text><text x="150" y="125" font-size="12" text-anchor="middle">8</text><text x="86" y="55" font-size="12" text-anchor="middle">13</text><text x="154" y="55" font-size="12" text-anchor="middle">13</text></svg>'
+        answer: 15
+        check: "(13 * 8 + 13 * 7) // 13"
+        hints:
+          - 正三角形では 3 つの辺の長さが同じだね。AB と AC は何 cm かな。
+          - AB も AC も 13 cm なので、AB × PC + AC × PB は 13 × 8 + 13 × 7 になるよ。
+          - 13 × 8 は 13 が 8 こ分、13 × 7 は 13 が 7 こ分だね。合わせると 13 が何こ分になるかな。
+        paths:
+          - [AB = AC = 13 なので 13 × 8 + 13 × 7, 13 が共通なので 13 × (8 + 7) とまとめる, 8 + 7 = 15, 15]
+          - [13 × 8 + 13 × 7 = 104 + 91 = 195, 13 × □ = 195, □ = 195 ÷ 13 = 15, 15]
+        note: 正三角形では AB = AC なので、AB × PC + AC × PB から 1 辺 13 cm を共通にくくり出す所だけを試す足場。13 × 8 + 13 × 7 の答え 195 を、□ に入る数と取りちがえやすい。
+      - part: 今日
         text: 正三角形 ABC の外接円の、弧 BC（A をふくまないほう）の上に点 P があります。PB = 4 cm、PC = 7 cm のとき、PA は何 cm ですか。
         svg: '<svg viewBox="0 0 240 140" xmlns="http://www.w3.org/2000/svg"><circle cx="120" cy="70" r="52" stroke="currentColor" stroke-width="2" fill="none"/><polygon points="120,18 75,96 165,96" stroke="currentColor" stroke-width="2" fill="none"/><line x1="104" y1="119.5" x2="120" y2="18" stroke="currentColor" stroke-width="2" fill="none"/><line x1="104" y1="119.5" x2="75" y2="96" stroke="currentColor" stroke-width="2" fill="none"/><line x1="104" y1="119.5" x2="165" y2="96" stroke="currentColor" stroke-width="2" fill="none"/><text x="127.8" y="15.1" font-size="14" text-anchor="middle">A</text><text x="65.4" y="106.4" font-size="14" text-anchor="middle">B</text><text x="174.6" y="106.4" font-size="14" text-anchor="middle">C</text><text x="100.6" y="134.9" font-size="14" text-anchor="middle">P</text><text x="82.2" y="121" font-size="12" text-anchor="middle">4</text><text x="116.8" y="109.6" font-size="12" text-anchor="middle">7</text></svg>'
         answer: 11
@@ -263,6 +289,18 @@ days:
           - BE:CD も同じ比になるよ。
         paths:
           - [AB:AC = 2:5, BE = 15 × 2/5 = 6, 6 cm]
+      - part: 今日
+        text: 9 × 9 = 6 × 6 + 3 × □ が成り立つとき、□ に入る数はいくつですか。
+        answer: 15
+        check: "sum(x for x in range(1, 100) if 9 * 9 == 6 * 6 + 3 * x)"
+        hints:
+          - 右の 3 × □ だけを残したいね。先に何をひけばいいかな。
+          - 左の 9 × 9 から 6 × 6 をひくと、3 × □ にあたる数が出るよ。
+          - 3 × □ がその数になる □ を、わり算で求めよう。
+        paths:
+          - [3 × □ だけを残す, 9 × 9 − 6 × 6 = 81 − 36 = 45, 3 × □ = 45, □ = 45 ÷ 3 = 15]
+          - [□ に数を入れてためす, 10 だと 36 + 30 = 66 で足りない, 20 だと 36 + 60 = 96 で多い, 15 だと 36 + 45 = 81 で合う, 15]
+        note: 先に 81 ÷ 3 とわってしまいやすい。たし算の形の式では、先にひいてからわる、という逆算の順を試す足場。
       - part: 今日
         text: 円に内接する四角形 ABCD で、AB = CD = 8 cm、AD = 4 cm、対角線 AC = BD = 10 cm です。BC は何 cm ですか。
         svg: '<svg viewBox="0 0 240 140" xmlns="http://www.w3.org/2000/svg"><circle cx="120" cy="70" r="52" stroke="currentColor" stroke-width="2" fill="none"/><polygon points="100.2,21.9 75.5,97 164.5,97 139.8,21.9" stroke="currentColor" stroke-width="2" fill="none"/><line x1="100.2" y1="21.9" x2="164.5" y2="97" stroke="currentColor" stroke-width="2" fill="none"/><line x1="75.5" y1="97" x2="139.8" y2="21.9" stroke="currentColor" stroke-width="2" fill="none"/><text x="96.1" y="16.6" font-size="14" text-anchor="middle">A</text><text x="66.1" y="107.6" font-size="14" text-anchor="middle">B</text><text x="173.9" y="107.6" font-size="14" text-anchor="middle">C</text><text x="143.9" y="16.6" font-size="14" text-anchor="middle">D</text><text x="79.7" y="61" font-size="12" text-anchor="middle">8</text><text x="160.3" y="61" font-size="12" text-anchor="middle">8</text><text x="120" y="34.7" font-size="12" text-anchor="middle">4</text></svg>'

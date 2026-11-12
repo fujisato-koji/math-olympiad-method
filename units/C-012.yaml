@@ -328,6 +328,19 @@ days:
         paths:
           - [奇数は 5、3、7 の 3 こ, 余りが 1 つ残る, 奇数]
       - part: 今日
+        text: 点ウに集まる線は 5 本、点エに集まる線は 2 本です。ウとエをつなぐ線を 1 本かき足します。かき足したあと、集まる線の数が奇数になっている点は、ウとエのどちらですか。
+        choices: [ウ, エ]
+        answer: エ
+        check: "[c for c, k in (('ウ', 5), ('エ', 2)) if (k + 1) % 2 == 1][0]"
+        hints:
+          - ウに集まる線は、今 5 本だね。線を 1 本足すと、何本になるかな。
+          - かき足す線は、ウとエの両方につながるよ。エの線も 1 本ふえるね。
+          - ふえたあとのウとエの本数を、偶数か奇数かで見くらべよう。
+        paths:
+          - [ウは 5 + 1 = 6 本、エは 2 + 1 = 3 本, 6 は偶数で 3 は奇数, 奇数になったのはエ]
+          - [奇数に 1 本たすと偶数になる、偶数に 1 本たすと奇数になる, ウは奇数だったので偶数に、エは偶数だったので奇数にかわる, 奇数になったのはエ]
+        note: 線を 1 本足すと、その両はしの点の線の数がどちらも 1 本ふえて、偶数と奇数が入れかわる。
+      - part: 今日
         text: この図に線を 1 本かき足して、一筆書きできる図にします。どの 2 点を結ぶ線をかき足せばよいですか（曲がった線でもかまいません）。
         svg: |
           <svg viewBox="0 0 240 140" xmlns="http://www.w3.org/2000/svg">
@@ -791,6 +804,39 @@ days:
           - 7 は偶数かな、奇数かな。
         paths:
           - [輪で交互なら男子と女子が同じ人数, 人数の合計は偶数になる, 7 は奇数なのでできない]
+      - part: 今日
+        text: 図の点アから、線だけをたどって点カへ行けますか。
+        svg: |
+          <svg viewBox="0 0 240 140" xmlns="http://www.w3.org/2000/svg">
+            <line x1="40" y1="28" x2="110" y2="28" stroke="currentColor" stroke-width="2"/>
+            <line x1="110" y1="28" x2="110" y2="112" stroke="currentColor" stroke-width="2"/>
+            <line x1="110" y1="112" x2="40" y2="112" stroke="currentColor" stroke-width="2"/>
+            <line x1="40" y1="112" x2="40" y2="28" stroke="currentColor" stroke-width="2"/>
+            <line x1="180" y1="32" x2="205" y2="108" stroke="currentColor" stroke-width="2"/>
+            <circle cx="40" cy="28" r="4" fill="currentColor"/>
+            <circle cx="110" cy="28" r="4" fill="currentColor"/>
+            <circle cx="110" cy="112" r="4" fill="currentColor"/>
+            <circle cx="40" cy="112" r="4" fill="currentColor"/>
+            <circle cx="180" cy="32" r="4" fill="currentColor"/>
+            <circle cx="205" cy="108" r="4" fill="currentColor"/>
+            <text x="29" y="27" font-size="14" text-anchor="middle">ア</text>
+            <text x="122" y="27" font-size="14" text-anchor="middle">イ</text>
+            <text x="122" y="123" font-size="14" text-anchor="middle">ウ</text>
+            <text x="29" y="123" font-size="14" text-anchor="middle">エ</text>
+            <text x="180" y="22" font-size="14" text-anchor="middle">オ</text>
+            <text x="218" y="119" font-size="14" text-anchor="middle">カ</text>
+          </svg>
+        choices: [行ける, 行けない]
+        answer: 行けない
+        check: "'行ける' if 'カ' in (lambda f, E: f(f, {'ア'}, E))(lambda f, S, E: S if {w for e in E if e[0] in S or e[1] in S for w in e} <= S else f(f, S | {w for e in E if e[0] in S or e[1] in S for w in e}, E), 'アイ イウ ウエ エア オカ'.split()) else '行けない'"
+        hints:
+          - アから線をたどって行ける点に、しるしをつけていこう。
+          - 左の四角形の点は、全部行けるかな。そこから右の線へ、線はのびているかな。
+          - オとカにしるしがついたか、見てみよう。
+        paths:
+          - [アから行ける点はイ・ウ・エ, オとカにはしるしがつかない, 行けない]
+          - [図は左の四角形と右の線の 2 つにわかれている, アは左でカは右, 2 つのあいだに線がない, 行けない]
+        note: どの点からどの点へも線だけで行ける図を、つながっている図という。
       - part: 今日
         text: 表が上になっているコインを、1 回ずつ裏返していきます。12 回裏返すと、上はどちらですか。
         choices: [表, うら]
