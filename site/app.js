@@ -1335,21 +1335,29 @@
     if (!e.target.closest('#xpop')) { const p = $('#xpop'); if (p) p.hidden = true; }
     if (e.target.closest('#map') && !e.target.closest('a, button')) pick(null);
   });
-  // 星をさがす：題に言葉を含む星だけを光らせる。Enter で 1 つ目へ（組み合わせの途中なら、その星と組み合わせる）
+  // 星をさがす：題に言葉を含む星だけを光らせる。Enter で 1 つ目へ、もう一度 Enter で次へ、Shift+Enter で前へ、Esc で消す（D-123）
+  let hitAt = -1;
   $('#explore').addEventListener('input', e => {
     if (e.target.id !== 'cosmos-q') return;
     const q = e.target.value.trim().toLowerCase();
     hits = q ? R.units.filter(u => (u.title + ' ' + u.id).toLowerCase().includes(q)).map(u => u.id) : [];
+    hitAt = -1;
     X.hits = q ? new Set(hits) : null;
     paint();
-    tip(q ? (hits.length ? `${hits.length} の星が光っています。Enter で 1 つ目へ` : '見つかりません') : '', 0);
+    tip(q ? (hits.length ? `${hits.length} の星が光っています。Enter で 1 つ目へ${hits.length > 1 ? '、もう一度 Enter で次へ' : ''}` : '見つかりません') : '', 0);
   });
   $('#explore').addEventListener('keydown', e => {
-    if (e.target.id !== 'cosmos-q' || e.key !== 'Enter' || !hits.length) return;
-    const id = hits[0];
-    e.target.value = ''; hits = []; X.hits = null; tip('');
-    // Enter はその星へ飛んで鎖を光らせるだけ。開くのは星を押したとき（D-108）
+    if (e.target.id !== 'cosmos-q') return;
+    if (e.key === 'Escape') { e.target.value = ''; hits = []; hitAt = -1; X.hits = null; tip(''); paint(); return; }
+    if (e.key !== 'Enter' || !hits.length) return;
+    e.preventDefault();
+    const n = hits.length;
+    hitAt = hitAt < 0 ? (e.shiftKey ? n - 1 : 0) : (hitAt + (e.shiftKey ? n - 1 : 1)) % n;
+    const id = hits[hitAt], u = R.units.find(x => x.id === id);
+    // Enter はその星へ飛んで鎖を光らせるだけ。開くのは星を押したとき（D-108）。言葉は窓に残し、次の Enter で次の星へ
+    X.hits = null;
     X.sel = id; X.pair = null; card(''); paint(true);
+    tip(n > 1 ? `${hitAt + 1} / ${n}　${esc(u.title.split('（')[0])}　Enter で次へ（Shift+Enter で前へ）` : esc(u.title.split('（')[0]), 0);
   });
   document.addEventListener('fullscreenchange', () => { setBarH(); if (cosmos) cosmos.resize(); if (X.view === '2d' && parse().name === 'map') paint(); });
 

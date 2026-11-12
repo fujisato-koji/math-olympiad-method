@@ -15,6 +15,8 @@ for k, f in cfg.items():
         continue  # base（重みなし）は参考で、run.py では作らない（cluster2.py main base 1.0 --gammas 0.5 で作れる）
     d = json.load(open(os.path.join(H, f)))
     g = d.get('0.5') or d.get(0.5)
+    if labs and len(g['labels']) != len(next(iter(labs.values()))):
+        print(f'  {k}：単元の数がちがう古い結果なので飛ばす'); continue
     labs[k] = np.array(g['labels']); keeps[k] = np.array(g['keep'])
 ks = list(labs)
 print('設定どうしの分け方の一致（ARI）')

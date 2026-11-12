@@ -5,7 +5,7 @@ import numpy as np
 import yaml
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 import relations as R
-from vos import W_LAYERS
+from place3d import W_LAYERS
 HERE = os.path.dirname(os.path.abspath(__file__))
 H = os.path.join(HERE, 'out')
 REPO = Path(__file__).resolve().parents[2]
@@ -88,7 +88,7 @@ if old:
 print('名前を引き継げた分野', sum(1 for f in out if f['name']), '/', len(out), '細かい分野', sum(1 for f in out for s in f['subs'] if s['name']), '/', sum(len(f['subs']) for f in out))
 print('要命名', len(todo)); [print('  ', t) for t in todo]
 # 3D の配置と分野を、プレビュー用に書き出す
-X = np.load(os.path.join(H, 'X_vos.npy'))
+X = np.load(os.path.join(H, 'X_3d.npy'))
 fid = {}
 for f in out:
     for sb in f['subs']:
