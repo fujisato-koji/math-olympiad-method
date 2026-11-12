@@ -1,0 +1,267 @@
+title: OECD Fields of Research and Development（Frascati Manual 2015）
+version: "2015"
+sources:
+  Y01:
+    title: "Frascati Manual 2015: Guidelines for Collecting and Reporting Data on Research and Experimental Development（OECD, 2015）Table 2.2 Fields of R&D classification, p.59"
+    url: "https://www.oecd.org/content/dam/oecd/en/publications/reports/2015/10/frascati-manual-2015_g1g57dcb/9789264239012-en.pdf"
+    date: 2026-11-12
+    license: "OECD の著作権表示（文書 p.2）：自分の用途での複製・ダウンロード・印刷、文書・発表・ウェブサイト・教材への抜粋は、出典と著作権者を適切に示せば可。公開や商業の利用と翻訳の権利は rights@oecd.org へ申請。DOI 10.1787/9789264239012-en"
+items:
+  - {id: "1", name: Natural sciences, ja: 自然科学, group: true}
+  - id: "1.1"
+    parent: "1"
+    name: Mathematics
+    ja: 数学
+    units: [N-032, D-020, M-007, R-013, T-015, S-006]
+    sources: [Y01]
+  - id: "1.2"
+    parent: "1"
+    name: Computer and information sciences
+    ja: 計算機科学と情報科学
+    units: [K-024, K-028, K-037, K-039, K-046, K-105]
+    sources: [Y01]
+  - id: "1.3"
+    parent: "1"
+    name: Physical sciences
+    ja: 物理科学
+    units: [P-004, P-034, P-051, P-072, P-108, P-212]
+    sources: [Y01]
+  - id: "1.4"
+    parent: "1"
+    name: Chemical sciences
+    ja: 化学
+    units: [H-014, H-024, H-039, H-045, H-041, H-048]
+    sources: [Y01]
+  - id: "1.5"
+    parent: "1"
+    name: Earth and related environmental sciences
+    ja: 地球科学と関連する環境科学
+    units: [W-012, W-016, W-063, W-101, W-041, P-122]
+    sources: [Y01]
+  - id: "1.6"
+    parent: "1"
+    name: Biological sciences
+    ja: 生物科学
+    units: [B-009, B-010, B-042, B-056, B-131, B-144]
+    sources: [Y01]
+  - id: "1.7"
+    parent: "1"
+    name: Other natural sciences
+    ja: その他の自然科学
+    units: [B-111, H-090, K-015, P-117, K-190]
+    sources: [Y01]
+  - {id: "2", name: Engineering and technology, ja: 工学・技術, group: true}
+  - id: "2.1"
+    parent: "2"
+    name: Civil engineering
+    ja: 土木工学
+    units: [E-003, E-117, E-122, E-124, E-187, E-090]
+    sources: [Y01]
+  - id: "2.2"
+    parent: "2"
+    name: Electrical engineering, electronic engineering, information engineering
+    ja: 電気工学・電子工学・情報工学
+    units: [E-067, E-049, E-088, E-158, E-197, K-085]
+    sources: [Y01]
+  - id: "2.3"
+    parent: "2"
+    name: Mechanical engineering
+    ja: 機械工学
+    units: [E-189, E-193, E-038, E-040, E-043, E-060]
+    sources: [Y01]
+  - id: "2.4"
+    parent: "2"
+    name: Chemical engineering
+    ja: 化学工学
+    units: [E-212, E-213, E-214, E-215, E-216, E-217]
+    sources: [Y01]
+  - id: "2.5"
+    parent: "2"
+    name: Materials engineering
+    ja: 材料工学
+    units: [E-163, E-164, E-015, H-049, E-196, E-162]
+    sources: [Y01]
+  - id: "2.6"
+    parent: "2"
+    name: Medical engineering
+    ja: 医用工学
+    units: [E-223, E-225, E-226, E-227, E-169, E-168]
+    sources: [Y01]
+  - id: "2.7"
+    parent: "2"
+    name: Environmental engineering
+    ja: 環境工学
+    units: [E-219, E-220, E-221, E-222, E-200, E-124]
+    sources: [Y01]
+  - id: "2.8"
+    parent: "2"
+    name: Environmental biotechnology
+    ja: 環境バイオテクノロジー
+    units: [E-219, E-221, B-156, B-148]
+    sources: [Y01]
+  - id: "2.9"
+    parent: "2"
+    name: Industrial biotechnology
+    ja: 産業バイオテクノロジー
+    units: [E-228, E-229, B-043, B-053]
+    sources: [Y01]
+  - id: "2.10"
+    parent: "2"
+    name: Nano-technology
+    ja: ナノテクノロジー
+    units: [P-173, P-172, E-165, H-049, P-174, H-054]
+    sources: [Y01]
+  - id: "2.11"
+    parent: "2"
+    name: Other engineering and technologies
+    ja: その他の工学・技術
+    units: [V-016, E-154, E-156, E-157, E-199]
+    sources: [Y01]
+  - {id: "3", name: Medical and health sciences, ja: 医学・健康科学, group: true}
+  - id: "3.1"
+    parent: "3"
+    name: Basic medicine
+    ja: 基礎医学
+    units: [I-012, I-014, I-001, I-005, I-020, B-052]
+    sources: [Y01]
+  - id: "3.2"
+    parent: "3"
+    name: Clinical medicine
+    ja: 臨床医学
+    units: [I-044, I-045, I-046, I-047, I-050, I-051]
+    sources: [Y01]
+  - id: "3.3"
+    parent: "3"
+    name: Health sciences
+    ja: 保健科学
+    units: [I-033, I-035, I-036, I-041, I-042, I-052]
+    sources: [Y01]
+  - id: "3.4"
+    parent: "3"
+    name: Medical biotechnology
+    ja: 医療バイオテクノロジー
+    units: [B-053, B-054, I-054, I-053, B-080, E-226]
+    sources: [Y01]
+  - id: "3.5"
+    parent: "3"
+    name: Other medical science
+    ja: その他の医学
+    units: [I-003, I-025, I-055, I-040]
+    sources: [Y01]
+  - {id: "4", name: Agricultural and veterinary sciences, ja: 農学・獣医学, group: true}
+  - id: "4.1"
+    parent: "4"
+    name: Agriculture, forestry, and fisheries
+    ja: 農業・林業・水産業
+    units: [V-005, V-008, V-009, V-010, V-013, B-103]
+    sources: [Y01]
+  - id: "4.2"
+    parent: "4"
+    name: Animal and dairy science
+    ja: 畜産・酪農学
+    units: [V-011, V-012, V-004, V-006, V-037, V-038]
+    sources: [Y01]
+  - id: "4.3"
+    parent: "4"
+    name: Veterinary science
+    ja: 獣医学
+    units: [V-014, V-015, V-030, V-031, V-035, V-036]
+    sources: [Y01]
+  - id: "4.4"
+    parent: "4"
+    name: Agricultural biotechnology
+    ja: 農業バイオテクノロジー
+    units: [V-007, B-081, B-080, V-006]
+    sources: [Y01]
+  - id: "4.5"
+    parent: "4"
+    name: Other agricultural sciences
+    ja: その他の農学
+    units: [V-010, B-091, V-016]
+    sources: [Y01]
+  - {id: "5", name: Social sciences, ja: 社会科学, group: true}
+  - id: "5.1"
+    parent: "5"
+    name: Psychology and cognitive sciences
+    ja: 心理学と認知科学
+    units: [Q-005, Q-006, Q-009, Q-010, Q-011, Q-014]
+    sources: [Y01]
+  - id: "5.2"
+    parent: "5"
+    name: Economics and business
+    ja: 経済学と経営学
+    units: [F-012, F-013, F-033, F-062, F-042, F-043]
+    sources: [Y01]
+  - id: "5.3"
+    parent: "5"
+    name: Education
+    ja: 教育学
+    gap: "学習の科学は Q-002・Q-005・Q-007、教育測定の中心（項目反応理論など）は Q-013 にあるが、授業や介入の効果の実証研究（比較実験と準実験、メタ分析、学習到達度調査の読み方）の単元がない。案：教育の効果の実証研究（前提 Q-013、S-050）。教育の理念や教授法の規範は D-115 で外す"
+    sources: [Y01]
+  - id: "5.4"
+    parent: "5"
+    name: Sociology
+    ja: 社会学
+    gap: "社会学の実証（社会調査、社会階層と移動、社会ネットワーク、比較文化の研究）の単元がない。人口学の入口は B-090・I-036・F-014 にある。案：社会調査の方法（前提 S-031、S-041）、社会ネットワークの分析（前提 C-029、S-005）、人口学（人口動態と推計、前提 B-090、F-014）"
+    sources: [Y01]
+  - id: "5.5"
+    parent: "5"
+    name: Law
+    ja: 法学
+    none: "規範（法の判断と解釈）（D-115）。測れる部分：法と経済は F-061・F-063、目撃証言の記憶は Q-005、プライバシーと知的財産の技術側は K-146。犯罪学の実証（犯罪統計、抑止の効果）の単元はない"
+    sources: [Y01]
+  - id: "5.6"
+    parent: "5"
+    name: Political science
+    ja: 政治学
+    gap: "実証の政治学（選挙・投票と制度、社会的選択、政治制度の比較と因果推論）の単元がない。ゲーム理論は F-024、制度の経済学は F-063 にある。規範の政治理論は D-115 で外す。案：社会的選択と投票の理論（前提 C-007、F-024）、政治制度の比較と因果推論（前提 S-042、F-063）"
+    sources: [Y01]
+  - id: "5.7"
+    parent: "5"
+    name: Social and economic geography
+    ja: 社会・経済地理学
+    gap: "人文地理・経済地理の実証（立地と集積、都市の成長、土地利用の変化、交通の需要）の単元がない。道具は W-066・W-114、人と環境の関わりは B-090・B-091 にある。案：都市と地域の経済学（前提 F-012、W-114）、交通と土地利用の分析（前提 K-011、W-114）"
+    sources: [Y01]
+  - id: "5.8"
+    parent: "5"
+    name: Media and communications
+    ja: メディア・コミュニケーション
+    gap: "メディア・コミュニケーションの実証（メディアの効果、情報と誤情報の拡散、書誌計量）の単元がない。説得と態度は Q-011、拡散の数理は I-037 にある。報道と図書館の実務は技能で外し、メディア研究の解釈は人文で外す。案：情報の拡散とネットワーク（前提 C-029、I-037）、メディアの効果と説得の実証（前提 Q-011、S-050）。gap か none か迷う項目"
+    sources: [Y01]
+  - id: "5.9"
+    parent: "5"
+    name: Other social sciences
+    ja: その他の社会科学
+    units: [F-049, F-065, F-061, S-042]
+    sources: [Y01]
+  - {id: "6", name: Humanities and the arts, ja: 人文・芸術, group: true}
+  - id: "6.1"
+    parent: "6"
+    name: History and archaeology
+    ja: 歴史学と考古学
+    none: "人文（歴史の解釈）（D-115）。測れる部分：年代測定は W-010、考古の科学分析は W-031・W-032・H-041・H-042、化石とゲノムの年代は B-133、気候の記録は W-041"
+    sources: [Y01]
+  - id: "6.2"
+    parent: "6"
+    name: Languages and literature
+    ja: 言語・文学
+    none: "人文（言語・語学、文学）（D-115）。測れる部分：言語の理解と獲得は Q-008・Q-010、音声の物理は P-022・E-149、計算言語学と言語モデルは K-161、形式言語は L-027・L-028"
+    sources: [Y01]
+  - id: "6.3"
+    parent: "6"
+    name: Philosophy, ethics and religion
+    ja: 哲学・倫理・宗教
+    none: "人文・規範（哲学、倫理、宗教）（D-115）。測れる部分：論理学は L-023・L-024・L-043、意識の実証は B-114、協力や道徳判断の実験は Q-011"
+    sources: [Y01]
+  - id: "6.4"
+    parent: "6"
+    name: Arts (arts, history of arts, performing arts, music)
+    ja: 芸術（美術、美術史、舞台芸術、音楽）
+    none: "芸術（D-115）。測れる部分：音の物理は P-022、音響は E-126・E-148・E-149、色と描画は K-074・K-077、知覚は Q-001・Q-004"
+    sources: [Y01]
+  - id: "6.5"
+    parent: "6"
+    name: Other humanities
+    ja: その他の人文学
+    none: "人文（D-115）。残余の項目。測れる部分は 6.1〜6.4 の単元（W-010、Q-008、B-114 など）が個別に受け持つ"
+    sources: [Y01]

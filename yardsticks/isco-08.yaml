@@ -1,0 +1,1121 @@
+title: ILO International Standard Classification of Occupations 2008（ISCO-08、大分類 2 と 3）
+version: "2008"
+sources:
+  Y01: {title: "ISCO-08 structure table, English (ILO; ILOSTAT file ISCO-08 EN.csv, ISCO-08 rows only)", url: "https://www.ilo.org/ilostat-files/ISCO/newdocs-08-2021/ISCO-08/ISCO-08%20EN.csv", date: 2026-11-12, license: "© International Labour Organization（ISCO-08 は 2012 年刊）。ILO の複製許諾のページ https://webapps.ilo.org/public/english/disclaim/reqpubl.htm に short excerpts may be reproduced without authorization on condition that the complete source is clearly indicated とある。この csv 自体の個別の利用条件は未確認。記号と名前だけを使い、職業の説明文は写さない"}
+items:
+  - {id: "2", name: "Professionals", ja: "専門職", group: true}
+  - {id: "21", parent: "2", name: "Science and Engineering Professionals", ja: "科学・工学の専門職", group: true}
+  - {id: "211", parent: "21", name: "Physical and Earth Science Professionals", ja: "物理・地球科学の専門職", group: true}
+  - id: "2111"
+    parent: "211"
+    name: "Physicists and Astronomers"
+    ja: "物理学者・天文学者"
+    units: [P-003, P-034, P-072, P-049, P-212, P-064]
+    sources: [Y01]
+  - id: "2112"
+    parent: "211"
+    name: "Meteorologists"
+    ja: "気象学者"
+    units: [P-122, P-123, P-132, P-133, P-134, P-156]
+    sources: [Y01]
+  - id: "2113"
+    parent: "211"
+    name: "Chemists"
+    ja: "化学者"
+    units: [H-024, H-039, H-041, H-036, H-042]
+    sources: [Y01]
+  - id: "2114"
+    parent: "211"
+    name: "Geologists and Geophysicists"
+    ja: "地質学者・地球物理学者"
+    units: [W-008, W-012, W-016, W-021, W-014, W-025]
+    sources: [Y01]
+  - {id: "212", parent: "21", name: "Mathematicians, Actuaries and Statisticians", ja: "数学者、保険数理士、統計家", group: true}
+  - id: "2120"
+    parent: "212"
+    name: "Mathematicians, Actuaries and Statisticians"
+    ja: "数学者・保険数理士・統計家"
+    units: [N-033, R-013, S-018, S-019, F-015, F-016]
+    sources: [Y01]
+  - {id: "213", parent: "21", name: "Life Science Professionals", ja: "生命科学の専門職", group: true}
+  - id: "2131"
+    parent: "213"
+    name: "Biologists, Botanists, Zoologists and Related Professionals"
+    ja: "生物学者・植物学者・動物学者など"
+    units: [B-028, B-032, B-042, B-040, B-025, B-010]
+    sources: [Y01]
+  - id: "2132"
+    parent: "213"
+    name: "Farming, Forestry and Fisheries Advisers"
+    ja: "農林水産の助言者"
+    units: [V-005, V-008, V-009, V-013, V-011, B-103]
+    sources: [Y01]
+  - id: "2133"
+    parent: "213"
+    name: "Environmental Protection Professionals"
+    ja: "環境保護の専門職"
+    units: [B-041, B-092, B-093, H-043, E-220, W-064]
+    sources: [Y01]
+  - {id: "214", parent: "21", name: "Engineering Professionals (excluding Electrotechnology)", ja: "工学の専門職（電気技術を除く）", group: true}
+  - id: "2141"
+    parent: "214"
+    name: "Industrial and Production Engineers"
+    ja: "産業・生産の技術者"
+    units: [E-154, E-155, E-156, E-157, E-193]
+    sources: [Y01]
+  - id: "2142"
+    parent: "214"
+    name: "Civil Engineers"
+    ja: "土木技術者"
+    units: [E-124, E-187, E-116, E-122, E-003, W-101]
+    sources: [Y01]
+  - id: "2143"
+    parent: "214"
+    name: "Environmental Engineers"
+    ja: "環境技術者"
+    units: [E-219, E-220, E-221, E-222, H-081]
+    sources: [Y01]
+  - id: "2144"
+    parent: "214"
+    name: "Mechanical Engineers"
+    ja: "機械技術者"
+    units: [E-189, E-038, E-040, E-003, E-043, E-026]
+    sources: [Y01]
+  - id: "2145"
+    parent: "214"
+    name: "Chemical Engineers"
+    ja: "化学技術者"
+    units: [E-212, E-213, E-214, E-215, E-216, E-217]
+    sources: [Y01]
+  - id: "2146"
+    parent: "214"
+    name: "Mining Engineers, Metallurgists and Related Professionals"
+    ja: "鉱山技術者・冶金技術者"
+    units: [E-164, H-030, E-163, W-065, W-020]
+    sources: [Y01]
+  - id: "2149"
+    parent: "214"
+    name: "Engineering Professionals Not Elsewhere Classified"
+    ja: "その他の工学の専門職"
+    units: [E-199, E-223, E-226, E-163, P-104, E-042]
+    sources: [Y01]
+  - {id: "215", parent: "21", name: "Electrotechnology Engineers", ja: "電気技術の技術者", group: true}
+  - id: "2151"
+    parent: "215"
+    name: "Electrical Engineers"
+    ja: "電気技術者"
+    units: [E-067, E-170, E-197, P-033, E-053]
+    sources: [Y01]
+  - id: "2152"
+    parent: "215"
+    name: "Electronics Engineers"
+    ja: "電子技術者"
+    units: [E-158, E-188, E-205, E-230, E-068]
+    sources: [Y01]
+  - id: "2153"
+    parent: "215"
+    name: "Telecommunications Engineers"
+    ja: "電気通信技術者"
+    units: [E-084, E-086, E-087, E-088, E-089, C-038]
+    sources: [Y01]
+  - {id: "216", parent: "21", name: "Architects, Planners, Surveyors and Designers", ja: "建築家、計画家、測量士、デザイナー", group: true}
+  - id: "2161"
+    parent: "216"
+    name: "Building Architects"
+    ja: "建築家"
+    units: [E-106, E-120, E-122, E-148, E-192, E-196]
+    sources: [Y01]
+  - id: "2162"
+    parent: "216"
+    name: "Landscape Architects"
+    ja: "造園家・ランドスケープ設計者"
+    units: [W-062, W-101, B-094, B-103, W-066]
+    sources: [Y01]
+  - id: "2163"
+    parent: "216"
+    name: "Product and Garment Designers"
+    ja: "製品・衣服のデザイナー"
+    none: "芸術・デザインの技能（D-115）。人間工学は Q-021、製造性は E-193、機械要素は E-189 で扱う"
+    sources: [Y01]
+  - id: "2164"
+    parent: "216"
+    name: "Town and Traffic Planners"
+    ja: "都市・交通の計画家"
+    gap: "交通工学と都市計画の実証の単元がない。案：交通流と交通計画（前提 P-013、S-009、C-024）、都市と地域の経済学（前提 F-012、F-061、W-066）"
+    sources: [Y01]
+  - id: "2165"
+    parent: "216"
+    name: "Cartographers and Surveyors"
+    ja: "地図作成者・測量士"
+    units: [W-066, W-114, W-015, W-042, E-166]
+    sources: [Y01]
+  - id: "2166"
+    parent: "216"
+    name: "Graphic and Multimedia Designers"
+    ja: "グラフィック・マルチメディアのデザイナー"
+    none: "芸術・デザインの技能（D-115）。画像と色の計算は K-071〜K-075、K-074 で扱う"
+    sources: [Y01]
+  - {id: "22", parent: "2", name: "Health Professionals", ja: "保健の専門職", group: true}
+  - {id: "221", parent: "22", name: "Medical Doctors", ja: "医師", group: true}
+  - id: "2211"
+    parent: "221"
+    name: "Generalist Medical Practitioners"
+    ja: "一般診療の医師"
+    units: [I-004, I-012, I-044, I-045, I-046, I-001]
+    sources: [Y01]
+  - id: "2212"
+    parent: "221"
+    name: "Specialist Medical Practitioners"
+    ja: "専門診療の医師"
+    units: [I-021, I-023, I-050, I-051, I-043, Q-014]
+    sources: [Y01]
+  - {id: "222", parent: "22", name: "Nursing and Midwifery Professionals", ja: "看護・助産の専門職", group: true}
+  - id: "2221"
+    parent: "222"
+    name: "Nursing Professionals"
+    ja: "看護師"
+    units: [I-004, I-001, I-008, I-009, I-028]
+    sources: [Y01]
+  - id: "2222"
+    parent: "222"
+    name: "Midwifery Professionals"
+    ja: "助産師"
+    units: [I-018, I-013, I-049, I-004]
+    sources: [Y01]
+  - {id: "223", parent: "22", name: "Traditional and Complementary Medicine Professionals", ja: "伝統医療・補完医療の専門職", group: true}
+  - id: "2230"
+    parent: "223"
+    name: "Traditional and Complementary Medicine Professionals"
+    ja: "伝統医療・補完医療の専門職"
+    none: "検証できない知（D-115）。ホメオパシーなど検証で支持されない療法を外す。生薬の薬理は I-001、H-056、効果の検証法は I-040 で扱う"
+    sources: [Y01]
+  - {id: "224", parent: "22", name: "Paramedical Practitioners", ja: "準医療の実務者", group: true}
+  - id: "2240"
+    parent: "224"
+    name: "Paramedical Practitioners"
+    ja: "準医療の実務者"
+    units: [I-008, I-051, I-044, I-015]
+    sources: [Y01]
+  - {id: "225", parent: "22", name: "Veterinarians", ja: "獣医師", group: true}
+  - id: "2250"
+    parent: "225"
+    name: "Veterinarians"
+    ja: "獣医師"
+    units: [V-014, V-015, V-030, V-031, V-032, V-035]
+    sources: [Y01]
+  - {id: "226", parent: "22", name: "Other Health Professionals", ja: "その他の保健の専門職", group: true}
+  - id: "2261"
+    parent: "226"
+    name: "Dentists"
+    ja: "歯科医師"
+    units: [I-012, I-011, I-001, I-028, E-226]
+    sources: [Y01]
+  - id: "2262"
+    parent: "226"
+    name: "Pharmacists"
+    ja: "薬剤師"
+    units: [I-001, I-002, I-026, I-027, I-003, H-056]
+    sources: [Y01]
+  - id: "2263"
+    parent: "226"
+    name: "Environmental and Occupational Health and Hygiene Professionals"
+    ja: "環境・労働衛生の専門職"
+    units: [I-041, I-033, I-027, I-042]
+    sources: [Y01]
+  - id: "2264"
+    parent: "226"
+    name: "Physiotherapists"
+    ja: "理学療法士"
+    units: [B-120, B-139, I-012, I-004]
+    sources: [Y01]
+  - id: "2265"
+    parent: "226"
+    name: "Dieticians and Nutritionists"
+    ja: "栄養士・管理栄養士"
+    units: [I-009, I-052, V-016, B-028, I-046]
+    sources: [Y01]
+  - id: "2266"
+    parent: "226"
+    name: "Audiologists and Speech Therapists"
+    ja: "聴能訓練士・言語聴覚士"
+    units: [P-022, E-149, B-063, Q-008, Q-010]
+    sources: [Y01]
+  - id: "2267"
+    parent: "226"
+    name: "Optometrists and Ophthalmic Opticians"
+    ja: "検眼士・眼鏡士"
+    units: [P-023, P-028, Q-004, Q-001, B-100]
+    sources: [Y01]
+  - id: "2269"
+    parent: "226"
+    name: "Health Professionals Not Elsewhere Classified"
+    ja: "その他の保健の専門職"
+    units: [I-004, I-012, I-044, B-120]
+    sources: [Y01]
+  - {id: "23", parent: "2", name: "Teaching Professionals", ja: "教育の専門職", group: true}
+  - {id: "231", parent: "23", name: "University and Higher Education Teachers", ja: "大学・高等教育の教員", group: true}
+  - id: "2310"
+    parent: "231"
+    name: "University and Higher Education Teachers"
+    ja: "大学・高等教育の教員"
+    units: [Q-002, Q-005, Q-007, Q-013]
+    sources: [Y01]
+  - {id: "232", parent: "23", name: "Vocational Education Teachers", ja: "職業教育の教員", group: true}
+  - id: "2320"
+    parent: "232"
+    name: "Vocational Education Teachers"
+    ja: "職業教育の教員"
+    units: [Q-002, Q-005, Q-007]
+    sources: [Y01]
+  - {id: "233", parent: "23", name: "Secondary Education Teachers", ja: "中等教育の教員", group: true}
+  - id: "2330"
+    parent: "233"
+    name: "Secondary Education Teachers"
+    ja: "中等教育の教員"
+    units: [Q-002, Q-005, Q-010, Q-007]
+    sources: [Y01]
+  - {id: "234", parent: "23", name: "Primary School and Early Childhood Teachers", ja: "初等学校・幼児教育の教員", group: true}
+  - id: "2341"
+    parent: "234"
+    name: "Primary School Teachers"
+    ja: "初等学校の教員"
+    units: [Q-002, Q-005, Q-010, N-013, N-016]
+    sources: [Y01]
+  - id: "2342"
+    parent: "234"
+    name: "Early Childhood Educators"
+    ja: "幼児教育の教育者"
+    units: [Q-010, Q-007, Q-012, I-049]
+    sources: [Y01]
+  - {id: "235", parent: "23", name: "Other Teaching Professionals", ja: "その他の教育の専門職", group: true}
+  - id: "2351"
+    parent: "235"
+    name: "Education Methods specialists"
+    ja: "教育方法の専門家"
+    gap: "教育方法の土台は授業や介入の効果の実証研究（比較実験と準実験、メタ分析）で、その単元がない。学習の科学は Q-002・Q-007、測定は Q-013 にある。案：教育の効果の実証研究（前提 Q-013、S-050）。FORD 5.3 と同じ単元"
+    sources: [Y01]
+  - id: "2352"
+    parent: "235"
+    name: "Special Needs Teachers"
+    ja: "特別支援の教員"
+    units: [Q-010, Q-013, Q-014, B-068]
+    sources: [Y01]
+  - id: "2353"
+    parent: "235"
+    name: "Other Language Teachers"
+    ja: "語学の教員"
+    none: "言語・語学（D-115）。言語の獲得と理解の実証は Q-008、Q-010 で扱う"
+    sources: [Y01]
+  - id: "2354"
+    parent: "235"
+    name: "Other Music Teachers"
+    ja: "音楽の教員"
+    none: "芸術（D-115）。音の物理は P-022、聴覚と音質の評価は E-149 で扱う"
+    sources: [Y01]
+  - id: "2355"
+    parent: "235"
+    name: "Other Arts Teachers"
+    ja: "美術などの教員"
+    none: "芸術（D-115）。光と色の物理は P-023、色の計算は K-074 で扱う"
+    sources: [Y01]
+  - id: "2356"
+    parent: "235"
+    name: "Information Technology Trainers"
+    ja: "ICT の講師"
+    units: [K-012, K-016, K-037, K-144, Q-002]
+    sources: [Y01]
+  - id: "2359"
+    parent: "235"
+    name: "Teaching Professionals Not Elsewhere Classified"
+    ja: "その他の教育の専門職"
+    units: [Q-002, Q-005, Q-007]
+    sources: [Y01]
+  - {id: "24", parent: "2", name: "Business and Administration Professionals", ja: "経営・事務の専門職", group: true}
+  - {id: "241", parent: "24", name: "Finance Professionals", ja: "金融の専門職", group: true}
+  - id: "2411"
+    parent: "241"
+    name: "Accountants"
+    ja: "会計士"
+    units: [F-004, F-010, F-042]
+    sources: [Y01]
+  - id: "2412"
+    parent: "241"
+    name: "Financial and Investment Advisers"
+    ja: "金融・投資の助言者"
+    units: [F-020, F-022, F-005, F-006, F-041]
+    sources: [Y01]
+  - id: "2413"
+    parent: "241"
+    name: "Financial Analysts"
+    ja: "金融アナリスト"
+    units: [F-011, F-023, F-010, F-036, F-071]
+    sources: [Y01]
+  - {id: "242", parent: "24", name: "Administration Professionals", ja: "事務・管理の専門職", group: true}
+  - id: "2421"
+    parent: "242"
+    name: "Management and Organization Analysts"
+    ja: "経営・組織の分析者"
+    units: [E-154, E-157, F-042, F-043, F-024]
+    sources: [Y01]
+  - id: "2422"
+    parent: "242"
+    name: "Policy Administration Professionals"
+    ja: "政策行政の専門職"
+    gap: "政策の土台のうち実証できる部分は、政策効果の測定が S-042、財政が F-052、市場の失敗が F-061 にあるが、実証の政治学と行政学（制度の比較、選挙と投票、社会的選択）の単元がない。案：社会的選択と投票の理論（前提 C-007、F-024）、政治制度の比較と因果推論（前提 S-042、F-063）。FORD 5.6 と同じ単元。法令の運用と価値判断は規範で外す"
+    sources: [Y01]
+  - id: "2423"
+    parent: "242"
+    name: "Personnel and Careers Professionals"
+    ja: "人事・キャリアの専門職"
+    units: [Q-013, Q-012, F-062, Q-011]
+    sources: [Y01]
+  - id: "2424"
+    parent: "242"
+    name: "Training and Staff Development Professionals"
+    ja: "研修・人材開発の専門職"
+    units: [Q-002, Q-005, Q-007, Q-012]
+    sources: [Y01]
+  - {id: "243", parent: "24", name: "Sales, Marketing and Public Relations Professionals", ja: "販売・マーケティング・広報の専門職", group: true}
+  - id: "2431"
+    parent: "243"
+    name: "Advertising and Marketing Professionals"
+    ja: "広告・マーケティングの専門職"
+    units: [Q-009, Q-011, F-060, S-054, S-050]
+    sources: [Y01]
+  - id: "2432"
+    parent: "243"
+    name: "Public Relations Professionals"
+    ja: "広報の専門職"
+    none: "知の体系でない技能（広報の文章・対人折衝）（D-115）。説得と態度の実証は Q-011 で扱う"
+    sources: [Y01]
+  - id: "2433"
+    parent: "243"
+    name: "Technical and Medical Sales Professionals (excluding ICT)"
+    ja: "技術・医療の営業（ICT を除く）"
+    none: "知の体系でない技能（営業）（D-115）。扱う製品の知は別の職業の項目（医薬は I-001、技術は E の流れ）"
+    sources: [Y01]
+  - id: "2434"
+    parent: "243"
+    name: "Information and Communications Technology Sales Professionals"
+    ja: "ICT の営業"
+    none: "知の体系でない技能（営業）（D-115）。扱う製品の知は K の流れ"
+    sources: [Y01]
+  - {id: "25", parent: "2", name: "Information and Communications Technology Professionals", ja: "情報通信技術（ICT）の専門職", group: true}
+  - {id: "251", parent: "25", name: "Software and Applications Developers and Analysts", ja: "ソフトウェアとアプリケーションの開発者・分析者", group: true}
+  - id: "2511"
+    parent: "251"
+    name: "Systems Analysts"
+    ja: "システム分析者"
+    units: [E-199, K-022, K-016, K-169, K-017]
+    sources: [Y01]
+  - id: "2512"
+    parent: "251"
+    name: "Software Developers"
+    ja: "ソフトウェア開発者"
+    units: [K-016, K-017, K-019, K-020, K-023, K-024]
+    sources: [Y01]
+  - id: "2513"
+    parent: "251"
+    name: "Web and Multimedia Developers"
+    ja: "ウェブ・マルチメディアの開発者"
+    units: [K-016, K-038, K-043, K-064, K-071]
+    sources: [Y01]
+  - id: "2514"
+    parent: "251"
+    name: "Applications Programmers"
+    ja: "アプリケーション・プログラマー"
+    units: [K-016, K-017, K-013, K-145, K-029]
+    sources: [Y01]
+  - id: "2519"
+    parent: "251"
+    name: "Software and Applications Developers and Analysts Not Elsewhere Classified"
+    ja: "その他のソフトウェア開発者・分析者"
+    units: [K-017, K-018, K-028, K-033]
+    sources: [Y01]
+  - {id: "252", parent: "25", name: "Database and Network Professionals", ja: "データベースとネットワークの専門職", group: true}
+  - id: "2521"
+    parent: "252"
+    name: "Database Designers and Administrators"
+    ja: "データベース設計者・管理者"
+    units: [K-169, K-035, K-023, K-133]
+    sources: [Y01]
+  - id: "2522"
+    parent: "252"
+    name: "Systems Administrators"
+    ja: "システム管理者"
+    units: [K-037, K-033, K-043, K-144]
+    sources: [Y01]
+  - id: "2523"
+    parent: "252"
+    name: "Computer Network Professionals"
+    ja: "コンピュータネットワークの専門職"
+    units: [K-038, K-034, K-144, K-132, E-089]
+    sources: [Y01]
+  - id: "2529"
+    parent: "252"
+    name: "Database and Network Professionals Not Elsewhere Classified"
+    ja: "その他のデータベース・ネットワークの専門職"
+    units: [K-034, K-043, K-042, K-035]
+    sources: [Y01]
+  - {id: "26", parent: "2", name: "Legal, Social and Cultural Professionals", ja: "法律・社会・文化の専門職", group: true}
+  - {id: "261", parent: "26", name: "Legal Professionals", ja: "法律の専門職", group: true}
+  - id: "2611"
+    parent: "261"
+    name: "Lawyers"
+    ja: "弁護士"
+    none: "規範（法の解釈と適用、D-115）。証拠の確率の推論は S-001、目撃証言の記憶は Q-005 で扱う"
+    sources: [Y01]
+  - id: "2612"
+    parent: "261"
+    name: "Judges"
+    ja: "裁判官"
+    none: "規範（法の解釈と適用、D-115）。証拠の確率の推論は S-001、判断のゆがみは Q-009 で扱う"
+    sources: [Y01]
+  - id: "2619"
+    parent: "261"
+    name: "Legal Professionals Not Elsewhere Classified"
+    ja: "その他の法律の専門職"
+    none: "規範（法の解釈と適用、D-115）"
+    sources: [Y01]
+  - {id: "262", parent: "26", name: "Librarians, Archivists and Curators", ja: "司書、記録保管官、学芸員", group: true}
+  - id: "2621"
+    parent: "262"
+    name: "Archivists and Curators"
+    ja: "記録保管官・学芸員"
+    none: "人文と文化財の取り扱いの技能（D-115）。年代測定は W-010、保存の材料の化学は H の流れで扱う"
+    sources: [Y01]
+  - id: "2622"
+    parent: "262"
+    name: "Librarians and Related Information Professionals"
+    ja: "司書・情報の専門職"
+    none: "知の体系でない技能と規約（分類規則・目録規則・利用者対応）（D-115）。検索の技術は K-133、K-161 で扱う"
+    sources: [Y01]
+  - {id: "263", parent: "26", name: "Social and Religious Professionals", ja: "社会・宗教の専門職", group: true}
+  - id: "2631"
+    parent: "263"
+    name: "Economists"
+    ja: "経済学者"
+    units: [F-012, F-013, F-024, F-033, F-052, F-063]
+    sources: [Y01]
+  - id: "2632"
+    parent: "263"
+    name: "Sociologists, Anthropologists and Related Professionals"
+    ja: "社会学者・人類学者など"
+    gap: "社会学の実証（社会調査の測定、階層と移動、社会ネットワーク、人口学）の単元がない。断片は S-031、S-042、B-090、F-063、Q-011 のみ。人類学の解釈の部分は人文（D-115）。案：社会調査の方法と測定（前提 S-031、S-018、Q-013）、社会ネットワークの分析（前提 C-029、M-007）、人口学の方法（前提 B-090、I-036）"
+    sources: [Y01]
+  - id: "2633"
+    parent: "263"
+    name: "Philosophers, Historians and Political Scientists"
+    ja: "哲学者・歴史学者・政治学者"
+    none: "人文（D-115）。政治の測れる部分の投票やゲームは F-024、年代の測定は W-010 で扱う"
+    sources: [Y01]
+  - id: "2634"
+    parent: "263"
+    name: "Psychologists"
+    ja: "心理学者"
+    units: [Q-006, Q-013, Q-014, Q-011, Q-005]
+    sources: [Y01]
+  - id: "2635"
+    parent: "263"
+    name: "Social Work and Counselling Professionals"
+    ja: "ソーシャルワーク・カウンセリングの専門職"
+    units: [Q-014, Q-012, Q-010, Q-018]
+    sources: [Y01]
+  - id: "2636"
+    parent: "263"
+    name: "Religious Professionals"
+    ja: "宗教の専門職"
+    none: "宗教（D-115）"
+    sources: [Y01]
+  - {id: "264", parent: "26", name: "Authors, Journalists and Linguists", ja: "著述家、記者、言語学者", group: true}
+  - id: "2641"
+    parent: "264"
+    name: "Authors and Related Writers"
+    ja: "著述家"
+    none: "人文・芸術（D-115）"
+    sources: [Y01]
+  - id: "2642"
+    parent: "264"
+    name: "Journalists"
+    ja: "記者"
+    none: "知の体系でない技能（取材と報道）（D-115）。データの扱いは S-029、K-064 で扱う"
+    sources: [Y01]
+  - id: "2643"
+    parent: "264"
+    name: "Translators, Interpreters and Other Linguists"
+    ja: "翻訳者・通訳者・言語学者"
+    none: "言語・語学（D-115）。言語の理解と獲得の実証は Q-008、Q-010、機械処理は K-161 で扱う"
+    sources: [Y01]
+  - {id: "265", parent: "26", name: "Creative and Performing Artists", ja: "創作・実演の芸術家", group: true}
+  - id: "2651"
+    parent: "265"
+    name: "Visual Artists"
+    ja: "美術家"
+    none: "芸術（D-115）"
+    sources: [Y01]
+  - id: "2652"
+    parent: "265"
+    name: "Musicians, Singers and Composers"
+    ja: "音楽家・歌手・作曲家"
+    none: "芸術（D-115）。音の物理は P-022、聴覚と音質は E-149 で扱う"
+    sources: [Y01]
+  - id: "2653"
+    parent: "265"
+    name: "Dancers and Choreographers"
+    ja: "舞踊家・振付家"
+    none: "芸術と技能（D-115）。動作の力学は B-120、B-139 で扱う"
+    sources: [Y01]
+  - id: "2654"
+    parent: "265"
+    name: "Film, Stage and Related Directors and Producers"
+    ja: "映画・舞台の監督・プロデューサー"
+    none: "芸術（D-115）"
+    sources: [Y01]
+  - id: "2655"
+    parent: "265"
+    name: "Actors"
+    ja: "俳優"
+    none: "芸術と技能（D-115）"
+    sources: [Y01]
+  - id: "2656"
+    parent: "265"
+    name: "Announcers on Radio, Television and Other Media"
+    ja: "ラジオ・テレビなどのアナウンサー"
+    none: "知の体系でない技能（話芸）（D-115）"
+    sources: [Y01]
+  - id: "2659"
+    parent: "265"
+    name: "Creative and Performing Artists Not Elsewhere Classified"
+    ja: "その他の創作・実演の芸術家"
+    none: "芸術（D-115）"
+    sources: [Y01]
+  - {id: "3", name: "Technicians and Associate Professionals", ja: "技術者・準専門職", group: true}
+  - {id: "31", parent: "3", name: "Science and Engineering Associate Professionals", ja: "科学・工学の準専門職", group: true}
+  - {id: "311", parent: "31", name: "Physical and Engineering Science Technicians", ja: "物理・工学の科学技術者", group: true}
+  - id: "3111"
+    parent: "311"
+    name: "Chemical and Physical Science Technicians"
+    ja: "化学・物理の科学技術者"
+    units: [H-031, H-042, P-117, P-118]
+    sources: [Y01]
+  - id: "3112"
+    parent: "311"
+    name: "Civil Engineering Technicians"
+    ja: "土木技術者の補助"
+    units: [E-124, E-003, E-196, E-187, W-066]
+    sources: [Y01]
+  - id: "3113"
+    parent: "311"
+    name: "Electrical Engineering Technicians"
+    ja: "電気技術者の補助"
+    units: [E-067, E-197, E-170, P-029, P-033]
+    sources: [Y01]
+  - id: "3114"
+    parent: "311"
+    name: "Electronics Engineering Technicians"
+    ja: "電子技術者の補助"
+    units: [E-158, E-183, E-068, E-069, P-191]
+    sources: [Y01]
+  - id: "3115"
+    parent: "311"
+    name: "Mechanical Engineering Technicians"
+    ja: "機械技術者の補助"
+    units: [E-189, E-193, E-204, E-038]
+    sources: [Y01]
+  - id: "3116"
+    parent: "311"
+    name: "Chemical Engineering Technicians"
+    ja: "化学技術者の補助"
+    units: [E-212, E-213, E-216, H-042]
+    sources: [Y01]
+  - id: "3117"
+    parent: "311"
+    name: "Mining and Metallurgical Technicians"
+    ja: "鉱業・冶金の技術者"
+    units: [E-164, H-030, W-065, H-031]
+    sources: [Y01]
+  - id: "3118"
+    parent: "311"
+    name: "Draughtspersons"
+    ja: "製図工"
+    units: [E-204, G-021, G-022]
+    sources: [Y01]
+  - id: "3119"
+    parent: "311"
+    name: "Physical and Engineering Science Technicians Not Elsewhere Classified"
+    ja: "その他の物理・工学の科学技術者"
+    units: [P-117, P-118, H-031, E-199]
+    sources: [Y01]
+  - {id: "312", parent: "31", name: "Mining, Manufacturing and Construction Supervisors", ja: "鉱業・製造・建設の監督者", group: true}
+  - id: "3121"
+    parent: "312"
+    name: "Mining Supervisors"
+    ja: "鉱業の監督者"
+    units: [W-065, W-020, W-064, E-154]
+    sources: [Y01]
+  - id: "3122"
+    parent: "312"
+    name: "Manufacturing Supervisors"
+    ja: "製造の監督者"
+    units: [E-154, E-155, E-156, E-193]
+    sources: [Y01]
+  - id: "3123"
+    parent: "312"
+    name: "Construction Supervisors"
+    ja: "建設の監督者"
+    units: [E-120, E-122, E-124, E-196, E-116]
+    sources: [Y01]
+  - {id: "313", parent: "31", name: "Process Control Technicians", ja: "プロセス制御の技術者", group: true}
+  - id: "3131"
+    parent: "313"
+    name: "Power Production Plant Operators"
+    ja: "発電所の運転員"
+    units: [E-038, E-041, E-170, E-197, P-203]
+    sources: [Y01]
+  - id: "3132"
+    parent: "313"
+    name: "Incinerator and Water Treatment Plant Operators"
+    ja: "焼却炉・水処理施設の運転員"
+    units: [E-219, E-221, E-194, H-081]
+    sources: [Y01]
+  - id: "3133"
+    parent: "313"
+    name: "Chemical Processing Plant Controllers"
+    ja: "化学プラントの制御員"
+    units: [E-212, E-214, E-216, E-217]
+    sources: [Y01]
+  - id: "3134"
+    parent: "313"
+    name: "Petroleum and Natural Gas Refining Plant Operators"
+    ja: "石油・天然ガス精製の運転員"
+    units: [E-215, E-214, E-216, E-217, W-065]
+    sources: [Y01]
+  - id: "3135"
+    parent: "313"
+    name: "Metal Production Process Controllers"
+    ja: "金属製造工程の制御員"
+    units: [E-164, H-030, E-216, E-212]
+    sources: [Y01]
+  - id: "3139"
+    parent: "313"
+    name: "Process Control Technicians Not Elsewhere Classified"
+    ja: "その他のプロセス制御の技術者"
+    units: [E-216, E-048, E-049, E-217]
+    sources: [Y01]
+  - {id: "314", parent: "31", name: "Life Science Technicians and Related Associate Professionals", ja: "生命科学の技術者と関連の準専門職", group: true}
+  - id: "3141"
+    parent: "314"
+    name: "Life Science Technicians (excluding Medical)"
+    ja: "生命科学の技術者（医療を除く）"
+    units: [B-043, B-033, B-010, H-042, B-061]
+    sources: [Y01]
+  - id: "3142"
+    parent: "314"
+    name: "Agricultural Technicians"
+    ja: "農業技術者"
+    units: [V-005, V-008, V-009, V-011]
+    sources: [Y01]
+  - id: "3143"
+    parent: "314"
+    name: "Forestry Technicians"
+    ja: "林業技術者"
+    units: [B-103, W-062, B-040, W-066]
+    sources: [Y01]
+  - {id: "315", parent: "31", name: "Ship and Aircraft Controllers and Technicians", ja: "船舶・航空機の操縦者と技術者", group: true}
+  - id: "3151"
+    parent: "315"
+    name: "Ships’ Engineers"
+    ja: "船舶の機関士"
+    units: [E-038, E-041, E-189, E-194, E-197]
+    sources: [Y01]
+  - id: "3152"
+    parent: "315"
+    name: "Ships’ Deck Officers and Pilots"
+    ja: "船舶の甲板士官・水先人"
+    units: [P-210, E-166, W-063, W-024, P-122]
+    sources: [Y01]
+  - id: "3153"
+    parent: "315"
+    name: "Aircraft Pilots and Related Associate Professionals"
+    ja: "航空機の操縦士など"
+    units: [E-025, E-029, E-060, P-122, E-166]
+    sources: [Y01]
+  - id: "3154"
+    parent: "315"
+    name: "Air Traffic Controllers"
+    ja: "航空管制官"
+    units: [P-122, E-166, E-084]
+    sources: [Y01]
+  - id: "3155"
+    parent: "315"
+    name: "Air Traffic Safety Electronics Technicians"
+    ja: "航空保安の電子技術者"
+    units: [E-084, E-088, E-166, E-158]
+    sources: [Y01]
+  - {id: "32", parent: "3", name: "Health Associate Professionals", ja: "保健の準専門職", group: true}
+  - {id: "321", parent: "32", name: "Medical and Pharmaceutical Technicians", ja: "医療・薬剤の技術者", group: true}
+  - id: "3211"
+    parent: "321"
+    name: "Medical Imaging and Therapeutic Equipment Technicians"
+    ja: "医用画像・治療機器の技師"
+    units: [E-223, E-224, P-104, I-041]
+    sources: [Y01]
+  - id: "3212"
+    parent: "321"
+    name: "Medical and Pathology Laboratory Technicians"
+    ja: "臨床検査・病理検査の技師"
+    units: [I-011, I-043, I-025, I-028, H-042]
+    sources: [Y01]
+  - id: "3213"
+    parent: "321"
+    name: "Pharmaceutical Technicians and Assistants"
+    ja: "薬剤の技術者・助手"
+    units: [I-001, I-026, H-042]
+    sources: [Y01]
+  - id: "3214"
+    parent: "321"
+    name: "Medical and Dental Prosthetic Technicians"
+    ja: "義肢・義歯の技工士"
+    units: [E-226, B-120, E-193]
+    sources: [Y01]
+  - {id: "322", parent: "32", name: "Nursing and Midwifery Associate Professionals", ja: "看護・助産の準専門職", group: true}
+  - id: "3221"
+    parent: "322"
+    name: "Nursing Associate Professionals"
+    ja: "看護助手"
+    units: [I-004, I-008, I-009, I-001]
+    sources: [Y01]
+  - id: "3222"
+    parent: "322"
+    name: "Midwifery Associate Professionals"
+    ja: "助産の準専門職"
+    units: [I-018, I-013, I-049]
+    sources: [Y01]
+  - {id: "323", parent: "32", name: "Traditional and Complementary Medicine Associate Professionals", ja: "伝統医療・補完医療の準専門職", group: true}
+  - id: "3230"
+    parent: "323"
+    name: "Traditional and Complementary Medicine Associate Professionals"
+    ja: "伝統医療・補完医療の準専門職"
+    none: "検証できない知（D-115）。2230 と同じ"
+    sources: [Y01]
+  - {id: "324", parent: "32", name: "Veterinary Technicians and Assistants", ja: "獣医の技術者と助手", group: true}
+  - id: "3240"
+    parent: "324"
+    name: "Veterinary Technicians and Assistants"
+    ja: "動物看護師・獣医助手"
+    units: [V-030, V-031, V-033, V-014]
+    sources: [Y01]
+  - {id: "325", parent: "32", name: "Other Health Associate Professionals", ja: "その他の保健の準専門職", group: true}
+  - id: "3251"
+    parent: "325"
+    name: "Dental Assistants and Therapists"
+    ja: "歯科助手・歯科衛生士"
+    units: [I-012, I-001, I-028, E-226]
+    sources: [Y01]
+  - id: "3252"
+    parent: "325"
+    name: "Medical Records and Health Information Technicians"
+    ja: "診療記録・医療情報の技術者"
+    none: "知の体系でない技能と規約（疾病分類の符号付けと記録の整理）（D-115）。データ管理は K-169、疾病の統計は I-033 で扱う"
+    sources: [Y01]
+  - id: "3253"
+    parent: "325"
+    name: "Community Health Workers"
+    ja: "地域保健の従事者"
+    units: [I-007, I-008, I-009, I-033, I-036]
+    sources: [Y01]
+  - id: "3254"
+    parent: "325"
+    name: "Dispensing Opticians"
+    ja: "眼鏡士"
+    units: [P-023, P-028, Q-004]
+    sources: [Y01]
+  - id: "3255"
+    parent: "325"
+    name: "Physiotherapy Technicians and Assistants"
+    ja: "理学療法の助手"
+    units: [B-120, B-139, I-012, I-004]
+    sources: [Y01]
+  - id: "3256"
+    parent: "325"
+    name: "Medical Assistants"
+    ja: "医療助手"
+    units: [I-004, I-043, I-001, I-008]
+    sources: [Y01]
+  - id: "3257"
+    parent: "325"
+    name: "Environmental and Occupational Health Inspectors and Associates"
+    ja: "環境・労働衛生の検査員"
+    units: [I-041, I-033, H-043, E-219]
+    sources: [Y01]
+  - id: "3258"
+    parent: "325"
+    name: "Ambulance Workers"
+    ja: "救急隊員"
+    units: [I-008, I-051, I-004]
+    sources: [Y01]
+  - id: "3259"
+    parent: "325"
+    name: "Health Associate Professionals Not Elsewhere Classified"
+    ja: "その他の保健の準専門職"
+    units: [I-007, I-009, I-052]
+    sources: [Y01]
+  - {id: "33", parent: "3", name: "Business and Administration Associate Professionals", ja: "経営・事務の準専門職", group: true}
+  - {id: "331", parent: "33", name: "Financial and Mathematical Associate Professionals", ja: "金融・数理の準専門職", group: true}
+  - id: "3311"
+    parent: "331"
+    name: "Securities and Finance Dealers and Brokers"
+    ja: "証券・金融のディーラーとブローカー"
+    units: [F-021, F-022, F-070, F-020, F-011]
+    sources: [Y01]
+  - id: "3312"
+    parent: "331"
+    name: "Credit and Loans Officers"
+    ja: "与信・融資の担当者"
+    units: [F-071, F-005, F-006, F-059]
+    sources: [Y01]
+  - id: "3313"
+    parent: "331"
+    name: "Accounting Associate Professionals"
+    ja: "会計の準専門職"
+    units: [F-004, F-010]
+    sources: [Y01]
+  - id: "3314"
+    parent: "331"
+    name: "Statistical, Mathematical and Related Associate Professionals"
+    ja: "統計・数学の準専門職"
+    units: [S-028, S-029, S-030, S-031, K-143]
+    sources: [Y01]
+  - id: "3315"
+    parent: "331"
+    name: "Valuers and Loss Assessors"
+    ja: "鑑定人・損害査定人"
+    units: [F-007, F-011, F-017]
+    sources: [Y01]
+  - {id: "332", parent: "33", name: "Sales and Purchasing Agents and Brokers", ja: "販売・購買の代理人とブローカー", group: true}
+  - id: "3321"
+    parent: "332"
+    name: "Insurance Representatives"
+    ja: "保険の外務員"
+    none: "知の体系でない技能（営業）（D-115）。保険の数理は F-015、F-018 で扱う"
+    sources: [Y01]
+  - id: "3322"
+    parent: "332"
+    name: "Commercial Sales Representatives"
+    ja: "商品の営業担当者"
+    none: "知の体系でない技能（営業）（D-115）"
+    sources: [Y01]
+  - id: "3323"
+    parent: "332"
+    name: "Buyers"
+    ja: "購買担当者"
+    none: "知の体系でない技能と商慣行（購買）（D-115）。在庫は E-155、OR は E-157 で扱う"
+    sources: [Y01]
+  - id: "3324"
+    parent: "332"
+    name: "Trade Brokers"
+    ja: "取引のブローカー"
+    none: "知の体系でない技能（取引の仲介）（D-115）。貿易の経済は F-051 で扱う"
+    sources: [Y01]
+  - {id: "333", parent: "33", name: "Business Services Agents", ja: "事業サービスの代理人", group: true}
+  - id: "3331"
+    parent: "333"
+    name: "Clearing and Forwarding Agents"
+    ja: "通関・運送取扱の代理人"
+    none: "規範と手順（通関法規の運用）（D-115）。貿易の経済は F-051 で扱う"
+    sources: [Y01]
+  - id: "3332"
+    parent: "333"
+    name: "Conference and Event Planners"
+    ja: "会議・イベントの企画者"
+    none: "知の体系でない技能（D-115）"
+    sources: [Y01]
+  - id: "3333"
+    parent: "333"
+    name: "Employment Agents and Contractors"
+    ja: "職業紹介・派遣の担当者"
+    none: "知の体系でない技能と規範（D-115）。労働市場は F-062 で扱う"
+    sources: [Y01]
+  - id: "3334"
+    parent: "333"
+    name: "Real Estate Agents and Property Managers"
+    ja: "不動産仲介・管理の担当者"
+    none: "知の体系でない技能と規範（取引と法規）（D-115）。価値評価は F-007、F-011 で扱う"
+    sources: [Y01]
+  - id: "3339"
+    parent: "333"
+    name: "Business Services Agents Not Elsewhere Classified"
+    ja: "その他の事業サービスの代理人"
+    none: "知の体系でない技能（D-115）"
+    sources: [Y01]
+  - {id: "334", parent: "33", name: "Administrative and Specialized Secretaries", ja: "事務・専門の秘書", group: true}
+  - id: "3341"
+    parent: "334"
+    name: "Office Supervisors"
+    ja: "事務の監督者"
+    none: "知の体系でない技能（事務の管理）（D-115）"
+    sources: [Y01]
+  - id: "3342"
+    parent: "334"
+    name: "Legal Secretaries"
+    ja: "法務秘書"
+    none: "規範と事務の技能（D-115）"
+    sources: [Y01]
+  - id: "3343"
+    parent: "334"
+    name: "Administrative and Executive Secretaries"
+    ja: "管理・役員秘書"
+    none: "知の体系でない技能（D-115）"
+    sources: [Y01]
+  - id: "3344"
+    parent: "334"
+    name: "Medical Secretaries"
+    ja: "医療秘書"
+    none: "知の体系でない技能（事務）（D-115）。医学の基礎は I の流れで扱う"
+    sources: [Y01]
+  - {id: "335", parent: "33", name: "Government Regulatory Associate Professionals", ja: "政府の規制関連の準専門職", group: true}
+  - id: "3351"
+    parent: "335"
+    name: "Customs and Border Inspectors"
+    ja: "税関・国境の検査官"
+    none: "規範（法令の運用、D-115）"
+    sources: [Y01]
+  - id: "3352"
+    parent: "335"
+    name: "Government Tax and Excise Officials"
+    ja: "税務・物品税の公務員"
+    none: "規範（税法の運用、D-115）。財政の経済は F-052、個人の税は F-041 で扱う"
+    sources: [Y01]
+  - id: "3353"
+    parent: "335"
+    name: "Government Social Benefits Officials"
+    ja: "社会給付の公務員"
+    none: "規範（制度の運用、D-115）"
+    sources: [Y01]
+  - id: "3354"
+    parent: "335"
+    name: "Government Licensing Officials"
+    ja: "許認可の公務員"
+    none: "規範（制度の運用、D-115）"
+    sources: [Y01]
+  - id: "3355"
+    parent: "335"
+    name: "Police Inspectors and Detectives"
+    ja: "警部・刑事"
+    none: "規範と技能（法の執行と捜査）（D-115）。DNA 型鑑定の手法は B-033、証拠の確率の推論は S-001、I-044 で扱う"
+    sources: [Y01]
+  - id: "3359"
+    parent: "335"
+    name: "Government Regulatory Associate Professionals Not Elsewhere Classified"
+    ja: "その他の政府の規制関連の準専門職"
+    none: "規範（法令の運用、D-115）"
+    sources: [Y01]
+  - {id: "34", parent: "3", name: "Legal, Social, Cultural and Related Associate Professionals", ja: "法律・社会・文化などの準専門職", group: true}
+  - {id: "341", parent: "34", name: "Legal, Social and Religious Associate Professionals", ja: "法律・社会・宗教の準専門職", group: true}
+  - id: "3411"
+    parent: "341"
+    name: "Legal and Related Associate Professionals"
+    ja: "法律関連の準専門職"
+    none: "規範（D-115）"
+    sources: [Y01]
+  - id: "3412"
+    parent: "341"
+    name: "Social Work Associate Professionals"
+    ja: "ソーシャルワークの準専門職"
+    none: "規範と技能（福祉制度の運用とケースワーク）（D-115）。支援の効果の研究は Q-014 で扱う"
+    sources: [Y01]
+  - id: "3413"
+    parent: "341"
+    name: "Religious Associate Professionals"
+    ja: "宗教の準専門職"
+    none: "宗教（D-115）"
+    sources: [Y01]
+  - {id: "342", parent: "34", name: "Sports and Fitness Workers", ja: "スポーツ・フィットネスの従事者", group: true}
+  - id: "3421"
+    parent: "342"
+    name: "Athletes and Sports Players"
+    ja: "スポーツ選手"
+    none: "知の体系でない技能（競技）（D-115）。動作の力学は B-120、B-139、競技の数学は K-065 で扱う"
+    sources: [Y01]
+  - id: "3422"
+    parent: "342"
+    name: "Sports Coaches, Instructors and Officials"
+    ja: "スポーツのコーチ・審判"
+    units: [B-120, B-139, K-065, K-066, I-004, Q-007]
+    sources: [Y01]
+  - id: "3423"
+    parent: "342"
+    name: "Fitness and Recreation Instructors and Programme Leaders"
+    ja: "フィットネス・レクリエーションの指導員"
+    units: [B-120, I-004, I-009, I-052]
+    sources: [Y01]
+  - {id: "343", parent: "34", name: "Artistic, Cultural and Culinary Associate Professionals", ja: "芸術・文化・調理の準専門職", group: true}
+  - id: "3431"
+    parent: "343"
+    name: "Photographers"
+    ja: "写真家"
+    none: "芸術と技能（D-115）。光学は P-023、撮像素子は E-161 で扱う"
+    sources: [Y01]
+  - id: "3432"
+    parent: "343"
+    name: "Interior Designers and Decorators"
+    ja: "インテリアデザイナー"
+    none: "芸術・デザインの技能（D-115）"
+    sources: [Y01]
+  - id: "3433"
+    parent: "343"
+    name: "Gallery, Museum and Library Technicians"
+    ja: "美術館・図書館の技術者"
+    none: "人文と文化財の取り扱いの技能（D-115）"
+    sources: [Y01]
+  - id: "3434"
+    parent: "343"
+    name: "Chefs"
+    ja: "料理人"
+    none: "知の体系でない技能（調理）（D-115）。土台の食品の科学は V-016、V-003、栄養は I-009、I-052、加熱や保存の化学は H-070 で扱う"
+    sources: [Y01]
+  - id: "3435"
+    parent: "343"
+    name: "Other Artistic and Cultural Associate Professionals"
+    ja: "その他の芸術・文化の準専門職"
+    none: "芸術と文化の技能（D-115）"
+    sources: [Y01]
+  - {id: "35", parent: "3", name: "Information and Communications Technicians", ja: "情報通信の技術者", group: true}
+  - {id: "351", parent: "35", name: "Information and Communications Technology Operations and User Support Technicians", ja: "ICT 運用・利用者支援の技術者", group: true}
+  - id: "3511"
+    parent: "351"
+    name: "Information and Communications Technology Operations Technicians"
+    ja: "ICT 運用の技術者"
+    units: [K-037, K-033, K-144]
+    sources: [Y01]
+  - id: "3512"
+    parent: "351"
+    name: "Information and Communications Technology User Support Technicians"
+    ja: "ICT 利用者支援の技術者"
+    units: [K-144, K-037, K-043, K-146]
+    sources: [Y01]
+  - id: "3513"
+    parent: "351"
+    name: "Computer Network and Systems Technicians"
+    ja: "コンピュータネットワーク・システムの技術者"
+    units: [K-038, K-144, K-132, K-043]
+    sources: [Y01]
+  - id: "3514"
+    parent: "351"
+    name: "Web Technicians"
+    ja: "ウェブ技術者"
+    units: [K-038, K-144, K-016, K-043]
+    sources: [Y01]
+  - {id: "352", parent: "35", name: "Telecommunications and Broadcasting Technicians", ja: "電気通信・放送の技術者", group: true}
+  - id: "3521"
+    parent: "352"
+    name: "Broadcasting and Audiovisual Technicians"
+    ja: "放送・映像音響の技術者"
+    units: [E-073, E-075, E-072, K-140, E-161, E-084]
+    sources: [Y01]
+  - id: "3522"
+    parent: "352"
+    name: "Telecommunications Engineering Technicians"
+    ja: "電気通信の技術者"
+    units: [E-086, E-088, E-089, E-205, E-084]
+    sources: [Y01]

@@ -1,0 +1,542 @@
+# UNESCO ISCED-F 2013（教育分野分類）の網羅表（D-117）
+# 記号と名前は UIS/2015/INS/6 の Appendix I（List of possible codes）の原文のとおり。説明文は写していない。
+# 採った範囲：大分野 11（00〜10）、細分野 29、詳細分野 80 と、本文に中身のある 0619（人工知能）と 0719（ナノテクノロジー）。
+# 採らなかった範囲：細分野・詳細分野の 0（未定義）・9（他に分類されない）・8（学際）の残余区分と 99（分野不明）。符号は raw/isced-f.tsv に残す。
+# 取得の経緯：UIS の英語 PDF の直リンクは 404、UNESDOC は curl・WebFetch とも 403、web.archive.org は 429 だった。そのため記号と名前は、同じ文書の写し（Y01 に記載）の Appendix I から取った。公式の PDF そのものとの突き合わせは未了（docs/research/yardstick-broad.md）。
+title: UNESCO ISCED Fields of Education and Training 2013（ISCED-F 2013）
+version: "2013"
+sources:
+  Y01: {title: "International Standard Classification of Education: Fields of education and training 2013 (ISCED-F 2013) - Detailed field descriptions（UNESCO UIS、UIS/2015/INS/6、ISBN 978-92-9189-179-5、Appendix I: List of possible codes）。実際に読んだのは同じ文書の写し（omu.edu.tr、rmutr.ac.th、hec.gov.pk の三つ。前二者は本文が完全に一致、hec は空白の差のみ。表紙裏の ISBN・DOI・CC 表記が一致）", url: "https://doi.org/10.15220/978-92-9189-179-5-en", date: 2026-11-12, license: "CC BY-SA 3.0 IGO（文書の表紙裏に記載。UNESCO オープンアクセスの利用条件 http://www.unesco.org/open-access/terms-use-ccbysa-en に従う）。この URL は文書の DOI で、公式の PDF は読めなかった。写しの個別の URL は取得の記録に残っていない"}
+items:
+  - {id: "00", name: "Generic programmes and qualifications", ja: "一般課程と資格", group: true, sources: [Y01]}
+  - {id: "001", parent: "00", name: "Basic programmes and qualifications", ja: "基礎課程と資格", group: true, sources: [Y01]}
+  - id: "0011"
+    parent: "001"
+    name: "Basic programmes and qualifications"
+    ja: "基礎課程と資格"
+    none: "分野でなく一般課程の区分（読み書き算と初歩の諸教科）で、知の体系でない。初歩の数と理科は N・A・G・H・B・W・P の低学年の単元（例 N-001、H-001、B-015）で扱う"
+    sources: [Y01]
+  - {id: "002", parent: "00", name: "Literacy and numeracy", ja: "読み書きと計算", group: true, sources: [Y01]}
+  - id: "0021"
+    parent: "002"
+    name: "Literacy and numeracy"
+    ja: "読み書きと計算"
+    units: [N-001, N-005, N-007, N-013, N-060]
+    sources: [Y01]
+  - {id: "003", parent: "00", name: "Personal skills and development", ja: "個人の技能と成長", group: true, sources: [Y01]}
+  - id: "0031"
+    parent: "003"
+    name: "Personal skills and development"
+    ja: "個人の技能と成長"
+    none: "知の体系でない技能（対話・時間管理・子育て講座などの個人技能）。測れる部分は Q-002（覚え方）、Q-012（感情と動機）、Q-018（習慣と行動を変える介入）"
+    sources: [Y01]
+  - {id: "01", name: "Education", ja: "教育", group: true, sources: [Y01]}
+  - {id: "011", parent: "01", name: "Education", ja: "教育", group: true, sources: [Y01]}
+  - id: "0111"
+    parent: "011"
+    name: "Education science"
+    ja: "教育科学"
+    gap: "学習の科学は Q-002・Q-005・Q-007、教育測定は Q-013 にあるが、授業や介入の効果の実証研究（比較実験と準実験、メタ分析）の単元がない。案：教育の効果の実証研究（前提 Q-013、S-050）。FORD 5.3、ISCO 2351 と同じ単元。カリキュラム論と教授法の規範は D-115 で外す"
+    sources: [Y01]
+  - id: "0112"
+    parent: "011"
+    name: "Training for pre-school teachers"
+    ja: "就学前教員の養成"
+    none: "教員養成は技能と制度（幼児教育の実習と免許）。幼児の発達の実証は Q-010 で扱う"
+    sources: [Y01]
+  - id: "0113"
+    parent: "011"
+    name: "Teacher training without subject specialisation"
+    ja: "教科専門を持たない教員養成"
+    none: "教員養成は技能と制度（学級運営と授業の実践）。学習の実証は Q-005、Q-007 で扱う"
+    sources: [Y01]
+  - id: "0114"
+    parent: "011"
+    name: "Teacher training with subject specialisation"
+    ja: "教科専門を持つ教員養成"
+    none: "教員養成は技能と制度（教科の指導法と免許）。教科そのものの中身は各分野の単元で扱う"
+    sources: [Y01]
+  - {id: "02", name: "Arts and humanities", ja: "芸術と人文", group: true, sources: [Y01]}
+  - {id: "021", parent: "02", name: "Arts", ja: "芸術", group: true, sources: [Y01]}
+  - id: "0211"
+    parent: "021"
+    name: "Audio-visual techniques and media production"
+    ja: "視聴覚技術とメディア制作"
+    none: "芸術・制作の技能（撮影、印刷、編集、制作の手技。D-115）。測れる部分はコンピュータグラフィックスの数理 K-071〜K-077、音の解析 E-073"
+    sources: [Y01]
+  - id: "0212"
+    parent: "021"
+    name: "Fashion, interior and industrial design"
+    ja: "ファッション、インテリア、工業デザイン"
+    none: "芸術としての意匠（D-115）。工学としての設計は E-189、E-199、人体寸法に合わせる設計は Q-021 で扱う"
+    sources: [Y01]
+  - id: "0213"
+    parent: "021"
+    name: "Fine arts"
+    ja: "美術"
+    none: "芸術（D-115）。美術の理論と歴史は人文として外す"
+    sources: [Y01]
+  - id: "0214"
+    parent: "021"
+    name: "Handicrafts"
+    ja: "工芸"
+    none: "工芸の手技（D-115、知の体系でない技能）。材料の科学は H-049 で扱う"
+    sources: [Y01]
+  - id: "0215"
+    parent: "021"
+    name: "Music and performing arts"
+    ja: "音楽と舞台芸術"
+    none: "芸術（D-115）。測れる部分は音と楽器の物理 P-022、音の解析 E-073"
+    sources: [Y01]
+  - {id: "022", parent: "02", name: "Humanities (except languages)", ja: "人文（語学を除く）", group: true, sources: [Y01]}
+  - id: "0221"
+    parent: "022"
+    name: "Religion and theology"
+    ja: "宗教と神学"
+    none: "人文（D-115）。宗教と神学は検証できない知として外す"
+    sources: [Y01]
+  - id: "0222"
+    parent: "022"
+    name: "History and archaeology"
+    ja: "歴史と考古学"
+    none: "人文（D-115）。年代測定などの測れる部分は W-010、W-041 で扱う"
+    sources: [Y01]
+  - id: "0223"
+    parent: "022"
+    name: "Philosophy and ethics"
+    ja: "哲学と倫理"
+    none: "人文・規範（D-115）。論理学の測れる部分は L-023、L-024、L-043 で扱う"
+    sources: [Y01]
+  - {id: "023", parent: "02", name: "Languages", ja: "言語", group: true, sources: [Y01]}
+  - id: "0231"
+    parent: "023"
+    name: "Language acquisition"
+    ja: "言語習得"
+    none: "人文（D-115、言語・語学）。外国語の運用は技能"
+    sources: [Y01]
+  - id: "0232"
+    parent: "023"
+    name: "Literature and linguistics"
+    ja: "文学と言語学"
+    none: "人文（D-115、言語・語学・文学）。言語の構造を測る部分は Q-008（心理言語学）、形式言語は L-027、L-028 で扱う"
+    sources: [Y01]
+  - {id: "03", name: "Social sciences, journalism and information", ja: "社会科学、ジャーナリズムと情報", group: true, sources: [Y01]}
+  - {id: "031", parent: "03", name: "Social and behavioural sciences", ja: "社会・行動科学", group: true, sources: [Y01]}
+  - id: "0311"
+    parent: "031"
+    name: "Economics"
+    ja: "経済学"
+    units: [F-008, F-012, F-013, F-024, F-033, F-063]
+    sources: [Y01]
+  - id: "0312"
+    parent: "031"
+    name: "Political sciences and civics"
+    ja: "政治学と公民"
+    gap: "政治学の実証できる部分（投票と選挙、制度の比較、紛争の計量）の単元がない。案：社会的選択と投票の理論（前提 F-024、A-024）、政治と紛争の計量分析（前提 S-042、F-033）。公民と人権は規範で外す"
+    sources: [Y01]
+  - id: "0313"
+    parent: "031"
+    name: "Psychology"
+    ja: "心理学"
+    units: [Q-004, Q-005, Q-011, Q-012, Q-013, Q-014]
+    sources: [Y01]
+  - id: "0314"
+    parent: "031"
+    name: "Sociology and cultural studies"
+    ja: "社会学と文化研究"
+    gap: "社会学・人類学・犯罪学の実証できる部分の単元がない（人口は B-090、社会の認知は Q-011、不平等は F-063 に一部）。案：社会調査の方法（前提 S-031、S-019）、社会ネットワークの分析（前提 C-029、C-032）、人口学（前提 F-014、F-056、B-090）"
+    sources: [Y01]
+  - {id: "032", parent: "03", name: "Journalism and information", ja: "ジャーナリズムと情報", group: true, sources: [Y01]}
+  - id: "0321"
+    parent: "032"
+    name: "Journalism and reporting"
+    ja: "ジャーナリズムと報道"
+    none: "人文・技能（取材と記事の文言。D-115）"
+    sources: [Y01]
+  - id: "0322"
+    parent: "032"
+    name: "Library, information and archival studies"
+    ja: "図書館・情報・文書館学"
+    none: "図書館・博物館・文書館の実務と制度（知の体系でない技能）。情報の整理の数理は K-169（データベース）、K-140（符号化）で扱う"
+    sources: [Y01]
+  - {id: "04", name: "Business, administration and law", ja: "ビジネス、経営と法", group: true, sources: [Y01]}
+  - {id: "041", parent: "04", name: "Business and administration", ja: "ビジネスと経営", group: true, sources: [Y01]}
+  - id: "0411"
+    parent: "041"
+    name: "Accounting and taxation"
+    ja: "会計と税"
+    units: [F-004, F-010, F-042]
+    sources: [Y01]
+  - id: "0412"
+    parent: "041"
+    name: "Finance, banking and insurance"
+    ja: "金融、銀行、保険"
+    units: [F-006, F-011, F-020, F-015, F-017, F-029]
+    sources: [Y01]
+  - id: "0413"
+    parent: "041"
+    name: "Management and administration"
+    ja: "経営管理"
+    units: [F-043, E-154, E-155, E-157]
+    sources: [Y01]
+  - id: "0414"
+    parent: "041"
+    name: "Marketing and advertising"
+    ja: "マーケティングと広告"
+    units: [F-060, F-049, Q-009, S-054, Q-020]
+    sources: [Y01]
+  - id: "0415"
+    parent: "041"
+    name: "Secretarial and office work"
+    ja: "秘書と事務"
+    none: "職業の手技（事務・タイピング・受付。D-115 の知の体系でない技能）"
+    sources: [Y01]
+  - id: "0416"
+    parent: "041"
+    name: "Wholesale and retail sales"
+    ja: "卸売と小売"
+    none: "商取引の実務の技能。測れる部分は在庫管理 E-155、価格の理論 F-060"
+    sources: [Y01]
+  - id: "0417"
+    parent: "041"
+    name: "Work skills"
+    ja: "職場の技能"
+    none: "職場研修と接客の技能。測れる部分は品質管理 E-156、作業負荷と人間工学 Q-021"
+    sources: [Y01]
+  - {id: "042", parent: "04", name: "Law", ja: "法", group: true, sources: [Y01]}
+  - id: "0421"
+    parent: "042"
+    name: "Law"
+    ja: "法"
+    none: "規範（法の解釈と運用、D-115）"
+    sources: [Y01]
+  - {id: "05", name: "Natural sciences, mathematics and statistics", ja: "自然科学、数学と統計", group: true, sources: [Y01]}
+  - {id: "051", parent: "05", name: "Biological and related sciences", ja: "生物学と関連科学", group: true, sources: [Y01]}
+  - id: "0511"
+    parent: "051"
+    name: "Biology"
+    ja: "生物学"
+    units: [B-022, B-032, B-009, B-010, B-011, B-133]
+    sources: [Y01]
+  - id: "0512"
+    parent: "051"
+    name: "Biochemistry"
+    ja: "生化学"
+    units: [B-006, B-007, B-008, B-053, H-044, B-080]
+    sources: [Y01]
+  - {id: "052", parent: "05", name: "Environment", ja: "環境", group: true, sources: [Y01]}
+  - id: "0521"
+    parent: "052"
+    name: "Environmental sciences"
+    ja: "環境科学"
+    units: [B-040, B-041, B-056, B-057, B-092, W-060]
+    sources: [Y01]
+  - id: "0522"
+    parent: "052"
+    name: "Natural environments and wildlife"
+    ja: "自然環境と野生生物"
+    units: [B-060, B-093, B-182, B-184, B-183]
+    sources: [Y01]
+  - {id: "053", parent: "05", name: "Physical sciences", ja: "物理科学", group: true, sources: [Y01]}
+  - id: "0531"
+    parent: "053"
+    name: "Chemistry"
+    ja: "化学"
+    units: [H-010, H-014, H-024, H-032, H-036, H-047]
+    sources: [Y01]
+  - id: "0532"
+    parent: "053"
+    name: "Earth sciences"
+    ja: "地球科学"
+    units: [W-012, W-020, W-021, W-063, P-122, W-041]
+    sources: [Y01]
+  - id: "0533"
+    parent: "053"
+    name: "Physics"
+    ja: "物理学"
+    units: [P-003, P-034, P-072, P-049, P-064, P-108]
+    sources: [Y01]
+  - {id: "054", parent: "05", name: "Mathematics and statistics", ja: "数学と統計", group: true, sources: [Y01]}
+  - id: "0541"
+    parent: "054"
+    name: "Mathematics"
+    ja: "数学"
+    units: [N-033, R-013, D-020, M-007, T-019, K-010]
+    sources: [Y01]
+  - id: "0542"
+    parent: "054"
+    name: "Statistics"
+    ja: "統計学"
+    units: [S-001, S-006, S-018, S-019, S-020, F-014]
+    sources: [Y01]
+  - {id: "06", name: "Information and Communication Technologies (ICTs)", ja: "情報通信技術（ICT）", group: true, sources: [Y01]}
+  - {id: "061", parent: "06", name: "Information and Communication Technologies (ICTs)", ja: "情報通信技術（ICT）", group: true, sources: [Y01]}
+  - id: "0611"
+    parent: "061"
+    name: "Computer use"
+    ja: "コンピュータの利用"
+    none: "ソフトウェアの操作技能（知の体系でない技能）。表計算によるデータ分析は K-143 で扱う"
+    sources: [Y01]
+  - id: "0612"
+    parent: "061"
+    name: "Database and network design and administration"
+    ja: "データベースとネットワークの設計と管理"
+    units: [K-169, K-038, K-043, K-144, K-034]
+    sources: [Y01]
+  - id: "0613"
+    parent: "061"
+    name: "Software and applications development and analysis"
+    ja: "ソフトウェアとアプリケーションの開発と分析"
+    units: [K-016, K-017, K-020, K-023, K-037, K-039]
+    sources: [Y01]
+  - id: "0619"
+    parent: "061"
+    name: "Information and Communication Technologies (ICTs) not elsewhere classified"
+    ja: "ICT（他に分類されないもの）"
+    units: [K-046, K-047, K-054, K-056, K-161]
+    sources: [Y01]
+  - {id: "07", name: "Engineering, manufacturing and construction", ja: "工学、製造と建設", group: true, sources: [Y01]}
+  - {id: "071", parent: "07", name: "Engineering and engineering trades", ja: "工学と工学系の職種", group: true, sources: [Y01]}
+  - id: "0711"
+    parent: "071"
+    name: "Chemical engineering and processes"
+    ja: "化学工学とプロセス"
+    units: [E-212, E-213, E-214, E-215, E-216]
+    sources: [Y01]
+  - id: "0712"
+    parent: "071"
+    name: "Environmental protection technology"
+    ja: "環境保護技術"
+    units: [E-219, E-220, E-221, E-222, H-081]
+    sources: [Y01]
+  - id: "0713"
+    parent: "071"
+    name: "Electricity and energy"
+    ja: "電気とエネルギー"
+    units: [E-170, E-197, E-167, E-160, E-038, E-041]
+    sources: [Y01]
+  - id: "0714"
+    parent: "071"
+    name: "Electronics and automation"
+    ja: "電子工学と自動化"
+    units: [E-067, E-158, E-049, E-088, K-085, E-183]
+    sources: [Y01]
+  - id: "0715"
+    parent: "071"
+    name: "Mechanics and metal trades"
+    ja: "機械と金属加工"
+    units: [E-189, E-193, E-163, E-164, E-015, K-084]
+    sources: [Y01]
+  - id: "0716"
+    parent: "071"
+    name: "Motor vehicles, ships and aircraft"
+    ja: "自動車、船舶、航空機"
+    units: [E-191, E-186, E-025, E-043, E-060, E-064]
+    sources: [Y01]
+  - id: "0719"
+    parent: "071"
+    name: "Engineering and engineering trades not elsewhere classified"
+    ja: "工学（他に分類されないもの）"
+    units: [P-173, E-165, H-049, H-054, P-172]
+    sources: [Y01]
+  - {id: "072", parent: "07", name: "Manufacturing and processing", ja: "製造と加工", group: true, sources: [Y01]}
+  - id: "0721"
+    parent: "072"
+    name: "Food processing"
+    ja: "食品加工"
+    units: [V-016, V-003, B-043, H-070]
+    sources: [Y01]
+  - id: "0722"
+    parent: "072"
+    name: "Materials (glass, paper, plastic and wood)"
+    ja: "材料（ガラス、紙、プラスチック、木材）"
+    units: [H-035, H-049, E-202, E-196]
+    sources: [Y01]
+  - id: "0723"
+    parent: "072"
+    name: "Textiles (clothes, footwear and leather)"
+    ja: "繊維（衣服、履物、皮革）"
+    none: "職業の手技（縫製・靴・皮革）。繊維の化学は H-035（高分子）で扱う"
+    sources: [Y01]
+  - id: "0724"
+    parent: "072"
+    name: "Mining and extraction"
+    ja: "鉱業と採掘"
+    gap: "採鉱と石油・ガス工学の単元がない（鉱床と貯留層の成因は W-065、岩石中の流れは W-029 に一部）。案：岩盤力学と坑道の安定（前提 E-002、E-124、W-020）、貯留層工学と掘削（前提 W-029、E-031）、選鉱とミネラルプロセッシング（前提 E-213、E-215）"
+    sources: [Y01]
+  - {id: "073", parent: "07", name: "Architecture and construction", ja: "建築と建設", group: true, sources: [Y01]}
+  - id: "0731"
+    parent: "073"
+    name: "Architecture and town planning"
+    ja: "建築と都市計画"
+    units: [E-106, E-120, E-122, E-148, W-066]
+    sources: [Y01]
+  - id: "0732"
+    parent: "073"
+    name: "Building and civil engineering"
+    ja: "建築施工と土木"
+    units: [E-116, E-119, E-124, E-187, W-101, E-219]
+    sources: [Y01]
+  - {id: "08", name: "Agriculture, forestry, fisheries and veterinary", ja: "農業、林業、水産業と獣医", group: true, sources: [Y01]}
+  - {id: "081", parent: "08", name: "Agriculture", ja: "農業", group: true, sources: [Y01]}
+  - id: "0811"
+    parent: "081"
+    name: "Crop and livestock production"
+    ja: "作物と家畜の生産"
+    units: [V-004, V-005, V-006, V-008, V-010, V-011]
+    sources: [Y01]
+  - id: "0812"
+    parent: "081"
+    name: "Horticulture"
+    ja: "園芸"
+    units: [V-005, V-008, V-009, B-150]
+    sources: [Y01]
+  - {id: "082", parent: "08", name: "Forestry", ja: "林業", group: true, sources: [Y01]}
+  - id: "0821"
+    parent: "082"
+    name: "Forestry"
+    ja: "林業"
+    units: [B-103, W-062, B-091]
+    sources: [Y01]
+  - {id: "083", parent: "08", name: "Fisheries", ja: "水産業", group: true, sources: [Y01]}
+  - id: "0831"
+    parent: "083"
+    name: "Fisheries"
+    ja: "水産業"
+    units: [V-013, B-154, B-155]
+    sources: [Y01]
+  - {id: "084", parent: "08", name: "Veterinary", ja: "獣医", group: true, sources: [Y01]}
+  - id: "0841"
+    parent: "084"
+    name: "Veterinary"
+    ja: "獣医"
+    units: [V-014, V-015, V-030, V-031, V-033, V-035]
+    sources: [Y01]
+  - {id: "09", name: "Health and welfare", ja: "保健と福祉", group: true, sources: [Y01]}
+  - {id: "091", parent: "09", name: "Health", ja: "保健", group: true, sources: [Y01]}
+  - id: "0911"
+    parent: "091"
+    name: "Dental studies"
+    ja: "歯学"
+    gap: "歯学の単元がない（口腔の解剖と組織、う蝕と歯周病の病態、口腔外科、歯科材料）。案：口腔の解剖・組織・病態（前提 I-011、I-012、I-021、I-028）、歯科材料学（前提 H-049、E-226）"
+    sources: [Y01]
+  - id: "0912"
+    parent: "091"
+    name: "Medicine"
+    ja: "医学"
+    units: [I-004, I-012, I-021, I-044, I-045, I-050]
+    sources: [Y01]
+  - id: "0913"
+    parent: "091"
+    name: "Nursing and midwifery"
+    ja: "看護と助産"
+    units: [I-004, I-001, I-008, I-009, I-028]
+    sources: [Y01]
+  - id: "0914"
+    parent: "091"
+    name: "Medical diagnostic and treatment technology"
+    ja: "医療の診断と治療の技術"
+    units: [E-223, E-225, E-226, E-227, I-043]
+    sources: [Y01]
+  - id: "0915"
+    parent: "091"
+    name: "Therapy and rehabilitation"
+    ja: "治療とリハビリテーション"
+    units: [B-120, B-139, I-012, I-004]
+    sources: [Y01]
+  - id: "0916"
+    parent: "091"
+    name: "Pharmacy"
+    ja: "薬学"
+    units: [I-001, I-002, I-026, I-027, H-056, I-003]
+    sources: [Y01]
+  - id: "0917"
+    parent: "091"
+    name: "Traditional and complementary medicine and therapy"
+    ja: "伝統医学と補完医学・療法"
+    none: "検証できない知（D-115。鍼・ホメオパシー・伝統医学）。効果の検証は薬理 I-001、臨床試験の方法 I-003、I-040 で行う"
+    sources: [Y01]
+  - {id: "092", parent: "09", name: "Welfare", ja: "福祉", group: true, sources: [Y01]}
+  - id: "0921"
+    parent: "092"
+    name: "Care of the elderly and of disabled adults"
+    ja: "高齢者と障害のある成人の介護"
+    none: "ケアの技能と制度。老化の科学は B-112、一生の医学は I-049 で扱う"
+    sources: [Y01]
+  - id: "0922"
+    parent: "092"
+    name: "Child care and youth services"
+    ja: "保育と青少年サービス"
+    none: "保育・青少年育成の技能と制度。子どもの発達の実証は Q-010 で扱う"
+    sources: [Y01]
+  - id: "0923"
+    parent: "092"
+    name: "Social work and counselling"
+    ja: "ソーシャルワークとカウンセリング"
+    none: "ソーシャルワークとカウンセリングの実務・政策（技能と規範）。効果が確かめられた介入は Q-014、再分配の経済は F-063 で扱う"
+    sources: [Y01]
+  - {id: "10", name: "Services", ja: "サービス", group: true, sources: [Y01]}
+  - {id: "101", parent: "10", name: "Personal services", ja: "対人サービス", group: true, sources: [Y01]}
+  - id: "1011"
+    parent: "101"
+    name: "Domestic services"
+    ja: "家事サービス"
+    none: "家事・清掃の手技（知の体系でない技能）"
+    sources: [Y01]
+  - id: "1012"
+    parent: "101"
+    name: "Hair and beauty services"
+    ja: "理容・美容"
+    none: "理容・美容の手技（知の体系でない技能）"
+    sources: [Y01]
+  - id: "1013"
+    parent: "101"
+    name: "Hotel, restaurants and catering"
+    ja: "ホテル、飲食、調理"
+    none: "調理・接客の手技（知の体系でない技能）。食品の科学は V-016 で扱う"
+    sources: [Y01]
+  - id: "1014"
+    parent: "101"
+    name: "Sports"
+    ja: "スポーツ"
+    gap: "スポーツ科学の運動生理学（エネルギー供給系、トレーニングによる適応、運動の栄養と回復、運動の障害）の単元がない。動作の生体力学は B-120、スポーツの数学とデータは K-065〜K-070 にある。競技の技能は D-115 で外す。案：運動生理学とトレーニング科学（前提 I-004、I-052、B-120）。迷う項目：細目の範囲が競技の指導に寄るなら none"
+    sources: [Y01]
+  - id: "1015"
+    parent: "101"
+    name: "Travel, tourism and leisure"
+    ja: "旅行、観光、余暇"
+    none: "観光・旅行の実務と接客の技能"
+    sources: [Y01]
+  - {id: "102", parent: "10", name: "Hygiene and occupational health services", ja: "衛生と労働衛生サービス", group: true, sources: [Y01]}
+  - id: "1021"
+    parent: "102"
+    name: "Community sanitation"
+    ja: "地域の衛生"
+    units: [E-219, E-221, I-041, I-007]
+    sources: [Y01]
+  - id: "1022"
+    parent: "102"
+    name: "Occupational health and safety"
+    ja: "労働安全衛生"
+    units: [I-041, Q-021, E-217, Q-012]
+    sources: [Y01]
+  - {id: "103", parent: "10", name: "Security services", ja: "保安サービス", group: true, sources: [Y01]}
+  - id: "1031"
+    parent: "103"
+    name: "Military and defence"
+    ja: "軍事と防衛"
+    none: "軍務の訓練と戦略論（職業の技能と規範）。ゲームの戦略は F-024、L-017 で扱う"
+    sources: [Y01]
+  - id: "1032"
+    parent: "103"
+    name: "Protection of persons and property"
+    ja: "人と財産の保護"
+    none: "警備・消防・警察の職業の手技と制度。燃焼の科学は E-194 で扱う"
+    sources: [Y01]
+  - {id: "104", parent: "10", name: "Transport services", ja: "運輸サービス", group: true, sources: [Y01]}
+  - id: "1041"
+    parent: "104"
+    name: "Transport services"
+    ja: "運輸サービス"
+    none: "運転・操縦・航行の技能（D-115）。航法の数理は E-062、E-166、飛行力学は E-060 で扱う"
+    sources: [Y01]
