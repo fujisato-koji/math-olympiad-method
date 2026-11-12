@@ -615,6 +615,14 @@ def check(data, problems):
                 one_path += 1
     if one_path:
         print(f"警告: paths が 1 本だけの挑戦・わけ・腕だめしが {one_path} 問")
+    # 引用符のない小数（4.0、2e-07）は画面（JavaScript）で 4、2e-7 になる（D-135）。直す係が unitqc.py で誤りとして直すまで、ここでは警告
+    jsbad = lambda v: isinstance(v, float) and (v.is_integer() or "e" in repr(v))
+    fl = sorted({uid for uid, doc in problems.items()
+                 for it in [x for d in doc.get("days", []) for x in d.get("items", []) + d.get("extra", [])] + list(doc.get("ri") or [])
+                 for k in ("answer", "choices", "accept")
+                 for v in (it.get(k) if isinstance(it.get(k), list) else [it.get(k)]) if jsbad(v)})
+    if fl:
+        print(f"警告: 画面で表し方が変わる小数（4.0 → 4）を引用符なしで書いた単元が {len(fl)} 個：" + "、".join(fl[:10]))
     kanji_warnings(units, problems, data.get("glossary", []))
     return errors
 

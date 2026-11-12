@@ -41,6 +41,16 @@ for uid in ids:
           if it.get('balance') and not it.get('svg')]
     nb += [f'腕だめし {i}' for i, it in enumerate(pu.get('ri') or [], 1) if it.get('balance') and not it.get('svg')]
     e += [f'{uid} {w}：天びんを balance: でなく svg で描く（答えを見ない係に見えない。check が bal を使うなら式も直す）' for w in nb]
+    # 小数は引用符で文字として書く。YAML の数のままだと画面（JavaScript）で 4.0 → 4、2e-07 → 2e-7 になる（D-135）
+    jsbad = lambda v: isinstance(v, float) and (v.is_integer() or 'e' in repr(v))
+    labeled = [(f"{d.get('day')} 日目 {i}", it) for d in pu.get('days') or [] for i, it in enumerate((d.get('items') or []) + (d.get('extra') or []), 1)]
+    labeled += [(f'腕だめし {i}', it) for i, it in enumerate(pu.get('ri') or [], 1)]
+    for w, it in labeled:
+        for k in ('answer', 'choices', 'accept'):
+            vs = it.get(k) if isinstance(it.get(k), list) else [it.get(k)]
+            if any(jsbad(v) for v in vs):
+                e.append(f'{uid} {w}：{k} の小数 {[v for v in vs if jsbad(v)]} は画面で表し方が変わる（4.0 → 4）。引用符で "14.0" のように書く。'
+                         '10 の何乗は 2 × 10⁻⁷ の形で書く')
     print(f'  誤り {len(e)}')
     for x in e:
         print('   -', x)
@@ -50,18 +60,21 @@ for uid in ids:
         for g in range(1, min(st, 6) + 1):
             ok |= set(grades.get(str(g), []))
         head = {ch for no, line in enumerate((REPO / 'units' / f'{uid}.yaml').read_text(encoding='utf-8').splitlines()) if no and line.startswith('#') for ch in line if RM.is_kanji(ch)}
+        ok_nohead = ok | term_chars
         ok |= term_chars | head
-        bad = {}
+        bad, head_only = {}, {}  # head_only：頭注に出るだけで通っている字（D-135。頭注は単元の説明なので、ふつうのことばも通ってしまう）
         def walk(x, key=None, where=''):
             if isinstance(x, str):
                 if key == 'svg':  # 図の中の文字も子が読むので数える
                     x = re.sub(r'<[^>]+>', '', ' '.join(re.findall(r'<text\b[^>]*>(.*?)</text>', x, re.S)))
                     where = where + '（図の文字）'
-                elif key in ('check', 'figure', 'part', 'kinds', 'uses', 'type', 'like'):
+                elif key in ('check', 'figure', 'part', 'kinds', 'uses', 'type', 'like', 'note'):  # note は保護者用で、子の画面に出ない（D-135）
                     return
-                for ch in x:
+                for i, ch in enumerate(x):
                     if RM.is_kanji(ch) and ch not in ok:
                         bad.setdefault(ch, where)
+                    elif RM.is_kanji(ch) and ch not in ok_nohead:
+                        head_only.setdefault(ch, f'{where}「{x[max(0, i - 2):i + 3]}」')
             elif isinstance(x, dict):
                 for k, v in x.items():
                     walk(v, k, where)
@@ -73,6 +86,9 @@ for uid in ids:
                 walk(it, None, f"{d.get('day')} 日目 {i}")
         walk(problems[uid].get('ri') or [], None, '腕だめし')
         print(f'  段 {st} の学年より上の漢字 {len(bad)}' + ('：' + '、'.join(f'{c}（{w}）' for c, w in list(bad.items())[:20]) if bad else ''))
+        if head_only:
+            print(f'  頭注だけで通っている字 {len(head_only)}（その単元の用語なら残し、ふつうのことばならかなに開く。D-135）：'
+                  + '、'.join(f'{c}{w}' for c, w in list(head_only.items())[:20]))
     if shot:
         cells = []
         def add(label, s):
