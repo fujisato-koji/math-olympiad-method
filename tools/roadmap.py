@@ -197,6 +197,22 @@ def qid(unit_id, item):
     return f"{unit_id}:{hashlib.sha1(body.encode('utf-8')).hexdigest()[:10]}"
 
 
+CHOICE_LABEL = re.compile(r"^([ア-ン]|[A-Z]|[①-⑳])(\s|$)")
+CHOICE_LAST = ("どれでもない", "どちらでもない", "どれも ちがう", "どれも ちがう。")
+
+
+def show_choices(key, item):
+    """画面に出す選択肢の順（D-134）。書いた順は正解が 1 番目にかたよる（中身の選択肢 3,129 問の 62%、2026-11-13）ので、
+    問題の記号 key を種に、いつも同じ順に混ぜる。図の印（ア・イ・ウ、A・B、①②）だけの選択肢と order: fixed の問題はそのまま、
+    「どれでもない」などは最後に置く。答えは文字で比べる（app.js の isRight）ので、並びを変えても正誤と記録は変わらない。"""
+    cs = item.get("choices")
+    if not cs or item.get("order") == "fixed" or all(CHOICE_LABEL.match(str(c).strip()) for c in cs):
+        return cs
+    last = [c for c in cs if str(c).strip() in CHOICE_LAST]
+    rest = [c for c in cs if str(c).strip() not in CHOICE_LAST]
+    return sorted(rest, key=lambda c: hashlib.sha1(f"{key}|{c}".encode("utf-8")).hexdigest()) + last
+
+
 def mark_ids(unit_id, days):
     """各問題に qid、各日に key（日のねらい、なければ種類と何番目か）を付け、単元の版（問題の記号の指紋）を返す。"""
     seen, kinds, all_ids = {}, {}, []
@@ -670,11 +686,14 @@ def build(data, problems):
         days = expand(u)
         doc = problems.get(u["id"], {})
         for d in doc.get("days", []):
-            days[d["day"] - 1]["items"] = d.get("items", [])
+            days[d["day"] - 1]["items"] = [dict(it) for it in d.get("items", [])]  # 写しに qid と画面の並びを書く（元のデータは変えない）
             if d.get("extra"):
-                days[d["day"] - 1]["extra"] = d["extra"]
+                days[d["day"] - 1]["extra"] = [dict(it) for it in d["extra"]]
         ver = mark_ids(u["id"], days)
         ri = [dict(it, qid=qid(u["id"], it)) for it in doc.get("ri") or []]
+        for it in [x for d in days for x in d.get("items", []) + d.get("extra", [])] + ri:
+            if it.get("choices"):
+                it["choices"] = show_choices(it["qid"], it)  # 正解が 1 番目にかたよらないよう混ぜる（D-134）
         out_units.append({"id": u["id"], "title": u["title"], "lane": m.group(1),
                           "stage": u["stage"], **({"level": u["level"]} if u.get("level") else {}), "region": u.get("region"), "needs": u.get("needs", []), "days": days, **({"ver": ver} if ver else {}), **({"ri": ri} if ri else {}),
                           **({"measure": True} if u.get("measure") else {}),

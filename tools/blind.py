@@ -8,6 +8,8 @@ from pathlib import Path
 import yaml
 yload = lambda s: yaml.load(s, Loader=getattr(yaml, "CSafeLoader", yaml.SafeLoader))  # C 版の読み込み口（libyaml）があれば使う。Python 版の約 9 倍速く、全部の YAML で結果が同じ（D-132）
 REPO = Path(__file__).resolve().parents[1]
+sys.path.insert(0, str(REPO / 'tools'))
+import roadmap as RM  # noqa: E402  画面と同じ選択肢の順（D-134）
 # 答えを抜いた問題と画像はリポジトリの外に置く（係が答えを見ないように、画像をためないように）
 OUT = Path(tempfile.gettempdir()) / 'michisuji-blind' / REPO.name
 OUT.mkdir(parents=True, exist_ok=True)
@@ -31,7 +33,8 @@ def answerable(it):
 cmd, ids = sys.argv[1], sys.argv[2:]
 if cmd == 'build':
     for uid in ids:
-        rows = [{'key': k, 'part': it.get('part'), 'text': it.get('text', ''), 'choices': it.get('choices'),
+        # 選択肢は画面と同じ順（D-134、roadmap.show_choices）で見せる。書いた順は正解が 1 番目にかたよるため
+        rows = [{'key': k, 'part': it.get('part'), 'text': it.get('text', ''), 'choices': RM.show_choices(RM.qid(uid, it), it),
                  'figure': it.get('figure'), 'svg': it.get('svg')} for k, it in items(uid) if answerable(it)]
         (OUT / f'{uid}.json').write_text(json.dumps(rows, ensure_ascii=False, indent=1), encoding='utf-8')
         print(uid, len(rows), '問', OUT / f'{uid}.json')
