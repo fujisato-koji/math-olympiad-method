@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>プライバシー — みちすじ</title>
+<link rel="icon" href="icons/icon-192.png">
+<style>
+  :root { --bg: #f6f3ec; --ink: #1c2230; --muted: #5a6172; --line: #e4ded1; --card: #fffdf9; }
+  @media (prefers-color-scheme: dark) { :root { --bg: #0d1220; --ink: #e8ecff; --muted: #a9b1d6; --line: #26304f; --card: #141b33; } }
+  body { margin: 0; background: var(--bg); color: var(--ink); font: 16px/1.8 "Zen Maru Gothic", "Hiragino Sans", "Yu Gothic UI", "Meiryo", system-ui, sans-serif; }
+  main { max-width: 760px; margin: 0 auto; padding: 32px 16px 64px; }
+  h1 { font-size: 26px; margin: 0 0 4px; }
+  h2 { font-size: 18px; margin: 28px 0 6px; }
+  p, li { color: var(--ink); }
+  .muted { color: var(--muted); font-size: 14px; }
+  section.en { margin-top: 40px; padding-top: 16px; border-top: 1px solid var(--line); }
+  a { color: inherit; }
+</style>
+</head>
+<body>
+<main>
+  <h1>プライバシー</h1>
+  <p class="muted">みちすじ（<a href="./">https://fujisato-koji.github.io/math-olympiad-method/</a>）・2026 年 11 月 9 日（ログインを保つサーバを足した）</p>
+
+  <h2>こちらは記録を受け取りません</h2>
+  <p>みちすじには、記録を受け取るサーバがありません。解いた問題、済んだ単元、呼び名などの記録は、次のどれかにだけ置きます。</p>
+  <ul>
+    <li>使っている端末のブラウザの中（ログインしないとき）</li>
+    <li>ログインした人の Google ドライブの、このページ専用の隠しフォルダ（Google でログインしたとき）</li>
+    <li>家族と共有したときは、共有した人の Google ドライブの「みちすじの記録」というファイル（共有した相手も読み書きできます）</li>
+  </ul>
+  <p>どの場合も、記録がこちらに送られることはありません。こちらが動かすのは、ログインを保つための小さなサーバだけです（下の「ログインを保つサーバ」）。</p>
+
+  <h2>Google でログインしたとき</h2>
+  <ul>
+    <li>求める権限は、Google ドライブの「このアプリ自身のデータの表示と管理」（<code>drive.appdata</code>）と、「このアプリで作ったファイルと、自分で選んだファイルの表示と管理」（<code>drive.file</code>）だけです。ドライブのほかのファイルは見えません。</li>
+    <li>家族と共有するときは、入力したメールアドレスの相手に、Google からお知らせが届きます。共有された人は、Google のファイル選びで「みちすじの記録」を選んで開きます。共有は Google ドライブの共有の設定でやめられます。</li>
+    <li>ログインの鍵（アクセストークン）は、そのブラウザのタブの中にだけ置き、約 1 時間で切れます。切れたら、ログインを保つサーバで黙って取り直します。</li>
+    <li>どのアカウントのドライブかを画面に出すため、Google からメールアドレスを受け取ることがあります。画面に出すだけで、どこにも送りません。</li>
+    <li>ログインとドライブは Google のサービスです。Google での扱いは <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Google のプライバシーポリシー</a>によります。</li>
+  </ul>
+
+  <h2>ログインを保つサーバ</h2>
+  <ul>
+    <li>一度ログインすれば切れないように、Cloudflare Workers に小さなサーバを置いています。することは、Google から受けたログインの番号を鍵に換えることと、切れた鍵を取り直すことだけです。</li>
+    <li>このサーバは何も保存しません。記録（ドライブの中身）は通りません。</li>
+    <li>鍵を取り直すための更新の鍵（リフレッシュトークン）は、このサーバでしか開けない暗号にして、使っている端末のブラウザに置きます。「ログアウト」を押すと消えます。</li>
+    <li>サーバを動かす Cloudflare には、端末の IP アドレスなどが伝わります。Cloudflare での扱いは <a href="https://www.cloudflare.com/privacypolicy/" target="_blank" rel="noopener">Cloudflare のプライバシーポリシー</a>によります。</li>
+  </ul>
+  <h2>記録を消すには</h2>
+  <ul>
+    <li>端末の記録は、画面の「記録」の窓の「この人の記録を消す」で消せます。ブラウザのサイトのデータを消しても消えます。</li>
+    <li>Google ドライブの記録は、Google ドライブの設定の「アプリを管理」で、みちすじの「隠しアプリデータを削除」を選ぶと消えます。</li>
+    <li>ログインの許可は、<a href="https://myaccount.google.com/permissions" target="_blank" rel="noopener">Google アカウントのサードパーティ アクセス</a>で取り消せます。</li>
+  </ul>
+
+  <h2>ほかに使うもの</h2>
+  <p>画面の字は Google Fonts から、ログインの部品は Google から読み込みます。そのとき、Google のサーバに端末の IP アドレスなどが伝わります。広告、アクセス解析、外部の追跡は使っていません。</p>
+
+  <h2>問い合わせ</h2>
+  <p><a href="https://github.com/fujisato-koji/math-olympiad-method/issues" target="_blank" rel="noopener">GitHub の issues</a> にお書きください。</p>
+
+  <section class="en" lang="en">
+    <h1>Privacy</h1>
+    <p class="muted">Michisuji · 9 November 2026</p>
+    <p>Michisuji has no server that receives your records. Your learning records stay in your browser on your device, or, if you sign in with Google, in a hidden app-specific folder in your own Google Drive (or, if you share with family, in a shared file in the Drive of the person who shared). We never receive your records.</p>
+    <p>When you sign in, we request only the Google Drive scopes <code>drive.appdata</code> (the app's own hidden data) and <code>drive.file</code> (files the app created or that you picked), and nothing else in your Drive. If you share your records with family, a file named "みちすじの記録" is created in your Drive and shared with the address you enter; they open it with the Google file picker. The access token is kept only in the browser tab and expires after about one hour. To keep you signed in, a small server on Cloudflare Workers exchanges the sign-in code for tokens and renews the access token; it stores nothing and your records never pass through it. The refresh token is kept on your device, encrypted so that only that server can open it, and is deleted when you press "ログアウト" (log out). Cloudflare receives your IP address when the server is used. Your email address may be shown on screen to tell you which account is in use; it is not sent anywhere.</p>
+    <p>To delete your data, use "この人の記録を消す" in the record menu, and delete the app's hidden data under "Manage apps" in Google Drive settings. You can revoke access at <a href="https://myaccount.google.com/permissions" target="_blank" rel="noopener">your Google Account permissions</a>. Fonts and the sign-in library are loaded from Google. No ads, analytics or trackers are used. Contact: <a href="https://github.com/fujisato-koji/math-olympiad-method/issues" target="_blank" rel="noopener">GitHub issues</a>.</p>
+  </section>
+</main>
+</body>
+</html>
