@@ -46,7 +46,7 @@ days:
           - それぞれの かどを かぞえてみよう。
           - text: さかさまの かたちの かどに、てんを つけたよ。
             svg: '<svg viewBox="0 0 320 200" xmlns="http://www.w3.org/2000/svg"><polygon points="96.2,43 223.8,43 160,153" fill="#7bc96f" fill-opacity="0.7" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><circle cx="96.2" cy="43" r="5" fill="#e8590c" fill-opacity="0.95" stroke="currentColor" stroke-width="1.5"/><circle cx="223.8" cy="43" r="5" fill="#e8590c" fill-opacity="0.95" stroke="currentColor" stroke-width="1.5"/><circle cx="160" cy="153" r="5" fill="#e8590c" fill-opacity="0.95" stroke="currentColor" stroke-width="1.5"/></svg>'
-          - かどの かずが、ひとつだけ ちがうのは どれかな。
+          - ア、イ、ウ の かどの かずを ならべて くらべよう。
         paths:
           - [かどを かぞえる, ア と ウ は 3 つ、イ は 4 つ, イ]
       - part: 今日
@@ -404,7 +404,7 @@ days:
           - あいて いる ところは、どんな ならびかな。
           - text: あいて いる ますに、てんを つけたよ。よこに いくつ ならんで いるかな。
             svg: '<svg viewBox="0 0 320 200" xmlns="http://www.w3.org/2000/svg"><rect x="85" y="50" width="50" height="50" rx="3" fill="#f08080" fill-opacity="0.75" stroke="currentColor" stroke-width="2"/><rect x="135" y="50" width="50" height="50" rx="3" fill="#f08080" fill-opacity="0.75" stroke="currentColor" stroke-width="2"/><rect x="185" y="50" width="50" height="50" rx="3" fill="#f08080" fill-opacity="0.75" stroke="currentColor" stroke-width="2"/><rect x="85" y="100" width="50" height="50" rx="3" fill="#f08080" fill-opacity="0.75" stroke="currentColor" stroke-width="2"/><rect x="135" y="100" width="50" height="50" fill="#8a8f9c" fill-opacity="0.6" stroke="currentColor" stroke-width="1" stroke-opacity="0.55"/><rect x="185" y="100" width="50" height="50" fill="#8a8f9c" fill-opacity="0.6" stroke="currentColor" stroke-width="1" stroke-opacity="0.55"/><circle cx="160" cy="125" r="6" fill="#e8590c" fill-opacity="0.95" stroke="currentColor" stroke-width="1.5"/><circle cx="210" cy="125" r="6" fill="#e8590c" fill-opacity="0.95" stroke="currentColor" stroke-width="1.5"/></svg>'
-          - おなじ かずだけ よこに ならんだ いろいたを えらぼう。
+          - あいて いる ますの かずと、ア、イ、ウ の いろいたの ますの かずを くらべよう。
         paths:
           - [あいて いる ところは よこに 2 つ, よこに 2 まいの いろいた, イ]
       - part: 挑戦
@@ -473,7 +473,7 @@ days:
           - あいて いる ところは、どんな ならびかな。
           - text: あいて いる ますに、てんを つけたよ。よこに いくつ ならんで いるかな。
             svg: '<svg viewBox="0 0 320 200" xmlns="http://www.w3.org/2000/svg"><rect x="60" y="50" width="50" height="50" rx="3" fill="#f5a25d" fill-opacity="0.75" stroke="currentColor" stroke-width="2"/><rect x="110" y="50" width="50" height="50" fill="#8a8f9c" fill-opacity="0.6" stroke="currentColor" stroke-width="1" stroke-opacity="0.55"/><rect x="160" y="50" width="50" height="50" fill="#8a8f9c" fill-opacity="0.6" stroke="currentColor" stroke-width="1" stroke-opacity="0.55"/><rect x="210" y="50" width="50" height="50" fill="#8a8f9c" fill-opacity="0.6" stroke="currentColor" stroke-width="1" stroke-opacity="0.55"/><rect x="60" y="100" width="50" height="50" rx="3" fill="#f5a25d" fill-opacity="0.75" stroke="currentColor" stroke-width="2"/><rect x="110" y="100" width="50" height="50" rx="3" fill="#f5a25d" fill-opacity="0.75" stroke="currentColor" stroke-width="2"/><rect x="160" y="100" width="50" height="50" rx="3" fill="#f5a25d" fill-opacity="0.75" stroke="currentColor" stroke-width="2"/><rect x="210" y="100" width="50" height="50" rx="3" fill="#f5a25d" fill-opacity="0.75" stroke="currentColor" stroke-width="2"/><circle cx="135" cy="75" r="6" fill="#e8590c" fill-opacity="0.95" stroke="currentColor" stroke-width="1.5"/><circle cx="185" cy="75" r="6" fill="#e8590c" fill-opacity="0.95" stroke="currentColor" stroke-width="1.5"/><circle cx="235" cy="75" r="6" fill="#e8590c" fill-opacity="0.95" stroke="currentColor" stroke-width="1.5"/></svg>'
-          - おなじ かずだけ よこに ならんだ いろいたを えらぼう。
+          - あいて いる ますの かずと、ア、イ、ウ の いろいたの ますの かずを くらべよう。
         paths:
           - [あいて いる ところは よこに 3 つ, ウ]
 
@@ -726,7 +726,7 @@ days:
           - あいて いる ところは、どんな ならびかな。
           - text: あいて いる ますに、てんを つけたよ。よこに いくつ ならんで いるかな。
             svg: '<svg viewBox="0 0 320 200" xmlns="http://www.w3.org/2000/svg"><rect x="45" y="54" width="46" height="46" rx="3" fill="#7bc96f" fill-opacity="0.75" stroke="currentColor" stroke-width="2"/><rect x="91" y="54" width="46" height="46" rx="3" fill="#7bc96f" fill-opacity="0.75" stroke="currentColor" stroke-width="2"/><rect x="137" y="54" width="46" height="46" fill="#8a8f9c" fill-opacity="0.6" stroke="currentColor" stroke-width="1" stroke-opacity="0.55"/><rect x="183" y="54" width="46" height="46" fill="#8a8f9c" fill-opacity="0.6" stroke="currentColor" stroke-width="1" stroke-opacity="0.55"/><rect x="229" y="54" width="46" height="46" fill="#8a8f9c" fill-opacity="0.6" stroke="currentColor" stroke-width="1" stroke-opacity="0.55"/><rect x="45" y="100" width="46" height="46" rx="3" fill="#7bc96f" fill-opacity="0.75" stroke="currentColor" stroke-width="2"/><rect x="91" y="100" width="46" height="46" rx="3" fill="#7bc96f" fill-opacity="0.75" stroke="currentColor" stroke-width="2"/><rect x="137" y="100" width="46" height="46" rx="3" fill="#7bc96f" fill-opacity="0.75" stroke="currentColor" stroke-width="2"/><rect x="183" y="100" width="46" height="46" rx="3" fill="#7bc96f" fill-opacity="0.75" stroke="currentColor" stroke-width="2"/><rect x="229" y="100" width="46" height="46" rx="3" fill="#7bc96f" fill-opacity="0.75" stroke="currentColor" stroke-width="2"/><circle cx="160" cy="77" r="6" fill="#e8590c" fill-opacity="0.95" stroke="currentColor" stroke-width="1.5"/><circle cx="206" cy="77" r="6" fill="#e8590c" fill-opacity="0.95" stroke="currentColor" stroke-width="1.5"/><circle cx="252" cy="77" r="6" fill="#e8590c" fill-opacity="0.95" stroke="currentColor" stroke-width="1.5"/></svg>'
-          - おなじ かずだけ よこに ならんだ いろいたを えらぼう。
+          - あいて いる ますの かずと、ア、イ、ウ の いろいたの ますの かずを くらべよう。
         paths:
           - [あいて いる ところは よこに 3 つ, ア]
       - part: 今日

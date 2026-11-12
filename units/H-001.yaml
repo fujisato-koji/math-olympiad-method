@@ -65,7 +65,7 @@ days:
           - 4 つ それぞれ、どう やって しらべるかを かんがえよう。
           - text: おもさは、目を とじて いても、手で もてば わかるね。
             svg: '<svg viewBox="0 0 320 200" xmlns="http://www.w3.org/2000/svg"><circle cx="110" cy="50" r="20" fill="#f3c969" fill-opacity=".45" stroke="currentColor" stroke-width="2"/><path d="M98 47.6q4.4 4 8.8 0" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/><path d="M113.2 47.6q4.4 4 8.8 0" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/><path d="M104 57q6 5 12 0" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/><line x1="110" y1="70" x2="110" y2="130.5" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><line x1="110" y1="130.5" x2="88" y2="180" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><line x1="110" y1="130.5" x2="132" y2="180" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><line x1="110" y1="86.5" x2="160" y2="112" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><line x1="110" y1="86.5" x2="160" y2="120" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><rect x="158" y="92" width="46" height="40" rx="3" fill="#c8ccd6" fill-opacity=".55" stroke="currentColor" stroke-width="2"/><line x1="181" y1="140" x2="181" y2="162" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/><polygon points="181,172 174.8,162 187.2,162" fill="currentColor"/><text x="196" y="166" font-size="14" text-anchor="start" fill="currentColor">ずっしり</text><text x="110" y="22" font-size="13" text-anchor="middle" fill="currentColor">目を とじて いる</text></svg>'
-          - 目の ほかに、手も 水も じしゃくも つかわずに わかる のは どれかな。
+          - のこりの 3 つも、しらべる ときに なにが いるか、1 つずつ かんがえよう。
         paths:
           - [目で 見る だけで しらべる, いろは 見れば わかる, いろ]
           - [おもさは 手、とけるかは 水、じしゃくに つくかは じしゃくで しらべる, のこる のは いろ]
@@ -126,7 +126,7 @@ days:
           - 水に 入れて まぜた あと、つぶが のこるか どうかで きめよう。
           - text: 1 つずつ、コップの 水に 入れて まぜ、よこから 見て しらべよう。
             svg: '<svg viewBox="0 0 320 200" xmlns="http://www.w3.org/2000/svg"><g transform="rotate(-20 44 70)"><line x1="61" y1="70" x2="96.7" y2="70" stroke="currentColor" stroke-width="3" stroke-linecap="round"/><ellipse cx="44" cy="70" rx="18.7" ry="7.6" fill="#c8ccd6" fill-opacity=".5" stroke="currentColor" stroke-width="2"/><path d="M29.6 69Q44 53.7 58.5 69Z" fill="#fff" fill-opacity=".85" stroke="currentColor" stroke-width="2"/><rect x="36.7" y="65.5" width="2.4" height="2.4" fill="none" stroke="currentColor" stroke-width="1"/><rect x="43.5" y="64" width="2.4" height="2.4" fill="none" stroke="currentColor" stroke-width="1"/><rect x="49.3" y="65.5" width="2.4" height="2.4" fill="none" stroke="currentColor" stroke-width="1"/></g><line x1="78" y1="98" x2="94.9" y2="105.8" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><polygon points="104,110 92.3,111.4 97.5,100.2" fill="currentColor"/><path d="M112.8 84Q131.4 81 150 84T187.2 84L180.9 149L119.1 149Z" fill="#7fc8f8" fill-opacity=".55"/><path d="M112.8 84Q131.4 81 150 84T187.2 84" fill="none" stroke="currentColor" stroke-width="1.5"/><path d="M109 70L117.2 150L182.8 150L191 70" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><line x1="168" y1="46" x2="152" y2="132" stroke="currentColor" stroke-width="3" stroke-linecap="round"/><path d="M118 120Q150 136 182 120" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><polygon points="188,116 180,125 177,116" fill="currentColor"/><path d="M252.2 112Q272 85 291.8 112Q272 139 252.2 112Z" fill="#fff" fill-opacity=".85" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><circle cx="267.5" cy="112" r="7.2" fill="#7fc8f8" fill-opacity=".85" stroke="currentColor" stroke-width="1.5"/><circle cx="267.5" cy="112" r="3.1" fill="currentColor"/><path d="M248 108L196 106M248 118L196 132" stroke="currentColor" stroke-width="1.5" stroke-dasharray="4 4" fill="none"/><text x="44" y="182" font-size="14" text-anchor="middle" fill="currentColor">入れる</text><text x="150" y="182" font-size="14" text-anchor="middle" fill="currentColor">まぜる</text><text x="272" y="182" font-size="14" text-anchor="middle" fill="currentColor">よこから 見る</text></svg>'
-          - まぜた あと、コップの そこに つぶが たまる のは どれかな。
+          - 見本を おもいだそう。まぜた あと、コップの そこは どう なって いたかな。
         paths:
           - [しおと さとうは まぜると 見えなく なる, すなは つぶが のこる, すな]
           - [すなは まぜても そこに たまる, とけない, すな]
@@ -157,7 +157,7 @@ days:
           - じしゃくが ひきつけた ものを おもいだそう。
           - text: てつの クリップは、じしゃくに ついたね。
             svg: '<svg viewBox="0 0 320 200" xmlns="http://www.w3.org/2000/svg"><path d="M124 88L124 58A36 36 0 0 1 196 58L196 88L179 88L179 58A19 19 0 0 0 141 58L141 88Z" fill="#f08080" fill-opacity=".8" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><rect x="124" y="77" width="17" height="11" fill="#c8ccd6" fill-opacity=".95" stroke="currentColor" stroke-width="2"/><rect x="179" y="77" width="17" height="11" fill="#c8ccd6" fill-opacity=".95" stroke="currentColor" stroke-width="2"/><path d="M128.9 98.5V118A3.4 3.4 0 0 0 135.8 118V92.8A5.2 5.2 0 0 0 125.5 92.8V120.3A6.9 6.9 0 0 0 139.3 120.3V98.5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" transform="rotate(0 132.4 87)"/><path d="M128.9 136.5V156.1A3.4 3.4 0 0 0 135.8 156.1V130.8A5.2 5.2 0 0 0 125.5 130.8V158.3A6.9 6.9 0 0 0 139.3 158.3V136.5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" transform="rotate(0 132.4 125)"/><path d="M183.9 98.5V118A3.4 3.4 0 0 0 190.8 118V92.8A5.2 5.2 0 0 0 180.5 92.8V120.3A6.9 6.9 0 0 0 194.3 120.3V98.5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" transform="rotate(-14 187.4 87)"/><text x="160" y="188" font-size="15" text-anchor="middle" fill="currentColor">てつの クリップ</text></svg>'
-          - 4 つの うち、てつで できて いる ものは どれかな。
+          - 4 つが それぞれ、なにで できて いるか いって みよう。
         paths:
           - [じしゃくは てつを ひきつける, くぎは てつ, くぎ]
           - [えんぴつは 木、わゴムは ゴム、かみは かみ, どれも てつ では ない, くぎ]
@@ -232,10 +232,10 @@ days:
         answer: さとう
         check: "'さとう'"
         hints:
-          - 水に 入れて まぜた あと、見えなく なる ものを さがそう。
-          - text: 石と 木を 水に 入れて まぜて みたよ。どちらも 見えて いるね。
-            svg: '<svg viewBox="0 0 320 200" xmlns="http://www.w3.org/2000/svg"><path d="M44.2 70Q67.1 67 90 70T135.8 70L128.1 159L51.9 159Z" fill="#7fc8f8" fill-opacity=".55"/><path d="M44.2 70Q67.1 67 90 70T135.8 70" fill="none" stroke="currentColor" stroke-width="1.5"/><path d="M40 50L50 160L130 160L140 50" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><path d="M72.4 154Q68.4 141.2 82 136.4Q94.8 131.6 104.4 141.2Q111.6 150.8 101.2 155.6Q86.8 158.8 72.4 154Z" fill="#c8ccd6" fill-opacity=".9" stroke="currentColor" stroke-width="2"/><path d="M184.2 70Q207.1 67 230 70T275.8 70L268.1 159L191.9 159Z" fill="#7fc8f8" fill-opacity=".55"/><path d="M184.2 70Q207.1 67 230 70T275.8 70" fill="none" stroke="currentColor" stroke-width="1.5"/><path d="M180 50L190 160L270 160L280 50" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><path d="M248 61H214A6.1 11 0 0 0 214 83H248" fill="#c9a36b" fill-opacity=".6" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><path d="M220 67.8H236M226 76.2H242" fill="none" stroke="currentColor" stroke-width="1.2" stroke-opacity=".5" stroke-linecap="round"/><ellipse cx="248" cy="72" rx="6.1" ry="11" fill="#c9a36b" fill-opacity=".25" stroke="currentColor" stroke-width="2"/><ellipse cx="248" cy="72" rx="3.6" ry="6.8" fill="none" stroke="currentColor" stroke-width="1.2"/><ellipse cx="248" cy="72" rx="1.5" ry="2.8" fill="none" stroke="currentColor" stroke-width="1.2"/><text x="90" y="188" font-size="15" text-anchor="middle" fill="currentColor" font-weight="bold">石</text><text x="230" y="188" font-size="15" text-anchor="middle" fill="currentColor" font-weight="bold">木</text></svg>'
-          - のこりの 2 つ、すなと さとうは、まぜると どう なったかな。2 日目を おもいだそう。
+          - とける とは、まぜると つぶが 見えなく なる ことだったね。
+          - text: 石を 水に 入れて まぜて みたよ。石は 見えて いるね。
+            svg: '<svg viewBox="0 0 320 200" xmlns="http://www.w3.org/2000/svg"><g transform="translate(70 0)"><path d="M44.2 70Q67.1 67 90 70T135.8 70L128.1 159L51.9 159Z" fill="#7fc8f8" fill-opacity=".55"/><path d="M44.2 70Q67.1 67 90 70T135.8 70" fill="none" stroke="currentColor" stroke-width="1.5"/><path d="M40 50L50 160L130 160L140 50" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><path d="M72.4 154Q68.4 141.2 82 136.4Q94.8 131.6 104.4 141.2Q111.6 150.8 101.2 155.6Q86.8 158.8 72.4 154Z" fill="#c8ccd6" fill-opacity=".9" stroke="currentColor" stroke-width="2"/><text x="90" y="188" font-size="15" text-anchor="middle" fill="currentColor" font-weight="bold">石</text></g></svg>'
+          - ほかの 3 つも、まぜた あと 見えなく なるか、1 つずつ おもいうかべよう。2 日目を おもいだそう。
         paths:
           - [水に 入れて まぜる, さとうは 見えなく なる, さとう]
           - [すな・石・木は まぜても 見える, とけない, さとう]
@@ -284,7 +284,7 @@ days:
           - じしゃくは、なにで できた ものを ひきつけたかな。
           - text: てつの クリップは、じしゃくに ついたね。
             svg: '<svg viewBox="0 0 320 200" xmlns="http://www.w3.org/2000/svg"><path d="M124 88L124 58A36 36 0 0 1 196 58L196 88L179 88L179 58A19 19 0 0 0 141 58L141 88Z" fill="#f08080" fill-opacity=".8" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><rect x="124" y="77" width="17" height="11" fill="#c8ccd6" fill-opacity=".95" stroke="currentColor" stroke-width="2"/><rect x="179" y="77" width="17" height="11" fill="#c8ccd6" fill-opacity=".95" stroke="currentColor" stroke-width="2"/><path d="M128.9 98.5V118A3.4 3.4 0 0 0 135.8 118V92.8A5.2 5.2 0 0 0 125.5 92.8V120.3A6.9 6.9 0 0 0 139.3 120.3V98.5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" transform="rotate(0 132.4 87)"/><path d="M128.9 136.5V156.1A3.4 3.4 0 0 0 135.8 156.1V130.8A5.2 5.2 0 0 0 125.5 130.8V158.3A6.9 6.9 0 0 0 139.3 158.3V136.5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" transform="rotate(0 132.4 125)"/><path d="M183.9 98.5V118A3.4 3.4 0 0 0 190.8 118V92.8A5.2 5.2 0 0 0 180.5 92.8V120.3A6.9 6.9 0 0 0 194.3 120.3V98.5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" transform="rotate(-14 187.4 87)"/><text x="160" y="188" font-size="15" text-anchor="middle" fill="currentColor">てつの クリップ</text></svg>'
-          - 4 つの うち、てつで できて いる ものを さがそう。
+          - 4 つが それぞれ、なにで できて いるか いって みよう。
         paths:
           - [じしゃくは てつ, くぎ]
           - [えんぴつ・わゴム・かみは てつ では ない, くぎ]
@@ -333,7 +333,7 @@ ri:
       - 4 つが それぞれ、なにで できて いるか 見よう。
       - text: てつの クリップは、じしゃくに ついたね。
         svg: '<svg viewBox="0 0 320 200" xmlns="http://www.w3.org/2000/svg"><path d="M124 88L124 58A36 36 0 0 1 196 58L196 88L179 88L179 58A19 19 0 0 0 141 58L141 88Z" fill="#f08080" fill-opacity=".8" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><rect x="124" y="77" width="17" height="11" fill="#c8ccd6" fill-opacity=".95" stroke="currentColor" stroke-width="2"/><rect x="179" y="77" width="17" height="11" fill="#c8ccd6" fill-opacity=".95" stroke="currentColor" stroke-width="2"/><path d="M128.9 98.5V118A3.4 3.4 0 0 0 135.8 118V92.8A5.2 5.2 0 0 0 125.5 92.8V120.3A6.9 6.9 0 0 0 139.3 120.3V98.5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" transform="rotate(0 132.4 87)"/><path d="M128.9 136.5V156.1A3.4 3.4 0 0 0 135.8 156.1V130.8A5.2 5.2 0 0 0 125.5 130.8V158.3A6.9 6.9 0 0 0 139.3 158.3V136.5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" transform="rotate(0 132.4 125)"/><path d="M183.9 98.5V118A3.4 3.4 0 0 0 190.8 118V92.8A5.2 5.2 0 0 0 180.5 92.8V120.3A6.9 6.9 0 0 0 194.3 120.3V98.5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" transform="rotate(-14 187.4 87)"/><text x="160" y="188" font-size="15" text-anchor="middle" fill="currentColor">てつの クリップ</text></svg>'
-      - てつで できて いる ものを さがそう。
+      - 4 つを 1 つずつ、じしゃくに ちかづけた ところを おもいうかべよう。
     paths:
       - [じしゃくは てつ, くぎ]
       - [えんぴつは 木、わゴムは ゴム、かみは かみ, くぎ]
@@ -347,10 +347,10 @@ ri:
     answer: さとう
     check: "'さとう'"
     hints:
-      - 水の 中で 見えなく なる ものを さがそう。
-      - text: 石と 木を 水に 入れて まぜて みたよ。どちらも 見えて いるね。
-        svg: '<svg viewBox="0 0 320 200" xmlns="http://www.w3.org/2000/svg"><path d="M44.2 70Q67.1 67 90 70T135.8 70L128.1 159L51.9 159Z" fill="#7fc8f8" fill-opacity=".55"/><path d="M44.2 70Q67.1 67 90 70T135.8 70" fill="none" stroke="currentColor" stroke-width="1.5"/><path d="M40 50L50 160L130 160L140 50" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><path d="M72.4 154Q68.4 141.2 82 136.4Q94.8 131.6 104.4 141.2Q111.6 150.8 101.2 155.6Q86.8 158.8 72.4 154Z" fill="#c8ccd6" fill-opacity=".9" stroke="currentColor" stroke-width="2"/><path d="M184.2 70Q207.1 67 230 70T275.8 70L268.1 159L191.9 159Z" fill="#7fc8f8" fill-opacity=".55"/><path d="M184.2 70Q207.1 67 230 70T275.8 70" fill="none" stroke="currentColor" stroke-width="1.5"/><path d="M180 50L190 160L270 160L280 50" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><path d="M248 61H214A6.1 11 0 0 0 214 83H248" fill="#c9a36b" fill-opacity=".6" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><path d="M220 67.8H236M226 76.2H242" fill="none" stroke="currentColor" stroke-width="1.2" stroke-opacity=".5" stroke-linecap="round"/><ellipse cx="248" cy="72" rx="6.1" ry="11" fill="#c9a36b" fill-opacity=".25" stroke="currentColor" stroke-width="2"/><ellipse cx="248" cy="72" rx="3.6" ry="6.8" fill="none" stroke="currentColor" stroke-width="1.2"/><ellipse cx="248" cy="72" rx="1.5" ry="2.8" fill="none" stroke="currentColor" stroke-width="1.2"/><text x="90" y="188" font-size="15" text-anchor="middle" fill="currentColor" font-weight="bold">石</text><text x="230" y="188" font-size="15" text-anchor="middle" fill="currentColor" font-weight="bold">木</text></svg>'
-      - すなと さとう、まぜると つぶが 見えなく なる のは どちらかな。
+      - とける とは、まぜると つぶが 見えなく なる ことだったね。
+      - text: 石を 水に 入れて まぜて みたよ。石は 見えて いるね。
+        svg: '<svg viewBox="0 0 320 200" xmlns="http://www.w3.org/2000/svg"><g transform="translate(70 0)"><path d="M44.2 70Q67.1 67 90 70T135.8 70L128.1 159L51.9 159Z" fill="#7fc8f8" fill-opacity=".55"/><path d="M44.2 70Q67.1 67 90 70T135.8 70" fill="none" stroke="currentColor" stroke-width="1.5"/><path d="M40 50L50 160L130 160L140 50" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><path d="M72.4 154Q68.4 141.2 82 136.4Q94.8 131.6 104.4 141.2Q111.6 150.8 101.2 155.6Q86.8 158.8 72.4 154Z" fill="#c8ccd6" fill-opacity=".9" stroke="currentColor" stroke-width="2"/><text x="90" y="188" font-size="15" text-anchor="middle" fill="currentColor" font-weight="bold">石</text></g></svg>'
+      - ほかの 3 つも、まぜた あと 見えなく なるか、1 つずつ おもいうかべよう。
     paths:
       - [水に 入れる, さとう]
       - [すな・石・木は のこる, さとう]

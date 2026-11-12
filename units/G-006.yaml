@@ -1,17 +1,19 @@
 # G-006 直角と平行、三角形と四角形
 #
-# 書き方は N-001 の頭の注のとおり。
-# ことば：へん、ちょうてん、さんかくけい、しかくけい、ちょっかく、ちょうほうけい、せいほうけい、ちょっかくさんかくけい、へいこう。
-# 直角は、紙を 2 回折ってつくった角（折り目と折り目を重ねる）と比べて確かめる。📐 のいちばん大きい角も直角。
-# 点の図：⚪ は方眼紙の点、🔴 を順にまっすぐな線で結ぶ。点の縦と横の間は同じとみる。
-# 平行は、2 本の 🟦 の帯や、カタカナ・記号の形（ニ、ロ、コ、＝ など）で見る。書体で形が少し変わるので、まぎれない字だけにした。
-# 正方形は長方形の仲間（3 日目のわけ）なので、正方形の図の選択肢には「ちょうほうけい」を入れない（答えが 2 つにならないように）。
+# 段 2・水準 2・5 日。三角形と四角形（辺と頂点）、直角と長方形・正方形・直角三角形、平行、G-002 と混ぜる、確かめ。
+# 子の画面には text、svg、choices、ヒントだけを出す。answer、check、paths、explain、note は保護者用。
+# ヒントは答えを書かず、見方・調べ方だけを示す。図の付いたヒントは、答えの手前までを絵で見せる。
+# 図は svg（D-129）。方眼紙の点はうすい小さな点、むすぶ点は赤い点、むすんだ辺は青い線。直角のしるしはだいだいの小さなかぎ。
+# 直角は、紙を 2 回折ってつくった角（黄色の「おった紙のかど」）を当てて確かめる。1 日目の見本の折り方の絵と同じ形。
+# カタカナと記号（コ、ロ、ハ、ヘ、ン、ノ、ニ、ト、＝、＜、＋）は書体に頼らず、太い線で描く。
+# 子に見せることば：三角形、四角形、長方形、正方形、直角、直角三角形は漢字（小 2 までの字）。へん、ちょう点、へいこうはかな。
+# 正方形は長方形の仲間（3 日目のわけ）なので、正方形の図の選択肢には「長方形」を入れない（答えが 2 つにならないように）。
 # 前提は G-002 だけで数の単元がないので、数は 1 つずつ数えて答える（たし算は使わない）。答えは 10 まで。
 # 角の大きさ（度）、平行線と角（同位角・錯角）、三角形の角の和は G-009 以降で扱う。ここでは「まじわらない」「はばが同じ」まで。
 # 地図に plan がないので既定の並び（導入・練習・わけ・混ぜる・確認）。各日のねらいは次のように決めた。
 #   1 日目 三角形と四角形（辺と頂点）　2 日目 直角、長方形・正方形・直角三角形　3 日目 平行とわけ
 #   4 日目 G-002（分ける・組み合わせる）と混ぜる　5 日目 確認
-# check：点の図は 🔴 の位置から形の名前を出す式、色板の中の正方形は大きさごとに数える式。
+# check：点の図は赤い点の位置（行, 列）から形の名前を出す式、色板の中の正方形は大きさごとに数える式。
 # 字の形と言葉の決まりを問う問題は約束ごとなので check を付けない。
 
 id: G-006
@@ -19,637 +21,800 @@ days:
   - day: 1
     items:
       - part: 見本
-        text: まっすぐな せんで かこまれた かたちの なまえを しろう。⚪ は ほうがんしの てん です。
-        figure: "🔴⚪⚪🔴\n⚪⚪⚪⚪\n⚪🔴⚪⚪"
-        explain: 3 ぼんの まっすぐな せんで かこまれた かたちを さんかくけい、4 ほんの まっすぐな せんで かこまれた かたちを しかくけい と いいます。まわりの せんを へん、かどの てんを ちょうてん と いいます。🔴 を じゅんに むすぶと、へんが 3 つ、ちょうてんが 3 つの さんかくけいが できます。
+        id: "55c2a8c304"
+        text: |-
+          まっすぐな 線で かこまれた かたちを しらべよう。
+          3 本の 線で かこまれた かたちを 三角形、4 本の 線で かこまれた かたちを 四角形 と いいます。
+          まわりの 線を へん、かどの 点を ちょう点 と いいます。
+        svg: '<svg viewBox="0 0 320 200" xmlns="http://www.w3.org/2000/svg"><polygon points="28,132 142,132 70,36" fill="#f3c969" fill-opacity="0.4" stroke="#3d8bd4" stroke-width="3.5" stroke-linejoin="round"/><polygon points="190,48 284,34 302,132 200,128" fill="#7fc8f8" fill-opacity="0.4" stroke="#3d8bd4" stroke-width="3.5" stroke-linejoin="round"/><circle cx="28" cy="132" r="6" fill="#f08080" fill-opacity="0.95" stroke="currentColor" stroke-width="1.5"/><circle cx="142" cy="132" r="6" fill="#f08080" fill-opacity="0.95" stroke="currentColor" stroke-width="1.5"/><circle cx="70" cy="36" r="6" fill="#f08080" fill-opacity="0.95" stroke="currentColor" stroke-width="1.5"/><circle cx="190" cy="48" r="6" fill="#f08080" fill-opacity="0.95" stroke="currentColor" stroke-width="1.5"/><circle cx="284" cy="34" r="6" fill="#f08080" fill-opacity="0.95" stroke="currentColor" stroke-width="1.5"/><circle cx="302" cy="132" r="6" fill="#f08080" fill-opacity="0.95" stroke="currentColor" stroke-width="1.5"/><circle cx="200" cy="128" r="6" fill="#f08080" fill-opacity="0.95" stroke="currentColor" stroke-width="1.5"/><text x="102" y="26" font-size="14" text-anchor="start" fill="currentColor">ちょう点</text><line x1="100" y1="22" x2="80" y2="33" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/><text x="118" y="86" font-size="14" text-anchor="start" fill="currentColor">へん</text><line x1="116" y1="81" x2="109" y2="81" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/><text x="85" y="160" font-size="16" text-anchor="middle" fill="currentColor">三角形</text><text x="85" y="182" font-size="13" text-anchor="middle" fill="currentColor">へん 3 本・ちょう点 3 つ</text><text x="246" y="160" font-size="16" text-anchor="middle" fill="currentColor">四角形</text><text x="246" y="182" font-size="13" text-anchor="middle" fill="currentColor">へん 4 本・ちょう点 4 つ</text></svg>'
+        explain: 3 本の まっすぐな 線で かこまれた かたちを 三角形、4 本の まっすぐな 線で かこまれた かたちを 四角形 と いいます。まわりの 線が へん、かどの 点が ちょう点 です。三角形は へんも ちょう点も 3 つ、四角形は へんも ちょう点も 4 つ です。かたむいて いても、へんの ながさが ばらばらでも、まっすぐな 線で すきまなく かこまれて いれば なかま です。
       - part: 思い出す
-        text: いろで わけて あります。いくつに わかれて いますか。
-        figure: "🟦🟦🟥\n🟨🟨🟥"
+        id: "4e6a6c7d21"
+        text: 大きな しかくを、色で わけました。いくつに わかれて いますか。
+        svg: '<svg viewBox="0 0 320 200" xmlns="http://www.w3.org/2000/svg"><rect x="85" y="50" width="100" height="50" rx="3" fill="#6fa8f0" fill-opacity="0.75" stroke="currentColor" stroke-width="2"/><rect x="85" y="100" width="100" height="50" rx="3" fill="#f3c969" fill-opacity="0.75" stroke="currentColor" stroke-width="2"/><rect x="185" y="50" width="50" height="100" rx="3" fill="#f08080" fill-opacity="0.75" stroke="currentColor" stroke-width="2"/></svg>'
         answer: 3
-        check: "len(set(''.join(fig.splitlines())))"
+        check: "len(set('BBR/YYR'.replace('/', '')))"
         hints:
-          - おなじ いろの まとまりを ひとつと みよう。
-          - まとまりを ひとつずつ ゆびで かこもう。
-          - かこんだ まとまりを かぞえよう。
+          - おなじ 色の ところを 1 つと 見よう。
+          - text: わかれた ところを、すこし はなして ならべたよ。
+            svg: '<svg viewBox="0 0 320 200" xmlns="http://www.w3.org/2000/svg"><rect x="75" y="40" width="100" height="50" rx="3" fill="#6fa8f0" fill-opacity="0.75" stroke="currentColor" stroke-width="2"/><rect x="75" y="110" width="100" height="50" rx="3" fill="#f3c969" fill-opacity="0.75" stroke="currentColor" stroke-width="2"/><rect x="195" y="50" width="50" height="100" rx="3" fill="#f08080" fill-opacity="0.75" stroke="currentColor" stroke-width="2"/></svg>'
+          - ゆびで さして、1 つずつ かぞえよう。
         paths:
-          - [🟦 🟥 🟨 の まとまり, 3 つ]
+          - [あお・きいろ・あかの まとまり, 3 つ]
+          - [わける 線で 切りはなす, 1、2、3, 3 つ]
       - part: 思い出す
-        text: しかくに、かどから かどへ ななめに まっすぐな せんを ひいて、2 つに わけます。できる かたちは なんですか。
+        id: "d75b9b0cdb"
+        text: しかくに、かどから かどへ ななめに 線を ひいて、2 つに わけました。できた かたちは 何ですか。
+        svg: '<svg viewBox="0 0 320 200" xmlns="http://www.w3.org/2000/svg"><polygon points="110,45 210,45 210,145 110,145" fill="#7fc8f8" fill-opacity="0.45" stroke="currentColor" stroke-width="2.5" stroke-linejoin="round"/><line x1="110" y1="45" x2="210" y2="145" stroke="#e8590c" stroke-width="3.5" stroke-linecap="round"/></svg>'
         choices: [さんかく, しかく, まる]
         answer: さんかく
         hints:
-          - おりがみを、かどと かどが あうように おってみよう。
-          - ひらいて、おりめで わかれた かたちを みよう。
-          - わかれた かたちの かどを かぞえよう。
+          - おりがみを、かどと かどが あうように おって みよう。
+          - text: わかれた かたちの 1 つに 色を ぬったよ。
+            svg: '<svg viewBox="0 0 320 200" xmlns="http://www.w3.org/2000/svg"><polygon points="102,53 202,153 102,153" fill="#f3c969" fill-opacity="0.7" stroke="currentColor" stroke-width="2.5" stroke-linejoin="round"/><polygon points="118,37 218,37 218,137" fill="#7fc8f8" fill-opacity="0.45" stroke="currentColor" stroke-width="2.5" stroke-linejoin="round"/></svg>'
+          - 色を ぬった かたちの かどを かぞえよう。
         paths:
           - [かどから かどへ おる, かどは 3 つ, さんかく]
       - part: 今日
-        text: 🔴 を じゅんに、まっすぐな せんで むすびます。できる かたちは どれですか。
-        figure: "⚪🔴⚪🔴\n⚪⚪⚪⚪\n🔴⚪⚪🔴"
-        choices: [さんかくけい, しかくけい]
-        answer: しかくけい
-        check: "{3: 'さんかくけい', 4: 'しかくけい'}[n('🔴')]"
+        id: "bb03dc9183"
+        text: あかい 点を、ぐるりと 1 しゅう する じゅんに、まっすぐな 線で むすびます。できる かたちは どれですか。
+        svg: '<svg viewBox="0 0 320 200" xmlns="http://www.w3.org/2000/svg"><circle cx="85" cy="50" r="4" fill="currentColor" fill-opacity="0.35"/><circle cx="185" cy="50" r="4" fill="currentColor" fill-opacity="0.35"/><circle cx="85" cy="100" r="4" fill="currentColor" fill-opacity="0.35"/><circle cx="135" cy="100" r="4" fill="currentColor" fill-opacity="0.35"/><circle cx="185" cy="100" r="4" fill="currentColor" fill-opacity="0.35"/><circle cx="235" cy="100" r="4" fill="currentColor" fill-opacity="0.35"/><circle cx="135" cy="150" r="4" fill="currentColor" fill-opacity="0.35"/><circle cx="185" cy="150" r="4" fill="currentColor" fill-opacity="0.35"/><circle cx="135" cy="50" r="8" fill="#f08080" fill-opacity="0.95" stroke="currentColor" stroke-width="1.5"/><circle cx="235" cy="50" r="8" fill="#f08080" fill-opacity="0.95" stroke="currentColor" stroke-width="1.5"/><circle cx="235" cy="150" r="8" fill="#f08080" fill-opacity="0.95" stroke="currentColor" stroke-width="1.5"/><circle cx="85" cy="150" r="8" fill="#f08080" fill-opacity="0.95" stroke="currentColor" stroke-width="1.5"/></svg>'
+        choices: [三角形, 四角形]
+        answer: 四角形
+        check: "{3: '三角形', 4: '四角形'}[len([(0, 1), (0, 3), (2, 3), (2, 0)])]"
         hints:
-          - 🔴 は いくつ あるかな。
-          - むすぶと、🔴 が ちょうてんに なるよ。
-          - へんが いくつの かたちか かんがえよう。
+          - あかい 点は、むすぶと ちょう点に なるよ。
+          - text: 2 本 むすんだよ。のこりも むすんで、もとの 点に もどろう。
+            svg: '<svg viewBox="0 0 320 200" xmlns="http://www.w3.org/2000/svg"><line x1="135" y1="50" x2="235" y2="50" stroke="#3d8bd4" stroke-width="3.5" stroke-linecap="round"/><line x1="235" y1="50" x2="235" y2="150" stroke="#3d8bd4" stroke-width="3.5" stroke-linecap="round"/><circle cx="85" cy="50" r="4" fill="currentColor" fill-opacity="0.35"/><circle cx="185" cy="50" r="4" fill="currentColor" fill-opacity="0.35"/><circle cx="85" cy="100" r="4" fill="currentColor" fill-opacity="0.35"/><circle cx="135" cy="100" r="4" fill="currentColor" fill-opacity="0.35"/><circle cx="185" cy="100" r="4" fill="currentColor" fill-opacity="0.35"/><circle cx="235" cy="100" r="4" fill="currentColor" fill-opacity="0.35"/><circle cx="135" cy="150" r="4" fill="currentColor" fill-opacity="0.35"/><circle cx="185" cy="150" r="4" fill="currentColor" fill-opacity="0.35"/><circle cx="135" cy="50" r="8" fill="#f08080" fill-opacity="0.95" stroke="currentColor" stroke-width="1.5"/><circle cx="235" cy="50" r="8" fill="#f08080" fill-opacity="0.95" stroke="currentColor" stroke-width="1.5"/><circle cx="235" cy="150" r="8" fill="#f08080" fill-opacity="0.95" stroke="currentColor" stroke-width="1.5"/><circle cx="85" cy="150" r="8" fill="#f08080" fill-opacity="0.95" stroke="currentColor" stroke-width="1.5"/></svg>'
+          - へんが 何本の かたちか かぞえよう。
         paths:
-          - [🔴 は 4 つ, ちょうてんが 4 つ、へんが 4 ほん, しかくけい]
-        note: かたむいた辺があっても、4 本の辺で囲まれていれば四角形。紙に点を写して結ぶとよい。
+          - [あかい 点は 4 つ, ちょう点が 4 つ・へんが 4 本, 四角形]
+        note: かたむいた へんが あっても、4 本の へんで かこまれて いれば 四角形。紙に 点を うつして むすぶと よい。
       - part: 今日
-        text: さんかくけいは どれですか。
-        choices: [まっすぐな せん 3 ぼんで かこんだ かたち, まがった せんで かこんだ かたち, せんが とちゅうで あいて いる かたち]
-        answer: まっすぐな せん 3 ぼんで かこんだ かたち
+        id: "3a7c846e87"
+        text: 三角形は どれですか。
+        svg: '<svg viewBox="0 0 320 200" xmlns="http://www.w3.org/2000/svg"><path d="M60,40 L102,112 L18,112 Q8,58 60,40 Z" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/><text x="60" y="166" font-size="18" text-anchor="middle" fill="currentColor">ア</text><polygon points="160,40 202,112 118,112" fill="none" stroke="currentColor" stroke-width="3" stroke-linejoin="round"/><text x="160" y="166" font-size="18" text-anchor="middle" fill="currentColor">イ</text><path d="M267,52 L302,112 L218,112 L253,52" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/><text x="260" y="166" font-size="18" text-anchor="middle" fill="currentColor">ウ</text></svg>'
+        choices: [ア, イ, ウ]
+        answer: イ
+        check: "'イ'"
         hints:
-          - さんかくけいの きまりを おもいだそう。
-          - まがった せんは、へんに なるかな。
-          - すきまが あると、「かこまれて いる」と いえるかな。
+          - へんが まっすぐか、すきまが ないかを、1 つずつ 見よう。
+          - text: ウ の ここを 見よう。線は つながって いるかな。
+            svg: '<svg viewBox="0 0 320 200" xmlns="http://www.w3.org/2000/svg"><path d="M60,40 L102,112 L18,112 Q8,58 60,40 Z" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/><text x="60" y="166" font-size="18" text-anchor="middle" fill="currentColor">ア</text><polygon points="160,40 202,112 118,112" fill="none" stroke="currentColor" stroke-width="3" stroke-linejoin="round"/><text x="160" y="166" font-size="18" text-anchor="middle" fill="currentColor">イ</text><path d="M267,52 L302,112 L218,112 L253,52" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/><text x="260" y="166" font-size="18" text-anchor="middle" fill="currentColor">ウ</text><circle cx="260" cy="50" r="17" fill="none" stroke="#e8590c" stroke-width="3"/></svg>'
+          - のこりの 2 つも、へんを 1 本ずつ ゆびで なぞって しらべよう。
         paths:
-          - [へんは まっすぐ, すきまなく かこむ, まっすぐな せん 3 ぼんで かこんだ かたち]
-        note: 「3 つの角がある」だけで選ぶと、すき間のある形も入ってしまう。まっすぐ・すき間なし・3 本の 3 つで決まる。
+          - [へんは まっすぐ, すきまなく かこむ, イ]
+        note: 「かどが 3 つ ある」だけで えらぶと、すきまの ある かたちも 入って しまう。まっすぐ・すきま なし・3 本 の 3 つで きまる。
       - part: 今日
-        text: 🔺 の ような さんかくけいを、2 つ べつべつに かきました。ちょうてんは ぜんぶで いくつ ありますか。
-        figure: "🔺　🔺"
+        id: "c11f110ca7"
+        text: ちょう点は ぜんぶで いくつ ありますか。
+        svg: '<svg viewBox="0 0 320 200" xmlns="http://www.w3.org/2000/svg"><polygon points="40,150 140,150 78,50" fill="#f3c969" fill-opacity="0.6" stroke="currentColor" stroke-width="2.5" stroke-linejoin="round"/><polygon points="190,140 290,150 262,46" fill="#7fc8f8" fill-opacity="0.6" stroke="currentColor" stroke-width="2.5" stroke-linejoin="round"/></svg>'
         answer: 6
-        check: "3 * n('🔺')"
+        check: "sum([3, 3])"
         hints:
-          - 1 つの さんかくけいの ちょうてんは いくつかな。
-          - もう 1 つの さんかくけいにも、ちょうてんが あるね。
-          - ひだりから じゅんに、ちょうてんを さして つづけて かぞえよう。
+          - ちょう点は、かどの 点 だよ。
+          - text: ひだりの 三角形の ちょう点に、1、2、3 と ばんごうを つけたよ。
+            svg: '<svg viewBox="0 0 320 200" xmlns="http://www.w3.org/2000/svg"><polygon points="40,150 140,150 78,50" fill="#f3c969" fill-opacity="0.6" stroke="currentColor" stroke-width="2.5" stroke-linejoin="round"/><polygon points="190,140 290,150 262,46" fill="#7fc8f8" fill-opacity="0.6" stroke="currentColor" stroke-width="2.5" stroke-linejoin="round"/><circle cx="40" cy="150" r="6" fill="#e8590c" fill-opacity="1"/><text x="28" y="171" font-size="15" text-anchor="middle" fill="currentColor">1</text><circle cx="140" cy="150" r="6" fill="#e8590c" fill-opacity="1"/><text x="152" y="171" font-size="15" text-anchor="middle" fill="currentColor">2</text><circle cx="78" cy="50" r="6" fill="#e8590c" fill-opacity="1"/><text x="78" y="38" font-size="15" text-anchor="middle" fill="currentColor">3</text></svg>'
+          - みぎの 三角形は、つづきの かずから かぞえよう。
         paths:
-          - [ひだりの ちょうてん 1、2、3, みぎに つづけて 4、5、6, 6 つ]
+          - [ひだりの ちょう点 1、2、3, みぎに つづけて 4、5、6, 6 つ]
       - part: 挑戦
-        text: まっすぐな ぼうで、さんかくけいを 2 つ つくります。1 ぽんの ぼうを、2 つの さんかくけいで いっしょに つかいます。ぼうは なんぼん いりますか。
+        id: "bae3796ba7"
+        text: ぼうで 三角形を 2 つ つくります。あかい ぼうは、2 つの 三角形で いっしょに つかいます。ぼうは ぜんぶで 何本 いりますか。
+        svg: '<svg viewBox="0 0 320 200" xmlns="http://www.w3.org/2000/svg"><line x1="47" y1="172" x2="163" y2="172" stroke="currentColor" stroke-width="11.5" stroke-linecap="round"/><line x1="47" y1="172" x2="163" y2="172" stroke="#c9a36b" stroke-width="9" stroke-linecap="round"/><line x1="43.5" y1="165.9" x2="101.5" y2="65.5" stroke="currentColor" stroke-width="11.5" stroke-linecap="round"/><line x1="43.5" y1="165.9" x2="101.5" y2="65.5" stroke="#c9a36b" stroke-width="9" stroke-linecap="round"/><line x1="166.5" y1="165.9" x2="108.5" y2="65.5" stroke="currentColor" stroke-width="11.5" stroke-linecap="round"/><line x1="166.5" y1="165.9" x2="108.5" y2="65.5" stroke="#f08080" stroke-width="9" stroke-linecap="round"/><text x="204" y="100" font-size="15" text-anchor="start" fill="currentColor">あかい ぼうは</text><text x="204" y="122" font-size="15" text-anchor="start" fill="currentColor">いっしょに</text><text x="204" y="144" font-size="15" text-anchor="start" fill="currentColor">つかう</text></svg>'
         answer: 5
         check: "3 + 3 - 1"
         hints:
-          - さんかくけい 1 つに、ぼうは なんぼん いるかな。
-          - いっしょに つかう ぼうは、2 かい かぞえないよ。
-          - かみに かいて、ぼうを 1 ぽんずつ かぞえよう。
+          - 三角形 1 つに、ぼうは 何本 いるかな。
+          - text: 2 つめの 三角形を、てんせんで かいたよ。あかい ぼうは もう あるね。
+            svg: '<svg viewBox="0 0 320 200" xmlns="http://www.w3.org/2000/svg"><line x1="47" y1="172" x2="163" y2="172" stroke="currentColor" stroke-width="11.5" stroke-linecap="round"/><line x1="47" y1="172" x2="163" y2="172" stroke="#c9a36b" stroke-width="9" stroke-linecap="round"/><line x1="43.5" y1="165.9" x2="101.5" y2="65.5" stroke="currentColor" stroke-width="11.5" stroke-linecap="round"/><line x1="43.5" y1="165.9" x2="101.5" y2="65.5" stroke="#c9a36b" stroke-width="9" stroke-linecap="round"/><line x1="166.5" y1="165.9" x2="108.5" y2="65.5" stroke="currentColor" stroke-width="11.5" stroke-linecap="round"/><line x1="166.5" y1="165.9" x2="108.5" y2="65.5" stroke="#f08080" stroke-width="9" stroke-linecap="round"/><line x1="105" y1="59.4" x2="235" y2="59.4" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-dasharray="7 6"/><line x1="170" y1="172" x2="235" y2="59.4" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-dasharray="7 6"/></svg>'
+          - ぼうを 1 本ずつ ゆびで さして かぞえよう。あかい ぼうは 1 回だけ かぞえるよ。
         paths:
-          - [1 つめに 3 ぼん, 2 つめは 1 ぽんを いっしょに つかって あと 2 ほん, 4、5 と かぞえて 5 ほん]
-          - ["さんかくけい 2 つでは 3 + 3 = 6 ぼん", "1 ぽんを いっしょに つかうので 1 ぼん へる", "6 − 1 = 5 ぼん"]
-        note: 別々に作る数（6）を答えやすい。ストローや綿棒で実際に作るとよい。
+          - [1 つめに 3 本, 2 つめは あかい ぼうを つかって あと 2 本, 4、5 と かぞえて 5 本]
+          - [三角形 2 つでは 3 + 3 = 6 本, あかい ぼうを いっしょに つかうので 1 本 へる, 6 − 1 = 5 本]
+        note: べつべつに つくる かず（6）を こたえやすい。ストローや めんぼうで じっさいに つくると よい。
     extra:
       - part: 今日
-        text: 🔴 を じゅんに、まっすぐな せんで むすびます。できる かたちは どれですか。
-        figure: "🔴⚪⚪\n⚪⚪🔴\n🔴⚪⚪"
-        choices: [さんかくけい, しかくけい]
-        answer: さんかくけい
-        check: "{3: 'さんかくけい', 4: 'しかくけい'}[n('🔴')]"
+        id: "b1ecabf9cb"
+        text: あかい 点を、ぐるりと 1 しゅう する じゅんに、まっすぐな 線で むすびます。できる かたちは どれですか。
+        svg: '<svg viewBox="0 0 320 200" xmlns="http://www.w3.org/2000/svg"><circle cx="160" cy="50" r="4" fill="currentColor" fill-opacity="0.35"/><circle cx="210" cy="50" r="4" fill="currentColor" fill-opacity="0.35"/><circle cx="110" cy="100" r="4" fill="currentColor" fill-opacity="0.35"/><circle cx="160" cy="100" r="4" fill="currentColor" fill-opacity="0.35"/><circle cx="160" cy="150" r="4" fill="currentColor" fill-opacity="0.35"/><circle cx="210" cy="150" r="4" fill="currentColor" fill-opacity="0.35"/><circle cx="210" cy="100" r="8" fill="#f08080" fill-opacity="0.95" stroke="currentColor" stroke-width="1.5"/><circle cx="110" cy="150" r="8" fill="#f08080" fill-opacity="0.95" stroke="currentColor" stroke-width="1.5"/><circle cx="110" cy="50" r="8" fill="#f08080" fill-opacity="0.95" stroke="currentColor" stroke-width="1.5"/></svg>'
+        choices: [三角形, 四角形]
+        answer: 三角形
+        check: "{3: '三角形', 4: '四角形'}[len([(0, 0), (1, 2), (2, 0)])]"
         hints:
-          - 🔴 は いくつ あるかな。
-          - むすぶと、🔴 が ちょうてんに なるよ。
-          - へんが いくつの かたちか かんがえよう。
+          - あかい 点は、むすぶと ちょう点に なるよ。
+          - text: 1 本 むすんだよ。のこりも むすんで、もとの 点に もどろう。
+            svg: '<svg viewBox="0 0 320 200" xmlns="http://www.w3.org/2000/svg"><line x1="110" y1="50" x2="210" y2="100" stroke="#3d8bd4" stroke-width="3.5" stroke-linecap="round"/><circle cx="160" cy="50" r="4" fill="currentColor" fill-opacity="0.35"/><circle cx="210" cy="50" r="4" fill="currentColor" fill-opacity="0.35"/><circle cx="110" cy="100" r="4" fill="currentColor" fill-opacity="0.35"/><circle cx="160" cy="100" r="4" fill="currentColor" fill-opacity="0.35"/><circle cx="160" cy="150" r="4" fill="currentColor" fill-opacity="0.35"/><circle cx="210" cy="150" r="4" fill="currentColor" fill-opacity="0.35"/><circle cx="210" cy="100" r="8" fill="#f08080" fill-opacity="0.95" stroke="currentColor" stroke-width="1.5"/><circle cx="110" cy="150" r="8" fill="#f08080" fill-opacity="0.95" stroke="currentColor" stroke-width="1.5"/><circle cx="110" cy="50" r="8" fill="#f08080" fill-opacity="0.95" stroke="currentColor" stroke-width="1.5"/></svg>'
+          - へんが 何本の かたちか かぞえよう。
         paths:
-          - [🔴 は 3 つ, へんが 3 ぼん, さんかくけい]
+          - [あかい 点は 3 つ, へんが 3 本, 三角形]
       - part: 今日
-        text: 🔴 を じゅんに むすんで、しかくけいを かきます。へんは なんぼん ありますか。
-        figure: "🔴⚪🔴\n⚪⚪⚪\n🔴⚪🔴"
+        id: "2898476e06"
+        text: あかい 点を ぐるりと 1 しゅう する じゅんに むすんで、四角形を かきます。へんは 何本 ありますか。
+        svg: '<svg viewBox="0 0 320 200" xmlns="http://www.w3.org/2000/svg"><circle cx="160" cy="50" r="4" fill="currentColor" fill-opacity="0.35"/><circle cx="110" cy="100" r="4" fill="currentColor" fill-opacity="0.35"/><circle cx="160" cy="100" r="4" fill="currentColor" fill-opacity="0.35"/><circle cx="210" cy="100" r="4" fill="currentColor" fill-opacity="0.35"/><circle cx="160" cy="150" r="4" fill="currentColor" fill-opacity="0.35"/><circle cx="110" cy="150" r="8" fill="#f08080" fill-opacity="0.95" stroke="currentColor" stroke-width="1.5"/><circle cx="210" cy="50" r="8" fill="#f08080" fill-opacity="0.95" stroke="currentColor" stroke-width="1.5"/><circle cx="210" cy="150" r="8" fill="#f08080" fill-opacity="0.95" stroke="currentColor" stroke-width="1.5"/><circle cx="110" cy="50" r="8" fill="#f08080" fill-opacity="0.95" stroke="currentColor" stroke-width="1.5"/></svg>'
         answer: 4
-        check: "n('🔴')"
+        check: "len([(0, 0), (0, 2), (2, 2), (2, 0)])"
         hints:
-          - 🔴 と 🔴 の あいだに、へんが 1 ぽん できるよ。
-          - ひとまわり むすんで、もとの 🔴 に もどろう。
-          - むすんだ せんを かぞえよう。
+          - あかい 点と あかい 点の あいだに、へんが 1 本 できるよ。
+          - text: 2 本 むすんだよ。ひとまわり むすんで、もとの 点に もどろう。
+            svg: '<svg viewBox="0 0 320 200" xmlns="http://www.w3.org/2000/svg"><line x1="110" y1="50" x2="210" y2="50" stroke="#3d8bd4" stroke-width="3.5" stroke-linecap="round"/><line x1="210" y1="50" x2="210" y2="150" stroke="#3d8bd4" stroke-width="3.5" stroke-linecap="round"/><circle cx="160" cy="50" r="4" fill="currentColor" fill-opacity="0.35"/><circle cx="110" cy="100" r="4" fill="currentColor" fill-opacity="0.35"/><circle cx="160" cy="100" r="4" fill="currentColor" fill-opacity="0.35"/><circle cx="210" cy="100" r="4" fill="currentColor" fill-opacity="0.35"/><circle cx="160" cy="150" r="4" fill="currentColor" fill-opacity="0.35"/><circle cx="110" cy="150" r="8" fill="#f08080" fill-opacity="0.95" stroke="currentColor" stroke-width="1.5"/><circle cx="210" cy="50" r="8" fill="#f08080" fill-opacity="0.95" stroke="currentColor" stroke-width="1.5"/><circle cx="210" cy="150" r="8" fill="#f08080" fill-opacity="0.95" stroke="currentColor" stroke-width="1.5"/><circle cx="110" cy="50" r="8" fill="#f08080" fill-opacity="0.95" stroke="currentColor" stroke-width="1.5"/></svg>'
+          - むすんだ 線を 1 本ずつ かぞえよう。
         paths:
-          - [となりの 🔴 どうしを むすぶ, ひとまわりで 4 ほん, 4 ほん]
+          - [となりの あかい 点どうしを むすぶ, ひとまわりで 4 本, 4 本]
       - part: 今日
-        text: さんかくけいと いえないのは どれですか。
-        choices: [せんの あいだが あいて いる かたち, まっすぐな せん 3 ぼんで かこんだ かたち]
-        answer: せんの あいだが あいて いる かたち
+        id: "b827a3acd5"
+        text: 三角形と いえないのは どれですか。
+        svg: '<svg viewBox="0 0 320 200" xmlns="http://www.w3.org/2000/svg"><path d="M107,52 L142,112 L58,112 L93,52" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/><text x="100" y="166" font-size="18" text-anchor="middle" fill="currentColor">ア</text><polygon points="220,40 262,112 178,112" fill="none" stroke="currentColor" stroke-width="3" stroke-linejoin="round"/><text x="220" y="166" font-size="18" text-anchor="middle" fill="currentColor">イ</text></svg>'
+        choices: [ア, イ]
+        answer: ア
+        check: "'ア'"
         hints:
-          - さんかくけいの きまりを おもいだそう。
-          - すきまが あると、かこまれて いるかな。
-          - きまりに あわない ほうを えらぼう。
+          - 三角形の きまりを おもいだそう。
+          - text: 2 つの かたちの うえの かどを 見よう。
+            svg: '<svg viewBox="0 0 320 200" xmlns="http://www.w3.org/2000/svg"><path d="M107,52 L142,112 L58,112 L93,52" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/><text x="100" y="166" font-size="18" text-anchor="middle" fill="currentColor">ア</text><polygon points="220,40 262,112 178,112" fill="none" stroke="currentColor" stroke-width="3" stroke-linejoin="round"/><text x="220" y="166" font-size="18" text-anchor="middle" fill="currentColor">イ</text><circle cx="100" cy="48" r="18" fill="none" stroke="#e8590c" stroke-width="3"/><circle cx="220" cy="44" r="18" fill="none" stroke="#e8590c" stroke-width="3"/></svg>'
+          - すきまが あると、かこまれて いると いえるかな。
         paths:
-          - [すきまが あると かこまれて いない, さんかくけいと いえない]
+          - [すきまが あると かこまれて いない, ア は 三角形と いえない]
 
   - day: 2
     items:
       - part: 見本
-        text: かみを 2 かい おって、かどを つくろう。
-        figure: 📐
-        explain: かみを はんぶんに おり、おりめと おりめが かさなるように もう いちど おると、まっすぐな かどが できます。この かどの かたちを ちょっかく と いいます。📐 の いちばん おおきい かども ちょっかく です。4 つの かどが みんな ちょっかくの しかくけいを ちょうほうけい、4 つの かどが みんな ちょっかくで、4 つの へんが みんな おなじ ながさの しかくけいを せいほうけい、ちょっかくの かどが ある さんかくけいを ちょっかくさんかくけい と いいます。
+        id: "111387997e"
+        text: |-
+          紙を 2 回 おると、まっすぐな かどが できます。この かどを 直角 と いいます。
+          4 つの かどが みんな 直角の 四角形が 長方形、へんの ながさも みんな おなじなら 正方形 です。
+          直角の かどが ある 三角形が 直角三角形 です。
+        svg: '<svg viewBox="0 0 320 200" xmlns="http://www.w3.org/2000/svg"><path d="M22,20 Q52,6 80,20 Q94,46 80,70 Q50,84 22,70 Q8,46 22,20 Z" fill="#f3c969" fill-opacity="0.7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><line x1="10" y1="45" x2="92" y2="45" stroke="#e8590c" stroke-width="2.5" stroke-linecap="round" stroke-dasharray="6 5"/><line x1="98" y1="45" x2="108" y2="45" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><polygon points="116,45 107,49.5 107,40.5" fill="currentColor" fill-opacity="1" stroke="currentColor" stroke-width="1" stroke-linejoin="round"/><path d="M124,66 L200,66 Q206,44 190,30 Q164,14 138,26 Q120,42 124,66 Z" fill="#f3c969" fill-opacity="0.7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><line x1="162" y1="16" x2="162" y2="72" stroke="#e8590c" stroke-width="2.5" stroke-linecap="round" stroke-dasharray="6 5"/><line x1="210" y1="45" x2="220" y2="45" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><polygon points="228,45 219,49.5 219,40.5" fill="currentColor" fill-opacity="1" stroke="currentColor" stroke-width="1" stroke-linejoin="round"/><path d="M240,70 L300,70 Q304,40 284,28 Q262,16 240,22 Z" fill="#f3c969" fill-opacity="0.7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M240,57 L253,57 L253,70" fill="none" stroke="#e8590c" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/><text x="240" y="92" font-size="14" text-anchor="middle" fill="currentColor">直角</text><polygon points="18,112 106,112 106,162 18,162" fill="#7fc8f8" fill-opacity="0.45" stroke="currentColor" stroke-width="2.5" stroke-linejoin="round"/><polygon points="136,108 192,108 192,164 136,164" fill="#7fc8f8" fill-opacity="0.45" stroke="currentColor" stroke-width="2.5" stroke-linejoin="round"/><polygon points="222,164 304,164 222,108" fill="#7fc8f8" fill-opacity="0.45" stroke="currentColor" stroke-width="2.5" stroke-linejoin="round"/><path d="M18,121 L27,121 L27,112" fill="none" stroke="#e8590c" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M97,112 L97,121 L106,121" fill="none" stroke="#e8590c" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M106,153 L97,153 L97,162" fill="none" stroke="#e8590c" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M27,162 L27,153 L18,153" fill="none" stroke="#e8590c" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M136,117 L145,117 L145,108" fill="none" stroke="#e8590c" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M183,108 L183,117 L192,117" fill="none" stroke="#e8590c" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M192,155 L183,155 L183,164" fill="none" stroke="#e8590c" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M145,164 L145,155 L136,155" fill="none" stroke="#e8590c" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M222,154 L232,154 L232,164" fill="none" stroke="#e8590c" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><text x="62" y="188" font-size="14" text-anchor="middle" fill="currentColor">長方形</text><text x="164" y="188" font-size="14" text-anchor="middle" fill="currentColor">正方形</text><text x="263" y="188" font-size="14" text-anchor="middle" fill="currentColor">直角三角形</text></svg>'
+        explain: 紙を はんぶんに おり、おりめと おりめが かさなるように もう いちど おると、直角の かどが できます。この かどを あてると、ほかの かどが 直角か どうか しらべられます。4 つの かどが みんな 直角の 四角形が 長方形、4 つの かどが みんな 直角で 4 つの へんが みんな おなじ ながさの 四角形が 正方形、直角の かどが ある 三角形が 直角三角形 です。三角じょうぎの いちばん 大きい かども 直角 です。
       - part: 思い出す
-        text: 🔴 を じゅんに、まっすぐな せんで むすびます。できる かたちは どれですか。
-        figure: "🔴⚪🔴⚪\n⚪⚪⚪⚪\n⚪⚪⚪🔴"
-        choices: [さんかくけい, しかくけい]
-        answer: さんかくけい
-        check: "{3: 'さんかくけい', 4: 'しかくけい'}[n('🔴')]"
+        id: "330dea862a"
+        text: あかい 点を、ぐるりと 1 しゅう する じゅんに、まっすぐな 線で むすびます。できる かたちは どれですか。
+        svg: '<svg viewBox="0 0 320 200" xmlns="http://www.w3.org/2000/svg"><circle cx="135" cy="50" r="4" fill="currentColor" fill-opacity="0.35"/><circle cx="235" cy="50" r="4" fill="currentColor" fill-opacity="0.35"/><circle cx="85" cy="100" r="4" fill="currentColor" fill-opacity="0.35"/><circle cx="135" cy="100" r="4" fill="currentColor" fill-opacity="0.35"/><circle cx="185" cy="100" r="4" fill="currentColor" fill-opacity="0.35"/><circle cx="235" cy="100" r="4" fill="currentColor" fill-opacity="0.35"/><circle cx="85" cy="150" r="4" fill="currentColor" fill-opacity="0.35"/><circle cx="135" cy="150" r="4" fill="currentColor" fill-opacity="0.35"/><circle cx="185" cy="150" r="4" fill="currentColor" fill-opacity="0.35"/><circle cx="235" cy="150" r="8" fill="#f08080" fill-opacity="0.95" stroke="currentColor" stroke-width="1.5"/><circle cx="185" cy="50" r="8" fill="#f08080" fill-opacity="0.95" stroke="currentColor" stroke-width="1.5"/><circle cx="85" cy="50" r="8" fill="#f08080" fill-opacity="0.95" stroke="currentColor" stroke-width="1.5"/></svg>'
+        choices: [三角形, 四角形]
+        answer: 三角形
+        check: "{3: '三角形', 4: '四角形'}[len([(0, 0), (0, 2), (2, 3)])]"
         hints:
-          - 🔴 は いくつ あるかな。
-          - むすぶと、🔴 が ちょうてんに なるよ。
-          - へんが いくつの かたちか かんがえよう。
+          - あかい 点は、むすぶと ちょう点に なるよ。
+          - text: 1 本 むすんだよ。のこりも むすんで、もとの 点に もどろう。
+            svg: '<svg viewBox="0 0 320 200" xmlns="http://www.w3.org/2000/svg"><line x1="85" y1="50" x2="185" y2="50" stroke="#3d8bd4" stroke-width="3.5" stroke-linecap="round"/><circle cx="135" cy="50" r="4" fill="currentColor" fill-opacity="0.35"/><circle cx="235" cy="50" r="4" fill="currentColor" fill-opacity="0.35"/><circle cx="85" cy="100" r="4" fill="currentColor" fill-opacity="0.35"/><circle cx="135" cy="100" r="4" fill="currentColor" fill-opacity="0.35"/><circle cx="185" cy="100" r="4" fill="currentColor" fill-opacity="0.35"/><circle cx="235" cy="100" r="4" fill="currentColor" fill-opacity="0.35"/><circle cx="85" cy="150" r="4" fill="currentColor" fill-opacity="0.35"/><circle cx="135" cy="150" r="4" fill="currentColor" fill-opacity="0.35"/><circle cx="185" cy="150" r="4" fill="currentColor" fill-opacity="0.35"/><circle cx="235" cy="150" r="8" fill="#f08080" fill-opacity="0.95" stroke="currentColor" stroke-width="1.5"/><circle cx="185" cy="50" r="8" fill="#f08080" fill-opacity="0.95" stroke="currentColor" stroke-width="1.5"/><circle cx="85" cy="50" r="8" fill="#f08080" fill-opacity="0.95" stroke="currentColor" stroke-width="1.5"/></svg>'
+          - へんが 何本の かたちか かぞえよう。
         paths:
-          - [🔴 は 3 つ, さんかくけい]
+          - [あかい 点は 3 つ, 三角形]
       - part: 思い出す
-        text: 🟦 の ような しかくけいを、ぼうで 2 つ べつべつに つくります。ぼうは なんぼん いりますか。
-        figure: "🟦　🟦"
+        id: "091fdc4c92"
+        text: ぼうで、四角形を 2 つ べつべつに つくります。ぼうは ぜんぶで 何本 いりますか。
+        svg: '<svg viewBox="0 0 320 200" xmlns="http://www.w3.org/2000/svg"><line x1="47" y1="55" x2="123" y2="55" stroke="currentColor" stroke-width="11.5" stroke-linecap="round"/><line x1="47" y1="55" x2="123" y2="55" stroke="#c9a36b" stroke-width="9" stroke-linecap="round"/><line x1="130" y1="62" x2="130" y2="138" stroke="currentColor" stroke-width="11.5" stroke-linecap="round"/><line x1="130" y1="62" x2="130" y2="138" stroke="#c9a36b" stroke-width="9" stroke-linecap="round"/><line x1="123" y1="145" x2="47" y2="145" stroke="currentColor" stroke-width="11.5" stroke-linecap="round"/><line x1="123" y1="145" x2="47" y2="145" stroke="#c9a36b" stroke-width="9" stroke-linecap="round"/><line x1="40" y1="138" x2="40" y2="62" stroke="currentColor" stroke-width="11.5" stroke-linecap="round"/><line x1="40" y1="138" x2="40" y2="62" stroke="#c9a36b" stroke-width="9" stroke-linecap="round"/><polygon points="190,55 280,55 280,145 190,145" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linejoin="round" stroke-dasharray="7 6"/><text x="235" y="106" font-size="15" text-anchor="middle" fill="currentColor">もう 1 つ</text></svg>'
         answer: 8
-        check: "4 * n('🟦')"
+        check: "4 * 2"
         hints:
-          - しかくけい 1 つに、ぼうは なんぼん いるかな。
-          - もう 1 つの しかくけいにも、ぼうが いるね。
-          - ひだりから じゅんに、へんを さして つづけて かぞえよう。
+          - 四角形 1 つに、ぼうは 何本 いるかな。
+          - text: ひだりの ぼうに ばんごうを つけたよ。みぎは、つづきの かずから かぞえよう。
+            svg: '<svg viewBox="0 0 320 200" xmlns="http://www.w3.org/2000/svg"><line x1="47" y1="55" x2="123" y2="55" stroke="currentColor" stroke-width="11.5" stroke-linecap="round"/><line x1="47" y1="55" x2="123" y2="55" stroke="#c9a36b" stroke-width="9" stroke-linecap="round"/><line x1="130" y1="62" x2="130" y2="138" stroke="currentColor" stroke-width="11.5" stroke-linecap="round"/><line x1="130" y1="62" x2="130" y2="138" stroke="#c9a36b" stroke-width="9" stroke-linecap="round"/><line x1="123" y1="145" x2="47" y2="145" stroke="currentColor" stroke-width="11.5" stroke-linecap="round"/><line x1="123" y1="145" x2="47" y2="145" stroke="#c9a36b" stroke-width="9" stroke-linecap="round"/><line x1="40" y1="138" x2="40" y2="62" stroke="currentColor" stroke-width="11.5" stroke-linecap="round"/><line x1="40" y1="138" x2="40" y2="62" stroke="#c9a36b" stroke-width="9" stroke-linecap="round"/><line x1="197" y1="55" x2="273" y2="55" stroke="currentColor" stroke-width="11.5" stroke-linecap="round"/><line x1="197" y1="55" x2="273" y2="55" stroke="#c9a36b" stroke-width="9" stroke-linecap="round"/><line x1="280" y1="62" x2="280" y2="138" stroke="currentColor" stroke-width="11.5" stroke-linecap="round"/><line x1="280" y1="62" x2="280" y2="138" stroke="#c9a36b" stroke-width="9" stroke-linecap="round"/><line x1="273" y1="145" x2="197" y2="145" stroke="currentColor" stroke-width="11.5" stroke-linecap="round"/><line x1="273" y1="145" x2="197" y2="145" stroke="#c9a36b" stroke-width="9" stroke-linecap="round"/><line x1="190" y1="138" x2="190" y2="62" stroke="currentColor" stroke-width="11.5" stroke-linecap="round"/><line x1="190" y1="138" x2="190" y2="62" stroke="#c9a36b" stroke-width="9" stroke-linecap="round"/><text x="85" y="40" font-size="16" text-anchor="middle" fill="currentColor">1</text><text x="148" y="105" font-size="16" text-anchor="middle" fill="currentColor">2</text><text x="85" y="170" font-size="16" text-anchor="middle" fill="currentColor">3</text><text x="22" y="105" font-size="16" text-anchor="middle" fill="currentColor">4</text></svg>'
+          - ゆびで さして、かぞえわすれが ないか たしかめよう。
         paths:
-          - [ひだり 1、2、3、4, みぎに つづけて 5、6、7、8, 8 ほん]
+          - [ひだり 1、2、3、4, みぎに つづけて 5、6、7、8, 8 本]
       - part: 今日
-        text: てんが たてに 5 つ ならんで います。うえと したの はしが 🔴 です。てんと てんの あいだ 1 つを 1 つぶん と かぞえます。うえの 🔴 から したの 🔴 まで、あいだは いくつぶん ありますか。
-        figure: "🔴\n⚪\n⚪\n⚪\n🔴"
+        id: "6666ad1247"
+        text: 点と 点の あいだ 1 つを「1 つぶん」と かぞえます。うえの あかい 点から したの あかい 点まで、あいだは いくつぶん ありますか。
+        svg: '<svg viewBox="0 0 320 200" xmlns="http://www.w3.org/2000/svg"><circle cx="130" cy="28" r="8" fill="#f08080" fill-opacity="0.95" stroke="currentColor" stroke-width="1.5"/><circle cx="130" cy="64" r="5" fill="currentColor" fill-opacity="0.45"/><circle cx="130" cy="100" r="5" fill="currentColor" fill-opacity="0.45"/><circle cx="130" cy="136" r="5" fill="currentColor" fill-opacity="0.45"/><circle cx="130" cy="172" r="8" fill="#f08080" fill-opacity="0.95" stroke="currentColor" stroke-width="1.5"/><path d="M120,31 Q92,46.0 120,61" fill="none" stroke="#e8590c" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/><text x="86" y="51" font-size="14" text-anchor="end" fill="currentColor">1 つぶん</text></svg>'
         answer: 4
-        check: "(lambda g: max(r for r in range(len(g)) if '🔴' in g[r]) - min(r for r in range(len(g)) if '🔴' in g[r]))(fig.splitlines())"
+        check: "5 - 1"
         hints:
-          - うえの 🔴 に ゆびを おいて、したへ 1 つずつ とんで いこう。
-          - てんの かずと、あいだの かずは おなじ かな。
-          - 1 つ とぶごとに 1、2、3 と かぞえて、したの 🔴 に ついたら とまろう。
+          - うえの あかい 点に ゆびを おいて、したへ 1 つずつ とんで いこう。
+          - text: 2 回 とんだよ。つづけて、したの あかい 点まで とぼう。
+            svg: '<svg viewBox="0 0 320 200" xmlns="http://www.w3.org/2000/svg"><circle cx="130" cy="28" r="8" fill="#f08080" fill-opacity="0.95" stroke="currentColor" stroke-width="1.5"/><circle cx="130" cy="64" r="5" fill="currentColor" fill-opacity="0.45"/><circle cx="130" cy="100" r="5" fill="currentColor" fill-opacity="0.45"/><circle cx="130" cy="136" r="5" fill="currentColor" fill-opacity="0.45"/><circle cx="130" cy="172" r="8" fill="#f08080" fill-opacity="0.95" stroke="currentColor" stroke-width="1.5"/><path d="M140,31 Q170,46.0 140,61" fill="none" stroke="#e8590c" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/><text x="176" y="51" font-size="15" text-anchor="start" fill="currentColor">1</text><path d="M140,67 Q170,82.0 140,97" fill="none" stroke="#e8590c" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/><text x="176" y="87" font-size="15" text-anchor="start" fill="currentColor">2</text></svg>'
+          - 点の かずと、あいだの かずは おなじ かな。
         paths:
-          - [うえの 🔴 に ゆびを おく, 1 つ したへ とぶごとに 1、2、3、4, したの 🔴 に ついて 4 つぶん]
-          - [てんを 1 つずつ さして 「ここから つぎの てんまで」と いう, つぎの てんが ある てんは 1、2、3、4, いちばん したの てんには つぎが ない ので 4 つぶん]
-        note: 点の数（5）をそのまま答えやすい。間は点と点のすき間なので、点より 1 つ少ない。
+          - [うえの あかい 点に ゆびを おく, 1 つ したへ とぶごとに 1、2、3、4, したの あかい 点に ついて 4 つぶん]
+          - [点を 1 つずつ さして「ここから つぎの 点まで」と いう, つぎの 点が ある 点は 1、2、3、4, いちばん したの 点には つぎが ないので 4 つぶん]
+        note: 点の かず（5）を そのまま こたえやすい。あいだは 点と 点の すきまなので、点より 1 つ すくない。
       - part: 今日
-        text: ちょっかくの かどが ある カタカナは どれですか。
+        id: "8ec42bcc08"
+        text: 直角の かどが ある カタカナは どれですか。
+        svg: '<svg viewBox="0 0 320 200" xmlns="http://www.w3.org/2000/svg"><path d="M32.4,53.8 L87.6,53.8 L87.6,118.2 L32.4,118.2" fill="none" stroke="currentColor" stroke-width="7" stroke-linecap="round" stroke-linejoin="miter"/><text x="60" y="170" font-size="20" text-anchor="middle" fill="currentColor">コ</text><path d="M150.8,56.1 L127.8,115.9" fill="none" stroke="currentColor" stroke-width="7" stroke-linecap="round" stroke-linejoin="miter"/><path d="M171.5,56.1 L196.8,115.9" fill="none" stroke="currentColor" stroke-width="7" stroke-linecap="round" stroke-linejoin="miter"/><text x="160" y="170" font-size="20" text-anchor="middle" fill="currentColor">ハ</text><path d="M210.6,87.2 L245.1,67.6 L309.4,104.4" fill="none" stroke="currentColor" stroke-width="7" stroke-linecap="round" stroke-linejoin="miter"/><text x="260" y="170" font-size="20" text-anchor="middle" fill="currentColor">ヘ</text></svg>'
         choices: [コ, ハ, ヘ]
         answer: コ
         hints:
-          - おった かみの かどを、もじの かどに あててみよう。
-          - ハ や ヘ に、ちょっかくの かどは あるかな。
-          - おった かみの かどと ぴったり あう かどを さがそう。
+          - おった 紙の かどを、もじの かどに あてて みよう。
+          - text: おった 紙の かどを ヘ に あてたよ。ぴったり あうかな。
+            svg: '<svg viewBox="0 0 320 200" xmlns="http://www.w3.org/2000/svg"><path d="M137.9,72.8 L75.3,108.3 Q108,180.8 173.4,135.4 Z" fill="#f3c969" fill-opacity="0.7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M130.1,77.2 L134.5,85.1 L142.3,80.6" fill="none" stroke="#e8590c" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M86.9,101.7 L137.9,72.8 L233.1,127.2" fill="none" stroke="currentColor" stroke-width="7" stroke-linecap="round" stroke-linejoin="miter"/><text x="282" y="186" font-size="18" text-anchor="middle" fill="currentColor">ヘ</text></svg>'
+          - ほかの もじにも、おった 紙の かどを あてて みよう。
         paths:
-          - [おった かみの かどを あてる, コ の かどは ぴったり, コ]
+          - [おった 紙の かどを あてる, コ の かどは ぴったり, コ]
       - part: 今日
-        text: 🔴 を じゅんに、まっすぐな せんで むすびます。できる かたちは どれですか。
-        figure: "🔴⚪⚪🔴\n⚪⚪⚪⚪\n🔴⚪⚪🔴"
-        choices: [ちょうほうけい, せいほうけい, さんかくけい]
-        answer: ちょうほうけい
-        check: "(lambda g: (lambda p: ('せいほうけい' if max(a for a, b in p) - min(a for a, b in p) == max(b for a, b in p) - min(b for a, b in p) else 'ちょうほうけい') if len(p) == 4 and len(set(a for a, b in p)) == 2 and len(set(b for a, b in p)) == 2 else 'ほかの しかくけい')([(r, c) for r in range(len(g)) for c in range(len(g[r])) if g[r][c] == '🔴']))(fig.splitlines())"
+        id: "7ddb685e53"
+        text: あかい 点を、ぐるりと 1 しゅう する じゅんに、まっすぐな 線で むすびます。できる かたちは どれですか。
+        svg: '<svg viewBox="0 0 320 200" xmlns="http://www.w3.org/2000/svg"><circle cx="135" cy="50" r="4" fill="currentColor" fill-opacity="0.35"/><circle cx="185" cy="50" r="4" fill="currentColor" fill-opacity="0.35"/><circle cx="85" cy="100" r="4" fill="currentColor" fill-opacity="0.35"/><circle cx="135" cy="100" r="4" fill="currentColor" fill-opacity="0.35"/><circle cx="185" cy="100" r="4" fill="currentColor" fill-opacity="0.35"/><circle cx="235" cy="100" r="4" fill="currentColor" fill-opacity="0.35"/><circle cx="135" cy="150" r="4" fill="currentColor" fill-opacity="0.35"/><circle cx="185" cy="150" r="4" fill="currentColor" fill-opacity="0.35"/><circle cx="235" cy="150" r="8" fill="#f08080" fill-opacity="0.95" stroke="currentColor" stroke-width="1.5"/><circle cx="235" cy="50" r="8" fill="#f08080" fill-opacity="0.95" stroke="currentColor" stroke-width="1.5"/><circle cx="85" cy="150" r="8" fill="#f08080" fill-opacity="0.95" stroke="currentColor" stroke-width="1.5"/><circle cx="85" cy="50" r="8" fill="#f08080" fill-opacity="0.95" stroke="currentColor" stroke-width="1.5"/></svg>'
+        choices: [長方形, 正方形, 三角形]
+        answer: 長方形
+        check: "(lambda p: '正方形' if max(r for r, c in p) - min(r for r, c in p) == max(c for r, c in p) - min(c for r, c in p) else '長方形')([(0, 0), (0, 3), (2, 3), (2, 0)])"
         hints:
-          - 4 つの かどは、みんな ちょっかく かな。
-          - よこの へんと たての へんは、てんの あいだ いくつぶん かな。
-          - へんの ながさが みんな おなじ かどうかで きめよう。
+          - 4 つの かどは、みんな 直角 かな。
+          - text: よこの へんは、点の あいだ 3 つぶん だよ。たては いくつぶん かな。
+            svg: '<svg viewBox="0 0 320 200" xmlns="http://www.w3.org/2000/svg"><circle cx="135" cy="50" r="4" fill="currentColor" fill-opacity="0.35"/><circle cx="185" cy="50" r="4" fill="currentColor" fill-opacity="0.35"/><circle cx="85" cy="100" r="4" fill="currentColor" fill-opacity="0.35"/><circle cx="135" cy="100" r="4" fill="currentColor" fill-opacity="0.35"/><circle cx="185" cy="100" r="4" fill="currentColor" fill-opacity="0.35"/><circle cx="235" cy="100" r="4" fill="currentColor" fill-opacity="0.35"/><circle cx="135" cy="150" r="4" fill="currentColor" fill-opacity="0.35"/><circle cx="185" cy="150" r="4" fill="currentColor" fill-opacity="0.35"/><circle cx="235" cy="150" r="8" fill="#f08080" fill-opacity="0.95" stroke="currentColor" stroke-width="1.5"/><circle cx="235" cy="50" r="8" fill="#f08080" fill-opacity="0.95" stroke="currentColor" stroke-width="1.5"/><circle cx="85" cy="150" r="8" fill="#f08080" fill-opacity="0.95" stroke="currentColor" stroke-width="1.5"/><circle cx="85" cy="50" r="8" fill="#f08080" fill-opacity="0.95" stroke="currentColor" stroke-width="1.5"/><path d="M88,44 Q110,21.2 132,44" fill="none" stroke="#e8590c" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/><text x="110" y="23.5" font-size="14" text-anchor="middle" fill="currentColor">1</text><path d="M138,44 Q160,21.2 182,44" fill="none" stroke="#e8590c" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/><text x="160" y="23.5" font-size="14" text-anchor="middle" fill="currentColor">2</text><path d="M188,44 Q210,21.2 232,44" fill="none" stroke="#e8590c" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/><text x="210" y="23.5" font-size="14" text-anchor="middle" fill="currentColor">3</text></svg>'
+          - よこと たての へんの ながさを くらべよう。
         paths:
-          - [かどは みんな ちょっかく, よこは 3 つぶん、たては 2 つぶん, ちょうほうけい]
-        note: 点の間を数えて辺の長さを比べる。画面では縦と横の間が少し違って見えることがある。
+          - [かどは みんな 直角, よこは 3 つぶん・たては 2 つぶん, 長方形]
+        note: 点の あいだを かぞえて、へんの ながさを くらべる。
       - part: 今日
-        text: 🔴 を じゅんに、まっすぐな せんで むすびます。できる さんかくけいは どちら ですか。
-        figure: "🔴⚪⚪\n⚪⚪⚪\n🔴⚪🔴"
-        choices: [ちょっかくさんかくけい, ちょっかくの ない さんかくけい]
-        answer: ちょっかくさんかくけい
-        check: "(lambda g: (lambda p: 'ちょっかくさんかくけい' if any((p[(i + 1) % 3][0] - p[i][0]) * (p[(i + 2) % 3][0] - p[i][0]) + (p[(i + 1) % 3][1] - p[i][1]) * (p[(i + 2) % 3][1] - p[i][1]) == 0 for i in range(3)) else 'ちょっかくの ない さんかくけい')([(r, c) for r in range(len(g)) for c in range(len(g[r])) if g[r][c] == '🔴']))(fig.splitlines())"
+        id: "40fee7f096"
+        text: あかい 点を、ぐるりと 1 しゅう する じゅんに、まっすぐな 線で むすびます。できる 三角形は どちら ですか。
+        svg: '<svg viewBox="0 0 320 200" xmlns="http://www.w3.org/2000/svg"><circle cx="160" cy="50" r="4" fill="currentColor" fill-opacity="0.35"/><circle cx="210" cy="50" r="4" fill="currentColor" fill-opacity="0.35"/><circle cx="110" cy="100" r="4" fill="currentColor" fill-opacity="0.35"/><circle cx="160" cy="100" r="4" fill="currentColor" fill-opacity="0.35"/><circle cx="210" cy="100" r="4" fill="currentColor" fill-opacity="0.35"/><circle cx="160" cy="150" r="4" fill="currentColor" fill-opacity="0.35"/><circle cx="110" cy="150" r="8" fill="#f08080" fill-opacity="0.95" stroke="currentColor" stroke-width="1.5"/><circle cx="210" cy="150" r="8" fill="#f08080" fill-opacity="0.95" stroke="currentColor" stroke-width="1.5"/><circle cx="110" cy="50" r="8" fill="#f08080" fill-opacity="0.95" stroke="currentColor" stroke-width="1.5"/></svg>'
+        choices: [直角三角形, 直角の ない 三角形]
+        answer: 直角三角形
+        check: "(lambda p: '直角三角形' if any((p[(i + 1) % 3][0] - p[i][0]) * (p[(i + 2) % 3][0] - p[i][0]) + (p[(i + 1) % 3][1] - p[i][1]) * (p[(i + 2) % 3][1] - p[i][1]) == 0 for i in range(3)) else '直角の ない 三角形')([(0, 0), (2, 2), (2, 0)])"
         hints:
-          - 3 つの ちょうてんの かどを、1 つずつ みよう。
-          - たての せんと よこの せんが まじわる かどは あるかな。
-          - おった かみの かどを あてて たしかめよう。
+          - 3 つの かどを、1 つずつ しらべよう。
+          - text: 線で むすんで、うえの かどに おった 紙の かどを あてたよ。ぴったり あうかな。
+            svg: '<svg viewBox="0 0 320 200" xmlns="http://www.w3.org/2000/svg"><path d="M110,50 L110,100 Q165,105 160,50 Z" fill="#f3c969" fill-opacity="0.7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M110,59 L119,59 L119,50" fill="none" stroke="#e8590c" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><polygon points="110,50 210,150 110,150" fill="none" stroke="#3d8bd4" stroke-width="3.5" stroke-linejoin="round"/><circle cx="160" cy="50" r="4" fill="currentColor" fill-opacity="0.35"/><circle cx="210" cy="50" r="4" fill="currentColor" fill-opacity="0.35"/><circle cx="110" cy="100" r="4" fill="currentColor" fill-opacity="0.35"/><circle cx="160" cy="100" r="4" fill="currentColor" fill-opacity="0.35"/><circle cx="210" cy="100" r="4" fill="currentColor" fill-opacity="0.35"/><circle cx="160" cy="150" r="4" fill="currentColor" fill-opacity="0.35"/><circle cx="110" cy="150" r="8" fill="#f08080" fill-opacity="0.95" stroke="currentColor" stroke-width="1.5"/><circle cx="210" cy="150" r="8" fill="#f08080" fill-opacity="0.95" stroke="currentColor" stroke-width="1.5"/><circle cx="110" cy="50" r="8" fill="#f08080" fill-opacity="0.95" stroke="currentColor" stroke-width="1.5"/></svg>'
+          - のこりの かどにも、おった 紙の かどを あてて みよう。
         paths:
-          - [ひだりしたの かど, たての へんと よこの へんが まじわる, ちょっかくさんかくけい]
+          - [ひだりしたの かど, たての へんと よこの へんが まじわる, 直角三角形]
       - part: 挑戦
-        text: ちょうほうけいの かみを、かどから かどへ ななめに おって わけます。わけた かたちに、ちょっかくの かどは あわせて いくつ のこりますか。
+        id: "99c37e8028"
+        text: 長方形に、かどから かどへ ななめに 線を ひいて、2 つに わけます。わけた かたちに、直角の かどは あわせて いくつ のこりますか。
+        svg: '<svg viewBox="0 0 320 200" xmlns="http://www.w3.org/2000/svg"><rect x="60" y="50" width="200" height="100" fill="#7fc8f8" fill-opacity="0.45" stroke="currentColor" stroke-width="2.5"/><line x1="60" y1="150" x2="260" y2="50" stroke="#e8590c" stroke-width="3.5" stroke-linecap="round"/></svg>'
         answer: 2
+        check: "4 - 2"
         hints:
-          - ちょうほうけいの かどは、おった あと どう なるかな。
-          - ななめの おりめが とおる かどは、ちょっかくの まま のこるかな。
-          - おりめが とおらない かどを かぞえよう。
+          - ななめの 線が とおる かどは、どう なるかな。
+          - text: わけた 2 つを、すこし はなしたよ。
+            svg: '<svg viewBox="0 0 320 200" xmlns="http://www.w3.org/2000/svg"><polygon points="51,41 251,41 51,141" fill="#7fc8f8" fill-opacity="0.45" stroke="currentColor" stroke-width="2.5" stroke-linejoin="round"/><polygon points="269,59 269,159 69,159" fill="#7fc8f8" fill-opacity="0.45" stroke="currentColor" stroke-width="2.5" stroke-linejoin="round"/></svg>'
+          - わけた かたちの かどに、おった 紙の かどを あてて みよう。
         paths:
-          - [おりめが とおる 2 つの かどは わかれて ちょっかくでなく なる, のこる ちょっかくは 2 つ, 2 つ]
-        note: 長方形の角の数（4）を答えやすい。折り紙で折って、折った紙の角を当てて確かめる。
+          - [ななめの 線が とおる 2 つの かどは わかれて 直角で なく なる, のこる 直角は 2 つ, 2 つ]
+          - [わけた かたちは 直角三角形 2 つ, 直角三角形の 直角は 1 つずつ, 2 つ]
+        note: 長方形の かどの かず（4）を こたえやすい。紙に 長方形を かいて ななめの 線で 切りはなし、おった 紙の かどを あてて たしかめる（はさみは おうちの ひとと いっしょに）。
     extra:
       - part: 今日
-        text: ちょっかくの かどが ある カタカナは どれですか。
+        id: "48a05be28d"
+        text: 直角の かどが ある カタカナは どれですか。
+        svg: '<svg viewBox="0 0 320 200" xmlns="http://www.w3.org/2000/svg"><path d="M32.4,56.1 L87.6,56.1 L87.6,118.2 L32.4,118.2 Z" fill="none" stroke="currentColor" stroke-width="7" stroke-linecap="round" stroke-linejoin="miter"/><text x="60" y="170" font-size="20" text-anchor="middle" fill="currentColor">ロ</text><path d="M150.8,56.1 L127.8,115.9" fill="none" stroke="currentColor" stroke-width="7" stroke-linecap="round" stroke-linejoin="miter"/><path d="M171.5,56.1 L196.8,115.9" fill="none" stroke="currentColor" stroke-width="7" stroke-linecap="round" stroke-linejoin="miter"/><text x="160" y="170" font-size="20" text-anchor="middle" fill="currentColor">ハ</text><path d="M230.1,58.4 L243.9,71" fill="none" stroke="currentColor" stroke-width="7" stroke-linecap="round" stroke-linejoin="miter"/><path d="M232.4,115.9 Q269.2,109 292.2,56.1" fill="none" stroke="currentColor" stroke-width="7" stroke-linecap="round" stroke-linejoin="miter"/><text x="260" y="170" font-size="20" text-anchor="middle" fill="currentColor">ン</text></svg>'
         choices: [ロ, ハ, ン]
         answer: ロ
         hints:
-          - おった かみの かどを、もじの かどに あててみよう。
-          - まがった せんや、ひらいた かどは ちょっかくかな。
-          - おった かみの かどと ぴったり あう かどを さがそう。
+          - おった 紙の かどを、もじの かどに あてて みよう。
+          - text: ハ の うえの ところを 見よう。2 本の 線は くっついて いるかな。
+            svg: '<svg viewBox="0 0 320 200" xmlns="http://www.w3.org/2000/svg"><path d="M146.4,63.8 L112.4,152.2" fill="none" stroke="currentColor" stroke-width="7" stroke-linecap="round" stroke-linejoin="miter"/><path d="M177,63.8 L214.4,152.2" fill="none" stroke="currentColor" stroke-width="7" stroke-linecap="round" stroke-linejoin="miter"/><circle cx="161.7" cy="63.8" r="26" fill="none" stroke="#e8590c" stroke-width="3"/><text x="282" y="186" font-size="18" text-anchor="middle" fill="currentColor">ハ</text></svg>'
+          - かどが ある もじを さがして、おった 紙の かどと くらべよう。
         paths:
-          - [おった かみの かどを あてる, ロ の かどは ぴったり, ロ]
+          - [おった 紙の かどを あてる, ロ の かどは ぴったり, ロ]
       - part: 今日
-        text: 🔴 を じゅんに、まっすぐな せんで むすびます。できる かたちは どれですか。
-        figure: "🔴⚪🔴\n⚪⚪⚪\n🔴⚪🔴"
-        choices: [せいほうけい, さんかくけい, ちょっかくさんかくけい]
-        answer: せいほうけい
-        check: "(lambda g: (lambda p: ('せいほうけい' if max(a for a, b in p) - min(a for a, b in p) == max(b for a, b in p) - min(b for a, b in p) else 'ちょうほうけい') if len(p) == 4 and len(set(a for a, b in p)) == 2 and len(set(b for a, b in p)) == 2 else 'ほかの しかくけい')([(r, c) for r in range(len(g)) for c in range(len(g[r])) if g[r][c] == '🔴']))(fig.splitlines())"
+        id: "3d9d6ff719"
+        text: あかい 点を、ぐるりと 1 しゅう する じゅんに、まっすぐな 線で むすびます。できる かたちは どれですか。
+        svg: '<svg viewBox="0 0 320 200" xmlns="http://www.w3.org/2000/svg"><circle cx="160" cy="50" r="4" fill="currentColor" fill-opacity="0.35"/><circle cx="110" cy="100" r="4" fill="currentColor" fill-opacity="0.35"/><circle cx="160" cy="100" r="4" fill="currentColor" fill-opacity="0.35"/><circle cx="210" cy="100" r="4" fill="currentColor" fill-opacity="0.35"/><circle cx="160" cy="150" r="4" fill="currentColor" fill-opacity="0.35"/><circle cx="110" cy="150" r="8" fill="#f08080" fill-opacity="0.95" stroke="currentColor" stroke-width="1.5"/><circle cx="210" cy="50" r="8" fill="#f08080" fill-opacity="0.95" stroke="currentColor" stroke-width="1.5"/><circle cx="210" cy="150" r="8" fill="#f08080" fill-opacity="0.95" stroke="currentColor" stroke-width="1.5"/><circle cx="110" cy="50" r="8" fill="#f08080" fill-opacity="0.95" stroke="currentColor" stroke-width="1.5"/></svg>'
+        choices: [正方形, 三角形, 直角三角形]
+        answer: 正方形
+        check: "(lambda p: '正方形' if max(r for r, c in p) - min(r for r, c in p) == max(c for r, c in p) - min(c for r, c in p) else '長方形')([(0, 0), (0, 2), (2, 2), (2, 0)])"
         hints:
-          - 🔴 は いくつ あるかな。
-          - 4 つの かどは、みんな ちょっかく かな。
-          - よこの へんと たての へんは、てんの あいだ いくつぶん かな。
+          - あかい 点を じゅんに むすんで、かどが いくつ あるか、直角か どうかを しらべよう。
+          - text: よこの へんは、点の あいだ 2 つぶん だよ。たては いくつぶん かな。
+            svg: '<svg viewBox="0 0 320 200" xmlns="http://www.w3.org/2000/svg"><circle cx="160" cy="50" r="4" fill="currentColor" fill-opacity="0.35"/><circle cx="110" cy="100" r="4" fill="currentColor" fill-opacity="0.35"/><circle cx="160" cy="100" r="4" fill="currentColor" fill-opacity="0.35"/><circle cx="210" cy="100" r="4" fill="currentColor" fill-opacity="0.35"/><circle cx="160" cy="150" r="4" fill="currentColor" fill-opacity="0.35"/><circle cx="110" cy="150" r="8" fill="#f08080" fill-opacity="0.95" stroke="currentColor" stroke-width="1.5"/><circle cx="210" cy="50" r="8" fill="#f08080" fill-opacity="0.95" stroke="currentColor" stroke-width="1.5"/><circle cx="210" cy="150" r="8" fill="#f08080" fill-opacity="0.95" stroke="currentColor" stroke-width="1.5"/><circle cx="110" cy="50" r="8" fill="#f08080" fill-opacity="0.95" stroke="currentColor" stroke-width="1.5"/><path d="M113,44 Q135,21.2 157,44" fill="none" stroke="#e8590c" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/><text x="135" y="23.5" font-size="14" text-anchor="middle" fill="currentColor">1</text><path d="M163,44 Q185,21.2 207,44" fill="none" stroke="#e8590c" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/><text x="185" y="23.5" font-size="14" text-anchor="middle" fill="currentColor">2</text></svg>'
+          - よこと たての へんの ながさを くらべよう。
         paths:
-          - [かどは みんな ちょっかく, よこも たても 2 つぶん, せいほうけい]
+          - [かどは みんな 直角, よこも たても 2 つぶん, 正方形]
       - part: 今日
-        text: 🔴 を じゅんに、まっすぐな せんで むすびます。できる さんかくけいは どちら ですか。
-        figure: "⚪🔴⚪\n⚪⚪⚪\n🔴⚪🔴"
-        choices: [ちょっかくさんかくけい, ちょっかくの ない さんかくけい]
-        answer: ちょっかくの ない さんかくけい
-        check: "(lambda g: (lambda p: 'ちょっかくさんかくけい' if any((p[(i + 1) % 3][0] - p[i][0]) * (p[(i + 2) % 3][0] - p[i][0]) + (p[(i + 1) % 3][1] - p[i][1]) * (p[(i + 2) % 3][1] - p[i][1]) == 0 for i in range(3)) else 'ちょっかくの ない さんかくけい')([(r, c) for r in range(len(g)) for c in range(len(g[r])) if g[r][c] == '🔴']))(fig.splitlines())"
+        id: "816b3a0e96"
+        text: あかい 点を、ぐるりと 1 しゅう する じゅんに、まっすぐな 線で むすびます。できる 三角形は どちら ですか。
+        svg: '<svg viewBox="0 0 320 200" xmlns="http://www.w3.org/2000/svg"><circle cx="110" cy="50" r="4" fill="currentColor" fill-opacity="0.35"/><circle cx="210" cy="50" r="4" fill="currentColor" fill-opacity="0.35"/><circle cx="110" cy="100" r="4" fill="currentColor" fill-opacity="0.35"/><circle cx="160" cy="100" r="4" fill="currentColor" fill-opacity="0.35"/><circle cx="210" cy="100" r="4" fill="currentColor" fill-opacity="0.35"/><circle cx="160" cy="150" r="4" fill="currentColor" fill-opacity="0.35"/><circle cx="160" cy="50" r="8" fill="#f08080" fill-opacity="0.95" stroke="currentColor" stroke-width="1.5"/><circle cx="110" cy="150" r="8" fill="#f08080" fill-opacity="0.95" stroke="currentColor" stroke-width="1.5"/><circle cx="210" cy="150" r="8" fill="#f08080" fill-opacity="0.95" stroke="currentColor" stroke-width="1.5"/></svg>'
+        choices: [直角三角形, 直角の ない 三角形]
+        answer: 直角の ない 三角形
+        check: "(lambda p: '直角三角形' if any((p[(i + 1) % 3][0] - p[i][0]) * (p[(i + 2) % 3][0] - p[i][0]) + (p[(i + 1) % 3][1] - p[i][1]) * (p[(i + 2) % 3][1] - p[i][1]) == 0 for i in range(3)) else '直角の ない 三角形')([(0, 1), (2, 0), (2, 2)])"
         hints:
-          - 3 つの ちょうてんの かどを、1 つずつ みよう。
-          - たての せんと よこの せんが まじわる かどは あるかな。
-          - おった かみの かどを あてて たしかめよう。
+          - 3 つの かどを、1 つずつ しらべよう。
+          - text: 線で むすんで、ひだりしたの かどに おった 紙の かどを あてたよ。ぴったり あうかな。
+            svg: '<svg viewBox="0 0 320 200" xmlns="http://www.w3.org/2000/svg"><path d="M110,150 L160,150 Q165,95 110,100 Z" fill="#f3c969" fill-opacity="0.7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M119,150 L119,141 L110,141" fill="none" stroke="#e8590c" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><polygon points="160,50 110,150 210,150" fill="none" stroke="#3d8bd4" stroke-width="3.5" stroke-linejoin="round"/><circle cx="110" cy="50" r="4" fill="currentColor" fill-opacity="0.35"/><circle cx="210" cy="50" r="4" fill="currentColor" fill-opacity="0.35"/><circle cx="110" cy="100" r="4" fill="currentColor" fill-opacity="0.35"/><circle cx="160" cy="100" r="4" fill="currentColor" fill-opacity="0.35"/><circle cx="210" cy="100" r="4" fill="currentColor" fill-opacity="0.35"/><circle cx="160" cy="150" r="4" fill="currentColor" fill-opacity="0.35"/><circle cx="160" cy="50" r="8" fill="#f08080" fill-opacity="0.95" stroke="currentColor" stroke-width="1.5"/><circle cx="110" cy="150" r="8" fill="#f08080" fill-opacity="0.95" stroke="currentColor" stroke-width="1.5"/><circle cx="210" cy="150" r="8" fill="#f08080" fill-opacity="0.95" stroke="currentColor" stroke-width="1.5"/></svg>'
+          - のこりの かどにも、おった 紙の かどを あてて みよう。
         paths:
-          - [うえの かどは ちょっかくより せまい, したの 2 つも ちょっかくでは ない, ちょっかくの ない さんかくけい]
+          - [うえの かどは 直角より せまい, したの 2 つも 直角では ない, 直角の ない 三角形]
 
   - day: 3
     items:
       - part: 見本
-        text: へいこうな 2 ほんの せんを しろう。
-        figure: "🟦🟦🟦🟦🟦\n⬜⬜⬜⬜⬜\n🟦🟦🟦🟦🟦"
-        explain: どこまで のばしても まじわらない 2 ほんの まっすぐな せんを へいこう と いいます。せんろの 2 ほんの レールのように、2 ほんの あいだの はばは どこでも おなじ です。ちょうほうけいの むかいあう へんは へいこう です。
+        id: "1063e63fa6"
+        text: |-
+          どこまで のばしても まじわらない 2 本の まっすぐな 線を、へいこう と いいます。
+          せんろの レールのように、2 本の あいだの はばは どこでも おなじ です。
+        svg: '<svg viewBox="0 0 320 200" xmlns="http://www.w3.org/2000/svg"><rect x="26" y="24" width="8" height="62" fill="#c9a36b" fill-opacity="0.8" stroke="currentColor" stroke-width="1.5"/><rect x="60" y="24" width="8" height="62" fill="#c9a36b" fill-opacity="0.8" stroke="currentColor" stroke-width="1.5"/><rect x="94" y="24" width="8" height="62" fill="#c9a36b" fill-opacity="0.8" stroke="currentColor" stroke-width="1.5"/><rect x="128" y="24" width="8" height="62" fill="#c9a36b" fill-opacity="0.8" stroke="currentColor" stroke-width="1.5"/><rect x="162" y="24" width="8" height="62" fill="#c9a36b" fill-opacity="0.8" stroke="currentColor" stroke-width="1.5"/><rect x="196" y="24" width="8" height="62" fill="#c9a36b" fill-opacity="0.8" stroke="currentColor" stroke-width="1.5"/><rect x="230" y="24" width="8" height="62" fill="#c9a36b" fill-opacity="0.8" stroke="currentColor" stroke-width="1.5"/><rect x="264" y="24" width="8" height="62" fill="#c9a36b" fill-opacity="0.8" stroke="currentColor" stroke-width="1.5"/><rect x="298" y="24" width="8" height="62" fill="#c9a36b" fill-opacity="0.8" stroke="currentColor" stroke-width="1.5"/><line x1="16" y1="32" x2="304" y2="32" stroke="currentColor" stroke-width="4" stroke-linecap="round"/><line x1="16" y1="78" x2="304" y2="78" stroke="currentColor" stroke-width="4" stroke-linecap="round"/><line x1="47" y1="55" x2="47" y2="44" stroke="#e8590c" stroke-width="2.5" stroke-linecap="round"/><polygon points="47,37 51,45 43,45" fill="#e8590c" fill-opacity="1" stroke="#e8590c" stroke-width="1" stroke-linejoin="round"/><line x1="47" y1="55" x2="47" y2="66" stroke="#e8590c" stroke-width="2.5" stroke-linecap="round"/><polygon points="47,73 43,65 51,65" fill="#e8590c" fill-opacity="1" stroke="#e8590c" stroke-width="1" stroke-linejoin="round"/><line x1="251" y1="55" x2="251" y2="44" stroke="#e8590c" stroke-width="2.5" stroke-linecap="round"/><polygon points="251,37 255,45 247,45" fill="#e8590c" fill-opacity="1" stroke="#e8590c" stroke-width="1" stroke-linejoin="round"/><line x1="251" y1="55" x2="251" y2="66" stroke="#e8590c" stroke-width="2.5" stroke-linecap="round"/><polygon points="251,73 247,65 255,65" fill="#e8590c" fill-opacity="1" stroke="#e8590c" stroke-width="1" stroke-linejoin="round"/><text x="160" y="108" font-size="14" text-anchor="middle" fill="currentColor">はばが どこでも おなじ</text><line x1="30" y1="128" x2="196" y2="146" stroke="#3d8bd4" stroke-width="3.5" stroke-linecap="round"/><line x1="30" y1="190" x2="196" y2="172" stroke="#3d8bd4" stroke-width="3.5" stroke-linecap="round"/><line x1="196" y1="146" x2="300" y2="157.4" stroke="#3d8bd4" stroke-width="3" stroke-linecap="round" stroke-dasharray="7 6"/><line x1="196" y1="172" x2="300" y2="160.6" stroke="#3d8bd4" stroke-width="3" stroke-linecap="round" stroke-dasharray="7 6"/><circle cx="301" cy="159" r="5" fill="#e8590c" fill-opacity="1"/><text x="112" y="164" font-size="13" text-anchor="middle" fill="currentColor">のばすと まじわる</text></svg>'
+        explain: どこまで のばしても まじわらない 2 本の まっすぐな 線を へいこう と いいます。せんろの 2 本の レールのように、あいだの はばは どこでも おなじ です。はばが だんだん せまく なる 2 本は、のばすと いつかは まじわるので へいこうでは ありません。長方形の むかいあう へんは へいこう です。
       - part: 今日
-        text: たての せんは、せんろの レール です。レールは 2 ほんで 1 くみ と かぞえます。ひだりから 2 ほんずつ くみに すると、くみは いくつ できますか。
-        figure: "｜　｜　｜　｜　｜　｜"
+        id: "627eb9ffcd"
+        text: たての 線は レール です。レールは 2 本で 1 組 と かぞえます。ひだりから 2 本ずつ 組に すると、組は いくつ できますか。
+        svg: '<svg viewBox="0 0 320 200" xmlns="http://www.w3.org/2000/svg"><line x1="55" y1="40" x2="55" y2="160" stroke="currentColor" stroke-width="5" stroke-linecap="round"/><line x1="97" y1="40" x2="97" y2="160" stroke="currentColor" stroke-width="5" stroke-linecap="round"/><line x1="139" y1="40" x2="139" y2="160" stroke="currentColor" stroke-width="5" stroke-linecap="round"/><line x1="181" y1="40" x2="181" y2="160" stroke="currentColor" stroke-width="5" stroke-linecap="round"/><line x1="223" y1="40" x2="223" y2="160" stroke="currentColor" stroke-width="5" stroke-linecap="round"/><line x1="265" y1="40" x2="265" y2="160" stroke="currentColor" stroke-width="5" stroke-linecap="round"/></svg>'
         answer: 3
-        check: "n('｜') // 2"
+        check: "6 // 2"
         hints:
-          - レールは 2 ほんで 1 くみ だよ。ひだりから 2 ほん えらぼう。
-          - 2 ほんずつ ゆびで かこんで いこう。かこんだ レールは もう つかわないよ。
-          - かこんだ くみが いくつか かぞえよう。
+          - レールは 2 本で 1 組 だよ。ひだりから 2 本 えらぼう。
+          - text: ひだりの 2 本を かこんだよ。つぎの 2 本も かこもう。かこんだ レールは もう つかわないよ。
+            svg: '<svg viewBox="0 0 320 200" xmlns="http://www.w3.org/2000/svg"><line x1="55" y1="40" x2="55" y2="160" stroke="currentColor" stroke-width="5" stroke-linecap="round"/><line x1="97" y1="40" x2="97" y2="160" stroke="currentColor" stroke-width="5" stroke-linecap="round"/><line x1="139" y1="40" x2="139" y2="160" stroke="currentColor" stroke-width="5" stroke-linecap="round"/><line x1="181" y1="40" x2="181" y2="160" stroke="currentColor" stroke-width="5" stroke-linecap="round"/><line x1="223" y1="40" x2="223" y2="160" stroke="currentColor" stroke-width="5" stroke-linecap="round"/><line x1="265" y1="40" x2="265" y2="160" stroke="currentColor" stroke-width="5" stroke-linecap="round"/><rect x="41" y="30" width="70" height="140" rx="12" fill="none" stroke="#e8590c" stroke-width="2.5" stroke-dasharray="7 5"/><text x="76" y="190" font-size="15" text-anchor="middle" fill="currentColor">1 組</text></svg>'
+          - かこんだ 組が いくつか かぞえよう。
         paths:
-          - [ひだりから 2 ほんずつ ゆびで かこむ, かこみが 1、2、3 と できる, 3 くみ]
-        note: 本の数（6）をそのまま答えたり、となりどうしを重ねて 5 と数えたりしやすい。平行な辺の問題で出てくる「2 本で 1 組」の数え方を、先に確かめておく。
+          - [ひだりから 2 本ずつ ゆびで かこむ, かこみが 1、2、3 と できる, 3 組]
+        note: 本の かず（6）を そのまま こたえたり、となりどうしを かさねて 5 と かぞえたり しやすい。へいこうな へんの もんだいで 出て くる「2 本で 1 組」の かぞえかたを、先に たしかめて おく。
       - part: 今日
-        text: へいこうな せんが ある カタカナは どれですか。
+        id: "bf801b1d0d"
+        text: へいこうな 線が ある カタカナは どれですか。
+        svg: '<svg viewBox="0 0 320 200" xmlns="http://www.w3.org/2000/svg"><path d="M37,65.3 L83,65.3" fill="none" stroke="currentColor" stroke-width="7" stroke-linecap="round" stroke-linejoin="miter"/><path d="M25.5,109 L94.5,109" fill="none" stroke="currentColor" stroke-width="7" stroke-linecap="round" stroke-linejoin="miter"/><text x="60" y="170" font-size="20" text-anchor="middle" fill="currentColor">ニ</text><path d="M150.8,56.1 L127.8,115.9" fill="none" stroke="currentColor" stroke-width="7" stroke-linecap="round" stroke-linejoin="miter"/><path d="M171.5,56.1 L196.8,115.9" fill="none" stroke="currentColor" stroke-width="7" stroke-linecap="round" stroke-linejoin="miter"/><text x="160" y="170" font-size="20" text-anchor="middle" fill="currentColor">ハ</text><path d="M248.5,49.2 L248.5,122.8" fill="none" stroke="currentColor" stroke-width="7" stroke-linecap="round" stroke-linejoin="miter"/><path d="M248.5,79.1 L283,95.2" fill="none" stroke="currentColor" stroke-width="7" stroke-linecap="round" stroke-linejoin="miter"/><text x="260" y="170" font-size="20" text-anchor="middle" fill="currentColor">ト</text></svg>'
         choices: [ニ, ハ, ト]
         answer: ニ
         hints:
-          - 2 ほんの せんを、どこまでも のばした ところを おもいうかべよう。
-          - のばすと まじわる せんは、へいこうでは ないよ。
-          - あいだの はばが どこでも おなじ 2 ほんを さがそう。
+          - 2 本の 線を、どこまでも のばした ところを おもいうかべよう。
+          - text: ハ の 2 本を、てんせんで うえへ のばしたよ。
+            svg: '<svg viewBox="0 0 320 200" xmlns="http://www.w3.org/2000/svg"><path d="M147.2,80.4 L115.2,163.6" fill="none" stroke="currentColor" stroke-width="7" stroke-linecap="round" stroke-linejoin="miter"/><path d="M176,80.4 L211.2,163.6" fill="none" stroke="currentColor" stroke-width="7" stroke-linecap="round" stroke-linejoin="miter"/><line x1="147.2" y1="80.4" x2="160.9" y2="44.7" stroke="#e8590c" stroke-width="3" stroke-linecap="round" stroke-dasharray="6 5"/><line x1="176" y1="80.4" x2="160.9" y2="44.7" stroke="#e8590c" stroke-width="3" stroke-linecap="round" stroke-dasharray="6 5"/><circle cx="160.9" cy="44.7" r="6" fill="#e8590c" fill-opacity="1" stroke="currentColor" stroke-width="1.5"/><text x="282" y="186" font-size="18" text-anchor="middle" fill="currentColor">ハ</text></svg>'
+          - あいだの はばが どこでも おなじ 2 本を さがそう。
         paths:
-          - [ハ は したで ひろがる, ト は 2 ほんが くっついて いる, ニ の 2 ほんは はばが おなじ]
+          - [ハ は のばすと うえで まじわる, ト は 2 本が くっついて いる, ニ の 2 本は はばが おなじ]
       - part: 今日
-        text: ちょうほうけいには、へいこうな へんの くみが いくつ ありますか。
+        id: "d4217274f1"
+        text: 長方形には、へいこうな へんの 組が いくつ ありますか。
+        svg: '<svg viewBox="0 0 320 200" xmlns="http://www.w3.org/2000/svg"><rect x="65" y="50" width="190" height="100" fill="#7fc8f8" fill-opacity="0.45" stroke="currentColor" stroke-width="2.5"/></svg>'
         answer: 2
+        check: "len([('うえ', 'した'), ('ひだり', 'みぎ')])"
         hints:
           - むかいあう へんを さがそう。
-          - うえの へんと したの へんは、へいこうかな。
-          - ひだりと みぎの へんも しらべよう。
+          - text: うえと したの へんに 色を つけたよ。はばは どこでも おなじ。
+            svg: '<svg viewBox="0 0 320 200" xmlns="http://www.w3.org/2000/svg"><rect x="65" y="50" width="190" height="100" fill="#7fc8f8" fill-opacity="0.45" stroke="currentColor" stroke-width="2.5"/><line x1="65" y1="50" x2="255" y2="50" stroke="#3d8bd4" stroke-width="5" stroke-linecap="round"/><line x1="65" y1="150" x2="255" y2="150" stroke="#3d8bd4" stroke-width="5" stroke-linecap="round"/><line x1="95" y1="100" x2="95" y2="65" stroke="#e8590c" stroke-width="2.5" stroke-linecap="round"/><polygon points="95,58 99,66 91,66" fill="#e8590c" fill-opacity="1" stroke="#e8590c" stroke-width="1" stroke-linejoin="round"/><line x1="95" y1="100" x2="95" y2="135" stroke="#e8590c" stroke-width="2.5" stroke-linecap="round"/><polygon points="95,142 91,134 99,134" fill="#e8590c" fill-opacity="1" stroke="#e8590c" stroke-width="1" stroke-linejoin="round"/><line x1="225" y1="100" x2="225" y2="65" stroke="#e8590c" stroke-width="2.5" stroke-linecap="round"/><polygon points="225,58 229,66 221,66" fill="#e8590c" fill-opacity="1" stroke="#e8590c" stroke-width="1" stroke-linejoin="round"/><line x1="225" y1="100" x2="225" y2="135" stroke="#e8590c" stroke-width="2.5" stroke-linecap="round"/><polygon points="225,142 221,134 229,134" fill="#e8590c" fill-opacity="1" stroke="#e8590c" stroke-width="1" stroke-linejoin="round"/><text x="160" y="182" font-size="15" text-anchor="middle" fill="currentColor">うえと した で 1 組</text></svg>'
+          - たての 2 本の へんも しらべよう。
         paths:
-          - [うえと した で 1 くみ, ひだりと みぎ で 1 くみ, 2 くみ]
-        note: 辺の数（4）を答えやすい。平行は 2 本で 1 組。
+          - [うえと した で 1 組, ひだりと みぎ で 1 組, 2 組]
+        note: へんの かず（4）を こたえやすい。へいこうは 2 本で 1 組。
       - part: 今日
-        text: ちょっかくさんかくけいに、へいこうな へんは ありますか。
+        id: "72d4fb9d24"
+        text: 直角三角形に、へいこうな へんは ありますか。
+        svg: '<svg viewBox="0 0 320 200" xmlns="http://www.w3.org/2000/svg"><polygon points="90,40 90,160 250,160" fill="#7fc8f8" fill-opacity="0.45" stroke="currentColor" stroke-width="2.5" stroke-linejoin="round"/><path d="M90,148 L102,148 L102,160" fill="none" stroke="#e8590c" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>'
         choices: [ある, ない]
         answer: ない
         hints:
-          - さんかくけいの へんを、2 ほんずつ くらべよう。
-          - 2 ほんの へんを のばすと、まじわるかな。
-          - どの 2 ほんも ちょうてんで くっついて いるね。
+          - へんを 2 本ずつ くらべよう。
+          - text: 2 本の へんに 色を つけたよ。この 2 本は、どこで どう なって いるかな。
+            svg: '<svg viewBox="0 0 320 200" xmlns="http://www.w3.org/2000/svg"><polygon points="90,40 90,160 250,160" fill="#7fc8f8" fill-opacity="0.45" stroke="currentColor" stroke-width="2.5" stroke-linejoin="round"/><path d="M90,148 L102,148 L102,160" fill="none" stroke="#e8590c" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><line x1="90" y1="40" x2="90" y2="160" stroke="#3d8bd4" stroke-width="5" stroke-linecap="round"/><line x1="90" y1="160" x2="250" y2="160" stroke="#3d8bd4" stroke-width="5" stroke-linecap="round"/><circle cx="90" cy="160" r="16" fill="none" stroke="#e8590c" stroke-width="3"/></svg>'
+          - のこりの 2 本ずつの 組も、おなじように しらべよう。
         paths:
-          - [どの 2 ほんも ちょうてんで まじわる, まじわる せんは へいこうでは ない, ない]
+          - [どの 2 本も ちょう点で まじわる, まじわる 線は へいこうでは ない, ない]
       - part: わけ
-        text: せいほうけいは、ちょうほうけいの なかま と いえます。どうしてか、くちで いってみよう。
-        figure: "🔴⚪🔴\n⚪⚪⚪\n🔴⚪🔴"
-        explain: 「せいほうけいも、4 つの かどが みんな ちょっかく だから」と言えればよい。「ちょうほうけいの きまりは『かどが みんな ちょっかく』だけで、へんの ながさの ことは いって いない から」でもよい。名前の決まりに当てはめて仲間かどうかを決める（決まりを当てはめる考え方）。「形が違うから仲間ではない」と答えたら、長方形の決まりを一緒に読み直す。
+        id: "bf5dd9e204"
+        text: 正方形は、長方形の なかま と いえます。どうしてか、くちで いって みよう。
+        svg: '<svg viewBox="0 0 320 200" xmlns="http://www.w3.org/2000/svg"><polygon points="30,50 130,50 130,150 30,150" fill="#7fc8f8" fill-opacity="0.45" stroke="currentColor" stroke-width="2.5" stroke-linejoin="round"/><polygon points="170,65 300,65 300,135 170,135" fill="#7bc96f" fill-opacity="0.45" stroke="currentColor" stroke-width="2.5" stroke-linejoin="round"/><text x="80" y="180" font-size="15" text-anchor="middle" fill="currentColor">正方形</text><text x="235" y="180" font-size="15" text-anchor="middle" fill="currentColor">長方形</text></svg>'
         hints:
-          - ちょうほうけいの きまりを おもいだそう。
-          - せいほうけいの かどは、どんな かどかな。
-          - 「〜だから なかま」と いってみよう。
+          - 長方形の きまりを おもいだそう。
+          - text: 2 つの かたちの かどを、おった 紙の かどで しらべて、しるしを つけたよ。
+            svg: '<svg viewBox="0 0 320 200" xmlns="http://www.w3.org/2000/svg"><polygon points="30,50 130,50 130,150 30,150" fill="#7fc8f8" fill-opacity="0.45" stroke="currentColor" stroke-width="2.5" stroke-linejoin="round"/><polygon points="170,65 300,65 300,135 170,135" fill="#7bc96f" fill-opacity="0.45" stroke="currentColor" stroke-width="2.5" stroke-linejoin="round"/><text x="80" y="180" font-size="15" text-anchor="middle" fill="currentColor">正方形</text><text x="235" y="180" font-size="15" text-anchor="middle" fill="currentColor">長方形</text><path d="M30,61 L41,61 L41,50" fill="none" stroke="#e8590c" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M119,50 L119,61 L130,61" fill="none" stroke="#e8590c" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M130,139 L119,139 L119,150" fill="none" stroke="#e8590c" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M41,150 L41,139 L30,139" fill="none" stroke="#e8590c" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M170,76 L181,76 L181,65" fill="none" stroke="#e8590c" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M289,65 L289,76 L300,76" fill="none" stroke="#e8590c" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M300,124 L289,124 L289,135" fill="none" stroke="#e8590c" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M181,135 L181,124 L170,124" fill="none" stroke="#e8590c" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>'
+          - 「〜だから なかま」と いって みよう。
         paths:
-          - [ちょうほうけいの きまりは かどが みんな ちょっかく, せいほうけいの かども みんな ちょっかく, だから なかま]
+          - [長方形の きまりは かどが みんな 直角, 正方形の かども みんな 直角, だから なかま]
+          - [長方形の きまりに へんの ながさは 入って いない, 正方形は へんが みんな おなじ ながさの 長方形, だから なかま]
+        explain: 「正方形も、4 つの かどが みんな 直角 だから」と いえれば よい。「長方形の きまりは『かどが みんな 直角』だけで、へんの ながさの ことは いって いない から」でも よい。名前の きまりに あてはめて、なかまか どうかを きめる（きまりを あてはめる 考え方）。「かたちが ちがうから なかまでは ない」と こたえたら、長方形の きまりを いっしょに 読みなおす。
       - part: わけ
-        text: ちょうほうけいの むかいあう へんは、へいこう です。どうしてか、くちで いってみよう。
-        figure: "🔴⚪⚪⚪🔴\n⚪⚪⚪⚪⚪\n🔴⚪⚪⚪🔴"
-        explain: 「ひだりの へんも みぎの へんも、したの へんと ちょっかくに まじわる。だから 2 ほんは おなじ むきに まっすぐ のびて、まじわらない」と言えればよい。「うえの へんと したの へんは おなじ ながさ だから、2 ほんの あいだの はばが どこでも おなじ」でもよい。直角と平行のつながりに気づけばなお良い。
+        id: "cd4a3c35ed"
+        text: 長方形の むかいあう へんは、へいこう です。どうしてか、くちで いって みよう。
+        svg: '<svg viewBox="0 0 320 200" xmlns="http://www.w3.org/2000/svg"><rect x="70" y="45" width="180" height="110" fill="#7fc8f8" fill-opacity="0.45" stroke="currentColor" stroke-width="2.5"/><line x1="70" y1="45" x2="250" y2="45" stroke="#3d8bd4" stroke-width="5" stroke-linecap="round"/><line x1="70" y1="155" x2="250" y2="155" stroke="#3d8bd4" stroke-width="5" stroke-linecap="round"/></svg>'
         hints:
           - ひだりの へんと したの へんは、どんな かどで まじわって いるかな。
-          - みぎの へんも しらべよう。
-          - 2 ほんとも おなじ かどで たって いると、どう なるかな。
+          - text: ひだりと みぎの へんの、したの かどに しるしを つけたよ。
+            svg: '<svg viewBox="0 0 320 200" xmlns="http://www.w3.org/2000/svg"><rect x="70" y="45" width="180" height="110" fill="#7fc8f8" fill-opacity="0.45" stroke="currentColor" stroke-width="2.5"/><line x1="70" y1="45" x2="70" y2="155" stroke="#3d8bd4" stroke-width="5" stroke-linecap="round"/><line x1="250" y1="45" x2="250" y2="155" stroke="#3d8bd4" stroke-width="5" stroke-linecap="round"/><path d="M70,142 L83,142 L83,155" fill="none" stroke="#e8590c" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M250,142 L237,142 L237,155" fill="none" stroke="#e8590c" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>'
+          - 2 本とも おなじ かどで 立って いると、どう なるかな。
         paths:
-          - [ひだりも みぎも したの へんと ちょっかく, おなじ むきに のびる, まじわらない, だから へいこう]
+          - [ひだりも みぎも したの へんと 直角, おなじ むきに のびる, まじわらない, だから へいこう]
+          - [ひだりと みぎの へんは おなじ ながさ, うえと したの あいだの はばが どこでも おなじ, だから うえと したは へいこう]
+        explain: 「ひだりの へんも みぎの へんも、したの へんと 直角に まじわる。だから 2 本は おなじ むきに まっすぐ のびて、まじわらない」と いえれば よい。「ひだりの へんと みぎの へんは、どちらも したの へんに 直角に 立って いて、ながさも おなじ。だから うえの へんと したの へんの あいだの はばは どこでも おなじ」でも よい。直角と へいこうの つながりに 気づけば なお よい。
       - part: わけ
-        text: さんかくけいの かどが、2 つとも ちょっかくに なる ことは ありません。どうしてか、くちで いってみよう。
-        explain: 「したの へんの りょうはしに、ちょっかくに たてた 2 ほんの へんは へいこうに なる。へいこうな せんは まじわらないので、3 つめの ちょうてんが できない から」と言えればよい。「かいてみると、2 ほんの せんが まっすぐ うえに のびて、いつまでも くっつかない から」でもよい。三角形の角の和を学ぶ前に、直角と平行だけで言える理由（G-009 で角の和につながる）。
+        id: "88a97c89ce"
+        text: 三角形の かどが、2 つとも 直角に なる ことは ありません。どうしてか、くちで いって みよう。
+        svg: '<svg viewBox="0 0 320 200" xmlns="http://www.w3.org/2000/svg"><polygon points="90,160 230,160 90,50" fill="#7fc8f8" fill-opacity="0.45" stroke="currentColor" stroke-width="2.5" stroke-linejoin="round"/><path d="M90,147 L103,147 L103,160" fill="none" stroke="#e8590c" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><text x="250" y="140" font-size="22" text-anchor="middle" fill="currentColor">？</text></svg>'
         hints:
-          - したの へんを かいて、りょうはしに ちょっかくの せんを かいてみよう。
-          - かいた 2 ほんの せんは、どんな せんかな。
-          - へいこうな せんは、まじわるかな。
+          - したの へんを かいて、りょうはしに 直角の 線を 立てて みよう。
+          - text: りょうはしに 直角の 線を 立てて、うえへ のばしたよ。
+            svg: '<svg viewBox="0 0 320 200" xmlns="http://www.w3.org/2000/svg"><line x1="90" y1="160" x2="230" y2="160" stroke="currentColor" stroke-width="3" stroke-linecap="round"/><line x1="90" y1="160" x2="90" y2="80" stroke="#3d8bd4" stroke-width="3.5" stroke-linecap="round"/><line x1="230" y1="160" x2="230" y2="80" stroke="#3d8bd4" stroke-width="3.5" stroke-linecap="round"/><line x1="90" y1="80" x2="90" y2="24" stroke="#3d8bd4" stroke-width="3" stroke-linecap="round" stroke-dasharray="7 6"/><line x1="230" y1="80" x2="230" y2="24" stroke="#3d8bd4" stroke-width="3" stroke-linecap="round" stroke-dasharray="7 6"/><path d="M90,147 L103,147 L103,160" fill="none" stroke="#e8590c" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M230,147 L217,147 L217,160" fill="none" stroke="#e8590c" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><line x1="90" y1="30" x2="90" y2="17" stroke="#3d8bd4" stroke-width="2.5" stroke-linecap="round"/><polygon points="90,10 94,18 86,18" fill="#3d8bd4" fill-opacity="1" stroke="#3d8bd4" stroke-width="1" stroke-linejoin="round"/><line x1="230" y1="30" x2="230" y2="17" stroke="#3d8bd4" stroke-width="2.5" stroke-linecap="round"/><polygon points="230,10 234,18 226,18" fill="#3d8bd4" fill-opacity="1" stroke="#3d8bd4" stroke-width="1" stroke-linejoin="round"/></svg>'
+          - へいこうな 線は、まじわる かな。
         paths:
-          - [りょうはしに ちょっかくの せん, 2 ほんは へいこう, へいこうな せんは まじわらない, だから さんかくけいに ならない]
+          - [りょうはしに 直角の 線, 2 本は へいこう, へいこうな 線は まじわらない, だから 三角形に ならない]
+          - [かいて みる, 2 本の 線は まっすぐ うえに のびる, いつまでも くっつかない, 3 つめの ちょう点が できない]
+        explain: 「したの へんの りょうはしに、直角に 立てた 2 本の へんは へいこうに なる。へいこうな 線は まじわらないので、3 つめの ちょう点が できない から」と いえれば よい。「かいて みると、2 本の 線が まっすぐ うえに のびて、いつまでも くっつかない から」でも よい。三角形の かどの 大きさを たす 前に、直角と へいこう だけで いえる わけ（G-009 で 三角形の かどの 大きさの あつまりに つながる）。
     extra:
       - part: 今日
-        text: へいこうな 2 ほんの せんは どれですか。
+        id: "ee6b3973a5"
+        text: へいこうな 2 本の 線は どれですか。
+        svg: '<svg viewBox="0 0 320 200" xmlns="http://www.w3.org/2000/svg"><path d="M25.5,71 L94.5,71" fill="none" stroke="currentColor" stroke-width="7" stroke-linecap="round" stroke-linejoin="miter"/><path d="M25.5,101 L94.5,101" fill="none" stroke="currentColor" stroke-width="7" stroke-linecap="round" stroke-linejoin="miter"/><text x="60" y="170" font-size="20" text-anchor="middle" fill="currentColor">＝</text><path d="M189.9,53.8 L130.1,86 L189.9,118.2" fill="none" stroke="currentColor" stroke-width="7" stroke-linecap="round" stroke-linejoin="miter"/><text x="160" y="170" font-size="20" text-anchor="middle" fill="currentColor">＜</text><path d="M225.5,86 L294.5,86" fill="none" stroke="currentColor" stroke-width="7" stroke-linecap="round" stroke-linejoin="miter"/><path d="M260,51.5 L260,120.5" fill="none" stroke="currentColor" stroke-width="7" stroke-linecap="round" stroke-linejoin="miter"/><text x="260" y="170" font-size="20" text-anchor="middle" fill="currentColor">＋</text></svg>'
         choices: [＝, ＜, ＋]
         answer: ＝
         hints:
-          - 2 ほんの せんを、どこまでも のばした ところを おもいうかべよう。
-          - くっついたり、まじわったり して いる せんは へいこうかな。
-          - あいだの はばが どこでも おなじ 2 ほんを さがそう。
+          - 2 本の 線を、どこまでも のばした ところを おもいうかべよう。
+          - text: ＜ の ここを 見よう。2 本の 線は どう なって いるかな。
+            svg: '<svg viewBox="0 0 320 200" xmlns="http://www.w3.org/2000/svg"><path d="M204.2,52.4 L115.8,100 L204.2,147.6" fill="none" stroke="currentColor" stroke-width="7" stroke-linecap="round" stroke-linejoin="miter"/><circle cx="115.8" cy="100" r="22" fill="none" stroke="#e8590c" stroke-width="3"/><text x="282" y="186" font-size="18" text-anchor="middle" fill="currentColor">＜</text></svg>'
+          - あいだの はばが どこでも おなじ 2 本を さがそう。
         paths:
           - [＜ は くっつく, ＋ は まじわる, ＝]
       - part: 今日
-        text: せいほうけいには、へいこうな へんの くみが いくつ ありますか。
+        id: "09a7782260"
+        text: 正方形には、へいこうな へんの 組が いくつ ありますか。
+        svg: '<svg viewBox="0 0 320 200" xmlns="http://www.w3.org/2000/svg"><rect x="105" y="45" width="110" height="110" fill="#7fc8f8" fill-opacity="0.45" stroke="currentColor" stroke-width="2.5"/></svg>'
         answer: 2
+        check: "len([('うえ', 'した'), ('ひだり', 'みぎ')])"
         hints:
           - むかいあう へんを さがそう。
-          - うえの へんと したの へんは、へいこうかな。
-          - ひだりと みぎの へんも しらべよう。
+          - text: ひだりと みぎの へんに 色を つけたよ。この 2 本で 1 組。
+            svg: '<svg viewBox="0 0 320 200" xmlns="http://www.w3.org/2000/svg"><rect x="105" y="45" width="110" height="110" fill="#7fc8f8" fill-opacity="0.45" stroke="currentColor" stroke-width="2.5"/><line x1="105" y1="45" x2="105" y2="155" stroke="#3d8bd4" stroke-width="5" stroke-linecap="round"/><line x1="215" y1="45" x2="215" y2="155" stroke="#3d8bd4" stroke-width="5" stroke-linecap="round"/><text x="160" y="187" font-size="15" text-anchor="middle" fill="currentColor">ひだりと みぎ で 1 組</text></svg>'
+          - よこの 2 本の へんも しらべよう。
         paths:
-          - [うえと した, ひだりと みぎ, 2 くみ]
+          - [うえと した, ひだりと みぎ, 2 組]
       - part: 今日
-        text: ちょうほうけいの むかいあう 2 つの へんを、どこまでも のばします。まじわりますか。
+        id: "b5fd161731"
+        text: 長方形の むかいあう 2 つの へんを、どこまでも のばします。まじわりますか。
+        svg: '<svg viewBox="0 0 320 200" xmlns="http://www.w3.org/2000/svg"><rect x="100" y="60" width="120" height="80" fill="#7fc8f8" fill-opacity="0.45" stroke="currentColor" stroke-width="2.5"/><line x1="100" y1="60" x2="220" y2="60" stroke="#3d8bd4" stroke-width="5" stroke-linecap="round"/><line x1="100" y1="140" x2="220" y2="140" stroke="#3d8bd4" stroke-width="5" stroke-linecap="round"/><line x1="14" y1="60" x2="100" y2="60" stroke="#3d8bd4" stroke-width="3" stroke-linecap="round" stroke-dasharray="7 6"/><line x1="220" y1="60" x2="306" y2="60" stroke="#3d8bd4" stroke-width="3" stroke-linecap="round" stroke-dasharray="7 6"/><line x1="14" y1="140" x2="100" y2="140" stroke="#3d8bd4" stroke-width="3" stroke-linecap="round" stroke-dasharray="7 6"/><line x1="220" y1="140" x2="306" y2="140" stroke="#3d8bd4" stroke-width="3" stroke-linecap="round" stroke-dasharray="7 6"/></svg>'
         choices: [まじわる, まじわらない]
         answer: まじわらない
         hints:
-          - むかいあう へんは、どんな 2 ほん だったかな。
-          - 2 ほんの あいだの はばは、のばすと かわるかな。
-          - へいこうな せんの きまりを おもいだそう。
+          - むかいあう へんは、どんな 2 本 だったかな。
+          - text: のばした 線の あいだの はばを、3 つの ところで しらべたよ。
+            svg: '<svg viewBox="0 0 320 200" xmlns="http://www.w3.org/2000/svg"><rect x="100" y="60" width="120" height="80" fill="#7fc8f8" fill-opacity="0.45" stroke="currentColor" stroke-width="2.5"/><line x1="100" y1="60" x2="220" y2="60" stroke="#3d8bd4" stroke-width="5" stroke-linecap="round"/><line x1="100" y1="140" x2="220" y2="140" stroke="#3d8bd4" stroke-width="5" stroke-linecap="round"/><line x1="14" y1="60" x2="100" y2="60" stroke="#3d8bd4" stroke-width="3" stroke-linecap="round" stroke-dasharray="7 6"/><line x1="220" y1="60" x2="306" y2="60" stroke="#3d8bd4" stroke-width="3" stroke-linecap="round" stroke-dasharray="7 6"/><line x1="14" y1="140" x2="100" y2="140" stroke="#3d8bd4" stroke-width="3" stroke-linecap="round" stroke-dasharray="7 6"/><line x1="220" y1="140" x2="306" y2="140" stroke="#3d8bd4" stroke-width="3" stroke-linecap="round" stroke-dasharray="7 6"/><line x1="40" y1="100" x2="40" y2="73" stroke="#e8590c" stroke-width="2.5" stroke-linecap="round"/><polygon points="40,66 44,74 36,74" fill="#e8590c" fill-opacity="1" stroke="#e8590c" stroke-width="1" stroke-linejoin="round"/><line x1="40" y1="100" x2="40" y2="127" stroke="#e8590c" stroke-width="2.5" stroke-linecap="round"/><polygon points="40,134 36,126 44,126" fill="#e8590c" fill-opacity="1" stroke="#e8590c" stroke-width="1" stroke-linejoin="round"/><line x1="160" y1="100" x2="160" y2="73" stroke="#e8590c" stroke-width="2.5" stroke-linecap="round"/><polygon points="160,66 164,74 156,74" fill="#e8590c" fill-opacity="1" stroke="#e8590c" stroke-width="1" stroke-linejoin="round"/><line x1="160" y1="100" x2="160" y2="127" stroke="#e8590c" stroke-width="2.5" stroke-linecap="round"/><polygon points="160,134 156,126 164,126" fill="#e8590c" fill-opacity="1" stroke="#e8590c" stroke-width="1" stroke-linejoin="round"/><line x1="280" y1="100" x2="280" y2="73" stroke="#e8590c" stroke-width="2.5" stroke-linecap="round"/><polygon points="280,66 284,74 276,74" fill="#e8590c" fill-opacity="1" stroke="#e8590c" stroke-width="1" stroke-linejoin="round"/><line x1="280" y1="100" x2="280" y2="127" stroke="#e8590c" stroke-width="2.5" stroke-linecap="round"/><polygon points="280,134 276,126 284,126" fill="#e8590c" fill-opacity="1" stroke="#e8590c" stroke-width="1" stroke-linejoin="round"/></svg>'
+          - へいこうな 線の きまりを おもいだそう。
         paths:
           - [むかいあう へんは へいこう, はばは かわらない, まじわらない]
 
   - day: 4
     items:
       - part: 思い出す
-        text: 🔴 を じゅんに、まっすぐな せんで むすびます。できる かたちは どれですか。
-        figure: "🔴⚪🔴⚪\n⚪⚪⚪⚪\n🔴⚪🔴⚪"
-        choices: [せいほうけい, さんかくけい, ちょっかくさんかくけい]
-        answer: せいほうけい
-        check: "(lambda g: (lambda p: ('せいほうけい' if max(a for a, b in p) - min(a for a, b in p) == max(b for a, b in p) - min(b for a, b in p) else 'ちょうほうけい') if len(p) == 4 and len(set(a for a, b in p)) == 2 and len(set(b for a, b in p)) == 2 else 'ほかの しかくけい')([(r, c) for r in range(len(g)) for c in range(len(g[r])) if g[r][c] == '🔴']))(fig.splitlines())"
+        id: "00e0485699"
+        text: あかい 点を、ぐるりと 1 しゅう する じゅんに、まっすぐな 線で むすびます。できる かたちは どれですか。
+        svg: '<svg viewBox="0 0 320 200" xmlns="http://www.w3.org/2000/svg"><circle cx="135" cy="50" r="4" fill="currentColor" fill-opacity="0.35"/><circle cx="235" cy="50" r="4" fill="currentColor" fill-opacity="0.35"/><circle cx="85" cy="100" r="4" fill="currentColor" fill-opacity="0.35"/><circle cx="135" cy="100" r="4" fill="currentColor" fill-opacity="0.35"/><circle cx="185" cy="100" r="4" fill="currentColor" fill-opacity="0.35"/><circle cx="235" cy="100" r="4" fill="currentColor" fill-opacity="0.35"/><circle cx="135" cy="150" r="4" fill="currentColor" fill-opacity="0.35"/><circle cx="235" cy="150" r="4" fill="currentColor" fill-opacity="0.35"/><circle cx="85" cy="150" r="8" fill="#f08080" fill-opacity="0.95" stroke="currentColor" stroke-width="1.5"/><circle cx="185" cy="50" r="8" fill="#f08080" fill-opacity="0.95" stroke="currentColor" stroke-width="1.5"/><circle cx="185" cy="150" r="8" fill="#f08080" fill-opacity="0.95" stroke="currentColor" stroke-width="1.5"/><circle cx="85" cy="50" r="8" fill="#f08080" fill-opacity="0.95" stroke="currentColor" stroke-width="1.5"/></svg>'
+        choices: [正方形, 三角形, 直角三角形]
+        answer: 正方形
+        check: "(lambda p: '正方形' if max(r for r, c in p) - min(r for r, c in p) == max(c for r, c in p) - min(c for r, c in p) else '長方形')([(0, 0), (0, 2), (2, 2), (2, 0)])"
         hints:
-          - 🔴 は いくつ あるかな。
-          - 4 つの かどは、みんな ちょっかく かな。
-          - よこの へんと たての へんは、てんの あいだ いくつぶん かな。
+          - あかい 点を じゅんに むすんで、かどが いくつ あるか、直角か どうかを しらべよう。
+          - text: よこの へんは、点の あいだ 2 つぶん だよ。たては いくつぶん かな。
+            svg: '<svg viewBox="0 0 320 200" xmlns="http://www.w3.org/2000/svg"><circle cx="135" cy="50" r="4" fill="currentColor" fill-opacity="0.35"/><circle cx="235" cy="50" r="4" fill="currentColor" fill-opacity="0.35"/><circle cx="85" cy="100" r="4" fill="currentColor" fill-opacity="0.35"/><circle cx="135" cy="100" r="4" fill="currentColor" fill-opacity="0.35"/><circle cx="185" cy="100" r="4" fill="currentColor" fill-opacity="0.35"/><circle cx="235" cy="100" r="4" fill="currentColor" fill-opacity="0.35"/><circle cx="135" cy="150" r="4" fill="currentColor" fill-opacity="0.35"/><circle cx="235" cy="150" r="4" fill="currentColor" fill-opacity="0.35"/><circle cx="85" cy="150" r="8" fill="#f08080" fill-opacity="0.95" stroke="currentColor" stroke-width="1.5"/><circle cx="185" cy="50" r="8" fill="#f08080" fill-opacity="0.95" stroke="currentColor" stroke-width="1.5"/><circle cx="185" cy="150" r="8" fill="#f08080" fill-opacity="0.95" stroke="currentColor" stroke-width="1.5"/><circle cx="85" cy="50" r="8" fill="#f08080" fill-opacity="0.95" stroke="currentColor" stroke-width="1.5"/><path d="M88,44 Q110,21.2 132,44" fill="none" stroke="#e8590c" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/><text x="110" y="23.5" font-size="14" text-anchor="middle" fill="currentColor">1</text><path d="M138,44 Q160,21.2 182,44" fill="none" stroke="#e8590c" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/><text x="160" y="23.5" font-size="14" text-anchor="middle" fill="currentColor">2</text></svg>'
+          - よこと たての へんの ながさを くらべよう。
         paths:
-          - [かどは みんな ちょっかく, よこも たても 2 つぶん, せいほうけい]
+          - [かどは みんな 直角, よこも たても 2 つぶん, 正方形]
       - part: 思い出す
+        id: "e1969db922"
         text: へいこうな へんが ある カタカナは どれですか。
+        svg: '<svg viewBox="0 0 320 200" xmlns="http://www.w3.org/2000/svg"><path d="M50.8,56.1 L27.8,115.9" fill="none" stroke="currentColor" stroke-width="7" stroke-linecap="round" stroke-linejoin="miter"/><path d="M71.5,56.1 L96.8,115.9" fill="none" stroke="currentColor" stroke-width="7" stroke-linecap="round" stroke-linejoin="miter"/><text x="60" y="170" font-size="20" text-anchor="middle" fill="currentColor">ハ</text><path d="M132.4,56.1 L187.6,56.1 L187.6,118.2 L132.4,118.2 Z" fill="none" stroke="currentColor" stroke-width="7" stroke-linecap="round" stroke-linejoin="miter"/><text x="160" y="170" font-size="20" text-anchor="middle" fill="currentColor">ロ</text><path d="M210.6,87.2 L245.1,67.6 L309.4,104.4" fill="none" stroke="currentColor" stroke-width="7" stroke-linecap="round" stroke-linejoin="miter"/><text x="260" y="170" font-size="20" text-anchor="middle" fill="currentColor">ヘ</text></svg>'
         choices: [ハ, ロ, ヘ]
         answer: ロ
         hints:
-          - 2 ほんの へんを、どこまでも のばした ところを おもいうかべよう。
-          - ひろがったり、くっついたり する せんは へいこうかな。
-          - あいだの はばが どこでも おなじ 2 ほんを さがそう。
+          - 2 本の へんを、どこまでも のばした ところを おもいうかべよう。
+          - text: ハ の 2 本を、てんせんで うえへ のばしたよ。
+            svg: '<svg viewBox="0 0 320 200" xmlns="http://www.w3.org/2000/svg"><path d="M147.2,80.4 L115.2,163.6" fill="none" stroke="currentColor" stroke-width="7" stroke-linecap="round" stroke-linejoin="miter"/><path d="M176,80.4 L211.2,163.6" fill="none" stroke="currentColor" stroke-width="7" stroke-linecap="round" stroke-linejoin="miter"/><line x1="147.2" y1="80.4" x2="160.9" y2="44.7" stroke="#e8590c" stroke-width="3" stroke-linecap="round" stroke-dasharray="6 5"/><line x1="176" y1="80.4" x2="160.9" y2="44.7" stroke="#e8590c" stroke-width="3" stroke-linecap="round" stroke-dasharray="6 5"/><circle cx="160.9" cy="44.7" r="6" fill="#e8590c" fill-opacity="1" stroke="currentColor" stroke-width="1.5"/><text x="282" y="186" font-size="18" text-anchor="middle" fill="currentColor">ハ</text></svg>'
+          - あいだの はばが どこでも おなじ 2 本を さがそう。
         paths:
           - [ロ の うえと した, はばが おなじ, ロ]
       - part: 今日
-        text: いろいたを、たてに 2 まい、よこに 4 まい ならべました。4 まいで できる せいほうけいだけを かぞえます。1 まいぶん ずらした ものも、べつの せいほうけいと して かぞえます。いくつ ありますか。
-        figure: "🟨🟨🟨🟨\n🟨🟨🟨🟨"
+        id: "5751993e14"
+        text: いろいたを ならべました。4 まいで できる 正方形は いくつ ありますか。ずらして かさなる ものも、べつに かぞえます。
+        svg: '<svg viewBox="0 0 320 200" xmlns="http://www.w3.org/2000/svg"><rect x="60" y="50" width="50" height="50" rx="3" fill="#f3c969" fill-opacity="0.75" stroke="currentColor" stroke-width="2"/><rect x="110" y="50" width="50" height="50" rx="3" fill="#f3c969" fill-opacity="0.75" stroke="currentColor" stroke-width="2"/><rect x="160" y="50" width="50" height="50" rx="3" fill="#f3c969" fill-opacity="0.75" stroke="currentColor" stroke-width="2"/><rect x="210" y="50" width="50" height="50" rx="3" fill="#f3c969" fill-opacity="0.75" stroke="currentColor" stroke-width="2"/><rect x="60" y="100" width="50" height="50" rx="3" fill="#f3c969" fill-opacity="0.75" stroke="currentColor" stroke-width="2"/><rect x="110" y="100" width="50" height="50" rx="3" fill="#f3c969" fill-opacity="0.75" stroke="currentColor" stroke-width="2"/><rect x="160" y="100" width="50" height="50" rx="3" fill="#f3c969" fill-opacity="0.75" stroke="currentColor" stroke-width="2"/><rect x="210" y="100" width="50" height="50" rx="3" fill="#f3c969" fill-opacity="0.75" stroke="currentColor" stroke-width="2"/></svg>'
         answer: 3
-        check: "(lambda g: sum(1 for r in range(len(g) - 1) for c in range(len(g[0]) - 1) if g[r][c] == g[r][c + 1] == g[r + 1][c] == g[r + 1][c + 1]))(fig.splitlines())"
+        check: "(lambda R, C: (R - 1) * (C - 1))(2, 4)"
         hints:
-          - 4 まいで できる せいほうけいは、たて 2 まい よこ 2 まいの かたまりだよ。
-          - いちばん ひだりの かたまりを かこんでから、1 まいぶん みぎへ ずらそう。
-          - ずらして かこむのを、かこめなく なるまで つづけて かぞえよう。
+          - 4 まいで できる 正方形は、たて 2 まい・よこ 2 まいの かたまり だよ。
+          - text: ひだりの 4 まいを かこんだよ。1 まいぶん みぎへ ずらして、また かこもう。
+            svg: '<svg viewBox="0 0 320 200" xmlns="http://www.w3.org/2000/svg"><rect x="60" y="50" width="50" height="50" rx="3" fill="#f3c969" fill-opacity="0.75" stroke="currentColor" stroke-width="2"/><rect x="110" y="50" width="50" height="50" rx="3" fill="#f3c969" fill-opacity="0.75" stroke="currentColor" stroke-width="2"/><rect x="160" y="50" width="50" height="50" rx="3" fill="#f3c969" fill-opacity="0.75" stroke="currentColor" stroke-width="2"/><rect x="210" y="50" width="50" height="50" rx="3" fill="#f3c969" fill-opacity="0.75" stroke="currentColor" stroke-width="2"/><rect x="60" y="100" width="50" height="50" rx="3" fill="#f3c969" fill-opacity="0.75" stroke="currentColor" stroke-width="2"/><rect x="110" y="100" width="50" height="50" rx="3" fill="#f3c969" fill-opacity="0.75" stroke="currentColor" stroke-width="2"/><rect x="160" y="100" width="50" height="50" rx="3" fill="#f3c969" fill-opacity="0.75" stroke="currentColor" stroke-width="2"/><rect x="210" y="100" width="50" height="50" rx="3" fill="#f3c969" fill-opacity="0.75" stroke="currentColor" stroke-width="2"/><rect x="56" y="46" width="108" height="108" rx="6" fill="none" stroke="#e8590c" stroke-width="4"/><rect x="113" y="53" width="94" height="94" rx="6" fill="none" stroke="#e8590c" stroke-width="3" stroke-dasharray="7 5"/><line x1="120" y1="172" x2="153" y2="172" stroke="#e8590c" stroke-width="2.5" stroke-linecap="round"/><polygon points="160,172 152,176 152,168" fill="#e8590c" fill-opacity="1" stroke="#e8590c" stroke-width="1" stroke-linejoin="round"/></svg>'
+          - かこめなく なるまで ずらして、かこんだ かずを かぞえよう。
         paths:
           - [いちばん ひだりの 4 まいを かこむ, 1 まいぶん みぎへ ずらして かこむ, また ずらして かこんで 3 つ]
-          - [🟨 の あいだの たての せんを ひだりから 1、2、3 と かぞえる, 4 まいの せいほうけいは その せんの どれか 1 ぽんを まんなかに もつ, せん 1 ぽんに せいほうけい 1 つずつ だから 3 つ]
-        note: ずらしながら数える。かさなっていても、ずらした正方形は 1 つずつ数える。
+          - [いろいたの あいだの たての 線を ひだりから 1、2、3 と かぞえる, 4 まいの 正方形は その 線の どれか 1 本を まんなかに もつ, 線 1 本に 正方形 1 つずつ だから 3 つ]
+        note: ずらしながら かぞえる。かさなって いても、ずらした 正方形は 1 つずつ かぞえる。
       - part: 今日
-        text: ちょうほうけいに、かどから かどへ ななめに まっすぐな せんを ひいて、2 つに わけます。できる かたちは どれですか。
-        choices: [ちょっかくさんかくけい, せいほうけい, ちょうほうけい]
-        answer: ちょっかくさんかくけい
+        id: "815bb21bb7"
+        text: 長方形に、かどから かどへ ななめに 線を ひいて、2 つに わけます。できる かたちは どれですか。
+        svg: '<svg viewBox="0 0 320 200" xmlns="http://www.w3.org/2000/svg"><rect x="60" y="50" width="200" height="100" fill="#7fc8f8" fill-opacity="0.45" stroke="currentColor" stroke-width="2.5"/><line x1="60" y1="150" x2="260" y2="50" stroke="#e8590c" stroke-width="3.5" stroke-linecap="round"/></svg>'
+        choices: [直角三角形, 正方形, 長方形]
+        answer: 直角三角形
         hints:
-          - わけた かたちの へんは いくつかな。
-          - わけた かたちに、もとの ちょうほうけいの かどが のこって いるかな。
-          - のこった かどは どんな かどかな。
+          - わけた かたちの へんは 何本 かな。
+          - text: わけた かたちの 1 つに 色を ぬったよ。
+            svg: '<svg viewBox="0 0 320 200" xmlns="http://www.w3.org/2000/svg"><polygon points="52,42 252,42 52,142" fill="#f3c969" fill-opacity="0.7" stroke="currentColor" stroke-width="2.5" stroke-linejoin="round"/><polygon points="268,58 268,158 68,158" fill="#7fc8f8" fill-opacity="0.45" stroke="currentColor" stroke-width="2.5" stroke-linejoin="round"/></svg>'
+          - 色を ぬった かたちの かどに、おった 紙の かどを あてて みよう。
         paths:
-          - [へんが 3 ぼんで さんかくけい, もとの ちょっかくの かどが のこる, ちょっかくさんかくけい]
+          - [へんが 3 本で 三角形, もとの 直角の かどが のこる, 直角三角形]
       - part: 今日
-        text: いろいたで できた せいほうけいを、ぜんぶ かぞえよう。1 まいの せいほうけいの ほかに、4 まいで できる せいほうけいも かぞえます。
-        figure: "🟦🟦🟦\n🟦🟦🟦"
+        id: "7bb4409bc4"
+        text: いろいたで できた 正方形を、ぜんぶ かぞえよう。1 まいの 正方形の ほかに、4 まいで できる 正方形も かぞえます。
+        svg: '<svg viewBox="0 0 320 200" xmlns="http://www.w3.org/2000/svg"><rect x="85" y="50" width="50" height="50" rx="3" fill="#6fa8f0" fill-opacity="0.75" stroke="currentColor" stroke-width="2"/><rect x="135" y="50" width="50" height="50" rx="3" fill="#6fa8f0" fill-opacity="0.75" stroke="currentColor" stroke-width="2"/><rect x="185" y="50" width="50" height="50" rx="3" fill="#6fa8f0" fill-opacity="0.75" stroke="currentColor" stroke-width="2"/><rect x="85" y="100" width="50" height="50" rx="3" fill="#6fa8f0" fill-opacity="0.75" stroke="currentColor" stroke-width="2"/><rect x="135" y="100" width="50" height="50" rx="3" fill="#6fa8f0" fill-opacity="0.75" stroke="currentColor" stroke-width="2"/><rect x="185" y="100" width="50" height="50" rx="3" fill="#6fa8f0" fill-opacity="0.75" stroke="currentColor" stroke-width="2"/></svg>'
         answer: 8
-        check: "(lambda g: sum((len(g) - k + 1) * (len(g[0]) - k + 1) for k in range(1, min(len(g), len(g[0])) + 1)))(fig.splitlines())"
+        check: "(lambda R, C: R * C + (R - 1) * (C - 1))(2, 3)"
         hints:
-          - 1 まいで できる せいほうけいは いくつかな。
-          - 4 まいで できる せいほうけいを、ひだりから さがそう。
-          - 2 まいの ながい かたちは、せいほうけい かな。
+          - 1 まいの 正方形から かぞえよう。
+          - text: 4 まいで できる 正方形を 1 つ かこんだよ。ずらすと、ほかにも あるかな。
+            svg: '<svg viewBox="0 0 320 200" xmlns="http://www.w3.org/2000/svg"><rect x="85" y="50" width="50" height="50" rx="3" fill="#6fa8f0" fill-opacity="0.75" stroke="currentColor" stroke-width="2"/><rect x="135" y="50" width="50" height="50" rx="3" fill="#6fa8f0" fill-opacity="0.75" stroke="currentColor" stroke-width="2"/><rect x="185" y="50" width="50" height="50" rx="3" fill="#6fa8f0" fill-opacity="0.75" stroke="currentColor" stroke-width="2"/><rect x="85" y="100" width="50" height="50" rx="3" fill="#6fa8f0" fill-opacity="0.75" stroke="currentColor" stroke-width="2"/><rect x="135" y="100" width="50" height="50" rx="3" fill="#6fa8f0" fill-opacity="0.75" stroke="currentColor" stroke-width="2"/><rect x="185" y="100" width="50" height="50" rx="3" fill="#6fa8f0" fill-opacity="0.75" stroke="currentColor" stroke-width="2"/><rect x="81" y="46" width="108" height="108" rx="6" fill="none" stroke="#e8590c" stroke-width="4"/></svg>'
+          - 2 まいの ながい かたちは、正方形 かな。
         paths:
-          - [1 まいの せいほうけい 1 から 6, 4 まいの せいほうけい 7、8, 8 つ]
-        note: 4 枚の正方形は左寄せと右寄せで 2 つある。真ん中の色板が両方に入ることに気づかせる。
+          - [1 まいの 正方形 1 から 6, 4 まいの 正方形 7、8, 8 つ]
+        note: 4 まいの 正方形は ひだりよりと みぎよりで 2 つ ある。まんなかの いろいたが どちらにも 入る ことに 気づかせる。
       - part: 今日
-        text: せいほうけいの おりがみを、まっすぐな せん 1 ぽんで、おなじ かたちの ちょうほうけい 2 つに わけられますか。
+        id: "744ad33621"
+        text: 正方形の おりがみを、まっすぐな 線 1 本で、おなじ かたちの 長方形 2 つに わけられますか。
+        svg: '<svg viewBox="0 0 320 200" xmlns="http://www.w3.org/2000/svg"><rect x="105" y="40" width="110" height="110" fill="#f08080" fill-opacity="0.5" stroke="currentColor" stroke-width="2.5"/></svg>'
         choices: [わけられる, わけられない]
         answer: わけられる
         hints:
-          - せいほうけいの おりがみを、はんぶんに おってみよう。
-          - たてに おると、どんな かたちが 2 つ できるかな。
-          - できた かたちの かどを しらべよう。
+          - 正方形の おりがみを、はんぶんに おって みよう。
+          - text: 長方形は、4 つの かどが みんな 直角の 四角形 だったね。
+            svg: '<svg viewBox="0 0 320 200" xmlns="http://www.w3.org/2000/svg"><rect x="80" y="50" width="160" height="90" fill="#7fc8f8" fill-opacity="0.45" stroke="currentColor" stroke-width="2.5"/><polyline points="80,64 94,64 94,50" fill="none" stroke="#e8590c" stroke-width="2.5"/><polyline points="240,64 226,64 226,50" fill="none" stroke="#e8590c" stroke-width="2.5"/><polyline points="80,126 94,126 94,140" fill="none" stroke="#e8590c" stroke-width="2.5"/><polyline points="240,126 226,126 226,140" fill="none" stroke="#e8590c" stroke-width="2.5"/><text x="160" y="172" font-size="15" text-anchor="middle" fill="currentColor">4 つの かどが 直角</text></svg>'
+          - できた 2 つの かたちの かどを しらべよう。
         paths:
-          - [たてに はんぶんに おる, ほそながい かたちが 2 つ, かどは みんな ちょっかくで ちょうほうけい]
-        note: 正方形から長方形が 2 つできる。斜めに折ると直角三角形になることと比べてもよい。
+          - [たてに はんぶんに おる, ほそながい かたちが 2 つ, かどは みんな 直角で 長方形]
+        note: 正方形から 長方形が 2 つ できる。ななめに おると 直角三角形に なる ことと くらべても よい。
       - part: 挑戦
-        text: ちょうほうけいの かみから、いちばん おおきな せいほうけいを 1 つ おって わけます。のこりは どんな かたち ですか。
-        figure: "🟦🟦🟦🟦🟦\n🟦🟦🟦🟦🟦\n🟦🟦🟦🟦🟦"
-        choices: [せいほうけい, ちょうほうけい, ちょっかくさんかくけい]
-        answer: ちょうほうけい
-        check: "(lambda g: 'せいほうけい' if len(g) == len(g[0]) - len(g) else 'ちょうほうけい')(fig.splitlines())"
+        id: "d4f9f5e9ac"
+        text: 長方形の 紙から、いちばん 大きな 正方形を 1 つ おって わけます。のこりは どんな かたち ですか。
+        svg: '<svg viewBox="0 0 320 200" xmlns="http://www.w3.org/2000/svg"><rect x="75" y="49" width="170" height="102" fill="#7fc8f8" fill-opacity="0.4" stroke="currentColor" stroke-width="2.5"/><line x1="109" y1="49" x2="109" y2="151" stroke="currentColor" stroke-width="1" stroke-linecap="round"/><line x1="143" y1="49" x2="143" y2="151" stroke="currentColor" stroke-width="1" stroke-linecap="round"/><line x1="177" y1="49" x2="177" y2="151" stroke="currentColor" stroke-width="1" stroke-linecap="round"/><line x1="211" y1="49" x2="211" y2="151" stroke="currentColor" stroke-width="1" stroke-linecap="round"/><line x1="75" y1="83" x2="245" y2="83" stroke="currentColor" stroke-width="1" stroke-linecap="round"/><line x1="75" y1="117" x2="245" y2="117" stroke="currentColor" stroke-width="1" stroke-linecap="round"/><rect x="75" y="49" width="170" height="102" fill="none" stroke="currentColor" stroke-width="2.5"/></svg>'
+        choices: [正方形, 長方形, 直角三角形]
+        answer: 長方形
+        check: "(lambda R, C: '正方形' if R == C - R else '長方形')(3, 5)"
         hints:
-          - いちばん おおきな せいほうけいの へんは、たての ながさと おなじ だよ。
-          - その せいほうけいを、ゆびで かくそう。
+          - いちばん 大きな 正方形の へんは、たての ながさと おなじ だよ。
+          - text: ひだりの 正方形に 色を ぬったよ。のこりの マスを 見よう。
+            svg: '<svg viewBox="0 0 320 200" xmlns="http://www.w3.org/2000/svg"><rect x="75" y="49" width="170" height="102" fill="#7fc8f8" fill-opacity="0.4" stroke="currentColor" stroke-width="2.5"/><rect x="75" y="49" width="102" height="102" fill="#c8ccd6" fill-opacity="0.95" stroke="currentColor" stroke-width="2.5"/><line x1="109" y1="49" x2="109" y2="151" stroke="currentColor" stroke-width="1" stroke-linecap="round"/><line x1="143" y1="49" x2="143" y2="151" stroke="currentColor" stroke-width="1" stroke-linecap="round"/><line x1="177" y1="49" x2="177" y2="151" stroke="currentColor" stroke-width="1" stroke-linecap="round"/><line x1="211" y1="49" x2="211" y2="151" stroke="currentColor" stroke-width="1" stroke-linecap="round"/><line x1="75" y1="83" x2="245" y2="83" stroke="currentColor" stroke-width="1" stroke-linecap="round"/><line x1="75" y1="117" x2="245" y2="117" stroke="currentColor" stroke-width="1" stroke-linecap="round"/><rect x="75" y="49" width="170" height="102" fill="none" stroke="currentColor" stroke-width="2.5"/><rect x="75" y="49" width="102" height="102" fill="none" stroke="currentColor" stroke-width="3.5"/></svg>'
           - のこった マスの、たてと よこを かぞえよう。
         paths:
-          - [たて 3 マスの せいほうけいを とる, のこりは たて 3、よこ 2, へんの ながさが ちがうので ちょうほうけい]
-        note: 正方形を取り続けると最後に何が残るか、は割り算の互除法の芽。紙を折って確かめる（はさみは使わなくてよい）。
+          - [たて 3 マスの 正方形を とる, のこりは たて 3・よこ 2, へんの ながさが ちがうので 長方形]
+          - [みぎはしから 正方形を とっても おなじ, のこりは たて 3・よこ 2 の マス, かどは みんな 直角で 長方形]
+        note: 正方形を とりつづけると さいごに 何が のこるか、は わり算の ごじょほうの め。紙を おって たしかめる（はさみは つかわなくて よい）。
       - part: わけ
-        text: この かたちは ちょうほうけい では ありません。どうしてか、くちで いってみよう。
-        figure: "⚪🔴🔴⚪\n⚪⚪⚪⚪\n🔴⚪⚪🔴"
-        explain: 「ちょっかくで ない かどが ある から」と言えればよい。「うえの かどが ひらいて いて、おった かみの かどと あわない から」でもよい。長方形の決まり（4 つの角がみんな直角）の 1 つでも外れれば長方形ではない。
+        id: "97cdb3e003"
+        text: この かたちは 長方形 では ありません。どうしてか、くちで いって みよう。
+        svg: '<svg viewBox="0 0 320 200" xmlns="http://www.w3.org/2000/svg"><polygon points="135,50 185,50 235,150 85,150" fill="none" stroke="#3d8bd4" stroke-width="3.5" stroke-linejoin="round"/><circle cx="85" cy="50" r="4" fill="currentColor" fill-opacity="0.35"/><circle cx="235" cy="50" r="4" fill="currentColor" fill-opacity="0.35"/><circle cx="85" cy="100" r="4" fill="currentColor" fill-opacity="0.35"/><circle cx="135" cy="100" r="4" fill="currentColor" fill-opacity="0.35"/><circle cx="185" cy="100" r="4" fill="currentColor" fill-opacity="0.35"/><circle cx="235" cy="100" r="4" fill="currentColor" fill-opacity="0.35"/><circle cx="135" cy="150" r="4" fill="currentColor" fill-opacity="0.35"/><circle cx="185" cy="150" r="4" fill="currentColor" fill-opacity="0.35"/><circle cx="135" cy="50" r="8" fill="#f08080" fill-opacity="0.95" stroke="currentColor" stroke-width="1.5"/><circle cx="185" cy="50" r="8" fill="#f08080" fill-opacity="0.95" stroke="currentColor" stroke-width="1.5"/><circle cx="235" cy="150" r="8" fill="#f08080" fill-opacity="0.95" stroke="currentColor" stroke-width="1.5"/><circle cx="85" cy="150" r="8" fill="#f08080" fill-opacity="0.95" stroke="currentColor" stroke-width="1.5"/></svg>'
         hints:
-          - 4 つの かどを、1 つずつ みよう。
-          - おった かみの かどを あててみよう。
-          - 「〜だから ちょうほうけいでは ない」と いってみよう。
+          - 4 つの かどを、1 つずつ 見よう。
+          - text: ひだりしたの かどに、おった 紙の かどを あてたよ。
+            svg: '<svg viewBox="0 0 320 200" xmlns="http://www.w3.org/2000/svg"><path d="M85,150 L135,150 Q140,95 85,100 Z" fill="#f3c969" fill-opacity="0.7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M94,150 L94,141 L85,141" fill="none" stroke="#e8590c" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><polygon points="135,50 185,50 235,150 85,150" fill="none" stroke="#3d8bd4" stroke-width="3.5" stroke-linejoin="round"/><circle cx="85" cy="50" r="4" fill="currentColor" fill-opacity="0.35"/><circle cx="235" cy="50" r="4" fill="currentColor" fill-opacity="0.35"/><circle cx="85" cy="100" r="4" fill="currentColor" fill-opacity="0.35"/><circle cx="135" cy="100" r="4" fill="currentColor" fill-opacity="0.35"/><circle cx="185" cy="100" r="4" fill="currentColor" fill-opacity="0.35"/><circle cx="235" cy="100" r="4" fill="currentColor" fill-opacity="0.35"/><circle cx="135" cy="150" r="4" fill="currentColor" fill-opacity="0.35"/><circle cx="185" cy="150" r="4" fill="currentColor" fill-opacity="0.35"/><circle cx="135" cy="50" r="8" fill="#f08080" fill-opacity="0.95" stroke="currentColor" stroke-width="1.5"/><circle cx="185" cy="50" r="8" fill="#f08080" fill-opacity="0.95" stroke="currentColor" stroke-width="1.5"/><circle cx="235" cy="150" r="8" fill="#f08080" fill-opacity="0.95" stroke="currentColor" stroke-width="1.5"/><circle cx="85" cy="150" r="8" fill="#f08080" fill-opacity="0.95" stroke="currentColor" stroke-width="1.5"/></svg>'
+          - 「〜だから 長方形では ない」と いって みよう。
         paths:
-          - [かどを 1 つずつ しらべる, ちょっかくで ない かどが ある, だから ちょうほうけいでは ない]
+          - [かどを 1 つずつ しらべる, 直角で ない かどが ある, だから 長方形では ない]
+          - [長方形なら むかいあう へんは へいこう, ひだりと みぎの へんは のばすと まじわる, だから 長方形では ない]
+        explain: 「直角で ない かどが ある から」と いえれば よい。「うえの かどが ひらいて いて、おった 紙の かどと あわない から」でも よい。長方形の きまり（4 つの かどが みんな 直角）の 1 つでも はずれれば 長方形では ない。
     extra:
       - part: 今日
-        text: ちょうほうけいを、むかいあう へんの まんなかどうしを むすぶ まっすぐな せんで、2 つに わけます。できる かたちは どれですか。
-        choices: [ちょうほうけい, ちょっかくさんかくけい, さんかくけい]
-        answer: ちょうほうけい
+        id: "9aa9602aef"
+        text: 長方形を、むかいあう へんの まんなかどうしを むすぶ 線で、2 つに わけます。できる かたちは どれですか。
+        svg: '<svg viewBox="0 0 320 200" xmlns="http://www.w3.org/2000/svg"><rect x="60" y="40" width="200" height="120" fill="#7fc8f8" fill-opacity="0.45" stroke="currentColor" stroke-width="2.5"/><line x1="60" y1="100" x2="260" y2="100" stroke="#e8590c" stroke-width="3.5" stroke-linecap="round"/><circle cx="60" cy="100" r="5" fill="#e8590c" fill-opacity="1"/><circle cx="260" cy="100" r="5" fill="#e8590c" fill-opacity="1"/></svg>'
+        choices: [長方形, 直角三角形, 三角形]
+        answer: 長方形
         hints:
-          - わけた かたちの へんは いくつかな。
-          - わけた かたちの かどは、どんな かどかな。
-          - かどが みんな ちょっかくの しかくけいの なまえを いおう。
+          - わけた かたちの へんは 何本 かな。
+          - text: わけた かたちの 1 つに 色を ぬったよ。
+            svg: '<svg viewBox="0 0 320 200" xmlns="http://www.w3.org/2000/svg"><rect x="60" y="40" width="200" height="60" fill="#f3c969" fill-opacity="0.75" stroke="currentColor" stroke-width="2.5"/><rect x="60" y="100" width="200" height="60" fill="#7fc8f8" fill-opacity="0.45" stroke="currentColor" stroke-width="2.5"/><line x1="60" y1="100" x2="260" y2="100" stroke="#e8590c" stroke-width="3.5" stroke-linecap="round"/><circle cx="60" cy="100" r="5" fill="#e8590c" fill-opacity="1"/><circle cx="260" cy="100" r="5" fill="#e8590c" fill-opacity="1"/></svg>'
+          - 色を ぬった かたちの かどは、どんな かどかな。
         paths:
-          - [へんが 4 ほん, かどは みんな ちょっかく, ちょうほうけい]
+          - [へんが 4 本, かどは みんな 直角, 長方形]
       - part: 今日
-        text: いろいたで できた せいほうけいを、ぜんぶ かぞえよう。1 まいの ものも、4 まいの ものも かぞえます。
-        figure: "🟩🟩\n🟩🟩"
+        id: "1b5210fe34"
+        text: いろいたで できた 正方形を、ぜんぶ かぞえよう。1 まいの ものも、4 まいの ものも かぞえます。
+        svg: '<svg viewBox="0 0 320 200" xmlns="http://www.w3.org/2000/svg"><rect x="110" y="50" width="50" height="50" rx="3" fill="#7bc96f" fill-opacity="0.75" stroke="currentColor" stroke-width="2"/><rect x="160" y="50" width="50" height="50" rx="3" fill="#7bc96f" fill-opacity="0.75" stroke="currentColor" stroke-width="2"/><rect x="110" y="100" width="50" height="50" rx="3" fill="#7bc96f" fill-opacity="0.75" stroke="currentColor" stroke-width="2"/><rect x="160" y="100" width="50" height="50" rx="3" fill="#7bc96f" fill-opacity="0.75" stroke="currentColor" stroke-width="2"/></svg>'
         answer: 5
-        check: "(lambda g: sum((len(g) - k + 1) * (len(g[0]) - k + 1) for k in range(1, min(len(g), len(g[0])) + 1)))(fig.splitlines())"
+        check: "(lambda R, C: R * C + (R - 1) * (C - 1))(2, 2)"
         hints:
-          - 1 まいで できる せいほうけいは いくつかな。
-          - 4 まい ぜんぶで できる せいほうけいも あるね。
-          - おおきさごとに かぞえて、つづけて かぞえよう。
+          - 1 まいで できる 正方形は いくつかな。
+          - text: 1 まいの 正方形に ばんごうを つけたよ。4 まい ぜんぶで できる かたちも 見よう。
+            svg: '<svg viewBox="0 0 320 200" xmlns="http://www.w3.org/2000/svg"><rect x="110" y="50" width="50" height="50" rx="3" fill="#7bc96f" fill-opacity="0.75" stroke="currentColor" stroke-width="2"/><rect x="160" y="50" width="50" height="50" rx="3" fill="#7bc96f" fill-opacity="0.75" stroke="currentColor" stroke-width="2"/><rect x="110" y="100" width="50" height="50" rx="3" fill="#7bc96f" fill-opacity="0.75" stroke="currentColor" stroke-width="2"/><rect x="160" y="100" width="50" height="50" rx="3" fill="#7bc96f" fill-opacity="0.75" stroke="currentColor" stroke-width="2"/><text x="135" y="81" font-size="17" text-anchor="middle" fill="currentColor">1</text><text x="185" y="81" font-size="17" text-anchor="middle" fill="currentColor">2</text><text x="135" y="131" font-size="17" text-anchor="middle" fill="currentColor">3</text><text x="185" y="131" font-size="17" text-anchor="middle" fill="currentColor">4</text></svg>'
+          - 大きさごとに かぞえて、つづけて かぞえよう。
         paths:
-          - [1 まいの せいほうけい 1 から 4, 4 まいの せいほうけい 5, 5 つ]
+          - [1 まいの 正方形 1 から 4, 4 まいの 正方形 5, 5 つ]
       - part: 挑戦
-        text: ⚪ の てんから 4 つ えらんで むすび、せいほうけいを つくります。せいほうけいは いくつ つくれますか。
-        figure: "⚪⚪⚪\n⚪⚪⚪\n⚪⚪⚪"
+        id: "bc1a573b16"
+        text: 点を 4 つ えらんで むすび、正方形を つくります。正方形は いくつ つくれますか。
+        svg: '<svg viewBox="0 0 320 200" xmlns="http://www.w3.org/2000/svg"><circle cx="100" cy="40" r="7" fill="currentColor" fill-opacity="0.6"/><circle cx="160" cy="40" r="7" fill="currentColor" fill-opacity="0.6"/><circle cx="220" cy="40" r="7" fill="currentColor" fill-opacity="0.6"/><circle cx="100" cy="100" r="7" fill="currentColor" fill-opacity="0.6"/><circle cx="160" cy="100" r="7" fill="currentColor" fill-opacity="0.6"/><circle cx="220" cy="100" r="7" fill="currentColor" fill-opacity="0.6"/><circle cx="100" cy="160" r="7" fill="currentColor" fill-opacity="0.6"/><circle cx="160" cy="160" r="7" fill="currentColor" fill-opacity="0.6"/><circle cx="220" cy="160" r="7" fill="currentColor" fill-opacity="0.6"/></svg>'
         answer: 6
-        check: "(lambda g: sum(1 for q in itertools.combinations([(r, c) for r in range(len(g)) for c in range(len(g[r])) if g[r][c] == '⚪'], 4) if (lambda d: d[0] > 0 and d[0] == d[3] and d[4] == d[5] and d[4] == 2 * d[0])(sorted((a[0] - b[0]) ** 2 + (a[1] - b[1]) ** 2 for a, b in itertools.combinations(q, 2)))))(fig.splitlines())"
+        check: "(lambda P: sum(1 for q in itertools.combinations(P, 4) if (lambda d: d[0] > 0 and d[0] == d[3] and d[4] == d[5] and d[4] == 2 * d[0])(sorted((a[0] - b[0]) ** 2 + (a[1] - b[1]) ** 2 for a, b in itertools.combinations(q, 2)))))([(r, c) for r in range(3) for c in range(3)])"
         hints:
-          - いちばん ちいさい せいほうけいから さがそう。
-          - いちばん おおきい せいほうけいも あるね。
-          - かたむいた せいほうけい（🔷 の ような むき）も さがしてみよう。
+          - いちばん 小さい 正方形から さがそう。
+          - text: 小さい 正方形を 1 つ かいたよ。おなじ 大きさの ものは ほかにも あるかな。
+            svg: '<svg viewBox="0 0 320 200" xmlns="http://www.w3.org/2000/svg"><polygon points="100,40 160,40 160,100 100,100" fill="none" stroke="#3d8bd4" stroke-width="3.5" stroke-linejoin="round"/><circle cx="100" cy="40" r="7" fill="currentColor" fill-opacity="0.6"/><circle cx="160" cy="40" r="7" fill="currentColor" fill-opacity="0.6"/><circle cx="220" cy="40" r="7" fill="currentColor" fill-opacity="0.6"/><circle cx="100" cy="100" r="7" fill="currentColor" fill-opacity="0.6"/><circle cx="160" cy="100" r="7" fill="currentColor" fill-opacity="0.6"/><circle cx="220" cy="100" r="7" fill="currentColor" fill-opacity="0.6"/><circle cx="100" cy="160" r="7" fill="currentColor" fill-opacity="0.6"/><circle cx="160" cy="160" r="7" fill="currentColor" fill-opacity="0.6"/><circle cx="220" cy="160" r="7" fill="currentColor" fill-opacity="0.6"/></svg>'
+          - ななめに かたむいた 正方形も さがして みよう。
         paths:
-          - [ちいさい せいほうけい 1 から 4, おおきい せいほうけい 5, かたむいた せいほうけい 6, 6 つ]
-        note: 傾いた正方形（真ん中の上下左右の 4 点）を見落として 5 と答えやすい。傾いていても 4 つの角が直角で 4 辺が同じなら正方形（G-001 の 🔷）。
+          - [小さい 正方形 1 から 4, 大きい 正方形 5, かたむいた 正方形 6, 6 つ]
+          - [大きさごとに わける, 小さい ものが 4 つ・大きい ものが 1 つ, かたむいた ものが 1 つで あわせて 6 つ]
+        note: かたむいた 正方形（まんなかの うえ・した・ひだり・みぎの 4 つの 点）を 見おとして 5 と こたえやすい。かたむいて いても、4 つの かどが 直角で 4 つの へんが おなじ ながさなら 正方形（G-001 の 🔷）。
 
   - day: 5
     items:
       - part: 今日
-        text: 🔴 を じゅんに、まっすぐな せんで むすびます。できる かたちは どれですか。
-        figure: "🔴⚪⚪🔴\n⚪⚪⚪⚪\n⚪🔴🔴⚪"
-        choices: [さんかくけい, しかくけい]
-        answer: しかくけい
-        check: "{3: 'さんかくけい', 4: 'しかくけい'}[n('🔴')]"
+        id: "80d9167742"
+        text: あかい 点を、ぐるりと 1 しゅう する じゅんに、まっすぐな 線で むすびます。できる かたちは どれですか。
+        svg: '<svg viewBox="0 0 320 200" xmlns="http://www.w3.org/2000/svg"><circle cx="135" cy="50" r="4" fill="currentColor" fill-opacity="0.35"/><circle cx="185" cy="50" r="4" fill="currentColor" fill-opacity="0.35"/><circle cx="85" cy="100" r="4" fill="currentColor" fill-opacity="0.35"/><circle cx="135" cy="100" r="4" fill="currentColor" fill-opacity="0.35"/><circle cx="185" cy="100" r="4" fill="currentColor" fill-opacity="0.35"/><circle cx="235" cy="100" r="4" fill="currentColor" fill-opacity="0.35"/><circle cx="85" cy="150" r="4" fill="currentColor" fill-opacity="0.35"/><circle cx="235" cy="150" r="4" fill="currentColor" fill-opacity="0.35"/><circle cx="235" cy="50" r="8" fill="#f08080" fill-opacity="0.95" stroke="currentColor" stroke-width="1.5"/><circle cx="185" cy="150" r="8" fill="#f08080" fill-opacity="0.95" stroke="currentColor" stroke-width="1.5"/><circle cx="135" cy="150" r="8" fill="#f08080" fill-opacity="0.95" stroke="currentColor" stroke-width="1.5"/><circle cx="85" cy="50" r="8" fill="#f08080" fill-opacity="0.95" stroke="currentColor" stroke-width="1.5"/></svg>'
+        choices: [三角形, 四角形]
+        answer: 四角形
+        check: "{3: '三角形', 4: '四角形'}[len([(0, 0), (0, 3), (2, 2), (2, 1)])]"
         hints:
-          - 🔴 は いくつ あるかな。
-          - むすぶと、🔴 が ちょうてんに なるよ。
-          - へんが いくつの かたちか かんがえよう。
+          - あかい 点は、むすぶと ちょう点に なるよ。
+          - text: 2 本 むすんだよ。のこりも むすんで、もとの 点に もどろう。
+            svg: '<svg viewBox="0 0 320 200" xmlns="http://www.w3.org/2000/svg"><line x1="85" y1="50" x2="235" y2="50" stroke="#3d8bd4" stroke-width="3.5" stroke-linecap="round"/><line x1="235" y1="50" x2="185" y2="150" stroke="#3d8bd4" stroke-width="3.5" stroke-linecap="round"/><circle cx="135" cy="50" r="4" fill="currentColor" fill-opacity="0.35"/><circle cx="185" cy="50" r="4" fill="currentColor" fill-opacity="0.35"/><circle cx="85" cy="100" r="4" fill="currentColor" fill-opacity="0.35"/><circle cx="135" cy="100" r="4" fill="currentColor" fill-opacity="0.35"/><circle cx="185" cy="100" r="4" fill="currentColor" fill-opacity="0.35"/><circle cx="235" cy="100" r="4" fill="currentColor" fill-opacity="0.35"/><circle cx="85" cy="150" r="4" fill="currentColor" fill-opacity="0.35"/><circle cx="235" cy="150" r="4" fill="currentColor" fill-opacity="0.35"/><circle cx="235" cy="50" r="8" fill="#f08080" fill-opacity="0.95" stroke="currentColor" stroke-width="1.5"/><circle cx="185" cy="150" r="8" fill="#f08080" fill-opacity="0.95" stroke="currentColor" stroke-width="1.5"/><circle cx="135" cy="150" r="8" fill="#f08080" fill-opacity="0.95" stroke="currentColor" stroke-width="1.5"/><circle cx="85" cy="50" r="8" fill="#f08080" fill-opacity="0.95" stroke="currentColor" stroke-width="1.5"/></svg>'
+          - へんが 何本の かたちか かぞえよう。
         paths:
-          - [🔴 は 4 つ, へんが 4 ほん, しかくけい]
+          - [あかい 点は 4 つ, へんが 4 本, 四角形]
       - part: 今日
-        text: しかくけいと いえるのは どれですか。
-        choices: [まっすぐな せん 4 ほんで かこんだ かたち, まがった せんが まじった かたち, せんが とちゅうで あいて いる かたち]
-        answer: まっすぐな せん 4 ほんで かこんだ かたち
+        id: "37c296c313"
+        text: 四角形と いえるのは どれですか。
+        svg: '<svg viewBox="0 0 320 200" xmlns="http://www.w3.org/2000/svg"><path d="M84,43.3 L22,50 L20,114 L102,110 L97.1,54" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/><text x="60" y="166" font-size="18" text-anchor="middle" fill="currentColor">ア</text><path d="M122,50 L196,42 L202,110 Q160,86 120,114 Z" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/><text x="160" y="166" font-size="18" text-anchor="middle" fill="currentColor">イ</text><polygon points="222,50 296,42 302,110 220,114" fill="none" stroke="currentColor" stroke-width="3" stroke-linejoin="round"/><text x="260" y="166" font-size="18" text-anchor="middle" fill="currentColor">ウ</text></svg>'
+        choices: [ア, イ, ウ]
+        answer: ウ
+        check: "'ウ'"
         hints:
-          - しかくけいの きまりを おもいだそう。
-          - まがった せんは、へんに なるかな。
-          - すきまが あると、「かこまれて いる」と いえるかな。
+          - へんが まっすぐか、すきまが ないかを、1 つずつ 見よう。
+          - text: イ の ここを 見よう。まっすぐな 線 かな。
+            svg: '<svg viewBox="0 0 320 200" xmlns="http://www.w3.org/2000/svg"><path d="M84,43.3 L22,50 L20,114 L102,110 L97.1,54" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/><text x="60" y="166" font-size="18" text-anchor="middle" fill="currentColor">ア</text><path d="M122,50 L196,42 L202,110 Q160,86 120,114 Z" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/><text x="160" y="166" font-size="18" text-anchor="middle" fill="currentColor">イ</text><polygon points="222,50 296,42 302,110 220,114" fill="none" stroke="currentColor" stroke-width="3" stroke-linejoin="round"/><text x="260" y="166" font-size="18" text-anchor="middle" fill="currentColor">ウ</text><circle cx="160" cy="100" r="18" fill="none" stroke="#e8590c" stroke-width="3"/></svg>'
+          - のこりの 2 つも、へんを 1 本ずつ ゆびで なぞって しらべよう。
         paths:
-          - [へんは まっすぐ, すきまなく かこむ, まっすぐな せん 4 ほんで かこんだ かたち]
+          - [へんは まっすぐ, すきまなく かこむ, ウ]
       - part: 今日
-        text: ちょっかくの かどが ある カタカナは どれですか。
+        id: "ee21fb0ad3"
+        text: 直角の かどが ある カタカナは どれですか。
+        svg: '<svg viewBox="0 0 320 200" xmlns="http://www.w3.org/2000/svg"><path d="M87.6,51.5 Q76.1,99.8 30.1,120.5" fill="none" stroke="currentColor" stroke-width="7" stroke-linecap="round" stroke-linejoin="miter"/><text x="60" y="170" font-size="20" text-anchor="middle" fill="currentColor">ノ</text><path d="M110.6,87.2 L145.1,67.6 L209.4,104.4" fill="none" stroke="currentColor" stroke-width="7" stroke-linecap="round" stroke-linejoin="miter"/><text x="160" y="170" font-size="20" text-anchor="middle" fill="currentColor">ヘ</text><path d="M232.4,53.8 L287.6,53.8 L287.6,118.2 L232.4,118.2" fill="none" stroke="currentColor" stroke-width="7" stroke-linecap="round" stroke-linejoin="miter"/><text x="260" y="170" font-size="20" text-anchor="middle" fill="currentColor">コ</text></svg>'
         choices: [ノ, ヘ, コ]
         answer: コ
         hints:
-          - おった かみの かどを、もじの かどに あててみよう。
-          - かどが ない もじや、ひらいた かどの もじは どれかな。
-          - おった かみの かどと ぴったり あう かどを さがそう。
+          - おった 紙の かどを、もじの かどに あてて みよう。
+          - text: おった 紙の かどを ヘ に あてたよ。ぴったり あうかな。
+            svg: '<svg viewBox="0 0 320 200" xmlns="http://www.w3.org/2000/svg"><path d="M137.9,72.8 L75.3,108.3 Q108,180.8 173.4,135.4 Z" fill="#f3c969" fill-opacity="0.7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M130.1,77.2 L134.5,85.1 L142.3,80.6" fill="none" stroke="#e8590c" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M86.9,101.7 L137.9,72.8 L233.1,127.2" fill="none" stroke="currentColor" stroke-width="7" stroke-linecap="round" stroke-linejoin="miter"/><text x="282" y="186" font-size="18" text-anchor="middle" fill="currentColor">ヘ</text></svg>'
+          - ほかの もじにも、おった 紙の かどを あてて みよう。
         paths:
           - [ノ に かどは ない, ヘ の かどは ひらいて いる, コ]
       - part: 今日
-        text: 🔴 を じゅんに、まっすぐな せんで むすびます。できる かたちは どれですか。
-        figure: "🔴⚪⚪⚪🔴\n⚪⚪⚪⚪⚪\n🔴⚪⚪⚪🔴"
-        choices: [ちょうほうけい, せいほうけい, さんかくけい]
-        answer: ちょうほうけい
-        check: "(lambda g: (lambda p: ('せいほうけい' if max(a for a, b in p) - min(a for a, b in p) == max(b for a, b in p) - min(b for a, b in p) else 'ちょうほうけい') if len(p) == 4 and len(set(a for a, b in p)) == 2 and len(set(b for a, b in p)) == 2 else 'ほかの しかくけい')([(r, c) for r in range(len(g)) for c in range(len(g[r])) if g[r][c] == '🔴']))(fig.splitlines())"
+        id: "db95b18853"
+        text: あかい 点を、ぐるりと 1 しゅう する じゅんに、まっすぐな 線で むすびます。できる かたちは どれですか。
+        svg: '<svg viewBox="0 0 320 200" xmlns="http://www.w3.org/2000/svg"><circle cx="110" cy="50" r="4" fill="currentColor" fill-opacity="0.35"/><circle cx="160" cy="50" r="4" fill="currentColor" fill-opacity="0.35"/><circle cx="210" cy="50" r="4" fill="currentColor" fill-opacity="0.35"/><circle cx="60" cy="100" r="4" fill="currentColor" fill-opacity="0.35"/><circle cx="110" cy="100" r="4" fill="currentColor" fill-opacity="0.35"/><circle cx="160" cy="100" r="4" fill="currentColor" fill-opacity="0.35"/><circle cx="210" cy="100" r="4" fill="currentColor" fill-opacity="0.35"/><circle cx="260" cy="100" r="4" fill="currentColor" fill-opacity="0.35"/><circle cx="110" cy="150" r="4" fill="currentColor" fill-opacity="0.35"/><circle cx="160" cy="150" r="4" fill="currentColor" fill-opacity="0.35"/><circle cx="210" cy="150" r="4" fill="currentColor" fill-opacity="0.35"/><circle cx="60" cy="150" r="8" fill="#f08080" fill-opacity="0.95" stroke="currentColor" stroke-width="1.5"/><circle cx="260" cy="150" r="8" fill="#f08080" fill-opacity="0.95" stroke="currentColor" stroke-width="1.5"/><circle cx="260" cy="50" r="8" fill="#f08080" fill-opacity="0.95" stroke="currentColor" stroke-width="1.5"/><circle cx="60" cy="50" r="8" fill="#f08080" fill-opacity="0.95" stroke="currentColor" stroke-width="1.5"/></svg>'
+        choices: [長方形, 正方形, 三角形]
+        answer: 長方形
+        check: "(lambda p: '正方形' if max(r for r, c in p) - min(r for r, c in p) == max(c for r, c in p) - min(c for r, c in p) else '長方形')([(0, 0), (0, 4), (2, 4), (2, 0)])"
         hints:
-          - 4 つの かどは、みんな ちょっかく かな。
-          - よこの へんと たての へんは、てんの あいだ いくつぶん かな。
-          - へんの ながさが みんな おなじ かどうかで きめよう。
+          - 4 つの かどは、みんな 直角 かな。
+          - text: よこの へんは、点の あいだ 4 つぶん だよ。たては いくつぶん かな。
+            svg: '<svg viewBox="0 0 320 200" xmlns="http://www.w3.org/2000/svg"><circle cx="110" cy="50" r="4" fill="currentColor" fill-opacity="0.35"/><circle cx="160" cy="50" r="4" fill="currentColor" fill-opacity="0.35"/><circle cx="210" cy="50" r="4" fill="currentColor" fill-opacity="0.35"/><circle cx="60" cy="100" r="4" fill="currentColor" fill-opacity="0.35"/><circle cx="110" cy="100" r="4" fill="currentColor" fill-opacity="0.35"/><circle cx="160" cy="100" r="4" fill="currentColor" fill-opacity="0.35"/><circle cx="210" cy="100" r="4" fill="currentColor" fill-opacity="0.35"/><circle cx="260" cy="100" r="4" fill="currentColor" fill-opacity="0.35"/><circle cx="110" cy="150" r="4" fill="currentColor" fill-opacity="0.35"/><circle cx="160" cy="150" r="4" fill="currentColor" fill-opacity="0.35"/><circle cx="210" cy="150" r="4" fill="currentColor" fill-opacity="0.35"/><circle cx="60" cy="150" r="8" fill="#f08080" fill-opacity="0.95" stroke="currentColor" stroke-width="1.5"/><circle cx="260" cy="150" r="8" fill="#f08080" fill-opacity="0.95" stroke="currentColor" stroke-width="1.5"/><circle cx="260" cy="50" r="8" fill="#f08080" fill-opacity="0.95" stroke="currentColor" stroke-width="1.5"/><circle cx="60" cy="50" r="8" fill="#f08080" fill-opacity="0.95" stroke="currentColor" stroke-width="1.5"/><path d="M63,44 Q85,21.2 107,44" fill="none" stroke="#e8590c" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/><text x="85" y="23.5" font-size="14" text-anchor="middle" fill="currentColor">1</text><path d="M113,44 Q135,21.2 157,44" fill="none" stroke="#e8590c" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/><text x="135" y="23.5" font-size="14" text-anchor="middle" fill="currentColor">2</text><path d="M163,44 Q185,21.2 207,44" fill="none" stroke="#e8590c" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/><text x="185" y="23.5" font-size="14" text-anchor="middle" fill="currentColor">3</text><path d="M213,44 Q235,21.2 257,44" fill="none" stroke="#e8590c" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/><text x="235" y="23.5" font-size="14" text-anchor="middle" fill="currentColor">4</text></svg>'
+          - よこと たての へんの ながさを くらべよう。
         paths:
-          - [かどは みんな ちょっかく, よこは 4 つぶん、たては 2 つぶん, ちょうほうけい]
+          - [かどは みんな 直角, よこは 4 つぶん・たては 2 つぶん, 長方形]
       - part: 今日
-        text: 🔴 を じゅんに、まっすぐな せんで むすびます。できる かたちは どれですか。
-        figure: "🔴⚪⚪🔴\n⚪⚪⚪⚪\n⚪⚪⚪⚪\n🔴⚪⚪🔴"
-        choices: [せいほうけい, さんかくけい, ちょっかくさんかくけい]
-        answer: せいほうけい
-        check: "(lambda g: (lambda p: ('せいほうけい' if max(a for a, b in p) - min(a for a, b in p) == max(b for a, b in p) - min(b for a, b in p) else 'ちょうほうけい') if len(p) == 4 and len(set(a for a, b in p)) == 2 and len(set(b for a, b in p)) == 2 else 'ほかの しかくけい')([(r, c) for r in range(len(g)) for c in range(len(g[r])) if g[r][c] == '🔴']))(fig.splitlines())"
+        id: "d676bf5a37"
+        text: あかい 点を、ぐるりと 1 しゅう する じゅんに、まっすぐな 線で むすびます。できる かたちは どれですか。
+        svg: '<svg viewBox="0 0 320 200" xmlns="http://www.w3.org/2000/svg"><circle cx="139" cy="47" r="4" fill="currentColor" fill-opacity="0.35"/><circle cx="181" cy="47" r="4" fill="currentColor" fill-opacity="0.35"/><circle cx="97" cy="89" r="4" fill="currentColor" fill-opacity="0.35"/><circle cx="139" cy="89" r="4" fill="currentColor" fill-opacity="0.35"/><circle cx="181" cy="89" r="4" fill="currentColor" fill-opacity="0.35"/><circle cx="223" cy="89" r="4" fill="currentColor" fill-opacity="0.35"/><circle cx="97" cy="131" r="4" fill="currentColor" fill-opacity="0.35"/><circle cx="139" cy="131" r="4" fill="currentColor" fill-opacity="0.35"/><circle cx="181" cy="131" r="4" fill="currentColor" fill-opacity="0.35"/><circle cx="223" cy="131" r="4" fill="currentColor" fill-opacity="0.35"/><circle cx="139" cy="173" r="4" fill="currentColor" fill-opacity="0.35"/><circle cx="181" cy="173" r="4" fill="currentColor" fill-opacity="0.35"/><circle cx="223" cy="47" r="8" fill="#f08080" fill-opacity="0.95" stroke="currentColor" stroke-width="1.5"/><circle cx="223" cy="173" r="8" fill="#f08080" fill-opacity="0.95" stroke="currentColor" stroke-width="1.5"/><circle cx="97" cy="173" r="8" fill="#f08080" fill-opacity="0.95" stroke="currentColor" stroke-width="1.5"/><circle cx="97" cy="47" r="8" fill="#f08080" fill-opacity="0.95" stroke="currentColor" stroke-width="1.5"/></svg>'
+        choices: [正方形, 三角形, 直角三角形]
+        answer: 正方形
+        check: "(lambda p: '正方形' if max(r for r, c in p) - min(r for r, c in p) == max(c for r, c in p) - min(c for r, c in p) else '長方形')([(0, 0), (0, 3), (3, 3), (3, 0)])"
         hints:
-          - 🔴 は いくつ あるかな。
-          - 4 つの かどは、みんな ちょっかく かな。
-          - よこの へんと たての へんは、てんの あいだ いくつぶん かな。
+          - あかい 点を じゅんに むすんで、かどが いくつ あるか、直角か どうかを しらべよう。
+          - text: よこの へんは、点の あいだ 3 つぶん だよ。たては いくつぶん かな。
+            svg: '<svg viewBox="0 0 320 200" xmlns="http://www.w3.org/2000/svg"><circle cx="139" cy="47" r="4" fill="currentColor" fill-opacity="0.35"/><circle cx="181" cy="47" r="4" fill="currentColor" fill-opacity="0.35"/><circle cx="97" cy="89" r="4" fill="currentColor" fill-opacity="0.35"/><circle cx="139" cy="89" r="4" fill="currentColor" fill-opacity="0.35"/><circle cx="181" cy="89" r="4" fill="currentColor" fill-opacity="0.35"/><circle cx="223" cy="89" r="4" fill="currentColor" fill-opacity="0.35"/><circle cx="97" cy="131" r="4" fill="currentColor" fill-opacity="0.35"/><circle cx="139" cy="131" r="4" fill="currentColor" fill-opacity="0.35"/><circle cx="181" cy="131" r="4" fill="currentColor" fill-opacity="0.35"/><circle cx="223" cy="131" r="4" fill="currentColor" fill-opacity="0.35"/><circle cx="139" cy="173" r="4" fill="currentColor" fill-opacity="0.35"/><circle cx="181" cy="173" r="4" fill="currentColor" fill-opacity="0.35"/><circle cx="223" cy="47" r="8" fill="#f08080" fill-opacity="0.95" stroke="currentColor" stroke-width="1.5"/><circle cx="223" cy="173" r="8" fill="#f08080" fill-opacity="0.95" stroke="currentColor" stroke-width="1.5"/><circle cx="97" cy="173" r="8" fill="#f08080" fill-opacity="0.95" stroke="currentColor" stroke-width="1.5"/><circle cx="97" cy="47" r="8" fill="#f08080" fill-opacity="0.95" stroke="currentColor" stroke-width="1.5"/><path d="M100,41 Q118,18.2 136,41" fill="none" stroke="#e8590c" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/><text x="118" y="20.5" font-size="14" text-anchor="middle" fill="currentColor">1</text><path d="M142,41 Q160,18.2 178,41" fill="none" stroke="#e8590c" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/><text x="160" y="20.5" font-size="14" text-anchor="middle" fill="currentColor">2</text><path d="M184,41 Q202,18.2 220,41" fill="none" stroke="#e8590c" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/><text x="202" y="20.5" font-size="14" text-anchor="middle" fill="currentColor">3</text></svg>'
+          - よこと たての へんの ながさを くらべよう。
         paths:
-          - [かどは みんな ちょっかく, よこも たても 3 つぶん, せいほうけい]
+          - [かどは みんな 直角, よこも たても 3 つぶん, 正方形]
       - part: 今日
-        text: 🔴 を じゅんに、まっすぐな せんで むすびます。できる さんかくけいは どちら ですか。
-        figure: "⚪⚪🔴\n⚪⚪⚪\n🔴⚪🔴"
-        choices: [ちょっかくさんかくけい, ちょっかくの ない さんかくけい]
-        answer: ちょっかくさんかくけい
-        check: "(lambda g: (lambda p: 'ちょっかくさんかくけい' if any((p[(i + 1) % 3][0] - p[i][0]) * (p[(i + 2) % 3][0] - p[i][0]) + (p[(i + 1) % 3][1] - p[i][1]) * (p[(i + 2) % 3][1] - p[i][1]) == 0 for i in range(3)) else 'ちょっかくの ない さんかくけい')([(r, c) for r in range(len(g)) for c in range(len(g[r])) if g[r][c] == '🔴']))(fig.splitlines())"
+        id: "fff86b9298"
+        text: あかい 点を、ぐるりと 1 しゅう する じゅんに、まっすぐな 線で むすびます。できる 三角形は どちら ですか。
+        svg: '<svg viewBox="0 0 320 200" xmlns="http://www.w3.org/2000/svg"><circle cx="110" cy="50" r="4" fill="currentColor" fill-opacity="0.35"/><circle cx="160" cy="50" r="4" fill="currentColor" fill-opacity="0.35"/><circle cx="110" cy="100" r="4" fill="currentColor" fill-opacity="0.35"/><circle cx="160" cy="100" r="4" fill="currentColor" fill-opacity="0.35"/><circle cx="210" cy="100" r="4" fill="currentColor" fill-opacity="0.35"/><circle cx="160" cy="150" r="4" fill="currentColor" fill-opacity="0.35"/><circle cx="210" cy="50" r="8" fill="#f08080" fill-opacity="0.95" stroke="currentColor" stroke-width="1.5"/><circle cx="110" cy="150" r="8" fill="#f08080" fill-opacity="0.95" stroke="currentColor" stroke-width="1.5"/><circle cx="210" cy="150" r="8" fill="#f08080" fill-opacity="0.95" stroke="currentColor" stroke-width="1.5"/></svg>'
+        choices: [直角三角形, 直角の ない 三角形]
+        answer: 直角三角形
+        check: "(lambda p: '直角三角形' if any((p[(i + 1) % 3][0] - p[i][0]) * (p[(i + 2) % 3][0] - p[i][0]) + (p[(i + 1) % 3][1] - p[i][1]) * (p[(i + 2) % 3][1] - p[i][1]) == 0 for i in range(3)) else '直角の ない 三角形')([(0, 2), (2, 0), (2, 2)])"
         hints:
-          - 3 つの ちょうてんの かどを、1 つずつ みよう。
-          - たての せんと よこの せんが まじわる かどは あるかな。
-          - おった かみの かどを あてて たしかめよう。
+          - 3 つの かどを、1 つずつ しらべよう。
+          - text: 線で むすんで、ひだりしたの かどに おった 紙の かどを あてたよ。ぴったり あうかな。
+            svg: '<svg viewBox="0 0 320 200" xmlns="http://www.w3.org/2000/svg"><path d="M110,150 L160,150 Q165,95 110,100 Z" fill="#f3c969" fill-opacity="0.7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M119,150 L119,141 L110,141" fill="none" stroke="#e8590c" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><polygon points="210,50 110,150 210,150" fill="none" stroke="#3d8bd4" stroke-width="3.5" stroke-linejoin="round"/><circle cx="110" cy="50" r="4" fill="currentColor" fill-opacity="0.35"/><circle cx="160" cy="50" r="4" fill="currentColor" fill-opacity="0.35"/><circle cx="110" cy="100" r="4" fill="currentColor" fill-opacity="0.35"/><circle cx="160" cy="100" r="4" fill="currentColor" fill-opacity="0.35"/><circle cx="210" cy="100" r="4" fill="currentColor" fill-opacity="0.35"/><circle cx="160" cy="150" r="4" fill="currentColor" fill-opacity="0.35"/><circle cx="210" cy="50" r="8" fill="#f08080" fill-opacity="0.95" stroke="currentColor" stroke-width="1.5"/><circle cx="110" cy="150" r="8" fill="#f08080" fill-opacity="0.95" stroke="currentColor" stroke-width="1.5"/><circle cx="210" cy="150" r="8" fill="#f08080" fill-opacity="0.95" stroke="currentColor" stroke-width="1.5"/></svg>'
+          - のこりの かどにも、おった 紙の かどを あてて みよう。
         paths:
-          - [みぎしたの かど, たての へんと よこの へんが まじわる, ちょっかくさんかくけい]
+          - [みぎしたの かど, たての へんと よこの へんが まじわる, 直角三角形]
       - part: 今日
-        text: へいこうな 2 ほんの せんは どれですか。
+        id: "d7d50dbc3a"
+        text: へいこうな 2 本の 線は どれですか。
+        svg: '<svg viewBox="0 0 320 200" xmlns="http://www.w3.org/2000/svg"><path d="M25.5,86 L94.5,86" fill="none" stroke="currentColor" stroke-width="7" stroke-linecap="round" stroke-linejoin="miter"/><path d="M60,51.5 L60,120.5" fill="none" stroke="currentColor" stroke-width="7" stroke-linecap="round" stroke-linejoin="miter"/><text x="60" y="170" font-size="20" text-anchor="middle" fill="currentColor">＋</text><path d="M125.5,71 L194.5,71" fill="none" stroke="currentColor" stroke-width="7" stroke-linecap="round" stroke-linejoin="miter"/><path d="M125.5,101 L194.5,101" fill="none" stroke="currentColor" stroke-width="7" stroke-linecap="round" stroke-linejoin="miter"/><text x="160" y="170" font-size="20" text-anchor="middle" fill="currentColor">＝</text><path d="M289.9,53.8 L230.1,86 L289.9,118.2" fill="none" stroke="currentColor" stroke-width="7" stroke-linecap="round" stroke-linejoin="miter"/><text x="260" y="170" font-size="20" text-anchor="middle" fill="currentColor">＜</text></svg>'
         choices: [＋, ＝, ＜]
         answer: ＝
         hints:
-          - 2 ほんの せんを、どこまでも のばした ところを おもいうかべよう。
-          - くっついたり、まじわったり して いる せんは へいこうかな。
-          - あいだの はばが どこでも おなじ 2 ほんを さがそう。
+          - 2 本の 線を、どこまでも のばした ところを おもいうかべよう。
+          - text: ＋ の まんなかを 見よう。2 本の 線は どう なって いるかな。
+            svg: '<svg viewBox="0 0 320 200" xmlns="http://www.w3.org/2000/svg"><path d="M109,100 L211,100" fill="none" stroke="currentColor" stroke-width="7" stroke-linecap="round" stroke-linejoin="miter"/><path d="M160,49 L160,151" fill="none" stroke="currentColor" stroke-width="7" stroke-linecap="round" stroke-linejoin="miter"/><circle cx="160" cy="100" r="22" fill="none" stroke="#e8590c" stroke-width="3"/><text x="282" y="186" font-size="18" text-anchor="middle" fill="currentColor">＋</text></svg>'
+          - あいだの はばが どこでも おなじ 2 本を さがそう。
         paths:
           - [＋ は まじわる, ＜ は くっつく, ＝]
       - part: 今日
-        text: ちょうほうけいに、かどから かどへ ななめに まっすぐな せんを ひいて、2 つに わけます。できる かたちは どれですか。
-        choices: [せいほうけい, ちょうほうけい, ちょっかくさんかくけい]
-        answer: ちょっかくさんかくけい
+        id: "bebb40c86c"
+        text: 長方形に、かどから かどへ ななめに 線を ひいて、2 つに わけます。できる かたちは どれですか。
+        svg: '<svg viewBox="0 0 320 200" xmlns="http://www.w3.org/2000/svg"><rect x="60" y="50" width="200" height="100" fill="#7fc8f8" fill-opacity="0.45" stroke="currentColor" stroke-width="2.5"/><line x1="60" y1="50" x2="260" y2="150" stroke="#e8590c" stroke-width="3.5" stroke-linecap="round"/></svg>'
+        choices: [正方形, 長方形, 直角三角形]
+        answer: 直角三角形
         hints:
-          - わけた かたちの へんは いくつかな。
-          - わけた かたちに、もとの ちょうほうけいの かどが のこって いるかな。
-          - のこった かどは どんな かどかな。
+          - わけた かたちの へんは 何本 かな。
+          - text: わけた かたちの 1 つに 色を ぬったよ。
+            svg: '<svg viewBox="0 0 320 200" xmlns="http://www.w3.org/2000/svg"><polygon points="68,42 268,42 268,142" fill="#f3c969" fill-opacity="0.7" stroke="currentColor" stroke-width="2.5" stroke-linejoin="round"/><polygon points="52,58 252,158 52,158" fill="#7fc8f8" fill-opacity="0.45" stroke="currentColor" stroke-width="2.5" stroke-linejoin="round"/></svg>'
+          - 色を ぬった かたちの かどに、おった 紙の かどを あてて みよう。
         paths:
-          - [へんが 3 ぼん, もとの ちょっかくが のこる, ちょっかくさんかくけい]
+          - [へんが 3 本, もとの 直角が のこる, 直角三角形]
     extra:
       - part: 今日
-        text: 🔴 を じゅんに むすんで、しかくけいを かきます。ちょうてんは いくつ ありますか。
-        figure: "🔴⚪🔴\n⚪⚪⚪\n⚪🔴🔴"
+        id: "1f9f910ee9"
+        text: あかい 点を ぐるりと 1 しゅう する じゅんに むすんで、四角形を かきます。ちょう点は いくつ ありますか。
+        svg: '<svg viewBox="0 0 320 200" xmlns="http://www.w3.org/2000/svg"><circle cx="160" cy="50" r="4" fill="currentColor" fill-opacity="0.35"/><circle cx="110" cy="100" r="4" fill="currentColor" fill-opacity="0.35"/><circle cx="160" cy="100" r="4" fill="currentColor" fill-opacity="0.35"/><circle cx="210" cy="100" r="4" fill="currentColor" fill-opacity="0.35"/><circle cx="110" cy="150" r="4" fill="currentColor" fill-opacity="0.35"/><circle cx="210" cy="50" r="8" fill="#f08080" fill-opacity="0.95" stroke="currentColor" stroke-width="1.5"/><circle cx="210" cy="150" r="8" fill="#f08080" fill-opacity="0.95" stroke="currentColor" stroke-width="1.5"/><circle cx="160" cy="150" r="8" fill="#f08080" fill-opacity="0.95" stroke="currentColor" stroke-width="1.5"/><circle cx="110" cy="50" r="8" fill="#f08080" fill-opacity="0.95" stroke="currentColor" stroke-width="1.5"/></svg>'
         answer: 4
-        check: "n('🔴')"
+        check: "len([(0, 0), (0, 2), (2, 2), (2, 1)])"
         hints:
-          - ちょうてんは、かどの てん だよ。
-          - むすぶと、どの 🔴 が かどに なるかな。
-          - 🔴 を ゆびで さして かぞえよう。
+          - ちょう点は、かどの 点 だよ。
+          - text: 2 本 むすんだよ。のこりも むすんで、かどに なる 点を 見よう。
+            svg: '<svg viewBox="0 0 320 200" xmlns="http://www.w3.org/2000/svg"><line x1="110" y1="50" x2="210" y2="50" stroke="#3d8bd4" stroke-width="3.5" stroke-linecap="round"/><line x1="210" y1="50" x2="210" y2="150" stroke="#3d8bd4" stroke-width="3.5" stroke-linecap="round"/><circle cx="160" cy="50" r="4" fill="currentColor" fill-opacity="0.35"/><circle cx="110" cy="100" r="4" fill="currentColor" fill-opacity="0.35"/><circle cx="160" cy="100" r="4" fill="currentColor" fill-opacity="0.35"/><circle cx="210" cy="100" r="4" fill="currentColor" fill-opacity="0.35"/><circle cx="110" cy="150" r="4" fill="currentColor" fill-opacity="0.35"/><circle cx="210" cy="50" r="8" fill="#f08080" fill-opacity="0.95" stroke="currentColor" stroke-width="1.5"/><circle cx="210" cy="150" r="8" fill="#f08080" fill-opacity="0.95" stroke="currentColor" stroke-width="1.5"/><circle cx="160" cy="150" r="8" fill="#f08080" fill-opacity="0.95" stroke="currentColor" stroke-width="1.5"/><circle cx="110" cy="50" r="8" fill="#f08080" fill-opacity="0.95" stroke="currentColor" stroke-width="1.5"/></svg>'
+          - かどに なる 点を、ゆびで さして かぞえよう。
         paths:
-          - [🔴 が ちょうてんに なる, 1、2、3、4, 4 つ]
+          - [あかい 点が ちょう点に なる, 1、2、3、4, 4 つ]
       - part: 今日
-        text: せいほうけいは、ちょうほうけいの なかま ですか。
+        id: "647c9ae2c3"
+        text: 正方形は、長方形の なかま ですか。
+        svg: '<svg viewBox="0 0 320 200" xmlns="http://www.w3.org/2000/svg"><polygon points="30,50 130,50 130,150 30,150" fill="#7fc8f8" fill-opacity="0.45" stroke="currentColor" stroke-width="2.5" stroke-linejoin="round"/><polygon points="170,65 300,65 300,135 170,135" fill="#7bc96f" fill-opacity="0.45" stroke="currentColor" stroke-width="2.5" stroke-linejoin="round"/><text x="80" y="180" font-size="15" text-anchor="middle" fill="currentColor">正方形</text><text x="235" y="180" font-size="15" text-anchor="middle" fill="currentColor">長方形</text></svg>'
         choices: [なかま, なかまでは ない]
         answer: なかま
         hints:
-          - ちょうほうけいの きまりを おもいだそう。
-          - せいほうけいの かどは、どんな かどかな。
+          - 長方形の きまりを おもいだそう。
+          - text: 2 つの かたちの かどを、おった 紙の かどで しらべて、しるしを つけたよ。
+            svg: '<svg viewBox="0 0 320 200" xmlns="http://www.w3.org/2000/svg"><polygon points="30,50 130,50 130,150 30,150" fill="#7fc8f8" fill-opacity="0.45" stroke="currentColor" stroke-width="2.5" stroke-linejoin="round"/><polygon points="170,65 300,65 300,135 170,135" fill="#7bc96f" fill-opacity="0.45" stroke="currentColor" stroke-width="2.5" stroke-linejoin="round"/><text x="80" y="180" font-size="15" text-anchor="middle" fill="currentColor">正方形</text><text x="235" y="180" font-size="15" text-anchor="middle" fill="currentColor">長方形</text><path d="M30,61 L41,61 L41,50" fill="none" stroke="#e8590c" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M119,50 L119,61 L130,61" fill="none" stroke="#e8590c" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M130,139 L119,139 L119,150" fill="none" stroke="#e8590c" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M41,150 L41,139 L30,139" fill="none" stroke="#e8590c" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M170,76 L181,76 L181,65" fill="none" stroke="#e8590c" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M289,65 L289,76 L300,76" fill="none" stroke="#e8590c" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M300,124 L289,124 L289,135" fill="none" stroke="#e8590c" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M181,135 L181,124 L170,124" fill="none" stroke="#e8590c" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>'
           - きまりに あって いれば なかま だよ。
         paths:
-          - [ちょうほうけいの きまりは かどが みんな ちょっかく, せいほうけいも そう, なかま]
+          - [長方形の きまりは かどが みんな 直角, 正方形も そう, なかま]
       - part: 今日
-        text: ちょっかくさんかくけいに、へいこうな へんは ありますか。
+        id: "72d4fb9d24"
+        text: 直角三角形に、へいこうな へんは ありますか。
+        svg: '<svg viewBox="0 0 320 200" xmlns="http://www.w3.org/2000/svg"><polygon points="90,40 90,160 250,160" fill="#7fc8f8" fill-opacity="0.45" stroke="currentColor" stroke-width="2.5" stroke-linejoin="round"/><path d="M90,148 L102,148 L102,160" fill="none" stroke="#e8590c" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>'
         choices: [ある, ない]
         answer: ない
         hints:
-          - さんかくけいの へんを、2 ほんずつ くらべよう。
-          - 2 ほんの へんを のばすと、まじわるかな。
-          - どの 2 ほんも ちょうてんで くっついて いるね。
+          - へんを 2 本ずつ くらべよう。
+          - text: 2 本の へんに 色を つけたよ。この 2 本は、どこで どう なって いるかな。
+            svg: '<svg viewBox="0 0 320 200" xmlns="http://www.w3.org/2000/svg"><polygon points="90,40 90,160 250,160" fill="#7fc8f8" fill-opacity="0.45" stroke="currentColor" stroke-width="2.5" stroke-linejoin="round"/><path d="M90,148 L102,148 L102,160" fill="none" stroke="#e8590c" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><line x1="90" y1="40" x2="90" y2="160" stroke="#3d8bd4" stroke-width="5" stroke-linecap="round"/><line x1="90" y1="160" x2="250" y2="160" stroke="#3d8bd4" stroke-width="5" stroke-linecap="round"/><circle cx="90" cy="160" r="16" fill="none" stroke="#e8590c" stroke-width="3"/></svg>'
+          - のこりの 2 本ずつの 組も、おなじように しらべよう。
         paths:
-          - [どの 2 ほんも まじわる, ない]
+          - [どの 2 本も まじわる, ない]
 
 # 腕だめし（離、D-047）：型を離れた問題。単元が済になってから開き、済の判定には入れない。
 ri:
   - part: 離
+    id: "e7d6955624"
     kinds: [数, 道筋]
-    text: せいほうけいに、かどから かどへ ななめの せんを 2 ほん ひきました。ちょっかくさんかくけいは ぜんぶで いくつ ありますか。
-    svg: |
-      <svg viewBox="0 0 240 140" xmlns="http://www.w3.org/2000/svg"><polygon points="62,12 178,12 178,128 62,128" stroke="currentColor" stroke-width="2" fill="none"/><line x1="62" y1="12" x2="178" y2="128" stroke="currentColor" stroke-width="2"/><line x1="178" y1="12" x2="62" y2="128" stroke="currentColor" stroke-width="2"/></svg>
+    text: 正方形に、かどから かどへ ななめの 線を 2 本 ひきました。直角三角形は ぜんぶで いくつ ありますか。
+    svg: '<svg viewBox="0 0 320 200" xmlns="http://www.w3.org/2000/svg"><polygon points="100,30 240,30 240,170 100,170" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linejoin="round"/><line x1="100" y1="30" x2="240" y2="170" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/><line x1="240" y1="30" x2="100" y2="170" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/></svg>'
     answer: 8
     check: "4 + 4"
     hints:
-      - いちばん ちいさい さんかくけいは いくつかな。ちょっかくの かどは どこかな。
-      - ちいさい さんかくけいを 2 つ あわせても、さんかくけいに なるよ。
-      - 2 つ あわせた さんかくけいの ちょっかくの かどを、📐 で たしかめよう。
+      - いちばん 小さい 三角形は いくつかな。直角の かどは どこかな。
+      - text: 小さい 三角形を 2 つ あわせた かたちに 色を ぬったよ。これも 三角形 だね。
+        svg: '<svg viewBox="0 0 320 200" xmlns="http://www.w3.org/2000/svg"><polygon points="100,30 240,30 240,170" fill="#f3c969" fill-opacity="0.75" stroke="currentColor" stroke-width="0.01" stroke-linejoin="round"/><polygon points="100,30 240,30 240,170 100,170" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linejoin="round"/><line x1="100" y1="30" x2="240" y2="170" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/><line x1="240" y1="30" x2="100" y2="170" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/></svg>'
+      - 2 つ あわせた 三角形の かどに、おった 紙の かどを あてて たしかめよう。
     paths:
-      - [ちいさい さんかくけい 4 こ（まんなかが ちょっかく）, 2 つ あわせた おおきな さんかくけい 4 こ（せいほうけいの かどが ちょっかく）, 8 こ]
-    note: 小さい 4 つだけを数えやすい。2 つ合わせた大きい三角形（正方形を対角線で半分にしたもの）も直角三角形。直角の場所が、小さい三角形はまん中、大きい三角形は正方形のかど。正方形の 2 本の対角線が直角に交わることは、紙を折って確かめる。
+      - [小さい 三角形 4 こ（まんなかが 直角）, 2 つ あわせた 大きな 三角形 4 こ（正方形の かどが 直角）, 8 こ]
+      - [直角の かどで さがす, まんなかの 点で 4 こ, 正方形の 4 つの かどで 1 こずつ 4 こ, 8 こ]
+    note: 小さい 4 つだけを かぞえやすい。2 つ あわせた 大きい 三角形（正方形を ななめの 線で はんぶんに した もの）も 直角三角形。直角の ある ところが、小さい 三角形は まんなか、大きい 三角形は 正方形の かど。正方形の 2 本の ななめの 線が 直角に まじわる ことは、紙を おって たしかめる。
   - part: 離
+    id: "c430aa8694"
     kinds: [総動員, 手数]
     uses: [G-005]
-    text: たて 15 マス、よこ 21 マスの ちょうほうけいの かみが あります。いちばん おおきな せいほうけいを 1 つ きりとり、のこりの かたちからも、また いちばん おおきな せいほうけいを きりとります。これを くりかえすと、さいごに せいほうけいだけが のこりました。さいごの せいほうけいの 1 つの へんは なんマス ですか。
+    text: たて 15 マス、よこ 21 マスの 長方形の 紙が あります。いちばん 大きな 正方形を 1 つ 切りとり、のこりの かたちからも、また いちばん 大きな 正方形を 切りとります。これを くりかえすと、さいごに 正方形だけが のこりました。さいごの 正方形の 1 つの へんは 何マス ですか。
+    svg: '<svg viewBox="0 0 320 200" xmlns="http://www.w3.org/2000/svg"><rect x="96" y="34" width="210" height="150" fill="#7fc8f8" fill-opacity="0.4" stroke="currentColor" stroke-width="2.5"/><text x="201" y="24" font-size="14" text-anchor="middle" fill="currentColor">よこ 21 マス</text><text x="88" y="105" font-size="14" text-anchor="end" fill="currentColor">たて</text><text x="88" y="123" font-size="14" text-anchor="end" fill="currentColor">15 マス</text></svg>'
     answer: 3
     check: "math.gcd(21, 15)"
     hints:
-      - さいしょに きりとる せいほうけいの へんは、たてと よこの みじかい ほうだよ。
-      - きりとった あとの ちょうほうけいの たてと よこを、ひきざんで だそう。
-      - のこりが せいほうけいに なるまで、ずに かいて くりかえそう。
+      - さいしょに 切りとる 正方形の へんは、たてと よこの みじかい ほう だよ。
+      - text: 15 マスの 正方形を 切りとったよ。のこりの よこは 何マス かな。
+        svg: '<svg viewBox="0 0 320 200" xmlns="http://www.w3.org/2000/svg"><rect x="96" y="34" width="210" height="150" fill="#7fc8f8" fill-opacity="0.4" stroke="currentColor" stroke-width="2.5"/><rect x="96" y="34" width="150" height="150" fill="#c8ccd6" fill-opacity="0.95" stroke="currentColor" stroke-width="3"/><text x="171" y="114" font-size="14" text-anchor="middle" fill="currentColor">15 マスの 正方形</text><text x="276" y="116" font-size="22" text-anchor="middle" fill="currentColor">？</text><text x="201" y="24" font-size="14" text-anchor="middle" fill="currentColor">よこ 21 マス</text><text x="88" y="105" font-size="14" text-anchor="end" fill="currentColor">たて</text><text x="88" y="123" font-size="14" text-anchor="end" fill="currentColor">15 マス</text></svg>'
+      - のこりが 正方形に なるまで、図に かいて くりかえそう。
     paths:
-      - [15 マスの せいほうけいを きると のこりは たて 15・よこ 6, 6 マスの せいほうけいを 2 かい きると のこりは たて 3・よこ 6, 3 マスの せいほうけいを きると 3 マスの せいほうけいが のこる, 3 マス]
-    note: G-005 の長さ（マス）と、2 けたのひき算（21 − 15、15 − 6）を何度も使う。途中の長方形の縦と横を図にかき残すのがこつ。この手順は、後で 2 つの数の最大公《約数》を求める方法（互除法、N-029）になる。
+      - [15 マスの 正方形を 切ると のこりは たて 15・よこ 6, 6 マスの 正方形を 2 回 切ると のこりは たて 3・よこ 6, 3 マスの 正方形を 切ると 3 マスの 正方形が のこる, 3 マス]
+      - [21 − 15 = 6, 15 − 6 = 9、9 − 6 = 3, 6 − 3 = 3 で たても よこも 3, 3 マス]
+    note: G-005 の ながさ（マス）と、2 けたの ひき算（21 − 15、15 − 6）を 何回も つかう。とちゅうの 長方形の たてと よこを 図に かき のこすのが こつ。この てじゅんは、あとで 2 つの 数の いちばん 大きい 公《約数》を もとめる やり方（ごじょほう、N-029）に なる。
   - part: 離
+    id: "d25918fcdd"
     kinds: [総動員, 読み取り]
     uses: [L-002]
-    text: 🐶 🐱 🐰 が、ちょっかくさんかくけい、ちょうほうけい、せいほうけいの カードを 1 まいずつ もって います。① 🐶 の かたちには、ちょっかくの かどが 2 つ いじょう ある。② 🐱 の かたちは、へんが 4 つ では ない。③ 🐰 の かたちは、4 つの へんの ながさが みんな おなじ では ない。🐶 の カードの かたちは どれですか。
-    choices:
-      - ちょっかくさんかくけい
-      - ちょうほうけい
-      - せいほうけい
-    answer: せいほうけい
-    check: "(lambda R, S, E: (lambda s: s.pop() if len(s) == 1 else 'きまらない')({p[0] for p in itertools.permutations(('ちょっかくさんかくけい', 'ちょうほうけい', 'せいほうけい')) if R[p[0]] >= 2 and S[p[1]] != 4 and S[p[2]] == 4 and not E[p[2]]}))({'ちょっかくさんかくけい': 1, 'ちょうほうけい': 4, 'せいほうけい': 4}, {'ちょっかくさんかくけい': 3, 'ちょうほうけい': 4, 'せいほうけい': 4}, {'ちょっかくさんかくけい': False, 'ちょうほうけい': False, 'せいほうけい': True})"
+    text: |-
+      🐶 🐱 🐰 が、直角三角形、長方形、正方形の カードを 1 まいずつ もって います。
+      ① 🐶 の かたちには、直角の かどが 2 つ いじょう ある。
+      ② 🐱 の かたちは、へんが 4 つ では ない。
+      ③ 🐰 の かたちは、4 つの へんの ながさが みんな おなじ では ない。
+      🐶 の カードの かたちは どれですか。
+    svg: '<svg viewBox="0 0 320 200" xmlns="http://www.w3.org/2000/svg"><rect x="16" y="26" width="88" height="120" rx="8" fill="#ffffff" fill-opacity="0.08" stroke="currentColor" stroke-width="2"/><rect x="116" y="26" width="88" height="120" rx="8" fill="#ffffff" fill-opacity="0.08" stroke="currentColor" stroke-width="2"/><rect x="216" y="26" width="88" height="120" rx="8" fill="#ffffff" fill-opacity="0.08" stroke="currentColor" stroke-width="2"/><polygon points="30,116 90,116 30,50" fill="#7fc8f8" fill-opacity="0.5" stroke="currentColor" stroke-width="2.5" stroke-linejoin="round"/><path d="M30,106 L40,106 L40,116" fill="none" stroke="#e8590c" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><rect x="124" y="64" width="72" height="46" fill="#7bc96f" fill-opacity="0.5" stroke="currentColor" stroke-width="2.5"/><rect x="230" y="56" width="60" height="60" fill="#f3c969" fill-opacity="0.6" stroke="currentColor" stroke-width="2.5"/><text x="60" y="172" font-size="14" text-anchor="middle" fill="currentColor">直角三角形</text><text x="160" y="172" font-size="14" text-anchor="middle" fill="currentColor">長方形</text><text x="260" y="172" font-size="14" text-anchor="middle" fill="currentColor">正方形</text></svg>'
+    choices: [直角三角形, 長方形, 正方形]
+    answer: 正方形
+    check: "(lambda R, S, E: (lambda s: s.pop() if len(s) == 1 else 'きまらない')({p[0] for p in itertools.permutations(('直角三角形', '長方形', '正方形')) if R[p[0]] >= 2 and S[p[1]] != 4 and S[p[2]] == 4 and not E[p[2]]}))({'直角三角形': 1, '長方形': 4, '正方形': 4}, {'直角三角形': 3, '長方形': 4, '正方形': 4}, {'直角三角形': False, '長方形': False, '正方形': True})"
     hints:
       - まず ② から、🐱 の カードが きまるよ。
-      - のこりの 2 まいの うち、どちらが 🐰 かな。③ を つかおう。
-      - のこった 1 まいが ① に あうか、ちょっかくの かどを かぞえて たしかめよう。
+      - text: ひょうに かいて、あわない ところに ✕ を つけて いこう。② で わかる ところだけ つけたよ。
+        svg: '<svg viewBox="0 0 320 200" xmlns="http://www.w3.org/2000/svg"><polygon points="113,42 149,42 113,12" fill="#7fc8f8" fill-opacity="0.5" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><rect x="179" y="16" width="44" height="26" fill="#7bc96f" fill-opacity="0.5" stroke="currentColor" stroke-width="2"/><rect x="256" y="12" width="30" height="30" fill="#f3c969" fill-opacity="0.6" stroke="currentColor" stroke-width="2"/><text x="84" y="79" font-size="15" text-anchor="end" fill="currentColor">いぬ</text><text x="84" y="121" font-size="15" text-anchor="end" fill="currentColor">ねこ</text><text x="84" y="163" font-size="15" text-anchor="end" fill="currentColor">うさぎ</text><line x1="96" y1="52" x2="306" y2="52" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/><line x1="96" y1="94" x2="306" y2="94" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/><line x1="96" y1="136" x2="306" y2="136" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/><line x1="96" y1="178" x2="306" y2="178" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/><line x1="96" y1="52" x2="96" y2="178" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/><line x1="166" y1="52" x2="166" y2="178" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/><line x1="236" y1="52" x2="236" y2="178" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/><line x1="306" y1="52" x2="306" y2="178" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/><line x1="191" y1="105" x2="211" y2="125" stroke="#e8590c" stroke-width="3.5" stroke-linecap="round"/><line x1="191" y1="125" x2="211" y2="105" stroke="#e8590c" stroke-width="3.5" stroke-linecap="round"/><line x1="261" y1="105" x2="281" y2="125" stroke="#e8590c" stroke-width="3.5" stroke-linecap="round"/><line x1="261" y1="125" x2="281" y2="105" stroke="#e8590c" stroke-width="3.5" stroke-linecap="round"/></svg>'
+      - つぎは ③ で 🐰 を きめて、のこりの 1 まいが ① に あうか たしかめよう。
     paths:
-      - [② で 🐱 は ちょっかくさんかくけい, ③ で 🐰 は せいほうけい では ない, 🐰 は ちょうほうけい, 🐶 は せいほうけい]
-    note: ① だけを見て「ちょうほうけい」と答えやすい。正方形もかどがみな直角なので ① に合う（正方形は長方形の仲間）。決まるヒントから先に使うのが推理（L-002）のこつ。
+      - [② で 🐱 は 直角三角形, ③ で 🐰 は 正方形 では ない, 🐰 は 長方形, 🐶 は 正方形]
+      - [① で 🐶 は 長方形 か 正方形, ② で 🐱 は 直角三角形, ③ で 🐰 は 正方形では ないので 長方形, のこる 🐶 は 正方形]
+    note: ① だけを 見て「長方形」と こたえやすい。正方形も かどが みんな 直角なので ① に あう（正方形は 長方形の なかま）。きまる ヒントから 先に つかうのが すいり（L-002）の こつ。

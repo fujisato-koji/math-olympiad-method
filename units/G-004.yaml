@@ -456,7 +456,7 @@ days:
           - かみに かずを かいて、さかさまに して みよう。
           - text: 7 を はんぶん まわすと、こう なるよ。7 に みえるかな。
             svg: '<svg viewBox="0 0 320 200" xmlns="http://www.w3.org/2000/svg"><rect x="32" y="40" width="80" height="110" rx="8" fill="#f3c969" fill-opacity="0.25" stroke="currentColor" stroke-width="2"/><text x="72" y="120.9" font-size="72" text-anchor="middle" fill="currentColor">7</text><path d="M 140 92 A 20 20 0 0 1 180 91" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/><polygon points="180,101 174.5,90 185.5,90" fill="currentColor"/><text x="160" y="136" font-size="12" text-anchor="middle" fill="currentColor">はんぶん まわす</text><rect x="208" y="40" width="80" height="110" rx="8" fill="#f3c969" fill-opacity="0.25" stroke="currentColor" stroke-width="2"/><g transform="rotate(180 248 95)"><text x="248" y="120.9" font-size="72" text-anchor="middle" fill="currentColor">7</text></g></svg>'
-          - うえはんぶんと したはんぶんが、おなじ かたちの かずを さがそう。
+          - まわす まえと あとを ならべて、おなじ かずに みえるか くらべよう。
         paths:
           - [3 と 7 は さかさまだと よめない, 8 は うえと したが おなじ かたち, "8"]
       - part: 今日
