@@ -48,7 +48,7 @@ items:
   - id: "0900"
     name: "EXPLORATION GEOPHYSICS"
     ja: "探査地球物理学"
-    gap: "要る単元の案「探査地球物理（反射法・屈折法の地震探査、重力・磁気・電気・電磁探査、検層、データ処理とイメージング）」（前提 W-021、W-015、W-011、P-039）。入口は W-021、W-065で、中心がない"
+    units: [W-118]
     sources: [Y01]
   - id: "1000"
     name: "GEOCHEMISTRY"
@@ -93,17 +93,17 @@ items:
   - id: "2100"
     name: "INTERPLANETARY PHYSICS"
     ja: "惑星間空間の物理"
-    gap: "要る単元の案「太陽風と惑星間空間（太陽風の生成と加速、惑星間磁場、衝撃波と粒子加速、宇宙線の伝播）」（前提 P-231、P-246、P-211）。入口は P-231、P-211"
+    units: [P-291]
     sources: [Y01]
   - id: "2400"
     name: "IONOSPHERE"
     ja: "電離圏"
-    gap: "要る単元の案「電離圏（生成と消滅の化学、層構造と日変化、電流系、電波の伝搬、不規則構造と衛星測位への影響）」（前提 P-041、W-034、P-122）。入口は P-041、E-166"
+    units: [P-293]
     sources: [Y01]
   - id: "2700"
     name: "MAGNETOSPHERIC PHYSICS"
     ja: "磁気圏物理"
-    gap: "要る単元の案「磁気圏物理（地球磁気圏の構造、磁気リコネクションと対流、放射線帯、磁気嵐とサブストーム、オーロラ）」（前提 P-231、P-041、W-011）。入口は P-231、P-246"
+    units: [P-292]
     sources: [Y01]
   - id: "3000"
     name: "MARINE GEOLOGY AND GEOPHYSICS"
@@ -128,7 +128,7 @@ items:
   - id: "3900"
     name: "MINERAL PHYSICS"
     ja: "鉱物物理"
-    gap: "要る単元の案「鉱物物理（高圧高温下の鉱物の相転移・状態方程式・弾性・拡散と輸送、地球内部の組成と構造との対応）」（前提 W-013、W-026、W-037、P-093）。入口は W-013、W-026"
+    units: [W-119]
     sources: [Y01]
   - id: "4300"
     name: "NATURAL HAZARDS"
@@ -163,7 +163,7 @@ items:
   - id: "5100"
     name: "PHYSICAL PROPERTIES OF ROCKS"
     ja: "岩石の物性"
-    gap: "要る単元の案「岩石の物性（密度・空隙率・弾性波速度・電気伝導度・熱伝導率・透水性とその測り方）」（前提 W-013、W-029、W-015）。入口は W-029、W-026"
+    units: [W-117]
     sources: [Y01]
   - id: "5200"
     name: "PLANETARY SCIENCES: ASTROBIOLOGY"
@@ -173,17 +173,17 @@ items:
   - id: "5400"
     name: "PLANETARY SCIENCES: SOLID SURFACE PLANETS"
     ja: "惑星科学（固体表面の惑星）"
-    gap: "要る単元の案「固体惑星と月の地質（衝突クレーター、火山と地殻変動、表層の過程、内部構造）」（前提 W-074、W-035、W-012、W-023）。入口は W-074、P-171"
+    units: [W-115]
     sources: [Y01]
   - id: "5700"
     name: "PLANETARY SCIENCES: FLUID PLANETS"
     ja: "惑星科学（流体の惑星）"
-    gap: "要る単元の案「惑星の大気と流体（金星・火星・巨大惑星・タイタンの大気、超回転、惑星の磁気圏の入口）」（前提 P-171、P-157、P-155）。入口は P-171"
+    units: [P-295]
     sources: [Y01]
   - id: "6000"
     name: "PLANETARY SCIENCES: COMETS AND SMALL BODIES"
     ja: "惑星科学（彗星と小天体）"
-    gap: "要る単元の案「小天体と衝突（小惑星・彗星・カイパーベルト、隕石、軌道の進化、衝突の頻度と地球への影響）」（前提 W-074、W-035、P-010）。入口は W-074、W-035"
+    units: [W-116]
     sources: [Y01]
   - id: "6200"
     name: "PLANETARY SCIENCES: SOLAR SYSTEM OBJECTS"
@@ -218,12 +218,12 @@ items:
   - id: "7800"
     name: "SPACE PLASMA PHYSICS"
     ja: "宇宙プラズマ物理"
-    units: [P-231, P-246, P-041]
+    units: [P-231, P-246, P-041, P-283, P-292]
     sources: [Y01]
   - id: "7900"
     name: "SPACE WEATHER"
     ja: "宇宙天気"
-    gap: "要る単元の案「宇宙天気（太陽フレアとコロナ質量放出、磁気嵐、放射線帯と衛星の障害、電離圏の擾乱、予報と観測）」（前提 P-211、E-065）。入口は E-065、P-211"
+    units: [P-294]
     sources: [Y01]
   - id: "8000"
     name: "STRUCTURAL GEOLOGY"

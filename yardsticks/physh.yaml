@@ -17,7 +17,7 @@ items:
     parent: "9f5c878e"
     name: "Sum rules"
     ja: "総和則"
-    gap: "入口は P-040（クラマース＝クローニッヒ）と P-054（線形応答）だけで、総和則の中心がない。要る単元の案「分散関係と総和則」（前提 P-040、P-054、P-111）"
+    units: [P-296]
     sources: [Y01]
   - id: "3797f4c0"
     parent: "9f5c878e"
@@ -59,7 +59,7 @@ items:
     parent: "9f5c878e"
     name: "Strings & branes"
     ja: "弦とブレーン"
-    gap: "入口は P-237（ボソン弦と臨界次元）だけで、超弦理論と D ブレーンがない。要る単元の案「超弦理論と D ブレーンの入口」（前提 P-237、P-114、P-230）"
+    units: [P-297, P-237]
     sources: [Y01]
   - id: "cdaf7295"
     parent: "9f5c878e"
@@ -188,19 +188,19 @@ items:
     parent: "512fd433"
     name: "Interactions in fluids"
     ja: "流体中の相互作用"
-    gap: "入口は E-113（空力弾性）だけで、流体と構造・粒子の相互作用の中心がない。要る単元の案「流体と構造・粒子の相互作用」（前提 E-031、E-090、P-014）"
+    units: [P-275, E-113]
     sources: [Y01]
   - id: "5ad87d23"
     parent: "512fd433"
     name: "Reacting flows"
     ja: "反応性流れ"
-    gap: "入口は E-194（燃焼の熱化学）だけで、火炎・爆轟など流れとの結合がない。要る単元の案「反応性流れ（火炎・爆轟・乱流燃焼）」（前提 E-194、E-037、E-040、E-213）"
+    units: [P-279]
     sources: [Y01]
   - id: "6aed0168"
     parent: "512fd433"
     name: "Low Reynolds number flows"
     ja: "低レイノルズ数流れ"
-    gap: "入口は P-190（ストークスの法則）と E-031（潤滑理論）だけ。要る単元の案「低レイノルズ数の流れ（ストークス流・微生物の遊泳）」（前提 E-031、P-014）"
+    units: [P-269]
     sources: [Y01]
   - id: "6cebc2dd"
     parent: "512fd433"
@@ -212,7 +212,7 @@ items:
     parent: "512fd433"
     name: "Rarefied flows"
     ja: "希薄気体流れ"
-    gap: "入口は P-054（ボルツマン方程式）と D-082（運動論的方程式の数学）だけ。要る単元の案「希薄気体力学（クヌーセン数・すべり流れ・DSMC）」（前提 P-043、P-054、E-037）"
+    units: [P-278]
     sources: [Y01]
   - id: "7a4e6b3d"
     parent: "512fd433"
@@ -225,19 +225,19 @@ items:
     name: "Rheology"
     ja: "レオロジー"
     also: ["2bd35371"]
-    gap: "入口は E-019（線形粘弾性）と P-190（粘性）だけ。要る単元の案「レオロジー（非ニュートン流体・粘弾性流体・構成方程式）」（前提 E-019、E-031、P-103）"
+    units: [P-270, P-264]
     sources: [Y01]
   - id: "884ba888"
     parent: "512fd433"
     name: "Cavitation"
     ja: "キャビテーション"
-    gap: "入口は E-024（ポンプの NPSH）の一言だけ。要る単元の案「気泡力学とキャビテーション（レイリー–プレセット方程式・崩壊・壊食）」（前提 E-031、P-014）"
+    units: [P-271]
     sources: [Y01]
   - id: "8da11568"
     parent: "512fd433"
     name: "Granular flows"
     ja: "粒状流れ"
-    gap: "入口は P-239（ジャミング）と G-048（球充填）だけ。要る単元の案「粒状物質の流れと力（なだれ・ホッパー・力鎖・粒状レオロジー）」（前提 P-014、P-239）"
+    units: [P-276]
     sources: [Y01]
   - id: "9c5b281b"
     parent: "512fd433"
@@ -261,13 +261,13 @@ items:
     parent: "512fd433"
     name: "Drop & bubble phenomena"
     ja: "液滴と気泡の現象"
-    gap: "入口は P-013（表面張力と毛管圧）だけ。要る単元の案「液滴・気泡・ぬれ（接触角・液滴の衝突と分裂・毛管現象）」（前提 P-013、E-031）"
+    units: [P-273, P-271, P-272]
     sources: [Y01]
   - id: "b7f686b6"
     parent: "512fd433"
     name: "Flow control"
     ja: "流れの制御"
-    gap: "受け持つ単元がない（制御は E-049、流れは E-025 が別々にあるだけ）。要る単元の案「流れの制御（受動・能動制御・境界層制御・フィードバック）」（前提 E-025、E-049、E-033）"
+    units: [P-280]
     sources: [Y01]
   - id: "c25108e7"
     parent: "512fd433"
@@ -280,13 +280,13 @@ items:
     parent: "512fd433"
     name: "Multiphase flows"
     ja: "混相流"
-    gap: "入口は E-040（沸騰と凝縮）だけ。要る単元の案「混相流（気液二相流・気泡流・粒子–流体・流動様式）」（前提 E-031、E-040、P-014）"
+    units: [P-274, P-275]
     sources: [Y01]
   - id: "c7102703"
     parent: "512fd433"
     name: "Nanofluidics"
     ja: "ナノ流体"
-    gap: "受け持つ単元がない。要る単元の案「マイクロ流体とナノ流体（微小流路・電気浸透・毛管力・ナノ細孔内の輸送）」（前提 E-031、B-004、P-013）"
+    units: [P-277]
     sources: [Y01]
   - id: "cc73b723"
     parent: "512fd433"
@@ -310,13 +310,13 @@ items:
     parent: "512fd433"
     name: "Microfluidics"
     ja: "マイクロ流体"
-    gap: "入口は B-004（生体系の流れ）だけ。要る単元の案「マイクロ流体とナノ流体（微小流路・電気浸透・毛管力・ナノ細孔内の輸送）」（前提 E-031、B-004、P-013）"
+    units: [P-277]
     sources: [Y01]
   - id: "f5372742"
     parent: "512fd433"
     name: "Interfacial flows"
     ja: "界面の流れ"
-    gap: "入口は E-033（表面張力駆動流）と E-031（潤滑理論）だけ。要る単元の案「界面の流体力学（薄膜流・マランゴニ流・接触線）」（前提 E-031、P-013、E-033）"
+    units: [P-272]
     sources: [Y01]
   - {id: "e4211828", name: "Interdisciplinary Physics", ja: "学際物理", group: true}
   - id: "019e106f"
@@ -347,7 +347,7 @@ items:
     parent: "e4211828"
     name: "Social systems"
     ja: "社会系"
-    gap: "入口は F-024（ゲーム理論）と B-058（協力の進化）だけ。要る単元の案「社会系の統計物理（意見形成・協力の進化ゲーム・集団行動）」（前提 P-055、F-024、P-052）"
+    units: [P-257]
     sources: [Y01]
   - id: "4455b073"
     parent: "e4211828"
@@ -371,13 +371,13 @@ items:
     parent: "e4211828"
     name: "Transportation research"
     ja: "交通研究"
-    gap: "入口は E-191（車両運動力学）と E-157（待ち行列）だけ。要る単元の案「交通流の物理（渋滞の相転移・セルオートマトン・流体モデル）」（前提 S-009、P-055、E-157）"
+    units: [P-258]
     sources: [Y01]
   - id: "d55c7570"
     parent: "e4211828"
     name: "Complex systems"
     ja: "複雑系"
-    gap: "入口は D-055（カオス）と P-020 だけ。要る単元の案「複雑系の科学（創発・べき則・自己組織化・エージェントモデル）」（前提 D-055、P-052、S-005）"
+    units: [P-260, P-256, P-257]
     sources: [Y01]
   - id: "e429096f"
     parent: "e4211828"
@@ -414,14 +414,14 @@ items:
     parent: "510fc218"
     name: "Qubit architectures"
     ja: "量子ビットの実装"
-    gap: "入口は P-249（超伝導量子回路）だけで、イオントラップ・中性原子・スピン・光の実装がない。要る単元の案「量子ビットの物理実装（イオン・中性原子・スピン・光子）」（前提 P-087、P-091、P-242）"
+    units: [P-298, P-249]
     sources: [Y01]
   - {id: "0213a5a0", name: "Nuclear Physics", ja: "原子核物理", group: true}
   - id: "0fe307b1"
     parent: "0213a5a0"
     name: "Synthesis of new superheavy elements"
     ja: "超重元素の合成"
-    gap: "入口は P-106（原子核物理）だけ。要る単元の案「超重元素の合成（重イオン融合・安定の島）」（前提 P-106、P-081）"
+    units: [P-287]
     sources: [Y01]
   - id: "1cf75de2"
     parent: "0213a5a0"
@@ -439,32 +439,32 @@ items:
     parent: "0213a5a0"
     name: "Relativistic heavy-ion collisions"
     ja: "相対論的重イオン衝突"
-    gap: "受け持つ単元がない。要る単元の案「相対論的重イオン衝突とクォーク・グルーオン・プラズマ」（前提 P-108、P-238、P-106）"
+    units: [P-288]
     sources: [Y01]
   - id: "8ad76784"
     parent: "0213a5a0"
     name: "Nuclear engineering"
     ja: "原子力工学"
-    gap: "入口は P-104（核分裂の初歩）と E-038（工学熱力学）だけ。要る単元の案「原子炉と核燃料サイクル」（前提 P-104、E-038、P-106）。CAS 71 と同じ単元"
+    units: [P-290]
     sources: [Y01]
   - id: "bbb0ce0d"
     parent: "0213a5a0"
     name: "Nuclear reactions"
     ja: "核反応"
-    gap: "入口は P-104（核反応の初歩）と P-081（散乱理論）だけ。要る単元の案「原子核反応（複合核・光学模型・直接反応・重イオン融合）」（前提 P-081、P-106）"
+    units: [P-287]
     sources: [Y01]
   - id: "c348f41e"
     parent: "0213a5a0"
     name: "Nuclear tests of fundamental interactions"
     ja: "核による基本相互作用の検証"
-    gap: "入口は P-220（二重ベータ崩壊）だけ。要る単元の案「原子核・原子による基本相互作用の精密検証（ベータ崩壊・EDM・パリティ非保存）」（前提 P-106、P-220、P-108）"
+    units: [P-289, P-220]
     sources: [Y01]
   - {id: "2bd35371", name: "Polymers & Soft Matter", ja: "高分子とソフトマター", group: true}
   - id: "233556f2"
     parent: "2bd35371"
     name: "Conformation & topology"
     ja: "配座とトポロジー"
-    gap: "入口は P-103（ソフトマターの概観）と B-003（溶液中の高分子）だけ。要る単元の案「高分子の化学と物理」（前提 P-049、P-055、P-103）。CAS 35・36・39 と同じ単元"
+    units: [P-262]
     sources: [Y01]
   - id: "36754399"
     parent: "2bd35371"
@@ -483,7 +483,7 @@ items:
     parent: "2bd35371"
     name: "Polymer behavior"
     ja: "高分子の挙動"
-    gap: "入口は H-035（高分子の合成と性質）と P-103 だけ。要る単元の案「高分子の化学と物理」（前提 P-049、P-055、P-103）。CAS 35・36・39 と同じ単元"
+    units: [P-262, P-263, P-264]
     sources: [Y01]
   - id: "5eb78870"
     parent: "2bd35371"
@@ -502,7 +502,7 @@ items:
     parent: "2bd35371"
     name: "Granular packing"
     ja: "粒状充填"
-    gap: "入口は G-048（球充填）と P-239（ジャミング）だけ。要る単元の案「充填とジャミング（ランダム最密充填・ジャミング転移）」（前提 G-048、P-052）"
+    units: [P-268, P-276]
     sources: [Y01]
   - id: "77d491f8"
     parent: "2bd35371"
@@ -527,7 +527,7 @@ items:
     parent: "2bd35371"
     name: "Polymer aging"
     ja: "高分子のエイジング"
-    gap: "入口は P-239（ガラス転移）と H-035 だけ。要る単元の案「ガラス転移と高分子の緩和・エイジング」（前提 P-239、H-035、E-019）"
+    units: [P-264]
     sources: [Y01]
   - id: "c256fda5"
     parent: "2bd35371"
@@ -552,13 +552,13 @@ items:
     parent: "2bd35371"
     name: "Interactions & forces"
     ja: "相互作用と力"
-    gap: "入口は H-018（分子間力）と B-003 だけ。要る単元の案「コロイドと表面力（DLVO・ファンデルワールス力・枯渇力・電気二重層）」（前提 H-018、P-030、P-103）"
+    units: [P-265]
     sources: [Y01]
   - id: "da8795cf"
     parent: "2bd35371"
     name: "Collective behavior"
     ja: "集団挙動"
-    gap: "入口は B-158（群れの動きの数理）と B-058（集団行動）だけ。要る単元の案「アクティブマター（自己駆動粒子・群れ・運動誘起相分離）」（前提 P-052、P-055、P-103）"
+    units: [P-267]
     sources: [Y01]
   - id: "dba0f19a"
     parent: "2bd35371"
@@ -570,7 +570,7 @@ items:
     parent: "2bd35371"
     name: "Electric field effects"
     ja: "電場効果"
-    gap: "入口は P-103（液晶）と P-035（誘電体）だけ。要る単元の案「液晶とソフトマターの電場応答（フレデリクス転移・誘電泳動・電気流体）」（前提 P-035、P-103）"
+    units: [P-266, P-277]
     sources: [Y01]
   - id: "e521b9c7"
     parent: "2bd35371"
@@ -589,7 +589,7 @@ items:
     parent: "2bd35371"
     name: "Confinement"
     ja: "閉じ込め"
-    gap: "受け持つ単元がない（P-173 は半導体の量子閉じ込めで別）。要る単元の案「閉じ込められた流体・高分子（ナノ細孔・ガラス転移の変化）」（前提 P-103、P-239）"
+    units: [P-277]
     sources: [Y01]
   - id: "f2a9db78"
     parent: "2bd35371"
@@ -616,7 +616,7 @@ items:
     parent: "c3ec1cb0"
     name: "Beam techniques"
     ja: "ビーム技術"
-    gap: "入口は P-107（加速器とビーム光学の一言）だけ。要る単元の案「加速器物理（ビーム力学・高周波加速・ビームの冷却と診断）」（前提 P-032、P-018、P-040）"
+    units: [P-285]
     sources: [Y01]
   - id: "be790dcd"
     parent: "c3ec1cb0"
@@ -628,7 +628,7 @@ items:
     parent: "c3ec1cb0"
     name: "Beam dynamics"
     ja: "ビーム力学"
-    gap: "入口は P-107（加速器とビーム光学の一言）と P-032（磁場中の荷電粒子）だけ。要る単元の案「加速器物理（ビーム力学・高周波加速・ビームの冷却と診断）」（前提 P-032、P-018、P-040）"
+    units: [P-285]
     sources: [Y01]
   - {id: "a48f173e", name: "Condensed Matter, Materials & Applied Physics", ja: "物性・材料・応用物理", group: true}
   - id: "15f520a3"
@@ -653,7 +653,7 @@ items:
     parent: "a48f173e"
     name: "Mesoscopics"
     ja: "メゾスコピック系"
-    gap: "入口は P-173（量子ドット）と P-098（二次元電子系）だけ。要る単元の案「メゾスコピック輸送（ランダウアー公式・コンダクタンス量子化・弱局在・クーロン遮蔽）」（前提 P-094、P-098、P-173）"
+    units: [P-301]
     sources: [Y01]
   - id: "4c4f4d87"
     parent: "a48f173e"
@@ -665,7 +665,7 @@ items:
     parent: "a48f173e"
     name: "Superfluidity"
     ja: "超流動"
-    gap: "入口は P-051（理想ボース気体）と P-099（超伝導）だけ。要る単元の案「超流動と量子流体（ヘリウム・ボゴリューボフ理論・量子渦）」（前提 P-051、P-083、P-099）"
+    units: [P-302]
     sources: [Y01]
   - id: "9e001bda"
     parent: "a48f173e"
@@ -726,7 +726,7 @@ items:
     parent: "419d860e"
     name: "Growth processes"
     ja: "成長過程"
-    gap: "入口は S-045（KPZ）と H-053（結晶成長）だけ。要る単元の案「成長する界面の統計物理（KPZ・DLA・堆積模型・粗さ）」（前提 P-055、P-053）"
+    units: [P-261]
     sources: [Y01]
   - id: "465c2601"
     parent: "419d860e"
@@ -752,19 +752,19 @@ items:
     name: "Synchronization"
     ja: "同期"
     also: ["6f025065", "c9174048"]
-    gap: "入口は D-054（平面の周期軌道と分岐）と P-025（連成振動）だけ。要る単元の案「同期現象（結合振動子・蔵本モデル・引き込み）」（前提 D-054、P-025）"
+    units: [P-255]
     sources: [Y01]
   - id: "5d390ffe"
     parent: "419d860e"
     name: "Self-avoiding walks"
     ja: "自己回避ウォーク"
-    gap: "入口は P-055（ランダムウォーク）と P-053（臨界現象）だけ。要る単元の案「高分子鎖と自己回避歩行の統計（フローリー指数・普遍性）」（前提 P-053、P-055）"
+    units: [P-262]
     sources: [Y01]
   - id: "69e160e2"
     parent: "419d860e"
     name: "Self-organized systems"
     ja: "自己組織化系"
-    gap: "入口は B-141 と B-062（反応拡散のパターン）だけ。要る単元の案「自己組織化と自己組織化臨界（散逸構造・砂山模型・べき則）」（前提 D-054、P-053）"
+    units: [P-259, P-260]
     sources: [Y01]
   - id: "7dd874c0"
     parent: "419d860e"
@@ -782,13 +782,13 @@ items:
     parent: "419d860e"
     name: "Ballistic deposition"
     ja: "弾道堆積"
-    gap: "入口は S-045（KPZ）だけ。要る単元の案「成長する界面の統計物理（KPZ・DLA・堆積模型・粗さ）」（前提 P-055、P-053）"
+    units: [P-261]
     sources: [Y01]
   - id: "97615b28"
     parent: "419d860e"
     name: "Fractional dimension"
     ja: "分数次元"
-    units: [D-072, D-074]
+    units: [D-072, D-074, P-261]
     sources: [Y01]
   - id: "99934578"
     parent: "419d860e"
@@ -812,7 +812,7 @@ items:
     parent: "419d860e"
     name: "Packing & jamming problems"
     ja: "充填・ジャミング問題"
-    gap: "入口は G-048（球充填）と P-239（ジャミング）だけ。要る単元の案「充填とジャミング（ランダム最密充填・ジャミング転移）」（前提 G-048、P-052）"
+    units: [P-268]
     sources: [Y01]
   - id: "d9490ac8"
     parent: "419d860e"
@@ -881,7 +881,7 @@ items:
     parent: "6f025065"
     name: "Dynamics of networks"
     ja: "ネットワークの力学"
-    gap: "入口は D-054（分岐）と I-037（感染のネットワーク）だけ。要る単元の案「ネットワーク上の力学（同期・意見形成・集団行動）」（前提 D-054、C-029、P-052）"
+    units: [P-256]
     sources: [Y01]
   - id: "af1f8b12"
     parent: "6f025065"
@@ -912,7 +912,7 @@ items:
     parent: "5375b253"
     name: "High-energy-density plasmas"
     ja: "高エネルギー密度プラズマ"
-    gap: "入口は P-241（核融合炉心）だけ。要る単元の案「高エネルギー密度プラズマと慣性核融合（レーザープラズマ・衝撃波）」（前提 P-041、P-241、P-246）"
+    units: [P-282]
     sources: [Y01]
   - id: "162881a6"
     parent: "5375b253"
@@ -924,7 +924,7 @@ items:
     parent: "5375b253"
     name: "Laboratory studies of space & astrophysical plasmas"
     ja: "宇宙・天体プラズマの実験室研究"
-    gap: "入口は P-231（MHD の基礎）と P-246（プラズマ波）だけ。要る単元の案「宇宙プラズマの物理（磁気リコネクション・無衝突衝撃波・磁気圏・太陽風）」（前提 P-231、P-246）"
+    units: [P-283]
     sources: [Y01]
   - id: "3741a35f"
     parent: "5375b253"
@@ -936,7 +936,7 @@ items:
     parent: "5375b253"
     name: "Plasma acceleration & new acceleration techniques"
     ja: "プラズマ加速と新しい加速技術"
-    gap: "入口は P-246（プラズマ波）だけ。要る単元の案「プラズマ加速（レーザー航跡場・ビーム航跡場）」（前提 P-246、P-039）"
+    units: [P-286]
     sources: [Y01]
   - id: "52f61d50"
     parent: "5375b253"
@@ -966,7 +966,7 @@ items:
     parent: "5375b253"
     name: "Space weather"
     ja: "宇宙天気"
-    gap: "入口は P-211（太陽の活動）と E-065（熱圏・宇宙天気の一言）だけ。要る単元の案「宇宙天気（太陽風・磁気圏・電離圏・磁気嵐）」（前提 P-211、P-231、P-246）"
+    units: [P-294]
     sources: [Y01]
   - id: "a7a00bcb"
     parent: "5375b253"
@@ -978,13 +978,13 @@ items:
     parent: "5375b253"
     name: "Plasma discharges"
     ja: "プラズマ放電"
-    gap: "入口は P-248（シース）だけ。要る単元の案「放電と低温プラズマ（パッシェンの法則・グロー放電・プラズマプロセス）」（前提 P-041、P-248）"
+    units: [P-281]
     sources: [Y01]
   - id: "bdf4c29f"
     parent: "5375b253"
     name: "Plasma medicine"
     ja: "プラズマ医療"
-    gap: "優先度は低い。受け持つ単元がなく、案「放電と低温プラズマ」の応用の節として扱える（前提 P-041、P-248）"
+    units: [P-281]
     sources: [Y01]
   - id: "cad250bc"
     parent: "5375b253"
@@ -1002,7 +1002,7 @@ items:
     parent: "5375b253"
     name: "Nonlinear phenomena in plasmas"
     ja: "プラズマの非線形現象"
-    gap: "入口は P-246（ランダウ減衰）と D-079（ソリトン）だけ。要る単元の案「プラズマの非線形現象（波と波の相互作用・不安定・乱流）」（前提 P-246、D-079）"
+    units: [P-284]
     sources: [Y01]
   - {id: "88db3168", name: "Physics Education Research", ja: "物理教育研究", group: true}
   - id: "1ad4c70d"
@@ -1100,25 +1100,25 @@ items:
     parent: "c9174048"
     name: "Network structure"
     ja: "ネットワークの構造"
-    gap: "入口は C-029・C-032・C-042（グラフの基礎・固有値・グラフ極限）だけ。要る単元の案「複雑ネットワークの構造（次数分布・スモールワールド・スケールフリー・コミュニティ）」（前提 C-029、S-003、C-032）"
+    units: [P-251]
     sources: [Y01]
   - id: "5b214695"
     parent: "c9174048"
     name: "Collective behavior in networks"
     ja: "ネットワークの集団挙動"
-    gap: "受け持つ単元がない。要る単元の案「ネットワーク上の力学（同期・意見形成・集団行動）」（前提 D-054、C-029、P-052）"
+    units: [P-256, P-257]
     sources: [Y01]
   - id: "62dc4b9b"
     parent: "c9174048"
     name: "Traffic"
     ja: "交通"
-    gap: "入口は K-038（TCP）と E-087（待ち行列）だけ。要る単元の案「交通流とネットワークの混雑（渋滞の相転移・待ち行列網）」（前提 S-009、E-087）"
+    units: [P-258]
     sources: [Y01]
   - id: "6e3ddc0a"
     parent: "c9174048"
     name: "Network phase transitions"
     ja: "ネットワークの相転移"
-    gap: "入口は S-043（格子のパーコレーション）だけ。要る単元の案「ネットワークのパーコレーションと頑健性（巨大成分・臨界点・連鎖故障）」（前提 S-043、C-029）"
+    units: [P-253]
     sources: [Y01]
   - id: "8b374c75"
     parent: "c9174048"
@@ -1130,31 +1130,31 @@ items:
     parent: "c9174048"
     name: "Network searches"
     ja: "ネットワーク探索"
-    gap: "入口は K-026（グラフ探索・最短経路）と S-005（マルコフ連鎖）だけ。要る単元の案「ネットワークの探索と中心性（ランダムウォーク・ページランク・ナビゲーション）」（前提 K-026、S-005）"
+    units: [P-254]
     sources: [Y01]
   - id: "da80b6c6"
     parent: "c9174048"
     name: "Network evolution"
     ja: "ネットワークの進化"
-    gap: "受け持つ単元がない。要る単元の案「ネットワークの成長模型（優先的選択・適応度・進化）」（前提 C-029、S-005）"
+    units: [P-252]
     sources: [Y01]
   - id: "dbd74b4d"
     parent: "c9174048"
     name: "Network formation & growth"
     ja: "ネットワークの形成と成長"
-    gap: "受け持つ単元がない。要る単元の案「ネットワークの成長模型（優先的選択・適応度・進化）」（前提 C-029、S-005）"
+    units: [P-252]
     sources: [Y01]
   - id: "f23d87e8"
     parent: "c9174048"
     name: "Transport in networks"
     ja: "ネットワーク上の輸送"
-    gap: "入口は E-024（管路網）・E-067（回路網）・K-011（最大流）だけ。要る単元の案「ネットワーク上の輸送（ランダムウォーク・拡散・流れ・ラプラシアン）」（前提 C-032、S-005）"
+    units: [P-254]
     sources: [Y01]
   - id: "f6b0d9b5"
     parent: "c9174048"
     name: "Network stability"
     ja: "ネットワークの安定性"
-    gap: "入口は E-170（電力系統の安定）だけ。要る単元の案「ネットワークの頑健性と連鎖故障」（前提 C-029、E-170）"
+    units: [P-253]
     sources: [Y01]
   - {id: "8ab3d2b7", name: "Atomic, Molecular & Optical", ja: "原子・分子・光", group: true}
   - id: "12e1040c"
@@ -1185,13 +1185,13 @@ items:
     parent: "8ab3d2b7"
     name: "Collective effects in atomic physics"
     ja: "原子物理の集団効果"
-    gap: "入口は P-091（共振器 QED・もつれ）だけ。要る単元の案「原子集団の集団効果（超放射・電磁誘導透明化・リュードベリ原子）」（前提 P-091、P-082、P-079）"
+    units: [P-299]
     sources: [Y01]
   - id: "b63a8374"
     parent: "8ab3d2b7"
     name: "Structured light"
     ja: "構造化光"
-    gap: "入口は P-028（ビーム光学）だけ。要る単元の案「構造化光（軌道角運動量・ベクトルビーム・位相特異点）」（前提 P-028、P-024）"
+    units: [P-300]
     sources: [Y01]
   - id: "ba7ccb8e"
     parent: "8ab3d2b7"
