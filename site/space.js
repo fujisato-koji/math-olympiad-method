@@ -143,18 +143,7 @@ export function mount(api) {
   // 星の色は関係から見つけた分野（D-124）。分野がまだない単元は流れの色
   const color = u => new THREE.Color(u.f && api.fieldColor ? api.fieldColor(u.f) : api.laneColor(u.lane));
 
-  // ---- 遠くの星くず（背景） ----
-  {
-    const g = new THREE.BufferGeometry(), n = 1400, p = new Float32Array(n * 3);
-    let s = 7;
-    const rnd = () => ((s = (s * 16807) % 2147483647) / 2147483647);
-    for (let i = 0; i < n; i++) {
-      const u = rnd() * 2 - 1, th = rnd() * Math.PI * 2, r = 260 + rnd() * 340, q = Math.sqrt(1 - u * u);
-      p.set([r * q * Math.cos(th), r * u, r * q * Math.sin(th)], i * 3);
-    }
-    g.setAttribute('position', new THREE.BufferAttribute(p, 3));
-    scene.add(new THREE.Points(g, new THREE.PointsMaterial({ color: 0x9fb4ff, size: 1.2, sizeAttenuation: false, transparent: true, opacity: .55, depthWrite: false })));
-  }
+  // 背景の星くず（単元でない飾りの点）は描かない（施主「3D の画面のバックに単元ではない星が表示されているが、これはなくしたい」）。見える点はすべて単元
   // 深さの軌道の輪は、中心からの距離が前提の深さだったとき（D-037）の目印なので、関係から見た配置（D-124）では描かない
 
   // ---- 星（単元） ----
