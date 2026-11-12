@@ -1,7 +1,7 @@
 export const meta = {
   name: 'new-units',
   description: 'まだ問題のない単元に、図とイラストの多い問題（docs/problem-figures.md）を作り、審査・直し・答えを見ない係 2 人の解き直しで確かめる（D-129〜D-131）',
-  whenToUse: 'みちすじの問題のない単元に、試しの 6 単元の水準で問題を作るとき。args は { units: ["B-017", ...], width: 4 }（width は同時に進める単元の数、省くと 4）。1 回に 12 単元ほど',
+  whenToUse: 'みちすじの問題のない単元に、試しの 6 単元の水準で問題を作るとき。args は { units: ["B-017", ...], width: 4 }（width は同時に進める単元の数、省くと 4。止めたあと動かし直すときは done: [直すまで済んだ単元] を足すと、その単元は解くから始める）。1 回に 12 単元ほど',
   phases: [
     { title: 'Write', detail: '単元ごとに問題とイラストを書く' },
     { title: 'Review', detail: '別の係が図を見て審査する' },
@@ -86,12 +86,16 @@ const judgePrompt = (id, solved) => `みちすじの単元 ${id} を、答えを
 const ids = (args && args.units) || []
 // 同時に進める単元の数（PC を軽くする。D-132）。args.width で変えられる。1 単元は 作る → 審査 → 直す → 解く 2 人 → 照らす の順
 const W = Math.max(1, Math.min(ids.length || 1, (args && args.width) || 4))
-log(`${ids.length} 単元を作る（同時に ${W} 単元まで）`)
+// 止めたあと動かし直すとき、作る・審査・直すが済んだ単元は args.done に入れると、解く・照らすから始める
+// （台本を替えると resumeFromRunId では係の並びが変わり、使い回されないため。-fix2 の知らせ）
+const done = new Set((args && args.done) || [])
+log(`${ids.length} 単元を作る（同時に ${W} 単元まで${done.size ? `、直すまで済んだ ${done.size} 単元は解くから` : ''}）`)
 const one = async id => {
-  const w = await agent(writePrompt(id), { label: `作る:${id}`, phase: 'Write' })
+  const skip = done.has(id)
+  const w = skip ? '作る・審査・直すは前の回で済み（args.done）' : await agent(writePrompt(id), { label: `作る:${id}`, phase: 'Write' })
   if (!w) return null
-  const r = await agent(reviewPrompt(id), { label: `審査:${id}`, phase: 'Review', schema: REVIEW, model: 'sonnet' })
-  const f = (!r || (!r.fixes.length && Object.values(r.scores).every(s => s >= 4))) ? '直しなし'
+  const r = skip ? null : await agent(reviewPrompt(id), { label: `審査:${id}`, phase: 'Review', schema: REVIEW, model: 'sonnet' })
+  const f = skip ? '前の回で済み' : (!r || (!r.fixes.length && Object.values(r.scores).every(s => s >= 4))) ? '直しなし'
     : await agent(fixPrompt(id, r), { label: `直す:${id}`, phase: 'Fix' })
   const s = (await parallel(['a', 'b'].map(t => () => agent(solvePrompt(id, t), { label: `解く:${id}-${t}`, phase: 'Solve', schema: SOLVE })
     .then(x => x ? { t, answers: x.answers } : null)))).filter(Boolean)

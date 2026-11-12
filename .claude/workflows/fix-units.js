@@ -1,7 +1,7 @@
 export const meta = {
   name: 'fix-units',
   description: '作ってある単元を、図とイラストの多い形（docs/problem-figures.md）に直し、答えを見ない係 2 人の解き直しで確かめて直す（D-131）',
-  whenToUse: 'みちすじの作ってある単元を、試しの 6 単元の水準に直すとき。args は { units: ["A-001", ...], width: 4 }（width は同時に進める単元の数、省くと 4）。1 回に 12 単元ほど',
+  whenToUse: 'みちすじの作ってある単元を、試しの 6 単元の水準に直すとき。args は { units: ["A-001", ...], width: 4 }（width は同時に進める単元の数、省くと 4。止めたあと動かし直すときは done: [直す段が済んだ単元] を足すと、その単元は解くから始める）。1 回に 12 単元ほど',
   phases: [
     { title: 'Fix', detail: '記号を固定し、図・ヒント・文・漢字・答えを直す' },
     { title: 'Solve', detail: '答えを見ない係 2 人が解き直す' },
@@ -74,9 +74,12 @@ const judgePrompt = (id, solved) => `みちすじの単元 ${id} を、答えを
 const ids = (args && args.units) || []
 // 同時に進める単元の数（PC を軽くする。D-132）。args.width で変えられる。1 単元は 直す → 解く 2 人 → 照らす の順
 const W = Math.max(1, Math.min(ids.length || 1, (args && args.width) || 4))
-log(`${ids.length} 単元を直す（同時に ${W} 単元まで）`)
+// 止めたあと動かし直すとき、直す段が済んだ単元は args.done に入れると、解く・照らすから始める
+// （台本を替えると resumeFromRunId では係の並びが変わり、使い回されないため。-fix2 の知らせ）
+const done = new Set((args && args.done) || [])
+log(`${ids.length} 単元を直す（同時に ${W} 単元まで${done.size ? `、直す段が済んだ ${done.size} 単元は解くから` : ''}）`)
 const one = async id => {
-  const w = await agent(fixPrompt(id), { label: `直す:${id}`, phase: 'Fix' })
+  const w = done.has(id) ? '直す段は前の回で済み（args.done）' : await agent(fixPrompt(id), { label: `直す:${id}`, phase: 'Fix' })
   if (!w) return null
   const s = (await parallel(['a', 'b'].map(t => () => agent(solvePrompt(id, t), { label: `解く:${id}-${t}`, phase: 'Solve', schema: SOLVE })
     .then(r => r ? { t, answers: r.answers } : null)))).filter(Boolean)
