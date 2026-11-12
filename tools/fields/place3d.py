@@ -119,8 +119,17 @@ if __name__ == '__main__':
         # サイトの 3D の地図（D-124）：tools/space-layout.json に書く。大きさは、はじめの知の宇宙（D-037）の半径の中央値 48.6 にそろえ、カメラや霧の決まりをそのまま使う
         r = np.linalg.norm(X - X.mean(0), axis=1)
         Y = (X - X.mean(0)) * (48.6 / np.median(r))
-        pos = {i: [round(float(v), 2) for v in Y[k]] for k, i in enumerate(L['ids'])}
         out = os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), 'space-layout.json')
+        # 向きは、いま公開している配置に合わせる（回転と裏返しだけで、形と大きさは変えない）。主軸で決める向きは、データが少し変わると入れかわることがあり、
+        # そのままだと見なれた地図が回ったり鏡に映ったりする（2026-11-12、地図を広げたとき回さずにくらべると半径の 110% 動いた）
+        if os.path.exists(out):
+            prev = json.load(open(out, encoding='utf-8'))
+            com = [k for k, i in enumerate(L['ids']) if i in prev]
+            if len(com) >= 10:
+                Pm = np.array([prev[L['ids'][k]] for k in com], float); Pm = Pm - Pm.mean(0)
+                Ua, _, Vt = np.linalg.svd(Y[com].T @ Pm)
+                Y = Y @ (Ua @ Vt)
+        pos = {i: [round(float(v), 2) for v in Y[k]] for k, i in enumerate(L['ids'])}
         open(out, 'w', encoding='utf-8', newline='\n').write(json.dumps(pos, ensure_ascii=False, separators=(',', ':'), sort_keys=True) + '\n')
         print(f'サイトの 3D の配置を書いた：{len(pos)} 単元 → tools/space-layout.json', flush=True)
     json.dump(out, open(os.path.join(H, 'place3d.json'), 'w'), ensure_ascii=False, indent=1)

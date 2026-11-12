@@ -887,7 +887,7 @@
   const inGroup = id => { const rg = REGION[UNITS[id].region]; return !rg || group()[2](rg); };
   const cssLane = l => getComputedStyle($('#cosmos') || document.documentElement).getPropertyValue('--lane-' + l).trim() || '#9fb4ff';
   // 関係から見つけた分野（D-122、D-124）：色は relations/fields.yaml の並びの 1〜16（style.css の --field-N）。分野がない単元は流れの色
-  const FIELDS = Object.fromEntries((R.fields || []).map((f, i) => [f.id, { ...f, n: i + 1 }]));
+  const FIELDS = Object.fromEntries((R.fields || []).map((f, i) => [f.id, { ...f, n: f.c || i + 1 }]));   // n は色の番号（relations/fields.yaml の color）
   const cssField = f => getComputedStyle($('#cosmos') || document.documentElement).getPropertyValue('--field-' + (FIELDS[f] ? FIELDS[f].n : 0)).trim() || '#9fb4ff';
   const fc = o => o && o.f && FIELDS[o.f] ? `--c: var(--field-${FIELDS[o.f].n})` : lc(o.lane);
   const svgi = d => `<svg viewBox="0 0 24 24" aria-hidden="true">${d}</svg>`;

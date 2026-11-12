@@ -11,7 +11,7 @@
     python tools/fields/run.py --from b   # (b) から始める（(a) の結果が out/ にあるとき）
     python tools/fields/run.py --write    # relations/fields.yaml も書きかえる（付けなければ out/fields.yaml だけ）
     python tools/fields/place3d.py --check  # 3D の配置だけ作り、乱数の初めと関係を 1 割抜いた配置とくらべる
-    python tools/fields/place3d.py --site   # サイトの 3D の地図の位置（tools/space-layout.json）を書く（D-124）
+    python tools/fields/place3d.py --site   # サイトの 3D の地図の位置（tools/space-layout.json）を書く（D-124）。向きは、いま公開している配置に回転と裏返しだけで合わせる
     python tools/fields/order2d.py          # 2D の地図の縦の並び（relations/region-order.yaml）を書く（D-124。relations/fields.yaml のあとに）
 
 順番：(a) 3 設定（typed、typed_topic2、typed_use2。どれも前提の線を強さ×種類で重み付け、α=1.0）の合意の分け方 → (b) 3 設定の合意（cross.py、out/fields.json）→
@@ -39,7 +39,7 @@ place3d.py --check は 15 分ほど。
 - 10 単元に満たない塊は、関係（合わせた類似度）のいちばん多い大きな塊に入れる
 - 3D の配置（D-121）：エネルギー Σ a_ij d²/2 − Σ log d（Noack の (a, r) 族の (2, 0)。引き合いは association strength、層の比は topic 1.5）を、古典的 MDS の初めから L-BFGS で最小にする。乱数は使わない
 
-## 確かめの数（地図を広げたあとの 1,685 単元、2026-11-12）
+## 確かめの数（地図を広げたあとの 1,685 単元、2026-11-12 昼。夕の第 2 回のあとは 1,705 単元で 15 分野・139 細かい分野、前の版との一致 0.91）
 
 - 3 設定どうしの一致 ARI 0.77〜0.86。合意は 19 の塊（10 単元以上 16）、30 回の一致 0.993。16 の分野と 143 の細かい分野。
 - 3 設定とも同じ仲間で、ゆさぶりでも 8 割以上同じ塊に残る単元 72%（境目 464）。いまの 21 の流れとの一致 ARI 0.37。旧の 13 分野（1,523 単元）との一致 ARI 0.82。

@@ -1,6 +1,6 @@
 note: tools/fields/order2d.py が relations/fields.yaml と roadmap.yaml から作る。2D の地図の縦の並び（D-124）。手で直さない。
 fields:
-- field: F16
+- field: F15
   regions:
   - kikai
   - sekkei
@@ -8,27 +8,27 @@ fields:
   regions:
   - wakusei
   - chikyu-kagaku
-  - chikyu-system
-  - mizu-kori
-  - chiso
-  - ganseki
   - shigen
-  - chikyu-naibu
+  - ganseki
   - jishin-kazan
+  - chikyu-naibu
+  - chiso
+  - mizu-kori
+  - chikyu-system
   - chikyu
-- field: F07
-  regions:
   - tenki
   - kankyo-kogaku
-  - kagaku-kogaku
+- field: F08
+  regions:
   - busshitsu
+  - bunseki
+  - yuki
   - genshi-ketsugo
   - hanno
   - muki
-  - bunseki
-  - yuki
   - butsuri-kagaku
   - zairyo
+  - kagaku-kogaku
 - field: F04
   regions:
   - ryutai-butsuri
@@ -38,6 +38,7 @@ fields:
   - bussei
   - genshi
   - ryoshi
+  - kaiseki-rikigaku
   - soryushi
   - jikken
   - denjiki
@@ -46,20 +47,19 @@ fields:
   - hado
   - uchu-kukan
   - sora
-- field: F14
+- field: F10
   regions:
-  - kaiseki-rikigaku
+  - netsu-suishin
+  - ryutai
   - rikigaku
   - kido
-  - netsu-suishin
+  - suchi
   - onkyo
-- field: F08
+- field: F11
   regions:
-  - ryutai
   - doboku
   - kozo-zairyo
-  - suchi
-- field: F11
+- field: F12
   regions:
   - energy
   - seigyo
@@ -68,12 +68,14 @@ fields:
 - field: F01
   regions:
   - risan-kika
+  - totsu-kika
   - senkei-chusho
   - senkei-keisan
-  - kansu-kaiseki
-  - jitsukaiseki
+  - fukuzatsukei
   - bibun-hoteishiki
   - bisekibun
+  - jitsukaiseki
+  - kansu-kaiseki
   - fukuso
   - kaisekiteki-seisuron
   - tayotai
@@ -90,78 +92,62 @@ fields:
   - graph
 - field: F03
   regions:
-  - bisekibun-nyumon
   - zahyo
   - haichi
   - shomei-zukei
   - katachi
   - hakaru
-  - futoshiki
-  - kansu
-  - data
+  - suiri
   - kazu
+  - seisuron
+  - seisu
   - keisan
   - houteishiki
   - shiki
   - kazoekata
   - ronpo
-  - seisu
-  - seisuron
-  - suiri
+  - kansu
+  - futoshiki
+  - data
   - kakuritsu
-- field: F06
+  - bisekibun-nyumon
+  - keiei-kogaku
+- field: F07
   regions:
+  - kumiawase-daigaku
   - suri-ronri
   - keisan-kanousei
   - keisan-riron
-  - hardware
+  - anzen
   - programming
   - keisanki-system
-  - anzen
+  - hardware
   - fugo
-  - kumiawase-daigaku
-  - fukuzatsukei
 - field: F13
   regions:
   - graphics
   - robotics
   - kikai-gakushu
   - vision
-- field: F15
+- field: F14
   regions:
   - kakuritsu-katei
-- field: F10
-  regions:
-  - keiei-kogaku
-  - kakuritsu-daigaku
-  - tokei
-  - shakai-hoho
-  - kyoiku
-- field: F09
-  regions:
-  - songai
-  - keiryo-risk
-  - shokugyo-seido
-  - toshi
-  - kaikei
-  - risoku
-  - seimei-nenkin
-  - ouyou-keizai
-  - keizai
-  - seijigaku
-  - shakaigaku
-- field: F12
+- field: F06
   regions:
   - media
-  - hci
-  - shinri-shakai
+  - shakai-hoho
+  - kyoiku
+  - tokei
+  - kakuritsu-daigaku
   - shinri-hoho
+  - shinri-shakai
   - shinri-rinsho
   - shinri-gakushu
   - shinri-ninchi
+  - kyoiku-shinri
   - shinkei
   - seitai-kogaku
-  - kyoiku-shinri
+  - hci
 - field: F02
   regions:
   - chiri-joho
@@ -176,9 +162,9 @@ fields:
   - kachiku-yoshoku
   - sakumotsu
   - shokubutsu
-  - iden-shinka
-  - biseibutsu
   - iyaku
+  - biseibutsu
+  - iden-shinka
   - seibutsu-keisan
   - bunshi-saibo
   - hassei
@@ -197,3 +183,16 @@ fields:
   - jintai
   - eiyo
   - shinri-hattatsu
+- field: F09
+  regions:
+  - shakaigaku
+  - seijigaku
+  - keizai
+  - ouyou-keizai
+  - seimei-nenkin
+  - risoku
+  - kaikei
+  - toshi
+  - shokugyo-seido
+  - keiryo-risk
+  - songai

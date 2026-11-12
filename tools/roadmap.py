@@ -626,8 +626,8 @@ def load_fields():
         for s in f["subs"]:
             for x in s["units"]:
                 f_of[x], s_of[x] = f["id"], s["id"]
-    fields = [{"id": f["id"], "name": f["name"], "en": f.get("name_en") or "", "about": f.get("about") or "",
-               "subs": [{"id": s["id"], "name": s["name"]} for s in f["subs"]]} for f in F]
+    fields = [{"id": f["id"], "name": f["name"], "en": f.get("name_en") or "", "about": f.get("about") or "", "c": f.get("color") or k + 1,
+               "subs": [{"id": s["id"], "name": s["name"]} for s in f["subs"]]} for k, f in enumerate(F)]
     RO = (yaml.safe_load(ro.read_text(encoding="utf-8")) or {}).get("fields", []) if ro.exists() else []
     region_order = {r: (g["field"], k) for k, (g, r) in enumerate((g, r) for g in RO for r in g["regions"])}
     return fields, f_of, s_of, region_order
