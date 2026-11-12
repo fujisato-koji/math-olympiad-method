@@ -1,621 +1,762 @@
 # G-001 形を見分ける、位置の言葉（前後、左右、上下、内外）
 #
-# 書き方は N-001 の頭の注のとおり。
-# 形は絵文字で描く：さんかく 🔺🔻、しかく 🟥🟦🟩🟨🟧🔷（🔷 はかたむいたしかく）、まる 🔴🔵🟢🟡🟠⚪。
-# 地図の plan に位置の言葉の日がないので、位置の言葉は形をたずねる言い方として 4・5 日目に混ぜる。
-# 形の名前を答えるだけの問題は計算で確かめられないので check を付けない。
-# 数える問題は n(c)、点を結ぶ問題は点の数（かどの数）、位置の問題は図の並びから check で答えを出す。
+# 段 1・水準 1・5 日。さんかく・しかく・まるを、かどの数で見分ける。かどとへんを数える。いろやむきがちがっても、同じ形の仲間に分ける。
+# 地図の plan に位置の言葉の日がないので、位置の言葉（まえ・うしろ、みぎ・ひだり、うえ・した、なか・そと）は、形をたずねる言い方として 4・5 日目に混ぜる。
+# 書き方は N-001 の頭の注のとおり。子の画面には text、svg、choices、ヒントだけを出す。answer、check、paths、note、explain は保護者用。
+# ヒントは答えを書かず、見方・調べ方だけを示す。図の付いたヒントは、答えの手前までを絵で見せる。
+# 図は svg（D-129）。かどは赤い点、へんは青い太い線で示す。選ぶ問題は、形に ア・イ・ウ（・エ）を付けて、記号で答える。
+# check は図の並びから答えを出す（T 上むきの三角、V さかさまの三角、S 四角、D かたむいた四角、C 丸。2 字目は色）。形の名前を答えるだけの問題には check を付けない。
 
 id: G-001
 days:
   - day: 1
     items:
       - part: 見本
-        text: かたちの なまえを おぼえよう。
-        figure: "🔺　🟦　🔵"
-        explain: 🔺 は さんかく。とがった かどが 3 つ あります。🟦 は しかく。かどが 4 つ あります。🔵 は まる。かどが なくて、ぐるっと まるい かたちです。
+        id: "96301b307b"
+        text: |-
+          かたちの なまえを おぼえよう。
+          とがった ところを「かど」と いうよ。
+          かどが 3 つなら さんかく、4 つなら しかく、かどが ないのが まる。
+          いろや むきが かわっても、なまえは かわらないよ。
+        svg: '<svg viewBox="0 0 320 200" xmlns="http://www.w3.org/2000/svg"><polygon points="60,49.3 19.2,115.6 100.8,115.6" fill="#f3c969" fill-opacity="0.6" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><circle cx="60" cy="49.3" r="5.1" fill="#d9534f"/><circle cx="19.2" cy="115.6" r="5.1" fill="#d9534f"/><circle cx="100.8" cy="115.6" r="5.1" fill="#d9534f"/><polygon points="126,51 194,51 194,119 126,119" fill="#7fc8f8" fill-opacity="0.6" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><circle cx="126" cy="51" r="5.1" fill="#d9534f"/><circle cx="194" cy="51" r="5.1" fill="#d9534f"/><circle cx="194" cy="119" r="5.1" fill="#d9534f"/><circle cx="126" cy="119" r="5.1" fill="#d9534f"/><circle cx="260" cy="85" r="36.7" fill="#7bc96f" fill-opacity="0.6" stroke="currentColor" stroke-width="2"/><text x="104" y="30" font-size="15" text-anchor="middle" fill="currentColor" font-weight="bold">かど</text><line x1="94" y1="35" x2="67" y2="49" stroke="#d9534f" stroke-width="2"/><text x="60" y="152" font-size="16" text-anchor="middle" fill="currentColor" font-weight="bold">さんかく</text><text x="160" y="152" font-size="16" text-anchor="middle" fill="currentColor" font-weight="bold">しかく</text><text x="260" y="152" font-size="16" text-anchor="middle" fill="currentColor" font-weight="bold">まる</text><text x="60" y="178" font-size="13" text-anchor="middle" fill="currentColor">かど 3 つ</text><text x="160" y="178" font-size="13" text-anchor="middle" fill="currentColor">かど 4 つ</text><text x="260" y="178" font-size="13" text-anchor="middle" fill="currentColor">かど なし</text></svg>'
+        explain: さんかくは とがった かどが 3 つ、しかくは かどが 4 つ、まるは かどが なく、ぐるっと まるい かたちです。いろや むき、おおきさが かわっても、かどの かずで なまえが きまります。えの あかい ●（かど）を いっしょに ゆびで さして かぞえて ください。
       - part: 今日
+        id: "2725a38dd4"
         text: しかくは どれですか。
-        choices: [🔺, 🔷, 🔵]
-        answer: 🔷
+        svg: '<svg viewBox="0 0 320 200" xmlns="http://www.w3.org/2000/svg"><polygon points="60,54.4 21.6,116.8 98.4,116.8" fill="#f08080" fill-opacity="0.6" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><polygon points="160,44.8 203.2,88 160,131.2 116.8,88" fill="#7fc8f8" fill-opacity="0.6" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><circle cx="260" cy="88" r="34.6" fill="#7fc8f8" fill-opacity="0.6" stroke="currentColor" stroke-width="2"/><text x="60" y="172" font-size="18" text-anchor="middle" fill="currentColor">ア</text><text x="160" y="172" font-size="18" text-anchor="middle" fill="currentColor">イ</text><text x="260" y="172" font-size="18" text-anchor="middle" fill="currentColor">ウ</text></svg>'
+        choices: [ア, イ, ウ]
+        answer: イ
+        check: "'イ'"
         hints:
-          - どの かたちも、かどを ゆびで さして かぞえてみよう。
-          - かどが 3 つの かたちと、かどが ない かたちは しかくでは ないね。
-          - むきが かわって いても、かどが 4 つの かたちが しかくだよ。
+          - どの かたちも、かどを ゆびで さして かぞえよう。
+          - text: かどに ●を つけたよ。●は いくつずつ あるかな。
+            svg: '<svg viewBox="0 0 320 200" xmlns="http://www.w3.org/2000/svg"><polygon points="60,54.4 21.6,116.8 98.4,116.8" fill="#f08080" fill-opacity="0.6" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><circle cx="60" cy="54.4" r="4.8" fill="#d9534f"/><circle cx="21.6" cy="116.8" r="4.8" fill="#d9534f"/><circle cx="98.4" cy="116.8" r="4.8" fill="#d9534f"/><polygon points="160,44.8 203.2,88 160,131.2 116.8,88" fill="#7fc8f8" fill-opacity="0.6" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><circle cx="160" cy="44.8" r="4.8" fill="#d9534f"/><circle cx="203.2" cy="88" r="4.8" fill="#d9534f"/><circle cx="160" cy="131.2" r="4.8" fill="#d9534f"/><circle cx="116.8" cy="88" r="4.8" fill="#d9534f"/><circle cx="260" cy="88" r="34.6" fill="#7fc8f8" fill-opacity="0.6" stroke="currentColor" stroke-width="2"/><text x="60" y="172" font-size="18" text-anchor="middle" fill="currentColor">ア</text><text x="160" y="172" font-size="18" text-anchor="middle" fill="currentColor">イ</text><text x="260" y="172" font-size="18" text-anchor="middle" fill="currentColor">ウ</text></svg>'
+          - むきが かわって いても、かどの かずは かわらないよ。
         paths:
-          - [かどを かぞえる, 🔺 は 3 つ、🔷 は 4 つ、🔵 は かどが ない, かどが 4 つの 🔷]
-          - [しかくでは ない かたちを のぞく, 🔺 は かどが 3 つ、🔵 は かどが ない, のこった 🔷]
-        note: かたむいた しかくを えらぶ だけの 1 ぽ。あとの「しかくは いくつ ありますか」で 🔷 を いれ わすれないための じゅんび。
+          - [かどを かぞえる, ア は 3 つ、イ は 4 つ、ウ は かどが ない, かどが 4 つの イ]
+          - [しかくでは ない かたちを のぞく, ア は かどが 3 つ、ウ は かどが ない, のこった イ]
+        note: かたむいた しかく（イ）を えらぶ だけの 1 ぽ。あとの「しかくは いくつ ありますか」で かたむいた しかくを いれ わすれないための じゅんび。
       - part: 今日
+        id: "0850426946"
         text: さんかくは どれですか。
-        choices: [🟩, 🔺, 🟡]
-        answer: 🔺
+        svg: '<svg viewBox="0 0 320 200" xmlns="http://www.w3.org/2000/svg"><polygon points="60,54.4 21.6,116.8 98.4,116.8" fill="#f08080" fill-opacity="0.6" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><polygon points="128,56 192,56 192,120 128,120" fill="#7bc96f" fill-opacity="0.6" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><circle cx="260" cy="88" r="34.6" fill="#f3c969" fill-opacity="0.6" stroke="currentColor" stroke-width="2"/><text x="60" y="172" font-size="18" text-anchor="middle" fill="currentColor">ア</text><text x="160" y="172" font-size="18" text-anchor="middle" fill="currentColor">イ</text><text x="260" y="172" font-size="18" text-anchor="middle" fill="currentColor">ウ</text></svg>'
+        choices: [ア, イ, ウ]
+        answer: ア
+        check: "'ア'"
         hints:
           - とがった かどを さがそう。
-          - かどは いくつ あるかな。ゆびで さして かぞえよう。
-          - かどが 3 つの かたちが さんかくだよ。
+          - text: かどに ●を つけたよ。●を かぞえよう。
+            svg: '<svg viewBox="0 0 320 200" xmlns="http://www.w3.org/2000/svg"><polygon points="60,54.4 21.6,116.8 98.4,116.8" fill="#f08080" fill-opacity="0.6" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><circle cx="60" cy="54.4" r="4.8" fill="#d9534f"/><circle cx="21.6" cy="116.8" r="4.8" fill="#d9534f"/><circle cx="98.4" cy="116.8" r="4.8" fill="#d9534f"/><polygon points="128,56 192,56 192,120 128,120" fill="#7bc96f" fill-opacity="0.6" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><circle cx="128" cy="56" r="4.8" fill="#d9534f"/><circle cx="192" cy="56" r="4.8" fill="#d9534f"/><circle cx="192" cy="120" r="4.8" fill="#d9534f"/><circle cx="128" cy="120" r="4.8" fill="#d9534f"/><circle cx="260" cy="88" r="34.6" fill="#f3c969" fill-opacity="0.6" stroke="currentColor" stroke-width="2"/><text x="60" y="172" font-size="18" text-anchor="middle" fill="currentColor">ア</text><text x="160" y="172" font-size="18" text-anchor="middle" fill="currentColor">イ</text><text x="260" y="172" font-size="18" text-anchor="middle" fill="currentColor">ウ</text></svg>'
+          - 見本の えを おもいだそう。かどが いくつなら さんかくだったかな。
         paths:
-          - [かどを かぞえる, かどが 3 つ, さんかく]
+          - [かどを かぞえる, ア は かどが 3 つ, さんかく]
       - part: 今日
+        id: "1d584ca435"
         text: まるは どれですか。
-        choices: [🔷, 🔻, 🟠]
-        answer: 🟠
+        svg: '<svg viewBox="0 0 320 200" xmlns="http://www.w3.org/2000/svg"><polygon points="60,44.8 103.2,88 60,131.2 16.8,88" fill="#7fc8f8" fill-opacity="0.6" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><polygon points="121.6,59.2 198.4,59.2 160,121.6" fill="#f08080" fill-opacity="0.6" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><circle cx="260" cy="88" r="34.6" fill="#f5a25d" fill-opacity="0.6" stroke="currentColor" stroke-width="2"/><text x="60" y="172" font-size="18" text-anchor="middle" fill="currentColor">ア</text><text x="160" y="172" font-size="18" text-anchor="middle" fill="currentColor">イ</text><text x="260" y="172" font-size="18" text-anchor="middle" fill="currentColor">ウ</text></svg>'
+        choices: [ア, イ, ウ]
+        answer: ウ
+        check: "'ウ'"
         hints:
           - かどが ある かたちと、ない かたちが あるね。
-          - ゆびで ふちを なぞってみよう。
+          - text: ア の ふちを なぞると、とがった ところで ゆびが とまるね。ほかの かたちも なぞろう。
+            svg: '<svg viewBox="0 0 320 200" xmlns="http://www.w3.org/2000/svg"><polygon points="60,44.8 103.2,88 60,131.2 16.8,88" fill="#7fc8f8" fill-opacity="0.6" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><polygon points="121.6,59.2 198.4,59.2 160,121.6" fill="#f08080" fill-opacity="0.6" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><circle cx="260" cy="88" r="34.6" fill="#f5a25d" fill-opacity="0.6" stroke="currentColor" stroke-width="2"/><text x="60" y="172" font-size="18" text-anchor="middle" fill="currentColor">ア</text><text x="160" y="172" font-size="18" text-anchor="middle" fill="currentColor">イ</text><text x="260" y="172" font-size="18" text-anchor="middle" fill="currentColor">ウ</text><line x1="16.8" y1="88" x2="60" y2="44.8" stroke="#2b7fd4" stroke-width="7" stroke-linecap="round"/><line x1="16.8" y1="88" x2="60" y2="44.8" stroke="currentColor" stroke-width="2"/><line x1="15.5" y1="73.7" x2="41.5" y2="47.7" stroke="#d9534f" stroke-width="3" stroke-linecap="round"/><polygon points="47.9,41.3 44.9,51.1 38.1,44.3" fill="#d9534f"/><circle cx="60" cy="44.8" r="6" fill="#d9534f"/></svg>'
           - かどが ひとつも ない かたちを えらぼう。
         paths:
-          - [ふちを なぞる, かどが ない, まる]
+          - [ふちを なぞる, ウ だけ かどが ない, まる]
       - part: 今日
+        id: "b4de2747de"
         text: さんかくは いくつ ありますか。
-        figure: 🔺🟦🔺🟢🟥🔺
+        svg: '<svg viewBox="0 0 320 200" xmlns="http://www.w3.org/2000/svg"><polygon points="60,30.7 28.8,81.4 91.2,81.4" fill="#f08080" fill-opacity="0.6" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><polygon points="134,32 186,32 186,84 134,84" fill="#7fc8f8" fill-opacity="0.6" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><polygon points="260,30.7 228.8,81.4 291.2,81.4" fill="#f08080" fill-opacity="0.6" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><circle cx="60" cy="145" r="28.1" fill="#7bc96f" fill-opacity="0.6" stroke="currentColor" stroke-width="2"/><polygon points="134,119 186,119 186,171 134,171" fill="#f08080" fill-opacity="0.6" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><polygon points="260,117.7 228.8,168.4 291.2,168.4" fill="#f08080" fill-opacity="0.6" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/></svg>'
         answer: 3
-        check: "n('🔺')"
+        check: "len([t for t in 'Tr Sb Tr Cg Sr Tr'.split() if t[0] in 'TV'])"
         hints:
           - さんかくだけを ゆびで さそう。
-          - さした さんかくに、こころの なかで しるしを つけよう。
-          - しるしを つけた かずを かぞえよう。
+          - text: かどに ●を つけたよ。さんかくは どれと どれかな。
+            svg: '<svg viewBox="0 0 320 200" xmlns="http://www.w3.org/2000/svg"><polygon points="60,30.7 28.8,81.4 91.2,81.4" fill="#f08080" fill-opacity="0.6" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><circle cx="60" cy="30.7" r="4.5" fill="#d9534f"/><circle cx="28.8" cy="81.4" r="4.5" fill="#d9534f"/><circle cx="91.2" cy="81.4" r="4.5" fill="#d9534f"/><polygon points="134,32 186,32 186,84 134,84" fill="#7fc8f8" fill-opacity="0.6" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><circle cx="134" cy="32" r="4.5" fill="#d9534f"/><circle cx="186" cy="32" r="4.5" fill="#d9534f"/><circle cx="186" cy="84" r="4.5" fill="#d9534f"/><circle cx="134" cy="84" r="4.5" fill="#d9534f"/><polygon points="260,30.7 228.8,81.4 291.2,81.4" fill="#f08080" fill-opacity="0.6" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><circle cx="260" cy="30.7" r="4.5" fill="#d9534f"/><circle cx="228.8" cy="81.4" r="4.5" fill="#d9534f"/><circle cx="291.2" cy="81.4" r="4.5" fill="#d9534f"/><circle cx="60" cy="145" r="28.1" fill="#7bc96f" fill-opacity="0.6" stroke="currentColor" stroke-width="2"/><polygon points="134,119 186,119 186,171 134,171" fill="#f08080" fill-opacity="0.6" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><circle cx="134" cy="119" r="4.5" fill="#d9534f"/><circle cx="186" cy="119" r="4.5" fill="#d9534f"/><circle cx="186" cy="171" r="4.5" fill="#d9534f"/><circle cx="134" cy="171" r="4.5" fill="#d9534f"/><polygon points="260,117.7 228.8,168.4 291.2,168.4" fill="#f08080" fill-opacity="0.6" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><circle cx="260" cy="117.7" r="4.5" fill="#d9534f"/><circle cx="228.8" cy="168.4" r="4.5" fill="#d9534f"/><circle cx="291.2" cy="168.4" r="4.5" fill="#d9534f"/></svg>'
+          - みつけた さんかくに しるしを つけて、1、2… と かぞえよう。
         paths:
           - [さんかくだけを えらぶ, 1、2、3 と かぞえる, 3 こ]
       - part: 挑戦
+        id: "58c92f15f4"
         text: しかくは いくつ ありますか。
-        figure: 🟦🔺🟥🟢🔷🟩🟨
+        svg: '<svg viewBox="0 0 320 200" xmlns="http://www.w3.org/2000/svg"><polygon points="25,35.5 70,35.5 70,80.5 25,80.5" fill="#7fc8f8" fill-opacity="0.6" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><polygon points="122.5,34.4 95.5,78.2 149.5,78.2" fill="#f08080" fill-opacity="0.6" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><polygon points="175,35.5 220,35.5 220,80.5 175,80.5" fill="#f08080" fill-opacity="0.6" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><circle cx="272.5" cy="58" r="24.3" fill="#7bc96f" fill-opacity="0.6" stroke="currentColor" stroke-width="2"/><polygon points="85,114.6 115.4,145 85,175.4 54.6,145" fill="#7fc8f8" fill-opacity="0.6" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><polygon points="137.5,122.5 182.5,122.5 182.5,167.5 137.5,167.5" fill="#7bc96f" fill-opacity="0.6" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><polygon points="212.5,122.5 257.5,122.5 257.5,167.5 212.5,167.5" fill="#f3c969" fill-opacity="0.6" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/></svg>'
         answer: 5
-        check: "n('🟦') + n('🟥') + n('🔷') + n('🟩') + n('🟨')"
+        check: "len([t for t in 'Sb Tr Sr Cg Db Sg Sy'.split() if t[0] in 'SD'])"
         hints:
           - かどが 4 つ ある かたちを さがそう。
-          - いろや むきが ちがっても、かどが 4 つなら しかくだよ。
-          - しかくだけに しるしを つけて かぞえよう。
+          - text: かどに ●を つけたよ。いろや むきが ちがっても、●の かずで みわけよう。
+            svg: '<svg viewBox="0 0 320 200" xmlns="http://www.w3.org/2000/svg"><polygon points="25,35.5 70,35.5 70,80.5 25,80.5" fill="#7fc8f8" fill-opacity="0.6" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><circle cx="25" cy="35.5" r="4.5" fill="#d9534f"/><circle cx="70" cy="35.5" r="4.5" fill="#d9534f"/><circle cx="70" cy="80.5" r="4.5" fill="#d9534f"/><circle cx="25" cy="80.5" r="4.5" fill="#d9534f"/><polygon points="122.5,34.4 95.5,78.2 149.5,78.2" fill="#f08080" fill-opacity="0.6" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><circle cx="122.5" cy="34.4" r="4.5" fill="#d9534f"/><circle cx="95.5" cy="78.2" r="4.5" fill="#d9534f"/><circle cx="149.5" cy="78.2" r="4.5" fill="#d9534f"/><polygon points="175,35.5 220,35.5 220,80.5 175,80.5" fill="#f08080" fill-opacity="0.6" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><circle cx="175" cy="35.5" r="4.5" fill="#d9534f"/><circle cx="220" cy="35.5" r="4.5" fill="#d9534f"/><circle cx="220" cy="80.5" r="4.5" fill="#d9534f"/><circle cx="175" cy="80.5" r="4.5" fill="#d9534f"/><circle cx="272.5" cy="58" r="24.3" fill="#7bc96f" fill-opacity="0.6" stroke="currentColor" stroke-width="2"/><polygon points="85,114.6 115.4,145 85,175.4 54.6,145" fill="#7fc8f8" fill-opacity="0.6" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><circle cx="85" cy="114.6" r="4.5" fill="#d9534f"/><circle cx="115.4" cy="145" r="4.5" fill="#d9534f"/><circle cx="85" cy="175.4" r="4.5" fill="#d9534f"/><circle cx="54.6" cy="145" r="4.5" fill="#d9534f"/><polygon points="137.5,122.5 182.5,122.5 182.5,167.5 137.5,167.5" fill="#7bc96f" fill-opacity="0.6" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><circle cx="137.5" cy="122.5" r="4.5" fill="#d9534f"/><circle cx="182.5" cy="122.5" r="4.5" fill="#d9534f"/><circle cx="182.5" cy="167.5" r="4.5" fill="#d9534f"/><circle cx="137.5" cy="167.5" r="4.5" fill="#d9534f"/><polygon points="212.5,122.5 257.5,122.5 257.5,167.5 212.5,167.5" fill="#f3c969" fill-opacity="0.6" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><circle cx="212.5" cy="122.5" r="4.5" fill="#d9534f"/><circle cx="257.5" cy="122.5" r="4.5" fill="#d9534f"/><circle cx="257.5" cy="167.5" r="4.5" fill="#d9534f"/><circle cx="212.5" cy="167.5" r="4.5" fill="#d9534f"/></svg>'
+          - しかくに しるしを つけて かぞえよう。かたむいた かたちも わすれずに。
         paths:
-          - [かどが 4 つの かたちを えらぶ, 🟦 🟥 🔷 🟩 🟨, 5 こ]
-        note: 🔷 は かたむいた しかく。むきが ちがうので しかくに いれず 4 と こたえやすい。かどを かぞえれば しかくと わかる。
+          - [かどが 4 つの かたちを えらぶ, あお・あか・かたむいた あお・みどり・きいろ の しかく, 5 こ]
+          - [しかくでは ない かたちを ゆびで かくす, さんかくと まるを かくす, のこりを 1 から かぞえて 5 こ]
+        note: かたむいた しかく（あおい ひしがた）は むきが ちがうので しかくに いれず 4 と こたえやすい。かどを かぞえれば しかくと わかる。
     extra:
       - part: 今日
+        id: "6bf6cc65f2"
         text: しかくは どれですか。
-        choices: [🔵, 🟨, 🔺]
-        answer: 🟨
+        svg: '<svg viewBox="0 0 320 200" xmlns="http://www.w3.org/2000/svg"><circle cx="60" cy="88" r="34.6" fill="#7fc8f8" fill-opacity="0.6" stroke="currentColor" stroke-width="2"/><polygon points="160,54.4 121.6,116.8 198.4,116.8" fill="#f08080" fill-opacity="0.6" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><polygon points="228,56 292,56 292,120 228,120" fill="#f3c969" fill-opacity="0.6" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><text x="60" y="172" font-size="18" text-anchor="middle" fill="currentColor">ア</text><text x="160" y="172" font-size="18" text-anchor="middle" fill="currentColor">イ</text><text x="260" y="172" font-size="18" text-anchor="middle" fill="currentColor">ウ</text></svg>'
+        choices: [ア, イ, ウ]
+        answer: ウ
+        check: "'ウ'"
         hints:
           - かどが ある かたちを さがそう。
-          - かどを ゆびで さして かぞえよう。
-          - かどが 4 つの かたちが しかくだよ。
+          - text: かどに ●を つけたよ。●を かぞえよう。
+            svg: '<svg viewBox="0 0 320 200" xmlns="http://www.w3.org/2000/svg"><circle cx="60" cy="88" r="34.6" fill="#7fc8f8" fill-opacity="0.6" stroke="currentColor" stroke-width="2"/><polygon points="160,54.4 121.6,116.8 198.4,116.8" fill="#f08080" fill-opacity="0.6" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><circle cx="160" cy="54.4" r="4.8" fill="#d9534f"/><circle cx="121.6" cy="116.8" r="4.8" fill="#d9534f"/><circle cx="198.4" cy="116.8" r="4.8" fill="#d9534f"/><polygon points="228,56 292,56 292,120 228,120" fill="#f3c969" fill-opacity="0.6" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><circle cx="228" cy="56" r="4.8" fill="#d9534f"/><circle cx="292" cy="56" r="4.8" fill="#d9534f"/><circle cx="292" cy="120" r="4.8" fill="#d9534f"/><circle cx="228" cy="120" r="4.8" fill="#d9534f"/><text x="60" y="172" font-size="18" text-anchor="middle" fill="currentColor">ア</text><text x="160" y="172" font-size="18" text-anchor="middle" fill="currentColor">イ</text><text x="260" y="172" font-size="18" text-anchor="middle" fill="currentColor">ウ</text></svg>'
+          - 見本の えを おもいだそう。かどが いくつなら しかくだったかな。
         paths:
-          - [かどを かぞえる, かどが 4 つ, しかく]
+          - [かどを かぞえる, ウ は かどが 4 つ, しかく]
       - part: 今日
+        id: "44b2d5c53f"
         text: まるは いくつ ありますか。
-        figure: 🔴🟦🟡🔺🟢
+        svg: '<svg viewBox="0 0 320 200" xmlns="http://www.w3.org/2000/svg"><circle cx="60" cy="58" r="28.1" fill="#f08080" fill-opacity="0.6" stroke="currentColor" stroke-width="2"/><polygon points="134,32 186,32 186,84 134,84" fill="#7fc8f8" fill-opacity="0.6" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><circle cx="260" cy="58" r="28.1" fill="#f3c969" fill-opacity="0.6" stroke="currentColor" stroke-width="2"/><polygon points="110,117.7 78.8,168.4 141.2,168.4" fill="#f08080" fill-opacity="0.6" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><circle cx="210" cy="145" r="28.1" fill="#7bc96f" fill-opacity="0.6" stroke="currentColor" stroke-width="2"/></svg>'
         answer: 3
-        check: "n('🔴') + n('🟡') + n('🟢')"
+        check: "len([t for t in 'Cr Sb Cy Tr Cg'.split() if t[0] in 'C'])"
         hints:
           - かどが ない かたちを さがそう。
-          - いろが ちがっても、まるい かたちは まるだよ。
-          - まるだけに しるしを つけて かぞえよう。
+          - text: かどに ●を つけたよ。●が ひとつも ない かたちは どれかな。
+            svg: '<svg viewBox="0 0 320 200" xmlns="http://www.w3.org/2000/svg"><circle cx="60" cy="58" r="28.1" fill="#f08080" fill-opacity="0.6" stroke="currentColor" stroke-width="2"/><polygon points="134,32 186,32 186,84 134,84" fill="#7fc8f8" fill-opacity="0.6" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><circle cx="134" cy="32" r="4.5" fill="#d9534f"/><circle cx="186" cy="32" r="4.5" fill="#d9534f"/><circle cx="186" cy="84" r="4.5" fill="#d9534f"/><circle cx="134" cy="84" r="4.5" fill="#d9534f"/><circle cx="260" cy="58" r="28.1" fill="#f3c969" fill-opacity="0.6" stroke="currentColor" stroke-width="2"/><polygon points="110,117.7 78.8,168.4 141.2,168.4" fill="#f08080" fill-opacity="0.6" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><circle cx="110" cy="117.7" r="4.5" fill="#d9534f"/><circle cx="78.8" cy="168.4" r="4.5" fill="#d9534f"/><circle cx="141.2" cy="168.4" r="4.5" fill="#d9534f"/><circle cx="210" cy="145" r="28.1" fill="#7bc96f" fill-opacity="0.6" stroke="currentColor" stroke-width="2"/></svg>'
+          - いろが ちがっても、まるい かたちは まるだよ。しるしを つけて かぞえよう。
         paths:
-          - [まるだけを えらぶ, 🔴 🟡 🟢, 3 こ]
+          - [まるだけを えらぶ, あか・きいろ・みどりの まる, 3 こ]
       - part: 挑戦
+        id: "73de400b73"
         text: さんかくは いくつ ありますか。
-        figure: 🔻🟩🔺🔵🔺🔻
+        svg: '<svg viewBox="0 0 320 200" xmlns="http://www.w3.org/2000/svg"><polygon points="28.8,34.6 91.2,34.6 60,85.3" fill="#f08080" fill-opacity="0.6" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><polygon points="134,32 186,32 186,84 134,84" fill="#7bc96f" fill-opacity="0.6" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><polygon points="260,30.7 228.8,81.4 291.2,81.4" fill="#f08080" fill-opacity="0.6" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><circle cx="60" cy="145" r="28.1" fill="#7fc8f8" fill-opacity="0.6" stroke="currentColor" stroke-width="2"/><polygon points="160,117.7 128.8,168.4 191.2,168.4" fill="#f08080" fill-opacity="0.6" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><polygon points="228.8,121.6 291.2,121.6 260,172.3" fill="#f08080" fill-opacity="0.6" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/></svg>'
         answer: 4
-        check: "n('🔺') + n('🔻')"
+        check: "len([t for t in 'Vr Sg Tr Cb Tr Vr'.split() if t[0] in 'TV'])"
         hints:
           - かどが 3 つ ある かたちを さがそう。
-          - さかさまの かたちも、かどを かぞえてみよう。
+          - text: かどに ●を つけたよ。さかさまの かたちも、●を かぞえてみよう。
+            svg: '<svg viewBox="0 0 320 200" xmlns="http://www.w3.org/2000/svg"><polygon points="28.8,34.6 91.2,34.6 60,85.3" fill="#f08080" fill-opacity="0.6" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><circle cx="28.8" cy="34.6" r="4.5" fill="#d9534f"/><circle cx="91.2" cy="34.6" r="4.5" fill="#d9534f"/><circle cx="60" cy="85.3" r="4.5" fill="#d9534f"/><polygon points="134,32 186,32 186,84 134,84" fill="#7bc96f" fill-opacity="0.6" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><circle cx="134" cy="32" r="4.5" fill="#d9534f"/><circle cx="186" cy="32" r="4.5" fill="#d9534f"/><circle cx="186" cy="84" r="4.5" fill="#d9534f"/><circle cx="134" cy="84" r="4.5" fill="#d9534f"/><polygon points="260,30.7 228.8,81.4 291.2,81.4" fill="#f08080" fill-opacity="0.6" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><circle cx="260" cy="30.7" r="4.5" fill="#d9534f"/><circle cx="228.8" cy="81.4" r="4.5" fill="#d9534f"/><circle cx="291.2" cy="81.4" r="4.5" fill="#d9534f"/><circle cx="60" cy="145" r="28.1" fill="#7fc8f8" fill-opacity="0.6" stroke="currentColor" stroke-width="2"/><polygon points="160,117.7 128.8,168.4 191.2,168.4" fill="#f08080" fill-opacity="0.6" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><circle cx="160" cy="117.7" r="4.5" fill="#d9534f"/><circle cx="128.8" cy="168.4" r="4.5" fill="#d9534f"/><circle cx="191.2" cy="168.4" r="4.5" fill="#d9534f"/><polygon points="228.8,121.6 291.2,121.6 260,172.3" fill="#f08080" fill-opacity="0.6" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><circle cx="228.8" cy="121.6" r="4.5" fill="#d9534f"/><circle cx="291.2" cy="121.6" r="4.5" fill="#d9534f"/><circle cx="260" cy="172.3" r="4.5" fill="#d9534f"/></svg>'
           - さんかくだけに しるしを つけて かぞえよう。
         paths:
-          - [かどが 3 つの かたちを えらぶ, 🔻 🔺 🔺 🔻, 4 こ]
-        note: さかさまの 🔻 を いれずに 2 と こたえやすい。
+          - [かどが 3 つの かたちを えらぶ, うえむき 2 こと さかさま 2 こ, 4 こ]
+          - [うえむきの さんかくを かぞえる, 1、2, さかさまの さんかくを つづけて 3、4, 4 こ]
+        note: さかさまの さんかくを いれずに 2 と こたえやすい。
 
   - day: 2
     items:
       - part: 見本
-        text: かたちの「かど」と「へん」を しろう。
-        figure: 🟦
-        explain: とがった ところを「かど」、ふちの まっすぐな せんを「へん」と いいます。しかくには かどが 4 つ、へんが 4 つ あります。さんかくには かどが 3 つ、へんが 3 つ あります。
+        id: "d0f6e55107"
+        text: |-
+          かたちの「かど」と「へん」を しろう。
+          とがった ところが かど。
+          かどと かどを むすぶ まっすぐな せんが へん。
+        svg: '<svg viewBox="0 0 320 200" xmlns="http://www.w3.org/2000/svg"><polygon points="48,46 136,46 136,134 48,134" fill="none" stroke="#2b7fd4" stroke-width="7" stroke-linejoin="round"/><polygon points="48,46 136,46 136,134 48,134" fill="#7bc96f" fill-opacity="0.6" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><circle cx="48" cy="46" r="6.6" fill="#d9534f"/><circle cx="136" cy="46" r="6.6" fill="#d9534f"/><circle cx="136" cy="134" r="6.6" fill="#d9534f"/><circle cx="48" cy="134" r="6.6" fill="#d9534f"/><polygon points="236,49.9 185.6,131.8 286.4,131.8" fill="none" stroke="#2b7fd4" stroke-width="7" stroke-linejoin="round"/><polygon points="236,49.9 185.6,131.8 286.4,131.8" fill="#f3c969" fill-opacity="0.6" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><circle cx="236" cy="49.9" r="6.3" fill="#d9534f"/><circle cx="185.6" cy="131.8" r="6.3" fill="#d9534f"/><circle cx="286.4" cy="131.8" r="6.3" fill="#d9534f"/><text x="24" y="30" font-size="15" text-anchor="middle" fill="currentColor" font-weight="bold">かど</text><line x1="34" y1="35" x2="45" y2="44" stroke="#d9534f" stroke-width="2"/><text x="20" y="115" font-size="15" text-anchor="middle" fill="currentColor" font-weight="bold">へん</text><line x1="30" y1="102" x2="44" y2="94" stroke="#2b7fd4" stroke-width="2"/><text x="92" y="172" font-size="16" text-anchor="middle" fill="currentColor">しかく</text><text x="236" y="172" font-size="16" text-anchor="middle" fill="currentColor">さんかく</text></svg>'
+        explain: とがった ところを「かど」、かどと かどを むすぶ まっすぐな せんを「へん」と いいます。しかくには かどが 4 つ、へんが 4 つ あります。さんかくには かどが 3 つ、へんが 3 つ あります。えの あかい ●が かど、あおい ふとい せんが へんです。
       - part: 思い出す
+        id: "965f472a76"
         text: まるは どれですか。
-        choices: [🟥, 🔵, 🔺]
-        answer: 🔵
+        svg: '<svg viewBox="0 0 320 200" xmlns="http://www.w3.org/2000/svg"><polygon points="28,56 92,56 92,120 28,120" fill="#f08080" fill-opacity="0.6" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><circle cx="160" cy="88" r="34.6" fill="#7fc8f8" fill-opacity="0.6" stroke="currentColor" stroke-width="2"/><polygon points="260,54.4 221.6,116.8 298.4,116.8" fill="#f08080" fill-opacity="0.6" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><text x="60" y="172" font-size="18" text-anchor="middle" fill="currentColor">ア</text><text x="160" y="172" font-size="18" text-anchor="middle" fill="currentColor">イ</text><text x="260" y="172" font-size="18" text-anchor="middle" fill="currentColor">ウ</text></svg>'
+        choices: [ア, イ, ウ]
+        answer: イ
+        check: "'イ'"
         hints:
           - かどが ある かたちと、ない かたちが あるね。
-          - ゆびで ふちを なぞってみよう。
+          - text: ア の ふちを なぞると、とがった ところで ゆびが とまるね。ほかの かたちも なぞろう。
+            svg: '<svg viewBox="0 0 320 200" xmlns="http://www.w3.org/2000/svg"><polygon points="28,56 92,56 92,120 28,120" fill="#f08080" fill-opacity="0.6" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><circle cx="160" cy="88" r="34.6" fill="#7fc8f8" fill-opacity="0.6" stroke="currentColor" stroke-width="2"/><polygon points="260,54.4 221.6,116.8 298.4,116.8" fill="#f08080" fill-opacity="0.6" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><text x="60" y="172" font-size="18" text-anchor="middle" fill="currentColor">ア</text><text x="160" y="172" font-size="18" text-anchor="middle" fill="currentColor">イ</text><text x="260" y="172" font-size="18" text-anchor="middle" fill="currentColor">ウ</text><line x1="28" y1="120" x2="28" y2="56" stroke="#2b7fd4" stroke-width="7" stroke-linecap="round"/><line x1="28" y1="120" x2="28" y2="56" stroke="currentColor" stroke-width="2"/><line x1="17" y1="110.4" x2="17" y2="71.4" stroke="#d9534f" stroke-width="3" stroke-linecap="round"/><polygon points="17,62.4 21.8,71.4 12.2,71.4" fill="#d9534f"/><circle cx="28" cy="56" r="6" fill="#d9534f"/></svg>'
           - かどが ひとつも ない かたちを えらぼう。
         paths:
-          - [ふちを なぞる, かどが ない, まる]
+          - [ふちを なぞる, イ だけ かどが ない, まる]
       - part: 思い出す
+        id: "c47de3add0"
         text: しかくは いくつ ありますか。
-        figure: 🟥🟢🟦🔺🟨
+        svg: '<svg viewBox="0 0 320 200" xmlns="http://www.w3.org/2000/svg"><polygon points="34,32 86,32 86,84 34,84" fill="#f08080" fill-opacity="0.6" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><circle cx="160" cy="58" r="28.1" fill="#7bc96f" fill-opacity="0.6" stroke="currentColor" stroke-width="2"/><polygon points="234,32 286,32 286,84 234,84" fill="#7fc8f8" fill-opacity="0.6" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><polygon points="110,117.7 78.8,168.4 141.2,168.4" fill="#f08080" fill-opacity="0.6" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><polygon points="184,119 236,119 236,171 184,171" fill="#f3c969" fill-opacity="0.6" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/></svg>'
         answer: 3
-        check: "n('🟥') + n('🟦') + n('🟨')"
+        check: "len([t for t in 'Sr Cg Sb Tr Sy'.split() if t[0] in 'SD'])"
         hints:
           - かどが 4 つ ある かたちを さがそう。
-          - いろが ちがっても おなじ かたちだよ。
-          - しかくだけに しるしを つけて かぞえよう。
+          - text: かどに ●を つけたよ。しかくは どれと どれかな。
+            svg: '<svg viewBox="0 0 320 200" xmlns="http://www.w3.org/2000/svg"><polygon points="34,32 86,32 86,84 34,84" fill="#f08080" fill-opacity="0.6" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><circle cx="34" cy="32" r="4.5" fill="#d9534f"/><circle cx="86" cy="32" r="4.5" fill="#d9534f"/><circle cx="86" cy="84" r="4.5" fill="#d9534f"/><circle cx="34" cy="84" r="4.5" fill="#d9534f"/><circle cx="160" cy="58" r="28.1" fill="#7bc96f" fill-opacity="0.6" stroke="currentColor" stroke-width="2"/><polygon points="234,32 286,32 286,84 234,84" fill="#7fc8f8" fill-opacity="0.6" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><circle cx="234" cy="32" r="4.5" fill="#d9534f"/><circle cx="286" cy="32" r="4.5" fill="#d9534f"/><circle cx="286" cy="84" r="4.5" fill="#d9534f"/><circle cx="234" cy="84" r="4.5" fill="#d9534f"/><polygon points="110,117.7 78.8,168.4 141.2,168.4" fill="#f08080" fill-opacity="0.6" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><circle cx="110" cy="117.7" r="4.5" fill="#d9534f"/><circle cx="78.8" cy="168.4" r="4.5" fill="#d9534f"/><circle cx="141.2" cy="168.4" r="4.5" fill="#d9534f"/><polygon points="184,119 236,119 236,171 184,171" fill="#f3c969" fill-opacity="0.6" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><circle cx="184" cy="119" r="4.5" fill="#d9534f"/><circle cx="236" cy="119" r="4.5" fill="#d9534f"/><circle cx="236" cy="171" r="4.5" fill="#d9534f"/><circle cx="184" cy="171" r="4.5" fill="#d9534f"/></svg>'
+          - いろが ちがっても おなじ かたちだよ。しるしを つけて かぞえよう。
         paths:
-          - [しかくだけを えらぶ, 🟥 🟦 🟨, 3 こ]
+          - [しかくだけを えらぶ, あか・あお・きいろの しかく, 3 こ]
       - part: 今日
+        id: "1f17a50fc2"
         text: さんかくには、かどが いくつ ありますか。
-        figure: 🔺
+        svg: '<svg viewBox="0 0 320 200" xmlns="http://www.w3.org/2000/svg"><polygon points="160,39.2 92.8,148.4 227.2,148.4" fill="#f08080" fill-opacity="0.6" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/></svg>'
         answer: 3
         hints:
           - とがった ところが かどだよ。
-          - かどを ひとつずつ ゆびで さそう。
+          - text: 1 つめの かどに ●を つけたよ。つぎの かども ゆびで さそう。
+            svg: '<svg viewBox="0 0 320 200" xmlns="http://www.w3.org/2000/svg"><polygon points="160,39.2 92.8,148.4 227.2,148.4" fill="#f08080" fill-opacity="0.6" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><circle cx="160" cy="39.2" r="7" fill="#d9534f"/><text x="160" y="25.2" font-size="17" text-anchor="middle" fill="currentColor" font-weight="bold">1</text></svg>'
           - さした かどを かぞえよう。
         paths:
           - [かどを さす, 1、2、3 と かぞえる, 3 つ]
       - part: 今日
+        id: "bab3ba3c9c"
         text: しかくには、へんが いくつ ありますか。
-        figure: 🟩
+        svg: '<svg viewBox="0 0 320 200" xmlns="http://www.w3.org/2000/svg"><polygon points="104,42 216,42 216,154 104,154" fill="#7bc96f" fill-opacity="0.6" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/></svg>'
         answer: 4
         hints:
           - ふちの まっすぐな せんが へんだよ。
-          - ゆびで ふちを なぞって、まがる ところで とまろう。
+          - text: 1 ぽんめの へんに いろを ぬったよ。まがる ところで とまって、つぎの へんへ すすもう。
+            svg: '<svg viewBox="0 0 320 200" xmlns="http://www.w3.org/2000/svg"><polygon points="104,42 216,42 216,154 104,154" fill="#7bc96f" fill-opacity="0.6" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><line x1="104" y1="42" x2="216" y2="42" stroke="#2b7fd4" stroke-width="8" stroke-linecap="round"/><line x1="104" y1="42" x2="216" y2="42" stroke="currentColor" stroke-width="2"/><text x="160" y="28" font-size="17" text-anchor="middle" fill="currentColor" font-weight="bold">1</text></svg>'
           - なぞった へんを かぞえよう。
         paths:
           - [ふちを なぞる, まがる ところで くぎる, 4 ほん]
         note: かどと へんを まぜやすい。かどは とがった ところ、へんは まっすぐな せん。
       - part: 今日
-        text: てんを じゅんに、まっすぐな せんで むすびます。どんな かたちに なりますか。
-        figure: "●　　●\n\n●　　●"
+        id: "f38fc9cba6"
+        text: 1 の てんから じゅんに、まっすぐな せんで むすび、さいごは 1 に もどります。どんな かたちに なりますか。
+        svg: '<svg viewBox="0 0 320 200" xmlns="http://www.w3.org/2000/svg"><circle cx="95" cy="45" r="7" fill="currentColor"/><circle cx="225" cy="45" r="7" fill="currentColor"/><circle cx="225" cy="160" r="7" fill="currentColor"/><circle cx="95" cy="160" r="7" fill="currentColor"/><text x="95" y="30" font-size="16" text-anchor="middle" fill="currentColor" font-weight="bold">1</text><text x="225" y="30" font-size="16" text-anchor="middle" fill="currentColor" font-weight="bold">2</text><text x="225" y="186" font-size="16" text-anchor="middle" fill="currentColor" font-weight="bold">3</text><text x="95" y="186" font-size="16" text-anchor="middle" fill="currentColor" font-weight="bold">4</text></svg>'
         choices: [さんかく, しかく, まる]
         answer: しかく
-        check: "{3: 'さんかく', 4: 'しかく'}[n('●')]"
+        check: "{3: 'さんかく', 4: 'しかく'}[len([(95, 45), (225, 45), (225, 160), (95, 160)])]"
         hints:
           - てんは いくつ あるかな。
-          - むすぶと、てんが かどに なるよ。
-          - かどが いくつの かたちか かんがえよう。
+          - text: 1 から 2 まで せんを ひいたよ。つづけて じゅんに むすんで、1 に もどろう。
+            svg: '<svg viewBox="0 0 320 200" xmlns="http://www.w3.org/2000/svg"><line x1="95" y1="45" x2="225" y2="45" stroke="#f08080" stroke-width="3" stroke-linecap="round"/><circle cx="95" cy="45" r="7" fill="currentColor"/><circle cx="225" cy="45" r="7" fill="currentColor"/><circle cx="225" cy="160" r="7" fill="currentColor"/><circle cx="95" cy="160" r="7" fill="currentColor"/><text x="95" y="30" font-size="16" text-anchor="middle" fill="currentColor" font-weight="bold">1</text><text x="225" y="30" font-size="16" text-anchor="middle" fill="currentColor" font-weight="bold">2</text><text x="225" y="186" font-size="16" text-anchor="middle" fill="currentColor" font-weight="bold">3</text><text x="95" y="186" font-size="16" text-anchor="middle" fill="currentColor" font-weight="bold">4</text></svg>'
+          - むすぶと、てんが かどに なるよ。かどの かずを かぞえよう。
         paths:
           - [てんは 4 つ, かどが 4 つに なる, しかく]
         note: かみに てんを かいて、じっさいに せんで むすぶと よい。
       - part: 挑戦
-        text: 🔺 と 🟦 の かどを、ぜんぶ あわせると いくつですか。
-        figure: "🔺　🟦"
+        id: "82bb70dbfe"
+        text: さんかくと しかくの かどを、ぜんぶ あわせると いくつですか。
+        svg: '<svg viewBox="0 0 320 200" xmlns="http://www.w3.org/2000/svg"><polygon points="95,58 47,136 143,136" fill="#f3c969" fill-opacity="0.6" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><polygon points="185,60 265,60 265,140 185,140" fill="#7fc8f8" fill-opacity="0.6" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/></svg>'
         answer: 7
-        check: "3 * n('🔺') + 4 * n('🟦')"
+        check: "3 + 4"
         hints:
           - さんかくの かどは いくつかな。
-          - しかくの かどは いくつかな。
-          - さんかくから じゅんに、かどを さして つづけて かぞえよう。
+          - text: さんかくの かどに 1、2、3 と つけたよ。しかくへ つづけて かぞえよう。
+            svg: '<svg viewBox="0 0 320 200" xmlns="http://www.w3.org/2000/svg"><polygon points="95,58 47,136 143,136" fill="#f3c969" fill-opacity="0.6" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><circle cx="95" cy="58" r="6" fill="#d9534f"/><circle cx="47" cy="136" r="6" fill="#d9534f"/><circle cx="143" cy="136" r="6" fill="#d9534f"/><polygon points="185,60 265,60 265,140 185,140" fill="#7fc8f8" fill-opacity="0.6" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><text x="95" y="44" font-size="16" text-anchor="middle" fill="currentColor" font-weight="bold">1</text><text x="34" y="154" font-size="16" text-anchor="middle" fill="currentColor" font-weight="bold">2</text><text x="156" y="154" font-size="16" text-anchor="middle" fill="currentColor" font-weight="bold">3</text></svg>'
+          - しかくの かどを「4」から つづけて さそう。
         paths:
           - [さんかくの かど 1、2、3, しかくに つづけて 4、5、6、7, 7 つ]
           - [3 と 4 を あわせる, 7 つ]
         note: たしざんを ならう まえでも、かどを じゅんに さして 1 から かぞえれば よい。
       - part: わけ
-        text: 🔻 は さかさまですが、さんかくです。どうして さんかくと いえるのか、くちで いってみよう。
-        figure: 🔻
+        id: "1ad384838c"
+        text: この かたちは さかさまですが、さんかくです。どうして さんかくと いえるのか、くちで いってみよう。
+        svg: '<svg viewBox="0 0 320 200" xmlns="http://www.w3.org/2000/svg"><polygon points="92.8,47.6 227.2,47.6 160,156.8" fill="#f08080" fill-opacity="0.6" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/></svg>'
         explain: 「かどが 3 つ、まっすぐな へんが 3 つ あるから」と いえれば よい。むきが かわっても かたちの なまえは かわらない ことに きづけば なお よい。
         hints:
           - かどを かぞえてみよう。
-          - へんも かぞえてみよう。
+          - text: かどに ●を、へんに いろを つけたよ。いくつずつ あるかな。
+            svg: '<svg viewBox="0 0 320 200" xmlns="http://www.w3.org/2000/svg"><polygon points="92.8,47.6 227.2,47.6 160,156.8" fill="none" stroke="#2b7fd4" stroke-width="7" stroke-linejoin="round"/><polygon points="92.8,47.6 227.2,47.6 160,156.8" fill="#f08080" fill-opacity="0.6" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><circle cx="92.8" cy="47.6" r="8.4" fill="#d9534f"/><circle cx="227.2" cy="47.6" r="8.4" fill="#d9534f"/><circle cx="160" cy="156.8" r="8.4" fill="#d9534f"/></svg>'
           - 「〜だから さんかく」と いってみよう。
         paths:
           - [かどが 3 つ, へんが 3 つ, だから さんかく]
+          - [ひっくりかえすと うえむきの さんかくと おなじ, むきが かわっても なまえは かわらない, だから さんかく]
     extra:
       - part: 今日
+        id: "3108fa4663"
         text: しかくには、かどが いくつ ありますか。
-        figure: 🟨
+        svg: '<svg viewBox="0 0 320 200" xmlns="http://www.w3.org/2000/svg"><polygon points="104,42 216,42 216,154 104,154" fill="#f3c969" fill-opacity="0.6" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/></svg>'
         answer: 4
         hints:
           - とがった ところが かどだよ。
-          - かどを ひとつずつ ゆびで さそう。
+          - text: 1 つめの かどに ●を つけたよ。ぐるりと じゅんに さそう。
+            svg: '<svg viewBox="0 0 320 200" xmlns="http://www.w3.org/2000/svg"><polygon points="104,42 216,42 216,154 104,154" fill="#f3c969" fill-opacity="0.6" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><circle cx="104" cy="42" r="7" fill="#d9534f"/><text x="89.9" y="33.9" font-size="17" text-anchor="middle" fill="currentColor" font-weight="bold">1</text></svg>'
           - さした かどを かぞえよう。
         paths:
           - [かどを さす, 1、2、3、4 と かぞえる, 4 つ]
       - part: 今日
+        id: "d90fe3574d"
         text: さんかくには、へんが いくつ ありますか。
-        figure: 🔺
+        svg: '<svg viewBox="0 0 320 200" xmlns="http://www.w3.org/2000/svg"><polygon points="160,39.2 92.8,148.4 227.2,148.4" fill="#f08080" fill-opacity="0.6" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/></svg>'
         answer: 3
         hints:
           - ふちの まっすぐな せんが へんだよ。
-          - ゆびで ふちを なぞって、まがる ところで とまろう。
+          - text: 1 ぽんめの へんに いろを ぬったよ。つぎの へんは どこかな。
+            svg: '<svg viewBox="0 0 320 200" xmlns="http://www.w3.org/2000/svg"><polygon points="160,39.2 92.8,148.4 227.2,148.4" fill="#f08080" fill-opacity="0.6" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><line x1="92.8" y1="148.4" x2="227.2" y2="148.4" stroke="#2b7fd4" stroke-width="8" stroke-linecap="round"/><line x1="92.8" y1="148.4" x2="227.2" y2="148.4" stroke="currentColor" stroke-width="2"/><text x="160" y="174.4" font-size="17" text-anchor="middle" fill="currentColor" font-weight="bold">1</text></svg>'
           - なぞった へんを かぞえよう。
         paths:
           - [ふちを なぞる, まがる ところで くぎる, 3 ぼん]
       - part: 今日
-        text: てんを じゅんに、まっすぐな せんで むすびます。どんな かたちに なりますか。
-        figure: "　●\n\n●　　●"
+        id: "b407e3be0a"
+        text: 1 の てんから じゅんに、まっすぐな せんで むすび、さいごは 1 に もどります。どんな かたちに なりますか。
+        svg: '<svg viewBox="0 0 320 200" xmlns="http://www.w3.org/2000/svg"><circle cx="160" cy="40" r="7" fill="currentColor"/><circle cx="245" cy="160" r="7" fill="currentColor"/><circle cx="75" cy="160" r="7" fill="currentColor"/><text x="160" y="25" font-size="16" text-anchor="middle" fill="currentColor" font-weight="bold">1</text><text x="245" y="186" font-size="16" text-anchor="middle" fill="currentColor" font-weight="bold">2</text><text x="75" y="186" font-size="16" text-anchor="middle" fill="currentColor" font-weight="bold">3</text></svg>'
         choices: [さんかく, しかく, まる]
         answer: さんかく
-        check: "{3: 'さんかく', 4: 'しかく'}[n('●')]"
+        check: "{3: 'さんかく', 4: 'しかく'}[len([(160, 40), (245, 160), (75, 160)])]"
         hints:
           - てんは いくつ あるかな。
-          - むすぶと、てんが かどに なるよ。
-          - かどが いくつの かたちか かんがえよう。
+          - text: 1 から 2 まで せんを ひいたよ。つづけて じゅんに むすんで、1 に もどろう。
+            svg: '<svg viewBox="0 0 320 200" xmlns="http://www.w3.org/2000/svg"><line x1="160" y1="40" x2="245" y2="160" stroke="#f08080" stroke-width="3" stroke-linecap="round"/><circle cx="160" cy="40" r="7" fill="currentColor"/><circle cx="245" cy="160" r="7" fill="currentColor"/><circle cx="75" cy="160" r="7" fill="currentColor"/><text x="160" y="25" font-size="16" text-anchor="middle" fill="currentColor" font-weight="bold">1</text><text x="245" y="186" font-size="16" text-anchor="middle" fill="currentColor" font-weight="bold">2</text><text x="75" y="186" font-size="16" text-anchor="middle" fill="currentColor" font-weight="bold">3</text></svg>'
+          - むすぶと、てんが かどに なるよ。かどの かずを かぞえよう。
         paths:
           - [てんは 3 つ, かどが 3 つに なる, さんかく]
 
   - day: 3
     items:
       - part: 思い出す
+        id: "732a04ecca"
         text: しかくには、かどが いくつ ありますか。
-        figure: 🟧
+        svg: '<svg viewBox="0 0 320 200" xmlns="http://www.w3.org/2000/svg"><polygon points="104,42 216,42 216,154 104,154" fill="#f5a25d" fill-opacity="0.6" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/></svg>'
         answer: 4
         hints:
           - とがった ところが かどだよ。
-          - かどを ひとつずつ ゆびで さそう。
+          - text: 1 つめの かどに ●を つけたよ。ぐるりと じゅんに さそう。
+            svg: '<svg viewBox="0 0 320 200" xmlns="http://www.w3.org/2000/svg"><polygon points="104,42 216,42 216,154 104,154" fill="#f5a25d" fill-opacity="0.6" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><circle cx="216" cy="154" r="7" fill="#d9534f"/><text x="230.1" y="174.1" font-size="17" text-anchor="middle" fill="currentColor" font-weight="bold">1</text></svg>'
           - さした かどを かぞえよう。
         paths:
           - [かどを さす, 1、2、3、4 と かぞえる, 4 つ]
       - part: 思い出す
-        text: てんを じゅんに、まっすぐな せんで むすびます。どんな かたちに なりますか。
-        figure: "　　●\n●\n　　　●"
+        id: "c70fd7c877"
+        text: 1 の てんから じゅんに、まっすぐな せんで むすび、さいごは 1 に もどります。どんな かたちに なりますか。
+        svg: '<svg viewBox="0 0 320 200" xmlns="http://www.w3.org/2000/svg"><circle cx="180" cy="35" r="7" fill="currentColor"/><circle cx="60" cy="105" r="7" fill="currentColor"/><circle cx="255" cy="168" r="7" fill="currentColor"/><text x="180" y="20" font-size="16" text-anchor="middle" fill="currentColor" font-weight="bold">1</text><text x="40" y="111" font-size="16" text-anchor="middle" fill="currentColor" font-weight="bold">2</text><text x="276" y="174" font-size="16" text-anchor="middle" fill="currentColor" font-weight="bold">3</text></svg>'
         choices: [さんかく, しかく, まる]
         answer: さんかく
-        check: "{3: 'さんかく', 4: 'しかく'}[n('●')]"
+        check: "{3: 'さんかく', 4: 'しかく'}[len([(180, 35), (60, 105), (255, 168)])]"
         hints:
           - てんは いくつ あるかな。
-          - むすぶと、てんが かどに なるよ。
-          - かどが いくつの かたちか かんがえよう。
+          - text: 1 から 2 まで せんを ひいたよ。つづけて じゅんに むすんで、1 に もどろう。
+            svg: '<svg viewBox="0 0 320 200" xmlns="http://www.w3.org/2000/svg"><line x1="180" y1="35" x2="60" y2="105" stroke="#f08080" stroke-width="3" stroke-linecap="round"/><circle cx="180" cy="35" r="7" fill="currentColor"/><circle cx="60" cy="105" r="7" fill="currentColor"/><circle cx="255" cy="168" r="7" fill="currentColor"/><text x="180" y="20" font-size="16" text-anchor="middle" fill="currentColor" font-weight="bold">1</text><text x="40" y="111" font-size="16" text-anchor="middle" fill="currentColor" font-weight="bold">2</text><text x="276" y="174" font-size="16" text-anchor="middle" fill="currentColor" font-weight="bold">3</text></svg>'
+          - むすぶと、てんが かどに なるよ。かどの かずを かぞえよう。
         paths:
           - [てんは 3 つ, かどが 3 つに なる, さんかく]
         note: ばらばらに おいた てんでも、3 つなら さんかくに なる。かたむいた さんかくも さんかく。
       - part: 今日
+        id: "1c37309ef7"
         text: この かたちの なまえは なんですか。
-        figure: 🔻
+        svg: '<svg viewBox="0 0 320 200" xmlns="http://www.w3.org/2000/svg"><polygon points="92.8,47.6 227.2,47.6 160,156.8" fill="#f08080" fill-opacity="0.6" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/></svg>'
         choices: [さんかく, しかく, まる]
         answer: さんかく
         hints:
           - とがった ところが かどだよ。
-          - ゆびで さして、かどを ぜんぶ かぞえよう。
-          - かどが 3 つの かたちは、なんと いったかな。
+          - text: かどに ●を つけたよ。●は いくつ あるかな。
+            svg: '<svg viewBox="0 0 320 200" xmlns="http://www.w3.org/2000/svg"><polygon points="92.8,47.6 227.2,47.6 160,156.8" fill="#f08080" fill-opacity="0.6" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><circle cx="92.8" cy="47.6" r="8.4" fill="#d9534f"/><circle cx="227.2" cy="47.6" r="8.4" fill="#d9534f"/><circle cx="160" cy="156.8" r="8.4" fill="#d9534f"/></svg>'
+          - かどの かずで なまえが きまったね。むきは かんけい ないよ。
         paths:
-          - [かどを かぞえる, 🔻 は かどが 3 つ, さんかく]
-          - [🔺 と くらべる, 🔻 は 🔺 を さかさまに した かたち, さんかく]
-        note: さかさまの 🔻 も さんかくと みとめる だけの 1 ぽ。あとの「さんかくの なかまは いくつ ありますか」で 🔻 を かぞえ おとさないための じゅんび。
+          - [かどを かぞえる, かどが 3 つ, さんかく]
+          - [うえむきの さんかくと くらべる, うえむきの さんかくを さかさまに した かたち, さんかく]
+        note: さかさまの さんかくも さんかくと みとめる だけの 1 ぽ。あとの「さんかくの なかまは いくつ ありますか」で さかさまの さんかくを かぞえ おとさないための じゅんび。
       - part: 今日
+        id: "d4c9aba263"
         text: まるの なかまは いくつ ありますか。
-        figure: 🔴🟦🟡🔺🟢🟥
+        svg: '<svg viewBox="0 0 320 200" xmlns="http://www.w3.org/2000/svg"><circle cx="60" cy="58" r="28.1" fill="#f08080" fill-opacity="0.6" stroke="currentColor" stroke-width="2"/><polygon points="134,32 186,32 186,84 134,84" fill="#7fc8f8" fill-opacity="0.6" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><circle cx="260" cy="58" r="28.1" fill="#f3c969" fill-opacity="0.6" stroke="currentColor" stroke-width="2"/><polygon points="60,117.7 28.8,168.4 91.2,168.4" fill="#f08080" fill-opacity="0.6" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><circle cx="160" cy="145" r="28.1" fill="#7bc96f" fill-opacity="0.6" stroke="currentColor" stroke-width="2"/><polygon points="234,119 286,119 286,171 234,171" fill="#f08080" fill-opacity="0.6" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/></svg>'
         answer: 3
-        check: "n('🔴') + n('🟡') + n('🟢')"
+        check: "len([t for t in 'Cr Sb Cy Tr Cg Sr'.split() if t[0] in 'C'])"
         hints:
           - かどが ない かたちを さがそう。
-          - いろが ちがっても、おなじ かたちなら なかまだよ。
-          - まるだけに しるしを つけて かぞえよう。
+          - text: かどに ●を つけたよ。●が ひとつも ない かたちは どれかな。
+            svg: '<svg viewBox="0 0 320 200" xmlns="http://www.w3.org/2000/svg"><circle cx="60" cy="58" r="28.1" fill="#f08080" fill-opacity="0.6" stroke="currentColor" stroke-width="2"/><polygon points="134,32 186,32 186,84 134,84" fill="#7fc8f8" fill-opacity="0.6" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><circle cx="134" cy="32" r="4.5" fill="#d9534f"/><circle cx="186" cy="32" r="4.5" fill="#d9534f"/><circle cx="186" cy="84" r="4.5" fill="#d9534f"/><circle cx="134" cy="84" r="4.5" fill="#d9534f"/><circle cx="260" cy="58" r="28.1" fill="#f3c969" fill-opacity="0.6" stroke="currentColor" stroke-width="2"/><polygon points="60,117.7 28.8,168.4 91.2,168.4" fill="#f08080" fill-opacity="0.6" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><circle cx="60" cy="117.7" r="4.5" fill="#d9534f"/><circle cx="28.8" cy="168.4" r="4.5" fill="#d9534f"/><circle cx="91.2" cy="168.4" r="4.5" fill="#d9534f"/><circle cx="160" cy="145" r="28.1" fill="#7bc96f" fill-opacity="0.6" stroke="currentColor" stroke-width="2"/><polygon points="234,119 286,119 286,171 234,171" fill="#f08080" fill-opacity="0.6" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><circle cx="234" cy="119" r="4.5" fill="#d9534f"/><circle cx="286" cy="119" r="4.5" fill="#d9534f"/><circle cx="286" cy="171" r="4.5" fill="#d9534f"/><circle cx="234" cy="171" r="4.5" fill="#d9534f"/></svg>'
+          - いろが ちがっても、おなじ かたちなら なかまだよ。しるしを つけて かぞえよう。
         paths:
-          - [まるだけを えらぶ, 🔴 🟡 🟢, 3 こ]
+          - [まるだけを えらぶ, あか・きいろ・みどりの まる, 3 こ]
       - part: 今日
+        id: "997bcaae4f"
         text: ひとつだけ ちがう かたちが あります。なかまはずれは どれですか。
-        choices: [🟥, 🟦, 🔺, 🟩]
-        answer: 🔺
+        svg: '<svg viewBox="0 0 320 200" xmlns="http://www.w3.org/2000/svg"><polygon points="44,61.8 14,110.5 74,110.5" fill="#f08080" fill-opacity="0.6" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><polygon points="99,63 149,63 149,113 99,113" fill="#f08080" fill-opacity="0.6" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><polygon points="179,63 229,63 229,113 179,113" fill="#7fc8f8" fill-opacity="0.6" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><polygon points="259,63 309,63 309,113 259,113" fill="#7bc96f" fill-opacity="0.6" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><text x="44" y="172" font-size="18" text-anchor="middle" fill="currentColor">ア</text><text x="124" y="172" font-size="18" text-anchor="middle" fill="currentColor">イ</text><text x="204" y="172" font-size="18" text-anchor="middle" fill="currentColor">ウ</text><text x="284" y="172" font-size="18" text-anchor="middle" fill="currentColor">エ</text></svg>'
+        choices: [ア, イ, ウ, エ]
+        answer: ア
+        check: "'ア'"
         hints:
           - それぞれの かたちの なまえを いってみよう。
-          - かどの かずを くらべてみよう。
-          - ひとつだけ かどの かずが ちがうのは どれかな。
+          - text: かどに ●を つけたよ。●の かずを くらべよう。
+            svg: '<svg viewBox="0 0 320 200" xmlns="http://www.w3.org/2000/svg"><polygon points="44,61.8 14,110.5 74,110.5" fill="#f08080" fill-opacity="0.6" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><circle cx="44" cy="61.8" r="4.5" fill="#d9534f"/><circle cx="14" cy="110.5" r="4.5" fill="#d9534f"/><circle cx="74" cy="110.5" r="4.5" fill="#d9534f"/><polygon points="99,63 149,63 149,113 99,113" fill="#f08080" fill-opacity="0.6" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><circle cx="99" cy="63" r="4.5" fill="#d9534f"/><circle cx="149" cy="63" r="4.5" fill="#d9534f"/><circle cx="149" cy="113" r="4.5" fill="#d9534f"/><circle cx="99" cy="113" r="4.5" fill="#d9534f"/><polygon points="179,63 229,63 229,113 179,113" fill="#7fc8f8" fill-opacity="0.6" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><circle cx="179" cy="63" r="4.5" fill="#d9534f"/><circle cx="229" cy="63" r="4.5" fill="#d9534f"/><circle cx="229" cy="113" r="4.5" fill="#d9534f"/><circle cx="179" cy="113" r="4.5" fill="#d9534f"/><polygon points="259,63 309,63 309,113 259,113" fill="#7bc96f" fill-opacity="0.6" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><circle cx="259" cy="63" r="4.5" fill="#d9534f"/><circle cx="309" cy="63" r="4.5" fill="#d9534f"/><circle cx="309" cy="113" r="4.5" fill="#d9534f"/><circle cx="259" cy="113" r="4.5" fill="#d9534f"/><text x="44" y="172" font-size="18" text-anchor="middle" fill="currentColor">ア</text><text x="124" y="172" font-size="18" text-anchor="middle" fill="currentColor">イ</text><text x="204" y="172" font-size="18" text-anchor="middle" fill="currentColor">ウ</text><text x="284" y="172" font-size="18" text-anchor="middle" fill="currentColor">エ</text></svg>'
+          - ほかの 3 つは、どんな かたちの なかまかな。
         paths:
-          - [かどを かぞえる, 🟥 🟦 🟩 は 4 つ、🔺 は 3 つ, 🔺]
+          - [かどを かぞえる, イ ウ エ は 4 つ、ア は 3 つ, ア]
       - part: 今日
+        id: "1265694e12"
         text: さんかくの なかまは いくつ ありますか。
-        figure: 🔺🔵🔻🟩🔺🟡🔻
+        svg: '<svg viewBox="0 0 320 200" xmlns="http://www.w3.org/2000/svg"><polygon points="47.5,34.4 20.5,78.2 74.5,78.2" fill="#f08080" fill-opacity="0.6" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><circle cx="122.5" cy="58" r="24.3" fill="#7fc8f8" fill-opacity="0.6" stroke="currentColor" stroke-width="2"/><polygon points="170.5,37.8 224.5,37.8 197.5,81.6" fill="#f08080" fill-opacity="0.6" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><polygon points="250,35.5 295,35.5 295,80.5 250,80.5" fill="#7bc96f" fill-opacity="0.6" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><polygon points="85,121.4 58,165.2 112,165.2" fill="#f08080" fill-opacity="0.6" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><circle cx="160" cy="145" r="24.3" fill="#f3c969" fill-opacity="0.6" stroke="currentColor" stroke-width="2"/><polygon points="208,124.8 262,124.8 235,168.6" fill="#f08080" fill-opacity="0.6" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/></svg>'
         answer: 4
-        check: "n('🔺') + n('🔻')"
+        check: "len([t for t in 'Tr Cb Vr Sg Tr Cy Vr'.split() if t[0] in 'TV'])"
         hints:
           - かどが 3 つ ある かたちを さがそう。
-          - さかさまでも、かどが 3 つなら なかまだよ。
+          - text: かどに ●を つけたよ。さかさまの かたちの ●も かぞえよう。
+            svg: '<svg viewBox="0 0 320 200" xmlns="http://www.w3.org/2000/svg"><polygon points="47.5,34.4 20.5,78.2 74.5,78.2" fill="#f08080" fill-opacity="0.6" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><circle cx="47.5" cy="34.4" r="4.5" fill="#d9534f"/><circle cx="20.5" cy="78.2" r="4.5" fill="#d9534f"/><circle cx="74.5" cy="78.2" r="4.5" fill="#d9534f"/><circle cx="122.5" cy="58" r="24.3" fill="#7fc8f8" fill-opacity="0.6" stroke="currentColor" stroke-width="2"/><polygon points="170.5,37.8 224.5,37.8 197.5,81.6" fill="#f08080" fill-opacity="0.6" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><circle cx="170.5" cy="37.8" r="4.5" fill="#d9534f"/><circle cx="224.5" cy="37.8" r="4.5" fill="#d9534f"/><circle cx="197.5" cy="81.6" r="4.5" fill="#d9534f"/><polygon points="250,35.5 295,35.5 295,80.5 250,80.5" fill="#7bc96f" fill-opacity="0.6" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><circle cx="250" cy="35.5" r="4.5" fill="#d9534f"/><circle cx="295" cy="35.5" r="4.5" fill="#d9534f"/><circle cx="295" cy="80.5" r="4.5" fill="#d9534f"/><circle cx="250" cy="80.5" r="4.5" fill="#d9534f"/><polygon points="85,121.4 58,165.2 112,165.2" fill="#f08080" fill-opacity="0.6" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><circle cx="85" cy="121.4" r="4.5" fill="#d9534f"/><circle cx="58" cy="165.2" r="4.5" fill="#d9534f"/><circle cx="112" cy="165.2" r="4.5" fill="#d9534f"/><circle cx="160" cy="145" r="24.3" fill="#f3c969" fill-opacity="0.6" stroke="currentColor" stroke-width="2"/><polygon points="208,124.8 262,124.8 235,168.6" fill="#f08080" fill-opacity="0.6" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><circle cx="208" cy="124.8" r="4.5" fill="#d9534f"/><circle cx="262" cy="124.8" r="4.5" fill="#d9534f"/><circle cx="235" cy="168.6" r="4.5" fill="#d9534f"/></svg>'
           - さんかくだけに しるしを つけて かぞえよう。
         paths:
-          - [かどが 3 つの かたちを えらぶ, 🔺 🔻 🔺 🔻, 4 こ]
+          - [かどが 3 つの かたちを えらぶ, うえむき 2 こと さかさま 2 こ, 4 こ]
       - part: 挑戦
+        id: "9f02d9d87f"
         text: かたちで なかまわけ します。なかまはずれは どれですか。
-        choices: [🔴, 🟡, 🟥, 🔵]
-        answer: 🟥
+        svg: '<svg viewBox="0 0 320 200" xmlns="http://www.w3.org/2000/svg"><circle cx="44" cy="88" r="27" fill="#f08080" fill-opacity="0.6" stroke="currentColor" stroke-width="2"/><circle cx="124" cy="88" r="27" fill="#f3c969" fill-opacity="0.6" stroke="currentColor" stroke-width="2"/><polygon points="179,63 229,63 229,113 179,113" fill="#f08080" fill-opacity="0.6" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><circle cx="284" cy="88" r="27" fill="#7fc8f8" fill-opacity="0.6" stroke="currentColor" stroke-width="2"/><text x="44" y="172" font-size="18" text-anchor="middle" fill="currentColor">ア</text><text x="124" y="172" font-size="18" text-anchor="middle" fill="currentColor">イ</text><text x="204" y="172" font-size="18" text-anchor="middle" fill="currentColor">ウ</text><text x="284" y="172" font-size="18" text-anchor="middle" fill="currentColor">エ</text></svg>'
+        choices: [ア, イ, ウ, エ]
+        answer: ウ
+        check: "'ウ'"
         hints:
           - いろでは なく、かたちを みよう。
-          - かどが ある かたちは どれかな。
+          - text: いろを けして、かたちだけに したよ。
+            svg: '<svg viewBox="0 0 320 200" xmlns="http://www.w3.org/2000/svg"><circle cx="44" cy="88" r="27" fill="#c8ccd6" fill-opacity="0.6" stroke="currentColor" stroke-width="2"/><circle cx="124" cy="88" r="27" fill="#c8ccd6" fill-opacity="0.6" stroke="currentColor" stroke-width="2"/><polygon points="179,63 229,63 229,113 179,113" fill="#c8ccd6" fill-opacity="0.6" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><circle cx="284" cy="88" r="27" fill="#c8ccd6" fill-opacity="0.6" stroke="currentColor" stroke-width="2"/><text x="44" y="172" font-size="18" text-anchor="middle" fill="currentColor">ア</text><text x="124" y="172" font-size="18" text-anchor="middle" fill="currentColor">イ</text><text x="204" y="172" font-size="18" text-anchor="middle" fill="currentColor">ウ</text><text x="284" y="172" font-size="18" text-anchor="middle" fill="currentColor">エ</text></svg>'
           - ほかの 3 つは、どんな かたちの なかまかな。
         paths:
-          - [かたちを みる, 🔴 🟡 🔵 は まる、🟥 だけ しかく, 🟥]
-        note: 🔴 と 🟥 は おなじ あかなので、いろで みて まよいやすい。
+          - [かたちを みる, ア イ エ は まる、ウ だけ しかく, ウ]
+          - [かどを かぞえる, ウ だけ かどが 4 つ、ほかは かどが ない, ウ]
+        note: あかい まると あかい しかくは おなじ いろなので、いろで みて まよいやすい。
       - part: わけ
-        text: 🟥 と 🔴 は、どちらも あかいけれど、かたちの なかまでは ありません。どうしてか、くちで いってみよう。
-        figure: "🟥　🔴"
-        explain: 「🟥 は かどが 4 つ ある しかく、🔴 は かどが ない まる だから」と いえれば よい。「いろでは なく、かたちで みる」と いえれば なお よい。
+        id: "2591728f9c"
+        text: あかい しかくと あかい まるは、どちらも あかいけれど、かたちの なかまでは ありません。どうしてか、くちで いってみよう。
+        svg: '<svg viewBox="0 0 320 200" xmlns="http://www.w3.org/2000/svg"><polygon points="53,53 137,53 137,137 53,137" fill="#f08080" fill-opacity="0.6" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><circle cx="225" cy="95" r="45.4" fill="#f08080" fill-opacity="0.6" stroke="currentColor" stroke-width="2"/></svg>'
+        explain: 「しかくは かどが 4 つ ある かたち、まるは かどが ない かたち だから」と いえれば よい。「いろでは なく、かたちで みる」と いえれば なお よい。
         hints:
-          - 🟥 の かどは いくつかな。
-          - 🔴 には かどが あるかな。
+          - しかくの かどは いくつかな。
+          - text: しかくの かどに ●を つけたよ。まるの ほうは どうかな。
+            svg: '<svg viewBox="0 0 320 200" xmlns="http://www.w3.org/2000/svg"><polygon points="53,53 137,53 137,137 53,137" fill="#f08080" fill-opacity="0.6" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><circle cx="53" cy="53" r="6.3" fill="#d9534f"/><circle cx="137" cy="53" r="6.3" fill="#d9534f"/><circle cx="137" cy="137" r="6.3" fill="#d9534f"/><circle cx="53" cy="137" r="6.3" fill="#d9534f"/><circle cx="225" cy="95" r="45.4" fill="#f08080" fill-opacity="0.6" stroke="currentColor" stroke-width="2"/></svg>'
           - 「〜だから なかまでは ない」と いってみよう。
         paths:
-          - [🟥 は かどが 4 つ, 🔴 は かどが ない, かたちが ちがう, だから なかまでは ない]
+          - [しかくは かどが 4 つ, まるは かどが ない, かたちが ちがう, だから なかまでは ない]
+          - [いろでは なく かたちで わける, しかくと まるは べつの かたち, だから なかまでは ない]
     extra:
       - part: 今日
+        id: "ee53976172"
         text: しかくの なかまは いくつ ありますか。
-        figure: 🟨🔺🟦🟢🔷
+        svg: '<svg viewBox="0 0 320 200" xmlns="http://www.w3.org/2000/svg"><polygon points="34,32 86,32 86,84 34,84" fill="#f3c969" fill-opacity="0.6" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><polygon points="160,30.7 128.8,81.4 191.2,81.4" fill="#f08080" fill-opacity="0.6" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><polygon points="234,32 286,32 286,84 234,84" fill="#7fc8f8" fill-opacity="0.6" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><circle cx="110" cy="145" r="28.1" fill="#7bc96f" fill-opacity="0.6" stroke="currentColor" stroke-width="2"/><polygon points="210,109.9 245.1,145 210,180.1 174.9,145" fill="#7fc8f8" fill-opacity="0.6" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/></svg>'
         answer: 3
-        check: "n('🟨') + n('🟦') + n('🔷')"
+        check: "len([t for t in 'Sy Tr Sb Cg Db'.split() if t[0] in 'SD'])"
         hints:
           - かどが 4 つ ある かたちを さがそう。
-          - かたむいて いても、かどが 4 つなら なかまだよ。
+          - text: かどに ●を つけたよ。かたむいた かたちの ●も かぞえよう。
+            svg: '<svg viewBox="0 0 320 200" xmlns="http://www.w3.org/2000/svg"><polygon points="34,32 86,32 86,84 34,84" fill="#f3c969" fill-opacity="0.6" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><circle cx="34" cy="32" r="4.5" fill="#d9534f"/><circle cx="86" cy="32" r="4.5" fill="#d9534f"/><circle cx="86" cy="84" r="4.5" fill="#d9534f"/><circle cx="34" cy="84" r="4.5" fill="#d9534f"/><polygon points="160,30.7 128.8,81.4 191.2,81.4" fill="#f08080" fill-opacity="0.6" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><circle cx="160" cy="30.7" r="4.5" fill="#d9534f"/><circle cx="128.8" cy="81.4" r="4.5" fill="#d9534f"/><circle cx="191.2" cy="81.4" r="4.5" fill="#d9534f"/><polygon points="234,32 286,32 286,84 234,84" fill="#7fc8f8" fill-opacity="0.6" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><circle cx="234" cy="32" r="4.5" fill="#d9534f"/><circle cx="286" cy="32" r="4.5" fill="#d9534f"/><circle cx="286" cy="84" r="4.5" fill="#d9534f"/><circle cx="234" cy="84" r="4.5" fill="#d9534f"/><circle cx="110" cy="145" r="28.1" fill="#7bc96f" fill-opacity="0.6" stroke="currentColor" stroke-width="2"/><polygon points="210,109.9 245.1,145 210,180.1 174.9,145" fill="#7fc8f8" fill-opacity="0.6" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><circle cx="210" cy="109.9" r="4.5" fill="#d9534f"/><circle cx="245.1" cy="145" r="4.5" fill="#d9534f"/><circle cx="210" cy="180.1" r="4.5" fill="#d9534f"/><circle cx="174.9" cy="145" r="4.5" fill="#d9534f"/></svg>'
           - しかくだけに しるしを つけて かぞえよう。
         paths:
-          - [かどが 4 つの かたちを えらぶ, 🟨 🟦 🔷, 3 こ]
+          - [かどが 4 つの かたちを えらぶ, きいろ・あお・かたむいた あおの しかく, 3 こ]
       - part: 今日
+        id: "e8a3926f8b"
         text: ひとつだけ ちがう かたちが あります。なかまはずれは どれですか。
-        choices: [🟢, 🔵, 🔻, 🟡]
-        answer: 🔻
+        svg: '<svg viewBox="0 0 320 200" xmlns="http://www.w3.org/2000/svg"><circle cx="44" cy="88" r="27" fill="#7bc96f" fill-opacity="0.6" stroke="currentColor" stroke-width="2"/><circle cx="124" cy="88" r="27" fill="#7fc8f8" fill-opacity="0.6" stroke="currentColor" stroke-width="2"/><circle cx="204" cy="88" r="27" fill="#f3c969" fill-opacity="0.6" stroke="currentColor" stroke-width="2"/><polygon points="254,65.5 314,65.5 284,114.2" fill="#f08080" fill-opacity="0.6" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><text x="44" y="172" font-size="18" text-anchor="middle" fill="currentColor">ア</text><text x="124" y="172" font-size="18" text-anchor="middle" fill="currentColor">イ</text><text x="204" y="172" font-size="18" text-anchor="middle" fill="currentColor">ウ</text><text x="284" y="172" font-size="18" text-anchor="middle" fill="currentColor">エ</text></svg>'
+        choices: [ア, イ, ウ, エ]
+        answer: エ
+        check: "'エ'"
         hints:
           - それぞれの かたちの なまえを いってみよう。
-          - かどが ある かたちは どれかな。
+          - text: いろを けして、かたちだけに したよ。
+            svg: '<svg viewBox="0 0 320 200" xmlns="http://www.w3.org/2000/svg"><circle cx="44" cy="88" r="27" fill="#c8ccd6" fill-opacity="0.6" stroke="currentColor" stroke-width="2"/><circle cx="124" cy="88" r="27" fill="#c8ccd6" fill-opacity="0.6" stroke="currentColor" stroke-width="2"/><circle cx="204" cy="88" r="27" fill="#c8ccd6" fill-opacity="0.6" stroke="currentColor" stroke-width="2"/><polygon points="254,65.5 314,65.5 284,114.2" fill="#c8ccd6" fill-opacity="0.6" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><text x="44" y="172" font-size="18" text-anchor="middle" fill="currentColor">ア</text><text x="124" y="172" font-size="18" text-anchor="middle" fill="currentColor">イ</text><text x="204" y="172" font-size="18" text-anchor="middle" fill="currentColor">ウ</text><text x="284" y="172" font-size="18" text-anchor="middle" fill="currentColor">エ</text></svg>'
           - ほかの 3 つは、どんな かたちの なかまかな。
         paths:
-          - [かどを みる, 🔻 だけ かどが ある, 🔻]
+          - [かどを みる, エ だけ かどが ある, エ]
       - part: 今日
+        id: "dfa13d0da2"
         text: まるの なかまは いくつ ありますか。
-        figure: ⚪🔺🔵🟥🟠⚪
+        svg: '<svg viewBox="0 0 320 200" xmlns="http://www.w3.org/2000/svg"><circle cx="60" cy="58" r="28.1" fill="#c8ccd6" fill-opacity="0.6" stroke="currentColor" stroke-width="2"/><polygon points="160,30.7 128.8,81.4 191.2,81.4" fill="#f08080" fill-opacity="0.6" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><circle cx="260" cy="58" r="28.1" fill="#7fc8f8" fill-opacity="0.6" stroke="currentColor" stroke-width="2"/><polygon points="34,119 86,119 86,171 34,171" fill="#f08080" fill-opacity="0.6" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><circle cx="160" cy="145" r="28.1" fill="#f5a25d" fill-opacity="0.6" stroke="currentColor" stroke-width="2"/><circle cx="260" cy="145" r="28.1" fill="#c8ccd6" fill-opacity="0.6" stroke="currentColor" stroke-width="2"/></svg>'
         answer: 4
-        check: "n('⚪') + n('🔵') + n('🟠')"
+        check: "len([t for t in 'Cw Tr Cb Sr Co Cw'.split() if t[0] in 'C'])"
         hints:
           - かどが ない かたちを さがそう。
-          - いろが ちがっても、おなじ かたちなら なかまだよ。
-          - まるだけに しるしを つけて かぞえよう。
+          - text: かどに ●を つけたよ。●が ひとつも ない かたちは どれかな。
+            svg: '<svg viewBox="0 0 320 200" xmlns="http://www.w3.org/2000/svg"><circle cx="60" cy="58" r="28.1" fill="#c8ccd6" fill-opacity="0.6" stroke="currentColor" stroke-width="2"/><polygon points="160,30.7 128.8,81.4 191.2,81.4" fill="#f08080" fill-opacity="0.6" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><circle cx="160" cy="30.7" r="4.5" fill="#d9534f"/><circle cx="128.8" cy="81.4" r="4.5" fill="#d9534f"/><circle cx="191.2" cy="81.4" r="4.5" fill="#d9534f"/><circle cx="260" cy="58" r="28.1" fill="#7fc8f8" fill-opacity="0.6" stroke="currentColor" stroke-width="2"/><polygon points="34,119 86,119 86,171 34,171" fill="#f08080" fill-opacity="0.6" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><circle cx="34" cy="119" r="4.5" fill="#d9534f"/><circle cx="86" cy="119" r="4.5" fill="#d9534f"/><circle cx="86" cy="171" r="4.5" fill="#d9534f"/><circle cx="34" cy="171" r="4.5" fill="#d9534f"/><circle cx="160" cy="145" r="28.1" fill="#f5a25d" fill-opacity="0.6" stroke="currentColor" stroke-width="2"/><circle cx="260" cy="145" r="28.1" fill="#c8ccd6" fill-opacity="0.6" stroke="currentColor" stroke-width="2"/></svg>'
+          - いろが ちがっても、おなじ かたちなら なかまだよ。しるしを つけて かぞえよう。
         paths:
-          - [まるだけを えらぶ, ⚪ 🔵 🟠 ⚪, 4 こ]
+          - [まるだけを えらぶ, しろ・あお・だいだい・しろの まる, 4 こ]
 
   - day: 4
     items:
       - part: 思い出す
+        id: "53455e8615"
         text: さんかくの なかまは いくつ ありますか。
-        figure: 🔻🟦🔺🔵
+        svg: '<svg viewBox="0 0 320 200" xmlns="http://www.w3.org/2000/svg"><polygon points="20.5,79.8 74.5,79.8 47.5,123.6" fill="#f08080" fill-opacity="0.6" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><polygon points="100,77.5 145,77.5 145,122.5 100,122.5" fill="#7fc8f8" fill-opacity="0.6" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><polygon points="197.5,76.4 170.5,120.2 224.5,120.2" fill="#f08080" fill-opacity="0.6" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><circle cx="272.5" cy="100" r="24.3" fill="#7fc8f8" fill-opacity="0.6" stroke="currentColor" stroke-width="2"/></svg>'
         answer: 2
-        check: "n('🔺') + n('🔻')"
+        check: "len([t for t in 'Vr Sb Tr Cb'.split() if t[0] in 'TV'])"
         hints:
           - かどが 3 つ ある かたちを さがそう。
-          - さかさまでも、かどが 3 つなら なかまだよ。
+          - text: かどに ●を つけたよ。さかさまの かたちの ●も かぞえよう。
+            svg: '<svg viewBox="0 0 320 200" xmlns="http://www.w3.org/2000/svg"><polygon points="20.5,79.8 74.5,79.8 47.5,123.6" fill="#f08080" fill-opacity="0.6" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><circle cx="20.5" cy="79.8" r="4.5" fill="#d9534f"/><circle cx="74.5" cy="79.8" r="4.5" fill="#d9534f"/><circle cx="47.5" cy="123.6" r="4.5" fill="#d9534f"/><polygon points="100,77.5 145,77.5 145,122.5 100,122.5" fill="#7fc8f8" fill-opacity="0.6" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><circle cx="100" cy="77.5" r="4.5" fill="#d9534f"/><circle cx="145" cy="77.5" r="4.5" fill="#d9534f"/><circle cx="145" cy="122.5" r="4.5" fill="#d9534f"/><circle cx="100" cy="122.5" r="4.5" fill="#d9534f"/><polygon points="197.5,76.4 170.5,120.2 224.5,120.2" fill="#f08080" fill-opacity="0.6" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><circle cx="197.5" cy="76.4" r="4.5" fill="#d9534f"/><circle cx="170.5" cy="120.2" r="4.5" fill="#d9534f"/><circle cx="224.5" cy="120.2" r="4.5" fill="#d9534f"/><circle cx="272.5" cy="100" r="24.3" fill="#7fc8f8" fill-opacity="0.6" stroke="currentColor" stroke-width="2"/></svg>'
           - さんかくだけに しるしを つけて かぞえよう。
         paths:
-          - [かどが 3 つの かたちを えらぶ, 🔻 🔺, 2 こ]
+          - [かどが 3 つの かたちを えらぶ, さかさま 1 こと うえむき 1 こ, 2 こ]
       - part: 思い出す
+        id: "dc8856f7a3"
         text: しかくには、へんが いくつ ありますか。
-        figure: 🟦
+        svg: '<svg viewBox="0 0 320 200" xmlns="http://www.w3.org/2000/svg"><polygon points="104,42 216,42 216,154 104,154" fill="#7fc8f8" fill-opacity="0.6" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/></svg>'
         answer: 4
         hints:
           - ふちの まっすぐな せんが へんだよ。
-          - ゆびで ふちを なぞって、まがる ところで とまろう。
+          - text: 1 ぽんめの へんに いろを ぬったよ。まがる ところで とまって、つぎの へんへ すすもう。
+            svg: '<svg viewBox="0 0 320 200" xmlns="http://www.w3.org/2000/svg"><polygon points="104,42 216,42 216,154 104,154" fill="#7fc8f8" fill-opacity="0.6" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><line x1="104" y1="154" x2="104" y2="42" stroke="#2b7fd4" stroke-width="8" stroke-linecap="round"/><line x1="104" y1="154" x2="104" y2="42" stroke="currentColor" stroke-width="2"/><text x="84" y="104" font-size="17" text-anchor="middle" fill="currentColor" font-weight="bold">1</text></svg>'
           - なぞった へんを かぞえよう。
         paths:
           - [ふちを なぞる, まがる ところで くぎる, 4 ほん]
       - part: 今日
+        id: "bd0ffcec08"
         text: どうぶつが ならんで います。いちばん まえに いる どうぶつは だれですか。
-        figure: まえ　🐼🐱🐸　うしろ
+        svg: '<svg viewBox="0 0 320 200" xmlns="http://www.w3.org/2000/svg"><rect x="3" y="82" width="38" height="30" rx="8" fill="#f3c969" fill-opacity="0.5" stroke="currentColor" stroke-width="2"/><text x="22" y="103" font-size="15" text-anchor="middle" fill="currentColor" font-weight="bold">まえ</text><rect x="271" y="82" width="46" height="30" rx="8" fill="#c8ccd6" fill-opacity="0.5" stroke="currentColor" stroke-width="2"/><text x="294" y="103" font-size="14" text-anchor="middle" fill="currentColor" font-weight="bold">うしろ</text><line x1="46" y1="132" x2="266" y2="132" stroke="currentColor" stroke-width="1.5" stroke-dasharray="4 4"/><g transform="translate(90 98) scale(1)"><circle cx="-16" cy="-17" r="8" fill="#333333" stroke="currentColor" stroke-width="2"/><circle cx="16" cy="-17" r="8" fill="#333333" stroke="currentColor" stroke-width="2"/><circle cx="0" cy="0" r="22" fill="#ffffff" stroke="currentColor" stroke-width="2"/><ellipse cx="-8" cy="-2" rx="5.5" ry="7.5" fill="#333333" transform="rotate(30 -8 -2)"/><ellipse cx="8" cy="-2" rx="5.5" ry="7.5" fill="#333333" transform="rotate(-30 8 -2)"/><circle cx="-7" cy="-3" r="1.8" fill="#ffffff"/><circle cx="7" cy="-3" r="1.8" fill="#ffffff"/><ellipse cx="0" cy="7" rx="3.5" ry="2.5" fill="#333333"/><path d="M-4 12 Q0 15 4 12" fill="none" stroke="#333333" stroke-width="1.5" stroke-linecap="round"/></g><text x="90" y="158" font-size="14" text-anchor="middle" fill="currentColor">パンダ</text><g transform="translate(160 98) scale(1)"><circle cx="0" cy="0" r="22" fill="#f3c969" stroke="currentColor" stroke-width="2"/><path d="M-20 -9 L-18 -33 L-6 -21" fill="#f3c969" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><path d="M20 -9 L18 -33 L6 -21" fill="#f3c969" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><circle cx="-8" cy="-3" r="2.6" fill="#333333"/><circle cx="8" cy="-3" r="2.6" fill="#333333"/><polygon points="-3,4 3,4 0,7" fill="#f08080"/><path d="M-5 10 Q-2.5 13 0 9 Q2.5 13 5 10" fill="none" stroke="#333333" stroke-width="1.5" stroke-linecap="round"/><line x1="-10" y1="5" x2="-27" y2="2" stroke="#333333" stroke-width="1.2"/><line x1="-10" y1="8" x2="-27" y2="11" stroke="#333333" stroke-width="1.2"/><line x1="10" y1="5" x2="27" y2="2" stroke="#333333" stroke-width="1.2"/><line x1="10" y1="8" x2="27" y2="11" stroke="#333333" stroke-width="1.2"/></g><text x="160" y="158" font-size="14" text-anchor="middle" fill="currentColor">ねこ</text><g transform="translate(230 98) scale(1)"><ellipse cx="0" cy="4" rx="25" ry="18" fill="#7bc96f" stroke="currentColor" stroke-width="2"/><circle cx="-12" cy="-13" r="8.5" fill="#7bc96f" stroke="currentColor" stroke-width="2"/><circle cx="12" cy="-13" r="8.5" fill="#7bc96f" stroke="currentColor" stroke-width="2"/><circle cx="-12" cy="-13" r="5" fill="#ffffff"/><circle cx="12" cy="-13" r="5" fill="#ffffff"/><circle cx="-12" cy="-12" r="2.6" fill="#333333"/><circle cx="12" cy="-12" r="2.6" fill="#333333"/><path d="M-13 6 Q0 16 13 6" fill="none" stroke="#333333" stroke-width="1.8" stroke-linecap="round"/></g><text x="230" y="158" font-size="14" text-anchor="middle" fill="currentColor">かえる</text></svg>'
         choices: [パンダ, ねこ, かえる]
         answer: パンダ
-        check: "{'🐼': 'パンダ', '🐱': 'ねこ', '🐸': 'かえる'}[fig.split('　')[1][0]]"
+        check: "['パンダ', 'ねこ', 'かえる'][1 - 1]"
         hints:
           - 「まえ」と かいて ある ほうを みつけよう。
-          - 「まえ」の すぐ よこに いる どうぶつに ゆびを おこう。
-          - ゆびを おいた どうぶつの なまえを いおう。
+          - text: 「まえ」に ◯を つけたよ。「まえ」に いちばん ちかいのは だれかな。
+            svg: '<svg viewBox="0 0 320 200" xmlns="http://www.w3.org/2000/svg"><rect x="3" y="82" width="38" height="30" rx="8" fill="#f3c969" fill-opacity="0.5" stroke="currentColor" stroke-width="2"/><text x="22" y="103" font-size="15" text-anchor="middle" fill="currentColor" font-weight="bold">まえ</text><rect x="271" y="82" width="46" height="30" rx="8" fill="#c8ccd6" fill-opacity="0.5" stroke="currentColor" stroke-width="2"/><text x="294" y="103" font-size="14" text-anchor="middle" fill="currentColor" font-weight="bold">うしろ</text><line x1="46" y1="132" x2="266" y2="132" stroke="currentColor" stroke-width="1.5" stroke-dasharray="4 4"/><g transform="translate(90 98) scale(1)"><circle cx="-16" cy="-17" r="8" fill="#333333" stroke="currentColor" stroke-width="2"/><circle cx="16" cy="-17" r="8" fill="#333333" stroke="currentColor" stroke-width="2"/><circle cx="0" cy="0" r="22" fill="#ffffff" stroke="currentColor" stroke-width="2"/><ellipse cx="-8" cy="-2" rx="5.5" ry="7.5" fill="#333333" transform="rotate(30 -8 -2)"/><ellipse cx="8" cy="-2" rx="5.5" ry="7.5" fill="#333333" transform="rotate(-30 8 -2)"/><circle cx="-7" cy="-3" r="1.8" fill="#ffffff"/><circle cx="7" cy="-3" r="1.8" fill="#ffffff"/><ellipse cx="0" cy="7" rx="3.5" ry="2.5" fill="#333333"/><path d="M-4 12 Q0 15 4 12" fill="none" stroke="#333333" stroke-width="1.5" stroke-linecap="round"/></g><text x="90" y="158" font-size="14" text-anchor="middle" fill="currentColor">パンダ</text><g transform="translate(160 98) scale(1)"><circle cx="0" cy="0" r="22" fill="#f3c969" stroke="currentColor" stroke-width="2"/><path d="M-20 -9 L-18 -33 L-6 -21" fill="#f3c969" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><path d="M20 -9 L18 -33 L6 -21" fill="#f3c969" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><circle cx="-8" cy="-3" r="2.6" fill="#333333"/><circle cx="8" cy="-3" r="2.6" fill="#333333"/><polygon points="-3,4 3,4 0,7" fill="#f08080"/><path d="M-5 10 Q-2.5 13 0 9 Q2.5 13 5 10" fill="none" stroke="#333333" stroke-width="1.5" stroke-linecap="round"/><line x1="-10" y1="5" x2="-27" y2="2" stroke="#333333" stroke-width="1.2"/><line x1="-10" y1="8" x2="-27" y2="11" stroke="#333333" stroke-width="1.2"/><line x1="10" y1="5" x2="27" y2="2" stroke="#333333" stroke-width="1.2"/><line x1="10" y1="8" x2="27" y2="11" stroke="#333333" stroke-width="1.2"/></g><text x="160" y="158" font-size="14" text-anchor="middle" fill="currentColor">ねこ</text><g transform="translate(230 98) scale(1)"><ellipse cx="0" cy="4" rx="25" ry="18" fill="#7bc96f" stroke="currentColor" stroke-width="2"/><circle cx="-12" cy="-13" r="8.5" fill="#7bc96f" stroke="currentColor" stroke-width="2"/><circle cx="12" cy="-13" r="8.5" fill="#7bc96f" stroke="currentColor" stroke-width="2"/><circle cx="-12" cy="-13" r="5" fill="#ffffff"/><circle cx="12" cy="-13" r="5" fill="#ffffff"/><circle cx="-12" cy="-12" r="2.6" fill="#333333"/><circle cx="12" cy="-12" r="2.6" fill="#333333"/><path d="M-13 6 Q0 16 13 6" fill="none" stroke="#333333" stroke-width="1.8" stroke-linecap="round"/></g><text x="230" y="158" font-size="14" text-anchor="middle" fill="currentColor">かえる</text><rect x="0" y="77" width="44" height="40" rx="11" fill="none" stroke="#f08080" stroke-width="3"/></svg>'
+          - その どうぶつに ゆびを おいて、なまえを いおう。
         paths:
-          - [「まえ」と かいて ある ほうを みる, そこに いる どうぶつは 🐼, パンダ]
+          - [「まえ」と かいて ある ほうを みる, そこに いちばん ちかいのは パンダ, パンダ]
         note: 「まえ」と かいて ある ほうが どちらかを たしかめる だけの 1 ぽ。あとの「まえから 2 ばんめ」で、どちらから かぞえるかを まちがえないための じゅんび。
       - part: 今日
-        text: 🟦 の うえに ある かたちは なんですか。
-        figure: "🔺\n🟦\n🟢"
+        id: "5b64030d1a"
+        text: しかくの うえに ある かたちは なんですか。
+        svg: '<svg viewBox="0 0 320 200" xmlns="http://www.w3.org/2000/svg"><polygon points="160,15 136,54 184,54" fill="#f08080" fill-opacity="0.6" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><polygon points="140,80 180,80 180,120 140,120" fill="#7fc8f8" fill-opacity="0.6" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><circle cx="160" cy="164" r="21.6" fill="#7bc96f" fill-opacity="0.6" stroke="currentColor" stroke-width="2"/></svg>'
         choices: [さんかく, しかく, まる]
         answer: さんかく
-        check: "{'🔺': 'さんかく', '🟦': 'しかく', '🟢': 'まる'}[fig.splitlines()[fig.splitlines().index('🟦') - 1]]"
+        check: "(lambda r: {'T': 'さんかく', 'V': 'さんかく', 'S': 'しかく', 'D': 'しかく', 'C': 'まる'}[r[r.index('Sb') - 1][0]])('Tr Sb Cg'.split())"
         hints:
-          - うえは そら の ほう、したは あし の ほうだよ。
-          - 🟦 を みつけて、ゆびを おこう。
-          - ゆびを ひとつ うえに うごかして、かたちの なまえを いおう。
+          - うえは そらの ほう、したは あしの ほうだよ。
+          - text: しかくに ◯を つけたよ。やじるしの「うえ」の ほうへ、ゆびを ひとつ うごかそう。
+            svg: '<svg viewBox="0 0 320 200" xmlns="http://www.w3.org/2000/svg"><polygon points="160,15 136,54 184,54" fill="#f08080" fill-opacity="0.6" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><polygon points="140,80 180,80 180,120 140,120" fill="#7fc8f8" fill-opacity="0.6" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><circle cx="160" cy="164" r="21.6" fill="#7bc96f" fill-opacity="0.6" stroke="currentColor" stroke-width="2"/><circle cx="160" cy="100" r="33" fill="none" stroke="#f08080" stroke-width="3"/><line x1="268" y1="100" x2="268" y2="58.5" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/><polygon points="268,48 273.6,58.5 262.4,58.5" fill="currentColor"/><line x1="268" y1="100" x2="268" y2="141.5" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/><polygon points="268,152 262.4,141.5 273.6,141.5" fill="currentColor"/><text x="268" y="36" font-size="14" text-anchor="middle" fill="currentColor">うえ</text><text x="268" y="174" font-size="14" text-anchor="middle" fill="currentColor">した</text></svg>'
+          - ゆびを おいた ところの かたちの なまえを いおう。
         paths:
-          - [🟦 を みつける, ひとつ うえを みる, 🔺 は さんかく]
+          - [しかくを みつける, ひとつ うえを みる, うえに あるのは さんかく]
       - part: 今日
-        text: 🟢 の みぎに ある かたちは なんですか。
-        figure: 🔺🟢🟦
+        id: "939b2c8b19"
+        text: まるの みぎに ある かたちは なんですか。
+        svg: '<svg viewBox="0 0 320 200" xmlns="http://www.w3.org/2000/svg"><polygon points="65,63.6 32.6,116.3 97.4,116.3" fill="#f08080" fill-opacity="0.6" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><circle cx="160" cy="92" r="29.2" fill="#7bc96f" fill-opacity="0.6" stroke="currentColor" stroke-width="2"/><polygon points="228,65 282,65 282,119 228,119" fill="#7fc8f8" fill-opacity="0.6" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/></svg>'
         choices: [さんかく, しかく, まる]
         answer: しかく
-        check: "{'🔺': 'さんかく', '🟦': 'しかく', '🟢': 'まる'}[fig[fig.index('🟢') + 1]]"
+        check: "(lambda r: {'T': 'さんかく', 'V': 'さんかく', 'S': 'しかく', 'D': 'しかく', 'C': 'まる'}[r[r.index('Cg') + 1][0]])('Tr Cg Sb'.split())"
         hints:
           - みぎは どちらかな。おうちの ひとと たしかめよう。
-          - 🟢 を みつけて、ゆびを おこう。
+          - text: まるに ◯を つけたよ。したの やじるしで「みぎ」を たしかめよう。
+            svg: '<svg viewBox="0 0 320 200" xmlns="http://www.w3.org/2000/svg"><polygon points="65,63.6 32.6,116.3 97.4,116.3" fill="#f08080" fill-opacity="0.6" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><circle cx="160" cy="92" r="29.2" fill="#7bc96f" fill-opacity="0.6" stroke="currentColor" stroke-width="2"/><polygon points="228,65 282,65 282,119 228,119" fill="#7fc8f8" fill-opacity="0.6" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><circle cx="160" cy="92" r="44" fill="none" stroke="#f08080" stroke-width="3"/><line x1="160" y1="180" x2="102.5" y2="180" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/><polygon points="92,180 102.5,174.4 102.5,185.6" fill="currentColor"/><line x1="160" y1="180" x2="217.5" y2="180" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/><polygon points="228,180 217.5,185.6 217.5,174.4" fill="currentColor"/><text x="60" y="185" font-size="14" text-anchor="middle" fill="currentColor">ひだり</text><text x="256" y="185" font-size="14" text-anchor="middle" fill="currentColor">みぎ</text></svg>'
           - ゆびを ひとつ みぎに うごかして、かたちの なまえを いおう。
         paths:
-          - [🟢 を みつける, ひとつ みぎを みる, 🟦 は しかく]
+          - [まるを みつける, ひとつ みぎを みる, みぎに あるのは しかく]
         note: みぎと ひだりは まちがえやすい。「おはしを もつ て」で おしえると、ひだりききの こが こまるので、からだの みぎを ゆびさして おしえる。
       - part: 今日
-        text: 【 】の わくの そとに ある かたちは なんですか。
-        figure: 【🔺🟦】🟢
+        id: "a63221d878"
+        text: わくの そとに ある かたちは なんですか。
+        svg: '<svg viewBox="0 0 320 200" xmlns="http://www.w3.org/2000/svg"><rect x="25" y="45" width="180" height="110" rx="14" fill="#b39ddb" fill-opacity="0.15" stroke="currentColor" stroke-width="3"/><text x="49" y="35" font-size="15" text-anchor="middle" fill="currentColor">わく</text><polygon points="75,72.7 43.8,123.4 106.2,123.4" fill="#f08080" fill-opacity="0.6" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><polygon points="129,74 181,74 181,126 129,126" fill="#7fc8f8" fill-opacity="0.6" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><circle cx="262" cy="100" r="28.1" fill="#7bc96f" fill-opacity="0.6" stroke="currentColor" stroke-width="2"/></svg>'
         choices: [さんかく, しかく, まる]
         answer: まる
-        check: "{'🔺': 'さんかく', '🟦': 'しかく', '🟢': 'まる'}[fig.split('】')[1]]"
+        check: "(lambda naka, soto: {'T': 'さんかく', 'S': 'しかく', 'C': 'まる'}[soto[0][0]])(['Tr', 'Sb'], ['Cg'])"
         hints:
-          - 【 と 】で かこまれた ところが、わくの なかだよ。
-          - わくの なかに ある かたちを、ゆびで かくそう。
-          - のこった かたちの なまえを いおう。
+          - わくの せんを ゆびで なぞって、なかと そとを たしかめよう。
+          - text: わくの なかに いろを ぬったよ。いろの ない ところに ある かたちは どれかな。
+            svg: '<svg viewBox="0 0 320 200" xmlns="http://www.w3.org/2000/svg"><rect x="25" y="45" width="180" height="110" rx="14" fill="#f3c969" fill-opacity="0.5" stroke="currentColor" stroke-width="3"/><text x="49" y="35" font-size="15" text-anchor="middle" fill="currentColor">わく</text><polygon points="75,72.7 43.8,123.4 106.2,123.4" fill="#f08080" fill-opacity="0.6" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><polygon points="129,74 181,74 181,126 129,126" fill="#7fc8f8" fill-opacity="0.6" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><circle cx="262" cy="100" r="28.1" fill="#7bc96f" fill-opacity="0.6" stroke="currentColor" stroke-width="2"/></svg>'
+          - わくの なかの かたちを ゆびで かくして、のこった かたちの なまえを いおう。
         paths:
-          - [わくの なかは 🔺 と 🟦, そとに あるのは 🟢, まる]
+          - [わくの なかは さんかくと しかく, そとに あるのは まる, まる]
       - part: 今日
+        id: "908c0145fd"
         text: どうぶつが ならんで います。まえから 2 ばんめは だれですか。
-        figure: まえ　🐶🐱🐰🐻　うしろ
+        svg: '<svg viewBox="0 0 320 200" xmlns="http://www.w3.org/2000/svg"><rect x="3" y="82" width="38" height="30" rx="8" fill="#f3c969" fill-opacity="0.5" stroke="currentColor" stroke-width="2"/><text x="22" y="103" font-size="15" text-anchor="middle" fill="currentColor" font-weight="bold">まえ</text><rect x="271" y="82" width="46" height="30" rx="8" fill="#c8ccd6" fill-opacity="0.5" stroke="currentColor" stroke-width="2"/><text x="294" y="103" font-size="14" text-anchor="middle" fill="currentColor" font-weight="bold">うしろ</text><line x1="46" y1="132" x2="266" y2="132" stroke="currentColor" stroke-width="1.5" stroke-dasharray="4 4"/><g transform="translate(72 98) scale(0.85)"><circle cx="0" cy="0" r="22" fill="#ecd2a6" stroke="currentColor" stroke-width="2"/><ellipse cx="-20" cy="1" rx="7" ry="15" fill="#a8784a" stroke="currentColor" stroke-width="2" transform="rotate(18 -20 1)"/><ellipse cx="20" cy="1" rx="7" ry="15" fill="#a8784a" stroke="currentColor" stroke-width="2" transform="rotate(-18 20 1)"/><circle cx="-7" cy="-4" r="2.6" fill="#333333"/><circle cx="7" cy="-4" r="2.6" fill="#333333"/><ellipse cx="0" cy="6" rx="4.5" ry="3.2" fill="#333333"/><path d="M0 9 L0 12 M-5 13 Q0 17 5 13" fill="none" stroke="#333333" stroke-width="1.5" stroke-linecap="round"/><ellipse cx="3" cy="17" rx="3" ry="3.5" fill="#f08080"/></g><text x="72" y="158" font-size="14" text-anchor="middle" fill="currentColor">いぬ</text><g transform="translate(130 98) scale(0.85)"><circle cx="0" cy="0" r="22" fill="#f3c969" stroke="currentColor" stroke-width="2"/><path d="M-20 -9 L-18 -33 L-6 -21" fill="#f3c969" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><path d="M20 -9 L18 -33 L6 -21" fill="#f3c969" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><circle cx="-8" cy="-3" r="2.6" fill="#333333"/><circle cx="8" cy="-3" r="2.6" fill="#333333"/><polygon points="-3,4 3,4 0,7" fill="#f08080"/><path d="M-5 10 Q-2.5 13 0 9 Q2.5 13 5 10" fill="none" stroke="#333333" stroke-width="1.5" stroke-linecap="round"/><line x1="-10" y1="5" x2="-27" y2="2" stroke="#333333" stroke-width="1.2"/><line x1="-10" y1="8" x2="-27" y2="11" stroke="#333333" stroke-width="1.2"/><line x1="10" y1="5" x2="27" y2="2" stroke="#333333" stroke-width="1.2"/><line x1="10" y1="8" x2="27" y2="11" stroke="#333333" stroke-width="1.2"/></g><text x="130" y="158" font-size="14" text-anchor="middle" fill="currentColor">ねこ</text><g transform="translate(188 98) scale(0.85)"><ellipse cx="-9" cy="-34" rx="7" ry="17" fill="#ffffff" stroke="currentColor" stroke-width="2"/><ellipse cx="9" cy="-34" rx="7" ry="17" fill="#ffffff" stroke="currentColor" stroke-width="2"/><ellipse cx="-9" cy="-33" rx="3" ry="11" fill="#f4b6c6"/><ellipse cx="9" cy="-33" rx="3" ry="11" fill="#f4b6c6"/><circle cx="0" cy="0" r="22" fill="#ffffff" stroke="currentColor" stroke-width="2"/><circle cx="-8" cy="-3" r="2.6" fill="#333333"/><circle cx="8" cy="-3" r="2.6" fill="#333333"/><ellipse cx="0" cy="5" rx="3" ry="2.2" fill="#f4b6c6"/><path d="M0 7 L0 10 M-5 12 Q-2.5 14 0 10 Q2.5 14 5 12" fill="none" stroke="#333333" stroke-width="1.5" stroke-linecap="round"/></g><text x="188" y="158" font-size="14" text-anchor="middle" fill="currentColor">うさぎ</text><g transform="translate(246 98) scale(0.85)"><circle cx="-16" cy="-16" r="8.5" fill="#b8875a" stroke="currentColor" stroke-width="2"/><circle cx="16" cy="-16" r="8.5" fill="#b8875a" stroke="currentColor" stroke-width="2"/><circle cx="-16" cy="-16" r="4" fill="#f1e2c8"/><circle cx="16" cy="-16" r="4" fill="#f1e2c8"/><circle cx="0" cy="0" r="22" fill="#b8875a" stroke="currentColor" stroke-width="2"/><circle cx="-8" cy="-5" r="2.6" fill="#333333"/><circle cx="8" cy="-5" r="2.6" fill="#333333"/><ellipse cx="0" cy="8" rx="10" ry="7.5" fill="#f1e2c8"/><ellipse cx="0" cy="5" rx="3.8" ry="2.6" fill="#333333"/><path d="M0 8 L0 11 M-4 12 Q0 15 4 12" fill="none" stroke="#333333" stroke-width="1.5" stroke-linecap="round"/></g><text x="246" y="158" font-size="14" text-anchor="middle" fill="currentColor">くま</text></svg>'
         choices: [いぬ, ねこ, うさぎ, くま]
         answer: ねこ
-        check: "{'🐶': 'いぬ', '🐱': 'ねこ', '🐰': 'うさぎ', '🐻': 'くま'}[fig.split('　')[1][1]]"
+        check: "['いぬ', 'ねこ', 'うさぎ', 'くま'][2 - 1]"
         hints:
           - 「まえ」と かいて ある ほうから みよう。
-          - まえから じゅんに「1、2」と かぞえよう。
-          - 2 と いった どうぶつは だれかな。
+          - text: まえから「1」と かぞえたよ。つぎは だれかな。
+            svg: '<svg viewBox="0 0 320 200" xmlns="http://www.w3.org/2000/svg"><rect x="3" y="82" width="38" height="30" rx="8" fill="#f3c969" fill-opacity="0.5" stroke="currentColor" stroke-width="2"/><text x="22" y="103" font-size="15" text-anchor="middle" fill="currentColor" font-weight="bold">まえ</text><rect x="271" y="82" width="46" height="30" rx="8" fill="#c8ccd6" fill-opacity="0.5" stroke="currentColor" stroke-width="2"/><text x="294" y="103" font-size="14" text-anchor="middle" fill="currentColor" font-weight="bold">うしろ</text><line x1="46" y1="132" x2="266" y2="132" stroke="currentColor" stroke-width="1.5" stroke-dasharray="4 4"/><g transform="translate(72 98) scale(0.85)"><circle cx="0" cy="0" r="22" fill="#ecd2a6" stroke="currentColor" stroke-width="2"/><ellipse cx="-20" cy="1" rx="7" ry="15" fill="#a8784a" stroke="currentColor" stroke-width="2" transform="rotate(18 -20 1)"/><ellipse cx="20" cy="1" rx="7" ry="15" fill="#a8784a" stroke="currentColor" stroke-width="2" transform="rotate(-18 20 1)"/><circle cx="-7" cy="-4" r="2.6" fill="#333333"/><circle cx="7" cy="-4" r="2.6" fill="#333333"/><ellipse cx="0" cy="6" rx="4.5" ry="3.2" fill="#333333"/><path d="M0 9 L0 12 M-5 13 Q0 17 5 13" fill="none" stroke="#333333" stroke-width="1.5" stroke-linecap="round"/><ellipse cx="3" cy="17" rx="3" ry="3.5" fill="#f08080"/></g><text x="72" y="158" font-size="14" text-anchor="middle" fill="currentColor">いぬ</text><g transform="translate(130 98) scale(0.85)"><circle cx="0" cy="0" r="22" fill="#f3c969" stroke="currentColor" stroke-width="2"/><path d="M-20 -9 L-18 -33 L-6 -21" fill="#f3c969" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><path d="M20 -9 L18 -33 L6 -21" fill="#f3c969" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><circle cx="-8" cy="-3" r="2.6" fill="#333333"/><circle cx="8" cy="-3" r="2.6" fill="#333333"/><polygon points="-3,4 3,4 0,7" fill="#f08080"/><path d="M-5 10 Q-2.5 13 0 9 Q2.5 13 5 10" fill="none" stroke="#333333" stroke-width="1.5" stroke-linecap="round"/><line x1="-10" y1="5" x2="-27" y2="2" stroke="#333333" stroke-width="1.2"/><line x1="-10" y1="8" x2="-27" y2="11" stroke="#333333" stroke-width="1.2"/><line x1="10" y1="5" x2="27" y2="2" stroke="#333333" stroke-width="1.2"/><line x1="10" y1="8" x2="27" y2="11" stroke="#333333" stroke-width="1.2"/></g><text x="130" y="158" font-size="14" text-anchor="middle" fill="currentColor">ねこ</text><g transform="translate(188 98) scale(0.85)"><ellipse cx="-9" cy="-34" rx="7" ry="17" fill="#ffffff" stroke="currentColor" stroke-width="2"/><ellipse cx="9" cy="-34" rx="7" ry="17" fill="#ffffff" stroke="currentColor" stroke-width="2"/><ellipse cx="-9" cy="-33" rx="3" ry="11" fill="#f4b6c6"/><ellipse cx="9" cy="-33" rx="3" ry="11" fill="#f4b6c6"/><circle cx="0" cy="0" r="22" fill="#ffffff" stroke="currentColor" stroke-width="2"/><circle cx="-8" cy="-3" r="2.6" fill="#333333"/><circle cx="8" cy="-3" r="2.6" fill="#333333"/><ellipse cx="0" cy="5" rx="3" ry="2.2" fill="#f4b6c6"/><path d="M0 7 L0 10 M-5 12 Q-2.5 14 0 10 Q2.5 14 5 12" fill="none" stroke="#333333" stroke-width="1.5" stroke-linecap="round"/></g><text x="188" y="158" font-size="14" text-anchor="middle" fill="currentColor">うさぎ</text><g transform="translate(246 98) scale(0.85)"><circle cx="-16" cy="-16" r="8.5" fill="#b8875a" stroke="currentColor" stroke-width="2"/><circle cx="16" cy="-16" r="8.5" fill="#b8875a" stroke="currentColor" stroke-width="2"/><circle cx="-16" cy="-16" r="4" fill="#f1e2c8"/><circle cx="16" cy="-16" r="4" fill="#f1e2c8"/><circle cx="0" cy="0" r="22" fill="#b8875a" stroke="currentColor" stroke-width="2"/><circle cx="-8" cy="-5" r="2.6" fill="#333333"/><circle cx="8" cy="-5" r="2.6" fill="#333333"/><ellipse cx="0" cy="8" rx="10" ry="7.5" fill="#f1e2c8"/><ellipse cx="0" cy="5" rx="3.8" ry="2.6" fill="#333333"/><path d="M0 8 L0 11 M-4 12 Q0 15 4 12" fill="none" stroke="#333333" stroke-width="1.5" stroke-linecap="round"/></g><text x="246" y="158" font-size="14" text-anchor="middle" fill="currentColor">くま</text><circle cx="72" cy="186" r="11" fill="#f3c969" fill-opacity="0.7" stroke="currentColor" stroke-width="2"/><text x="72" y="191" font-size="15" text-anchor="middle" fill="currentColor" font-weight="bold">1</text></svg>'
+          - 「2」と いった どうぶつの なまえを いおう。
         paths:
-          - [まえの ほうから かぞえる, 1 ばんめ 🐶、2 ばんめ 🐱, ねこ]
+          - [まえの ほうから かぞえる, 1 ばんめ いぬ、2 ばんめ ねこ, ねこ]
         note: うしろから かぞえて うさぎと こたえやすい。どちらから かぞえるかを ことばで たしかめる。
       - part: 挑戦
-        text: 🔺 の したで、🟢 の ひだりに ある かたちは なんですか。
-        figure: "🔺🟡\n🟦🟢"
+        id: "a74223f024"
+        text: さんかくの したで、みどりの まるの ひだりに ある かたちは なんですか。
+        svg: '<svg viewBox="0 0 320 200" xmlns="http://www.w3.org/2000/svg"><polygon points="115,32.7 83.8,83.4 146.2,83.4" fill="#f08080" fill-opacity="0.6" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><circle cx="205" cy="60" r="28.1" fill="#f3c969" fill-opacity="0.6" stroke="currentColor" stroke-width="2"/><polygon points="89,122 141,122 141,174 89,174" fill="#7fc8f8" fill-opacity="0.6" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><circle cx="205" cy="148" r="28.1" fill="#7bc96f" fill-opacity="0.6" stroke="currentColor" stroke-width="2"/></svg>'
         choices: [さんかく, しかく, まる]
         answer: しかく
-        check: "(lambda g: {'🔺': 'さんかく', '🟦': 'しかく', '🟢': 'まる', '🟡': 'まる'}[g[1][g[0].index('🔺')]] if g[1][g[0].index('🔺')] == g[1][g[1].index('🟢') - 1] else 'ちがう')(fig.splitlines())"
+        check: "(lambda g: (lambda a, b: {'T': 'さんかく', 'S': 'しかく', 'C': 'まる'}[a[0]] if a == b else 'ちがう')(g[1][g[0].index('Tr')], g[1][g[1].index('Cg') - 1]))([['Tr', 'Cy'], ['Sb', 'Cg']])"
         hints:
-          - まず 🔺 の したに ある かたちを みつけよう。
-          - つぎに 🟢 の ひだりに ある かたちを みつけよう。
-          - ふたつが おなじ かたちに なったら、その なまえを いおう。
+          - まず さんかくを みつけて、ひとつ したを みよう。
+          - text: さんかくと みどりの まるに ◯を つけたよ。どちらからも ゆびを うごかしてみよう。
+            svg: '<svg viewBox="0 0 320 200" xmlns="http://www.w3.org/2000/svg"><polygon points="115,32.7 83.8,83.4 146.2,83.4" fill="#f08080" fill-opacity="0.6" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><circle cx="205" cy="60" r="28.1" fill="#f3c969" fill-opacity="0.6" stroke="currentColor" stroke-width="2"/><polygon points="89,122 141,122 141,174 89,174" fill="#7fc8f8" fill-opacity="0.6" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><circle cx="205" cy="148" r="28.1" fill="#7bc96f" fill-opacity="0.6" stroke="currentColor" stroke-width="2"/><circle cx="115" cy="60" r="42" fill="none" stroke="#f08080" stroke-width="3"/><circle cx="205" cy="148" r="42" fill="none" stroke="#f08080" stroke-width="3"/></svg>'
+          - さんかくの したと、みどりの まるの ひだりは、おなじ かたちに なるかな。
         paths:
-          - [🔺 の したは 🟦, 🟢 の ひだりも 🟦, しかく]
-        note: 2 つの ことばを いちどに つかう もんだい。ひとつずつ ゆびで たしかめる。
+          - [さんかくの したは しかく, みどりの まるの ひだりも しかく, しかく]
+          - [みどりの まるの ひだりは しかく, その しかくの うえに さんかくが ある, しかく]
+        note: 2 つの ことばを いちどに つかう もんだい。ひとつずつ ゆびで たしかめる。きいろい まると みどりの まるを まちがえない。
       - part: わけ
-        text: 🟦 は 🔺 の みぎに あります。では、🔺 は 🟦 の どちらに ありますか。わけも くちで いってみよう。
-        figure: 🔺🟦
-        explain: 「🔺 は 🟦 の ひだり。🟦 が 🔺 の みぎに あるなら、🔺 は 🟦 から みて はんたいの ひだりに あるから」と いえれば よい。どちらから みるかで、みぎと ひだりが いれかわる ことに きづけば なお よい。
+        id: "a0000a9235"
+        text: しかくは さんかくの みぎに あります。では、さんかくは しかくの どちらに ありますか。わけも くちで いってみよう。
+        svg: '<svg viewBox="0 0 320 200" xmlns="http://www.w3.org/2000/svg"><polygon points="105,56.3 64.2,122.6 145.8,122.6" fill="#f08080" fill-opacity="0.6" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><polygon points="181,58 249,58 249,126 181,126" fill="#7fc8f8" fill-opacity="0.6" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/></svg>'
+        explain: 「さんかくは しかくの ひだり。しかくが さんかくの みぎに あるなら、さんかくは しかくから みて はんたいの ひだりに あるから」と いえれば よい。どちらから みるかで、みぎと ひだりが いれかわる ことに きづけば なお よい。
         hints:
-          - 🟦 に ゆびを おいて、🔺 を みよう。
-          - 🔺 は 🟦 の みぎかな、ひだりかな。
-          - 「〜から みると」を つかって いってみよう。
+          - しかくに ゆびを おいて、さんかくを みよう。
+          - text: しかくから さんかくの ほうへ やじるしを かいたよ。この むきは みぎかな、ひだりかな。
+            svg: '<svg viewBox="0 0 320 200" xmlns="http://www.w3.org/2000/svg"><polygon points="105,56.3 64.2,122.6 145.8,122.6" fill="#f08080" fill-opacity="0.6" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><polygon points="181,58 249,58 249,126 181,126" fill="#7fc8f8" fill-opacity="0.6" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><circle cx="215" cy="92" r="54" fill="none" stroke="#f08080" stroke-width="3"/><line x1="196" y1="165" x2="136" y2="165" stroke="#f08080" stroke-width="3" stroke-linecap="round"/><polygon points="124,165 136,158.6 136,171.4" fill="#f08080"/></svg>'
+          - 「しかくから みると」を つかって いってみよう。
         paths:
-          - [🟦 は 🔺 の みぎ, 🟦 から みると 🔺 は はんたいがわ, だから 🔺 は 🟦 の ひだり]
+          - [しかくは さんかくの みぎ, しかくから みると さんかくは はんたいがわ, だから さんかくは しかくの ひだり]
+          - [さんかくから しかくへ ゆびを うごかすと みぎむき, しかくから さんかくへは その ぎゃくむき, だから ひだり]
     extra:
       - part: 今日
-        text: 🟥 の したに ある かたちは なんですか。
-        figure: "🟥\n🔵\n🔺"
+        id: "985f3b4ac0"
+        text: しかくの すぐ したに ある かたちは なんですか。
+        svg: '<svg viewBox="0 0 320 200" xmlns="http://www.w3.org/2000/svg"><polygon points="140,16 180,16 180,56 140,56" fill="#f08080" fill-opacity="0.6" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><circle cx="160" cy="100" r="21.6" fill="#7fc8f8" fill-opacity="0.6" stroke="currentColor" stroke-width="2"/><polygon points="160,143 136,182 184,182" fill="#f08080" fill-opacity="0.6" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/></svg>'
         choices: [さんかく, しかく, まる]
         answer: まる
-        check: "{'🟥': 'しかく', '🔵': 'まる', '🔺': 'さんかく'}[fig.splitlines()[fig.splitlines().index('🟥') + 1]]"
+        check: "(lambda r: {'T': 'さんかく', 'V': 'さんかく', 'S': 'しかく', 'D': 'しかく', 'C': 'まる'}[r[r.index('Sr') + 1][0]])('Sr Cb Tr'.split())"
         hints:
-          - うえは そら の ほう、したは あし の ほうだよ。
-          - 🟥 を みつけて、ゆびを おこう。
-          - ゆびを ひとつ したに うごかして、かたちの なまえを いおう。
+          - うえは そらの ほう、したは あしの ほうだよ。
+          - text: しかくに ◯を つけたよ。やじるしの「した」の ほうへ、ゆびを ひとつ うごかそう。
+            svg: '<svg viewBox="0 0 320 200" xmlns="http://www.w3.org/2000/svg"><polygon points="140,16 180,16 180,56 140,56" fill="#f08080" fill-opacity="0.6" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><circle cx="160" cy="100" r="21.6" fill="#7fc8f8" fill-opacity="0.6" stroke="currentColor" stroke-width="2"/><polygon points="160,143 136,182 184,182" fill="#f08080" fill-opacity="0.6" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><circle cx="160" cy="36" r="33" fill="none" stroke="#f08080" stroke-width="3"/><line x1="268" y1="100" x2="268" y2="58.5" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/><polygon points="268,48 273.6,58.5 262.4,58.5" fill="currentColor"/><line x1="268" y1="100" x2="268" y2="141.5" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/><polygon points="268,152 262.4,141.5 273.6,141.5" fill="currentColor"/><text x="268" y="36" font-size="14" text-anchor="middle" fill="currentColor">うえ</text><text x="268" y="174" font-size="14" text-anchor="middle" fill="currentColor">した</text></svg>'
+          - ゆびを おいた ところの かたちの なまえを いおう。
         paths:
-          - [🟥 を みつける, ひとつ したを みる, 🔵 は まる]
+          - [しかくを みつける, ひとつ したを みる, したに あるのは まる]
       - part: 今日
-        text: 🔺 の ひだりに ある かたちは なんですか。
-        figure: 🟡🔺🟦
+        id: "4e14b04981"
+        text: さんかくの ひだりに ある かたちは なんですか。
+        svg: '<svg viewBox="0 0 320 200" xmlns="http://www.w3.org/2000/svg"><circle cx="65" cy="92" r="29.2" fill="#f3c969" fill-opacity="0.6" stroke="currentColor" stroke-width="2"/><polygon points="160,63.6 127.6,116.3 192.4,116.3" fill="#f08080" fill-opacity="0.6" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><polygon points="228,65 282,65 282,119 228,119" fill="#7fc8f8" fill-opacity="0.6" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/></svg>'
         choices: [さんかく, しかく, まる]
         answer: まる
-        check: "{'🟡': 'まる', '🔺': 'さんかく', '🟦': 'しかく'}[fig[fig.index('🔺') - 1]]"
+        check: "(lambda r: {'T': 'さんかく', 'V': 'さんかく', 'S': 'しかく', 'D': 'しかく', 'C': 'まる'}[r[r.index('Tr') - 1][0]])('Cy Tr Sb'.split())"
         hints:
           - ひだりは どちらかな。おうちの ひとと たしかめよう。
-          - 🔺 を みつけて、ゆびを おこう。
+          - text: さんかくに ◯を つけたよ。したの やじるしで「ひだり」を たしかめよう。
+            svg: '<svg viewBox="0 0 320 200" xmlns="http://www.w3.org/2000/svg"><circle cx="65" cy="92" r="29.2" fill="#f3c969" fill-opacity="0.6" stroke="currentColor" stroke-width="2"/><polygon points="160,63.6 127.6,116.3 192.4,116.3" fill="#f08080" fill-opacity="0.6" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><polygon points="228,65 282,65 282,119 228,119" fill="#7fc8f8" fill-opacity="0.6" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><circle cx="160" cy="92" r="44" fill="none" stroke="#f08080" stroke-width="3"/><line x1="160" y1="180" x2="102.5" y2="180" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/><polygon points="92,180 102.5,174.4 102.5,185.6" fill="currentColor"/><line x1="160" y1="180" x2="217.5" y2="180" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/><polygon points="228,180 217.5,185.6 217.5,174.4" fill="currentColor"/><text x="60" y="185" font-size="14" text-anchor="middle" fill="currentColor">ひだり</text><text x="256" y="185" font-size="14" text-anchor="middle" fill="currentColor">みぎ</text></svg>'
           - ゆびを ひとつ ひだりに うごかして、かたちの なまえを いおう。
         paths:
-          - [🔺 を みつける, ひとつ ひだりを みる, 🟡 は まる]
+          - [さんかくを みつける, ひとつ ひだりを みる, ひだりに あるのは まる]
       - part: 今日
+        id: "890a3b3a7b"
         text: どうぶつが ならんで います。まえから 3 ばんめは だれですか。
-        figure: まえ　🐼🐶🐸🐱　うしろ
+        svg: '<svg viewBox="0 0 320 200" xmlns="http://www.w3.org/2000/svg"><rect x="3" y="82" width="38" height="30" rx="8" fill="#f3c969" fill-opacity="0.5" stroke="currentColor" stroke-width="2"/><text x="22" y="103" font-size="15" text-anchor="middle" fill="currentColor" font-weight="bold">まえ</text><rect x="271" y="82" width="46" height="30" rx="8" fill="#c8ccd6" fill-opacity="0.5" stroke="currentColor" stroke-width="2"/><text x="294" y="103" font-size="14" text-anchor="middle" fill="currentColor" font-weight="bold">うしろ</text><line x1="46" y1="132" x2="266" y2="132" stroke="currentColor" stroke-width="1.5" stroke-dasharray="4 4"/><g transform="translate(72 98) scale(0.85)"><circle cx="-16" cy="-17" r="8" fill="#333333" stroke="currentColor" stroke-width="2"/><circle cx="16" cy="-17" r="8" fill="#333333" stroke="currentColor" stroke-width="2"/><circle cx="0" cy="0" r="22" fill="#ffffff" stroke="currentColor" stroke-width="2"/><ellipse cx="-8" cy="-2" rx="5.5" ry="7.5" fill="#333333" transform="rotate(30 -8 -2)"/><ellipse cx="8" cy="-2" rx="5.5" ry="7.5" fill="#333333" transform="rotate(-30 8 -2)"/><circle cx="-7" cy="-3" r="1.8" fill="#ffffff"/><circle cx="7" cy="-3" r="1.8" fill="#ffffff"/><ellipse cx="0" cy="7" rx="3.5" ry="2.5" fill="#333333"/><path d="M-4 12 Q0 15 4 12" fill="none" stroke="#333333" stroke-width="1.5" stroke-linecap="round"/></g><text x="72" y="158" font-size="14" text-anchor="middle" fill="currentColor">パンダ</text><g transform="translate(130 98) scale(0.85)"><circle cx="0" cy="0" r="22" fill="#ecd2a6" stroke="currentColor" stroke-width="2"/><ellipse cx="-20" cy="1" rx="7" ry="15" fill="#a8784a" stroke="currentColor" stroke-width="2" transform="rotate(18 -20 1)"/><ellipse cx="20" cy="1" rx="7" ry="15" fill="#a8784a" stroke="currentColor" stroke-width="2" transform="rotate(-18 20 1)"/><circle cx="-7" cy="-4" r="2.6" fill="#333333"/><circle cx="7" cy="-4" r="2.6" fill="#333333"/><ellipse cx="0" cy="6" rx="4.5" ry="3.2" fill="#333333"/><path d="M0 9 L0 12 M-5 13 Q0 17 5 13" fill="none" stroke="#333333" stroke-width="1.5" stroke-linecap="round"/><ellipse cx="3" cy="17" rx="3" ry="3.5" fill="#f08080"/></g><text x="130" y="158" font-size="14" text-anchor="middle" fill="currentColor">いぬ</text><g transform="translate(188 98) scale(0.85)"><ellipse cx="0" cy="4" rx="25" ry="18" fill="#7bc96f" stroke="currentColor" stroke-width="2"/><circle cx="-12" cy="-13" r="8.5" fill="#7bc96f" stroke="currentColor" stroke-width="2"/><circle cx="12" cy="-13" r="8.5" fill="#7bc96f" stroke="currentColor" stroke-width="2"/><circle cx="-12" cy="-13" r="5" fill="#ffffff"/><circle cx="12" cy="-13" r="5" fill="#ffffff"/><circle cx="-12" cy="-12" r="2.6" fill="#333333"/><circle cx="12" cy="-12" r="2.6" fill="#333333"/><path d="M-13 6 Q0 16 13 6" fill="none" stroke="#333333" stroke-width="1.8" stroke-linecap="round"/></g><text x="188" y="158" font-size="14" text-anchor="middle" fill="currentColor">かえる</text><g transform="translate(246 98) scale(0.85)"><circle cx="0" cy="0" r="22" fill="#f3c969" stroke="currentColor" stroke-width="2"/><path d="M-20 -9 L-18 -33 L-6 -21" fill="#f3c969" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><path d="M20 -9 L18 -33 L6 -21" fill="#f3c969" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><circle cx="-8" cy="-3" r="2.6" fill="#333333"/><circle cx="8" cy="-3" r="2.6" fill="#333333"/><polygon points="-3,4 3,4 0,7" fill="#f08080"/><path d="M-5 10 Q-2.5 13 0 9 Q2.5 13 5 10" fill="none" stroke="#333333" stroke-width="1.5" stroke-linecap="round"/><line x1="-10" y1="5" x2="-27" y2="2" stroke="#333333" stroke-width="1.2"/><line x1="-10" y1="8" x2="-27" y2="11" stroke="#333333" stroke-width="1.2"/><line x1="10" y1="5" x2="27" y2="2" stroke="#333333" stroke-width="1.2"/><line x1="10" y1="8" x2="27" y2="11" stroke="#333333" stroke-width="1.2"/></g><text x="246" y="158" font-size="14" text-anchor="middle" fill="currentColor">ねこ</text></svg>'
         choices: [パンダ, いぬ, かえる, ねこ]
         answer: かえる
-        check: "{'🐼': 'パンダ', '🐶': 'いぬ', '🐸': 'かえる', '🐱': 'ねこ'}[fig.split('　')[1][2]]"
+        check: "['パンダ', 'いぬ', 'かえる', 'ねこ'][3 - 1]"
         hints:
           - 「まえ」と かいて ある ほうから みよう。
-          - まえから じゅんに「1、2、3」と かぞえよう。
-          - 3 と いった どうぶつは だれかな。
+          - text: まえから「1、2」と かぞえたよ。つぎは だれかな。
+            svg: '<svg viewBox="0 0 320 200" xmlns="http://www.w3.org/2000/svg"><rect x="3" y="82" width="38" height="30" rx="8" fill="#f3c969" fill-opacity="0.5" stroke="currentColor" stroke-width="2"/><text x="22" y="103" font-size="15" text-anchor="middle" fill="currentColor" font-weight="bold">まえ</text><rect x="271" y="82" width="46" height="30" rx="8" fill="#c8ccd6" fill-opacity="0.5" stroke="currentColor" stroke-width="2"/><text x="294" y="103" font-size="14" text-anchor="middle" fill="currentColor" font-weight="bold">うしろ</text><line x1="46" y1="132" x2="266" y2="132" stroke="currentColor" stroke-width="1.5" stroke-dasharray="4 4"/><g transform="translate(72 98) scale(0.85)"><circle cx="-16" cy="-17" r="8" fill="#333333" stroke="currentColor" stroke-width="2"/><circle cx="16" cy="-17" r="8" fill="#333333" stroke="currentColor" stroke-width="2"/><circle cx="0" cy="0" r="22" fill="#ffffff" stroke="currentColor" stroke-width="2"/><ellipse cx="-8" cy="-2" rx="5.5" ry="7.5" fill="#333333" transform="rotate(30 -8 -2)"/><ellipse cx="8" cy="-2" rx="5.5" ry="7.5" fill="#333333" transform="rotate(-30 8 -2)"/><circle cx="-7" cy="-3" r="1.8" fill="#ffffff"/><circle cx="7" cy="-3" r="1.8" fill="#ffffff"/><ellipse cx="0" cy="7" rx="3.5" ry="2.5" fill="#333333"/><path d="M-4 12 Q0 15 4 12" fill="none" stroke="#333333" stroke-width="1.5" stroke-linecap="round"/></g><text x="72" y="158" font-size="14" text-anchor="middle" fill="currentColor">パンダ</text><g transform="translate(130 98) scale(0.85)"><circle cx="0" cy="0" r="22" fill="#ecd2a6" stroke="currentColor" stroke-width="2"/><ellipse cx="-20" cy="1" rx="7" ry="15" fill="#a8784a" stroke="currentColor" stroke-width="2" transform="rotate(18 -20 1)"/><ellipse cx="20" cy="1" rx="7" ry="15" fill="#a8784a" stroke="currentColor" stroke-width="2" transform="rotate(-18 20 1)"/><circle cx="-7" cy="-4" r="2.6" fill="#333333"/><circle cx="7" cy="-4" r="2.6" fill="#333333"/><ellipse cx="0" cy="6" rx="4.5" ry="3.2" fill="#333333"/><path d="M0 9 L0 12 M-5 13 Q0 17 5 13" fill="none" stroke="#333333" stroke-width="1.5" stroke-linecap="round"/><ellipse cx="3" cy="17" rx="3" ry="3.5" fill="#f08080"/></g><text x="130" y="158" font-size="14" text-anchor="middle" fill="currentColor">いぬ</text><g transform="translate(188 98) scale(0.85)"><ellipse cx="0" cy="4" rx="25" ry="18" fill="#7bc96f" stroke="currentColor" stroke-width="2"/><circle cx="-12" cy="-13" r="8.5" fill="#7bc96f" stroke="currentColor" stroke-width="2"/><circle cx="12" cy="-13" r="8.5" fill="#7bc96f" stroke="currentColor" stroke-width="2"/><circle cx="-12" cy="-13" r="5" fill="#ffffff"/><circle cx="12" cy="-13" r="5" fill="#ffffff"/><circle cx="-12" cy="-12" r="2.6" fill="#333333"/><circle cx="12" cy="-12" r="2.6" fill="#333333"/><path d="M-13 6 Q0 16 13 6" fill="none" stroke="#333333" stroke-width="1.8" stroke-linecap="round"/></g><text x="188" y="158" font-size="14" text-anchor="middle" fill="currentColor">かえる</text><g transform="translate(246 98) scale(0.85)"><circle cx="0" cy="0" r="22" fill="#f3c969" stroke="currentColor" stroke-width="2"/><path d="M-20 -9 L-18 -33 L-6 -21" fill="#f3c969" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><path d="M20 -9 L18 -33 L6 -21" fill="#f3c969" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><circle cx="-8" cy="-3" r="2.6" fill="#333333"/><circle cx="8" cy="-3" r="2.6" fill="#333333"/><polygon points="-3,4 3,4 0,7" fill="#f08080"/><path d="M-5 10 Q-2.5 13 0 9 Q2.5 13 5 10" fill="none" stroke="#333333" stroke-width="1.5" stroke-linecap="round"/><line x1="-10" y1="5" x2="-27" y2="2" stroke="#333333" stroke-width="1.2"/><line x1="-10" y1="8" x2="-27" y2="11" stroke="#333333" stroke-width="1.2"/><line x1="10" y1="5" x2="27" y2="2" stroke="#333333" stroke-width="1.2"/><line x1="10" y1="8" x2="27" y2="11" stroke="#333333" stroke-width="1.2"/></g><text x="246" y="158" font-size="14" text-anchor="middle" fill="currentColor">ねこ</text><circle cx="72" cy="186" r="11" fill="#f3c969" fill-opacity="0.7" stroke="currentColor" stroke-width="2"/><text x="72" y="191" font-size="15" text-anchor="middle" fill="currentColor" font-weight="bold">1</text><circle cx="130" cy="186" r="11" fill="#f3c969" fill-opacity="0.7" stroke="currentColor" stroke-width="2"/><text x="130" y="191" font-size="15" text-anchor="middle" fill="currentColor" font-weight="bold">2</text></svg>'
+          - 「3」と いった どうぶつの なまえを いおう。
         paths:
-          - [まえの ほうから かぞえる, 1 🐼、2 🐶、3 🐸, かえる]
+          - [まえの ほうから かぞえる, 1 パンダ、2 いぬ、3 かえる, かえる]
 
   - day: 5
     items:
       - part: 今日
+        id: "4b1058c7bf"
         text: さんかくは どれですか。
-        choices: [🟨, 🔻, 🟢]
-        answer: 🔻
+        svg: '<svg viewBox="0 0 320 200" xmlns="http://www.w3.org/2000/svg"><polygon points="28,56 92,56 92,120 28,120" fill="#f3c969" fill-opacity="0.6" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><circle cx="160" cy="88" r="34.6" fill="#7bc96f" fill-opacity="0.6" stroke="currentColor" stroke-width="2"/><polygon points="221.6,59.2 298.4,59.2 260,121.6" fill="#f08080" fill-opacity="0.6" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><text x="60" y="172" font-size="18" text-anchor="middle" fill="currentColor">ア</text><text x="160" y="172" font-size="18" text-anchor="middle" fill="currentColor">イ</text><text x="260" y="172" font-size="18" text-anchor="middle" fill="currentColor">ウ</text></svg>'
+        choices: [ア, イ, ウ]
+        answer: ウ
+        check: "'ウ'"
         hints:
           - とがった かどを さがそう。
-          - かどは いくつ あるかな。ゆびで さして かぞえよう。
-          - さかさまでも、かどが 3 つなら さんかくだよ。
+          - text: かどに ●を つけたよ。●を かぞえよう。
+            svg: '<svg viewBox="0 0 320 200" xmlns="http://www.w3.org/2000/svg"><polygon points="28,56 92,56 92,120 28,120" fill="#f3c969" fill-opacity="0.6" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><circle cx="28" cy="56" r="4.8" fill="#d9534f"/><circle cx="92" cy="56" r="4.8" fill="#d9534f"/><circle cx="92" cy="120" r="4.8" fill="#d9534f"/><circle cx="28" cy="120" r="4.8" fill="#d9534f"/><circle cx="160" cy="88" r="34.6" fill="#7bc96f" fill-opacity="0.6" stroke="currentColor" stroke-width="2"/><polygon points="221.6,59.2 298.4,59.2 260,121.6" fill="#f08080" fill-opacity="0.6" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><circle cx="221.6" cy="59.2" r="4.8" fill="#d9534f"/><circle cx="298.4" cy="59.2" r="4.8" fill="#d9534f"/><circle cx="260" cy="121.6" r="4.8" fill="#d9534f"/><text x="60" y="172" font-size="18" text-anchor="middle" fill="currentColor">ア</text><text x="160" y="172" font-size="18" text-anchor="middle" fill="currentColor">イ</text><text x="260" y="172" font-size="18" text-anchor="middle" fill="currentColor">ウ</text></svg>'
+          - さかさまでも、かどの かずは かわらないよ。
         paths:
-          - [かどを かぞえる, 🔻 は かどが 3 つ, さんかく]
+          - [かどを かぞえる, ウ は かどが 3 つ, さんかく]
       - part: 今日
+        id: "45886b6373"
         text: しかくは いくつ ありますか。
-        figure: 🟦🔵🔷🔺🟥
+        svg: '<svg viewBox="0 0 320 200" xmlns="http://www.w3.org/2000/svg"><polygon points="34,32 86,32 86,84 34,84" fill="#7fc8f8" fill-opacity="0.6" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><circle cx="160" cy="58" r="28.1" fill="#7fc8f8" fill-opacity="0.6" stroke="currentColor" stroke-width="2"/><polygon points="260,22.9 295.1,58 260,93.1 224.9,58" fill="#7fc8f8" fill-opacity="0.6" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><polygon points="110,117.7 78.8,168.4 141.2,168.4" fill="#f08080" fill-opacity="0.6" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><polygon points="184,119 236,119 236,171 184,171" fill="#f08080" fill-opacity="0.6" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/></svg>'
         answer: 3
-        check: "n('🟦') + n('🔷') + n('🟥')"
+        check: "len([t for t in 'Sb Cb Db Tr Sr'.split() if t[0] in 'SD'])"
         hints:
           - かどが 4 つ ある かたちを さがそう。
-          - かたむいて いても、かどが 4 つなら しかくだよ。
+          - text: かどに ●を つけたよ。かたむいた かたちの ●も かぞえよう。
+            svg: '<svg viewBox="0 0 320 200" xmlns="http://www.w3.org/2000/svg"><polygon points="34,32 86,32 86,84 34,84" fill="#7fc8f8" fill-opacity="0.6" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><circle cx="34" cy="32" r="4.5" fill="#d9534f"/><circle cx="86" cy="32" r="4.5" fill="#d9534f"/><circle cx="86" cy="84" r="4.5" fill="#d9534f"/><circle cx="34" cy="84" r="4.5" fill="#d9534f"/><circle cx="160" cy="58" r="28.1" fill="#7fc8f8" fill-opacity="0.6" stroke="currentColor" stroke-width="2"/><polygon points="260,22.9 295.1,58 260,93.1 224.9,58" fill="#7fc8f8" fill-opacity="0.6" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><circle cx="260" cy="22.9" r="4.5" fill="#d9534f"/><circle cx="295.1" cy="58" r="4.5" fill="#d9534f"/><circle cx="260" cy="93.1" r="4.5" fill="#d9534f"/><circle cx="224.9" cy="58" r="4.5" fill="#d9534f"/><polygon points="110,117.7 78.8,168.4 141.2,168.4" fill="#f08080" fill-opacity="0.6" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><circle cx="110" cy="117.7" r="4.5" fill="#d9534f"/><circle cx="78.8" cy="168.4" r="4.5" fill="#d9534f"/><circle cx="141.2" cy="168.4" r="4.5" fill="#d9534f"/><polygon points="184,119 236,119 236,171 184,171" fill="#f08080" fill-opacity="0.6" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><circle cx="184" cy="119" r="4.5" fill="#d9534f"/><circle cx="236" cy="119" r="4.5" fill="#d9534f"/><circle cx="236" cy="171" r="4.5" fill="#d9534f"/><circle cx="184" cy="171" r="4.5" fill="#d9534f"/></svg>'
           - しかくだけに しるしを つけて かぞえよう。
         paths:
-          - [かどが 4 つの かたちを えらぶ, 🟦 🔷 🟥, 3 こ]
+          - [かどが 4 つの かたちを えらぶ, あお・かたむいた あお・あかの しかく, 3 こ]
       - part: 今日
+        id: "ab144546af"
         text: さんかくには、かどが いくつ ありますか。
-        figure: 🔻
+        svg: '<svg viewBox="0 0 320 200" xmlns="http://www.w3.org/2000/svg"><polygon points="92.8,47.6 227.2,47.6 160,156.8" fill="#f08080" fill-opacity="0.6" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/></svg>'
         answer: 3
         hints:
           - とがった ところが かどだよ。
-          - かどを ひとつずつ ゆびで さそう。
+          - text: 1 つめの かどに ●を つけたよ。つぎの かども ゆびで さそう。
+            svg: '<svg viewBox="0 0 320 200" xmlns="http://www.w3.org/2000/svg"><polygon points="92.8,47.6 227.2,47.6 160,156.8" fill="#f08080" fill-opacity="0.6" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><circle cx="160" cy="156.8" r="7" fill="#d9534f"/><text x="160" y="182.8" font-size="17" text-anchor="middle" fill="currentColor" font-weight="bold">1</text></svg>'
           - さした かどを かぞえよう。
         paths:
           - [かどを さす, 1、2、3 と かぞえる, 3 つ]
       - part: 今日
-        text: てんを じゅんに、まっすぐな せんで むすびます。どんな かたちに なりますか。
-        figure: "●　　　●\n\n　●　　　●"
+        id: "d26b552a0c"
+        text: 1 の てんから じゅんに、まっすぐな せんで むすび、さいごは 1 に もどります。どんな かたちに なりますか。
+        svg: '<svg viewBox="0 0 320 200" xmlns="http://www.w3.org/2000/svg"><circle cx="60" cy="50" r="7" fill="currentColor"/><circle cx="215" cy="50" r="7" fill="currentColor"/><circle cx="260" cy="155" r="7" fill="currentColor"/><circle cx="105" cy="155" r="7" fill="currentColor"/><text x="60" y="35" font-size="16" text-anchor="middle" fill="currentColor" font-weight="bold">1</text><text x="215" y="35" font-size="16" text-anchor="middle" fill="currentColor" font-weight="bold">2</text><text x="260" y="181" font-size="16" text-anchor="middle" fill="currentColor" font-weight="bold">3</text><text x="105" y="181" font-size="16" text-anchor="middle" fill="currentColor" font-weight="bold">4</text></svg>'
         choices: [さんかく, しかく, まる]
         answer: しかく
-        check: "{3: 'さんかく', 4: 'しかく'}[n('●')]"
+        check: "{3: 'さんかく', 4: 'しかく'}[len([(60, 50), (215, 50), (260, 155), (105, 155)])]"
         hints:
           - てんは いくつ あるかな。
-          - むすぶと、てんが かどに なるよ。
-          - かどが いくつの かたちか かんがえよう。
+          - text: 1 から 2 まで せんを ひいたよ。つづけて じゅんに むすんで、1 に もどろう。
+            svg: '<svg viewBox="0 0 320 200" xmlns="http://www.w3.org/2000/svg"><line x1="60" y1="50" x2="215" y2="50" stroke="#f08080" stroke-width="3" stroke-linecap="round"/><circle cx="60" cy="50" r="7" fill="currentColor"/><circle cx="215" cy="50" r="7" fill="currentColor"/><circle cx="260" cy="155" r="7" fill="currentColor"/><circle cx="105" cy="155" r="7" fill="currentColor"/><text x="60" y="35" font-size="16" text-anchor="middle" fill="currentColor" font-weight="bold">1</text><text x="215" y="35" font-size="16" text-anchor="middle" fill="currentColor" font-weight="bold">2</text><text x="260" y="181" font-size="16" text-anchor="middle" fill="currentColor" font-weight="bold">3</text><text x="105" y="181" font-size="16" text-anchor="middle" fill="currentColor" font-weight="bold">4</text></svg>'
+          - むすぶと、てんが かどに なるよ。かどの かずを かぞえよう。
         paths:
           - [てんは 4 つ, かどが 4 つに なる, しかく]
       - part: 今日
+        id: "1314721bb3"
         text: まるの なかまは いくつ ありますか。
-        figure: 🟡🔺⚪🟩🔴
+        svg: '<svg viewBox="0 0 320 200" xmlns="http://www.w3.org/2000/svg"><circle cx="60" cy="58" r="28.1" fill="#f3c969" fill-opacity="0.6" stroke="currentColor" stroke-width="2"/><polygon points="160,30.7 128.8,81.4 191.2,81.4" fill="#f08080" fill-opacity="0.6" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><circle cx="260" cy="58" r="28.1" fill="#c8ccd6" fill-opacity="0.6" stroke="currentColor" stroke-width="2"/><polygon points="84,119 136,119 136,171 84,171" fill="#7bc96f" fill-opacity="0.6" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><circle cx="210" cy="145" r="28.1" fill="#f08080" fill-opacity="0.6" stroke="currentColor" stroke-width="2"/></svg>'
         answer: 3
-        check: "n('🟡') + n('⚪') + n('🔴')"
+        check: "len([t for t in 'Cy Tr Cw Sg Cr'.split() if t[0] in 'C'])"
         hints:
           - かどが ない かたちを さがそう。
-          - いろが ちがっても、おなじ かたちなら なかまだよ。
-          - まるだけに しるしを つけて かぞえよう。
+          - text: かどに ●を つけたよ。●が ひとつも ない かたちは どれかな。
+            svg: '<svg viewBox="0 0 320 200" xmlns="http://www.w3.org/2000/svg"><circle cx="60" cy="58" r="28.1" fill="#f3c969" fill-opacity="0.6" stroke="currentColor" stroke-width="2"/><polygon points="160,30.7 128.8,81.4 191.2,81.4" fill="#f08080" fill-opacity="0.6" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><circle cx="160" cy="30.7" r="4.5" fill="#d9534f"/><circle cx="128.8" cy="81.4" r="4.5" fill="#d9534f"/><circle cx="191.2" cy="81.4" r="4.5" fill="#d9534f"/><circle cx="260" cy="58" r="28.1" fill="#c8ccd6" fill-opacity="0.6" stroke="currentColor" stroke-width="2"/><polygon points="84,119 136,119 136,171 84,171" fill="#7bc96f" fill-opacity="0.6" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><circle cx="84" cy="119" r="4.5" fill="#d9534f"/><circle cx="136" cy="119" r="4.5" fill="#d9534f"/><circle cx="136" cy="171" r="4.5" fill="#d9534f"/><circle cx="84" cy="171" r="4.5" fill="#d9534f"/><circle cx="210" cy="145" r="28.1" fill="#f08080" fill-opacity="0.6" stroke="currentColor" stroke-width="2"/></svg>'
+          - いろが ちがっても、おなじ かたちなら なかまだよ。しるしを つけて かぞえよう。
         paths:
-          - [まるだけを えらぶ, 🟡 ⚪ 🔴, 3 こ]
+          - [まるだけを えらぶ, きいろ・しろ・あかの まる, 3 こ]
       - part: 今日
+        id: "480e59b24d"
         text: かたちで なかまわけ します。なかまはずれは どれですか。
-        choices: [🟩, 🔷, 🟨, 🔵]
-        answer: 🔵
+        svg: '<svg viewBox="0 0 320 200" xmlns="http://www.w3.org/2000/svg"><polygon points="19,63 69,63 69,113 19,113" fill="#7bc96f" fill-opacity="0.6" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><polygon points="124,54.2 157.8,88 124,121.8 90.2,88" fill="#7fc8f8" fill-opacity="0.6" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><polygon points="179,63 229,63 229,113 179,113" fill="#f3c969" fill-opacity="0.6" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><circle cx="284" cy="88" r="27" fill="#7fc8f8" fill-opacity="0.6" stroke="currentColor" stroke-width="2"/><text x="44" y="172" font-size="18" text-anchor="middle" fill="currentColor">ア</text><text x="124" y="172" font-size="18" text-anchor="middle" fill="currentColor">イ</text><text x="204" y="172" font-size="18" text-anchor="middle" fill="currentColor">ウ</text><text x="284" y="172" font-size="18" text-anchor="middle" fill="currentColor">エ</text></svg>'
+        choices: [ア, イ, ウ, エ]
+        answer: エ
+        check: "'エ'"
         hints:
           - いろでは なく、かたちを みよう。
-          - かどが ない かたちは どれかな。
+          - text: いろを けして、かたちだけに したよ。
+            svg: '<svg viewBox="0 0 320 200" xmlns="http://www.w3.org/2000/svg"><polygon points="19,63 69,63 69,113 19,113" fill="#c8ccd6" fill-opacity="0.6" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><polygon points="124,54.2 157.8,88 124,121.8 90.2,88" fill="#c8ccd6" fill-opacity="0.6" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><polygon points="179,63 229,63 229,113 179,113" fill="#c8ccd6" fill-opacity="0.6" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><circle cx="284" cy="88" r="27" fill="#c8ccd6" fill-opacity="0.6" stroke="currentColor" stroke-width="2"/><text x="44" y="172" font-size="18" text-anchor="middle" fill="currentColor">ア</text><text x="124" y="172" font-size="18" text-anchor="middle" fill="currentColor">イ</text><text x="204" y="172" font-size="18" text-anchor="middle" fill="currentColor">ウ</text><text x="284" y="172" font-size="18" text-anchor="middle" fill="currentColor">エ</text></svg>'
           - ほかの 3 つは、どんな かたちの なかまかな。
         paths:
-          - [かどを みる, 🟩 🔷 🟨 は しかく、🔵 だけ まる, 🔵]
+          - [かどを みる, ア イ ウ は しかく、エ だけ まる, エ]
       - part: 今日
-        text: 🟦 の ひだりに ある かたちは なんですか。
-        figure: 🔺🟢🟦
+        id: "bceb66ebb0"
+        text: しかくの すぐ ひだりに ある かたちは なんですか。
+        svg: '<svg viewBox="0 0 320 200" xmlns="http://www.w3.org/2000/svg"><polygon points="65,63.6 32.6,116.3 97.4,116.3" fill="#f08080" fill-opacity="0.6" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><circle cx="160" cy="92" r="29.2" fill="#7bc96f" fill-opacity="0.6" stroke="currentColor" stroke-width="2"/><polygon points="228,65 282,65 282,119 228,119" fill="#7fc8f8" fill-opacity="0.6" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/></svg>'
         choices: [さんかく, しかく, まる]
         answer: まる
-        check: "{'🔺': 'さんかく', '🟢': 'まる', '🟦': 'しかく'}[fig[fig.index('🟦') - 1]]"
+        check: "(lambda r: {'T': 'さんかく', 'V': 'さんかく', 'S': 'しかく', 'D': 'しかく', 'C': 'まる'}[r[r.index('Sb') - 1][0]])('Tr Cg Sb'.split())"
         hints:
           - ひだりは どちらかな。
-          - 🟦 を みつけて、ゆびを おこう。
+          - text: しかくに ◯を つけたよ。したの やじるしで「ひだり」を たしかめよう。
+            svg: '<svg viewBox="0 0 320 200" xmlns="http://www.w3.org/2000/svg"><polygon points="65,63.6 32.6,116.3 97.4,116.3" fill="#f08080" fill-opacity="0.6" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><circle cx="160" cy="92" r="29.2" fill="#7bc96f" fill-opacity="0.6" stroke="currentColor" stroke-width="2"/><polygon points="228,65 282,65 282,119 228,119" fill="#7fc8f8" fill-opacity="0.6" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><circle cx="255" cy="92" r="44" fill="none" stroke="#f08080" stroke-width="3"/><line x1="160" y1="180" x2="102.5" y2="180" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/><polygon points="92,180 102.5,174.4 102.5,185.6" fill="currentColor"/><line x1="160" y1="180" x2="217.5" y2="180" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/><polygon points="228,180 217.5,185.6 217.5,174.4" fill="currentColor"/><text x="60" y="185" font-size="14" text-anchor="middle" fill="currentColor">ひだり</text><text x="256" y="185" font-size="14" text-anchor="middle" fill="currentColor">みぎ</text></svg>'
           - ゆびを ひとつ ひだりに うごかして、かたちの なまえを いおう。
         paths:
-          - [🟦 を みつける, ひとつ ひだりを みる, 🟢 は まる]
+          - [しかくを みつける, ひとつ ひだりを みる, ひだりに あるのは まる]
       - part: 今日
-        text: 【 】の わくの なかに ある かたちは なんですか。
-        figure: 🔵【🔻】🟦
+        id: "f14a731882"
+        text: わくの なかに ある かたちは なんですか。
+        svg: '<svg viewBox="0 0 320 200" xmlns="http://www.w3.org/2000/svg"><circle cx="55" cy="100" r="28.1" fill="#7fc8f8" fill-opacity="0.6" stroke="currentColor" stroke-width="2"/><rect x="105" y="45" width="110" height="110" rx="14" fill="#b39ddb" fill-opacity="0.15" stroke="currentColor" stroke-width="3"/><text x="129" y="35" font-size="15" text-anchor="middle" fill="currentColor">わく</text><polygon points="126.4,74.8 193.6,74.8 160,129.4" fill="#f08080" fill-opacity="0.6" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><polygon points="242,74 294,74 294,126 242,126" fill="#7fc8f8" fill-opacity="0.6" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/></svg>'
         choices: [さんかく, しかく, まる]
         answer: さんかく
-        check: "{'🔵': 'まる', '🔻': 'さんかく', '🟦': 'しかく'}[fig.split('【')[1].split('】')[0]]"
+        check: "(lambda naka, soto: {'T': 'さんかく', 'V': 'さんかく', 'S': 'しかく', 'C': 'まる'}[naka[0][0]])(['Vr'], ['Cb', 'Sb'])"
         hints:
-          - 【 と 】で かこまれた ところが、わくの なかだよ。
-          - わくの そとに ある かたちを、ゆびで かくそう。
-          - のこった かたちの なまえを いおう。
+          - わくの せんを ゆびで なぞって、なかと そとを たしかめよう。
+          - text: わくの なかに いろを ぬったよ。いろの ところに ある かたちを みよう。
+            svg: '<svg viewBox="0 0 320 200" xmlns="http://www.w3.org/2000/svg"><circle cx="55" cy="100" r="28.1" fill="#7fc8f8" fill-opacity="0.6" stroke="currentColor" stroke-width="2"/><rect x="105" y="45" width="110" height="110" rx="14" fill="#f3c969" fill-opacity="0.5" stroke="currentColor" stroke-width="3"/><text x="129" y="35" font-size="15" text-anchor="middle" fill="currentColor">わく</text><polygon points="126.4,74.8 193.6,74.8 160,129.4" fill="#f08080" fill-opacity="0.6" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><polygon points="242,74 294,74 294,126 242,126" fill="#7fc8f8" fill-opacity="0.6" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/></svg>'
+          - その かたちの かどを かぞえて、なまえを いおう。
         paths:
-          - [わくの なかは 🔻, さかさまでも かどが 3 つ, さんかく]
+          - [わくの なかは さかさまの さんかく, さかさまでも かどが 3 つ, さんかく]
     extra:
       - part: 今日
+        id: "6e17bfb01b"
         text: どうぶつが ならんで います。うしろから 1 ばんめは だれですか。
-        figure: まえ　🐰🐶🐻　うしろ
+        svg: '<svg viewBox="0 0 320 200" xmlns="http://www.w3.org/2000/svg"><rect x="3" y="82" width="38" height="30" rx="8" fill="#f3c969" fill-opacity="0.5" stroke="currentColor" stroke-width="2"/><text x="22" y="103" font-size="15" text-anchor="middle" fill="currentColor" font-weight="bold">まえ</text><rect x="271" y="82" width="46" height="30" rx="8" fill="#c8ccd6" fill-opacity="0.5" stroke="currentColor" stroke-width="2"/><text x="294" y="103" font-size="14" text-anchor="middle" fill="currentColor" font-weight="bold">うしろ</text><line x1="46" y1="132" x2="266" y2="132" stroke="currentColor" stroke-width="1.5" stroke-dasharray="4 4"/><g transform="translate(90 98) scale(1)"><ellipse cx="-9" cy="-34" rx="7" ry="17" fill="#ffffff" stroke="currentColor" stroke-width="2"/><ellipse cx="9" cy="-34" rx="7" ry="17" fill="#ffffff" stroke="currentColor" stroke-width="2"/><ellipse cx="-9" cy="-33" rx="3" ry="11" fill="#f4b6c6"/><ellipse cx="9" cy="-33" rx="3" ry="11" fill="#f4b6c6"/><circle cx="0" cy="0" r="22" fill="#ffffff" stroke="currentColor" stroke-width="2"/><circle cx="-8" cy="-3" r="2.6" fill="#333333"/><circle cx="8" cy="-3" r="2.6" fill="#333333"/><ellipse cx="0" cy="5" rx="3" ry="2.2" fill="#f4b6c6"/><path d="M0 7 L0 10 M-5 12 Q-2.5 14 0 10 Q2.5 14 5 12" fill="none" stroke="#333333" stroke-width="1.5" stroke-linecap="round"/></g><text x="90" y="158" font-size="14" text-anchor="middle" fill="currentColor">うさぎ</text><g transform="translate(160 98) scale(1)"><circle cx="0" cy="0" r="22" fill="#ecd2a6" stroke="currentColor" stroke-width="2"/><ellipse cx="-20" cy="1" rx="7" ry="15" fill="#a8784a" stroke="currentColor" stroke-width="2" transform="rotate(18 -20 1)"/><ellipse cx="20" cy="1" rx="7" ry="15" fill="#a8784a" stroke="currentColor" stroke-width="2" transform="rotate(-18 20 1)"/><circle cx="-7" cy="-4" r="2.6" fill="#333333"/><circle cx="7" cy="-4" r="2.6" fill="#333333"/><ellipse cx="0" cy="6" rx="4.5" ry="3.2" fill="#333333"/><path d="M0 9 L0 12 M-5 13 Q0 17 5 13" fill="none" stroke="#333333" stroke-width="1.5" stroke-linecap="round"/><ellipse cx="3" cy="17" rx="3" ry="3.5" fill="#f08080"/></g><text x="160" y="158" font-size="14" text-anchor="middle" fill="currentColor">いぬ</text><g transform="translate(230 98) scale(1)"><circle cx="-16" cy="-16" r="8.5" fill="#b8875a" stroke="currentColor" stroke-width="2"/><circle cx="16" cy="-16" r="8.5" fill="#b8875a" stroke="currentColor" stroke-width="2"/><circle cx="-16" cy="-16" r="4" fill="#f1e2c8"/><circle cx="16" cy="-16" r="4" fill="#f1e2c8"/><circle cx="0" cy="0" r="22" fill="#b8875a" stroke="currentColor" stroke-width="2"/><circle cx="-8" cy="-5" r="2.6" fill="#333333"/><circle cx="8" cy="-5" r="2.6" fill="#333333"/><ellipse cx="0" cy="8" rx="10" ry="7.5" fill="#f1e2c8"/><ellipse cx="0" cy="5" rx="3.8" ry="2.6" fill="#333333"/><path d="M0 8 L0 11 M-4 12 Q0 15 4 12" fill="none" stroke="#333333" stroke-width="1.5" stroke-linecap="round"/></g><text x="230" y="158" font-size="14" text-anchor="middle" fill="currentColor">くま</text></svg>'
         choices: [うさぎ, いぬ, くま]
         answer: くま
-        check: "{'🐰': 'うさぎ', '🐶': 'いぬ', '🐻': 'くま'}[fig.split('　')[1][-1]]"
+        check: "['うさぎ', 'いぬ', 'くま'][-1]"
         hints:
           - 「うしろ」と かいて ある ほうを みよう。
-          - うしろから じゅんに かぞえよう。
-          - いちばん うしろに いる どうぶつは だれかな。
+          - text: 「うしろ」に ◯を つけたよ。「うしろ」に いちばん ちかいのは だれかな。
+            svg: '<svg viewBox="0 0 320 200" xmlns="http://www.w3.org/2000/svg"><rect x="3" y="82" width="38" height="30" rx="8" fill="#f3c969" fill-opacity="0.5" stroke="currentColor" stroke-width="2"/><text x="22" y="103" font-size="15" text-anchor="middle" fill="currentColor" font-weight="bold">まえ</text><rect x="271" y="82" width="46" height="30" rx="8" fill="#c8ccd6" fill-opacity="0.5" stroke="currentColor" stroke-width="2"/><text x="294" y="103" font-size="14" text-anchor="middle" fill="currentColor" font-weight="bold">うしろ</text><line x1="46" y1="132" x2="266" y2="132" stroke="currentColor" stroke-width="1.5" stroke-dasharray="4 4"/><g transform="translate(90 98) scale(1)"><ellipse cx="-9" cy="-34" rx="7" ry="17" fill="#ffffff" stroke="currentColor" stroke-width="2"/><ellipse cx="9" cy="-34" rx="7" ry="17" fill="#ffffff" stroke="currentColor" stroke-width="2"/><ellipse cx="-9" cy="-33" rx="3" ry="11" fill="#f4b6c6"/><ellipse cx="9" cy="-33" rx="3" ry="11" fill="#f4b6c6"/><circle cx="0" cy="0" r="22" fill="#ffffff" stroke="currentColor" stroke-width="2"/><circle cx="-8" cy="-3" r="2.6" fill="#333333"/><circle cx="8" cy="-3" r="2.6" fill="#333333"/><ellipse cx="0" cy="5" rx="3" ry="2.2" fill="#f4b6c6"/><path d="M0 7 L0 10 M-5 12 Q-2.5 14 0 10 Q2.5 14 5 12" fill="none" stroke="#333333" stroke-width="1.5" stroke-linecap="round"/></g><text x="90" y="158" font-size="14" text-anchor="middle" fill="currentColor">うさぎ</text><g transform="translate(160 98) scale(1)"><circle cx="0" cy="0" r="22" fill="#ecd2a6" stroke="currentColor" stroke-width="2"/><ellipse cx="-20" cy="1" rx="7" ry="15" fill="#a8784a" stroke="currentColor" stroke-width="2" transform="rotate(18 -20 1)"/><ellipse cx="20" cy="1" rx="7" ry="15" fill="#a8784a" stroke="currentColor" stroke-width="2" transform="rotate(-18 20 1)"/><circle cx="-7" cy="-4" r="2.6" fill="#333333"/><circle cx="7" cy="-4" r="2.6" fill="#333333"/><ellipse cx="0" cy="6" rx="4.5" ry="3.2" fill="#333333"/><path d="M0 9 L0 12 M-5 13 Q0 17 5 13" fill="none" stroke="#333333" stroke-width="1.5" stroke-linecap="round"/><ellipse cx="3" cy="17" rx="3" ry="3.5" fill="#f08080"/></g><text x="160" y="158" font-size="14" text-anchor="middle" fill="currentColor">いぬ</text><g transform="translate(230 98) scale(1)"><circle cx="-16" cy="-16" r="8.5" fill="#b8875a" stroke="currentColor" stroke-width="2"/><circle cx="16" cy="-16" r="8.5" fill="#b8875a" stroke="currentColor" stroke-width="2"/><circle cx="-16" cy="-16" r="4" fill="#f1e2c8"/><circle cx="16" cy="-16" r="4" fill="#f1e2c8"/><circle cx="0" cy="0" r="22" fill="#b8875a" stroke="currentColor" stroke-width="2"/><circle cx="-8" cy="-5" r="2.6" fill="#333333"/><circle cx="8" cy="-5" r="2.6" fill="#333333"/><ellipse cx="0" cy="8" rx="10" ry="7.5" fill="#f1e2c8"/><ellipse cx="0" cy="5" rx="3.8" ry="2.6" fill="#333333"/><path d="M0 8 L0 11 M-4 12 Q0 15 4 12" fill="none" stroke="#333333" stroke-width="1.5" stroke-linecap="round"/></g><text x="230" y="158" font-size="14" text-anchor="middle" fill="currentColor">くま</text><rect x="268" y="77" width="52" height="40" rx="11" fill="none" stroke="#f08080" stroke-width="3"/></svg>'
+          - その どうぶつに ゆびを おいて、なまえを いおう。
         paths:
-          - [うしろの ほうから かぞえる, 1 ばんめは 🐻, くま]
+          - [うしろの ほうから かぞえる, うしろから 1 ばんめは くま, くま]
       - part: 今日
-        text: 🔵 の うえに ある かたちは なんですか。
-        figure: "🟩\n🔵\n🔺"
+        id: "0d74391bfa"
+        text: まるの うえに ある かたちは なんですか。
+        svg: '<svg viewBox="0 0 320 200" xmlns="http://www.w3.org/2000/svg"><polygon points="140,16 180,16 180,56 140,56" fill="#7bc96f" fill-opacity="0.6" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><circle cx="160" cy="100" r="21.6" fill="#7fc8f8" fill-opacity="0.6" stroke="currentColor" stroke-width="2"/><polygon points="160,143 136,182 184,182" fill="#f08080" fill-opacity="0.6" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/></svg>'
         choices: [さんかく, しかく, まる]
         answer: しかく
-        check: "{'🟩': 'しかく', '🔵': 'まる', '🔺': 'さんかく'}[fig.splitlines()[fig.splitlines().index('🔵') - 1]]"
+        check: "(lambda r: {'T': 'さんかく', 'V': 'さんかく', 'S': 'しかく', 'D': 'しかく', 'C': 'まる'}[r[r.index('Cb') - 1][0]])('Sg Cb Tr'.split())"
         hints:
-          - うえは そら の ほうだよ。
-          - 🔵 を みつけて、ゆびを おこう。
-          - ゆびを ひとつ うえに うごかして、かたちの なまえを いおう。
+          - うえは そらの ほうだよ。
+          - text: まるに ◯を つけたよ。やじるしの「うえ」の ほうへ、ゆびを ひとつ うごかそう。
+            svg: '<svg viewBox="0 0 320 200" xmlns="http://www.w3.org/2000/svg"><polygon points="140,16 180,16 180,56 140,56" fill="#7bc96f" fill-opacity="0.6" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><circle cx="160" cy="100" r="21.6" fill="#7fc8f8" fill-opacity="0.6" stroke="currentColor" stroke-width="2"/><polygon points="160,143 136,182 184,182" fill="#f08080" fill-opacity="0.6" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><circle cx="160" cy="100" r="33" fill="none" stroke="#f08080" stroke-width="3"/><line x1="268" y1="100" x2="268" y2="58.5" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/><polygon points="268,48 273.6,58.5 262.4,58.5" fill="currentColor"/><line x1="268" y1="100" x2="268" y2="141.5" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/><polygon points="268,152 262.4,141.5 273.6,141.5" fill="currentColor"/><text x="268" y="36" font-size="14" text-anchor="middle" fill="currentColor">うえ</text><text x="268" y="174" font-size="14" text-anchor="middle" fill="currentColor">した</text></svg>'
+          - ゆびを おいた ところの かたちの なまえを いおう。
         paths:
-          - [🔵 を みつける, ひとつ うえを みる, 🟩 は しかく]
+          - [まるを みつける, ひとつ うえを みる, うえに あるのは しかく]
       - part: 今日
+        id: "33982f5c87"
         text: しかくには、へんが いくつ ありますか。
-        figure: 🔷
+        svg: '<svg viewBox="0 0 320 200" xmlns="http://www.w3.org/2000/svg"><polygon points="160,27.8 230.2,98 160,168.2 89.8,98" fill="#7fc8f8" fill-opacity="0.6" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/></svg>'
         answer: 4
         hints:
           - ふちの まっすぐな せんが へんだよ。
-          - ゆびで ふちを なぞって、まがる ところで とまろう。
+          - text: 1 ぽんめの へんに いろを ぬったよ。まがる ところで とまって、つぎの へんへ すすもう。
+            svg: '<svg viewBox="0 0 320 200" xmlns="http://www.w3.org/2000/svg"><polygon points="160,27.8 230.2,98 160,168.2 89.8,98" fill="#7fc8f8" fill-opacity="0.6" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><line x1="160" y1="27.8" x2="230.2" y2="98" stroke="#2b7fd4" stroke-width="8" stroke-linecap="round"/><line x1="160" y1="27.8" x2="230.2" y2="98" stroke="currentColor" stroke-width="2"/><text x="209.2" y="54.8" font-size="17" text-anchor="middle" fill="currentColor" font-weight="bold">1</text></svg>'
           - かたむいて いても、なぞった へんを かぞえれば いいよ。
         paths:
           - [ふちを なぞる, まがる ところで くぎる, 4 ほん]
@@ -623,49 +764,59 @@ days:
 # 腕だめし（離、D-047）：型を離れた問題。単元が済になってから開き、済の判定には入れない。
 ri:
   - part: 離
+    id: "290c749ebd"
     kinds: [道筋]
     text: おおきな さんかくの なかに、てっぺんから 2 ほんの せんを ひきました。さんかくは ぜんぶで いくつ ありますか。ちいさい さんかくを あわせて できる さんかくも かぞえます。
-    svg: |
-      <svg viewBox="0 0 240 140" xmlns="http://www.w3.org/2000/svg"><polygon points="120,12 20,128 220,128" stroke="currentColor" stroke-width="2" fill="none"/><line x1="120" y1="12" x2="88" y2="128" stroke="currentColor" stroke-width="2"/><line x1="120" y1="12" x2="152" y2="128" stroke="currentColor" stroke-width="2"/></svg>
+    svg: '<svg viewBox="0 0 320 200" xmlns="http://www.w3.org/2000/svg"><polygon points="160,20 30,180 290,180" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><line x1="160" y1="20" x2="118" y2="180" stroke="currentColor" stroke-width="2"/><line x1="160" y1="20" x2="202" y2="180" stroke="currentColor" stroke-width="2"/></svg>'
     answer: 6
     check: "math.comb(4, 2)"
     hints:
-      - いちばん ちいさい さんかくは いくつ あるかな。
-      - となりどうしの 2 つを あわせても、さんかくに なるよ。
+      - text: いちばん ちいさい さんかくに 1、2、3 と ばんごうを つけたよ。
+        svg: '<svg viewBox="0 0 320 200" xmlns="http://www.w3.org/2000/svg"><polygon points="160,20 30,180 290,180" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><line x1="160" y1="20" x2="118" y2="180" stroke="currentColor" stroke-width="2"/><line x1="160" y1="20" x2="202" y2="180" stroke="currentColor" stroke-width="2"/><text x="102.7" y="138" font-size="17" text-anchor="middle" fill="currentColor" font-weight="bold">1</text><text x="160" y="138" font-size="17" text-anchor="middle" fill="currentColor" font-weight="bold">2</text><text x="217.3" y="138" font-size="17" text-anchor="middle" fill="currentColor" font-weight="bold">3</text></svg>'
+      - text: となりどうしの 2 つを あわせても、さんかくに なるよ。ほかにも あるかな。
+        svg: '<svg viewBox="0 0 320 200" xmlns="http://www.w3.org/2000/svg"><polygon points="160,20 30,180 202,180" fill="#f3c969" fill-opacity="0.55"/><polygon points="160,20 30,180 290,180" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><line x1="160" y1="20" x2="118" y2="180" stroke="currentColor" stroke-width="2"/><line x1="160" y1="20" x2="202" y2="180" stroke="currentColor" stroke-width="2"/><text x="102.7" y="138" font-size="17" text-anchor="middle" fill="currentColor" font-weight="bold">1</text><text x="160" y="138" font-size="17" text-anchor="middle" fill="currentColor" font-weight="bold">2</text><text x="217.3" y="138" font-size="17" text-anchor="middle" fill="currentColor" font-weight="bold">3</text></svg>'
       - 3 つ ぜんぶを あわせた かたちも みてみよう。
     paths:
       - [ちいさい さんかくを 1、2、3 と かぞえる, 2 つ あわせた さんかくを 4、5 と かぞえる, 3 つ ぜんぶの おおきな さんかくで 6, 6 こ]
-    note: 見えている小さい三角形 3 つだけを数えて 3 と答えやすい。大きさごとに分けて数える（1 つ、2 つ合わせ、3 つ合わせ）のが道筋。左はしと右はしの三角形を合わせても、まん中を飛ばすので三角形にならない（合わせるのは となりどうしだけ）。
+      - [どの さんかくも てっぺんと したの へんの 2 つの てんで できる, したの へんの てんは 4 つ, 2 つの えらびかたは 3 + 2 + 1 = 6, 6 こ]
+    note: みえて いる ちいさい さんかく 3 つだけを かぞえて 3 と こたえやすい。おおきさごとに わけて かぞえる（1 つ、2 つ あわせ、3 つ あわせ）のが みちすじ。ひだりはしと みぎはしを あわせても、まんなかを とばすので さんかくに ならない（あわせるのは となりどうしだけ）。
   - part: 離
+    id: "bbc7cbe7f2"
     kinds: [総動員, 読み取り]
     uses: [L-002]
-    text: 🔺 🟦 🔴 🟨 を、うえに 2 つ、したに 2 つ ならべました。① 🔺 の すぐ みぎに 🔴 が ある。② 🔴 は したの ならびに ある。③ 🔺 の うえに 🟨 は ない。🔺 の うえに ある かたちは どれですか。
-    figure: "⬜⬜\n⬜⬜"
-    choices:
-      - 🟦
-      - 🟨
-      - 🔴
-    answer: 🟦
-    check: "(lambda s: s.pop() if len(s) == 1 else 'きまらない')({p[p.index('🔺') - 2] for p in itertools.permutations('🔺🟦🔴🟨') if p.index('🔺') in (0, 2) and p.index('🔴') == p.index('🔺') + 1 and p.index('🔴') in (2, 3) and not (p.index('🔺') >= 2 and p[p.index('🔺') - 2] == '🟨')})"
+    text: |-
+      さんかく、あおい しかく、きいろい しかく、まるを、うえに 2 つ、したに 2 つ ならべます。
+      ① さんかくの すぐ みぎに まるが ある。
+      ② まるは したの ならびに ある。
+      ③ さんかくの うえに きいろい しかくは ない。
+      さんかくの うえに ある かたちは どれですか。
+    svg: '<svg viewBox="0 0 320 200" xmlns="http://www.w3.org/2000/svg"><polygon points="60,24.1 39.6,57.3 80.4,57.3" fill="#f08080" fill-opacity="0.6" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><polygon points="108,25 142,25 142,59 108,59" fill="#7fc8f8" fill-opacity="0.6" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><polygon points="173,25 207,25 207,59 173,59" fill="#f3c969" fill-opacity="0.6" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><circle cx="255" cy="42" r="18.4" fill="#f08080" fill-opacity="0.6" stroke="currentColor" stroke-width="2"/><text x="125" y="80" font-size="13" text-anchor="middle" fill="currentColor">あお</text><text x="190" y="80" font-size="13" text-anchor="middle" fill="currentColor">きいろ</text><rect x="120" y="96" width="50" height="50" rx="4" fill="none" stroke="currentColor" stroke-width="2"/><rect x="170" y="96" width="50" height="50" rx="4" fill="none" stroke="currentColor" stroke-width="2"/><rect x="120" y="146" width="50" height="50" rx="4" fill="none" stroke="currentColor" stroke-width="2"/><rect x="170" y="146" width="50" height="50" rx="4" fill="none" stroke="currentColor" stroke-width="2"/><text x="108" y="126" font-size="14" text-anchor="end" fill="currentColor">うえ</text><text x="108" y="176" font-size="14" text-anchor="end" fill="currentColor">した</text></svg>'
+    choices: [あおい しかく, きいろい しかく, まる]
+    answer: あおい しかく
+    check: "(lambda s: {'Sb': 'あおい しかく', 'Sy': 'きいろい しかく', 'Cr': 'まる'}[s.pop()] if len(s) == 1 else 'きまらない')({p[p.index('Tr') - 2] for p in itertools.permutations(['Tr', 'Sb', 'Cr', 'Sy']) if p.index('Tr') in (0, 2) and p.index('Cr') == p.index('Tr') + 1 and p.index('Cr') in (2, 3) and not (p.index('Tr') >= 2 and p[p.index('Tr') - 2] == 'Sy')})"
     hints:
-      - ① と ② を いっしょに つかうと、🔺 と 🔴 の ばしょが きまるよ。
-      - 🔴 が したの ならびなら、🔺 は どこかな。
+      - ① と ② を いっしょに つかうと、さんかくと まるの ばしょが きまるよ。
+      - text: まるは したの ならびの みぎに きまるよ。さんかくは どこに おけるかな。
+        svg: '<svg viewBox="0 0 320 200" xmlns="http://www.w3.org/2000/svg"><polygon points="60,24.1 39.6,57.3 80.4,57.3" fill="#f08080" fill-opacity="0.6" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><polygon points="108,25 142,25 142,59 108,59" fill="#7fc8f8" fill-opacity="0.6" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><polygon points="173,25 207,25 207,59 173,59" fill="#f3c969" fill-opacity="0.6" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><circle cx="255" cy="42" r="18.4" fill="#f08080" fill-opacity="0.6" stroke="currentColor" stroke-width="2"/><text x="125" y="80" font-size="13" text-anchor="middle" fill="currentColor">あお</text><text x="190" y="80" font-size="13" text-anchor="middle" fill="currentColor">きいろ</text><rect x="120" y="96" width="50" height="50" rx="4" fill="none" stroke="currentColor" stroke-width="2"/><rect x="170" y="96" width="50" height="50" rx="4" fill="none" stroke="currentColor" stroke-width="2"/><rect x="120" y="146" width="50" height="50" rx="4" fill="none" stroke="currentColor" stroke-width="2"/><rect x="170" y="146" width="50" height="50" rx="4" fill="none" stroke="currentColor" stroke-width="2"/><text x="108" y="126" font-size="14" text-anchor="end" fill="currentColor">うえ</text><text x="108" y="176" font-size="14" text-anchor="end" fill="currentColor">した</text><circle cx="195" cy="171" r="17.3" fill="#f08080" fill-opacity="0.6" stroke="currentColor" stroke-width="2"/></svg>'
       - のこりの 2 つの ばしょに、③ を つかおう。
     paths:
-      - [① と ② で したの ならびは 🔺🔴, ③ で 🔺 の うえは 🟨 では ない, 🔺 の うえは 🟦, 🟦]
-    note: ヒントを 1 つずつ読むだけでは決まらず、①と②を合わせて先に位置を決めるのが要点（L-002 の推理）。「すぐ みぎ」は同じ段のとなり。紙に形をかいて並べて確かめてよい。
+      - [① と ② で したの ならびは さんかく・まる, ③ で さんかくの うえは きいろい しかくでは ない, さんかくの うえは あおい しかく]
+      - [② で まるは したの ならび, ① で さんかくは まるの ひだり, うえに のこる 2 つの うち、③ で きいろでは ない ほう, あおい しかく]
+    note: ヒントを 1 つずつ よむ だけでは きまらず、① と ② を あわせて さきに ばしょを きめるのが だいじ（L-002 の すいり）。「すぐ みぎ」は おなじ ならびの となり。かみに かたちを かいて ならべて たしかめて よい。
   - part: 離
+    id: "8f15af8517"
     kinds: [総動員, 数, 手数]
     uses: [N-003]
-    text: かどが 4 つの かたちは、かどが 3 つの かたちより いくつ おおいですか。
-    figure: "🔷🔺🟡🟩\n🔻🟧⚪🟦\n🟨🔵🔷🟥"
+    text: かどが 4 つの かたちの かずは、かどが 3 つの かたちの かずより いくつ おおいですか。
+    svg: '<svg viewBox="0 0 320 200" xmlns="http://www.w3.org/2000/svg"><polygon points="55,12.3 80.7,38 55,63.7 29.3,38" fill="#7fc8f8" fill-opacity="0.6" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><polygon points="125,18.1 102.2,55.1 147.8,55.1" fill="#f08080" fill-opacity="0.6" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><circle cx="195" cy="38" r="20.5" fill="#f3c969" fill-opacity="0.6" stroke="currentColor" stroke-width="2"/><polygon points="246,19 284,19 284,57 246,57" fill="#7bc96f" fill-opacity="0.6" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><polygon points="32.2,82.9 77.8,82.9 55,120" fill="#f08080" fill-opacity="0.6" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><polygon points="106,81 144,81 144,119 106,119" fill="#f5a25d" fill-opacity="0.6" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><circle cx="195" cy="100" r="20.5" fill="#c8ccd6" fill-opacity="0.6" stroke="currentColor" stroke-width="2"/><polygon points="246,81 284,81 284,119 246,119" fill="#7fc8f8" fill-opacity="0.6" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><polygon points="36,143 74,143 74,181 36,181" fill="#f3c969" fill-opacity="0.6" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><circle cx="125" cy="162" r="20.5" fill="#7fc8f8" fill-opacity="0.6" stroke="currentColor" stroke-width="2"/><polygon points="195,136.3 220.7,162 195,187.7 169.3,162" fill="#7fc8f8" fill-opacity="0.6" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><polygon points="246,143 284,143 284,181 246,181" fill="#f08080" fill-opacity="0.6" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/></svg>'
     answer: 5
-    check: "(n('🔷') + n('🟩') + n('🟧') + n('🟦') + n('🟨') + n('🟥')) - (n('🔺') + n('🔻'))"
+    check: "(lambda f: len([t for t in f if t[0] in 'SD']) - len([t for t in f if t[0] in 'TV']))('Db Tr Cy Sg Vr So Cw Sb Sy Cb Db Sr'.split())"
     hints:
       - かどが 4 つの かたちに しるしを つけて かぞえよう。かたむいて いても しかくだよ。
-      - かどが 3 つの かたちも かぞえよう。さかさまでも さんかくだよ。
+      - text: かどに ●を つけたよ。●が 4 つの かたちと 3 つの かたちを、べつべつに かぞえよう。
+        svg: '<svg viewBox="0 0 320 200" xmlns="http://www.w3.org/2000/svg"><polygon points="55,12.3 80.7,38 55,63.7 29.3,38" fill="#7fc8f8" fill-opacity="0.6" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><circle cx="55" cy="12.3" r="4.5" fill="#d9534f"/><circle cx="80.7" cy="38" r="4.5" fill="#d9534f"/><circle cx="55" cy="63.7" r="4.5" fill="#d9534f"/><circle cx="29.3" cy="38" r="4.5" fill="#d9534f"/><polygon points="125,18.1 102.2,55.1 147.8,55.1" fill="#f08080" fill-opacity="0.6" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><circle cx="125" cy="18.1" r="4.5" fill="#d9534f"/><circle cx="102.2" cy="55.1" r="4.5" fill="#d9534f"/><circle cx="147.8" cy="55.1" r="4.5" fill="#d9534f"/><circle cx="195" cy="38" r="20.5" fill="#f3c969" fill-opacity="0.6" stroke="currentColor" stroke-width="2"/><polygon points="246,19 284,19 284,57 246,57" fill="#7bc96f" fill-opacity="0.6" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><circle cx="246" cy="19" r="4.5" fill="#d9534f"/><circle cx="284" cy="19" r="4.5" fill="#d9534f"/><circle cx="284" cy="57" r="4.5" fill="#d9534f"/><circle cx="246" cy="57" r="4.5" fill="#d9534f"/><polygon points="32.2,82.9 77.8,82.9 55,120" fill="#f08080" fill-opacity="0.6" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><circle cx="32.2" cy="82.9" r="4.5" fill="#d9534f"/><circle cx="77.8" cy="82.9" r="4.5" fill="#d9534f"/><circle cx="55" cy="120" r="4.5" fill="#d9534f"/><polygon points="106,81 144,81 144,119 106,119" fill="#f5a25d" fill-opacity="0.6" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><circle cx="106" cy="81" r="4.5" fill="#d9534f"/><circle cx="144" cy="81" r="4.5" fill="#d9534f"/><circle cx="144" cy="119" r="4.5" fill="#d9534f"/><circle cx="106" cy="119" r="4.5" fill="#d9534f"/><circle cx="195" cy="100" r="20.5" fill="#c8ccd6" fill-opacity="0.6" stroke="currentColor" stroke-width="2"/><polygon points="246,81 284,81 284,119 246,119" fill="#7fc8f8" fill-opacity="0.6" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><circle cx="246" cy="81" r="4.5" fill="#d9534f"/><circle cx="284" cy="81" r="4.5" fill="#d9534f"/><circle cx="284" cy="119" r="4.5" fill="#d9534f"/><circle cx="246" cy="119" r="4.5" fill="#d9534f"/><polygon points="36,143 74,143 74,181 36,181" fill="#f3c969" fill-opacity="0.6" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><circle cx="36" cy="143" r="4.5" fill="#d9534f"/><circle cx="74" cy="143" r="4.5" fill="#d9534f"/><circle cx="74" cy="181" r="4.5" fill="#d9534f"/><circle cx="36" cy="181" r="4.5" fill="#d9534f"/><circle cx="125" cy="162" r="20.5" fill="#7fc8f8" fill-opacity="0.6" stroke="currentColor" stroke-width="2"/><polygon points="195,136.3 220.7,162 195,187.7 169.3,162" fill="#7fc8f8" fill-opacity="0.6" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><circle cx="195" cy="136.3" r="4.5" fill="#d9534f"/><circle cx="220.7" cy="162" r="4.5" fill="#d9534f"/><circle cx="195" cy="187.7" r="4.5" fill="#d9534f"/><circle cx="169.3" cy="162" r="4.5" fill="#d9534f"/><polygon points="246,143 284,143 284,181 246,181" fill="#f08080" fill-opacity="0.6" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><circle cx="246" cy="143" r="4.5" fill="#d9534f"/><circle cx="284" cy="143" r="4.5" fill="#d9534f"/><circle cx="284" cy="181" r="4.5" fill="#d9534f"/><circle cx="246" cy="181" r="4.5" fill="#d9534f"/></svg>'
       - おおい ほうから すくない ほうを ひこう。かずの せんで もどっても よいよ。
     paths:
-      - [しかくは 🔷🟩🟧🟦🟨🔷🟥 で 7 こ, さんかくは 🔺🔻 で 2 こ, 7 − 2 = 5, 5]
-      - [しかくと さんかくを 1 こずつ せんで むすぶ, しかくが 5 こ あまる, 5]
-    note: 🔷（かたむいた四角）と 🔻（さかさまの三角）を仲間に入れ忘れやすい。まる（かど 0）は数えない。形を見分ける（G-001）、数える、ちがいを出すひき算（N-003）を合わせる。
+      - [しかくは 7 こ（かたむいた しかく 2 こを ふくむ）, さんかくは 2 こ（さかさま 1 こを ふくむ）, 7 − 2 = 5, "5"]
+      - [しかくと さんかくを 1 こずつ せんで むすぶ, しかくが 5 こ あまる, "5"]
+    note: かたむいた しかく（ひしがた）と さかさまの さんかくを なかまに いれ わすれやすい。まる（かど なし）は かぞえない。かたちを みわける（G-001）、かぞえる、ちがいを だす ひきざん（N-003）を あわせる。

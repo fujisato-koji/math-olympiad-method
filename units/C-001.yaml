@@ -1,193 +1,235 @@
 # C-001 もれなく数える
 #
-# 書き方は N-001 の頭の注のとおり。
+# 段 1・水準 1・5 日。印をつけて数える（数え落としと二重に数えるのを防ぐ）、並べ直して 5 のまとまりで数える、散らばったものを種類ごとに数える、N-001 と混ぜる、確認。
+# 書き方は N-001 の頭の注のとおり。子の画面には text、figure、svg、choices、ヒントだけを出す。answer、check、paths、note は保護者用。
 # 前提は N-001（10 までの数）だけなので、数は 10 まで。合わせる・残りは N-001 の「いくつといくつ」の言い方にし、たし算とひき算の式は使わない。
 # 「いくつ多い」（ちがい）は N-003 の中身なので出さない。
 # 図のばらばらの並びは、絵文字のあいだを全角の空白（　）であける。✅ は「もう数えた物」のしるし。
 # check は n(c) で図の中を数える。並べ直した列を選ぶ問題は、数えた数だけ絵文字を並べた文字列を check で作る。
 # 種類の数は、図の行をつないだ文字の集まりの大きさ（len(set(...))）で数える（その図には空白を入れない）。
+# 図（svg）のきまり（D-129）：物は、文字の図と同じ絵文字・同じ並び（行ごとに中よせ）でかく。きいろのふだの 1、2、3 は、しるしをつけたじゅん。
+# うすい絵は「いまは数えない物」、うしろの赤いまるは「同じ種類」、赤いやじるしは「数えるむき」。わの並びは svg でかき、check にはその数を書く。
+# ヒントの図は、はじめの 2〜3 こにふだをつける・数えない物をうすくする・5 のわくや 10 のまるをとちゅうまでぬる、までにして、数えおえた数はかかない。
 
 id: C-001
 days:
   - day: 1
     items:
       - part: 思い出す
+        id: "17bc3b8422"
         text: かめは なんびき いますか。
         figure: "🐢🐢🐢🐢🐢\n🐢🐢"
         answer: 7
         check: "n('🐢')"
         hints:
           - うえの ならびから かぞえよう。
-          - したの ならびに つづけて かぞえよう。
-          - うえを かぞえおわった つぎの かずから、したを かぞえるよ。
+          - text: うえは 1 から 5 まで かぞえたよ。したの ならびに つづけよう。
+            svg: '<svg viewBox="0 0 320 200" xmlns="http://www.w3.org/2000/svg"><text x="56" y="74" font-size="36" text-anchor="middle" dominant-baseline="central">🐢</text><text x="108" y="74" font-size="36" text-anchor="middle" dominant-baseline="central">🐢</text><text x="160" y="74" font-size="36" text-anchor="middle" dominant-baseline="central">🐢</text><text x="212" y="74" font-size="36" text-anchor="middle" dominant-baseline="central">🐢</text><text x="264" y="74" font-size="36" text-anchor="middle" dominant-baseline="central">🐢</text><text x="134" y="126" font-size="36" text-anchor="middle" dominant-baseline="central">🐢</text><text x="186" y="126" font-size="36" text-anchor="middle" dominant-baseline="central">🐢</text><circle cx="74.7" cy="56.3" r="10" fill="#f3c969" fill-opacity=".8" stroke="currentColor" stroke-width="1.5"/><text x="74.7" y="60.9" font-size="13" text-anchor="middle" fill="currentColor" font-weight="bold">1</text><circle cx="126.7" cy="56.3" r="10" fill="#f3c969" fill-opacity=".8" stroke="currentColor" stroke-width="1.5"/><text x="126.7" y="60.9" font-size="13" text-anchor="middle" fill="currentColor" font-weight="bold">2</text><circle cx="178.7" cy="56.3" r="10" fill="#f3c969" fill-opacity=".8" stroke="currentColor" stroke-width="1.5"/><text x="178.7" y="60.9" font-size="13" text-anchor="middle" fill="currentColor" font-weight="bold">3</text><circle cx="230.7" cy="56.3" r="10" fill="#f3c969" fill-opacity=".8" stroke="currentColor" stroke-width="1.5"/><text x="230.7" y="60.9" font-size="13" text-anchor="middle" fill="currentColor" font-weight="bold">4</text><circle cx="282.7" cy="56.3" r="10" fill="#f3c969" fill-opacity=".8" stroke="currentColor" stroke-width="1.5"/><text x="282.7" y="60.9" font-size="13" text-anchor="middle" fill="currentColor" font-weight="bold">5</text></svg>'
+          - 5 の つぎの かずから、したを かぞえるよ。
         paths:
           - [うえを かぞえる（5）, したに つづけて 6、7, 7 ひき]
       - part: 思い出す
+        id: "af56569661"
         text: 7 は 4 と いくつですか。
         figure: 🔵🔵🔵🔵⚪⚪⚪
         answer: 3
         check: "n('⚪')"
         hints:
           - まるは ぜんぶで 7 こ あるね。
-          - あおい まるが 4 こ。のこりは どれかな。
-          - しろい まるを かぞえよう。
+          - text: 7 を、あおい 4 こと のこりに わけたよ。
+            svg: '<svg viewBox="0 0 320 200" xmlns="http://www.w3.org/2000/svg"><text x="40" y="100" font-size="30" text-anchor="middle" dominant-baseline="central">🔵</text><text x="80" y="100" font-size="30" text-anchor="middle" dominant-baseline="central">🔵</text><text x="120" y="100" font-size="30" text-anchor="middle" dominant-baseline="central">🔵</text><text x="160" y="100" font-size="30" text-anchor="middle" dominant-baseline="central">🔵</text><text x="200" y="100" font-size="30" text-anchor="middle" dominant-baseline="central">⚪</text><text x="240" y="100" font-size="30" text-anchor="middle" dominant-baseline="central">⚪</text><text x="280" y="100" font-size="30" text-anchor="middle" dominant-baseline="central">⚪</text><path d="M23 75V68H297V75" fill="none" stroke="currentColor" stroke-width="2"/><text x="160" y="58" font-size="16" text-anchor="middle" fill="currentColor" font-weight="bold">7</text><path d="M23 125V132H177V125" fill="none" stroke="currentColor" stroke-width="2"/><text x="100" y="154" font-size="16" text-anchor="middle" fill="currentColor" font-weight="bold">4</text><path d="M183 125V132H297V125" fill="none" stroke="#f08080" stroke-width="2"/><text x="240" y="154" font-size="16" text-anchor="middle" fill="currentColor" font-weight="bold">？</text></svg>'
+          - のこりの しろい まるを、1 こずつ かぞえよう。
         paths:
           - [あおが 4 こ, しろを かぞえる, 3]
       - part: 見本
-        text: ばらばらの ほしを かぞえよう。
-        figure: "⭐　　⭐\n　⭐　　⭐\n⭐　⭐"
+        id: "ef1b7c52fc"
+        text: |-
+          ばらばらの ほしを かぞえよう。
+          かぞえた ほしに しるしを つけながら、1、2、3 と かぞえるよ。
+          しるしの ない ほしが なくなったら おわり。
+        svg: '<svg viewBox="0 0 320 204" xmlns="http://www.w3.org/2000/svg"><text x="85" y="29" font-size="36" text-anchor="middle" dominant-baseline="central">⭐</text><text x="235" y="29" font-size="36" text-anchor="middle" dominant-baseline="central">⭐</text><text x="110" y="79" font-size="36" text-anchor="middle" dominant-baseline="central">⭐</text><text x="260" y="79" font-size="36" text-anchor="middle" dominant-baseline="central">⭐</text><text x="110" y="129" font-size="36" text-anchor="middle" dominant-baseline="central">⭐</text><text x="210" y="129" font-size="36" text-anchor="middle" dominant-baseline="central">⭐</text><circle cx="104" cy="12" r="11" fill="#f3c969" fill-opacity=".8" stroke="currentColor" stroke-width="1.5"/><text x="104" y="16.6" font-size="13" text-anchor="middle" fill="currentColor" font-weight="bold">1</text><circle cx="254" cy="12" r="11" fill="#f3c969" fill-opacity=".8" stroke="currentColor" stroke-width="1.5"/><text x="254" y="16.6" font-size="13" text-anchor="middle" fill="currentColor" font-weight="bold">2</text><circle cx="129" cy="62" r="11" fill="#f3c969" fill-opacity=".8" stroke="currentColor" stroke-width="1.5"/><text x="129" y="66.6" font-size="13" text-anchor="middle" fill="currentColor" font-weight="bold">3</text><circle cx="279" cy="62" r="11" fill="#f3c969" fill-opacity=".8" stroke="currentColor" stroke-width="1.5"/><text x="279" y="66.6" font-size="13" text-anchor="middle" fill="currentColor" font-weight="bold">4</text><circle cx="129" cy="112" r="11" fill="#f3c969" fill-opacity=".8" stroke="currentColor" stroke-width="1.5"/><text x="129" y="116.6" font-size="13" text-anchor="middle" fill="currentColor" font-weight="bold">5</text><circle cx="229" cy="112" r="11" fill="#f3c969" fill-opacity=".8" stroke="currentColor" stroke-width="1.5"/><text x="229" y="116.6" font-size="13" text-anchor="middle" fill="currentColor" font-weight="bold">6</text><text x="160" y="176" font-size="15" text-anchor="middle" fill="currentColor">しるしの ない ほしは もう ない。</text><text x="160" y="196" font-size="15" text-anchor="middle" fill="currentColor" font-weight="bold">ほしは 6 こ</text></svg>'
         explain: ばらばらに ある ときは、かぞえた ほしに しるしを つけながら かぞえます。「1」と いって 1 こめに しるし、「2」と いって 2 こめに しるし…。しるしの ない ほしが なくなったら おわりです。とばした ほしも、2 かい かぞえた ほしも ないので、ほしは 6 こです。
       - part: 今日
+        id: "941a59220b"
         text: てんとうむしは なんびき いますか。
         figure: "🐞　　🐞\n　🐞　🐞\n🐞　🐞　🐞\n　🐞　🐞"
         answer: 9
         check: "n('🐞')"
         hints:
           - かぞえた てんとうむしに、こころの なかで しるしを つけよう。
-          - うえの ならびから じゅんに かぞえよう。
+          - text: うえの ならびから、1、2、3 と じゅんに しるしを つけて いこう。
+            svg: '<svg viewBox="0 0 320 200" xmlns="http://www.w3.org/2000/svg"><text x="91" y="31" font-size="33" text-anchor="middle" dominant-baseline="central">🐞</text><text x="229" y="31" font-size="33" text-anchor="middle" dominant-baseline="central">🐞</text><text x="137" y="77" font-size="33" text-anchor="middle" dominant-baseline="central">🐞</text><text x="229" y="77" font-size="33" text-anchor="middle" dominant-baseline="central">🐞</text><text x="68" y="123" font-size="33" text-anchor="middle" dominant-baseline="central">🐞</text><text x="160" y="123" font-size="33" text-anchor="middle" dominant-baseline="central">🐞</text><text x="252" y="123" font-size="33" text-anchor="middle" dominant-baseline="central">🐞</text><text x="137" y="169" font-size="33" text-anchor="middle" dominant-baseline="central">🐞</text><text x="229" y="169" font-size="33" text-anchor="middle" dominant-baseline="central">🐞</text><circle cx="107.6" cy="15.4" r="10" fill="#f3c969" fill-opacity=".8" stroke="currentColor" stroke-width="1.5"/><text x="107.6" y="20" font-size="13" text-anchor="middle" fill="currentColor" font-weight="bold">1</text><circle cx="245.6" cy="15.4" r="10" fill="#f3c969" fill-opacity=".8" stroke="currentColor" stroke-width="1.5"/><text x="245.6" y="20" font-size="13" text-anchor="middle" fill="currentColor" font-weight="bold">2</text><circle cx="153.6" cy="61.4" r="10" fill="#f3c969" fill-opacity=".8" stroke="currentColor" stroke-width="1.5"/><text x="153.6" y="66" font-size="13" text-anchor="middle" fill="currentColor" font-weight="bold">3</text></svg>'
           - しるしの ない てんとうむしが のこって いないか みよう。
         paths:
           - [うえの ならびから じゅんに さす, さした ものに しるしを つける, しるしの ない ものが なくなるまで かぞえる, 9 ひき]
-        note: ばらばらだと、1 匹とばしたり 2 回数えたりしやすい。紙に写して、数えたものに印を付けさせてもよい。
+        note: ばらばらだと、1 ぴきとばしたり 2 かい数えたりしやすい。かみにうつして、数えたものに印をつけさせてもよい。
       - part: 今日
+        id: "38473fd65f"
         text: ✅ は もう かぞえた りんごです。まだ かぞえて いない りんごは なんこ ですか。
         figure: "✅🍎✅\n🍎✅🍎\n✅🍎"
         answer: 4
         check: "n('🍎')"
         hints:
           - ✅ の ついた ものは、もう かぞえて あるよ。
-          - ✅ の ない りんごだけを ゆびで さそう。
-          - さした りんごを かぞえよう。
+          - text: ✅ を うすく したよ。のこって いる りんごだけを ゆびで さそう。
+            svg: '<svg viewBox="0 0 320 200" xmlns="http://www.w3.org/2000/svg"><text x="108" y="48" font-size="36" text-anchor="middle" dominant-baseline="central" opacity="0.22">✅</text><text x="160" y="48" font-size="36" text-anchor="middle" dominant-baseline="central">🍎</text><text x="212" y="48" font-size="36" text-anchor="middle" dominant-baseline="central" opacity="0.22">✅</text><text x="108" y="100" font-size="36" text-anchor="middle" dominant-baseline="central">🍎</text><text x="160" y="100" font-size="36" text-anchor="middle" dominant-baseline="central" opacity="0.22">✅</text><text x="212" y="100" font-size="36" text-anchor="middle" dominant-baseline="central">🍎</text><text x="134" y="152" font-size="36" text-anchor="middle" dominant-baseline="central" opacity="0.22">✅</text><text x="186" y="152" font-size="36" text-anchor="middle" dominant-baseline="central">🍎</text></svg>'
+          - さした りんごを、1 こずつ かぞえよう。
         paths:
           - [✅ の ない りんごを さがす, うえから じゅんに かぞえる, 4 こ]
         note: ✅ も数えてしまうことがある。「しるしは数えおわったもの」と確かめる。
       - part: 今日
-        text: 🐻 が いちごを かぞえて います。かぞえた いちごには ✅ が ついて います。いちごは ぜんぶで なんこ ですか。
+        id: "fef42833c8"
+        text: ✅ は、🐻 が もう かぞえた いちごです。いちごは ぜんぶで なんこ ですか。
         figure: "✅✅🍓\n✅🍓"
         answer: 5
         check: "n('✅') + n('🍓')"
         hints:
           - ✅ も、もとは いちごだよ。
-          - ✅ を かぞえてから、いちごに つづけよう。
-          - ✅ の つぎの かずから、いちごを かぞえるよ。
+          - text: ✅ の ところにも、いちごが あるね。
+            svg: '<svg viewBox="0 0 320 200" xmlns="http://www.w3.org/2000/svg"><text x="108" y="74" font-size="36" text-anchor="middle" dominant-baseline="central" opacity="0.45">🍓</text><path d="M101.2 76 l6.6 6.6 l12.1 -14.3" fill="none" stroke="#3fa34d" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/><text x="160" y="74" font-size="36" text-anchor="middle" dominant-baseline="central" opacity="0.45">🍓</text><path d="M153.2 76 l6.6 6.6 l12.1 -14.3" fill="none" stroke="#3fa34d" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/><text x="212" y="74" font-size="36" text-anchor="middle" dominant-baseline="central">🍓</text><text x="134" y="126" font-size="36" text-anchor="middle" dominant-baseline="central" opacity="0.45">🍓</text><path d="M127.2 128 l6.6 6.6 l12.1 -14.3" fill="none" stroke="#3fa34d" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/><text x="186" y="126" font-size="36" text-anchor="middle" dominant-baseline="central">🍓</text></svg>'
+          - ✅ を かぞえてから、つづけて いちごを かぞえよう。
         paths:
           - [✅ を かぞえる（3）, いちごに つづけて 4、5, 5 こ]
-        note: ✅ の付いたものを数えずに 2 と答えやすい。印は「数えた」というだけで、いちごはそこにある。
+        note: ✅ のついたものを数えずに 2 とこたえやすい。印は「数えた」というだけで、いちごはそこにある。
       - part: 今日
+        id: "ba861b1f33"
         text: わに ならんだ おにぎりは なんこ ありますか。いちばん うえの おにぎりから かぞえはじめます。
-        figure: "　　🍙\n🍙　　　🍙\n　🍙　🍙"
+        svg: '<svg viewBox="0 0 320 200" xmlns="http://www.w3.org/2000/svg"><text x="160" y="36" font-size="34" text-anchor="middle" dominant-baseline="central">🍙</text><text x="220.9" y="80.2" font-size="34" text-anchor="middle" dominant-baseline="central">🍙</text><text x="197.6" y="151.8" font-size="34" text-anchor="middle" dominant-baseline="central">🍙</text><text x="122.4" y="151.8" font-size="34" text-anchor="middle" dominant-baseline="central">🍙</text><text x="99.1" y="80.2" font-size="34" text-anchor="middle" dominant-baseline="central">🍙</text></svg>'
         answer: 5
-        check: "n('🍙')"
+        check: "5"
         hints:
           - いちばん うえの おにぎりに しるしを つけよう。
-          - しるしの おにぎりが 1 こめ。ぐるっと まわって 2、3 と かぞえよう。
+          - text: しるしの おにぎりが 1。ぐるっと まわって 2、3 と かぞえよう。
+            svg: '<svg viewBox="0 0 320 200" xmlns="http://www.w3.org/2000/svg"><text x="160" y="36" font-size="34" text-anchor="middle" dominant-baseline="central">🍙</text><text x="220.9" y="80.2" font-size="34" text-anchor="middle" dominant-baseline="central">🍙</text><text x="197.6" y="151.8" font-size="34" text-anchor="middle" dominant-baseline="central">🍙</text><text x="122.4" y="151.8" font-size="34" text-anchor="middle" dominant-baseline="central">🍙</text><text x="99.1" y="80.2" font-size="34" text-anchor="middle" dominant-baseline="central">🍙</text><circle cx="160" cy="36" r="23.8" fill="none" stroke="#f08080" stroke-width="2.5"/><circle cx="178.7" cy="20.7" r="10" fill="#f3c969" fill-opacity=".8" stroke="currentColor" stroke-width="1.5"/><text x="178.7" y="25.3" font-size="13" text-anchor="middle" fill="currentColor" font-weight="bold">1</text><circle cx="239.6" cy="64.9" r="10" fill="#f3c969" fill-opacity=".8" stroke="currentColor" stroke-width="1.5"/><text x="239.6" y="69.5" font-size="13" text-anchor="middle" fill="currentColor" font-weight="bold">2</text><path d="M167.8 69.3A31.7 31.7 0 0 1 167.9 130.7" fill="none" stroke="#f08080" stroke-width="3" stroke-linecap="round"/><polygon points="160.1,132.7 169.1,123.6 172.4,136.4" fill="#f08080"/></svg>'
           - しるしの ところに もどったら おわり。しるしの おにぎりを もう 1 かい かぞえないよ。
         paths:
           - [いちばん うえに しるしを つける, まわりながら かぞえる, しるしに もどったら やめる, 5 こ]
-          - [うえの ならびから じゅんに かぞえる, したの ならびまで つづける, 5 こ]
-        note: はじめの 1 こを 2 回数えて 6 こにしてしまいやすい。数えはじめにしるしをつけ、しるしにもどったところで数えおわる、とたしかめる。
+          - [2 こずつ かぞえる（2、4）, のこりの 1 こで 5, 5 こ]
+        note: はじめの 1 こを 2 かい数えて 6 こにしてしまいやすい。数えはじめにしるしをつけ、しるしにもどったところで数えおわる、とたしかめる。
       - part: 挑戦
+        id: "16658b7fe8"
         text: わに ならんだ ドーナツは なんこ ありますか。
-        figure: "　🍩🍩\n🍩　　🍩\n🍩　　🍩\n　🍩🍩"
+        svg: '<svg viewBox="0 0 320 200" xmlns="http://www.w3.org/2000/svg"><text x="160" y="28" font-size="32" text-anchor="middle" dominant-baseline="central">🍩</text><text x="210.9" y="49.1" font-size="32" text-anchor="middle" dominant-baseline="central">🍩</text><text x="232" y="100" font-size="32" text-anchor="middle" dominant-baseline="central">🍩</text><text x="210.9" y="150.9" font-size="32" text-anchor="middle" dominant-baseline="central">🍩</text><text x="160" y="172" font-size="32" text-anchor="middle" dominant-baseline="central">🍩</text><text x="109.1" y="150.9" font-size="32" text-anchor="middle" dominant-baseline="central">🍩</text><text x="88" y="100" font-size="32" text-anchor="middle" dominant-baseline="central">🍩</text><text x="109.1" y="49.1" font-size="32" text-anchor="middle" dominant-baseline="central">🍩</text></svg>'
         answer: 8
-        check: "n('🍩')"
+        check: "8"
         hints:
           - まるく ならんで いると、どこから かぞえたか わからなく なるね。
-          - はじめの 1 こに しるしを つけてから かぞえよう。
+          - text: はじめの 1 こに しるしを つけてから、ぐるっと まわって かぞえよう。
+            svg: '<svg viewBox="0 0 320 200" xmlns="http://www.w3.org/2000/svg"><text x="160" y="28" font-size="32" text-anchor="middle" dominant-baseline="central">🍩</text><text x="210.9" y="49.1" font-size="32" text-anchor="middle" dominant-baseline="central">🍩</text><text x="232" y="100" font-size="32" text-anchor="middle" dominant-baseline="central">🍩</text><text x="210.9" y="150.9" font-size="32" text-anchor="middle" dominant-baseline="central">🍩</text><text x="160" y="172" font-size="32" text-anchor="middle" dominant-baseline="central">🍩</text><text x="109.1" y="150.9" font-size="32" text-anchor="middle" dominant-baseline="central">🍩</text><text x="88" y="100" font-size="32" text-anchor="middle" dominant-baseline="central">🍩</text><text x="109.1" y="49.1" font-size="32" text-anchor="middle" dominant-baseline="central">🍩</text><circle cx="160" cy="28" r="22.4" fill="none" stroke="#f08080" stroke-width="2.5"/><circle cx="177.6" cy="13.6" r="10" fill="#f3c969" fill-opacity=".8" stroke="currentColor" stroke-width="1.5"/><text x="177.6" y="18.2" font-size="13" text-anchor="middle" fill="currentColor" font-weight="bold">1</text><path d="M170.3 59.7A41.6 41.6 0 0 1 200.5 109.7" fill="none" stroke="#f08080" stroke-width="3" stroke-linecap="round"/><polygon points="198.6,117.5 194.7,105.3 207.6,108.3" fill="#f08080"/></svg>'
           - しるしの ところに もどったら おわりだよ。
         paths:
           - [はじめの 1 こに しるしを つける, まわりながら かぞえる, しるしに もどったら やめる, 8 こ]
-        note: 輪になっていると、はじめの 1 こを 2 回数えて 9 と答えやすい。
+          - [2 こずつ かぞえる（2、4、6、8）, しるしに もどったら やめる, 8 こ]
+        note: わになっていると、はじめの 1 こを 2 かい数えて 9 とこたえやすい。
     extra:
       - part: 今日
+        id: "8874b12b86"
         text: さかなは なんびき いますか。
         figure: "🐟　🐟\n　　🐟\n🐟　🐟　🐟"
         answer: 6
         check: "n('🐟')"
         hints:
           - かぞえた さかなに、こころの なかで しるしを つけよう。
-          - うえの ならびから じゅんに かぞえよう。
+          - text: うえの ならびから、1、2、3 と じゅんに しるしを つけて いこう。
+            svg: '<svg viewBox="0 0 320 200" xmlns="http://www.w3.org/2000/svg"><text x="108" y="48" font-size="36" text-anchor="middle" dominant-baseline="central">🐟</text><text x="212" y="48" font-size="36" text-anchor="middle" dominant-baseline="central">🐟</text><text x="212" y="100" font-size="36" text-anchor="middle" dominant-baseline="central">🐟</text><text x="56" y="152" font-size="36" text-anchor="middle" dominant-baseline="central">🐟</text><text x="160" y="152" font-size="36" text-anchor="middle" dominant-baseline="central">🐟</text><text x="264" y="152" font-size="36" text-anchor="middle" dominant-baseline="central">🐟</text><circle cx="126.7" cy="30.3" r="10" fill="#f3c969" fill-opacity=".8" stroke="currentColor" stroke-width="1.5"/><text x="126.7" y="34.9" font-size="13" text-anchor="middle" fill="currentColor" font-weight="bold">1</text><circle cx="230.7" cy="30.3" r="10" fill="#f3c969" fill-opacity=".8" stroke="currentColor" stroke-width="1.5"/><text x="230.7" y="34.9" font-size="13" text-anchor="middle" fill="currentColor" font-weight="bold">2</text><circle cx="230.7" cy="82.3" r="10" fill="#f3c969" fill-opacity=".8" stroke="currentColor" stroke-width="1.5"/><text x="230.7" y="86.9" font-size="13" text-anchor="middle" fill="currentColor" font-weight="bold">3</text></svg>'
           - しるしの ない さかなが のこって いないか みよう。
         paths:
           - [うえから じゅんに さす, しるしを つけながら かぞえる, 6 ぴき]
       - part: 今日
+        id: "10e53dc1d0"
         text: ✅ は もう かぞえた みかんです。まだ かぞえて いない みかんは なんこ ですか。
         figure: "🍊✅🍊\n✅🍊🍊\n🍊✅"
         answer: 5
         check: "n('🍊')"
         hints:
           - ✅ の ついた ものは、もう かぞえて あるよ。
-          - ✅ の ない みかんだけを ゆびで さそう。
-          - さした みかんを かぞえよう。
+          - text: ✅ を うすく したよ。のこって いる みかんだけを ゆびで さそう。
+            svg: '<svg viewBox="0 0 320 200" xmlns="http://www.w3.org/2000/svg"><text x="108" y="48" font-size="36" text-anchor="middle" dominant-baseline="central">🍊</text><text x="160" y="48" font-size="36" text-anchor="middle" dominant-baseline="central" opacity="0.22">✅</text><text x="212" y="48" font-size="36" text-anchor="middle" dominant-baseline="central">🍊</text><text x="108" y="100" font-size="36" text-anchor="middle" dominant-baseline="central" opacity="0.22">✅</text><text x="160" y="100" font-size="36" text-anchor="middle" dominant-baseline="central">🍊</text><text x="212" y="100" font-size="36" text-anchor="middle" dominant-baseline="central">🍊</text><text x="134" y="152" font-size="36" text-anchor="middle" dominant-baseline="central">🍊</text><text x="186" y="152" font-size="36" text-anchor="middle" dominant-baseline="central" opacity="0.22">✅</text></svg>'
+          - さした みかんを、1 こずつ かぞえよう。
         paths:
           - [✅ の ない みかんを さがす, うえから じゅんに かぞえる, 5 こ]
       - part: 挑戦
+        id: "f9054cff76"
         text: わに ならんだ クッキーは なんこ ありますか。
-        figure: "　🍪🍪\n🍪　　🍪\n　🍪🍪"
+        svg: '<svg viewBox="0 0 320 200" xmlns="http://www.w3.org/2000/svg"><text x="160" y="34" font-size="34" text-anchor="middle" dominant-baseline="central">🍪</text><text x="217.2" y="67" font-size="34" text-anchor="middle" dominant-baseline="central">🍪</text><text x="217.2" y="133" font-size="34" text-anchor="middle" dominant-baseline="central">🍪</text><text x="160" y="166" font-size="34" text-anchor="middle" dominant-baseline="central">🍪</text><text x="102.8" y="133" font-size="34" text-anchor="middle" dominant-baseline="central">🍪</text><text x="102.8" y="67" font-size="34" text-anchor="middle" dominant-baseline="central">🍪</text></svg>'
         answer: 6
-        check: "n('🍪')"
+        check: "6"
         hints:
           - どこから かぞえはじめるか きめよう。
-          - はじめの 1 こに しるしを つけよう。
+          - text: はじめの 1 こに しるしを つけたよ。ぐるっと まわって かぞえよう。
+            svg: '<svg viewBox="0 0 320 200" xmlns="http://www.w3.org/2000/svg"><text x="160" y="34" font-size="34" text-anchor="middle" dominant-baseline="central">🍪</text><text x="217.2" y="67" font-size="34" text-anchor="middle" dominant-baseline="central">🍪</text><text x="217.2" y="133" font-size="34" text-anchor="middle" dominant-baseline="central">🍪</text><text x="160" y="166" font-size="34" text-anchor="middle" dominant-baseline="central">🍪</text><text x="102.8" y="133" font-size="34" text-anchor="middle" dominant-baseline="central">🍪</text><text x="102.8" y="67" font-size="34" text-anchor="middle" dominant-baseline="central">🍪</text><circle cx="160" cy="34" r="23.8" fill="none" stroke="#f08080" stroke-width="2.5"/><circle cx="178.7" cy="18.7" r="10" fill="#f3c969" fill-opacity=".8" stroke="currentColor" stroke-width="1.5"/><text x="178.7" y="23.3" font-size="13" text-anchor="middle" fill="currentColor" font-weight="bold">1</text><path d="M168.3 67.3A33.7 33.7 0 0 1 182.5 125" fill="none" stroke="#f08080" stroke-width="3" stroke-linecap="round"/><polygon points="176.6,130.4 180.4,118.1 189.2,127.9" fill="#f08080"/></svg>'
           - しるしの ところに もどったら おわりだよ。
         paths:
           - [はじめの 1 こに しるしを つける, まわりながら かぞえる, 6 こ]
-        note: はじめの 1 こを 2 回数えて 7 と答えやすい。
+          - [2 こずつ かぞえる（2、4、6）, しるしに もどったら やめる, 6 こ]
+        note: はじめの 1 こを 2 かい数えて 7 とこたえやすい。
 
   - day: 2
     items:
       - part: 思い出す
+        id: "02b02d578d"
         text: ちょうちょは なんびき いますか。
         figure: "🦋　　🦋\n🦋　🦋\n　　🦋"
         answer: 5
         check: "n('🦋')"
         hints:
           - かぞえた ちょうちょに、こころの なかで しるしを つけよう。
-          - うえの ならびから じゅんに かぞえよう。
+          - text: うえの ならびから、1、2 と じゅんに しるしを つけて いこう。
+            svg: '<svg viewBox="0 0 320 200" xmlns="http://www.w3.org/2000/svg"><text x="82" y="48" font-size="36" text-anchor="middle" dominant-baseline="central">🦋</text><text x="238" y="48" font-size="36" text-anchor="middle" dominant-baseline="central">🦋</text><text x="108" y="100" font-size="36" text-anchor="middle" dominant-baseline="central">🦋</text><text x="212" y="100" font-size="36" text-anchor="middle" dominant-baseline="central">🦋</text><text x="212" y="152" font-size="36" text-anchor="middle" dominant-baseline="central">🦋</text><circle cx="100.7" cy="30.3" r="10" fill="#f3c969" fill-opacity=".8" stroke="currentColor" stroke-width="1.5"/><text x="100.7" y="34.9" font-size="13" text-anchor="middle" fill="currentColor" font-weight="bold">1</text><circle cx="256.7" cy="30.3" r="10" fill="#f3c969" fill-opacity=".8" stroke="currentColor" stroke-width="1.5"/><text x="256.7" y="34.9" font-size="13" text-anchor="middle" fill="currentColor" font-weight="bold">2</text></svg>'
           - しるしの ない ちょうちょが いないか みよう。
         paths:
           - [うえから じゅんに さす, しるしを つけながら かぞえる, 5 ひき]
       - part: 思い出す
+        id: "4c8e953d08"
         text: ✅ は もう かぞえた さかなです。まだ かぞえて いない さかなは なんびき ですか。
         figure: "✅🐟✅✅\n🐟✅🐟"
         answer: 3
         check: "n('🐟')"
         hints:
           - ✅ の ついた ものは、もう かぞえて あるよ。
-          - ✅ の ない さかなだけを ゆびで さそう。
-          - さした さかなを かぞえよう。
+          - text: ✅ を うすく したよ。のこって いる さかなだけを ゆびで さそう。
+            svg: '<svg viewBox="0 0 320 200" xmlns="http://www.w3.org/2000/svg"><text x="82" y="74" font-size="36" text-anchor="middle" dominant-baseline="central" opacity="0.22">✅</text><text x="134" y="74" font-size="36" text-anchor="middle" dominant-baseline="central">🐟</text><text x="186" y="74" font-size="36" text-anchor="middle" dominant-baseline="central" opacity="0.22">✅</text><text x="238" y="74" font-size="36" text-anchor="middle" dominant-baseline="central" opacity="0.22">✅</text><text x="108" y="126" font-size="36" text-anchor="middle" dominant-baseline="central">🐟</text><text x="160" y="126" font-size="36" text-anchor="middle" dominant-baseline="central" opacity="0.22">✅</text><text x="212" y="126" font-size="36" text-anchor="middle" dominant-baseline="central">🐟</text></svg>'
+          - さした さかなを、1 ぴきずつ かぞえよう。
         paths:
           - [✅ の ない さかなを さがす, かぞえる, 3 びき]
       - part: 見本
-        text: ばらばらの クッキーを 1 れつに ならべなおして かぞえよう。
-        figure: "🍪　🍪\n🍪　　🍪\n　🍪　🍪🍪"
+        id: "fd6a7776dd"
+        text: |-
+          ばらばらの クッキーを 1 れつに ならべなおして かぞえよう。
+          5 こで ひとまとまりに すると、かぞえやすいよ。
+        svg: '<svg viewBox="0 0 320 200" xmlns="http://www.w3.org/2000/svg"><rect x="66" y="2" width="188" height="90" rx="12" fill="none" stroke="currentColor" stroke-width="2" stroke-dasharray="5 4"/><text x="132" y="18" font-size="24" text-anchor="middle" dominant-baseline="central">🍪</text><text x="188" y="18" font-size="24" text-anchor="middle" dominant-baseline="central">🍪</text><text x="118" y="46" font-size="24" text-anchor="middle" dominant-baseline="central">🍪</text><text x="202" y="46" font-size="24" text-anchor="middle" dominant-baseline="central">🍪</text><text x="132" y="74" font-size="24" text-anchor="middle" dominant-baseline="central">🍪</text><text x="188" y="74" font-size="24" text-anchor="middle" dominant-baseline="central">🍪</text><text x="216" y="74" font-size="24" text-anchor="middle" dominant-baseline="central">🍪</text><line x1="160" y1="98" x2="160" y2="116" stroke="#f08080" stroke-width="3" stroke-linecap="round"/><polygon points="160,124 154,114 166,114" fill="#f08080"/><text x="172" y="116" font-size="13" text-anchor="start" fill="currentColor">1 れつに ならべなおす</text><text x="46" y="146" font-size="28" text-anchor="middle" dominant-baseline="central">🍪</text><text x="84" y="146" font-size="28" text-anchor="middle" dominant-baseline="central">🍪</text><text x="122" y="146" font-size="28" text-anchor="middle" dominant-baseline="central">🍪</text><text x="160" y="146" font-size="28" text-anchor="middle" dominant-baseline="central">🍪</text><text x="198" y="146" font-size="28" text-anchor="middle" dominant-baseline="central">🍪</text><text x="236" y="146" font-size="28" text-anchor="middle" dominant-baseline="central">🍪</text><text x="274" y="146" font-size="28" text-anchor="middle" dominant-baseline="central">🍪</text><path d="M30 161V168H214V161" fill="none" stroke="currentColor" stroke-width="2"/><text x="122" y="190" font-size="16" text-anchor="middle" fill="currentColor" font-weight="bold">5</text><path d="M220 161V168H290V161" fill="none" stroke="#f08080" stroke-width="2"/><text x="255" y="190" font-size="16" text-anchor="middle" fill="currentColor" font-weight="bold">2</text></svg>'
         explain: クッキーを 1 れつに ならべなおすと 🍪🍪🍪🍪🍪🍪🍪 に なります。はじめの 5 こを「5」の まとまりと みると、のこりは 2 こ。5 と 2 で 7 こです。ならべなおしても、クッキーの かずは かわりません。
       - part: 今日
+        id: "fafe8d7bed"
         text: ばらばらの ボールを 1 れつに ならべなおします。ただしい ならびは どれですか。
         figure: "⚽　　⚽\n　⚽\n⚽　　⚽"
         choices: [⚽⚽⚽⚽, ⚽⚽⚽⚽⚽, ⚽⚽⚽⚽⚽⚽]
         answer: ⚽⚽⚽⚽⚽
         check: "'⚽' * n('⚽')"
         hints:
-          - さきに ばらばらの ボールを かぞえよう。
-          - えらぶ ならびの ボールも かぞえよう。
-          - おなじ かずの ならびが こたえだよ。
+          - text: ばらばらの ボールに しるしを つけながら かぞえよう。
+            svg: '<svg viewBox="0 0 320 200" xmlns="http://www.w3.org/2000/svg"><text x="82" y="48" font-size="36" text-anchor="middle" dominant-baseline="central">⚽</text><text x="238" y="48" font-size="36" text-anchor="middle" dominant-baseline="central">⚽</text><text x="186" y="100" font-size="36" text-anchor="middle" dominant-baseline="central">⚽</text><text x="82" y="152" font-size="36" text-anchor="middle" dominant-baseline="central">⚽</text><text x="238" y="152" font-size="36" text-anchor="middle" dominant-baseline="central">⚽</text><circle cx="100.7" cy="30.3" r="10" fill="#f3c969" fill-opacity=".8" stroke="currentColor" stroke-width="1.5"/><text x="100.7" y="34.9" font-size="13" text-anchor="middle" fill="currentColor" font-weight="bold">1</text><circle cx="256.7" cy="30.3" r="10" fill="#f3c969" fill-opacity=".8" stroke="currentColor" stroke-width="1.5"/><text x="256.7" y="34.9" font-size="13" text-anchor="middle" fill="currentColor" font-weight="bold">2</text></svg>'
+          - えらぶ ならびの ボールも、1 つずつ かぞえよう。
+          - ばらばらの ボールと おなじ かずの ならびを さがそう。
         paths:
           - [ばらばらの ボールを かぞえる（5）, ならびの ボールを かぞえる, 5 この ならび]
-        note: 並びの長さを見ただけで選びやすい。両方を数えて比べさせる。
+        note: 並びのながさを見ただけで選びやすい。どちらも数えてくらべさせる。
       - part: 今日
+        id: "65b56d2b36"
         text: みかんは なんこ ありますか。5 こ ずつ ならべなおすと かぞえやすいよ。
         figure: "🍊　🍊🍊\n🍊　　🍊\n🍊🍊　🍊"
         answer: 8
         check: "n('🍊')"
         hints:
           - かみに 5 こを 1 れつに かいてみよう。
-          - 5 こ かいたら、のこりを したの ならびに かこう。
-          - 5 の つぎから、したの ならびを かぞえよう。
+          - text: うえの れつに 5 こ ならべたよ。のこりを したの れつに ならべよう。
+            svg: '<svg viewBox="0 0 320 200" xmlns="http://www.w3.org/2000/svg"><rect x="38" y="38" width="44" height="44" rx="7" fill="none" stroke="currentColor" stroke-width="2"/><text x="60" y="60" font-size="28" text-anchor="middle" dominant-baseline="central">🍊</text><rect x="86" y="38" width="44" height="44" rx="7" fill="none" stroke="currentColor" stroke-width="2"/><text x="108" y="60" font-size="28" text-anchor="middle" dominant-baseline="central">🍊</text><rect x="134" y="38" width="44" height="44" rx="7" fill="none" stroke="currentColor" stroke-width="2"/><text x="156" y="60" font-size="28" text-anchor="middle" dominant-baseline="central">🍊</text><rect x="182" y="38" width="44" height="44" rx="7" fill="none" stroke="currentColor" stroke-width="2"/><text x="204" y="60" font-size="28" text-anchor="middle" dominant-baseline="central">🍊</text><rect x="230" y="38" width="44" height="44" rx="7" fill="none" stroke="currentColor" stroke-width="2"/><text x="252" y="60" font-size="28" text-anchor="middle" dominant-baseline="central">🍊</text><rect x="38" y="102" width="44" height="44" rx="7" fill="none" stroke="currentColor" stroke-width="2" stroke-dasharray="5 4"/><rect x="86" y="102" width="44" height="44" rx="7" fill="none" stroke="currentColor" stroke-width="2" stroke-dasharray="5 4"/><rect x="134" y="102" width="44" height="44" rx="7" fill="none" stroke="currentColor" stroke-width="2" stroke-dasharray="5 4"/><rect x="182" y="102" width="44" height="44" rx="7" fill="none" stroke="currentColor" stroke-width="2" stroke-dasharray="5 4"/><rect x="230" y="102" width="44" height="44" rx="7" fill="none" stroke="currentColor" stroke-width="2" stroke-dasharray="5 4"/><text x="28" y="63" font-size="15" text-anchor="end" fill="currentColor" font-weight="bold">5</text><line x1="298" y1="60" x2="298" y2="112" stroke="#f08080" stroke-width="2.5" stroke-linecap="round"/><polygon points="298,120 292,110 304,110" fill="#f08080"/></svg>'
+          - 5 の つぎから、したの れつを かぞえよう。
         paths:
           - [5 こを 1 れつに ならべる, のこりを したに ならべる, 5 と 3 で 8, 8 こ]
           - [しるしを つけながら 1 こずつ かぞえる, 8 こ]
       - part: 今日
+        id: "2eb242c7c2"
         text: いぬと ねこでは、どちらが おおいですか。
         figure: "🐶　🐱🐶\n🐱　🐶\n🐶🐱　🐶"
         choices: [いぬ, ねこ]
@@ -195,279 +237,336 @@ days:
         check: "'いぬ' if n('🐶') > n('🐱') else 'ねこ'"
         hints:
           - いぬと ねこが まざって いるね。
-          - いぬだけを 1 れつに、ねこだけを 1 れつに ならべなおしてみよう。
-          - ならべた れつを 1 ぴきずつ せんで むすぼう。
+          - text: いぬを 1 れつ、ねこを 1 れつに ならべて、1 ぴきずつ せんで むすぼう。
+            svg: '<svg viewBox="0 0 320 200" xmlns="http://www.w3.org/2000/svg"><text x="52" y="66" font-size="15" text-anchor="end" fill="currentColor">いぬ</text><text x="52" y="146" font-size="15" text-anchor="end" fill="currentColor">ねこ</text><text x="90" y="60" font-size="34" text-anchor="middle" dominant-baseline="central">🐶</text><text x="90" y="140" font-size="34" text-anchor="middle" dominant-baseline="central">🐱</text><line x1="90" y1="82" x2="90" y2="118" stroke="#f08080" stroke-width="3" stroke-linecap="round"/><text x="142" y="60" font-size="34" text-anchor="middle" dominant-baseline="central">🐶</text><text x="142" y="140" font-size="34" text-anchor="middle" dominant-baseline="central">🐱</text><line x1="142" y1="82" x2="142" y2="118" stroke="#f08080" stroke-width="3" stroke-linecap="round"/><text x="204" y="66" font-size="20" text-anchor="start" fill="currentColor">…</text><text x="204" y="146" font-size="20" text-anchor="start" fill="currentColor">…</text></svg>'
+          - せんで むすべずに のこった ほうが おおいよ。
         paths:
           - [いぬを かぞえる（5）, ねこを かぞえる（3）, 5 は 3 より おおきい, いぬ]
           - [いぬと ねこを べつの れつに ならべる, 1 ぴきずつ むすぶ, いぬが のこる, いぬ]
       - part: 挑戦
+        id: "df6022bc6f"
         text: ケーキを 10 こに したいです。いま ある ケーキは これだけです。あと なんこ あれば よいですか。
         figure: "🍰　🍰\n🍰🍰　🍰\n　🍰🍰"
         answer: 3
         check: "10 - n('🍰')"
         hints:
           - いま ある ケーキを かぞえよう。
-          - 10 は その かずと いくつかな。
-          - まるを 10 こ かいて、ある ぶんを ぬってみよう。
+          - text: まるを 10 こ かいたよ。ケーキの かずだけ、まるを ぬって いこう。
+            svg: '<svg viewBox="0 0 320 200" xmlns="http://www.w3.org/2000/svg"><circle cx="80" cy="70" r="15" fill="#7fc8f8" fill-opacity=".7" stroke="currentColor" stroke-width="2"/><circle cx="80" cy="44" r="9" fill="#f3c969" fill-opacity=".8" stroke="currentColor" stroke-width="1.5"/><text x="80" y="48.6" font-size="13" text-anchor="middle" fill="currentColor" font-weight="bold">1</text><circle cx="120" cy="70" r="15" fill="#7fc8f8" fill-opacity=".7" stroke="currentColor" stroke-width="2"/><circle cx="120" cy="44" r="9" fill="#f3c969" fill-opacity=".8" stroke="currentColor" stroke-width="1.5"/><text x="120" y="48.6" font-size="13" text-anchor="middle" fill="currentColor" font-weight="bold">2</text><circle cx="160" cy="70" r="15" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="200" cy="70" r="15" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="240" cy="70" r="15" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="80" cy="114" r="15" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="120" cy="114" r="15" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="160" cy="114" r="15" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="200" cy="114" r="15" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="240" cy="114" r="15" fill="none" stroke="currentColor" stroke-width="2"/></svg>'
+          - ぬって いない まるの かずが、あと いる かずだよ。
         paths:
           - [ケーキを かぞえる（7）, 10 は 7 と 3, 3 こ]
-          - ["10 こから、いまある 7 こをひく", "10 − 7 = 3", "3 こ"]
-        note: ある数（7）をそのまま答えやすい。「あといくつ」は 10 の残りであることを確かめる。
+          - [7 の つぎから 10 まで かぞえる, 8、9、10 で 3 つ, 3 こ]
+        note: ある数（7）をそのままこたえやすい。「あといくつ」は 10 の残りであることをたしかめる。
       - part: わけ
+        id: "537c473b3c"
         text: ばらばらの クッキーを 1 れつに ならべなおしても、かずは かわりません。どうして そう いえるのか、くちで いってみよう。
         figure: "🍪　🍪\n　🍪　🍪\n🍪"
-        explain: 「ひとつも ふやして いないし、ひとつも とって いないから」「ならべる まえも あとも、かぞえると 5 こ だから」と言えればよい。並べ方が変わっても数は変わらない（数の保存）ことに気づけば、なおよい。長く並ぶと多く見える子もいる。そのときは並べる前と後を 1 こずつ線で結んで確かめる。
+        explain: 「ひとつも ふやして いないし、ひとつも とって いないから」「ならべる まえも あとも、かぞえると 5 こ だから」と言えればよい。並べ方がかわっても数はかわらない（数のほぞん）ことに気づけば、なおよい。ながく並ぶと多く見える子もいる。そのときは並べるまえとあとを 1 こずつせんでむすんでたしかめる。
         hints:
           - ならべなおす とき、クッキーを たしたかな、とったかな。
-          - まえと あとで、かぞえて くらべてみよう。
+          - text: ならべる まえと あとを、1 こずつ せんで むすんで みよう。
+            svg: '<svg viewBox="0 0 320 200" xmlns="http://www.w3.org/2000/svg"><text x="58" y="56" font-size="15" text-anchor="end" fill="currentColor">まえ</text><text x="58" y="166" font-size="15" text-anchor="end" fill="currentColor">あと</text><text x="128" y="20" font-size="26" text-anchor="middle" dominant-baseline="central">🍪</text><text x="192" y="20" font-size="26" text-anchor="middle" dominant-baseline="central">🍪</text><text x="144" y="52" font-size="26" text-anchor="middle" dominant-baseline="central">🍪</text><text x="208" y="52" font-size="26" text-anchor="middle" dominant-baseline="central">🍪</text><text x="160" y="84" font-size="26" text-anchor="middle" dominant-baseline="central">🍪</text><text x="92" y="160" font-size="26" text-anchor="middle" dominant-baseline="central">🍪</text><text x="132" y="160" font-size="26" text-anchor="middle" dominant-baseline="central">🍪</text><text x="172" y="160" font-size="26" text-anchor="middle" dominant-baseline="central">🍪</text><text x="212" y="160" font-size="26" text-anchor="middle" dominant-baseline="central">🍪</text><text x="252" y="160" font-size="26" text-anchor="middle" dominant-baseline="central">🍪</text><line x1="128" y1="34" x2="92" y2="146" stroke="#f08080" stroke-width="2.5" stroke-linecap="round" stroke-dasharray="5 4"/><line x1="192" y1="34" x2="132" y2="146" stroke="#f08080" stroke-width="2.5" stroke-linecap="round" stroke-dasharray="5 4"/></svg>'
           - 「だから」を つかって いってみよう。
         paths:
           - [たしても とっても いない, まえも あとも 5 こ, だから かずは かわらない]
+          - [まえと あとを 1 こずつ せんで むすぶ, どれも あまらない, だから かずは かわらない]
     extra:
       - part: 今日
+        id: "87f34aafe3"
         text: ばらばらの チューリップを 1 れつに ならべなおします。ただしい ならびは どれですか。
         figure: "🌷　🌷🌷\n　🌷\n🌷　🌷"
         choices: [🌷🌷🌷🌷🌷🌷🌷, 🌷🌷🌷🌷🌷, 🌷🌷🌷🌷🌷🌷]
         answer: 🌷🌷🌷🌷🌷🌷
         check: "'🌷' * n('🌷')"
         hints:
-          - さきに ばらばらの チューリップを かぞえよう。
-          - えらぶ ならびも かぞえよう。
-          - おなじ かずの ならびが こたえだよ。
+          - text: ばらばらの チューリップに しるしを つけながら かぞえよう。
+            svg: '<svg viewBox="0 0 320 200" xmlns="http://www.w3.org/2000/svg"><text x="82" y="48" font-size="36" text-anchor="middle" dominant-baseline="central">🌷</text><text x="186" y="48" font-size="36" text-anchor="middle" dominant-baseline="central">🌷</text><text x="238" y="48" font-size="36" text-anchor="middle" dominant-baseline="central">🌷</text><text x="186" y="100" font-size="36" text-anchor="middle" dominant-baseline="central">🌷</text><text x="108" y="152" font-size="36" text-anchor="middle" dominant-baseline="central">🌷</text><text x="212" y="152" font-size="36" text-anchor="middle" dominant-baseline="central">🌷</text><circle cx="100.7" cy="30.3" r="10" fill="#f3c969" fill-opacity=".8" stroke="currentColor" stroke-width="1.5"/><text x="100.7" y="34.9" font-size="13" text-anchor="middle" fill="currentColor" font-weight="bold">1</text><circle cx="204.7" cy="30.3" r="10" fill="#f3c969" fill-opacity=".8" stroke="currentColor" stroke-width="1.5"/><text x="204.7" y="34.9" font-size="13" text-anchor="middle" fill="currentColor" font-weight="bold">2</text></svg>'
+          - えらぶ ならびの チューリップも、1 つずつ かぞえよう。
+          - ばらばらの チューリップと おなじ かずの ならびを さがそう。
         paths:
           - [ばらばらの チューリップを かぞえる（6）, ならびを かぞえる, 6 この ならび]
       - part: 今日
+        id: "7bdfd7c1e6"
         text: ひよこは なんわ いますか。5 わ ずつ ならべなおすと かぞえやすいよ。
         figure: "🐥🐥　🐥\n🐥　🐥🐥\n　🐥🐥🐥"
         answer: 9
         check: "n('🐥')"
         hints:
           - かみに 5 わを 1 れつに かいてみよう。
-          - のこりを したの ならびに かこう。
-          - 5 の つぎから、したの ならびを かぞえよう。
+          - text: うえの れつに 5 わ ならべたよ。のこりを したの れつに ならべよう。
+            svg: '<svg viewBox="0 0 320 200" xmlns="http://www.w3.org/2000/svg"><rect x="38" y="38" width="44" height="44" rx="7" fill="none" stroke="currentColor" stroke-width="2"/><text x="60" y="60" font-size="28" text-anchor="middle" dominant-baseline="central">🐥</text><rect x="86" y="38" width="44" height="44" rx="7" fill="none" stroke="currentColor" stroke-width="2"/><text x="108" y="60" font-size="28" text-anchor="middle" dominant-baseline="central">🐥</text><rect x="134" y="38" width="44" height="44" rx="7" fill="none" stroke="currentColor" stroke-width="2"/><text x="156" y="60" font-size="28" text-anchor="middle" dominant-baseline="central">🐥</text><rect x="182" y="38" width="44" height="44" rx="7" fill="none" stroke="currentColor" stroke-width="2"/><text x="204" y="60" font-size="28" text-anchor="middle" dominant-baseline="central">🐥</text><rect x="230" y="38" width="44" height="44" rx="7" fill="none" stroke="currentColor" stroke-width="2"/><text x="252" y="60" font-size="28" text-anchor="middle" dominant-baseline="central">🐥</text><rect x="38" y="102" width="44" height="44" rx="7" fill="none" stroke="currentColor" stroke-width="2" stroke-dasharray="5 4"/><rect x="86" y="102" width="44" height="44" rx="7" fill="none" stroke="currentColor" stroke-width="2" stroke-dasharray="5 4"/><rect x="134" y="102" width="44" height="44" rx="7" fill="none" stroke="currentColor" stroke-width="2" stroke-dasharray="5 4"/><rect x="182" y="102" width="44" height="44" rx="7" fill="none" stroke="currentColor" stroke-width="2" stroke-dasharray="5 4"/><rect x="230" y="102" width="44" height="44" rx="7" fill="none" stroke="currentColor" stroke-width="2" stroke-dasharray="5 4"/><text x="28" y="63" font-size="15" text-anchor="end" fill="currentColor" font-weight="bold">5</text><line x1="298" y1="60" x2="298" y2="112" stroke="#f08080" stroke-width="2.5" stroke-linecap="round"/><polygon points="298,120 292,110 304,110" fill="#f08080"/></svg>'
+          - 5 の つぎから、したの れつを かぞえよう。
         paths:
           - [5 わを 1 れつに ならべる, のこりを したに ならべる, 5 と 4 で 9, 9 わ]
       - part: 挑戦
+        id: "7f698178f6"
         text: ふうせんを 10 こに したいです。いま ある ふうせんは これだけです。あと なんこ あれば よいですか。
         figure: "🎈　🎈🎈\n🎈\n　🎈🎈"
         answer: 4
         check: "10 - n('🎈')"
         hints:
           - いま ある ふうせんを かぞえよう。
-          - 10 は その かずと いくつかな。
-          - まるを 10 こ かいて、ある ぶんを ぬってみよう。
+          - text: まるを 10 こ かいたよ。ふうせんの かずだけ、まるを ぬって いこう。
+            svg: '<svg viewBox="0 0 320 200" xmlns="http://www.w3.org/2000/svg"><circle cx="80" cy="70" r="15" fill="#7fc8f8" fill-opacity=".7" stroke="currentColor" stroke-width="2"/><circle cx="80" cy="44" r="9" fill="#f3c969" fill-opacity=".8" stroke="currentColor" stroke-width="1.5"/><text x="80" y="48.6" font-size="13" text-anchor="middle" fill="currentColor" font-weight="bold">1</text><circle cx="120" cy="70" r="15" fill="#7fc8f8" fill-opacity=".7" stroke="currentColor" stroke-width="2"/><circle cx="120" cy="44" r="9" fill="#f3c969" fill-opacity=".8" stroke="currentColor" stroke-width="1.5"/><text x="120" y="48.6" font-size="13" text-anchor="middle" fill="currentColor" font-weight="bold">2</text><circle cx="160" cy="70" r="15" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="200" cy="70" r="15" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="240" cy="70" r="15" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="80" cy="114" r="15" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="120" cy="114" r="15" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="160" cy="114" r="15" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="200" cy="114" r="15" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="240" cy="114" r="15" fill="none" stroke="currentColor" stroke-width="2"/></svg>'
+          - ぬって いない まるの かずが、あと いる かずだよ。
         paths:
           - [ふうせんを かぞえる（6）, 10 は 6 と 4, 4 こ]
+          - [まるを 10 こ かいて 6 こ ぬる, ぬって いない まるを かぞえる, 4 こ]
 
   - day: 3
     items:
       - part: 思い出す
+        id: "395485cb66"
         text: ドーナツは なんこ ありますか。5 こ ずつ ならべなおすと かぞえやすいよ。
         figure: "🍩🍩　🍩\n🍩　🍩🍩\n🍩"
         answer: 7
         check: "n('🍩')"
         hints:
           - かみに 5 こを 1 れつに かいてみよう。
-          - のこりを したの ならびに かこう。
-          - 5 の つぎから かぞえよう。
+          - text: うえの れつに 5 こ ならべたよ。のこりを したの れつに ならべよう。
+            svg: '<svg viewBox="0 0 320 200" xmlns="http://www.w3.org/2000/svg"><rect x="38" y="38" width="44" height="44" rx="7" fill="none" stroke="currentColor" stroke-width="2"/><text x="60" y="60" font-size="28" text-anchor="middle" dominant-baseline="central">🍩</text><rect x="86" y="38" width="44" height="44" rx="7" fill="none" stroke="currentColor" stroke-width="2"/><text x="108" y="60" font-size="28" text-anchor="middle" dominant-baseline="central">🍩</text><rect x="134" y="38" width="44" height="44" rx="7" fill="none" stroke="currentColor" stroke-width="2"/><text x="156" y="60" font-size="28" text-anchor="middle" dominant-baseline="central">🍩</text><rect x="182" y="38" width="44" height="44" rx="7" fill="none" stroke="currentColor" stroke-width="2"/><text x="204" y="60" font-size="28" text-anchor="middle" dominant-baseline="central">🍩</text><rect x="230" y="38" width="44" height="44" rx="7" fill="none" stroke="currentColor" stroke-width="2"/><text x="252" y="60" font-size="28" text-anchor="middle" dominant-baseline="central">🍩</text><rect x="38" y="102" width="44" height="44" rx="7" fill="none" stroke="currentColor" stroke-width="2" stroke-dasharray="5 4"/><rect x="86" y="102" width="44" height="44" rx="7" fill="none" stroke="currentColor" stroke-width="2" stroke-dasharray="5 4"/><rect x="134" y="102" width="44" height="44" rx="7" fill="none" stroke="currentColor" stroke-width="2" stroke-dasharray="5 4"/><rect x="182" y="102" width="44" height="44" rx="7" fill="none" stroke="currentColor" stroke-width="2" stroke-dasharray="5 4"/><rect x="230" y="102" width="44" height="44" rx="7" fill="none" stroke="currentColor" stroke-width="2" stroke-dasharray="5 4"/><text x="28" y="63" font-size="15" text-anchor="end" fill="currentColor" font-weight="bold">5</text><line x1="298" y1="60" x2="298" y2="112" stroke="#f08080" stroke-width="2.5" stroke-linecap="round"/><polygon points="298,120 292,110 304,110" fill="#f08080"/></svg>'
+          - 5 の つぎから、したの れつを かぞえよう。
         paths:
           - [5 こを 1 れつに ならべる, のこりは 2 こ, 5 と 2 で 7, 7 こ]
       - part: 思い出す
+        id: "ee755cb6c7"
         text: あめを 10 こに したいです。いま ある あめは これだけです。あと なんこ あれば よいですか。
         figure: "🍬　🍬🍬\n🍬🍬\n　🍬🍬🍬"
         answer: 2
         check: "10 - n('🍬')"
         hints:
           - いま ある あめを かぞえよう。
-          - 10 は その かずと いくつかな。
-          - まるを 10 こ かいて、ある ぶんを ぬってみよう。
+          - text: まるを 10 こ かいたよ。あめの かずだけ、まるを ぬって いこう。
+            svg: '<svg viewBox="0 0 320 200" xmlns="http://www.w3.org/2000/svg"><circle cx="80" cy="70" r="15" fill="#7fc8f8" fill-opacity=".7" stroke="currentColor" stroke-width="2"/><circle cx="80" cy="44" r="9" fill="#f3c969" fill-opacity=".8" stroke="currentColor" stroke-width="1.5"/><text x="80" y="48.6" font-size="13" text-anchor="middle" fill="currentColor" font-weight="bold">1</text><circle cx="120" cy="70" r="15" fill="#7fc8f8" fill-opacity=".7" stroke="currentColor" stroke-width="2"/><circle cx="120" cy="44" r="9" fill="#f3c969" fill-opacity=".8" stroke="currentColor" stroke-width="1.5"/><text x="120" y="48.6" font-size="13" text-anchor="middle" fill="currentColor" font-weight="bold">2</text><circle cx="160" cy="70" r="15" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="200" cy="70" r="15" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="240" cy="70" r="15" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="80" cy="114" r="15" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="120" cy="114" r="15" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="160" cy="114" r="15" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="200" cy="114" r="15" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="240" cy="114" r="15" fill="none" stroke="currentColor" stroke-width="2"/></svg>'
+          - ぬって いない まるの かずが、あと いる かずだよ。
         paths:
           - [あめを かぞえる（8）, 10 は 8 と 2, 2 こ]
       - part: 見本
-        text: いろいろな ものが まざって いるときは、1 しゅるいずつ かぞえよう。
-        figure: "🍎🍌🍎\n🍌🍎\n🍎🍌🍎"
+        id: "15532811d5"
+        text: |-
+          いろいろな ものが まざって いる ときは、1 しゅるいずつ かぞえよう。
+          まず りんごだけ、つぎに バナナだけ。
+          おなじ ものを あつめて かぞえると、まちがえにくいよ。
+        svg: '<svg viewBox="0 0 320 200" xmlns="http://www.w3.org/2000/svg"><rect x="6" y="30" width="130" height="140" rx="12" fill="none" stroke="currentColor" stroke-width="2" stroke-dasharray="5 4"/><text x="29" y="58" font-size="30" text-anchor="middle" dominant-baseline="central">🍎</text><text x="71" y="58" font-size="30" text-anchor="middle" dominant-baseline="central">🍌</text><text x="113" y="58" font-size="30" text-anchor="middle" dominant-baseline="central">🍎</text><text x="50" y="100" font-size="30" text-anchor="middle" dominant-baseline="central">🍌</text><text x="92" y="100" font-size="30" text-anchor="middle" dominant-baseline="central">🍎</text><text x="29" y="142" font-size="30" text-anchor="middle" dominant-baseline="central">🍎</text><text x="71" y="142" font-size="30" text-anchor="middle" dominant-baseline="central">🍌</text><text x="113" y="142" font-size="30" text-anchor="middle" dominant-baseline="central">🍎</text><line x1="144" y1="100" x2="164" y2="100" stroke="#f08080" stroke-width="3" stroke-linecap="round"/><polygon points="172,100 162,106 162,94" fill="#f08080"/><text x="196" y="62" font-size="22" text-anchor="middle" dominant-baseline="central">🍎</text><text x="222" y="62" font-size="22" text-anchor="middle" dominant-baseline="central">🍎</text><text x="248" y="62" font-size="22" text-anchor="middle" dominant-baseline="central">🍎</text><text x="274" y="62" font-size="22" text-anchor="middle" dominant-baseline="central">🍎</text><text x="300" y="62" font-size="22" text-anchor="middle" dominant-baseline="central">🍎</text><text x="250" y="94" font-size="14" text-anchor="middle" fill="currentColor">りんご 5 こ</text><text x="196" y="130" font-size="22" text-anchor="middle" dominant-baseline="central">🍌</text><text x="222" y="130" font-size="22" text-anchor="middle" dominant-baseline="central">🍌</text><text x="248" y="130" font-size="22" text-anchor="middle" dominant-baseline="central">🍌</text><text x="250" y="162" font-size="14" text-anchor="middle" fill="currentColor">バナナ 3 ぼん</text></svg>'
         explain: まず りんごだけを みて、しるしを つけながら かぞえます。りんごは 5 こ。つぎに バナナだけを かぞえます。バナナは 3 ぼん。1 しゅるいずつ かぞえると、まざって いても まちがえにくく なります。
       - part: 今日
+        id: "e0cea76ed9"
         text: はなは なんしゅるい ありますか。
-        figure: "🌻🌹🌻"
+        figure: 🌻🌹🌻
         answer: 2
         check: "len(set(''.join(fig.splitlines())))"
         hints:
           - おなじ はなは、いくつ あっても 1 しゅるいだよ。
-          - はじめの はなが 1 しゅるいめ。ちがう はなが でて きたら ふやして いこう。
+          - text: ひまわりの うしろに、あかい まるを つけたよ。おなじ はなは、2 つ あっても 1 しゅるい。
+            svg: '<svg viewBox="0 0 320 200" xmlns="http://www.w3.org/2000/svg"><circle cx="84" cy="100" r="33.4" fill="#f08080" fill-opacity="0.35"/><circle cx="236" cy="100" r="33.4" fill="#f08080" fill-opacity="0.35"/><text x="84" y="100" font-size="36" text-anchor="middle" dominant-baseline="central">🌻</text><text x="160" y="100" font-size="36" text-anchor="middle" dominant-baseline="central">🌹</text><text x="236" y="100" font-size="36" text-anchor="middle" dominant-baseline="central">🌻</text></svg>'
           - ちがう はなが もう ないか みて、ぜんぶで なんしゅるいか かぞえよう。
         paths:
           - [ひまわりと ばらを みつける, おなじ はなは まとめて 1 しゅるいと かぞえる, 2 しゅるい]
           - [ひまわりだけ、ばらだけを べつの れつに ならべる, れつの かずを かぞえる, 2 しゅるい]
-        note: 全部の数（3）と種類の数をまちがえやすい。「いくつ」と「なんしゅるい」のちがいをたしかめる。
+        note: ぜんぶの数（3）と種類の数をまちがえやすい。「いくつ」と「なんしゅるい」のちがいをたしかめる。
       - part: 今日
+        id: "135ef3f05f"
         text: みかんは なんこ ありますか。
         figure: "🍎🍊　🍎\n🍊🍊🍎\n　🍎🍊🍎"
         answer: 4
         check: "n('🍊')"
         hints:
           - りんごと みかんが まざって いるね。
-          - みかんだけを みて、しるしを つけよう。
+          - text: りんごを うすく したよ。みかんだけに しるしを つけよう。
+            svg: '<svg viewBox="0 0 320 200" xmlns="http://www.w3.org/2000/svg"><text x="82" y="48" font-size="36" text-anchor="middle" dominant-baseline="central" opacity="0.22">🍎</text><text x="134" y="48" font-size="36" text-anchor="middle" dominant-baseline="central">🍊</text><text x="238" y="48" font-size="36" text-anchor="middle" dominant-baseline="central" opacity="0.22">🍎</text><text x="108" y="100" font-size="36" text-anchor="middle" dominant-baseline="central">🍊</text><text x="160" y="100" font-size="36" text-anchor="middle" dominant-baseline="central">🍊</text><text x="212" y="100" font-size="36" text-anchor="middle" dominant-baseline="central" opacity="0.22">🍎</text><text x="134" y="152" font-size="36" text-anchor="middle" dominant-baseline="central" opacity="0.22">🍎</text><text x="186" y="152" font-size="36" text-anchor="middle" dominant-baseline="central">🍊</text><text x="238" y="152" font-size="36" text-anchor="middle" dominant-baseline="central" opacity="0.22">🍎</text></svg>'
           - しるしを つけた みかんを かぞえよう。
         paths:
           - [みかんだけを えらぶ, しるしを つけながら かぞえる, 4 こ]
-        note: りんごもいっしょに数えやすい。指で差すのはみかんだけにする。
+        note: りんごもいっしょに数えやすい。ゆびでさすのはみかんだけにする。
       - part: 今日
+        id: "b6cd4a9b85"
         text: いちばん おおいのは どれですか。
         figure: "🐶🐱🐰\n🐱🐶🐱\n🐰🐱🐶"
         choices: [いぬ, ねこ, うさぎ]
         answer: ねこ
         check: "max(['いぬ', 'ねこ', 'うさぎ'], key=lambda k: {'いぬ': n('🐶'), 'ねこ': n('🐱'), 'うさぎ': n('🐰')}[k])"
         hints:
-          - 1 しゅるいずつ かぞえよう。
-          - いぬ、ねこ、うさぎの かずを かいておこう。
+          - text: まず いぬだけ みて かぞえよう。
+            svg: '<svg viewBox="0 0 320 200" xmlns="http://www.w3.org/2000/svg"><text x="108" y="48" font-size="36" text-anchor="middle" dominant-baseline="central">🐶</text><text x="160" y="48" font-size="36" text-anchor="middle" dominant-baseline="central" opacity="0.22">🐱</text><text x="212" y="48" font-size="36" text-anchor="middle" dominant-baseline="central" opacity="0.22">🐰</text><text x="108" y="100" font-size="36" text-anchor="middle" dominant-baseline="central" opacity="0.22">🐱</text><text x="160" y="100" font-size="36" text-anchor="middle" dominant-baseline="central">🐶</text><text x="212" y="100" font-size="36" text-anchor="middle" dominant-baseline="central" opacity="0.22">🐱</text><text x="108" y="152" font-size="36" text-anchor="middle" dominant-baseline="central" opacity="0.22">🐰</text><text x="160" y="152" font-size="36" text-anchor="middle" dominant-baseline="central" opacity="0.22">🐱</text><text x="212" y="152" font-size="36" text-anchor="middle" dominant-baseline="central">🐶</text></svg>'
+          - ねこ、うさぎも 1 しゅるいずつ かぞえて、かずを かいて おこう。
           - いちばん おおきい かずは どれかな。
         paths:
           - [いぬ 3、ねこ 4、うさぎ 2 と かぞえる, いちばん おおきいのは 4, ねこ]
       - part: 今日
+        id: "9adfa0f6dd"
         text: くだものは なんしゅるい ありますか。
         figure: "🍎🍇🍎\n🍓🍇🍎\n🍋🍓"
         answer: 4
         check: "len(set(''.join(fig.splitlines())))"
         hints:
           - おなじ くだものは、なんこ あっても 1 しゅるいだよ。
-          - はじめて でて きた くだものに しるしを つけよう。
-          - しるしを つけた くだものを かぞえよう。
+          - text: りんごの うしろに、あかい まるを つけたよ。りんごは 3 こ あっても 1 しゅるい。
+            svg: '<svg viewBox="0 0 320 200" xmlns="http://www.w3.org/2000/svg"><circle cx="108" cy="48" r="22.9" fill="#f08080" fill-opacity="0.35"/><circle cx="212" cy="48" r="22.9" fill="#f08080" fill-opacity="0.35"/><circle cx="212" cy="100" r="22.9" fill="#f08080" fill-opacity="0.35"/><text x="108" y="48" font-size="36" text-anchor="middle" dominant-baseline="central">🍎</text><text x="160" y="48" font-size="36" text-anchor="middle" dominant-baseline="central">🍇</text><text x="212" y="48" font-size="36" text-anchor="middle" dominant-baseline="central">🍎</text><text x="108" y="100" font-size="36" text-anchor="middle" dominant-baseline="central">🍓</text><text x="160" y="100" font-size="36" text-anchor="middle" dominant-baseline="central">🍇</text><text x="212" y="100" font-size="36" text-anchor="middle" dominant-baseline="central">🍎</text><text x="134" y="152" font-size="36" text-anchor="middle" dominant-baseline="central">🍋</text><text x="186" y="152" font-size="36" text-anchor="middle" dominant-baseline="central">🍓</text></svg>'
+          - ほかの くだものも、おなじ ものを まとめて 1 しゅるいと かぞえよう。
         paths:
           - [りんご、ぶどう、いちご、レモンと じゅんに みつける, 4 しゅるい]
-        note: 個数（8）と種類の数を取り違えやすい。「なんこ」と「なんしゅるい」の違いを確かめる。
+        note: くだものの数（8）と種類の数をとりちがえやすい。「なんこ」と「なんしゅるい」のちがいをたしかめる。
       - part: 挑戦
+        id: "876a5d97aa"
         text: くだものは ぜんぶで なんこ ありますか。おもちゃは かぞえません。
-        figure: "🍎⚽🍌\n🎈🍇⚽\n🍓🎈🍎"
+        figure: "🍎⚽🍌\n🧸🍇⚽\n🍓🧸🍎"
         answer: 5
         check: "n('🍎') + n('🍌') + n('🍇') + n('🍓')"
         hints:
           - くだものと おもちゃが まざって いるね。
-          - くだものだけに しるしを つけよう。
+          - text: おもちゃを うすく したよ。くだものだけに しるしを つけよう。
+            svg: '<svg viewBox="0 0 320 200" xmlns="http://www.w3.org/2000/svg"><text x="108" y="48" font-size="36" text-anchor="middle" dominant-baseline="central">🍎</text><text x="160" y="48" font-size="36" text-anchor="middle" dominant-baseline="central" opacity="0.22">⚽</text><text x="212" y="48" font-size="36" text-anchor="middle" dominant-baseline="central">🍌</text><text x="108" y="100" font-size="36" text-anchor="middle" dominant-baseline="central" opacity="0.22">🧸</text><text x="160" y="100" font-size="36" text-anchor="middle" dominant-baseline="central">🍇</text><text x="212" y="100" font-size="36" text-anchor="middle" dominant-baseline="central" opacity="0.22">⚽</text><text x="108" y="152" font-size="36" text-anchor="middle" dominant-baseline="central">🍓</text><text x="160" y="152" font-size="36" text-anchor="middle" dominant-baseline="central" opacity="0.22">🧸</text><text x="212" y="152" font-size="36" text-anchor="middle" dominant-baseline="central">🍎</text></svg>'
           - しるしを つけた ものを かぞえよう。
         paths:
           - [くだものだけを えらぶ, しるしを つけながら かぞえる, 5 こ]
-        note: ボールや風船もいっしょに数えて 9 と答えやすい。
+          - [おもちゃを かぞえる（4）, ぜんぶで 9 こ, 9 は 4 と 5, 5 こ]
+        note: ボールやぬいぐるみもいっしょに数えて 9 とこたえやすい。ふうせん（🎈）は小さく出ると赤い玉に見え、くだものとまぎれるので、ぬいぐるみ（🧸）にした。
       - part: わけ
+        id: "7cb1a7350d"
         text: りんごと みかんを べつべつに かぞえたら、りんごは 3 こ、みかんは 4 こ でした。くだものは ぜんぶで 7 こ と いえる わけを、くちで いってみよう。
         figure: "🍊🍎🍊\n🍎🍊　🍊\n　🍎"
-        explain: 「くだものは りんごか みかんの どちらかで、どれも 1 かいずつ かぞえたから、3 と 4 で 7」「りんごの 3 の つぎから、みかんを 4、5、6、7 と かぞえると 7 に なるから」と言えればよい。種類ごとに数えた数を合わせると全部の数になるのは、どの物もどれか 1 つの種類にだけ入るから。ここに気づけば、なおよい。
+        explain: 「くだものは りんごか みかんの どちらかで、どれも 1 かいずつ かぞえたから、3 と 4 で 7」「りんごの 3 の つぎから、みかんを 4、5、6、7 と かぞえると 7 に なるから」と言えればよい。種類ごとに数えた数を合わせるとぜんぶの数になるのは、どの物もどれか 1 つの種類にだけ入るから。ここに気づけば、なおよい。
         hints:
           - ここに ある くだものは、どんな しゅるいかな。
-          - りんごでも みかんでも ある くだものは あるかな。
+          - text: りんごでも みかんでも ある くだものは あるかな。
+            svg: '<svg viewBox="0 0 320 200" xmlns="http://www.w3.org/2000/svg"><rect x="14" y="46" width="140" height="104" rx="12" fill="none" stroke="currentColor" stroke-width="2"/><rect x="166" y="46" width="140" height="104" rx="12" fill="none" stroke="currentColor" stroke-width="2"/><text x="84" y="36" font-size="15" text-anchor="middle" fill="currentColor">りんご</text><text x="236" y="36" font-size="15" text-anchor="middle" fill="currentColor">みかん</text><text x="44" y="98" font-size="30" text-anchor="middle" dominant-baseline="central">🍎</text><text x="84" y="98" font-size="30" text-anchor="middle" dominant-baseline="central">🍎</text><text x="124" y="98" font-size="30" text-anchor="middle" dominant-baseline="central">🍎</text><text x="190" y="98" font-size="26" text-anchor="middle" dominant-baseline="central">🍊</text><text x="221" y="98" font-size="26" text-anchor="middle" dominant-baseline="central">🍊</text><text x="252" y="98" font-size="26" text-anchor="middle" dominant-baseline="central">🍊</text><text x="283" y="98" font-size="26" text-anchor="middle" dominant-baseline="central">🍊</text></svg>'
           - 「だから」を つかって いってみよう。
         paths:
           - [くだものは りんごか みかん, どれも 1 かいずつ かぞえた, だから 3 と 4 で 7]
+          - [りんごの 3 の つぎから、みかんを 4、5、6、7 と かぞえる, とばした ものも 2 かい かぞえた ものも ない, だから 7]
     extra:
       - part: 今日
+        id: "07ef4281f6"
         text: かめは なんびき いますか。
         figure: "🐟🐢🐟\n🐟🐢🐟🐢\n🐟"
         answer: 3
         check: "n('🐢')"
         hints:
           - さかなと かめが まざって いるね。
-          - かめだけに しるしを つけよう。
+          - text: さかなを うすく したよ。かめだけに しるしを つけよう。
+            svg: '<svg viewBox="0 0 320 200" xmlns="http://www.w3.org/2000/svg"><text x="108" y="48" font-size="36" text-anchor="middle" dominant-baseline="central" opacity="0.22">🐟</text><text x="160" y="48" font-size="36" text-anchor="middle" dominant-baseline="central">🐢</text><text x="212" y="48" font-size="36" text-anchor="middle" dominant-baseline="central" opacity="0.22">🐟</text><text x="82" y="100" font-size="36" text-anchor="middle" dominant-baseline="central" opacity="0.22">🐟</text><text x="134" y="100" font-size="36" text-anchor="middle" dominant-baseline="central">🐢</text><text x="186" y="100" font-size="36" text-anchor="middle" dominant-baseline="central" opacity="0.22">🐟</text><text x="238" y="100" font-size="36" text-anchor="middle" dominant-baseline="central">🐢</text><text x="160" y="152" font-size="36" text-anchor="middle" dominant-baseline="central" opacity="0.22">🐟</text></svg>'
           - しるしを つけた かめを かぞえよう。
         paths:
           - [かめだけを えらぶ, かぞえる, 3 びき]
       - part: 今日
+        id: "533112e7ec"
         text: いちばん すくないのは どれですか。
         figure: "🍩🍪🍩\n🍰🍩🍪\n🍪🍩"
         choices: [ドーナツ, クッキー, ケーキ]
         answer: ケーキ
         check: "min(['ドーナツ', 'クッキー', 'ケーキ'], key=lambda k: {'ドーナツ': n('🍩'), 'クッキー': n('🍪'), 'ケーキ': n('🍰')}[k])"
         hints:
-          - 1 しゅるいずつ かぞえよう。
-          - ドーナツ、クッキー、ケーキの かずを かいておこう。
+          - text: まず ドーナツだけ みて かぞえよう。
+            svg: '<svg viewBox="0 0 320 200" xmlns="http://www.w3.org/2000/svg"><text x="108" y="48" font-size="36" text-anchor="middle" dominant-baseline="central">🍩</text><text x="160" y="48" font-size="36" text-anchor="middle" dominant-baseline="central" opacity="0.22">🍪</text><text x="212" y="48" font-size="36" text-anchor="middle" dominant-baseline="central">🍩</text><text x="108" y="100" font-size="36" text-anchor="middle" dominant-baseline="central" opacity="0.22">🍰</text><text x="160" y="100" font-size="36" text-anchor="middle" dominant-baseline="central">🍩</text><text x="212" y="100" font-size="36" text-anchor="middle" dominant-baseline="central" opacity="0.22">🍪</text><text x="134" y="152" font-size="36" text-anchor="middle" dominant-baseline="central" opacity="0.22">🍪</text><text x="186" y="152" font-size="36" text-anchor="middle" dominant-baseline="central">🍩</text></svg>'
+          - クッキー、ケーキも 1 しゅるいずつ かぞえて、かずを かいて おこう。
           - いちばん ちいさい かずは どれかな。
         paths:
           - [ドーナツ 4、クッキー 3、ケーキ 1 と かぞえる, いちばん ちいさいのは 1, ケーキ]
       - part: 挑戦
+        id: "a1dd8cc39b"
         text: どうぶつは ぜんぶで なんびき いますか。
         figure: "🐶🍎🐱\n🎈🐰🐼\n🐻⚽🐶"
         answer: 6
         check: "n('🐶') + n('🐱') + n('🐰') + n('🐼') + n('🐻')"
         hints:
           - どうぶつと ほかの ものが まざって いるね。
-          - どうぶつだけに しるしを つけよう。
+          - text: どうぶつで ない ものを うすく したよ。どうぶつだけに しるしを つけよう。
+            svg: '<svg viewBox="0 0 320 200" xmlns="http://www.w3.org/2000/svg"><text x="108" y="48" font-size="36" text-anchor="middle" dominant-baseline="central">🐶</text><text x="160" y="48" font-size="36" text-anchor="middle" dominant-baseline="central" opacity="0.22">🍎</text><text x="212" y="48" font-size="36" text-anchor="middle" dominant-baseline="central">🐱</text><text x="108" y="100" font-size="36" text-anchor="middle" dominant-baseline="central" opacity="0.22">🎈</text><text x="160" y="100" font-size="36" text-anchor="middle" dominant-baseline="central">🐰</text><text x="212" y="100" font-size="36" text-anchor="middle" dominant-baseline="central">🐼</text><text x="108" y="152" font-size="36" text-anchor="middle" dominant-baseline="central">🐻</text><text x="160" y="152" font-size="36" text-anchor="middle" dominant-baseline="central" opacity="0.22">⚽</text><text x="212" y="152" font-size="36" text-anchor="middle" dominant-baseline="central">🐶</text></svg>'
           - しるしを つけた ものを かぞえよう。
         paths:
           - [どうぶつだけを えらぶ, しるしを つけながら かぞえる, 6 ぴき]
+          - [どうぶつで ない ものを かぞえる（3）, ぜんぶで 9 こ, 9 は 3 と 6, 6 ぴき]
 
   - day: 4
     items:
       - part: 思い出す
+        id: "d4fdd6e91b"
         text: いちごは なんこ ありますか。
-        figure: "🍒🍓🍒\n🍓🍓🍒🍓\n🍒"
+        figure: "🍇🍓🍇\n🍓🍓🍇🍓\n🍇"
         answer: 4
         check: "n('🍓')"
         hints:
-          - さくらんぼと いちごが まざって いるね。
-          - いちごだけに しるしを つけよう。
+          - ぶどうと いちごが まざって いるね。
+          - text: ぶどうを うすく したよ。いちごだけに しるしを つけよう。
+            svg: '<svg viewBox="0 0 320 200" xmlns="http://www.w3.org/2000/svg"><text x="108" y="48" font-size="36" text-anchor="middle" dominant-baseline="central" opacity="0.22">🍇</text><text x="160" y="48" font-size="36" text-anchor="middle" dominant-baseline="central">🍓</text><text x="212" y="48" font-size="36" text-anchor="middle" dominant-baseline="central" opacity="0.22">🍇</text><text x="82" y="100" font-size="36" text-anchor="middle" dominant-baseline="central">🍓</text><text x="134" y="100" font-size="36" text-anchor="middle" dominant-baseline="central">🍓</text><text x="186" y="100" font-size="36" text-anchor="middle" dominant-baseline="central" opacity="0.22">🍇</text><text x="238" y="100" font-size="36" text-anchor="middle" dominant-baseline="central">🍓</text><text x="160" y="152" font-size="36" text-anchor="middle" dominant-baseline="central" opacity="0.22">🍇</text></svg>'
           - しるしを つけた いちごを かぞえよう。
         paths:
           - [いちごだけを えらぶ, かぞえる, 4 こ]
       - part: 思い出す
+        id: "b075ccb653"
         text: 10 は 7 と いくつですか。
+        figure: 🔵🔵🔵🔵🔵🔵🔵⚪⚪⚪
         answer: 3
-        check: "10 - 7"
+        check: "n('⚪')"
         hints:
-          - まるを 10 こ かいてみよう。
-          - そのうち 7 こを ぬりつぶそう。
-          - ぬって いない まるを かぞえよう。
+          - まるは ぜんぶで 10 こ あるね。
+          - text: 10 を、あおい 7 こと のこりに わけたよ。
+            svg: '<svg viewBox="0 0 320 200" xmlns="http://www.w3.org/2000/svg"><text x="29.5" y="100" font-size="22" text-anchor="middle" dominant-baseline="central">🔵</text><text x="58.5" y="100" font-size="22" text-anchor="middle" dominant-baseline="central">🔵</text><text x="87.5" y="100" font-size="22" text-anchor="middle" dominant-baseline="central">🔵</text><text x="116.5" y="100" font-size="22" text-anchor="middle" dominant-baseline="central">🔵</text><text x="145.5" y="100" font-size="22" text-anchor="middle" dominant-baseline="central">🔵</text><text x="174.5" y="100" font-size="22" text-anchor="middle" dominant-baseline="central">🔵</text><text x="203.5" y="100" font-size="22" text-anchor="middle" dominant-baseline="central">🔵</text><text x="232.5" y="100" font-size="22" text-anchor="middle" dominant-baseline="central">⚪</text><text x="261.5" y="100" font-size="22" text-anchor="middle" dominant-baseline="central">⚪</text><text x="290.5" y="100" font-size="22" text-anchor="middle" dominant-baseline="central">⚪</text><path d="M18 75V68H302V75" fill="none" stroke="currentColor" stroke-width="2"/><text x="160" y="58" font-size="16" text-anchor="middle" fill="currentColor" font-weight="bold">10</text><path d="M18 125V132H215V125" fill="none" stroke="currentColor" stroke-width="2"/><text x="116.5" y="154" font-size="16" text-anchor="middle" fill="currentColor" font-weight="bold">7</text><path d="M221 125V132H302V125" fill="none" stroke="#f08080" stroke-width="2"/><text x="261.5" y="154" font-size="16" text-anchor="middle" fill="currentColor" font-weight="bold">？</text></svg>'
+          - のこりの しろい まるを、1 こずつ かぞえよう。
         paths:
-          - [まるを 10 こ かく, 7 こ ぬる, のこりを かぞえる, 3]
+          - [まるが 10 こ, あおが 7 こ, しろを かぞえる, "3"]
       - part: 今日
-        text: ケーキが 6 こ ありました。🐻 が いくつか たべました。たべて なくなった ところは ⚪ です。🐻 が たべたのは なんこ ですか。
+        id: "cc999e1067"
+        text: ケーキが 6 こ ありました。⚪ は、🐻 が たべて なくなった ところです。🐻 が たべたのは なんこ ですか。
         figure: 🍰🍰🍰🍰⚪⚪
         answer: 2
         check: "n('⚪') if n('🍰') + n('⚪') == 6 else -1"
         hints:
           - ケーキは はじめ 6 こ あったね。いま のこって いるのは どれかな。
-          - 🐻 が たべたのは、のこって いる ケーキかな、なくなった ところかな。
+          - text: はじめと いまを ならべたよ。🐻 が たべた ところは どこかな。
+            svg: '<svg viewBox="0 0 320 200" xmlns="http://www.w3.org/2000/svg"><text x="58" y="61" font-size="15" text-anchor="end" fill="currentColor">はじめ</text><text x="58" y="141" font-size="15" text-anchor="end" fill="currentColor">いま</text><text x="92" y="56" font-size="30" text-anchor="middle" dominant-baseline="central">🍰</text><text x="92" y="136" font-size="30" text-anchor="middle" dominant-baseline="central">🍰</text><line x1="92" y1="78" x2="92" y2="114" stroke="#c8ccd6" stroke-width="2" stroke-linecap="round" stroke-dasharray="5 4"/><text x="134" y="56" font-size="30" text-anchor="middle" dominant-baseline="central">🍰</text><text x="134" y="136" font-size="30" text-anchor="middle" dominant-baseline="central">🍰</text><line x1="134" y1="78" x2="134" y2="114" stroke="#c8ccd6" stroke-width="2" stroke-linecap="round" stroke-dasharray="5 4"/><text x="176" y="56" font-size="30" text-anchor="middle" dominant-baseline="central">🍰</text><text x="176" y="136" font-size="30" text-anchor="middle" dominant-baseline="central">🍰</text><line x1="176" y1="78" x2="176" y2="114" stroke="#c8ccd6" stroke-width="2" stroke-linecap="round" stroke-dasharray="5 4"/><text x="218" y="56" font-size="30" text-anchor="middle" dominant-baseline="central">🍰</text><text x="218" y="136" font-size="30" text-anchor="middle" dominant-baseline="central">🍰</text><line x1="218" y1="78" x2="218" y2="114" stroke="#c8ccd6" stroke-width="2" stroke-linecap="round" stroke-dasharray="5 4"/><text x="260" y="56" font-size="30" text-anchor="middle" dominant-baseline="central">🍰</text><text x="260" y="136" font-size="30" text-anchor="middle" dominant-baseline="central">⚪</text><line x1="260" y1="78" x2="260" y2="114" stroke="#c8ccd6" stroke-width="2" stroke-linecap="round" stroke-dasharray="5 4"/><text x="302" y="56" font-size="30" text-anchor="middle" dominant-baseline="central">🍰</text><text x="302" y="136" font-size="30" text-anchor="middle" dominant-baseline="central">⚪</text><line x1="302" y1="78" x2="302" y2="114" stroke="#c8ccd6" stroke-width="2" stroke-linecap="round" stroke-dasharray="5 4"/></svg>'
           - ⚪ を ゆびで さして、1 こずつ かぞえよう。
         paths:
           - [⚪ が たべた ところ, ⚪ を かぞえる, 2 こ]
           - [のこって いる ケーキを かぞえる（4）, 6 は 4 と 2, 2 こ]
-        note: 残りの数（4）をこたえてしまいやすい。たべた分は、なくなった ⚪ の方であることをたしかめる。
+        note: 残りの数（4）をこたえてしまいやすい。たべたぶんは、なくなった ⚪ のほうであることをたしかめる。
       - part: 今日
+        id: "00e2211f19"
         text: かえると かめでは、どちらが おおいですか。
         figure: "🐸　🐢🐸\n🐢🐸　🐢\n🐸🐢　🐸🐢"
         choices: [かえる, かめ, おなじ]
         answer: おなじ
         check: "'おなじ' if n('🐸') == n('🐢') else ('かえる' if n('🐸') > n('🐢') else 'かめ')"
         hints:
-          - かえるだけを かぞえよう。
-          - かめだけを かぞえよう。
+          - text: まず かえるだけ みて かぞえよう。
+            svg: '<svg viewBox="0 0 320 200" xmlns="http://www.w3.org/2000/svg"><text x="82" y="48" font-size="36" text-anchor="middle" dominant-baseline="central">🐸</text><text x="186" y="48" font-size="36" text-anchor="middle" dominant-baseline="central" opacity="0.22">🐢</text><text x="238" y="48" font-size="36" text-anchor="middle" dominant-baseline="central">🐸</text><text x="82" y="100" font-size="36" text-anchor="middle" dominant-baseline="central" opacity="0.22">🐢</text><text x="134" y="100" font-size="36" text-anchor="middle" dominant-baseline="central">🐸</text><text x="238" y="100" font-size="36" text-anchor="middle" dominant-baseline="central" opacity="0.22">🐢</text><text x="56" y="152" font-size="36" text-anchor="middle" dominant-baseline="central">🐸</text><text x="108" y="152" font-size="36" text-anchor="middle" dominant-baseline="central" opacity="0.22">🐢</text><text x="212" y="152" font-size="36" text-anchor="middle" dominant-baseline="central">🐸</text><text x="264" y="152" font-size="36" text-anchor="middle" dominant-baseline="central" opacity="0.22">🐢</text></svg>'
+          - text: つぎに かめだけ みて かぞえよう。
+            svg: '<svg viewBox="0 0 320 200" xmlns="http://www.w3.org/2000/svg"><text x="82" y="48" font-size="36" text-anchor="middle" dominant-baseline="central" opacity="0.22">🐸</text><text x="186" y="48" font-size="36" text-anchor="middle" dominant-baseline="central">🐢</text><text x="238" y="48" font-size="36" text-anchor="middle" dominant-baseline="central" opacity="0.22">🐸</text><text x="82" y="100" font-size="36" text-anchor="middle" dominant-baseline="central">🐢</text><text x="134" y="100" font-size="36" text-anchor="middle" dominant-baseline="central" opacity="0.22">🐸</text><text x="238" y="100" font-size="36" text-anchor="middle" dominant-baseline="central">🐢</text><text x="56" y="152" font-size="36" text-anchor="middle" dominant-baseline="central" opacity="0.22">🐸</text><text x="108" y="152" font-size="36" text-anchor="middle" dominant-baseline="central">🐢</text><text x="212" y="152" font-size="36" text-anchor="middle" dominant-baseline="central" opacity="0.22">🐸</text><text x="264" y="152" font-size="36" text-anchor="middle" dominant-baseline="central">🐢</text></svg>'
           - 2 つの かずを くらべよう。
         paths:
           - [かえるを かぞえる（5）, かめを かぞえる（5）, おなじ かず, おなじ]
           - [かえると かめを 1 ぴきずつ せんで むすぶ, どちらも のこらない, おなじ]
-        note: どちらかを選ぶものと思いこみやすい。「おなじ」もあることを確かめる。
+        note: どちらかを選ぶものとおもいこみやすい。「おなじ」もあることをたしかめる。
       - part: 今日
+        id: "c83b141d28"
         text: ほしは いくつ ありますか。しるしを つけながら かぞえよう。
         figure: "⭐　⭐　⭐\n　⭐　⭐\n⭐　⭐　⭐\n　⭐"
         answer: 9
         check: "n('⭐')"
         hints:
           - うえの ならびから じゅんに かぞえよう。
-          - かぞえた ほしに しるしを つけよう。
+          - text: うえの ならびから、1、2、3 と じゅんに しるしを つけて いこう。
+            svg: '<svg viewBox="0 0 320 200" xmlns="http://www.w3.org/2000/svg"><text x="68" y="31" font-size="33" text-anchor="middle" dominant-baseline="central">⭐</text><text x="160" y="31" font-size="33" text-anchor="middle" dominant-baseline="central">⭐</text><text x="252" y="31" font-size="33" text-anchor="middle" dominant-baseline="central">⭐</text><text x="137" y="77" font-size="33" text-anchor="middle" dominant-baseline="central">⭐</text><text x="229" y="77" font-size="33" text-anchor="middle" dominant-baseline="central">⭐</text><text x="68" y="123" font-size="33" text-anchor="middle" dominant-baseline="central">⭐</text><text x="160" y="123" font-size="33" text-anchor="middle" dominant-baseline="central">⭐</text><text x="252" y="123" font-size="33" text-anchor="middle" dominant-baseline="central">⭐</text><text x="183" y="169" font-size="33" text-anchor="middle" dominant-baseline="central">⭐</text><circle cx="84.6" cy="15.4" r="10" fill="#f3c969" fill-opacity=".8" stroke="currentColor" stroke-width="1.5"/><text x="84.6" y="20" font-size="13" text-anchor="middle" fill="currentColor" font-weight="bold">1</text><circle cx="176.6" cy="15.4" r="10" fill="#f3c969" fill-opacity=".8" stroke="currentColor" stroke-width="1.5"/><text x="176.6" y="20" font-size="13" text-anchor="middle" fill="currentColor" font-weight="bold">2</text><circle cx="268.6" cy="15.4" r="10" fill="#f3c969" fill-opacity=".8" stroke="currentColor" stroke-width="1.5"/><text x="268.6" y="20" font-size="13" text-anchor="middle" fill="currentColor" font-weight="bold">3</text></svg>'
           - しるしの ない ほしが のこって いないか みよう。
         paths:
           - [うえから じゅんに さす, しるしを つけながら かぞえる, 9 こ]
       - part: 今日
+        id: "b955bc8e57"
         text: あめが 9 こ ありました。🐻 が いくつか たべて、のこりが この あめです。🐻 が たべたのは なんこ ですか。
         figure: "🍬　🍬\n　🍬🍬\n🍬"
         answer: 4
         check: "9 - n('🍬')"
         hints:
           - のこって いる あめを かぞえよう。
-          - 9 は のこりの かずと いくつかな。
-          - まるを 9 こ かいて、のこりの ぶんを ぬってみよう。
+          - text: まるを 9 こ かいたよ。のこって いる あめの かずだけ、まるを ぬって いこう。
+            svg: '<svg viewBox="0 0 320 200" xmlns="http://www.w3.org/2000/svg"><circle cx="80" cy="70" r="15" fill="#7fc8f8" fill-opacity=".7" stroke="currentColor" stroke-width="2"/><circle cx="80" cy="44" r="9" fill="#f3c969" fill-opacity=".8" stroke="currentColor" stroke-width="1.5"/><text x="80" y="48.6" font-size="13" text-anchor="middle" fill="currentColor" font-weight="bold">1</text><circle cx="120" cy="70" r="15" fill="#7fc8f8" fill-opacity=".7" stroke="currentColor" stroke-width="2"/><circle cx="120" cy="44" r="9" fill="#f3c969" fill-opacity=".8" stroke="currentColor" stroke-width="1.5"/><text x="120" y="48.6" font-size="13" text-anchor="middle" fill="currentColor" font-weight="bold">2</text><circle cx="160" cy="70" r="15" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="200" cy="70" r="15" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="240" cy="70" r="15" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="80" cy="114" r="15" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="120" cy="114" r="15" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="160" cy="114" r="15" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="200" cy="114" r="15" fill="none" stroke="currentColor" stroke-width="2"/></svg>'
+          - ぬって いない まるが、🐻 が たべた ぶんだよ。
         paths:
           - [のこりを かぞえる（5）, 9 は 5 と 4, 4 こ]
-        note: 残りの数（5）を答えやすい。たべた分は 9 の「もう一方」であることを確かめる。
+        note: 残りの数（5）をこたえやすい。たべたぶんは 9 の「もう一方」であることをたしかめる。
       - part: 挑戦
+        id: "b1615cd0ef"
         text: 🐻 は いちごを かぞえて「6 こ」と いいました。🐻 の こたえは ただしいですか。
         figure: "🍓　🍓🍓\n🍓\n　🍓🍓🍓"
         choices: [ただしい, ただしくない]
@@ -475,47 +574,57 @@ days:
         check: "'ただしい' if n('🍓') == 6 else 'ただしくない'"
         hints:
           - じぶんで かぞえて たしかめよう。
-          - かぞえた いちごに しるしを つけよう。
+          - text: うえの ならびから、1、2、3 と じゅんに しるしを つけて いこう。
+            svg: '<svg viewBox="0 0 320 200" xmlns="http://www.w3.org/2000/svg"><text x="82" y="48" font-size="36" text-anchor="middle" dominant-baseline="central">🍓</text><text x="186" y="48" font-size="36" text-anchor="middle" dominant-baseline="central">🍓</text><text x="238" y="48" font-size="36" text-anchor="middle" dominant-baseline="central">🍓</text><text x="160" y="100" font-size="36" text-anchor="middle" dominant-baseline="central">🍓</text><text x="134" y="152" font-size="36" text-anchor="middle" dominant-baseline="central">🍓</text><text x="186" y="152" font-size="36" text-anchor="middle" dominant-baseline="central">🍓</text><text x="238" y="152" font-size="36" text-anchor="middle" dominant-baseline="central">🍓</text><circle cx="100.7" cy="30.3" r="10" fill="#f3c969" fill-opacity=".8" stroke="currentColor" stroke-width="1.5"/><text x="100.7" y="34.9" font-size="13" text-anchor="middle" fill="currentColor" font-weight="bold">1</text><circle cx="204.7" cy="30.3" r="10" fill="#f3c969" fill-opacity=".8" stroke="currentColor" stroke-width="1.5"/><text x="204.7" y="34.9" font-size="13" text-anchor="middle" fill="currentColor" font-weight="bold">2</text><circle cx="256.7" cy="30.3" r="10" fill="#f3c969" fill-opacity=".8" stroke="currentColor" stroke-width="1.5"/><text x="256.7" y="34.9" font-size="13" text-anchor="middle" fill="currentColor" font-weight="bold">3</text></svg>'
           - じぶんの かずと 🐻 の かずを くらべよう。
         paths:
           - [しるしを つけながら かぞえる（7）, 🐻 は 6, ちがう, ただしくない]
-        note: 人の答えをそのまま信じず、自分で数えて確かめる問題。7 と数えられたかも聞く。
+          - [5 こずつ ならべなおす, 5 と 2 で 7, 6 と ちがう, ただしくない]
+        note: 人のこたえをそのまましんじず、じぶんで数えてたしかめる問題。7 と数えられたかもきく。
       - part: わけ
+        id: "dcd5024f64"
         text: 🐻 が ドーナツを 2 かい かぞえたら、1 かいめは 8 こ、2 かいめは 7 こ でした。まちがえない かぞえかたを、くちで いってみよう。
         figure: "🍩　🍩\n　🍩🍩\n🍩　🍩\n　🍩"
-        explain: 「かぞえた ドーナツに しるしを つけると、とばしたり 2 かい かぞえたり しないから」「1 れつに ならべなおして、はしから かぞえると よいから」と言えればよい。1 回目の 8 は、どれかを 2 回数えたからだと気づけば、なおよい。
+        explain: 「かぞえた ドーナツに しるしを つけると、とばしたり 2 かい かぞえたり しないから」「1 れつに ならべなおして、はしから かぞえると よいから」と言えればよい。1 かいめの 8 は、どれかを 2 かい数えたからだと気づけば、なおよい。
         hints:
           - どうして かずが ちがったのかな。
-          - とばしたり、2 かい かぞえたり すると、どう なるかな。
+          - text: とばしたり、2 かい かぞえたり すると、どう なるかな。
+            svg: '<svg viewBox="0 0 320 200" xmlns="http://www.w3.org/2000/svg"><text x="80" y="96" font-size="44" text-anchor="middle" dominant-baseline="central">🍩</text><text x="160" y="96" font-size="44" text-anchor="middle" dominant-baseline="central">🍩</text><text x="240" y="96" font-size="44" text-anchor="middle" dominant-baseline="central">🍩</text><circle cx="104" cy="62" r="11" fill="#f3c969" fill-opacity=".8" stroke="currentColor" stroke-width="1.5"/><text x="104" y="66.6" font-size="13" text-anchor="middle" fill="currentColor" font-weight="bold">1</text><circle cx="138" cy="62" r="11" fill="#f3c969" fill-opacity=".8" stroke="currentColor" stroke-width="1.5"/><text x="138" y="66.6" font-size="13" text-anchor="middle" fill="currentColor" font-weight="bold">2</text><circle cx="182" cy="62" r="11" fill="#f3c969" fill-opacity=".8" stroke="currentColor" stroke-width="1.5"/><text x="182" y="66.6" font-size="13" text-anchor="middle" fill="currentColor" font-weight="bold">3</text><circle cx="264" cy="62" r="11" fill="#f3c969" fill-opacity=".8" stroke="currentColor" stroke-width="1.5"/><text x="264" y="66.6" font-size="13" text-anchor="middle" fill="currentColor" font-weight="bold">4</text><circle cx="160" cy="96" r="34" fill="none" stroke="#f08080" stroke-width="2.5" stroke-dasharray="5 4"/><text x="160" y="168" font-size="15" text-anchor="middle" fill="currentColor">3 こ なのに 4 に なった</text></svg>'
           - 「〜すると まちがえない。だから」と いってみよう。
         paths:
           - [しるしを つけながら かぞえる, とばさない・2 かい かぞえない, だから まちがえない]
           - [1 れつに ならべなおす, はしから かぞえる, だから まちがえない]
     extra:
       - part: 今日
+        id: "928ae812d8"
         text: はちと てんとうむしでは、どちらが おおいですか。
         figure: "🐝🐞　🐝\n🐞🐝🐝\n　🐞🐝"
         choices: [はち, てんとうむし, おなじ]
         answer: はち
         check: "'おなじ' if n('🐝') == n('🐞') else ('はち' if n('🐝') > n('🐞') else 'てんとうむし')"
         hints:
-          - はちだけを かぞえよう。
-          - てんとうむしだけを かぞえよう。
+          - text: まず はちだけ みて かぞえよう。
+            svg: '<svg viewBox="0 0 320 200" xmlns="http://www.w3.org/2000/svg"><text x="82" y="48" font-size="36" text-anchor="middle" dominant-baseline="central">🐝</text><text x="134" y="48" font-size="36" text-anchor="middle" dominant-baseline="central" opacity="0.22">🐞</text><text x="238" y="48" font-size="36" text-anchor="middle" dominant-baseline="central">🐝</text><text x="108" y="100" font-size="36" text-anchor="middle" dominant-baseline="central" opacity="0.22">🐞</text><text x="160" y="100" font-size="36" text-anchor="middle" dominant-baseline="central">🐝</text><text x="212" y="100" font-size="36" text-anchor="middle" dominant-baseline="central">🐝</text><text x="160" y="152" font-size="36" text-anchor="middle" dominant-baseline="central" opacity="0.22">🐞</text><text x="212" y="152" font-size="36" text-anchor="middle" dominant-baseline="central">🐝</text></svg>'
+          - text: つぎに てんとうむしだけ みて かぞえよう。
+            svg: '<svg viewBox="0 0 320 200" xmlns="http://www.w3.org/2000/svg"><text x="82" y="48" font-size="36" text-anchor="middle" dominant-baseline="central" opacity="0.22">🐝</text><text x="134" y="48" font-size="36" text-anchor="middle" dominant-baseline="central">🐞</text><text x="238" y="48" font-size="36" text-anchor="middle" dominant-baseline="central" opacity="0.22">🐝</text><text x="108" y="100" font-size="36" text-anchor="middle" dominant-baseline="central">🐞</text><text x="160" y="100" font-size="36" text-anchor="middle" dominant-baseline="central" opacity="0.22">🐝</text><text x="212" y="100" font-size="36" text-anchor="middle" dominant-baseline="central" opacity="0.22">🐝</text><text x="160" y="152" font-size="36" text-anchor="middle" dominant-baseline="central">🐞</text><text x="212" y="152" font-size="36" text-anchor="middle" dominant-baseline="central" opacity="0.22">🐝</text></svg>'
           - 2 つの かずを くらべよう。
         paths:
           - [はちを かぞえる（5）, てんとうむしを かぞえる（3）, 5 は 3 より おおきい, はち]
       - part: 今日
+        id: "0a8bd7e317"
         text: あめが 10 こ ありました。🐻 が いくつか たべて、のこりが この あめです。🐻 が たべたのは なんこ ですか。
         figure: "🍬🍬\n🍬　🍬\n　🍬🍬"
         answer: 4
         check: "10 - n('🍬')"
         hints:
           - のこって いる あめを かぞえよう。
-          - 10 は のこりの かずと いくつかな。
-          - まるを 10 こ かいて、のこりの ぶんを ぬってみよう。
+          - text: まるを 10 こ かいたよ。のこって いる あめの かずだけ、まるを ぬって いこう。
+            svg: '<svg viewBox="0 0 320 200" xmlns="http://www.w3.org/2000/svg"><circle cx="80" cy="70" r="15" fill="#7fc8f8" fill-opacity=".7" stroke="currentColor" stroke-width="2"/><circle cx="80" cy="44" r="9" fill="#f3c969" fill-opacity=".8" stroke="currentColor" stroke-width="1.5"/><text x="80" y="48.6" font-size="13" text-anchor="middle" fill="currentColor" font-weight="bold">1</text><circle cx="120" cy="70" r="15" fill="#7fc8f8" fill-opacity=".7" stroke="currentColor" stroke-width="2"/><circle cx="120" cy="44" r="9" fill="#f3c969" fill-opacity=".8" stroke="currentColor" stroke-width="1.5"/><text x="120" y="48.6" font-size="13" text-anchor="middle" fill="currentColor" font-weight="bold">2</text><circle cx="160" cy="70" r="15" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="200" cy="70" r="15" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="240" cy="70" r="15" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="80" cy="114" r="15" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="120" cy="114" r="15" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="160" cy="114" r="15" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="200" cy="114" r="15" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="240" cy="114" r="15" fill="none" stroke="currentColor" stroke-width="2"/></svg>'
+          - ぬって いない まるが、🐻 が たべた ぶんだよ。
         paths:
           - [のこりを かぞえる（6）, 10 は 6 と 4, 4 こ]
       - part: 挑戦
+        id: "30210305e2"
         text: 🐱 は さかなを かぞえて「5 ひき」と いいました。🐱 の こたえは ただしいですか。
         figure: "🐟　🐟\n　🐟\n🐟　🐟"
         choices: [ただしい, ただしくない]
@@ -523,136 +632,161 @@ days:
         check: "'ただしい' if n('🐟') == 5 else 'ただしくない'"
         hints:
           - じぶんで かぞえて たしかめよう。
-          - かぞえた さかなに しるしを つけよう。
+          - text: うえの ならびから、1、2 と じゅんに しるしを つけて いこう。
+            svg: '<svg viewBox="0 0 320 200" xmlns="http://www.w3.org/2000/svg"><text x="108" y="48" font-size="36" text-anchor="middle" dominant-baseline="central">🐟</text><text x="212" y="48" font-size="36" text-anchor="middle" dominant-baseline="central">🐟</text><text x="186" y="100" font-size="36" text-anchor="middle" dominant-baseline="central">🐟</text><text x="108" y="152" font-size="36" text-anchor="middle" dominant-baseline="central">🐟</text><text x="212" y="152" font-size="36" text-anchor="middle" dominant-baseline="central">🐟</text><circle cx="126.7" cy="30.3" r="10" fill="#f3c969" fill-opacity=".8" stroke="currentColor" stroke-width="1.5"/><text x="126.7" y="34.9" font-size="13" text-anchor="middle" fill="currentColor" font-weight="bold">1</text><circle cx="230.7" cy="30.3" r="10" fill="#f3c969" fill-opacity=".8" stroke="currentColor" stroke-width="1.5"/><text x="230.7" y="34.9" font-size="13" text-anchor="middle" fill="currentColor" font-weight="bold">2</text></svg>'
           - じぶんの かずと 🐱 の かずを くらべよう。
         paths:
           - [しるしを つけながら かぞえる（5）, 🐱 も 5, おなじ, ただしい]
+          - [うえの ならびから じゅんに かぞえる, 2 と 1 と 2 で 5, 🐱 と おなじ, ただしい]
 
   - day: 5
     items:
       - part: 今日
-        text: さくらは いくつ ありますか。
+        id: "323abfe1dd"
+        text: さくらの はなは いくつ ありますか。
         figure: "🌸　🌸🌸\n　🌸\n🌸　🌸🌸\n　🌸"
         answer: 8
         check: "n('🌸')"
         hints:
-          - かぞえた さくらに しるしを つけよう。
-          - うえの ならびから じゅんに かぞえよう。
-          - しるしの ない さくらが のこって いないか みよう。
+          - かぞえた はなに しるしを つけよう。
+          - text: うえの ならびから、1、2、3 と じゅんに しるしを つけて いこう。
+            svg: '<svg viewBox="0 0 320 200" xmlns="http://www.w3.org/2000/svg"><text x="91" y="31" font-size="33" text-anchor="middle" dominant-baseline="central">🌸</text><text x="183" y="31" font-size="33" text-anchor="middle" dominant-baseline="central">🌸</text><text x="229" y="31" font-size="33" text-anchor="middle" dominant-baseline="central">🌸</text><text x="183" y="77" font-size="33" text-anchor="middle" dominant-baseline="central">🌸</text><text x="91" y="123" font-size="33" text-anchor="middle" dominant-baseline="central">🌸</text><text x="183" y="123" font-size="33" text-anchor="middle" dominant-baseline="central">🌸</text><text x="229" y="123" font-size="33" text-anchor="middle" dominant-baseline="central">🌸</text><text x="183" y="169" font-size="33" text-anchor="middle" dominant-baseline="central">🌸</text><circle cx="107.6" cy="15.4" r="10" fill="#f3c969" fill-opacity=".8" stroke="currentColor" stroke-width="1.5"/><text x="107.6" y="20" font-size="13" text-anchor="middle" fill="currentColor" font-weight="bold">1</text><circle cx="199.6" cy="15.4" r="10" fill="#f3c969" fill-opacity=".8" stroke="currentColor" stroke-width="1.5"/><text x="199.6" y="20" font-size="13" text-anchor="middle" fill="currentColor" font-weight="bold">2</text><circle cx="245.6" cy="15.4" r="10" fill="#f3c969" fill-opacity=".8" stroke="currentColor" stroke-width="1.5"/><text x="245.6" y="20" font-size="13" text-anchor="middle" fill="currentColor" font-weight="bold">3</text></svg>'
+          - しるしの ない はなが のこって いないか みよう。
         paths:
           - [うえから じゅんに さす, しるしを つけながら かぞえる, 8 こ]
       - part: 今日
+        id: "0fb2ca342e"
         text: ✅ は もう かぞえた りんごです。まだ かぞえて いない りんごは なんこ ですか。
         figure: "🍎✅✅\n✅🍎✅🍎\n✅"
         answer: 3
         check: "n('🍎')"
         hints:
           - ✅ の ついた ものは、もう かぞえて あるよ。
-          - ✅ の ない りんごだけを さそう。
-          - さした りんごを かぞえよう。
+          - text: ✅ を うすく したよ。のこって いる りんごだけを ゆびで さそう。
+            svg: '<svg viewBox="0 0 320 200" xmlns="http://www.w3.org/2000/svg"><text x="108" y="48" font-size="36" text-anchor="middle" dominant-baseline="central">🍎</text><text x="160" y="48" font-size="36" text-anchor="middle" dominant-baseline="central" opacity="0.22">✅</text><text x="212" y="48" font-size="36" text-anchor="middle" dominant-baseline="central" opacity="0.22">✅</text><text x="82" y="100" font-size="36" text-anchor="middle" dominant-baseline="central" opacity="0.22">✅</text><text x="134" y="100" font-size="36" text-anchor="middle" dominant-baseline="central">🍎</text><text x="186" y="100" font-size="36" text-anchor="middle" dominant-baseline="central" opacity="0.22">✅</text><text x="238" y="100" font-size="36" text-anchor="middle" dominant-baseline="central">🍎</text><text x="160" y="152" font-size="36" text-anchor="middle" dominant-baseline="central" opacity="0.22">✅</text></svg>'
+          - さした りんごを、1 こずつ かぞえよう。
         paths:
           - [✅ の ない りんごを さがす, かぞえる, 3 こ]
       - part: 今日
+        id: "b30b7e4605"
         text: わに ならんだ クッキーは なんこ ありますか。
-        figure: "　🍪🍪🍪\n🍪　　　🍪\n🍪　　　🍪\n　🍪🍪🍪"
+        svg: '<svg viewBox="0 0 320 200" xmlns="http://www.w3.org/2000/svg"><text x="160" y="22" font-size="30" text-anchor="middle" dominant-baseline="central">🍪</text><text x="205.8" y="36.9" font-size="30" text-anchor="middle" dominant-baseline="central">🍪</text><text x="234.2" y="75.9" font-size="30" text-anchor="middle" dominant-baseline="central">🍪</text><text x="234.2" y="124.1" font-size="30" text-anchor="middle" dominant-baseline="central">🍪</text><text x="205.8" y="163.1" font-size="30" text-anchor="middle" dominant-baseline="central">🍪</text><text x="160" y="178" font-size="30" text-anchor="middle" dominant-baseline="central">🍪</text><text x="114.2" y="163.1" font-size="30" text-anchor="middle" dominant-baseline="central">🍪</text><text x="85.8" y="124.1" font-size="30" text-anchor="middle" dominant-baseline="central">🍪</text><text x="85.8" y="75.9" font-size="30" text-anchor="middle" dominant-baseline="central">🍪</text><text x="114.2" y="36.9" font-size="30" text-anchor="middle" dominant-baseline="central">🍪</text></svg>'
         answer: 10
-        check: "n('🍪')"
+        check: "10"
         hints:
           - どこから かぞえはじめるか きめよう。
-          - はじめの 1 こに しるしを つけよう。
+          - text: はじめの 1 こに しるしを つけたよ。ぐるっと まわって かぞえよう。
+            svg: '<svg viewBox="0 0 320 200" xmlns="http://www.w3.org/2000/svg"><text x="160" y="22" font-size="30" text-anchor="middle" dominant-baseline="central">🍪</text><text x="205.8" y="36.9" font-size="30" text-anchor="middle" dominant-baseline="central">🍪</text><text x="234.2" y="75.9" font-size="30" text-anchor="middle" dominant-baseline="central">🍪</text><text x="234.2" y="124.1" font-size="30" text-anchor="middle" dominant-baseline="central">🍪</text><text x="205.8" y="163.1" font-size="30" text-anchor="middle" dominant-baseline="central">🍪</text><text x="160" y="178" font-size="30" text-anchor="middle" dominant-baseline="central">🍪</text><text x="114.2" y="163.1" font-size="30" text-anchor="middle" dominant-baseline="central">🍪</text><text x="85.8" y="124.1" font-size="30" text-anchor="middle" dominant-baseline="central">🍪</text><text x="85.8" y="75.9" font-size="30" text-anchor="middle" dominant-baseline="central">🍪</text><text x="114.2" y="36.9" font-size="30" text-anchor="middle" dominant-baseline="central">🍪</text><circle cx="160" cy="22" r="21" fill="none" stroke="#f08080" stroke-width="2.5"/><circle cx="176.5" cy="8.5" r="10" fill="#f3c969" fill-opacity=".8" stroke="currentColor" stroke-width="1.5"/><text x="176.5" y="13.1" font-size="13" text-anchor="middle" fill="currentColor" font-weight="bold">1</text><path d="M172.2 52A49.5 49.5 0 0 1 209.1 93.8" fill="none" stroke="#f08080" stroke-width="3" stroke-linecap="round"/><polygon points="210.1,101.7 202.2,91.6 215.3,90" fill="#f08080"/></svg>'
           - しるしの ところに もどったら おわりだよ。
         paths:
           - [はじめの 1 こに しるしを つける, まわりながら かぞえる, 10 こ]
       - part: 今日
+        id: "e88d99dcad"
         text: ばらばらの さかなを 1 れつに ならべなおします。ただしい ならびは どれですか。
         figure: "🐟　🐟🐟\n　🐟\n🐟🐟　🐟"
         choices: [🐟🐟🐟🐟🐟🐟🐟, 🐟🐟🐟🐟🐟🐟, 🐟🐟🐟🐟🐟🐟🐟🐟]
         answer: 🐟🐟🐟🐟🐟🐟🐟
         check: "'🐟' * n('🐟')"
         hints:
-          - さきに ばらばらの さかなを かぞえよう。
-          - えらぶ ならびも かぞえよう。
-          - おなじ かずの ならびが こたえだよ。
+          - text: ばらばらの さかなに しるしを つけながら かぞえよう。
+            svg: '<svg viewBox="0 0 320 200" xmlns="http://www.w3.org/2000/svg"><text x="82" y="48" font-size="36" text-anchor="middle" dominant-baseline="central">🐟</text><text x="186" y="48" font-size="36" text-anchor="middle" dominant-baseline="central">🐟</text><text x="238" y="48" font-size="36" text-anchor="middle" dominant-baseline="central">🐟</text><text x="186" y="100" font-size="36" text-anchor="middle" dominant-baseline="central">🐟</text><text x="82" y="152" font-size="36" text-anchor="middle" dominant-baseline="central">🐟</text><text x="134" y="152" font-size="36" text-anchor="middle" dominant-baseline="central">🐟</text><text x="238" y="152" font-size="36" text-anchor="middle" dominant-baseline="central">🐟</text><circle cx="100.7" cy="30.3" r="10" fill="#f3c969" fill-opacity=".8" stroke="currentColor" stroke-width="1.5"/><text x="100.7" y="34.9" font-size="13" text-anchor="middle" fill="currentColor" font-weight="bold">1</text><circle cx="204.7" cy="30.3" r="10" fill="#f3c969" fill-opacity=".8" stroke="currentColor" stroke-width="1.5"/><text x="204.7" y="34.9" font-size="13" text-anchor="middle" fill="currentColor" font-weight="bold">2</text></svg>'
+          - えらぶ ならびの さかなも、1 つずつ かぞえよう。
+          - ばらばらの さかなと おなじ かずの ならびを さがそう。
         paths:
           - [ばらばらの さかなを かぞえる（7）, ならびを かぞえる, 7 ひきの ならび]
       - part: 今日
+        id: "a1d59dd118"
         text: ひよこは なんわ いますか。5 わ ずつ ならべなおすと かぞえやすいよ。
         figure: "🐥🐥🐥\n🐥　🐥\n🐥"
         answer: 6
         check: "n('🐥')"
         hints:
           - かみに 5 わを 1 れつに かいてみよう。
-          - のこりを したの ならびに かこう。
-          - 5 の つぎから かぞえよう。
+          - text: うえの れつに 5 わ ならべたよ。のこりを したの れつに ならべよう。
+            svg: '<svg viewBox="0 0 320 200" xmlns="http://www.w3.org/2000/svg"><rect x="38" y="38" width="44" height="44" rx="7" fill="none" stroke="currentColor" stroke-width="2"/><text x="60" y="60" font-size="28" text-anchor="middle" dominant-baseline="central">🐥</text><rect x="86" y="38" width="44" height="44" rx="7" fill="none" stroke="currentColor" stroke-width="2"/><text x="108" y="60" font-size="28" text-anchor="middle" dominant-baseline="central">🐥</text><rect x="134" y="38" width="44" height="44" rx="7" fill="none" stroke="currentColor" stroke-width="2"/><text x="156" y="60" font-size="28" text-anchor="middle" dominant-baseline="central">🐥</text><rect x="182" y="38" width="44" height="44" rx="7" fill="none" stroke="currentColor" stroke-width="2"/><text x="204" y="60" font-size="28" text-anchor="middle" dominant-baseline="central">🐥</text><rect x="230" y="38" width="44" height="44" rx="7" fill="none" stroke="currentColor" stroke-width="2"/><text x="252" y="60" font-size="28" text-anchor="middle" dominant-baseline="central">🐥</text><rect x="38" y="102" width="44" height="44" rx="7" fill="none" stroke="currentColor" stroke-width="2" stroke-dasharray="5 4"/><rect x="86" y="102" width="44" height="44" rx="7" fill="none" stroke="currentColor" stroke-width="2" stroke-dasharray="5 4"/><rect x="134" y="102" width="44" height="44" rx="7" fill="none" stroke="currentColor" stroke-width="2" stroke-dasharray="5 4"/><rect x="182" y="102" width="44" height="44" rx="7" fill="none" stroke="currentColor" stroke-width="2" stroke-dasharray="5 4"/><rect x="230" y="102" width="44" height="44" rx="7" fill="none" stroke="currentColor" stroke-width="2" stroke-dasharray="5 4"/><text x="28" y="63" font-size="15" text-anchor="end" fill="currentColor" font-weight="bold">5</text><line x1="298" y1="60" x2="298" y2="112" stroke="#f08080" stroke-width="2.5" stroke-linecap="round"/><polygon points="298,120 292,110 304,110" fill="#f08080"/></svg>'
+          - 5 の つぎから、したの れつを かぞえよう。
         paths:
           - [5 わを 1 れつに ならべる, のこりは 1 わ, 5 と 1 で 6, 6 わ]
       - part: 今日
+        id: "a5593c88fa"
         text: どうぶつは なんしゅるい いますか。
         figure: "🐶🐱🐶\n🐰🐻🐱\n🐶🐰"
         answer: 4
         check: "len(set(''.join(fig.splitlines())))"
         hints:
           - おなじ どうぶつは、なんびき いても 1 しゅるいだよ。
-          - はじめて でて きた どうぶつに しるしを つけよう。
-          - しるしを つけた どうぶつを かぞえよう。
+          - text: いぬの うしろに、あかい まるを つけたよ。いぬは 3 びき いても 1 しゅるい。
+            svg: '<svg viewBox="0 0 320 200" xmlns="http://www.w3.org/2000/svg"><circle cx="108" cy="48" r="22.9" fill="#f08080" fill-opacity="0.35"/><circle cx="212" cy="48" r="22.9" fill="#f08080" fill-opacity="0.35"/><circle cx="134" cy="152" r="22.9" fill="#f08080" fill-opacity="0.35"/><text x="108" y="48" font-size="36" text-anchor="middle" dominant-baseline="central">🐶</text><text x="160" y="48" font-size="36" text-anchor="middle" dominant-baseline="central">🐱</text><text x="212" y="48" font-size="36" text-anchor="middle" dominant-baseline="central">🐶</text><text x="108" y="100" font-size="36" text-anchor="middle" dominant-baseline="central">🐰</text><text x="160" y="100" font-size="36" text-anchor="middle" dominant-baseline="central">🐻</text><text x="212" y="100" font-size="36" text-anchor="middle" dominant-baseline="central">🐱</text><text x="134" y="152" font-size="36" text-anchor="middle" dominant-baseline="central">🐶</text><text x="186" y="152" font-size="36" text-anchor="middle" dominant-baseline="central">🐰</text></svg>'
+          - ほかの どうぶつも、おなじ ものを まとめて 1 しゅるいと かぞえよう。
         paths:
           - [いぬ、ねこ、うさぎ、くまと みつける, 4 しゅるい]
       - part: 今日
+        id: "b86a603846"
         text: のりものは ぜんぶで いくつ ありますか。
         figure: "🚗🍎🚌\n🐶🚗🎈\n🚌🍌🚗"
         answer: 5
         check: "n('🚗') + n('🚌')"
         hints:
           - のりものと ほかの ものが まざって いるね。
-          - のりものだけに しるしを つけよう。
+          - text: のりもので ない ものを うすく したよ。のりものだけに しるしを つけよう。
+            svg: '<svg viewBox="0 0 320 200" xmlns="http://www.w3.org/2000/svg"><text x="108" y="48" font-size="36" text-anchor="middle" dominant-baseline="central">🚗</text><text x="160" y="48" font-size="36" text-anchor="middle" dominant-baseline="central" opacity="0.22">🍎</text><text x="212" y="48" font-size="36" text-anchor="middle" dominant-baseline="central">🚌</text><text x="108" y="100" font-size="36" text-anchor="middle" dominant-baseline="central" opacity="0.22">🐶</text><text x="160" y="100" font-size="36" text-anchor="middle" dominant-baseline="central">🚗</text><text x="212" y="100" font-size="36" text-anchor="middle" dominant-baseline="central" opacity="0.22">🎈</text><text x="108" y="152" font-size="36" text-anchor="middle" dominant-baseline="central">🚌</text><text x="160" y="152" font-size="36" text-anchor="middle" dominant-baseline="central" opacity="0.22">🍌</text><text x="212" y="152" font-size="36" text-anchor="middle" dominant-baseline="central">🚗</text></svg>'
           - しるしを つけた ものを かぞえよう。
         paths:
           - [くるまと バスだけを えらぶ, かぞえる, 5 つ]
       - part: 今日
+        id: "80e7748899"
         text: りんごと みかんでは、どちらが おおいですか。
         figure: "🍎🍊　🍊\n🍊🍎🍊\n　🍊🍎"
         choices: [りんご, みかん, おなじ]
         answer: みかん
         check: "'おなじ' if n('🍎') == n('🍊') else ('りんご' if n('🍎') > n('🍊') else 'みかん')"
         hints:
-          - りんごだけを かぞえよう。
-          - みかんだけを かぞえよう。
+          - text: まず りんごだけ みて かぞえよう。
+            svg: '<svg viewBox="0 0 320 200" xmlns="http://www.w3.org/2000/svg"><text x="82" y="48" font-size="36" text-anchor="middle" dominant-baseline="central">🍎</text><text x="134" y="48" font-size="36" text-anchor="middle" dominant-baseline="central" opacity="0.22">🍊</text><text x="238" y="48" font-size="36" text-anchor="middle" dominant-baseline="central" opacity="0.22">🍊</text><text x="108" y="100" font-size="36" text-anchor="middle" dominant-baseline="central" opacity="0.22">🍊</text><text x="160" y="100" font-size="36" text-anchor="middle" dominant-baseline="central">🍎</text><text x="212" y="100" font-size="36" text-anchor="middle" dominant-baseline="central" opacity="0.22">🍊</text><text x="160" y="152" font-size="36" text-anchor="middle" dominant-baseline="central" opacity="0.22">🍊</text><text x="212" y="152" font-size="36" text-anchor="middle" dominant-baseline="central">🍎</text></svg>'
+          - text: つぎに みかんだけ みて かぞえよう。
+            svg: '<svg viewBox="0 0 320 200" xmlns="http://www.w3.org/2000/svg"><text x="82" y="48" font-size="36" text-anchor="middle" dominant-baseline="central" opacity="0.22">🍎</text><text x="134" y="48" font-size="36" text-anchor="middle" dominant-baseline="central">🍊</text><text x="238" y="48" font-size="36" text-anchor="middle" dominant-baseline="central">🍊</text><text x="108" y="100" font-size="36" text-anchor="middle" dominant-baseline="central">🍊</text><text x="160" y="100" font-size="36" text-anchor="middle" dominant-baseline="central" opacity="0.22">🍎</text><text x="212" y="100" font-size="36" text-anchor="middle" dominant-baseline="central">🍊</text><text x="160" y="152" font-size="36" text-anchor="middle" dominant-baseline="central">🍊</text><text x="212" y="152" font-size="36" text-anchor="middle" dominant-baseline="central" opacity="0.22">🍎</text></svg>'
           - 2 つの かずを くらべよう。
         paths:
           - [りんご 3、みかん 5 と かぞえる, 5 は 3 より おおきい, みかん]
           - [1 こずつ せんで むすぶ, みかんが のこる, みかん]
     extra:
       - part: 今日
+        id: "0d55413d01"
         text: てんとうむしは なんびき いますか。
         figure: "🐞　🐞\n🐞　　🐞\n　🐞🐞"
         answer: 6
         check: "n('🐞')"
         hints:
           - かぞえた てんとうむしに しるしを つけよう。
-          - うえの ならびから じゅんに かぞえよう。
+          - text: うえの ならびから、1、2 と じゅんに しるしを つけて いこう。
+            svg: '<svg viewBox="0 0 320 200" xmlns="http://www.w3.org/2000/svg"><text x="108" y="48" font-size="36" text-anchor="middle" dominant-baseline="central">🐞</text><text x="212" y="48" font-size="36" text-anchor="middle" dominant-baseline="central">🐞</text><text x="82" y="100" font-size="36" text-anchor="middle" dominant-baseline="central">🐞</text><text x="238" y="100" font-size="36" text-anchor="middle" dominant-baseline="central">🐞</text><text x="160" y="152" font-size="36" text-anchor="middle" dominant-baseline="central">🐞</text><text x="212" y="152" font-size="36" text-anchor="middle" dominant-baseline="central">🐞</text><circle cx="126.7" cy="30.3" r="10" fill="#f3c969" fill-opacity=".8" stroke="currentColor" stroke-width="1.5"/><text x="126.7" y="34.9" font-size="13" text-anchor="middle" fill="currentColor" font-weight="bold">1</text><circle cx="230.7" cy="30.3" r="10" fill="#f3c969" fill-opacity=".8" stroke="currentColor" stroke-width="1.5"/><text x="230.7" y="34.9" font-size="13" text-anchor="middle" fill="currentColor" font-weight="bold">2</text></svg>'
           - しるしの ない ものが のこって いないか みよう。
         paths:
           - [うえから じゅんに さす, しるしを つけながら かぞえる, 6 ぴき]
       - part: 今日
+        id: "2fc8ff40d2"
         text: あめが 10 こ ありました。🐻 が いくつか たべて、のこりが この あめです。🐻 が たべたのは なんこ ですか。
         figure: "🍬🍬　🍬\n🍬　🍬\n🍬🍬"
         answer: 3
         check: "10 - n('🍬')"
         hints:
           - のこって いる あめを かぞえよう。
-          - 10 は のこりの かずと いくつかな。
-          - まるを 10 こ かいて、のこりの ぶんを ぬってみよう。
+          - text: まるを 10 こ かいたよ。のこって いる あめの かずだけ、まるを ぬって いこう。
+            svg: '<svg viewBox="0 0 320 200" xmlns="http://www.w3.org/2000/svg"><circle cx="80" cy="70" r="15" fill="#7fc8f8" fill-opacity=".7" stroke="currentColor" stroke-width="2"/><circle cx="80" cy="44" r="9" fill="#f3c969" fill-opacity=".8" stroke="currentColor" stroke-width="1.5"/><text x="80" y="48.6" font-size="13" text-anchor="middle" fill="currentColor" font-weight="bold">1</text><circle cx="120" cy="70" r="15" fill="#7fc8f8" fill-opacity=".7" stroke="currentColor" stroke-width="2"/><circle cx="120" cy="44" r="9" fill="#f3c969" fill-opacity=".8" stroke="currentColor" stroke-width="1.5"/><text x="120" y="48.6" font-size="13" text-anchor="middle" fill="currentColor" font-weight="bold">2</text><circle cx="160" cy="70" r="15" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="200" cy="70" r="15" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="240" cy="70" r="15" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="80" cy="114" r="15" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="120" cy="114" r="15" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="160" cy="114" r="15" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="200" cy="114" r="15" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="240" cy="114" r="15" fill="none" stroke="currentColor" stroke-width="2"/></svg>'
+          - ぬって いない まるが、🐻 が たべた ぶんだよ。
         paths:
           - [のこりを かぞえる（7）, 10 は 7 と 3, 3 こ]
       - part: 今日
+        id: "cc007b009d"
         text: いちばん おおいのは どれですか。
         figure: "🍇🍓🍇\n🍋🍇🍓\n🍇🍋"
         choices: [ぶどう, いちご, レモン]
         answer: ぶどう
         check: "max(['ぶどう', 'いちご', 'レモン'], key=lambda k: {'ぶどう': n('🍇'), 'いちご': n('🍓'), 'レモン': n('🍋')}[k])"
         hints:
-          - 1 しゅるいずつ かぞえよう。
-          - ぶどう、いちご、レモンの かずを かいておこう。
+          - text: まず いちごだけ みて かぞえよう。
+            svg: '<svg viewBox="0 0 320 200" xmlns="http://www.w3.org/2000/svg"><text x="108" y="48" font-size="36" text-anchor="middle" dominant-baseline="central" opacity="0.22">🍇</text><text x="160" y="48" font-size="36" text-anchor="middle" dominant-baseline="central">🍓</text><text x="212" y="48" font-size="36" text-anchor="middle" dominant-baseline="central" opacity="0.22">🍇</text><text x="108" y="100" font-size="36" text-anchor="middle" dominant-baseline="central" opacity="0.22">🍋</text><text x="160" y="100" font-size="36" text-anchor="middle" dominant-baseline="central" opacity="0.22">🍇</text><text x="212" y="100" font-size="36" text-anchor="middle" dominant-baseline="central">🍓</text><text x="134" y="152" font-size="36" text-anchor="middle" dominant-baseline="central" opacity="0.22">🍇</text><text x="186" y="152" font-size="36" text-anchor="middle" dominant-baseline="central" opacity="0.22">🍋</text></svg>'
+          - ぶどう、レモンも 1 しゅるいずつ かぞえて、かずを かいて おこう。
           - いちばん おおきい かずは どれかな。
         paths:
           - [ぶどう 4、いちご 2、レモン 2 と かぞえる, いちばん おおきいのは 4, ぶどう]
@@ -660,43 +794,51 @@ days:
 # 腕だめし（離、D-047）：型を離れた問題。単元が済になってから開き、済の判定には入れない。
 ri:
   - part: 離
+    id: "bc7098a58c"
     kinds: [総動員, 読み取り]
     uses: [L-001]
-    text: くだものが きまった じゅんばんで 10 こ ならんで います。❓ の ところは かくれて いて みえません。🍌 は ぜんぶで なんこ ありますか。
-    figure: "🍎🍌🍌🍎❓❓❓❓🍌🍎"
+    text: くだものを 3 こずつ おなじ じゅんばんで くりかえして、10 こ ならべました。❓ の ところは かくれて いて みえません。🍌 は ぜんぶで なんこ ありますか。
+    figure: 🍎🍌🍌🍎❓❓❓❓🍌🍎
     answer: 6
     check: "sum(1 for i in range(len(fig)) if '🍎🍌🍌'[i % 3] == '🍌')"
     hints:
       - みえて いる ところから、くりかえしの きまりを みつけよう。
-      - ❓ の ところに はいる くだものを、ひだりから じゅんに いって みよう。
+      - text: 🍎🍌🍌 の くりかえしだね。❓ の ところに はいる くだものを、ひだりから じゅんに いって みよう。
+        svg: '<svg viewBox="0 0 320 200" xmlns="http://www.w3.org/2000/svg"><text x="25" y="100" font-size="24" text-anchor="middle" dominant-baseline="central">🍎</text><text x="55" y="100" font-size="24" text-anchor="middle" dominant-baseline="central">🍌</text><text x="85" y="100" font-size="24" text-anchor="middle" dominant-baseline="central">🍌</text><text x="115" y="100" font-size="24" text-anchor="middle" dominant-baseline="central">🍎</text><rect x="132" y="82" width="26" height="36" rx="5" fill="none" stroke="currentColor" stroke-width="2" stroke-dasharray="5 4"/><text x="145" y="100" font-size="18" text-anchor="middle" dominant-baseline="central" opacity="0.5">❓</text><rect x="162" y="82" width="26" height="36" rx="5" fill="none" stroke="currentColor" stroke-width="2" stroke-dasharray="5 4"/><text x="175" y="100" font-size="18" text-anchor="middle" dominant-baseline="central" opacity="0.5">❓</text><rect x="192" y="82" width="26" height="36" rx="5" fill="none" stroke="currentColor" stroke-width="2" stroke-dasharray="5 4"/><text x="205" y="100" font-size="18" text-anchor="middle" dominant-baseline="central" opacity="0.5">❓</text><rect x="222" y="82" width="26" height="36" rx="5" fill="none" stroke="currentColor" stroke-width="2" stroke-dasharray="5 4"/><text x="235" y="100" font-size="18" text-anchor="middle" dominant-baseline="central" opacity="0.5">❓</text><text x="265" y="100" font-size="24" text-anchor="middle" dominant-baseline="central">🍌</text><text x="295" y="100" font-size="24" text-anchor="middle" dominant-baseline="central">🍎</text><path d="M12 121V128H98V121" fill="none" stroke="#f08080" stroke-width="2"/><text x="55" y="150" font-size="13" text-anchor="middle" fill="currentColor">ひとまとまり</text></svg>'
       - かくれて いた 🍌 も わすれずに、はしから じゅんに しるしを つけて かぞえよう。
     paths:
       - [🍎🍌🍌 の くりかえし, ❓ には 🍌🍌🍎🍌 が はいる, 10 この ならびを かいて 🍌 を はしから かぞえる, 6]
-    note: きまりを見つける（L-001）と、もれなく数えるを合わせる。見えている 🍌 だけを数えて 3 と答えやすい。隠れた所を絵に描き足してから、しるしを付けて数えさせる。
+      - [🍎 で くぎると 🍎🍌🍌 の まとまりが 3 つと 🍎, 1 つの まとまりに 🍌 が 2 ほん, 2、4、6, "6"]
+    note: きまりを見つける（L-001）と、もれなく数えるを合わせる。見えている 🍌 だけを数えて 3 とこたえやすい。かくれたところを絵にかき足してから、しるしをつけて数えさせる。「3 こずつ」がないと、6 こごとのくりかえし（🍎🍌🍌🍎 のあとがなんでもよい）でも見えているところと合い、こたえが 1 つにきまらないので、文に書いた。
   - part: 離
+    id: "94a76391c3"
     kinds: [数, 手数]
-    text: おなじ いろの まる 2 つで 1 くみに します。くみは ぜんぶで いくつ できますか。
+    text: おなじ いろの まるを 2 つずつ くみに します。どの まるも 1 つの くみにしか はいれません。くみは ぜんぶで いくつ できますか。
     figure: "🔴　🔵🟡\n🔵🟢　🔴\n🟡🔵　🔴🔵"
     answer: 4
     check: "sum(n(c) // 2 for c in '🔴🔵🟡🟢')"
     hints:
       - いろごとに かぞえよう。
-      - 🔵 は いくつ あるかな。2 つずつ せんで むすぶと、くみは いくつかな。
+      - text: 🔴 を 2 つ せんで むすぶと 1 くみ。1 つ あまるね。ほかの いろも むすんで みよう。
+        svg: '<svg viewBox="0 0 320 200" xmlns="http://www.w3.org/2000/svg"><line x1="82" y1="48" x2="238" y2="100" stroke="#f08080" stroke-width="4" stroke-linecap="round"/><text x="82" y="48" font-size="36" text-anchor="middle" dominant-baseline="central">🔴</text><text x="186" y="48" font-size="36" text-anchor="middle" dominant-baseline="central">🔵</text><text x="238" y="48" font-size="36" text-anchor="middle" dominant-baseline="central">🟡</text><text x="82" y="100" font-size="36" text-anchor="middle" dominant-baseline="central">🔵</text><text x="134" y="100" font-size="36" text-anchor="middle" dominant-baseline="central">🟢</text><text x="238" y="100" font-size="36" text-anchor="middle" dominant-baseline="central">🔴</text><text x="56" y="152" font-size="36" text-anchor="middle" dominant-baseline="central">🟡</text><text x="108" y="152" font-size="36" text-anchor="middle" dominant-baseline="central">🔵</text><text x="212" y="152" font-size="36" text-anchor="middle" dominant-baseline="central">🔴</text><text x="264" y="152" font-size="36" text-anchor="middle" dominant-baseline="central">🔵</text><circle cx="82" cy="48" r="22.9" fill="none" stroke="#f08080" stroke-width="2.5"/><circle cx="238" cy="100" r="22.9" fill="none" stroke="#f08080" stroke-width="2.5"/></svg>'
       - あまった まるは くみに ならないよ。むすんだ くみを ぜんぶ かぞえよう。
     paths:
       - [🔴 は 3 こで 1 くみ, 🔵 は 4 こで 2 くみ, 🟡 は 2 こで 1 くみ, 🟢 は 1 こで くみに ならない, くみを かぞえて 4]
       - [おなじ いろの まるを 2 つずつ せんで むすぶ, むすんだ せんを かぞえる, 4]
-    note: 色ごとに数える、2 つずつ組にする、組を数える、の 3 つの手順を続ける。あまった 1 つを組に数えたり、まる全部の数（10）を答えたりしやすい。
+    note: いろごとに数える、2 つずつくみにする、くみを数える、の 3 つのてじゅんをつづける。あまった 1 つをくみに数えたり、まるぜんぶの数（10）をこたえたりしやすい。
   - part: 離
+    id: "6c93de2fba"
     kinds: [道筋]
     text: 🌳 が 7 ほん ならんで います。となりの 🌳 と 🌳 の あいだに、🌼 を 1 つずつ うえます。🌼 は なんこ いりますか。
-    figure: "🌳　🌳　🌳　🌳　🌳　🌳　🌳"
+    figure: 🌳　🌳　🌳　🌳　🌳　🌳　🌳
     answer: 6
     check: "n('🌳') - 1"
     hints:
       - 🌳 と 🌳 の あいだに ゆびを おいて みよう。
-      - あいだに 🌼 を かきこんで みよう。
+      - text: 🌳 と 🌳 の あいだに、🌼 を 1 つずつ かきこんで いこう。
+        svg: '<svg viewBox="0 0 320 200" xmlns="http://www.w3.org/2000/svg"><text x="22" y="96" font-size="36" text-anchor="middle" dominant-baseline="central">🌳</text><text x="68" y="96" font-size="36" text-anchor="middle" dominant-baseline="central">🌳</text><text x="114" y="96" font-size="36" text-anchor="middle" dominant-baseline="central">🌳</text><text x="160" y="96" font-size="36" text-anchor="middle" dominant-baseline="central">🌳</text><text x="206" y="96" font-size="36" text-anchor="middle" dominant-baseline="central">🌳</text><text x="252" y="96" font-size="36" text-anchor="middle" dominant-baseline="central">🌳</text><text x="298" y="96" font-size="36" text-anchor="middle" dominant-baseline="central">🌳</text><text x="45" y="116" font-size="22" text-anchor="middle" dominant-baseline="central">🌼</text><text x="91" y="116" font-size="22" text-anchor="middle" dominant-baseline="central">🌼</text></svg>'
       - かきこんだ 🌼 を はしから かぞえよう。🌳 の かずと おなじかな。
     paths:
       - [🌳 と 🌳 の あいだに 🌼 を かきこむ, かきこんだ 🌼 を かぞえる, 6]
-    note: 数えるのは木ではなく、木と木の間。木の数（7）をそのまま答えやすい。図に花を描き込むと、数え落としも防げる。
+      - [🌳 が 2 ほんなら 🌼 は 1 こ、3 ぼんなら 2 こ, 🌼 は 🌳 より 1 つ すくない, "6"]
+    note: 数えるのは木ではなく、木と木のあいだ。木の数（7）をそのままこたえやすい。図に花をかきこむと、数えおとしもふせげる。
