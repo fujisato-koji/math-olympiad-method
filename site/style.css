@@ -735,6 +735,21 @@ body[data-page="map"] .icon[aria-pressed="true"] { color: #ffe2a8; background: r
 .map circle.mark { stroke-width: 5; filter: drop-shadow(0 0 5px var(--c)); }
 .map .pair-arc { fill: none; stroke: #ffe2a8; stroke-width: 2.5; stroke-dasharray: 7 7; animation: arcflow 1.1s linear infinite; }
 @keyframes arcflow { to { stroke-dashoffset: -28; } }
+/* 2D で選んだ単元の出入り：前提（入る）は水色、先（出る）は金。光は前提から先へ流れる（3D と同じ向き） */
+.map.focus .edges path.hl.up, .map.focus .edges path.hl.down { stroke-dasharray: 8 6; animation: edgeflow 1.2s linear infinite; stroke-width: 1.8; }
+@keyframes edgeflow { to { stroke-dashoffset: -14; } }
+.map.focus .edges path.hl.up { stroke: #2f80c8; }
+.map.focus .edges path.hl.down { stroke: #c9851a; }
+.cosmos .map.focus .edges path.hl.up { stroke: #8fd3ff; stroke-opacity: .9; }
+.cosmos .map.focus .edges path.hl.down { stroke: #ffd27a; stroke-opacity: .9; }
+.flow-legend { position: absolute; right: 16px; bottom: 84px; z-index: 5; display: flex; flex-direction: column; gap: 4px; padding: 8px 12px; border-radius: 10px; background: rgba(12, 16, 36, .82); border: 1px solid rgba(160, 180, 255, .22); color: #e8ecff; font-size: 12px; pointer-events: none; }
+.flow-legend span { display: flex; align-items: center; gap: 8px; }
+.flow-legend i { display: inline-block; width: 26px; height: 0; border-top: 2px dashed; }
+.flow-legend .up i { border-color: #8fd3ff; }
+.flow-legend .down i { border-color: #ffd27a; }
+.cosmos[data-view="3d"] .flow-legend { display: none; }
+@media (max-width: 640px) { .flow-legend { top: 112px; bottom: auto; right: 12px; padding: 6px 10px; font-size: 11px; } }
+@media (prefers-reduced-motion: reduce) { .map.focus .edges path.hl.up, .map.focus .edges path.hl.down { animation: none; } }
 /* 単元の道しるべから来たとき、選んでいた単元に脈打つ金の輪と名前の札（D-107） */
 .cosmos .map svg { overflow: visible; }
 .map.focus .sel-mark circle, .map.comb .sel-mark circle { opacity: 1; }  /* 鎖を光らせているときの薄めを、輪には当てない */

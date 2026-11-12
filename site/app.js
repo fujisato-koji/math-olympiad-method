@@ -1027,7 +1027,7 @@
     const host = $('#map');
     if (!host) return;
     const near = x => inGoal(x) || inChoice(x);
-    let on = null, edgeOn = null;
+    let on = null, edgeOn = null, inUp = null;
     if (X.pair) {
       const { a, b, meet } = X.pair, path = (s, m) => { const d = closure(s, 'down'), u = closure(m, 'up'); return [...d].filter(x => u.has(x)); };
       on = new Set([a, b, ...meet, ...meet.flatMap(m => [...path(a, m), ...path(b, m)])]);
@@ -1035,6 +1035,7 @@
     } else if (X.sel) {
       const s = X.sel, up = new Set([...closure(s, 'up')].filter(near)), down = new Set([...closure(s, 'down')].filter(near));
       on = new Set([s, ...up, ...down]);
+      inUp = up;
       edgeOn = (x, y) => (up.has(x) && (up.has(y) || y === s)) || (down.has(y) && (down.has(x) || x === s));
     }
     const g = GOALS.find(x => x.id === prefs.goal), marks = g && !on ? new Set(goalMarks(g)) : null;
@@ -1051,7 +1052,24 @@
       c.classList.toggle('mark', !!marks && marks.has(id));
       c.classList.toggle('dim', !!X.hits && !X.hits.has(id));
     });
-    host.querySelectorAll('.edges path').forEach(p => p.classList.toggle('hl', !!edgeOn && edgeOn(p.dataset.a, p.dataset.b)));
+    host.querySelectorAll('.edges path').forEach(p => {
+      const a = p.dataset.a, b = p.dataset.b, hl = !!edgeOn && edgeOn(a, b);
+      p.classList.toggle('hl', hl);
+      // 選んだ単元へ入ってくる前提の線（up）と、そこから出ていく先の線（down）を分ける。3D と同じく、光は前提から先へ流れる
+      const side = hl && X.sel && !X.pair ? (b === X.sel || (inUp && inUp.has(b)) ? 'up' : 'down') : '';
+      p.classList.toggle('up', side === 'up');
+      p.classList.toggle('down', side === 'down');
+    });
+    // 出入りの見方（2D で単元を選んだときだけ）。地図は .flat の中でスクロールするので、見方は外の枠に置く
+    const frame = host.closest('.cosmos') || host.parentElement;
+    const oldLeg = frame.querySelector(':scope > .flow-legend');
+    if (oldLeg) oldLeg.remove();
+    if (X.sel && !X.pair) {
+      const leg = document.createElement('div');
+      leg.className = 'flow-legend';
+      leg.innerHTML = '<span class="up"><i></i>前提（この単元へ入る）</span><span class="down"><i></i>この単元を使う先（出ていく）</span>';
+      frame.appendChild(leg);
+    }
     // 組み合わせた 2 つの星を、金色の弧で結ぶ
     const svg = host.querySelector('svg'), old = host.querySelector('.pair-arc');
     if (old) old.remove();
