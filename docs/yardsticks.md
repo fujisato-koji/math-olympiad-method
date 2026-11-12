@@ -13,6 +13,11 @@
 | 物理 PhySH（Physics Subject Headings の分野と主な分類） | yardsticks/physh.yaml | 物理の中の抜け | 深い物差し |
 | 計算機 ACM CCS 2012（上位 2 段） | yardsticks/acm-ccs.yaml | 計算機科学の中の抜け | 深い物差し |
 | 医学 MeSH（樹の上位） | yardsticks/mesh.yaml | 医学と生命科学の中の抜け | 深い物差し |
+| 社会学 ASA（米国社会学会の部会） | yardsticks/asa-sections.yaml | 社会学の実証の部分の抜け | 地図を広げる（社会科学、D-119） |
+| 政治学 APSA（米国政治学会の Organized Sections） | yardsticks/apsa-sections.yaml | 政治学と行政学の実証の部分の抜け | 地図を広げる（社会科学） |
+| 教育学 AERA（米国教育学会の 12 部会） | yardsticks/aera-divisions.yaml | 教育の実証の部分の抜け | 地図を広げる（社会科学） |
+| コミュニケーション学 ICA（国際コミュニケーション学会の部会と関心グループ） | yardsticks/ica-divisions.yaml | メディアとコミュニケーションの実証の部分の抜け | 地図を広げる（社会科学） |
+| 地理学 AAG（米国地理学会の専門部会） | yardsticks/aag-specialty-groups.yaml | 人文地理の実証の部分と自然地理の抜け | 地図を広げる（社会科学） |
 | ほかの分野（化学、地球科学、工学、統計、経済など） | yardsticks/<名前>.yaml | 各分野の中の抜け | 深い物差し（公開の分類が見つかるものから） |
 
 ## 書き方

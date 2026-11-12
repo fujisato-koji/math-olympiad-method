@@ -1,0 +1,67 @@
+# 外の物差し：教育学の中の抜けを測る（D-117）。米国教育学会（AERA）の Division A〜L の 12 部会を項目にした。AERA には 150 ほどの SIG もあるが、学会の公式の大区分の 12 部会だけを物差しにした。部会の説明文は写さず、名前だけを使う。
+# 書き方と確かめ方は docs/yardsticks.md。地図（roadmap.yaml）は変えず、足りない単元は gap に案を書くだけ（D-117）。
+title: "AERA Divisions（American Educational Research Association の 12 部会）"
+version: "2026-11-12 時点"
+sources:
+  Y01: {title: "AERA Divisions（aera.net）", url: "https://www.aera.net/About-AERA/Member-Constituents/Divisions", date: 2026-11-12, license: "©2026 American Educational Research Association. All rights reserved.（名前だけを使う）"}
+items:
+  - id: "A"
+    name: "Administration, Organization, & Leadership"
+    ja: "教育の運営・組織・リーダーシップ"
+    none: "知の体系でない実務・規範（学校と教育機関の経営、人事、リーダーの実践）。測れる部分（組織の中の集団とリーダーシップの研究）は Q-030、政策の評価は Y-015 にある"
+    sources: [Y01]
+  - id: "B"
+    name: "Curriculum Studies"
+    ja: "カリキュラム研究"
+    none: "人文・規範（何をどう教えるべきかの理論と解釈、カリキュラム理論）。測れる部分（教科ごとの学習の認知、指導法の効果）は Q-024、Q-023、Y-017 にある"
+    sources: [Y01]
+  - id: "C"
+    name: "Learning & Instruction"
+    ja: "学習と指導"
+    units: [Q-023, Q-024, Y-017, Q-005]
+    sources: [Y01]
+  - id: "D"
+    name: "Measurement & Research Methodologies"
+    ja: "測定と研究方法論"
+    units: [Q-013, Y-018, Y-001, Y-004, Q-006]
+    sources: [Y01]
+  - id: "E"
+    name: "Counseling & Human Development"
+    ja: "カウンセリングと人間発達"
+    units: [Q-010, Q-028, Q-014]
+    sources: [Y01]
+  - id: "F"
+    name: "Historical Inquiry in Education"
+    ja: "教育の歴史的探究"
+    none: "人文（教育の歴史の解釈）。いまの知に要る歴史は各単元の中で扱う"
+    sources: [Y01]
+  - id: "G"
+    name: "Social Context of Education"
+    ja: "教育の社会的文脈"
+    units: [Y-008, Y-011, Y-017, F-080]
+    sources: [Y01]
+  - id: "H"
+    name: "Research, Evaluation, & Assessment in Schools"
+    ja: "学校における研究・評価・アセスメント"
+    units: [Y-018, Y-015, Y-017, Q-013]
+    sources: [Y01]
+  - id: "I"
+    name: "Education in the Professions"
+    ja: "専門職の教育"
+    none: "知の体系でない実務（医学・法・工学などの専門職を養成する教育の実践と運営）。測れる部分（専門家と初心者の知識の違い、学習法の効果）は Q-023 にある"
+    sources: [Y01]
+  - id: "J"
+    name: "Postsecondary Education"
+    ja: "高等教育"
+    units: [F-080, Y-008, Y-004]
+    sources: [Y01]
+  - id: "K"
+    name: "Teaching & Teacher Education"
+    ja: "教職と教員養成"
+    none: "知の体系でない実務（教員養成と教職の実践）。測れる部分（教師の質と付加価値、指導の効果）は F-080、Y-018、Q-023、Y-017 にある"
+    sources: [Y01]
+  - id: "L"
+    name: "Educational Policy & Politics"
+    ja: "教育政策と政治"
+    units: [Y-015, F-080, Y-017]
+    sources: [Y01]

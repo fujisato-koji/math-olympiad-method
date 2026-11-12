@@ -1,0 +1,413 @@
+# 外の物差し：地理学の中の抜けを測る（D-117）。米国地理学会（AAG）の Specialty Groups を、一覧の並びの通し番号 01〜81 で項目にした。一覧のページ（aag.org/groups/）は JavaScript で読み込むので、ページが使う問い合わせ（get_groups、types=specialty_group）の応答から名前を取った。aag.org/community/ は専門部会を 69 と書くが、応答には 81 の名前があり、会員の集まり（学生、退職者など）が混じっているらしい。混じったものは none にした。部会の説明文は写さず、名前だけを使う。
+# 地域で分けた集まり（Africa、Asian Geography など）は分類の便宜の見出しなので none にし、中身は各分野の単元で扱う。
+# 書き方と確かめ方は docs/yardsticks.md。地図（roadmap.yaml）は変えず、足りない単元は gap に案を書くだけ（D-117）。
+title: "AAG Specialty Groups（American Association of Geographers）"
+version: "2026-11-12 時点の応答"
+sources:
+  Y01: {title: "AAG Specialty Groups（aag.org の一覧が使う get_groups の応答、types=specialty_group）", url: "https://www.aag.org/groups/?view=specialty_group", date: 2026-11-12, license: "© American Association of Geographers。利用条件は未確認（名前だけを使う）"}
+items:
+  - id: "01"
+    name: "Africa"
+    ja: "アフリカ"
+    none: "分類の便宜の見出し（地域で分けた集まり）。中身は各分野の単元で扱う"
+    sources: [Y01]
+  - id: "02"
+    name: "Animal Geographies"
+    ja: "動物の地理"
+    none: "人文・批判（人と動物の関係の解釈）。測れる部分（動物の分布と移動）は B-184、B-159 にある"
+    sources: [Y01]
+  - id: "03"
+    name: "Applied Geography"
+    ja: "応用地理学"
+    none: "知の体系でない実務（地理の応用と実務家の集まり）。測れる部分（空間データの解析）は W-114 にある"
+    sources: [Y01]
+  - id: "04"
+    name: "Asian Geography"
+    ja: "アジア地理"
+    none: "分類の便宜の見出し（地域で分けた集まり）。中身は各分野の単元で扱う"
+    sources: [Y01]
+  - id: "05"
+    name: "Bible Geography"
+    ja: "聖書の地理"
+    none: "人文（宗教、聖書の地理の解釈）。地図に入れない"
+    sources: [Y01]
+  - id: "06"
+    name: "Biogeography"
+    ja: "生物地理学"
+    units: [B-184, B-056, B-094, B-093, B-060]
+    sources: [Y01]
+  - id: "07"
+    name: "Black Geographies"
+    ja: "黒人の地理"
+    none: "人文・批判理論（黒人の地理の経験と空間の批判）。測れる部分（居住の分離の測定）は Y-011 にある"
+    sources: [Y01]
+  - id: "08"
+    name: "Business Geography"
+    ja: "ビジネス地理学"
+    none: "知の体系でない実務（企業の立地と市場分析の実務）。測れる部分（企業の立地と集積）は F-075 にある"
+    sources: [Y01]
+  - id: "09"
+    name: "Canadian Studies"
+    ja: "カナダ研究"
+    none: "分類の便宜の見出し（地域で分けた集まり）。中身は各分野の単元で扱う"
+    sources: [Y01]
+  - id: "10"
+    name: "Caregiving"
+    ja: "ケアの地理"
+    none: "人文・規範（ケアの経験の解釈と倫理）。測れる部分は家族の実証の Y-009、人口の高齢化の Y-007 にある"
+    sources: [Y01]
+  - id: "11"
+    name: "Caribbean Geography"
+    ja: "カリブ地理"
+    none: "分類の便宜の見出し（地域で分けた集まり）。中身は各分野の単元で扱う"
+    sources: [Y01]
+  - id: "12"
+    name: "Cartography & Mapping"
+    ja: "地図学と地図作成"
+    units: [W-066, W-114, K-064]
+    sources: [Y01]
+  - id: "13"
+    name: "China Geography"
+    ja: "中国地理"
+    none: "分類の便宜の見出し（地域で分けた集まり）。中身は各分野の単元で扱う"
+    sources: [Y01]
+  - id: "14"
+    name: "Climate"
+    ja: "気候"
+    units: [P-204, P-201, P-122, P-153, W-041]
+    sources: [Y01]
+  - id: "15"
+    name: "Coastal and Marine"
+    ja: "沿岸と海洋"
+    units: [W-063, B-154, W-024, B-102]
+    sources: [Y01]
+  - id: "16"
+    name: "Community College"
+    ja: "コミュニティカレッジ"
+    none: "会員の集まり（コミュニティカレッジの教員）。研究分野の区分でない"
+    sources: [Y01]
+  - id: "17"
+    name: "Community Geographies Collaborative"
+    ja: "地域地理の協働"
+    none: "会員の集まり（地域での共同研究の実践者）。研究分野の区分でない"
+    sources: [Y01]
+  - id: "18"
+    name: "Critical Geographies of Education"
+    ja: "教育の批判的地理"
+    none: "批判理論（教育の批判的な地理）。測れる部分は教育の介入の効果の Y-017、学力の測定の Y-018 にある"
+    sources: [Y01]
+  - id: "19"
+    name: "Critical Islands, Archipelagos, and Oceans"
+    ja: "批判的な島・群島・海洋"
+    none: "人文・批判（島と海の批判的な地理）と地域の見出し。測れる部分（島の生物地理、海洋）は B-093、W-063 にある"
+    sources: [Y01]
+  - id: "20"
+    name: "Cryosphere"
+    ja: "雪氷圏"
+    units: [W-105, W-106, W-100]
+    sources: [Y01]
+  - id: "21"
+    name: "Cultural and Political Ecology"
+    ja: "文化・政治生態学"
+    none: "人文・批判理論（人と環境の関係の解釈、政治生態学）。測れる部分（土地と水の利用、環境の経済）は B-091、F-061 にある"
+    sources: [Y01]
+  - id: "22"
+    name: "Cultural Geography"
+    ja: "文化地理学"
+    none: "人文（文化と場所の解釈）。測れる部分（文化による認知の違い）は Q-011 にある"
+    sources: [Y01]
+  - id: "23"
+    name: "Cyberinfrastructure"
+    ja: "サイバーインフラ"
+    units: [K-027, K-032, K-169, W-114]
+    sources: [Y01]
+  - id: "24"
+    name: "Development Geographies"
+    ja: "開発の地理"
+    units: [F-065, I-036, Y-015, F-083]
+    sources: [Y01]
+  - id: "25"
+    name: "Digital Geographies"
+    ja: "デジタルの地理"
+    none: "批判・解釈（デジタル技術と空間の批判的な考察）。測れる部分は計算社会科学の Y-006、人と機械のやり取りの Q-021 にある"
+    sources: [Y01]
+  - id: "26"
+    name: "Disability"
+    ja: "障害"
+    none: "規範・批判（権利と包摂の議論）と当事者の集まり。測れる部分（健康と機能の障害）は I-036 にある"
+    sources: [Y01]
+  - id: "27"
+    name: "Economic Geography"
+    ja: "経済地理学"
+    units: [F-075, F-065, F-083]
+    sources: [Y01]
+  - id: "28"
+    name: "Energy and Environment"
+    ja: "エネルギーと環境"
+    units: [F-078, W-065, P-203, F-061]
+    sources: [Y01]
+  - id: "29"
+    name: "Environmental Perception and Behavioral Geography"
+    ja: "環境の知覚と行動地理学"
+    units: [Q-032, Q-009]
+    sources: [Y01]
+  - id: "30"
+    name: "Ethics, Justice, and Human Rights"
+    ja: "倫理・正義・人権"
+    none: "規範（倫理・正義・人権の議論）。地図に入れない"
+    sources: [Y01]
+  - id: "31"
+    name: "Ethnic Geography"
+    ja: "民族地理学"
+    units: [Y-011, F-083, Y-007]
+    sources: [Y01]
+  - id: "32"
+    name: "Eurasian"
+    ja: "ユーラシア"
+    none: "分類の便宜の見出し（地域で分けた集まり）。中身は各分野の単元で扱う"
+    sources: [Y01]
+  - id: "33"
+    name: "European"
+    ja: "ヨーロッパ"
+    none: "分類の便宜の見出し（地域で分けた集まり）。中身は各分野の単元で扱う"
+    sources: [Y01]
+  - id: "34"
+    name: "Feminist Geographies"
+    ja: "フェミニスト地理学"
+    none: "批判理論（フェミニストの地理の批判）。測れる部分（性役割と偏見の測定）は Q-011 にある"
+    sources: [Y01]
+  - id: "35"
+    name: "Film"
+    ja: "映画"
+    none: "人文（映画の解釈と批評）。地図に入れない"
+    sources: [Y01]
+  - id: "36"
+    name: "Geographic Information Science & Systems"
+    ja: "地理情報科学とシステム"
+    units: [W-114, W-066, K-169, K-026]
+    sources: [Y01]
+  - id: "37"
+    name: "Geographies of Food and Agriculture"
+    ja: "食と農業の地理"
+    units: [F-086, B-091, V-010, V-016]
+    sources: [Y01]
+  - id: "38"
+    name: "Geography Education"
+    ja: "地理教育"
+    none: "知の体系でない実務（地理の教育の実践）。測れる部分（学習と指導の効果）は Q-023、Q-024、Y-017 にある"
+    sources: [Y01]
+  - id: "39"
+    name: "Geography of Religions and Belief Systems"
+    ja: "宗教と信仰の地理"
+    none: "人文（宗教と信仰の地理の解釈）。地図に入れない"
+    sources: [Y01]
+  - id: "40"
+    name: "Geomorphology"
+    ja: "地形学"
+    units: [W-023, W-105, W-040, W-018]
+    sources: [Y01]
+  - id: "41"
+    name: "Graduate Student"
+    ja: "大学院生"
+    none: "会員の集まり（大学院生）。研究分野の区分でない"
+    sources: [Y01]
+  - id: "42"
+    name: "Hazards, Risks, and Disasters"
+    ja: "災害・リスク・ハザード"
+    units: [W-064, W-101, W-110, E-101]
+    sources: [Y01]
+  - id: "43"
+    name: "Health and Medical Geography"
+    ja: "健康と医療の地理"
+    units: [I-035, I-036, I-037, I-042, F-079]
+    sources: [Y01]
+  - id: "44"
+    name: "Historical Geography"
+    ja: "歴史地理学"
+    none: "人文（過去の景観と地域の解釈）。測れる部分は古環境の W-041、人口の動きの Y-007 にある"
+    sources: [Y01]
+  - id: "45"
+    name: "History of Geography"
+    ja: "地理学史"
+    none: "人文（地理学の歴史の解釈）。地図に入れない"
+    sources: [Y01]
+  - id: "46"
+    name: "Human Dimensions of Global Change"
+    ja: "地球変化の人間的側面"
+    units: [P-201, B-091, B-090, F-061, B-093]
+    sources: [Y01]
+  - id: "47"
+    name: "Indigenous Peoples"
+    ja: "先住民"
+    none: "人文・規範・共同体（先住民の知と権利の議論）。地図に入れない"
+    sources: [Y01]
+  - id: "48"
+    name: "International Geographical Union"
+    ja: "国際地理学連合"
+    none: "会員の集まり（国際地理学連合との連絡）。研究分野の区分でない"
+    sources: [Y01]
+  - id: "49"
+    name: "Landscape"
+    ja: "景観"
+    none: "人文（景観の解釈）。測れる部分（景観の分断と生物）は B-060 にある"
+    sources: [Y01]
+  - id: "50"
+    name: "Latin America"
+    ja: "ラテンアメリカ"
+    none: "分類の便宜の見出し（地域で分けた集まり）。中身は各分野の単元で扱う"
+    sources: [Y01]
+  - id: "51"
+    name: "Latinx Geographies"
+    ja: "ラティーノの地理"
+    none: "人文・批判理論（ラティーノの地理の経験と空間の批判）と共同体の集まり。測れる部分（居住の分離）は Y-011 にある"
+    sources: [Y01]
+  - id: "52"
+    name: "Legal Geography"
+    ja: "法の地理"
+    none: "規範（法の解釈）。地図に入れない"
+    sources: [Y01]
+  - id: "53"
+    name: "Media and Communication Geography"
+    ja: "メディアとコミュニケーションの地理"
+    none: "批判・解釈（メディアと空間の関係の考察）。測れる部分（メディアの効果）は Y-016 にある"
+    sources: [Y01]
+  - id: "54"
+    name: "Mental Health in the Academy"
+    ja: "学界のメンタルヘルス"
+    none: "会員の集まり（学界で働く人の精神保健）。研究分野の区分でない"
+    sources: [Y01]
+  - id: "55"
+    name: "Middle East"
+    ja: "中東"
+    none: "分類の便宜の見出し（地域で分けた集まり）。中身は各分野の単元で扱う"
+    sources: [Y01]
+  - id: "56"
+    name: "Military Geography"
+    ja: "軍事地理"
+    none: "知の体系でない実務（軍事の運用と施策）。測れる部分は武力紛争の実証の Y-014 にある"
+    sources: [Y01]
+  - id: "57"
+    name: "Mountain Geography"
+    ja: "山岳地理"
+    units: [W-023, W-105, W-040, P-204, B-094]
+    sources: [Y01]
+  - id: "58"
+    name: "Paleoenvironmental Change"
+    ja: "古環境の変化"
+    units: [W-041, W-032, W-009, B-103]
+    sources: [Y01]
+  - id: "59"
+    name: "Polar Geography"
+    ja: "極地地理"
+    units: [W-105, W-106, P-204]
+    sources: [Y01]
+  - id: "60"
+    name: "Political Geography"
+    ja: "政治地理学"
+    none: "批判的地政学・国家論の解釈と規範。測れる部分（選挙、比較政治、武力紛争）は Y-012、Y-013、Y-014 にある"
+    sources: [Y01]
+  - id: "61"
+    name: "Population"
+    ja: "人口"
+    units: [Y-007, B-090, F-083]
+    sources: [Y01]
+  - id: "62"
+    name: "Protected Areas"
+    ja: "保護地域"
+    units: [B-093, B-060, B-184]
+    sources: [Y01]
+  - id: "63"
+    name: "Public/Private Sector"
+    ja: "公共・民間部門"
+    none: "会員の集まり（公共部門と民間部門で働く地理学者）。研究分野の区分でない"
+    sources: [Y01]
+  - id: "64"
+    name: "Qualitative Research"
+    ja: "質的研究"
+    none: "解釈的な方法（質的調査の技法は解釈が中心で、反復して検証する知の形でない）。測れる部分は調査の設計と誤差の Y-001、研究の方法の Q-006、UX の聞き取りの Q-020 にある"
+    sources: [Y01]
+  - id: "65"
+    name: "Queer and Trans Geographies"
+    ja: "クィア・トランスの地理"
+    none: "批判理論（クィア・トランスの地理の批判）。測れる部分（性の発達の研究）は Q-031 にある"
+    sources: [Y01]
+  - id: "66"
+    name: "Regional Development and Planning"
+    ja: "地域開発と計画"
+    units: [F-075, F-065, F-084, Y-015]
+    sources: [Y01]
+  - id: "67"
+    name: "Remote Sensing"
+    ja: "リモートセンシング"
+    units: [E-200, W-066, W-114]
+    sources: [Y01]
+  - id: "68"
+    name: "Rural Geography"
+    ja: "農村地理学"
+    units: [F-086, F-065, Y-007]
+    sources: [Y01]
+  - id: "69"
+    name: "Senior Geographer Organization"
+    ja: "シニア地理学者の会"
+    none: "会員の集まり（退職した地理学者）。研究分野の区分でない"
+    sources: [Y01]
+  - id: "70"
+    name: "Socialist and Critical Geography"
+    ja: "社会主義・批判地理学"
+    none: "批判理論（社会主義・批判の地理）。測れる部分（不平等の測定）は F-063、Y-008 にある"
+    sources: [Y01]
+  - id: "71"
+    name: "Spatial Analysis and Modeling"
+    ja: "空間分析とモデリング"
+    gap: "要る単元の案「空間統計と空間モデル（空間的自己相関（モランの I）、点パターンと空間のポアソン過程、地球統計と変動図とクリギング、地理的加重回帰と空間の不均一、空間相互作用モデルと重力モデル、疾病地図、可変単位地区問題と生態学的誤り）」（前提 W-114、S-020、S-010）。入口は W-114（空間の結合と重ね合わせ）、S-010（空間ポアソン過程）、K-063（一般化線形・加法モデル）で、空間のデータに固有の統計がない。統計の流れ S の単元なので、計算機と数学のセッション（ext-cs）か取りまとめで足す"
+    sources: [Y01]
+  - id: "72"
+    name: "Stand Alone Geographers"
+    ja: "単独の地理学者"
+    none: "会員の集まり（所属先に地理学者が 1 人の人）。研究分野の区分でない"
+    sources: [Y01]
+  - id: "73"
+    name: "Study of the American South"
+    ja: "アメリカ南部の研究"
+    none: "分類の便宜の見出し（地域で分けた集まり）。中身は各分野の単元で扱う"
+    sources: [Y01]
+  - id: "74"
+    name: "Tourism, Leisure and Mobilities"
+    ja: "観光・余暇・モビリティ"
+    none: "知の体系でない実務（観光の実務と余暇の施策）。測れる部分（人の移動と交通）は F-077 にある"
+    sources: [Y01]
+  - id: "75"
+    name: "Transportation Geography"
+    ja: "交通地理学"
+    units: [F-077, K-026]
+    sources: [Y01]
+  - id: "76"
+    name: "UAS Geospatial Data"
+    ja: "無人航空機の地理空間データ"
+    gap: "要る単元の案「測量と写真測量（GNSS 測量と基準点、SfM 写真測量とオルソ画像・数値表層モデル、LiDAR の点群、ドローンによる観測の計画と精度の評価）」（前提 W-066、E-200、E-182）。入口は W-066（GPS と空中写真）、E-200（リモートセンシング）、E-182（カメラの射影）で、現地の測定と写真測量の単元がない。工学か地球科学の流れの単元なので、ほかのセッションか取りまとめで足す"
+    sources: [Y01]
+  - id: "77"
+    name: "Undergraduate Student"
+    ja: "学部生"
+    none: "会員の集まり（学部生）。研究分野の区分でない"
+    sources: [Y01]
+  - id: "78"
+    name: "Urban Geography"
+    ja: "都市地理学"
+    units: [F-075, Y-011, Y-008, Y-007]
+    sources: [Y01]
+  - id: "79"
+    name: "Water Insecurity (WISE)"
+    ja: "水不安（WISE）"
+    units: [W-061, I-041, I-036, W-101]
+    sources: [Y01]
+  - id: "80"
+    name: "Water Resources"
+    ja: "水資源"
+    units: [W-061, W-101, W-102, B-102]
+    sources: [Y01]
+  - id: "81"
+    name: "Wine, Beer, and Spirits"
+    ja: "ワイン・ビール・蒸留酒"
+    none: "知の体系でない実務と文化（酒類の産地と産業の話題）。測れる部分は発酵の B-083、B-043、産地の気候と栽培の P-204、V-010、農業経済の F-086 にある"
+    sources: [Y01]

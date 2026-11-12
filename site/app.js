@@ -884,7 +884,7 @@
     ['school', '小中高の数学', rg => SCHOOL_REGIONS.has(rg.id)],
     ['univ', '大学の数学', rg => !SCHOOL_REGIONS.has(rg.id) && ('NACGLDMRTS'.includes(rg.lane) || rg.id === 'suchi')],
     ['cs', '計算機科学', rg => rg.lane === 'K' && rg.id !== 'suchi'],
-    ...'PHBWIQVEF'.split('').map(l => [l, LANES[l].name, rg => rg.lane === l]),
+    ...'PHBWIQVEFY'.split('').map(l => [l, LANES[l].name, rg => rg.lane === l]),
   ];
   const REGION = Object.fromEntries((R.regions || []).map(r => [r.id, r]));
   const group = () => MAP_GROUPS.find(g => g[0] === prefs.mapGroup) || MAP_GROUPS[0];

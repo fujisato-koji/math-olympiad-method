@@ -141,7 +141,7 @@ items:
     parent: "216"
     name: "Town and Traffic Planners"
     ja: "都市・交通の計画家"
-    gap: "交通工学と都市計画の実証の単元がない。案：交通流と交通計画（前提 P-013、S-009、C-024）、都市と地域の経済学（前提 F-012、F-061、W-066）"
+    units: [F-077, F-075, W-114]
     sources: [Y01]
   - id: "2165"
     parent: "216"
@@ -292,13 +292,13 @@ items:
     parent: "235"
     name: "Education Methods specialists"
     ja: "教育方法の専門家"
-    gap: "教育方法の土台は授業や介入の効果の実証研究（比較実験と準実験、メタ分析）で、その単元がない。学習の科学は Q-002・Q-007、測定は Q-013 にある。案：教育の効果の実証研究（前提 Q-013、S-050）。FORD 5.3 と同じ単元"
+    units: [Q-023, Y-017, Y-018]
     sources: [Y01]
   - id: "2352"
     parent: "235"
     name: "Special Needs Teachers"
     ja: "特別支援の教員"
-    units: [Q-010, Q-013, Q-014, B-068]
+    units: [Q-028, Q-010, Q-013, Q-014, B-068]
     sources: [Y01]
   - id: "2353"
     parent: "235"
@@ -328,7 +328,7 @@ items:
     parent: "235"
     name: "Teaching Professionals Not Elsewhere Classified"
     ja: "その他の教育の専門職"
-    units: [Q-002, Q-005, Q-007]
+    units: [Q-023, Q-002, Q-005, Q-007]
     sources: [Y01]
   - {id: "24", parent: "2", name: "Business and Administration Professionals", ja: "経営・事務の専門職", group: true}
   - {id: "241", parent: "24", name: "Finance Professionals", ja: "金融の専門職", group: true}
@@ -361,19 +361,19 @@ items:
     parent: "242"
     name: "Policy Administration Professionals"
     ja: "政策行政の専門職"
-    gap: "政策の土台のうち実証できる部分は、政策効果の測定が S-042、財政が F-052、市場の失敗が F-061 にあるが、実証の政治学と行政学（制度の比較、選挙と投票、社会的選択）の単元がない。案：社会的選択と投票の理論（前提 C-007、F-024）、政治制度の比較と因果推論（前提 S-042、F-063）。FORD 5.6 と同じ単元。法令の運用と価値判断は規範で外す"
+    units: [Y-015, Y-013, F-052, F-072]
     sources: [Y01]
   - id: "2423"
     parent: "242"
     name: "Personnel and Careers Professionals"
     ja: "人事・キャリアの専門職"
-    units: [Q-013, Q-012, F-062, Q-011]
+    units: [Q-030, Q-013, Q-012, F-062, Q-011]
     sources: [Y01]
   - id: "2424"
     parent: "242"
     name: "Training and Staff Development Professionals"
     ja: "研修・人材開発の専門職"
-    units: [Q-002, Q-005, Q-007, Q-012]
+    units: [Q-023, Q-002, Q-005, Q-007, Q-012]
     sources: [Y01]
   - {id: "243", parent: "24", name: "Sales, Marketing and Public Relations Professionals", ja: "販売・マーケティング・広報の専門職", group: true}
   - id: "2431"
@@ -501,13 +501,13 @@ items:
     parent: "263"
     name: "Sociologists, Anthropologists and Related Professionals"
     ja: "社会学者・人類学者など"
-    gap: "社会学の実証（社会調査の測定、階層と移動、社会ネットワーク、人口学）の単元がない。断片は S-031、S-042、B-090、F-063、Q-011 のみ。人類学の解釈の部分は人文（D-115）。案：社会調査の方法と測定（前提 S-031、S-018、Q-013）、社会ネットワークの分析（前提 C-029、M-007）、人口学の方法（前提 B-090、I-036）"
+    units: [Y-001, Y-005, Y-007, Y-008]
     sources: [Y01]
   - id: "2633"
     parent: "263"
     name: "Philosophers, Historians and Political Scientists"
     ja: "哲学者・歴史学者・政治学者"
-    none: "人文（D-115）。政治の測れる部分の投票やゲームは F-024、年代の測定は W-010 で扱う"
+    none: "人文（D-115、哲学と歴史）。政治学者の実証の部分は Y-012、Y-013、Y-014、年代の測定は W-010 で扱う"
     sources: [Y01]
   - id: "2634"
     parent: "263"
@@ -519,7 +519,7 @@ items:
     parent: "263"
     name: "Social Work and Counselling Professionals"
     ja: "ソーシャルワーク・カウンセリングの専門職"
-    units: [Q-014, Q-012, Q-010, Q-018]
+    units: [Q-014, Q-029, Q-012, Q-010, Q-018]
     sources: [Y01]
   - id: "2636"
     parent: "263"
@@ -544,7 +544,7 @@ items:
     parent: "264"
     name: "Translators, Interpreters and Other Linguists"
     ja: "翻訳者・通訳者・言語学者"
-    none: "言語・語学（D-115）。言語の理解と獲得の実証は Q-008、Q-010、機械処理は K-161 で扱う"
+    none: "言語・語学（D-115）。音声と心理言語学は Q-026・Q-008、言語の獲得は Q-010、機械処理は K-161 で扱う"
     sources: [Y01]
   - {id: "265", parent: "26", name: "Creative and Performing Artists", ja: "創作・実演の芸術家", group: true}
   - id: "2651"

@@ -36,7 +36,7 @@ items:
     parent: "011"
     name: "Education science"
     ja: "教育科学"
-    gap: "学習の科学は Q-002・Q-005・Q-007、教育測定は Q-013 にあるが、授業や介入の効果の実証研究（比較実験と準実験、メタ分析）の単元がない。案：教育の効果の実証研究（前提 Q-013、S-050）。FORD 5.3、ISCO 2351 と同じ単元。カリキュラム論と教授法の規範は D-115 で外す"
+    units: [Y-017, Y-018, Q-023, Q-024]
     sources: [Y01]
   - id: "0112"
     parent: "011"
@@ -112,13 +112,13 @@ items:
     parent: "023"
     name: "Language acquisition"
     ja: "言語習得"
-    none: "人文（D-115、言語・語学）。外国語の運用は技能"
+    none: "人文（D-115、言語・語学）。外国語の運用は技能。音声と二つの言語の研究は Q-026、言語の獲得は Q-010 で扱う"
     sources: [Y01]
   - id: "0232"
     parent: "023"
     name: "Literature and linguistics"
     ja: "文学と言語学"
-    none: "人文（D-115、言語・語学・文学）。言語の構造を測る部分は Q-008（心理言語学）、形式言語は L-027、L-028 で扱う"
+    none: "人文（D-115、言語・語学・文学）。測れる部分：音声学と心理言語学は Q-026・Q-008、形式言語は L-027・L-028、計算言語学は K-161 に一部"
     sources: [Y01]
   - {id: "03", name: "Social sciences, journalism and information", ja: "社会科学、ジャーナリズムと情報", group: true, sources: [Y01]}
   - {id: "031", parent: "03", name: "Social and behavioural sciences", ja: "社会・行動科学", group: true, sources: [Y01]}
@@ -132,7 +132,7 @@ items:
     parent: "031"
     name: "Political sciences and civics"
     ja: "政治学と公民"
-    gap: "政治学の実証できる部分（投票と選挙、制度の比較、紛争の計量）の単元がない。案：社会的選択と投票の理論（前提 F-024、A-024）、政治と紛争の計量分析（前提 S-042、F-033）。公民と人権は規範で外す"
+    units: [Y-012, Y-013, Y-014, F-072]
     sources: [Y01]
   - id: "0313"
     parent: "031"
@@ -144,7 +144,7 @@ items:
     parent: "031"
     name: "Sociology and cultural studies"
     ja: "社会学と文化研究"
-    gap: "社会学・人類学・犯罪学の実証できる部分の単元がない（人口は B-090、社会の認知は Q-011、不平等は F-063 に一部）。案：社会調査の方法（前提 S-031、S-019）、社会ネットワークの分析（前提 C-029、C-032）、人口学（前提 F-014、F-056、B-090）"
+    units: [Y-001, Y-007, Y-008, Y-010, Y-011]
     sources: [Y01]
   - {id: "032", parent: "03", name: "Journalism and information", ja: "ジャーナリズムと情報", group: true, sources: [Y01]}
   - id: "0321"

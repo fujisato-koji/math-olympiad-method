@@ -1,0 +1,282 @@
+# 外の物差し：社会学の中の抜けを測る（D-117）。米国社会学会（ASA）の部会（Sections）55 を項目にした。公式のページは自動の取得を断る（403）ので Internet Archive の写しから取った。ページの更新日は 2022-10-19。ページの本文は 53 部会と 2 つの設立中の部会と書くが、一覧には 55 の名前（設立中の Creative Sociology を含む）がある。id は一覧の並びの通し番号。部会の説明文は写さず、名前だけを使う。
+# 書き方と確かめ方は docs/yardsticks.md。地図（roadmap.yaml）は変えず、足りない単元は gap に案を書くだけ（D-117）。社会科学は実証の部分だけを入れ、解釈と規範の判断は入れない（D-115、D-118）。
+title: "ASA Sections（American Sociological Association の部会）"
+version: "2022-10-19 更新のページ（Internet Archive 2026-11-03 の写し）"
+sources:
+  Y01: {title: "ASA Current Sections（asanet.org の Internet Archive 2026-11-03 の写し）", url: "http://web.archive.org/web/20261103043613/https://www.asanet.org/communities-and-sections/sections/current-sections/", date: 2026-11-12, license: "© American Sociological Association。利用条件は未確認（名前だけを使う）"}
+items:
+  - id: "01"
+    name: "Aging and the Life Course"
+    ja: "加齢とライフコース"
+    units: [Y-007, Q-010, I-049]
+    sources: [Y01]
+  - id: "02"
+    name: "Altruism, Morality, and Social Solidarity"
+    ja: "利他性・道徳・社会的連帯"
+    units: [Q-011, B-058, F-024]
+    sources: [Y01]
+  - id: "03"
+    name: "Animals and Society"
+    ja: "動物と社会"
+    none: "規範・人文（動物の権利と人と動物の関係の解釈）。測れる部分（動物の福祉の評価）は V-012"
+    sources: [Y01]
+  - id: "04"
+    name: "Asia and Asian America"
+    ja: "アジアとアジア系アメリカ"
+    none: "分類の便宜の見出し（集団で分けた集まり）。中身は階層（Y-008）、移民（F-083）、家族（Y-009）などの各単元で扱う"
+    sources: [Y01]
+  - id: "05"
+    name: "Biology and Society"
+    ja: "生物学と社会"
+    units: [Q-013, I-036, Y-009]
+    sources: [Y01]
+  - id: "06"
+    name: "Children and Youth"
+    ja: "子どもと若者"
+    units: [Q-010, Y-009, Y-017]
+    sources: [Y01]
+  - id: "07"
+    name: "Collective Behavior and Social Movements"
+    ja: "集合行動と社会運動"
+    units: [Y-019, Y-005]
+    sources: [Y01]
+  - id: "08"
+    name: "Communication, Information Technologies, and Media Sociology"
+    ja: "コミュニケーション・情報技術・メディアの社会学"
+    units: [Y-016, Y-006]
+    sources: [Y01]
+  - id: "09"
+    name: "Community and Urban Sociology"
+    ja: "地域と都市の社会学"
+    units: [Y-011, F-075]
+    sources: [Y01]
+  - id: "10"
+    name: "Comparative-Historical Sociology"
+    ja: "比較歴史社会学"
+    none: "人文（歴史の比較と解釈が中心）。測れる部分（歴史の自然実験、制度と発展の因果）は Y-013、F-065"
+    sources: [Y01]
+  - id: "11"
+    name: "Consumers and Consumption"
+    ja: "消費者と消費"
+    none: "人文（消費の文化の解釈が中心）。測れる部分（消費の意思決定）は Q-009、F-049"
+    sources: [Y01]
+  - id: "12"
+    name: "Creative Sociology (Section-in-Formation)"
+    ja: "創造の社会学（設立中）"
+    none: "人文（創作や芸術的な方法による社会学の実践と表現）。設立中の部会で、名前だけで判断した。測れる部分は社会科学の方法（Y-001〜Y-006）で扱う"
+    sources: [Y01]
+  - id: "13"
+    name: "Crime, Law, and Deviance"
+    ja: "犯罪・法・逸脱"
+    units: [Y-010]
+    sources: [Y01]
+  - id: "14"
+    name: "Decision-Making, Social Networks, and Society"
+    ja: "意思決定・社会ネットワーク・社会"
+    units: [Y-005, Q-009, F-024]
+    sources: [Y01]
+  - id: "15"
+    name: "Disability in Society"
+    ja: "社会のなかの障害"
+    none: "規範・人文（障害の社会モデルと権利の議論）。測れる部分（健康の格差の測定）は I-036、雇用の差は F-081"
+    sources: [Y01]
+  - id: "16"
+    name: "Drugs and Society"
+    ja: "薬物と社会"
+    units: [Q-018, Q-029, Y-010]
+    sources: [Y01]
+  - id: "17"
+    name: "Economic Sociology"
+    ja: "経済社会学"
+    units: [Y-005, F-063, F-012]
+    sources: [Y01]
+  - id: "18"
+    name: "Environmental Sociology"
+    ja: "環境社会学"
+    units: [B-091, F-061, F-078]
+    sources: [Y01]
+  - id: "19"
+    name: "Ethnomethodology and Conversation Analysis"
+    ja: "エスノメソドロジーと会話分析"
+    none: "人文（日常の方法と会話の記述・解釈）。測れる部分（言語の産出と身ぶりの実験）は Q-008"
+    sources: [Y01]
+  - id: "20"
+    name: "Family"
+    ja: "家族"
+    units: [Y-009, Y-007]
+    sources: [Y01]
+  - id: "21"
+    name: "Global and Transnational Sociology"
+    ja: "グローバルと越境の社会学"
+    units: [F-065, F-083, F-051]
+    sources: [Y01]
+  - id: "22"
+    name: "Global Middle East and North Africa"
+    ja: "中東・北アフリカ（グローバル）"
+    none: "分類の便宜の見出し（地域で分けた集まり）。中身は比較政治（Y-013）、武力紛争（Y-014）、経済発展（F-065）、移民（F-083）などの各単元で扱う"
+    sources: [Y01]
+  - id: "23"
+    name: "History of Sociology and Social Thought"
+    ja: "社会学史と社会思想"
+    none: "人文（学説史と思想の解釈）。地図に入れない"
+    sources: [Y01]
+  - id: "24"
+    name: "Inequality, Poverty, and Mobility"
+    ja: "不平等・貧困・移動"
+    units: [Y-008, F-063, Y-011]
+    sources: [Y01]
+  - id: "25"
+    name: "International Migration"
+    ja: "国際移民"
+    units: [F-083, Y-007]
+    sources: [Y01]
+  - id: "26"
+    name: "Labor and Labor Movements"
+    ja: "労働と労働運動"
+    units: [F-062, F-063]
+    sources: [Y01]
+  - id: "27"
+    name: "Latina/o Sociology"
+    ja: "ラティーノの社会学"
+    none: "分類の便宜の見出し（集団で分けた集まり）。中身は移民（F-083）、階層（Y-008）、近隣（Y-011）などの各単元で扱う"
+    sources: [Y01]
+  - id: "28"
+    name: "Marxist Sociology"
+    ja: "マルクス主義社会学"
+    none: "人文・規範（マルクス主義の理論の解釈）。測れる部分（階級と不平等の測定）は Y-008、F-063"
+    sources: [Y01]
+  - id: "29"
+    name: "Mathematical Sociology"
+    ja: "数理社会学"
+    units: [Y-005, F-024, Y-011, Y-006]
+    sources: [Y01]
+  - id: "30"
+    name: "Medical Sociology"
+    ja: "医療社会学"
+    units: [I-036, F-079, Q-018]
+    sources: [Y01]
+  - id: "31"
+    name: "Methodology"
+    ja: "方法論"
+    units: [Y-001, Y-002, Y-003, Y-004, S-042]
+    sources: [Y01]
+  - id: "32"
+    name: "Organizations, Occupations, and Work"
+    ja: "組織・職業・仕事"
+    units: [Q-030, F-073, F-062]
+    sources: [Y01]
+  - id: "33"
+    name: "Peace, War, and Social Conflict"
+    ja: "平和・戦争・社会的葛藤"
+    units: [Y-014, Q-011]
+    sources: [Y01]
+  - id: "34"
+    name: "Political Economy of the World-System"
+    ja: "世界システムの政治経済学"
+    none: "人文（世界システム論の歴史的な解釈）。測れる部分（貿易と国の豊かさの違い）は F-051、F-065"
+    sources: [Y01]
+  - id: "35"
+    name: "Political Sociology"
+    ja: "政治社会学"
+    units: [Y-012, Y-013]
+    sources: [Y01]
+  - id: "36"
+    name: "Race, Gender, and Class"
+    ja: "人種・ジェンダー・階級"
+    units: [Y-008, F-081, F-063]
+    sources: [Y01]
+  - id: "37"
+    name: "Racial and Ethnic Minorities"
+    ja: "人種・民族的マイノリティ"
+    units: [Y-011, F-081, Y-008, Q-011]
+    sources: [Y01]
+  - id: "38"
+    name: "Science, Knowledge, and Technology"
+    ja: "科学・知識・技術"
+    none: "人文（科学と技術の社会的な解釈、科学知識の社会学）。測れる部分は技術の普及と知識の波及（F-082）、再現性（Q-006、Y-006）にある"
+    sources: [Y01]
+  - id: "39"
+    name: "Social Psychology"
+    ja: "社会心理学"
+    units: [Q-011, Q-012]
+    sources: [Y01]
+  - id: "40"
+    name: "Sociological Practice and Public Sociology"
+    ja: "実践社会学とパブリック社会学"
+    none: "知の体系でない実務・技能（社会学の実践と社会への発信）。地図に入れない"
+    sources: [Y01]
+  - id: "41"
+    name: "Sociology of Culture"
+    ja: "文化社会学"
+    none: "人文（文化の解釈）。測れる部分は文化による違いの実験（Q-011）、文化の伝わり方（B-160）、テキストの分析（Y-006）にある"
+    sources: [Y01]
+  - id: "42"
+    name: "Sociology of Development"
+    ja: "開発の社会学"
+    units: [F-065, Y-013, I-036, B-090]
+    sources: [Y01]
+  - id: "43"
+    name: "Sociology of Education"
+    ja: "教育社会学"
+    units: [Y-017, Y-018, F-080, Y-008]
+    sources: [Y01]
+  - id: "44"
+    name: "Sociology of Emotions"
+    ja: "感情社会学"
+    units: [Q-012]
+    sources: [Y01]
+  - id: "45"
+    name: "Sociology of Human Rights"
+    ja: "人権の社会学"
+    none: "規範（人権の議論）。測れる部分（紛争のデータ）は Y-014"
+    sources: [Y01]
+  - id: "46"
+    name: "Sociology of Indigenous Peoples and Native Nations"
+    ja: "先住民の社会学"
+    none: "分類の便宜の見出し（集団で分けた集まり）。中身は不平等（Y-008）、健康（I-036）、人口（Y-007）などの各単元で扱う"
+    sources: [Y01]
+  - id: "47"
+    name: "Sociology of Law"
+    ja: "法社会学"
+    units: [Y-021, Y-010]
+    sources: [Y01]
+  - id: "48"
+    name: "Sociology of Mental Health"
+    ja: "精神保健の社会学"
+    units: [Q-029, I-036, Q-012]
+    sources: [Y01]
+  - id: "49"
+    name: "Sociology of Population"
+    ja: "人口社会学"
+    units: [Y-007, B-090]
+    sources: [Y01]
+  - id: "50"
+    name: "Sociology of Religion"
+    ja: "宗教社会学"
+    none: "人文（宗教の解釈）。測れる部分（宗教的な行動や態度の調査）は Y-001、態度と偏見の測定は Q-011"
+    sources: [Y01]
+  - id: "51"
+    name: "Sociology of Sex and Gender"
+    ja: "性とジェンダーの社会学"
+    units: [F-081, Y-009, Q-011]
+    sources: [Y01]
+  - id: "52"
+    name: "Sociology of Sexualities"
+    ja: "セクシュアリティの社会学"
+    units: [Q-031]
+    sources: [Y01]
+  - id: "53"
+    name: "Sociology of the Body and Embodiment"
+    ja: "身体と身体性の社会学"
+    none: "人文（身体の経験の解釈）。測れる部分（健康の格差）は I-036"
+    sources: [Y01]
+  - id: "54"
+    name: "Teaching and Learning in Sociology"
+    ja: "社会学の教育と学習"
+    none: "知の体系でない実務・技能（教育の実践）。測れる部分（教育の介入の効果）は Y-017"
+    sources: [Y01]
+  - id: "55"
+    name: "Theory"
+    ja: "理論"
+    none: "人文（社会理論の解釈）。測れる部分（理論から導く模型）は Y-005、F-024、Y-011"
+    sources: [Y01]

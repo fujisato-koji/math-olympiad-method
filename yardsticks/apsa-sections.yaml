@@ -1,0 +1,272 @@
+# 外の物差し：政治学の中の抜けを測る（D-117）。米国政治学会（APSA）の Organized Sections 53 を項目にした。id は原文の番号（12・14・26 は欠番）。部会の説明文は写さず、番号と名前だけを使う。
+# 書き方と確かめ方は docs/yardsticks.md。地図（roadmap.yaml）は変えず、足りない単元は gap に案を書くだけ（D-117）。社会科学は実証の部分だけを入れ、解釈と規範の判断は入れない（D-115、D-118）。
+title: "APSA Organized Sections（American Political Science Association の部会）"
+version: "2026-11-12 取得"
+sources:
+  Y01: {title: "APSA Organized Sections（apsanet.org）", url: "https://apsanet.org/sections/organized-sections/", date: 2026-11-12, license: "© American Political Science Association。Terms of Use は未確認（番号と名前だけを使う）"}
+items:
+  - id: "01"
+    name: "Federalism & Intergovernmental Relations"
+    ja: "連邦制と政府間関係"
+    units: [F-084, Y-013]
+    sources: [Y01]
+  - id: "02"
+    name: "Law and Courts"
+    ja: "法と裁判所"
+    units: [Y-021]
+    sources: [Y01]
+  - id: "03"
+    name: "Legislative Studies"
+    ja: "議会研究"
+    units: [Y-020, F-072]
+    sources: [Y01]
+  - id: "04"
+    name: "Public Policy"
+    ja: "公共政策"
+    units: [Y-015, Y-004]
+    sources: [Y01]
+  - id: "05"
+    name: "Political Organizations and Parties"
+    ja: "政治組織と政党"
+    units: [Y-013, Y-012]
+    sources: [Y01]
+  - id: "06"
+    name: "Public Administration"
+    ja: "行政学"
+    units: [Y-015, F-073]
+    sources: [Y01]
+  - id: "07"
+    name: "Conflict Processes"
+    ja: "紛争過程"
+    units: [Y-014]
+    sources: [Y01]
+  - id: "08"
+    name: "Representation and Electoral Systems"
+    ja: "代表と選挙制度"
+    units: [Y-013, F-072, Y-012]
+    sources: [Y01]
+  - id: "09"
+    name: "Presidents and Executive Politics"
+    ja: "大統領と執政の政治"
+    units: [Y-013, Y-015]
+    sources: [Y01]
+  - id: "10"
+    name: "Political Methodology"
+    ja: "政治学の方法論"
+    units: [S-042, Y-004, Y-001, Y-003, Y-006]
+    sources: [Y01]
+  - id: "11"
+    name: "Religion and Politics"
+    ja: "宗教と政治"
+    none: "人文・規範（宗教の解釈、政教関係の規範）。測れる部分（宗教と投票・党派性）は Y-012、宗教と紛争は Y-014"
+    sources: [Y01]
+  - id: "13"
+    name: "Urban and Local Politics"
+    ja: "都市と地方の政治"
+    units: [F-084, F-075, Y-011]
+    sources: [Y01]
+  - id: "15"
+    name: "Science, Technology & Environmental Politics"
+    ja: "科学・技術・環境の政治"
+    units: [F-061, F-078, Y-015]
+    sources: [Y01]
+  - id: "16"
+    name: "Women, Gender, and Politics Research"
+    ja: "女性・ジェンダーと政治の研究"
+    units: [Y-012, Y-013]
+    sources: [Y01]
+  - id: "17"
+    name: "Foundations of Political Theory"
+    ja: "政治理論の基礎"
+    none: "規範（政治理論、何が正しいかの判断）。測れる部分（投票の理論）は F-072"
+    sources: [Y01]
+  - id: "18"
+    name: "Information Technology and Politics"
+    ja: "情報技術と政治"
+    units: [Y-016, Y-006]
+    sources: [Y01]
+  - id: "19"
+    name: "International Security"
+    ja: "国際安全保障"
+    units: [Y-014]
+    sources: [Y01]
+  - id: "20"
+    name: "Comparative Politics"
+    ja: "比較政治"
+    units: [Y-013, Y-014]
+    sources: [Y01]
+  - id: "21"
+    name: "European Politics and Society"
+    ja: "ヨーロッパの政治と社会"
+    none: "分類の便宜の見出し（地域で分けた集まり）。中身は比較政治（Y-013）、選挙（Y-012）、連邦制と地方財政（F-084）などの各単元で扱う"
+    sources: [Y01]
+  - id: "22"
+    name: "State Politics and Policy"
+    ja: "州の政治と政策"
+    units: [F-084, Y-015, Y-013]
+    sources: [Y01]
+  - id: "23"
+    name: "Political Communication"
+    ja: "政治コミュニケーション"
+    units: [Y-016, Y-012]
+    sources: [Y01]
+  - id: "24"
+    name: "Politics and History"
+    ja: "政治と歴史"
+    none: "人文（政治の歴史と制度の発展の解釈が中心）。測れる部分（歴史の自然実験、制度と発展の因果）は Y-013、F-065"
+    sources: [Y01]
+  - id: "25"
+    name: "Political Economy"
+    ja: "政治経済"
+    units: [F-072, Y-013, F-063, F-065]
+    sources: [Y01]
+  - id: "27"
+    name: "Critical Political Science"
+    ja: "批判的政治学"
+    none: "人文・規範（批判理論の解釈）。測れる部分（不平等の測定）は Y-008、F-063"
+    sources: [Y01]
+  - id: "28"
+    name: "Political Psychology"
+    ja: "政治心理学"
+    units: [Q-011, Y-012, Q-009]
+    sources: [Y01]
+  - id: "29"
+    name: "Political Science Education"
+    ja: "政治学教育"
+    none: "知の体系でない実務・技能（教育の実践）。測れる部分（教育の介入の効果）は Y-017"
+    sources: [Y01]
+  - id: "30"
+    name: "Politics, Literature, and the Arts"
+    ja: "政治・文学・芸術"
+    none: "人文（文学と芸術にあらわれる政治の解釈）。地図に入れない"
+    sources: [Y01]
+  - id: "31"
+    name: "Foreign Policy"
+    ja: "外交政策"
+    units: [Y-014, F-024]
+    sources: [Y01]
+  - id: "32"
+    name: "Elections, Public Opinion, and Voting Behavior"
+    ja: "選挙・世論・投票行動"
+    units: [Y-012]
+    sources: [Y01]
+  - id: "33"
+    name: "Race, Ethnicity and Politics"
+    ja: "人種・民族と政治"
+    units: [Y-012, Q-011]
+    sources: [Y01]
+  - id: "34"
+    name: "International History and Politics"
+    ja: "国際史と政治"
+    none: "人文（国際関係の歴史の解釈）。測れる部分（紛争のデータ）は Y-014"
+    sources: [Y01]
+  - id: "35"
+    name: "Democracy and Autocracy"
+    ja: "民主主義と独裁"
+    units: [Y-013]
+    sources: [Y01]
+  - id: "36"
+    name: "Human Rights"
+    ja: "人権"
+    none: "規範（人権の議論）。測れる部分（紛争のデータ）は Y-014"
+    sources: [Y01]
+  - id: "37"
+    name: "Qualitative and Multi-Method Research"
+    ja: "質的・複合的研究法"
+    none: "方法の議論（事例の選び方、過程追跡、解釈的な事例研究）。因果の推論の論理と選択の偏りは S-042、Y-004 で扱う"
+    sources: [Y01]
+  - id: "38"
+    name: "Sexuality and Politics"
+    ja: "セクシュアリティと政治"
+    units: [Y-012, Q-011]
+    sources: [Y01]
+  - id: "39"
+    name: "Health Politics and Policy"
+    ja: "保健の政治と政策"
+    units: [F-079, I-036, Y-015]
+    sources: [Y01]
+  - id: "40"
+    name: "Canadian Politics"
+    ja: "カナダの政治"
+    none: "分類の便宜の見出し（地域で分けた集まり）。中身は連邦制と地方財政（F-084）、選挙（Y-012）、比較政治（Y-013）などの各単元で扱う"
+    sources: [Y01]
+  - id: "41"
+    name: "Political Networks"
+    ja: "政治ネットワーク"
+    units: [Y-005]
+    sources: [Y01]
+  - id: "42"
+    name: "Experimental Research"
+    ja: "実験研究"
+    units: [Y-003, S-042, F-049]
+    sources: [Y01]
+  - id: "43"
+    name: "Migration and Citizenship"
+    ja: "移民と市民権"
+    units: [F-083, Y-007, Y-012]
+    sources: [Y01]
+  - id: "44"
+    name: "African Politics Conference Group"
+    ja: "アフリカ政治会議グループ"
+    none: "分類の便宜の見出し（地域で分けた集まり）。中身は比較政治（Y-013）、武力紛争（Y-014）、経済発展（F-065）などの各単元で扱う"
+    sources: [Y01]
+  - id: "45"
+    name: "Class and Inequality"
+    ja: "階級と不平等"
+    units: [F-063, Y-008]
+    sources: [Y01]
+  - id: "46"
+    name: "Ideas, Knowledge and Politics"
+    ja: "観念・知識と政治"
+    none: "人文（観念と知識の役割の解釈）。測れる部分は枠づけの実験（Y-016）、テキストの分析（Y-006）にある"
+    sources: [Y01]
+  - id: "47"
+    name: "American Political Thought"
+    ja: "アメリカの政治思想"
+    none: "人文（思想史の解釈）。地図に入れない"
+    sources: [Y01]
+  - id: "48"
+    name: "International Collaboration"
+    ja: "国際協力"
+    none: "知の体系でない実務（研究者や組織の国際協力という活動）。名前だけで判断した。地図に入れない"
+    sources: [Y01]
+  - id: "49"
+    name: "Middle East and North Africa Politics"
+    ja: "中東・北アフリカの政治"
+    none: "分類の便宜の見出し（地域で分けた集まり）。中身は比較政治（Y-013）、武力紛争（Y-014）などの各単元で扱う"
+    sources: [Y01]
+  - id: "50"
+    name: "Civic Engagement"
+    ja: "市民参加"
+    units: [Y-012, Q-011]
+    sources: [Y01]
+  - id: "51"
+    name: "Education Politics and Policy"
+    ja: "教育の政治と政策"
+    units: [Y-017, F-080, Y-015]
+    sources: [Y01]
+  - id: "52"
+    name: "Formal Theory"
+    ja: "形式理論"
+    units: [F-024, F-072, F-073]
+    sources: [Y01]
+  - id: "53"
+    name: "International Relations Theory"
+    ja: "国際関係理論"
+    none: "人文（国際関係の諸理論の解釈と比較）。測れる部分（戦争の交渉の模型、同盟と抑止の実証）は Y-014、F-024"
+    sources: [Y01]
+  - id: "54"
+    name: "American Political Economy"
+    ja: "アメリカの政治経済"
+    units: [F-063, F-052, Y-012]
+    sources: [Y01]
+  - id: "55"
+    name: "South Asian Politics"
+    ja: "南アジアの政治"
+    none: "分類の便宜の見出し（地域で分けた集まり）。中身は比較政治（Y-013）、武力紛争（Y-014）、経済発展（F-065）などの各単元で扱う"
+    sources: [Y01]
+  - id: "56"
+    name: "Nationalism and Politics"
+    ja: "ナショナリズムと政治"
+    none: "人文（ナショナリズムの歴史と概念の解釈）。測れる部分は集団どうしの態度（Q-011）、民族と内戦（Y-014）にある"
+    sources: [Y01]

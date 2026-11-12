@@ -169,7 +169,7 @@ items:
     parent: "D"
     name: "Analysis of Collective Decision-Making"
     ja: "集団的意思決定の分析"
-    gap: "要る単元の案「社会的選択と投票の理論（アローの不可能性定理、多数決のパラドックス、投票制度、公共選択、メカニズムデザインの入口）」（前提 F-012、F-024）。入口は F-061（公共財とただ乗り）"
+    units: [F-072, F-024]
     sources: [Y01]
   - id: "D8"
     parent: "D"
@@ -230,7 +230,7 @@ items:
     parent: "E"
     name: "Macro-Based Behavioral Economics"
     ja: "マクロ行動経済学"
-    gap: "要る単元の案「行動マクロ経済学（期待形成と学習、合理的不注意、貨幣錯覚、消費者心理と景気）」（前提 F-049、F-025、F-053）。入口は F-049、中心がない"
+    units: [F-085]
     sources: [Y01]
   - {id: "F", name: "International Economics", ja: "国際経済学", group: true}
   - id: "F0"
@@ -249,7 +249,7 @@ items:
     parent: "F"
     name: "International Factor Movements and International Business"
     ja: "国際的な生産要素の移動と国際ビジネス"
-    gap: "要る単元の案「多国籍企業と国際的な要素移動（直接投資の理論、海外生産の決定、国際労働移動と送金、移民の経済効果）」（前提 F-051、F-062、F-043）。入口は F-050（資本移動）、中心がない"
+    units: [F-083]
     sources: [Y01]
   - id: "F3"
     parent: "F"
@@ -267,7 +267,7 @@ items:
     parent: "F"
     name: "International Relations, National Security, and International Political Economy"
     ja: "国際関係・安全保障・国際政治経済"
-    none: "人文・規範（国際政治と安全保障の解釈と政策判断）。貿易政策の効果の測り方は F-051 で扱う"
+    units: [Y-014, F-051]
     sources: [Y01]
   - id: "F6"
     parent: "F"
@@ -359,7 +359,7 @@ items:
     parent: "H"
     name: "State and Local Government • Intergovernmental Relations"
     ja: "州・地方政府・政府間関係"
-    gap: "要る単元の案「地方財政と空間の公共経済学（財政連邦主義、ティブー・モデルと地方公共財、補助金の効果、地域間の財政競争、公共施設の立地）」（前提 F-052、F-061）"
+    units: [F-084]
     sources: [Y01]
   - id: "H8"
     parent: "H"
@@ -378,13 +378,13 @@ items:
     parent: "I"
     name: "Health"
     ja: "保健（医療経済）"
-    gap: "要る単元の案「医療経済学（医療市場と医療保険、医療の需要と供給、費用効果分析と QALY、健康の不平等の測り方）」（前提 F-061、F-007、I-036）。入口は I-036（世界の健康）"
+    units: [F-079]
     sources: [Y01]
   - id: "I2"
     parent: "I"
     name: "Education and Research Institutions"
     ja: "教育と研究機関"
-    gap: "要る単元の案「教育の経済学（教育の収益率、教育の生産関数、学校選択と補助、因果推論による教育政策の評価）」（前提 F-062、S-042）。入口は F-062（人的資本）"
+    units: [F-080, Y-017]
     sources: [Y01]
   - id: "I3"
     parent: "I"
@@ -439,7 +439,7 @@ items:
     parent: "J"
     name: "Labor Discrimination"
     ja: "労働市場の差別"
-    gap: "要る単元の案「労働市場の差別と格差（嗜好による差別と統計的差別、監査調査、賃金格差の分解）」（前提 F-062、S-042）。入口は F-062、Q-011（偏見の測り方）"
+    units: [F-081]
     sources: [Y01]
   - id: "J8"
     parent: "J"
@@ -464,7 +464,7 @@ items:
     parent: "K"
     name: "Regulation and Business Law"
     ja: "規制とビジネス法"
-    none: "規範（反トラスト法・証券法・行政法など法の解釈と判断）。規制の経済分析は L5 の要る単元の案に置く"
+    none: "規範（反トラスト法・証券法・行政法など法の解釈と判断）。規制と競争政策の経済分析は F-074 にある"
     sources: [Y01]
   - id: "K3"
     parent: "K"
@@ -476,7 +476,7 @@ items:
     parent: "K"
     name: "Legal Procedure, the Legal System, and Illegal Behavior"
     ja: "訴訟手続・法制度・違法行為"
-    gap: "要る単元の案「犯罪と法執行の経済学（抑止の模型、犯罪の実証、訴訟と和解の分析）」（前提 F-012、F-024、S-042）。法の手続きの解釈は入れない"
+    units: [Y-010]
     sources: [Y01]
   - {id: "L", name: "Industrial Organization", ja: "産業組織論", group: true}
   - id: "L0"
@@ -501,19 +501,19 @@ items:
     parent: "L"
     name: "Nonprofit Organizations and Public Enterprise"
     ja: "非営利組織と公企業"
-    gap: "要る単元の案「規制・公企業・民営化の経済学（自然独占と料金規制、インセンティブ規制、公企業と民営化の比較、非営利組織の経済分析）」（前提 F-060、F-061、F-043）"
+    units: [F-074]
     sources: [Y01]
   - id: "L4"
     parent: "L"
     name: "Antitrust Issues and Policies"
     ja: "反トラスト問題と政策"
-    gap: "要る単元の案「競争政策の経済学（カルテルと協調、合併の分析、垂直的取引制限、市場支配力の測定）」（前提 F-060、F-024）。入口は F-060（不完全競争）、法の解釈は入れない"
+    units: [F-074]
     sources: [Y01]
   - id: "L5"
     parent: "L"
     name: "Regulation and Industrial Policy"
     ja: "規制と産業政策"
-    gap: "要る単元の案「規制・公企業・民営化の経済学（自然独占と料金規制、インセンティブ規制、公企業と民営化の比較、非営利組織の経済分析）」（前提 F-060、F-061、F-043）。産業政策の是非の判断は入れない"
+    units: [F-074]
     sources: [Y01]
   - id: "L6"
     parent: "L"
@@ -537,7 +537,7 @@ items:
     parent: "L"
     name: "Industry Studies: Transportation and Utilities"
     ja: "産業研究：運輸と公益事業"
-    none: "知の体系でない（産業ごとの事例の一覧）。規制の経済分析は L5 の要る単元の案に置く"
+    none: "知の体系でない（産業ごとの事例の一覧）。規制の経済分析は F-074、交通は F-077 で扱う"
     sources: [Y01]
   - {id: "M", name: "Business Administration and Business Economics • Marketing • Accounting • Personnel Economics", ja: "経営・マーケティング・会計・人事の経済学", group: true}
   - id: "M0"
@@ -574,7 +574,7 @@ items:
     parent: "M"
     name: "Personnel Economics"
     ja: "人事の経済学"
-    gap: "要る単元の案「契約とインセンティブの経済学（プリンシパル・エージェント、報酬設計、昇進のトーナメント、労働契約）」（前提 F-024、F-061、F-062）。入口は F-062（人的資本）、F-061（モラルハザード）"
+    units: [F-073]
     sources: [Y01]
   - {id: "N", name: "Economic History", ja: "経済史", group: true}
   - id: "N0"
@@ -654,7 +654,7 @@ items:
     parent: "O"
     name: "Innovation • Research and Development • Technological Change • Intellectual Property Rights"
     ja: "技術革新・研究開発・技術変化・知的財産権"
-    gap: "要る単元の案「技術革新と知的財産の経済学（内生的成長と研究開発、特許と競争、技術の普及、イノベーションの測定）」（前提 F-025、F-060）。入口は F-065（全要素生産性）"
+    units: [F-082]
     sources: [Y01]
   - id: "O4"
     parent: "O"
@@ -716,7 +716,7 @@ items:
     parent: "Q"
     name: "Agriculture"
     ja: "農業経済"
-    gap: "要る単元の案「農業経済学（農家の生産と所得、農産物市場と価格変動、土地と農業政策の効果）」（前提 F-008、F-012）。周辺は V-010、B-091 に少しあるが中心がない"
+    units: [F-086]
     sources: [Y01]
   - id: "Q2"
     parent: "Q"
@@ -728,13 +728,13 @@ items:
     parent: "Q"
     name: "Nonrenewable Resources and Conservation"
     ja: "枯渇性資源と保全"
-    gap: "要る単元の案「資源とエネルギーの経済学（枯渇性資源の最適採掘とホテリング則、資源価格と資源の呪い、エネルギー市場と電源の費用比較）」（前提 F-025、F-008、W-065）。入口は W-065（地下資源）"
+    units: [F-078]
     sources: [Y01]
   - id: "Q4"
     parent: "Q"
     name: "Energy"
     ja: "エネルギー"
-    gap: "要る単元の案「資源とエネルギーの経済学（枯渇性資源の最適採掘とホテリング則、資源価格と資源の呪い、エネルギー市場と電源の費用比較）」（前提 F-025、F-008、W-065）。入口は P-203（エネルギー資源と電力の供給）"
+    units: [F-078]
     sources: [Y01]
   - id: "Q5"
     parent: "Q"
@@ -753,31 +753,31 @@ items:
     parent: "R"
     name: "General Regional Economics"
     ja: "地域経済一般"
-    gap: "要る単元の案「都市・地域経済学（集積の経済、都市の規模分布、土地利用と地代、空間均衡モデル、地域間の人口移動）」（前提 F-012、F-051）"
+    units: [F-075]
     sources: [Y01]
   - id: "R2"
     parent: "R"
     name: "Household Analysis"
     ja: "家計の分析（住宅・地域移動）"
-    gap: "要る単元の案「都市・地域経済学（集積の経済、都市の規模分布、土地利用と地代、空間均衡モデル、地域間の人口移動）」（前提 F-012、F-051）。住宅需要と地域間移動はここに入れる"
+    units: [F-075]
     sources: [Y01]
   - id: "R3"
     parent: "R"
     name: "Real Estate Markets, Spatial Production Analysis, and Firm Location"
     ja: "不動産市場・空間的生産・企業立地"
-    gap: "要る単元の案「不動産市場と立地の経済学（地価と住宅価格の決まり方、ヘドニック価格、企業の立地、輸送費と空間均衡）」（前提 F-012、F-051）。入口は F-047（不動産の投資）"
+    units: [F-075]
     sources: [Y01]
   - id: "R4"
     parent: "R"
     name: "Transportation Economics"
     ja: "交通経済学"
-    gap: "要る単元の案「交通の経済学（交通需要と混雑、混雑課金、交通投資の費用便益、事故と安全）」（前提 F-061、F-007）"
+    units: [F-077]
     sources: [Y01]
   - id: "R5"
     parent: "R"
     name: "Regional Government Analysis"
     ja: "地域政府の分析"
-    gap: "要る単元の案「地方財政と空間の公共経済学（財政連邦主義、ティブー・モデルと地方公共財、補助金の効果、地域間の財政競争、公共施設の立地）」（前提 F-052、F-061）。H7 と同じ単元"
+    units: [F-084]
     sources: [Y01]
   - {id: "Y", name: "Miscellaneous Categories", ja: "その他の分類", group: true}
   - id: "Y1"
@@ -845,7 +845,7 @@ items:
     parent: "Z"
     name: "Cultural Economics • Economic Sociology • Economic Anthropology"
     ja: "文化経済学・経済社会学・経済人類学"
-    none: "人文（芸術・宗教・文化の解釈）と社会学の記述。測れる部分は F-063（制度）、Q-011（協力と信頼の実験と文化）にある"
+    none: "人文（芸術・宗教・文化の解釈）。測れる部分は F-063（制度）、Q-011（協力と信頼の実験と文化）、Y-005（社会ネットワーク）、Y-008（階層と移動）にある"
     sources: [Y01]
   - id: "Z2"
     parent: "Z"

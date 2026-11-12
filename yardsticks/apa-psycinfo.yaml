@@ -42,7 +42,7 @@ items:
     parent: "2300"
     name: "Motor Processes"
     ja: "運動過程"
-    gap: "要る単元の案「運動の制御と学習（感覚運動の学習、スキルの獲得と練習の効果、協調と時間の精度、眼球運動）」（前提 B-063、Q-005）。入口は B-063、B-120、Q-021（フィッツの法則）で、中心がない"
+    units: [Q-025]
     sources: [Y01]
   - id: "2340"
     parent: "2300"
@@ -92,7 +92,7 @@ items:
     parent: "2500"
     name: "Neuropsychology & Neurology"
     ja: "神経心理学と神経学"
-    units: [B-063, B-101, B-065, B-068]
+    units: [B-063, B-101, B-065, B-068, Q-027]
     sources: [Y01]
   - id: "2530"
     parent: "2500"
@@ -136,13 +136,13 @@ items:
     parent: "2700"
     name: "Linguistics & Language & Speech"
     ja: "言語学・言語・音声"
-    gap: "要る単元の案「言語学と音声（音声学と音韻、語と文の構造と意味、言語の類型と変化、音声の産出と知覚）」（前提 Q-008、E-149）。入口は Q-008（心理言語学）で、言語そのものの科学がない"
+    units: [Q-026, Q-008, Q-010]
     sources: [Y01]
   - id: "2750"
     parent: "2700"
     name: "Mass Media Communications"
     ja: "マスメディア"
-    none: "知の体系でない実務（報道・広告・番組の制作と運営）。測れる部分（説得と態度）は Q-011 にある"
+    units: [Y-016]
     sources: [Y01]
   - {id: "2800", name: "Developmental Psychology", ja: "発達心理学", group: true}
   - id: "2820"
@@ -168,7 +168,7 @@ items:
     parent: "2900"
     name: "Social Structure & Organization"
     ja: "社会構造と組織"
-    gap: "要る単元の案「社会の構造と変化の実証（階層と移動、社会ネットワーク、人口と都市化、集合行動の測り方）」（前提 B-090、S-042、F-062）。入口は B-090、F-062"
+    units: [Y-008, Y-005, Y-007]
     sources: [Y01]
   - id: "2920"
     parent: "2900"
@@ -186,25 +186,25 @@ items:
     parent: "2900"
     name: "Marriage & Family"
     ja: "結婚と家族"
-    gap: "要る単元の案「親密な関係と家族（魅力と関係の満足、結婚と別れ、親の養育と家族の力学の実証）」（前提 Q-010、Q-011）。入口は Q-010 の愛着"
+    units: [Y-009]
     sources: [Y01]
   - id: "2960"
     parent: "2900"
     name: "Political Processes & Political Issues"
     ja: "政治過程と政治問題"
-    none: "規範（政治の判断と制度）。測れる部分は態度と説得（Q-011）、意思決定（Q-009）、ゲーム理論（F-024）にある"
+    units: [Y-012, Y-013, F-072]
     sources: [Y01]
   - id: "2970"
     parent: "2900"
     name: "Sex & Gender Roles"
     ja: "性と性役割"
-    none: "規範（性役割と平等の議論）。測れる部分（ステレオタイプと偏見の測定）は Q-011 にある"
+    none: "規範（性役割と平等の議論）。測れる部分（ステレオタイプと偏見の測定）は Q-011、性の発達の研究は Q-031 にある"
     sources: [Y01]
   - id: "2980"
     parent: "2900"
     name: "Sexual Behavior & Sexual Orientation"
     ja: "性行動と性的指向"
-    gap: "要る単元の案「ヒトの性の科学（性的指向と性自認の発達の研究、性行動の疫学、性機能）」（前提 I-018、Q-010）。入口は I-018 の性の分化"
+    units: [Q-031]
     sources: [Y01]
   - id: "2990"
     parent: "2900"
@@ -243,31 +243,31 @@ items:
     parent: "3200"
     name: "Psychological Disorders"
     ja: "心理的障害"
-    units: [Q-014, B-068, Q-016]
+    units: [Q-014, Q-029, B-068, Q-016]
     sources: [Y01]
   - id: "3230"
     parent: "3200"
     name: "Behavior Disorders & Antisocial Behavior"
     ja: "行動障害と反社会的行動"
-    gap: "要る単元の案「行動の問題と攻撃・反社会的行動（ADHD、素行症、攻撃性の発達と介入の効果）」（前提 Q-010、Q-014）。入口は Q-014、B-068"
+    units: [Q-028, Y-010]
     sources: [Y01]
   - id: "3250"
     parent: "3200"
     name: "Neurodevelopmental & Autism Spectrum Disorders"
     ja: "神経発達症と自閉スペクトラム症"
-    units: [B-068, Q-010]
+    units: [Q-028, B-068, Q-010]
     sources: [Y01]
   - id: "3260"
     parent: "3200"
     name: "Eating Disorders"
     ja: "摂食障害"
-    gap: "要る単元の案「摂食障害（神経性やせ症・過食症の病態と治療の効果の実証）」（前提 Q-014、I-019）。入口は Q-014、I-019（食欲と体重の調節）"
+    units: [Q-029]
     sources: [Y01]
   - id: "3270"
     parent: "3200"
     name: "Communication Disorders"
     ja: "コミュニケーション障害"
-    gap: "要る単元の案「言語と聴覚の障害（失語、構音と吃音、難聴、検査と介入の効果）」（前提 Q-008、B-063、E-149）。入口は Q-008"
+    units: [Q-027, Q-028, I-060, I-057]
     sources: [Y01]
   - id: "3280"
     parent: "3200"
@@ -316,7 +316,7 @@ items:
     parent: "3300"
     name: "Rehabilitation"
     ja: "リハビリテーション"
-    gap: "要る単元の案「リハビリテーションの科学（神経の回復と可塑性、運動療法の効果、機能の評価、補装具）」（前提 B-064、B-063、I-049）。入口は B-064、B-170"
+    units: [Q-027, Q-025]
     sources: [Y01]
   - {id: "3400", name: "Health & Mental Health Personnel Issues", ja: "保健・精神保健の人材の問題", group: true}
   - id: "3410"
@@ -354,13 +354,13 @@ items:
     parent: "3500"
     name: "Curriculum & Programs & Teaching Methods"
     ja: "課程・プログラム・教授法"
-    gap: "要る単元の案「学習科学と教育の実証（指導法とフィードバックの効果、教育の無作為化試験と効果量、学力の測り方、教科ごとの誤概念）」（前提 Q-005、Q-013、S-050。MeSH I02、MSC 97 と同じ単元）。教育の制度と運営は入れない。入口は Q-005（想起練習と間隔反復）"
+    units: [Q-023, Y-017]
     sources: [Y01]
   - id: "3550"
     parent: "3500"
     name: "Academic Learning & Achievement"
     ja: "学習と学業達成"
-    units: [Q-005, Q-013, Q-010]
+    units: [Q-023, Q-024, Q-005, Q-013, Q-010]
     sources: [Y01]
   - id: "3560"
     parent: "3500"
@@ -372,7 +372,7 @@ items:
     parent: "3500"
     name: "Special & Compensatory Education"
     ja: "特別支援・補償教育"
-    none: "規範・実務（特別支援教育の制度と運営）。測れる部分（神経発達症の理解）は B-068、Q-010 にある"
+    none: "規範・実務（特別支援教育の制度と運営）。測れる部分（神経発達症の理解と早期の介入の効果）は Q-028 に"
     sources: [Y01]
   - id: "3580"
     parent: "3500"
@@ -391,31 +391,31 @@ items:
     parent: "3600"
     name: "Personnel Management & Selection & Training"
     ja: "人事管理・選抜・訓練"
-    gap: "要る単元の案「産業・組織心理学（選抜と評価の妥当性、職務の遂行の測り方、仕事の動機と職務満足、組織の中の集団とリーダーシップ）」（前提 Q-011、Q-012、Q-013）。採用・人事の実務は入れない"
+    units: [Q-030]
     sources: [Y01]
   - id: "3630"
     parent: "3600"
     name: "Personnel Evaluation & Job Performance"
     ja: "人事評価と職務遂行"
-    gap: "要る単元の案「産業・組織心理学（選抜と評価の妥当性、職務の遂行の測り方、仕事の動機と職務満足、組織の中の集団とリーダーシップ）」（前提 Q-011、Q-012、Q-013）。採用・人事の実務は入れない"
+    units: [Q-030]
     sources: [Y01]
   - id: "3640"
     parent: "3600"
     name: "Management & Management Training"
     ja: "経営と管理者訓練"
-    none: "経営の実務。測れる部分（集団と意思決定）は Q-011、Q-009 にある"
+    none: "経営の実務。測れる部分（集団と意思決定、リーダーシップの研究）は Q-011、Q-009、Q-030 にある"
     sources: [Y01]
   - id: "3650"
     parent: "3600"
     name: "Personnel Attitudes & Job Satisfaction"
     ja: "従業員の態度と職務満足"
-    gap: "要る単元の案「産業・組織心理学（選抜と評価の妥当性、職務の遂行の測り方、仕事の動機と職務満足、組織の中の集団とリーダーシップ）」（前提 Q-011、Q-012、Q-013）。採用・人事の実務は入れない"
+    units: [Q-030]
     sources: [Y01]
   - id: "3660"
     parent: "3600"
     name: "Organizational Behavior"
     ja: "組織行動"
-    gap: "要る単元の案「産業・組織心理学（選抜と評価の妥当性、職務の遂行の測り方、仕事の動機と職務満足、組織の中の集団とリーダーシップ）」（前提 Q-011、Q-012、Q-013）。採用・人事の実務は入れない"
+    units: [Q-030]
     sources: [Y01]
   - id: "3670"
     parent: "3600"
@@ -428,7 +428,7 @@ items:
     parent: "3700"
     name: "Sports & Exercise"
     ja: "スポーツと運動"
-    gap: "要る単元の案「運動とスポーツの科学（運動の生理、トレーニングの効果、スポーツのバイオメカニクス、運動の継続とスポーツ心理）」（前提 I-004、B-120、Q-012）。入口は B-120、K-065"
+    units: [Q-025, I-065, I-066, B-120]
     sources: [Y01]
   - id: "3740"
     parent: "3700"
@@ -483,7 +483,7 @@ items:
     parent: "4000"
     name: "Transportation"
     ja: "交通"
-    none: "実務・政策（交通の計画と運用）。測れる部分（運転の人間要因）は Q-021、Q-022 にある"
+    units: [Q-021, Q-022, F-077]
     sources: [Y01]
   - {id: "4100", name: "Cognitive Psychology & Intelligent Systems", ja: "認知心理学と知的システム", group: true}
   - id: "4120"
@@ -515,7 +515,7 @@ items:
     parent: "4200"
     name: "Criminal Law & Criminal Adjudication"
     ja: "刑事法と刑事裁判"
-    none: "規範（法と裁判）。測れる部分（目撃証言の記憶）は Q-005 にある"
+    none: "規範（法と裁判）。測れる部分（目撃証言の記憶）は Q-005、犯罪と刑事司法の実証は Y-010 にある"
     sources: [Y01]
   - id: "4250"
     parent: "4200"
@@ -527,7 +527,7 @@ items:
     parent: "4200"
     name: "Crime Prevention"
     ja: "犯罪予防"
-    none: "規範・政策（犯罪予防の施策）。地図に入れない"
+    units: [Y-010]
     sources: [Y01]
   - id: "4290"
     parent: "4200"

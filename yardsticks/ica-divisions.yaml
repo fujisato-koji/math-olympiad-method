@@ -1,0 +1,213 @@
+# 外の物差し：コミュニケーション学の中の抜けを測る（D-117）。国際コミュニケーション学会（ICA）の Divisions 28 と Interest Groups 6 を項目にした。公式のページ（icahdq.org）は自動の取得を断る（403）ので、Internet Archive の写し（トップページの一覧）から取った。部会の説明文は写さず、名前だけを使う。
+# 書き方と確かめ方は docs/yardsticks.md。地図（roadmap.yaml）は変えず、足りない単元は gap に案を書くだけ（D-117）。
+title: "ICA Divisions and Interest Groups（International Communication Association）"
+version: "2026-10-11 の写し"
+sources:
+  Y01: {title: "ICA Divisions and Interest Groups（icahdq.org のトップページの一覧、Internet Archive 2026-10-11 の写し）", url: "http://web.archive.org/web/20261011152739/https://www.icahdq.org/", date: 2026-11-12, license: "© International Communication Association。利用条件は未確認（名前だけを使う）"}
+items:
+  - {id: "D", name: "Divisions", ja: "部会", group: true}
+  - {id: "IG", name: "Interest Groups", ja: "関心グループ", group: true}
+  - id: "D01"
+    parent: "D"
+    name: "Activism, Communication and Social Justice"
+    ja: "アクティビズム・コミュニケーション・社会正義"
+    none: "規範（運動の主張と社会正義の議論）。測れる部分（社会運動の実証、説得）は Y-019、Y-016、Q-011 にある"
+    sources: [Y01]
+  - id: "D02"
+    parent: "D"
+    name: "Children, Adolescents and Media"
+    ja: "子ども・青年とメディア"
+    units: [Y-016, Q-010, Q-012]
+    sources: [Y01]
+  - id: "D03"
+    parent: "D"
+    name: "Communication and Technology"
+    ja: "コミュニケーションと技術"
+    units: [Q-021, Q-022, Y-006, Y-005]
+    sources: [Y01]
+  - id: "D04"
+    parent: "D"
+    name: "Communication History"
+    ja: "コミュニケーション史"
+    none: "人文（コミュニケーションの歴史の解釈）。地図に入れない"
+    sources: [Y01]
+  - id: "D05"
+    parent: "D"
+    name: "Communication Law and Policy"
+    ja: "コミュニケーションの法と政策"
+    none: "規範（法と政策の解釈と主張）。測れる部分（規制の経済学、政策の評価）は F-074、Y-015 にある"
+    sources: [Y01]
+  - id: "D06"
+    parent: "D"
+    name: "Computational Methods"
+    ja: "計算の方法"
+    units: [Y-006, K-161, Y-005, K-064]
+    sources: [Y01]
+  - id: "D07"
+    parent: "D"
+    name: "Environmental Communication"
+    ja: "環境コミュニケーション"
+    units: [Y-016, Q-011, Q-009]
+    sources: [Y01]
+  - id: "D08"
+    parent: "D"
+    name: "Ethnicity and Race in Communication"
+    ja: "コミュニケーションにおける民族と人種"
+    none: "批判理論・規範（表象と不平等の批判）。測れる部分（ステレオタイプと偏見の測定、メディアの効果）は Q-011、Y-016 にある"
+    sources: [Y01]
+  - id: "D09"
+    parent: "D"
+    name: "Feminist Scholarship"
+    ja: "フェミニスト研究"
+    none: "批判理論（フェミニストの理論と批判）。測れる部分（性役割の測定）は Q-011 にある"
+    sources: [Y01]
+  - id: "D10"
+    parent: "D"
+    name: "Game Studies"
+    ja: "ゲーム研究"
+    units: [Q-012, Q-021, Y-016]
+    sources: [Y01]
+  - id: "D11"
+    parent: "D"
+    name: "Global Communication and Social Change"
+    ja: "国際コミュニケーションと社会変動"
+    none: "規範・批判（国際メディアの政治経済と開発の議論）。測れる部分は Y-013、Y-016、F-065 にある"
+    sources: [Y01]
+  - id: "D12"
+    parent: "D"
+    name: "Health Communication"
+    ja: "ヘルスコミュニケーション"
+    units: [Q-018, Y-016, I-036]
+    sources: [Y01]
+  - id: "D13"
+    parent: "D"
+    name: "Human-Machine Communication"
+    ja: "人と機械のコミュニケーション"
+    units: [Q-021, Q-022, K-161]
+    sources: [Y01]
+  - id: "D14"
+    parent: "D"
+    name: "Information Systems"
+    ja: "情報システム"
+    units: [Y-016, Q-011, Q-005]
+    sources: [Y01]
+  - id: "D15"
+    parent: "D"
+    name: "Instructional and Developmental Communication"
+    ja: "教授・発達のコミュニケーション"
+    units: [Q-023, Y-017, Q-010]
+    sources: [Y01]
+  - id: "D16"
+    parent: "D"
+    name: "Intercultural Communication"
+    ja: "異文化コミュニケーション"
+    units: [Q-011, Q-008]
+    sources: [Y01]
+  - id: "D17"
+    parent: "D"
+    name: "Interpersonal Communication"
+    ja: "対人コミュニケーション"
+    units: [Q-011, Q-012, Y-009]
+    sources: [Y01]
+  - id: "D18"
+    parent: "D"
+    name: "Journalism Studies"
+    ja: "ジャーナリズム研究"
+    none: "知の体系でない実務（報道の制作と運営、ジャーナリズムの実践）。測れる部分（報道の効果）は Y-016 にある"
+    sources: [Y01]
+  - id: "D19"
+    parent: "D"
+    name: "Language and Social Interaction"
+    ja: "言語と社会的相互行為"
+    none: "言語の記述と解釈（会話分析と談話の解釈）。測れる部分は心理言語学の Q-008、音声の Q-026 にある"
+    sources: [Y01]
+  - id: "D20"
+    parent: "D"
+    name: "LGBTQ Studies"
+    ja: "LGBTQ 研究"
+    none: "批判理論・規範（当事者の経験の解釈と権利の議論）。測れる部分（性の発達の研究、偏見の測定）は Q-031、Q-011 にある"
+    sources: [Y01]
+  - id: "D21"
+    parent: "D"
+    name: "Mass Communication"
+    ja: "マスコミュニケーション"
+    units: [Y-016, Q-011, Y-006]
+    sources: [Y01]
+  - id: "D22"
+    parent: "D"
+    name: "Mobile Communication"
+    ja: "モバイルコミュニケーション"
+    units: [Q-021, Y-006, Y-005]
+    sources: [Y01]
+  - id: "D23"
+    parent: "D"
+    name: "Organizational Communication"
+    ja: "組織コミュニケーション"
+    units: [Q-030, Y-005]
+    sources: [Y01]
+  - id: "D24"
+    parent: "D"
+    name: "Philosophy, Theory and Critique"
+    ja: "哲学・理論・批判"
+    none: "人文（哲学・理論・批評）。地図に入れない"
+    sources: [Y01]
+  - id: "D25"
+    parent: "D"
+    name: "Political Communication"
+    ja: "政治コミュニケーション"
+    units: [Y-012, Y-016, Y-006]
+    sources: [Y01]
+  - id: "D26"
+    parent: "D"
+    name: "Popular Media & Culture"
+    ja: "大衆メディアと文化"
+    none: "人文（大衆文化の解釈と批評）。測れる部分（メディアの効果）は Y-016 にある"
+    sources: [Y01]
+  - id: "D27"
+    parent: "D"
+    name: "Public Relations"
+    ja: "広報"
+    none: "知の体系でない実務（広報の施策と制作）。測れる部分（説得と態度、誤情報の訂正）は Q-011、Y-016 にある"
+    sources: [Y01]
+  - id: "D28"
+    parent: "D"
+    name: "Visual Communication Studies"
+    ja: "視覚コミュニケーション研究"
+    none: "人文（画像と表象の解釈と批評）。測れる部分（視覚の知覚、メディアの効果）は Q-004、Y-016 にある"
+    sources: [Y01]
+  - id: "IG01"
+    parent: "IG"
+    name: "Communication Science & Biology"
+    ja: "コミュニケーション科学と生物学"
+    units: [B-065, Q-012, Q-011]
+    sources: [Y01]
+  - id: "IG02"
+    parent: "IG"
+    name: "Intergroup Communication"
+    ja: "集団間コミュニケーション"
+    units: [Q-011, Q-008]
+    sources: [Y01]
+  - id: "IG03"
+    parent: "IG"
+    name: "Media Industry Studies"
+    ja: "メディア産業研究"
+    none: "知の体系でない実務と産業の記述（制作・配給・編成の事情）。測れる部分（プラットフォームの経済、規制）は F-060、F-074 にある"
+    sources: [Y01]
+  - id: "IG04"
+    parent: "IG"
+    name: "Public Diplomacy & International Relations"
+    ja: "公共外交と国際関係"
+    none: "知の体系でない実務・規範（外交と広報の実践、国際関係の判断）。測れる部分は武力紛争の実証の Y-014、メディアの効果の Y-016 にある"
+    sources: [Y01]
+  - id: "IG05"
+    parent: "IG"
+    name: "Science Communication"
+    ja: "科学コミュニケーション"
+    units: [Y-016, Q-011, Q-009]
+    sources: [Y01]
+  - id: "IG06"
+    parent: "IG"
+    name: "Sport Communication"
+    ja: "スポーツコミュニケーション"
+    units: [Y-016, Q-011, Q-012]
+    sources: [Y01]
