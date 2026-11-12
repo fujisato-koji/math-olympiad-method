@@ -740,3 +740,33 @@ ri:
     paths:
       - [面を開く, 3² + 16² = 265, 4² + 15² = 241, 12² + 7² = 193, いちばん短いのは √193]
     note: 立体の面上の最短道は、面を開いたときの直線。3 通りの開き方を全部くらべる。
+  - part: 離
+    kinds:
+    - 最難関
+    level: 10
+    time: 1500
+    uses:
+    - G-011
+    - G-013
+    - G-014
+    - G-020
+    text: 三角すい OABC があります。辺 OA のまん中の点を D、辺 OB を OE：EB = 1：2 に分ける点を E、辺 AC を AF：FC = 3：2 に分ける点を F とします。3 点 D、E、F を通る平面で三角すいを切ると、この平面は辺 BC とも交わります。切った 2 つの立体のうち、頂点 O をふくむほうの体積は、もとの三角すい OABC の体積の何倍ですか。（図は正しい大きさではありません。点線は見えない辺です。）
+    svg: <svg viewBox="0 -8 240 178" xmlns="http://www.w3.org/2000/svg"><line x1="118.0" y1="12.0" x2="28.0" y2="112.0" stroke="currentColor" stroke-width="2" fill="none"/><line x1="118.0" y1="12.0" x2="112.0" y2="150.0" stroke="currentColor" stroke-width="2" fill="none"/><line x1="118.0" y1="12.0" x2="208.0" y2="102.0" stroke="currentColor" stroke-width="2" fill="none"/><line x1="28.0" y1="112.0" x2="112.0" y2="150.0" stroke="currentColor" stroke-width="2" fill="none"/><line x1="112.0" y1="150.0" x2="208.0" y2="102.0" stroke="currentColor" stroke-width="2" fill="none"/><line x1="28.0" y1="112.0" x2="208.0" y2="102.0" stroke="currentColor" stroke-width="1.5" fill="none" stroke-dasharray="5 4"/><circle cx="73.0" cy="62.0" r="2.2" fill="currentColor"/><circle cx="116.0" cy="58.0" r="2.2" fill="currentColor"/><circle cx="136.0" cy="106.0" r="2.2" fill="currentColor"/><text x="118.0" y="6.0" font-size="12" text-anchor="middle">O</text><text x="19.0" y="118.0" font-size="12" text-anchor="middle">A</text><text x="112.0" y="165.0" font-size="12" text-anchor="middle">B</text><text x="217.0" y="106.0" font-size="12" text-anchor="middle">C</text><text x="64.0" y="60.0" font-size="12" text-anchor="middle">D</text><text x="107.0" y="58.0" font-size="12" text-anchor="middle">E</text><text x="136.0" y="98.0" font-size="12" text-anchor="middle">F</text></svg>
+    answer: 3/10
+    check: '(lambda O, A, B, C: (lambda sub, dot, cross: (lambda T: (lambda D, E, F: (lambda n: (lambda t: (lambda G: (T(O, D, E, C) + T(D, E, F, C) + T(E, F, G, C)) / T(O, A, B, C))((B[0] + t * (C[0] - B[0]), B[1] + t * (C[1] - B[1]), B[2] + t * (C[2] - B[2]))))(dot(n, sub(D, B)) / dot(n, sub(C, B))))(cross(sub(E, D), sub(F, D))))((O[0] + Fraction(1, 2) * (A[0] - O[0]), O[1] + Fraction(1, 2) * (A[1] - O[1]), O[2] + Fraction(1, 2) * (A[2] - O[2])), (O[0] + Fraction(1, 3) * (B[0] - O[0]), O[1] + Fraction(1, 3) * (B[1] - O[1]), O[2] + Fraction(1, 3) * (B[2] - O[2])), (A[0] + Fraction(3, 5) * (C[0] - A[0]), A[1] + Fraction(3, 5) * (C[1] - A[1]), A[2] + Fraction(3, 5) * (C[2] - A[2]))))(lambda p, q, r, s: abs(dot(sub(q, p), cross(sub(r, p), sub(s, p)))) / 6))(lambda a, b: (a[0] - b[0], a[1] - b[1], a[2] - b[2]), lambda a, b: a[0] * b[0] + a[1] * b[1] + a[2] * b[2], lambda a, b: (a[1] * b[2] - a[2] * b[1], a[2] * b[0] - a[0] * b[2], a[0] * b[1] - a[1] * b[0])))((Fraction(0), Fraction(0), Fraction(0)), (Fraction(1), Fraction(0), Fraction(0)), (Fraction(0), Fraction(1), Fraction(0)), (Fraction(0), Fraction(0), Fraction(1)))'
+    hints:
+    - 切る平面が辺 BC と交わる点の位置を、まず決めよう。
+    - 3 点を通る平面と、三角すいのそれぞれの面との交わりを、面ごとに考えてみよう。
+    - O をふくむ立体の体積を、体積の求めやすい三角すいの足し算や引き算で表せないかな。
+    paths:
+    - - 面 OAC の中で、直線 DF が直線 OC と交わる点を Y とする。A を通り OC に平行な線と直線 DF の交点を P とすると、D が OA のまん中で DA = DO、AP ∥ OY で角が等しい（対頂角も等しい）ので △DAP ≡ △DOY、AP = OY。また AP ∥ CY で △FAP ∽ △FCY、AP：CY = AF：FC = 3：2。よって CY = OY × 2/3 で、OC = OY − CY = OY × 1/3。Y は OC を C の先にのばした所にあり、OY = 3 × OC（CY：YO = 2：3）
+      - 面 OBC の中で、直線 YE が辺 BC と交わる点が、切る平面と BC の交点 G（Y、E、D は切る平面の上にある）。C を通り OB に平行な線と直線 YE の交点を Q とする。△YCQ ∽ △YOE で CQ：OE = YC：YO = 2：3。OE = OB × 1/3 なので CQ = OB × 2/9。△GCQ ∽ △GBE で CG：GB = CQ：BE = (OB × 2/9)：(OB × 2/3) = 1：3
+      - 三角すい O-DEY と O-ABC は、O から出る 3 本の辺が同じ直線 OA、OB、OC の上にある。底面を三角形 ODE と OAB とすると、面積の比は (OD/OA) × (OE/OB) = 1/2 × 1/3 = 1/6（角 O が同じで、OA の上の辺を底辺と見ると、底辺が 1/2 倍、E の直線 OA からの高さが B の 1/3 倍）、Y と C の面 OAB からの高さの比は OY：OC = 3：1。体積の比は 1/6 × 3 = 1/2 なので、三角すい O-DEY は もとの 1/2 倍
+      - O-DEY のうち、面 ABC の外にはみ出すのは三角すい C-FGY（面 ABC は DY、EY、OY を F、G、C で切る）。底面を三角形 CFG と CAB とすると、面積の比は (CF/CA) × (CG/CB) = 2/5 × 1/4 = 1/10。Y と O の面 ABC からの高さの比は CY：CO = 2：1。C-FGY は もとの 1/10 × 2 = 1/5 倍
+      - O をふくむ立体は、三角すい O-DEY から C-FGY を引いたものなので、1/2 − 1/5 = 3/10 倍
+    - - 面 OAB の中で、直線 DE が直線 AB と交わる点を X とする。A を通り OB に平行な線と直線 DE の交点を P とすると、D が OA のまん中で DA = DO、AP ∥ OE で角が等しい（対頂角も等しい）ので △DAP ≡ △DOE、AP = OE = OB × 1/3。AP ∥ BE で △XAP ∽ △XBE、XA：XB = AP：BE = 1/3：2/3 = 1：2。X は BA を A の先にのばした所にあり、XA = AB
+      - 面 ABC の中で、直線 XF が辺 BC と交わる点が G（X、D、E、F は切る平面の上にある）。C を通り AB に平行な線と直線 XF の交点を Q とする。△FAX ∽ △FCQ で CQ：AX = CF：FA = 2：3、CQ = AB × 2/3。BX = XA + AB = AB × 2 で、△GCQ ∽ △GBX なので CG：GB = CQ：BX = 2/3：2 = 1：3
+      - O をふくむ立体の頂点は O、C、D、E、F、G。C の向かいの面は三角形 ODE と四角形 DEGF なので、DEGF を EF で 2 つに分けると、三角すい C-ODE、C-DEF、C-EFG の 3 つに分かれる。C-ODE は底面 ODE が三角形 OAB の 1/2 × 1/3 = 1/6 で、頂点 C が同じなので、もとの 1/6 倍
+      - C-DEF は、E を頂点、三角形 CDF を底面と見る。CDF は面 OAC の上で、三角形 CDA の 2/5（F は AC を 3：2 に分ける）。CDA は OAC の 1/2（D は OA のまん中）。よって CDF は OAC の 1/5。E の面 OAC からの高さは B の 1/3（OE = OB × 1/3）。もとの 1/5 × 1/3 = 1/15 倍。C-EFG は、E を頂点、三角形 CFG を底面と見る。CFG は ABC の 2/5 × 1/4 = 1/10、E の面 ABC からの高さは O の 2/3（EB = OB × 2/3）。もとの 1/10 × 2/3 = 1/15 倍
+      - 3 つを足して、1/6 + 1/15 + 1/15 = 5/30 + 2/30 + 2/30 = 9/30 = 3/10 倍
+    note: 考えどころは 3 つ：①切る平面と辺 BC の交点 G の位置を、面の中で線をのばした交点と相似で決める（BC には 3 点のうちどれもないので、G はすぐには見えない）、②立体の分け方を決める（のばして大きな三角すいから引くか、中で三角すいに分けて足すか）、③頂点の角を共有する三角すいの体積比は、辺の比の積。2 本目のちがい：1 本目は外の点 Y で大きな三角すい O-DEY を作って C-FGY を引く。2 本目は別の外の点 X で G を出し、中を 3 つの三角すいに分けて足す（Y は使わない）。check は O(0,0,0)、A(1,0,0)、B(0,1,0)、C(0,0,1) の座標で D、E、F を比から出し、3 点を通る平面と辺 BC の交点 G を連立で出してから、O をふくむ立体を C を頂点にした 3 つの四面体に分け、行列式で体積を出して、もとの 1/6 でわる（G の比は書き入れていない）。別に、x + y + z ≤ 1 の中の乱数 200 万点で、切る平面 2x + 3y + z/3 = 1 の O のがわのわりあいを見積もると 0.2999 で、3/10 に合う（確かめの係が調べた）。既出：三角すいを平面で切る体積比は受験の定番だが、ふつうは切る点が 4 つとも辺の上にある形。ここは 4 つめの点 G を自分で決め、分け方を自分で作る所がちがう。わな：D、E、F の 3 つの比の積 1/2 × 1/3 × 3/5 = 1/10 などを答えにしてしまう（この積は、3 点が O から出る 3 本の辺 OA、OB、OC の上にあるときの三角すいの体積比。F は OC の上でなく辺 AC の上にあり、切り口は 3 点だけでは決まらない）。
