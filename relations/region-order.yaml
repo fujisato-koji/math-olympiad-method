@@ -48,11 +48,11 @@ fields:
   - sora
 - field: F14
   regions:
-  - onkyo
-  - netsu-suishin
-  - rikigaku
   - kaiseki-rikigaku
+  - rikigaku
   - kido
+  - netsu-suishin
+  - onkyo
 - field: F08
   regions:
   - ryutai
@@ -103,22 +103,22 @@ fields:
   - keisan
   - houteishiki
   - shiki
-  - seisu
   - kazoekata
   - ronpo
+  - seisu
   - seisuron
   - suiri
   - kakuritsu
 - field: F06
   regions:
-  - fugo
-  - keisan-kanousei
   - suri-ronri
-  - hardware
+  - keisan-kanousei
   - keisan-riron
+  - hardware
   - programming
   - keisanki-system
   - anzen
+  - fugo
   - kumiawase-daigaku
   - fukuzatsukei
 - field: F13
@@ -127,6 +127,9 @@ fields:
   - robotics
   - kikai-gakushu
   - vision
+- field: F15
+  regions:
+  - kakuritsu-katei
 - field: F10
   regions:
   - keiei-kogaku
@@ -134,22 +137,31 @@ fields:
   - tokei
   - shakai-hoho
   - kyoiku
-- field: F15
-  regions:
-  - kakuritsu-katei
 - field: F09
   regions:
   - songai
+  - keiryo-risk
   - shokugyo-seido
-  - seimei-nenkin
+  - toshi
   - kaikei
   - risoku
-  - toshi
-  - keiryo-risk
+  - seimei-nenkin
   - ouyou-keizai
   - keizai
   - seijigaku
   - shakaigaku
+- field: F12
+  regions:
+  - media
+  - hci
+  - shinri-shakai
+  - shinri-hoho
+  - shinri-rinsho
+  - shinri-gakushu
+  - shinri-ninchi
+  - shinkei
+  - seitai-kogaku
+  - kyoiku-shinri
 - field: F02
   regions:
   - chiri-joho
@@ -167,10 +179,10 @@ fields:
   - iden-shinka
   - biseibutsu
   - iyaku
-  - sangyo-bio
   - seibutsu-keisan
   - bunshi-saibo
   - hassei
+  - sangyo-bio
   - seibutsu-butsuri
   - soyaku
   - iryo-saizensen
@@ -185,15 +197,3 @@ fields:
   - jintai
   - eiyo
   - shinri-hattatsu
-- field: F12
-  regions:
-  - seitai-kogaku
-  - shinkei
-  - kyoiku-shinri
-  - shinri-ninchi
-  - shinri-gakushu
-  - shinri-rinsho
-  - shinri-hoho
-  - shinri-shakai
-  - hci
-  - media

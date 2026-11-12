@@ -7,7 +7,7 @@
 #   応用：先の単元の主な中身が、前の単元の考えを別の対象・場面に当てはめること
 #   深める：同じ論題を、先の単元が次の段で深める
 #   成熟：前の単元の中身は直接使わないが、考え方・読み書きの慣れが要る
-#   疑い：先の単元の中身から見て、前提として要らないように見える（見直しの候補）
+#   疑い：先の単元の中身から見て、前提として要らないように見える（見直しの候補）。2026-11-12 に 310 本を見直し、外す 216・替える 83・残す 11 で 0 本になった（docs/research/needs-review.md）
 # 強さ（strength）：3 は欠けると始められない、2 は一部で使う、1 はあると助かる（疑いは 1）
 #
 # 付け方（2026-11-12）：sonnet の係が、単元の名前（かっこの中の中身）と頭注の前提にふれた行を読んで、65 束で付けた。
@@ -34,7 +34,7 @@ lines:
   H-001>H-002: {type: 土台, strength: 2, why: 物の性質から状態変化へ}
   B-015>B-016: {type: 土台, strength: 2, why: 観察の習慣で植物を調べる}
   B-015>B-017: {type: 土台, strength: 2, why: 観察の習慣で動物を調べる}
-  N-001>K-122: {type: 疑い, strength: 1, why: 10までの数は手順の本質でない}
+  N-001>K-122: {type: 道具, strength: 2, why: ロボット役の道案内で「まえに 3 すすむ」の歩数を数え、まちがえた歩数を見つけて直すのに 10 までの数を使う。}
   K-122>K-123: {type: 土台, strength: 3, why: 手順の考えを並べ替えに使う}
   A-001>K-123: {type: 土台, strength: 2, why: てんびんの比べ方が並べ替えの元}
   H-001>P-181: {type: 土台, strength: 2, why: 身近な物の磁石の性質が出発点}
@@ -72,7 +72,6 @@ lines:
   N-006>N-059: {type: 道具, strength: 3, why: 5ずつ・10ずつ数えて時計を進む}
   N-007>N-059: {type: 道具, strength: 1, why: 注で前提にないと明記、後で追加}
   N-007>N-060: {type: 土台, strength: 3, why: 2けたの計算で金額を足し引き}
-  N-009>N-060: {type: 疑い, strength: 1, why: 金額は100円まで、1000は不要}
   G-005>G-046: {type: 土台, strength: 2, why: まわりの長さを単位で測る}
   N-007>G-046: {type: 道具, strength: 2, why: 数の計算で単位を換算}
   N-009>G-046: {type: 道具, strength: 1, why: 数の範囲の復習で足りる}
@@ -87,7 +86,6 @@ lines:
   B-016>B-018: {type: 土台, strength: 3, why: 植物の特徴を比べて分ける}
   B-017>B-018: {type: 土台, strength: 3, why: 動物の特徴を比べて分ける}
   K-122>K-124: {type: 深める, strength: 3, why: 手順を書くのくり返しへの続き}
-  N-006>K-124: {type: 疑い, strength: 1, why: 100までの数は必須でない}
   N-006>K-127: {type: 道具, strength: 2, why: 点の数を数の列で書く}
   P-178>P-179: {type: 深める, strength: 2, why: 光の直進から反射と集光へ続く}
   N-004>P-189: {type: 道具, strength: 2, why: 0度より低い温度を読む}
@@ -125,27 +123,19 @@ lines:
   N-013>N-015: {type: 土台, strength: 3, why: かけ算の性質をきまりにする}
   N-014>N-016: {type: 土台, strength: 3, why: わり算を分数で表す}
   N-014>N-017: {type: 土台, strength: 3, why: わり切れるかで倍数と約数を決める}
-  N-009>N-017: {type: 疑い, strength: 1, why: 数は100まで、1000の位は不要}
   N-017>N-018: {type: 深める, strength: 3, why: 倍数と約数を共通に広げる}
   N-016>N-019: {type: 土台, strength: 3, why: 分数の意味の上で約分と通分}
   N-018>N-019: {type: 道具, strength: 3, why: 最大公約数と最小公倍数で約分通分}
   N-009>N-020: {type: 土台, strength: 3, why: 位取りを小数の位へ延ばす}
   N-014>N-020: {type: 道具, strength: 2, why: 何回入るかのわり算で小数を扱う}
-  N-016>N-020: {type: 疑い, strength: 1, why: 注では前提にないとされ名前だけで判断}
   N-017>N-021: {type: 土台, strength: 3, why: 約数・倍数から素数を定義する}
   A-009>N-021: {type: 道具, strength: 2, why: 同じ素数を累乗でまとめて書く}
-  N-009>N-021: {type: 疑い, strength: 1, why: 数は100まで。1000の位は不要}
   N-017>N-022: {type: 土台, strength: 3, why: 倍数・約数の見分けをあまりに拡張}
-  N-009>N-022: {type: 疑い, strength: 1, why: 数は100まで。位は要らない}
-  N-015>N-022: {type: 疑い, strength: 1, why: 積のあまりは扱わない。注で前提外}
   N-014>N-023: {type: 土台, strength: 3, why: 'あまりをn-k[n/k]で表す'}
   N-022>N-023: {type: 土台, strength: 2, why: 曜日・和のあまりの問題で使う}
-  N-009>N-023: {type: 疑い, strength: 1, why: 数は100まで。位は要らない}
-  N-020>N-023: {type: 疑い, strength: 1, why: 小数は前提にないと注にある}
   N-021>N-024: {type: 土台, strength: 3, why: 素因数分解が約数の対象を決める}
   C-005>N-024: {type: 道具, strength: 3, why: 積の法則で約数の個数を数える}
   A-009>N-024: {type: 道具, strength: 2, why: 素因数分解の指数を扱う}
-  N-009>N-024: {type: 疑い, strength: 1, why: 数は100まで。位は要らない}
   N-009>N-025: {type: 土台, strength: 3, why: 位取りをn進法に作り替える}
   N-014>N-025: {type: 道具, strength: 3, why: わり算のくり返しで変換する}
   A-009>N-025: {type: 土台, strength: 3, why: 位は右からn^kの累乗}
@@ -165,29 +155,23 @@ lines:
   N-077>A-005: {type: 道具, strength: 2, why: 小数倍の計算に使う}
   N-078>A-005: {type: 道具, strength: 2, why: 分数倍の計算に使う}
   A-005>A-006: {type: 土台, strength: 3, why: 比例は比が一定の関係}
-  G-050>A-006: {type: 疑い, strength: 1, why: グラフは扱わず前提に見えない}
   A-006>A-007: {type: 土台, strength: 3, why: 速さ・濃度を比例で解く}
   G-046>A-007: {type: 道具, strength: 2, why: km・m、kg・gの単位換算}
   N-059>A-007: {type: 道具, strength: 2, why: 時間と分の換算を速さで使う}
-  N-073>A-007: {type: 疑い, strength: 1, why: 万の位は使わない設計と注にある}
   A-004>A-008: {type: 道具, strength: 3, why: 組の終わりを1+2+3…の和で求める}
-  N-019>A-008: {type: 疑い, strength: 1, why: 名前だけで判断、分数の約分は要らなそう}
   N-013>A-009: {type: 土台, strength: 3, why: 累乗は同じ数のかけ算のくり返し}
   N-074>A-009: {type: 道具, strength: 1, why: 大きな累乗値の筆算（名前だけで判断）}
   C-003>C-005: {type: 深める, strength: 3, why: 樹形図から積の法則へ}
   N-013>C-005: {type: 道具, strength: 3, why: 九九でかけて数える}
   C-005>C-006: {type: 土台, strength: 3, why: 積の法則で並べ方を数える}
-  N-015>C-006: {type: 疑い, strength: 1, why: 入れかえは使わないと注にある}
   C-004>C-007: {type: 成熟, strength: 1, why: 道順の数え方の慣れ}
   C-006>C-007: {type: 土台, strength: 3, why: 順列から組合せを出す}
   N-014>C-007: {type: 道具, strength: 2, why: 順列をわって組合せにする}
   N-015>C-007: {type: 道具, strength: 1, why: ×と÷のまじる式で使う}
-  N-075>C-007: {type: 疑い, strength: 1, why: 数は100までで筆算は不要}
   C-005>C-008: {type: 土台, strength: 2, why: たし算の考えを重なりへ}
   C-005>C-009: {type: 道具, strength: 3, why: 積とたし算で次を出す}
   C-004>C-009: {type: 道具, strength: 2, why: 道順の書きこみを使う}
   C-006>C-010: {type: 土台, strength: 3, why: 全部ちがう色は順列}
-  N-015>C-010: {type: 疑い, strength: 1, why: 名前だけで判断、不要に見える}
   C-007>C-011: {type: 土台, strength: 3, why: 選び方で場合の数を出す}
   A-005>C-011: {type: 道具, strength: 3, why: 割合で確率を表す}
   L-005>C-012: {type: 道具, strength: 3, why: 点の偶奇で一筆書きを調べる}
@@ -208,8 +192,6 @@ lines:
   G-007>G-011: {type: 道具, strength: 2, why: 展開図で表面積を求める}
   G-008>G-011: {type: 土台, strength: 3, why: 面積の「いくつ分」を立体へ}
   G-010>G-011: {type: 道具, strength: 2, why: 円柱の底面に円の面積を使う}
-  N-074>G-011: {type: 疑い, strength: 1, why: 筆算は使わず九九で足りる}
-  G-046>G-011: {type: 疑い, strength: 1, why: 単位換算は扱わず不要に見える}
   G-008>G-012: {type: 土台, strength: 3, why: 底辺と高さで面積を比べる}
   A-005>G-012: {type: 道具, strength: 3, why: 面積比を比で表し簡単にする}
   G-008>G-013: {type: 応用, strength: 2, why: 拡大で面積が何倍になるか見る}
@@ -238,7 +220,6 @@ lines:
   N-075>S-028: {type: 道具, strength: 2, why: 大きい合計のわり算で使う}
   N-077>S-028: {type: 道具, strength: 2, why: 小数の平均計算に使う}
   G-046>S-028: {type: 道具, strength: 1, why: 単位つきの量を例に使う}
-  N-059>S-028: {type: 疑い, strength: 1, why: 時刻と時間は平均に不要そう}
   F-001>F-002: {type: 土台, strength: 2, why: 元金と残高の考えを使う}
   A-005>F-002: {type: 道具, strength: 3, why: 利率を割合として扱う}
   A-009>F-002: {type: 道具, strength: 3, why: 複利は累乗で増える}
@@ -255,7 +236,6 @@ lines:
   A-005>H-007: {type: 道具, strength: 3, why: 密度は比で表す}
   H-064>H-007: {type: 深める, strength: 3, why: 重さと体積から密度へ}
   H-004>H-008: {type: 土台, strength: 2, why: 燃焼を化合として扱う}
-  H-005>H-008: {type: 疑い, strength: 1, why: 水溶液の性質は直接要らない}
   H-062>H-008: {type: 土台, strength: 2, why: もどらない変化が化学変化の入口}
   H-008>H-009: {type: 土台, strength: 3, why: 原子の組みかえで質量を論じる}
   A-006>H-009: {type: 道具, strength: 3, why: 反応する量の比を比例で扱う}
@@ -354,12 +334,9 @@ lines:
   N-076>N-078: {type: 道具, strength: 1, why: ×÷の式を前から順に計算}
   G-004>G-053: {type: 土台, strength: 3, why: 折る・映す動きが対称の土台}
   G-006>G-053: {type: 道具, strength: 2, why: 直角・平行で図形を調べる}
-  G-009>G-053: {type: 疑い, strength: 1, why: 角度は使わないと注にある}
   G-015>G-053: {type: 道具, strength: 2, why: 半回転で点対称を言う}
   S-027>S-055: {type: 深める, strength: 3, why: 棒グラフから折れ線へ伸ばす}
   A-005>S-055: {type: 土台, strength: 3, why: 割合を円・帯グラフで表す}
-  G-009>S-055: {type: 疑い, strength: 1, why: 中心角は扱わない（note）}
-  G-046>S-055: {type: 疑い, strength: 1, why: 単位は場面の文脈だけ}
   N-010>N-027: {type: 土台, strength: 3, why: 符号の扱いを土台に積と商へ}
   N-014>N-027: {type: 道具, strength: 2, why: わり算を符号つきで使う}
   N-015>N-027: {type: 道具, strength: 2, why: 入れかえと分配のきまりを使う}
@@ -376,7 +353,6 @@ lines:
   N-029>N-030: {type: 道具, strength: 2, why: 互いに素なら解をもつ事実を使う}
   N-028>N-031: {type: 土台, strength: 3, why: あまりで平方数を分類する}
   A-015>N-031: {type: 道具, strength: 3, why: (a±b)^2の展開と因数分解}
-  N-021>N-031: {type: 疑い, strength: 1, why: 注で素因数分解は使わないとある}
   A-002>A-010: {type: 深める, strength: 3, why: □を文字に伸ばす}
   N-015>A-010: {type: 土台, strength: 2, why: 計算のきまりで文字式を整理}
   N-010>A-010: {type: 道具, strength: 2, why: 負の数を文字に入れる計算}
@@ -384,14 +360,12 @@ lines:
   N-019>A-010: {type: 道具, strength: 1, why: 分数係数の文字式（名前だけで判断）}
   N-027>A-010: {type: 道具, strength: 2, why: 負の数のかけ算で式の値を出す}
   A-009>A-010: {type: 道具, strength: 1, why: 文字の累乗x²の書き方}
-  N-009>A-010: {type: 疑い, strength: 1, why: 位取りは文字式に直接要らなそう}
   N-076>A-010: {type: 道具, strength: 2, why: 式の計算順序とかっこ}
   A-010>A-011: {type: 土台, strength: 3, why: 文字式で方程式を書く}
   A-001>A-011: {type: 土台, strength: 3, why: つり合いで方程式を解く考え方}
   N-027>A-011: {type: 道具, strength: 3, why: 負の係数で両辺をわる}
   A-005>A-011: {type: 道具, strength: 1, why: 比の文章題で方程式を立てる}
   N-077>A-011: {type: 道具, strength: 2, why: 小数係数の方程式を解く}
-  G-046>A-011: {type: 疑い, strength: 1, why: 単位は方程式の中身に要らなそう}
   N-078>A-011: {type: 道具, strength: 2, why: 分数係数の方程式を解く}
   N-076>A-011: {type: 道具, strength: 2, why: かっこ付きの式を整理する}
   A-011>A-012: {type: 土台, strength: 3, why: 1次方程式を解く手続きを連立で使う}
@@ -414,7 +388,6 @@ lines:
   A-010>A-018: {type: 土台, strength: 3, why: 文字式でΣの一般項を書く}
   A-015>A-018: {type: 道具, strength: 2, why: 展開してから和を分ける}
   C-007>C-013: {type: 深める, strength: 3, why: 組合せを重複ありへ伸ばす}
-  A-010>C-013: {type: 疑い, strength: 1, why: 文字の式は使わないと注にある}
   C-013>C-014: {type: 道具, strength: 2, why: 数え方で対応づけて数える}
   C-007>C-015: {type: 深める, strength: 3, why: 組合せを二項係数として整理する}
   A-010>C-015: {type: 道具, strength: 2, why: 文字の式でnCrを書き計算する}
@@ -427,10 +400,7 @@ lines:
   N-013>C-017: {type: 道具, strength: 1, why: マス数の計算に使う程度}
   A-010>C-017: {type: 道具, strength: 1, why: 一般のわけを式で書ける程度}
   G-009>G-016: {type: 深める, strength: 3, why: 角の性質を証明へ伸ばす}
-  A-010>G-016: {type: 疑い, strength: 1, why: 答えは数で文字の式は不要}
-  N-074>G-016: {type: 疑い, strength: 1, why: 筆算は証明に関係しない}
   G-016>G-017: {type: 深める, strength: 3, why: 平行線と合同条件を使い性質を示す}
-  G-012>G-017: {type: 疑い, strength: 1, why: 等積変形は扱わない}
   G-017>G-018: {type: 道具, strength: 3, why: 二等辺三角形の底角で角を追う}
   G-010>G-018: {type: 道具, strength: 2, why: 弧の長さと円の性質を使う}
   G-017>G-019: {type: 土台, strength: 2, why: 直角三角形と合同の性質}
@@ -461,7 +431,6 @@ lines:
   G-017>G-042: {type: 道具, strength: 1, why: 二等辺三角形の性質を補助に}
   G-018>G-043: {type: 道具, strength: 3, why: 円周角で相似を作る}
   G-020>G-043: {type: 道具, strength: 3, why: 相似比で式を作る}
-  A-016>G-043: {type: 疑い, strength: 1, why: 三平方は使わないと注にある}
   L-011>L-032: {type: 道具, strength: 2, why: 背理法で離散的な中間値を示す}
   L-007>L-033: {type: 道具, strength: 2, why: 全部調べて数える構成で使う}
   L-011>L-033: {type: 道具, strength: 2, why: 和で押さえる評価で使う}
@@ -471,7 +440,6 @@ lines:
   F-002>F-003: {type: 土台, strength: 3, why: 複利の逆算が割引}
   A-010>F-003: {type: 道具, strength: 2, why: 現在価値の式を文字で表す}
   F-001>F-004: {type: 一般化, strength: 3, why: 収支の記録を二面記録へ広げる}
-  A-011>F-004: {type: 疑い, strength: 1, why: 簿記は1次方程式をほぼ使わない}
   A-007>W-005: {type: 道具, strength: 1, why: 速さ=距離÷時間を波の伝わりに使う}
   W-003>W-006: {type: 土台, strength: 2, why: 地層のしゅう曲や断層を読むのに要る}
   W-005>W-006: {type: 土台, strength: 2, why: 地震波から地球内部の層を知る}
@@ -482,7 +450,6 @@ lines:
   H-009>H-010: {type: 土台, strength: 2, why: 質量の比から反応式へ}
   A-012>H-010: {type: 道具, strength: 2, why: 係数を連立で決める}
   H-008>H-011: {type: 深める, strength: 3, why: 原子の中身へ伸ばす}
-  A-009>H-011: {type: 疑い, strength: 1, why: 指数法則は原子構造に不要}
   H-011>H-012: {type: 土台, strength: 3, why: 電子配置から周期性へ}
   H-012>H-013: {type: 土台, strength: 2, why: 周期性からイオンのでき方へ}
   H-005>H-013: {type: 土台, strength: 2, why: 水溶液の性質からイオンへ}
@@ -526,7 +493,6 @@ lines:
   G-011>G-052: {type: 深める, strength: 3, why: 柱体の体積を錐体へ伸ばす}
   G-010>G-052: {type: 道具, strength: 2, why: おうぎ形の考えを円錐に}
   A-010>G-052: {type: 道具, strength: 2, why: π と文字式で公式を書く}
-  N-078>G-052: {type: 疑い, strength: 1, why: 分数のかけ算は使わないと注}
   G-018>G-054: {type: 土台, strength: 3, why: 円周角で接弦定理を示す}
   G-017>G-054: {type: 道具, strength: 2, why: 二等辺三角形等の性質で証明}
   A-006>A-019: {type: 土台, strength: 3, why: 比例の式と座標が1次関数の土台}
@@ -542,7 +508,7 @@ lines:
   C-009>A-022: {type: 深める, strength: 3, why: 漸化式の入口を本格化}
   A-019>A-023: {type: 土台, strength: 2, why: 1次関数を条件・解の例に使う}
   L-013>A-024: {type: 土台, strength: 3, why: 論理記号で写像・同値を定義}
-  A-006>A-024: {type: 疑い, strength: 1, why: 比例は集合・写像の前提に見えない}
+  A-006>A-024: {type: 一般化, strength: 2, why: 写像は、比例・反比例で初めて出会う関数（一方が決まるともう一方がただ 1 つ決まる対応）を一般の集合へ広げたもので、本文も関数（A-006）を数から数への写像として引いている。}
   C-015>C-018: {type: 土台, strength: 3, why: 二項係数の等式を二通りに数える}
   C-015>C-019: {type: 道具, strength: 2, why: 対応先の数をnCrで数える}
   A-024>C-019: {type: 土台, strength: 3, why: 写像の言葉で全単射を言い直す}
@@ -600,7 +566,7 @@ lines:
   P-006>P-011: {type: 道具, strength: 2, why: 重心運動と相対運動の扱いを使う}
   P-007>P-012: {type: 土台, strength: 3, why: 向心加速度から遠心力を理解する}
   D-004>P-012: {type: 道具, strength: 2, why: 回転系の加速度を微分で導く}
-  P-002>P-013: {type: 疑い, strength: 1, why: 弾性は流体入門に要らなそう（名前だけで判断）}
+  P-002>P-013: {type: 土台, strength: 3, why: 圧力は面を押す力、浮力は力のつり合いで決まり、力とつり合い（と応力）の考えが流体の入門の土台になる。}
   G-025>P-021: {type: 道具, strength: 3, why: 三角関数で波を表し合成する}
   P-021>P-022: {type: 土台, strength: 3, why: 波の性質を音に使う}
   G-025>P-022: {type: 道具, strength: 2, why: 三角関数でうなりや波を表す}
@@ -737,7 +703,7 @@ lines:
   B-030>B-041: {type: 土台, strength: 2, why: 光合成が生産量と炭素循環の元}
   B-027>B-042: {type: 深める, strength: 3, why: 自然選択の入口を数理で深める}
   B-032>B-042: {type: 土台, strength: 2, why: 突然変異と遺伝子頻度の理解}
-  A-015>B-042: {type: 疑い, strength: 1, why: 因数分解は進化の中身に直接不要}
+  A-015>B-042: {type: 道具, strength: 2, why: ハーディ–ワインベルグの法則は遺伝子の頻度 p、q から (p + q)² = p² + 2pq + q² と展開して遺伝子型の頻度を出すので、展開の計算が道具として要る。}
   B-032>B-043: {type: 土台, strength: 2, why: ウイルスの増殖にDNAの複製を使う}
   B-031>B-043: {type: 土台, strength: 1, why: 細菌の膜や物質の出入り、名前だけで判断}
   B-074>B-043: {type: 深める, strength: 2, why: かびや発酵の観察を微生物学へ深める}
@@ -768,13 +734,12 @@ lines:
   W-002>W-066: {type: 土台, strength: 1, why: 名前だけで判断}
   K-012>K-145: {type: 深める, strength: 3, why: Pythonの続きでJavaを学ぶ}
   K-013>K-145: {type: 土台, strength: 3, why: クラス設計がJava学習の元}
-  K-012>K-146: {type: 疑い, strength: 1, why: Pythonは社会の話に不要}
   P-105>P-200: {type: 土台, strength: 3, why: 素粒子の性質から分類へ}
   P-042>P-201: {type: 土台, strength: 3, why: 熱の移動・放射を使う}
   P-021>P-201: {type: 土台, strength: 1, why: 赤外線の波として。名前だけで判断}
   P-162>P-202: {type: 土台, strength: 3, why: HR図・距離・等級を使う}
   P-104>P-202: {type: 土台, strength: 3, why: 核融合・核反応が星の中身}
-  P-022>P-202: {type: 疑い, strength: 1, why: ドップラー効果は赤方偏移の類推のみ}
+  P-022>P-202: {type: 道具, strength: 2, why: 赤方偏移からハッブルの法則の後退速度を読むにはドップラー効果で波長のずれを速さに直す必要があり、段 5 でそれを学ぶのは P-022 の音の単元だけである。}
   P-004>P-203: {type: 土台, strength: 2, why: エネルギー保存と仕事率}
   P-029>P-203: {type: 土台, strength: 2, why: 電力量と送電を扱う}
   P-042>P-203: {type: 土台, strength: 2, why: 熱機関の効率と発電}
@@ -929,7 +894,6 @@ lines:
   G-028>G-045: {type: 土台, strength: 3, why: 五心が共役の対象}
   G-023>G-045: {type: 道具, strength: 2, why: 角度追跡で共役を示す}
   G-029>G-045: {type: 道具, strength: 2, why: チェバの比で共役を扱う}
-  D-006>D-008: {type: 疑い, strength: 1, why: 平均値の定理は微分が前提}
   D-006>D-009: {type: 深める, strength: 3, why: 積分の考えを厳密に再構成}
   D-006>D-011: {type: 道具, strength: 1, why: 名前だけで判断、積分で定義する面}
   D-008>D-014: {type: 土台, strength: 3, why: 偏微分は1変数微分が土台}
@@ -940,14 +904,13 @@ lines:
   D-017>D-018: {type: 土台, strength: 3, why: 面積分は重積分に帰着}
   D-071>D-018: {type: 道具, strength: 3, why: 曲線の媒介変数で線積分}
   D-045>D-022: {type: 道具, strength: 2, why: 固有関数展開で線形方程式}
-  D-046>D-022: {type: 疑い, strength: 1, why: 名前だけで判断、相図は不要か}
   D-006>D-044: {type: 道具, strength: 3, why: 積分で変数分離形を解く}
   D-044>D-045: {type: 深める, strength: 3, why: 1階の続きとして高階線形を扱う}
   D-044>D-046: {type: 深める, strength: 3, why: 1階の方程式を連立系へ伸ばす}
   M-007>D-046: {type: 道具, strength: 3, why: 固有値で連立系を対角化して解く}
   M-002>M-003: {type: 一般化, strength: 3, why: 2次の行列を一般の大きさへ広げる}
   M-003>M-004: {type: 土台, strength: 3, why: 行列演算と逆行列の上で行列式を扱う}
-  M-004>M-006: {type: 疑い, strength: 1, why: 内積空間に行列式は要らなそう}
+  M-004>M-006: {type: 道具, strength: 2, why: 直交行列の行列式が ±1 になることを det(QᵀQ)=det(Q)² で示すなど、単元の問題が行列式の性質を使う。}
   M-004>M-007: {type: 道具, strength: 3, why: 特性多項式を行列式で作る}
   M-007>M-010: {type: 道具, strength: 3, why: 二次形式の対角化に固有値を使う}
   M-007>M-012: {type: 道具, strength: 2, why: 主軸変換で固有値を使う}
@@ -959,7 +922,6 @@ lines:
   D-017>S-003: {type: 道具, strength: 3, why: 重積分で同時分布を計算する}
   S-001>S-004: {type: 土台, strength: 3, why: 確率の定義から不等式を示す}
   S-002>S-005: {type: 道具, strength: 2, why: 母関数で連鎖の計算をする}
-  S-003>S-005: {type: 疑い, strength: 1, why: 離散連鎖に連続分布は不要そう}
   S-004>S-005: {type: 道具, strength: 1, why: 極限定理を長時間挙動で使う}
   S-002>S-018: {type: 土台, strength: 2, why: 確率変数と母関数で推定量を扱う}
   S-003>S-018: {type: 土台, strength: 3, why: 連続分布と同時分布で推定を述べる}
@@ -971,7 +933,6 @@ lines:
   S-030>S-020: {type: 土台, strength: 3, why: 相関と回帰直線を一般化の出発点に}
   P-007>P-008: {type: 深める, strength: 3, why: 単振動に減衰と外力を加えて伸ばす}
   A-021>P-008: {type: 道具, strength: 2, why: 複素数で振動の解と位相を表す}
-  D-014>P-008: {type: 疑い, strength: 1, why: 多変数微分は減衰振動に不要そう}
   P-021>P-024: {type: 土台, strength: 3, why: 波の重ね合わせを干渉・回折に使う}
   P-008>P-025: {type: 深める, strength: 3, why: 単一振動を連成・連続体へ伸ばす}
   M-004>P-025: {type: 道具, strength: 2, why: 行列式で基準振動数を求める}
@@ -1003,13 +964,12 @@ lines:
   F-006>F-009: {type: 土台, strength: 3, why: 債券の価格と利回りが対象}
   D-005>F-009: {type: 道具, strength: 3, why: デュレーションは価格の微分}
   F-004>F-010: {type: 土台, strength: 3, why: 簿記の仕訳から財務諸表を作る}
-  F-003>F-010: {type: 疑い, strength: 1, why: 財務会計の中心は現価でない}
+  F-003>F-010: {type: 道具, strength: 2, why: 社債・リース・退職給付などの負債や減損の測定は将来のキャッシュフローを割り引いた現在価値で行うので、資産・負債の会計の部分で割引が要る。}
   F-005>F-011: {type: 道具, strength: 3, why: DCFは現価の計算を使う}
   F-010>F-011: {type: 道具, strength: 2, why: 財務諸表から将来収益を見積もる}
   F-008>F-012: {type: 深める, strength: 3, why: 需給を消費者・企業行動で深める}
   D-014>F-012: {type: 道具, strength: 3, why: 効用最大化に条件付き極値を使う}
   F-008>F-013: {type: 土台, strength: 2, why: 需給の枠組みを集計に使う}
-  F-005>F-013: {type: 疑い, strength: 1, why: マクロの乗数・為替に直接要らない}
   S-001>F-014: {type: 土台, strength: 3, why: 生存確率は条件付き確率で定義}
   S-003>F-014: {type: 土台, strength: 3, why: 死力は連続分布の密度とハザード}
   F-014>F-015: {type: 土台, strength: 3, why: 生命表で給付の確率を与える}
@@ -1022,7 +982,6 @@ lines:
   S-004>F-017: {type: 道具, strength: 1, why: 和の近似に極限定理を使う}
   F-017>F-018: {type: 土台, strength: 3, why: 損害の分布から純保険料を出す}
   S-020>F-018: {type: 道具, strength: 3, why: クラス料率の推定に線形モデル}
-  F-005>F-018: {type: 疑い, strength: 1, why: 料率算定で利息は主でない}
   F-017>F-019: {type: 土台, strength: 2, why: 損害額の分布の理解が前提}
   S-020>F-019: {type: 道具, strength: 3, why: チェイン・ラダーは回帰として扱う}
   S-003>F-020: {type: 土台, strength: 3, why: 収益の同時分布と共分散を使う}
@@ -1032,7 +991,6 @@ lines:
   F-009>F-021: {type: 土台, strength: 2, why: 金利の期間構造で割り引く}
   S-001>F-021: {type: 道具, strength: 2, why: リスク中立確率の計算に使う}
   C-015>F-021: {type: 道具, strength: 2, why: 二項モデルは二項係数で数える}
-  C-012>E-154: {type: 疑い, strength: 1, why: 一筆書きはPERT・CPMの前提に弱い}
   E-154>E-155: {type: 深める, strength: 2, why: 生産管理の続きとして在庫を扱う}
   S-018>E-155: {type: 道具, strength: 2, why: 推定を需要予測・安全在庫に使う}
   A-022>E-155: {type: 道具, strength: 1, why: 漸化式を指数平滑法で使う程度}
@@ -1040,7 +998,7 @@ lines:
   S-018>E-156: {type: 道具, strength: 3, why: 推定を管理図・工程能力に使う}
   S-019>E-156: {type: 道具, strength: 3, why: 検定の考えを管理図・抜取検査に使う}
   S-020>E-156: {type: 道具, strength: 1, why: 線形モデルは一部で使う程度。名前だけで判断}
-  F-010>F-040: {type: 疑い, strength: 1, why: 倫理は会計知識を要しないように見える}
+  F-010>F-040: {type: 土台, strength: 2, why: 公正な開示や利益相反を具体的に扱うには、財務諸表で何をどう開示するか（F-010）を知っている必要があり、ほかに前提がないので外さない。}
   F-005>F-041: {type: 道具, strength: 2, why: 年金現価で資産計画を計算}
   F-010>F-041: {type: 道具, strength: 1, why: 名前だけで判断}
   F-010>F-042: {type: 土台, strength: 3, why: 原価計算は会計が土台}
@@ -1103,7 +1061,6 @@ lines:
   D-009>D-080: {type: 道具, strength: 2, why: 広義積分で判定、項別積分に使う}
   G-021>E-204: {type: 土台, strength: 2, why: 空間図形が立体のモデル化の基礎}
   G-026>E-204: {type: 道具, strength: 2, why: 座標と方程式を曲面・図面に使う}
-  F-040>E-198: {type: 疑い, strength: 1, why: 金融の倫理規程は技術者倫理に不要。名前だけで判断}
   K-012>K-169: {type: 成熟, strength: 1, why: プログラムの読み書きの慣れ}
   P-162>P-210: {type: 土台, strength: 2, why: 天球座標を座標変換へ}
   G-025>P-210: {type: 道具, strength: 3, why: 球面三角法に三角関数を使う}
@@ -1148,7 +1105,6 @@ lines:
   B-031>I-011: {type: 土台, strength: 2, why: 細胞膜と物質の出入りが土台}
   B-036>I-011: {type: 土台, strength: 2, why: 器官の知識が器官の組み立ての土台}
   S-031>I-034: {type: 成熟, strength: 1, why: 研究の設計の見方が審査の読みに効く}
-  I-033>I-034: {type: 疑い, strength: 1, why: 病気の数え方は倫理の前提に見えない}
   Q-001>Q-004: {type: 深める, strength: 2, why: 錯視を推論として深める}
   B-020>Q-004: {type: 土台, strength: 1, why: 感覚器の知識・名前だけで判断}
   S-041>Q-004: {type: 道具, strength: 2, why: d′や閾値の推定に分布を使う}
@@ -1200,7 +1156,6 @@ lines:
   N-033>N-047: {type: 道具, strength: 2, why: 合同の定理を形の表現に使う}
   N-036>N-047: {type: 道具, strength: 2, why: 合同条件を組み合わせて使う}
   N-033>N-049: {type: 成熟, strength: 1, why: 合同の定理は直接は使わない、名前だけで判断}
-  N-036>N-049: {type: 疑い, strength: 1, why: 連分数に中国剰余定理は要らなそう}
   N-041>N-049: {type: 土台, strength: 3, why: ペル方程式を連分数で解く}
   N-033>N-050: {type: 道具, strength: 3, why: 素数判定に小定理を使う}
   N-036>N-050: {type: 道具, strength: 2, why: 剰余の合成を判定・分解に使う}
@@ -1229,11 +1184,8 @@ lines:
   D-031>D-037: {type: 道具, strength: 2, why: 極の展開とゼータの解析接続}
   D-032>D-037: {type: 道具, strength: 2, why: 留数で特殊値・極の残差を求める}
   D-045>D-048: {type: 土台, strength: 3, why: 2階線形方程式が固有値問題の形}
-  D-046>D-048: {type: 疑い, strength: 1, why: 名前だけで判断。連立系は直接不要そう}
   D-045>D-049: {type: 道具, strength: 3, why: 分離後の常微分方程式を解く}
-  D-046>D-049: {type: 疑い, strength: 1, why: 名前だけで判断。連立系は直接不要そう}
   D-045>D-050: {type: 道具, strength: 2, why: グリーン関数を常微分方程式から作る}
-  D-046>D-050: {type: 疑い, strength: 1, why: 名前だけで判断。連立系は直接不要そう}
   D-018>D-051: {type: 道具, strength: 2, why: グリーン恒等式で一意性を示す}
   D-014>D-052: {type: 道具, strength: 3, why: 極値・連鎖律を汎関数に使う}
   D-045>D-052: {type: 道具, strength: 2, why: オイラー方程式が2階ODEになる}
@@ -1253,12 +1205,10 @@ lines:
   S-019>S-025: {type: 土台, strength: 2, why: 検定の理論を汎化誤差の議論へ}
   S-020>S-025: {type: 土台, strength: 2, why: 線形モデルが学習の基本例}
   K-009>S-025: {type: 道具, strength: 3, why: 凸最適化で学習問題を解く}
-  K-011>S-025: {type: 疑い, strength: 1, why: 線形計画の応用は不要に見える}
   S-025>S-026: {type: 土台, strength: 3, why: 学習理論の対象を計算で実現}
   D-009>K-001: {type: 土台, strength: 3, why: 積分の定義が数値積分の土台}
   K-001>K-002: {type: 道具, strength: 2, why: 補間と求積を解法の構成に使う}
   D-044>K-002: {type: 土台, strength: 3, why: 1階ODEが数値解法の対象}
-  K-001>K-003: {type: 疑い, strength: 1, why: 補間は直接法に直接は不要そう}
   M-006>K-003: {type: 道具, strength: 3, why: 直交化をQR法や最小二乗に使う}
   D-014>K-009: {type: 土台, strength: 3, why: 勾配・極値が凸最適化の土台}
   M-006>K-009: {type: 道具, strength: 2, why: 内積と直交の性質を使う}
@@ -1275,26 +1225,17 @@ lines:
   K-014>K-019: {type: 成熟, strength: 1, why: 計算量の感覚があると助かる}
   L-012>K-019: {type: 道具, strength: 2, why: 不変条件の証明に帰納法}
   L-011>K-019: {type: 成熟, strength: 1, why: 証明の読み書きの慣れ}
-  C-022>K-019: {type: 疑い, strength: 1, why: グラフ理論は不要に見える}
-  C-021>K-019: {type: 疑い, strength: 1, why: 包除原理は使わなそう}
   L-012>K-020: {type: 道具, strength: 2, why: 再帰と帰納の対応}
-  L-011>K-020: {type: 疑い, strength: 1, why: 背理法は不要に見える}
-  C-022>K-020: {type: 疑い, strength: 1, why: グラフ理論は不要に見える}
-  C-021>K-020: {type: 疑い, strength: 1, why: 包除原理は不要に見える}
   K-012>K-020: {type: 土台, strength: 3, why: 基本の計算を土台に}
   K-013>K-020: {type: 成熟, strength: 1, why: 名前だけで判断 別流儀で慣れ程度}
-  K-014>K-020: {type: 疑い, strength: 1, why: 計算量は主題でない}
   L-012>K-021: {type: 道具, strength: 3, why: 漸化式の評価に帰納法}
   L-011>K-021: {type: 成熟, strength: 1, why: 証明の慣れ}
-  C-022>K-021: {type: 疑い, strength: 1, why: 名前だけで判断 要らなそう}
-  C-021>K-021: {type: 疑い, strength: 1, why: 包除原理は不要に見える}
   K-012>K-022: {type: 土台, strength: 3, why: アルゴリズムの基礎}
   K-013>K-022: {type: 成熟, strength: 1, why: 実装の慣れ}
   K-014>K-022: {type: 土台, strength: 3, why: 性能の測り方の入門}
   L-012>K-022: {type: 道具, strength: 2, why: 正しさの証明に帰納法}
   L-011>K-022: {type: 成熟, strength: 1, why: 証明の慣れ}
   C-022>K-022: {type: 土台, strength: 2, why: グラフでモデル化する}
-  C-021>K-022: {type: 疑い, strength: 1, why: 包除原理は不要に見える}
   K-012>K-029: {type: 土台, strength: 2, why: プログラミングの基礎}
   K-013>K-029: {type: 成熟, strength: 1, why: 名前だけで判断 慣れ程度}
   K-014>K-029: {type: 成熟, strength: 1, why: 名前だけで判断 慣れ程度}
@@ -1308,7 +1249,6 @@ lines:
   S-001>B-002: {type: 道具, strength: 2, why: 確率で集団遺伝を扱う}
   B-042>B-002: {type: 土台, strength: 3, why: 進化のしくみが選択の土台}
   B-045>B-002: {type: 土台, strength: 2, why: 組換え・遺伝解析を使う}
-  D-018>B-003: {type: 疑い, strength: 1, why: ベクトル解析は名前だけで判断}
   P-004>B-003: {type: 道具, strength: 2, why: ポテンシャルで相互作用を扱う}
   B-028>B-003: {type: 土台, strength: 3, why: 高分子の構成分子が土台}
   H-021>B-003: {type: 土台, strength: 2, why: 溶液の性質が土台}
@@ -1347,29 +1287,23 @@ lines:
   D-031>P-014: {type: 道具, strength: 1, why: ポテンシャル流の特異点で補助的に使う}
   D-032>P-014: {type: 道具, strength: 1, why: 留数を流れの計算で補助的に使う}
   D-018>P-014: {type: 道具, strength: 2, why: 渦度・循環に線積分と面積分を使う}
-  P-008>P-015: {type: 疑い, strength: 1, why: 共振は変分法に直接要らなそう}
   P-010>P-015: {type: 成熟, strength: 1, why: 中心力の例で変分の慣れ（名前だけで判断）}
-  P-011>P-015: {type: 疑い, strength: 1, why: 剛体回転は変分法に要らなそう}
-  P-012>P-015: {type: 疑い, strength: 1, why: 非慣性系は変分法に直接要らなそう}
   P-016>P-015: {type: 深める, strength: 3, why: E-L方程式を作用原理として深める}
   P-008>P-016: {type: 道具, strength: 2, why: 微小振動・基準振動で振動論を使う}
   P-011>P-016: {type: 道具, strength: 2, why: 慣性モーメントで運動エネルギーを書く}
   P-012>P-016: {type: 道具, strength: 1, why: 慣性力を一般化座標で扱う場面で使う}
   P-015>P-018: {type: 道具, strength: 2, why: 作用原理から正準方程式へ移る}
   P-018>P-019: {type: 深める, strength: 3, why: ハミルトン形式を正準変換へ伸ばす}
-  P-008>P-026: {type: 疑い, strength: 1, why: 共振は波束・分散に直接要らなそう}
   D-022>P-026: {type: 道具, strength: 3, why: フーリエ級数・変換で波束を表す}
   D-049>P-026: {type: 道具, strength: 1, why: 波動方程式の解の形で補助的に使う}
   P-035>P-027: {type: 土台, strength: 3, why: 分極から屈折率と分散を導く}
   P-034>P-035: {type: 深める, strength: 3, why: マクスウェル方程式を物質中へ伸ばす}
-  D-049>P-035: {type: 疑い, strength: 1, why: 物質中の場の定式化に変数分離は要らない}
   P-057>P-037: {type: 土台, strength: 3, why: ローレンツ変換を電磁場に適用する}
   P-058>P-037: {type: 土台, strength: 3, why: 4元ベクトルと不変間隔を使う}
   M-012>P-037: {type: 道具, strength: 3, why: 電磁場テンソルの扱いにテンソルを使う}
   P-037>P-038: {type: 土台, strength: 3, why: 共変形の場から保存則と作用を作る}
   P-037>P-039: {type: 土台, strength: 2, why: 4元ポテンシャルから放射場を導く}
   D-050>P-039: {type: 道具, strength: 3, why: 遅延グリーン関数で波動方程式を解く}
-  D-049>P-039: {type: 疑い, strength: 1, why: 放射の扱いは遅延ポテンシャルで変数分離は要らない}
   P-045>P-048: {type: 土台, strength: 3, why: エントロピーを統計力学で定義し直す}
   P-072>P-048: {type: 道具, strength: 2, why: 量子状態を数えて状態数とする}
   P-045>P-049: {type: 土台, strength: 2, why: 自由エネルギーとエントロピーを使う}
@@ -1379,13 +1313,11 @@ lines:
   P-026>P-070: {type: 土台, strength: 3, why: 波束と群速度が波動関数の描像の土台}
   P-069>P-070: {type: 深める, strength: 3, why: 粒子性と波動性を方程式にまで進める}
   P-025>P-071: {type: 道具, strength: 2, why: 境界条件と反射・透過の考えを使う}
-  P-026>P-071: {type: 疑い, strength: 1, why: 波束の分散は1次元問題で必須でない}
   P-070>P-072: {type: 一般化, strength: 3, why: 波動関数の理論を抽象的な状態空間へ}
   P-071>P-072: {type: 応用, strength: 2, why: 1次元の例が体系の具体例になる}
   M-006>P-072: {type: 土台, strength: 3, why: 内積空間がヒルベルト空間の出発点}
   P-018>P-072: {type: 土台, strength: 2, why: ポアソン括弧から交換関係へ移る正準量子化}
   P-070>P-073: {type: 土台, strength: 3, why: シュレーディンガー方程式の解を演算子で表す}
-  P-071>P-073: {type: 疑い, strength: 1, why: 1次元の個別例は描像の理解に必須でない}
   M-006>P-073: {type: 道具, strength: 2, why: ユニタリ行列で時間発展演算子を扱う}
   M-014>P-073: {type: 土台, strength: 3, why: 'e^{tA}がそのまま時間発展演算子の形'}
   P-071>P-074: {type: 深める, strength: 3, why: 調和振動子を代数的に解き直す}
@@ -1404,14 +1336,11 @@ lines:
   K-012>P-119: {type: 道具, strength: 3, why: Pythonでの実装が前提}
   P-004>P-120: {type: 道具, strength: 1, why: 名前だけで判断。エネルギーの考え方}
   P-012>P-120: {type: 道具, strength: 2, why: コリオリ力を大気・海洋循環で使う}
-  D-018>P-120: {type: 疑い, strength: 1, why: 名前だけで判断。気候の概説に積分定理は不要}
   P-123>P-126: {type: 土台, strength: 3, why: 安定度が浮力振動の前提}
   P-124>P-126: {type: 土台, strength: 2, why: 力の釣り合いが慣性振動の前提}
-  P-125>P-126: {type: 疑い, strength: 1, why: 前線形成は回転と成層の効果に不要}
   P-123>P-127: {type: 土台, strength: 2, why: 成層の知識をロスビー変形半径で使う}
   P-124>P-127: {type: 土台, strength: 3, why: 地衡風から温度風・エクマン層へ}
   P-125>P-127: {type: 深める, strength: 3, why: 温度風を同じ論題で深める}
-  P-123>P-128: {type: 疑い, strength: 1, why: 熱力学は渦度方程式に直接要らない}
   P-124>P-128: {type: 土台, strength: 2, why: 地衡風の釣り合いから渦度方程式へ}
   P-125>P-128: {type: 深める, strength: 3, why: 渦度・発散を方程式として深める}
   P-123>P-129: {type: 土台, strength: 3, why: 浮力・安定度が内部重力波の前提}
@@ -1420,7 +1349,6 @@ lines:
   P-123>P-130: {type: 土台, strength: 3, why: 熱力学と浮力が雲の生成の土台}
   P-124>P-130: {type: 土台, strength: 2, why: 大気中の水分の扱いを使う}
   P-125>P-130: {type: 道具, strength: 1, why: 鉛直運動の知識が上昇の理解に効く}
-  P-130>P-131: {type: 疑い, strength: 1, why: 雲物理は放射伝達に必須でなさそう}
   P-122>P-132: {type: 土台, strength: 2, why: 大気の構造・天気図が定式化の前提}
   P-122>P-133: {type: 成熟, strength: 1, why: 名前だけで判断、観測の基礎知識}
   P-122>P-134: {type: 成熟, strength: 1, why: 名前だけで判断、予報の基礎知識}
@@ -1428,10 +1356,8 @@ lines:
   P-012>P-143: {type: 道具, strength: 1, why: コリオリ力が循環の表現に出る}
   D-006>P-143: {type: 成熟, strength: 1, why: 名前だけで判断、積分の慣れ}
   P-004>E-001: {type: 土台, strength: 3, why: つりあいと力の扱いを力学から継ぐ}
-  D-045>E-001: {type: 疑い, strength: 1, why: 高階線形ODEは三原則に直接要らない}
   D-014>E-001: {type: 道具, strength: 1, why: 名前だけで判断、多変数微分は補助}
   P-004>E-002: {type: 土台, strength: 2, why: 力・仕事の概念が応力の下地}
-  D-045>E-002: {type: 疑い, strength: 1, why: 高階線形ODEは応力ひずみに要らなそう}
   D-014>E-002: {type: 道具, strength: 2, why: ひずみ・応力の偏微分と座標変換}
   P-004>E-003: {type: 土台, strength: 2, why: 力のつりあいとエネルギーを梁に使う}
   D-018>E-003: {type: 道具, strength: 1, why: 名前だけで判断、積分定理は補助}
@@ -1443,28 +1369,16 @@ lines:
   D-006>E-006: {type: 道具, strength: 2, why: 影響線の面積や積分を使う}
   D-006>E-007: {type: 道具, strength: 2, why: 座屈のエネルギー計算に積分を使う}
   D-018>E-026: {type: 道具, strength: 1, why: 名前だけで判断。積分形の保存則に使う}
-  D-045>E-026: {type: 疑い, strength: 1, why: 高階線形ODEは圧縮性流れに薄い}
   D-018>E-027: {type: 道具, strength: 3, why: 線積分で循環と揚力を扱う}
-  D-045>E-027: {type: 疑い, strength: 1, why: 高階ODEはポテンシャル流に直接要らない}
-  D-045>E-038: {type: 疑い, strength: 1, why: 高階線形ODEは熱力学の中身に不要}
-  M-007>E-038: {type: 疑い, strength: 1, why: 対角化は工学熱力学に直接不要}
   D-045>E-039: {type: 道具, strength: 2, why: フィンや非定常の解で線形ODEを解く}
   M-007>E-039: {type: 道具, strength: 1, why: 固有モードで非定常伝導を解く場面}
-  P-034>E-067: {type: 疑い, strength: 1, why: 集中定数の回路に電磁波論は不要}
-  P-034>E-068: {type: 疑い, strength: 1, why: 演算増幅器に電磁波論は不要そう}
-  P-034>E-069: {type: 疑い, strength: 1, why: 回路の動特性に電磁波論は不要}
   D-045>E-070: {type: 道具, strength: 2, why: LTI系の応答を微分方程式で扱う}
   D-045>E-071: {type: 道具, strength: 2, why: ラプラス変換で微分方程式を解く}
   D-045>E-072: {type: 道具, strength: 1, why: 名前だけで判断。フィルタの復習}
   K-012>E-073: {type: 道具, strength: 1, why: DFTをPythonで計算してみる}
-  K-013>E-073: {type: 疑い, strength: 1, why: オブジェクト指向は要らなそう}
   K-014>E-073: {type: 道具, strength: 1, why: DFTの計算量の見積り}
   K-012>E-074: {type: 道具, strength: 1, why: フィルタをPythonで実装する}
-  K-013>E-074: {type: 疑い, strength: 1, why: オブジェクト指向は要らなそう}
-  K-014>E-074: {type: 疑い, strength: 1, why: 計算量は畳み込みに必須でない}
   K-012>E-075: {type: 道具, strength: 1, why: 雑音除去を実装して試す}
-  K-013>E-075: {type: 疑い, strength: 1, why: オブジェクト指向は要らなそう}
-  K-014>E-075: {type: 疑い, strength: 1, why: 計算量は雑音除去に必須でない}
   E-001>E-106: {type: 土台, strength: 2, why: つりあいと材料挙動が荷重評価の基礎}
   S-001>E-106: {type: 道具, strength: 3, why: 確率を信頼性評価に使う}
   E-106>E-107: {type: 深める, strength: 3, why: 信頼性理論を一次近似へ深める}
@@ -1549,7 +1463,6 @@ lines:
   W-012>W-022: {type: 土台, strength: 2, why: 海洋底の冷却はプレート運動が前提}
   W-018>W-023: {type: 土台, strength: 2, why: 運搬と堆積の知識が侵食の対}
   P-014>W-023: {type: 道具, strength: 2, why: 河川の流れや侵食に流体力学を使う}
-  H-024>W-023: {type: 疑い, strength: 1, why: 地形の中身に化学平衡は薄い}
   P-009>W-024: {type: 土台, strength: 3, why: 起潮力は万有引力から導く}
   P-012>W-024: {type: 道具, strength: 2, why: 遠心力で起潮力の分布を出す}
   W-015>W-024: {type: 土台, strength: 2, why: 固体地球の潮汐に重力ポテンシャル}
@@ -1585,7 +1498,6 @@ lines:
   S-031>I-003: {type: 土台, strength: 3, why: 実験計画が無作為化試験の土台}
   B-035>I-004: {type: 深める, strength: 3, why: 内分泌と腎臓を深める}
   B-036>I-004: {type: 深める, strength: 3, why: 循環と呼吸の器官を深める}
-  D-044>I-004: {type: 疑い, strength: 1, why: 名前に微分方程式の中身が見えない}
   B-034>B-052: {type: 深める, strength: 3, why: 神経の基礎を分子の段で深める}
   B-031>B-052: {type: 土台, strength: 3, why: 膜輸送が膜電位の土台}
   D-046>B-052: {type: 道具, strength: 2, why: 膜電位モデルの相図解析に使う}
@@ -1627,7 +1539,6 @@ lines:
   F-006>F-059: {type: 土台, strength: 2, why: 債券の価格と利回り}
   F-009>F-059: {type: 道具, strength: 2, why: 期間構造で割り引く}
   S-002>F-059: {type: 道具, strength: 2, why: 確率で損失とトランシェを計算}
-  F-022>F-070: {type: 疑い, strength: 1, why: 微細構造にCAPMは要らなそう}
   F-009>F-071: {type: 道具, strength: 2, why: 割引とフォワードで現価}
   F-021>F-071: {type: 道具, strength: 3, why: 二項ツリーでCVAを計算}
   S-002>F-071: {type: 道具, strength: 3, why: デフォルト確率の計算}
@@ -1639,12 +1550,10 @@ lines:
   P-212>P-214: {type: 土台, strength: 2, why: 星の進化から星団の年齢へ}
   P-009>P-214: {type: 道具, strength: 2, why: 回転曲線に万有引力を使う}
   P-214>P-215: {type: 土台, strength: 3, why: 銀河と距離のはしごが前提}
-  P-022>P-215: {type: 疑い, strength: 1, why: 音のドップラーは直接要らない}
   B-022>B-100: {type: 土台, strength: 3, why: 細胞のつくりが組織の土台}
   B-034>B-100: {type: 土台, strength: 3, why: ニューロンの働きが前提}
   B-063>B-100: {type: 土台, strength: 3, why: 脳の構造を組織で読む}
   B-063>B-101: {type: 土台, strength: 3, why: 病変の場所に神経解剖が要る}
-  B-039>B-101: {type: 疑い, strength: 1, why: 行動学は診断に直接要らない}
   F-012>F-060: {type: 深める, strength: 3, why: 市場を独占・寡占へ広げる}
   F-024>F-060: {type: 道具, strength: 3, why: クールノー・ベルトランの均衡}
   F-012>F-061: {type: 土台, strength: 3, why: 外部性を余剰で捉える}
@@ -1775,31 +1684,25 @@ lines:
   N-036>L-026: {type: 道具, strength: 2, why: 中国剰余定理で数列を符号化}
   A-024>L-027: {type: 土台, strength: 3, why: 同値関係が状態の同一視の土台}
   A-024>L-028: {type: 土台, strength: 2, why: 集合と関係で文法を定める}
-  D-006>D-007: {type: 疑い, strength: 1, why: ε-δの前提は極限で積分は不要}
   D-008>D-010: {type: 道具, strength: 3, why: テイラー展開をべき級数に使う}
   D-009>D-010: {type: 道具, strength: 2, why: 項別積分や広義積分で使う}
   D-010>D-012: {type: 土台, strength: 2, why: 関数項級数の一様収束を扱う}
   D-011>D-012: {type: 道具, strength: 1, why: 例として初等関数を使う}
   D-007>D-012: {type: 土台, strength: 3, why: 一様収束はε-δの拡張}
   D-010>D-013: {type: 成熟, strength: 1, why: 名前だけで判断}
-  D-011>D-013: {type: 疑い, strength: 1, why: 距離空間に初等関数は不要}
   D-007>D-013: {type: 一般化, strength: 3, why: 距離空間は実数の距離の一般化}
   D-014>D-015: {type: 深める, strength: 3, why: ヤコビ行列を逆関数定理へ}
   D-010>D-016: {type: 道具, strength: 2, why: 不動点の例に級数を使う}
-  D-011>D-016: {type: 疑い, strength: 1, why: 縮小写像に初等関数は不要}
   D-007>D-016: {type: 土台, strength: 3, why: 完備性を距離空間に広げる}
   D-012>D-019: {type: 成熟, strength: 1, why: 名前だけで判断}
   D-013>D-019: {type: 土台, strength: 2, why: 測度は距離空間の位相上に置く}
-  D-015>D-019: {type: 疑い, strength: 1, why: 測度空間に逆関数定理は不要}
-  D-047>D-019: {type: 疑い, strength: 1, why: ピカールは測度と無関係}
   D-019>D-020: {type: 土台, strength: 3, why: 積分は測度の上で定義}
   D-019>D-021: {type: 土台, strength: 3, why: L^pは測度空間上の関数空間}
-  D-012>D-027: {type: 疑い, strength: 1, why: 名前だけで判断。同程度連続は不動点に不要}
+  D-012>D-027: {type: 道具, strength: 2, why: 写像度は滑らかな写像で定めてから連続写像を一様に近似して広げ、ブラウワーの不動点定理もコンパクトな集合の上の一様連続で極限へ移すので、一様収束と一様連続が道具として要る。}
   D-013>D-027: {type: 土台, strength: 3, why: 距離空間の上で不動点を述べる}
   D-015>D-027: {type: 道具, strength: 2, why: 写像度で陰関数・微分の議論を使う}
   D-012>D-028: {type: 土台, strength: 3, why: 一様収束で多項式近似を述べる}
   D-013>D-028: {type: 土台, strength: 2, why: 一様ノルムの距離で近似を測る}
-  D-015>D-028: {type: 疑い, strength: 1, why: 名前だけで判断。陰関数定理は近似に不要}
   A-034>D-034: {type: 土台, strength: 2, why: 複素数の演算で変換を扱う}
   M-002>D-034: {type: 道具, strength: 2, why: 一次分数変換を行列で表し合成する}
   D-030>D-034: {type: 道具, strength: 2, why: シュワルツの補題の証明に積分公式}
@@ -1813,36 +1716,24 @@ lines:
   D-037>D-039: {type: 道具, strength: 2, why: ガンマ関数の漸近形を例に使う}
   D-038>D-039: {type: 道具, strength: 1, why: 名前だけで判断。WKB が方程式を扱う}
   D-048>D-039: {type: 道具, strength: 1, why: 名前だけで判断。固有値の漸近に関わる}
-  D-049>D-039: {type: 疑い, strength: 1, why: 変数分離法は漸近解析に直接は不要}
-  D-050>D-039: {type: 疑い, strength: 1, why: グリーン関数は漸近解析に直接は不要}
   D-016>D-047: {type: 道具, strength: 3, why: 縮小写像でピカール列の収束を示す}
   M-004>M-005: {type: 成熟, strength: 1, why: 行列式は直接使わず線形の慣れが要る}
-  M-006>M-008: {type: 疑い, strength: 1, why: ジョルダン形に内積は本質でない}
   M-007>M-008: {type: 深める, strength: 3, why: 対角化できない場合へ続ける}
-  M-007>M-009: {type: 疑い, strength: 1, why: 双対空間に固有値は要らなそう}
   M-005>M-009: {type: 土台, strength: 3, why: 線形写像の空間から双対を作る}
   M-005>M-011: {type: 土台, strength: 3, why: ベクトル空間からテンソル積を作る}
   M-006>M-011: {type: 道具, strength: 1, why: 内積は一部の場面で使う程度}
-  M-007>M-011: {type: 疑い, strength: 1, why: テンソル積に固有値は要らなそう}
   A-024>R-001: {type: 土台, strength: 3, why: 写像と単射・全射を使う}
   R-001>R-002: {type: 深める, strength: 3, why: 部分群から剰余類へ}
   R-001>R-003: {type: 土台, strength: 3, why: 群の定義を土台に作用を定義}
-  R-003>R-005: {type: 疑い, strength: 1, why: 符号は群作用でなく置換から定義}
   R-001>R-006: {type: 土台, strength: 3, why: 群の定義が行列群の出発点}
   M-004>R-006: {type: 道具, strength: 2, why: GL・SL・O を行列式で定める}
   D-012>T-001: {type: 成熟, strength: 1, why: 名前だけで判断。収束の慣れ}
   D-013>T-001: {type: 一般化, strength: 3, why: 距離空間の一般化が位相空間}
-  D-015>T-001: {type: 疑い, strength: 1, why: 逆関数定理は位相空間に不要}
-  D-047>T-001: {type: 疑い, strength: 1, why: ピカール逐次近似は不要に見える}
   T-001>T-002: {type: 土台, strength: 3, why: 連結性は開集合で定義}
   T-001>T-003: {type: 土台, strength: 3, why: コンパクト性は開被覆で定義}
   T-001>T-004: {type: 土台, strength: 3, why: 多様体は位相空間の上}
-  M-008>T-005: {type: 疑い, strength: 1, why: ジョルダン標準形は不要}
-  M-009>T-005: {type: 疑い, strength: 1, why: 双対空間は不要に見える}
-  M-010>T-005: {type: 疑い, strength: 1, why: 二次形式は不要に見える}
-  D-012>T-005: {type: 疑い, strength: 1, why: 一様収束は分離公理に不要}
+  D-012>T-005: {type: 道具, strength: 2, why: ティーツェの拡張定理はウリゾーン関数の一様収束する級数で連続な拡張を作るので、一様収束の極限が連続であることを道具として使う。}
   D-013>T-005: {type: 土台, strength: 2, why: 距離空間が正規性の例}
-  D-015>T-005: {type: 疑い, strength: 1, why: 陰関数定理は不要に見える}
   D-014>T-006: {type: 道具, strength: 3, why: 微分と連鎖律で曲率を計算}
   D-071>T-006: {type: 土台, strength: 3, why: 曲線と速度が弧長の土台}
   M-006>T-011: {type: 道具, strength: 3, why: 内積と直交変換で基本形式を扱う}
@@ -1850,8 +1741,6 @@ lines:
   T-011>T-013: {type: 深める, strength: 3, why: ガウス曲率の理論を測地線へ伸ばす}
   D-012>S-006: {type: 成熟, strength: 1, why: 名前だけで判断。解析の慣れ}
   D-013>S-006: {type: 土台, strength: 2, why: 位相・可測空間の距離の考え方}
-  D-015>S-006: {type: 疑い, strength: 1, why: 陰関数定理は測度論に不要そう}
-  D-047>S-006: {type: 疑い, strength: 1, why: ピカール近似は不要に見える}
   S-006>S-007: {type: 土台, strength: 3, why: 測度論的確率の枠で法則を示す}
   S-006>S-008: {type: 土台, strength: 3, why: 確率測度の枠で特性関数を扱う}
   S-005>S-009: {type: 深める, strength: 3, why: 離散時間を連続時間へ伸ばす}
@@ -1882,49 +1771,36 @@ lines:
   L-012>K-023: {type: 道具, strength: 2, why: ヒープ等の正しさの帰納}
   L-011>K-023: {type: 成熟, strength: 1, why: 証明の慣れ}
   C-022>K-023: {type: 道具, strength: 2, why: 木の構造を使う}
-  C-021>K-023: {type: 疑い, strength: 1, why: 包除原理は不要に見える}
   K-022>K-023: {type: 深める, strength: 3, why: データ構造を深める}
   L-012>K-024: {type: 道具, strength: 2, why: 最適部分構造の帰納}
   L-011>K-024: {type: 成熟, strength: 1, why: 証明の慣れ}
   C-022>K-024: {type: 道具, strength: 1, why: 名前だけで判断 DAG上のDP}
-  C-021>K-024: {type: 疑い, strength: 1, why: 包除原理は不要に見える}
   K-022>K-024: {type: 土台, strength: 3, why: 代表的な手法を土台に}
   K-021>K-024: {type: 道具, strength: 3, why: 漸化式で計算量を解析}
   L-012>K-025: {type: 道具, strength: 2, why: 正しさの帰納}
   L-011>K-025: {type: 道具, strength: 2, why: 交換論法に背理法}
   C-022>K-025: {type: 道具, strength: 2, why: 最小全域木などの題材}
-  C-021>K-025: {type: 疑い, strength: 1, why: 包除原理は不要に見える}
   K-022>K-025: {type: 土台, strength: 3, why: アルゴリズムの基礎}
   L-012>K-026: {type: 成熟, strength: 1, why: 証明の慣れ}
   L-011>K-026: {type: 成熟, strength: 1, why: 証明の慣れ}
   C-022>K-026: {type: 土台, strength: 3, why: グラフが対象そのもの}
-  C-021>K-026: {type: 疑い, strength: 1, why: 包除原理は不要に見える}
   K-022>K-026: {type: 土台, strength: 2, why: モデル化と基本手法}
   K-023>K-026: {type: 道具, strength: 2, why: ヒープ等を内部で使う}
   K-019>K-027: {type: 土台, strength: 2, why: 逐次プログラムが前提}
   K-020>K-027: {type: 土台, strength: 2, why: 純粋な関数の並列化}
   K-027>K-028: {type: 深める, strength: 2, why: 名前だけで判断 解析を深める}
-  M-007>K-028: {type: 疑い, strength: 1, why: 固有値は直接使わなそう}
   K-012>K-030: {type: 成熟, strength: 1, why: プログラム経験の慣れ}
-  K-013>K-030: {type: 疑い, strength: 1, why: OOPは回路設計に不要そう}
-  K-014>K-030: {type: 疑い, strength: 1, why: 計算量は直接要らない}
   K-029>K-030: {type: 土台, strength: 2, why: メモリと機械語の理解}
   N-025>K-030: {type: 土台, strength: 3, why: 2進数が設計の土台}
   K-012>K-031: {type: 成熟, strength: 1, why: 名前だけで判断}
-  K-013>K-031: {type: 疑い, strength: 1, why: OOPは命令セットに不要}
-  K-014>K-031: {type: 疑い, strength: 1, why: 計算量は設計に直接不要}
   K-029>K-031: {type: 土台, strength: 3, why: アセンブリが命令セットの土台}
   K-012>K-032: {type: 成熟, strength: 1, why: 名前だけで判断}
-  K-013>K-032: {type: 疑い, strength: 1, why: OOPはメモリ階層に不要}
   K-014>K-032: {type: 成熟, strength: 1, why: 性能の測り方に慣れ}
   K-029>K-032: {type: 土台, strength: 3, why: メモリ・例外の低水準理解}
   K-030>K-033: {type: 成熟, strength: 1, why: 名前だけで判断}
   K-031>K-033: {type: 土台, strength: 2, why: プロセッサ理解がOS設計に要る}
   K-032>K-033: {type: 土台, strength: 3, why: 仮想記憶・入出力をOSが使う}
-  K-030>K-034: {type: 疑い, strength: 1, why: 回路設計はネットワーク不要}
-  K-031>K-034: {type: 疑い, strength: 1, why: プロセッサ構造は直接不要}
   K-032>K-034: {type: 土台, strength: 2, why: 入出力・並列がネットワークに関与}
-  K-030>K-035: {type: 疑い, strength: 1, why: 回路設計は耐故障に不要}
   K-031>K-035: {type: 成熟, strength: 1, why: 名前だけで判断}
   K-032>K-035: {type: 土台, strength: 3, why: 並行動作の基盤はメモリ・並列}
   K-019>K-036: {type: 土台, strength: 2, why: Cと不変条件が機械語・最適化の土台}
@@ -1932,20 +1808,16 @@ lines:
   K-016>K-037: {type: 土台, strength: 2, why: 再帰・データ型をOS実装で使う}
   K-033>K-038: {type: 土台, strength: 2, why: サーバ・OS概念をネットワークが前提}
   L-012>K-039: {type: 成熟, strength: 1, why: 帰納的定義・型の証明に慣れ}
-  L-011>K-039: {type: 疑い, strength: 1, why: 背理法は直接使わない}
   C-022>K-039: {type: 道具, strength: 2, why: 構文木・状態遷移でグラフを使う}
-  C-021>K-039: {type: 疑い, strength: 1, why: 包除原理はコンパイラに不要}
   K-029>K-039: {type: 土台, strength: 2, why: コード生成に機械語の知識}
   K-036>K-039: {type: 深める, strength: 2, why: 最適化コンパイラの続き}
   K-019>K-040: {type: 土台, strength: 2, why: アルゴリズムと正しさが前提}
   L-012>K-040: {type: 道具, strength: 2, why: 帰納法で計算量・正しさを示す}
   L-011>K-040: {type: 道具, strength: 2, why: 計算量の下界証明で背理法}
   C-022>K-040: {type: 道具, strength: 2, why: 計算量・オートマトンでグラフを使う}
-  C-021>K-040: {type: 疑い, strength: 1, why: 包除原理は直接使わない}
   L-026>K-041: {type: 土台, strength: 3, why: 計算可能性が難しさ分類の土台}
   L-027>K-041: {type: 土台, strength: 2, why: オートマトンが計算モデルの土台}
   K-022>K-042: {type: 道具, strength: 2, why: 暗号のアルゴリズム性能の考え方}
-  K-033>K-042: {type: 疑い, strength: 1, why: OS概念は暗号基礎に不要}
   N-033>K-042: {type: 道具, strength: 3, why: RSAでフェルマー・オイラー}
   N-036>K-042: {type: 道具, strength: 2, why: RSAの復号などで中国剰余}
   S-001>K-042: {type: 道具, strength: 2, why: 安全性の定義に確率}
@@ -1953,7 +1825,6 @@ lines:
   K-022>K-043: {type: 成熟, strength: 1, why: 名前だけで判断}
   K-033>K-043: {type: 土台, strength: 3, why: 隔離・アクセス制御はOS機構}
   K-012>K-046: {type: 道具, strength: 2, why: 勾配法をPythonで実装}
-  K-013>K-046: {type: 疑い, strength: 1, why: OOPは不要}
   K-014>K-046: {type: 成熟, strength: 1, why: 計算効率の感覚}
   M-007>K-046: {type: 道具, strength: 2, why: 固有値分解を最適化で使う}
   K-012>K-047: {type: 道具, strength: 2, why: Pythonで学習を実装}
@@ -1969,8 +1840,6 @@ lines:
   K-016>K-055: {type: 道具, strength: 3, why: 探索の技法を計画に使う}
   K-016>K-056: {type: 道具, strength: 2, why: 動的計画の実装に再帰を使う}
   K-012>K-060: {type: 道具, strength: 2, why: Pythonでデータを解析}
-  K-013>K-060: {type: 疑い, strength: 1, why: オブジェクト指向は解析に要らない}
-  K-014>K-060: {type: 疑い, strength: 1, why: 計算量入門は解析に要らない}
   S-003>K-060: {type: 土台, strength: 3, why: 分布の理解で当てはめを行う}
   S-004>K-060: {type: 土台, strength: 2, why: 極限定理で推定の性質を言う}
   S-019>K-060: {type: 土台, strength: 3, why: 検定と多重比較をそのまま使う}
@@ -1983,13 +1852,9 @@ lines:
   S-005>K-068: {type: 道具, strength: 3, why: 試合状態の遷移にマルコフ連鎖}
   S-020>K-069: {type: 道具, strength: 3, why: 階層モデルの基礎に線形モデル}
   K-016>K-071: {type: 道具, strength: 3, why: レイトレーシングの実装に使う}
-  M-007>K-071: {type: 疑い, strength: 1, why: 固有値は主に要らない。名前だけで判断}
   K-016>K-072: {type: 道具, strength: 2, why: 変換の実装に使う}
-  M-007>K-072: {type: 疑い, strength: 1, why: 座標変換は行列積で固有値は薄い}
   K-016>K-073: {type: 道具, strength: 2, why: 標本化の実装に使う}
-  M-007>K-073: {type: 疑い, strength: 1, why: 固有値は標本化に要らない}
   K-016>K-074: {type: 道具, strength: 2, why: スプライン計算の実装に使う}
-  M-007>K-074: {type: 疑い, strength: 1, why: 固有値は主に要らない}
   K-019>K-075: {type: 道具, strength: 2, why: C言語での実装に使う}
   D-006>K-075: {type: 道具, strength: 2, why: 曲面のモデリングで積分を使う}
   M-007>K-075: {type: 道具, strength: 2, why: 幾何変換に行列を使う}
@@ -2002,26 +1867,13 @@ lines:
   D-018>K-077: {type: 道具, strength: 2, why: 光輸送の面積分に使う}
   K-075>K-078: {type: 土台, strength: 2, why: 描画部分が画像処理に立つ}
   K-046>K-080: {type: 道具, strength: 1, why: 最適化の考えが補助。名前だけで判断}
-  K-047>K-080: {type: 疑い, strength: 1, why: 低次視覚はNN不要そう}
   M-007>K-080: {type: 道具, strength: 2, why: 画像変換に固有値・対角化を使う}
-  L-012>K-080: {type: 疑い, strength: 1, why: 帰納法は画像解析に不要そう}
-  L-011>K-080: {type: 疑い, strength: 1, why: 背理法は画像解析に不要そう}
-  C-022>K-080: {type: 疑い, strength: 1, why: グラフ理論は低次視覚に不要そう}
-  C-021>K-080: {type: 疑い, strength: 1, why: 包除原理は画像解析に不要そう}
   K-046>K-081: {type: 道具, strength: 2, why: 復元の最適化に勾配法を使う}
   K-047>K-081: {type: 道具, strength: 1, why: 追跡の学習に補助。名前だけで判断}
   M-007>K-081: {type: 道具, strength: 3, why: 多視点幾何で行列分解を使う}
-  L-012>K-081: {type: 疑い, strength: 1, why: 帰納法は3D復元に不要そう}
-  L-011>K-081: {type: 疑い, strength: 1, why: 背理法は3D復元に不要そう}
-  C-022>K-081: {type: 疑い, strength: 1, why: グラフ理論は要らなそう。名前だけで判断}
-  C-021>K-081: {type: 疑い, strength: 1, why: 包除原理は3D復元に不要そう}
   K-046>K-082: {type: 土台, strength: 3, why: 勾配学習をそのまま土台にする}
   K-047>K-082: {type: 土台, strength: 3, why: NNの構成が出発点}
   M-007>K-082: {type: 道具, strength: 2, why: 線形変換・行列計算に使う}
-  L-012>K-082: {type: 疑い, strength: 1, why: 帰納法はCNNに不要そう}
-  L-011>K-082: {type: 疑い, strength: 1, why: 背理法はCNNに不要そう}
-  C-022>K-082: {type: 疑い, strength: 1, why: グラフ理論はCNNに不要そう}
-  C-021>K-082: {type: 疑い, strength: 1, why: 包除原理はCNNに不要そう}
   P-016>K-084: {type: 土台, strength: 3, why: 機構の動力学をラグランジュ形式で}
   P-025>K-084: {type: 道具, strength: 1, why: 機構の振動に補助。名前だけで判断}
   D-053>K-084: {type: 道具, strength: 1, why: 安定性の考えが補助。名前だけで判断}
@@ -2029,7 +1881,6 @@ lines:
   P-025>K-085: {type: 道具, strength: 1, why: 弾性・振動の補助。名前だけで判断}
   D-053>K-085: {type: 道具, strength: 3, why: 制御設計で安定性解析を使う}
   P-016>K-086: {type: 道具, strength: 1, why: 動力学の補助。名前だけで判断}
-  P-025>K-086: {type: 疑い, strength: 1, why: 波動の振動は知覚・計画に不要そう}
   D-053>K-086: {type: 道具, strength: 2, why: 制御・計画で安定性を使う}
   K-012>K-087: {type: 道具, strength: 3, why: 計画アルゴリズムの実装に使う}
   K-013>K-087: {type: 道具, strength: 2, why: ロボットソフトの構成に使う}
@@ -2054,14 +1905,11 @@ lines:
   B-002>B-009: {type: 土台, strength: 1, why: 変異・組換えの知識を使う}
   B-006>B-009: {type: 土台, strength: 3, why: 核酸・タンパク質の化学構造を使う}
   B-007>B-009: {type: 道具, strength: 2, why: 複製・翻訳の酵素反応の理解に使う}
-  B-008>B-009: {type: 疑い, strength: 1, why: 代謝は分子生物学の前提に見えない}
   B-044>B-009: {type: 深める, strength: 3, why: 発現調節の入口を分子機構へ深める}
   B-033>B-009: {type: 道具, strength: 2, why: PCR・配列決定の手法を使う}
   B-001>B-010: {type: 土台, strength: 2, why: 染色体・ゲノムが細胞周期の土台}
-  B-002>B-010: {type: 疑い, strength: 1, why: 集団遺伝は細胞生物学に要らない}
   B-006>B-010: {type: 土台, strength: 2, why: 細胞成分の化学を前提にする}
   B-007>B-010: {type: 道具, strength: 1, why: シグナル伝達で酵素反応が出る}
-  B-008>B-010: {type: 疑い, strength: 1, why: 代謝は細胞生物学の前提に見えない}
   B-031>B-010: {type: 深める, strength: 3, why: 膜の出入りを輸送・シグナルへ深める}
   B-023>B-010: {type: 深める, strength: 3, why: 細胞分裂を細胞周期へ深める}
   K-022>K-106: {type: 道具, strength: 3, why: ゲノム組み立てにアルゴリズム}
@@ -2087,14 +1935,9 @@ lines:
   B-001>K-113: {type: 土台, strength: 2, why: ゲノムの構造がデータの意味}
   B-002>K-113: {type: 土台, strength: 1, why: 変異の理解があると助かる}
   B-006>K-113: {type: 土台, strength: 1, why: 名前だけで判断}
-  B-007>K-113: {type: 疑い, strength: 1, why: 酵素学はシーケンシング解析に不要}
-  B-008>K-113: {type: 疑い, strength: 1, why: 代謝は配列解析に直接不要}
   B-033>K-113: {type: 土台, strength: 3, why: シーケンシング技術の原理が土台}
   B-001>K-114: {type: 土台, strength: 1, why: データの生物的な意味づけ}
   B-002>K-114: {type: 土台, strength: 1, why: 集団遺伝の例で統計を使う}
-  B-006>K-114: {type: 疑い, strength: 1, why: 統計手法に化学基礎は不要}
-  B-007>K-114: {type: 疑い, strength: 1, why: 統計手法に酵素学は不要}
-  B-008>K-114: {type: 疑い, strength: 1, why: 統計手法に代謝は不要}
   K-015>K-115: {type: 道具, strength: 3, why: モデル化とシミュレーションを使う}
   D-045>K-115: {type: 道具, strength: 2, why: 反応ネットワークの微分方程式}
   P-046>K-115: {type: 土台, strength: 2, why: 自由エネルギーで反応を評価}
@@ -2104,15 +1947,11 @@ lines:
   B-008>K-115: {type: 土台, strength: 2, why: 代謝ネットワークの対象}
   K-015>K-116: {type: 土台, strength: 2, why: 統計モデルから深層学習へ}
   B-006>K-116: {type: 土台, strength: 1, why: 入力データの化学的な意味}
-  B-007>K-116: {type: 疑い, strength: 1, why: 深層学習に酵素学は不要そう}
-  B-008>K-116: {type: 疑い, strength: 1, why: 深層学習に代謝は不要そう}
   K-012>K-117: {type: 道具, strength: 3, why: 実装にPythonを使う}
   K-013>K-117: {type: 道具, strength: 2, why: モデルの実装とデバッグ}
   K-014>K-117: {type: 道具, strength: 1, why: 名前だけで判断}
   K-046>K-117: {type: 土台, strength: 3, why: 勾配法の機械学習が土台}
   B-006>K-117: {type: 土台, strength: 2, why: タンパク質構造予測の対象}
-  B-007>K-117: {type: 疑い, strength: 1, why: 機械学習に酵素学は不要そう}
-  B-008>K-117: {type: 疑い, strength: 1, why: 機械学習に代謝は不要そう}
   M-012>P-017: {type: 土台, strength: 3, why: 慣性テンソルがテンソルそのもの}
   P-011>P-017: {type: 深める, strength: 3, why: 慣性モーメントをテンソルへ伸ばす}
   P-016>P-017: {type: 道具, strength: 2, why: ラグランジュ形式でこまを解く}
@@ -2129,14 +1968,10 @@ lines:
   D-032>P-040: {type: 道具, strength: 2, why: 留数でKK関係の積分を計算する}
   P-035>P-041: {type: 土台, strength: 2, why: プラズマ振動や遮蔽で誘電的な扱い}
   P-039>P-041: {type: 土台, strength: 1, why: 荷電粒子の放射の知識があると助かる}
-  D-030>P-041: {type: 疑い, strength: 1, why: プラズマ入口の中身に複素積分は見えない}
-  D-031>P-041: {type: 疑い, strength: 1, why: プラズマ入口の中身に展開は見えない}
-  D-032>P-041: {type: 疑い, strength: 1, why: プラズマ入口の中身に留数は見えない}
   P-049>P-050: {type: 深める, strength: 3, why: カノニカルを粒子数変化へ広げる}
   P-082>P-050: {type: 土台, strength: 1, why: 粒子数の数え方で同種粒子が出る}
   P-082>P-051: {type: 土台, strength: 3, why: ボース・フェルミ粒子の区別が核心}
   P-049>P-051: {type: 土台, strength: 3, why: 分配関数から量子分布を導く}
-  P-073>P-051: {type: 疑い, strength: 1, why: 量子統計に時間発展の描像は要らない}
   P-074>P-051: {type: 道具, strength: 2, why: 黒体放射やデバイ模型で生成消滅演算子}
   P-050>P-052: {type: 土台, strength: 2, why: 化学ポテンシャルを相転移で使う}
   P-052>P-053: {type: 深める, strength: 3, why: 相転移を臨界現象へ深める}
@@ -2150,12 +1985,10 @@ lines:
   P-058>P-060: {type: 土台, strength: 2, why: ミンコフスキー計量が曲がった計量の例}
   P-015>P-060: {type: 道具, strength: 2, why: 測地線を変分原理で導く}
   M-005>P-060: {type: 土台, strength: 3, why: 接空間・計量はベクトル空間が基盤}
-  D-049>P-060: {type: 疑い, strength: 1, why: 変数分離法は微分幾何の中身に不要}
   M-012>P-060: {type: 一般化, strength: 3, why: 直交座標のテンソルを一般座標へ広げる}
   D-018>P-060: {type: 道具, strength: 1, why: 積分定理の一般化は多様体上で現れる}
   P-010>P-061: {type: 応用, strength: 2, why: 中心力の軌道を近日点移動に当てはめる}
   P-037>P-061: {type: 土台, strength: 2, why: 電磁場テンソルがエネルギー運動量の型}
-  M-006>P-061: {type: 疑い, strength: 1, why: 内積空間の手法はこの単元で使わない}
   D-045>P-061: {type: 道具, strength: 1, why: 軌道方程式を解く常微分方程式の技法}
   P-057>P-062: {type: 土台, strength: 2, why: ローレンツ共変性とゲージの考えを使う}
   P-058>P-062: {type: 土台, strength: 3, why: ミンコフスキー時空上で摂動を展開する}
@@ -2163,9 +1996,7 @@ lines:
   P-061>P-063: {type: 土台, strength: 3, why: シュワルツシルト解が対象そのもの}
   P-060>P-063: {type: 土台, strength: 3, why: 曲率・測地線の言葉が特異点論の前提}
   P-034>P-064: {type: 成熟, strength: 1, why: 名前だけで判断。放射の扱いに慣れが要る}
-  D-045>P-064: {type: 疑い, strength: 1, why: 高階線形ODEは宇宙論の中身と薄い}
   P-034>P-065: {type: 土台, strength: 2, why: 光子・放射の性質がCMBの前提}
-  D-045>P-065: {type: 疑い, strength: 1, why: 高階線形ODEは熱い宇宙に直接要らない}
   P-064>P-066: {type: 土台, strength: 3, why: 膨張宇宙の背景上でゆらぎが成長}
   P-065>P-066: {type: 土台, strength: 2, why: 脱結合・CMBがゆらぎの初期条件}
   P-014>P-066: {type: 道具, strength: 2, why: 流体方程式でゆらぎの成長を扱う}
@@ -2197,7 +2028,6 @@ lines:
   P-084>P-087: {type: 土台, strength: 3, why: 量子ビットともつれが土台}
   P-076>P-089: {type: 道具, strength: 3, why: 角運動量合成でLS結合}
   P-078>P-089: {type: 道具, strength: 3, why: 摂動・変分で補正を計算}
-  P-073>P-090: {type: 疑い, strength: 1, why: 描像は分子で直接使わない}
   P-074>P-090: {type: 道具, strength: 3, why: 分子振動を調和振動子で扱う}
   P-075>P-090: {type: 土台, strength: 2, why: 原子軌道が分子の土台}
   P-076>P-090: {type: 道具, strength: 2, why: 回転スペクトルに角運動量}
@@ -2211,19 +2041,15 @@ lines:
   P-092>P-093: {type: 土台, strength: 3, why: 格子と逆格子が土台}
   P-051>P-093: {type: 道具, strength: 2, why: デバイ模型・比熱の統計}
   P-051>P-094: {type: 土台, strength: 3, why: フェルミ分布が自由電子の土台}
-  P-075>P-094: {type: 疑い, strength: 1, why: 水素原子は自由電子論に不要}
   P-076>P-094: {type: 道具, strength: 2, why: スピン縮退・パウリ原理}
   P-048>P-094: {type: 道具, strength: 1, why: 統計力学の枠組み}
   P-095>P-096: {type: 土台, strength: 3, why: バンドとギャップが土台}
-  P-093>P-097: {type: 疑い, strength: 1, why: 磁性にフォノンは要らなそう}
   P-094>P-097: {type: 土台, strength: 2, why: 伝導電子の磁性に使う}
-  P-096>P-097: {type: 疑い, strength: 1, why: 半導体は磁性の前提でない}
   P-095>P-098: {type: 土台, strength: 3, why: バンド間遷移の土台}
   P-080>P-098: {type: 土台, strength: 3, why: ランダウ準位・量子ホール}
   P-094>P-099: {type: 土台, strength: 3, why: フェルミ面が超伝導の土台}
   P-095>P-099: {type: 土台, strength: 2, why: 金属状態・バンドの理解}
   P-083>P-099: {type: 道具, strength: 3, why: BCSに第二量子化を使う}
-  P-057>P-100: {type: 疑い, strength: 1, why: ローレンツ変換は不要そう}
   P-055>P-100: {type: 成熟, strength: 1, why: ゆらぎ・スケーリングの慣れ}
   P-097>P-100: {type: 土台, strength: 2, why: 交換相互作用がモット絶縁体に}
   P-098>P-102: {type: 土台, strength: 3, why: 量子ホール効果が土台}
@@ -2232,26 +2058,19 @@ lines:
   H-035>P-103: {type: 土台, strength: 2, why: 高分子の性質が主題の一部}
   P-077>P-106: {type: 道具, strength: 2, why: パリティ・選択則を使う}
   P-079>P-106: {type: 道具, strength: 2, why: 遷移確率を崩壊・反応に使う}
-  P-080>P-106: {type: 疑い, strength: 1, why: 電磁場中の粒子は核に不要そう}
   P-081>P-106: {type: 道具, strength: 3, why: 核力・二核子を散乱で扱う}
   P-083>P-106: {type: 土台, strength: 3, why: 核子多体系の土台}
-  P-084>P-106: {type: 疑い, strength: 1, why: もつれは核物理に不要そう}
-  P-085>P-106: {type: 疑い, strength: 1, why: 経路積分は核物理に不要そう}
   P-086>P-106: {type: 道具, strength: 1, why: 名前だけで判断}
   P-058>P-107: {type: 道具, strength: 3, why: 4元運動量で衝突・崩壊を扱う}
   P-077>P-107: {type: 道具, strength: 2, why: パリティ・選択則を反応の解析に使う}
   P-073>P-107: {type: 成熟, strength: 1, why: 名前だけで判断。描像の慣れ}
-  P-074>P-107: {type: 疑い, strength: 1, why: 検出器・加速器に生成消滅演算子は直接不要}
   P-075>P-107: {type: 道具, strength: 2, why: 球面調和関数・角運動量を現象論で使う}
   P-105>P-107: {type: 土台, strength: 3, why: 粒子の種類と性質が現象論の対象}
   P-016>P-109: {type: 一般化, strength: 3, why: 粒子のラグランジュ形式を場へ拡張}
   P-018>P-109: {type: 道具, strength: 1, why: 名前だけで判断。正準形式の慣れ}
   P-037>P-109: {type: 道具, strength: 2, why: 共変形の電磁場を場の例に使う}
-  D-022>P-109: {type: 疑い, strength: 1, why: 場の理論の入口にフーリエ級数は必須でない}
-  D-032>P-109: {type: 疑い, strength: 1, why: 留数計算は古典場の基礎に不要。名前だけで判断}
   P-074>P-110: {type: 道具, strength: 3, why: 生成消滅演算子で場を量子化}
   P-076>P-110: {type: 道具, strength: 2, why: スピン1/2をディラック場で使う}
-  P-078>P-110: {type: 疑い, strength: 1, why: 近似法は自由場の量子化に使わない}
   R-001>P-110: {type: 成熟, strength: 1, why: 群の言葉への慣れ。名前だけで判断}
   P-110>P-111: {type: 土台, strength: 3, why: 自由場とその量子化の上に相互作用を載せる}
   P-037>P-112: {type: 道具, strength: 3, why: 電磁場テンソルとゲージ変換を使う}
@@ -2282,7 +2101,6 @@ lines:
   P-127>P-151: {type: 土台, strength: 2, why: 温度風・プリミティブ方程式}
   P-128>P-151: {type: 土台, strength: 2, why: 渦度方程式で循環を診断}
   P-129>P-151: {type: 道具, strength: 2, why: 波の運動量輸送を使う}
-  K-005>P-153: {type: 疑い, strength: 1, why: 差分法は気候統計に要らなそう}
   D-055>P-153: {type: 道具, strength: 2, why: 予測可能性でカオスを使う}
   S-019>P-153: {type: 道具, strength: 2, why: 有意性検定を気候データに使う}
   S-020>P-153: {type: 道具, strength: 3, why: 回帰・主成分で線形モデルを使う}
@@ -2299,25 +2117,20 @@ lines:
   E-002>E-015: {type: 土台, strength: 3, why: 応力・ひずみで疲労と破壊を語る}
   E-003>E-015: {type: 道具, strength: 2, why: 梁・軸の応力解析を疲労評価に使う}
   K-001>E-020: {type: 道具, strength: 2, why: 補間と積分でRitz近似を組む}
-  K-002>E-020: {type: 疑い, strength: 1, why: ODE数値解法は境界値の弱形式に薄い}
   K-003>E-020: {type: 道具, strength: 2, why: 連立方程式でGalerkin係数を解く}
   K-001>E-021: {type: 道具, strength: 3, why: 形状関数の補間と要素積分に使う}
   K-002>E-021: {type: 道具, strength: 1, why: 名前だけで判断。時間発展で使う程度}
   K-003>E-021: {type: 道具, strength: 3, why: 疎行列の連立方程式を解く}
   E-038>E-024: {type: 道具, strength: 2, why: エネルギー収支を管路・ポンプに使う}
-  E-039>E-024: {type: 疑い, strength: 1, why: 熱伝導は管路の損失に直接要らない}
   P-013>E-024: {type: 土台, strength: 3, why: 連続の式・ベルヌーイが管路の基礎}
   P-014>E-024: {type: 土台, strength: 2, why: レイノルズ数と粘性流を損失評価に使う}
-  E-038>E-025: {type: 疑い, strength: 1, why: 熱力学は境界層に直接要らない}
   E-039>E-025: {type: 成熟, strength: 1, why: 熱境界層との対応。名前だけで判断}
   P-013>E-025: {type: 土台, strength: 2, why: 抗力・圧力の概念が境界層で再登場}
   P-014>E-025: {type: 土台, strength: 3, why: ナビエ＝ストークスと粘性流が出発点}
   E-026>E-028: {type: 土台, strength: 2, why: 空力と圧縮性の基礎をパネル法の前提に}
   E-027>E-028: {type: 土台, strength: 3, why: ポテンシャル流のモデルをパネル法で離散化}
-  E-038>E-028: {type: 疑い, strength: 1, why: 熱力学は亜音速ポテンシャル流に薄い}
   E-026>E-029: {type: 土台, strength: 2, why: 空力性能の基礎を翼理論で使う}
   E-027>E-029: {type: 深める, strength: 3, why: 三次元翼と誘導抗力を揚力線理論へ}
-  E-038>E-029: {type: 疑い, strength: 1, why: 熱力学は薄翼理論に直接要らない}
   E-026>E-030: {type: 土台, strength: 3, why: 衝撃波と膨張波が超音速翼の基礎}
   E-027>E-030: {type: 道具, strength: 2, why: ポテンシャル流の線形化を使う}
   E-038>E-030: {type: 道具, strength: 2, why: エントロピーと断熱の関係を衝撃波で使う}
@@ -2326,19 +2139,13 @@ lines:
   P-013>E-040: {type: 土台, strength: 2, why: 流れの基礎が対流の前提}
   P-014>E-040: {type: 土台, strength: 2, why: 粘性流・境界層が対流熱伝達の基礎}
   E-038>E-041: {type: 深める, strength: 3, why: 熱力学の続きでサイクルと混合気体}
-  E-039>E-041: {type: 疑い, strength: 1, why: 熱伝導はサイクル・湿り空気に不要}
-  P-013>E-041: {type: 疑い, strength: 1, why: 流体入門は混合気体に直接不要}
-  P-014>E-041: {type: 疑い, strength: 1, why: 流体力学はサイクル解析に直接不要}
   E-026>E-042: {type: 土台, strength: 3, why: ノズル流・衝撃波が推進性能の土台}
-  E-027>E-042: {type: 疑い, strength: 1, why: ポテンシャル流は推進系の見方に不要}
   E-038>E-042: {type: 土台, strength: 3, why: 熱力学サイクルが推進の基本性能式}
   P-034>E-047: {type: 土台, strength: 2, why: 電磁気がアクチュエータ・センサの土台}
   P-025>E-047: {type: 道具, strength: 2, why: 連成振動の見方で機械系モデルを作る}
-  D-053>E-047: {type: 疑い, strength: 1, why: 力学系の安定性は集中定数モデル化に不要}
   P-025>E-048: {type: 道具, strength: 1, why: 振動系を例に伝達関数を学ぶ}
   D-053>E-048: {type: 道具, strength: 2, why: 線形化と安定性を極の配置で扱う}
   D-035>E-048: {type: 土台, strength: 3, why: ラプラス変換が伝達関数の定義}
-  P-025>E-049: {type: 疑い, strength: 1, why: 連成振動は制御入門に直接不要}
   D-053>E-049: {type: 道具, strength: 2, why: 安定性の概念を制御設計に使う}
   E-048>E-049: {type: 土台, strength: 3, why: 伝達関数・極零点で制御を設計}
   E-070>E-052: {type: 土台, strength: 2, why: LTIと畳み込みが周波数応答の基礎}
@@ -2347,16 +2154,12 @@ lines:
   E-052>E-053: {type: 成熟, strength: 2, why: 古典制御の慣れが状態空間の動機}
   M-014>E-053: {type: 道具, strength: 3, why: 'e^{tA}で状態方程式の解を書く'}
   E-052>E-054: {type: 深める, strength: 2, why: 古典設計から最適・ロバスト設計へ}
-  E-003>E-060: {type: 疑い, strength: 1, why: 梁の解析は剛体の動力学に不要そう}
   E-026>E-060: {type: 道具, strength: 2, why: 飛行力学で空力性能の知識を使う}
   E-027>E-060: {type: 道具, strength: 1, why: 名前だけで判断。翼の空力を参照}
   E-073>E-076: {type: 土台, strength: 2, why: 変換領域の表現にフーリエ変換}
   E-074>E-076: {type: 道具, strength: 2, why: 畳み込みで入出力関係を表す}
-  E-075>E-076: {type: 疑い, strength: 1, why: 雑音除去は状態空間に要らなそう}
-  S-003>E-076: {type: 疑い, strength: 1, why: 確率変数は決定論モデルに不要}
   E-073>E-077: {type: 土台, strength: 3, why: パワースペクトルはフーリエ変換}
   E-074>E-077: {type: 道具, strength: 1, why: 名前だけで判断。標本化の知識}
-  E-075>E-077: {type: 疑い, strength: 1, why: 雑音除去は確率過程に不要そう}
   S-003>E-077: {type: 土台, strength: 3, why: 確率過程は同時分布の拡張}
   E-073>E-078: {type: 道具, strength: 2, why: 周波数領域でウィーナーフィルタ}
   E-074>E-078: {type: 道具, strength: 1, why: フィルタ・畳み込みの基礎}
@@ -2371,9 +2174,6 @@ lines:
   E-074>E-086: {type: 道具, strength: 1, why: 名前だけで判断}
   E-075>E-086: {type: 深める, strength: 2, why: 圧縮から符号化へ続く}
   S-003>E-086: {type: 道具, strength: 2, why: 雑音下の復号に確率を使う}
-  E-073>E-087: {type: 疑い, strength: 1, why: 名前だけで判断、直接は不要}
-  E-074>E-087: {type: 疑い, strength: 1, why: 名前だけで判断、直接は不要}
-  E-075>E-087: {type: 疑い, strength: 1, why: 名前だけで判断、直接は不要}
   S-003>E-087: {type: 道具, strength: 2, why: 待ち行列の確率モデルに使う}
   E-073>E-089: {type: 道具, strength: 1, why: 名前だけで判断}
   E-074>E-089: {type: 道具, strength: 1, why: 名前だけで判断}
@@ -2381,14 +2181,9 @@ lines:
   S-003>E-089: {type: 道具, strength: 2, why: 雑音下の検出に確率を使う}
   E-004>E-090: {type: 土台, strength: 2, why: 構造の剛性と変形が土台}
   E-005>E-090: {type: 道具, strength: 1, why: 名前だけで判断、補助的}
-  E-006>E-090: {type: 疑い, strength: 1, why: 影響線は振動に直接不要}
-  E-007>E-090: {type: 疑い, strength: 1, why: 座屈は振動に直接不要}
   D-045>E-090: {type: 道具, strength: 3, why: 振動の運動方程式を解く}
   M-007>E-090: {type: 道具, strength: 3, why: 固有振動数とモードを求める}
   E-004>E-091: {type: 土台, strength: 2, why: 構造の応力と変形が土台}
-  E-010>E-091: {type: 疑い, strength: 1, why: 名前だけで判断、入門には重い}
-  E-004>E-092: {type: 疑い, strength: 1, why: 名前だけで判断、直接不要}
-  E-010>E-092: {type: 疑い, strength: 1, why: 名前だけで判断、直接不要}
   E-004>E-093: {type: 土台, strength: 2, why: 構造の剛性の基礎}
   E-010>E-093: {type: 道具, strength: 3, why: 剛性行列の組立を使う}
   E-021>E-097: {type: 土台, strength: 3, why: 有限要素法そのものを使う}
@@ -2413,7 +2208,6 @@ lines:
   E-110>E-114: {type: 土台, strength: 2, why: 風工学の序論が風洞実験の土台}
   E-024>E-114: {type: 道具, strength: 3, why: 相似則を風洞の模型実験に使う}
   E-004>E-116: {type: 土台, strength: 2, why: 静定骨組の応力が橋の設計に要る}
-  E-005>E-116: {type: 疑い, strength: 1, why: 名前だけで判断。計画段階に不要}
   E-006>E-116: {type: 道具, strength: 1, why: 名前だけで判断。影響線を荷重に}
   E-007>E-116: {type: 土台, strength: 1, why: 名前だけで判断。座屈は設計の一部}
   E-004>E-117: {type: 土台, strength: 3, why: 骨組の応力が設計荷重の土台}
@@ -2422,26 +2216,19 @@ lines:
   E-007>E-117: {type: 土台, strength: 3, why: 座屈が圧縮部材耐荷力の土台}
   E-108>E-117: {type: 土台, strength: 3, why: 荷重の分類が設計荷重の土台}
   E-004>E-118: {type: 土台, strength: 2, why: 骨組の応力が耐荷力の基礎}
-  E-005>E-118: {type: 疑い, strength: 1, why: 名前だけで判断。要らなそう}
-  E-006>E-118: {type: 疑い, strength: 1, why: 名前だけで判断。要らなそう}
   E-007>E-118: {type: 土台, strength: 2, why: 座屈が耐震設計の基礎に要る}
   E-004>E-119: {type: 土台, strength: 2, why: 骨組の応力がRCの断面力の基礎}
-  E-005>E-119: {type: 疑い, strength: 1, why: 名前だけで判断。要らなそう}
-  E-006>E-119: {type: 疑い, strength: 1, why: 名前だけで判断。要らなそう}
-  E-007>E-119: {type: 疑い, strength: 1, why: 名前だけで判断。座屈は別論題}
   E-004>E-120: {type: 土台, strength: 2, why: 骨組の応力が鉄骨の部材力の基礎}
   E-013>E-120: {type: 土台, strength: 3, why: 座屈・断面特性が鉄骨の土台}
   E-012>E-120: {type: 成熟, strength: 1, why: 名前だけで判断。弾性論の慣れ}
   E-014>E-120: {type: 道具, strength: 2, why: 塑性設計を鉄骨に使う}
   E-004>E-121: {type: 土台, strength: 3, why: 骨組の応力計算が設計の出発点}
   E-013>E-121: {type: 道具, strength: 2, why: 座屈・薄肉断面の諸特性を設計で使う}
-  E-012>E-121: {type: 疑い, strength: 1, why: 鉄骨接合設計に三次元弾性は不要そう}
   E-014>E-121: {type: 道具, strength: 2, why: 塑性設計・崩壊荷重を骨組設計で使う}
   E-002>E-122: {type: 土台, strength: 3, why: 応力・ひずみの概念が部材挙動の土台}
   E-003>E-122: {type: 道具, strength: 3, why: 曲げ・せん断の梁解析を部材に使う}
   E-122>E-123: {type: 深める, strength: 3, why: RC部材挙動を付着・接合部へ深める}
   E-012>E-124: {type: 道具, strength: 2, why: 平面ひずみ・弾性解を地盤内応力に使う}
-  E-013>E-124: {type: 疑い, strength: 1, why: 断面特性・座屈は地盤に直接要らない}
   G-021>G-048: {type: 土台, strength: 2, why: 空間図形を格子で扱う}
   M-006>G-048: {type: 道具, strength: 2, why: 直交基底で格子を扱う}
   M-010>G-048: {type: 道具, strength: 2, why: 二次形式で格子を測る}
@@ -2464,9 +2251,7 @@ lines:
   S-009>E-157: {type: 土台, strength: 2, why: 待ち行列の理論を応用で使う}
   E-155>E-157: {type: 応用, strength: 1, why: 在庫モデルは数理計画の一例}
   D-035>D-078: {type: 道具, strength: 3, why: ラプラス変換でたたみ込み型を解く}
-  D-050>D-078: {type: 疑い, strength: 1, why: グリーン関数は核として近いが名前だけで判断}
   D-076>D-079: {type: 道具, strength: 2, why: 特性曲線法で第一積分・解を求める}
-  D-049>D-079: {type: 疑い, strength: 1, why: 変数分離は非線形厳密解に直接効かない}
   P-078>P-176: {type: 道具, strength: 2, why: 摂動と WKB 近似を使う}
   P-079>P-176: {type: 道具, strength: 3, why: 時間依存の遷移の扱いを使う}
   P-019>P-176: {type: 一般化, strength: 2, why: 断熱不変量を量子へ広げた形}
@@ -2529,7 +2314,6 @@ lines:
   W-018>W-029: {type: 土台, strength: 2, why: 名前だけで判断。堆積岩の空隙}
   W-016>W-030: {type: 土台, strength: 3, why: マグマの発生と性質が出発点}
   P-014>W-030: {type: 土台, strength: 3, why: 噴煙柱と火砕流は流体力学}
-  H-021>W-030: {type: 疑い, strength: 1, why: 溶液の性質は噴火の中身と遠い}
   H-036>W-030: {type: 道具, strength: 2, why: 発泡や相変化の熱力学を使う}
   W-010>W-031: {type: 土台, strength: 3, why: 崩壊と半減期がアイソクロンの基礎}
   W-016>W-031: {type: 土台, strength: 2, why: マントルの分化はマグマ成因が前提}
@@ -2603,7 +2387,6 @@ lines:
   E-015>E-206: {type: 土台, strength: 2, why: 疲労・破壊が劣化と点検の基礎}
   E-090>E-206: {type: 道具, strength: 2, why: 振動解析をモニタリングと耐震に使う}
   E-105>E-206: {type: 土台, strength: 2, why: 免震・制振が耐震改修の手法の基礎}
-  E-119>E-196: {type: 疑い, strength: 1, why: 材料・施工にRC破壊形式は要らなそう}
   H-022>E-196: {type: 土台, strength: 2, why: 反応熱がセメント水和熱の基礎}
   E-039>E-196: {type: 道具, strength: 2, why: 熱伝導を温度ひび割れの解析に使う}
   P-028>P-233: {type: 土台, strength: 3, why: 望遠鏡・分光器の光学の基礎}
@@ -2746,7 +2529,6 @@ lines:
   B-010>B-151: {type: 土台, strength: 2, why: シグナル伝達の基礎を使う}
   B-151>B-152: {type: 土台, strength: 3, why: 信号伝達の理解が前提}
   B-147>B-152: {type: 土台, strength: 2, why: 菌根と病原菌の知識を使う}
-  B-144>B-152: {type: 疑い, strength: 1, why: 細菌病原の知識は必須でない}
   B-030>B-153: {type: 深める, strength: 3, why: 光合成の仕組みを深める}
   B-038>B-153: {type: 土台, strength: 2, why: 気孔と環境要因を使う}
   B-007>B-153: {type: 道具, strength: 2, why: 酵素反応の機構を使う}
@@ -2898,13 +2680,9 @@ lines:
   R-013>N-051: {type: 土台, strength: 3, why: 体の拡大とガロア理論が対象の枠}
   R-014>N-051: {type: 道具, strength: 2, why: 円分多項式・有限体を例と道具に使う}
   R-015>N-051: {type: 成熟, strength: 1, why: 可解性は直接使わない、名前だけで判断}
-  D-012>N-051: {type: 疑い, strength: 1, why: 一様収束は代数体に要らなそう}
-  D-013>N-051: {type: 疑い, strength: 1, why: 距離空間は代数体の定義に要らなそう}
-  D-015>N-051: {type: 疑い, strength: 1, why: 陰関数定理は整数環に要らなそう}
   N-051>N-052: {type: 土台, strength: 3, why: 整数環のイデアルを分解する}
   N-051>N-053: {type: 土台, strength: 3, why: 整数環の類群を調べる}
   N-051>N-054: {type: 土台, strength: 3, why: 整数環の単数群を調べる}
-  T-002>N-055: {type: 疑い, strength: 1, why: 連結性は局所体の定義に要らなそう}
   T-003>N-055: {type: 道具, strength: 2, why: 局所コンパクト性を局所体で使う}
   N-052>N-055: {type: 道具, strength: 2, why: 素イデアルでの付値を局所化に使う}
   N-053>N-055: {type: 成熟, strength: 1, why: 類群は直接使わない、名前だけで判断}
@@ -2918,7 +2696,6 @@ lines:
   D-030>N-058: {type: 道具, strength: 3, why: 積分公式で関数を調べる}
   D-031>N-058: {type: 道具, strength: 3, why: ローラン展開で極を調べる}
   D-032>N-058: {type: 道具, strength: 3, why: 留数で和や積分を計算する}
-  R-011>C-036: {type: 疑い, strength: 1, why: 加群の構造定理は直接要らなそう}
   M-005>C-036: {type: 道具, strength: 2, why: 線形代数の技法を使う}
   M-006>C-036: {type: 道具, strength: 1, why: 名前だけで判断、内積の技法}
   M-007>C-036: {type: 道具, strength: 2, why: 固有値の技法を使う}
@@ -2930,37 +2707,30 @@ lines:
   S-002>C-038: {type: 土台, strength: 3, why: 離散確率変数でエントロピーを定義}
   S-003>C-038: {type: 道具, strength: 2, why: 連続分布の通信路容量で使う}
   C-038>C-039: {type: 土台, strength: 2, why: 通信路容量の考えを符号に使う}
-  C-038>C-040: {type: 疑い, strength: 1, why: 暗号の主題は別で情報量は補助的}
+  C-038>C-040: {type: 道具, strength: 2, why: 暗号の情報理論的な安全性（シャノンの完全秘匿、鍵の長さの下限）は鍵と平文のエントロピーと相互情報量で述べるので、情報源符号化と通信路容量で学ぶ情報量が道具として要る。}
   L-020>L-023: {type: 道具, strength: 2, why: 可算性を完全性の証明で使う。名前だけで判断}
   L-023>L-024: {type: 深める, strength: 3, why: 命題論理を述語論理へ広げる}
   L-022>L-029: {type: 道具, strength: 2, why: 選択公理をモデル構成で使う}
   L-024>L-029: {type: 土台, strength: 3, why: 述語論理の構造とモデルが対象}
   L-025>L-029: {type: 土台, strength: 2, why: 集合論の枠で構造を扱う}
-  T-002>L-029: {type: 疑い, strength: 1, why: 連結性はモデル理論の入口に不要}
   T-003>L-029: {type: 成熟, strength: 1, why: コンパクト性の見方に慣れる}
-  L-022>L-030: {type: 疑い, strength: 1, why: 選択公理はラムダ計算に使わない}
   L-024>L-030: {type: 土台, strength: 2, why: 論理の証明の考えを土台にする}
   L-025>L-030: {type: 成熟, strength: 1, why: 形式体系の読み書きに慣れる}
   L-027>L-030: {type: 土台, strength: 2, why: 計算モデルの見方を土台にする}
   L-028>L-030: {type: 成熟, strength: 1, why: 文法・構文の扱いに慣れる}
   D-063>D-023: {type: 成熟, strength: 1, why: 名前だけで判断}
-  D-064>D-023: {type: 疑い, strength: 1, why: 連続関数空間の定理は不要}
   D-065>D-023: {type: 道具, strength: 2, why: L^2のユニタリ性で扱う}
-  D-066>D-023: {type: 疑い, strength: 1, why: スペクトル定理は直接使わない}
   D-020>D-023: {type: 土台, strength: 3, why: L^1のフーリエ変換はルベーグ積分}
   D-021>D-023: {type: 土台, strength: 3, why: L^2上のプランシュレルを使う}
   D-075>D-023: {type: 一般化, strength: 3, why: 計算の理論を厳密に一般化}
   D-023>D-024: {type: 土台, strength: 3, why: 超関数にフーリエ変換を拡張}
   D-023>D-025: {type: 道具, strength: 2, why: フーリエ変換でソボレフ空間を定義}
-  D-063>D-026: {type: 疑い, strength: 1, why: 名前だけで判断。関数解析の定理は不要そう}
   D-064>D-026: {type: 成熟, strength: 1, why: 名前だけで判断。近似の考えに慣れる}
   D-065>D-026: {type: 道具, strength: 1, why: 名前だけで判断。L^2 の直交性を補助に}
-  D-066>D-026: {type: 疑い, strength: 1, why: スペクトル定理は微分定理に不要そう}
   D-020>D-026: {type: 土台, strength: 3, why: 積分と収束定理で微分定理を示す}
   D-021>D-026: {type: 道具, strength: 2, why: L^p の近似・不等式を使う}
   D-030>D-040: {type: 土台, strength: 2, why: リーマン面上の積分と接続の基礎}
   D-031>D-040: {type: 土台, strength: 3, why: 級数で局所座標と接続を扱う}
-  D-032>D-040: {type: 疑い, strength: 1, why: 名前だけで判断。留数は面の例に不要そう}
   T-002>D-040: {type: 土台, strength: 2, why: リーマン面は連結な面として扱う}
   T-003>D-040: {type: 土台, strength: 2, why: コンパクトなリーマン面を例に扱う}
   T-004>D-040: {type: 土台, strength: 3, why: リーマン面は曲面の例そのもの}
@@ -2968,47 +2738,36 @@ lines:
   D-040>D-042: {type: 土台, strength: 3, why: リーマン面の上で一意化を述べる}
   D-034>D-042: {type: 道具, strength: 2, why: 等角同値と一意化の主張で使う}
   D-063>D-056: {type: 道具, strength: 1, why: 一様有界性は名前だけで判断}
-  D-064>D-056: {type: 疑い, strength: 1, why: 連続関数空間の定理は直接要らない}
   D-065>D-056: {type: 土台, strength: 3, why: ヒルベルト空間でリースの表現}
   D-066>D-056: {type: 道具, strength: 2, why: コンパクト作用素のスペクトル分解}
   D-020>D-056: {type: 道具, strength: 2, why: 積分と収束定理で弱解を扱う}
   D-021>D-056: {type: 道具, strength: 3, why: L^p評価で解の存在を示す}
   D-033>D-056: {type: 深める, strength: 2, why: 調和関数をディリクレ問題へ拡張}
   D-020>D-057: {type: 道具, strength: 1, why: 積分は名前だけで判断}
-  D-021>D-057: {type: 疑い, strength: 1, why: 名前だけで判断、解析的定理に不要}
   D-057>D-058: {type: 土台, strength: 3, why: 適切性の考えで弱解を定式化}
   D-057>D-059: {type: 土台, strength: 2, why: 適切性を双曲型で論じる}
   D-076>D-059: {type: 土台, strength: 2, why: 特性曲線が双曲型の核}
   D-020>D-061: {type: 土台, strength: 2, why: 積分論が分散型方程式の枠}
   D-021>D-061: {type: 土台, strength: 3, why: L^p評価で分散型を扱う}
-  M-008>D-062: {type: 疑い, strength: 1, why: ジョルダン標準形は直接要らない}
   M-009>D-062: {type: 一般化, strength: 2, why: 双対空間を無限次元へ一般化}
-  M-010>D-062: {type: 疑い, strength: 1, why: 双線形形式は名前だけで判断}
   D-012>D-062: {type: 成熟, strength: 1, why: 一様収束の慣れ、名前だけで判断}
   D-013>D-062: {type: 土台, strength: 3, why: 距離・完備性をバナッハ空間に}
-  D-015>D-062: {type: 疑い, strength: 1, why: 陰関数定理は直接要らない}
   D-062>D-063: {type: 土台, strength: 3, why: バナッハ空間上の定理を示す}
   D-062>D-064: {type: 土台, strength: 2, why: ノルム空間として連続関数を扱う}
   D-062>D-065: {type: 一般化, strength: 3, why: ノルム空間に内積を加えた特殊形}
   D-062>D-066: {type: 土台, strength: 3, why: 有界作用素のスペクトルを論じる}
   D-063>D-067: {type: 道具, strength: 2, why: 閉グラフ定理系と同じ枠で使う}
-  D-064>D-067: {type: 疑い, strength: 1, why: 連続関数空間は直接要らない}
   D-065>D-067: {type: 道具, strength: 1, why: ヒルベルト空間を例に使う}
-  D-066>D-067: {type: 疑い, strength: 1, why: スペクトル定理は直接要らない}
-  D-020>D-067: {type: 疑い, strength: 1, why: 名前だけで判断、直接要らない}
   D-021>D-067: {type: 道具, strength: 1, why: L^pを例に使う、名前だけで判断}
   D-067>D-068: {type: 道具, strength: 3, why: ハーン–バナッハで双対を同定}
   D-067>D-069: {type: 土台, strength: 3, why: 弱位相から局所凸空間へ}
   D-067>D-070: {type: 道具, strength: 2, why: ハーン–バナッハでスペクトル非空}
   D-030>D-070: {type: 道具, strength: 2, why: 複素解析をスペクトルに使う}
   D-031>D-070: {type: 道具, strength: 2, why: ローラン展開でレゾルベント}
-  D-032>D-070: {type: 疑い, strength: 1, why: 留数計算は直接要らない}
   R-002>R-004: {type: 土台, strength: 3, why: 剰余類から剰余群を作る}
   R-004>R-007: {type: 土台, strength: 3, why: 剰余群・正規化群を使う}
   R-005>R-007: {type: 道具, strength: 1, why: A5 の単純性など応用例で使う}
   R-004>R-008: {type: 成熟, strength: 2, why: 剰余環は剰余群の類似、名前だけで判断}
-  R-005>R-008: {type: 疑い, strength: 1, why: 符号・交代群は環論に不要}
-  R-006>R-008: {type: 疑い, strength: 1, why: 結晶群は環・イデアルに不要}
   R-008>R-009: {type: 土台, strength: 3, why: イデアルが PID・UFD の定義の土台}
   R-008>R-010: {type: 土台, strength: 3, why: イデアルの概念から基底定理を述べる}
   R-009>R-011: {type: 土台, strength: 3, why: PID 上の加群を扱う}
@@ -3023,7 +2782,6 @@ lines:
   R-016>R-018: {type: 深める, strength: 3, why: 表現の構成を積と連続群へ伸ばす}
   R-017>R-019: {type: 道具, strength: 2, why: 指標・誘導で既約表現を求める}
   R-018>R-019: {type: 道具, strength: 1, why: テンソル積表現を一部で使う}
-  R-026>R-019: {type: 疑い, strength: 1, why: 圏論は対称群の表現に不要そう}
   R-017>R-020: {type: 成熟, strength: 1, why: 指標の中身は直接使わない}
   R-018>R-020: {type: 土台, strength: 2, why: 随伴表現・表現の考えを使う}
   R-020>R-021: {type: 土台, strength: 3, why: リー環の構造からルート系を作る}
@@ -3034,7 +2792,6 @@ lines:
   R-011>R-024: {type: 土台, strength: 2, why: 加群の言葉で局所化・準素分解}
   R-024>R-025: {type: 深める, strength: 3, why: 可換環論を整拡大・次元論へ進める}
   R-001>R-026: {type: 成熟, strength: 1, why: 群は圏の例、名前だけで判断}
-  R-007>R-027: {type: 疑い, strength: 1, why: シローはホモロジー代数の入口に不要}
   R-010>R-027: {type: 道具, strength: 1, why: 多項式環を例に使う程度}
   R-011>R-027: {type: 土台, strength: 3, why: 加群が複体・導来の対象}
   R-027>R-028: {type: 土台, strength: 3, why: 群コホモロジーは導来関手で定義}
@@ -3047,22 +2804,15 @@ lines:
   T-009>T-010: {type: 土台, strength: 3, why: 部分多様体の上で写像度を定義する}
   T-009>T-012: {type: 土台, strength: 3, why: 部分多様体としての曲面が対象}
   D-018>T-014: {type: 土台, strength: 2, why: 多様体上の積分の原型として使う}
-  M-008>T-014: {type: 疑い, strength: 1, why: 標準形は多様体の導入に直接要らない}
   M-011>T-014: {type: 道具, strength: 2, why: テンソルと外積を接空間の構成に使う}
   T-002>T-014: {type: 土台, strength: 2, why: 連結性を多様体の議論で使う}
   T-003>T-014: {type: 土台, strength: 2, why: 位相の概念が多様体の定義の土台}
   T-004>T-014: {type: 一般化, strength: 3, why: 位相多様体に微分構造を足した枠}
-  L-020>T-014: {type: 疑い, strength: 1, why: 可算性は第二可算公理程度。名前だけで判断}
-  L-022>T-014: {type: 疑い, strength: 1, why: ツォルンは多様体の定義に不要に見える}
   T-014>T-015: {type: 土台, strength: 3, why: 多様体上で微分形式を定義する}
   T-014>T-016: {type: 土台, strength: 3, why: 多様体に計量と接続を入れる}
   T-015>T-017: {type: 道具, strength: 2, why: ド・ラーム理論を大域論で使う}
   T-016>T-017: {type: 深める, strength: 3, why: 曲率の理論を大域へ伸ばす}
   R-023>T-017: {type: 道具, strength: 2, why: リー群を等質空間の例と議論に使う}
-  T-017>T-018: {type: 疑い, strength: 1, why: ホッジ理論は計量と微分形式で足りそう}
-  R-007>T-019: {type: 疑い, strength: 1, why: シローは基本群の入口に要らない}
-  R-010>T-019: {type: 疑い, strength: 1, why: ヒルベルト基底定理は要らなそう}
-  R-011>T-019: {type: 疑い, strength: 1, why: 加群の構造定理は入口に要らなそう}
   T-002>T-019: {type: 土台, strength: 2, why: 弧状連結性が基本群の前提になる}
   T-003>T-019: {type: 成熟, strength: 1, why: 位相の慣れが要る。名前だけで判断}
   T-004>T-019: {type: 道具, strength: 1, why: 曲面の例で基本群を計算する}
@@ -3077,9 +2827,6 @@ lines:
   T-026>T-027: {type: 道具, strength: 2, why: 束の理論をファイブレーションで使う}
   R-010>T-030: {type: 土台, strength: 3, why: イデアルと基底定理で多様体を定める}
   R-011>T-030: {type: 道具, strength: 1, why: 加群を座標環の議論で使う}
-  T-002>T-030: {type: 疑い, strength: 1, why: ザリスキ位相では別の連結性。名前だけで判断}
-  T-003>T-030: {type: 疑い, strength: 1, why: 射影の完備性程度。名前だけで判断}
-  T-004>T-030: {type: 疑い, strength: 1, why: 位相多様体は代数多様体に要らなそう}
   T-030>T-031: {type: 深める, strength: 3, why: 多様体の次元と特異点に伸ばす}
   T-030>T-032: {type: 応用, strength: 3, why: 射影多様体の例として曲線と曲面}
   T-030>T-033: {type: 土台, strength: 3, why: 代数曲線の上で微分形式と因子}
@@ -3087,15 +2834,10 @@ lines:
   L-012>K-044: {type: 成熟, strength: 1, why: 名前だけで判断}
   L-011>K-044: {type: 道具, strength: 1, why: 証明系の健全性で背理法}
   C-022>K-044: {type: 道具, strength: 2, why: グラフ彩色のゼロ知識証明}
-  C-021>K-044: {type: 疑い, strength: 1, why: 包除原理は直接使わない}
-  K-033>K-044: {type: 疑い, strength: 1, why: OS概念は不要}
   K-042>K-044: {type: 土台, strength: 3, why: 暗号の基礎が前提}
   S-001>K-044: {type: 道具, strength: 2, why: ゼロ知識の健全性に確率}
   L-012>K-045: {type: 成熟, strength: 1, why: 名前だけで判断}
   L-011>K-045: {type: 成熟, strength: 1, why: 名前だけで判断}
-  C-022>K-045: {type: 疑い, strength: 1, why: グラフ理論は直接使わない}
-  C-021>K-045: {type: 疑い, strength: 1, why: 包除原理は直接使わない}
-  K-033>K-045: {type: 疑い, strength: 1, why: OS概念は不要}
   K-042>K-045: {type: 深める, strength: 3, why: 基礎暗号の設計を深める}
   N-037>K-045: {type: 道具, strength: 3, why: 有限体上の群と位数を使う}
   M-006>K-045: {type: 道具, strength: 2, why: 格子基底の簡約にグラム–シュミット}
@@ -3103,10 +2845,8 @@ lines:
   S-003>K-048: {type: 土台, strength: 3, why: 確率変数と分布で推論を言う}
   M-007>K-049: {type: 道具, strength: 3, why: 次元削減やカーネルで固有値分解}
   S-003>K-049: {type: 土台, strength: 3, why: 同時分布でEMやHMMを言う}
-  S-019>K-050: {type: 疑い, strength: 1, why: 検定は逆伝播に要らない}
   K-046>K-050: {type: 土台, strength: 3, why: 勾配法の勾配を効率よく求める}
   K-047>K-050: {type: 土台, strength: 3, why: 網の構成を微分する対象とする}
-  S-019>K-051: {type: 疑い, strength: 1, why: 検定は網の構造に要らない}
   K-046>K-051: {type: 土台, strength: 2, why: 勾配学習で各構造を訓練}
   K-047>K-051: {type: 深める, strength: 3, why: 網の構成を各構造へ伸ばす}
   S-019>K-052: {type: 成熟, strength: 1, why: 名前だけで判断。統計的な見方}
@@ -3122,10 +2862,6 @@ lines:
   K-068>K-070: {type: 応用, strength: 2, why: 解析の結果を意思決定に使う}
   K-050>K-083: {type: 土台, strength: 3, why: 微分可能レンダリングは自動微分}
   K-051>K-083: {type: 土台, strength: 2, why: ニューラル場面表現でNN構造を使う}
-  L-012>K-083: {type: 疑い, strength: 1, why: 帰納法は画像形成に不要そう}
-  L-011>K-083: {type: 疑い, strength: 1, why: 背理法は画像形成に不要そう}
-  C-022>K-083: {type: 疑い, strength: 1, why: グラフ理論は場面表現に不要そう}
-  C-021>K-083: {type: 疑い, strength: 1, why: 包除原理は多視点幾何に不要そう}
   M-007>K-083: {type: 道具, strength: 3, why: 多視点幾何で行列分解を使う}
   P-023>K-083: {type: 土台, strength: 2, why: レンズと像の形成が画像形成の基礎}
   D-045>K-089: {type: 道具, strength: 3, why: 線形系の解析を非線形化で使う}
@@ -3138,18 +2874,14 @@ lines:
   S-003>K-090: {type: 道具, strength: 2, why: 位置推定の確率分布を扱う}
   E-056>K-091: {type: 道具, strength: 3, why: カルマンフィルタで視覚慣性航法}
   B-006>B-012: {type: 土台, strength: 3, why: 解析対象の分子構造が土台}
-  B-007>B-012: {type: 疑い, strength: 1, why: 酵素学は手法の前提に見えない}
-  B-008>B-012: {type: 疑い, strength: 1, why: 代謝は構造解析手法に要らない}
   P-092>B-012: {type: 道具, strength: 3, why: X線回折・ブラッグ散乱を使う}
   B-006>B-013: {type: 土台, strength: 2, why: 折りたたむ分子の構造が対象}
   B-007>B-013: {type: 土台, strength: 2, why: 酵素反応の速度論の基礎を使う}
-  B-008>B-013: {type: 疑い, strength: 1, why: 代謝は熱力学の前提に見えない}
   P-046>B-013: {type: 道具, strength: 3, why: 自由エネルギー・化学ポテンシャルを使う}
   H-051>B-013: {type: 道具, strength: 3, why: 分配関数・平衡定数の分子論を使う}
   B-003>B-013: {type: 深める, strength: 3, why: 高分子の相互作用を熱力学へ深める}
   B-006>B-014: {type: 土台, strength: 3, why: タンパク質の構造が折りたたみの土台}
   B-007>B-014: {type: 成熟, strength: 1, why: 名前だけで判断、機構の読みに慣れる}
-  B-008>B-014: {type: 疑い, strength: 1, why: 代謝は折りたたみの前提に見えない}
   B-010>B-014: {type: 土台, strength: 2, why: 小胞体など品質管理の場を使う}
   K-016>K-110: {type: 道具, strength: 3, why: 再帰とアルゴリズムの技法を使う}
   B-042>K-110: {type: 土台, strength: 2, why: 系統樹の生物学的意味}
@@ -3189,8 +2921,6 @@ lines:
   P-133>P-139: {type: 土台, strength: 3, why: 同化が予報システムの構成要素}
   P-133>P-140: {type: 深める, strength: 3, why: 同化の概念を理論に深める}
   S-003>P-140: {type: 道具, strength: 3, why: 同時分布・ガウス分布を使う}
-  D-032>P-141: {type: 疑い, strength: 1, why: 留数定理は逆問題に要らなそう}
-  D-049>P-141: {type: 疑い, strength: 1, why: 変数分離法は推論に直接要らない}
   M-015>P-141: {type: 道具, strength: 3, why: 特異値分解を逆問題で使う}
   P-121>P-142: {type: 土台, strength: 3, why: 流体力学の方程式を数値化する}
   K-005>P-142: {type: 道具, strength: 3, why: 差分法で移流拡散を解く}
@@ -3202,16 +2932,12 @@ lines:
   P-155>P-157: {type: 道具, strength: 1, why: 大循環の知識を大規模力学で参照}
   P-121>P-158: {type: 土台, strength: 3, why: 回転成層流体の基礎方程式を使う}
   P-157>P-159: {type: 土台, strength: 3, why: 準地衡力学が準地衡乱流の土台}
-  D-018>P-161: {type: 疑い, strength: 1, why: 名前だけで判断。気候科学に積分定理は直接不要}
   P-034>P-161: {type: 道具, strength: 1, why: 名前だけで判断。放射の理解に電磁波を使う}
   E-010>E-011: {type: 深める, strength: 3, why: 行列解析を2次元・3次元へ拡張}
   M-003>E-011: {type: 道具, strength: 2, why: 大きな連立方程式と座標変換行列}
   E-014>E-016: {type: 深める, strength: 1, why: 名前だけで判断。塑性は安定の背景}
-  E-015>E-016: {type: 疑い, strength: 1, why: 疲労は仮想仕事と安定に直接要らない}
   E-014>E-017: {type: 成熟, strength: 1, why: 名前だけで判断。連続体への慣れ}
-  E-015>E-017: {type: 疑い, strength: 1, why: 疲労は連続体の定式化に要らない}
   E-014>E-018: {type: 道具, strength: 2, why: 極限解析の上界下界がエネルギー法に通じる}
-  E-015>E-018: {type: 疑い, strength: 1, why: 疲労は変分法に直接要らない}
   E-014>E-019: {type: 土台, strength: 2, why: 弾塑性の概念を小ひずみ弾塑性で使う}
   E-015>E-019: {type: 成熟, strength: 1, why: クリープは粘弾性の背景。名前だけ}
   E-012>E-022: {type: 土台, strength: 3, why: 三次元弾性が非線形FEMの出発点}
@@ -3224,13 +2950,10 @@ lines:
   E-024>E-031: {type: 土台, strength: 2, why: 次元解析と管路損失の知見を一般化}
   E-025>E-031: {type: 土台, strength: 2, why: 境界層の描像を粘性流の方程式で扱う}
   E-040>E-031: {type: 成熟, strength: 1, why: 対流の熱伝達は名前だけで判断}
-  D-032>E-031: {type: 疑い, strength: 1, why: 留数定理はNS方程式に直接要らない}
   D-049>E-031: {type: 道具, strength: 2, why: 変数分離で潤滑理論の厳密解を得る}
   E-024>E-032: {type: 成熟, strength: 1, why: 名前だけで判断。相似の感覚}
   E-025>E-032: {type: 深める, strength: 3, why: 境界層と剥離を理論的に深める}
-  E-040>E-032: {type: 疑い, strength: 1, why: 熱伝達は循環・渦度に直接要らない}
   D-032>E-032: {type: 道具, strength: 2, why: 複素ポテンシャル流の計算に使う}
-  D-049>E-032: {type: 疑い, strength: 1, why: 変数分離は循環・渦度の定理に薄い}
   E-024>E-033: {type: 土台, strength: 2, why: レイノルズ数など相似則を遷移で使う}
   E-025>E-033: {type: 土台, strength: 3, why: 境界層の遷移を安定性理論で扱う}
   E-040>E-033: {type: 応用, strength: 1, why: 対流の不安定性との対応。名前だけ}
@@ -3238,23 +2961,19 @@ lines:
   D-049>E-033: {type: 道具, strength: 2, why: 変数分離で線形安定性の固有モードを出す}
   E-033>E-034: {type: 深める, strength: 2, why: 遷移の後の乱流を統計で扱う続き}
   S-003>E-034: {type: 道具, strength: 3, why: 同時分布・相関で応力とスペクトルを記述}
-  D-032>E-035: {type: 疑い, strength: 1, why: 留数計算は差分法・有限体積法に不要}
   D-049>E-035: {type: 道具, strength: 2, why: フーリエ型の安定性解析に変数分離を使う}
   E-024>E-035: {type: 道具, strength: 1, why: 無次元数・相似の見方を使う。名前だけで判断}
   E-025>E-035: {type: 応用, strength: 2, why: 境界層など流れの解法を数値で解く}
   E-040>E-035: {type: 応用, strength: 1, why: 熱伝達問題も数値解法の対象。名前だけで判断}
-  D-032>E-036: {type: 疑い, strength: 1, why: 留数定理は格子・有限要素法に不要}
   D-049>E-036: {type: 道具, strength: 2, why: スペクトル法の基底展開に変数分離を使う}
   E-024>E-036: {type: 成熟, strength: 1, why: 相似・損失の感覚が要る。名前だけで判断}
   E-025>E-036: {type: 応用, strength: 2, why: 複雑形状まわりの流れを数値で解く}
   E-040>E-036: {type: 応用, strength: 1, why: 熱伝達も有限要素の対象。名前だけで判断}
   E-038>E-037: {type: 土台, strength: 3, why: 熱力学の関係式が跳び条件の土台}
-  E-039>E-037: {type: 疑い, strength: 1, why: 熱伝導は圧縮性流れの理論に直接不要}
   P-013>E-037: {type: 土台, strength: 2, why: 連続の式・ベルヌーイが出発点}
   P-014>E-037: {type: 土台, strength: 3, why: オイラー方程式を圧縮性へ拡張する}
   E-024>E-037: {type: 成熟, strength: 1, why: 次元解析の感覚。名前だけで判断}
   E-025>E-037: {type: 深める, strength: 1, why: 粘性流の理解が補助。名前だけで判断}
-  E-040>E-037: {type: 疑い, strength: 1, why: 対流熱伝達は圧縮性理論に直接不要}
   D-076>E-037: {type: 道具, strength: 3, why: 特性曲線法で衝撃波・波の伝播を扱う}
   E-042>E-043: {type: 深める, strength: 3, why: 推進系の見方をエンジン詳細へ伸ばす}
   E-042>E-044: {type: 深める, strength: 3, why: ロケットの性能式を化学ロケットへ}
@@ -3289,13 +3008,10 @@ lines:
   E-065>E-066: {type: 道具, strength: 1, why: 軌道との結合は一部のみ}
   E-076>E-079: {type: 道具, strength: 2, why: 変換領域でレート変換を解析}
   E-077>E-079: {type: 道具, strength: 1, why: 名前だけで判断。スペクトル知識}
-  E-078>E-079: {type: 疑い, strength: 1, why: 最適推定は間引き補間に不要}
   E-076>E-080: {type: 土台, strength: 3, why: 伝達関数がフィルタ設計の土台}
-  E-077>E-080: {type: 疑い, strength: 1, why: 確率過程は決定論設計に不要そう}
   E-078>E-080: {type: 道具, strength: 1, why: ウィーナーフィルタを設計例に使う}
   E-076>E-081: {type: 道具, strength: 2, why: 変換領域の表現でDFTを扱う}
   E-077>E-081: {type: 土台, strength: 2, why: スペクトル解析はパワースペクトル}
-  E-078>E-081: {type: 疑い, strength: 1, why: 最適推定はFFTに不要そう}
   E-076>E-082: {type: 土台, strength: 2, why: 線形系モデルがパラメトリック化の土台}
   E-077>E-082: {type: 土台, strength: 3, why: 相関関数から線形予測を導く}
   E-078>E-082: {type: 道具, strength: 2, why: 線形予測はウィーナー推定の応用形}
@@ -3309,8 +3025,6 @@ lines:
   M-007>E-083: {type: 道具, strength: 2, why: 共分散行列の固有分解を使う}
   P-034>E-084: {type: 土台, strength: 3, why: マクスウェル方程式の解を扱う}
   E-073>E-084: {type: 道具, strength: 2, why: 周波数領域で波を扱う}
-  E-074>E-084: {type: 疑い, strength: 1, why: 名前だけで判断、直接は不要}
-  E-075>E-084: {type: 疑い, strength: 1, why: 雑音除去と圧縮は直接不要}
   E-085>E-088: {type: 土台, strength: 2, why: 通信路モデルで信号表現を使う}
   E-086>E-088: {type: 土台, strength: 3, why: 変調・符号化が前提}
   E-087>E-088: {type: 土台, strength: 2, why: 多元接続の原理を土台にする}
@@ -3364,7 +3078,6 @@ lines:
   E-126>E-137: {type: 土台, strength: 3, why: 音の基礎方程式を離散化して解く}
   E-127>E-137: {type: 土台, strength: 2, why: 放射・音源の扱いを計算で使う}
   E-128>E-137: {type: 土台, strength: 2, why: 境界条件・固有モードを計算に使う}
-  P-008>E-137: {type: 疑い, strength: 1, why: 1自由度の共振は直接要らなそう}
   P-025>E-137: {type: 土台, strength: 2, why: 波動方程式が計算の対象式}
   E-134>E-138: {type: 土台, strength: 3, why: 音源理論を空力音響の類推に使う}
   E-126>E-148: {type: 土台, strength: 2, why: 音速・音波の基礎を室内音場に使う}
@@ -3510,7 +3223,6 @@ lines:
   E-034>E-195: {type: 土台, strength: 3, why: レイノルズ応力がモデルの対象そのもの}
   E-035>E-195: {type: 土台, strength: 3, why: 差分・有限体積法の上でモデルを実装}
   T-032>T-053: {type: 土台, strength: 3, why: 2次曲線から実代数曲線へ}
-  R-012>T-053: {type: 疑い, strength: 1, why: 有限体の理論は実代数と別物}
   P-028>P-234: {type: 土台, strength: 3, why: ビーム・パルスの光学が議論の前提}
   P-040>P-234: {type: 土台, strength: 2, why: 誘電関数・分散が感受率の前提}
   D-020>D-087: {type: 土台, strength: 3, why: 測度と積分でコストと輸送を定義}
@@ -3616,7 +3328,6 @@ lines:
   K-161>Q-017: {type: 土台, strength: 3, why: 言語モデルを調べる対象とする}
   K-041>K-150: {type: 土台, strength: 3, why: 計算の難しさの分類が前提}
   K-121>K-150: {type: 土台, strength: 3, why: 回路計算量が近似困難の元}
-  K-042>K-150: {type: 疑い, strength: 1, why: 暗号とPCPの直接の関係が薄い}
   K-028>K-153: {type: 土台, strength: 2, why: 計算量の下界とNP完全性が前提}
   K-026>K-153: {type: 道具, strength: 2, why: 最短経路などの技法を使う}
   R-003>K-153: {type: 土台, strength: 3, why: 群作用が置換群の元}
@@ -3674,7 +3385,6 @@ lines:
   E-164>E-231: {type: 道具, strength: 2, why: 熱酸化・イオン注入後の拡散に使う}
   E-213>E-231: {type: 道具, strength: 2, why: CVD の物質移動や拡散に使う}
   P-028>E-232: {type: 道具, strength: 3, why: 干渉・回折の光学で解像度を論じる}
-  H-035>E-232: {type: 疑い, strength: 1, why: レジストの高分子は名前だけで判断}
   E-169>E-234: {type: 土台, strength: 3, why: 神経信号と刺激の理解が土台}
   E-226>E-234: {type: 土台, strength: 3, why: 異物反応と生体適合性を直接使う}
   E-158>E-234: {type: 道具, strength: 2, why: 記録・刺激回路の増幅に使う}
@@ -3750,8 +3460,6 @@ lines:
   B-137>V-039: {type: 土台, strength: 3, why: 変温動物の体温調節が土台}
   B-138>V-039: {type: 土台, strength: 2, why: 鳥の気嚢やえらの呼吸を使う}
   N-052>N-056: {type: 成熟, strength: 1, why: 素イデアルの感覚が要る、名前だけで判断}
-  N-053>N-056: {type: 疑い, strength: 1, why: 類群は楕円曲線の幾何に要らなそう}
-  N-054>N-056: {type: 疑い, strength: 1, why: 単数定理は楕円曲線に要らなそう}
   T-031>N-056: {type: 土台, strength: 3, why: 滑らかさ・特異点が曲線の定義}
   T-032>N-056: {type: 土台, strength: 3, why: 平面3次曲線が楕円曲線そのもの}
   T-033>N-056: {type: 土台, strength: 3, why: 種数と因子で群構造を述べる}
@@ -3761,7 +3469,6 @@ lines:
   L-029>L-031: {type: 土台, strength: 3, why: モデルの構成が強制法の土台}
   T-029>D-043: {type: 一般化, strength: 2, why: 複素多様体は多変数の枠を含む}
   D-058>D-060: {type: 土台, strength: 3, why: 弱解の正則性を調べる}
-  D-059>D-060: {type: 疑い, strength: 1, why: 双曲型は楕円型正則性に不要}
   D-025>D-060: {type: 土台, strength: 3, why: ソボレフ空間で正則性を述べる}
   T-027>T-028: {type: 土台, strength: 3, why: ファイブレーションからスペクトル系列}
   T-018>T-029: {type: 道具, strength: 3, why: ケーラー多様体でホッジ理論を使う}
@@ -3769,7 +3476,6 @@ lines:
   T-026>T-029: {type: 土台, strength: 2, why: 正則ベクトル束を扱う}
   D-030>T-029: {type: 土台, strength: 3, why: 複素解析の積分公式が土台}
   D-031>T-029: {type: 土台, strength: 2, why: 展開の考えを複素多様体で使う}
-  D-032>T-029: {type: 疑い, strength: 1, why: 留数計算は要らなそう}
   R-025>T-035: {type: 土台, strength: 3, why: スキームは可換環論が土台}
   T-031>T-035: {type: 土台, strength: 2, why: 次元と特異点をスキームで一般化}
   T-032>T-035: {type: 応用, strength: 1, why: 具体例として使う。名前だけで判断}
@@ -3813,7 +3519,6 @@ lines:
   D-055>D-073: {type: 深める, strength: 2, why: カオスから構造安定性へ}
   T-014>D-073: {type: 土台, strength: 3, why: 多様体上の力学系を扱う}
   D-034>D-074: {type: 道具, strength: 2, why: 一次分数変換で球面上の力学}
-  D-036>D-074: {type: 疑い, strength: 1, why: 解析接続は直接要らない}
   D-053>D-074: {type: 深める, strength: 3, why: 軌道・安定性を複素へ伸ばす}
   R-026>R-029: {type: 土台, strength: 3, why: 導来圏は圏・関手の上に立つ}
   R-027>R-029: {type: 深める, strength: 3, why: ホモロジー代数を圏の言葉へ深める}
@@ -3839,7 +3544,6 @@ lines:
   T-017>T-045: {type: 土台, strength: 3, why: リーマン幾何の大域論が舞台}
   T-040>T-045: {type: 土台, strength: 3, why: 幾何化の対象に双曲多様体}
   D-060>T-045: {type: 道具, strength: 2, why: 流れの正則性の評価に使う}
-  T-012>T-045: {type: 疑い, strength: 1, why: 極小曲面は直接必要に見えない}
   D-091>T-045: {type: 道具, strength: 2, why: 放物型方程式の理論をリッチ流に}
   T-037>T-046: {type: 土台, strength: 3, why: 層コホモロジーが対象の土台}
   T-024>T-046: {type: 土台, strength: 2, why: ホモロジーの理論が背景}
@@ -3863,7 +3567,6 @@ lines:
   T-029>T-049: {type: 土台, strength: 3, why: ケーラー多様体が舞台}
   N-062>N-071: {type: 土台, strength: 3, why: 志村多様体はモジュラー曲線の一般化}
   N-066>N-071: {type: 道具, strength: 3, why: 虚数乗法が類体を生成する}
-  D-061>D-082: {type: 疑い, strength: 1, why: 分散型方程式は運動論に必須でなさそう}
   P-054>D-082: {type: 土台, strength: 3, why: ボルツマン方程式を物理側で導入済み}
   S-006>D-082: {type: 道具, strength: 2, why: 測度論的確率で分布・極限を扱う}
   T-041>T-052: {type: 土台, strength: 3, why: シンプレクティック多様体が舞台}
@@ -3879,7 +3582,6 @@ lines:
   C-028>C-044: {type: 道具, strength: 3, why: 多項式法で分割を構成}
   T-030>C-044: {type: 道具, strength: 2, why: 多項式分割で多様体を使う}
   R-023>D-084: {type: 土台, strength: 3, why: リー群とその格子が対象そのもの}
-  R-032>D-084: {type: 疑い, strength: 1, why: 双曲群は等質力学に必須でなさそう}
   D-023>D-085: {type: 土台, strength: 3, why: フーリエ変換の制限が主題}
   D-072>D-085: {type: 道具, strength: 3, why: 掛谷問題でハウスドルフ次元を使う}
   S-006>S-043: {type: 土台, strength: 3, why: 測度論的確率が言語}
@@ -3900,7 +3602,6 @@ lines:
   P-056>P-236: {type: 土台, strength: 3, why: 臨界現象とくりこみ群が出発点}
   D-029>P-236: {type: 道具, strength: 3, why: 等角写像と正則関数が2次元CFTの核}
   P-113>P-237: {type: 道具, strength: 3, why: 経路積分でボソン弦を量子化}
-  P-063>P-237: {type: 疑い, strength: 1, why: 弦の入口にBH力学は不要に見える}
   K-041>K-170: {type: 土台, strength: 3, why: 乱択と計算量の分類が前提}
   C-032>K-170: {type: 土台, strength: 3, why: エクスパンダーはグラフ固有値で扱う}
   C-034>K-170: {type: 道具, strength: 2, why: 確率的方法とずれの評価を使う}
@@ -4312,3 +4013,86 @@ lines:
   P-270>E-235: {type: 道具, strength: 3, why: ずり減粘と法線応力（ダイスウェル）に非ニュートン流体の考えを使う}
   W-117>E-240: {type: 土台, strength: 2, why: 孔隙率と浸透率を測り、飽和率をアーチーの式で出す}
   I-063>I-048: {type: 土台, strength: 2, why: 皮膚の病気を角化とバリアの乱れとして見る}
+  R-004>C-036: {type: 道具, strength: 2, why: 加法的組合せ論の和集合や、部分群と剰余類で構造を述べる定理（ケネザー、フライマン）は有限アーベル群の上の話で、要るのは剰余群と有限生成アーベル群の分類（R-004）までであり、PID 上の加群の一般論ではない。}
+  D-003>D-007: {type: 深める, strength: 3, why: ε-δ 論法は関数の極限と連続を ε と δ で厳密に言い直すもので、要るのは極限と連続の考え（D-003）であり、面積と原始関数や置換積分・部分積分は使わない。}
+  D-005>D-008: {type: 土台, strength: 3, why: 平均値の定理・ロルの定理・テイラーの定理は導関数とその計算の上に立ち、問題も f'(x) を出すだけで積分は使わないので、本当の前提は導関数の計算（D-005）である。}
+  D-030>D-028: {type: 道具, strength: 2, why: ワイエルシュトラスの近似定理は一様収束と距離空間で足り、ルンゲの定理は正則関数をコーシーの積分公式で表して有理関数で近似するので、陰関数定理でなくコーシーの積分公式（D-030）が要る。}
+  D-036>D-040: {type: 深める, strength: 2, why: リーマン面の例（√z、log z、代数関数）は多価関数の枝を解析接続でつないで作るので、要るのは留数定理でなく解析接続と多価関数（D-036）である。}
+  D-022>D-048: {type: 一般化, strength: 2, why: スツルム–リウヴィルの固有関数展開は、sin nx・cos nx で展開するフーリエ級数を一般の 2 階の固有値問題の固有関数へ広げたもので、連立 1 階線形系や相図は使わない。}
+  D-022>D-049: {type: 道具, strength: 3, why: 有界な区間でラプラス・波動・拡散方程式を変数分離すると、初期値や境界値をフーリエ級数に展開して係数を決めるので、連立 1 階線形系でなくフーリエ級数が欠かせない。}
+  D-075>D-050: {type: 道具, strength: 2, why: グリーン関数はデルタ関数への応答で、非有界領域の解はフーリエ変換で求めてグリーン関数とのたたみ込みで書くので、連立 1 階線形系でなくフーリエ変換の計算（たたみ込み、デルタ関数）が要る。}
+  D-076>D-057: {type: 土台, strength: 2, why: コーシー–コワレフスカヤの定理は非特性的な初期面の上のコーシー問題をべき級数の優級数で解くもので、L^p 空間は使わず、特性曲線と特性面の考え（D-076）が土台になる。}
+  D-050>D-079: {type: 道具, strength: 2, why: コール＝ホップ変換はバーガース方程式を直線上の拡散方程式に直し、その解を熱核とのたたみ込みで書くので、有界区間の変数分離でなく非有界領域のグリーン関数（D-050）が道具になる。}
+  E-038>E-026: {type: 土台, strength: 3, why: 準一次元圧縮性流れと衝撃波はよどみ点エンタルピー、等エントロピーの関係、エントロピーの増加という開いた系の熱力学の上に立ち、高階線形常微分方程式は使わない。}
+  P-013>E-027: {type: 土台, strength: 3, why: 流線曲率と圧力の関係やポテンシャル流のモデル化は連続の式とベルヌーイの定理の上に立ち、高階線形常微分方程式は使わない。}
+  E-025>E-029: {type: 道具, strength: 2, why: 薄翼理論と揚力線理論に熱力学は要らないが、境界層との相互作用の部分では層流・乱流境界層と剥離の知識を使う。}
+  K-005>E-035: {type: 応用, strength: 3, why: 差分法の誤差と安定、時間進行法は、初期値問題の偏微分方程式の差分法と安定性を流れの方程式に当てはめるもので、留数定理は使わない。}
+  E-035>E-036: {type: 深める, strength: 3, why: 格子生成や有限要素法・スペクトル法・パネル法は数値流体力学（1）の差分法・有限体積法・時間進行法を複雑形状へ広げるもので、留数定理ではなく（1）が前提になる。}
+  E-026>E-037: {type: 深める, strength: 3, why: 圧縮性流れの理論は準一次元圧縮性流れと衝撃波・膨張波を、オイラー方程式と特性曲線で一般の流れへ深めるもので、対流熱伝達は使わない。}
+  P-045>E-038: {type: 深める, strength: 3, why: 工学熱力学は物理の熱力学第二法則とエントロピー（カルノー・サイクル、クラウジウスの不等式）を開いた系とエントロピー生成へ深めるもので、高階線形常微分方程式は使わない。}
+  P-011>E-060: {type: 土台, strength: 2, why: 剛体の動力学と姿勢力学は慣性モーメントとトルクによる回転の運動方程式の上に立ち、梁の曲げやトラスの解析は使わない。}
+  P-029>E-067: {type: 深める, strength: 3, why: 線形回路網はオームの法則とキルヒホッフの法則による回路の解析を、従属電源やコンデンサ・インダクタを含む回路網へ深めるもので、変位電流や電磁波は使わない。}
+  E-067>E-068: {type: 土台, strength: 3, why: 演算増幅器の回路は従属電源をもつ線形回路網として節点の式で解くので、電磁波ではなく線形回路網が前提になる。}
+  P-033>E-069: {type: 深める, strength: 3, why: 1 次・2 次回路の動特性は RL・RC 回路の時定数と交流の複素インピーダンス・共振を時間領域と周波数領域の解析へ深めるもので、電磁波の理論は使わない。}
+  D-006>E-073: {type: 道具, strength: 3, why: フーリエ係数とフーリエ変換は積分で定義して計算するので積分の考え（置換積分と部分積分）が要り、オブジェクト指向やテストの技法は要らない。}
+  E-073>E-074: {type: 土台, strength: 3, why: 畳み込みとフィルタの周波数特性、標本化の理論はフーリエ変換の上に立ち、オブジェクト指向のプログラミングは要らない。}
+  E-074>E-075: {type: 道具, strength: 3, why: 雑音除去はフィルタと逆畳み込みを使い、圧縮も変換と標本化の上で行うので、オブジェクト指向ではなくフィルタの単元が前提になる。}
+  E-071>E-076: {type: 土台, strength: 3, why: 入出力モデルと変換領域の表現はラプラス変換、z 変換、差分方程式の上に立ち、雑音除去や圧縮の手法は使わない。}
+  D-046>E-076: {type: 土台, strength: 3, why: 状態空間モデルと状態フィードバック・オブザーバは連立 1 階線形系と固有値による安定性の上に立ち、確定的なモデルなので連続確率変数は使わない。}
+  D-049>E-084: {type: 道具, strength: 2, why: 導波管のモードやアンテナの放射は境界条件のもとで波動方程式を変数分離して解くので変数分離法が要り、標本化や畳み込みは使わない。}
+  S-009>E-087: {type: 道具, strength: 2, why: 待ち行列と媒体アクセス制御の解析はポアソン過程と連続時間マルコフ連鎖を使い、フーリエ級数や変換は使わない。}
+  P-008>E-091: {type: 土台, strength: 2, why: 1 自由度系の地震応答は減衰振動・強制振動と共振の上に立ち、入門の段階では直接剛性法による行列解析は要らない。}
+  E-073>E-092: {type: 道具, strength: 2, why: 地震動のスペクトルは記録をフーリエ変換・離散フーリエ変換して求めるので、静定骨組の応力ではなくフーリエ解析が前提になる。}
+  P-008>E-092: {type: 土台, strength: 3, why: 応答スペクトルは周期と減衰の違う 1 自由度の振動子の強制振動の最大応答を並べたものなので、減衰振動・強制振動と共振が前提になり、行列解析は使わない。}
+  K-005>E-137: {type: 道具, strength: 2, why: 計算音響の差分法は初期値問題の偏微分方程式の差分法と安定性を波動方程式に使うもので、1 自由度の共振は連成振動や音響の単元を通してすでに届いている。}
+  K-131>E-154: {type: 深める, strength: 2, why: PERT と CPM、工程管理は作業の前後の関係からいちばん早く終わる順番を求める段取りの考えを深めるもので、一筆書き（オイラー路）は使わない。}
+  K-146>E-198: {type: 土台, strength: 2, why: 技術者の倫理のうち知的財産と安全の実務は、情報技術と社会で学ぶ知的財産とライセンス、安全とセキュリティの入口の上に立ち、金融の信任義務や公正な開示は要らない。}
+  F-024>F-070: {type: 道具, strength: 2, why: 市場の微細構造の中身（情報を持つ取引者による逆選択、売り値と買い値の差、オークションとしての電子市場）はゲーム理論と情報の非対称性（F-024）の上に立ち、CAPM の価格づけは使わない。}
+  A-022>K-021: {type: 土台, strength: 2, why: アルゴリズムの手間を表す漸化式を解く部分は数列と漸化式（A-022）の上に立ち、包除原理は使わない。}
+  K-014>K-021: {type: 深める, strength: 2, why: 漸近記法とアルゴリズム解析の初歩は計算量の入門（K-014）を深めるもので、K-021 にはいまその前提がなく、グラフ理論は要らない。}
+  K-030>K-031: {type: 土台, strength: 3, why: 単一サイクルとパイプラインのプロセッサは組合せ回路と順序回路（K-030）を組んだデータパスとして作るので、回路の単元が本当の前提で、計算量は使わない。}
+  K-033>K-034: {type: 土台, strength: 2, why: ネットワークと命名、セキュリティはクライアント・サーバと強いモジュール化（K-033）の上に層を組む話で、論理回路の設計は使わない。}
+  K-033>K-035: {type: 土台, strength: 2, why: 耐故障、原子性と並行動作の協調、回復は OS とモジュール化（K-033）の上で組む仕組みで、論理回路の設計は使わない。}
+  L-027>K-039: {type: 道具, strength: 2, why: 字句解析は正規表現と有限オートマトン（L-027）をそのまま道具に使い、包除原理は使わない。}
+  L-028>K-039: {type: 道具, strength: 2, why: 構文解析は文脈自由文法（L-028）の上で LL や LR の解析器を作るもので、背理法は使わない。}
+  K-041>K-044: {type: 土台, strength: 2, why: 証明系とゼロ知識は NP の言語と乱択の多項式時間の検証者で定義するので P 対 NP と乱択の力（K-041）が本当の前提で、包除原理は使わない。}
+  R-001>K-045: {type: 土台, strength: 2, why: 有限体上の楕円曲線の点が群をなし、その群の上の離散対数で暗号を作るので、群の定義と例（R-001）が本当の前提で、グラフ理論は使わない。}
+  D-014>K-046: {type: 道具, strength: 3, why: 勾配に基づく方法で損失を最小にするには多変数関数の微分と勾配（D-014）が欠かせず、オブジェクト指向は要らない。}
+  D-014>K-050: {type: 土台, strength: 3, why: 誤差逆伝播法と自動微分は計算のグラフの上で連鎖律（D-014）をくり返し使うものそのもので、仮説検定は使わない。}
+  S-020>K-060: {type: 土台, strength: 2, why: 特徴選択とモデルの当てはめと評価は線形モデル（S-020）の上に立ち、アルゴリズムの計算量は使わない。}
+  G-049>K-071: {type: 道具, strength: 3, why: レイトレーシングの中心は光線（空間の直線）と平面や球の交わりを求めることで空間座標と直線・平面・球の方程式（G-049）を使い、固有値は使わない。}
+  M-003>K-072: {type: 道具, strength: 3, why: 座標変換は行列の積と逆行列（M-003）でつなぐもので、固有値と対角化は使わない。}
+  S-003>K-073: {type: 道具, strength: 3, why: 標本化とモンテカルロ法による大域照明は密度関数に従う標本と期待値・分散で積分を見積もるので連続確率変数（S-003）が欠かせず、固有値は使わない。}
+  D-071>K-074: {type: 土台, strength: 2, why: スプラインとアニメーションの道すじは媒介変数で表した曲線と速度（D-071）の上に立ち、固有値は使わない。}
+  E-074>K-080: {type: 道具, strength: 3, why: エッジ検出などの低次の画像解析は微分のフィルタを画像に畳み込むことなので標本化と畳み込みとフィルタ（E-074）が本当の前提で、包除原理は使わない。}
+  E-073>K-080: {type: 道具, strength: 2, why: 画像変換は画像のフーリエ変換と離散フーリエ変換（E-073）を使うもので、グラフ理論は使わない。}
+  K-003>K-081: {type: 道具, strength: 2, why: 三次元の復元はカメラ行列の推定や三角測量を最小二乗と行列の分解（K-003）で解くので、それが本当の前提で、包除原理は使わない。}
+  G-049>K-081: {type: 道具, strength: 2, why: 三次元シーンの復元は視線を空間の直線として交わらせ平面を当てはめるので空間座標と直線・平面の方程式（G-049）を使い、グラフ理論は使わない。}
+  G-037>K-083: {type: 土台, strength: 2, why: 多視点幾何のエピポーラ幾何とホモグラフィーは射影平面と射影変換（G-037）の上に立ち、包除原理は使わない。}
+  K-046>K-086: {type: 土台, strength: 2, why: 知覚とロボットのための機械学習は、線形・非線形モデルを勾配法で学ぶ機械学習（K-046）の上に立ち、連続体の振動や波動方程式は使わない。}
+  S-019>K-114: {type: 土台, strength: 3, why: 生物学の検定と多重検定は仮説検定（S-019）の p 値と誤りの考えの上に立ち、核酸・タンパク質の化学は使わない。}
+  K-047>K-116: {type: 土台, strength: 3, why: 深層学習による生命科学はニューラルネットワークの構成（K-047）の上に立つが、いまの前提に深層学習の単元がなく、代謝経路は使わない。}
+  S-031>K-146: {type: 土台, strength: 2, why: データの収集とアルゴリズム・データの偏りは、標本の選び方で結果が偏ること（S-031 標本調査）の上に立ち、Python の書き方は使わない。}
+  M-005>M-008: {type: 土台, strength: 3, why: ジョルダン標準形は広義固有空間への直和分解と核の次元の列で作るので部分空間と線形写像（M-005）の上に立ち、内積は使わない。}
+  D-045>P-008: {type: 道具, strength: 2, why: 減衰振動と強制振動の運動方程式は定数係数の 2 階線形微分方程式で、その解き方（D-045）を使い、多変数の微分は使わない（ラグランジュ形式の P-016 には D-014 を直接引くとよい）。}
+  D-014>P-015: {type: 道具, strength: 3, why: 汎関数微分とラグランジュの未定乗数は多変数の偏微分と未定乗数法（D-014）の計算を使い、共振の中身は使わない（D-014 へはいま P-008 経由でしか届いていない）。}
+  P-025>P-026: {type: 深める, strength: 3, why: 波束・分散と群速度は波動方程式と連続体の波（P-025）の上で分散関係を考える話で、いまの前提に波の物理の単元がない。}
+  P-043>P-041: {type: 道具, strength: 2, why: デバイ遮蔽は電子の密度をボルツマン因子で置き、衝突と拡散は熱速度を使うので気体分子運動論（P-043）が要り、留数定理は使わない。}
+  P-060>P-061: {type: 土台, strength: 3, why: アインシュタイン方程式はリッチ曲率と共変微分で書かれ、計量と曲率（P-060）の上に立つが、いまの前提に微分幾何がなく、内積空間の手法は使わない。}
+  P-058>P-064: {type: 土台, strength: 2, why: FRW 計量と赤方偏移・地平線は不変間隔とミンコフスキー計量（P-058）を膨張する空間へ広げたもので、フリードマン方程式は 1 階の式で高階線形 ODE は使わない。}
+  P-064>P-065: {type: 土台, strength: 3, why: 再結合・脱結合・元素合成の時期は、スケール因子と温度の変化 T ∝ 1/a（P-064 膨張宇宙）の上で決まり、高階線形 ODE は使わない。}
+  P-070>P-071: {type: 土台, strength: 3, why: 井戸型ポテンシャルやトンネル効果はシュレーディンガー方程式と波動関数の確率解釈（P-070）の上で解くが、いまの前提にそれがなく、波束の分散は P-070 経由で届く。}
+  P-092>P-097: {type: 道具, strength: 2, why: 磁性の結晶場と多極子はまわりのイオンの並びと結晶の対称性で準位の分裂が決まるので、要るのはフォノンの量子化ではなく P-092 の結晶構造と対称性である。}
+  P-083>P-100: {type: 道具, strength: 3, why: ハバード模型・フェルミ液体論・近藤効果は生成消滅演算子で書かれる多体の理論なので、本当の前提はローレンツ変換でなく P-083 の第二量子化である。}
+  P-109>P-110: {type: 土台, strength: 3, why: スカラー場とディラック場の正準量子化は場のラグランジアンと共役運動量から始まるので、本当の前提は摂動や WKB の近似法でなく P-109 の古典場の理論である。}
+  P-123>P-120: {type: 土台, strength: 2, why: 地球の放射収支は放射の法則、対流と雲は断熱減率と浮力の安定度で説明するので、要るのはガウス・ストークスの定理でなく P-123 の大気の熱力学である。}
+  P-123>P-131: {type: 土台, strength: 3, why: 放射伝達方程式の射出の項と加熱率はプランクの法則など放射の法則の上に立つので、雲粒の核形成ではなく P-123 が前提である。}
+  S-020>P-141: {type: 土台, strength: 2, why: 線形逆問題の回帰・最小二乗・正則化は線形モデルの推定を一般の観測方程式へ広げたものなので、本当の前提は留数定理でなく S-020 の線形モデルである。}
+  P-120>P-161: {type: 深める, strength: 2, why: 気候変化の検出・炭素循環・熱と水の収支・フィードバックは放射収支と大気海洋の循環の概説を深めるものなので、前提は積分定理でなく P-120 である。}
+  R-002>R-005: {type: 土台, strength: 3, why: 置換の符号は対称群から （±1） への準同型、交代群はその核で指数 2 の部分群なので、要るのは軌道や類等式ではなく R-002 までの群・部分群・剰余類である。}
+  S-004>S-006: {type: 深める, strength: 2, why: 測度論的確率論は大数の法則や中心極限定理を厳密に立て直すものなので、前提は陰関数定理でなく S-004 の確率の不等式と極限定理である。}
+  D-020>S-006: {type: 土台, strength: 3, why: 確率は測度、期待値はルベーグ積分として定義され収束定理とフビニの定理を使うので、本当の前提はピカールの逐次近似でなく D-020 のルベーグ積分である。}
+  T-001>T-005: {type: 土台, strength: 3, why: 分離公理は位相空間の開集合についての条件なので、本当の前提はジョルダン標準形でなく T-001 の位相空間である。}
+  T-015>T-018: {type: 土台, strength: 3, why: ホッジ理論は各ド・ラームコホモロジー類が調和形式をただ一つ持つという定理で、計量はホッジのスター作用素に使うだけなので、土台は大域的なリーマン幾何でなく T-015 の微分形式とド・ラームコホモロジーである。}
+  R-004>T-019: {type: 道具, strength: 2, why: ファン・カンペンの定理での正規部分群による商や被覆変換群の計算、アーベル化を使うので、要るのは PID 上の加群ではなく R-004 の正規部分群・剰余群・同型定理である。}
+  T-001>T-030: {type: 道具, strength: 2, why: アフィン多様体と射影多様体はザリスキ位相の閉集合・既約成分・開集合で語るので、要るのは曲面の分類ではなく T-001 の位相空間の言葉である。}
