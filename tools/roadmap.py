@@ -545,6 +545,16 @@ def check(data, problems):
     # どの単元も、どれかの目標の道のりに入るか、段の物差しの大会のため（measure）であること
     if data["coverages"]:
         on_path = set().union(*goal_units(data).values())
+        # 外の物差し（yardsticks/、D-117）が受け持つとした単元と、その前提も、道のりに入っているとみなす（D-119）。
+        # 物差しは「収録する知の範囲」の外の基準なので、目標がまだなくても、網羅のために足した単元は地図に置いてよい
+        needs_of = {u["id"]: u.get("needs", []) for u in data["units"]}
+        stack = [uid for y in yardstick.load().values() for it in y.get("items") or [] for uid in it.get("units") or []]
+        while stack:
+            uid = stack.pop()
+            if uid in on_path or uid not in needs_of:
+                continue
+            on_path.add(uid)
+            stack += needs_of[uid]
         # 網羅表がそろったので誤りに戻した（2026-11-08、D-036）。道のりの外の単元は、合う目標の論題に当てるか外す
         off = [uid for uid, (_, _, u) in units.items() if uid not in on_path and not u.get("measure")]
         if off:
