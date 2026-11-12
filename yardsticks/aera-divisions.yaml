@@ -18,7 +18,7 @@ items:
   - id: "C"
     name: "Learning & Instruction"
     ja: "学習と指導"
-    units: [Q-023, Q-024, Y-017, Q-005]
+    units: [Q-023, Q-024, Y-017, Q-005, Q-033]
     sources: [Y01]
   - id: "D"
     name: "Measurement & Research Methodologies"

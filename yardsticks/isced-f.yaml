@@ -118,7 +118,7 @@ items:
     parent: "023"
     name: "Literature and linguistics"
     ja: "文学と言語学"
-    none: "人文（D-115、言語・語学・文学）。測れる部分：音声学と心理言語学は Q-026・Q-008、形式言語は L-027・L-028、計算言語学は K-161 に一部"
+    none: "人文（D-115、言語・語学・文学）。測れる部分：音声学と心理言語学は Q-026・Q-008、形式言語は L-027・L-028、計算言語学は K-216（統計的自然言語処理）と K-217（分布意味論）、言語モデルは K-161"
     sources: [Y01]
   - {id: "03", name: "Social sciences, journalism and information", ja: "社会科学、ジャーナリズムと情報", group: true, sources: [Y01]}
   - {id: "031", parent: "03", name: "Social and behavioural sciences", ja: "社会・行動科学", group: true, sources: [Y01]}
@@ -144,7 +144,7 @@ items:
     parent: "031"
     name: "Sociology and cultural studies"
     ja: "社会学と文化研究"
-    units: [Y-001, Y-007, Y-008, Y-010, Y-011]
+    units: [Y-001, Y-007, Y-008, Y-010, Y-011, B-187, B-188]
     sources: [Y01]
   - {id: "032", parent: "03", name: "Journalism and information", ja: "ジャーナリズムと情報", group: true, sources: [Y01]}
   - id: "0321"
@@ -369,7 +369,7 @@ items:
     parent: "073"
     name: "Architecture and town planning"
     ja: "建築と都市計画"
-    units: [E-106, E-120, E-122, E-148, W-066]
+    units: [E-106, E-120, E-122, E-148, W-066, W-120, W-121]
     sources: [Y01]
   - id: "0732"
     parent: "073"

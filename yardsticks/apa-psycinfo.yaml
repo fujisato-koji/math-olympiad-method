@@ -366,7 +366,7 @@ items:
     parent: "3500"
     name: "Classroom Dynamics & Student Adjustment & Attitudes"
     ja: "学級の力学・生徒の適応・態度"
-    units: [Q-012, Q-011, Q-010]
+    units: [Q-012, Q-011, Q-010, Q-033]
     sources: [Y01]
   - id: "3570"
     parent: "3500"

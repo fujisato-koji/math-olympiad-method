@@ -143,7 +143,7 @@ items:
     parent: "62"
     name: "Inference from stochastic processes"
     ja: "確率過程からの推測"
-    units: [F-034, E-056, E-077, E-081]
+    units: [F-034, E-056, E-077, E-081, S-061]
     sources: [Y01]
   - id: "62Nxx"
     parent: "62"
@@ -167,5 +167,5 @@ items:
     parent: "62"
     name: "Statistics on algebraic and topological structures"
     ja: "代数的・位相的構造上の統計"
-    units: [S-058, T-060, S-059]
+    units: [S-058, T-060, S-059, S-060]
     sources: [Y01]

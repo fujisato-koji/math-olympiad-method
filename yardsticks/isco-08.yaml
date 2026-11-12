@@ -147,7 +147,7 @@ items:
     parent: "216"
     name: "Cartographers and Surveyors"
     ja: "地図作成者・測量士"
-    units: [W-066, W-114, W-015, W-042, E-166]
+    units: [W-066, W-114, W-015, W-042, E-166, W-120, W-121, W-122]
     sources: [Y01]
   - id: "2166"
     parent: "216"
@@ -501,7 +501,7 @@ items:
     parent: "263"
     name: "Sociologists, Anthropologists and Related Professionals"
     ja: "社会学者・人類学者など"
-    units: [Y-001, Y-005, Y-007, Y-008]
+    units: [Y-001, Y-005, Y-007, Y-008, B-187, B-188]
     sources: [Y01]
   - id: "2633"
     parent: "263"
@@ -544,7 +544,7 @@ items:
     parent: "264"
     name: "Translators, Interpreters and Other Linguists"
     ja: "翻訳者・通訳者・言語学者"
-    none: "言語・語学（D-115）。音声と心理言語学は Q-026・Q-008、言語の獲得は Q-010、機械処理は K-161 で扱う"
+    none: "言語・語学（D-115）。音声と心理言語学は Q-026・Q-008、言語の獲得は Q-010、機械処理は K-216（統計的自然言語処理）、K-217（分布意味論）、K-161 で扱う"
     sources: [Y01]
   - {id: "265", parent: "26", name: "Creative and Performing Artists", ja: "創作・実演の芸術家", group: true}
   - id: "2651"

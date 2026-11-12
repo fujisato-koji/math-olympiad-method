@@ -64,7 +64,7 @@ items:
   - id: "12"
     name: "Cartography & Mapping"
     ja: "地図学と地図作成"
-    units: [W-066, W-114, K-064]
+    units: [W-066, W-114, K-064, W-121]
     sources: [Y01]
   - id: "13"
     name: "China Geography"
@@ -219,7 +219,7 @@ items:
   - id: "43"
     name: "Health and Medical Geography"
     ja: "健康と医療の地理"
-    units: [I-035, I-036, I-037, I-042, F-079]
+    units: [I-035, I-036, I-037, I-042, F-079, S-061]
     sources: [Y01]
   - id: "44"
     name: "Historical Geography"
@@ -339,7 +339,7 @@ items:
   - id: "67"
     name: "Remote Sensing"
     ja: "リモートセンシング"
-    units: [E-200, W-066, W-114]
+    units: [E-200, W-066, W-114, W-122]
     sources: [Y01]
   - id: "68"
     name: "Rural Geography"
@@ -359,7 +359,7 @@ items:
   - id: "71"
     name: "Spatial Analysis and Modeling"
     ja: "空間分析とモデリング"
-    gap: "要る単元の案「空間統計と空間モデル（空間的自己相関（モランの I）、点パターンと空間のポアソン過程、地球統計と変動図とクリギング、地理的加重回帰と空間の不均一、空間相互作用モデルと重力モデル、疾病地図、可変単位地区問題と生態学的誤り）」（前提 W-114、S-020、S-010）。入口は W-114（空間の結合と重ね合わせ）、S-010（空間ポアソン過程）、K-063（一般化線形・加法モデル）で、空間のデータに固有の統計がない。統計の流れ S の単元なので、計算機と数学のセッション（ext-cs）か取りまとめで足す"
+    units: [S-061]
     sources: [Y01]
   - id: "72"
     name: "Stand Alone Geographers"
@@ -384,7 +384,7 @@ items:
   - id: "76"
     name: "UAS Geospatial Data"
     ja: "無人航空機の地理空間データ"
-    gap: "要る単元の案「測量と写真測量（GNSS 測量と基準点、SfM 写真測量とオルソ画像・数値表層モデル、LiDAR の点群、ドローンによる観測の計画と精度の評価）」（前提 W-066、E-200、E-182）。入口は W-066（GPS と空中写真）、E-200（リモートセンシング）、E-182（カメラの射影）で、現地の測定と写真測量の単元がない。工学か地球科学の流れの単元なので、ほかのセッションか取りまとめで足す"
+    units: [W-120, W-121, W-122]
     sources: [Y01]
   - id: "77"
     name: "Undergraduate Student"

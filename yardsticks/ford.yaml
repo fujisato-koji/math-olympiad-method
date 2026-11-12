@@ -202,7 +202,7 @@ items:
     parent: "5"
     name: Sociology
     ja: 社会学
-    units: [Y-001, Y-005, Y-007, Y-008, Y-009]
+    units: [Y-001, Y-005, Y-007, Y-008, Y-009, B-187, B-188]
     sources: [Y01]
   - id: "5.5"
     parent: "5"
@@ -226,7 +226,7 @@ items:
     parent: "5"
     name: Media and communications
     ja: メディア・コミュニケーション
-    units: [Y-016, Y-006, Y-005]
+    units: [Y-016, Y-006, Y-005, Y-022]
     sources: [Y01]
   - id: "5.9"
     parent: "5"
@@ -245,7 +245,7 @@ items:
     parent: "6"
     name: Languages and literature
     ja: 言語・文学
-    none: "人文（言語・語学、文学）（D-115）。測れる部分：言語の理解と獲得は Q-008・Q-010、音声の物理は P-022・E-149、計算言語学と言語モデルは K-161、形式言語は L-027・L-028"
+    none: "人文（言語・語学、文学）（D-115）。測れる部分：言語の理解と獲得は Q-008・Q-010、音声の物理は P-022・E-149、計算言語学は K-216・K-217、言語モデルは K-161、形式言語は L-027・L-028"
     sources: [Y01]
   - id: "6.3"
     parent: "6"

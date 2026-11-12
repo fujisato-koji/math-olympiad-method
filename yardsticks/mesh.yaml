@@ -497,7 +497,7 @@ items:
     parent: "G"
     name: "Genetic Phenomena"
     ja: "遺伝現象"
-    units: [B-001, B-002, B-009, B-044, B-032]
+    units: [B-001, B-002, B-009, B-044, B-032, B-188]
     sources: [Y01]
   - id: "G06"
     parent: "G"
