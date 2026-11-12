@@ -748,20 +748,14 @@ body[data-page="map"] .icon[aria-pressed="true"] { color: #ffe2a8; background: r
 .map circle.mark { stroke-width: 5; filter: drop-shadow(0 0 5px var(--c)); }
 .map .pair-arc { fill: none; stroke: #ffe2a8; stroke-width: 2.5; stroke-dasharray: 7 7; animation: arcflow 1.1s linear infinite; }
 @keyframes arcflow { to { stroke-dashoffset: -28; } }
-/* 2D で選んだ単元の出入り（D-116）：前提へ入る線は水色、先へ出ていく線は金。線の先の矢じりで向きを見せる（動かさない）。
+/* 2D で選んだ単元の出入り（D-116）：前提へ入る線は水色、先へ出ていく線は金。色と太さで向きを見せる（矢じりは付けない、施主「矢はいらないかな」）。
    じかにつながる線は太く明るく、遠い線は細く淡く */
-.map.focus .edges path.hl.up { stroke: #2f80c8; marker-end: url(#arr-up); }
-.map.focus .edges path.hl.down { stroke: #c9851a; marker-end: url(#arr-down); }
+.map.focus .edges path.hl.up { stroke: #2f80c8; }
+.map.focus .edges path.hl.down { stroke: #c9851a; }
 .cosmos .map.focus .edges path.hl.up { stroke: #8fd3ff; stroke-opacity: .45; stroke-width: 1.1; }
 .cosmos .map.focus .edges path.hl.down { stroke: #ffc861; stroke-opacity: .45; stroke-width: 1.1; }
-.cosmos .map.focus .edges path.hl.up.near { stroke-opacity: 1; stroke-width: 2.4; marker-end: url(#arr-up-near); }
-.cosmos .map.focus .edges path.hl.down.near { stroke-opacity: 1; stroke-width: 2.4; marker-end: url(#arr-down-near); }
-.map.focus .edges path.hl.up.near.into, .cosmos .map.focus .edges path.hl.up.near.into { marker-end: url(#arr-up-into); }
-.map marker.arr.up path { fill: #2f80c8; }
-.map marker.arr.down path { fill: #c9851a; }
-.cosmos .map marker.arr.up path { fill: #8fd3ff; }
-.cosmos .map marker.arr.down path { fill: #ffc861; }
-.map marker#arr-up path, .map marker#arr-down path { fill-opacity: .55; }
+.cosmos .map.focus .edges path.hl.up.near { stroke-opacity: 1; stroke-width: 2.4; }
+.cosmos .map.focus .edges path.hl.down.near { stroke-opacity: 1; stroke-width: 2.4; }
 /* 単元の道しるべから来たとき、選んでいた単元に脈打つ金の輪と名前の札（D-107） */
 .cosmos .map svg { overflow: visible; }
 .map.focus .sel-mark circle, .map.comb .sel-mark circle { opacity: 1; }  /* 鎖を光らせているときの薄めを、輪には当てない */

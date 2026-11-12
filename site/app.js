@@ -1406,10 +1406,7 @@
       return ds.length ? { s, x: X0 + (ds[Math.floor(ds.length / 2)] - minD) * XS } : null;
     }).filter(Boolean);
     let svg = `<svg viewBox="0 0 ${W} ${H}" width="${W}" height="${H}" role="img" aria-label="全体の関係図">`;
-    // 選んだ単元の線の向き：線の先（入っていく単元の手前）に小さな矢じり。前提へ入る線と、先へ出ていく線で色を分ける（D-116）
-    // 選んだ単元へ入る線（into）は、金の輪（半径 15）の外で矢じりが止まるように手前に引く
-    const ARR = { 'up': [22, 6], 'down': [22, 6], 'up-near': [19, 8], 'down-near': [19, 8], 'up-into': [29, 11] };
-    svg += '<defs>' + Object.entries(ARR).map(([k, [rx, w]]) => `<marker id="arr-${k}" class="arr ${k.split('-')[0]}" viewBox="0 0 10 10" refX="${rx}" refY="5" markerWidth="${w}" markerHeight="${w}" markerUnits="userSpaceOnUse" orient="auto"><path d="M0,1 L10,5 L0,9 z"/></marker>`).join('') + '</defs>';
+    // 選んだ単元の線の向きは、前提へ入る線と先へ出ていく線の色で見せる（D-116。矢じりは付けない）
     svg += marks.map((m, i) => `<g class="level-mark"><line x1="${m.x}" y1="${TOP - 6}" x2="${m.x}" y2="${H}"/>
       </g>`).join('');
     svg += heads.map(h => `<g class="field-head" style="${fc(h)}"><text x="8" y="${h.y}">${esc(FIELDS[h.f].name)}</text><line x1="8" y1="${h.y + 6}" x2="${W - 8}" y2="${h.y + 6}"/></g>`).join('');
