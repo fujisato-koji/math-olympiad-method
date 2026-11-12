@@ -79,7 +79,7 @@ items:
     parent: "2"
     name: Materials engineering
     ja: 材料工学
-    units: [E-163, E-164, E-015, H-049, E-196, E-162]
+    units: [E-163, E-164, E-015, H-049, E-196, E-162, H-108]
     sources: [Y01]
   - id: "2.6"
     parent: "2"
@@ -91,7 +91,7 @@ items:
     parent: "2"
     name: Environmental engineering
     ja: 環境工学
-    units: [E-219, E-220, E-221, E-222, E-200, E-124]
+    units: [E-219, E-220, E-221, E-222, E-200, E-124, E-237, E-240]
     sources: [Y01]
   - id: "2.8"
     parent: "2"
@@ -128,13 +128,13 @@ items:
     parent: "3"
     name: Clinical medicine
     ja: 臨床医学
-    units: [I-044, I-045, I-046, I-047, I-050, I-051]
+    units: [I-044, I-045, I-046, I-047, I-050, I-051, I-059, I-062]
     sources: [Y01]
   - id: "3.3"
     parent: "3"
     name: Health sciences
     ja: 保健科学
-    units: [I-033, I-035, I-036, I-041, I-042, I-052]
+    units: [I-033, I-035, I-036, I-041, I-042, I-052, I-065]
     sources: [Y01]
   - id: "3.4"
     parent: "3"

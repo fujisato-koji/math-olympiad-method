@@ -350,7 +350,7 @@ items:
     parent: "072"
     name: "Materials (glass, paper, plastic and wood)"
     ja: "材料（ガラス、紙、プラスチック、木材）"
-    units: [H-035, H-049, E-202, E-196]
+    units: [H-035, H-049, E-202, E-196, H-106, E-235]
     sources: [Y01]
   - id: "0723"
     parent: "072"
@@ -362,7 +362,7 @@ items:
     parent: "072"
     name: "Mining and extraction"
     ja: "鉱業と採掘"
-    gap: "採鉱と石油・ガス工学の単元がない（鉱床と貯留層の成因は W-065、岩石中の流れは W-029 に一部）。案：岩盤力学と坑道の安定（前提 E-002、E-124、W-020）、貯留層工学と掘削（前提 W-029、E-031）、選鉱とミネラルプロセッシング（前提 E-213、E-215）"
+    units: [E-237, E-238, E-239, E-240, E-241, W-065]
     sources: [Y01]
   - {id: "073", parent: "07", name: "Architecture and construction", ja: "建築と建設", group: true, sources: [Y01]}
   - id: "0731"
@@ -418,7 +418,7 @@ items:
     parent: "091"
     name: "Dental studies"
     ja: "歯学"
-    gap: "歯学の単元がない（口腔の解剖と組織、う蝕と歯周病の病態、口腔外科、歯科材料）。案：口腔の解剖・組織・病態（前提 I-011、I-012、I-021、I-028）、歯科材料学（前提 H-049、E-226）"
+    units: [I-061, I-062, E-236]
     sources: [Y01]
   - id: "0912"
     parent: "091"
@@ -442,13 +442,13 @@ items:
     parent: "091"
     name: "Therapy and rehabilitation"
     ja: "治療とリハビリテーション"
-    units: [B-120, B-139, I-012, I-004]
+    units: [B-120, B-139, I-012, I-004, I-066]
     sources: [Y01]
   - id: "0916"
     parent: "091"
     name: "Pharmacy"
     ja: "薬学"
-    units: [I-001, I-002, I-026, I-027, H-056, I-003]
+    units: [I-001, I-002, I-026, I-027, H-056, I-003, I-064]
     sources: [Y01]
   - id: "0917"
     parent: "091"
@@ -499,7 +499,7 @@ items:
     parent: "101"
     name: "Sports"
     ja: "スポーツ"
-    gap: "スポーツ科学の運動生理学（エネルギー供給系、トレーニングによる適応、運動の栄養と回復、運動の障害）の単元がない。動作の生体力学は B-120、スポーツの数学とデータは K-065〜K-070 にある。競技の技能は D-115 で外す。案：運動生理学とトレーニング科学（前提 I-004、I-052、B-120）。迷う項目：細目の範囲が競技の指導に寄るなら none"
+    units: [I-065, I-066, B-120]
     sources: [Y01]
   - id: "1015"
     parent: "101"

@@ -59,7 +59,7 @@ items:
     parent: "A"
     name: "Sense Organs"
     ja: "感覚器"
-    units: [B-100, B-063, I-011]
+    units: [B-100, B-063, I-011, I-056, I-057, I-058]
     sources: [Y01]
   - id: "A10"
     parent: "A"
@@ -89,7 +89,7 @@ items:
     parent: "A"
     name: "Stomatognathic System"
     ja: "口腔・顎顔面系"
-    gap: "要る単元の案「口腔と歯の科学」（C07、E06 と同じ単元。前提 I-011、I-012）。歯と歯周の構造と発生、顎と咬合、唾液腺、咀嚼と嚥下"
+    units: [I-061, I-012]
     sources: [Y01]
   - id: "A15"
     parent: "A"
@@ -193,7 +193,7 @@ items:
     parent: "C"
     name: "Stomatognathic Diseases"
     ja: "口腔・顎顔面の病気"
-    gap: "要る単元の案「口腔と歯の科学」（A14、E06 と同じ単元。前提 I-011、I-028）。う蝕と歯周病、口腔の感染と腫瘍のしくみ"
+    units: [I-062, I-021]
     sources: [Y01]
   - id: "C08"
     parent: "C"
@@ -205,7 +205,7 @@ items:
     parent: "C"
     name: "Otorhinolaryngologic Diseases"
     ja: "耳鼻咽喉の病気"
-    gap: "要る単元の案「耳鼻咽喉の病気のしくみ（難聴と中耳炎、副鼻腔炎、気道の閉塞、平衡の障害）」（前提 I-012、I-045）。入口は E-169（人工内耳）"
+    units: [I-060, I-057]
     sources: [Y01]
   - id: "C10"
     parent: "C"
@@ -217,7 +217,7 @@ items:
     parent: "C"
     name: "Eye Diseases"
     ja: "眼の病気"
-    gap: "要る単元の案「眼の病気のしくみ（屈折異常、白内障、緑内障、網膜の病気）」（前提 I-046、G14 の案の視覚の生理の単元）。入口は B-170（網膜の人工器官）"
+    units: [I-059, I-056]
     sources: [Y01]
   - id: "C12"
     parent: "C"
@@ -320,13 +320,13 @@ items:
     parent: "D"
     name: "Heterocyclic Compounds"
     ja: "複素環化合物"
-    gap: "要る単元の案「複素環化合物の化学」（前提 H-034、H-039。CAS 27・28 と同じ単元）。ピロール・ピリジン・イミダゾール・プリンなどの芳香族性と反応性、環の合成。入口は H-047（複素環の合成）と H-044（核酸塩基）、中心がない"
+    units: [H-104, H-047]
     sources: [Y01]
   - id: "D04"
     parent: "D"
     name: "Polycyclic Compounds"
     ja: "多環化合物"
-    gap: "要る単元の案「天然物化学」（前提 H-044、H-039、H-041。CAS 30〜32 と同じ単元）に縮合環とステロイド骨格を含める。入口は H-034（ベンゼン）と H-038（配座）、縮合多環と橋かけ環の中心がない"
+    units: [H-105, H-034]
     sources: [Y01]
   - id: "D05"
     parent: "D"
@@ -386,13 +386,13 @@ items:
     parent: "D"
     name: "Biomedical and Dental Materials"
     ja: "生体医療・歯科材料"
-    units: [E-226]
+    units: [E-226, E-236]
     sources: [Y01]
   - id: "D26"
     parent: "D"
     name: "Pharmaceutical Preparations"
     ja: "医薬品製剤"
-    gap: "要る単元の案「製剤学（剤形と添加物、溶解性と生物学的利用能、安定性と品質、製剤の設計）」（前提 I-002、H-021）。入口は E-168（放出制御と送達）"
+    units: [I-064, E-168]
     sources: [Y01]
   - id: "D27"
     parent: "D"
@@ -435,7 +435,7 @@ items:
     parent: "E"
     name: "Dentistry"
     ja: "歯科"
-    gap: "要る単元の案「口腔と歯の科学（歯と歯周の構造と発生、う蝕と歯周病のしくみ、咀嚼と唾液、歯科材料）」（前提 I-011、I-012、B-006）。手技は外す。入口は E-226（生体材料）"
+    units: [I-061, I-062, E-236]
     sources: [Y01]
   - id: "E07"
     parent: "E"
@@ -527,13 +527,13 @@ items:
     parent: "G"
     name: "Digestive System and Oral Physiological Phenomena"
     ja: "消化と口腔の生理現象"
-    units: [I-017, B-036]
+    units: [I-017, B-036, I-061]
     sources: [Y01]
   - id: "G11"
     parent: "G"
     name: "Musculoskeletal and Neural Physiological Phenomena"
     ja: "筋骨格と神経の生理現象"
-    units: [B-034, B-052, B-139, B-120, B-063]
+    units: [B-034, B-052, B-139, B-120, B-063, I-065]
     sources: [Y01]
   - id: "G12"
     parent: "G"
@@ -545,13 +545,13 @@ items:
     parent: "G"
     name: "Integumentary System Physiological Phenomena"
     ja: "外皮の生理現象"
-    gap: "要る単元の案「皮膚の生理（角層の防御と経皮吸収、色素、汗腺と毛、皮膚の老化）」（前提 I-011、I-021）。入口は I-048（皮膚の守りと主な皮膚の病気）"
+    units: [I-063, I-048]
     sources: [Y01]
   - id: "G14"
     parent: "G"
     name: "Ocular Physiological Phenomena"
     ja: "眼の生理現象"
-    gap: "要る単元の案「感覚器の生理（視覚：眼の光学と調節、網膜の光受容と信号処理、視覚路、色覚、眼球運動。聴覚・平衡・嗅覚・味覚も同じ単元か並びの単元で）」（前提 B-052、P-023、P-022）。入口は Q-001、Q-004、B-063"
+    units: [I-056, B-063]
     sources: [Y01]
   - id: "G15"
     parent: "G"

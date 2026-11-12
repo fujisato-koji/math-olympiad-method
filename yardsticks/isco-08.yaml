@@ -91,7 +91,7 @@ items:
     parent: "214"
     name: "Mining Engineers, Metallurgists and Related Professionals"
     ja: "鉱山技術者・冶金技術者"
-    units: [E-164, H-030, E-163, W-065, W-020]
+    units: [E-164, H-030, E-163, W-065, W-020, E-237, E-238, E-239, E-240, H-108]
     sources: [Y01]
   - id: "2149"
     parent: "214"
@@ -208,13 +208,13 @@ items:
     parent: "226"
     name: "Dentists"
     ja: "歯科医師"
-    units: [I-012, I-011, I-001, I-028, E-226]
+    units: [I-012, I-011, I-001, I-028, E-226, I-061, I-062, E-236]
     sources: [Y01]
   - id: "2262"
     parent: "226"
     name: "Pharmacists"
     ja: "薬剤師"
-    units: [I-001, I-002, I-026, I-027, I-003, H-056]
+    units: [I-001, I-002, I-026, I-027, I-003, H-056, I-064]
     sources: [Y01]
   - id: "2263"
     parent: "226"
@@ -226,7 +226,7 @@ items:
     parent: "226"
     name: "Physiotherapists"
     ja: "理学療法士"
-    units: [B-120, B-139, I-012, I-004]
+    units: [B-120, B-139, I-012, I-004, I-065, I-066]
     sources: [Y01]
   - id: "2265"
     parent: "226"
@@ -238,13 +238,13 @@ items:
     parent: "226"
     name: "Audiologists and Speech Therapists"
     ja: "聴能訓練士・言語聴覚士"
-    units: [P-022, E-149, B-063, Q-008, Q-010]
+    units: [P-022, E-149, B-063, Q-008, Q-010, I-057, I-060]
     sources: [Y01]
   - id: "2267"
     parent: "226"
     name: "Optometrists and Ophthalmic Opticians"
     ja: "検眼士・眼鏡士"
-    units: [P-023, P-028, Q-004, Q-001, B-100]
+    units: [P-023, P-028, Q-004, Q-001, B-100, I-056, I-059]
     sources: [Y01]
   - id: "2269"
     parent: "226"
@@ -632,7 +632,7 @@ items:
     parent: "311"
     name: "Mining and Metallurgical Technicians"
     ja: "鉱業・冶金の技術者"
-    units: [E-164, H-030, W-065, H-031]
+    units: [E-164, H-030, W-065, H-031, E-239, E-241, H-108]
     sources: [Y01]
   - id: "3118"
     parent: "311"
@@ -651,7 +651,7 @@ items:
     parent: "312"
     name: "Mining Supervisors"
     ja: "鉱業の監督者"
-    units: [W-065, W-020, W-064, E-154]
+    units: [W-065, W-020, W-064, E-154, E-237, E-238]
     sources: [Y01]
   - id: "3122"
     parent: "312"
@@ -770,13 +770,13 @@ items:
     parent: "321"
     name: "Pharmaceutical Technicians and Assistants"
     ja: "薬剤の技術者・助手"
-    units: [I-001, I-026, H-042]
+    units: [I-001, I-026, H-042, I-064]
     sources: [Y01]
   - id: "3214"
     parent: "321"
     name: "Medical and Dental Prosthetic Technicians"
     ja: "義肢・義歯の技工士"
-    units: [E-226, B-120, E-193]
+    units: [E-226, B-120, E-193, E-236]
     sources: [Y01]
   - {id: "322", parent: "32", name: "Nursing and Midwifery Associate Professionals", ja: "看護・助産の準専門職", group: true}
   - id: "3221"
@@ -810,7 +810,7 @@ items:
     parent: "325"
     name: "Dental Assistants and Therapists"
     ja: "歯科助手・歯科衛生士"
-    units: [I-012, I-001, I-028, E-226]
+    units: [I-012, I-001, I-028, E-226, I-061, I-062]
     sources: [Y01]
   - id: "3252"
     parent: "325"
@@ -828,7 +828,7 @@ items:
     parent: "325"
     name: "Dispensing Opticians"
     ja: "眼鏡士"
-    units: [P-023, P-028, Q-004]
+    units: [P-023, P-028, Q-004, I-056]
     sources: [Y01]
   - id: "3255"
     parent: "325"
@@ -1041,13 +1041,13 @@ items:
     parent: "342"
     name: "Sports Coaches, Instructors and Officials"
     ja: "スポーツのコーチ・審判"
-    units: [B-120, B-139, K-065, K-066, I-004, Q-007]
+    units: [B-120, B-139, K-065, K-066, I-004, Q-007, I-065, I-066]
     sources: [Y01]
   - id: "3423"
     parent: "342"
     name: "Fitness and Recreation Instructors and Programme Leaders"
     ja: "フィットネス・レクリエーションの指導員"
-    units: [B-120, I-004, I-009, I-052]
+    units: [B-120, I-004, I-009, I-052, I-065, I-066]
     sources: [Y01]
   - {id: "343", parent: "34", name: "Artistic, Cultural and Culinary Associate Professionals", ja: "芸術・文化・調理の準専門職", group: true}
   - id: "3431"

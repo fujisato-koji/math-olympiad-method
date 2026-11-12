@@ -52,7 +52,7 @@ items:
     parent: "BIO"
     name: "Radiation Biochemistry"
     ja: "放射線生化学"
-    gap: "要る単元の案「放射線生物学」（前提 P-104、B-032、I-023）。DNA 損傷と修復、線量と生物効果、確定的影響と確率的影響、放射線治療の生物学。入口は I-041（放射線防護）と P-205（からだへの影響と防護）、中心がない"
+    units: [B-186, I-041, I-050]
     sources: [Y01]
   - id: "9"
     parent: "BIO"
@@ -167,13 +167,13 @@ items:
     parent: "ORG"
     name: "Heterocyclic Compounds (One Hetero Atom)"
     ja: "複素環化合物（ヘテロ原子 1 個）"
-    gap: "要る単元の案「複素環化合物の化学」（前提 H-034、H-039）。ピロール・フラン・チオフェン・ピリジンなどの芳香族性と反応性、環の合成。入口は H-047（有機合成の中で複素環の合成だけ）、中心がない"
+    units: [H-104, H-047]
     sources: [Y01]
   - id: "28"
     parent: "ORG"
     name: "Heterocyclic Compounds (More Than One Hetero Atom)"
     ja: "複素環化合物（ヘテロ原子 2 個以上）"
-    gap: "要る単元の案「複素環化合物の化学」（27 と同じ単元。前提 H-034、H-039）。イミダゾール・ピリミジン・プリンなど。入口は H-047（複素環の合成）と H-044（核酸塩基）、中心がない"
+    units: [H-104, H-044]
     sources: [Y01]
   - id: "29"
     parent: "ORG"
@@ -185,19 +185,19 @@ items:
     parent: "ORG"
     name: "Terpenes and Terpenoids"
     ja: "テルペンとテルペノイド"
-    gap: "要る単元の案「天然物化学」（前提 H-044、H-039、H-041）。テルペン・アルカロイド・ステロイド・ポリケチドの構造と生合成、単離と構造決定。入口は H-044（脂質）と H-047（有機合成）、中心がない"
+    units: [H-105]
     sources: [Y01]
   - id: "31"
     parent: "ORG"
     name: "Alkaloids"
     ja: "アルカロイド"
-    gap: "要る単元の案「天然物化学」（30 と同じ単元。前提 H-044、H-039、H-041）。窒素を含む天然物の構造と生合成。入口は H-056（医薬品化学）と H-047、中心がない"
+    units: [H-105, H-056]
     sources: [Y01]
   - id: "32"
     parent: "ORG"
     name: "Steroids"
     ja: "ステロイド"
-    gap: "要る単元の案「天然物化学」（30 と同じ単元。前提 H-044、H-039、H-041）。ステロイド骨格と立体、コレステロールの生合成、ホルモン。入口は H-044（脂質と膜）と I-019（副腎のホルモン）、中心がない"
+    units: [H-105, I-019]
     sources: [Y01]
   - id: "33"
     parent: "ORG"
@@ -216,37 +216,37 @@ items:
     parent: "MAC"
     name: "Chemistry of Synthetic High Polymers"
     ja: "合成高分子の化学"
-    gap: "要る単元の案「高分子の化学と物理」（前提 H-035、H-023、P-049）。連鎖重合・逐次重合・リビング重合・共重合・重合の速度論と分子量分布。入口は H-035（高校の付加重合と縮合重合と平均分子量）だけ、大学の中心がない"
+    units: [H-106, H-035]
     sources: [Y01]
   - id: "36"
     parent: "MAC"
     name: "Physical Properties of Synthetic High Polymers"
     ja: "合成高分子の物性"
-    gap: "要る単元の案「高分子の化学と物理」（35 と同じ単元。前提 H-035、P-049、E-019）。鎖の統計、ガラス転移、結晶化、ゴム弾性、粘弾性、溶液と溶融体。入口は P-103（ソフトマターの中の高分子）と E-019（粘弾性・超弾性）、中心がない"
+    units: [H-107, P-103, E-019]
     sources: [Y01]
   - id: "37"
     parent: "MAC"
     name: "Plastics Manufacture and Processing"
     ja: "プラスチックの製造と加工"
-    gap: "要る単元の案「高分子の加工とレオロジー」（前提 E-213、E-031、H-035）。溶融体の流動、押出し・射出成形・フィルム成形、冷却と結晶化、成形品の収縮と反り。原理の単元がない。製品ごとの実務は入れない"
+    units: [E-235, H-106]
     sources: [Y01]
   - id: "38"
     parent: "MAC"
     name: "Plastics Fabrication and Uses"
     ja: "プラスチックの成形品と用途"
-    none: "知の体系でない製品の実務。成形品の種類と用途の一覧は入れず、合成の原理は H-035、製造法一般は E-193、高分子の物性は 36 の gap（高分子の化学と物理）で扱う"
+    none: "知の体系でない製品の実務。成形品の種類と用途の一覧は入れず、合成の原理は H-106、成形の原理は E-235、高分子の物性は H-107 で扱う"
     sources: [Y01]
   - id: "39"
     parent: "MAC"
     name: "Synthetic Elastomers and Natural Rubber"
     ja: "合成エラストマーと天然ゴム"
-    gap: "要る単元の案「高分子の化学と物理」（35、36 と同じ単元。ゴム弾性と加硫を含む。前提 H-035、P-049）。入口は H-035（ゴムの合成）と E-019（超弾性）、中心がない"
+    units: [H-106, E-019, P-103]
     sources: [Y01]
   - id: "40"
     parent: "MAC"
     name: "Textiles and Fibers"
     ja: "繊維"
-    none: "知の体系でない製品の実務。紡糸・織り・染色の実務は入れず、合成繊維の合成は H-035、繊維の高分子の物性は 36 の gap で扱う"
+    none: "知の体系でない製品の実務。紡糸・織り・染色の実務は入れず、合成繊維の合成は H-106、繊維の高分子の物性は H-107 で扱う"
     sources: [Y01]
   - id: "41"
     parent: "MAC"
@@ -258,7 +258,7 @@ items:
     parent: "MAC"
     name: "Coatings, Inks, and Related Products"
     ja: "塗料・インキ・関連製品"
-    none: "知の体系でない製品の実務。配合と塗装の実務は入れず、膜形成の原理は高分子（36 の gap）と、分散・コロイド（P-103、H-021）に分かれて測れる"
+    none: "知の体系でない製品の実務。配合と塗装の実務は入れず、膜形成の原理は高分子（H-107）と、分散・コロイド（P-103、H-021）に分かれて測れる"
     sources: [Y01]
   - id: "43"
     parent: "MAC"
@@ -331,7 +331,7 @@ items:
     parent: "APP"
     name: "Extractive Metallurgy"
     ja: "抽出冶金"
-    gap: "要る単元の案「製錬と冶金プロセス」（前提 H-036、H-048、H-030）。エリンガム図、乾式・湿式・電解の製錬と精錬、スラグ、金属の回収。入口は H-030（高校の鉄・銅・アルミニウムの製錬）、中心がない"
+    units: [H-108, H-030]
     sources: [Y01]
   - id: "55"
     parent: "APP"
@@ -379,7 +379,7 @@ items:
     parent: "APP"
     name: "Essential Oils and Cosmetics"
     ja: "精油と化粧品"
-    none: "知の体系でない製品の実務。香料と化粧品の配合の実務は入れず、乳化と界面活性は P-103 と H-054、テルペンは 30 の gap（天然物化学）で扱う"
+    none: "知の体系でない製品の実務。香料と化粧品の配合の実務は入れず、乳化と界面活性は P-103 と H-054、テルペンは H-105（天然物化学）で扱う"
     sources: [Y01]
   - id: "63"
     parent: "APP"
@@ -452,7 +452,7 @@ items:
     parent: "PIA"
     name: "Radiation Chemistry, Photochemistry, and Photographic and Other Reprographic Processes"
     ja: "放射線化学・光化学・写真・複写"
-    gap: "要る単元の案「光化学と放射線化学」（前提 H-045、H-050）。励起状態と光化学反応、量子収率、光誘起の電子移動、放射線分解。入口は H-050（蛍光とりん光）と H-091（光触媒）、中心がない。写真と複写の実務は入れない"
+    units: [H-109, H-050, H-091]
     sources: [Y01]
   - id: "75"
     parent: "PIA"
