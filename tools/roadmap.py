@@ -535,6 +535,13 @@ def check(data, problems):
     # 外の物差し（yardsticks/*.yaml、D-117）：公開の分類の項目ごとに、受け持つ単元・入れない理由・足りないのどれか
     import yardstick
     errors += yardstick.check(set(units))
+    # 前提の線の種類と強さ（relations/needs.yaml、D-117）：地図の前提の線と合っているか（合わなければ警告。直すのは取りまとめ）
+    rel = ROOT / "relations" / "needs.yaml"
+    if rel.exists():
+        typed = set((yaml.safe_load(rel.read_text(encoding="utf-8")) or {}).get("lines") or {})
+        now = {f"{m}>{u['id']}" for u in data["units"] for m in u.get("needs", [])}
+        if typed != now:
+            print(f"警告: relations/needs.yaml と地図の前提の線が合わない（種類のない線 {len(now - typed)}、地図にない線 {len(typed - now)}）")
     # どの単元も、どれかの目標の道のりに入るか、段の物差しの大会のため（measure）であること
     if data["coverages"]:
         on_path = set().union(*goal_units(data).values())
