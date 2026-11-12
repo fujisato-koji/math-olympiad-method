@@ -1420,7 +1420,8 @@
       const mx = (a[0] + b[0]) / 2;
       return `<path class="${cls}${UNITS[n].region !== u.region ? ' x' : ''}" data-a="${n}" data-b="${u.id}" d="M${a[0]},${a[1]} C${mx},${a[1]} ${mx},${b[1]} ${b[0]},${b[1]}"/>`;
     };
-    svg += '<g class="edges">' + R.units.flatMap(u => [...u.needs.map(n => edge(n, u, 'need')),
+    // 前提の線は強さ（s3・s2・s1、relations/needs.yaml）で太さを変える。代わりの前提（alt）は点線
+    svg += '<g class="edges">' + R.units.flatMap(u => [...u.needs.map((n, k) => edge(n, u, 'need s' + ((u.nw || [])[k] || 2))),
       ...Object.values(u.alt || {}).flat().map(n => edge(n, u, 'alt'))]).join('') + '</g>';
     svg += '<g class="dots">' + R.units.map(u => {
       const p = pos[u.id];

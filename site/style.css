@@ -756,6 +756,15 @@ body[data-page="map"] .icon[aria-pressed="true"] { color: #ffe2a8; background: r
 .cosmos .map.focus .edges path.hl.down { stroke: #ffc861; stroke-opacity: .45; stroke-width: 1.1; }
 .cosmos .map.focus .edges path.hl.up.near { stroke-opacity: 1; stroke-width: 2.4; }
 .cosmos .map.focus .edges path.hl.down.near { stroke-opacity: 1; stroke-width: 2.4; }
+/* 前提の線の強さ（relations/needs.yaml の 3・2・1）で太さを変える。強さ 2 はいままでの太さ（D-116 の追記） */
+.map .edges path.s3 { stroke-width: 1.5; }
+.map .edges path.s1 { stroke-width: .6; }
+.map.focus .edges path.hl.s3 { stroke-width: 2.4; }
+.map.focus .edges path.hl.s1 { stroke-width: 1; }
+.cosmos .map.focus .edges path.hl.up.s3, .cosmos .map.focus .edges path.hl.down.s3 { stroke-width: 1.6; }
+.cosmos .map.focus .edges path.hl.up.s1, .cosmos .map.focus .edges path.hl.down.s1 { stroke-width: .7; }
+.cosmos .map.focus .edges path.hl.up.near.s3, .cosmos .map.focus .edges path.hl.down.near.s3 { stroke-width: 3.4; }
+.cosmos .map.focus .edges path.hl.up.near.s1, .cosmos .map.focus .edges path.hl.down.near.s1 { stroke-width: 1.4; }
 /* 単元の道しるべから来たとき、選んでいた単元に脈打つ金の輪と名前の札（D-107） */
 .cosmos .map svg { overflow: visible; }
 .map.focus .sel-mark circle, .map.comb .sel-mark circle { opacity: 1; }  /* 鎖を光らせているときの薄めを、輪には当てない */

@@ -650,6 +650,9 @@ def build(data, problems):
     if added:
         print(f"警告: 知の宇宙の配置にない単元 {len(added)}（仮に前提の近くに置いた。python tools/fields/run.py と python tools/fields/place3d.py --site で作り直す）：" + "、".join(added[:10]))
     fields, f_of, s_of, region_order = load_fields()
+    # 前提の線の強さ（relations/needs.yaml、3・2・1）を、地図の線の太さと濃さに使う（D-116 の追記）
+    ny = ROOT / "relations" / "needs.yaml"
+    NW = ((yaml.safe_load(ny.read_text(encoding="utf-8")) or {}).get("lines") or {}) if ny.exists() else {}
     for u in data["units"]:
         m = ID_RE.match(u["id"])
         days = expand(u)
@@ -666,6 +669,7 @@ def build(data, problems):
                           **({"alt": u["alt"]} if u.get("alt") else {}),
                           **({"keys": u["keys"]} if u.get("keys") else {}),
                           **({"f": f_of[u["id"]], "s": s_of[u["id"]]} if u["id"] in f_of else {}),
+                          **({"nw": [(NW.get(f"{n}>{u['id']}") or {}).get("strength", 2) for n in u["needs"]]} if u.get("needs") else {}),
                           "p": pos[u["id"]],
                           # 組み合わせ：b は広さ、r は珍しさ、rg は前提の領域、pr はいちばん珍しい組
                           **({"comb": {"b": comb[u["id"]]["breadth"], "r": comb[u["id"]]["rarity"],

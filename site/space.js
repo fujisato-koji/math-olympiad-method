@@ -185,7 +185,9 @@ export function mount(api) {
 
   // ---- 前提の糸（すべて） ----
   const pairs = [];
-  units.forEach((u, i) => u.needs.forEach(n => index.has(n) && pairs.push([index.get(n), i])));
+  // 3 つ目は前提の線の強さ（3・2・1）。糸の濃さに使う
+  units.forEach((u, i) => u.needs.forEach((n, k) => index.has(n) && pairs.push([index.get(n), i, (u.nw || [])[k] || 2])));
+  const SW = { 1: .55, 2: 1, 3: 1.45 };
   const eg = new THREE.BufferGeometry();
   const ep = new Float32Array(pairs.length * 6), ec = new Float32Array(pairs.length * 6), ea = new Float32Array(pairs.length * 2), el = new Float32Array(pairs.length * 2);
   pairs.forEach(([a, b], k) => {
@@ -356,10 +358,10 @@ export function mount(api) {
   function setAlpha(fn, boost = 1) {
     units.forEach((u, i) => { const a = fn(u.id); alpha[i] = lens && !api.bridges.has(u.id) ? a * .45 : a; });
     sg.attributes.alpha.needsUpdate = true;
-    pairs.forEach(([a, b], k) => {
+    pairs.forEach(([a, b, w], k) => {
       const v = Math.min(alpha[a], alpha[b]), len = P[a].distanceTo(P[b]);
       const f = lens ? (units[a].region !== units[b].region ? 3 : .2) : 1;
-      ea[k * 2] = ea[k * 2 + 1] = (.012 + .05 * v * v * boost) * f / (1 + len / 14);
+      ea[k * 2] = ea[k * 2 + 1] = (.012 + .05 * v * v * boost) * f * SW[w] / (1 + len / 14);
     });
     eg.attributes.alpha.needsUpdate = true;
   }
