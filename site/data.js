@@ -58928,6 +58928,7 @@ window.ROADMAP = {
     "I-050",
     "I-051",
     "I-052",
+    "I-063",
     "K-012",
     "K-013",
     "K-014",
@@ -59495,6 +59496,7 @@ window.ROADMAP = {
     "I-050",
     "I-051",
     "I-052",
+    "I-063",
     "L-001",
     "L-002",
     "L-003",
@@ -68204,6 +68206,7 @@ window.ROADMAP = {
     "I-046",
     "I-047",
     "I-048",
+    "I-063",
     "K-012",
     "K-013",
     "K-014",
@@ -78854,6 +78857,7 @@ window.ROADMAP = {
    "B-062",
    "I-041",
    "E-155",
+   "E-235",
    "E-226",
    "B-004",
    "E-224",
@@ -78865,18 +78869,18 @@ window.ROADMAP = {
    "W-101",
    "P-060",
    "E-196",
-   "V-007",
    "K-119",
+   "V-007",
    "E-167",
    "K-194",
    "E-239",
-   "C-036",
    "K-115",
+   "C-036",
    "W-010",
    "B-144",
-   "E-235",
-   "B-034",
+   "K-042",
    "B-066",
+   "B-034",
    "W-030",
    "W-029",
    "P-257",
@@ -78884,9 +78888,9 @@ window.ROADMAP = {
    "B-006",
    "E-222",
    "V-008",
+   "K-111",
    "B-042",
    "I-052",
-   "K-111",
    "E-173",
    "B-013",
    "B-092",
@@ -78903,24 +78907,25 @@ window.ROADMAP = {
    "V-005",
    "B-075",
    "W-062",
-   "H-092",
    "E-220",
+   "H-092",
    "P-188",
    "E-174",
    "D-034",
    "W-036",
-   "D-092",
    "E-231",
+   "D-092",
    "W-023",
    "B-036",
+   "K-076",
    "H-049",
    "Q-004",
    "B-073",
-   "K-076",
    "E-137",
    "I-037",
    "N-067",
    "H-045",
+   "B-011",
    "P-175",
    "S-043",
    "H-042",
@@ -78929,7 +78934,6 @@ window.ROADMAP = {
    "V-016",
    "B-045",
    "F-021",
-   "B-011",
    "F-058",
    "B-055",
    "E-044",
@@ -78943,12 +78947,12 @@ window.ROADMAP = {
    "P-230",
    "E-223",
    "B-021",
-   "K-211",
    "E-210",
    "W-070",
    "E-003",
    "H-018",
    "E-225",
+   "I-055",
    "P-232",
    "B-171",
    "D-035",
@@ -78960,14 +78964,14 @@ window.ROADMAP = {
    "P-290",
    "B-186",
    "P-061",
-   "S-033",
    "K-117",
+   "S-033",
    "E-229",
    "K-124",
    "P-177",
    "H-037",
-   "P-014",
    "K-060",
+   "P-014",
    "P-293",
    "K-125"
   ],
@@ -78985,7 +78989,7 @@ window.ROADMAP = {
     "a": "programming",
     "b": "tokei",
     "o": 1,
-    "e": 4.9,
+    "e": 4.5,
     "ex": [
      "K-060"
     ]
@@ -79000,15 +79004,6 @@ window.ROADMAP = {
     ]
    },
    {
-    "a": "keisan",
-    "b": "programming",
-    "o": 1,
-    "e": 4.0,
-    "ex": [
-     "K-125"
-    ]
-   },
-   {
     "a": "bunshi-saibo",
     "b": "shiki",
     "o": 1,
@@ -79018,13 +79013,12 @@ window.ROADMAP = {
     ]
    },
    {
-    "a": "bibun-hoteishiki",
+    "a": "keisan",
     "b": "programming",
-    "o": 2,
-    "e": 7.2,
+    "o": 1,
+    "e": 3.7,
     "ex": [
-     "K-115",
-     "B-066"
+     "K-125"
     ]
    },
    {
@@ -79034,6 +79028,16 @@ window.ROADMAP = {
     "e": 3.6,
     "ex": [
      "B-003"
+    ]
+   },
+   {
+    "a": "bibun-hoteishiki",
+    "b": "programming",
+    "o": 2,
+    "e": 6.6,
+    "ex": [
+     "K-115",
+     "B-066"
     ]
    },
    {
@@ -79073,33 +79077,6 @@ window.ROADMAP = {
     ]
    },
    {
-    "a": "hado",
-    "b": "programming",
-    "o": 1,
-    "e": 2.8,
-    "ex": [
-     "E-182"
-    ]
-   },
-   {
-    "a": "hanno",
-    "b": "programming",
-    "o": 1,
-    "e": 2.8,
-    "ex": [
-     "K-119"
-    ]
-   },
-   {
-    "a": "kazu",
-    "b": "programming",
-    "o": 1,
-    "e": 2.8,
-    "ex": [
-     "K-124"
-    ]
-   },
-   {
     "a": "senkei-keisan",
     "b": "shiki",
     "o": 1,
@@ -79127,12 +79104,30 @@ window.ROADMAP = {
     ]
    },
    {
-    "a": "kansu",
+    "a": "hado",
     "b": "programming",
     "o": 1,
     "e": 2.6,
     "ex": [
-     "E-180"
+     "E-182"
+    ]
+   },
+   {
+    "a": "hanno",
+    "b": "programming",
+    "o": 1,
+    "e": 2.6,
+    "ex": [
+     "K-119"
+    ]
+   },
+   {
+    "a": "kazu",
+    "b": "programming",
+    "o": 1,
+    "e": 2.6,
+    "ex": [
+     "K-124"
     ]
    },
    {
@@ -79161,6 +79156,15 @@ window.ROADMAP = {
     "e": 2.4,
     "ex": [
      "B-136"
+    ]
+   },
+   {
+    "a": "kansu",
+    "b": "programming",
+    "o": 1,
+    "e": 2.4,
+    "ex": [
+     "E-180"
     ]
    },
    {
@@ -79200,25 +79204,6 @@ window.ROADMAP = {
     ]
    },
    {
-    "a": "programming",
-    "b": "seitai",
-    "o": 1,
-    "e": 2.3,
-    "ex": [
-     "K-119"
-    ]
-   },
-   {
-    "a": "denjiki",
-    "b": "programming",
-    "o": 2,
-    "e": 4.5,
-    "ex": [
-     "E-176",
-     "E-180"
-    ]
-   },
-   {
     "a": "bunshi-saibo",
     "b": "kikai-gakushu",
     "o": 1,
@@ -79243,6 +79228,25 @@ window.ROADMAP = {
     "e": 2.2,
     "ex": [
      "P-188"
+    ]
+   },
+   {
+    "a": "kazu",
+    "b": "rikigaku",
+    "o": 1,
+    "e": 2.2,
+    "ex": [
+     "P-188"
+    ]
+   },
+   {
+    "a": "bibun-hoteishiki",
+    "b": "kakuritsu-daigaku",
+    "o": 2,
+    "e": 4.3,
+    "ex": [
+     "B-066",
+     "D-082"
     ]
    }
   ],
@@ -79969,6 +79973,18 @@ window.ROADMAP = {
     "d": 0.94
    },
    {
+    "a": "kagaku-kogaku",
+    "b": "suchi",
+    "via": [
+     "sangyo-bio",
+     "shigen",
+     "ryutai",
+     "kozo-zairyo"
+    ],
+    "s": 2.63,
+    "d": 0.82
+   },
+   {
     "a": "hakaru",
     "b": "programming",
     "via": [
@@ -80027,18 +80043,6 @@ window.ROADMAP = {
     ],
     "s": 2.88,
     "d": 0.74
-   },
-   {
-    "a": "kagaku-kogaku",
-    "b": "suchi",
-    "via": [
-     "sangyo-bio",
-     "shigen",
-     "ryutai",
-     "kozo-zairyo"
-    ],
-    "s": 2.63,
-    "d": 0.81
    },
    {
     "a": "keizai",
@@ -97197,8 +97201,8 @@ window.ROADMAP = {
     3.12
    ],
    "comb": {
-    "b": 0.389,
-    "r": 0.25,
+    "b": 0.39,
+    "r": 0.13,
     "rg": [
      "houteishiki",
      "programming"
@@ -127109,7 +127113,7 @@ window.ROADMAP = {
    ],
    "comb": {
     "b": 0.434,
-    "r": 1.46,
+    "r": 1.35,
     "rg": [
      "kazu",
      "programming"
@@ -195003,8 +195007,8 @@ window.ROADMAP = {
     5.04
    ],
    "comb": {
-    "b": 0.314,
-    "r": 2.01,
+    "b": 0.317,
+    "r": 1.9,
     "rg": [
      "keisan",
      "programming"
@@ -195497,8 +195501,8 @@ window.ROADMAP = {
     7.75
    ],
    "comb": {
-    "b": 0.622,
-    "r": 1.17,
+    "b": 0.623,
+    "r": 1.05,
     "rg": [
      "denjiki",
      "programming",
@@ -304612,8 +304616,8 @@ window.ROADMAP = {
     11.83
    ],
    "comb": {
-    "b": 0.384,
-    "r": 0.25,
+    "b": 0.386,
+    "r": 0.13,
     "rg": [
      "houteishiki",
      "programming"
@@ -304743,7 +304747,7 @@ window.ROADMAP = {
    ],
    "comb": {
     "b": 0.426,
-    "r": 0.32,
+    "r": 0.21,
     "rg": [
      "bisekibun-nyumon",
      "programming"
@@ -335647,8 +335651,8 @@ window.ROADMAP = {
     0.64
    ],
    "comb": {
-    "b": 0.442,
-    "r": 0.5,
+    "b": 0.443,
+    "r": 0.38,
     "rg": [
      "data",
      "programming"
@@ -361097,7 +361101,7 @@ window.ROADMAP = {
     27.97
    ],
    "comb": {
-    "b": 0.528,
+    "b": 0.53,
     "r": 0.0,
     "rg": [
      "chikyu-kagaku",
@@ -361310,7 +361314,7 @@ window.ROADMAP = {
     26.54
    ],
    "comb": {
-    "b": 0.42,
+    "b": 0.422,
     "r": 0.0,
     "rg": [
      "chikyu-kagaku",
@@ -362912,7 +362916,7 @@ window.ROADMAP = {
    ],
    "comb": {
     "b": 0.581,
-    "r": 1.39,
+    "r": 1.28,
     "rg": [
      "denjiki",
      "kansu",
@@ -363034,7 +363038,7 @@ window.ROADMAP = {
    ],
    "comb": {
     "b": 0.536,
-    "r": 1.46,
+    "r": 1.35,
     "rg": [
      "hado",
      "programming",
@@ -363430,7 +363434,7 @@ window.ROADMAP = {
     32.66
    ],
    "comb": {
-    "b": 0.523,
+    "b": 0.525,
     "r": 0.0,
     "rg": [
      "chikyu-naibu",
@@ -370632,7 +370636,7 @@ window.ROADMAP = {
     10.69
    ],
    "comb": {
-    "b": 0.407,
+    "b": 0.416,
     "r": 0.0,
     "rg": [
      "graph",
@@ -370717,7 +370721,7 @@ window.ROADMAP = {
     9.24
    ],
    "comb": {
-    "b": 0.407,
+    "b": 0.416,
     "r": 0.0,
     "rg": [
      "graph",
@@ -370883,7 +370887,7 @@ window.ROADMAP = {
     9.03
    ],
    "comb": {
-    "b": 0.407,
+    "b": 0.416,
     "r": 0.0,
     "rg": [
      "graph",
@@ -371033,8 +371037,8 @@ window.ROADMAP = {
     -0.32
    ],
    "comb": {
-    "b": 0.442,
-    "r": 0.5,
+    "b": 0.443,
+    "r": 0.38,
     "rg": [
      "data",
      "programming"
@@ -371610,7 +371614,7 @@ window.ROADMAP = {
     14.13
    ],
    "comb": {
-    "b": 0.238,
+    "b": 0.24,
     "r": 0.0,
     "rg": [
      "bunshi-saibo",
@@ -371691,7 +371695,7 @@ window.ROADMAP = {
     16.22
    ],
    "comb": {
-    "b": 0.294,
+    "b": 0.296,
     "r": 0.0,
     "rg": [
      "bunshi-saibo",
@@ -371774,8 +371778,8 @@ window.ROADMAP = {
     29.8
    ],
    "comb": {
-    "b": 0.614,
-    "r": 1.5,
+    "b": 0.615,
+    "r": 1.38,
     "rg": [
      "bunshi-saibo",
      "hanno",
@@ -377940,7 +377944,7 @@ window.ROADMAP = {
     31.21
    ],
    "comb": {
-    "b": 0.477,
+    "b": 0.479,
     "r": 0.0,
     "rg": [
      "bisekibun",
@@ -378291,7 +378295,7 @@ window.ROADMAP = {
     25.51
    ],
    "comb": {
-    "b": 0.464,
+    "b": 0.465,
     "r": 0.0,
     "rg": [
      "chikyu-naibu",
@@ -378442,7 +378446,7 @@ window.ROADMAP = {
     31.65
    ],
    "comb": {
-    "b": 0.506,
+    "b": 0.507,
     "r": 0.23,
     "rg": [
      "bibun-hoteishiki",
@@ -378585,7 +378589,7 @@ window.ROADMAP = {
     32.49
    ],
    "comb": {
-    "b": 0.34,
+    "b": 0.342,
     "r": 0.0,
     "rg": [
      "chikyu-naibu",
@@ -381484,7 +381488,7 @@ window.ROADMAP = {
     9.58
    ],
    "comb": {
-    "b": 0.326,
+    "b": 0.332,
     "r": 0.0,
     "rg": [
      "hassei",
@@ -381562,7 +381566,7 @@ window.ROADMAP = {
     9.78
    ],
    "comb": {
-    "b": 0.28,
+    "b": 0.284,
     "r": 0.0,
     "rg": [
      "jintai",
@@ -381635,7 +381639,7 @@ window.ROADMAP = {
     13.97
    ],
    "comb": {
-    "b": 0.404,
+    "b": 0.406,
     "r": 0.0,
     "rg": [
      "hanno",
@@ -381708,7 +381712,7 @@ window.ROADMAP = {
     7.35
    ],
    "comb": {
-    "b": 0.134,
+    "b": 0.139,
     "r": 0.0,
     "rg": [
      "jintai",
@@ -381836,7 +381840,7 @@ window.ROADMAP = {
     11.25
    ],
    "comb": {
-    "b": 0.491,
+    "b": 0.494,
     "r": 0.0,
     "rg": [
      "bunshi-saibo",
@@ -382206,7 +382210,7 @@ window.ROADMAP = {
     -5.81
    ],
    "comb": {
-    "b": 0.373,
+    "b": 0.378,
     "r": 0.0,
     "rg": [
      "ekigaku",
@@ -382357,7 +382361,7 @@ window.ROADMAP = {
     -10.53
    ],
    "comb": {
-    "b": 0.47,
+    "b": 0.471,
     "r": 0.0,
     "rg": [
      "rinsho",
@@ -384928,7 +384932,7 @@ window.ROADMAP = {
     16.67
    ],
    "comb": {
-    "b": 0.279,
+    "b": 0.284,
     "r": 0.0,
     "rg": [
      "jintai",
@@ -385075,7 +385079,7 @@ window.ROADMAP = {
     20.08
    ],
    "comb": {
-    "b": 0.381,
+    "b": 0.384,
     "r": 0.0,
     "rg": [
      "bunshi-saibo",
@@ -398451,7 +398455,7 @@ window.ROADMAP = {
     6.98
    ],
    "comb": {
-    "b": 0.326,
+    "b": 0.333,
     "r": 0.0,
     "rg": [
      "graph",
@@ -398545,7 +398549,7 @@ window.ROADMAP = {
     5.9
    ],
    "comb": {
-    "b": 0.404,
+    "b": 0.413,
     "r": 0.0,
     "rg": [
      "graph",
@@ -398638,7 +398642,7 @@ window.ROADMAP = {
     6.96
    ],
    "comb": {
-    "b": 0.326,
+    "b": 0.333,
     "r": 0.0,
     "rg": [
      "graph",
@@ -398732,7 +398736,7 @@ window.ROADMAP = {
     6.76
    ],
    "comb": {
-    "b": 0.401,
+    "b": 0.411,
     "r": 0.0,
     "rg": [
      "graph",
@@ -398901,7 +398905,7 @@ window.ROADMAP = {
     17.06
    ],
    "comb": {
-    "b": 0.312,
+    "b": 0.317,
     "r": 0.0,
     "rg": [
      "programming",
@@ -398992,7 +398996,7 @@ window.ROADMAP = {
     12.98
    ],
    "comb": {
-    "b": 0.283,
+    "b": 0.286,
     "r": 0.0,
     "rg": [
      "programming",
@@ -399169,7 +399173,7 @@ window.ROADMAP = {
    "lane": "K",
    "stage": 8,
    "level": 3,
-   "region": "programming",
+   "region": "keisanki-system",
    "needs": [
     "K-030",
     "K-031",
@@ -399249,7 +399253,7 @@ window.ROADMAP = {
    "lane": "K",
    "stage": 8,
    "level": 3,
-   "region": "programming",
+   "region": "keisanki-system",
    "needs": [
     "K-030",
     "K-031",
@@ -399329,7 +399333,7 @@ window.ROADMAP = {
    "lane": "K",
    "stage": 8,
    "level": 3,
-   "region": "programming",
+   "region": "keisanki-system",
    "needs": [
     "K-030",
     "K-031",
@@ -399487,7 +399491,7 @@ window.ROADMAP = {
    "lane": "K",
    "stage": 8,
    "level": 3,
-   "region": "programming",
+   "region": "keisanki-system",
    "needs": [
     "K-029",
     "K-016"
@@ -399566,7 +399570,7 @@ window.ROADMAP = {
    "lane": "K",
    "stage": 8,
    "level": 3,
-   "region": "programming",
+   "region": "keisanki-system",
    "needs": [
     "K-033"
    ],
@@ -399721,7 +399725,7 @@ window.ROADMAP = {
     7.72
    ],
    "comb": {
-    "b": 0.406,
+    "b": 0.416,
     "r": 0.0,
     "rg": [
      "graph",
@@ -399814,7 +399818,7 @@ window.ROADMAP = {
     9.24
    ],
    "comb": {
-    "b": 0.346,
+    "b": 0.353,
     "r": 0.0,
     "rg": [
      "graph",
@@ -399987,10 +399991,11 @@ window.ROADMAP = {
     2.24
    ],
    "comb": {
-    "b": 0.493,
+    "b": 0.606,
     "r": 0.0,
     "rg": [
      "kakuritsu-daigaku",
+     "keisanki-system",
      "programming",
      "seisuron"
     ],
@@ -400074,7 +400079,16 @@ window.ROADMAP = {
     -38.67,
     7.71,
     15.43
-   ]
+   ],
+   "comb": {
+    "b": 0.454,
+    "r": 0.0,
+    "rg": [
+     "keisanki-system",
+     "programming"
+    ],
+    "pr": []
+   }
   },
   {
    "id": "K-046",
@@ -400157,7 +400171,7 @@ window.ROADMAP = {
     18.22
    ],
    "comb": {
-    "b": 0.238,
+    "b": 0.242,
     "r": 0.0,
     "rg": [
      "programming",
@@ -400247,7 +400261,7 @@ window.ROADMAP = {
     16.1
    ],
    "comb": {
-    "b": 0.238,
+    "b": 0.242,
     "r": 0.0,
     "rg": [
      "programming",
@@ -400336,7 +400350,7 @@ window.ROADMAP = {
     5.46
    ],
    "comb": {
-    "b": 0.212,
+    "b": 0.227,
     "r": 0.0,
     "rg": [
      "kakuritsu-daigaku",
@@ -400425,7 +400439,7 @@ window.ROADMAP = {
     4.47
    ],
    "comb": {
-    "b": 0.212,
+    "b": 0.227,
     "r": 0.0,
     "rg": [
      "kakuritsu-daigaku",
@@ -400673,8 +400687,8 @@ window.ROADMAP = {
     -1.17
    ],
    "comb": {
-    "b": 0.346,
-    "r": 2.28,
+    "b": 0.36,
+    "r": 2.17,
     "rg": [
      "kakuritsu-daigaku",
      "programming",
@@ -401176,7 +401190,7 @@ window.ROADMAP = {
     22.46
    ],
    "comb": {
-    "b": 0.33,
+    "b": 0.336,
     "r": 0.0,
     "rg": [
      "programming",
@@ -401264,7 +401278,7 @@ window.ROADMAP = {
     21.29
    ],
    "comb": {
-    "b": 0.33,
+    "b": 0.336,
     "r": 0.0,
     "rg": [
      "programming",
@@ -401352,7 +401366,7 @@ window.ROADMAP = {
     21.42
    ],
    "comb": {
-    "b": 0.33,
+    "b": 0.336,
     "r": 0.0,
     "rg": [
      "programming",
@@ -401440,7 +401454,7 @@ window.ROADMAP = {
     22.58
    ],
    "comb": {
-    "b": 0.33,
+    "b": 0.336,
     "r": 0.0,
     "rg": [
      "programming",
@@ -401529,8 +401543,8 @@ window.ROADMAP = {
     29.07
    ],
    "comb": {
-    "b": 0.536,
-    "r": 0.32,
+    "b": 0.538,
+    "r": 0.21,
     "rg": [
      "bisekibun-nyumon",
      "programming",
@@ -401623,8 +401637,8 @@ window.ROADMAP = {
     35.53
    ],
    "comb": {
-    "b": 0.568,
-    "r": 0.92,
+    "b": 0.571,
+    "r": 0.81,
     "rg": [
      "bisekibun",
      "programming",
@@ -401717,8 +401731,8 @@ window.ROADMAP = {
     33.69
    ],
    "comb": {
-    "b": 0.511,
-    "r": 0.92,
+    "b": 0.516,
+    "r": 0.81,
     "rg": [
      "bisekibun",
      "programming",
@@ -402448,7 +402462,7 @@ window.ROADMAP = {
     13.89
    ],
    "comb": {
-    "b": 0.447,
+    "b": 0.448,
     "r": 0.0,
     "rg": [
      "kikai-gakushu",
@@ -402540,7 +402554,7 @@ window.ROADMAP = {
     21.3
    ],
    "comb": {
-    "b": 0.481,
+    "b": 0.483,
     "r": 0.0,
     "rg": [
      "kikai-gakushu",
@@ -403062,7 +403076,7 @@ window.ROADMAP = {
     17.17
    ],
    "comb": {
-    "b": 0.407,
+    "b": 0.412,
     "r": 0.0,
     "rg": [
      "bunshi-saibo",
@@ -403153,7 +403167,7 @@ window.ROADMAP = {
     13.77
    ],
    "comb": {
-    "b": 0.403,
+    "b": 0.409,
     "r": 0.0,
     "rg": [
      "bunshi-saibo",
@@ -403244,7 +403258,7 @@ window.ROADMAP = {
     23.12
    ],
    "comb": {
-    "b": 0.557,
+    "b": 0.562,
     "r": 0.0,
     "rg": [
      "bunshi-saibo",
@@ -403335,7 +403349,7 @@ window.ROADMAP = {
     9.1
    ],
    "comb": {
-    "b": 0.431,
+    "b": 0.44,
     "r": 0.0,
     "rg": [
      "bunshi-saibo",
@@ -403427,7 +403441,7 @@ window.ROADMAP = {
     26.2
    ],
    "comb": {
-    "b": 0.292,
+    "b": 0.294,
     "r": 0.0,
     "rg": [
      "bunshi-saibo",
@@ -403685,8 +403699,8 @@ window.ROADMAP = {
     41.46
    ],
    "comb": {
-    "b": 0.608,
-    "r": 1.84,
+    "b": 0.609,
+    "r": 1.73,
     "rg": [
      "bibun-hoteishiki",
      "bunshi-saibo",
@@ -403781,7 +403795,7 @@ window.ROADMAP = {
     28.7
    ],
    "comb": {
-    "b": 0.244,
+    "b": 0.246,
     "r": 0.0,
     "rg": [
      "bunshi-saibo",
@@ -403874,7 +403888,7 @@ window.ROADMAP = {
     26.26
    ],
    "comb": {
-    "b": 0.451,
+    "b": 0.453,
     "r": 1.11,
     "rg": [
      "bunshi-saibo",
@@ -415327,7 +415341,7 @@ window.ROADMAP = {
     22.22
    ],
    "comb": {
-    "b": 0.346,
+    "b": 0.348,
     "r": 0.0,
     "rg": [
      "chikyu-naibu",
@@ -415401,7 +415415,7 @@ window.ROADMAP = {
     29.47
    ],
    "comb": {
-    "b": 0.382,
+    "b": 0.383,
     "r": 0.0,
     "rg": [
      "chikyu-naibu",
@@ -415554,7 +415568,7 @@ window.ROADMAP = {
     37.26
    ],
    "comb": {
-    "b": 0.282,
+    "b": 0.284,
     "r": 0.0,
     "rg": [
      "chikyu-naibu",
@@ -417074,8 +417088,8 @@ window.ROADMAP = {
     16.59
    ],
    "comb": {
-    "b": 0.6,
-    "r": 1.84,
+    "b": 0.604,
+    "r": 1.73,
     "rg": [
      "bibun-hoteishiki",
      "kakuritsu-daigaku",
@@ -417474,7 +417488,7 @@ window.ROADMAP = {
     12.08
    ],
    "comb": {
-    "b": 0.376,
+    "b": 0.377,
     "r": 0.0,
     "rg": [
      "kikai-gakushu",
@@ -418609,7 +418623,7 @@ window.ROADMAP = {
     9.44
    ],
    "comb": {
-    "b": 0.431,
+    "b": 0.434,
     "r": 0.0,
     "rg": [
      "bunshi-saibo",
@@ -418823,7 +418837,7 @@ window.ROADMAP = {
     1.43
    ],
    "comb": {
-    "b": 0.101,
+    "b": 0.094,
     "r": 0.0,
     "rg": [
      "byori",
@@ -419086,7 +419100,7 @@ window.ROADMAP = {
     8.98
    ],
    "comb": {
-    "b": 0.116,
+    "b": 0.12,
     "r": 0.0,
     "rg": [
      "jintai",
@@ -419814,7 +419828,7 @@ window.ROADMAP = {
     6.96
    ],
    "comb": {
-    "b": 0.189,
+    "b": 0.187,
     "r": 0.0,
     "rg": [
      "byori",
@@ -419893,7 +419907,7 @@ window.ROADMAP = {
     6.71
    ],
    "comb": {
-    "b": 0.134,
+    "b": 0.138,
     "r": 0.0,
     "rg": [
      "jintai",
@@ -419977,7 +419991,7 @@ window.ROADMAP = {
     6.44
    ],
    "comb": {
-    "b": 0.082,
+    "b": 0.077,
     "r": 0.0,
     "rg": [
      "byori",
@@ -419996,7 +420010,8 @@ window.ROADMAP = {
    "needs": [
     "I-011",
     "I-021",
-    "B-035"
+    "B-035",
+    "I-063"
    ],
    "days": [
     {
@@ -420051,7 +420066,7 @@ window.ROADMAP = {
     11.16
    ],
    "comb": {
-    "b": 0.281,
+    "b": 0.24,
     "r": 0.0,
     "rg": [
      "byori",
@@ -422686,7 +422701,7 @@ window.ROADMAP = {
     4.46
    ],
    "comb": {
-    "b": 0.514,
+    "b": 0.512,
     "r": 0.0,
     "rg": [
      "bibun-hoteishiki",
@@ -422767,7 +422782,7 @@ window.ROADMAP = {
     3.42
    ],
    "comb": {
-    "b": 0.301,
+    "b": 0.304,
     "r": 0.0,
     "rg": [
      "butsuri-kagaku",
@@ -422851,7 +422866,7 @@ window.ROADMAP = {
     5.07
    ],
    "comb": {
-    "b": 0.287,
+    "b": 0.29,
     "r": 0.0,
     "rg": [
      "butsuri-kagaku",
@@ -422925,7 +422940,7 @@ window.ROADMAP = {
     -4.86
    ],
    "comb": {
-    "b": 0.415,
+    "b": 0.411,
     "r": 0.0,
     "rg": [
      "kagaku-kogaku",
@@ -423089,7 +423104,7 @@ window.ROADMAP = {
     18.54
    ],
    "comb": {
-    "b": 0.417,
+    "b": 0.421,
     "r": 0.0,
     "rg": [
      "biseibutsu",
@@ -423165,7 +423180,7 @@ window.ROADMAP = {
     22.2
    ],
    "comb": {
-    "b": 0.576,
+    "b": 0.577,
     "r": 0.0,
     "rg": [
      "chikyu",
@@ -423247,7 +423262,7 @@ window.ROADMAP = {
     18.46
    ],
    "comb": {
-    "b": 0.439,
+    "b": 0.443,
     "r": 0.0,
     "rg": [
      "kagaku-kogaku",
@@ -423323,7 +423338,7 @@ window.ROADMAP = {
     24.9
    ],
    "comb": {
-    "b": 0.593,
+    "b": 0.595,
     "r": 0.81,
     "rg": [
      "kagaku-kogaku",
@@ -423492,7 +423507,7 @@ window.ROADMAP = {
     6.63
    ],
    "comb": {
-    "b": 0.543,
+    "b": 0.544,
     "r": 0.0,
     "rg": [
      "jintai",
@@ -423646,7 +423661,7 @@ window.ROADMAP = {
     -13.94
    ],
    "comb": {
-    "b": 0.687,
+    "b": 0.688,
     "r": 0.0,
     "rg": [
      "doboku",
@@ -423728,7 +423743,7 @@ window.ROADMAP = {
     15.89
    ],
    "comb": {
-    "b": 0.498,
+    "b": 0.499,
     "r": 0.0,
     "rg": [
      "biseibutsu",
@@ -423809,7 +423824,7 @@ window.ROADMAP = {
     25.1
    ],
    "comb": {
-    "b": 0.522,
+    "b": 0.524,
     "r": 0.0,
     "rg": [
      "bibun-hoteishiki",
@@ -424044,7 +424059,7 @@ window.ROADMAP = {
     32.61
    ],
    "comb": {
-    "b": 0.484,
+    "b": 0.486,
     "r": 0.0,
     "rg": [
      "chikyu-naibu",
@@ -424120,7 +424135,7 @@ window.ROADMAP = {
     28.22
    ],
    "comb": {
-    "b": 0.505,
+    "b": 0.508,
     "r": 0.0,
     "rg": [
      "chikyu",
@@ -424935,7 +424950,7 @@ window.ROADMAP = {
     27.85
    ],
    "comb": {
-    "b": 0.346,
+    "b": 0.348,
     "r": 0.0,
     "rg": [
      "chikyu-naibu",
@@ -425014,7 +425029,7 @@ window.ROADMAP = {
     30.48
    ],
    "comb": {
-    "b": 0.306,
+    "b": 0.308,
     "r": 0.0,
     "rg": [
      "chikyu-naibu",
@@ -425819,7 +425834,7 @@ window.ROADMAP = {
     -16.53
    ],
    "comb": {
-    "b": 0.441,
+    "b": 0.442,
     "r": 0.0,
     "rg": [
      "kakuritsu-katei",
@@ -425945,7 +425960,7 @@ window.ROADMAP = {
     -21.21
    ],
    "comb": {
-    "b": 0.488,
+    "b": 0.485,
     "r": 0.0,
     "rg": [
      "keisanki-system",
@@ -426563,7 +426578,7 @@ window.ROADMAP = {
     22.71
    ],
    "comb": {
-    "b": 0.193,
+    "b": 0.192,
     "r": 0.0,
     "rg": [
      "byori",
@@ -426637,7 +426652,7 @@ window.ROADMAP = {
     25.65
    ],
    "comb": {
-    "b": 0.099,
+    "b": 0.092,
     "r": 0.0,
     "rg": [
      "byori",
@@ -426782,7 +426797,7 @@ window.ROADMAP = {
     11.75
    ],
    "comb": {
-    "b": 0.285,
+    "b": 0.294,
     "r": 0.0,
     "rg": [
      "eiyo",
@@ -426850,7 +426865,7 @@ window.ROADMAP = {
     19.86
    ],
    "comb": {
-    "b": 0.374,
+    "b": 0.379,
     "r": 0.0,
     "rg": [
      "jintai",
@@ -426923,7 +426938,7 @@ window.ROADMAP = {
     7.59
    ],
    "comb": {
-    "b": 0.404,
+    "b": 0.405,
     "r": 0.0,
     "rg": [
      "chikyu-naibu",
@@ -427074,7 +427089,7 @@ window.ROADMAP = {
     31.44
    ],
    "comb": {
-    "b": 0.609,
+    "b": 0.61,
     "r": 0.0,
     "rg": [
      "bussei",
@@ -427093,7 +427108,8 @@ window.ROADMAP = {
    "region": "shigen",
    "needs": [
     "W-029",
-    "W-065"
+    "W-065",
+    "W-117"
    ],
    "days": [
     {
@@ -427148,12 +427164,12 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    28.9,
-    -32.67,
-    31.66
+    31.82,
+    -34.07,
+    31.2
    ],
    "comb": {
-    "b": 0.194,
+    "b": 0.162,
     "r": 0.0,
     "rg": [
      "chikyu-naibu",
@@ -427222,12 +427238,12 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    38.21,
-    -37.24,
-    17.32
+    40.09,
+    -38.53,
+    17.51
    ],
    "comb": {
-    "b": 0.355,
+    "b": 0.358,
     "r": 0.0,
     "rg": [
      "ryutai",
@@ -427306,7 +427322,7 @@ window.ROADMAP = {
     10.67
    ],
    "comb": {
-    "b": 0.173,
+    "b": 0.172,
     "r": 0.0,
     "rg": [
      "juui-shoku",
@@ -428969,7 +428985,7 @@ window.ROADMAP = {
     -12.29
    ],
    "comb": {
-    "b": 0.481,
+    "b": 0.482,
     "r": 0.0,
     "rg": [
      "jintai",
@@ -436607,14 +436623,14 @@ window.ROADMAP = {
     6.08
    ],
    "comb": {
-    "b": 0.452,
+    "b": 0.411,
     "r": 0.0,
     "rg": [
      "anzen",
      "graph",
      "kakuritsu-daigaku",
      "kazoekata",
-     "programming",
+     "keisanki-system",
      "ronpo"
     ],
     "pr": []
@@ -436705,13 +436721,13 @@ window.ROADMAP = {
     13.55
    ],
    "comb": {
-    "b": 0.52,
+    "b": 0.49,
     "r": 0.0,
     "rg": [
      "anzen",
      "graph",
      "kazoekata",
-     "programming",
+     "keisanki-system",
      "ronpo",
      "seisuron",
      "senkei-keisan"
@@ -437825,7 +437841,7 @@ window.ROADMAP = {
     14.02
    ],
    "comb": {
-    "b": 0.324,
+    "b": 0.336,
     "r": 0.0,
     "rg": [
      "kakuritsu-daigaku",
@@ -438258,7 +438274,7 @@ window.ROADMAP = {
     16.3
    ],
    "comb": {
-    "b": 0.5,
+    "b": 0.502,
     "r": 0.0,
     "rg": [
      "bunshi-saibo",
@@ -438349,8 +438365,8 @@ window.ROADMAP = {
     43.91
    ],
    "comb": {
-    "b": 0.591,
-    "r": 0.76,
+    "b": 0.592,
+    "r": 0.65,
     "rg": [
      "bunshi-saibo",
      "jikken",
@@ -446673,7 +446689,7 @@ window.ROADMAP = {
     26.59
    ],
    "comb": {
-    "b": 0.346,
+    "b": 0.349,
     "r": 0.0,
     "rg": [
      "chikyu-naibu",
@@ -446753,7 +446769,7 @@ window.ROADMAP = {
     39.27
    ],
    "comb": {
-    "b": 0.382,
+    "b": 0.383,
     "r": 0.0,
     "rg": [
      "chikyu-naibu",
@@ -446832,7 +446848,7 @@ window.ROADMAP = {
     38.05
    ],
    "comb": {
-    "b": 0.276,
+    "b": 0.278,
     "r": 0.0,
     "rg": [
      "chikyu-naibu",
@@ -446993,7 +447009,7 @@ window.ROADMAP = {
     36.76
    ],
    "comb": {
-    "b": 0.328,
+    "b": 0.331,
     "r": 0.0,
     "rg": [
      "chikyu",
@@ -449220,7 +449236,7 @@ window.ROADMAP = {
     8.3
    ],
    "comb": {
-    "b": 0.656,
+    "b": 0.654,
     "r": 0.0,
     "rg": [
      "anzen",
@@ -450381,7 +450397,7 @@ window.ROADMAP = {
     10.51
    ],
    "comb": {
-    "b": 0.489,
+    "b": 0.486,
     "r": 0.0,
     "rg": [
      "byori",
@@ -450849,7 +450865,7 @@ window.ROADMAP = {
     -0.06
    ],
    "comb": {
-    "b": 0.538,
+    "b": 0.541,
     "r": 0.0,
     "rg": [
      "ekigaku",
@@ -451189,7 +451205,7 @@ window.ROADMAP = {
     11.49
    ],
    "comb": {
-    "b": 0.123,
+    "b": 0.207,
     "r": 0.0,
     "rg": [
      "anzen",
@@ -451260,7 +451276,7 @@ window.ROADMAP = {
    ],
    "comb": {
     "b": 0.467,
-    "r": 0.39,
+    "r": 0.28,
     "rg": [
      "gunkantai",
      "programming"
@@ -452385,7 +452401,7 @@ window.ROADMAP = {
     8.05
    ],
    "comb": {
-    "b": 0.573,
+    "b": 0.574,
     "r": 0.0,
     "rg": [
      "bussei",
@@ -453105,7 +453121,7 @@ window.ROADMAP = {
     23.8
    ],
    "comb": {
-    "b": 0.61,
+    "b": 0.611,
     "r": 0.0,
     "rg": [
      "hardware",
@@ -453250,7 +453266,16 @@ window.ROADMAP = {
     -39.84,
     4.55,
     10.18
-   ]
+   ],
+   "comb": {
+    "b": 0.459,
+    "r": 0.0,
+    "rg": [
+     "keisanki-system",
+     "programming"
+    ],
+    "pr": []
+   }
   },
   {
    "id": "K-198",
@@ -453380,7 +453405,7 @@ window.ROADMAP = {
     10.19
    ],
    "comb": {
-    "b": 0.357,
+    "b": 0.366,
     "r": 0.0,
     "rg": [
      "programming",
@@ -453535,7 +453560,16 @@ window.ROADMAP = {
     -39.49,
     4.05,
     11.66
-   ]
+   ],
+   "comb": {
+    "b": 0.457,
+    "r": 0.0,
+    "rg": [
+     "keisanki-system",
+     "programming"
+    ],
+    "pr": []
+   }
   },
   {
    "id": "K-205",
@@ -453606,7 +453640,7 @@ window.ROADMAP = {
     7.19
    ],
    "comb": {
-    "b": 0.422,
+    "b": 0.443,
     "r": 0.0,
     "rg": [
      "anzen",
@@ -453684,11 +453718,11 @@ window.ROADMAP = {
     14.27
    ],
    "comb": {
-    "b": 0.356,
+    "b": 0.274,
     "r": 0.0,
     "rg": [
      "anzen",
-     "programming"
+     "keisanki-system"
     ],
     "pr": []
    }
@@ -453763,7 +453797,7 @@ window.ROADMAP = {
     11.28
    ],
    "comb": {
-    "b": 0.312,
+    "b": 0.239,
     "r": 0.0,
     "rg": [
      "anzen",
@@ -453842,7 +453876,7 @@ window.ROADMAP = {
     -0.7
    ],
    "comb": {
-    "b": 0.462,
+    "b": 0.421,
     "r": 0.0,
     "rg": [
      "anzen",
@@ -453922,7 +453956,7 @@ window.ROADMAP = {
     13.91
    ],
    "comb": {
-    "b": 0.409,
+    "b": 0.444,
     "r": 0.0,
     "rg": [
      "anzen",
@@ -454002,12 +454036,12 @@ window.ROADMAP = {
     29.01
    ],
    "comb": {
-    "b": 0.548,
+    "b": 0.359,
     "r": 0.0,
     "rg": [
      "kairo-shingo",
-     "kikai-gakushu",
-     "programming"
+     "keisanki-system",
+     "kikai-gakushu"
     ],
     "pr": []
    }
@@ -454083,7 +454117,7 @@ window.ROADMAP = {
    ],
    "comb": {
     "b": 0.431,
-    "r": 0.39,
+    "r": 0.28,
     "rg": [
      "gunkantai",
      "programming"
@@ -454231,16 +454265,7 @@ window.ROADMAP = {
     -42.66,
     7.5,
     10.38
-   ],
-   "comb": {
-    "b": 0.423,
-    "r": 0.0,
-    "rg": [
-     "keisanki-system",
-     "programming"
-    ],
-    "pr": []
-   }
+   ]
   },
   {
    "id": "R-035",
@@ -455171,7 +455196,7 @@ window.ROADMAP = {
     30.32
    ],
    "comb": {
-    "b": 0.308,
+    "b": 0.31,
     "r": 0.0,
     "rg": [
      "chikyu-naibu",
@@ -456327,7 +456352,7 @@ window.ROADMAP = {
     27.69
    ],
    "comb": {
-    "b": 0.367,
+    "b": 0.37,
     "r": 0.0,
     "rg": [
      "ryutai-butsuri",
@@ -456474,7 +456499,7 @@ window.ROADMAP = {
     12.09
    ],
    "comb": {
-    "b": 0.447,
+    "b": 0.444,
     "r": 0.0,
     "rg": [
      "kagaku-kogaku",
@@ -457347,7 +457372,7 @@ window.ROADMAP = {
     33.39
    ],
    "comb": {
-    "b": 0.502,
+    "b": 0.503,
     "r": 0.0,
     "rg": [
      "chikyu-naibu",
@@ -457791,7 +457816,7 @@ window.ROADMAP = {
     32.46
    ],
    "comb": {
-    "b": 0.472,
+    "b": 0.468,
     "r": 0.0,
     "rg": [
      "bussei",
@@ -458305,7 +458330,8 @@ window.ROADMAP = {
    "needs": [
     "H-107",
     "E-031",
-    "E-019"
+    "E-019",
+    "P-270"
    ],
    "days": [
     {
@@ -458360,16 +458386,17 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    40.64,
-    -32.03,
-    15.11
+    42.91,
+    -27.4,
+    17.71
    ],
    "comb": {
-    "b": 0.602,
+    "b": 0.647,
     "r": 0.0,
     "rg": [
      "kozo-zairyo",
      "ryutai",
+     "ryutai-butsuri",
      "zairyo"
     ],
     "pr": []
@@ -458536,7 +458563,7 @@ window.ROADMAP = {
     17.31
    ],
    "comb": {
-    "b": 0.152,
+    "b": 0.15,
     "r": 0.0,
     "rg": [
      "jintai",
@@ -458717,7 +458744,7 @@ window.ROADMAP = {
     12.85
    ],
    "comb": {
-    "b": 0.175,
+    "b": 0.174,
     "r": 0.0,
     "rg": [
      "juui-shoku",
@@ -458887,7 +458914,7 @@ window.ROADMAP = {
     19.24
    ],
    "comb": {
-    "b": 0.41,
+    "b": 0.411,
     "r": 0.0,
     "rg": [
      "jintai",
@@ -465245,7 +465272,7 @@ window.ROADMAP = {
     11.26
    ],
    "comb": {
-    "b": 0.319,
+    "b": 0.326,
     "r": 0.0,
     "rg": [
      "programming",

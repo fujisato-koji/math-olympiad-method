@@ -240,7 +240,7 @@ items:
     parent: "MAC"
     name: "Synthetic Elastomers and Natural Rubber"
     ja: "合成エラストマーと天然ゴム"
-    units: [H-106, E-019, P-103]
+    units: [H-106, E-019, P-103, P-263]
     sources: [Y01]
   - id: "40"
     parent: "MAC"
@@ -434,7 +434,7 @@ items:
     parent: "PIA"
     name: "Nuclear Technology"
     ja: "原子力技術"
-    gap: "要る単元の案「原子炉と核燃料サイクル」（前提 P-104、P-106）。中性子の輸送と臨界、炉の制御と炉心、核燃料と同位体分離、遮へい、廃棄物。入口は P-104（核分裂）、P-203（原子力発電の概観）、P-241（核融合炉心）、中心がない"
+    units: [P-290]
     sources: [Y01]
   - id: "72"
     parent: "PIA"
