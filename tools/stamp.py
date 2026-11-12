@@ -5,6 +5,7 @@
 import sys
 from pathlib import Path
 import yaml
+yload = lambda s: yaml.load(s, Loader=getattr(yaml, "CSafeLoader", yaml.SafeLoader))  # C 版の読み込み口（libyaml）があれば使う。Python 版の約 9 倍速く、全部の YAML で結果が同じ（D-132）
 REPO = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(REPO / 'tools'))
 import roadmap as RM
@@ -38,7 +39,7 @@ def items(d):
 
 
 def qids(uid, text):
-    d = yaml.safe_load(text) or {}
+    d = yload(text) or {}
     return [RM.qid(uid, it) for it in items(d)]
 
 

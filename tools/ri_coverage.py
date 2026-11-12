@@ -12,6 +12,7 @@ import os
 from collections import Counter
 
 import yaml
+yload = lambda s: yaml.load(s, Loader=getattr(yaml, "CSafeLoader", yaml.SafeLoader))  # C 版の読み込み口（libyaml）があれば使う。Python 版の約 9 倍速く、全部の YAML で結果が同じ（D-132）
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 MATH = set("NACGLSF")
@@ -20,7 +21,7 @@ TARGET = {1: ["総動員", "数", "読み取り"], 2: ["総動員", "数", "読�
 
 
 def load():
-    road = yaml.safe_load(open(os.path.join(ROOT, "roadmap.yaml"), encoding="utf-8"))
+    road = yload(open(os.path.join(ROOT, "roadmap.yaml"), encoding="utf-8"))
     stages = {u["id"]: u.get("stage") for u in road["units"]}
     titles = {u["id"]: u.get("title", "") for u in road["units"]}
     rows = []
@@ -28,7 +29,7 @@ def load():
         uid = os.path.basename(f)[:-5]
         if stages.get(uid) not in TARGET or uid[0] not in MATH:
             continue
-        doc = yaml.safe_load(open(f, encoding="utf-8")) or {}
+        doc = yload(open(f, encoding="utf-8")) or {}
         ri = doc.get("ri") or []
         have = {k for it in ri for k in (it.get("kinds") or [])}
         miss = [k for k in TARGET[stages[uid]] if k not in have]

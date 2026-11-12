@@ -6,6 +6,7 @@
 import sys, os, json, html, subprocess, tempfile
 from pathlib import Path
 import yaml
+yload = lambda s: yaml.load(s, Loader=getattr(yaml, "CSafeLoader", yaml.SafeLoader))  # C 版の読み込み口（libyaml）があれば使う。Python 版の約 9 倍速く、全部の YAML で結果が同じ（D-132）
 REPO = Path(__file__).resolve().parents[1]
 # 答えを抜いた問題と画像はリポジトリの外に置く（係が答えを見ないように、画像をためないように）
 OUT = Path(tempfile.gettempdir()) / 'michisuji-blind' / REPO.name
@@ -13,7 +14,7 @@ OUT.mkdir(parents=True, exist_ok=True)
 
 
 def items(uid):
-    d = yaml.safe_load((REPO / 'units' / f'{uid}.yaml').read_text(encoding='utf-8'))
+    d = yload((REPO / 'units' / f'{uid}.yaml').read_text(encoding='utf-8'))
     for day in d.get('days') or []:
         for i, it in enumerate(day.get('items') or [], 1):
             yield f"d{day['day']}-{i}", it
@@ -47,6 +48,7 @@ elif cmd == 'render':
         p.unlink()
     rows = json.loads((OUT / f'{uid}.json').read_text(encoding='utf-8'))
     per = 8
+    jobs, pages = [], []
     for n in range(0, len(rows), per):
         cells = []
         for r in rows[n:n + per]:
@@ -61,7 +63,16 @@ elif cmd == 'render':
                         "pre{font-size:15px}</style><div class='g'>" + ''.join(cells) + '</div>', encoding='utf-8')
         png = OUT / f'{uid}-{tag}-{n // per + 1}.png'
         rows_n = (len(cells) + 1) // 2
-        subprocess.run(['node', str(REPO / 'tools' / 'headless.mjs'), page.as_uri(), str(png), '1090', str(40 + rows_n * 470), '3'],
-                       capture_output=True, text=True, encoding='utf-8', env={**os.environ, 'MSYS_NO_PATHCONV': '1'})
+        pages.append(page)
+        jobs.append({'url': page.as_uri(), 'png': str(png), 'width': 1090, 'height': 40 + rows_n * 470, 'sec': 3})
+    # ブラウザは 1 回だけ立てて全部の画像を撮る（PC を軽くする。D-132）
+    jf = OUT / f'jobs-{uid}-{tag}.json'
+    jf.write_text(json.dumps(jobs, ensure_ascii=False), encoding='utf-8')
+    subprocess.run(['node', str(REPO / 'tools' / 'headless.mjs'), '--jobs', str(jf)],
+                   capture_output=True, text=True, encoding='utf-8', env={**os.environ, 'MSYS_NO_PATHCONV': '1'})
+    jf.unlink(missing_ok=True)
+    for page in pages:
         page.unlink(missing_ok=True)
+    for j in jobs:
+        png = Path(j['png'])
         print('画像', png if png.exists() else '（作れなかった）')

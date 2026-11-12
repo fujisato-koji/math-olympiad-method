@@ -27,18 +27,47 @@ const BROWSERS = [
 ].filter(Boolean);
 
 const live = new Set();   // 止めていないブラウザ（途中で止まったときの後片付け用）
+const PREFIX = 'michisuji-headless-';
 function kill(child) {
   try {
     if (process.platform === 'win32') execFileSync('taskkill', ['/PID', String(child.pid), '/T', '/F'], { stdio: 'ignore' });
     else child.kill('SIGKILL');
   } catch { /* もう止まっている */ }
 }
-function removeSync(dir) {
-  for (let i = 0; i < 20; i++) {
-    try { fs.rmSync(dir, { recursive: true, force: true }); if (!fs.existsSync(dir)) return true; } catch { /* ブラウザがまだ握っている */ }
-    const t = Date.now() + 250; while (Date.now() < t) { /* 少し待つ */ }
+// 待つあいだ CPU を回さない（前は空回りの繰り返しで待っていた。D-132）
+const sleepSync = ms => Atomics.wait(new Int32Array(new SharedArrayBuffer(4)), 0, 0, ms);
+function removeSync(dir, tries = 8) {
+  for (let i = 0; i < tries; i++) {
+    try { fs.rmSync(dir, { recursive: true, force: true }); if (!fs.existsSync(dir)) return true; } catch { /* ブラウザかウイルス対策がまだ握っている */ }
+    sleepSync(250);
   }
   return !fs.existsSync(dir);
+}
+async function removeAsync(dir, ms = 30000) {
+  for (const t0 = Date.now(); Date.now() - t0 < ms;) {
+    try { await fs.promises.rm(dir, { recursive: true, force: true }); if (!fs.existsSync(dir)) return true; } catch { /* まだ握っている */ }
+    await sleep(500);
+  }
+  return !fs.existsSync(dir);
+}
+// 前に消しそこねたプロフィールを掃除する（D-132）。3 時間より古く、使っていないもの（lockfile が消せる）だけ。
+// 1 回に max 個まで。ほかの道具と同時に掃除しないよう、目印のファイルで 2 分に 1 回にする。
+export async function sweep({ hours = 3, max = 30 } = {}) {
+  const tmp = os.tmpdir(), stamp = path.join(tmp, PREFIX + 'sweep.stamp');
+  try { if (Date.now() - fs.statSync(stamp).mtimeMs < 120000) return 0; } catch { /* 目印がない */ }
+  try { fs.writeFileSync(stamp, String(process.pid)); } catch { return 0; }
+  let n = 0;
+  const old = fs.readdirSync(tmp, { withFileTypes: true })
+    .filter(d => d.isDirectory() && d.name.startsWith(PREFIX))
+    .map(d => { const p = path.join(tmp, d.name); try { return { p, t: fs.statSync(p).birthtimeMs }; } catch { return null; } })
+    .filter(x => x && Date.now() - x.t > hours * 3600e3)
+    .sort((a, b) => a.t - b.t);
+  for (const { p } of old) {
+    if (n >= max) break;
+    try { fs.rmSync(path.join(p, 'lockfile'), { force: true }); } catch { continue; /* 使っている */ }
+    try { await fs.promises.rm(p, { recursive: true, force: true }); n++; } catch { /* あとで */ }
+  }
+  return n;
 }
 function cleanupAll() {
   for (const b of live) { kill(b.child); removeSync(b.profile); }
@@ -51,9 +80,14 @@ process.on('uncaughtException', e => { console.error(e); cleanupAll(); process.e
 export async function open({ width = 1300, height = 860, port = 9200 + Math.floor(Math.random() * 700), browser } = {}) {
   const exe = browser || BROWSERS.find(p => fs.existsSync(p));
   if (!exe) throw new Error('Edge か Chrome が見つからない（HEADLESS_BROWSER で場所を渡せる）');
-  const profile = fs.mkdtempSync(path.join(os.tmpdir(), 'michisuji-headless-'));
+  const profile = fs.mkdtempSync(path.join(os.tmpdir(), PREFIX));
+  // キャッシュ・拡張機能・裏の通信を作らせない（プロフィールが小さくなり、作るのも消すのも軽い。D-132）
   const child = spawn(exe, ['--headless=new', '--enable-unsafe-swiftshader', '--use-angle=swiftshader', '--hide-scrollbars',
+    '--no-first-run', '--no-default-browser-check', '--disable-extensions', '--disable-component-update',
+    '--disable-background-networking', '--disable-sync', '--disable-default-apps', '--disable-gpu-shader-disk-cache',
+    '--disk-cache-size=1', '--media-cache-size=1',
     `--remote-debugging-port=${port}`, `--user-data-dir=${profile}`, `--window-size=${width},${height}`, 'about:blank'], { stdio: 'ignore' });
+  const exited = new Promise(r => child.once('exit', r));
   const b = { child, profile, errors: [] };
   live.add(b);
   let version = null;
@@ -79,9 +113,11 @@ export async function open({ width = 1300, height = 860, port = 9200 + Math.floo
   async function close() {
     try { ws.close(); } catch { /* */ }
     kill(child);
-    await sleep(300);
-    removeSync(profile);
+    // ブラウザが本当に終わるのを待ってから、最大 30 秒まで消し直す（前は 5 秒であきらめ、プロフィールが残っていた。D-132）
+    await Promise.race([exited, sleep(10000)]);
+    await removeAsync(profile);
     live.delete(b);
+    await sweep().catch(() => 0);
   }
   return Object.assign(b, {
     send,
@@ -93,15 +129,32 @@ export async function open({ width = 1300, height = 860, port = 9200 + Math.floo
 }
 
 // コマンドとして：node tools/headless.mjs <url> <png> [幅] [高さ] [待つ秒]
+//   何枚も撮るとき：node tools/headless.mjs --jobs <jobs.json>
+//   （jobs.json は [{url, png, width, height, sec}, …]。ブラウザを 1 回だけ立てて順に撮る。
+//     立ち上げとプロフィールづくりが 1 回で済むので PC が軽い。D-132）
 if (import.meta.url === pathToFileURL(process.argv[1] || '').href) {
-  const [url, png, w = '1300', h = '860', sec = '6'] = process.argv.slice(2);
-  if (!url || !png) { console.error('使い方：node tools/headless.mjs <url> <png> [幅] [高さ] [待つ秒]'); process.exit(2); }
-  const b = await open({ width: +w, height: +h });
+  const argv = process.argv.slice(2);
+  let jobs;
+  if (argv[0] === '--jobs') {
+    if (!argv[1]) { console.error('使い方：node tools/headless.mjs --jobs <jobs.json>'); process.exit(2); }
+    jobs = JSON.parse(fs.readFileSync(argv[1], 'utf-8')).map(j => ({ width: 1300, height: 860, sec: 6, ...j }));
+  } else {
+    const [url, png, w = '1300', h = '860', sec = '6'] = argv;
+    if (!url || !png) { console.error('使い方：node tools/headless.mjs <url> <png> [幅] [高さ] [待つ秒]'); process.exit(2); }
+    jobs = [{ url, png, width: +w, height: +h, sec: +sec }];
+  }
+  if (!jobs.length) process.exit(0);
+  // 窓はいちばん大きい頁に合わせて立て、頁ごとに大きさを合わせる
+  const b = await open({ width: Math.max(...jobs.map(j => +j.width)), height: Math.max(...jobs.map(j => +j.height)) });
   try {
-    await b.go(url, +sec * 1000);
-    await b.shot(path.resolve(png));
-    console.log('撮った', path.resolve(png));
-    console.log(b.errors.length ? b.errors.join('\n') : '例外なし');
+    for (const j of jobs) {
+      await b.send('Emulation.setDeviceMetricsOverride', { width: +j.width, height: +j.height, deviceScaleFactor: 1, mobile: false });
+      b.errors.length = 0;
+      await b.go(j.url, +j.sec * 1000);
+      await b.shot(path.resolve(j.png));
+      console.log('撮った', path.resolve(j.png));
+      console.log(b.errors.length ? b.errors.join('\n') : '例外なし');
+    }
   } finally {
     await b.close();
   }

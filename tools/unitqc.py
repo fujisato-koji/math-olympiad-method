@@ -87,7 +87,7 @@ for uid in ids:
         if cells:
             per = 3 * 6  # 1 枚の PNG に 6 段（18 図）まで。多いときは分ける（高さで切れて後ろが見えなくならないように）
             chunks = [cells[i:i + per] for i in range(0, len(cells), per)]
-            made, fail = [], ''
+            made, fail, jobs, pages = [], '', [], []
             for n, ch in enumerate(chunks, 1):
                 stem = f'shot-{uid}' if len(chunks) == 1 else f'shot-{uid}-{n}'
                 page = HERE / f'{stem}.html'
@@ -96,10 +96,18 @@ for uid in ids:
                                 '.l{font-size:12px;color:#556;margin-bottom:4px}.f svg{width:326px;height:auto;display:block}</style><div class="g">' + ''.join(ch) + '</div>',
                                 encoding='utf-8')
                 rows = (len(ch) + 2) // 3
-                png = HERE / f'{stem}.png'
-                r = subprocess.run(['node', str(REPO / 'tools' / 'headless.mjs'), page.as_uri(), str(png), '1080', str(40 + rows * 260), '3'],
-                                   capture_output=True, text=True, encoding='utf-8', env={**os.environ, 'MSYS_NO_PATHCONV': '1'})
+                pages.append(page)
+                jobs.append({'url': page.as_uri(), 'png': str(HERE / f'{stem}.png'), 'width': 1080, 'height': 40 + rows * 260, 'sec': 3})
+            # ブラウザは 1 回だけ立てて全部の PNG を撮る（PC を軽くする。D-132）
+            jf = HERE / f'jobs-{uid}.json'
+            jf.write_text(json.dumps(jobs, ensure_ascii=False), encoding='utf-8')
+            r = subprocess.run(['node', str(REPO / 'tools' / 'headless.mjs'), '--jobs', str(jf)],
+                               capture_output=True, text=True, encoding='utf-8', env={**os.environ, 'MSYS_NO_PATHCONV': '1'})
+            jf.unlink(missing_ok=True)
+            for page in pages:
                 page.unlink(missing_ok=True)
+            for j in jobs:
+                png = Path(j['png'])
                 if png.exists():
                     made.append(png)
                 else:

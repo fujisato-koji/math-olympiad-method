@@ -4,13 +4,14 @@
 import sys, collections
 from pathlib import Path
 import yaml
+yload = lambda s: yaml.load(s, Loader=getattr(yaml, "CSafeLoader", yaml.SafeLoader))  # C 版の読み込み口（libyaml）があれば使う。Python 版の約 9 倍速く、全部の YAML で結果が同じ（D-132）
 ROOT = Path(__file__).resolve().parents[1]
-data = yaml.safe_load((ROOT / 'roadmap.yaml').read_text(encoding='utf-8'))
+data = yload((ROOT / 'roadmap.yaml').read_text(encoding='utf-8'))
 U = {u['id']: u for u in data['units']}
 
 
 def measure(uid):
-    d = yaml.safe_load((ROOT / 'units' / f'{uid}.yaml').read_text(encoding='utf-8')) or {}
+    d = yload((ROOT / 'units' / f'{uid}.yaml').read_text(encoding='utf-8')) or {}
     its = [it for day in d.get('days') or [] for it in (day.get('items') or []) + (day.get('extra') or [])] + list(d.get('ri') or [])
     fig = lambda it: bool(it.get('svg') or it.get('figure') or it.get('balance'))
     mihon = [it for it in its if it.get('part') == '見本']

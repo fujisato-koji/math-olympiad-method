@@ -13,6 +13,7 @@ import sys
 from pathlib import Path
 
 import yaml
+yload = lambda s: yaml.load(s, Loader=getattr(yaml, "CSafeLoader", yaml.SafeLoader))  # C 版の読み込み口（libyaml）があれば使う。Python 版の約 9 倍速く、全部の YAML で結果が同じ（D-132）
 
 ROOT = Path(__file__).resolve().parent.parent
 KINDS = ("units", "none", "gap")
@@ -22,7 +23,7 @@ def load():
     out = {}
     d = ROOT / "yardsticks"
     for p in sorted(d.glob("*.yaml")) if d.exists() else []:
-        out[p.stem] = yaml.safe_load(p.read_text(encoding="utf-8")) or {}
+        out[p.stem] = yload(p.read_text(encoding="utf-8")) or {}
     return out
 
 
@@ -77,7 +78,7 @@ def summary(ys=None):
 
 
 if __name__ == "__main__":
-    rm = yaml.safe_load((ROOT / "roadmap.yaml").read_text(encoding="utf-8"))
+    rm = yload((ROOT / "roadmap.yaml").read_text(encoding="utf-8"))
     ids = {u["id"] for u in rm["units"]}
     errs = check(ids)
     for name, title, n, cu, cn, cg, rate, gaps in summary():

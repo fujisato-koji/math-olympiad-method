@@ -11,6 +11,7 @@ import sys
 from pathlib import Path
 
 import yaml
+yload = lambda s: yaml.load(s, Loader=getattr(yaml, "CSafeLoader", yaml.SafeLoader))  # C 版の読み込み口（libyaml）があれば使う。Python 版の約 9 倍速く、全部の YAML で結果が同じ（D-132）
 
 sys.path.insert(0, str(Path(__file__).parent))
 import combination  # noqa: E402  組み合わせの指標（D-031）
@@ -120,28 +121,28 @@ def default_plan(n):
 
 
 def load():
-    data = yaml.safe_load((ROOT / "roadmap.yaml").read_text(encoding="utf-8"))
+    data = yload((ROOT / "roadmap.yaml").read_text(encoding="utf-8"))
     problems = {}
     for p in sorted((ROOT / "units").glob("*.yaml")):
-        problems[p.stem] = yaml.safe_load(p.read_text(encoding="utf-8"))
+        problems[p.stem] = yload(p.read_text(encoding="utf-8"))
     # 目標ごとの網羅表（goals の coverage が指すファイル）
     data["coverages"] = {}
     for g in data.get("goals", []):
         cov = ROOT / g["coverage"]
         if cov.exists():
-            data["coverages"][g["id"]] = yaml.safe_load(cov.read_text(encoding="utf-8"))
+            data["coverages"][g["id"]] = yload(cov.read_text(encoding="utf-8"))
     # 古今東西の問題の記録（problems/*.yaml。組み合わせの型つき、D-020）
     data["catalog"] = []
     pdir = ROOT / "problems"
     for f in sorted(pdir.glob("*.yaml")) if pdir.exists() else []:
-        for it in yaml.safe_load(f.read_text(encoding="utf-8")) or []:
+        for it in yload(f.read_text(encoding="utf-8")) or []:
             it["_set"] = f.stem
             data["catalog"].append(it)
     ren = ROOT / "renamed.yaml"
-    data["renamed"] = yaml.safe_load(ren.read_text(encoding="utf-8")) if ren.exists() else {}
+    data["renamed"] = yload(ren.read_text(encoding="utf-8")) if ren.exists() else {}
     # 用語の説明（D-063）。原稿の《用語》を確かめるための唯一の情報源
     gfile = ROOT / "glossary.yaml"
-    data["glossary"] = yaml.safe_load(gfile.read_text(encoding="utf-8")) if gfile.exists() else []
+    data["glossary"] = yload(gfile.read_text(encoding="utf-8")) if gfile.exists() else []
     return data, problems
 
 
@@ -556,7 +557,7 @@ def check(data, problems):
     # 前提の線の種類と強さ（relations/needs.yaml、D-117）：地図の前提の線と合っているか（合わなければ警告。直すのは取りまとめ）
     rel = ROOT / "relations" / "needs.yaml"
     if rel.exists():
-        typed = set((yaml.safe_load(rel.read_text(encoding="utf-8")) or {}).get("lines") or {})
+        typed = set((yload(rel.read_text(encoding="utf-8")) or {}).get("lines") or {})
         now = {f"{m}>{u['id']}" for u in data["units"] for m in u.get("needs", [])}
         if typed != now:
             print(f"警告: relations/needs.yaml と地図の前提の線が合わない（種類のない線 {len(now - typed)}、地図にない線 {len(typed - now)}）")
@@ -638,7 +639,7 @@ def build_coverage(goal, cov, titles):
 def load_fields():
     """関係から見つけた分野（D-122）と、2D の地図の行の並び（分野と細かい分野、D-124）を読む。どちらも tools/fields/ が作り、build は読むだけ。"""
     fy, ro = ROOT / "relations" / "fields.yaml", ROOT / "relations" / "row-order.yaml"
-    F = (yaml.safe_load(fy.read_text(encoding="utf-8")) or {}).get("fields", []) if fy.exists() else []
+    F = (yload(fy.read_text(encoding="utf-8")) or {}).get("fields", []) if fy.exists() else []
     f_of, s_of = {}, {}
     for f in F:
         for s in f["subs"]:
@@ -646,7 +647,7 @@ def load_fields():
                 f_of[x], s_of[x] = f["id"], s["id"]
     fields = [{"id": f["id"], "name": f["name"], "en": f.get("name_en") or "", "about": f.get("about") or "", "c": f.get("color") or k + 1,
                "subs": [{"id": s["id"], "name": s["name"]} for s in f["subs"]]} for k, f in enumerate(F)]
-    RO = (yaml.safe_load(ro.read_text(encoding="utf-8")) or {}).get("rows", []) if ro.exists() else []
+    RO = (yload(ro.read_text(encoding="utf-8")) or {}).get("rows", []) if ro.exists() else []
     rows = [[g["field"], g["subs"]] for g in RO] or [[f["id"], [s["id"] for s in f["subs"]]] for f in F]
     return fields, f_of, s_of, rows
 
@@ -663,7 +664,7 @@ def build(data, problems):
     fields, f_of, s_of, rows = load_fields()
     # 前提の線の強さ（relations/needs.yaml、3・2・1）を、地図の線の太さと濃さに使う（D-116 の追記）
     ny = ROOT / "relations" / "needs.yaml"
-    NW = ((yaml.safe_load(ny.read_text(encoding="utf-8")) or {}).get("lines") or {}) if ny.exists() else {}
+    NW = ((yload(ny.read_text(encoding="utf-8")) or {}).get("lines") or {}) if ny.exists() else {}
     for u in data["units"]:
         m = ID_RE.match(u["id"])
         days = expand(u)

@@ -1,7 +1,7 @@
 export const meta = {
   name: 'new-units',
   description: 'まだ問題のない単元に、図とイラストの多い問題（docs/problem-figures.md）を作り、審査・直し・答えを見ない係 2 人の解き直しで確かめる（D-129〜D-131）',
-  whenToUse: 'みちすじの問題のない単元に、試しの 6 単元の水準で問題を作るとき。args は { units: ["B-017", ...] }。1 回に 12 単元ほど',
+  whenToUse: 'みちすじの問題のない単元に、試しの 6 単元の水準で問題を作るとき。args は { units: ["B-017", ...], width: 4 }（width は同時に進める単元の数、省くと 4）。1 回に 12 単元ほど',
   phases: [
     { title: 'Write', detail: '単元ごとに問題とイラストを書く' },
     { title: 'Review', detail: '別の係が図を見て審査する' },
@@ -84,21 +84,28 @@ const judgePrompt = (id, solved) => `みちすじの単元 ${id} を、答えを
 5. docs/problem-figures.md の決まりに従う。`
 
 const ids = (args && args.units) || []
-log(`${ids.length} 単元を作る`)
-const out = await pipeline(
-  ids,
-  id => agent(writePrompt(id), { label: `作る:${id}`, phase: 'Write' }),
-  (w, id) => w ? agent(reviewPrompt(id), { label: `審査:${id}`, phase: 'Review', schema: REVIEW, model: 'sonnet' }).then(r => ({ w, r })) : null,
-  (x, id) => {
-    if (!x) return null
-    if (!x.r || (!x.r.fixes.length && Object.values(x.r.scores).every(s => s >= 4))) return { ...x, f: '直しなし' }
-    return agent(fixPrompt(id, x.r), { label: `直す:${id}`, phase: 'Fix' }).then(f => ({ ...x, f }))
-  },
-  (x, id) => x ? parallel(['a', 'b'].map(t => () => agent(solvePrompt(id, t), { label: `解く:${id}-${t}`, phase: 'Solve', schema: SOLVE })
-    .then(r => r ? { t, answers: r.answers } : null))).then(s => ({ ...x, s: s.filter(Boolean) })) : null,
-  (x, id) => x ? agent(judgePrompt(id, x.s), { label: `照らす:${id}`, phase: 'Judge', schema: JUDGE })
-    .then(j => ({ id, write: x.w, review: x.r && x.r.scores, fix: x.f, judge: j })) : null,
-)
+// 同時に進める単元の数（PC を軽くする。D-132）。args.width で変えられる。1 単元は 作る → 審査 → 直す → 解く 2 人 → 照らす の順
+const W = Math.max(1, Math.min(ids.length || 1, (args && args.width) || 4))
+log(`${ids.length} 単元を作る（同時に ${W} 単元まで）`)
+const one = async id => {
+  const w = await agent(writePrompt(id), { label: `作る:${id}`, phase: 'Write' })
+  if (!w) return null
+  const r = await agent(reviewPrompt(id), { label: `審査:${id}`, phase: 'Review', schema: REVIEW, model: 'sonnet' })
+  const f = (!r || (!r.fixes.length && Object.values(r.scores).every(s => s >= 4))) ? '直しなし'
+    : await agent(fixPrompt(id, r), { label: `直す:${id}`, phase: 'Fix' })
+  const s = (await parallel(['a', 'b'].map(t => () => agent(solvePrompt(id, t), { label: `解く:${id}-${t}`, phase: 'Solve', schema: SOLVE })
+    .then(x => x ? { t, answers: x.answers } : null)))).filter(Boolean)
+  const j = await agent(judgePrompt(id, s), { label: `照らす:${id}`, phase: 'Judge', schema: JUDGE })
+  return { id, write: w, review: r && r.scores, fix: f, judge: j }
+}
+const out = ids.map(() => null)
+let next = 0
+await parallel(Array.from({ length: W }, () => async () => {
+  while (next < ids.length) {
+    const i = next++
+    try { out[i] = await one(ids[i]) } catch (e) { log(`${ids[i]} は途中で止まった：${e}`) }
+  }
+}))
 const ok = out.filter(Boolean)
 log(`終わった単元 ${ok.length}/${ids.length}`)
 return ok
