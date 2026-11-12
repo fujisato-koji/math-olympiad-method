@@ -33,7 +33,7 @@ if cmd == 'build':
         rows = [{'key': k, 'part': it.get('part'), 'text': it.get('text', ''), 'choices': it.get('choices'),
                  'figure': it.get('figure'), 'svg': it.get('svg')} for k, it in items(uid) if answerable(it)]
         (OUT / f'{uid}.json').write_text(json.dumps(rows, ensure_ascii=False, indent=1), encoding='utf-8')
-        print(uid, len(rows), '問')
+        print(uid, len(rows), '問', OUT / f'{uid}.json')
 elif cmd == 'key':
     for uid in ids:
         print(json.dumps({k: str(it['answer']) for k, it in items(uid) if answerable(it)}, ensure_ascii=False))
