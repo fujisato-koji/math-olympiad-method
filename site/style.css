@@ -38,6 +38,8 @@
   --bad: #d4553a;
   --warn: #c27c14;
   --glow: rgba(255, 196, 61, .55);
+  /* これまで（D-136）の濃淡：青 1 色の 4 段（紙の地で、いちばん薄い段も 2:1。明るさは順に下がる）と棒の色 */
+  --heat-1: #86b6ef; --heat-2: #3987e5; --heat-3: #1c5cab; --heat-4: #0d366b; --heat-0: #ece7dc; --bar: #2a78d6;
   --shadow: 0 1px 2px rgba(28, 34, 48, .05), 0 10px 30px rgba(28, 34, 48, .07);
   --radius: 20px;
   --font: "Zen Maru Gothic", "Hiragino Maru Gothic ProN", "Hiragino Sans", "Yu Gothic UI", "Meiryo", system-ui, sans-serif;
@@ -83,6 +85,7 @@
     --bad: #ff7b61;
     --warn: #f0b056;
     --glow: rgba(255, 205, 90, .4);
+    --heat-1: #184f95; --heat-2: #2a78d6; --heat-3: #6da7ec; --heat-4: #b7d3f6; --heat-0: #1c2438; --bar: #5598e7;  /* 暗い地では、薄いほど地に沈み、多い日ほど明るく（D-136） */
     --shadow: 0 1px 2px rgba(0, 0, 0, .3), 0 12px 32px rgba(0, 0, 0, .28);
     color-scheme: dark;
   }
@@ -125,6 +128,7 @@
   --bad: #ff7b61;
   --warn: #f0b056;
   --glow: rgba(255, 205, 90, .4);
+  --heat-1: #184f95; --heat-2: #2a78d6; --heat-3: #6da7ec; --heat-4: #b7d3f6; --heat-0: #1c2438; --bar: #5598e7;
   --shadow: 0 1px 2px rgba(0, 0, 0, .3), 0 12px 32px rgba(0, 0, 0, .28);
   color-scheme: dark;
 }
@@ -1102,4 +1106,58 @@ sup.m, sub.m { font-size: .72em; line-height: 0; }
   .icon { width: 36px; height: 36px; }
   .icon svg { width: 18px; height: 18px; }
   .who-chip { max-width: 4.5em; padding: 6px 9px; }
+}
+/* これまで（D-136）：日ごとの問題の数。カレンダーの濃淡（青 1 色の 4 段）、この 30 日の棒、日ごとの一覧 */
+.lg { margin: 22px 0 40px; }
+.lg .lg-stats { display: grid; grid-template-columns: minmax(180px, 1.4fr) repeat(3, minmax(120px, 1fr)); gap: 12px; margin-bottom: 12px; }
+.lg .lg-hero .ay-big b { font-size: 52px; }
+.lg .lg-v { font-size: 28px; font-weight: 700; line-height: 1.1; }
+.lg .lg-v small { font-size: 14px; font-weight: 500; color: var(--ink-2); }
+.lg .lg-cal, .lg .lg-bars { margin-bottom: 12px; }
+.lg .hm-wrap { overflow-x: auto; padding: 2px 2px 4px; }
+.lg .hm { display: grid; grid-template-columns: 18px auto; grid-template-rows: 16px auto; column-gap: 6px; width: max-content; }
+.lg .hm-months { grid-column: 2; display: grid; grid-template-columns: repeat(var(--weeks), 13px); column-gap: 3px; font-size: 11px; color: var(--muted); }
+.lg .hm-months span { white-space: nowrap; }
+.lg .hm-dow { grid-column: 1; grid-row: 2; display: grid; grid-template-rows: repeat(7, 13px); row-gap: 3px; font-size: 10px; line-height: 13px; color: var(--muted); }
+.lg .hm-cells { grid-column: 2; grid-row: 2; display: grid; grid-auto-flow: column; grid-template-rows: repeat(7, 13px); grid-auto-columns: 13px; gap: 3px; }
+.lg .hc { display: block; width: 13px; height: 13px; border-radius: 3px; background: var(--heat-0); }
+.lg .hc.l1 { background: var(--heat-1); }
+.lg .hc.l2 { background: var(--heat-2); }
+.lg .hc.l3 { background: var(--heat-3); }
+.lg .hc.l4 { background: var(--heat-4); }
+.lg .hc.f { background: none; }
+.lg .hc.now { outline: 2px solid var(--ink); outline-offset: 1px; }
+.lg .hm-cells .hc[data-tip]:hover { filter: brightness(1.15); cursor: pointer; }
+.lg .hm-key { display: flex; align-items: center; gap: 4px; font-size: 12px; margin-top: 4px; }
+.lg .hm-key span { margin: 0 4px; }
+.lg .bc { display: grid; grid-template-columns: auto 1fr; column-gap: 8px; margin: 18px 0 22px; }
+.lg .bc-axis { position: relative; width: 30px; height: 132px; font-size: 11px; color: var(--muted); font-variant-numeric: tabular-nums; }
+.lg .bc-axis span { position: absolute; right: 0; transform: translateY(-50%); }
+.lg .bc-axis span:nth-child(1) { top: 0; }
+.lg .bc-axis span:nth-child(2) { top: 50%; }
+.lg .bc-axis span:nth-child(3) { top: 100%; }
+.lg .bc-plot { display: flex; align-items: flex-end; gap: 2px; height: 132px; border-bottom: 1px solid var(--muted);
+  background: linear-gradient(to bottom, var(--line) 1px, transparent 1px) 0 0 / 100% 50%; }
+.lg .bc-plot .b { flex: 1; height: 100%; display: flex; align-items: flex-end; justify-content: center; position: relative; cursor: pointer; }
+.lg .bc-plot .b i { position: relative; width: 100%; max-width: 18px; background: var(--bar); border-radius: 4px 4px 0 0; }
+.lg .bc-plot .b:hover i { filter: brightness(1.15); }
+.lg .bc-plot .b em { position: absolute; bottom: 100%; left: 50%; transform: translateX(-50%); margin-bottom: 3px; font-style: normal; font-size: 12px; font-weight: 700; color: var(--ink); white-space: nowrap; }
+.lg .bc-plot .b s { position: absolute; top: 100%; margin-top: 5px; font-size: 11px; color: var(--muted); text-decoration: none; white-space: nowrap; }
+.lg .lg-list h3 { display: flex; align-items: baseline; gap: 12px; margin: 26px 0 6px; font-size: 16px; }
+.lg .lg-list h3 .muted { font-size: 13px; font-weight: 500; }
+.lg .lg-row { display: grid; grid-template-columns: 84px 72px 140px 1fr; align-items: center; gap: 10px; padding: 9px 12px; border-bottom: 1px solid var(--line); border-radius: 10px; }
+.lg .lg-row .d { white-space: nowrap; }
+.lg .lg-row .n b { font-size: 18px; font-variant-numeric: tabular-nums; }
+.lg .lg-row .muted { font-size: 13px; }
+.lg .lg-row .us { display: flex; flex-wrap: wrap; gap: 6px; }
+.lg .lg-row.hit { animation: lg-hit 1.8s ease-out; }
+@keyframes lg-hit { from { background: color-mix(in srgb, var(--bar) 22%, transparent); } to { background: transparent; } }
+.lg .lg-empty { align-items: center; padding: 40px; }
+.lg-tip { position: fixed; z-index: 60; pointer-events: none; padding: 6px 10px; border-radius: 10px; background: var(--solid); color: var(--solid-ink); font-size: 13px; box-shadow: var(--shadow); white-space: nowrap; }
+@media (max-width: 720px) {
+  .lg .lg-stats { grid-template-columns: 1fr 1fr; }
+  .lg .lg-hero, .lg .lg-stats > :last-child { grid-column: 1 / -1; }
+  .lg .lg-row { grid-template-columns: max-content max-content 1fr; gap: 4px 12px; }
+  .lg .lg-row .us { grid-column: 1 / -1; }
+  .lg .lg-row .us:empty { display: none; }
 }

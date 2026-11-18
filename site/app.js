@@ -667,6 +667,7 @@
     if (p[0] === 'look' && UNITS[p[1]]) return { name: 'day', type: 'look', id: p[1], day: Math.min(Math.max(1, parseInt(p[2], 10) || 1), UNITS[p[1]].days.length) };
     if (p[0] === 'goal' && GOAL_SETS[p[1]]) return { name: 'goal', goal: p[1] };
     if (p[0] === 'comb') return { name: 'comb' };
+    if (p[0] === 'log') return { name: 'log' };
     if (p[0] === 'join' && p[1]) return { name: 'join', file: p[1] };
     return { name: 'map' };
   }
@@ -676,6 +677,7 @@
     const parts = [['#/', '全体の地図', r.id || '']];
     if (r.name === 'goal') parts.push(['', '目標：' + GOALS.find(g => g.id === r.goal).name]);
     if (r.name === 'comb') parts.push(['', '組み合わせの層']);
+    if (r.name === 'log') parts.push(['', 'これまで']);
     if (r.name === 'join') parts.push(['', '共有の記録']);
     if (r.name === 'level' && THINK[r.level]) parts.push(['', `水準 ${r.level} ${THINK[r.level].name}`]);
     if (r.id) parts.push([`#/unit/${r.id}`, UNITS[r.id].title]);
@@ -699,7 +701,7 @@
   const viewHtml = r => r.name === 'level' ? viewLevel(r.level)
     : r.name === 'unit' ? viewUnit(r.id)
     : r.name === 'day' ? viewDay(r.id, r.day, r.type, r.group, r.start)
-    : r.name === 'goal' ? viewGoal(r.goal) : r.name === 'comb' ? viewComb() : r.name === 'join' ? viewJoin(r.file)
+    : r.name === 'goal' ? viewGoal(r.goal) : r.name === 'comb' ? viewComb() : r.name === 'join' ? viewJoin(r.file) : r.name === 'log' ? viewLog()
     : '';  // 地図は 3D と 2D の画面だけ（D-080、施主「あゆみ以下のページは削除」「3D もはずしてください」）
   function render() {
     const r = parse(), view = $('#view');
@@ -715,6 +717,7 @@
     $('#crumbs').innerHTML = crumbs(r);
     document.title = (r.name === 'map' ? '' : $('#crumbs .here').textContent + ' — ') + 'みちすじ';
     if (r.name === 'day') drawItem();
+    if (r.name === 'log') logScroll();
     if (r.name === 'join') { const b = $('#btn-join'); if (b) b.addEventListener('click', () => joinOpen(r.file)); }
     window.scrollTo(0, 0);
   }
@@ -726,6 +729,7 @@
     const y = window.scrollY;
     $('#view').innerHTML = viewHtml(r);
     if (r.name === 'map') paint();
+    if (r.name === 'log') logScroll();
     window.scrollTo(0, y);
   }
 
@@ -813,6 +817,119 @@
       ${asks.length ? `<div class="row"><b>ふりかえり待ち</b> ${asks.map(a => `<a class="from" href="#/look/${a.u}/${a.day}" style="${lc(UNITS[a.u].lane)}">${esc(UNITS[a.u].title)}</a>`).join('')}</div>` : ''}
     </div>`;
   }
+
+  // ---- これまで（D-136、施主「これまでいつ何問やったかグラフか何かで見えるようにしたい」）：この人の、日ごとの問題の数 ----
+  // 日の記録（progress.log、D-046 から）を使い、それより前の日は単元の日のまとめ（days の date）から数える（dayLog）
+  const mdLabel = date => { const [, m, d] = date.split('-').map(Number); return `${m}月${d}日（${WEEK[new Date(date + 'T00:00:00').getDay()]}）`; };
+  const num = n => n.toLocaleString('ja-JP');
+  function logDays() {
+    const dates = new Set(Object.keys(progress.log || {})), units = {};
+    Object.entries(progress.units).forEach(([id, r]) => Object.entries(r.days || {}).forEach(([d, v]) => {
+      if (!v || !v.date || !UNITS[id]) return;
+      dates.add(v.date);
+      (units[v.date] || (units[v.date] = [])).push({ id, day: +d });
+    }));
+    return [...dates].sort().map(date => ({ date, L: dayLog(date), units: units[date] || [] })).filter(x => active(x.L));
+  }
+  // 目盛りのきりのよい上限（1、2、5 × 10 の何乗）
+  const niceTop = v => { const p = Math.pow(10, Math.floor(Math.log10(Math.max(1, v)))); return [1, 2, 5, 10].map(k => k * p).find(t => t >= v); };
+  function viewLog() {
+    const days = logDays(), today = localDate(), name = store.profiles[store.current].name;
+    const head = `<div class="ay-head"><h2>これまで</h2><span class="muted">${esc(name)}</span></div>`;
+    if (!days.length) return `<section class="lg">${head}<div class="ay-card lg-empty"><span class="muted">まだ 記録が ありません</span></div></section>`;
+    const by = Object.fromEntries(days.map(x => [x.date, x]));
+    const total = days.reduce((a, x) => a + x.L.n, 0), ok = days.reduce((a, x) => a + x.L.ok, 0);
+    const best = days.reduce((a, x) => x.L.n > a.L.n ? x : a, days[0]);
+    const tip = (date, L) => L && active(L) ? `${mdLabel(date)}　${num(L.n)} 問・一度に ${num(L.ok)}` : `${mdLabel(date)}　なし`;
+    // カレンダー：日曜はじまりの週を列に。最初の日の週から今週まで（少なくとも 8 週）。濃さは多さ（4 段）
+    const start = new Date(days[0].date + 'T00:00:00'); start.setDate(start.getDate() - start.getDay());
+    const end = new Date(today + 'T00:00:00');
+    let weeks = Math.floor(Math.round((end - start) / 864e5) / 7) + 1;
+    if (weeks < 8) { start.setDate(start.getDate() - 7 * (8 - weeks)); weeks = 8; }
+    const max = Math.max(1, best.L.n), cells = [], marks = [];
+    for (let w = 0; w < weeks; w++) {
+      // 月の名前：その週の日曜の月が前の週と変わった列に 1 つ。次の名前と 3 列より近ければ、前のほうは出さない（重ならないように）
+      const sun = new Date(start); sun.setDate(start.getDate() + w * 7);
+      if (!marks.length || marks[marks.length - 1].m !== sun.getMonth()) marks.push({ w, m: sun.getMonth() });
+      for (let k = 0; k < 7; k++) {
+        const dt = new Date(start); dt.setDate(start.getDate() + w * 7 + k);
+        const date = localDate(dt), L = by[date] && by[date].L;
+        if (date > today) { cells.push('<i class="hc f"></i>'); continue; }
+        const lv = L && L.n ? Math.min(4, Math.ceil(4 * L.n / max)) : 0;
+        cells.push(`<i class="hc l${lv}${date === today ? ' now' : ''}" data-tip="${esc(tip(date, L))}" data-logday="${date}"></i>`);
+      }
+    }
+    const months = marks.filter((x, i) => !marks[i + 1] || marks[i + 1].w - x.w >= 3).map(x => `<span style="grid-column:${x.w + 1}">${x.m + 1}月</span>`);
+    // 棒：この 30 日
+    const last = Array.from({ length: 30 }, (_, i) => { const d = addDays(i - 29); return { d, L: (by[d] || {}).L || { n: 0, ok: 0 } }; });
+    const lmax = Math.max(...last.map(x => x.L.n)), top = niceTop(Math.max(1, lmax)), peak = last.findIndex(x => x.L.n === lmax && lmax > 0);
+    const bars = last.map((x, i) => `<span class="b" data-tip="${esc(tip(x.d, x.L))}" data-logday="${x.d}">
+        <i style="height:${(100 * x.L.n / top).toFixed(1)}%">${i === peak ? `<em>${num(x.L.n)}</em>` : ''}</i>
+        ${(29 - i) % 7 === 0 ? `<s>${i === 29 ? 'きょう' : x.d.slice(5).replace('-', '/').replace(/^0/, '').replace('/0', '/')}</s>` : ''}</span>`).join('');
+    // 日ごとの一覧：新しい日から、月ごとにまとめる
+    const groups = [];
+    [...days].reverse().forEach(x => {
+      const ym = x.date.slice(0, 7);
+      if (!groups.length || groups[groups.length - 1].ym !== ym) groups.push({ ym, list: [] });
+      groups[groups.length - 1].list.push(x);
+    });
+    const list = groups.map(g => {
+      const [y, m] = g.ym.split('-').map(Number), gn = g.list.reduce((a, x) => a + x.L.n, 0);
+      return `<h3>${y}年${m}月<span class="muted">${num(gn)} 問・${g.list.length} 日</span></h3>
+        ${g.list.map(x => {
+          const min = Math.round((x.L.sec || 0) / 60);
+          const us = x.units.map(u => `<a class="from" href="#/unit/${u.id}" style="${lc(UNITS[u.id].lane)}">${esc(UNITS[u.id].title)} ${u.day} 日目</a>`).join('');
+          return `<div class="lg-row" id="lg-${x.date}"><span class="d">${mdLabel(x.date).replace(/^\d+月/, '')}</span>
+            <span class="n"><b>${num(x.L.n)}</b> 問</span>
+            <span class="muted">一度に ${num(x.L.ok)}${min ? `・${min} 分` : ''}</span><span class="us">${us}</span></div>`;
+        }).join('')}`;
+    }).join('');
+    return `<section class="lg">${head}
+      <div class="lg-stats">
+        <div class="ay-card lg-hero"><span class="k">これまで</span><span class="ay-big"><b>${num(total)}</b><span class="u">問</span></span></div>
+        <div class="ay-card"><span class="k">やった日</span><span class="lg-v">${num(days.length)}<small> 日</small></span></div>
+        <div class="ay-card"><span class="k">一度にできた</span><span class="lg-v">${total ? Math.round(100 * ok / total) : 0}<small>%</small></span></div>
+        <div class="ay-card"><span class="k">いちばん多かった日</span><span class="lg-v">${num(best.L.n)}<small> 問</small></span><span class="muted">${mdLabel(best.date)}</span></div>
+      </div>
+      <div class="ay-card lg-cal"><span class="k">日ごと</span>
+        <div class="hm-wrap"><div class="hm" style="--weeks:${weeks}">
+          <div class="hm-months">${months.join('')}</div>
+          <div class="hm-dow"><span></span><span>月</span><span></span><span>水</span><span></span><span>金</span><span></span></div>
+          <div class="hm-cells" role="img" aria-label="日ごとの問題の数（濃いほど多い。数は下の一覧）">${cells.join('')}</div>
+        </div></div>
+        <div class="hm-key muted"><span>少ない</span><i class="hc l1"></i><i class="hc l2"></i><i class="hc l3"></i><i class="hc l4"></i><span>多い</span></div>
+      </div>
+      <div class="ay-card lg-bars"><span class="k">この 30 日</span>
+        <div class="bc" role="img" aria-label="この 30 日の、日ごとの問題の数（数は下の一覧）">
+          <div class="bc-axis"><span>${num(top)}</span><span>${num(top / 2)}</span><span>0</span></div>
+          <div class="bc-plot">${bars}</div>
+        </div>
+      </div>
+      <div class="lg-list">${list}</div>
+      <div class="lg-tip" id="lg-tip" hidden></div>
+    </section>`;
+  }
+  // 指を置いたマスと棒に、日付と数を出す。押すと一覧のその日へ
+  $('#view').addEventListener('pointermove', e => {
+    const t = $('#lg-tip');
+    if (!t) return;
+    const m = e.target.closest('[data-tip]');
+    if (!m) { t.hidden = true; return; }
+    t.textContent = m.dataset.tip;
+    t.hidden = false;
+    const x = Math.min(window.innerWidth - t.offsetWidth - 8, e.clientX + 12);
+    t.style.left = `${Math.max(8, x)}px`; t.style.top = `${e.clientY - t.offsetHeight - 12}px`;
+  });
+  $('#view').addEventListener('pointerleave', () => { const t = $('#lg-tip'); if (t) t.hidden = true; });
+  $('#view').addEventListener('click', e => {
+    const m = e.target.closest('[data-logday]');
+    const row = m && document.getElementById('lg-' + m.dataset.logday);
+    if (!row) return;
+    row.scrollIntoView({ behavior: 'smooth', block: 'center' });
+    row.classList.remove('hit'); void row.offsetWidth; row.classList.add('hit');
+  });
+  // カレンダーは新しい週（右の端）を見せる
+  const logScroll = () => { const w = $('.hm-wrap'); if (w) w.scrollLeft = w.scrollWidth; };
 
   // ---- 全体の地図 ----
   function viewMap() {
@@ -2243,6 +2360,7 @@
   btnMusic.addEventListener('click', () => { prefs.music = !prefs.music; Music.set(prefs.music); save(PREF, prefs); sync(); });
   const menu = $('#menu');
   $('#btn-menu').addEventListener('click', () => menu.showModal());
+  $('#btn-log').addEventListener('click', () => menu.close());  // これまでの記録へ移るときは窓を閉じる（D-136）
   // だれの記録か（D-044）：人を切り替える、足す、呼び名を変える
   const who = () => store.profiles[store.current];
   const tomb = pid => { (store.deleted || (store.deleted = {}))[pid] = localDate(); };
