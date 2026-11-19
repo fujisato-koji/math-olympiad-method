@@ -22,6 +22,19 @@
       .then(c => attachUnit(id, c))
       .catch(e => { delete LOADING[id]; throw e; }));
   }
+  // これからやりそうな単元を、電波があるときに裏で先に読む（D-195、施主「電波があるときに、これからやりそうな単元だけを裏で先に読み込む」）。
+  // 「次にやること」（options：ふりかえり、確かめの日、進めている単元、次にできる単元、腕だめし）の先頭 6 単元を 1 つずつ読む。
+  // 読んだファイルは Service Worker が控えるので、電波がないところでも、その単元を開いて続けられる
+  const PREFETCH = 6;
+  let prefetching = false;
+  function prefetchNext() {
+    if (prefetching || !navigator.onLine) return;
+    let ids;
+    try { ids = [...new Set(options().map(o => o.u.id))].filter(id => UNITS[id] && UNITS[id].c && !LOADED[id]).slice(0, PREFETCH); } catch { return; }
+    if (!ids.length) return;
+    prefetching = true;
+    ids.reduce((p, id) => p.then(() => loadUnit(id).catch(() => {})), Promise.resolve()).then(() => { prefetching = false; });
+  }
   // 考え方の水準（D-028）。段（stage）は画面に出さない
   const THINK = Object.fromEntries((R.levels || []).map(l => [l.id, l]));
   const KEY = 'michisuji.progress.v1', PREF = 'michisuji.prefs.v1';
@@ -2258,6 +2271,7 @@
   }
   function drawFinish() {
     const s = session, u = UNITS[s.id], d = u.days[s.n - 1], el = $('#play');
+    setTimeout(prefetchNext, 2000);  // 1 日を終えると次にやることが変わるので、先に読む単元を見直す（D-195）
     if (s.type === 'ri') {
       // 腕だめし：判定はしない。星を見せる
       const res = s.results.filter(Boolean), got = res.map(x => x.skipped ? 0 : x.first ? 3 : !x.hints && !x.dunno ? 2 : 1);
@@ -2852,6 +2866,9 @@
   Music.init(prefs.music);
   sync();
   render();
+  // これからやりそうな単元を裏で先に読む（D-195）：開いて少し待ってから（最初の描画を遅らせない）と、電波がもどったとき
+  setTimeout(prefetchNext, 4000);
+  window.addEventListener('online', () => setTimeout(prefetchNext, 1000));
   // ホーム画面に置けるアプリ（PWA、D-049）：電波がなくても開けるように、開いたファイルをとっておく
   if ('serviceWorker' in navigator && (location.protocol === 'https:' || ['127.0.0.1', 'localhost'].includes(location.hostname))) {
     navigator.serviceWorker.register('sw.js').catch(() => { /* とっておけなくても画面は使える */ });
