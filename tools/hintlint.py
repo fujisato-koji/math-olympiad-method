@@ -82,7 +82,7 @@ def empty_marks(it):
                 continue  # 囲みの中にヒントの字がある（途中の式などに置きかえた）なら空ではない
             lost += [t for x, y, t in q if t and t not in have and t not in lost and inside(x, y, b)]
         if lost:
-            out.append(f'空の囲み？ ヒント {k} の図の輪か四角が、問いの図の字「{"」「".join(lost)}」の場所を囲むが、ヒントの図にその字がない（字も描き入れる）')
+            out.append(f'空の囲み？ ヒント {k} の図の輪か四角が、問いの図の字「{"」「".join(lost)}」の場所を囲むが、ヒントの図にその字がない（描き直して字を落としたなら描き入れる。問いと別の絵、絵の一部の点線、わざと字を消した図なら、そのままでよい）')
     return out
 
 
