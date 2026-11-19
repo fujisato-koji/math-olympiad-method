@@ -85,7 +85,7 @@ items:
   sources:
   - MD02
   units:
-  - I-045
+  - I-072
   - I-051
 - id: T-11
   field: 医学
@@ -93,7 +93,7 @@ items:
   sources:
   - MD02
   units:
-  - I-047
+  - I-073
   - I-052
 - id: T-12
   field: 医学
@@ -126,7 +126,7 @@ items:
   sources:
   - MD02
   units:
-  - I-048
+  - I-074
 - id: T-16
   field: 医学
   topic: 筋骨格と結合組織の病気

@@ -313,7 +313,7 @@ items:
     parent: "071"
     name: "Electricity and energy"
     ja: "電気とエネルギー"
-    units: [E-170, E-197, E-167, E-160, E-038, E-041]
+    units: [E-170, E-197, E-167, E-160, E-038, E-041, E-249]
     sources: [Y01]
   - id: "0714"
     parent: "071"
@@ -424,7 +424,7 @@ items:
     parent: "091"
     name: "Medicine"
     ja: "医学"
-    units: [I-004, I-012, I-021, I-044, I-045, I-050]
+    units: [I-004, I-012, I-021, I-044, I-045, I-050, I-072]
     sources: [Y01]
   - id: "0913"
     parent: "091"

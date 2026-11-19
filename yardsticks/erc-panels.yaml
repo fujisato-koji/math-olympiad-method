@@ -1,0 +1,2457 @@
+# 外の物差し：ERC（欧州研究会議）の助成審査のパネルと細目で、研究の分野の抜けを測る（ERC・OpenAlex の回）。3 つの領域（PE・LS・SH）と 28 のパネルを group にし、403 の細目を項目にした。2024 年の公募の構造（最新のパネルは 28 で同じ）。細目の説明文は写していない。
+# 書き方と確かめ方は docs/yardsticks.md。地図（roadmap.yaml）は変えず、足りない単元は gap に案を書くだけ（D-117）。判定の根拠は docs/research/yardstick-erc-openalex.md。
+title: "ERC panel structure（2024 calls）"
+version: "2024"
+sources:
+  Y01: {title: "ERC Panel structure 2024 calls", url: "https://erc.europa.eu/sites/default/files/2023-03/ERC_panel_structure_2024_calls.pdf", date: 2026-11-19, license: "未確認（ERC の公表文書）。記号と名前だけを使い、説明文は写していない"}
+  Y02: {title: "ERC Work Programme Annex 1 Primary Panel Structure（28 パネル）", url: "https://erc.europa.eu/system/files/2026-08/Panel-Structure.pdf", date: 2026-11-19, license: "未確認（ERC の公表文書）"}
+items:
+  - {id: "PE", name: "Physical Sciences and Engineering", ja: "物理科学と工学", group: true}
+  - {id: "PE1", parent: "PE", name: "Mathematics", ja: "数学", group: true}
+  - {id: "PE2", parent: "PE", name: "Fundamental Constituents of Matter", ja: "物質の基本構成要素", group: true}
+  - {id: "PE3", parent: "PE", name: "Condensed Matter Physics", ja: "物性物理", group: true}
+  - {id: "PE4", parent: "PE", name: "Physical and Analytical Chemical Sciences", ja: "物理化学と分析化学", group: true}
+  - {id: "PE5", parent: "PE", name: "Synthetic Chemistry and Materials", ja: "合成化学と材料", group: true}
+  - {id: "PE6", parent: "PE", name: "Computer Science and Informatics", ja: "計算機科学と情報学", group: true}
+  - {id: "PE7", parent: "PE", name: "Systems and Communication Engineering", ja: "システム工学と通信工学", group: true}
+  - {id: "PE8", parent: "PE", name: "Products and Processes Engineering", ja: "製品とプロセスの工学", group: true}
+  - {id: "PE9", parent: "PE", name: "Universe Sciences", ja: "宇宙科学", group: true}
+  - {id: "PE10", parent: "PE", name: "Earth System Science", ja: "地球システム科学", group: true}
+  - {id: "PE11", parent: "PE", name: "Materials Engineering", ja: "材料工学", group: true}
+  - {id: "LS", name: "Life Sciences", ja: "生命科学", group: true}
+  - {id: "LS1", parent: "LS", name: "Molecules of Life: Biological Mechanisms, Structures and Functions", ja: "生命の分子（生物学的機構・構造・機能）", group: true}
+  - {id: "LS2", parent: "LS", name: "Integrative Biology: from Genes and Genomes to Systems", ja: "統合生物学（遺伝子とゲノムからシステムまで）", group: true}
+  - {id: "LS3", parent: "LS", name: "Cell Biology, Development, Stem Cells and Regeneration", ja: "細胞生物学・発生・幹細胞・再生", group: true}
+  - {id: "LS4", parent: "LS", name: "Physiology in Health, Disease and Ageing", ja: "健康・疾患・加齢の生理学", group: true}
+  - {id: "LS5", parent: "LS", name: "Neuroscience and Disorders of the Nervous System", ja: "神経科学と神経系の疾患", group: true}
+  - {id: "LS6", parent: "LS", name: "Immunity, Infection and Immunotherapy", ja: "免疫・感染・免疫療法", group: true}
+  - {id: "LS7", parent: "LS", name: "Prevention, Diagnosis and Treatment of Human Diseases", ja: "ヒトの疾患の予防・診断・治療", group: true}
+  - {id: "LS8", parent: "LS", name: "Environmental Biology, Ecology and Evolution", ja: "環境生物学・生態学・進化", group: true}
+  - {id: "LS9", parent: "LS", name: "Biotechnology and Biosystems Engineering", ja: "バイオテクノロジーとバイオシステム工学", group: true}
+  - {id: "SH", name: "Social Sciences and Humanities", ja: "社会科学と人文学", group: true}
+  - {id: "SH1", parent: "SH", name: "Individuals, Markets and Organisations", ja: "個人・市場・組織", group: true}
+  - {id: "SH2", parent: "SH", name: "Institutions, Governance and Legal Systems", ja: "制度・統治・法体系", group: true}
+  - {id: "SH3", parent: "SH", name: "The Social World and Its Interactions", ja: "社会とその相互作用", group: true}
+  - {id: "SH4", parent: "SH", name: "The Human Mind and Its Complexity", ja: "人の心とその複雑さ", group: true}
+  - {id: "SH5", parent: "SH", name: "Texts and Concepts", ja: "文章と概念", group: true}
+  - {id: "SH6", parent: "SH", name: "The Study of the Human Past", ja: "人の過去の研究", group: true}
+  - {id: "SH7", parent: "SH", name: "Human Mobility, Environment, and Space", ja: "人の移動・環境・空間", group: true}
+  - {id: "SH8", parent: "SH", name: "Studies of Cultures and Arts", ja: "文化と芸術の研究", group: true}
+  - id: "PE1_1"
+    parent: "PE1"
+    name: "Logic and foundations"
+    ja: "論理と数学の基礎"
+    units: [L-025, L-029, L-031, L-034, L-043]
+    sources: [Y01]
+  - id: "PE1_2"
+    parent: "PE1"
+    name: "Algebra"
+    ja: "代数学"
+    units: [R-001, R-008, R-013, R-024, R-026]
+    sources: [Y01]
+  - id: "PE1_3"
+    parent: "PE1"
+    name: "Number theory"
+    ja: "数論"
+    units: [N-051, N-055, N-058, N-066, N-069]
+    sources: [Y01]
+  - id: "PE1_4"
+    parent: "PE1"
+    name: "Algebraic and complex geometry"
+    ja: "代数幾何と複素幾何"
+    units: [T-030, T-034, T-035, T-054, D-092]
+    sources: [Y01]
+  - id: "PE1_5"
+    parent: "PE1"
+    name: "Lie groups, Lie algebras"
+    ja: "リー群とリー環"
+    units: [R-020, R-021, R-022, R-023, R-033]
+    sources: [Y01]
+  - id: "PE1_6"
+    parent: "PE1"
+    name: "Geometry and global analysis"
+    ja: "幾何学と大域解析"
+    units: [T-016, T-017, T-045, T-061, T-062]
+    sources: [Y01]
+  - id: "PE1_7"
+    parent: "PE1"
+    name: "Topology"
+    ja: "位相幾何学"
+    units: [T-019, T-024, T-027, T-043, T-050]
+    sources: [Y01]
+  - id: "PE1_8"
+    parent: "PE1"
+    name: "Analysis"
+    ja: "解析学"
+    units: [D-020, D-021, D-083, D-085, D-086]
+    sources: [Y01]
+  - id: "PE1_9"
+    parent: "PE1"
+    name: "Operator algebras and functional analysis"
+    ja: "作用素環と関数解析"
+    units: [D-062, D-065, D-066, D-094, D-095]
+    sources: [Y01]
+  - id: "PE1_10"
+    parent: "PE1"
+    name: "ODE and dynamical systems"
+    ja: "常微分方程式と力学系"
+    units: [D-046, D-053, D-054, D-073, D-074]
+    sources: [Y01]
+  - id: "PE1_11"
+    parent: "PE1"
+    name: "Theoretical aspects of partial differential equations"
+    ja: "偏微分方程式の理論"
+    units: [D-057, D-058, D-059, D-060, D-091]
+    sources: [Y01]
+  - id: "PE1_12"
+    parent: "PE1"
+    name: "Mathematical physics"
+    ja: "数理物理"
+    units: [P-235, P-236, D-094, T-051, D-079]
+    sources: [Y01]
+  - id: "PE1_13"
+    parent: "PE1"
+    name: "Probability"
+    ja: "確率論"
+    units: [S-006, S-008, S-012, S-015, S-043]
+    sources: [Y01]
+  - id: "PE1_14"
+    parent: "PE1"
+    name: "Mathematical statistics"
+    ja: "数理統計学"
+    units: [S-018, S-019, S-021, S-033, S-025]
+    sources: [Y01]
+  - id: "PE1_15"
+    parent: "PE1"
+    name: "Generic statistical methodology and modelling"
+    ja: "統計の一般的な方法とモデル化"
+    units: [S-020, S-023, S-024, S-039, S-042]
+    sources: [Y01]
+  - id: "PE1_16"
+    parent: "PE1"
+    name: "Discrete mathematics and combinatorics"
+    ja: "離散数学と組合せ論"
+    units: [C-021, C-033, C-036, C-037, C-045]
+    sources: [Y01]
+  - id: "PE1_17"
+    parent: "PE1"
+    name: "Mathematical aspects of computer science"
+    ja: "計算機科学の数学的側面"
+    units: [L-026, L-028, K-028, K-041, K-171]
+    sources: [Y01]
+  - id: "PE1_18"
+    parent: "PE1"
+    name: "Numerical analysis"
+    ja: "数値解析"
+    units: [K-001, K-004, K-005, K-007, K-120]
+    sources: [Y01]
+  - id: "PE1_19"
+    parent: "PE1"
+    name: "Scientific computing and data processing"
+    ja: "科学計算とデータ処理"
+    units: [K-190, K-201, K-163, K-015, K-175]
+    sources: [Y01]
+  - id: "PE1_20"
+    parent: "PE1"
+    name: "Control theory, optimisation and operational research"
+    ja: "制御理論・最適化・オペレーションズ・リサーチ"
+    units: [E-054, E-055, K-009, K-010, E-157]
+    sources: [Y01]
+  - id: "PE1_21"
+    parent: "PE1"
+    name: "Application of mathematics in sciences"
+    ja: "科学への数学の応用"
+    units: [P-055, P-251, B-055, B-062, D-079]
+    sources: [Y01]
+  - id: "PE1_22"
+    parent: "PE1"
+    name: "Application of mathematics in industry and society"
+    ja: "産業と社会への数学の応用"
+    units: [E-156, E-157, S-054, K-065, E-155]
+    sources: [Y01]
+  - id: "PE2_1"
+    parent: "PE2"
+    name: "Theory of fundamental interactions"
+    ja: "基本相互作用の理論"
+    units: [P-108, P-111, P-114, P-116, P-220]
+    sources: [Y01]
+  - id: "PE2_2"
+    parent: "PE2"
+    name: "Phenomenology of fundamental interactions"
+    ja: "基本相互作用の現象論"
+    units: [P-108, P-107, P-200, P-220, P-289]
+    sources: [Y01]
+  - id: "PE2_3"
+    parent: "PE2"
+    name: "Experimental particle physics with accelerators"
+    ja: "加速器による素粒子実験"
+    units: [P-107, P-285, P-288, P-118]
+    sources: [Y01]
+  - id: "PE2_4"
+    parent: "PE2"
+    name: "Experimental particle physics without accelerators"
+    ja: "加速器によらない素粒子実験"
+    units: [P-222, P-289, P-168, P-108, P-118]
+    sources: [Y01]
+  - id: "PE2_5"
+    parent: "PE2"
+    name: "Classical and quantum physics of gravitational interactions"
+    ja: "重力相互作用の古典・量子物理"
+    units: [P-061, P-062, P-063, P-240, P-244]
+    sources: [Y01]
+  - id: "PE2_6"
+    parent: "PE2"
+    name: "Nuclear, hadron and heavy ion physics"
+    ja: "原子核・ハドロン・重イオンの物理"
+    units: [P-106, P-287, P-288, P-238, P-104]
+    sources: [Y01]
+  - id: "PE2_7"
+    parent: "PE2"
+    name: "Nuclear and particle astrophysics"
+    ja: "原子核・素粒子天体物理"
+    units: [P-166, P-167, P-168, P-065, P-106]
+    sources: [Y01]
+  - id: "PE2_8"
+    parent: "PE2"
+    name: "Gas and plasma physics"
+    ja: "気体とプラズマの物理"
+    units: [P-041, P-246, P-281, P-284, P-278]
+    sources: [Y01]
+  - id: "PE2_9"
+    parent: "PE2"
+    name: "Electromagnetism"
+    ja: "電磁気学"
+    units: [P-034, P-036, P-038, P-039, P-040]
+    sources: [Y01]
+  - id: "PE2_10"
+    parent: "PE2"
+    name: "Atomic, molecular physics"
+    ja: "原子・分子物理"
+    units: [P-089, P-090, P-091, P-289, H-050]
+    sources: [Y01]
+  - id: "PE2_11"
+    parent: "PE2"
+    name: "Ultra-cold atoms and molecules"
+    ja: "極低温の原子と分子"
+    units: [P-303]
+    sources: [Y01]
+  - id: "PE2_12"
+    parent: "PE2"
+    name: "Optics, non-linear optics and nano-optics"
+    ja: "光学・非線形光学・ナノ光学"
+    units: [P-024, P-027, P-028, P-234, P-174]
+    sources: [Y01]
+  - id: "PE2_13"
+    parent: "PE2"
+    name: "Quantum optics and quantum information"
+    ja: "量子光学と量子情報"
+    units: [P-091, P-084, P-087, P-242, P-245]
+    sources: [Y01]
+  - id: "PE2_14"
+    parent: "PE2"
+    name: "Lasers, ultra-short lasers and laser physics"
+    ja: "レーザー・超短パルスレーザー・レーザー物理"
+    units: [P-028, P-234, P-091, E-159]
+    sources: [Y01]
+  - id: "PE2_15"
+    parent: "PE2"
+    name: "Thermodynamics"
+    ja: "熱力学"
+    units: [P-044, P-045, P-046, E-038]
+    sources: [Y01]
+  - id: "PE2_16"
+    parent: "PE2"
+    name: "Non-linear physics"
+    ja: "非線形物理"
+    units: [P-020, D-055, P-255, P-259, P-284]
+    sources: [Y01]
+  - id: "PE2_17"
+    parent: "PE2"
+    name: "Metrology and measurement"
+    ja: "計量学と測定"
+    units: [P-117, P-118, P-245, P-289, E-166]
+    sources: [Y01]
+  - id: "PE2_18"
+    parent: "PE2"
+    name: "Equilibrium and non-equilibrium statistical mechanics: steady states and dynamics"
+    ja: "平衡・非平衡の統計力学（定常状態と動力学）"
+    units: [P-048, P-049, P-054, P-055, P-239]
+    sources: [Y01]
+  - id: "PE3_1"
+    parent: "PE3"
+    name: "Structure of solids, material growth and characterisation"
+    ja: "固体の構造・結晶成長・評価"
+    units: [P-092, H-053, E-163, E-165, P-243]
+    sources: [Y01]
+  - id: "PE3_2"
+    parent: "PE3"
+    name: "Mechanical and acoustical properties of condensed matter, lattice dynamics"
+    ja: "凝縮系の力学的・音響的性質と格子力学"
+    units: [P-093, P-190, E-163, E-126]
+    sources: [Y01]
+  - id: "PE3_3"
+    parent: "PE3"
+    name: "Transport properties of condensed matter"
+    ja: "凝縮系の輸送特性"
+    units: [P-094, P-054, P-098, P-301]
+    sources: [Y01]
+  - id: "PE3_4"
+    parent: "PE3"
+    name: "Electronic properties of materials, surfaces, interfaces, nanostructures"
+    ja: "物質・表面・界面・ナノ構造の電子的性質"
+    units: [P-095, P-175, P-173, P-102, P-172]
+    sources: [Y01]
+  - id: "PE3_5"
+    parent: "PE3"
+    name: "Physical properties of semiconductors and insulators"
+    ja: "半導体と絶縁体の物性"
+    units: [P-096, E-158, E-159, E-160, E-230]
+    sources: [Y01]
+  - id: "PE3_6"
+    parent: "PE3"
+    name: "Macroscopic quantum phenomena, e.g. superconductivity, superfluidity, quantum Hall effect"
+    ja: "巨視的量子現象（超伝導・超流動・量子ホール効果）"
+    units: [P-099, P-302, P-098, P-250]
+    sources: [Y01]
+  - id: "PE3_7"
+    parent: "PE3"
+    name: "Spintronics"
+    ja: "スピントロニクス"
+    units: [P-304]
+    sources: [Y01]
+  - id: "PE3_8"
+    parent: "PE3"
+    name: "Magnetism and strongly correlated systems"
+    ja: "磁性と強相関系"
+    units: [P-305]
+    sources: [Y01]
+  - id: "PE3_9"
+    parent: "PE3"
+    name: "Condensed matter – beam interactions (photons, electrons, etc.)"
+    ja: "凝縮系と粒子線の相互作用（光子・電子など）"
+    units: [P-243, E-165, P-092]
+    sources: [Y01]
+  - id: "PE3_10"
+    parent: "PE3"
+    name: "Nanophysics, e.g. nanoelectronics, nanophotonics, nanomagnetism, nanoelectromechanics"
+    ja: "ナノ物理（ナノ電子・ナノ光・ナノ磁性・ナノ電気機械）"
+    units: [P-173, P-174, P-172, P-301, P-249]
+    sources: [Y01]
+  - id: "PE3_11"
+    parent: "PE3"
+    name: "Mesoscopic quantum physics and solid-state quantum technologies"
+    ja: "メゾスコピック量子物理と固体量子技術"
+    units: [P-301, P-249, P-298, P-242]
+    sources: [Y01]
+  - id: "PE3_12"
+    parent: "PE3"
+    name: "Molecular electronics"
+    ja: "分子エレクトロニクス"
+    units: [P-306]
+    sources: [Y01]
+  - id: "PE3_13"
+    parent: "PE3"
+    name: "Structure and dynamics of disordered systems, e.g. soft matter (gels, colloids, liquid crystals), granular matter, liquids, glasses, defects"
+    ja: "無秩序系の構造と動力学（ソフトマター・粒状物質）"
+    units: [P-103, P-266, P-268, P-276, P-239]
+    sources: [Y01]
+  - id: "PE3_14"
+    parent: "PE3"
+    name: "Fluid dynamics (physics)"
+    ja: "流体力学（物理）"
+    units: [P-014, E-031, P-269, P-270, E-033]
+    sources: [Y01]
+  - id: "PE3_15"
+    parent: "PE3"
+    name: "Statistical physics: phase transitions, condensed matter systems, models of complex systems, interdisciplinary applications"
+    ja: "統計物理（相転移・凝縮系・複雑系のモデル）"
+    units: [P-052, P-053, P-056, S-043, P-261]
+    sources: [Y01]
+  - id: "PE3_16"
+    parent: "PE3"
+    name: "Physics of biological systems"
+    ja: "生物系の物理"
+    units: [B-013, B-004, B-005, P-267, P-269]
+    sources: [Y01]
+  - id: "PE4_1"
+    parent: "PE4"
+    name: "Physical chemistry"
+    ja: "物理化学"
+    units: [H-036, H-037, H-051, P-046, H-021]
+    sources: [Y01]
+  - id: "PE4_2"
+    parent: "PE4"
+    name: "Spectroscopic and spectrometric techniques"
+    ja: "分光法と質量分析法"
+    units: [H-110]
+    sources: [Y01]
+  - id: "PE4_3"
+    parent: "PE4"
+    name: "Molecular architecture and Structure"
+    ja: "分子の構造と設計"
+    units: [H-014, H-018, H-038, H-050, B-012]
+    sources: [Y01]
+  - id: "PE4_4"
+    parent: "PE4"
+    name: "Surface science and nanostructures"
+    ja: "表面科学とナノ構造"
+    units: [P-175, E-165, P-173, P-174]
+    sources: [Y01]
+  - id: "PE4_5"
+    parent: "PE4"
+    name: "Analytical chemistry"
+    ja: "分析化学"
+    units: [H-111]
+    sources: [Y01]
+  - id: "PE4_6"
+    parent: "PE4"
+    name: "Chemical physics"
+    ja: "化学物理"
+    units: [H-051, H-050, P-090, P-081, H-109]
+    sources: [Y01]
+  - id: "PE4_7"
+    parent: "PE4"
+    name: "Chemical instrumentation"
+    ja: "化学の計測機器"
+    units: [P-118, H-042, E-165, E-188]
+    sources: [Y01]
+  - id: "PE4_8"
+    parent: "PE4"
+    name: "Electrochemistry, electrodialysis, microfluidics, sensors"
+    ja: "電気化学・電気透析・マイクロ流体・センサー"
+    units: [H-048, H-100, H-027, P-277]
+    sources: [Y01]
+  - id: "PE4_9"
+    parent: "PE4"
+    name: "Method development in chemistry"
+    ja: "化学の方法開発"
+    units: [H-047, H-042, H-055, H-031]
+    sources: [Y01]
+  - id: "PE4_10"
+    parent: "PE4"
+    name: "Heterogeneous catalysis"
+    ja: "不均一触媒"
+    units: [H-112]
+    sources: [Y01]
+  - id: "PE4_11"
+    parent: "PE4"
+    name: "Physical chemistry of biological systems"
+    ja: "生物系の物理化学"
+    units: [B-013, B-003, B-007, B-014]
+    sources: [Y01]
+  - id: "PE4_12"
+    parent: "PE4"
+    name: "Chemical reactions: mechanisms, dynamics, kinetics and catalytic reactions"
+    ja: "化学反応（機構・動力学・速度論・触媒反応）"
+    units: [H-023, H-037, H-051, H-052, E-214]
+    sources: [Y01]
+  - id: "PE4_13"
+    parent: "PE4"
+    name: "Theoretical and computational chemistry"
+    ja: "理論化学と計算化学"
+    units: [H-045, H-055, H-051, P-119]
+    sources: [Y01]
+  - id: "PE4_14"
+    parent: "PE4"
+    name: "Radiation and Nuclear chemistry"
+    ja: "放射化学と核化学"
+    units: [P-104, P-287, P-290, H-109, B-186]
+    sources: [Y01]
+  - id: "PE4_15"
+    parent: "PE4"
+    name: "Photochemistry"
+    ja: "光化学"
+    units: [H-109, H-045, P-079]
+    sources: [Y01]
+  - id: "PE4_16"
+    parent: "PE4"
+    name: "Corrosion"
+    ja: "腐食"
+    units: [E-242]
+    sources: [Y01]
+  - id: "PE4_17"
+    parent: "PE4"
+    name: "Characterisation methods of materials"
+    ja: "材料の評価法"
+    units: [E-165, P-243, P-092, P-118, H-041]
+    sources: [Y01]
+  - id: "PE4_18"
+    parent: "PE4"
+    name: "Environment chemistry"
+    ja: "環境化学"
+    units: [H-043, H-080, H-081, W-033, W-034]
+    sources: [Y01]
+  - id: "PE5_1"
+    parent: "PE5"
+    name: "Structural properties of materials"
+    ja: "材料の構造的性質"
+    units: [E-163, E-164, E-015, E-014]
+    sources: [Y01]
+  - id: "PE5_2"
+    parent: "PE5"
+    name: "Solid state materials chemistry"
+    ja: "固体材料化学"
+    units: [H-053, H-019, H-103]
+    sources: [Y01]
+  - id: "PE5_3"
+    parent: "PE5"
+    name: "Surface modification"
+    ja: "表面改質"
+    units: [P-175, E-231, P-281, H-048]
+    sources: [Y01]
+  - id: "PE5_4"
+    parent: "PE5"
+    name: "Thin films"
+    ja: "薄膜"
+    units: [E-231, P-175, P-261, E-163]
+    sources: [Y01]
+  - id: "PE5_5"
+    parent: "PE5"
+    name: "Ionic liquids"
+    ja: "イオン液体"
+    units: [H-102, H-103, H-021, H-108]
+    sources: [Y01]
+  - id: "PE5_6"
+    parent: "PE5"
+    name: "New materials: oxides, alloys, composite, organic-inorganic hybrid, nanoparticles"
+    ja: "新しい材料（酸化物・合金・複合材・有機無機ハイブリッド・ナノ粒子）"
+    units: [H-049, H-053, H-054, E-164, H-092]
+    sources: [Y01]
+  - id: "PE5_7"
+    parent: "PE5"
+    name: "Biomaterials synthesis"
+    ja: "生体材料の合成"
+    units: [E-226, E-168, H-035, H-044]
+    sources: [Y01]
+  - id: "PE5_8"
+    parent: "PE5"
+    name: "Intelligent materials synthesis – self assembled materials"
+    ja: "知能材料の合成と自己組織化材料"
+    units: [H-054, P-103, P-265, P-266]
+    sources: [Y01]
+  - id: "PE5_9"
+    parent: "PE5"
+    name: "Coordination chemistry"
+    ja: "配位化学"
+    units: [H-029, H-046]
+    sources: [Y01]
+  - id: "PE5_10"
+    parent: "PE5"
+    name: "Colloid chemistry"
+    ja: "コロイド化学"
+    units: [P-265, H-021, P-272]
+    sources: [Y01]
+  - id: "PE5_11"
+    parent: "PE5"
+    name: "Biological chemistry and chemical biology"
+    ja: "生物化学とケミカルバイオロジー"
+    units: [H-044, H-057, B-006, B-007]
+    sources: [Y01]
+  - id: "PE5_12"
+    parent: "PE5"
+    name: "Chemistry of condensed matter"
+    ja: "凝縮系の化学"
+    units: [H-053, H-019, H-021, H-049]
+    sources: [Y01]
+  - id: "PE5_13"
+    parent: "PE5"
+    name: "Homogeneous catalysis"
+    ja: "均一系触媒"
+    units: [H-052, H-046, H-047]
+    sources: [Y01]
+  - id: "PE5_14"
+    parent: "PE5"
+    name: "Macromolecular chemistry"
+    ja: "高分子化学（巨大分子）"
+    units: [H-106, H-107, P-262, P-263, P-264]
+    sources: [Y01]
+  - id: "PE5_15"
+    parent: "PE5"
+    name: "Polymer chemistry"
+    ja: "高分子合成化学"
+    units: [H-106, H-035, H-107]
+    sources: [Y01]
+  - id: "PE5_16"
+    parent: "PE5"
+    name: "Supramolecular chemistry"
+    ja: "超分子化学"
+    units: [H-054]
+    sources: [Y01]
+  - id: "PE5_17"
+    parent: "PE5"
+    name: "Organic chemistry"
+    ja: "有機化学"
+    units: [H-039, H-040, H-047, H-104, H-105]
+    sources: [Y01]
+  - id: "PE5_18"
+    parent: "PE5"
+    name: "Medicinal chemistry"
+    ja: "医薬化学"
+    units: [H-056, H-058, H-059]
+    sources: [Y01]
+  - id: "PE6_1"
+    parent: "PE6"
+    name: "Computer architecture, embedded systems, operating systems"
+    ja: "計算機アーキテクチャ・組込み系・オペレーティングシステム"
+    units: [K-030, K-031, K-032, K-037, K-197]
+    sources: [Y01]
+  - id: "PE6_2"
+    parent: "PE6"
+    name: "Distributed systems, parallel computing, sensor networks, cyber-physical systems"
+    ja: "分散系・並列計算・センサーネットワーク・サイバーフィジカル系"
+    units: [K-214, K-215, K-027, K-018, K-197]
+    sources: [Y01]
+  - id: "PE6_3"
+    parent: "PE6"
+    name: "Software engineering, programming languages and systems"
+    ja: "ソフトウェア工学とプログラミング言語・システム"
+    units: [K-199, K-200, K-020, K-039, K-017]
+    sources: [Y01]
+  - id: "PE6_4"
+    parent: "PE6"
+    name: "Theoretical computer science, formal methods, automata"
+    ja: "理論計算機科学・形式手法・オートマトン"
+    units: [L-027, L-028, K-218, K-200, L-043]
+    sources: [Y01]
+  - id: "PE6_5"
+    parent: "PE6"
+    name: "Security, privacy, cryptology, quantum cryptography"
+    ja: "セキュリティ・プライバシー・暗号・量子暗号"
+    units: [K-042, K-044, K-045, K-205, K-209]
+    sources: [Y01]
+  - id: "PE6_6"
+    parent: "PE6"
+    name: "Algorithms and complexity, distributed, parallel and network algorithms, algorithmic game theory"
+    ja: "アルゴリズムと計算量・分散並列ネットワークアルゴリズム・アルゴリズム的ゲーム理論"
+    units: [K-024, K-026, K-028, K-150, K-214]
+    sources: [Y01]
+  - id: "PE6_7"
+    parent: "PE6"
+    name: "Artificial intelligence, intelligent systems, natural language processing"
+    ja: "人工知能・知能システム・自然言語処理"
+    units: [K-053, K-054, K-056, K-161, K-216]
+    sources: [Y01]
+  - id: "PE6_8"
+    parent: "PE6"
+    name: "Computer graphics, computer vision, multimedia, computer games"
+    ja: "コンピュータグラフィックス・コンピュータビジョン・マルチメディア・ゲーム"
+    units: [K-071, K-075, K-077, K-080, K-082]
+    sources: [Y01]
+  - id: "PE6_9"
+    parent: "PE6"
+    name: "Human computer interaction and interface, visualisation"
+    ja: "ヒューマンコンピュータインタラクションと可視化"
+    units: [Q-021, K-212, K-064, K-210]
+    sources: [Y01]
+  - id: "PE6_10"
+    parent: "PE6"
+    name: "Web and information systems, data management systems, information retrieval and digital libraries, data fusion"
+    ja: "ウェブ・情報システム・データ管理・情報検索"
+    units: [K-222]
+    sources: [Y01]
+  - id: "PE6_11"
+    parent: "PE6"
+    name: "Machine learning, statistical data processing and applications using signal processing (e.g. speech, image, video)"
+    ja: "機械学習・統計的データ処理・信号処理の応用"
+    units: [K-046, K-048, K-049, K-051, E-081]
+    sources: [Y01]
+  - id: "PE6_12"
+    parent: "PE6"
+    name: "Scientific computing, simulation and modelling tools"
+    ja: "科学計算・シミュレーション・モデル化の道具"
+    units: [K-190, K-201, K-163, K-175, K-015]
+    sources: [Y01]
+  - id: "PE6_13"
+    parent: "PE6"
+    name: "Bioinformatics, bio-inspired computing, and natural computing"
+    ja: "バイオインフォマティクス・生物に学ぶ計算・自然計算"
+    units: [K-223]
+    sources: [Y01]
+  - id: "PE6_14"
+    parent: "PE6"
+    name: "Quantum computing (formal methods, algorithms and other computer science aspects)"
+    ja: "量子計算（形式手法・アルゴリズム・計算機科学の側面）"
+    units: [K-176, K-166, P-087, K-174, P-298]
+    sources: [Y01]
+  - id: "PE7_1"
+    parent: "PE7"
+    name: "Control engineering"
+    ja: "制御工学"
+    units: [E-049, E-052, E-053, E-054, E-058]
+    sources: [Y01]
+  - id: "PE7_2"
+    parent: "PE7"
+    name: "Electrical engineering: power components and/or systems"
+    ja: "電気工学（電力の部品とシステム）"
+    units: [E-197, E-170, E-067, E-069, E-249]
+    sources: [Y01]
+  - id: "PE7_3"
+    parent: "PE7"
+    name: "Simulation engineering and modelling"
+    ja: "シミュレーション工学とモデル化"
+    units: [K-163, K-015, E-047, E-157, E-021]
+    sources: [Y01]
+  - id: "PE7_4"
+    parent: "PE7"
+    name: "(Micro- and nano-) systems engineering"
+    ja: "（マイクロ・ナノ）システム工学"
+    units: [E-047, E-231, E-090, P-265, P-272, P-278, E-068]
+    sources: [Y01]
+  - id: "PE7_5"
+    parent: "PE7"
+    name: "(Micro- and nano-) electronic, optoelectronic and photonic components"
+    ja: "（マイクロ・ナノ）電子・光電子・フォトニクス部品"
+    units: [E-158, E-159, E-160, E-161, E-230]
+    sources: [Y01]
+  - id: "PE7_6"
+    parent: "PE7"
+    name: "Communication systems, wireless technology, high-frequency technology"
+    ja: "通信システム・無線・高周波技術"
+    units: [E-088, E-188, E-205, E-084, E-086]
+    sources: [Y01]
+  - id: "PE7_7"
+    parent: "PE7"
+    name: "Signal processing"
+    ja: "信号処理"
+    units: [E-070, E-079, E-080, E-081, E-083]
+    sources: [Y01]
+  - id: "PE7_8"
+    parent: "PE7"
+    name: "Networks, e.g. communication networks and nodes, Internet of Things, sensor networks, networks of robots"
+    ja: "ネットワーク（通信網・IoT・センサー網）"
+    units: [K-038, E-087, K-198, K-219, K-211]
+    sources: [Y01]
+  - id: "PE7_9"
+    parent: "PE7"
+    name: "Man-machine interfaces"
+    ja: "ヒューマンマシンインタフェース"
+    units: [Q-021, B-171, E-169, B-170]
+    sources: [Y01]
+  - id: "PE7_10"
+    parent: "PE7"
+    name: "Robotics"
+    ja: "ロボット工学"
+    units: [K-084, K-085, K-087, K-090, E-180]
+    sources: [Y01]
+  - id: "PE7_11"
+    parent: "PE7"
+    name: "Components and systems for applications (in e.g. medicine, biology, environment)"
+    ja: "応用の部品とシステム（医療・生物・環境）"
+    units: [E-223, E-225, E-226, E-227, E-169]
+    sources: [Y01]
+  - id: "PE7_12"
+    parent: "PE7"
+    name: "Electrical energy production, distribution, applications"
+    ja: "電気エネルギーの生産・配電・応用"
+    units: [E-170, E-197, E-167, E-160, P-290, E-249]
+    sources: [Y01]
+  - id: "PE8_1"
+    parent: "PE8"
+    name: "Aerospace engineering"
+    ja: "航空宇宙工学"
+    units: [E-029, E-043, E-044, E-060, E-190]
+    sources: [Y01]
+  - id: "PE8_2"
+    parent: "PE8"
+    name: "Chemical engineering, technical chemistry"
+    ja: "化学工学・工業化学"
+    units: [E-212, E-213, E-214, E-215, E-217]
+    sources: [Y01]
+  - id: "PE8_3"
+    parent: "PE8"
+    name: "Civil engineering, architecture, offshore construction, lightweight construction, geotechnics"
+    ja: "土木・建築・海洋構造物・軽量構造・地盤工学"
+    units: [E-003, E-122, E-124, E-196, E-187]
+    sources: [Y01]
+  - id: "PE8_4"
+    parent: "PE8"
+    name: "Computational engineering"
+    ja: "計算工学"
+    units: [E-021, E-022, E-023, E-035, K-163]
+    sources: [Y01]
+  - id: "PE8_5"
+    parent: "PE8"
+    name: "Fluid mechanics"
+    ja: "流体力学（工学）"
+    units: [E-024, E-025, E-031, E-034, E-195]
+    sources: [Y01]
+  - id: "PE8_6"
+    parent: "PE8"
+    name: "Energy processes engineering"
+    ja: "エネルギー変換プロセス工学"
+    units: [E-038, E-040, E-041, E-194, E-218]
+    sources: [Y01]
+  - id: "PE8_7"
+    parent: "PE8"
+    name: "Mechanical engineering"
+    ja: "機械工学"
+    units: [E-189, E-003, E-090, E-015, K-084]
+    sources: [Y01]
+  - id: "PE8_8"
+    parent: "PE8"
+    name: "Propulsion engineering, e.g. hydraulic, turbo, piston, hybrid engines"
+    ja: "推進工学（油圧・ターボ・ピストン・ハイブリッドの機関）"
+    units: [E-043, E-044, E-045, E-046, E-041]
+    sources: [Y01]
+  - id: "PE8_9"
+    parent: "PE8"
+    name: "Production technology, process engineering"
+    ja: "生産技術とプロセス工学"
+    units: [E-154, E-156, E-193, E-212, E-235]
+    sources: [Y01]
+  - id: "PE8_10"
+    parent: "PE8"
+    name: "Manufacturing engineering and industrial design"
+    ja: "製造工学と工業デザイン"
+    units: [E-193, E-204, E-154, E-156, E-184]
+    sources: [Y01]
+  - id: "PE8_11"
+    parent: "PE8"
+    name: "Environmental engineering, e.g. sustainable design, waste and water treatment, recycling, regeneration or recovery of compounds, carbon capture & storage"
+    ja: "環境工学（持続可能な設計・廃棄物と水の処理・再資源化）"
+    units: [E-219, E-220, E-221, E-222, H-081]
+    sources: [Y01]
+  - id: "PE8_12"
+    parent: "PE8"
+    name: "Naval/marine engineering"
+    ja: "船舶・海洋工学"
+    units: [E-247]
+    sources: [Y01]
+  - id: "PE8_13"
+    parent: "PE8"
+    name: "Industrial bioengineering"
+    ja: "産業バイオ工学"
+    units: [E-228, E-229, B-043, B-053, E-215]
+    sources: [Y01]
+  - id: "PE8_14"
+    parent: "PE8"
+    name: "Automotive and rail engineering; multi-/inter-modal transport engineering"
+    ja: "自動車・鉄道工学と複合輸送工学"
+    units: [E-246]
+    sources: [Y01]
+  - id: "PE9_1"
+    parent: "PE9"
+    name: "Solar physics – the Sun and the heliosphere"
+    ja: "太陽物理（太陽と太陽圏）"
+    units: [P-291, P-211, P-231, P-283, P-294]
+    sources: [Y01]
+  - id: "PE9_2"
+    parent: "PE9"
+    name: "Solar system science"
+    ja: "太陽系科学"
+    units: [W-074, W-115, W-116, P-295, P-292]
+    sources: [Y01]
+  - id: "PE9_3"
+    parent: "PE9"
+    name: "Exoplanetary science, formation and characterization of extrasolar planets"
+    ja: "系外惑星の科学（形成と特徴づけ）"
+    units: [P-213, P-171, P-295, W-074]
+    sources: [Y01]
+  - id: "PE9_4"
+    parent: "PE9"
+    name: "Astrobiology"
+    ja: "宇宙生物学"
+    units: [B-111, H-090, B-110, W-036, B-145]
+    sources: [Y01]
+  - id: "PE9_5"
+    parent: "PE9"
+    name: "Interstellar medium and star formation"
+    ja: "星間物質と星形成"
+    units: [P-164, P-163, P-214, P-231]
+    sources: [Y01]
+  - id: "PE9_6"
+    parent: "PE9"
+    name: "Stars – stellar physics, stellar systems"
+    ja: "恒星物理と恒星系"
+    units: [P-068, P-212, P-166, P-167, P-169]
+    sources: [Y01]
+  - id: "PE9_7"
+    parent: "PE9"
+    name: "The Milky Way"
+    ja: "天の川銀河"
+    units: [P-214, P-169, P-162, P-212, P-166]
+    sources: [Y01]
+  - id: "PE9_8"
+    parent: "PE9"
+    name: "Galaxies – formation, evolution, clusters"
+    ja: "銀河（形成・進化・銀河団）"
+    units: [P-169, P-170, P-229, P-168, P-214]
+    sources: [Y01]
+  - id: "PE9_9"
+    parent: "PE9"
+    name: "Cosmology and large-scale structure, dark matter, dark energy"
+    ja: "宇宙論と大規模構造・暗黒物質・暗黒エネルギー"
+    units: [P-064, P-066, P-215, P-228, P-222]
+    sources: [Y01]
+  - id: "PE9_10"
+    parent: "PE9"
+    name: "Relativistic astrophysics and compact objects"
+    ja: "相対論的天体物理とコンパクト天体"
+    units: [P-061, P-063, P-167, P-165, P-168]
+    sources: [Y01]
+  - id: "PE9_11"
+    parent: "PE9"
+    name: "Gravitational wave astronomy"
+    ja: "重力波天文学"
+    units: [P-062, P-244, P-245, P-063]
+    sources: [Y01]
+  - id: "PE9_12"
+    parent: "PE9"
+    name: "High-energy and particle astronomy"
+    ja: "高エネルギー・粒子天文学"
+    units: [P-168, P-283, P-163, P-222, P-166]
+    sources: [Y01]
+  - id: "PE9_13"
+    parent: "PE9"
+    name: "Astronomical instrumentation and data, e.g. telescopes, detectors, techniques, archives, analyses"
+    ja: "天文の観測機器とデータ"
+    units: [P-216, P-233, P-232, E-161, P-118]
+    sources: [Y01]
+  - id: "PE10_1"
+    parent: "PE10"
+    name: "Atmospheric chemistry, atmospheric composition, air pollution"
+    ja: "大気化学・大気組成・大気汚染"
+    units: [W-034, H-080, E-220, H-043, P-131]
+    sources: [Y01]
+  - id: "PE10_2"
+    parent: "PE10"
+    name: "Meteorology, atmospheric physics and dynamics"
+    ja: "気象学・大気物理と大気力学"
+    units: [P-122, P-125, P-144, P-156, P-132]
+    sources: [Y01]
+  - id: "PE10_3"
+    parent: "PE10"
+    name: "Climatology and climate change"
+    ja: "気候学と気候変動"
+    units: [P-120, P-143, P-161, P-153, P-201]
+    sources: [Y01]
+  - id: "PE10_4"
+    parent: "PE10"
+    name: "Terrestrial ecology, land cover change"
+    ja: "陸域の生態学と土地被覆変化"
+    units: [B-056, B-057, B-103, B-060, E-200]
+    sources: [Y01]
+  - id: "PE10_5"
+    parent: "PE10"
+    name: "Geology, tectonics, volcanology"
+    ja: "地質学・テクトニクス・火山学"
+    units: [W-012, W-020, W-030, W-040, W-112]
+    sources: [Y01]
+  - id: "PE10_6"
+    parent: "PE10"
+    name: "Palaeoclimatology, palaeoecology"
+    ja: "古気候学と古生態学"
+    units: [W-041, W-032, W-036, W-010, W-014]
+    sources: [Y01]
+  - id: "PE10_7"
+    parent: "PE10"
+    name: "Physics of earth’s interior, seismology, geodynamics"
+    ja: "地球内部の物理・地震学・ジオダイナミクス"
+    units: [W-021, W-025, W-037, W-038, W-028]
+    sources: [Y01]
+  - id: "PE10_8"
+    parent: "PE10"
+    name: "Oceanography (physical, chemical, biological, geological)"
+    ja: "海洋学（物理・化学・生物・地質）"
+    units: [W-063, W-104, P-128, P-129, B-154]
+    sources: [Y01]
+  - id: "PE10_9"
+    parent: "PE10"
+    name: "Biogeochemistry, biogeochemical cycles, environmental chemistry"
+    ja: "生物地球化学と物質循環・環境化学"
+    units: [W-033, W-104, W-103, B-041, H-043]
+    sources: [Y01]
+  - id: "PE10_10"
+    parent: "PE10"
+    name: "Mineralogy, petrology, igneous petrology, metamorphic petrology"
+    ja: "鉱物学・岩石学（火成岩・変成岩）"
+    units: [W-007, W-013, W-016, W-019, W-008]
+    sources: [Y01]
+  - id: "PE10_11"
+    parent: "PE10"
+    name: "Geochemistry, cosmochemistry, crystal chemistry, isotope geochemistry, thermodynamics"
+    ja: "地球化学・宇宙化学・結晶化学・同位体地球化学"
+    units: [W-017, W-031, W-032, W-035, W-013]
+    sources: [Y01]
+  - id: "PE10_12"
+    parent: "PE10"
+    name: "Sedimentology, soil science, palaeontology, earth evolution"
+    ja: "堆積学・土壌学・古生物学・地球の進化"
+    units: [W-018, W-062, W-070, W-009, W-036]
+    sources: [Y01]
+  - id: "PE10_13"
+    parent: "PE10"
+    name: "Physical geography, geomorphology"
+    ja: "自然地理学と地形学"
+    units: [W-023, W-066, W-114, W-101, W-105]
+    sources: [Y01]
+  - id: "PE10_14"
+    parent: "PE10"
+    name: "Earth observations from space/remote sensing"
+    ja: "宇宙からの地球観測とリモートセンシング"
+    units: [E-200, W-042, W-121, W-122, P-131]
+    sources: [Y01]
+  - id: "PE10_15"
+    parent: "PE10"
+    name: "Geomagnetism, palaeomagnetism"
+    ja: "地磁気と古地磁気"
+    units: [W-011, W-039]
+    sources: [Y01]
+  - id: "PE10_16"
+    parent: "PE10"
+    name: "Ozone, upper atmosphere, ionosphere"
+    ja: "オゾン・超高層大気・電離圏"
+    units: [W-034, P-293, P-294, P-292, H-080]
+    sources: [Y01]
+  - id: "PE10_17"
+    parent: "PE10"
+    name: "Hydrology, hydrogeology, engineering and environmental geology, water and soil pollution"
+    ja: "水文学・水文地質学・環境地質学・水と土壌の汚染"
+    units: [W-101, W-102, W-103, W-029, E-124]
+    sources: [Y01]
+  - id: "PE10_18"
+    parent: "PE10"
+    name: "Cryosphere, dynamics of snow and ice cover, sea ice, permafrosts and ice sheets"
+    ja: "雪氷圏（積雪・海氷・永久凍土・氷床の力学）"
+    units: [W-105, W-106]
+    sources: [Y01]
+  - id: "PE10_19"
+    parent: "PE10"
+    name: "Planetary geology and geophysics"
+    ja: "惑星の地質学と地球物理学"
+    units: [W-115, W-116, W-035, W-119, P-295]
+    sources: [Y01]
+  - id: "PE10_20"
+    parent: "PE10"
+    name: "Geohazards"
+    ja: "地質災害"
+    units: [W-064, W-110, W-111, W-113, E-100]
+    sources: [Y01]
+  - id: "PE10_21"
+    parent: "PE10"
+    name: "Earth system modelling and interactions"
+    ja: "地球システムのモデル化と相互作用"
+    units: [P-143, W-060, P-161, P-142, W-033]
+    sources: [Y01]
+  - id: "PE11_1"
+    parent: "PE11"
+    name: "Engineering of biomaterials, biomimetic, bioinspired and bio-enabled materials"
+    ja: "生体材料・生体模倣材料の工学"
+    units: [E-226, E-236, E-168, E-234]
+    sources: [Y01]
+  - id: "PE11_2"
+    parent: "PE11"
+    name: "Engineering of metals and alloys"
+    ja: "金属と合金の工学"
+    units: [E-163, E-164, H-108, E-015, E-014]
+    sources: [Y01]
+  - id: "PE11_3"
+    parent: "PE11"
+    name: "Engineering of ceramics and glasses"
+    ja: "セラミックスとガラスの工学"
+    units: [E-243]
+    sources: [Y01]
+  - id: "PE11_4"
+    parent: "PE11"
+    name: "Engineering of polymers and plastics"
+    ja: "高分子とプラスチックの工学"
+    units: [H-106, H-107, E-235, P-263, P-264]
+    sources: [Y01]
+  - id: "PE11_5"
+    parent: "PE11"
+    name: "Engineering of composites and hybrid materials"
+    ja: "複合材料とハイブリッド材料の工学"
+    units: [E-012, E-013, E-015, E-005, W-117, W-029, H-049]
+    sources: [Y01]
+  - id: "PE11_6"
+    parent: "PE11"
+    name: "Engineering of carbon materials"
+    ja: "炭素材料の工学"
+    units: [P-172, P-173, H-019, H-014, H-101]
+    sources: [Y01]
+  - id: "PE11_7"
+    parent: "PE11"
+    name: "Engineering of metal oxides"
+    ja: "金属酸化物の工学"
+    units: [H-053, H-101, H-103, H-091, P-250]
+    sources: [Y01]
+  - id: "PE11_8"
+    parent: "PE11"
+    name: "Engineering of alternative established or emergent materials"
+    ja: "そのほかの既存・新興材料の工学"
+    units: [H-092, P-172, P-173, H-054, P-102]
+    sources: [Y01]
+  - id: "PE11_9"
+    parent: "PE11"
+    name: "Nanomaterials engineering, e.g. nanoparticles, nanoporous materials, 1D & 2D nanomaterials"
+    ja: "ナノ材料の工学"
+    units: [P-173, H-049, P-174, E-165, P-172]
+    sources: [Y01]
+  - id: "PE11_10"
+    parent: "PE11"
+    name: "Soft materials engineering, e.g. gels, foams, colloids"
+    ja: "ソフトマテリアルの工学（ゲル・泡・コロイド）"
+    units: [P-103, P-265, P-263, P-266, P-268]
+    sources: [Y01]
+  - id: "PE11_11"
+    parent: "PE11"
+    name: "Porous materials engineering, e.g. covalent-organic, metal-organic, porous aromatic frameworks"
+    ja: "多孔質材料の工学（COF・MOF など）"
+    units: [H-054, P-175, E-215, H-092]
+    sources: [Y01]
+  - id: "PE11_12"
+    parent: "PE11"
+    name: "Semi-conducting and magnetic materials engineering"
+    ja: "半導体材料と磁性材料の工学"
+    units: [P-095, P-096, P-097, E-162, E-230]
+    sources: [Y01]
+  - id: "PE11_13"
+    parent: "PE11"
+    name: "Metamaterials engineering"
+    ja: "メタマテリアルの工学"
+    units: [P-174, P-035, P-040, P-093, E-084]
+    sources: [Y01]
+  - id: "PE11_14"
+    parent: "PE11"
+    name: "Computational methods for materials engineering"
+    ja: "材料工学の計算手法"
+    units: [H-055, H-092, P-119, E-021, E-022]
+    sources: [Y01]
+  - id: "LS1_1"
+    parent: "LS1"
+    name: "Macromolecular complexes including interactions involving nucleic acids, proteins, lipids and carbohydrates"
+    ja: "高分子複合体（核酸・タンパク質・脂質・糖の相互作用）"
+    units: [B-003, B-012, B-013]
+    sources: [Y01]
+  - id: "LS1_2"
+    parent: "LS1"
+    name: "Biochemistry"
+    ja: "生化学"
+    units: [B-006, B-007, B-008]
+    sources: [Y01]
+  - id: "LS1_3"
+    parent: "LS1"
+    name: "DNA and RNA biology"
+    ja: "DNA と RNA の生物学"
+    units: [B-009, B-001, B-032, B-186]
+    sources: [Y01]
+  - id: "LS1_4"
+    parent: "LS1"
+    name: "Protein biology"
+    ja: "タンパク質の生物学"
+    units: [B-014, B-007, B-013, K-111]
+    sources: [Y01]
+  - id: "LS1_5"
+    parent: "LS1"
+    name: "Lipid biology"
+    ja: "脂質の生物学"
+    units: [B-008, B-005, H-044, I-046]
+    sources: [Y01]
+  - id: "LS1_6"
+    parent: "LS1"
+    name: "Glycobiology"
+    ja: "糖鎖生物学"
+    gap: "糖鎖生物学（ERC・OpenAlex の新しい欠け、docs/research/yardstick-erc-openalex.md の 5）"
+    sources: [Y01]
+  - id: "LS1_7"
+    parent: "LS1"
+    name: "Molecular biophysics, biomechanics, bioenergetics"
+    ja: "分子生物物理・生体力学・生体エネルギー論"
+    units: [B-005, B-013, B-003, B-004]
+    sources: [Y01]
+  - id: "LS1_8"
+    parent: "LS1"
+    name: "Structural biology"
+    ja: "構造生物学"
+    units: [B-012, K-111, H-041]
+    sources: [Y01]
+  - id: "LS1_9"
+    parent: "LS1"
+    name: "Molecular mechanisms of signalling processes"
+    ja: "信号伝達の分子機構"
+    gap: "既知の欠け：細胞の信号伝達（docs/research/yardstick-journals.md の 3 と docs/yardsticks.md）"
+    sources: [Y01]
+  - id: "LS1_10"
+    parent: "LS1"
+    name: "Synthetic biology"
+    ja: "合成生物学"
+    units: [E-229, B-180]
+    sources: [Y01]
+  - id: "LS1_11"
+    parent: "LS1"
+    name: "Chemical biology"
+    ja: "ケミカルバイオロジー"
+    units: [H-057, H-056]
+    sources: [Y01]
+  - id: "LS1_12"
+    parent: "LS1"
+    name: "Protein design"
+    ja: "タンパク質設計"
+    gap: "タンパク質設計（ERC・OpenAlex の新しい欠け、docs/research/yardstick-erc-openalex.md の 5）"
+    sources: [Y01]
+  - id: "LS1_13"
+    parent: "LS1"
+    name: "Early translational research and drug design"
+    ja: "初期の橋渡し研究と創薬設計"
+    units: [H-056, H-058, H-059, I-001]
+    sources: [Y01]
+  - id: "LS1_14"
+    parent: "LS1"
+    name: "Innovative methods and modelling in molecular, structural and synthetic biology"
+    ja: "分子・構造・合成生物学の新しい方法とモデル化"
+    units: [K-112, K-111, K-115, H-055]
+    sources: [Y01]
+  - id: "LS2_1"
+    parent: "LS2"
+    name: "Genetics"
+    ja: "遺伝学"
+    units: [B-001, B-002, B-045]
+    sources: [Y01]
+  - id: "LS2_2"
+    parent: "LS2"
+    name: "Gene editing"
+    ja: "ゲノム編集"
+    units: [B-053, B-080]
+    sources: [Y01]
+  - id: "LS2_3"
+    parent: "LS2"
+    name: "Epigenetics"
+    ja: "エピジェネティクス"
+    gap: "既知の欠け：クロマチンとエピゲノム（docs/research/yardstick-journals.md の 3 と docs/yardsticks.md）"
+    sources: [Y01]
+  - id: "LS2_4"
+    parent: "LS2"
+    name: "Gene regulation"
+    ja: "遺伝子発現の制御"
+    units: [B-044, B-009, K-107]
+    sources: [Y01]
+  - id: "LS2_5"
+    parent: "LS2"
+    name: "Genomics"
+    ja: "ゲノミクス"
+    units: [K-106, K-113, B-011, B-001]
+    sources: [Y01]
+  - id: "LS2_6"
+    parent: "LS2"
+    name: "Metagenomics"
+    ja: "メタゲノミクス"
+    units: [B-145, B-148, B-156, K-191]
+    sources: [Y01]
+  - id: "LS2_7"
+    parent: "LS2"
+    name: "Transcriptomics"
+    ja: "トランスクリプトミクス"
+    units: [K-113, K-107, B-143]
+    sources: [Y01]
+  - id: "LS2_8"
+    parent: "LS2"
+    name: "Proteomics"
+    ja: "プロテオミクス"
+    gap: "既知の欠け：プロテオミクス（docs/research/yardstick-journals.md の 3 と docs/yardsticks.md）"
+    sources: [Y01]
+  - id: "LS2_9"
+    parent: "LS2"
+    name: "Metabolomics"
+    ja: "メタボロミクス"
+    gap: "既知の欠け：メタボロミクス（docs/research/yardstick-journals.md の 3 と docs/yardsticks.md）"
+    sources: [Y01]
+  - id: "LS2_10"
+    parent: "LS2"
+    name: "Glycomics/Lipidomics"
+    ja: "グライコミクスとリピドミクス"
+    gap: "既知の欠け：プロテオミクスとメタボロミクス（質量分析による網羅解析）（docs/research/yardstick-journals.md の 3 と docs/yardsticks.md）"
+    sources: [Y01]
+  - id: "LS2_11"
+    parent: "LS2"
+    name: "Bioinformatics and computational biology"
+    ja: "バイオインフォマティクスと計算生物学"
+    units: [K-105, K-109, K-110, K-118]
+    sources: [Y01]
+  - id: "LS2_12"
+    parent: "LS2"
+    name: "Biostatistics"
+    ja: "生物統計学"
+    units: [K-114, S-035, S-037, S-040]
+    sources: [Y01]
+  - id: "LS2_13"
+    parent: "LS2"
+    name: "Systems biology"
+    ja: "システム生物学"
+    units: [K-115, K-119, K-107, E-229]
+    sources: [Y01]
+  - id: "LS2_14"
+    parent: "LS2"
+    name: "Genetic diseases"
+    ja: "遺伝性疾患"
+    units: [I-024, B-068, B-002]
+    sources: [Y01]
+  - id: "LS2_15"
+    parent: "LS2"
+    name: "Integrative biology for personalised medicine"
+    ja: "個別化医療のための統合生物学"
+    units: [I-053, I-024]
+    sources: [Y01]
+  - id: "LS2_16"
+    parent: "LS2"
+    name: "Innovative methods and modelling in integrative biology"
+    ja: "統合生物学の新しい方法とモデル化"
+    units: [K-116, K-117, K-115, K-119]
+    sources: [Y01]
+  - id: "LS3_1"
+    parent: "LS3"
+    name: "Cell cycle, cell division and growth"
+    ja: "細胞周期・細胞分裂・成長"
+    gap: "既知の欠け：細胞周期の制御（docs/research/yardstick-journals.md の 3 と docs/yardsticks.md）"
+    sources: [Y01]
+  - id: "LS3_2"
+    parent: "LS3"
+    name: "Cell senescence, cell death, autophagy, cell ageing"
+    ja: "細胞老化・細胞死・オートファジー"
+    gap: "オートファジー（ERC・OpenAlex の新しい欠け、docs/research/yardstick-erc-openalex.md の 5）"
+    sources: [Y01]
+  - id: "LS3_3"
+    parent: "LS3"
+    name: "Cell behaviour, including control of cell shape, cell migration"
+    ja: "細胞の挙動（形の制御・細胞移動）"
+    gap: "細胞骨格（ERC・OpenAlex の新しい欠け、docs/research/yardstick-erc-openalex.md の 5）"
+    sources: [Y01]
+  - id: "LS3_4"
+    parent: "LS3"
+    name: "Cell junctions, cell adhesion, the extracellular matrix, cell communication"
+    ja: "細胞間結合・細胞接着・細胞外基質・細胞間連絡"
+    gap: "細胞接着（ERC・OpenAlex の新しい欠け、docs/research/yardstick-erc-openalex.md の 5）"
+    sources: [Y01]
+  - id: "LS3_5"
+    parent: "LS3"
+    name: "Cell signalling and signal transduction, exosome biology"
+    ja: "細胞の信号伝達とエキソソーム生物学"
+    gap: "既知の欠け：細胞の信号伝達（docs/research/yardstick-journals.md の 3 と docs/yardsticks.md）"
+    sources: [Y01]
+  - id: "LS3_6"
+    parent: "LS3"
+    name: "Organelle biology and trafficking"
+    ja: "細胞小器官の生物学と輸送"
+    gap: "細胞内輸送（ERC・OpenAlex の新しい欠け、docs/research/yardstick-erc-openalex.md の 5）"
+    sources: [Y01]
+  - id: "LS3_7"
+    parent: "LS3"
+    name: "Mechanobiology of cells, tissues and organs"
+    ja: "細胞・組織・器官のメカノバイオロジー"
+    units: [B-005, B-141, B-004]
+    sources: [Y01]
+  - id: "LS3_8"
+    parent: "LS3"
+    name: "Embryogenesis, pattern formation, morphogenesis"
+    ja: "胚発生・パターン形成・形態形成"
+    units: [B-046, B-141, B-140]
+    sources: [Y01]
+  - id: "LS3_9"
+    parent: "LS3"
+    name: "Cell differentiation, formation of tissues and organs"
+    ja: "細胞分化と組織・器官の形成"
+    units: [B-046, B-140, B-044, I-013]
+    sources: [Y01]
+  - id: "LS3_10"
+    parent: "LS3"
+    name: "Developmental genetics"
+    ja: "発生遺伝学"
+    units: [B-140, B-142, B-046]
+    sources: [Y01]
+  - id: "LS3_11"
+    parent: "LS3"
+    name: "Evolution of developmental strategies"
+    ja: "発生戦略の進化"
+    units: [B-142, B-130, B-131]
+    sources: [Y01]
+  - id: "LS3_12"
+    parent: "LS3"
+    name: "Organoids"
+    ja: "オルガノイド"
+    units: [B-054, E-226, B-080, B-046]
+    sources: [Y01]
+  - id: "LS3_13"
+    parent: "LS3"
+    name: "Stem cells"
+    ja: "幹細胞"
+    units: [B-054, B-046, B-150]
+    sources: [Y01]
+  - id: "LS3_14"
+    parent: "LS3"
+    name: "Regeneration"
+    ja: "再生"
+    units: [B-193]
+    sources: [Y01]
+  - id: "LS3_15"
+    parent: "LS3"
+    name: "Development of cell-based therapeutic approaches for tissue regeneration"
+    ja: "組織再生のための細胞治療法の開発"
+    units: [B-054, I-054, E-226]
+    sources: [Y01]
+  - id: "LS3_16"
+    parent: "LS3"
+    name: "Functional imaging of cells and tissues"
+    ja: "細胞と組織の機能イメージング"
+    gap: "蛍光イメージング（ERC・OpenAlex の新しい欠け、docs/research/yardstick-erc-openalex.md の 5）"
+    sources: [Y01]
+  - id: "LS3_17"
+    parent: "LS3"
+    name: "Theoretical modelling in cellular, developmental and regenerative biology"
+    ja: "細胞・発生・再生生物学の理論モデル"
+    units: [B-141, K-119, B-005]
+    sources: [Y01]
+  - id: "LS4_1"
+    parent: "LS4"
+    name: "Organ and tissue physiology and pathophysiology"
+    ja: "器官・組織の生理学と病態生理学"
+    units: [I-004, I-014, I-015, I-016, I-017]
+    sources: [Y01]
+  - id: "LS4_2"
+    parent: "LS4"
+    name: "Comparative physiology"
+    ja: "比較生理学"
+    units: [B-137, B-138, B-136, B-139]
+    sources: [Y01]
+  - id: "LS4_3"
+    parent: "LS4"
+    name: "Physiology of ageing"
+    ja: "加齢の生理学"
+    units: [B-112, I-049, I-066]
+    sources: [Y01]
+  - id: "LS4_4"
+    parent: "LS4"
+    name: "Endocrinology"
+    ja: "内分泌学"
+    units: [I-019, I-004, I-046, I-018]
+    sources: [Y01]
+  - id: "LS4_5"
+    parent: "LS4"
+    name: "Non-hormonal mechanisms of inter-organ and tissue communication"
+    ja: "ホルモン以外の器官間・組織間連絡の機構"
+    units: [B-035, B-052, I-021, I-019]
+    sources: [Y01]
+  - id: "LS4_6"
+    parent: "LS4"
+    name: "Microbiome and host physiology"
+    ja: "微生物叢と宿主の生理"
+    units: [I-032, B-148]
+    sources: [Y01]
+  - id: "LS4_7"
+    parent: "LS4"
+    name: "Nutrition and exercise physiology"
+    ja: "栄養と運動の生理学"
+    units: [I-052, I-009, I-065, I-066]
+    sources: [Y01]
+  - id: "LS4_8"
+    parent: "LS4"
+    name: "Impact of stress (including environmental stress) on physiology"
+    ja: "ストレス（環境ストレスを含む）が生理に及ぼす影響"
+    units: [Q-012, I-019, I-020, B-137, I-004]
+    sources: [Y01]
+  - id: "LS4_9"
+    parent: "LS4"
+    name: "Metabolism and metabolic disorders, including diabetes and obesity"
+    ja: "代謝と代謝疾患（糖尿病・肥満）"
+    units: [B-008, I-019, I-046]
+    sources: [Y01]
+  - id: "LS4_10"
+    parent: "LS4"
+    name: "The cardiovascular system and cardiovascular diseases"
+    ja: "心血管系と心血管疾患"
+    units: [I-014, I-045, I-004]
+    sources: [Y01]
+  - id: "LS4_11"
+    parent: "LS4"
+    name: "Haematopoiesis and blood diseases"
+    ja: "造血と血液疾患"
+    units: [I-022, B-054, I-023]
+    sources: [Y01]
+  - id: "LS4_12"
+    parent: "LS4"
+    name: "Cancer"
+    ja: "がん"
+    units: [I-023, I-050, I-025]
+    sources: [Y01]
+  - id: "LS4_13"
+    parent: "LS4"
+    name: "Other non-communicable diseases (except disorders of the nervous system and immunity-related diseases)"
+    ja: "そのほかの非感染性疾患"
+    units: [I-045, I-046, I-047, I-048, I-020, I-072, I-073, I-074]
+    sources: [Y01]
+  - id: "LS5_1"
+    parent: "LS5"
+    name: "Neuronal cells"
+    ja: "神経細胞"
+    units: [B-052, B-100, B-034]
+    sources: [Y01]
+  - id: "LS5_2"
+    parent: "LS5"
+    name: "Glial cells and neuronal-glial communication"
+    ja: "グリア細胞と神経・グリア間の連絡"
+    units: [B-191]
+    sources: [Y01]
+  - id: "LS5_3"
+    parent: "LS5"
+    name: "Neural development and related disorders"
+    ja: "神経発達と関連する疾患"
+    units: [B-064, B-068, Q-028]
+    sources: [Y01]
+  - id: "LS5_4"
+    parent: "LS5"
+    name: "Neural stem cells"
+    ja: "神経幹細胞"
+    units: [B-054, B-064, B-046]
+    sources: [Y01]
+  - id: "LS5_5"
+    parent: "LS5"
+    name: "Neural networks and plasticity"
+    ja: "神経回路と可塑性"
+    units: [B-052, B-066, B-064]
+    sources: [Y01]
+  - id: "LS5_6"
+    parent: "LS5"
+    name: "Neurovascular biology and blood-brain barrier"
+    ja: "神経血管生物学と血液脳関門"
+    units: [I-070, B-190]
+    sources: [Y01]
+  - id: "LS5_7"
+    parent: "LS5"
+    name: "Sensory systems, sensation and perception, including pain"
+    ja: "感覚系・感覚と知覚・痛み"
+    units: [I-056, I-057, I-058, Q-004, B-063]
+    sources: [Y01]
+  - id: "LS5_8"
+    parent: "LS5"
+    name: "Neural basis of behaviour (e.g. sleep, consciousness, addiction)"
+    ja: "行動の神経基盤（睡眠・意識・依存）"
+    units: [B-192]
+    sources: [Y01]
+  - id: "LS5_9"
+    parent: "LS5"
+    name: "Neural basis of cognition (e.g. learning, memory, attention, emotions, speech)"
+    ja: "認知の神経基盤（学習・記憶・注意・情動・言語）"
+    units: [B-065, Q-005, Q-007, Q-015]
+    sources: [Y01]
+  - id: "LS5_10"
+    parent: "LS5"
+    name: "Ageing of the nervous system"
+    ja: "神経系の加齢"
+    units: [B-112, B-068, Q-010]
+    sources: [Y01]
+  - id: "LS5_11"
+    parent: "LS5"
+    name: "Neurological and neurodegenerative disorders"
+    ja: "神経疾患と神経変性疾患"
+    units: [B-068, B-101, B-014]
+    sources: [Y01]
+  - id: "LS5_12"
+    parent: "LS5"
+    name: "Mental disorders"
+    ja: "精神疾患"
+    units: [Q-029, Q-014, Q-028, Q-016]
+    sources: [Y01]
+  - id: "LS5_13"
+    parent: "LS5"
+    name: "Nervous system injuries and trauma, stroke"
+    ja: "神経系の損傷・外傷・脳卒中"
+    units: [B-101, I-020, Q-027, Q-025]
+    sources: [Y01]
+  - id: "LS5_14"
+    parent: "LS5"
+    name: "Repair and regeneration of the nervous system"
+    ja: "神経系の修復と再生"
+    units: [B-064, B-054, E-169, E-234]
+    sources: [Y01]
+  - id: "LS5_15"
+    parent: "LS5"
+    name: "Neuroimmunology, neuroinflammation"
+    ja: "神経免疫学と神経炎症"
+    units: [I-005, I-021, I-030, B-068]
+    sources: [Y01]
+  - id: "LS5_16"
+    parent: "LS5"
+    name: "Systems and computational neuroscience (e.g. modelling, simulation, brain oscillations, connectomics)"
+    ja: "システム神経科学と計算神経科学"
+    units: [B-066, B-063, B-067, Q-015]
+    sources: [Y01]
+  - id: "LS5_17"
+    parent: "LS5"
+    name: "Imaging in neuroscience"
+    ja: "神経科学の画像化"
+    units: [B-190]
+    sources: [Y01]
+  - id: "LS5_18"
+    parent: "LS5"
+    name: "Innovative methods and tools for neuroscience"
+    ja: "神経科学の新しい方法と道具"
+    units: [B-067, B-170, B-171, E-169, E-234]
+    sources: [Y01]
+  - id: "LS6_1"
+    parent: "LS6"
+    name: "Innate immunity"
+    ja: "自然免疫"
+    units: [I-071]
+    sources: [Y01]
+  - id: "LS6_2"
+    parent: "LS6"
+    name: "Adaptive immunity"
+    ja: "獲得免疫"
+    units: [I-005, B-037, I-030]
+    sources: [Y01]
+  - id: "LS6_3"
+    parent: "LS6"
+    name: "Regulation of the immune response"
+    ja: "免疫応答の制御"
+    units: [I-005, I-030]
+    sources: [Y01]
+  - id: "LS6_4"
+    parent: "LS6"
+    name: "Immune-related diseases"
+    ja: "免疫関連疾患"
+    units: [I-030, I-021]
+    sources: [Y01]
+  - id: "LS6_5"
+    parent: "LS6"
+    name: "Biology of pathogens (e.g. bacteria, viruses, parasites, fungi)"
+    ja: "病原体の生物学（細菌・ウイルス・寄生虫・真菌）"
+    units: [I-028, B-144, B-146, B-147]
+    sources: [Y01]
+  - id: "LS6_6"
+    parent: "LS6"
+    name: "Infectious diseases"
+    ja: "感染症"
+    units: [I-028, I-037, I-042, V-015]
+    sources: [Y01]
+  - id: "LS6_7"
+    parent: "LS6"
+    name: "Mechanisms of infection"
+    ja: "感染の機構"
+    units: [I-028, B-146, B-144, B-152]
+    sources: [Y01]
+  - id: "LS6_8"
+    parent: "LS6"
+    name: "Biological basis of prevention and treatment of infection"
+    ja: "感染の予防と治療の生物学的基盤"
+    units: [I-031, I-029, I-042, I-037]
+    sources: [Y01]
+  - id: "LS6_9"
+    parent: "LS6"
+    name: "Antimicrobials, antimicrobial resistance"
+    ja: "抗微生物薬と薬剤耐性"
+    units: [I-029, B-144]
+    sources: [Y01]
+  - id: "LS6_10"
+    parent: "LS6"
+    name: "Vaccine development"
+    ja: "ワクチン開発"
+    units: [I-031, I-005]
+    sources: [Y01]
+  - id: "LS6_11"
+    parent: "LS6"
+    name: "Innovative immunological tools and approaches, including therapies"
+    ja: "免疫学の新しい道具と方法（治療を含む）"
+    units: [I-054, I-005, I-030, H-059]
+    sources: [Y01]
+  - id: "LS7_1"
+    parent: "LS7"
+    name: "Medical imaging for prevention, diagnosis and monitoring of diseases"
+    ja: "疾患の予防・診断・経過観察のための医用画像"
+    units: [E-223, E-224, V-031]
+    sources: [Y01]
+  - id: "LS7_2"
+    parent: "LS7"
+    name: "Medical technologies and tools (including genetic tools and biomarkers) for prevention, diagnosis, monitoring and treatment of diseases"
+    ja: "予防・診断・経過観察・治療のための医療技術と道具"
+    units: [E-227, I-043, I-053, E-225]
+    sources: [Y01]
+  - id: "LS7_3"
+    parent: "LS7"
+    name: "Nanomedicine"
+    ja: "ナノ医療"
+    units: [E-168, H-049, I-002, E-226]
+    sources: [Y01]
+  - id: "LS7_4"
+    parent: "LS7"
+    name: "Regenerative medicine"
+    ja: "再生医療"
+    units: [B-054, E-226]
+    sources: [Y01]
+  - id: "LS7_5"
+    parent: "LS7"
+    name: "Applied gene, cell and immune therapies"
+    ja: "遺伝子・細胞・免疫の応用治療"
+    units: [I-054, B-053]
+    sources: [Y01]
+  - id: "LS7_6"
+    parent: "LS7"
+    name: "Other medical therapeutic interventions, including transplantation"
+    ja: "そのほかの治療的介入（移植を含む）"
+    units: [I-030, I-050, I-051, E-234]
+    sources: [Y01]
+  - id: "LS7_7"
+    parent: "LS7"
+    name: "Pharmacology and toxicology"
+    ja: "薬理学と毒性学"
+    units: [I-001, I-002, I-026, I-027]
+    sources: [Y01]
+  - id: "LS7_8"
+    parent: "LS7"
+    name: "Effectiveness of interventions, including resistance to therapies"
+    ja: "介入の有効性（治療への抵抗を含む）"
+    units: [I-040, I-003, S-051, I-029, I-023]
+    sources: [Y01]
+  - id: "LS7_9"
+    parent: "LS7"
+    name: "Public health and epidemiology"
+    ja: "公衆衛生と疫学"
+    units: [I-033, I-035, I-036, I-037, I-039]
+    sources: [Y01]
+  - id: "LS7_10"
+    parent: "LS7"
+    name: "Preventative and prognostic medicine"
+    ja: "予防医学と予後医学"
+    units: [I-038, I-044, I-053]
+    sources: [Y01]
+  - id: "LS7_11"
+    parent: "LS7"
+    name: "Environmental health, occupational medicine"
+    ja: "環境保健と産業医学"
+    units: [I-041, I-027, B-092]
+    sources: [Y01]
+  - id: "LS7_12"
+    parent: "LS7"
+    name: "Health care, including care for the ageing population"
+    ja: "保健医療（高齢化社会のケアを含む）"
+    units: [I-036, I-049, F-079, I-040]
+    sources: [Y01]
+  - id: "LS7_13"
+    parent: "LS7"
+    name: "Palliative medicine"
+    ja: "緩和医療"
+    units: [I-049, I-026, I-040]
+    sources: [Y01]
+  - id: "LS7_14"
+    parent: "LS7"
+    name: "Digital medicine, e-medicine, medical applications of artificial intelligence"
+    ja: "デジタル医療・遠隔医療・医療への人工知能の応用"
+    units: [I-055, E-224, E-225]
+    sources: [Y01]
+  - id: "LS7_15"
+    parent: "LS7"
+    name: "Medical ethics"
+    ja: "医療倫理"
+    none: "倫理の判断は規範で範囲の外。事実の部分（研究倫理の歴史、審査と同意の制度、資源配分の原則の整理）だけ I-034 が持つ"
+    sources: [Y01]
+  - id: "LS8_1"
+    parent: "LS8"
+    name: "Ecosystem and community ecology, macroecology"
+    ja: "生態系と群集の生態学・マクロ生態学"
+    units: [B-056, B-057, B-040, B-136]
+    sources: [Y01]
+  - id: "LS8_2"
+    parent: "LS8"
+    name: "Biodiversity"
+    ja: "生物多様性"
+    units: [B-093, B-156, B-185, B-182]
+    sources: [Y01]
+  - id: "LS8_3"
+    parent: "LS8"
+    name: "Conservation biology"
+    ja: "保全生物学"
+    units: [B-060, B-182, B-183, B-093]
+    sources: [Y01]
+  - id: "LS8_4"
+    parent: "LS8"
+    name: "Population biology, population dynamics, population genetics"
+    ja: "個体群生物学・個体群動態・集団遺伝学"
+    units: [B-055, B-002, B-042, B-188]
+    sources: [Y01]
+  - id: "LS8_5"
+    parent: "LS8"
+    name: "Biological aspects of environmental change, including climate change"
+    ja: "環境変化（気候変動を含む）の生物学的側面"
+    units: [B-093, B-057, B-154, B-184]
+    sources: [Y01]
+  - id: "LS8_6"
+    parent: "LS8"
+    name: "Evolutionary ecology"
+    ja: "進化生態学"
+    units: [B-059, B-058, B-056]
+    sources: [Y01]
+  - id: "LS8_7"
+    parent: "LS8"
+    name: "Evolutionary genetics"
+    ja: "進化遺伝学"
+    units: [B-002, B-042, B-142, B-181]
+    sources: [Y01]
+  - id: "LS8_8"
+    parent: "LS8"
+    name: "Phylogenetics, systematics, comparative biology"
+    ja: "系統学・分類学・比較生物学"
+    units: [B-134, B-135, B-185, B-025]
+    sources: [Y01]
+  - id: "LS8_9"
+    parent: "LS8"
+    name: "Macroevolution and paleobiology"
+    ja: "大進化と古生物学"
+    units: [W-125]
+    sources: [Y01]
+  - id: "LS8_10"
+    parent: "LS8"
+    name: "Ecology and evolution of species interactions"
+    ja: "種間相互作用の生態と進化"
+    units: [B-056, B-059, B-148]
+    sources: [Y01]
+  - id: "LS8_11"
+    parent: "LS8"
+    name: "Behavioural ecology and evolution"
+    ja: "行動生態学と行動の進化"
+    units: [B-058, B-160, B-157, B-159]
+    sources: [Y01]
+  - id: "LS8_12"
+    parent: "LS8"
+    name: "Microbial ecology and evolution"
+    ja: "微生物の生態と進化"
+    units: [B-148, B-145, B-181]
+    sources: [Y01]
+  - id: "LS8_13"
+    parent: "LS8"
+    name: "Marine biology and ecology"
+    ja: "海洋生物学と海洋生態学"
+    units: [B-154, W-104, V-013]
+    sources: [Y01]
+  - id: "LS8_14"
+    parent: "LS8"
+    name: "Ecophysiology, from organisms to ecosystems"
+    ja: "生態生理学"
+    units: [B-137, B-138, B-136, B-153]
+    sources: [Y01]
+  - id: "LS8_15"
+    parent: "LS8"
+    name: "Theoretical developments and modelling in environmental biology, ecology, and evolution"
+    ja: "環境生物学・生態学・進化学の理論とモデル化"
+    units: [B-062, B-055, B-058]
+    sources: [Y01]
+  - id: "LS9_1"
+    parent: "LS9"
+    name: "Bioengineering for synthetic and chemical biology"
+    ja: "合成生物学・化学生物学のための生物工学"
+    units: [E-229, B-180, H-057]
+    sources: [Y01]
+  - id: "LS9_2"
+    parent: "LS9"
+    name: "Applied genetics, gene editing and transgenic organisms"
+    ja: "応用遺伝学・ゲノム編集・遺伝子組換え生物"
+    units: [B-053, B-080, V-007, B-081]
+    sources: [Y01]
+  - id: "LS9_3"
+    parent: "LS9"
+    name: "Bioengineering of cells, tissues, organs and organisms"
+    ja: "細胞・組織・器官・生物の生物工学"
+    units: [E-226, B-054, B-080, E-228]
+    sources: [Y01]
+  - id: "LS9_4"
+    parent: "LS9"
+    name: "Microbial biotechnology and bioengineering"
+    ja: "微生物バイオテクノロジーと生物工学"
+    units: [E-228, E-229, B-043, B-144]
+    sources: [Y01]
+  - id: "LS9_5"
+    parent: "LS9"
+    name: "Food biotechnology and bioengineering"
+    ja: "食品バイオテクノロジーと生物工学"
+    units: [V-016, B-043, E-228]
+    sources: [Y01]
+  - id: "LS9_6"
+    parent: "LS9"
+    name: "Marine biotechnology and bioengineering"
+    ja: "海洋バイオテクノロジーと生物工学"
+    units: [V-013, B-154, H-105]
+    sources: [Y01]
+  - id: "LS9_7"
+    parent: "LS9"
+    name: "Environmental biotechnology and bioengineering"
+    ja: "環境バイオテクノロジーと生物工学"
+    units: [E-219, E-221, B-148, H-081]
+    sources: [Y01]
+  - id: "LS9_8"
+    parent: "LS9"
+    name: "Applied plant sciences, plant breeding, agroecology and soil biology"
+    ja: "応用植物科学・育種・アグロエコロジー・土壌生物学"
+    units: [V-006, V-007, V-005, V-008]
+    sources: [Y01]
+  - id: "LS9_9"
+    parent: "LS9"
+    name: "Plant pathology and pest resistance"
+    ja: "植物病理学と病害虫抵抗性"
+    units: [V-009, B-152]
+    sources: [Y01]
+  - id: "LS9_10"
+    parent: "LS9"
+    name: "Veterinary and applied animal sciences"
+    ja: "獣医学と応用動物科学"
+    units: [V-011, V-014, V-015, V-035]
+    sources: [Y01]
+  - id: "LS9_11"
+    parent: "LS9"
+    name: "Biomass production and utilisation, biofuels"
+    ja: "バイオマスの生産と利用・バイオ燃料"
+    units: [E-228, E-229, B-153, E-219, P-203]
+    sources: [Y01]
+  - id: "LS9_12"
+    parent: "LS9"
+    name: "Ecotoxicology, biohazards and biosafety"
+    ja: "生態毒性学・バイオハザード・バイオセーフティ"
+    units: [I-027, B-092, B-081, E-229]
+    sources: [Y01]
+  - id: "SH1_1"
+    parent: "SH1"
+    name: "Macroeconomics; monetary economics; economic growth, labour economics"
+    ja: "マクロ経済学・金融経済学・経済成長・労働経済学"
+    units: [F-013, F-025, F-053, F-062, F-054]
+    sources: [Y01]
+  - id: "SH1_2"
+    parent: "SH1"
+    name: "International trade; international business; spatial economics"
+    ja: "国際貿易・国際ビジネス・空間経済学"
+    units: [F-051, F-050, F-083, F-075]
+    sources: [Y01]
+  - id: "SH1_3"
+    parent: "SH1"
+    name: "Development economics political economics"
+    ja: "開発経済学と政治経済学"
+    units: [F-065, F-063, F-086, F-072, Y-013]
+    sources: [Y01]
+  - id: "SH1_4"
+    parent: "SH1"
+    name: "Finance; financial markets"
+    ja: "金融と金融市場"
+    units: [F-020, F-022, F-036, F-070, F-021]
+    sources: [Y01]
+  - id: "SH1_5"
+    parent: "SH1"
+    name: "Corporate finance; international finance"
+    ja: "企業財務と国際金融"
+    units: [F-023, F-011, F-050, F-071]
+    sources: [Y01]
+  - id: "SH1_6"
+    parent: "SH1"
+    name: "Banking, insurance"
+    ja: "銀行と保険"
+    units: [F-026, F-015, F-017, F-044, F-038]
+    sources: [Y01]
+  - id: "SH1_7"
+    parent: "SH1"
+    name: "Accounting, asset prices, auditing"
+    ja: "会計・資産価格・監査"
+    units: [F-004, F-010, F-042, F-036]
+    sources: [Y01]
+  - id: "SH1_8"
+    parent: "SH1"
+    name: "Econometrics, game theory, decision theory"
+    ja: "計量経済学・ゲーム理論・決定理論"
+    units: [F-033, F-034, F-024, F-058, Q-009]
+    sources: [Y01]
+  - id: "SH1_9"
+    parent: "SH1"
+    name: "Behavioural economics; experimental economics; neuro-economics"
+    ja: "行動経済学・実験経済学・神経経済学"
+    units: [F-049, Q-009, Q-016, Q-007, B-065]
+    sources: [Y01]
+  - id: "SH1_10"
+    parent: "SH1"
+    name: "Microeconomics, industrial organisation, applied microeconomics"
+    ja: "ミクロ経済学・産業組織論・応用ミクロ経済学"
+    units: [F-012, F-060, F-074, F-076, F-073]
+    sources: [Y01]
+  - id: "SH1_11"
+    parent: "SH1"
+    name: "Innovation, research & development, entrepreneurship"
+    ja: "イノベーション・研究開発・起業"
+    units: [F-082, Y-022, F-047]
+    sources: [Y01]
+  - id: "SH1_12"
+    parent: "SH1"
+    name: "Management; operations management, international management"
+    ja: "経営管理・オペレーション管理・国際経営"
+    units: [E-155, E-156, E-157, F-043, F-042]
+    sources: [Y01]
+  - id: "SH1_13"
+    parent: "SH1"
+    name: "Human resource management; organisational behaviour"
+    ja: "人的資源管理と組織行動"
+    units: [Q-030, F-062, F-073, Q-011]
+    sources: [Y01]
+  - id: "SH1_14"
+    parent: "SH1"
+    name: "Strategy, operation research"
+    ja: "戦略とオペレーションズ・リサーチ"
+    units: [E-157, K-010, K-011, F-043, F-024]
+    sources: [Y01]
+  - id: "SH1_15"
+    parent: "SH1"
+    name: "Marketing, consumer behaviour"
+    ja: "マーケティングと消費者行動"
+    units: [F-060, F-076, F-049, Q-009, S-054]
+    sources: [Y01]
+  - id: "SH1_16"
+    parent: "SH1"
+    name: "Quantitative economic history, economic systems, institutional economics"
+    ja: "計量経済史・経済体制・制度経済学"
+    units: [F-063, F-065, F-033, F-025, Y-004]
+    sources: [Y01]
+  - id: "SH2_1"
+    parent: "SH2"
+    name: "Political systems, governance"
+    ja: "政治体制と統治"
+    units: [Y-013, Y-012, Y-020, F-072]
+    sources: [Y01]
+  - id: "SH2_2"
+    parent: "SH2"
+    name: "Democratisation and social movements"
+    ja: "民主化と社会運動"
+    units: [Y-019, Y-013, Y-005]
+    sources: [Y01]
+  - id: "SH2_3"
+    parent: "SH2"
+    name: "Conflict resolution, war, peace building"
+    ja: "紛争解決・戦争・平和構築"
+    units: [Y-014, F-024, Y-004]
+    sources: [Y01]
+  - id: "SH2_4"
+    parent: "SH2"
+    name: "Legal studies, comparative law, law and economics"
+    ja: "法学・比較法・法と経済学"
+    none: "法の解釈と比較法は規範・解釈の学で範囲外。測れる部分（裁判の実証、外部性・契約・規制の経済学、犯罪抑止）は列の単元が受け持つ"
+    sources: [Y01]
+  - id: "SH2_5"
+    parent: "SH2"
+    name: "Constitutions, human rights, international law"
+    ja: "憲法・人権・国際法"
+    none: "憲法・人権・国際法の解釈は規範で範囲外。測れる部分（民主主義と人権の指標、抑止と紛争の実証）は列の単元"
+    sources: [Y01]
+  - id: "SH2_6"
+    parent: "SH2"
+    name: "International relations, global and transnational governance"
+    ja: "国際関係とグローバル・越境統治"
+    units: [Y-014, F-051, F-024, F-061, Y-004]
+    sources: [Y01]
+  - id: "SH2_7"
+    parent: "SH2"
+    name: "Humanitarian assistance and development"
+    ja: "人道支援と開発"
+    units: [F-065, Y-003, Y-015, I-036, F-086]
+    sources: [Y01]
+  - id: "SH2_8"
+    parent: "SH2"
+    name: "Political and legal philosophy"
+    ja: "政治哲学と法哲学"
+    none: "政治・法の哲学は規範の議論で範囲外。形式化できる部分（投票と集団選択の公理、ゲーム）は F-072・F-024"
+    sources: [Y01]
+  - id: "SH2_9"
+    parent: "SH2"
+    name: "Digital approaches to political science and law"
+    ja: "政治学と法学へのデジタルな接近"
+    units: [Y-006, Y-012, K-216, K-217]
+    sources: [Y01]
+  - id: "SH3_1"
+    parent: "SH3"
+    name: "Social structure, social mobility, social innovation"
+    ja: "社会構造・社会移動・社会イノベーション"
+    units: [Y-008, Y-011, Y-002, Y-005]
+    sources: [Y01]
+  - id: "SH3_2"
+    parent: "SH3"
+    name: "Inequalities, discrimination, prejudice"
+    ja: "不平等・差別・偏見"
+    units: [F-081, F-063, Q-011, Y-008]
+    sources: [Y01]
+  - id: "SH3_3"
+    parent: "SH3"
+    name: "Aggression and violence, antisocial behaviour, crime"
+    ja: "攻撃と暴力・反社会的行動・犯罪"
+    units: [Y-010, Q-028, Q-011]
+    sources: [Y01]
+  - id: "SH3_4"
+    parent: "SH3"
+    name: "Social integration, exclusion, prosocial behaviour"
+    ja: "社会的統合・排除・向社会的行動"
+    units: [Q-011, Y-005, Y-011, F-049, P-257]
+    sources: [Y01]
+  - id: "SH3_5"
+    parent: "SH3"
+    name: "Social attitudes and beliefs"
+    ja: "社会的態度と信念"
+    units: [Q-011, Y-012, Y-001, Y-016]
+    sources: [Y01]
+  - id: "SH3_6"
+    parent: "SH3"
+    name: "Social influence; power and group behaviour"
+    ja: "社会的影響・権力・集団行動"
+    units: [Q-011, Y-005, P-257, Q-030]
+    sources: [Y01]
+  - id: "SH3_7"
+    parent: "SH3"
+    name: "Social policies, welfare, work and employment"
+    ja: "社会政策・福祉・労働と雇用"
+    units: [Y-015, F-062, F-063, F-052, Y-004]
+    sources: [Y01]
+  - id: "SH3_8"
+    parent: "SH3"
+    name: "Poverty and poverty alleviation"
+    ja: "貧困と貧困削減"
+    units: [F-063, F-065, Y-002, Y-003, Y-015]
+    sources: [Y01]
+  - id: "SH3_9"
+    parent: "SH3"
+    name: "Social aspects of teaching and learning, curriculum studies, education and educational policies"
+    ja: "教え学ぶことの社会的側面・カリキュラム研究・教育と教育政策"
+    units: [Y-017, Y-018, F-080, Q-023, Q-024]
+    sources: [Y01]
+  - id: "SH3_10"
+    parent: "SH3"
+    name: "Communication and information, networks, media"
+    ja: "コミュニケーションと情報・ネットワーク・メディア"
+    units: [Y-016, Y-005, P-251, K-204, Y-006]
+    sources: [Y01]
+  - id: "SH3_11"
+    parent: "SH3"
+    name: "Digital social research"
+    ja: "デジタル社会調査"
+    units: [Y-006, Y-001, Y-005, K-216]
+    sources: [Y01]
+  - id: "SH3_12"
+    parent: "SH3"
+    name: "Social studies of science and technology"
+    ja: "科学技術の社会研究"
+    none: "科学技術の社会研究（STS）は事例と解釈の学が主で範囲外に近い。測れる部分（引用の計量、技術の普及、科学観の測定）は列"
+    sources: [Y01]
+  - id: "SH4_1"
+    parent: "SH4"
+    name: "Cognitive basis of human development, developmental disorders; comparative cognition"
+    ja: "人の発達の認知的基盤・発達障害・比較認知"
+    units: [Q-010, Q-028, B-160, Q-006]
+    sources: [Y01]
+  - id: "SH4_2"
+    parent: "SH4"
+    name: "Personality and social cognition; emotion"
+    ja: "パーソナリティと社会的認知・情動"
+    units: [Q-013, Q-011, Q-012]
+    sources: [Y01]
+  - id: "SH4_3"
+    parent: "SH4"
+    name: "Clinical and health psychology"
+    ja: "臨床心理学と健康心理学"
+    units: [Q-014, Q-018, Q-029, Q-028]
+    sources: [Y01]
+  - id: "SH4_4"
+    parent: "SH4"
+    name: "Neurocognitive psychology"
+    ja: "神経認知心理学"
+    units: [Q-027, B-065, Q-005, B-114, E-225]
+    sources: [Y01]
+  - id: "SH4_5"
+    parent: "SH4"
+    name: "Attention, perception, action, consciousness"
+    ja: "注意・知覚・行為・意識"
+    units: [Q-004, Q-005, Q-025, Q-015, B-114]
+    sources: [Y01]
+  - id: "SH4_6"
+    parent: "SH4"
+    name: "Learning, memory; cognition in ageing"
+    ja: "学習と記憶・加齢と認知"
+    units: [Q-005, Q-007, Q-010, Q-023]
+    sources: [Y01]
+  - id: "SH4_7"
+    parent: "SH4"
+    name: "Reasoning, decision-making; intelligence"
+    ja: "推論・意思決定・知能"
+    units: [Q-009, Q-008, Q-013, Q-016]
+    sources: [Y01]
+  - id: "SH4_8"
+    parent: "SH4"
+    name: "Language learning and processing (first and second languages)"
+    ja: "言語の学習と処理（第一言語と第二言語）"
+    units: [Q-008, Q-010, Q-026, K-216]
+    sources: [Y01]
+  - id: "SH4_9"
+    parent: "SH4"
+    name: "Theoretical linguistics; computational linguistics"
+    ja: "理論言語学と計算言語学"
+    units: [K-216, K-217, L-028, L-030, Q-008]
+    sources: [Y01]
+  - id: "SH4_10"
+    parent: "SH4"
+    name: "Language typology; historical linguistics"
+    ja: "言語類型論と歴史言語学"
+    units: [B-134, S-037, S-061, S-039, K-110]
+    sources: [Y01]
+  - id: "SH4_11"
+    parent: "SH4"
+    name: "Pragmatics, sociolinguistics, linguistic anthropology, discourse analysis"
+    ja: "語用論・社会言語学・言語人類学・談話分析"
+    units: [S-037, K-063, Y-001, Q-015, F-024]
+    sources: [Y01]
+  - id: "SH5_1"
+    parent: "SH5"
+    name: "Classics, ancient literature"
+    ja: "古典学と古代文学"
+    none: "古典・古代文学は人文で範囲外"
+    sources: [Y01]
+  - id: "SH5_2"
+    parent: "SH5"
+    name: "Theory and history of literature, comparative literature"
+    ja: "文学の理論と歴史・比較文学"
+    none: "文学の理論と歴史は解釈の学で範囲外。測れる部分（文体と語の分布の計量）は列の単元"
+    sources: [Y01]
+  - id: "SH5_3"
+    parent: "SH5"
+    name: "Book studies"
+    ja: "書物研究"
+    none: "書物の研究は書誌・出版史で人文、範囲外。測れる部分（出版と引用の計量、検索）は列の単元"
+    sources: [Y01]
+  - id: "SH5_4"
+    parent: "SH5"
+    name: "Philology; text and image studies"
+    ja: "文献学とテキスト・イメージ研究"
+    none: "文献学とテキスト・図像の研究は校訂と解釈の学で範囲外。測れる部分（著者判定などの計量、画像の認識）は列の単元"
+    sources: [Y01]
+  - id: "SH5_5"
+    parent: "SH5"
+    name: "Palaeography and codicology"
+    ja: "古書体学と写本学"
+    none: "古文書の読解と写本の研究は人文と職人の技で範囲外。測れる部分（材料の年代・分光分析、文字の画像認識）は列の単元"
+    sources: [Y01]
+  - id: "SH5_6"
+    parent: "SH5"
+    name: "Philosophy of mind, philosophy of language"
+    ja: "心の哲学と言語哲学"
+    none: "心の哲学・言語の哲学は概念の分析で範囲外。実証できる部分（知覚、意識の科学、言語の理解）は列の単元"
+    sources: [Y01]
+  - id: "SH5_7"
+    parent: "SH5"
+    name: "Philosophy of science, epistemology, logic"
+    ja: "科学哲学・認識論・論理学"
+    units: [L-023, L-024, L-029, L-034, L-043]
+    sources: [Y01]
+  - id: "SH5_8"
+    parent: "SH5"
+    name: "Metaphysics, philosophical anthropology; aesthetics"
+    ja: "形而上学・哲学的人間学・美学"
+    none: "形而上学・哲学的人間学・美学は概念の議論で範囲外。測れる部分（知覚と感情の実験）は列の単元"
+    sources: [Y01]
+  - id: "SH5_9"
+    parent: "SH5"
+    name: "Ethics and its applications; social philosophy"
+    ja: "倫理学とその応用・社会哲学"
+    none: "倫理と社会哲学は規範の判断で範囲外。測れる部分（道徳判断・協力・分配の実験、集団選択の形式）は列の単元"
+    sources: [Y01]
+  - id: "SH5_10"
+    parent: "SH5"
+    name: "History of philosophy"
+    ja: "哲学史"
+    none: "哲学史は人文で範囲外"
+    sources: [Y01]
+  - id: "SH5_11"
+    parent: "SH5"
+    name: "Digital humanities; digital approaches to literary studies and philosophy"
+    ja: "デジタル人文学（文学研究と哲学へのデジタルな接近）"
+    units: [K-216, K-217, Y-006, K-204, Y-005]
+    sources: [Y01]
+  - id: "SH6_1"
+    parent: "SH6"
+    name: "Archaeological methods and theory, history of archaeology"
+    ja: "考古学の方法と理論・考古学史"
+    none: "考古学の理論と学史は解釈、発掘の手技は実務で範囲外。測れる部分（層序、年代、空間、型式の多変量解析）は列の単元"
+    sources: [Y01]
+  - id: "SH6_2"
+    parent: "SH6"
+    name: "Prehistoric archaeology, archaeology of non-literate societies"
+    ja: "先史考古学と文字を持たない社会の考古学"
+    none: "先史の考古学は物質資料の解釈で範囲外。測れる部分（人類の進化、古代 DNA、年代）は列の単元"
+    sources: [Y01]
+  - id: "SH6_3"
+    parent: "SH6"
+    name: "Archaeology of early literate societies and early civilizations"
+    ja: "初期の文字社会と初期文明の考古学"
+    none: "初期文明の考古学は解釈で範囲外。測れる部分（年代、遺跡の測量と空間解析）は列の単元"
+    sources: [Y01]
+  - id: "SH6_4"
+    parent: "SH6"
+    name: "Medieval and post-medieval archaeologies"
+    ja: "中世・近世以降の考古学"
+    none: "中世・近世の考古学は解釈で範囲外。測れる部分（年代、測量と空間解析）は列の単元"
+    sources: [Y01]
+  - id: "SH6_5"
+    parent: "SH6"
+    name: "Archaeological science, bioarchaeology, environmental archaeology, geoarchaeology"
+    ja: "考古科学・生物考古学・環境考古学・地考古学"
+    units: [W-124]
+    sources: [Y01]
+  - id: "SH6_6"
+    parent: "SH6"
+    name: "Digital, computational, virtual and geospatial archaeologies"
+    ja: "デジタル・計算・仮想・地理空間の考古学"
+    units: [W-114, W-066, W-120, W-121, W-122, K-081]
+    sources: [Y01]
+  - id: "SH6_7"
+    parent: "SH6"
+    name: "Historiography, theory and methods of history, including the analysis of digital data"
+    ja: "歴史学の理論と方法（デジタルデータの分析を含む）"
+    none: "歴史学の理論と方法は史料批判と解釈で範囲外。測れる部分（デジタル史料の文章解析、計量の分析）は列の単元"
+    sources: [Y01]
+  - id: "SH6_8"
+    parent: "SH6"
+    name: "Ancient history, medieval history"
+    ja: "古代史と中世史"
+    none: "古代・中世の歴史は人文で範囲外。測れる部分（古気候、古代 DNA）は列の単元"
+    sources: [Y01]
+  - id: "SH6_9"
+    parent: "SH6"
+    name: "Early modern, modern, and contemporary history"
+    ja: "近世・近代・現代史"
+    none: "近世・近現代の歴史は人文で範囲外"
+    sources: [Y01]
+  - id: "SH6_10"
+    parent: "SH6"
+    name: "Colonial and post-colonial history"
+    ja: "植民地史とポストコロニアルの歴史"
+    none: "植民地と脱植民地の歴史は人文・解釈で範囲外。測れる部分（制度の歴史の自然実験）は列の単元"
+    sources: [Y01]
+  - id: "SH6_11"
+    parent: "SH6"
+    name: "Global, transnational, and comparative history"
+    ja: "世界史・越境史・比較史"
+    none: "グローバル・比較の歴史は人文で範囲外。測れる部分（貿易と所得の長期の計量）は列の単元"
+    sources: [Y01]
+  - id: "SH6_12"
+    parent: "SH6"
+    name: "Social and economic history"
+    ja: "社会経済史"
+    none: "社会・経済の歴史の叙述は人文で範囲外。測れる部分（歴史人口学、階層の移動、長期の計量）は列の単元"
+    sources: [Y01]
+  - id: "SH6_13"
+    parent: "SH6"
+    name: "Cultural history, intellectual history"
+    ja: "文化史と思想史"
+    none: "文化史・思想史は人文で範囲外"
+    sources: [Y01]
+  - id: "SH6_14"
+    parent: "SH6"
+    name: "History of science and technologies, environmental history"
+    ja: "科学技術史と環境史"
+    none: "科学史・技術史・環境史は歴史叙述で範囲外。測れる部分（過去の気候と環境の復元）は列の単元"
+    sources: [Y01]
+  - id: "SH7_1"
+    parent: "SH7"
+    name: "Human, economic and social geography"
+    ja: "人文・経済・社会地理学"
+    units: [F-075, S-061, W-114, Y-011, Y-007]
+    sources: [Y01]
+  - id: "SH7_2"
+    parent: "SH7"
+    name: "Migration"
+    ja: "人口移動"
+    units: [F-083, Y-007, Y-011, F-065]
+    sources: [Y01]
+  - id: "SH7_3"
+    parent: "SH7"
+    name: "Population dynamics: households, family and fertility"
+    ja: "人口動態（世帯・家族・出生）"
+    units: [Y-007, Y-009, B-090, F-029]
+    sources: [Y01]
+  - id: "SH7_4"
+    parent: "SH7"
+    name: "Social aspects of health, ageing and society"
+    ja: "健康・加齢と社会の社会的側面"
+    units: [I-036, F-079, Y-007, I-035, F-029]
+    sources: [Y01]
+  - id: "SH7_5"
+    parent: "SH7"
+    name: "Sustainability sciences, environment and resources, ecosystem services"
+    ja: "持続可能性科学・環境と資源・生態系サービス"
+    units: [B-041, B-057, B-091, F-061, E-222, W-060]
+    sources: [Y01]
+  - id: "SH7_6"
+    parent: "SH7"
+    name: "Environmental and climate change, societal impact and policy"
+    ja: "環境・気候変動と社会への影響・政策"
+    units: [P-201, P-143, P-153, F-061, F-078, V-010, I-041]
+    sources: [Y01]
+  - id: "SH7_7"
+    parent: "SH7"
+    name: "Cities; urban, regional and rural studies"
+    ja: "都市・地域・農村研究"
+    units: [F-075, Y-011, Y-007, S-061, P-258]
+    sources: [Y01]
+  - id: "SH7_8"
+    parent: "SH7"
+    name: "Land use and planning"
+    ja: "土地利用と計画"
+    units: [F-075, W-114, E-200, B-060, B-091]
+    sources: [Y01]
+  - id: "SH7_9"
+    parent: "SH7"
+    name: "Energy, transportation and mobility"
+    ja: "エネルギー・交通・移動"
+    units: [F-077, F-078, P-203, P-258, E-170, F-076]
+    sources: [Y01]
+  - id: "SH7_10"
+    parent: "SH7"
+    name: "GIS, spatial analysis; digital geography"
+    ja: "GIS・空間分析・デジタル地理学"
+    units: [W-114, S-061, W-066, E-200, W-121]
+    sources: [Y01]
+  - id: "SH8_1"
+    parent: "SH8"
+    name: "Kinship; diversity and identities, gender, interethnic relations"
+    ja: "親族・多様性とアイデンティティ・ジェンダー・民族間関係"
+    none: "親族・アイデンティティ・民族関係の研究は文化人類学と規範の議論が主で範囲外。測れる部分（性別の賃金差、家族の実証、集団間の偏見、血縁選択）は列の単元"
+    sources: [Y01]
+  - id: "SH8_2"
+    parent: "SH8"
+    name: "Religious studies, ritual; symbolic representation"
+    ja: "宗教学・儀礼・象徴表現"
+    none: "宗教学・儀礼・象徴の研究は解釈で範囲外。測れる部分（信念と集団の実験、発達）は列の単元"
+    sources: [Y01]
+  - id: "SH8_3"
+    parent: "SH8"
+    name: "Cultural studies and theory, cultural identities and memories, cultural heritage"
+    ja: "文化研究と文化理論・文化的アイデンティティと記憶・文化遺産"
+    none: "文化研究・文化の記憶・文化遺産は解釈で範囲外。測れる部分（記憶の再構成、デジタル記録の計量）は列の単元"
+    sources: [Y01]
+  - id: "SH8_4"
+    parent: "SH8"
+    name: "Museums, exhibitions, conservation and restoration"
+    ja: "博物館・展示・保存と修復"
+    none: "博物館・展示・保存と修復は職業の実務で範囲外。測れる部分（材料の分析、年代）は列の単元"
+    sources: [Y01]
+  - id: "SH8_5"
+    parent: "SH8"
+    name: "History of art and of architecture"
+    ja: "美術史と建築史"
+    none: "美術史・建築史は人文で範囲外"
+    sources: [Y01]
+  - id: "SH8_6"
+    parent: "SH8"
+    name: "Architecture, design, craft, creative industries"
+    ja: "建築・デザイン・工芸・創造産業"
+    none: "建築・デザイン・工芸は設計の実務で範囲外。測れる部分（構造、人間工学、利用者の研究、創造産業の市場）は列の単元。建築環境工学は欠け（既知）"
+    sources: [Y01]
+  - id: "SH8_7"
+    parent: "SH8"
+    name: "Music and musicology; history of music"
+    ja: "音楽と音楽学・音楽史"
+    none: "音楽学と音楽史は人文で範囲外。測れる部分（音の物理、心理音響、聴覚）は列の単元"
+    sources: [Y01]
+  - id: "SH8_8"
+    parent: "SH8"
+    name: "Visual and performing arts, screen, arts-based research"
+    ja: "視覚芸術・舞台芸術・映像・芸術に基づく研究"
+    none: "美術・舞台・映画の研究は解釈と実技で範囲外。測れる部分（画像の生成、色、視覚と聴覚の知覚）は列の単元"
+    sources: [Y01]
+  - id: "SH8_9"
+    parent: "SH8"
+    name: "Digital approaches to anthropology, cultural studies and art"
+    ja: "人類学・文化研究・芸術へのデジタルな接近"
+    units: [Y-006, K-216, K-217, K-082, K-162]
+    sources: [Y01]

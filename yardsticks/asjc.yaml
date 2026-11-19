@@ -1,0 +1,1720 @@
+# 外の物差し：Scopus の雑誌の分類 ASJC（All Science Journal Classification）で、論文雑誌の分野を支える土台の抜けを測る（取りまとめ、2026-11-19）。
+# 大分野（xx00 の名前から General を除いたもの）を group にし、4 けたの分野を項目にした。総合（xx00）、その他（xx01、miscellaneous）、1000 Multidisciplinary は分野の中身を持たないので項目にしない（281 項目）。
+# 判定の根拠は docs/research/yardstick-journals.md。書き方と確かめ方は docs/yardsticks.md。対象・臓器・職業で切った分野は、単元の組み合わせ（土台）を units に挙げた。
+title: "Scopus ASJC（All Science Journal Classification）"
+version: "2026-11-19 取得"
+sources:
+  Y01: {title: "Elsevier Scopus Support Center「What is the complete list of ASJC subject areas in Scopus?」（ページの最終更新 2024-08-15）", url: "https://www.elsevier.support/scopus/answer/what-is-the-complete-list-of-asjc-subject-areas-in-scopus", date: 2026-11-19, license: "未確認（Elsevier のサポートページ）。記号と名前だけを使い、説明文は写していない"}
+items:
+  - {id: "area:Agricultural and Biological Sciences", name: "Agricultural and Biological Sciences", ja: "農学・生物学", group: true}
+  - {id: "area:Arts and Humanities", name: "Arts and Humanities", ja: "芸術・人文学", group: true}
+  - {id: "area:Biochemistry, Genetics and Molecular Biology", name: "Biochemistry, Genetics and Molecular Biology", ja: "生化学・遺伝学・分子生物学", group: true}
+  - {id: "area:Business, Management and Accounting", name: "Business, Management and Accounting", ja: "経営・管理・会計", group: true}
+  - {id: "area:Chemical Engineering", name: "Chemical Engineering", ja: "化学工学", group: true}
+  - {id: "area:Chemistry", name: "Chemistry", ja: "化学", group: true}
+  - {id: "area:Computer Science", name: "Computer Science", ja: "計算機科学", group: true}
+  - {id: "area:Decision Sciences", name: "Decision Sciences", ja: "意思決定科学", group: true}
+  - {id: "area:Earth and Planetary Sciences", name: "Earth and Planetary Sciences", ja: "地球惑星科学", group: true}
+  - {id: "area:Economics, Econometrics and Finance", name: "Economics, Econometrics and Finance", ja: "経済学・計量経済学・ファイナンス", group: true}
+  - {id: "area:Energy", name: "Energy", ja: "エネルギー", group: true}
+  - {id: "area:Engineering", name: "Engineering", ja: "工学", group: true}
+  - {id: "area:Environmental Science", name: "Environmental Science", ja: "環境科学", group: true}
+  - {id: "area:Immunology and Microbiology", name: "Immunology and Microbiology", ja: "免疫学・微生物学", group: true}
+  - {id: "area:Materials Science", name: "Materials Science", ja: "材料科学", group: true}
+  - {id: "area:Mathematics", name: "Mathematics", ja: "数学", group: true}
+  - {id: "area:Medicine", name: "Medicine", ja: "医学", group: true}
+  - {id: "area:Neuroscience", name: "Neuroscience", ja: "神経科学", group: true}
+  - {id: "area:Nursing", name: "Nursing", ja: "看護学", group: true}
+  - {id: "area:Pharmacology, Toxicology and Pharmaceutics", name: "Pharmacology, Toxicology and Pharmaceutics", ja: "薬理学・毒性学・薬剤学", group: true}
+  - {id: "area:Physics and Astronomy", name: "Physics and Astronomy", ja: "物理学・天文学", group: true}
+  - {id: "area:Psychology", name: "Psychology", ja: "心理学", group: true}
+  - {id: "area:Social Sciences", name: "Social Sciences", ja: "社会科学", group: true}
+  - {id: "area:Veterinary", name: "Veterinary", ja: "獣医学", group: true}
+  - {id: "area:Dentistry", name: "Dentistry", ja: "歯学", group: true}
+  - {id: "area:Health Professions", name: "Health Professions", ja: "保健医療専門職", group: true}
+  - id: "1102"
+    parent: "area:Agricultural and Biological Sciences"
+    name: "Agronomy and Crop Science"
+    ja: "農学と作物学"
+    units: [V-005, V-006, V-004, V-008]
+    sources: [Y01]
+  - id: "1103"
+    parent: "area:Agricultural and Biological Sciences"
+    name: "Animal Science and Zoology"
+    ja: "動物科学と動物学"
+    units: [V-011, V-006, V-012, B-130]
+    sources: [Y01]
+  - id: "1104"
+    parent: "area:Agricultural and Biological Sciences"
+    name: "Aquatic Science"
+    ja: "水圏科学"
+    units: [B-154, B-155, V-013, W-063]
+    sources: [Y01]
+  - id: "1105"
+    parent: "area:Agricultural and Biological Sciences"
+    name: "Ecology, Evolution, Behavior and Systematics"
+    ja: "生態学・進化・行動・系統分類"
+    units: [B-056, B-058, B-059, B-134, B-185]
+    sources: [Y01]
+  - id: "1106"
+    parent: "area:Agricultural and Biological Sciences"
+    name: "Food Science"
+    ja: "食品科学"
+    units: [V-016, H-044, B-043, I-052]
+    sources: [Y01]
+  - id: "1107"
+    parent: "area:Agricultural and Biological Sciences"
+    name: "Forestry"
+    ja: "林学"
+    units: [B-103, B-040, V-008]
+    sources: [Y01]
+  - id: "1108"
+    parent: "area:Agricultural and Biological Sciences"
+    name: "Horticulture"
+    ja: "園芸学"
+    units: [V-005, B-038, V-008, B-150]
+    sources: [Y01]
+  - id: "1109"
+    parent: "area:Agricultural and Biological Sciences"
+    name: "Insect Science"
+    ja: "昆虫学"
+    units: [B-132, V-009]
+    sources: [Y01]
+  - id: "1110"
+    parent: "area:Agricultural and Biological Sciences"
+    name: "Plant Science"
+    ja: "植物科学"
+    units: [B-038, B-149, B-150, B-151, B-152]
+    sources: [Y01]
+  - id: "1111"
+    parent: "area:Agricultural and Biological Sciences"
+    name: "Soil Science"
+    ja: "土壌学"
+    units: [V-008, W-062, W-070]
+    sources: [Y01]
+  - id: "1202"
+    parent: "area:Arts and Humanities"
+    name: "History"
+    ja: "歴史学"
+    none: "人文（歴史）。測れる部分は歴史を自然実験に使う実証（F-065）。"
+    sources: [Y01]
+  - id: "1203"
+    parent: "area:Arts and Humanities"
+    name: "Language and Linguistics"
+    ja: "言語と言語学"
+    none: "人文の記述と理論（統語・意味・類型・社会言語）は範囲の外。測れる部分は音声（Q-026）、心理言語（Q-008）、計算言語（K-216、K-217）、形式言語（L-028）。"
+    sources: [Y01]
+  - id: "1204"
+    parent: "area:Arts and Humanities"
+    name: "Archeology (arts and humanities)"
+    ja: "考古学（人文）"
+    none: "人文（考古学）の解釈と編年の議論は範囲の外。測れる部分は年代測定（W-010）、古代 DNA（B-188）、人類の進化（B-187）、空間データの解析（W-114）。"
+    sources: [Y01]
+  - id: "1205"
+    parent: "area:Arts and Humanities"
+    name: "Classics"
+    ja: "古典学"
+    none: "人文（古典学）。測れる部分はない。"
+    sources: [Y01]
+  - id: "1206"
+    parent: "area:Arts and Humanities"
+    name: "Conservation"
+    ja: "文化財の保存"
+    none: "文化財の保存修復は職業の実務と価値判断が中心。材料の分析と劣化は H-041、H-042、H-048、E-163 で測れる。"
+    sources: [Y01]
+  - id: "1207"
+    parent: "area:Arts and Humanities"
+    name: "History and Philosophy of Science"
+    ja: "科学史と科学哲学"
+    none: "人文（科学史・科学哲学）。科学の営みの測定は科学計量学（Y-022）と再現性（Q-006）。"
+    sources: [Y01]
+  - id: "1208"
+    parent: "area:Arts and Humanities"
+    name: "Literature and Literary Theory"
+    ja: "文学と文学理論"
+    none: "人文（文学・文学理論）。文章の計量は K-216 と Y-006。"
+    sources: [Y01]
+  - id: "1209"
+    parent: "area:Arts and Humanities"
+    name: "Museology"
+    ja: "博物館学"
+    none: "人文と職業の実務（博物館学）。測れる部分はない。"
+    sources: [Y01]
+  - id: "1210"
+    parent: "area:Arts and Humanities"
+    name: "Music"
+    ja: "音楽"
+    none: "芸術（音楽）。音の物理と聴覚の測定は P-022、E-149、Q-004。"
+    sources: [Y01]
+  - id: "1211"
+    parent: "area:Arts and Humanities"
+    name: "Philosophy"
+    ja: "哲学"
+    none: "人文（哲学）。形式論理は L の流れにある。"
+    sources: [Y01]
+  - id: "1212"
+    parent: "area:Arts and Humanities"
+    name: "Religious Studies"
+    ja: "宗教学"
+    none: "人文（宗教学）。測れる部分はない。"
+    sources: [Y01]
+  - id: "1213"
+    parent: "area:Arts and Humanities"
+    name: "Visual Arts and Performing Arts"
+    ja: "美術と舞台芸術"
+    none: "芸術（美術・舞台芸術）。知覚と色の測定は Q-001、Q-004、K-074。"
+    sources: [Y01]
+  - id: "1302"
+    parent: "area:Biochemistry, Genetics and Molecular Biology"
+    name: "Aging"
+    ja: "加齢"
+    units: [B-112, I-020, I-049]
+    sources: [Y01]
+  - id: "1303"
+    parent: "area:Biochemistry, Genetics and Molecular Biology"
+    name: "Biochemistry"
+    ja: "生化学"
+    units: [B-006, B-007, B-008, B-028, B-029]
+    sources: [Y01]
+  - id: "1304"
+    parent: "area:Biochemistry, Genetics and Molecular Biology"
+    name: "Biophysics"
+    ja: "生物物理学"
+    units: [B-003, B-004, B-005, B-013]
+    sources: [Y01]
+  - id: "1305"
+    parent: "area:Biochemistry, Genetics and Molecular Biology"
+    name: "Biotechnology"
+    ja: "バイオテクノロジー"
+    units: [B-053, B-033, E-229, E-228, B-080]
+    sources: [Y01]
+  - id: "1306"
+    parent: "area:Biochemistry, Genetics and Molecular Biology"
+    name: "Cancer Research"
+    ja: "がん研究"
+    units: [I-023, I-050, B-186]
+    sources: [Y01]
+  - id: "1307"
+    parent: "area:Biochemistry, Genetics and Molecular Biology"
+    name: "Cell Biology"
+    ja: "細胞生物学"
+    gap: "既知の欠け（細胞の信号伝達、細胞周期の制御）。生命科学の段 B でまとめて足す（docs/yardsticks.md の次の回の候補）"
+    sources: [Y01]
+  - id: "1308"
+    parent: "area:Biochemistry, Genetics and Molecular Biology"
+    name: "Clinical Biochemistry"
+    ja: "臨床生化学"
+    units: [I-043, I-019, B-008, H-042]
+    sources: [Y01]
+  - id: "1309"
+    parent: "area:Biochemistry, Genetics and Molecular Biology"
+    name: "Developmental Biology"
+    ja: "発生生物学"
+    units: [B-046, B-140, B-141, B-142, B-150]
+    sources: [Y01]
+  - id: "1310"
+    parent: "area:Biochemistry, Genetics and Molecular Biology"
+    name: "Endocrinology"
+    ja: "内分泌学"
+    units: [I-019, I-018, I-046, B-035]
+    sources: [Y01]
+  - id: "1311"
+    parent: "area:Biochemistry, Genetics and Molecular Biology"
+    name: "Genetics"
+    ja: "遺伝学"
+    units: [B-001, B-002, B-045, B-024, I-024]
+    sources: [Y01]
+  - id: "1312"
+    parent: "area:Biochemistry, Genetics and Molecular Biology"
+    name: "Molecular Biology"
+    ja: "分子生物学"
+    gap: "既知の欠け（クロマチンとエピゲノム、RNA の制御、プロテオミクス）。生命科学の段 B でまとめて足す（docs/yardsticks.md の次の回の候補）"
+    sources: [Y01]
+  - id: "1313"
+    parent: "area:Biochemistry, Genetics and Molecular Biology"
+    name: "Molecular Medicine"
+    ja: "分子医学"
+    units: [B-053, I-024, I-053, I-054, I-023]
+    sources: [Y01]
+  - id: "1314"
+    parent: "area:Biochemistry, Genetics and Molecular Biology"
+    name: "Physiology"
+    ja: "生理学"
+    units: [I-004, I-014, I-015, I-016, I-017]
+    sources: [Y01]
+  - id: "1315"
+    parent: "area:Biochemistry, Genetics and Molecular Biology"
+    name: "Structural Biology"
+    ja: "構造生物学"
+    units: [B-012, B-014, K-111, K-112]
+    sources: [Y01]
+  - id: "1402"
+    parent: "area:Business, Management and Accounting"
+    name: "Accounting"
+    ja: "会計学"
+    units: [F-004, F-010, F-042]
+    sources: [Y01]
+  - id: "1403"
+    parent: "area:Business, Management and Accounting"
+    name: "Business and International Management"
+    ja: "経営と国際経営"
+    units: [F-043, F-083, F-051, F-023]
+    sources: [Y01]
+  - id: "1404"
+    parent: "area:Business, Management and Accounting"
+    name: "Management Information Systems"
+    ja: "経営情報システム"
+    units: [K-169, K-199, E-199, Q-013]
+    sources: [Y01]
+  - id: "1405"
+    parent: "area:Business, Management and Accounting"
+    name: "Management of Technology and Innovation"
+    ja: "技術とイノベーションの経営"
+    units: [F-082, Y-022, E-199, E-184]
+    sources: [Y01]
+  - id: "1406"
+    parent: "area:Business, Management and Accounting"
+    name: "Marketing"
+    ja: "マーケティング"
+    units: [Q-009, F-060, F-076, S-054, Q-011]
+    sources: [Y01]
+  - id: "1407"
+    parent: "area:Business, Management and Accounting"
+    name: "Organizational Behavior and Human Resource Management"
+    ja: "組織行動と人的資源管理"
+    units: [Q-030, F-062, Q-011]
+    sources: [Y01]
+  - id: "1408"
+    parent: "area:Business, Management and Accounting"
+    name: "Strategy and Management"
+    ja: "戦略と経営"
+    units: [F-043, F-073, F-024, F-074]
+    sources: [Y01]
+  - id: "1409"
+    parent: "area:Business, Management and Accounting"
+    name: "Tourism, Leisure and Hospitality Management"
+    ja: "観光・余暇・ホスピタリティの経営"
+    units: [F-076, E-155, F-034, F-075, Y-001]
+    sources: [Y01]
+  - id: "1410"
+    parent: "area:Business, Management and Accounting"
+    name: "Industrial Relations"
+    ja: "労使関係"
+    units: [F-062, Q-030, F-081, F-024]
+    sources: [Y01]
+  - id: "1502"
+    parent: "area:Chemical Engineering"
+    name: "Bioengineering"
+    ja: "生物工学"
+    units: [E-228, E-229, E-226, E-168]
+    sources: [Y01]
+  - id: "1503"
+    parent: "area:Chemical Engineering"
+    name: "Catalysis"
+    ja: "触媒"
+    units: [H-052, E-214, H-023]
+    sources: [Y01]
+  - id: "1504"
+    parent: "area:Chemical Engineering"
+    name: "Chemical Health and Safety"
+    ja: "化学の健康と安全"
+    units: [E-217, I-027, I-041]
+    sources: [Y01]
+  - id: "1505"
+    parent: "area:Chemical Engineering"
+    name: "Colloid and Surface Chemistry"
+    ja: "コロイドと界面の化学"
+    units: [P-265, P-272, P-175, H-054]
+    sources: [Y01]
+  - id: "1506"
+    parent: "area:Chemical Engineering"
+    name: "Filtration and Separation"
+    ja: "ろ過と分離"
+    gap: "次の回の候補。(a) 膜分離工学／溶解拡散モデルと細孔流れモデル、透過流束と選択率、濃度分極とファウリング、逆浸透・限外ろ過・ナノろ過・電気透析・ガス分離、ケーキろ過の抵抗直列モデル、モジュールの物質収支／前提 E-213、E-215。(b) 吸着分離／吸着等温線（ラングミュア、BET）、固定層の破過曲線と物質移動帯、圧力スイング吸着、イオン交換、吸着剤の細孔の評価／前提 E-213、E-215、P-175。"
+    sources: [Y01]
+  - id: "1507"
+    parent: "area:Chemical Engineering"
+    name: "Fluid Flow and Transfer Processes"
+    ja: "流れと移動現象"
+    units: [E-213, E-024, E-040, E-031]
+    sources: [Y01]
+  - id: "1508"
+    parent: "area:Chemical Engineering"
+    name: "Process Chemistry and Technology"
+    ja: "プロセス化学と技術"
+    units: [E-212, E-214, E-216, E-218]
+    sources: [Y01]
+  - id: "1602"
+    parent: "area:Chemistry"
+    name: "Analytical Chemistry"
+    ja: "分析化学"
+    units: [H-042, H-041, H-100, H-031]
+    sources: [Y01]
+  - id: "1603"
+    parent: "area:Chemistry"
+    name: "Electrochemistry"
+    ja: "電気化学"
+    units: [H-048, H-027, H-100, H-101, H-102]
+    sources: [Y01]
+  - id: "1604"
+    parent: "area:Chemistry"
+    name: "Inorganic Chemistry"
+    ja: "無機化学"
+    units: [H-028, H-029, H-046, H-053]
+    sources: [Y01]
+  - id: "1605"
+    parent: "area:Chemistry"
+    name: "Organic Chemistry"
+    ja: "有機化学"
+    units: [H-032, H-038, H-039, H-040, H-047]
+    sources: [Y01]
+  - id: "1606"
+    parent: "area:Chemistry"
+    name: "Physical and Theoretical Chemistry"
+    ja: "物理化学と理論化学"
+    units: [H-036, H-037, H-045, H-051, H-055]
+    sources: [Y01]
+  - id: "1607"
+    parent: "area:Chemistry"
+    name: "Spectroscopy"
+    ja: "分光学"
+    units: [H-041, H-050, H-109]
+    sources: [Y01]
+  - id: "1702"
+    parent: "area:Computer Science"
+    name: "Artificial Intelligence"
+    ja: "人工知能"
+    units: [K-046, K-047, K-053, K-054, K-056]
+    sources: [Y01]
+  - id: "1703"
+    parent: "area:Computer Science"
+    name: "Computational Theory and Mathematics"
+    ja: "計算の理論と数学"
+    units: [K-028, K-041, L-026, K-150, K-171]
+    sources: [Y01]
+  - id: "1704"
+    parent: "area:Computer Science"
+    name: "Computer Graphics and Computer-Aided Design"
+    ja: "コンピュータグラフィックスと CAD"
+    units: [K-071, K-072, K-074, K-077, K-075]
+    sources: [Y01]
+  - id: "1705"
+    parent: "area:Computer Science"
+    name: "Computer Networks and Communications"
+    ja: "計算機ネットワークと通信"
+    units: [K-038, K-034, K-198, K-132, E-089]
+    sources: [Y01]
+  - id: "1706"
+    parent: "area:Computer Science"
+    name: "Computer Science Applications"
+    ja: "計算機科学の応用"
+    units: [K-064, K-143, K-163, K-190, K-201]
+    sources: [Y01]
+  - id: "1707"
+    parent: "area:Computer Science"
+    name: "Computer Vision and Pattern Recognition"
+    ja: "コンピュータビジョンとパターン認識"
+    units: [K-080, K-081, K-082, K-083]
+    sources: [Y01]
+  - id: "1708"
+    parent: "area:Computer Science"
+    name: "Hardware and Architecture"
+    ja: "ハードウェアとアーキテクチャ"
+    units: [K-030, K-031, K-032, K-193, K-194]
+    sources: [Y01]
+  - id: "1709"
+    parent: "area:Computer Science"
+    name: "Human-Computer Interaction"
+    ja: "ヒューマンコンピュータインタラクション"
+    units: [Q-020, Q-021, Q-022, K-212]
+    sources: [Y01]
+  - id: "1710"
+    parent: "area:Computer Science"
+    name: "Information Systems"
+    ja: "情報システム"
+    units: [K-169, K-204, K-203, K-202, K-215]
+    sources: [Y01]
+  - id: "1711"
+    parent: "area:Computer Science"
+    name: "Signal Processing"
+    ja: "信号処理"
+    units: [E-070, E-071, E-081, E-077, E-080]
+    sources: [Y01]
+  - id: "1712"
+    parent: "area:Computer Science"
+    name: "Software"
+    ja: "ソフトウェア"
+    units: [K-199, K-200, K-017, K-039, K-195]
+    sources: [Y01]
+  - id: "1802"
+    parent: "area:Decision Sciences"
+    name: "Information Systems and Management"
+    ja: "情報システムと経営"
+    units: [K-169, K-199, F-043, E-199, Q-021]
+    sources: [Y01]
+  - id: "1803"
+    parent: "area:Decision Sciences"
+    name: "Management Science and Operations Research"
+    ja: "経営科学とオペレーションズ・リサーチ"
+    units: [K-220, K-221]
+    sources: [Y01]
+  - id: "1804"
+    parent: "area:Decision Sciences"
+    name: "Statistics, Probability and Uncertainty"
+    ja: "統計・確率・不確かさ"
+    units: [S-001, S-018, S-019, S-021, S-022]
+    sources: [Y01]
+  - id: "1902"
+    parent: "area:Earth and Planetary Sciences"
+    name: "Atmospheric Science"
+    ja: "大気科学"
+    units: [P-122, P-123, P-131, P-132, P-120]
+    sources: [Y01]
+  - id: "1903"
+    parent: "area:Earth and Planetary Sciences"
+    name: "Computers in Earth Sciences"
+    ja: "地球科学の計算機利用"
+    units: [W-114, S-061, P-132, P-141, W-066]
+    sources: [Y01]
+  - id: "1904"
+    parent: "area:Earth and Planetary Sciences"
+    name: "Earth-Surface Processes"
+    ja: "地表のプロセス"
+    units: [W-023, W-018, W-101, W-105]
+    sources: [Y01]
+  - id: "1905"
+    parent: "area:Earth and Planetary Sciences"
+    name: "Economic Geology"
+    ja: "鉱床学（経済地質学）"
+    units: [W-123]
+    sources: [Y01]
+  - id: "1906"
+    parent: "area:Earth and Planetary Sciences"
+    name: "Geochemistry and Petrology"
+    ja: "地球化学と岩石学"
+    units: [W-016, W-017, W-019, W-031, W-032]
+    sources: [Y01]
+  - id: "1907"
+    parent: "area:Earth and Planetary Sciences"
+    name: "Geology"
+    ja: "地質学"
+    units: [W-014, W-018, W-020, W-012, W-008]
+    sources: [Y01]
+  - id: "1908"
+    parent: "area:Earth and Planetary Sciences"
+    name: "Geophysics"
+    ja: "地球物理学"
+    units: [W-015, W-021, W-037, W-118, W-025]
+    sources: [Y01]
+  - id: "1909"
+    parent: "area:Earth and Planetary Sciences"
+    name: "Geotechnical Engineering and Engineering Geology"
+    ja: "地盤工学と応用地質学"
+    units: [E-124, E-237, W-064]
+    sources: [Y01]
+  - id: "1910"
+    parent: "area:Earth and Planetary Sciences"
+    name: "Oceanography"
+    ja: "海洋学"
+    units: [W-063, W-104, P-128, P-129]
+    sources: [Y01]
+  - id: "1911"
+    parent: "area:Earth and Planetary Sciences"
+    name: "Paleontology"
+    ja: "古生物学"
+    units: [W-003, W-014, W-036, B-133, B-134]
+    sources: [Y01]
+  - id: "1912"
+    parent: "area:Earth and Planetary Sciences"
+    name: "Space and Planetary Science"
+    ja: "宇宙惑星科学"
+    units: [P-171, W-074, P-212, W-115, P-295]
+    sources: [Y01]
+  - id: "1913"
+    parent: "area:Earth and Planetary Sciences"
+    name: "Stratigraphy"
+    ja: "層序学"
+    units: [W-014, W-003, W-041, W-009]
+    sources: [Y01]
+  - id: "2002"
+    parent: "area:Economics, Econometrics and Finance"
+    name: "Economics and Econometrics"
+    ja: "経済学と計量経済学"
+    units: [F-012, F-013, F-033, F-034, F-058]
+    sources: [Y01]
+  - id: "2003"
+    parent: "area:Economics, Econometrics and Finance"
+    name: "Finance"
+    ja: "ファイナンス"
+    units: [F-020, F-021, F-022, F-023, F-035]
+    sources: [Y01]
+  - id: "2102"
+    parent: "area:Energy"
+    name: "Energy Engineering and Power Technology"
+    ja: "エネルギー工学と電力技術"
+    units: [E-170, E-249]
+    sources: [Y01]
+  - id: "2103"
+    parent: "area:Energy"
+    name: "Fuel Technology"
+    ja: "燃料技術"
+    units: [E-194, E-214, P-279, W-065, H-030]
+    sources: [Y01]
+  - id: "2104"
+    parent: "area:Energy"
+    name: "Nuclear Energy and Engineering"
+    ja: "原子力工学"
+    units: [P-290, P-104, P-106]
+    sources: [Y01]
+  - id: "2105"
+    parent: "area:Energy"
+    name: "Renewable Energy, Sustainability and the Environment"
+    ja: "再生可能エネルギー・持続可能性・環境"
+    units: [E-160, E-167, H-101, P-203, E-222]
+    sources: [Y01]
+  - id: "2202"
+    parent: "area:Engineering"
+    name: "Aerospace Engineering"
+    ja: "航空宇宙工学"
+    units: [E-026, E-027, E-029, E-042, E-060]
+    sources: [Y01]
+  - id: "2203"
+    parent: "area:Engineering"
+    name: "Automotive Engineering"
+    ja: "自動車工学"
+    units: [E-191, E-186, E-194, E-197]
+    sources: [Y01]
+  - id: "2204"
+    parent: "area:Engineering"
+    name: "Biomedical Engineering"
+    ja: "医用生体工学"
+    units: [E-223, E-225, E-226, E-227, E-169]
+    sources: [Y01]
+  - id: "2205"
+    parent: "area:Engineering"
+    name: "Civil and Structural Engineering"
+    ja: "土木工学と構造工学"
+    units: [E-003, E-116, E-119, E-120, E-122]
+    sources: [Y01]
+  - id: "2206"
+    parent: "area:Engineering"
+    name: "Computational Mechanics"
+    ja: "計算力学"
+    units: [E-020, E-021, E-022, E-023, E-035]
+    sources: [Y01]
+  - id: "2207"
+    parent: "area:Engineering"
+    name: "Control and Systems Engineering"
+    ja: "制御とシステムの工学"
+    units: [E-048, E-049, E-053, E-054, E-055]
+    sources: [Y01]
+  - id: "2208"
+    parent: "area:Engineering"
+    name: "Electrical and Electronic Engineering"
+    ja: "電気電子工学"
+    units: [E-245, E-249]
+    sources: [Y01]
+  - id: "2209"
+    parent: "area:Engineering"
+    name: "Industrial and Manufacturing Engineering"
+    ja: "産業工学と生産工学"
+    gap: "次の回の候補。生産加工学／切削の力学（せん断角とマーチャントの円、切削力、切削温度、工具摩耗とテイラーの寿命式、びびり）、塑性加工（鍛造・圧延・引抜き・プレス成形の力学と成形限界）、溶接と接合の入熱と熱影響部と凝固割れ、鋳造の凝固と欠陥、積層造形の熱と凝固、加工精度と表面粗さ／前提 E-014、E-039、E-164"
+    sources: [Y01]
+  - id: "2210"
+    parent: "area:Engineering"
+    name: "Mechanical Engineering"
+    ja: "機械工学"
+    units: [E-246]
+    sources: [Y01]
+  - id: "2211"
+    parent: "area:Engineering"
+    name: "Mechanics of Materials"
+    ja: "材料力学"
+    units: [E-002, E-012, E-014, E-015, E-019]
+    sources: [Y01]
+  - id: "2212"
+    parent: "area:Engineering"
+    name: "Ocean Engineering"
+    ja: "海洋工学"
+    units: [E-247]
+    sources: [Y01]
+  - id: "2213"
+    parent: "area:Engineering"
+    name: "Safety, Risk, Reliability and Quality"
+    ja: "安全・リスク・信頼性・品質"
+    gap: "次の回の候補。信頼性工学／故障率とバスタブ曲線、ワイブル分布による寿命データの解析、システムの信頼度（直列・並列・k/n、信頼性ブロック図）、故障の木と事象の木の定量化（最小カットセット）、故障モード影響解析、修理系と可用度（更新過程）、保全の最適化、加速試験、確率論的リスク評価／前提 S-003、S-010、S-035、E-156"
+    sources: [Y01]
+  - id: "2214"
+    parent: "area:Engineering"
+    name: "Media Technology"
+    ja: "メディア技術"
+    units: [E-085, E-075, E-149, E-161, K-140]
+    sources: [Y01]
+  - id: "2215"
+    parent: "area:Engineering"
+    name: "Building and Construction"
+    ja: "建築と建設"
+    units: [E-248]
+    sources: [Y01]
+  - id: "2216"
+    parent: "area:Engineering"
+    name: "Architecture"
+    ja: "建築学"
+    units: [E-248]
+    sources: [Y01]
+  - id: "2302"
+    parent: "area:Environmental Science"
+    name: "Ecological Modeling"
+    ja: "生態系のモデリング"
+    units: [B-055, B-062, B-184, B-061]
+    sources: [Y01]
+  - id: "2303"
+    parent: "area:Environmental Science"
+    name: "Ecology"
+    ja: "生態学"
+    units: [B-040, B-056, B-057, B-060]
+    sources: [Y01]
+  - id: "2304"
+    parent: "area:Environmental Science"
+    name: "Environmental Chemistry"
+    ja: "環境化学"
+    units: [H-043, H-080, W-034, W-033]
+    sources: [Y01]
+  - id: "2305"
+    parent: "area:Environmental Science"
+    name: "Environmental Engineering"
+    ja: "環境工学"
+    units: [E-219, E-220, E-221, E-222]
+    sources: [Y01]
+  - id: "2306"
+    parent: "area:Environmental Science"
+    name: "Global and Planetary Change"
+    ja: "地球規模の変化"
+    units: [P-161, P-143, W-041, P-201]
+    sources: [Y01]
+  - id: "2307"
+    parent: "area:Environmental Science"
+    name: "Health, Toxicology and Mutagenesis"
+    ja: "健康・毒性・変異原性"
+    units: [I-027, I-041, B-092]
+    sources: [Y01]
+  - id: "2308"
+    parent: "area:Environmental Science"
+    name: "Management, Monitoring, Policy and Law"
+    ja: "環境の管理・監視・政策・法"
+    units: [Y-015, F-061, E-200, B-156, E-222]
+    sources: [Y01]
+  - id: "2309"
+    parent: "area:Environmental Science"
+    name: "Nature and Landscape Conservation"
+    ja: "自然と景観の保全"
+    units: [B-060, B-182, B-183, B-184]
+    sources: [Y01]
+  - id: "2310"
+    parent: "area:Environmental Science"
+    name: "Pollution"
+    ja: "汚染"
+    units: [B-092, E-220, W-102, E-219, H-043]
+    sources: [Y01]
+  - id: "2311"
+    parent: "area:Environmental Science"
+    name: "Waste Management and Disposal"
+    ja: "廃棄物の管理と処分"
+    units: [E-221, E-222, H-081]
+    sources: [Y01]
+  - id: "2312"
+    parent: "area:Environmental Science"
+    name: "Water Science and Technology"
+    ja: "水の科学と技術"
+    units: [E-219, W-101, W-102, W-103]
+    sources: [Y01]
+  - id: "2402"
+    parent: "area:Immunology and Microbiology"
+    name: "Applied Microbiology and Biotechnology"
+    ja: "応用微生物学とバイオテクノロジー"
+    units: [E-228, E-229, B-043, B-144]
+    sources: [Y01]
+  - id: "2403"
+    parent: "area:Immunology and Microbiology"
+    name: "Immunology"
+    ja: "免疫学"
+    units: [I-005, B-037, I-030, I-031]
+    sources: [Y01]
+  - id: "2404"
+    parent: "area:Immunology and Microbiology"
+    name: "Microbiology"
+    ja: "微生物学"
+    units: [B-144, B-145, B-148, B-043, B-147]
+    sources: [Y01]
+  - id: "2405"
+    parent: "area:Immunology and Microbiology"
+    name: "Parasitology"
+    ja: "寄生虫学"
+    units: [I-067]
+    sources: [Y01]
+  - id: "2406"
+    parent: "area:Immunology and Microbiology"
+    name: "Virology"
+    ja: "ウイルス学"
+    units: [B-146, I-028, I-031]
+    sources: [Y01]
+  - id: "2502"
+    parent: "area:Materials Science"
+    name: "Biomaterials"
+    ja: "生体材料"
+    units: [E-226, E-236, E-168]
+    sources: [Y01]
+  - id: "2503"
+    parent: "area:Materials Science"
+    name: "Ceramics and Composites"
+    ja: "セラミックスと複合材料"
+    units: [E-243, E-012, E-013, E-015]
+    sources: [Y01]
+  - id: "2504"
+    parent: "area:Materials Science"
+    name: "Electronic, Optical and Magnetic Materials"
+    ja: "電子・光学・磁性材料"
+    units: [P-096, P-097, P-098, E-162, E-159]
+    sources: [Y01]
+  - id: "2505"
+    parent: "area:Materials Science"
+    name: "Materials Chemistry"
+    ja: "材料化学"
+    units: [H-049, H-053, H-054, H-092]
+    sources: [Y01]
+  - id: "2506"
+    parent: "area:Materials Science"
+    name: "Metals and Alloys"
+    ja: "金属と合金"
+    units: [E-163, E-164, H-108, E-014, E-015]
+    sources: [Y01]
+  - id: "2507"
+    parent: "area:Materials Science"
+    name: "Polymers and Plastics"
+    ja: "高分子とプラスチック"
+    units: [H-106, H-107, P-262, P-263, E-235]
+    sources: [Y01]
+  - id: "2508"
+    parent: "area:Materials Science"
+    name: "Surfaces, Coatings and Films"
+    ja: "表面・被覆・薄膜"
+    units: [P-175, P-272, E-231]
+    sources: [Y01]
+  - id: "2602"
+    parent: "area:Mathematics"
+    name: "Algebra and Number Theory"
+    ja: "代数学と数論"
+    units: [R-001, R-013, N-051, N-055, R-024]
+    sources: [Y01]
+  - id: "2603"
+    parent: "area:Mathematics"
+    name: "Analysis"
+    ja: "解析学"
+    units: [D-020, D-029, D-057, D-062, D-065]
+    sources: [Y01]
+  - id: "2604"
+    parent: "area:Mathematics"
+    name: "Applied Mathematics"
+    ja: "応用数学"
+    units: [D-045, D-049, D-052, D-039, K-015]
+    sources: [Y01]
+  - id: "2605"
+    parent: "area:Mathematics"
+    name: "Computational Mathematics"
+    ja: "計算数学"
+    units: [K-001, K-004, K-007, K-008, K-120]
+    sources: [Y01]
+  - id: "2606"
+    parent: "area:Mathematics"
+    name: "Control and Optimization"
+    ja: "制御と最適化"
+    units: [E-049, E-053, E-055, K-009, K-010]
+    sources: [Y01]
+  - id: "2607"
+    parent: "area:Mathematics"
+    name: "Discrete Mathematics and Combinatorics"
+    ja: "離散数学と組合せ論"
+    units: [C-022, C-029, C-031, C-033, C-037]
+    sources: [Y01]
+  - id: "2608"
+    parent: "area:Mathematics"
+    name: "Geometry and Topology"
+    ja: "幾何学と位相幾何学"
+    units: [T-001, T-014, T-016, T-019, T-024]
+    sources: [Y01]
+  - id: "2609"
+    parent: "area:Mathematics"
+    name: "Logic"
+    ja: "論理学"
+    units: [L-023, L-024, L-025, L-029, L-043]
+    sources: [Y01]
+  - id: "2610"
+    parent: "area:Mathematics"
+    name: "Mathematical Physics"
+    ja: "数理物理"
+    units: [P-109, P-230, P-235, P-236, D-094]
+    sources: [Y01]
+  - id: "2611"
+    parent: "area:Mathematics"
+    name: "Modeling and Simulation"
+    ja: "モデリングとシミュレーション"
+    units: [K-015, K-163, K-190, P-119]
+    sources: [Y01]
+  - id: "2612"
+    parent: "area:Mathematics"
+    name: "Numerical Analysis"
+    ja: "数値解析"
+    units: [K-001, K-002, K-003, K-005, K-008]
+    sources: [Y01]
+  - id: "2613"
+    parent: "area:Mathematics"
+    name: "Statistics and Probability"
+    ja: "統計と確率"
+    units: [S-001, S-006, S-012, S-018, S-021]
+    sources: [Y01]
+  - id: "2614"
+    parent: "area:Mathematics"
+    name: "Theoretical Computer Science"
+    ja: "理論計算機科学"
+    units: [K-040, K-041, K-121, K-150, L-026]
+    sources: [Y01]
+  - id: "2702"
+    parent: "area:Medicine"
+    name: "Anatomy"
+    ja: "解剖学"
+    units: [I-012, B-063, I-011]
+    sources: [Y01]
+  - id: "2703"
+    parent: "area:Medicine"
+    name: "Anesthesiology and Pain Medicine"
+    ja: "麻酔科学と疼痛医学"
+    units: [I-068, B-189, B-052, I-026]
+    sources: [Y01]
+  - id: "2704"
+    parent: "area:Medicine"
+    name: "Biochemistry (medical)"
+    ja: "生化学（医学）"
+    units: [B-006, B-007, B-008, I-019]
+    sources: [Y01]
+  - id: "2705"
+    parent: "area:Medicine"
+    name: "Cardiology and Cardiovascular Medicine"
+    ja: "循環器学と心血管医学"
+    units: [I-014, I-045, I-026, I-040]
+    sources: [Y01]
+  - id: "2706"
+    parent: "area:Medicine"
+    name: "Critical Care and Intensive Care Medicine"
+    ja: "集中治療医学"
+    units: [I-051, I-015, I-014, I-022]
+    sources: [Y01]
+  - id: "2707"
+    parent: "area:Medicine"
+    name: "Complementary and Alternative Medicine"
+    ja: "補完代替医療"
+    none: "検証で支持されない療法が中心。効果の調べ方（無作為化比較試験、プラセボ）は I-040・I-003 が受け持つ。"
+    sources: [Y01]
+  - id: "2708"
+    parent: "area:Medicine"
+    name: "Dermatology"
+    ja: "皮膚科学"
+    units: [I-063, I-074]
+    sources: [Y01]
+  - id: "2709"
+    parent: "area:Medicine"
+    name: "Drug Guides"
+    ja: "医薬品の便覧"
+    none: "薬の便覧という雑誌の形式の分類で、知の体系でない。中身の薬理は I-001・I-026。"
+    sources: [Y01]
+  - id: "2710"
+    parent: "area:Medicine"
+    name: "Embryology"
+    ja: "発生学"
+    units: [I-013, B-046, B-140]
+    sources: [Y01]
+  - id: "2711"
+    parent: "area:Medicine"
+    name: "Emergency Medicine"
+    ja: "救急医学"
+    units: [I-051, I-008, I-044]
+    sources: [Y01]
+  - id: "2712"
+    parent: "area:Medicine"
+    name: "Endocrinology, Diabetes and Metabolism"
+    ja: "内分泌・糖尿病・代謝"
+    units: [I-019, I-046, I-026]
+    sources: [Y01]
+  - id: "2713"
+    parent: "area:Medicine"
+    name: "Epidemiology"
+    ja: "疫学"
+    units: [I-033, I-035, I-039, S-035]
+    sources: [Y01]
+  - id: "2714"
+    parent: "area:Medicine"
+    name: "Family Practice"
+    ja: "家庭医療"
+    units: [I-044, I-038, I-049, I-040]
+    sources: [Y01]
+  - id: "2715"
+    parent: "area:Medicine"
+    name: "Gastroenterology"
+    ja: "消化器病学"
+    units: [I-017, I-073, I-032]
+    sources: [Y01]
+  - id: "2716"
+    parent: "area:Medicine"
+    name: "Genetics (clinical)"
+    ja: "遺伝学（臨床）"
+    units: [I-024, I-053, B-001, B-002]
+    sources: [Y01]
+  - id: "2717"
+    parent: "area:Medicine"
+    name: "Geriatrics and Gerontology"
+    ja: "老年医学と老年学"
+    units: [I-049, B-112, I-052, I-048]
+    sources: [Y01]
+  - id: "2718"
+    parent: "area:Medicine"
+    name: "Health Informatics"
+    ja: "医療情報学"
+    units: [I-055, K-169, K-204, K-208, I-044]
+    sources: [Y01]
+  - id: "2719"
+    parent: "area:Medicine"
+    name: "Health Policy"
+    ja: "医療政策"
+    units: [F-079, Y-015, I-036, Y-004]
+    sources: [Y01]
+  - id: "2720"
+    parent: "area:Medicine"
+    name: "Hematology"
+    ja: "血液学"
+    units: [I-022, I-005]
+    sources: [Y01]
+  - id: "2721"
+    parent: "area:Medicine"
+    name: "Hepatology"
+    ja: "肝臓病学"
+    units: [I-017, I-073]
+    sources: [Y01]
+  - id: "2722"
+    parent: "area:Medicine"
+    name: "Histology"
+    ja: "組織学"
+    units: [I-011, B-100]
+    sources: [Y01]
+  - id: "2723"
+    parent: "area:Medicine"
+    name: "Immunology and Allergy"
+    ja: "免疫学とアレルギー"
+    units: [I-005, I-030, B-037]
+    sources: [Y01]
+  - id: "2724"
+    parent: "area:Medicine"
+    name: "Internal Medicine"
+    ja: "内科学"
+    units: [I-044, I-045, I-046, I-047, I-048, I-072, I-073, I-074]
+    sources: [Y01]
+  - id: "2725"
+    parent: "area:Medicine"
+    name: "Infectious Diseases"
+    ja: "感染症"
+    units: [I-028, I-029, I-037, I-042, I-031]
+    sources: [Y01]
+  - id: "2726"
+    parent: "area:Medicine"
+    name: "Microbiology (medical)"
+    ja: "微生物学（医学）"
+    units: [I-028, B-043, B-144, B-146, I-029]
+    sources: [Y01]
+  - id: "2727"
+    parent: "area:Medicine"
+    name: "Nephrology"
+    ja: "腎臓病学"
+    units: [I-016, I-047]
+    sources: [Y01]
+  - id: "2728"
+    parent: "area:Medicine"
+    name: "Neurology (clinical)"
+    ja: "神経学（臨床）"
+    units: [B-101, B-068, B-063, E-225]
+    sources: [Y01]
+  - id: "2729"
+    parent: "area:Medicine"
+    name: "Obstetrics and Gynecology"
+    ja: "産婦人科学"
+    units: [I-018, I-049, I-013]
+    sources: [Y01]
+  - id: "2730"
+    parent: "area:Medicine"
+    name: "Oncology"
+    ja: "腫瘍学"
+    units: [I-023, I-050, I-053, S-035]
+    sources: [Y01]
+  - id: "2731"
+    parent: "area:Medicine"
+    name: "Ophthalmology"
+    ja: "眼科学"
+    units: [I-056, I-059, P-023]
+    sources: [Y01]
+  - id: "2732"
+    parent: "area:Medicine"
+    name: "Orthopedics and Sports Medicine"
+    ja: "整形外科学とスポーツ医学"
+    units: [I-048, B-120, I-065, I-066, E-015]
+    sources: [Y01]
+  - id: "2733"
+    parent: "area:Medicine"
+    name: "Otorhinolaryngology"
+    ja: "耳鼻咽喉科学"
+    units: [I-057, I-058, I-060]
+    sources: [Y01]
+  - id: "2734"
+    parent: "area:Medicine"
+    name: "Pathology and Forensic Medicine"
+    ja: "病理学と法医学"
+    units: [I-069, I-020, I-021, I-022, I-025]
+    sources: [Y01]
+  - id: "2735"
+    parent: "area:Medicine"
+    name: "Pediatrics, Perinatology and Child Health"
+    ja: "小児科学・周産期学・子どもの健康"
+    units: [I-049, I-013, Q-010, I-052]
+    sources: [Y01]
+  - id: "2736"
+    parent: "area:Medicine"
+    name: "Pharmacology (medical)"
+    ja: "薬理学（医学）"
+    units: [I-001, I-002, I-026, I-003]
+    sources: [Y01]
+  - id: "2737"
+    parent: "area:Medicine"
+    name: "Physiology (medical)"
+    ja: "生理学（医学）"
+    units: [I-004, I-014, I-015, I-016, I-017]
+    sources: [Y01]
+  - id: "2738"
+    parent: "area:Medicine"
+    name: "Psychiatry and Mental Health"
+    ja: "精神医学と精神保健"
+    units: [Q-029, Q-014, Q-028, B-068, I-026]
+    sources: [Y01]
+  - id: "2739"
+    parent: "area:Medicine"
+    name: "Public Health, Environmental and Occupational Health"
+    ja: "公衆衛生・環境衛生・産業衛生"
+    units: [I-033, I-036, I-041, I-042, I-038]
+    sources: [Y01]
+  - id: "2740"
+    parent: "area:Medicine"
+    name: "Pulmonary and Respiratory Medicine"
+    ja: "呼吸器医学"
+    units: [I-015, I-072, I-051]
+    sources: [Y01]
+  - id: "2741"
+    parent: "area:Medicine"
+    name: "Radiology, Nuclear Medicine and Imaging"
+    ja: "放射線医学・核医学・画像"
+    units: [E-244, E-223, E-224, B-186, P-118]
+    sources: [Y01]
+  - id: "2742"
+    parent: "area:Medicine"
+    name: "Rehabilitation"
+    ja: "リハビリテーション"
+    units: [Q-027, Q-025, B-120, I-066, E-169]
+    sources: [Y01]
+  - id: "2743"
+    parent: "area:Medicine"
+    name: "Reproductive Medicine"
+    ja: "生殖医学"
+    units: [I-018, B-046, B-080, I-013]
+    sources: [Y01]
+  - id: "2744"
+    parent: "area:Medicine"
+    name: "Reviews and References (medical)"
+    ja: "総説と参考文献（医学）"
+    none: "総説という雑誌の形式の分類で、知の体系でない。総説の方法（系統的レビューとメタ分析）は I-040。"
+    sources: [Y01]
+  - id: "2745"
+    parent: "area:Medicine"
+    name: "Rheumatology"
+    ja: "リウマチ学"
+    units: [I-048, I-030, I-021]
+    sources: [Y01]
+  - id: "2746"
+    parent: "area:Medicine"
+    name: "Surgery"
+    ja: "外科学"
+    units: [I-021, I-051, I-048, I-040]
+    sources: [Y01]
+  - id: "2747"
+    parent: "area:Medicine"
+    name: "Transplantation"
+    ja: "移植"
+    units: [I-030, I-005, I-020, I-016]
+    sources: [Y01]
+  - id: "2748"
+    parent: "area:Medicine"
+    name: "Urology"
+    ja: "泌尿器科学"
+    gap: "泌尿器の病気（次の回の候補）"
+    sources: [Y01]
+  - id: "2802"
+    parent: "area:Neuroscience"
+    name: "Behavioral Neuroscience"
+    ja: "行動神経科学"
+    units: [B-065, B-039, B-157, Q-007]
+    sources: [Y01]
+  - id: "2803"
+    parent: "area:Neuroscience"
+    name: "Biological Psychiatry"
+    ja: "生物学的精神医学"
+    units: [B-068, Q-029, I-026, Q-016, I-024]
+    sources: [Y01]
+  - id: "2804"
+    parent: "area:Neuroscience"
+    name: "Cellular and Molecular Neuroscience"
+    ja: "細胞と分子の神経科学"
+    units: [B-052, B-066, B-064]
+    sources: [Y01]
+  - id: "2805"
+    parent: "area:Neuroscience"
+    name: "Cognitive Neuroscience"
+    ja: "認知神経科学"
+    units: [B-190, B-065, B-067, E-225]
+    sources: [Y01]
+  - id: "2806"
+    parent: "area:Neuroscience"
+    name: "Developmental Neuroscience"
+    ja: "発達神経科学"
+    units: [B-064, B-046, B-140]
+    sources: [Y01]
+  - id: "2807"
+    parent: "area:Neuroscience"
+    name: "Endocrine and Autonomic Systems"
+    ja: "内分泌系と自律神経系"
+    units: [I-019, B-035, I-004, I-018, B-063]
+    sources: [Y01]
+  - id: "2808"
+    parent: "area:Neuroscience"
+    name: "Neurology"
+    ja: "神経学"
+    units: [B-101, B-068, B-063, B-100]
+    sources: [Y01]
+  - id: "2809"
+    parent: "area:Neuroscience"
+    name: "Sensory Systems"
+    ja: "感覚系"
+    units: [I-056, I-057, I-058, Q-004, B-157]
+    sources: [Y01]
+  - id: "2902"
+    parent: "area:Nursing"
+    name: "Advanced and Specialized Nursing"
+    ja: "高度な専門看護"
+    units: [I-004, I-026, I-040, I-044]
+    sources: [Y01]
+  - id: "2903"
+    parent: "area:Nursing"
+    name: "Assessment and Diagnosis"
+    ja: "アセスメントと診断"
+    units: [I-043, I-044, I-004, I-038]
+    sources: [Y01]
+  - id: "2904"
+    parent: "area:Nursing"
+    name: "Care Planning"
+    ja: "ケアの計画"
+    units: [I-044, I-040, I-049, I-038]
+    sources: [Y01]
+  - id: "2905"
+    parent: "area:Nursing"
+    name: "Community and Home Care"
+    ja: "地域と在宅のケア"
+    units: [I-036, I-041, I-049, I-038]
+    sources: [Y01]
+  - id: "2906"
+    parent: "area:Nursing"
+    name: "Critical Care Nursing"
+    ja: "クリティカルケア看護"
+    units: [I-051, I-015, I-014, I-022]
+    sources: [Y01]
+  - id: "2907"
+    parent: "area:Nursing"
+    name: "Emergency Nursing"
+    ja: "救急看護"
+    units: [I-051, I-008, I-044]
+    sources: [Y01]
+  - id: "2908"
+    parent: "area:Nursing"
+    name: "Fundamentals and Skills"
+    ja: "看護の基礎と技術"
+    none: "ベッド周りの技（手技）で知の体系でない。測れる部分の救命の手順は I-008。"
+    sources: [Y01]
+  - id: "2909"
+    parent: "area:Nursing"
+    name: "Gerontology"
+    ja: "老年学（看護）"
+    units: [I-049, B-112, Q-010, Y-007]
+    sources: [Y01]
+  - id: "2910"
+    parent: "area:Nursing"
+    name: "Issues, Ethics and Legal Aspects"
+    ja: "看護の課題・倫理・法"
+    none: "規範（倫理の判断と法の解釈）が中心。倫理の原則と研究倫理の知識は I-034。"
+    sources: [Y01]
+  - id: "2911"
+    parent: "area:Nursing"
+    name: "Leadership and Management"
+    ja: "看護のリーダーシップと管理"
+    units: [Q-030, F-043, F-042, E-154]
+    sources: [Y01]
+  - id: "2912"
+    parent: "area:Nursing"
+    name: "LPN and LVN"
+    ja: "准看護師（LPN と LVN）"
+    none: "資格の区分と職務の実務で、知の体系でない。"
+    sources: [Y01]
+  - id: "2913"
+    parent: "area:Nursing"
+    name: "Maternity and Midwifery"
+    ja: "母性看護と助産"
+    units: [I-018, I-049, I-013]
+    sources: [Y01]
+  - id: "2914"
+    parent: "area:Nursing"
+    name: "Medical and Surgical Nursing"
+    ja: "成人看護（内科と外科）"
+    units: [I-045, I-046, I-047, I-048, I-021, I-072, I-073, I-074]
+    sources: [Y01]
+  - id: "2915"
+    parent: "area:Nursing"
+    name: "Nurse Assisting"
+    ja: "看護助手"
+    none: "介助の手技で、知の体系でない。"
+    sources: [Y01]
+  - id: "2916"
+    parent: "area:Nursing"
+    name: "Nutrition and Dietetics"
+    ja: "栄養学と食事療法"
+    units: [I-052, I-009, I-046]
+    sources: [Y01]
+  - id: "2917"
+    parent: "area:Nursing"
+    name: "Oncology (nursing)"
+    ja: "腫瘍学（看護）"
+    units: [I-050, I-023, I-026]
+    sources: [Y01]
+  - id: "2918"
+    parent: "area:Nursing"
+    name: "Pathophysiology"
+    ja: "病態生理学"
+    units: [I-020, I-021, I-022, I-004]
+    sources: [Y01]
+  - id: "2919"
+    parent: "area:Nursing"
+    name: "Pediatrics"
+    ja: "小児看護"
+    units: [I-049, I-013, Q-010]
+    sources: [Y01]
+  - id: "2920"
+    parent: "area:Nursing"
+    name: "Pharmacology (nursing)"
+    ja: "薬理学（看護）"
+    units: [I-001, I-002, I-026, I-010]
+    sources: [Y01]
+  - id: "2921"
+    parent: "area:Nursing"
+    name: "Psychiatric Mental Health"
+    ja: "精神看護"
+    units: [Q-029, Q-014, Q-018]
+    sources: [Y01]
+  - id: "2922"
+    parent: "area:Nursing"
+    name: "Research and Theory"
+    ja: "看護の研究と理論"
+    units: [I-035, I-040, Q-006, Y-001, Q-020]
+    sources: [Y01]
+  - id: "2923"
+    parent: "area:Nursing"
+    name: "Review and Exam Preparation"
+    ja: "復習と試験対策"
+    none: "試験対策という雑誌の形式の分類で、知の体系でない。"
+    sources: [Y01]
+  - id: "3002"
+    parent: "area:Pharmacology, Toxicology and Pharmaceutics"
+    name: "Drug Discovery"
+    ja: "創薬"
+    units: [H-056, H-058, H-059, I-003, I-001]
+    sources: [Y01]
+  - id: "3003"
+    parent: "area:Pharmacology, Toxicology and Pharmaceutics"
+    name: "Pharmaceutical Science"
+    ja: "薬学"
+    units: [I-064, I-002, E-168, I-003]
+    sources: [Y01]
+  - id: "3004"
+    parent: "area:Pharmacology, Toxicology and Pharmaceutics"
+    name: "Pharmacology"
+    ja: "薬理学"
+    units: [I-001, I-026, I-002]
+    sources: [Y01]
+  - id: "3005"
+    parent: "area:Pharmacology, Toxicology and Pharmaceutics"
+    name: "Toxicology"
+    ja: "毒性学"
+    units: [I-027, B-092, I-041]
+    sources: [Y01]
+  - id: "3102"
+    parent: "area:Physics and Astronomy"
+    name: "Acoustics and Ultrasonics"
+    ja: "音響学と超音波"
+    units: [P-022, E-126, E-127, E-128, E-148]
+    sources: [Y01]
+  - id: "3103"
+    parent: "area:Physics and Astronomy"
+    name: "Astronomy and Astrophysics"
+    ja: "天文学と天体物理学"
+    units: [P-162, P-212, P-163, P-170, P-215]
+    sources: [Y01]
+  - id: "3104"
+    parent: "area:Physics and Astronomy"
+    name: "Condensed Matter Physics"
+    ja: "物性物理学"
+    units: [P-092, P-093, P-094, P-099, P-100]
+    sources: [Y01]
+  - id: "3105"
+    parent: "area:Physics and Astronomy"
+    name: "Instrumentation"
+    ja: "計測機器"
+    units: [P-117, P-118, E-068, E-077, E-161]
+    sources: [Y01]
+  - id: "3106"
+    parent: "area:Physics and Astronomy"
+    name: "Nuclear and High Energy Physics"
+    ja: "原子核物理学と高エネルギー物理学"
+    units: [P-104, P-106, P-107, P-108, P-287]
+    sources: [Y01]
+  - id: "3107"
+    parent: "area:Physics and Astronomy"
+    name: "Atomic and Molecular Physics, and Optics"
+    ja: "原子分子物理学と光学"
+    units: [P-088, P-089, P-091, P-028, P-234]
+    sources: [Y01]
+  - id: "3108"
+    parent: "area:Physics and Astronomy"
+    name: "Radiation"
+    ja: "放射線"
+    units: [E-244, P-104, P-118, P-290, B-186, I-041]
+    sources: [Y01]
+  - id: "3109"
+    parent: "area:Physics and Astronomy"
+    name: "Statistical and Nonlinear Physics"
+    ja: "統計物理学と非線形物理学"
+    units: [P-048, P-049, P-052, P-053, P-055]
+    sources: [Y01]
+  - id: "3110"
+    parent: "area:Physics and Astronomy"
+    name: "Surfaces and Interfaces"
+    ja: "表面と界面"
+    units: [P-175, P-272, E-165]
+    sources: [Y01]
+  - id: "3202"
+    parent: "area:Psychology"
+    name: "Applied Psychology"
+    ja: "応用心理学"
+    units: [Q-030, Q-021, Q-018, Q-023, Q-006]
+    sources: [Y01]
+  - id: "3203"
+    parent: "area:Psychology"
+    name: "Clinical Psychology"
+    ja: "臨床心理学"
+    units: [Q-014, Q-029, Q-028]
+    sources: [Y01]
+  - id: "3204"
+    parent: "area:Psychology"
+    name: "Developmental and Educational Psychology"
+    ja: "発達心理学と教育心理学"
+    units: [Q-010, Q-023, Q-024]
+    sources: [Y01]
+  - id: "3205"
+    parent: "area:Psychology"
+    name: "Experimental and Cognitive Psychology"
+    ja: "実験心理学と認知心理学"
+    units: [Q-004, Q-005, Q-007, Q-008, Q-009]
+    sources: [Y01]
+  - id: "3206"
+    parent: "area:Psychology"
+    name: "Neuropsychology and Physiological Psychology"
+    ja: "神経心理学と生理心理学"
+    units: [Q-027, B-065, Q-025]
+    sources: [Y01]
+  - id: "3207"
+    parent: "area:Psychology"
+    name: "Social Psychology"
+    ja: "社会心理学"
+    units: [Q-011, Q-012, Q-006]
+    sources: [Y01]
+  - id: "3302"
+    parent: "area:Social Sciences"
+    name: "Archeology"
+    ja: "考古学"
+    none: "遺物から過去の社会を解釈する分野で、歴史学に近い。測れる部分（年代、人類の進化、古代 DNA、同位体）は W-010・B-187・B-188・W-032。"
+    sources: [Y01]
+  - id: "3303"
+    parent: "area:Social Sciences"
+    name: "Development"
+    ja: "開発"
+    units: [F-065, F-063, F-086, Y-003, I-036]
+    sources: [Y01]
+  - id: "3304"
+    parent: "area:Social Sciences"
+    name: "Education"
+    ja: "教育"
+    units: [Q-023, Y-017, Y-018, Q-024, Q-013]
+    sources: [Y01]
+  - id: "3305"
+    parent: "area:Social Sciences"
+    name: "Geography, Planning and Development"
+    ja: "地理学・計画・開発"
+    units: [W-066, W-114, S-061, F-075, W-023]
+    sources: [Y01]
+  - id: "3306"
+    parent: "area:Social Sciences"
+    name: "Health (social science)"
+    ja: "健康（社会科学）"
+    units: [I-036, Q-018, I-035, I-041, Y-004]
+    sources: [Y01]
+  - id: "3307"
+    parent: "area:Social Sciences"
+    name: "Human Factors and Ergonomics"
+    ja: "人間工学"
+    units: [Q-021, Q-022, B-120]
+    sources: [Y01]
+  - id: "3308"
+    parent: "area:Social Sciences"
+    name: "Law"
+    ja: "法学"
+    none: "規範（法の解釈と適用）が中心。測れる部分の司法の実証、契約の理論、規制の経済学は Y-021・F-073・F-074。"
+    sources: [Y01]
+  - id: "3309"
+    parent: "area:Social Sciences"
+    name: "Library and Information Sciences"
+    ja: "図書館情報学"
+    units: [Y-022, K-204]
+    sources: [Y01]
+  - id: "3310"
+    parent: "area:Social Sciences"
+    name: "Linguistics and Language"
+    ja: "言語学"
+    units: [Q-026, Q-008, K-216, K-217]
+    sources: [Y01]
+  - id: "3311"
+    parent: "area:Social Sciences"
+    name: "Safety Research"
+    ja: "安全の研究"
+    units: [E-217, E-109, Q-021, I-041, E-227]
+    sources: [Y01]
+  - id: "3312"
+    parent: "area:Social Sciences"
+    name: "Sociology and Political Science"
+    ja: "社会学と政治学"
+    units: [Y-001, Y-002, Y-005, Y-008, Y-009]
+    sources: [Y01]
+  - id: "3313"
+    parent: "area:Social Sciences"
+    name: "Transportation"
+    ja: "交通"
+    units: [F-077, P-258, F-076, E-157]
+    sources: [Y01]
+  - id: "3314"
+    parent: "area:Social Sciences"
+    name: "Anthropology"
+    ja: "人類学"
+    units: [B-187, B-188, Q-011, B-160, Q-020]
+    sources: [Y01]
+  - id: "3315"
+    parent: "area:Social Sciences"
+    name: "Communication"
+    ja: "コミュニケーション"
+    units: [Y-016, Q-011, Y-006]
+    sources: [Y01]
+  - id: "3316"
+    parent: "area:Social Sciences"
+    name: "Cultural Studies"
+    ja: "カルチュラル・スタディーズ"
+    none: "批評と解釈が中心。測れる部分のメディアの効果、社会の認知、計算社会科学は Y-016・Q-011・Y-006。"
+    sources: [Y01]
+  - id: "3317"
+    parent: "area:Social Sciences"
+    name: "Demography"
+    ja: "人口学"
+    units: [Y-007, F-056, B-090]
+    sources: [Y01]
+  - id: "3318"
+    parent: "area:Social Sciences"
+    name: "Gender Studies"
+    ja: "ジェンダー研究"
+    none: "規範と批評が中心。測れる部分のヒトの性の科学、労働市場の差別、階層と移動は Q-031・F-081・Y-008。"
+    sources: [Y01]
+  - id: "3319"
+    parent: "area:Social Sciences"
+    name: "Life-span and Life-course Studies"
+    ja: "生涯発達とライフコースの研究"
+    units: [Q-010, I-049, Y-007, Y-008, S-037]
+    sources: [Y01]
+  - id: "3320"
+    parent: "area:Social Sciences"
+    name: "Political Science and International Relations"
+    ja: "政治学と国際関係論"
+    units: [Y-012, Y-013, Y-014, Y-019, Y-020]
+    sources: [Y01]
+  - id: "3321"
+    parent: "area:Social Sciences"
+    name: "Public Administration"
+    ja: "行政学"
+    units: [Y-015, F-052, F-084, Q-030, F-073]
+    sources: [Y01]
+  - id: "3322"
+    parent: "area:Social Sciences"
+    name: "Urban Studies"
+    ja: "都市研究"
+    units: [F-075, Y-011, P-258, W-066, F-084]
+    sources: [Y01]
+  - id: "3402"
+    parent: "area:Veterinary"
+    name: "Equine"
+    ja: "馬"
+    units: [V-035, V-034, V-036, V-037, V-031]
+    sources: [Y01]
+  - id: "3403"
+    parent: "area:Veterinary"
+    name: "Food Animals"
+    ja: "産業動物"
+    units: [V-038, V-011, V-037, V-015, V-012]
+    sources: [Y01]
+  - id: "3404"
+    parent: "area:Veterinary"
+    name: "Small Animals"
+    ja: "小動物"
+    units: [V-035, V-036, V-034, V-030, V-031]
+    sources: [Y01]
+  - id: "3502"
+    parent: "area:Dentistry"
+    name: "Dental Assisting"
+    ja: "歯科助手"
+    none: "歯科助手の補助業務で、知の体系でない。"
+    sources: [Y01]
+  - id: "3503"
+    parent: "area:Dentistry"
+    name: "Dental Hygiene"
+    ja: "歯科衛生"
+    units: [I-062, I-061, I-009]
+    sources: [Y01]
+  - id: "3504"
+    parent: "area:Dentistry"
+    name: "Oral Surgery"
+    ja: "口腔外科"
+    units: [I-061, I-062, E-236, I-021, I-048]
+    sources: [Y01]
+  - id: "3505"
+    parent: "area:Dentistry"
+    name: "Orthodontics"
+    ja: "歯科矯正学"
+    units: [I-061, I-062, E-236, I-048]
+    sources: [Y01]
+  - id: "3506"
+    parent: "area:Dentistry"
+    name: "Periodontics"
+    ja: "歯周病学"
+    units: [I-062, I-021, I-028, I-032]
+    sources: [Y01]
+  - id: "3602"
+    parent: "area:Health Professions"
+    name: "Chiropractics"
+    ja: "カイロプラクティック"
+    none: "検証で支持されない手技療法。効果の調べ方は I-040。"
+    sources: [Y01]
+  - id: "3603"
+    parent: "area:Health Professions"
+    name: "Complementary and Manual Therapy"
+    ja: "補完療法と手技療法"
+    none: "検証で支持されない手技療法と補完療法。効果の調べ方は I-040。"
+    sources: [Y01]
+  - id: "3604"
+    parent: "area:Health Professions"
+    name: "Emergency Medical Services"
+    ja: "救急医療サービス"
+    units: [I-008, I-051, I-044]
+    sources: [Y01]
+  - id: "3605"
+    parent: "area:Health Professions"
+    name: "Health Information Management"
+    ja: "診療情報管理"
+    none: "診療記録の管理とコード付けの実務で、知の体系でない。データの扱いは K-169・K-208・I-055。"
+    sources: [Y01]
+  - id: "3606"
+    parent: "area:Health Professions"
+    name: "Medical Assisting and Transcription"
+    ja: "医療事務と医療記録の作成"
+    none: "診療補助と文書作成の実務で、知の体系でない。"
+    sources: [Y01]
+  - id: "3607"
+    parent: "area:Health Professions"
+    name: "Medical Laboratory Technology"
+    ja: "臨床検査技術"
+    units: [I-043, H-042, B-033, B-043, I-025]
+    sources: [Y01]
+  - id: "3608"
+    parent: "area:Health Professions"
+    name: "Medical Terminology"
+    ja: "医学用語"
+    none: "用語の暗記で、知の体系でない。"
+    sources: [Y01]
+  - id: "3609"
+    parent: "area:Health Professions"
+    name: "Occupational Therapy"
+    ja: "作業療法"
+    units: [Q-027, Q-025, B-120, Q-021, I-049]
+    sources: [Y01]
+  - id: "3610"
+    parent: "area:Health Professions"
+    name: "Optometry"
+    ja: "検眼学"
+    units: [I-056, I-059, P-023, Q-004]
+    sources: [Y01]
+  - id: "3611"
+    parent: "area:Health Professions"
+    name: "Pharmacy"
+    ja: "薬剤師の業務（薬局）"
+    units: [I-001, I-002, I-064, I-010, I-026]
+    sources: [Y01]
+  - id: "3612"
+    parent: "area:Health Professions"
+    name: "Physical Therapy, Sports Therapy and Rehabilitation"
+    ja: "理学療法・スポーツの療法・リハビリテーション"
+    units: [B-120, I-066, I-065, Q-025, I-048]
+    sources: [Y01]
+  - id: "3613"
+    parent: "area:Health Professions"
+    name: "Podiatry"
+    ja: "足病学"
+    units: [I-048, B-120, I-046]
+    sources: [Y01]
+  - id: "3614"
+    parent: "area:Health Professions"
+    name: "Radiological and Ultrasound Technology"
+    ja: "放射線と超音波の技術"
+    units: [E-223, E-224, E-126, B-186, I-041]
+    sources: [Y01]
+  - id: "3615"
+    parent: "area:Health Professions"
+    name: "Respiratory Care"
+    ja: "呼吸療法"
+    units: [I-015, I-072, I-051]
+    sources: [Y01]
+  - id: "3616"
+    parent: "area:Health Professions"
+    name: "Speech and Hearing"
+    ja: "言語聴覚"
+    units: [I-057, I-060, Q-026, Q-027, Q-028]
+    sources: [Y01]

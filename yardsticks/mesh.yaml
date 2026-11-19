@@ -107,7 +107,7 @@ items:
     parent: "A"
     name: "Integumentary System"
     ja: "外皮系（皮膚）"
-    units: [I-011, I-048]
+    units: [I-011, I-074]
     sources: [Y01]
   - id: "A18"
     parent: "A"
@@ -187,7 +187,7 @@ items:
     parent: "C"
     name: "Digestive System Diseases"
     ja: "消化器の病気"
-    units: [I-047, I-017]
+    units: [I-073, I-017]
     sources: [Y01]
   - id: "C07"
     parent: "C"
@@ -199,7 +199,7 @@ items:
     parent: "C"
     name: "Respiratory Tract Diseases"
     ja: "呼吸器の病気"
-    units: [I-045, I-015]
+    units: [I-072, I-015]
     sources: [Y01]
   - id: "C09"
     parent: "C"
@@ -247,7 +247,7 @@ items:
     parent: "C"
     name: "Skin and Connective Tissue Diseases"
     ja: "皮膚と結合組織の病気"
-    units: [I-048, I-030]
+    units: [I-074, I-030]
     sources: [Y01]
   - id: "C18"
     parent: "C"
@@ -417,7 +417,7 @@ items:
     parent: "E"
     name: "Anesthesia and Analgesia"
     ja: "麻酔と鎮痛"
-    units: [V-033, I-026]
+    units: [I-068, B-189]
     sources: [Y01]
   - id: "E04"
     parent: "E"
@@ -545,7 +545,7 @@ items:
     parent: "G"
     name: "Integumentary System Physiological Phenomena"
     ja: "外皮の生理現象"
-    units: [I-063, I-048]
+    units: [I-063, I-074]
     sources: [Y01]
   - id: "G14"
     parent: "G"

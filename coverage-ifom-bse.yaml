@@ -148,7 +148,7 @@ items:
   sources:
   - MD01
   units:
-  - I-048
+  - I-074
   - I-011
 - id: T-18
   field: 医学
@@ -165,7 +165,7 @@ items:
   - MD01
   units:
   - I-015
-  - I-045
+  - I-072
   - I-051
 - id: T-20
   field: 医学
@@ -183,7 +183,7 @@ items:
   - MD01
   units:
   - I-017
-  - I-047
+  - I-073
   - I-032
 - id: T-22
   field: 医学

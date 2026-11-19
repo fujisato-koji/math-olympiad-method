@@ -104,7 +104,7 @@ items:
     parent: "215"
     name: "Electrical Engineers"
     ja: "電気技術者"
-    units: [E-067, E-170, E-197, P-033, E-053]
+    units: [E-067, E-170, E-197, P-033, E-053, E-249]
     sources: [Y01]
   - id: "2152"
     parent: "215"
@@ -161,7 +161,7 @@ items:
     parent: "221"
     name: "Generalist Medical Practitioners"
     ja: "一般診療の医師"
-    units: [I-004, I-012, I-044, I-045, I-046, I-001]
+    units: [I-004, I-012, I-044, I-045, I-046, I-001, I-072]
     sources: [Y01]
   - id: "2212"
     parent: "221"
@@ -608,7 +608,7 @@ items:
     parent: "311"
     name: "Electrical Engineering Technicians"
     ja: "電気技術者の補助"
-    units: [E-067, E-197, E-170, P-029, P-033]
+    units: [E-067, E-197, E-170, P-029, P-033, E-249]
     sources: [Y01]
   - id: "3114"
     parent: "311"

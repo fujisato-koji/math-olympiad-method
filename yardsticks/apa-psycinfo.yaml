@@ -279,7 +279,7 @@ items:
     parent: "3200"
     name: "Physical & Somatic Disorders"
     ja: "身体的・身体症状の障害"
-    units: [I-045, I-046, I-047, I-048, I-050]
+    units: [I-045, I-046, I-047, I-048, I-050, I-072, I-073, I-074]
     sources: [Y01]
   - {id: "3300", name: "Health & Mental Health Treatment & Prevention", ja: "健康・精神保健の治療と予防", group: true}
   - id: "3310"

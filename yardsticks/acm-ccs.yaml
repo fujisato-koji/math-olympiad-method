@@ -47,7 +47,7 @@ items:
     parent: "10010583"
     name: "Power and energy"
     ja: "電力とエネルギー"
-    units: [E-170, E-160, E-197, H-048, E-167]
+    units: [E-170, E-160, E-197, H-048, E-167, E-249]
     sources: [Y01]
   - id: "10010682"
     parent: "10010583"

@@ -71,6 +71,7 @@ items:
   units:
   - E-167
   - E-170
+  - E-249
 - id: T-09
   field: 計算
   topic: 現代の機械学習（ニューラルネットワーク、深層学習、並列計算機による計算）2025
@@ -143,6 +144,7 @@ items:
   - SC016
   units:
   - E-170
+  - E-249
 - id: T-17
   field: 工学
   topic: 固体力学（Solid Mechanics）

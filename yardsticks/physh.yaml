@@ -164,7 +164,7 @@ items:
     parent: "512fd433"
     name: "Electrokinetic flows"
     ja: "動電流れ（電気動力学的な流れ）"
-    units: [B-004]
+    units: [P-277, P-265]
     sources: [Y01]
   - id: "21804fac"
     parent: "512fd433"
@@ -477,7 +477,7 @@ items:
     parent: "2bd35371"
     name: "Chirality"
     ja: "キラリティ"
-    units: [H-038, P-103]
+    units: [H-038, P-103, P-266]
     sources: [Y01]
   - id: "5114e95c"
     parent: "2bd35371"
@@ -515,7 +515,7 @@ items:
     name: "Pattern formation"
     ja: "パターン形成"
     also: ["419d860e", "6f025065"]
-    units: [B-141, B-062, E-033]
+    units: [P-259, B-141]
     sources: [Y01]
   - id: "bb18132a"
     parent: "2bd35371"
@@ -610,7 +610,7 @@ items:
     parent: "c3ec1cb0"
     name: "Cryogenics & vacuum technology"
     ja: "極低温・真空技術"
-    units: [P-118]
+    gap: "低温工学（冷凍と液化、希釈冷凍機、真空系の排気）"
     sources: [Y01]
   - id: "b3310113"
     parent: "c3ec1cb0"
@@ -825,7 +825,7 @@ items:
     parent: "e6f3f236"
     name: "Energy utilization"
     ja: "エネルギー利用"
-    units: [P-203, E-170, E-197, E-038]
+    units: [P-203, E-170, E-197, E-038, E-249]
     sources: [Y01]
   - id: "6dca4b7f"
     parent: "e6f3f236"
@@ -1179,7 +1179,7 @@ items:
     parent: "8ab3d2b7"
     name: "Cold atoms & matter waves"
     ja: "冷却原子と物質波"
-    units: [P-091, P-051]
+    units: [P-303]
     sources: [Y01]
   - id: "5e87cd7f"
     parent: "8ab3d2b7"

@@ -1,0 +1,3039 @@
+# 外の物差し：OpenAlex Topics（4,516 話題）から無作為に抜いた 500 話題で、論文の世界の抜けを測る（ERC・OpenAlex の回）。4,516 話題から 26 分野ごとに 11%（少なくとも 3）を無作為に抽出、種 20261119。論文の数は話題によっておかしい値があるので重みは付けていない。
+# 4 つの domain と 26 の field を group にし、話題を項目にした。id は group が domain:名前・field:名前、話題は OpenAlex の話題の番号。話題の名前は原文のまま。判定の根拠は docs/research/yardstick-erc-openalex.md。
+# 書き方と確かめ方は docs/yardsticks.md。地図（roadmap.yaml）は変えず、足りない単元は gap に案を書くだけ（D-117）。
+title: "OpenAlex Topics（無作為抽出 500）"
+version: "2026-11-19"
+sources:
+  Y01: {title: "OpenAlex API /topics（4,516 件のうち無作為抽出 500）", url: "https://api.openalex.org/topics", date: 2026-11-19, license: "CC0 と公表されている（この回はページで確かめていない）"}
+  Y02: {title: "OpenAlex Help「Topics」", url: "https://help.openalex.org/hc/en-us/articles/24736129405719-Topics", date: 2026-11-19, license: "未確認"}
+items:
+  - {id: "domain:Physical Sciences", name: "Physical Sciences", ja: "物理科学", group: true}
+  - {id: "field:Chemical Engineering", parent: "domain:Physical Sciences", name: "Chemical Engineering", ja: "化学工学", group: true}
+  - {id: "field:Chemistry", parent: "domain:Physical Sciences", name: "Chemistry", ja: "化学", group: true}
+  - {id: "field:Computer Science", parent: "domain:Physical Sciences", name: "Computer Science", ja: "計算機科学", group: true}
+  - {id: "field:Earth and Planetary Sciences", parent: "domain:Physical Sciences", name: "Earth and Planetary Sciences", ja: "地球惑星科学", group: true}
+  - {id: "field:Energy", parent: "domain:Physical Sciences", name: "Energy", ja: "エネルギー", group: true}
+  - {id: "field:Engineering", parent: "domain:Physical Sciences", name: "Engineering", ja: "工学", group: true}
+  - {id: "field:Environmental Science", parent: "domain:Physical Sciences", name: "Environmental Science", ja: "環境科学", group: true}
+  - {id: "field:Materials Science", parent: "domain:Physical Sciences", name: "Materials Science", ja: "材料科学", group: true}
+  - {id: "field:Mathematics", parent: "domain:Physical Sciences", name: "Mathematics", ja: "数学", group: true}
+  - {id: "field:Physics and Astronomy", parent: "domain:Physical Sciences", name: "Physics and Astronomy", ja: "物理学・天文学", group: true}
+  - {id: "domain:Life Sciences", name: "Life Sciences", ja: "生命科学", group: true}
+  - {id: "field:Agricultural and Biological Sciences", parent: "domain:Life Sciences", name: "Agricultural and Biological Sciences", ja: "農学・生物学", group: true}
+  - {id: "field:Biochemistry, Genetics and Molecular Biology", parent: "domain:Life Sciences", name: "Biochemistry, Genetics and Molecular Biology", ja: "生化学・遺伝学・分子生物学", group: true}
+  - {id: "field:Immunology and Microbiology", parent: "domain:Life Sciences", name: "Immunology and Microbiology", ja: "免疫学・微生物学", group: true}
+  - {id: "field:Neuroscience", parent: "domain:Life Sciences", name: "Neuroscience", ja: "神経科学", group: true}
+  - {id: "field:Pharmacology, Toxicology and Pharmaceutics", parent: "domain:Life Sciences", name: "Pharmacology, Toxicology and Pharmaceutics", ja: "薬理学・毒性学・薬剤学", group: true}
+  - {id: "domain:Social Sciences", name: "Social Sciences", ja: "社会科学", group: true}
+  - {id: "field:Arts and Humanities", parent: "domain:Social Sciences", name: "Arts and Humanities", ja: "芸術・人文学", group: true}
+  - {id: "field:Business, Management and Accounting", parent: "domain:Social Sciences", name: "Business, Management and Accounting", ja: "経営・管理・会計", group: true}
+  - {id: "field:Decision Sciences", parent: "domain:Social Sciences", name: "Decision Sciences", ja: "意思決定科学", group: true}
+  - {id: "field:Economics, Econometrics and Finance", parent: "domain:Social Sciences", name: "Economics, Econometrics and Finance", ja: "経済学・計量経済学・ファイナンス", group: true}
+  - {id: "field:Psychology", parent: "domain:Social Sciences", name: "Psychology", ja: "心理学", group: true}
+  - {id: "field:Social Sciences", parent: "domain:Social Sciences", name: "Social Sciences", ja: "社会科学", group: true}
+  - {id: "domain:Health Sciences", name: "Health Sciences", ja: "健康科学", group: true}
+  - {id: "field:Dentistry", parent: "domain:Health Sciences", name: "Dentistry", ja: "歯学", group: true}
+  - {id: "field:Health Professions", parent: "domain:Health Sciences", name: "Health Professions", ja: "保健医療専門職", group: true}
+  - {id: "field:Medicine", parent: "domain:Health Sciences", name: "Medicine", ja: "医学", group: true}
+  - {id: "field:Nursing", parent: "domain:Health Sciences", name: "Nursing", ja: "看護学", group: true}
+  - {id: "field:Veterinary", parent: "domain:Health Sciences", name: "Veterinary", ja: "獣医学", group: true}
+  - id: "T12350"
+    parent: "field:Chemical Engineering"
+    name: "Particle Dynamics in Fluid Flows"
+    ja: "流れの中の粒子の動力学"
+    units: [P-275, P-274, E-195]
+    sources: [Y01]
+  - id: "T11593"
+    parent: "field:Chemical Engineering"
+    name: "Carbon dioxide utilization in catalysis"
+    ja: "触媒による二酸化炭素の利用"
+    units: [H-052, H-033, E-214, H-091, E-218]
+    sources: [Y01]
+  - id: "T13840"
+    parent: "field:Chemical Engineering"
+    name: "Chemical Safety and Risk Management"
+    ja: "化学の安全とリスク管理"
+    units: [E-217, H-031, H-070, I-027]
+    sources: [Y01]
+  - id: "T12270"
+    parent: "field:Chemistry"
+    name: "Microwave-Assisted Synthesis and Applications"
+    ja: "マイクロ波を使う合成とその応用"
+    units: [H-047, H-037, P-040, E-039]
+    sources: [Y01]
+  - id: "T13859"
+    parent: "field:Chemistry"
+    name: "Organic Chemistry Synthesis Methods"
+    ja: "有機合成の方法"
+    units: [H-047, H-040, H-105]
+    sources: [Y01]
+  - id: "T12240"
+    parent: "field:Chemistry"
+    name: "Nanomaterials for catalytic reactions"
+    ja: "触媒反応のためのナノ材料"
+    units: [H-052, H-049, H-023, H-040]
+    sources: [Y01]
+  - id: "T11931"
+    parent: "field:Chemistry"
+    name: "Organoselenium and organotellurium chemistry"
+    ja: "有機セレン・有機テルル化学"
+    units: [H-028, H-012, H-039, I-027]
+    sources: [Y01]
+  - id: "T11281"
+    parent: "field:Chemistry"
+    name: "Asymmetric Hydrogenation and Catalysis"
+    ja: "不斉水素化と触媒"
+    units: [H-052, H-047, H-038]
+    sources: [Y01]
+  - id: "T12189"
+    parent: "field:Chemistry"
+    name: "Sulfur-Based Synthesis Techniques"
+    ja: "硫黄を使う合成の技術"
+    units: [H-052, H-047, H-028, H-039]
+    sources: [Y01]
+  - id: "T12228"
+    parent: "field:Chemistry"
+    name: "Coordination Chemistry and Organometallics"
+    ja: "配位化学と有機金属化学"
+    units: [H-040, H-039, H-052, H-028]
+    sources: [Y01]
+  - id: "T13239"
+    parent: "field:Chemistry"
+    name: "Phosphorus compounds and reactions"
+    ja: "リン化合物と反応"
+    units: [H-040, H-039, H-028, H-047]
+    sources: [Y01]
+  - id: "T13833"
+    parent: "field:Chemistry"
+    name: "Ferrocene Chemistry and Applications"
+    ja: "フェロセンの化学と応用"
+    units: [H-046, H-052, H-048, H-071]
+    sources: [Y01]
+  - id: "T13124"
+    parent: "field:Chemistry"
+    name: "Chemical synthesis and alkaloids"
+    ja: "化学合成とアルカロイド"
+    units: [H-105, H-047]
+    sources: [Y01]
+  - id: "T13539"
+    parent: "field:Chemistry"
+    name: "thermodynamics and calorimetric analyses"
+    ja: "熱力学と熱量測定"
+    units: [H-022, H-036, P-046, H-100]
+    sources: [Y01]
+  - id: "T13128"
+    parent: "field:Chemistry"
+    name: "Chromatography in Natural Products"
+    ja: "天然物のクロマトグラフィー"
+    units: [H-042, E-215, H-105, H-006]
+    sources: [Y01]
+  - id: "T11460"
+    parent: "field:Chemistry"
+    name: "Analytical Methods in Pharmaceuticals"
+    ja: "医薬品の分析法"
+    units: [H-042, H-031, E-156, S-018]
+    sources: [Y01]
+  - id: "T12380"
+    parent: "field:Computer Science"
+    name: "Authorship Attribution and Profiling"
+    ja: "著者の推定とプロファイリング"
+    units: [K-216, K-046, K-161, S-023]
+    sources: [Y01]
+  - id: "T12326"
+    parent: "field:Computer Science"
+    name: "Network Packet Processing and Optimization"
+    ja: "ネットワークのパケット処理と最適化"
+    units: [K-198, K-043, K-038, K-023]
+    sources: [Y01]
+  - id: "T13559"
+    parent: "field:Computer Science"
+    name: "Edcuational Technology Systems"
+    ja: "教育技術のシステム"
+    units: [K-053, K-054, K-199]
+    sources: [Y01]
+  - id: "T11450"
+    parent: "field:Computer Science"
+    name: "Model-Driven Software Engineering Techniques"
+    ja: "モデル駆動のソフトウェア工学"
+    units: [K-199, K-017, K-039, K-200]
+    sources: [Y01]
+  - id: "T11478"
+    parent: "field:Computer Science"
+    name: "Caching and Content Delivery"
+    ja: "キャッシュとコンテンツ配信"
+    units: [K-203, K-038, K-215, S-009]
+    sources: [Y01]
+  - id: "T13373"
+    parent: "field:Computer Science"
+    name: "Data Mining and Machine Learning Applications"
+    ja: "データマイニングと機械学習の応用"
+    units: [K-049, K-060, K-105, K-048]
+    sources: [Y01]
+  - id: "T12535"
+    parent: "field:Computer Science"
+    name: "Machine Learning and Data Classification"
+    ja: "機械学習とデータ分類"
+    units: [K-048, K-049, K-052, K-154]
+    sources: [Y01]
+  - id: "T12290"
+    parent: "field:Computer Science"
+    name: "Human Motion and Animation"
+    ja: "人の動きとアニメーション"
+    units: [K-076, K-074, K-084, B-120]
+    sources: [Y01]
+  - id: "T10444"
+    parent: "field:Computer Science"
+    name: "Context-Aware Activity Recognition Systems"
+    ja: "文脈を使う活動認識システム"
+    units: [K-211, E-225, K-049]
+    sources: [Y01]
+  - id: "T10286"
+    parent: "field:Computer Science"
+    name: "Information Retrieval and Search Behavior"
+    ja: "情報検索と検索行動"
+    units: [K-204]
+    sources: [Y01]
+  - id: "T13693"
+    parent: "field:Computer Science"
+    name: "Smart Systems and Machine Learning"
+    ja: "スマートシステムと機械学習"
+    units: [E-088, E-078, K-049, K-211]
+    sources: [Y01]
+  - id: "T11612"
+    parent: "field:Computer Science"
+    name: "Stochastic Gradient Optimization Techniques"
+    ja: "確率的勾配による最適化"
+    units: [K-046, K-050, K-052]
+    sources: [Y01]
+  - id: "T10888"
+    parent: "field:Computer Science"
+    name: "Augmented Reality Applications"
+    ja: "拡張現実の応用"
+    units: [K-081, K-072, K-091, K-211]
+    sources: [Y01]
+  - id: "T10824"
+    parent: "field:Computer Science"
+    name: "Image Retrieval and Classification Techniques"
+    ja: "画像検索と画像分類"
+    units: [K-080, K-082, K-204, K-075]
+    sources: [Y01]
+  - id: "T10828"
+    parent: "field:Computer Science"
+    name: "Biometric Identification and Security"
+    ja: "生体認証とセキュリティ"
+    units: [K-080, K-082, K-043, K-049]
+    sources: [Y01]
+  - id: "T12262"
+    parent: "field:Computer Science"
+    name: "Hate Speech and Cyberbullying Detection"
+    ja: "ヘイトスピーチとネットいじめの検出"
+    units: [K-216, K-161, K-049, Y-006]
+    sources: [Y01]
+  - id: "T13270"
+    parent: "field:Computer Science"
+    name: "QR Code Applications and Technologies"
+    ja: "QR コードの応用と技術"
+    units: [C-039, K-140, K-080]
+    sources: [Y01]
+  - id: "T12127"
+    parent: "field:Computer Science"
+    name: "Software System Performance and Reliability"
+    ja: "ソフトウェアシステムの性能と信頼性"
+    units: [K-215, K-199, K-049, K-206]
+    sources: [Y01]
+  - id: "T13482"
+    parent: "field:Computer Science"
+    name: "Engineering Education and Technology"
+    ja: "工学教育と技術"
+    none: "大学の運営と情報基盤の整備方針の話で、知の体系でない。測れるのは教育の効果（Y-017）と IoT の端末（K-211）"
+    sources: [Y01]
+  - id: "T10181"
+    parent: "field:Computer Science"
+    name: "Natural Language Processing Techniques"
+    ja: "自然言語処理の技術"
+    units: [K-216, K-217, K-051, K-161]
+    sources: [Y01]
+  - id: "T12676"
+    parent: "field:Computer Science"
+    name: "Machine Learning and ELM"
+    ja: "機械学習と ELM（極限学習機械）"
+    units: [K-046, K-048, K-047, M-015]
+    sources: [Y01]
+  - id: "T10215"
+    parent: "field:Computer Science"
+    name: "Semantic Web and Ontologies"
+    ja: "セマンティックウェブとオントロジー"
+    units: [K-224]
+    sources: [Y01]
+  - id: "T10648"
+    parent: "field:Computer Science"
+    name: "Virtual Reality Applications and Impacts"
+    ja: "仮想現実の応用と影響"
+    units: [K-071, Q-004, Q-021, K-072]
+    sources: [Y01]
+  - id: "T11901"
+    parent: "field:Computer Science"
+    name: "Bayesian Methods and Mixture Models"
+    ja: "ベイズ法と混合モデル"
+    units: [S-022, S-039, S-036, K-049]
+    sources: [Y01]
+  - id: "T11448"
+    parent: "field:Computer Science"
+    name: "Face recognition and analysis"
+    ja: "顔の認識と分析"
+    units: [K-082, K-080, K-049]
+    sources: [Y01]
+  - id: "T13898"
+    parent: "field:Computer Science"
+    name: "Diverse Interdisciplinary Research Studies"
+    ja: "分野をまたぐ多様な研究"
+    units: [C-038, E-076, K-208, S-004]
+    sources: [Y01]
+  - id: "T10579"
+    parent: "field:Computer Science"
+    name: "Cognitive Radio Networks and Spectrum Sensing"
+    ja: "コグニティブ無線とスペクトルセンシング"
+    units: [E-078, E-088, E-089, E-077]
+    sources: [Y01]
+  - id: "T10320"
+    parent: "field:Computer Science"
+    name: "Neural Networks and Applications"
+    ja: "ニューラルネットワークと応用"
+    units: [K-047, K-050, K-051]
+    sources: [Y01]
+  - id: "T13514"
+    parent: "field:Computer Science"
+    name: "Experience-Based Knowledge Management"
+    ja: "経験に基づく知識管理"
+    none: "一つの研究群（Decisional DNA、SOEKS）の知識管理の枠組みで、再生可能エネルギーや IoT への当てはめが中心。検証された模型や測り方が示されず、組織の知識管理の実務の域"
+    sources: [Y01]
+  - id: "T13442"
+    parent: "field:Earth and Planetary Sciences"
+    name: "Geochemistry and Geochronology of Asian Mineral Deposits"
+    ja: "アジアの鉱床の地球化学と年代学"
+    units: [W-123, W-124]
+    sources: [Y01]
+  - id: "T10001"
+    parent: "field:Earth and Planetary Sciences"
+    name: "Geological and Geochemical Analysis"
+    ja: "地質・地球化学の分析"
+    units: [W-016, W-031, W-010, W-019]
+    sources: [Y01]
+  - id: "T10572"
+    parent: "field:Earth and Planetary Sciences"
+    name: "Geophysical and Geoelectrical Methods"
+    ja: "地球物理・地電気の探査法"
+    units: [W-118, W-117, P-141]
+    sources: [Y01]
+  - id: "T10159"
+    parent: "field:Earth and Planetary Sciences"
+    name: "Ionosphere and magnetosphere dynamics"
+    ja: "電離圏と磁気圏の動力学"
+    units: [P-292, P-293, P-294]
+    sources: [Y01]
+  - id: "T10109"
+    parent: "field:Earth and Planetary Sciences"
+    name: "Paleontology and Stratigraphy of Fossils"
+    ja: "古生物学と層序学"
+    units: [W-003, W-014, B-133, B-130, B-134]
+    sources: [Y01]
+  - id: "T11333"
+    parent: "field:Earth and Planetary Sciences"
+    name: "Climate change and permafrost"
+    ja: "気候変動と永久凍土"
+    units: [W-106, P-161, W-033]
+    sources: [Y01]
+  - id: "T14047"
+    parent: "field:Earth and Planetary Sciences"
+    name: "Marine and environmental studies"
+    ja: "海洋と環境の研究"
+    units: [W-041, W-063, W-014, W-032]
+    sources: [Y01]
+  - id: "T10088"
+    parent: "field:Energy"
+    name: "Thermochemical Biomass Conversion Processes"
+    ja: "バイオマスの熱化学的変換"
+    units: [E-194, E-214, H-037, E-212]
+    sources: [Y01]
+  - id: "T10476"
+    parent: "field:Energy"
+    name: "Algal biology and biofuel production"
+    ja: "藻類の生物学とバイオ燃料の生産"
+    units: [E-228, B-030, B-153, E-214]
+    sources: [Y01]
+  - id: "T10680"
+    parent: "field:Energy"
+    name: "Wind Energy Research and Development"
+    ja: "風力エネルギーの研究開発"
+    units: [E-167]
+    sources: [Y01]
+  - id: "T11802"
+    parent: "field:Energy"
+    name: "Chemical Looping and Thermochemical Processes"
+    ja: "ケミカルルーピングと熱化学プロセス"
+    units: [H-036, H-108, E-214, E-218]
+    sources: [Y01]
+  - id: "T14428"
+    parent: "field:Energy"
+    name: "Coal and Coke Industries Research"
+    ja: "石炭とコークスの産業の研究"
+    units: [W-065, H-108, E-194, E-212]
+    sources: [Y01]
+  - id: "T14146"
+    parent: "field:Engineering"
+    name: "Earthquake and Tsunami Effects"
+    ja: "地震と津波の影響"
+    units: [E-187, E-105, W-063, E-108, P-136]
+    sources: [Y01]
+  - id: "T12804"
+    parent: "field:Engineering"
+    name: "Thermal Analysis in Power Transmission"
+    ja: "送電の熱解析"
+    units: [E-170, E-039, E-040, E-197]
+    sources: [Y01]
+  - id: "T12959"
+    parent: "field:Engineering"
+    name: "Engineering and Materials Science Studies"
+    ja: "工学と材料科学の研究"
+    units: [E-193, E-164, H-048, E-015]
+    sources: [Y01]
+  - id: "T11946"
+    parent: "field:Engineering"
+    name: "Antenna Design and Optimization"
+    ja: "アンテナの設計と最適化"
+    units: [E-084, E-083, P-039, K-015]
+    sources: [Y01]
+  - id: "T11524"
+    parent: "field:Engineering"
+    name: "Advanced Aircraft Design and Technologies"
+    ja: "航空機の先進設計と技術"
+    units: [E-026, E-042, E-043, E-199, P-161]
+    sources: [Y01]
+  - id: "T12682"
+    parent: "field:Engineering"
+    name: "Smart Materials for Construction"
+    ja: "建設のためのスマート材料"
+    units: [E-196, E-206, P-029, P-103]
+    sources: [Y01]
+  - id: "T12105"
+    parent: "field:Engineering"
+    name: "Hygrothermal properties of building materials"
+    ja: "建築材料の熱と湿気の性質"
+    units: [E-248]
+    sources: [Y01]
+  - id: "T13685"
+    parent: "field:Engineering"
+    name: "Material Science and Thermodynamics"
+    ja: "材料科学と熱力学"
+    units: [E-015, E-090, E-120, E-191]
+    sources: [Y01]
+  - id: "T10121"
+    parent: "field:Engineering"
+    name: "Building Energy and Comfort Optimization"
+    ja: "建物のエネルギーと快適性の最適化"
+    units: [E-248]
+    sources: [Y01]
+  - id: "T13027"
+    parent: "field:Engineering"
+    name: "Applied Advanced Technologies"
+    ja: "応用先進技術"
+    units: [E-154, E-199, E-193, K-211]
+    sources: [Y01]
+  - id: "T12941"
+    parent: "field:Engineering"
+    name: "Embedded Systems and FPGA Design"
+    ja: "組込みシステムと FPGA の設計"
+    units: [K-197, K-030, K-193, E-183]
+    sources: [Y01]
+  - id: "T10173"
+    parent: "field:Engineering"
+    name: "Computational Fluid Dynamics and Aerodynamics"
+    ja: "数値流体力学と空気力学"
+    units: [E-035, E-036, E-037, E-195]
+    sources: [Y01]
+  - id: "T11945"
+    parent: "field:Engineering"
+    name: "Heat Transfer Mechanisms"
+    ja: "伝熱の機構"
+    units: [E-040, E-039, E-213]
+    sources: [Y01]
+  - id: "T12567"
+    parent: "field:Engineering"
+    name: "Heat transfer and supercritical fluids"
+    ja: "伝熱と超臨界流体"
+    units: [E-040, E-195, P-046, E-045]
+    sources: [Y01]
+  - id: "T12677"
+    parent: "field:Engineering"
+    name: "Sports Dynamics and Biomechanics"
+    ja: "スポーツの力学とバイオメカニクス"
+    units: [B-120, B-139, P-011, P-006]
+    sources: [Y01]
+  - id: "T12300"
+    parent: "field:Engineering"
+    name: "Advanced Electrical Measurement Techniques"
+    ja: "電気計測の先進技術"
+    units: [E-081, E-056, E-170, P-118]
+    sources: [Y01]
+  - id: "T10944"
+    parent: "field:Engineering"
+    name: "Turbomachinery Performance and Optimization"
+    ja: "ターボ機械の性能と最適化"
+    units: [E-043, E-024, E-040, E-025]
+    sources: [Y01]
+  - id: "T12791"
+    parent: "field:Engineering"
+    name: "Full-Duplex Wireless Communications"
+    ja: "全二重の無線通信"
+    units: [E-088, E-083, E-188, E-089]
+    sources: [Y01]
+  - id: "T13020"
+    parent: "field:Engineering"
+    name: "Heat Transfer and Mathematical Modeling"
+    ja: "伝熱と数理モデル"
+    units: [E-039, E-040, E-213, H-021]
+    sources: [Y01]
+  - id: "T14446"
+    parent: "field:Engineering"
+    name: "Civil and Geotechnical Engineering Research"
+    ja: "土木と地盤工学の研究"
+    units: [E-124, E-237, E-187, W-064]
+    sources: [Y01]
+  - id: "T14225"
+    parent: "field:Engineering"
+    name: "Advanced Sensor and Control Systems"
+    ja: "先進のセンサーと制御系"
+    units: [E-049, E-183, E-216, E-180]
+    sources: [Y01]
+  - id: "T13344"
+    parent: "field:Engineering"
+    name: "Industrial Automation and Control Systems"
+    ja: "産業の自動化と制御系"
+    units: [E-216, K-197, K-141, K-126, E-049]
+    sources: [Y01]
+  - id: "T13511"
+    parent: "field:Engineering"
+    name: "Geodetic Measurements and Engineering Structures"
+    ja: "測地測量と工学構造物"
+    units: [W-120, W-121, W-122, E-206]
+    sources: [Y01]
+  - id: "T13601"
+    parent: "field:Engineering"
+    name: "Urban Transport Systems Analysis"
+    ja: "都市交通システムの分析"
+    units: [F-077, F-076, P-258, E-157]
+    sources: [Y01]
+  - id: "T14510"
+    parent: "field:Engineering"
+    name: "Medical Imaging and Analysis"
+    ja: "医用画像と解析"
+    units: [E-224, K-082, E-223]
+    sources: [Y01]
+  - id: "T10059"
+    parent: "field:Engineering"
+    name: "Bone Tissue Engineering Materials"
+    ja: "骨の組織工学の材料"
+    units: [E-226, I-048, B-080]
+    sources: [Y01]
+  - id: "T14189"
+    parent: "field:Engineering"
+    name: "Intravenous Infusion Technology and Safety"
+    ja: "点滴の技術と安全"
+    units: [E-227, P-013, E-049, H-026]
+    sources: [Y01]
+  - id: "T11699"
+    parent: "field:Engineering"
+    name: "High-Velocity Impact and Material Behavior"
+    ja: "高速衝突と材料の挙動"
+    units: [E-014, E-019, P-025, P-282, W-119]
+    sources: [Y01]
+  - id: "T12719"
+    parent: "field:Engineering"
+    name: "Aerospace Engineering and Energy Systems"
+    ja: "航空宇宙工学とエネルギーシステム"
+    units: [E-026, E-167, E-060, P-013, E-190]
+    sources: [Y01]
+  - id: "T10868"
+    parent: "field:Engineering"
+    name: "Soft Robotics and Applications"
+    ja: "ソフトロボットと応用"
+    units: [K-084, E-019, E-022, E-189]
+    sources: [Y01]
+  - id: "T10247"
+    parent: "field:Engineering"
+    name: "Perovskite Materials and Applications"
+    ja: "ペロブスカイト材料と応用"
+    units: [E-160, H-049, H-053, P-096]
+    sources: [Y01]
+  - id: "T13905"
+    parent: "field:Engineering"
+    name: "Telecommunications and Broadcasting Technologies"
+    ja: "電気通信と放送の技術"
+    units: [E-086, E-088, E-089, E-085]
+    sources: [Y01]
+  - id: "T11978"
+    parent: "field:Engineering"
+    name: "Soil Mechanics and Vehicle Dynamics"
+    ja: "土の力学と車両の動力学"
+    units: [E-124, E-191]
+    sources: [Y01]
+  - id: "T10281"
+    parent: "field:Engineering"
+    name: "Advanced Battery Materials and Technologies"
+    ja: "先進電池の材料と技術"
+    units: [H-102, H-103, H-101, H-048]
+    sources: [Y01]
+  - id: "T11201"
+    parent: "field:Engineering"
+    name: "Metallurgy and Material Forming"
+    ja: "冶金と材料の成形"
+    units: [E-163, E-164, E-193, E-014]
+    sources: [Y01]
+  - id: "T10220"
+    parent: "field:Engineering"
+    name: "Machine Fault Diagnosis Techniques"
+    ja: "機械の故障診断技術"
+    units: [E-081, E-090, E-206, K-049]
+    sources: [Y01]
+  - id: "T12256"
+    parent: "field:Engineering"
+    name: "Facilities and Workplace Management"
+    ja: "施設と職場の管理"
+    units: [Q-030, Q-013, S-031]
+    sources: [Y01]
+  - id: "T12809"
+    parent: "field:Engineering"
+    name: "Contact Mechanics and Variational Inequalities"
+    ja: "接触力学と変分不等式"
+    units: [E-246]
+    sources: [Y01]
+  - id: "T12740"
+    parent: "field:Engineering"
+    name: "Gait Recognition and Analysis"
+    ja: "歩容の認識と分析"
+    units: [B-120, K-080, K-082, E-225]
+    sources: [Y01]
+  - id: "T11941"
+    parent: "field:Engineering"
+    name: "Power System Reliability and Maintenance"
+    ja: "電力系統の信頼性と保全"
+    units: [S-009, S-010, S-035, S-002, S-024, E-217, E-170]
+    sources: [Y01]
+  - id: "T11408"
+    parent: "field:Engineering"
+    name: "Advanced Optical Imaging Technologies"
+    ja: "先進の光学イメージング技術"
+    units: [P-024, P-028, P-300, P-026]
+    sources: [Y01]
+  - id: "T11170"
+    parent: "field:Engineering"
+    name: "Biomimetic flight and propulsion mechanisms"
+    ja: "生物に学ぶ飛行と推進の機構"
+    units: [B-139, E-029, P-014, E-027, P-269]
+    sources: [Y01]
+  - id: "T13477"
+    parent: "field:Engineering"
+    name: "Sustainable Design and Development"
+    ja: "持続可能な設計と開発"
+    units: [E-222, E-198, E-199, E-193]
+    sources: [Y01]
+  - id: "T10221"
+    parent: "field:Engineering"
+    name: "Composite Structure Analysis and Optimization"
+    ja: "複合材構造の解析と最適化"
+    units: [E-012, E-013, E-090, E-020]
+    sources: [Y01]
+  - id: "T11417"
+    parent: "field:Engineering"
+    name: "Advancements in PLL and VCO Technologies"
+    ja: "PLL と VCO の技術の進展"
+    units: [E-188, E-245]
+    sources: [Y01]
+  - id: "T13520"
+    parent: "field:Engineering"
+    name: "Architectural and Urban Studies"
+    ja: "建築と都市の研究"
+    none: "建築の様式と文化遺産の保存は人文・芸術の領域。測れるのは気候への応答（建築環境工学、既知の欠け）だけ"
+    sources: [Y01]
+  - id: "T11352"
+    parent: "field:Engineering"
+    name: "Masonry and Concrete Structural Analysis"
+    ja: "組積造とコンクリート構造の解析"
+    units: [E-206, E-122, E-014, E-093]
+    sources: [Y01]
+  - id: "T11557"
+    parent: "field:Engineering"
+    name: "Lubricants and Their Additives"
+    ja: "潤滑油とその添加剤"
+    units: [E-246]
+    sources: [Y01]
+  - id: "T11672"
+    parent: "field:Engineering"
+    name: "Recycling and utilization of industrial and municipal waste in materials production"
+    ja: "産業・都市廃棄物の材料生産への再利用"
+    units: [E-221, E-222, E-196, H-053]
+    sources: [Y01]
+  - id: "T14158"
+    parent: "field:Engineering"
+    name: "Optical Systems and Laser Technology"
+    ja: "光学系とレーザー技術"
+    units: [P-028, E-159, P-091]
+    sources: [Y01]
+  - id: "T12019"
+    parent: "field:Engineering"
+    name: "Calibration and Measurement Techniques"
+    ja: "校正と測定の技術"
+    units: [E-200, P-216, P-131, P-118]
+    sources: [Y01]
+  - id: "T10790"
+    parent: "field:Environmental Science"
+    name: "Heavy Metal Exposure and Toxicity"
+    ja: "重金属の曝露と毒性"
+    units: [I-027, I-041, B-092, H-028]
+    sources: [Y01]
+  - id: "T11588"
+    parent: "field:Environmental Science"
+    name: "Atmospheric and Environmental Gas Dynamics"
+    ja: "大気と環境ガスの動力学"
+    units: [E-200, P-131, P-141, P-161, W-034]
+    sources: [Y01]
+  - id: "T11493"
+    parent: "field:Environmental Science"
+    name: "Water Treatment and Disinfection"
+    ja: "水処理と消毒"
+    units: [E-219, I-027, H-043]
+    sources: [Y01]
+  - id: "T13203"
+    parent: "field:Environmental Science"
+    name: "Environmental Changes in China"
+    ja: "中国の環境変化"
+    units: [W-114, W-066, E-200, W-060]
+    sources: [Y01]
+  - id: "T12780"
+    parent: "field:Environmental Science"
+    name: "Heavy Metal Pollution Remediation"
+    ja: "重金属汚染の浄化"
+    units: [E-221, E-219, H-026, W-102]
+    sources: [Y01]
+  - id: "T13997"
+    parent: "field:Environmental Science"
+    name: "Scientific Research and Studies"
+    ja: "科学研究と調査"
+    units: [P-161, P-201, W-060, P-143]
+    sources: [Y01]
+  - id: "T12467"
+    parent: "field:Environmental Science"
+    name: "Rangeland Management and Livestock Ecology"
+    ja: "放牧地の管理と家畜の生態"
+    units: [B-091, B-041, V-010, V-011, W-070]
+    sources: [Y01]
+  - id: "T11231"
+    parent: "field:Environmental Science"
+    name: "Microbial Fuel Cells and Bioremediation"
+    ja: "微生物燃料電池とバイオレメディエーション"
+    units: [H-048, H-100, B-145, B-148, E-221]
+    sources: [Y01]
+  - id: "T12922"
+    parent: "field:Environmental Science"
+    name: "Business and Economic Development"
+    ja: "経営と経済発展"
+    units: [F-061, F-065, Y-015, E-222]
+    sources: [Y01]
+  - id: "T10266"
+    parent: "field:Environmental Science"
+    name: "Plant Water Relations and Carbon Dynamics"
+    ja: "植物の水関係と炭素の動態"
+    units: [B-038, B-031, B-153, E-115, P-161]
+    sources: [Y01]
+  - id: "T11371"
+    parent: "field:Environmental Science"
+    name: "Wind and Air Flow Studies"
+    ja: "風と空気の流れの研究"
+    units: [E-220, E-115, E-110, E-114]
+    sources: [Y01]
+  - id: "T11634"
+    parent: "field:Environmental Science"
+    name: "Water Quality and Pollution Assessment"
+    ja: "水質と汚染の評価"
+    units: [W-103, W-102, S-023, H-043]
+    sources: [Y01]
+  - id: "T10969"
+    parent: "field:Environmental Science"
+    name: "Water resources management and optimization"
+    ja: "水資源の管理と最適化"
+    units: [W-101, W-061, E-157, K-010]
+    sources: [Y01]
+  - id: "T13654"
+    parent: "field:Environmental Science"
+    name: "Urban Planning and Landscape Design"
+    ja: "都市計画と景観設計"
+    none: "景観と公園の設計は計画・芸術と価値判断の領域。測れるのは生態（B-041）と熱環境（既知の欠け）だけ"
+    sources: [Y01]
+  - id: "T11923"
+    parent: "field:Environmental Science"
+    name: "Mine drainage and remediation techniques"
+    ja: "鉱山排水と浄化の技術"
+    units: [E-221, H-043, B-148, H-017, E-219]
+    sources: [Y01]
+  - id: "T13793"
+    parent: "field:Environmental Science"
+    name: "Environmental and Analytical Chemistry Studies"
+    ja: "環境化学と分析化学の研究"
+    units: [E-221, H-043, H-042, W-102]
+    sources: [Y01]
+  - id: "T13804"
+    parent: "field:Environmental Science"
+    name: "Physical Activity and Education Research"
+    ja: "身体活動と教育の研究"
+    units: [E-219, E-221, E-222]
+    sources: [Y01]
+  - id: "T11188"
+    parent: "field:Environmental Science"
+    name: "Coagulation and Flocculation Studies"
+    ja: "凝集とフロキュレーションの研究"
+    units: [E-219, P-265, H-021]
+    sources: [Y01]
+  - id: "T14324"
+    parent: "field:Environmental Science"
+    name: "Insects and Parasite Interactions"
+    ja: "昆虫と寄生生物の相互作用"
+    units: [I-067]
+    sources: [Y01]
+  - id: "T14120"
+    parent: "field:Environmental Science"
+    name: "Thallium and Germanium Studies"
+    ja: "タリウムとゲルマニウムの研究"
+    units: [I-027, I-041, H-028, H-043]
+    sources: [Y01]
+  - id: "T10610"
+    parent: "field:Materials Science"
+    name: "Advanced Cellulose Research Studies"
+    ja: "セルロースの先進研究"
+    units: [H-107, P-103, P-265, H-044, H-049]
+    sources: [Y01]
+  - id: "T13159"
+    parent: "field:Materials Science"
+    name: "Structural mechanics and materials"
+    ja: "構造力学と材料"
+    units: [E-196, H-028, H-049, H-106]
+    sources: [Y01]
+  - id: "T10179"
+    parent: "field:Materials Science"
+    name: "Supercapacitor Materials and Fabrication"
+    ja: "スーパーキャパシタの材料と作製"
+    units: [H-048, H-100, P-265, H-049]
+    sources: [Y01]
+  - id: "T11224"
+    parent: "field:Materials Science"
+    name: "Electromagnetic wave absorption materials"
+    ja: "電磁波吸収材料"
+    units: [P-040, E-205, P-035, P-097]
+    sources: [Y01]
+  - id: "T12416"
+    parent: "field:Materials Science"
+    name: "Polymer Nanocomposite Synthesis and Irradiation"
+    ja: "高分子ナノ複合材の合成と照射"
+    units: [H-109, H-106, P-263, H-107]
+    sources: [Y01]
+  - id: "T12613"
+    parent: "field:Materials Science"
+    name: "X-ray Diffraction in Crystallography"
+    ja: "結晶学における X 線回折"
+    units: [P-307]
+    sources: [Y01]
+  - id: "T10612"
+    parent: "field:Materials Science"
+    name: "Magnetism in coordination complexes"
+    ja: "配位錯体の磁性"
+    units: [H-046, P-097, H-071, P-089]
+    sources: [Y01]
+  - id: "T10736"
+    parent: "field:Materials Science"
+    name: "Hydrogen embrittlement and corrosion behaviors in metals"
+    ja: "金属の水素脆化と腐食挙動"
+    units: [H-048, E-015, E-164, E-163]
+    sources: [Y01]
+  - id: "T11782"
+    parent: "field:Materials Science"
+    name: "Magnetic Properties of Alloys"
+    ja: "合金の磁気特性"
+    units: [E-162, P-097]
+    sources: [Y01]
+  - id: "T11025"
+    parent: "field:Materials Science"
+    name: "Nonlinear Optical Materials Research"
+    ja: "非線形光学材料の研究"
+    units: [P-234, P-027, H-045]
+    sources: [Y01]
+  - id: "T11240"
+    parent: "field:Materials Science"
+    name: "Luminescence and Fluorescent Materials"
+    ja: "発光材料と蛍光材料"
+    units: [H-109, H-050, H-045]
+    sources: [Y01]
+  - id: "T10321"
+    parent: "field:Materials Science"
+    name: "Quantum Dots Synthesis And Properties"
+    ja: "量子ドットの合成と性質"
+    units: [P-173, H-049]
+    sources: [Y01]
+  - id: "T11511"
+    parent: "field:Materials Science"
+    name: "Dyeing and Modifying Textile Fibers"
+    ja: "繊維の染色と改質"
+    units: [H-035, H-041, H-045, P-175]
+    sources: [Y01]
+  - id: "T11278"
+    parent: "field:Materials Science"
+    name: "Calcium Carbonate Crystallization and Inhibition"
+    ja: "炭酸カルシウムの結晶化と抑制"
+    units: [H-053, H-026, E-164, W-033, E-226]
+    sources: [Y01]
+  - id: "T10097"
+    parent: "field:Materials Science"
+    name: "Luminescence Properties of Advanced Materials"
+    ja: "先進材料の発光特性"
+    units: [H-109, H-050, E-159, H-046]
+    sources: [Y01]
+  - id: "T13465"
+    parent: "field:Materials Science"
+    name: "Graphite, nuclear technology, radiation studies"
+    ja: "黒鉛・原子力技術・放射線の研究"
+    units: [P-290, E-163, H-053, P-104]
+    sources: [Y01]
+  - id: "T12288"
+    parent: "field:Mathematics"
+    name: "Optimization and Search Problems"
+    ja: "最適化と探索の問題"
+    units: [K-225, K-221]
+    sources: [Y01]
+  - id: "T12404"
+    parent: "field:Mathematics"
+    name: "Mathematical Approximation and Integration"
+    ja: "数学的な近似と積分"
+    units: [K-073, C-034, K-001, S-024]
+    sources: [Y01]
+  - id: "T13400"
+    parent: "field:Mathematics"
+    name: "Mathematical and Theoretical Analysis"
+    ja: "数学的・理論的な解析"
+    units: [L-029, D-024, D-025, D-007, D-020]
+    sources: [Y01]
+  - id: "T13030"
+    parent: "field:Mathematics"
+    name: "Survey Sampling and Estimation Techniques"
+    ja: "標本調査と推定の技術"
+    units: [S-057, S-031]
+    sources: [Y01]
+  - id: "T10968"
+    parent: "field:Mathematics"
+    name: "Statistical Distribution Estimation and Applications"
+    ja: "統計分布の推定と応用"
+    units: [S-021, S-018, S-019, S-033]
+    sources: [Y01]
+  - id: "T10304"
+    parent: "field:Mathematics"
+    name: "Geometric and Algebraic Topology"
+    ja: "幾何的・代数的位相幾何"
+    units: [T-056, T-055, T-040, T-052, T-019]
+    sources: [Y01]
+  - id: "T11545"
+    parent: "field:Mathematics"
+    name: "Advanced Banach Space Theory"
+    ja: "バナッハ空間の先進理論"
+    units: [D-062, D-063, D-067, D-069]
+    sources: [Y01]
+  - id: "T11871"
+    parent: "field:Mathematics"
+    name: "Advanced Statistical Methods and Models"
+    ja: "先進の統計的方法とモデル"
+    units: [S-062]
+    sources: [Y01]
+  - id: "T11205"
+    parent: "field:Mathematics"
+    name: "Numerical methods in inverse problems"
+    ja: "逆問題の数値解法"
+    units: [P-141, M-015, K-003]
+    sources: [Y01]
+  - id: "T11517"
+    parent: "field:Physics and Astronomy"
+    name: "Advanced optical system design"
+    ja: "先進の光学系設計"
+    units: [P-308]
+    sources: [Y01]
+  - id: "T10490"
+    parent: "field:Physics and Astronomy"
+    name: "Orbital Angular Momentum in Optics"
+    ja: "光学における軌道角運動量"
+    units: [P-300]
+    sources: [Y01]
+  - id: "T11733"
+    parent: "field:Physics and Astronomy"
+    name: "X-ray Spectroscopy and Fluorescence Analysis"
+    ja: "X 線分光と蛍光分析"
+    units: [P-243, P-079, P-089, H-050]
+    sources: [Y01]
+  - id: "T10425"
+    parent: "field:Physics and Astronomy"
+    name: "Cold Atom Physics and Bose-Einstein Condensates"
+    ja: "冷却原子の物理とボース・アインシュタイン凝縮"
+    units: [P-091, P-302, P-051]
+    sources: [Y01]
+  - id: "T10642"
+    parent: "field:Physics and Astronomy"
+    name: "Atmospheric-Pressure Plasma Applications"
+    ja: "大気圧プラズマの応用"
+    units: [P-281]
+    sources: [Y01]
+  - id: "T11050"
+    parent: "field:Physics and Astronomy"
+    name: "Photorefractive and Nonlinear Optics"
+    ja: "フォトリフラクティブ効果と非線形光学"
+    units: [P-234, P-027, P-024, P-035]
+    sources: [Y01]
+  - id: "T12153"
+    parent: "field:Physics and Astronomy"
+    name: "Advanced Optical Sensing Technologies"
+    ja: "先進の光学センシング技術"
+    units: [E-161, E-084, W-122, P-118]
+    sources: [Y01]
+  - id: "T11449"
+    parent: "field:Physics and Astronomy"
+    name: "Mechanical and Optical Resonators"
+    ja: "機械共振器と光共振器"
+    units: [P-245, P-242]
+    sources: [Y01]
+  - id: "T10295"
+    parent: "field:Physics and Astronomy"
+    name: "Plasmonic and Surface Plasmon Research"
+    ja: "プラズモニクスと表面プラズモンの研究"
+    units: [P-174, P-098]
+    sources: [Y01]
+  - id: "T10025"
+    parent: "field:Physics and Astronomy"
+    name: "Black Holes and Theoretical Physics"
+    ja: "ブラックホールと理論物理"
+    units: [P-224, P-063, P-297, P-236]
+    sources: [Y01]
+  - id: "T11176"
+    parent: "field:Physics and Astronomy"
+    name: "Radiation Therapy and Dosimetry"
+    ja: "放射線治療と線量測定"
+    units: [E-244]
+    sources: [Y01]
+  - id: "T11996"
+    parent: "field:Physics and Astronomy"
+    name: "Random lasers and scattering media"
+    ja: "ランダムレーザーと散乱媒質"
+    units: [P-028, P-131, P-301, E-224]
+    sources: [Y01]
+  - id: "T10463"
+    parent: "field:Physics and Astronomy"
+    name: "Pulsars and Gravitational Waves Research"
+    ja: "パルサーと重力波の研究"
+    units: [P-244, P-167, P-062]
+    sources: [Y01]
+  - id: "T13396"
+    parent: "field:Agricultural and Biological Sciences"
+    name: "Agriculture and Rural Development Research"
+    ja: "農業と農村開発の研究"
+    units: [F-086, V-010, V-011]
+    sources: [Y01]
+  - id: "T12359"
+    parent: "field:Agricultural and Biological Sciences"
+    name: "Fern and Epiphyte Biology"
+    ja: "シダと着生植物の生物学"
+    units: [B-149, B-134, B-056]
+    sources: [Y01]
+  - id: "T13008"
+    parent: "field:Agricultural and Biological Sciences"
+    name: "Agricultural Practices and Plant Genetics"
+    ja: "農法と植物遺伝学"
+    units: [V-006, V-004, V-005]
+    sources: [Y01]
+  - id: "T12447"
+    parent: "field:Agricultural and Biological Sciences"
+    name: "Spider Taxonomy and Behavior Studies"
+    ja: "クモの分類と行動の研究"
+    units: [B-131, B-185, B-134]
+    sources: [Y01]
+  - id: "T13010"
+    parent: "field:Agricultural and Biological Sciences"
+    name: "Agriculture and Agroindustry Studies"
+    ja: "農業と農産業の研究"
+    units: [F-086, F-012, F-043]
+    sources: [Y01]
+  - id: "T13294"
+    parent: "field:Agricultural and Biological Sciences"
+    name: "Livestock and Poultry Management"
+    ja: "家畜と家禽の管理"
+    units: [V-004, V-006, V-011, F-086]
+    sources: [Y01]
+  - id: "T12721"
+    parent: "field:Agricultural and Biological Sciences"
+    name: "Moringa oleifera research and applications"
+    ja: "モリンガの研究と応用"
+    units: [H-105, I-001, I-052]
+    sources: [Y01]
+  - id: "T11404"
+    parent: "field:Agricultural and Biological Sciences"
+    name: "Irrigation Practices and Water Management"
+    ja: "灌漑の方法と水管理"
+    units: [V-005, V-008, V-010]
+    sources: [Y01]
+  - id: "T14272"
+    parent: "field:Agricultural and Biological Sciences"
+    name: "Agricultural and Food Production Studies"
+    ja: "農業と食料生産の研究"
+    units: [F-086, I-052, I-036]
+    sources: [Y01]
+  - id: "T13678"
+    parent: "field:Agricultural and Biological Sciences"
+    name: "Agricultural Research and Practices"
+    ja: "農業の研究と実践"
+    units: [F-086, V-010, Y-015]
+    sources: [Y01]
+  - id: "T10141"
+    parent: "field:Agricultural and Biological Sciences"
+    name: "Probiotics and Fermented Foods"
+    ja: "プロバイオティクスと発酵食品"
+    units: [I-032, B-043, V-016]
+    sources: [Y01]
+  - id: "T11546"
+    parent: "field:Agricultural and Biological Sciences"
+    name: "Plant Physiology and Cultivation Studies"
+    ja: "植物生理と栽培の研究"
+    units: [V-005, B-038, B-151]
+    sources: [Y01]
+  - id: "T12606"
+    parent: "field:Agricultural and Biological Sciences"
+    name: "Diptera species taxonomy and behavior"
+    ja: "ハエ目の分類と行動"
+    units: [B-132, B-185, B-134]
+    sources: [Y01]
+  - id: "T12968"
+    parent: "field:Agricultural and Biological Sciences"
+    name: "Research on scale insects"
+    ja: "カイガラムシの研究"
+    units: [V-009, B-132, B-185]
+    sources: [Y01]
+  - id: "T12310"
+    parent: "field:Agricultural and Biological Sciences"
+    name: "Crop Yield and Soil Fertility"
+    ja: "作物の収量と土壌の肥沃度"
+    units: [V-005, V-006, V-008]
+    sources: [Y01]
+  - id: "T12033"
+    parent: "field:Agricultural and Biological Sciences"
+    name: "Agricultural Economics and Policy"
+    ja: "農業経済と政策"
+    units: [F-086, F-061, Y-015]
+    sources: [Y01]
+  - id: "T13767"
+    parent: "field:Agricultural and Biological Sciences"
+    name: "Leech Biology and Applications"
+    ja: "ヒルの生物学と応用"
+    units: [B-131, B-134, I-022]
+    sources: [Y01]
+  - id: "T10367"
+    parent: "field:Agricultural and Biological Sciences"
+    name: "Agricultural Innovations and Practices"
+    ja: "農業の技術革新と実践"
+    units: [F-086, F-012]
+    sources: [Y01]
+  - id: "T11641"
+    parent: "field:Agricultural and Biological Sciences"
+    name: "Insect and Pesticide Research"
+    ja: "昆虫と農薬の研究"
+    units: [B-132, V-009, I-027, B-148]
+    sources: [Y01]
+  - id: "T12713"
+    parent: "field:Agricultural and Biological Sciences"
+    name: "Forest Ecology and Biodiversity Studies"
+    ja: "森林の生態と生物多様性の研究"
+    units: [B-103, B-056, B-132, B-147]
+    sources: [Y01]
+  - id: "T10332"
+    parent: "field:Agricultural and Biological Sciences"
+    name: "Amphibian and Reptile Biology"
+    ja: "両生類と爬虫類の生物学"
+    units: [B-133, B-093, B-182, B-147]
+    sources: [Y01]
+  - id: "T12896"
+    parent: "field:Agricultural and Biological Sciences"
+    name: "Sustainable Agricultural Systems Analysis"
+    ja: "持続可能な農業システムの分析"
+    units: [V-010, B-091, Y-015]
+    sources: [Y01]
+  - id: "T12858"
+    parent: "field:Agricultural and Biological Sciences"
+    name: "Plant Disease Resistance and Genetics"
+    ja: "植物の病害抵抗性と遺伝学"
+    units: [B-152, V-009, V-007]
+    sources: [Y01]
+  - id: "T11214"
+    parent: "field:Agricultural and Biological Sciences"
+    name: "Human-Animal Interaction Studies"
+    ja: "人と動物の関わりの研究"
+    units: [B-160, V-004, V-012, Q-014]
+    sources: [Y01]
+  - id: "T13069"
+    parent: "field:Agricultural and Biological Sciences"
+    name: "Cocoa and Sweet Potato Agronomy"
+    ja: "カカオとサツマイモの栽培"
+    units: [V-005, V-010, B-103, V-004]
+    sources: [Y01]
+  - id: "T11706"
+    parent: "field:Agricultural and Biological Sciences"
+    name: "Forensic Entomology and Diptera Studies"
+    ja: "法医昆虫学とハエ目の研究"
+    units: [I-069]
+    sources: [Y01]
+  - id: "T10174"
+    parent: "field:Agricultural and Biological Sciences"
+    name: "Animal Behavior and Reproduction"
+    ja: "動物の行動と繁殖"
+    units: [B-058, B-059]
+    sources: [Y01]
+  - id: "T14054"
+    parent: "field:Agricultural and Biological Sciences"
+    name: "Humic Substances and Bio-Organic Studies"
+    ja: "腐植物質と生物有機物の研究"
+    units: [W-062, V-008, H-044]
+    sources: [Y01]
+  - id: "T11339"
+    parent: "field:Biochemistry, Genetics and Molecular Biology"
+    name: "Metabolism, Diabetes, and Cancer"
+    ja: "代謝・糖尿病・がん"
+    gap: "既知の欠け：細胞の信号伝達（docs/research/yardstick-journals.md の 3 と docs/yardsticks.md）"
+    sources: [Y01]
+  - id: "T10123"
+    parent: "field:Biochemistry, Genetics and Molecular Biology"
+    name: "DNA Repair Mechanisms"
+    ja: "DNA 修復の機構"
+    gap: "DNA 修復（ERC・OpenAlex の新しい欠け、docs/research/yardstick-erc-openalex.md の 5）"
+    sources: [Y01]
+  - id: "T10422"
+    parent: "field:Biochemistry, Genetics and Molecular Biology"
+    name: "Angiogenesis and VEGF in Cancer"
+    ja: "がんにおける血管新生と VEGF"
+    units: [I-070]
+    sources: [Y01]
+  - id: "T10434"
+    parent: "field:Biochemistry, Genetics and Molecular Biology"
+    name: "Chromosomal and Genetic Variations"
+    ja: "染色体と遺伝子の変異"
+    units: [B-011, B-135, B-149, B-001]
+    sources: [Y01]
+  - id: "T11845"
+    parent: "field:Biochemistry, Genetics and Molecular Biology"
+    name: "Cancer therapeutics and mechanisms"
+    ja: "がん治療薬とその機構"
+    units: [B-009, B-032, B-001, I-001, I-050]
+    sources: [Y01]
+  - id: "T10724"
+    parent: "field:Biochemistry, Genetics and Molecular Biology"
+    name: "Ion Transport and Channel Regulation"
+    ja: "イオン輸送とチャネルの調節"
+    units: [B-031, I-016, B-052]
+    sources: [Y01]
+  - id: "T11618"
+    parent: "field:Biochemistry, Genetics and Molecular Biology"
+    name: "Cholesterol and Lipid Metabolism"
+    ja: "コレステロールと脂質の代謝"
+    units: [B-008, I-019, I-046]
+    sources: [Y01]
+  - id: "T12820"
+    parent: "field:Biochemistry, Genetics and Molecular Biology"
+    name: "Chromatin Remodeling and Cancer"
+    ja: "クロマチンの再編成とがん"
+    gap: "既知の欠け：クロマチンとエピゲノム（docs/research/yardstick-journals.md の 3 と docs/yardsticks.md）"
+    sources: [Y01]
+  - id: "T11591"
+    parent: "field:Biochemistry, Genetics and Molecular Biology"
+    name: "NF-κB Signaling Pathways"
+    ja: "NF-κB の信号経路"
+    gap: "既知の欠け：細胞の信号伝達（docs/research/yardstick-journals.md の 3 と docs/yardsticks.md）"
+    sources: [Y01]
+  - id: "T10268"
+    parent: "field:Biochemistry, Genetics and Molecular Biology"
+    name: "Developmental Biology and Gene Regulation"
+    ja: "発生生物学と遺伝子の調節"
+    gap: "既知の欠け：細胞の信号伝達（docs/research/yardstick-journals.md の 3 と docs/yardsticks.md）"
+    sources: [Y01]
+  - id: "T11916"
+    parent: "field:Biochemistry, Genetics and Molecular Biology"
+    name: "Legionella and Acanthamoeba research"
+    ja: "レジオネラとアカントアメーバの研究"
+    units: [I-028, B-043, B-145, E-219]
+    sources: [Y01]
+  - id: "T12505"
+    parent: "field:Biochemistry, Genetics and Molecular Biology"
+    name: "Peptidase Inhibition and Analysis"
+    ja: "ペプチダーゼの阻害と分析"
+    units: [I-023, B-007, E-223, H-056]
+    sources: [Y01]
+  - id: "T13426"
+    parent: "field:Biochemistry, Genetics and Molecular Biology"
+    name: "Kruppel-like factors research"
+    ja: "クルッペル様因子の研究"
+    units: [B-044, I-023, B-054]
+    sources: [Y01]
+  - id: "T12910"
+    parent: "field:Biochemistry, Genetics and Molecular Biology"
+    name: "Eicosanoids and Hypertension Pharmacology"
+    ja: "エイコサノイドと高血圧の薬理"
+    units: [B-008, I-001, I-014, I-021]
+    sources: [Y01]
+  - id: "T11124"
+    parent: "field:Biochemistry, Genetics and Molecular Biology"
+    name: "Protein purification and stability"
+    ja: "タンパク質の精製と安定性"
+    units: [B-014, E-215, E-228, I-064]
+    sources: [Y01]
+  - id: "T10379"
+    parent: "field:Biochemistry, Genetics and Molecular Biology"
+    name: "Cellular Mechanics and Interactions"
+    ja: "細胞の力学と相互作用"
+    units: [B-005, B-010]
+    sources: [Y01]
+  - id: "T12576"
+    parent: "field:Biochemistry, Genetics and Molecular Biology"
+    name: "vaccines and immunoinformatics approaches"
+    ja: "ワクチンとイムノインフォマティクス"
+    units: [I-005, I-031, K-117, K-118]
+    sources: [Y01]
+  - id: "T10957"
+    parent: "field:Biochemistry, Genetics and Molecular Biology"
+    name: "Photodynamic Therapy Research Studies"
+    ja: "光線力学療法の研究"
+    units: [H-109, I-020, I-050]
+    sources: [Y01]
+  - id: "T12610"
+    parent: "field:Biochemistry, Genetics and Molecular Biology"
+    name: "RNA regulation and disease"
+    ja: "RNA の調節と疾患"
+    gap: "既知の欠け：RNA の制御（docs/research/yardstick-journals.md の 3 と docs/yardsticks.md）"
+    sources: [Y01]
+  - id: "T10725"
+    parent: "field:Biochemistry, Genetics and Molecular Biology"
+    name: "RNA Interference and Gene Delivery"
+    ja: "RNA 干渉と遺伝子の導入"
+    units: [B-053, E-168, H-059]
+    sources: [Y01]
+  - id: "T12946"
+    parent: "field:Biochemistry, Genetics and Molecular Biology"
+    name: "Fractal and DNA sequence analysis"
+    ja: "フラクタルと DNA 配列の解析"
+    units: [K-105, K-106, E-073]
+    sources: [Y01]
+  - id: "T11908"
+    parent: "field:Biochemistry, Genetics and Molecular Biology"
+    name: "Protein Interaction Studies and Fluorescence Analysis"
+    ja: "タンパク質の相互作用と蛍光分析"
+    units: [B-003, B-013, H-109, I-002]
+    sources: [Y01]
+  - id: "T12198"
+    parent: "field:Dentistry"
+    name: "Oral health in cancer treatment"
+    ja: "がん治療における口腔の健康"
+    units: [I-062, I-050, B-186, I-021]
+    sources: [Y01]
+  - id: "T11570"
+    parent: "field:Dentistry"
+    name: "Periodontal Regeneration and Treatments"
+    ja: "歯周組織の再生と治療"
+    units: [I-062, I-021, B-054]
+    sources: [Y01]
+  - id: "T11919"
+    parent: "field:Dentistry"
+    name: "dental development and anomalies"
+    ja: "歯の発生と異常"
+    units: [I-061, B-140, B-046, I-013]
+    sources: [Y01]
+  - id: "T11497"
+    parent: "field:Health Professions"
+    name: "Interprofessional Education and Collaboration"
+    ja: "多職種の教育と協働"
+    none: "職種間の連携と教育は職業の実務と教育で知の体系でない。測れるチームの働きは Q-030"
+    sources: [Y01]
+  - id: "T13108"
+    parent: "field:Health Professions"
+    name: "Therapeutic Uses of Natural Elements"
+    ja: "天然の元素の治療的利用"
+    none: "温泉・泥・粘土の療法は代替医療で効果が検証で支持されない。成分と抗菌性の測定は H-043 と I-040 の枠で"
+    sources: [Y01]
+  - id: "T14407"
+    parent: "field:Health Professions"
+    name: "Athletic Training and Education"
+    ja: "アスレチックトレーニングと教育"
+    none: "アスレティックトレーナーの職業の社会化と教育は職業の実務。燃え尽きと満足の測定は Q-030"
+    sources: [Y01]
+  - id: "T11430"
+    parent: "field:Health Professions"
+    name: "Disaster Response and Management"
+    ja: "災害への対応と管理"
+    units: [I-051, I-042, I-034, W-064]
+    sources: [Y01]
+  - id: "T14463"
+    parent: "field:Health Professions"
+    name: "Diverse Scientific Research Studies"
+    ja: "多様な科学研究"
+    units: [I-037, I-031, I-042, I-028]
+    sources: [Y01]
+  - id: "T13896"
+    parent: "field:Health Professions"
+    name: "Health Services Management and Policy"
+    ja: "保健サービスの管理と政策"
+    none: "NHS の改革と病院の運営は制度と政策の是非の議論が中心。測れる部分は医療経済と世界の健康"
+    sources: [Y01]
+  - id: "T11020"
+    parent: "field:Immunology and Microbiology"
+    name: "Immune Cell Function and Interaction"
+    ja: "免疫細胞の機能と相互作用"
+    units: [I-005, B-037, I-054]
+    sources: [Y01]
+  - id: "T11136"
+    parent: "field:Immunology and Microbiology"
+    name: "Enzyme-mediated dye degradation"
+    ja: "酵素による染料の分解"
+    units: [B-007, B-147, E-219]
+    sources: [Y01]
+  - id: "T11086"
+    parent: "field:Immunology and Microbiology"
+    name: "Parasitic Infections and Diagnostics"
+    ja: "寄生虫感染と診断"
+    units: [I-067]
+    sources: [Y01]
+  - id: "T11346"
+    parent: "field:Immunology and Microbiology"
+    name: "Mast cells and histamine"
+    ja: "マスト細胞とヒスタミン"
+    units: [I-030, I-005, I-021]
+    sources: [Y01]
+  - id: "T10695"
+    parent: "field:Immunology and Microbiology"
+    name: "Parasites and Host Interactions"
+    ja: "寄生虫と宿主の相互作用"
+    units: [I-067]
+    sources: [Y01]
+  - id: "T11780"
+    parent: "field:Immunology and Microbiology"
+    name: "Rabies epidemiology and control"
+    ja: "狂犬病の疫学と制御"
+    units: [V-015, I-037, I-031, B-146]
+    sources: [Y01]
+  - id: "T14020"
+    parent: "field:Medicine"
+    name: "General Medicine and Therapeutics"
+    ja: "一般医学と治療"
+    units: [I-001, I-026, I-004]
+    sources: [Y01]
+  - id: "T13313"
+    parent: "field:Medicine"
+    name: "Dupuytren's Contracture and Treatments"
+    ja: "デュピュイトラン拘縮と治療"
+    units: [I-021, I-048, I-024]
+    sources: [Y01]
+  - id: "T11885"
+    parent: "field:Medicine"
+    name: "MRI in cancer diagnosis"
+    ja: "がん診断における MRI"
+    units: [E-223, I-002, I-043, I-050]
+    sources: [Y01]
+  - id: "T12328"
+    parent: "field:Medicine"
+    name: "Autoimmune and Inflammatory Disorders"
+    ja: "自己免疫・炎症性疾患"
+    units: [I-074, I-073, I-030, I-021]
+    sources: [Y01]
+  - id: "T12578"
+    parent: "field:Medicine"
+    name: "Diagnosis and treatment of tuberculosis"
+    ja: "結核の診断と治療"
+    units: [I-028, I-029, I-073, I-043]
+    sources: [Y01]
+  - id: "T14275"
+    parent: "field:Medicine"
+    name: "Historical Medical Research and Treatments"
+    ja: "医学の歴史的研究と治療"
+    none: "エールリヒの業績とサルバルサンの歴史は歴史。測れる抗菌薬の作用と創薬は I-029 H-056"
+    sources: [Y01]
+  - id: "T10285"
+    parent: "field:Medicine"
+    name: "Venous Thromboembolism Diagnosis and Management"
+    ja: "静脈血栓塞栓症の診断と管理"
+    units: [I-022, I-001, I-044, I-040]
+    sources: [Y01]
+  - id: "T12731"
+    parent: "field:Medicine"
+    name: "Hidradenitis Suppurativa and Treatments"
+    ja: "化膿性汗腺炎と治療"
+    units: [I-074, I-063, I-030]
+    sources: [Y01]
+  - id: "T12183"
+    parent: "field:Medicine"
+    name: "Teratomas and Epidermoid Cysts"
+    ja: "奇形腫と類表皮嚢胞"
+    units: [I-013, I-023, I-049]
+    sources: [Y01]
+  - id: "T11364"
+    parent: "field:Medicine"
+    name: "Cholangiocarcinoma and Gallbladder Cancer Studies"
+    ja: "胆管がんと胆嚢がんの研究"
+    units: [I-023, I-073, I-050, I-025]
+    sources: [Y01]
+  - id: "T11658"
+    parent: "field:Medicine"
+    name: "Esophageal and GI Pathology"
+    ja: "食道と消化管の病理"
+    units: [I-073, I-021, E-226, I-012]
+    sources: [Y01]
+  - id: "T10291"
+    parent: "field:Medicine"
+    name: "Dialysis and Renal Disease Management"
+    ja: "透析と腎疾患の管理"
+    units: [I-016, I-047, I-002, E-215]
+    sources: [Y01]
+  - id: "T10870"
+    parent: "field:Medicine"
+    name: "Interstitial Lung Diseases and Idiopathic Pulmonary Fibrosis"
+    ja: "間質性肺疾患と特発性肺線維症"
+    units: [I-015, I-021, I-072]
+    sources: [Y01]
+  - id: "T10118"
+    parent: "field:Medicine"
+    name: "SARS-CoV-2 and COVID-19 Research"
+    ja: "SARS-CoV-2 と COVID-19 の研究"
+    units: [B-146, I-031, I-037, I-005]
+    sources: [Y01]
+  - id: "T13199"
+    parent: "field:Medicine"
+    name: "Digestive system and related health"
+    ja: "消化器系と関連する健康"
+    units: [B-188, I-017, B-042]
+    sources: [Y01]
+  - id: "T10675"
+    parent: "field:Medicine"
+    name: "Mechanical Circulatory Support Devices"
+    ja: "機械的循環補助装置"
+    units: [E-024, E-215, I-014, I-022, E-226]
+    sources: [Y01]
+  - id: "T12193"
+    parent: "field:Medicine"
+    name: "Trigeminal Neuralgia and Treatments"
+    ja: "三叉神経痛と治療"
+    units: [B-101, B-063, I-026]
+    sources: [Y01]
+  - id: "T11531"
+    parent: "field:Medicine"
+    name: "Healthcare Systems and Reforms"
+    ja: "医療制度と改革"
+    units: [F-079, I-036]
+    sources: [Y01]
+  - id: "T12068"
+    parent: "field:Medicine"
+    name: "Neonatal Health and Biochemistry"
+    ja: "新生児の健康と生化学"
+    units: [I-017, I-024, I-049, H-109]
+    sources: [Y01]
+  - id: "T11752"
+    parent: "field:Medicine"
+    name: "Cancer Treatment and Pharmacology"
+    ja: "がんの治療と薬理"
+    units: [I-027, I-026, I-050, B-101]
+    sources: [Y01]
+  - id: "T11700"
+    parent: "field:Medicine"
+    name: "Hemodynamic Monitoring and Therapy"
+    ja: "血行動態のモニタリングと治療"
+    units: [I-014, I-051, E-225]
+    sources: [Y01]
+  - id: "T12402"
+    parent: "field:Medicine"
+    name: "Travel-related health issues"
+    ja: "旅行に関連する健康問題"
+    units: [I-042, I-028, I-031]
+    sources: [Y01]
+  - id: "T10137"
+    parent: "field:Medicine"
+    name: "Multiple Sclerosis Research Studies"
+    ja: "多発性硬化症の研究"
+    units: [I-030, B-100, B-101, I-005]
+    sources: [Y01]
+  - id: "T13505"
+    parent: "field:Medicine"
+    name: "Apelin-related biomedical research"
+    ja: "アペリン関連の生物医学研究"
+    units: [I-001, I-014, I-019]
+    sources: [Y01]
+  - id: "T12523"
+    parent: "field:Medicine"
+    name: "Nasolacrimal Duct Obstruction Treatments"
+    ja: "鼻涙管閉塞の治療"
+    units: [I-059, I-012, I-040]
+    sources: [Y01]
+  - id: "T13314"
+    parent: "field:Medicine"
+    name: "Lymphadenopathy Diagnosis and Analysis"
+    ja: "リンパ節腫脹の診断と分析"
+    units: [I-025, I-005, I-030]
+    sources: [Y01]
+  - id: "T13192"
+    parent: "field:Medicine"
+    name: "Forensic Fingerprint Detection Methods"
+    ja: "法科学の指紋検出法"
+    units: [I-069]
+    sources: [Y01]
+  - id: "T10902"
+    parent: "field:Medicine"
+    name: "Complementary and Alternative Medicine Studies"
+    ja: "補完代替医療の研究"
+    none: "ホメオパシーなど補完代替医療は効果が検証で支持されない。薬草の有害作用と相互作用の測定は I-027 I-001"
+    sources: [Y01]
+  - id: "T11518"
+    parent: "field:Medicine"
+    name: "Cervical and Thoracic Myelopathy"
+    ja: "頸椎・胸椎の脊髄症"
+    units: [I-048, I-012, B-101, I-040]
+    sources: [Y01]
+  - id: "T12871"
+    parent: "field:Medicine"
+    name: "Healthcare Quality and Management"
+    ja: "医療の質と管理"
+    none: "病院の認証と質の管理は組織の運営と職業の実務。測れる成果の評価は臨床研究の統計 I-040 と Q-030"
+    sources: [Y01]
+  - id: "T12992"
+    parent: "field:Medicine"
+    name: "Metastasis and carcinoma case studies"
+    ja: "転移とがんの症例研究"
+    units: [I-023, I-025, I-050]
+    sources: [Y01]
+  - id: "T10727"
+    parent: "field:Medicine"
+    name: "Ultrasound Imaging and Elastography"
+    ja: "超音波画像とエラストグラフィ"
+    units: [E-223, P-190, W-021, I-043]
+    sources: [Y01]
+  - id: "T12453"
+    parent: "field:Medicine"
+    name: "Infectious Aortic and Vascular Conditions"
+    ja: "感染性の大動脈・血管疾患"
+    units: [I-028, I-029, I-014, E-226]
+    sources: [Y01]
+  - id: "T12369"
+    parent: "field:Medicine"
+    name: "Pneumocystis jirovecii pneumonia detection and treatment"
+    ja: "ニューモシスチス肺炎の検出と治療"
+    units: [I-028, B-147, I-030]
+    sources: [Y01]
+  - id: "T11194"
+    parent: "field:Medicine"
+    name: "Ocular Diseases and Behçet’s Syndrome"
+    ja: "眼疾患とベーチェット病"
+    units: [I-059, I-030, I-021]
+    sources: [Y01]
+  - id: "T10618"
+    parent: "field:Medicine"
+    name: "Aortic Disease and Treatment Approaches"
+    ja: "大動脈疾患と治療の方法"
+    units: [I-045, I-014, I-012]
+    sources: [Y01]
+  - id: "T12096"
+    parent: "field:Medicine"
+    name: "Ectopic Pregnancy Diagnosis and Management"
+    ja: "異所性妊娠の診断と管理"
+    units: [I-018, I-049, I-044]
+    sources: [Y01]
+  - id: "T12226"
+    parent: "field:Medicine"
+    name: "Neuroblastoma Research and Treatments"
+    ja: "神経芽腫の研究と治療"
+    units: [I-023, I-050, I-053, I-024]
+    sources: [Y01]
+  - id: "T10997"
+    parent: "field:Medicine"
+    name: "Ocular Surface and Contact Lens"
+    ja: "眼表面とコンタクトレンズ"
+    units: [I-059, I-056, I-021]
+    sources: [Y01]
+  - id: "T10867"
+    parent: "field:Medicine"
+    name: "Intensive Care Unit Cognitive Disorders"
+    ja: "集中治療室の認知障害"
+    units: [I-051, Q-027, B-065]
+    sources: [Y01]
+  - id: "T10745"
+    parent: "field:Medicine"
+    name: "Heart Rate Variability and Autonomic Control"
+    ja: "心拍変動と自律神経の制御"
+    units: [E-225, I-014, B-035]
+    sources: [Y01]
+  - id: "T10697"
+    parent: "field:Medicine"
+    name: "Vasculitis and related conditions"
+    ja: "血管炎と関連疾患"
+    units: [I-030, I-021, I-045]
+    sources: [Y01]
+  - id: "T10854"
+    parent: "field:Medicine"
+    name: "Bipolar Disorder and Treatment"
+    ja: "双極性障害と治療"
+    units: [Q-029, B-068, I-026]
+    sources: [Y01]
+  - id: "T13147"
+    parent: "field:Medicine"
+    name: "Ethics and bioethics in healthcare"
+    ja: "医療における倫理と生命倫理"
+    none: "医療倫理・安楽死・患者の自律は規範の判断。測れる原則と研究倫理の歴史は I-034"
+    sources: [Y01]
+  - id: "T11991"
+    parent: "field:Medicine"
+    name: "Soft tissue tumor case studies"
+    ja: "軟部腫瘍の症例研究"
+    units: [I-023, I-025, I-050]
+    sources: [Y01]
+  - id: "T11824"
+    parent: "field:Medicine"
+    name: "Injury Epidemiology and Prevention"
+    ja: "傷害の疫学と予防"
+    units: [I-035, I-036, I-041, I-033]
+    sources: [Y01]
+  - id: "T12769"
+    parent: "field:Medicine"
+    name: "Stoma care and complications"
+    ja: "ストーマのケアと合併症"
+    units: [I-073, I-063, Q-018]
+    sources: [Y01]
+  - id: "T10961"
+    parent: "field:Medicine"
+    name: "Hernia repair and management"
+    ja: "ヘルニアの修復と管理"
+    units: [I-012, I-021, E-226, I-040]
+    sources: [Y01]
+  - id: "T10510"
+    parent: "field:Medicine"
+    name: "Stroke Rehabilitation and Recovery"
+    ja: "脳卒中のリハビリテーションと回復"
+    units: [Q-025, Q-027, B-064, E-169]
+    sources: [Y01]
+  - id: "T11438"
+    parent: "field:Medicine"
+    name: "Retinal Imaging and Analysis"
+    ja: "網膜の画像化と解析"
+    units: [I-059, K-082, I-055, K-117]
+    sources: [Y01]
+  - id: "T11681"
+    parent: "field:Medicine"
+    name: "Nosocomial Infections in ICU"
+    ja: "集中治療室の院内感染"
+    units: [I-028, I-029, I-051, I-032]
+    sources: [Y01]
+  - id: "T13381"
+    parent: "field:Medicine"
+    name: "Heart rate and cardiovascular health"
+    ja: "心拍と心血管の健康"
+    units: [I-014, I-001, I-045]
+    sources: [Y01]
+  - id: "T12438"
+    parent: "field:Medicine"
+    name: "Urticaria and Related Conditions"
+    ja: "蕁麻疹と関連疾患"
+    units: [I-030, I-005, I-026]
+    sources: [Y01]
+  - id: "T12930"
+    parent: "field:Medicine"
+    name: "Biomedical and Chemical Research"
+    ja: "生物医学と化学の研究"
+    units: [I-004, B-035, I-014]
+    sources: [Y01]
+  - id: "T11610"
+    parent: "field:Medicine"
+    name: "Food Security and Health in Diverse Populations"
+    ja: "多様な集団における食料安全保障と健康"
+    units: [I-036, I-052, I-035]
+    sources: [Y01]
+  - id: "T13123"
+    parent: "field:Medicine"
+    name: "Advances in Oncology and Radiotherapy"
+    ja: "腫瘍学と放射線治療の進歩"
+    units: [I-036, F-079, B-186]
+    sources: [Y01]
+  - id: "T12747"
+    parent: "field:Medicine"
+    name: "Moyamoya disease diagnosis and treatment"
+    ja: "もやもや病の診断と治療"
+    units: [B-101, I-045, I-024]
+    sources: [Y01]
+  - id: "T11207"
+    parent: "field:Medicine"
+    name: "Alcohol Consumption and Health Effects"
+    ja: "飲酒と健康への影響"
+    units: [I-017, I-073, I-027, I-035]
+    sources: [Y01]
+  - id: "T11084"
+    parent: "field:Medicine"
+    name: "Workplace Health and Well-being"
+    ja: "職場の健康と幸福"
+    units: [I-041, Q-018, Q-030, I-035]
+    sources: [Y01]
+  - id: "T11629"
+    parent: "field:Medicine"
+    name: "Birth, Development, and Health"
+    ja: "出生・発達・健康"
+    units: [I-049, I-013, I-035, I-019]
+    sources: [Y01]
+  - id: "T11553"
+    parent: "field:Medicine"
+    name: "Acne and Rosacea Treatments and Effects"
+    ja: "ざ瘡と酒さの治療と影響"
+    units: [I-063, I-029, I-028]
+    sources: [Y01]
+  - id: "T14043"
+    parent: "field:Medicine"
+    name: "Historical and modern epidemiology studies"
+    ja: "疫学の歴史と現代の研究"
+    units: [I-035, I-036]
+    sources: [Y01]
+  - id: "T12342"
+    parent: "field:Medicine"
+    name: "Vascular anomalies and interventions"
+    ja: "血管の異常と介入"
+    units: [I-012, I-013, I-014]
+    sources: [Y01]
+  - id: "T13544"
+    parent: "field:Medicine"
+    name: "Women's cancer prevention and management"
+    ja: "女性のがんの予防と管理"
+    units: [I-038, I-023, Q-018, I-031]
+    sources: [Y01]
+  - id: "T11785"
+    parent: "field:Medicine"
+    name: "Nausea and vomiting management"
+    ja: "悪心・嘔吐の管理"
+    units: [I-026, I-001, I-050]
+    sources: [Y01]
+  - id: "T13206"
+    parent: "field:Medicine"
+    name: "Neonatal skin health care"
+    ja: "新生児の皮膚のケア"
+    units: [I-063, I-049, I-028]
+    sources: [Y01]
+  - id: "T10839"
+    parent: "field:Medicine"
+    name: "Pancreatic function and diabetes"
+    ja: "膵臓の機能と糖尿病"
+    units: [I-019, I-046, B-035, B-054]
+    sources: [Y01]
+  - id: "T13252"
+    parent: "field:Medicine"
+    name: "Sex and Gender in Healthcare"
+    ja: "医療における性とジェンダー"
+    units: [I-035, I-040, I-039]
+    sources: [Y01]
+  - id: "T10129"
+    parent: "field:Medicine"
+    name: "Glioma Diagnosis and Treatment"
+    ja: "神経膠腫の診断と治療"
+    units: [I-023, I-050, I-053, I-025]
+    sources: [Y01]
+  - id: "T10950"
+    parent: "field:Medicine"
+    name: "Acute Lymphoblastic Leukemia research"
+    ja: "急性リンパ性白血病の研究"
+    units: [I-023, I-022, I-050, I-053]
+    sources: [Y01]
+  - id: "T10394"
+    parent: "field:Medicine"
+    name: "Lipoproteins and Cardiovascular Health"
+    ja: "リポタンパク質と心血管の健康"
+    units: [I-001, I-046, I-045, I-040]
+    sources: [Y01]
+  - id: "T11909"
+    parent: "field:Medicine"
+    name: "Histiocytic Disorders and Treatments"
+    ja: "組織球症と治療"
+    units: [I-023, I-025, I-022]
+    sources: [Y01]
+  - id: "T12849"
+    parent: "field:Medicine"
+    name: "Parvovirus B19 Infection Studies"
+    ja: "パルボウイルス B19 感染の研究"
+    units: [I-028, B-146, I-013, I-022]
+    sources: [Y01]
+  - id: "T10336"
+    parent: "field:Medicine"
+    name: "Cancer Cells and Metastasis"
+    ja: "がん細胞と転移"
+    units: [I-023, B-054, B-046]
+    sources: [Y01]
+  - id: "T10365"
+    parent: "field:Medicine"
+    name: "Gastrointestinal motility and disorders"
+    ja: "消化管の運動と障害"
+    units: [I-017, I-073, I-032]
+    sources: [Y01]
+  - id: "T11679"
+    parent: "field:Medicine"
+    name: "Craniofacial Disorders and Treatments"
+    ja: "頭蓋顔面の障害と治療"
+    units: [I-013, B-140, B-046, I-024]
+    sources: [Y01]
+  - id: "T11627"
+    parent: "field:Medicine"
+    name: "Autoimmune Neurological Disorders and Treatments"
+    ja: "自己免疫性の神経疾患と治療"
+    units: [I-030, B-101, B-052, I-005]
+    sources: [Y01]
+  - id: "T12023"
+    parent: "field:Medicine"
+    name: "Cholinesterase and Neurodegenerative Diseases"
+    ja: "コリンエステラーゼと神経変性疾患"
+    units: [B-007, I-001, I-027, B-068]
+    sources: [Y01]
+  - id: "T11035"
+    parent: "field:Medicine"
+    name: "Salivary Gland Tumors Diagnosis and Treatment"
+    ja: "唾液腺腫瘍の診断と治療"
+    units: [I-023, I-025, I-061]
+    sources: [Y01]
+  - id: "T11601"
+    parent: "field:Neuroscience"
+    name: "Neuroscience and Neural Engineering"
+    ja: "神経科学と神経工学"
+    units: [B-170, E-169, E-234]
+    sources: [Y01]
+  - id: "T10423"
+    parent: "field:Neuroscience"
+    name: "Neurobiology and Insect Physiology Research"
+    ja: "神経生物学と昆虫の生理の研究"
+    units: [B-065, B-132, B-157, I-058]
+    sources: [Y01]
+  - id: "T10918"
+    parent: "field:Neuroscience"
+    name: "Memory Processes and Influences"
+    ja: "記憶の過程と影響"
+    units: [Q-005, B-065]
+    sources: [Y01]
+  - id: "T11094"
+    parent: "field:Neuroscience"
+    name: "Face Recognition and Perception"
+    ja: "顔の認識と知覚"
+    units: [Q-004, B-063, B-067]
+    sources: [Y01]
+  - id: "T10971"
+    parent: "field:Neuroscience"
+    name: "Olfactory and Sensory Function Studies"
+    ja: "嗅覚と感覚機能の研究"
+    units: [I-058, I-060, B-063]
+    sources: [Y01]
+  - id: "T10448"
+    parent: "field:Neuroscience"
+    name: "Memory and Neural Mechanisms"
+    ja: "記憶と神経の機構"
+    units: [B-065, Q-007, Q-032]
+    sources: [Y01]
+  - id: "T13417"
+    parent: "field:Nursing"
+    name: "Biomedical Ethics and Regulation"
+    ja: "生物医学の倫理と規制"
+    none: "幹細胞クリニックの規制とクローンの倫理は規範と規制。測れる幹細胞の科学は B-054 と I-034"
+    sources: [Y01]
+  - id: "T12638"
+    parent: "field:Nursing"
+    name: "Pomegranate: compositions and health benefits"
+    ja: "ザクロの成分と健康への効果"
+    units: [H-105, I-052, I-032]
+    sources: [Y01]
+  - id: "T10140"
+    parent: "field:Nursing"
+    name: "Food composition and properties"
+    ja: "食品の組成と性質"
+    units: [V-016, H-044, I-052]
+    sources: [Y01]
+  - id: "T13048"
+    parent: "field:Nursing"
+    name: "Patient Dignity and Privacy"
+    ja: "患者の尊厳とプライバシー"
+    none: "尊厳療法と患者の尊厳は規範の議論が中心。測れる心理療法の効果は Q-014"
+    sources: [Y01]
+  - id: "T12817"
+    parent: "field:Pharmacology, Toxicology and Pharmaceutics"
+    name: "Pharmacological Effects of Natural Compounds"
+    ja: "天然化合物の薬理作用"
+    units: [H-105, I-001, I-027]
+    sources: [Y01]
+  - id: "T10375"
+    parent: "field:Pharmacology, Toxicology and Pharmaceutics"
+    name: "Pharmacogenetics and Drug Metabolism"
+    ja: "薬理遺伝学と薬物代謝"
+    units: [I-002, I-053, I-027, B-007]
+    sources: [Y01]
+  - id: "T14331"
+    parent: "field:Pharmacology, Toxicology and Pharmaceutics"
+    name: "Medicinal Plant Pharmacodynamics Research"
+    ja: "薬用植物の薬力学の研究"
+    units: [H-105, I-001, I-027]
+    sources: [Y01]
+  - id: "T13775"
+    parent: "field:Pharmacology, Toxicology and Pharmaceutics"
+    name: "Hydrogen's biological and therapeutic effects"
+    ja: "水素の生物学的・治療的効果"
+    units: [I-001, I-020, I-040]
+    sources: [Y01]
+  - id: "T12281"
+    parent: "field:Veterinary"
+    name: "Animal testing and alternatives"
+    ja: "動物実験とその代替"
+    units: [V-012, I-027, I-040]
+    sources: [Y01]
+  - id: "T11905"
+    parent: "field:Veterinary"
+    name: "Veterinary Pharmacology and Anesthesia"
+    ja: "獣医の薬理と麻酔"
+    units: [V-033, V-032, V-012, I-002]
+    sources: [Y01]
+  - id: "T12249"
+    parent: "field:Veterinary"
+    name: "Veterinary Orthopedics and Neurology"
+    ja: "獣医の整形外科と神経学"
+    units: [V-034, B-120, I-048, V-006]
+    sources: [Y01]
+  - id: "T14149"
+    parent: "field:Arts and Humanities"
+    name: "Historical and Literary Analyses"
+    ja: "歴史と文学の分析"
+    none: "文学史と文化史の解釈が中心で、反復して検証できる部分が見当たらない"
+    sources: [Y01]
+  - id: "T14197"
+    parent: "field:Arts and Humanities"
+    name: "Historical Studies of Medieval Iberia"
+    ja: "中世イベリアの歴史研究"
+    none: "中世イベリアの歴史と建築史の解釈と保存の議論で、人文の範囲"
+    sources: [Y01]
+  - id: "T13484"
+    parent: "field:Arts and Humanities"
+    name: "German History and Society"
+    ja: "ドイツの歴史と社会"
+    none: "東ドイツの記憶・アイデンティティ・戦後史の解釈で、人文の範囲"
+    sources: [Y01]
+  - id: "T13334"
+    parent: "field:Arts and Humanities"
+    name: "South Asian Cinema and Culture"
+    ja: "南アジアの映画と文化"
+    none: "映画と文化の批評・受容の解釈で、人文と芸術の範囲"
+    sources: [Y01]
+  - id: "T14441"
+    parent: "field:Arts and Humanities"
+    name: "Religion, Theology, History, Judaism, Christianity"
+    ja: "宗教・神学・歴史（ユダヤ教とキリスト教）"
+    none: "宗教間の関係と神学の議論と歴史で、人文の範囲"
+    sources: [Y01]
+  - id: "T14385"
+    parent: "field:Arts and Humanities"
+    name: "Franz Kafka Literary Studies"
+    ja: "フランツ・カフカの文学研究"
+    none: "カフカの文学研究で、人文の範囲"
+    sources: [Y01]
+  - id: "T13006"
+    parent: "field:Arts and Humanities"
+    name: "Spanish History and Politics"
+    ja: "スペインの歴史と政治"
+    none: "スペイン内戦とフランコ体制の歴史叙述で、人文の範囲"
+    sources: [Y01]
+  - id: "T11846"
+    parent: "field:Arts and Humanities"
+    name: "Cultural Heritage Management and Preservation"
+    ja: "文化遺産の管理と保存"
+    none: "文化遺産の保存と管理の実務・規範の議論が中心。測れるのは遺産の価値の評価（表明選好）の部分だけ"
+    sources: [Y01]
+  - id: "T10165"
+    parent: "field:Arts and Humanities"
+    name: "Classical Antiquity Studies"
+    ja: "古典古代の研究"
+    none: "古代ギリシャ・ローマの文学・宗教・社会の歴史叙述で、人文の範囲"
+    sources: [Y01]
+  - id: "T13122"
+    parent: "field:Arts and Humanities"
+    name: "Turkic and Altaic Linguistics"
+    ja: "テュルク諸語とアルタイ諸語の言語学"
+    none: "実証の部分：膠着語の形態素解析（有限状態の変換器）は K-216、音響の測定は Q-026、類型と系統の統計は SH4_10 の根拠単元で読める"
+    sources: [Y01]
+  - id: "T13072"
+    parent: "field:Arts and Humanities"
+    name: "Contemporary Christian Leadership and Education"
+    ja: "現代のキリスト教の指導と教育"
+    none: "教会の指導・牧会・神学教育の実践と規範で、宗教の範囲"
+    sources: [Y01]
+  - id: "T14109"
+    parent: "field:Arts and Humanities"
+    name: "Scottish History and National Identity"
+    ja: "スコットランドの歴史と国民のアイデンティティ"
+    none: "スコットランドの歴史・文学・国民意識の叙述で、人文の範囲"
+    sources: [Y01]
+  - id: "T11893"
+    parent: "field:Arts and Humanities"
+    name: "German Literature and Culture Studies"
+    ja: "ドイツの文学と文化の研究"
+    none: "ドイツ文学の批評で、人文の範囲"
+    sources: [Y01]
+  - id: "T12739"
+    parent: "field:Arts and Humanities"
+    name: "Historical Studies on Spain"
+    ja: "スペインの歴史研究"
+    none: "スペイン王室と宮廷の歴史叙述で、人文の範囲"
+    sources: [Y01]
+  - id: "T13413"
+    parent: "field:Arts and Humanities"
+    name: "Cultural and Historical Studies"
+    ja: "文化と歴史の研究"
+    none: "ファッションのデザイン教育と型紙などの職業の手技が中心。測れるのは環境への影響（ライフサイクル評価）の部分だけ"
+    sources: [Y01]
+  - id: "T13707"
+    parent: "field:Arts and Humanities"
+    name: "Literature, Language, and Rhetoric Studies"
+    ja: "文学・言語・修辞の研究"
+    none: "文学・修辞・文化研究の寄せ集めで特定の検証できる方法がない。コーパス分析の部分だけ K-216 が受け持つ"
+    sources: [Y01]
+  - id: "T10021"
+    parent: "field:Arts and Humanities"
+    name: "EFL/ESL Teaching and Learning"
+    ja: "英語教育（EFL/ESL）と学習"
+    units: [Q-023, Q-010, Q-012, Y-017]
+    sources: [Y01]
+  - id: "T11794"
+    parent: "field:Arts and Humanities"
+    name: "Early Modern Spanish Literature"
+    ja: "近世スペイン文学"
+    none: "スペイン黄金世紀の文学研究で、人文の範囲"
+    sources: [Y01]
+  - id: "T12517"
+    parent: "field:Arts and Humanities"
+    name: "Seventeenth-Century Political and Philosophical Thought"
+    ja: "17 世紀の政治思想と哲学思想"
+    none: "17 世紀の政治哲学の解釈で、人文の範囲"
+    sources: [Y01]
+  - id: "T14314"
+    parent: "field:Arts and Humanities"
+    name: "Violence, Religion, and Philosophy"
+    ja: "暴力・宗教・哲学"
+    none: "ジラールの模倣理論は暴力と宗教の哲学的な解釈で、反復して検証する形になっていない。模倣と社会的な学習の測れる部分だけ Q-011"
+    sources: [Y01]
+  - id: "T13409"
+    parent: "field:Arts and Humanities"
+    name: "Paleopathology and ancient diseases"
+    ja: "古病理学と古代の疾患"
+    units: [I-067]
+    sources: [Y01]
+  - id: "T12999"
+    parent: "field:Arts and Humanities"
+    name: "Medieval History and Crusades"
+    ja: "中世史と十字軍"
+    none: "十字軍と中世地中海の歴史叙述で、人文の範囲"
+    sources: [Y01]
+  - id: "T12977"
+    parent: "field:Arts and Humanities"
+    name: "Spanish Literature and Culture Studies"
+    ja: "スペインの文学と文化の研究"
+    none: "スペイン文学の批評で、人文の範囲"
+    sources: [Y01]
+  - id: "T14506"
+    parent: "field:Arts and Humanities"
+    name: "Historical and Architectural Studies"
+    ja: "歴史と建築の研究"
+    none: "天文考古学は宗教と文化の解釈が中心。測れるのは天体の位置の計算（天球と歳差）と配列の検定の部分だけ"
+    sources: [Y01]
+  - id: "T13231"
+    parent: "field:Arts and Humanities"
+    name: "History, Culture, and Diplomacy"
+    ja: "歴史・文化・外交"
+    none: "文化外交と文化交流の歴史叙述で、人文の範囲"
+    sources: [Y01]
+  - id: "T12283"
+    parent: "field:Arts and Humanities"
+    name: "Latin American history and culture"
+    ja: "ラテンアメリカの歴史と文化"
+    none: "ラテンアメリカ植民地の歴史と文化の叙述で、人文の範囲"
+    sources: [Y01]
+  - id: "T13887"
+    parent: "field:Arts and Humanities"
+    name: "Augustinian Studies and Theology"
+    ja: "アウグスティヌス研究と神学"
+    none: "アウグスティヌスの神学と哲学で、人文の範囲"
+    sources: [Y01]
+  - id: "T13933"
+    parent: "field:Arts and Humanities"
+    name: "Whitehead's Philosophy and Applications"
+    ja: "ホワイトヘッドの哲学と応用"
+    none: "ホワイトヘッドの過程哲学を足場にした緑の経済の主張で、哲学と規範が中心。測れるのは環境の経済学の部分だけ"
+    sources: [Y01]
+  - id: "T13068"
+    parent: "field:Arts and Humanities"
+    name: "Ancient Mediterranean Archaeology and History"
+    ja: "古代地中海の考古学と歴史"
+    none: "古代地中海の考古学と歴史の叙述が中心。年代決定と地図の解析の部分だけ地図の単元で読める"
+    sources: [Y01]
+  - id: "T14278"
+    parent: "field:Arts and Humanities"
+    name: "Marxism and Critical Theory"
+    ja: "マルクス主義と批判理論"
+    none: "マルクス主義とアルチュセールの理論の解釈で、人文の範囲"
+    sources: [Y01]
+  - id: "T13342"
+    parent: "field:Arts and Humanities"
+    name: "Art History and Market Analysis"
+    ja: "美術史と美術市場の分析"
+    units: [F-047, F-020, F-075, F-033]
+    sources: [Y01]
+  - id: "T11463"
+    parent: "field:Arts and Humanities"
+    name: "Classical Philosophy and Thought"
+    ja: "古典哲学と思想"
+    none: "古代ギリシャ哲学で、人文の範囲"
+    sources: [Y01]
+  - id: "T13059"
+    parent: "field:Arts and Humanities"
+    name: "Religion, Ecology, and Ethics"
+    ja: "宗教・生態・倫理"
+    none: "宗教と環境倫理の議論が中心。宗教と環境への態度の調査の部分だけ測れる"
+    sources: [Y01]
+  - id: "T13803"
+    parent: "field:Business, Management and Accounting"
+    name: "Organizational Strategy and Culture"
+    ja: "組織の戦略と文化"
+    units: [F-043, Q-030, Y-006, K-216]
+    sources: [Y01]
+  - id: "T13366"
+    parent: "field:Business, Management and Accounting"
+    name: "Accounting Theory and Financial Reporting"
+    ja: "会計理論と財務報告"
+    units: [F-010, F-042]
+    sources: [Y01]
+  - id: "T12393"
+    parent: "field:Business, Management and Accounting"
+    name: "Workplace Spirituality and Leadership"
+    ja: "職場のスピリチュアリティとリーダーシップ"
+    units: [Q-030, Q-013]
+    sources: [Y01]
+  - id: "T13580"
+    parent: "field:Business, Management and Accounting"
+    name: "Management and Performance Evaluation"
+    ja: "経営管理と業績評価"
+    units: [Q-030, F-042, F-062]
+    sources: [Y01]
+  - id: "T13963"
+    parent: "field:Business, Management and Accounting"
+    name: "Organizational Management and Leadership"
+    ja: "組織のマネジメントとリーダーシップ"
+    units: [F-043, Q-030, F-082, E-154]
+    sources: [Y01]
+  - id: "T11849"
+    parent: "field:Business, Management and Accounting"
+    name: "Intellectual Capital and Performance Analysis"
+    ja: "知的資本と業績の分析"
+    units: [F-010, F-042, F-082]
+    sources: [Y01]
+  - id: "T13901"
+    parent: "field:Business, Management and Accounting"
+    name: "State Capitalism and Financial Governance"
+    ja: "国家資本主義と金融ガバナンス"
+    units: [F-047, F-043, F-054, F-052]
+    sources: [Y01]
+  - id: "T10058"
+    parent: "field:Business, Management and Accounting"
+    name: "Entrepreneurship Studies and Influences"
+    ja: "起業の研究と影響"
+    units: [F-082, F-062, Q-011, Q-030]
+    sources: [Y01]
+  - id: "T13098"
+    parent: "field:Business, Management and Accounting"
+    name: "Conferences and Exhibitions Management"
+    ja: "会議と展示会の運営"
+    units: [F-076, Q-011, Y-001]
+    sources: [Y01]
+  - id: "T10880"
+    parent: "field:Business, Management and Accounting"
+    name: "Environmental Sustainability in Business"
+    ja: "企業の環境持続可能性"
+    units: [F-061, F-076, Q-011, Q-013]
+    sources: [Y01]
+  - id: "T11653"
+    parent: "field:Business, Management and Accounting"
+    name: "Financial Distress and Bankruptcy Prediction"
+    ja: "財務危機と倒産の予測"
+    units: [F-071, F-010, S-020, S-025]
+    sources: [Y01]
+  - id: "T14139"
+    parent: "field:Business, Management and Accounting"
+    name: "E-commerce and Technology Innovations"
+    ja: "電子商取引と技術革新"
+    units: [F-051, F-060, F-064, F-082]
+    sources: [Y01]
+  - id: "T13642"
+    parent: "field:Business, Management and Accounting"
+    name: "Organizational Downsizing and Restructuring"
+    ja: "組織の縮小と再構築"
+    units: [Q-030, F-062, F-043, Y-004]
+    sources: [Y01]
+  - id: "T11843"
+    parent: "field:Business, Management and Accounting"
+    name: "Family Business Performance and Succession"
+    ja: "同族企業の業績と承継"
+    units: [F-043, F-073, F-023, Q-030]
+    sources: [Y01]
+  - id: "T12843"
+    parent: "field:Business, Management and Accounting"
+    name: "Human Resource and Talent Management"
+    ja: "人的資源と人材の管理"
+    units: [Q-030, F-062, F-073]
+    sources: [Y01]
+  - id: "T10797"
+    parent: "field:Business, Management and Accounting"
+    name: "Accounting and Organizational Management"
+    ja: "会計と組織経営"
+    units: [F-042, F-043]
+    sources: [Y01]
+  - id: "T14031"
+    parent: "field:Business, Management and Accounting"
+    name: "Global and Cross-Cultural Management"
+    ja: "グローバルと異文化の経営"
+    units: [Q-011, Q-013, Q-030, F-065]
+    sources: [Y01]
+  - id: "T12101"
+    parent: "field:Decision Sciences"
+    name: "Advanced Bandit Algorithms Research"
+    ja: "バンディットアルゴリズムの先進研究"
+    units: [K-226]
+    sources: [Y01]
+  - id: "T13480"
+    parent: "field:Decision Sciences"
+    name: "Innovations and Analysis in Business and Education"
+    ja: "経営と教育の革新と分析"
+    none: "ABCD 分析は利点・便益・制約・欠点を並べる質的な枠組みで、検証できる法則や測り方がない。業績の測れる部分だけ F-042"
+    sources: [Y01]
+  - id: "T10068"
+    parent: "field:Decision Sciences"
+    name: "Technology Adoption and User Behaviour"
+    ja: "技術の採用と利用者の行動"
+    units: [Q-013, Q-011, Q-021, F-082]
+    sources: [Y01]
+  - id: "T10974"
+    parent: "field:Decision Sciences"
+    name: "Advanced Queuing Theory Analysis"
+    ja: "待ち行列理論の先進的な解析"
+    units: [S-009, E-157, K-131]
+    sources: [Y01]
+  - id: "T13612"
+    parent: "field:Decision Sciences"
+    name: "Advanced Scientific and Engineering Studies"
+    ja: "先進の科学・工学の研究"
+    units: [K-047, S-025, E-157]
+    sources: [Y01]
+  - id: "T13473"
+    parent: "field:Economics, Econometrics and Finance"
+    name: "Economic Zones and Regional Development"
+    ja: "経済特区と地域開発"
+    units: [F-083, F-075, F-051, Y-004]
+    sources: [Y01]
+  - id: "T13237"
+    parent: "field:Economics, Econometrics and Finance"
+    name: "Socio-economic Development and Sustainability"
+    ja: "社会経済の発展と持続可能性"
+    units: [F-065, F-025, F-061, F-082]
+    sources: [Y01]
+  - id: "T13411"
+    parent: "field:Economics, Econometrics and Finance"
+    name: "Labor Market and Education"
+    ja: "労働市場と教育"
+    units: [F-062, F-080, Y-007, F-033]
+    sources: [Y01]
+  - id: "T13961"
+    parent: "field:Economics, Econometrics and Finance"
+    name: "Socioeconomics of Resources and Conservation"
+    ja: "資源と保全の社会経済学"
+    units: [F-086, F-061, F-076, Y-015]
+    sources: [Y01]
+  - id: "T11014"
+    parent: "field:Economics, Econometrics and Finance"
+    name: "Agglomeration and Urban Systems"
+    ja: "集積と都市システム"
+    units: [F-075]
+    sources: [Y01]
+  - id: "T12446"
+    parent: "field:Economics, Econometrics and Finance"
+    name: "Economic Growth and Fiscal Policies"
+    ja: "経済成長と財政政策"
+    units: [F-084, F-052, F-065, Y-002]
+    sources: [Y01]
+  - id: "T12708"
+    parent: "field:Economics, Econometrics and Finance"
+    name: "Economic and Financial Impacts of Cancer"
+    ja: "がんの経済的・財政的影響"
+    units: [F-079, Q-013, I-050, Y-001]
+    sources: [Y01]
+  - id: "T13378"
+    parent: "field:Economics, Econometrics and Finance"
+    name: "Agricultural Development and Policies"
+    ja: "農業開発と政策"
+    units: [F-086, F-052, V-010]
+    sources: [Y01]
+  - id: "T13547"
+    parent: "field:Economics, Econometrics and Finance"
+    name: "Economic and Industrial Development"
+    ja: "経済と産業の発展"
+    units: [F-082, F-054, Y-002, F-023]
+    sources: [Y01]
+  - id: "T11898"
+    parent: "field:Economics, Econometrics and Finance"
+    name: "Economics of Agriculture and Food Markets"
+    ja: "農業と食料市場の経済学"
+    units: [F-086, F-012, F-034, F-076]
+    sources: [Y01]
+  - id: "T10632"
+    parent: "field:Economics, Econometrics and Finance"
+    name: "Housing Market and Economics"
+    ja: "住宅市場と経済学"
+    units: [F-075, F-059, F-026, F-076]
+    sources: [Y01]
+  - id: "T11496"
+    parent: "field:Economics, Econometrics and Finance"
+    name: "Credit Risk and Financial Regulations"
+    ja: "信用リスクと金融規制"
+    units: [F-071, F-039, F-006]
+    sources: [Y01]
+  - id: "T13074"
+    parent: "field:Economics, Econometrics and Finance"
+    name: "Global Financial Regulation and Crises"
+    ja: "世界の金融規制と危機"
+    units: [F-026, F-038, F-053, F-044]
+    sources: [Y01]
+  - id: "T10403"
+    parent: "field:Psychology"
+    name: "Phonetics and Phonology Research"
+    ja: "音声学と音韻論の研究"
+    units: [Q-026, Q-010]
+    sources: [Y01]
+  - id: "T12448"
+    parent: "field:Psychology"
+    name: "Paranormal Experiences and Beliefs"
+    ja: "超常体験と信念"
+    none: "超心理学と超能力は検証で支持されない。信じる心理（確率判断のずれ・記憶）と臨死体験の生理だけ測れる"
+    sources: [Y01]
+  - id: "T11295"
+    parent: "field:Psychology"
+    name: "Counseling Practices and Supervision"
+    ja: "カウンセリングの実践とスーパービジョン"
+    none: "カウンセラーの養成と指導・多文化の力量の議論は職業の実務と規範。効果の研究の部分だけ Q-014"
+    sources: [Y01]
+  - id: "T12496"
+    parent: "field:Psychology"
+    name: "Color perception and design"
+    ja: "色の知覚とデザイン"
+    units: [Q-004, I-056, Q-012, Q-013]
+    sources: [Y01]
+  - id: "T11345"
+    parent: "field:Psychology"
+    name: "Cognitive and developmental aspects of mathematical skills"
+    ja: "数学的技能の認知的・発達的側面"
+    units: [Q-024, Q-010, Q-028]
+    sources: [Y01]
+  - id: "T12684"
+    parent: "field:Psychology"
+    name: "Stuttering Research and Treatment"
+    ja: "吃音の研究と治療"
+    units: [Q-028, Q-025, Q-026, Q-014]
+    sources: [Y01]
+  - id: "T12553"
+    parent: "field:Psychology"
+    name: "Psychedelics and Drug Studies"
+    ja: "サイケデリクスと薬物の研究"
+    units: [I-026, B-052, Q-014, Q-029, I-003]
+    sources: [Y01]
+  - id: "T11761"
+    parent: "field:Psychology"
+    name: "Resilience and Mental Health"
+    ja: "レジリエンスとメンタルヘルス"
+    units: [Q-014, Q-012, Q-013]
+    sources: [Y01]
+  - id: "T12844"
+    parent: "field:Psychology"
+    name: "Psychology and Mental Health"
+    ja: "心理学とメンタルヘルス"
+    none: "精神分析と臨床の語りが中心で、検証で支持されない説を含む。症状の測り方と治療の効果の部分だけ Q-014、Q-029"
+    sources: [Y01]
+  - id: "T12430"
+    parent: "field:Psychology"
+    name: "Academic and Historical Perspectives in Psychology"
+    ja: "心理学の学術的・歴史的視点"
+    none: "心理学の歴史と哲学の議論で、人文の範囲。研究の方法と再現性の部分だけ Q-006"
+    sources: [Y01]
+  - id: "T10730"
+    parent: "field:Psychology"
+    name: "Language Development and Disorders"
+    ja: "言語の発達と障害"
+    units: [Q-010, Q-028, Q-026]
+    sources: [Y01]
+  - id: "T13821"
+    parent: "field:Psychology"
+    name: "Coaching Methods and Impact"
+    ja: "コーチングの方法と影響"
+    units: [Q-030, Q-014, Q-012]
+    sources: [Y01]
+  - id: "T14513"
+    parent: "field:Psychology"
+    name: "Leadership, Courage, and Heroism Studies"
+    ja: "リーダーシップ・勇気・英雄の研究"
+    units: [Q-011, Q-030, Q-013]
+    sources: [Y01]
+  - id: "T10475"
+    parent: "field:Psychology"
+    name: "Psychological Well-being and Life Satisfaction"
+    ja: "心理的な幸福と生活満足"
+    units: [Q-012, Q-013, Q-014]
+    sources: [Y01]
+  - id: "T14379"
+    parent: "field:Social Sciences"
+    name: "Diverse Cultural and Historical Studies"
+    ja: "多様な文化と歴史の研究"
+    none: "人類学と文化研究の儀礼・記憶・植民地の叙述で、人文の範囲"
+    sources: [Y01]
+  - id: "T11500"
+    parent: "field:Social Sciences"
+    name: "Evacuation and Crowd Dynamics"
+    ja: "避難と群集の動力学"
+    units: [P-258, Q-032, Y-006, W-064]
+    sources: [Y01]
+  - id: "T13247"
+    parent: "field:Social Sciences"
+    name: "Local Governance and Planning"
+    ja: "地方自治と計画"
+    none: "ポーランドの土地利用計画と自治の制度の記述で、法と行政の制度。土地利用と地方財政の測れる部分だけ地図の単元が受け持つ"
+    sources: [Y01]
+  - id: "T11344"
+    parent: "field:Social Sciences"
+    name: "Traffic Prediction and Management Techniques"
+    ja: "交通の予測と管理の技術"
+    units: [P-258, F-034, K-047, S-061]
+    sources: [Y01]
+  - id: "T12877"
+    parent: "field:Social Sciences"
+    name: "Social Issues in Poland"
+    ja: "ポーランドの社会問題"
+    units: [Y-001, Y-002, Y-007, F-062]
+    sources: [Y01]
+  - id: "T13583"
+    parent: "field:Social Sciences"
+    name: "Jury Decision Making Processes"
+    ja: "陪審の意思決定の過程"
+    units: [Y-021, Q-011, Q-009, Q-005]
+    sources: [Y01]
+  - id: "T11980"
+    parent: "field:Social Sciences"
+    name: "Human Mobility and Location-Based Analysis"
+    ja: "人の移動と位置情報に基づく分析"
+    gap: "既知の欠け：空間相互作用モデル（docs/research/yardstick-journals.md の 3 と docs/yardsticks.md）"
+    sources: [Y01]
+  - id: "T12687"
+    parent: "field:Social Sciences"
+    name: "Public Administration in Developing Nations"
+    ja: "開発途上国の行政"
+    units: [Y-015, Y-001, Q-013]
+    sources: [Y01]
+  - id: "T13755"
+    parent: "field:Social Sciences"
+    name: "Global socioeconomic and cultural dynamics"
+    ja: "世界の社会経済と文化の動態"
+    units: [Y-002, F-054, Y-007, F-065]
+    sources: [Y01]
+  - id: "T13352"
+    parent: "field:Social Sciences"
+    name: "International Relations in Latin America"
+    ja: "ラテンアメリカの国際関係"
+    units: [Y-014, F-051, Y-013]
+    sources: [Y01]
+  - id: "T12767"
+    parent: "field:Social Sciences"
+    name: "Conflict of Laws and Jurisdiction"
+    ja: "抵触法と管轄"
+    none: "国際私法の管轄と準拠法の解釈で、法の解釈"
+    sources: [Y01]
+  - id: "T12542"
+    parent: "field:Social Sciences"
+    name: "Second Language Learning and Teaching"
+    ja: "第二言語の学習と教授"
+    units: [Q-023, Q-010, Y-017]
+    sources: [Y01]
+  - id: "T13609"
+    parent: "field:Social Sciences"
+    name: "Economic, Social, and Public Health Issues in Russia and Globally"
+    ja: "ロシアと世界の経済・社会・公衆衛生の問題"
+    units: [S-023, Y-002, Y-006]
+    sources: [Y01]
+  - id: "T13994"
+    parent: "field:Social Sciences"
+    name: "The Impact of Diversity and Innovation on Society"
+    ja: "多様性とイノベーションの社会への影響"
+    units: [F-082, Q-030, Q-011]
+    sources: [Y01]
+  - id: "T14476"
+    parent: "field:Social Sciences"
+    name: "Mental Health and Well-being"
+    ja: "メンタルヘルスと幸福"
+    units: [F-064, Q-018, Y-001, F-065]
+    sources: [Y01]
+  - id: "T13073"
+    parent: "field:Social Sciences"
+    name: "China's Ethnic Minorities and Relations"
+    ja: "中国の少数民族と民族関係"
+    none: "中国の民族政策と地域研究の議論で、解釈と政策の是非が中心。紛争と教育介入の測れる部分だけ"
+    sources: [Y01]
+  - id: "T13469"
+    parent: "field:Social Sciences"
+    name: "Environmental, Ecological, and Cultural Studies"
+    ja: "環境・生態・文化の研究"
+    none: "崩壊学は検証された理論がなく、環境政策の主張が中心。測れるのは環境の経済・生物多様性・農業の部分"
+    sources: [Y01]
+  - id: "T14443"
+    parent: "field:Social Sciences"
+    name: "COVID-19, Geopolitics, Technology, Migration"
+    ja: "COVID-19・地政学・技術・移民"
+    units: [F-051, F-082, F-083, Y-014]
+    sources: [Y01]
+  - id: "T14171"
+    parent: "field:Social Sciences"
+    name: "Education, Law, and Society"
+    ja: "教育・法・社会"
+    none: "デジタル司法と電子証拠の制度と手続の解釈で、法の範囲。司法の実証と情報技術の部分だけ測れる"
+    sources: [Y01]
+  - id: "T12635"
+    parent: "field:Social Sciences"
+    name: "African studies and sociopolitical issues"
+    ja: "アフリカ研究と社会政治の問題"
+    none: "ジンバブエの歴史と政治の叙述で、解釈が中心。制度と土地の測れる部分だけ"
+    sources: [Y01]
+  - id: "T12863"
+    parent: "field:Social Sciences"
+    name: "Web and Library Services"
+    ja: "ウェブと図書館のサービス"
+    none: "図書館の広報とサービスの実務で、職業の手技。情報検索・科学計量・利用者の調査の部分だけ地図の単元が受け持つ"
+    sources: [Y01]
+  - id: "T14430"
+    parent: "field:Social Sciences"
+    name: "Higher Education and Teaching Methods"
+    ja: "高等教育と教授法"
+    units: [Q-023, Y-017]
+    sources: [Y01]
+  - id: "T13154"
+    parent: "field:Social Sciences"
+    name: "Legal and Regulatory Analysis"
+    ja: "法と規制の分析"
+    none: "道路運送と交通の法規の解釈で、法の範囲。交通と規制の経済の測れる部分だけ"
+    sources: [Y01]
+  - id: "T13491"
+    parent: "field:Social Sciences"
+    name: "Social Policy and Social Work in Brazil"
+    ja: "ブラジルの社会政策とソーシャルワーク"
+    units: [Y-015, F-063, Y-003, F-065]
+    sources: [Y01]
+  - id: "T14473"
+    parent: "field:Social Sciences"
+    name: "Social and Economic Development in India"
+    ja: "インドの社会経済の発展"
+    units: [F-065, Y-015, F-084, Y-004]
+    sources: [Y01]
+  - id: "T14219"
+    parent: "field:Social Sciences"
+    name: "Local Economic Development and Planning"
+    ja: "地域の経済開発と計画"
+    units: [F-075, F-084, F-065, Y-015]
+    sources: [Y01]
+  - id: "T14421"
+    parent: "field:Social Sciences"
+    name: "Educational Philosophies and Pedagogies"
+    ja: "教育の哲学と教育学"
+    none: "観想的な教育と共感の教育の理念と規範が中心。警告表示の効果は曝露と学習の単元で近づく"
+    sources: [Y01]
+  - id: "T13456"
+    parent: "field:Social Sciences"
+    name: "Religion, Society, and Development"
+    ja: "宗教・社会・開発"
+    units: [Y-015, F-065, Y-001]
+    sources: [Y01]
+  - id: "T11507"
+    parent: "field:Social Sciences"
+    name: "Religion and Society Interactions"
+    ja: "宗教と社会の相互作用"
+    units: [Y-001, Y-007, Y-012]
+    sources: [Y01]
+  - id: "T14007"
+    parent: "field:Social Sciences"
+    name: "Indigenous and Place-Based Education"
+    ja: "先住民と地域に根ざした教育"
+    none: "場所に根ざした教育と先住民の教育は理念と規範の主張が中心。効果の測れる部分だけ地図の単元が受け持つ"
+    sources: [Y01]
+  - id: "T11198"
+    parent: "field:Social Sciences"
+    name: "Japanese History and Culture"
+    ja: "日本の歴史と文化"
+    none: "日本の歴史と文化の叙述で、人文の範囲"
+    sources: [Y01]
+  - id: "T14229"
+    parent: "field:Social Sciences"
+    name: "Physical education and sports games research"
+    ja: "体育とスポーツ競技の研究"
+    units: [Q-012, Q-025, I-065, Q-023]
+    sources: [Y01]
+  - id: "T11475"
+    parent: "field:Social Sciences"
+    name: "French Territorial Governance"
+    ja: "フランスの地域統治"
+    none: "フランスの広域行政の制度と参加の議論で、行政制度の記述。地方財政と地域の経済の測れる部分だけ"
+    sources: [Y01]
+  - id: "T14395"
+    parent: "field:Social Sciences"
+    name: "African history and culture studies"
+    ja: "アフリカの歴史と文化の研究"
+    none: "アフリカの植民地と独立の歴史叙述で、人文の範囲"
+    sources: [Y01]
+  - id: "T11756"
+    parent: "field:Social Sciences"
+    name: "Mentoring and Academic Development"
+    ja: "メンタリングと学術的な成長"
+    units: [Q-030, Y-017, Q-011]
+    sources: [Y01]
+  - id: "T11544"
+    parent: "field:Social Sciences"
+    name: "Gender, Labor, and Family Dynamics"
+    ja: "ジェンダー・労働・家族の動態"
+    units: [F-062, F-081, Y-009, F-063]
+    sources: [Y01]
+  - id: "T13296"
+    parent: "field:Social Sciences"
+    name: "Sociology, History and Politics of Sport"
+    ja: "スポーツの社会学・歴史・政治"
+    units: [K-070, F-084, F-007, Y-015]
+    sources: [Y01]
+  - id: "T11461"
+    parent: "field:Social Sciences"
+    name: "Local Government Finance and Decentralization"
+    ja: "地方財政と地方分権"
+    units: [F-084]
+    sources: [Y01]
+  - id: "T13423"
+    parent: "field:Social Sciences"
+    name: "Social Policies and Healthcare Reform"
+    ja: "社会政策と医療改革"
+    units: [F-079, F-028, Y-007, Y-015]
+    sources: [Y01]
+  - id: "T13633"
+    parent: "field:Social Sciences"
+    name: "Public Health and Social Inequalities"
+    ja: "公衆衛生と社会的不平等"
+    units: [I-036, F-079, F-063]
+    sources: [Y01]
+  - id: "T12275"
+    parent: "field:Social Sciences"
+    name: "Gender and Feminist Studies"
+    ja: "ジェンダーとフェミニズムの研究"
+    none: "クィア理論とジェンダーの理論は批判と哲学が中心。差別・家族・性の発達の測れる部分だけ"
+    sources: [Y01]
+  - id: "T14462"
+    parent: "field:Social Sciences"
+    name: "Educational Methods and Impacts"
+    ja: "教育の方法と影響"
+    units: [Q-010, Y-009, Y-016, I-035]
+    sources: [Y01]
+  - id: "T14167"
+    parent: "field:Social Sciences"
+    name: "Consumer behavior in food and health"
+    ja: "食と健康における消費者行動"
+    units: [F-049, F-060, Y-019, Q-009]
+    sources: [Y01]
+  - id: "T13620"
+    parent: "field:Social Sciences"
+    name: "Education for Peace and Conflict Resolution"
+    ja: "平和と紛争解決のための教育"
+    none: "平和教育と調停の実践と理念が中心。紛争の実証・交渉のゲーム理論・集団の認知の測れる部分だけ"
+    sources: [Y01]
+  - id: "T12693"
+    parent: "field:Social Sciences"
+    name: "Migration, Ethnicity, and Economy"
+    ja: "移民・民族・経済"
+    units: [F-083, F-062, Y-005, Y-008]
+    sources: [Y01]
+  - id: "T13406"
+    parent: "field:Social Sciences"
+    name: "Human Resources and Workforce"
+    ja: "人的資源と労働力"
+    units: [F-075, F-082, F-080, Y-004]
+    sources: [Y01]
+  - id: "T12645"
+    parent: "field:Social Sciences"
+    name: "European history and politics"
+    ja: "ヨーロッパの歴史と政治"
+    none: "ナチス・ドイツの歴史叙述で、人文の範囲。宣伝の効果の測れる部分だけ Y-016"
+    sources: [Y01]
+  - id: "T10216"
+    parent: "field:Social Sciences"
+    name: "Migration, Refugees, and Integration"
+    ja: "移民・難民・統合"
+    units: [F-083, Y-007, Y-011, Y-012]
+    sources: [Y01]
+  - id: "T14141"
+    parent: "field:Social Sciences"
+    name: "Colonial History and Postcolonial Studies"
+    ja: "植民地史とポストコロニアル研究"
+    none: "植民地時代のインドの歴史叙述で、人文の範囲。植民地の経済への長期の効果の測れる部分だけ F-065"
+    sources: [Y01]
+  - id: "T10809"
+    parent: "field:Social Sciences"
+    name: "Occupational Health and Safety Research"
+    ja: "労働衛生と安全の研究"
+    units: [I-041, Q-021, Q-030, Q-013]
+    sources: [Y01]
+  - id: "T14485"
+    parent: "field:Social Sciences"
+    name: "Language Acquisition and Education"
+    ja: "言語の習得と教育"
+    units: [Q-024, Q-023, Q-010]
+    sources: [Y01]
+  - id: "T13222"
+    parent: "field:Social Sciences"
+    name: "Caribbean history, culture, and politics"
+    ja: "カリブ海の歴史・文化・政治"
+    none: "カリブの歴史と文化と政治の叙述で、人文の範囲"
+    sources: [Y01]
+  - id: "T13155"
+    parent: "field:Social Sciences"
+    name: "Digital Communication and Language"
+    ja: "デジタルコミュニケーションと言語"
+    units: [Y-006, K-216, Q-012]
+    sources: [Y01]
+  - id: "T13721"
+    parent: "field:Social Sciences"
+    name: "Political Science Research and Education"
+    ja: "政治学の研究と教育"
+    none: "政治学の学史と学問の制度の議論で、人文の範囲。方法論の部分は Y-004、出版の分析は Y-022"
+    sources: [Y01]
+  - id: "T13210"
+    parent: "field:Social Sciences"
+    name: "Historical Turkish Studies"
+    ja: "トルコの歴史研究"
+    none: "オスマン帝国とトルコ共和国の歴史叙述で、人文の範囲"
+    sources: [Y01]
+  - id: "T12090"
+    parent: "field:Social Sciences"
+    name: "Language and cultural evolution"
+    ja: "言語と文化の進化"
+    units: [B-194]
+    sources: [Y01]
+  - id: "T14037"
+    parent: "field:Social Sciences"
+    name: "Arabic Language Education Studies"
+    ja: "アラビア語教育の研究"
+    units: [Q-023, Y-017, Q-024]
+    sources: [Y01]
+  - id: "T13998"
+    parent: "field:Social Sciences"
+    name: "History, Medicine, and Leadership"
+    ja: "歴史・医学・リーダーシップ"
+    none: "指導者の病気と傲慢症候群は伝記と倫理（精神科医の診断の規則）の議論が中心で、検証に乏しい。言葉の指標の測れる部分だけ"
+    sources: [Y01]
+  - id: "T12469"
+    parent: "field:Social Sciences"
+    name: "Chaos, Complexity, and Education"
+    ja: "カオス・複雑性・教育"
+    none: "複雑性の認識論と教育の哲学が中心。測れるのは複雑系の模型（自己組織化臨界・エージェントベースモデル）の部分"
+    sources: [Y01]
+  - id: "T11148"
+    parent: "field:Social Sciences"
+    name: "Language, Metaphor, and Cognition"
+    ja: "言語・メタファー・認知"
+    units: [Q-008, Q-032, K-217]
+    sources: [Y01]
+  - id: "T12204"
+    parent: "field:Social Sciences"
+    name: "African Education and Politics"
+    ja: "アフリカの教育と政治"
+    units: [Y-017, F-080, Y-018, F-065]
+    sources: [Y01]
+  - id: "T10298"
+    parent: "field:Social Sciences"
+    name: "Urban Transport and Accessibility"
+    ja: "都市交通とアクセシビリティ"
+    units: [F-077, I-035, W-114]
+    sources: [Y01]
+  - id: "T12210"
+    parent: "field:Social Sciences"
+    name: "Policy Transfer and Learning"
+    ja: "政策の移転と学習"
+    units: [Y-015, Y-005, F-082, S-035]
+    sources: [Y01]
+  - id: "T12437"
+    parent: "field:Social Sciences"
+    name: "Balkans: History, Politics, Society"
+    ja: "バルカン半島の歴史・政治・社会"
+    none: "バルカンの歴史と文化の叙述で、人文の範囲"
+    sources: [Y01]
+  - id: "T14180"
+    parent: "field:Social Sciences"
+    name: "Law, logistics, and international trade"
+    ja: "法・物流・国際貿易"
+    none: "海上運送法と信用状の法の解釈で、法の範囲。貿易の測れる部分だけ F-051"
+    sources: [Y01]
+  - id: "T11147"
+    parent: "field:Social Sciences"
+    name: "Misinformation and Its Impacts"
+    ja: "誤情報とその影響"
+    units: [Y-016, K-216]
+    sources: [Y01]
+  - id: "T12978"
+    parent: "field:Social Sciences"
+    name: "Innovative Teaching Methodologies in Social Sciences"
+    ja: "社会科学の革新的な教授法"
+    units: [Q-023, Y-017, F-049]
+    sources: [Y01]
+  - id: "T10722"
+    parent: "field:Social Sciences"
+    name: "Work-Family Balance Challenges"
+    ja: "仕事と家庭の両立の課題"
+    units: [Q-030, Y-009, F-062, F-081]
+    sources: [Y01]
+  - id: "T12839"
+    parent: "field:Social Sciences"
+    name: "Emile Durkheim and Sociology"
+    ja: "エミール・デュルケームと社会学"
+    none: "デュルケームの社会学の学史と理論の解釈で、人文の範囲。測れるのは社会の測定と模倣・伝染の模型"
+    sources: [Y01]
+  - id: "T13800"
+    parent: "field:Social Sciences"
+    name: "Earthquake and Disaster Impact Studies"
+    ja: "地震と災害の影響の研究"
+    units: [W-064, F-075, Y-015, Y-007]
+    sources: [Y01]
+  - id: "T14218"
+    parent: "field:Social Sciences"
+    name: "Engineering Education and Global Impact"
+    ja: "工学教育と世界への影響"
+    none: "技術者の社会的責任と人道の工学の教育は規範と理念が中心。職業の倫理は E-198"
+    sources: [Y01]
+  - id: "T13488"
+    parent: "field:Social Sciences"
+    name: "Recreational Sport and Physical Activity"
+    ja: "レクリエーションスポーツと身体活動"
+    units: [Q-018, I-065, Y-001, I-035]
+    sources: [Y01]
+  - id: "T10652"
+    parent: "field:Social Sciences"
+    name: "Racial and Ethnic Identity Research"
+    ja: "人種・民族のアイデンティティの研究"
+    units: [Q-011, Q-013, F-081, I-036]
+    sources: [Y01]
+  - id: "T12546"
+    parent: "field:Social Sciences"
+    name: "Smart Parking Systems Research"
+    ja: "スマート駐車システムの研究"
+    units: [F-077, K-047, E-182, P-258]
+    sources: [Y01]
+  - id: "T12364"
+    parent: "field:Social Sciences"
+    name: "Archaeological Research and Protection"
+    ja: "考古学の研究と保護"
+    units: [W-122, W-114, W-010, K-047]
+    sources: [Y01]
+  - id: "T13212"
+    parent: "field:Social Sciences"
+    name: "German Social Sciences and History"
+    ja: "ドイツの社会科学と歴史"
+    none: "ドイツの社会学の学史と哲学的人間学の叙述で、人文の範囲"
+    sources: [Y01]
+  - id: "T14516"
+    parent: "field:Social Sciences"
+    name: "English Language Learning and Teaching"
+    ja: "英語の学習と教授"
+    units: [Q-023, Q-010, Y-017, Q-020]
+    sources: [Y01]
+  - id: "T12728"
+    parent: "field:Social Sciences"
+    name: "Demographic Trends and Gender Preferences"
+    ja: "人口動態の傾向と性別の選好"
+    units: [Y-007, Y-009, Y-015]
+    sources: [Y01]
+  - id: "T13623"
+    parent: "field:Social Sciences"
+    name: "Linguistic Studies and Language Acquisition"
+    ja: "言語学の研究と言語習得"
+    units: [K-216, Q-026, Q-010]
+    sources: [Y01]
+  - id: "T13455"
+    parent: "field:Social Sciences"
+    name: "Decadence, Literature, and Society"
+    ja: "デカダンス・文学・社会"
+    none: "ロンブローゾの犯罪人類学は上書きされた古い説で、文学の議論と合わさる。犯罪の測り方の部分だけ Y-010"
+    sources: [Y01]
+  - id: "T12872"
+    parent: "field:Social Sciences"
+    name: "Philippine History and Culture"
+    ja: "フィリピンの歴史と文化"
+    none: "フィリピンの歴史と文化の叙述で、人文の範囲"
+    sources: [Y01]
+  - id: "T14282"
+    parent: "field:Social Sciences"
+    name: "Security, Politics, and Digital Transformation"
+    ja: "安全保障・政治・デジタル変革"
+    none: "デジタル主権と情報安全の法と政策の議論で、規範が中心。情報技術と社会・システムの安全の部分だけ"
+    sources: [Y01]
+  - id: "T13305"
+    parent: "field:Social Sciences"
+    name: "Teacher Professional Development and Motivation"
+    ja: "教員の専門性開発と動機づけ"
+    units: [F-062, F-080, Q-030, Y-017]
+    sources: [Y01]
+  - id: "T13271"
+    parent: "field:Social Sciences"
+    name: "Ukrainian Legal and Forensic Studies"
+    ja: "ウクライナの法と法科学の研究"
+    none: "ウクライナの刑事手続と捜査実務の法の解釈が中心。犯罪の測り方の部分だけ Y-010。法科学の部分は既知の欠け"
+    sources: [Y01]
+  - id: "T14429"
+    parent: "field:Social Sciences"
+    name: "Global Political and Social Dynamics"
+    ja: "世界の政治・社会の動態"
+    units: [Y-014, F-051, Y-013]
+    sources: [Y01]
+  - id: "T13864"
+    parent: "field:Social Sciences"
+    name: "Indigenous Cultures and History"
+    ja: "先住民の文化と歴史"
+    none: "先住民の歴史と国家の政策の叙述で、人文の範囲。制度と発展の長期の効果の部分だけ F-065"
+    sources: [Y01]
+  - id: "T14125"
+    parent: "field:Social Sciences"
+    name: "Education, Sociology, Communication Studies"
+    ja: "教育・社会学・コミュニケーション研究"
+    none: "家政教育の理念と世代論（検証で支持されない）が中心。コーホートと期間の測れる部分だけ Y-007"
+    sources: [Y01]
+  - id: "T13416"
+    parent: "field:Social Sciences"
+    name: "Educational Theory and Curriculum Studies"
+    ja: "教育理論とカリキュラム研究"
+    none: "カリキュラムの政治と知識の社会学の理論の解釈。教育の効果・学力の測定・階層の部分だけ"
+    sources: [Y01]
+  - id: "T12498"
+    parent: "field:Social Sciences"
+    name: "Latin American Cultural Politics"
+    ja: "ラテンアメリカの文化政治"
+    none: "ラテンアメリカの脱植民地の思想と哲学で、人文の範囲"
+    sources: [Y01]
+  - id: "T12070"
+    parent: "field:Social Sciences"
+    name: "Writing and Handwriting Education"
+    ja: "書字と筆跡の教育"
+    units: [Q-023, Q-024, Q-025, Y-017]
+    sources: [Y01]
+  - id: "T13016"
+    parent: "field:Social Sciences"
+    name: "Innovative Educational Technologies"
+    ja: "革新的な教育技術"
+    units: [Q-023, Y-017, Q-020]
+    sources: [Y01]

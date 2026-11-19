@@ -282,7 +282,7 @@ items:
     parent: "MAC"
     name: "Surface-Active Agents and Detergents"
     ja: "界面活性剤と洗剤"
-    units: [H-054, H-070, P-103]
+    gap: "両親媒性分子の自己集合（ギブズの吸着式、臨界ミセル濃度、乳化と洗浄）"
     sources: [Y01]
   - {id: "APP", name: "Applied", ja: "応用化学", group: true}
   - id: "47"
@@ -307,7 +307,7 @@ items:
     parent: "APP"
     name: "Propellants and Explosives"
     ja: "推進剤と爆薬"
-    units: [E-044, E-045, E-194, E-217]
+    units: [E-044, E-045, E-194, P-279]
     sources: [Y01]
   - id: "51"
     parent: "APP"
@@ -349,7 +349,7 @@ items:
     parent: "APP"
     name: "Ceramics"
     ja: "セラミックス"
-    units: [H-049, H-053, W-013]
+    units: [H-049, H-053, W-013, E-243]
     sources: [Y01]
   - id: "58"
     parent: "APP"
@@ -391,7 +391,7 @@ items:
     parent: "APP"
     name: "Pharmaceutical Analysis"
     ja: "医薬品分析"
-    units: [H-042, H-031, H-041]
+    units: [H-111]
     sources: [Y01]
   - {id: "PIA", name: "Physical, Inorganic, And Analytical", ja: "物理・無機・分析化学", group: true}
   - id: "65"
@@ -404,13 +404,13 @@ items:
     parent: "PIA"
     name: "Surface Chemistry and Colloids"
     ja: "表面化学とコロイド"
-    units: [P-175, P-103, H-054, H-021]
+    units: [P-175, P-265, P-272, H-021]
     sources: [Y01]
   - id: "67"
     parent: "PIA"
     name: "Catalysis, Reaction Kinetics, and Inorganic Reaction Mechanisms"
     ja: "触媒・反応速度・無機反応機構"
-    units: [H-037, H-023, H-052, H-051, H-046]
+    units: [H-037, H-023, H-052, H-051, H-046, H-112]
     sources: [Y01]
   - id: "68"
     parent: "PIA"
@@ -446,7 +446,7 @@ items:
     parent: "PIA"
     name: "Optical, Electron, and Mass Spectroscopy and Other Related Properties"
     ja: "光・電子・質量分析など分光とその関連性質"
-    units: [H-041, H-050, P-243, P-088, P-090]
+    units: [H-041, H-050, P-243, P-088, P-090, H-110]
     sources: [Y01]
   - id: "74"
     parent: "PIA"
@@ -458,7 +458,7 @@ items:
     parent: "PIA"
     name: "Crystallography and Liquid Crystals"
     ja: "結晶学と液晶"
-    units: [P-092, H-019, H-053, P-103]
+    units: [P-092, H-019, H-053, P-266]
     sources: [Y01]
   - id: "76"
     parent: "PIA"
@@ -482,11 +482,11 @@ items:
     parent: "PIA"
     name: "Inorganic Analytical Chemistry"
     ja: "無機分析化学"
-    units: [H-031, H-042, H-026]
+    units: [H-031, H-042, H-026, H-111]
     sources: [Y01]
   - id: "80"
     parent: "PIA"
     name: "Organic Analytical Chemistry"
     ja: "有機分析化学"
-    units: [H-041, H-042, H-031]
+    units: [H-111, H-110]
     sources: [Y01]

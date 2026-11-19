@@ -1,0 +1,904 @@
+id	物差し	項目	パネル・分野	判定	受け持つ単元	理由	単元の案（欠けのとき）	反証の結論
+PE1_1	ERC 2024	Logic and foundations	PE1 Mathematics	本体	L-025,L-029,L-031,L-034,L-043	ZF 集合論・モデル理論・強制法・不完全性定理・証明論の単元がある。		
+PE1_2	ERC 2024	Algebra	PE1 Mathematics	本体	R-001,R-008,R-013,R-024,R-026	群・環・体とガロア理論・可換環論・圏論・ホモロジー代数の単元が揃う。		
+PE1_3	ERC 2024	Number theory	PE1 Mathematics	本体	N-051,N-055,N-058,N-066,N-069	代数的・解析的整数論、p 進、類体論、モジュラー形式、高さの理論まで単元がある。		
+PE1_4	ERC 2024	Algebraic and complex geometry	PE1 Mathematics	本体	T-030,T-034,T-035,T-054,D-092	多様体とスキーム、リーマン–ロッホ、極小モデル、多変数複素解析の単元がある。		
+PE1_5	ERC 2024	Lie groups, Lie algebras	PE1 Mathematics	本体	R-020,R-021,R-022,R-023,R-033	リー環・ルート系・表現・リー群・非コンパクト群の表現の単元がある。コンパクト群の表現は既知の欠け。		
+PE1_6	ERC 2024	Geometry and global analysis	PE1 Mathematics	本体	T-016,T-017,T-045,T-061,T-062	リーマン幾何の大域論・スペクトル幾何・指数定理・リッチ流の単元がある。		
+PE1_7	ERC 2024	Topology	PE1 Mathematics	本体	T-019,T-024,T-027,T-043,T-050	基本群からホモトピー論・微分位相・結び目理論まで単元がある。		
+PE1_8	ERC 2024	Analysis	PE1 Mathematics	本体	D-020,D-021,D-083,D-085,D-086	ルベーグ積分・調和解析・複素解析・ポテンシャル論の単元がある。		
+PE1_9	ERC 2024	Operator algebras and functional analysis	PE1 Mathematics	本体	D-062,D-065,D-066,D-094,D-095	バナッハ空間・ヒルベルト空間・非有界作用素・作用素環の単元がある。作用素環の K 理論と作用素の半群は既知の欠け。		
+PE1_10	ERC 2024	ODE and dynamical systems	PE1 Mathematics	本体	D-046,D-053,D-054,D-073,D-074	常微分方程式・力学系・カオス・双曲力学系・複素力学系の単元がある。		
+PE1_11	ERC 2024	Theoretical aspects of partial differential equations	PE1 Mathematics	本体	D-057,D-058,D-059,D-060,D-091	楕円型・双曲型・放物型・分散型の偏微分方程式の理論の単元がある。		
+PE1_12	ERC 2024	Mathematical physics	PE1 Mathematics	本体	P-235,P-236,D-094,T-051,D-079	公理的場の理論・共形場理論・スペクトル理論・ゲージ理論の幾何・ソリトンの単元がある。		
+PE1_13	ERC 2024	Probability	PE1 Mathematics	本体	S-006,S-008,S-012,S-015,S-043	測度論的確率・極限定理・ブラウン運動・確率積分・確率幾何と格子模型の単元がある。		
+PE1_14	ERC 2024	Mathematical statistics	PE1 Mathematics	本体	S-018,S-019,S-021,S-033,S-025	推定・検定・尤度の漸近理論・十分統計量・統計的学習理論の単元がある。		
+PE1_15	ERC 2024	Generic statistical methodology and modelling	PE1 Mathematics	本体	S-020,S-023,S-024,S-039,S-042	線形モデル・多変量解析・ノンパラメトリック・MCMC・因果推論の単元がある。		
+PE1_16	ERC 2024	Discrete mathematics and combinatorics	PE1 Mathematics	本体	C-021,C-033,C-036,C-037,C-045	包除・ラムゼー・加法的組合せ論・代数的組合せ論・マトロイドの単元がある。凸多面体の理論は既知の欠け。		
+PE1_17	ERC 2024	Mathematical aspects of computer science	PE1 Mathematics	本体	L-026,L-028,K-028,K-041,K-171	計算可能性・形式言語・NP 完全性・計算量の障壁の単元がある。		
+PE1_18	ERC 2024	Numerical analysis	PE1 Mathematics	本体	K-001,K-004,K-005,K-007,K-120	補間と積分・差分法・反復法・固有値・精度保証付き計算の単元がある。		
+PE1_19	ERC 2024	Scientific computing and data processing	PE1 Mathematics	本体	K-190,K-201,K-163,K-015,K-175	科学計算の流れ・数学ソフトウェア・検証と妥当性確認・粒子法の単元がある。		
+PE1_20	ERC 2024	Control theory, optimisation and operational research	PE1 Mathematics	本体	E-054,E-055,K-009,K-010,E-157	最適制御・凸最適化・線形計画・OR の応用の単元がある。整数計画と組合せ最適化は既知の欠け。		
+PE1_21	ERC 2024	Application of mathematics in sciences	PE1 Mathematics	土台	P-055,P-251,B-055,B-062,D-079	他分野の模型を数学で扱う項目で固有の理論は少なく、確率過程・ネットワーク・個体群の数理などの組み合わせで読める。		
+PE1_22	ERC 2024	Application of mathematics in industry and society	PE1 Mathematics	土台	E-156,E-157,S-054,K-065,E-155	産業と社会への応用は品質管理・OR・オンライン実験・在庫などの組み合わせで読める。		
+PE2_1	ERC 2024	Theory of fundamental interactions	PE2 Fundamental Constituents of Matter	本体	P-108,P-111,P-114,P-116,P-220	標準模型・場の理論・くりこみ・有効場の理論・標準模型を超える理論の単元がある。		
+PE2_2	ERC 2024	Phenomenology of fundamental interactions	PE2 Fundamental Constituents of Matter	本体	P-108,P-107,P-200,P-220,P-289	標準模型の現象論・粒子の分類・精密測定の単元がある。		
+PE2_3	ERC 2024	Experimental particle physics with accelerators	PE2 Fundamental Constituents of Matter	本体	P-107,P-285,P-288,P-118	加速器と検出器（P-107）と加速器物理（P-285）、重イオン衝突の単元がある。		
+PE2_4	ERC 2024	Experimental particle physics without accelerators	PE2 Fundamental Constituents of Matter	土台	P-222,P-289,P-168,P-108,P-118	暗黒物質直接探索・ニュートリノ・宇宙線・低エネルギー精密測定は標準模型と検出・計数統計の単元の組み合わせで読める。		
+PE2_5	ERC 2024	Classical and quantum physics of gravitational interactions	PE2 Fundamental Constituents of Matter	本体	P-061,P-062,P-063,P-240,P-244	一般相対論・重力波・ブラックホール・曲がった時空の場の量子論の単元がある。		
+PE2_6	ERC 2024	Nuclear, hadron and heavy ion physics	PE2 Fundamental Constituents of Matter	本体	P-106,P-287,P-288,P-238,P-104	原子核物理・原子核反応・QGP・格子ゲージ理論の単元がある。		
+PE2_7	ERC 2024	Nuclear and particle astrophysics	PE2 Fundamental Constituents of Matter	本体	P-166,P-167,P-168,P-065,P-106	超新星と元素合成・中性子星・高エネルギー天体・ビッグバン元素合成の単元がある。		
+PE2_8	ERC 2024	Gas and plasma physics	PE2 Fundamental Constituents of Matter	本体	P-041,P-246,P-281,P-284,P-278	プラズマの運動論・放電・非線形現象・希薄気体力学の単元がある。		
+PE2_9	ERC 2024	Electromagnetism	PE2 Fundamental Constituents of Matter	本体	P-034,P-036,P-038,P-039,P-040	マクスウェル方程式・境界値問題・放射・導波路の単元がある。		
+PE2_10	ERC 2024	Atomic, molecular physics	PE2 Fundamental Constituents of Matter	本体	P-089,P-090,P-091,P-289,H-050	多電子原子・分子・光と原子の相互作用・分子分光の単元がある。		
+PE2_11	ERC 2024	Ultra-cold atoms and molecules	PE2 Fundamental Constituents of Matter	欠け		P-091（レーザー冷却とボース＝アインシュタイン凝縮が括弧に一言）、P-302（冷却原子気体の超流動が一言）、P-299 はあるが、光トラップと光格子・フェッシュバッハ共鳴・量子気体の模型（グロス–ピタエフスキー、ハバード模型の量子シミュレーション）・超低温分子を受け持つ単元がない。 ／反証：P-091 は 11 項目のうちの一言（レーザー冷却、BEC）、P-302 は「冷却原子気体の超流動」の一言で、グロス–ピタエフスキー方程式、フェッシュバッハ共鳴、光格子は地図のどこにも名指しされない。ドレスト原子・散乱長・ボゴリューボフ理論は散在するが、トラップ中の凝縮体、散乱長の制御、格子模型の量子シミュレーションを束ねる単元がない。	冷却原子気体／レーザー冷却と磁気光学トラップ（ドップラー限界とサブドップラー冷却）、磁気トラップと光双極子トラップ（ドレスト原子の光シフトから）、蒸発冷却、グロス–ピタエフスキー方程式とトラップ中の凝縮体（トーマス–フェルミ近似）、フェッシュバッハ共鳴と散乱長の制御、BEC–BCS クロスオーバー、光格子とボース–ハバード模型（超流動–モット転移）と量子シミュレーション、超低温分子の生成（広すぎれば「原子の冷却と捕捉」と「冷却原子気体」に割る）／P-091,P-051,P-081,P-083,P-095,P-302（光格子にブロッホの定理 P-095、ボース–ハバード模型に第二量子化 P-083 を足した）	残す
+PE2_12	ERC 2024	Optics, non-linear optics and nano-optics	PE2 Fundamental Constituents of Matter	本体	P-024,P-027,P-028,P-234,P-174	干渉・回折・結晶光学・レーザー光学・非線形光学・ナノ光学の単元がある。		
+PE2_13	ERC 2024	Quantum optics and quantum information	PE2 Fundamental Constituents of Matter	本体	P-091,P-084,P-087,P-242,P-245	量子光学・もつれ・量子情報・開いた量子系・光機械と量子測定の単元がある。		
+PE2_14	ERC 2024	Lasers, ultra-short lasers and laser physics	PE2 Fundamental Constituents of Matter	本体	P-028,P-234,P-091,E-159	レーザーと光共振器（P-028）、超短パルス増幅と高次高調波（P-234）、半導体レーザーの単元がある。モード同期など発振器の動力学はやや薄い。		
+PE2_15	ERC 2024	Thermodynamics	PE2 Fundamental Constituents of Matter	本体	P-044,P-045,P-046,E-038	熱力学の第一・第二法則、熱力学関数、工学熱力学の単元がある。		
+PE2_16	ERC 2024	Non-linear physics	PE2 Fundamental Constituents of Matter	本体	P-020,D-055,P-255,P-259,P-284	非線形力学・カオス・同期・パターン形成・プラズマの非線形現象の単元がある。		
+PE2_17	ERC 2024	Metrology and measurement	PE2 Fundamental Constituents of Matter	土台	P-117,P-118,P-245,P-289,E-166	測定の誤差・実験技術・量子測定・精密測定・原子時計の単元の組み合わせで読める。SI の実現や計量標準の単元はない。		
+PE2_18	ERC 2024	Equilibrium and non-equilibrium statistical mechanics: steady states and dynamics	PE2 Fundamental Constituents of Matter	本体	P-048,P-049,P-054,P-055,P-239	統計力学・線形応答・確率過程・ゆらぎ・ガラスと乱れた系の単元がある。		
+PE3_1	ERC 2024	Structure of solids, material growth and characterisation	PE3 Condensed Matter Physics	本体	P-092,H-053,E-163,E-165,P-243	結晶構造と回折・結晶成長・欠陥・電子顕微鏡・分光と散乱の単元がある。		
+PE3_2	ERC 2024	Mechanical and acoustical properties of condensed matter, lattice dynamics	PE3 Condensed Matter Physics	本体	P-093,P-190,E-163,E-126	格子振動・弾性・転位・音響の単元がある。		
+PE3_3	ERC 2024	Transport properties of condensed matter	PE3 Condensed Matter Physics	本体	P-094,P-054,P-098,P-301	自由電子論・ボルツマン方程式と線形応答・メゾスコピック輸送の単元がある。		
+PE3_4	ERC 2024	Electronic properties of materials, surfaces, interfaces, nanostructures	PE3 Condensed Matter Physics	本体	P-095,P-175,P-173,P-102,P-172	バンド理論・表面と界面・ナノ構造・トポロジカル物性・二次元物質の単元がある。		
+PE3_5	ERC 2024	Physical properties of semiconductors and insulators	PE3 Condensed Matter Physics	本体	P-096,E-158,E-159,E-160,E-230	半導体物理・pn 接合・発光素子・太陽電池・先端 CMOS の単元がある。		
+PE3_6	ERC 2024	Macroscopic quantum phenomena, e.g. superconductivity, superfluidity, quantum Hall effect	PE3 Condensed Matter Physics	本体	P-099,P-302,P-098,P-250	超伝導・超流動・量子ホール効果・非従来型超伝導の単元がある。		
+PE3_7	ERC 2024	Spintronics	PE3 Condensed Matter Physics	欠け		近い単元は P-097（磁性）、P-094（自由電子論）、P-301（メゾスコピック輸送）、P-102（量子スピンホール効果が一言）だが、スピン依存輸送（GMR、TMR）、スピン軌道トルク、スピンホール効果、LLG 方程式による磁化ダイナミクスを受け持つ単元がない。 ／反証：P-102 の量子スピンホール効果はトポロジカル絶縁体の話で、スピン流・GMR/TMR・スピン軌道トルクとは別。E-162 は静的な磁区と磁壁まで、P-097 は磁気モーメントと交換相互作用まで。スピン依存輸送と LLG による磁化ダイナミクスを受け持つ単元がない。	スピントロニクス／スピン依存伝導（二流体模型、GMR と TMR）、スピン注入・蓄積・拡散長、スピンホール効果とラシュバ効果、スピン移行トルクとスピン軌道トルク、LLG 方程式と磁壁・スキルミオンの運動、磁気メモリと磁気センサ（「マグノニクスの入口」は量子磁性のスピン波に属すので外した）／P-094,P-097,P-098,E-162（超伝導の P-099 は欠かせないものでないので外し、磁壁の静的な扱いの E-162 を足した）	残す
+PE3_8	ERC 2024	Magnetism and strongly correlated systems	PE3 Condensed Matter Physics	欠け		強相関は P-100・P-250 が本体だが、磁性は P-097 の括弧に「交換相互作用と強磁性」と E-162（磁性材料）があるだけで、ハイゼンベルク模型・スピン波・反強磁性とフラストレーション・量子スピン液体・磁気的な量子相転移を受け持つ単元がない。 ／反証：強相関の半分は P-100・P-250・P-101 が本体だが、磁性の半分は P-097 が磁気モーメント・反磁性と常磁性・交換相互作用と強磁性・結晶場までの基礎で、反強磁性の基底状態、スピン波、フラストレーション、スピン液体は括弧にも出ない。P-052 はイジング模型と平均場、P-239 はスピングラスで、量子スピン系の中心の理論ではない。	量子磁性／ハイゼンベルク模型（強磁性と反強磁性の基底状態、ネール状態、超交換相互作用）、スピン波とマグノン（ホルスタイン–プリマコフ変換と磁化の温度依存）、フラストレーションと量子スピン液体、1 次元スピン鎖（ボソン化と厳密解の入口）、磁気的な量子相転移（イジング模型は P-052、磁気散乱の観測は P-243 に任せ「中性子散乱による観測」を外した）／P-097,P-076,P-083,P-052,P-100	残す
+PE3_9	ERC 2024	Condensed matter – beam interactions (photons, electrons, etc.)	PE3 Condensed Matter Physics	本体	P-243,E-165,P-092	光電子分光・中性子散乱・放射光・電子顕微鏡・回折の単元がある。		
+PE3_10	ERC 2024	Nanophysics, e.g. nanoelectronics, nanophotonics, nanomagnetism, nanoelectromechanics	PE3 Condensed Matter Physics	本体	P-173,P-174,P-172,P-301,P-249	量子ドット・ナノ光学・二次元物質・単電子素子・超伝導量子回路の単元がある。		
+PE3_11	ERC 2024	Mesoscopic quantum physics and solid-state quantum technologies	PE3 Condensed Matter Physics	本体	P-301,P-249,P-298,P-242	メゾスコピック輸送・超伝導量子回路・量子ビットの実装・開いた量子系の単元がある。		
+PE3_12	ERC 2024	Molecular electronics	PE3 Condensed Matter Physics	欠け		近い単元は P-301（ランダウアー公式、クーロン・ブロッケード）、H-045（分子軌道）、H-109（光誘起電子移動、フェルスター移動）、E-165（STM）だが、電子移動のマーカス理論、有機半導体の励起子とポーラロンとホッピング輸送、分子接合の伝導を受け持つ単元がない。 ／反証：H-109 の光誘起電子移動とフェルスター移動は一言で、電子移動のマーカス理論はどの単元にもない（H-051 は遷移状態理論まで）。励起子とポーラロンとホッピング輸送を持つ単元もない。分子接合の伝導は P-301 のランダウアー公式と H-045 で読めるので、欠けているのは有機半導体の物理の側。	有機半導体／π 共役系の電子状態（ヒュッケル法からバンドと局在へ）、励起子（フレンケル型と電荷移動型）とポーラロン、電荷輸送（バンド的とホッピング）、マーカスの電子移動理論、有機トランジスタ・有機 EL・有機太陽電池の動作、分子接合の伝導（P-301 の応用として 1 項目）／H-045,H-109,P-079,P-095,P-301（マーカス理論の黄金律に P-079 を足した）	残す
+PE3_13	ERC 2024	Structure and dynamics of disordered systems, e.g. soft matter (gels, colloids, liquid crystals), granular matter, liquids, glasses, defects	PE3 Condensed Matter Physics	本体	P-103,P-266,P-268,P-276,P-239	ソフトマター・液晶・ジャミング・粒状体・ガラスの単元がある。		
+PE3_14	ERC 2024	Fluid dynamics (physics)	PE3 Condensed Matter Physics	本体	P-014,E-031,P-269,P-270,E-033	流体力学・低レイノルズ数・レオロジー・流れの安定性と乱流の単元がある。		
+PE3_15	ERC 2024	Statistical physics: phase transitions, condensed matter systems, models of complex systems, interdisciplinary applications	PE3 Condensed Matter Physics	本体	P-052,P-053,P-056,S-043,P-261	相転移・くりこみ群・統計場の理論・格子模型の確率論・界面成長の単元がある。		
+PE3_16	ERC 2024	Physics of biological systems	PE3 Condensed Matter Physics	本体	B-013,B-004,B-005,P-267,P-269	生体高分子の統計力学・生物系の場と流れ・生体力学・アクティブマター・微生物の遊泳の単元がある。		
+PE4_1	ERC 2024	Physical chemistry	PE4 Physical and Analytical Chemical Sciences	本体	H-036,H-037,H-051,P-046,H-021	化学熱力学・反応速度論・統計熱力学・溶液の単元がある。		
+PE4_2	ERC 2024	Spectroscopic and spectrometric techniques	PE4 Physical and Analytical Chemical Sciences	欠け		分光は H-041（構造決定、s6）・H-050（分子分光）・P-243（物性の分光）が受け持つが、質量分析は H-041 の括弧に一言あるだけで、イオン化法・質量分析計・タンデム質量分析を受け持つ単元がない（NMR の方法も H-041・H-050 に一言のみ）。既知のプロテオミクス・メタボロミクスの土台でもある。 ／反証：分光の側は H-050（選択律と回転・振動・電子スペクトル）と H-041 が受け持つので欠けでない。質量分析は H-041 の 4 つの手法の一言だけで、イオン化とイオンの運動と質量分析計を扱う単元がない。別に、NMR 分光（化学シフトとスピン結合、緩和、パルス系列と 2 次元）も H-041・H-050・P-118 の一言と E-223 の MRI だけで、別の欠けの候補（要確認）。	質量分析／イオン化法（EI、CI、ESI、MALDI、ICP）、質量分析計（磁場型、四重極、イオントラップ、飛行時間、オービトラップ、FT-ICR）とイオンの運動、分解能と質量精度、同位体パターンと分子式の決定、タンデム質量分析と衝突誘起解離、クロマトグラフィーとの接続（LC-MS、GC-MS）（「定量と内部標準」は分析化学に移し、ICP を足した）／H-041,H-042,P-032,P-118	残す
+PE4_3	ERC 2024	Molecular architecture and Structure	PE4 Physical and Analytical Chemical Sciences	本体	H-014,H-018,H-038,H-050,B-012	化学結合・分子の形・立体化学・分子分光・構造解析手法の単元がある。		
+PE4_4	ERC 2024	Surface science and nanostructures	PE4 Physical and Analytical Chemical Sciences	本体	P-175,E-165,P-173,P-174	表面と界面・走査プローブ顕微鏡・ナノ構造の単元がある。		
+PE4_5	ERC 2024	Analytical chemistry	PE4 Physical and Analytical Chemical Sciences	欠け		近い単元は H-031（滴定と誤差）、H-042（分離と機器分析、s6 の入口）、H-041、P-117（誤差の解析）だが、検出限界と定量限界、校正と不確かさ、試料採取と前処理、クロマトグラフィーの理論（理論段数、ファン・デームテルの式）、原子スペクトル分析、ケモメトリックスを受け持つ単元がない。 ／反証：H-031 は滴定、H-042 は s6 の入口、P-117 は誤差の一般論で、検出限界、方法の妥当性確認、クロマトグラフィーの理論、原子スペクトル分析、多変量検量は名指しされない。E-215 の「吸着とクロマトグラフィー」は化学工学の分離で分析の理論ではない。	分析化学／検量線と検出限界・定量限界（回帰の応用）、標準添加法と内部標準、測定の不確かさと分析法の妥当性確認、試料採取と前処理、クロマトグラフィーの理論（理論段数、分離度、ファン・デームテルの式）、原子スペクトル分析（原子吸光、ICP 発光）、電位差法とストリッピング、ケモメトリックス（主成分回帰と PLS）（ボルタンメトリーとインピーダンスは H-100 が本体なので「電気化学分析」を縮め、ICP-MS は質量分析に移した）／H-042,H-031,S-018,S-020,P-117	残す
+PE4_6	ERC 2024	Chemical physics	PE4 Physical and Analytical Chemical Sciences	本体	H-051,H-050,P-090,P-081,H-109	ポテンシャルエネルギー面と遷移状態理論・分子分光・散乱理論・光物理の単元がある。		
+PE4_7	ERC 2024	Chemical instrumentation	PE4 Physical and Analytical Chemical Sciences	土台	P-118,H-042,E-165,E-188	真空・低温・検出・信号処理・顕微鏡・RF 回路などの単元の組み合わせで読める。		
+PE4_8	ERC 2024	Electrochemistry, electrodialysis, microfluidics, sensors	PE4 Physical and Analytical Chemical Sciences	本体	H-048,H-100,H-027,P-277	電気化学・電気化学測定・マイクロ流体の単元がある。化学センサと電気透析は薄い。		
+PE4_9	ERC 2024	Method development in chemistry	PE4 Physical and Analytical Chemical Sciences	土台	H-047,H-042,H-055,H-031	化学の方法の開発は合成・分離分析・計算化学・実験操作の単元の組み合わせで読める。		
+PE4_10	ERC 2024	Heterogeneous catalysis	PE4 Physical and Analytical Chemical Sciences	欠け		近い単元は H-052（触媒化学、固体触媒と吸着が括弧に一言）、E-214（固体触媒の反応と有効係数）、P-175（吸着）、H-023（反応速度）だが、表面反応の微視的速度論（ラングミュア–ヒンシェルウッド）、サバティエの原理と d バンド模型、スケーリング関係、構造敏感性、担持触媒と失活、昇温脱離などの評価法を受け持つ単元がない。 ／反証：H-052 は有機金属触媒が主で「固体触媒と吸着」は一言、P-175 の吸着も一言、E-214 は反応器の中の有効係数まで。ラングミュア–ヒンシェルウッドの速度論、サバティエの原理と d バンド模型、スケーリング関係、昇温脱離は名指しされず、ほかの単元の組み合わせでは導けない。	不均一触媒／吸着等温線と表面反応の速度論（ラングミュア–ヒンシェルウッド、イーレイ–リディール）、サバティエの原理と火山型曲線、d バンド模型とブレンステッド–エバンス–ポランニーの関係、微視的速度論、構造敏感性と担持金属、酸塩基触媒とゼオライト、触媒の失活、昇温脱離と表面分析による評価／H-023,H-051,P-175,E-214	残す
+PE4_11	ERC 2024	Physical chemistry of biological systems	PE4 Physical and Analytical Chemical Sciences	本体	B-013,B-003,B-007,B-014	生体高分子の熱力学・結合の協同性・酵素学・折りたたみの単元がある。		
+PE4_12	ERC 2024	Chemical reactions: mechanisms, dynamics, kinetics and catalytic reactions	PE4 Physical and Analytical Chemical Sciences	本体	H-023,H-037,H-051,H-052,E-214	反応速度論・遷移状態理論・触媒サイクル・反応工学の単元がある。		
+PE4_13	ERC 2024	Theoretical and computational chemistry	PE4 Physical and Analytical Chemical Sciences	本体	H-045,H-055,H-051,P-119	量子化学・計算化学・統計熱力学・計算物理の単元がある。		
+PE4_14	ERC 2024	Radiation and Nuclear chemistry	PE4 Physical and Analytical Chemical Sciences	土台	P-104,P-287,P-290,H-109,B-186	放射壊変・核反応・核燃料サイクル・放射線化学・放射線生物学の単元の組み合わせで読める。アクチノイド化学や放射化学分離の単元はない。		
+PE4_15	ERC 2024	Photochemistry	PE4 Physical and Analytical Chemical Sciences	本体	H-109,H-045,P-079	光化学と光物理・量子化学・時間依存摂動論の単元がある。		
+PE4_16	ERC 2024	Corrosion	PE4 Physical and Analytical Chemical Sciences	欠け		近い単元は H-048（腐食と防食が括弧に一言）、H-027（標準電極電位）、H-100（分極測定）、E-163（転位と強化）だが、混成電位論とエバンス図、不動態と局部腐食（孔食・すきま腐食）、応力腐食割れと水素脆化、腐食速度の測定を受け持つ単元がない。 ／反証：H-048 は電池が主で「腐食と防食」は一言、H-100 の分極は電池の伝導度と容量の測定で腐食速度の測定ではない。混成電位論とエバンス図は H-048 の過電圧から導けるが、不動態と局部腐食、応力腐食割れと水素脆化は地図にない。迷い：中心の模型の一部は導けるので、単元を立てる線ぎりぎり。	腐食科学／腐食の熱力学（プールベ線図）、混成電位論とエバンス図、分極曲線と腐食速度の測定、不動態とその破壊、局部腐食（孔食、すきま腐食、粒界腐食、ガルバニック腐食）、応力腐食割れと水素脆化、防食（カソード防食、インヒビター、塗装、合金化）／H-036,H-048,H-100,E-163（プールベ線図に電極電位と ΔG と相図の H-036 を足し、H-048 の前提の H-027 を外した）	残す
+PE4_17	ERC 2024	Characterisation methods of materials	PE4 Physical and Analytical Chemical Sciences	土台	E-165,P-243,P-092,P-118,H-041	電子顕微鏡・回折・分光と散乱・計測・分子分光の単元の組み合わせで読める。		
+PE4_18	ERC 2024	Environment chemistry	PE4 Physical and Analytical Chemical Sciences	本体	H-043,H-080,H-081,W-033,W-034	環境の化学・大気の化学と汚染・水の処理・炭酸系・大気化学の単元がある。		
+PE5_1	ERC 2024	Structural properties of materials	PE5 Synthetic Chemistry and Materials	本体	E-163,E-164,E-015,E-014	欠陥と転位・拡散と相変態・疲労と破壊・塑性の単元がある。		
+PE5_2	ERC 2024	Solid state materials chemistry	PE5 Synthetic Chemistry and Materials	本体	H-053,H-019,H-103	固体化学と結晶成長・結晶構造・固体イオニクスの単元がある。		
+PE5_3	ERC 2024	Surface modification	PE5 Synthetic Chemistry and Materials	土台	P-175,E-231,P-281,H-048	SAM と吸着・成膜とイオン注入・プラズマ処理・電気化学（めっき）の単元の組み合わせで読める。		
+PE5_4	ERC 2024	Thin films	PE5 Synthetic Chemistry and Materials	土台	E-231,P-175,P-261,E-163	成膜とエピタキシ（E-231）・表面・界面成長・転位の単元の組み合わせで読める。		
+PE5_5	ERC 2024	Ionic liquids	PE5 Synthetic Chemistry and Materials	土台	H-102,H-103,H-021,H-108	イオン液体は溶媒和・電解質・溶融塩・溶液の物性の単元の組み合わせで読める。		
+PE5_6	ERC 2024	New materials: oxides, alloys, composite, organic-inorganic hybrid, nanoparticles	PE5 Synthetic Chemistry and Materials	土台	H-049,H-053,H-054,E-164,H-092	材料の種類で切った項目で、材料化学・固体化学・多孔性材料・相変態の単元の組み合わせで読める。		
+PE5_7	ERC 2024	Biomaterials synthesis	PE5 Synthetic Chemistry and Materials	土台	E-226,E-168,H-035,H-044	生体材料・薬物送達・高分子・生体分子の化学の単元の組み合わせで読める。		
+PE5_8	ERC 2024	Intelligent materials synthesis – self assembled materials	PE5 Synthetic Chemistry and Materials	土台	H-054,P-103,P-265,P-266	自己集合は H-054 が受け持ち、ソフトマター・コロイド・液晶の単元の組み合わせで読める。刺激応答材料の単元はない。		
+PE5_9	ERC 2024	Coordination chemistry	PE5 Synthetic Chemistry and Materials	本体	H-029,H-046	遷移元素と錯イオン、配位子場理論と錯体化学の単元がある。		
+PE5_10	ERC 2024	Colloid chemistry	PE5 Synthetic Chemistry and Materials	本体	P-265,H-021,P-272	コロイドの相互作用と DLVO 理論・溶液のコロイド・毛管現象の単元がある。		
+PE5_11	ERC 2024	Biological chemistry and chemical biology	PE5 Synthetic Chemistry and Materials	本体	H-044,H-057,B-006,B-007	生体分子の化学・化学生物学・酵素学の単元がある。		
+PE5_12	ERC 2024	Chemistry of condensed matter	PE5 Synthetic Chemistry and Materials	本体	H-053,H-019,H-021,H-049	固体化学・結晶構造・溶液・材料化学の単元がある。		
+PE5_13	ERC 2024	Homogeneous catalysis	PE5 Synthetic Chemistry and Materials	本体	H-052,H-046,H-047	有機金属錯体と触媒サイクル・錯体化学・不斉触媒の単元がある。		
+PE5_14	ERC 2024	Macromolecular chemistry	PE5 Synthetic Chemistry and Materials	本体	H-106,H-107,P-262,P-263,P-264	高分子の合成・物理化学・鎖の統計・網目・動力学の単元がある。		
+PE5_15	ERC 2024	Polymer chemistry	PE5 Synthetic Chemistry and Materials	本体	H-106,H-035,H-107	高分子の合成と性質・高分子の物理化学の単元がある。		
+PE5_16	ERC 2024	Supramolecular chemistry	PE5 Synthetic Chemistry and Materials	本体	H-054	超分子と多孔性材料（分子認識、自己集合、分子機械）の単元がある。		
+PE5_17	ERC 2024	Organic chemistry	PE5 Synthetic Chemistry and Materials	本体	H-039,H-040,H-047,H-104,H-105	有機反応機構・カルボニル化学・有機合成・複素環・天然物化学の単元がある。		
+PE5_18	ERC 2024	Medicinal chemistry	PE5 Synthetic Chemistry and Materials	本体	H-056,H-058,H-059	医薬品化学・計算創薬・新しいモダリティの単元がある。		
+PE6_1	ERC 2024	Computer architecture, embedded systems, operating systems	PE6 Computer Science and Informatics	本体	K-030,K-031,K-032,K-037,K-197	論理回路・プロセッサ・メモリ階層・OS・リアルタイムシステムの単元がある。		
+PE6_2	ERC 2024	Distributed systems, parallel computing, sensor networks, cyber-physical systems	PE6 Computer Science and Informatics	本体	K-214,K-215,K-027,K-018,K-197	分散アルゴリズム・分散システム・並列・並行プログラミング・リアルタイムの単元がある。センサーネットワークは K-211 程度で薄い。		
+PE6_3	ERC 2024	Software engineering, programming languages and systems	PE6 Computer Science and Informatics	本体	K-199,K-200,K-020,K-039,K-017	ソフトウェア工学・プログラムの意味論・関数型・コンパイラ・仕様と不変条件の単元がある。		
+PE6_4	ERC 2024	Theoretical computer science, formal methods, automata	PE6 Computer Science and Informatics	本体	L-027,L-028,K-218,K-200,L-043	オートマトン・文脈自由言語・モデル検査・プログラムの意味論・証明論の単元がある。		
+PE6_5	ERC 2024	Security, privacy, cryptology, quantum cryptography	PE6 Computer Science and Informatics	本体	K-042,K-044,K-045,K-205,K-209	暗号・ゼロ知識・格子暗号・セキュリティの形式手法・脆弱性の単元がある。		
+PE6_6	ERC 2024	Algorithms and complexity, distributed, parallel and network algorithms, algorithmic game theory	PE6 Computer Science and Informatics	本体	K-024,K-026,K-028,K-150,K-214	アルゴリズム設計・グラフアルゴリズム・NP 完全性・近似の困難さ・分散アルゴリズムの単元がある。近似アルゴリズム、オンラインアルゴリズム、アルゴリズム的ゲーム理論は薄い（F-024、K-011 のみ）。		
+PE6_7	ERC 2024	Artificial intelligence, intelligent systems, natural language processing	PE6 Computer Science and Informatics	本体	K-053,K-054,K-056,K-161,K-216	探索と計画・確率的推論・強化学習・大規模言語モデル・自然言語処理の単元がある。		
+PE6_8	ERC 2024	Computer graphics, computer vision, multimedia, computer games	PE6 Computer Science and Informatics	本体	K-071,K-075,K-077,K-080,K-082	レンダリング・画像処理・物理ベースレンダリング・初期視覚・CNN の単元がある。		
+PE6_9	ERC 2024	Human computer interaction and interface, visualisation	PE6 Computer Science and Informatics	本体	Q-021,K-212,K-064,K-210	人と機械のやり取り（フィッツの法則、ユーザビリティ評価）・アクセシビリティ・可視化・社会的コンピューティングの単元がある。		
+PE6_10	ERC 2024	Web and information systems, data management systems, information retrieval and digital libraries, data fusion	PE6 Computer Science and Informatics	欠け		近い単元は K-169（SQL と関係モデルの入口）、K-035（原子性と回復）、K-202（ストレージ）、K-203・K-204（Web と情報検索）だが、関係代数と問い合わせの最適化、関数従属性と正規化、索引と並行制御（直列化可能性、MVCC）をまとめて受け持つ単元がない。 ／反証：K-169 は SQL の入門と実務（他の物差しの「SQL を使う」の受け皿）で、括弧に関係代数・関数従属性と正規化・問い合わせの最適化・直列化可能性が無い。K-035 は一般の原子性と回復、K-202 は記憶装置、K-215 は分散で、DBMS の演算子・索引・並行制御は導けない。判定役のとおり欠け。	データベースシステム／関係代数と関係論理、関数従属性と正規化、問い合わせの処理と最適化（演算子、結合の算法、結合順序、基数の推定）、索引（B 木、ハッシュ）、トランザクションと隔離水準（直列化可能性、2 相ロック、MVCC とスナップショット分離、異常）、データベースの回復（ログ先行書き込み、ARIES）、列指向とインメモリ（分散データベースは K-215 と重なるので外す）／前提 K-169, K-023, K-035（K-021 は外す）	残す
+PE6_11	ERC 2024	Machine learning, statistical data processing and applications using signal processing (e.g. speech, image, video)	PE6 Computer Science and Informatics	本体	K-046,K-048,K-049,K-051,E-081	機械学習・深層学習・統計的学習・信号処理（FFT）の単元がある。		
+PE6_12	ERC 2024	Scientific computing, simulation and modelling tools	PE6 Computer Science and Informatics	本体	K-190,K-201,K-163,K-175,K-015	科学計算のワークフロー・数学ソフトウェア・検証と妥当性確認・粒子法・計算によるモデル化の単元がある。		
+PE6_13	ERC 2024	Bioinformatics, bio-inspired computing, and natural computing	PE6 Computer Science and Informatics	欠け		バイオインフォマティクスは K-106、K-109、K-110、K-113 が本体だが、生物に学ぶ計算・自然計算は K-015 の括弧にメタヒューリスティクスが一言あるだけで、進化計算と群知能を受け持つ単元がない（進化は B-042、最適化は K-009 だけでは足りない）。 ／反証：バイオインフォマティクスは K-106 などが本体。生物に学ぶ計算は K-015 に「メタヒューリスティクス」の一語だけ。進化計算には固有の理論（実行時間のドリフト解析、適応度地形、進化戦略の分布更新）と測り方（ベンチマーク、実行時間の分布）があり、K-015 と K-009 では導けない。ニューラルネットは K-046〜K-051 が本体で足りる。	進化計算／遺伝的アルゴリズムと進化戦略（CMA-ES）、遺伝的プログラミング、多目的進化計算（パレート最適、NSGA-II、ハイパーボリューム）、適応度地形、実行時間の理論解析（ドリフト解析、(1+1) 進化戦略）、ベンチマークと性能の測り方、粒子群と蟻コロニーは収束や実行時間の解析があるものに絞る（比喩に基づく多数の新手法は入れない）／前提 K-015, K-021, S-001（B-042 は外す。ニューロ進化は K-047 側なので外す）	残す
+PE6_14	ERC 2024	Quantum computing (formal methods, algorithms and other computer science aspects)	PE6 Computer Science and Informatics	本体	K-176,K-166,P-087,K-174,P-298	量子アルゴリズム・量子誤り訂正・量子情報・量子シャノン理論・量子ビットの実装の単元がある。		
+PE7_1	ERC 2024	Control engineering	PE7 Systems and Communication Engineering	本体	E-049,E-052,E-053,E-054,E-058	古典制御（PID・根軌跡・周波数設計）から状態空間・最適制御・ロバスト・非線形制御まで単元が揃う。		
+PE7_2	ERC 2024	Electrical engineering: power components and/or systems	PE7 Systems and Communication Engineering	本体	E-197,E-170,E-067,E-069	三相交流と電気機械、電力変換と電力系統の単元がある（電力変換回路の細部は既知の欠けだが、項目全体は受け持てる）。		
+PE7_3	ERC 2024	Simulation engineering and modelling	PE7 Systems and Communication Engineering	土台	K-163,K-015,E-047,E-157,E-021	モデル化・数値解法・検証と妥当性確認・待ち行列とシミュレーションの組み合わせで読める。離散事象シミュレーションや縮約モデルは一言あるだけだが固有の理論は薄い。		
+PE7_4	ERC 2024	(Micro- and nano-) systems engineering	PE7 Systems and Communication Engineering	土台	E-047,E-231,E-090,P-265,P-272,P-278,E-068	MEMS の中心の模型は地図の単元から導ける。静電駆動とプルインは E-047 の集中定数モデルとエネルギー法、スケーリング則と固着は P-265 の表面力と P-272 のぬれ、スクイーズフィルム減衰は P-272 の潤滑近似と P-278 の希薄気体、共振子の Q は E-090、容量検出は E-068。加工は E-231 の成膜とエッチングの変種（異方性ウェットエッチング、DRIE、犠牲層のリリース）。単元を立てる固有の法則はない。		土台へ
+PE7_5	ERC 2024	(Micro- and nano-) electronic, optoelectronic and photonic components	PE7 Systems and Communication Engineering	本体	E-158,E-159,E-160,E-161,E-230	pn 接合とトランジスタ、LED とレーザー、太陽電池、撮像素子、先端 CMOS の単元がある。		
+PE7_6	ERC 2024	Communication systems, wireless technology, high-frequency technology	PE7 Systems and Communication Engineering	本体	E-088,E-188,E-205,E-084,E-086	無線通信路と MIMO・OFDM、RF 回路、伝送線路、アンテナとレーダ、変調と符号化の単元がある。		
+PE7_7	ERC 2024	Signal processing	PE7 Systems and Communication Engineering	本体	E-070,E-079,E-080,E-081,E-083	LTI と畳み込みからマルチレート、フィルタ設計、FFT、アレイ処理まで単元が揃う。		
+PE7_8	ERC 2024	Networks, e.g. communication networks and nodes, Internet of Things, sensor networks, networks of robots	PE7 Systems and Communication Engineering	本体	K-038,E-087,K-198,K-219,K-211	パケット交換と経路制御、媒体アクセスと待ち行列、ネットワーク機器、プロトコル工学、IoT 端末の単元がある（網の理論は P-251〜P-256）。センサー網固有の省電力経路制御は一言程度。		
+PE7_9	ERC 2024	Man-machine interfaces	PE7 Systems and Communication Engineering	本体	Q-021,B-171,E-169,B-170	人と機械のやり取りと人間工学（フィッツの法則・作業負荷・使いやすさ評価）と、脳–機械インターフェースの単元がある。		
+PE7_10	ERC 2024	Robotics	PE7 Systems and Communication Engineering	本体	K-084,K-085,K-087,K-090,E-180	ロボットの運動学と動力学、アームと移動ロボットの設計と制御、運動計画、SLAM、センサーとフィードバックの単元が揃う。		
+PE7_11	ERC 2024	Components and systems for applications (in e.g. medicine, biology, environment)	PE7 Systems and Communication Engineering	土台	E-223,E-225,E-226,E-227,E-169	医療・生物・環境向けの部品とシステムは、画像・生体信号・材料・規制・神経インターフェース（環境は E-200, E-219）の組み合わせで論文が読め、固有の理論は少ない。		
+PE7_12	ERC 2024	Electrical energy production, distribution, applications	PE7 Systems and Communication Engineering	本体	E-170,E-197,E-167,E-160,P-290	電力系統と電気機械、風力発電、太陽電池、原子力工学の単元があり、蓄電は H-048, H-101 が受け持つ。		
+PE8_1	ERC 2024	Aerospace engineering	PE8 Products and Processes Engineering	本体	E-029,E-043,E-044,E-060,E-190	翼の空力、ジェットエンジン、化学ロケット、飛行力学と軌道・姿勢、大気圏突入まで単元が揃う（E-026〜E-030, E-061〜E-066 も）。		
+PE8_2	ERC 2024	Chemical engineering, technical chemistry	PE8 Products and Processes Engineering	本体	E-212,E-213,E-214,E-215,E-217	物質収支、移動現象、反応工学、分離工学、プロセスの動特性と安全の単元が揃う（E-216, E-218 も）。		
+PE8_3	ERC 2024	Civil engineering, architecture, offshore construction, lightweight construction, geotechnics	PE8 Products and Processes Engineering	本体	E-003,E-122,E-124,E-196,E-187	構造力学、鋼とコンクリート、基礎と地盤、波が構造物に及ぼす力（海洋構造物）の単元がある。建築環境工学と浮体は既知の欠けだが項目全体は構造・地盤が受け持つ。		
+PE8_4	ERC 2024	Computational engineering	PE8 Products and Processes Engineering	本体	E-021,E-022,E-023,E-035,K-163	有限要素法・非線形有限要素法・偏微分方程式の数値解法・数値流体力学・検証と妥当性確認の単元が揃う。		
+PE8_5	ERC 2024	Fluid mechanics	PE8 Products and Processes Engineering	本体	E-024,E-025,E-031,E-034,E-195	管路と境界層、ナビエ・ストークス、乱流の統計、乱流モデルなど流体力学の単元が揃う（P-014, E-035 も）。		
+PE8_6	ERC 2024	Energy processes engineering	PE8 Products and Processes Engineering	本体	E-038,E-040,E-041,E-194,E-218	工学熱力学、熱伝達と熱交換器、動力・冷凍サイクル、燃焼、プロセスの脱炭素の単元がある。		
+PE8_7	ERC 2024	Mechanical engineering	PE8 Products and Processes Engineering	本体	E-189,E-003,E-090,E-015,K-084	機械要素、材料力学、振動、疲労と破壊、機構の運動学の単元がある。接触力学とトライボロジーは既知の欠け。		
+PE8_8	ERC 2024	Propulsion engineering, e.g. hydraulic, turbo, piston, hybrid engines	PE8 Products and Processes Engineering	本体	E-043,E-044,E-045,E-046,E-041	ガスタービン、ロケット、電気推進、ターボポンプと水力機械（E-024）の単元がある。ピストン機関は E-041 のサイクルと E-194 の燃焼で読める。		
+PE8_9	ERC 2024	Production technology, process engineering	PE8 Products and Processes Engineering	本体	E-154,E-156,E-193,E-212,E-235	生産管理、品質管理、製造法、物質収支、高分子の加工など生産技術とプロセスの単元がある。		
+PE8_10	ERC 2024	Manufacturing engineering and industrial design	PE8 Products and Processes Engineering	本体	E-193,E-204,E-154,E-156,E-184	製造法と製造性設計、公差と CAD、生産管理、品質管理、設計の繰り返しの単元がある。意匠の美的判断は範囲外で、測れる部分は人間工学 Q-021 が受け持つ。		
+PE8_11	ERC 2024	Environmental engineering, e.g. sustainable design, waste and water treatment, recycling, regeneration or recovery of compounds, carbon capture & storage	PE8 Products and Processes Engineering	本体	E-219,E-220,E-221,E-222,H-081	水処理、大気汚染の制御、廃棄物と汚染地の浄化、資源循環とライフサイクル評価の単元が揃う。		
+PE8_12	ERC 2024	Naval/marine engineering	PE8 Products and Processes Engineering	欠け（既知）		浮体と船の流体力学（既知）。近い E-187（水理学）と E-024（管路と相似則）では船体の抵抗・耐航性・復原性を扱えない。		
+PE8_13	ERC 2024	Industrial bioengineering	PE8 Products and Processes Engineering	本体	E-228,E-229,B-043,B-053,E-215	培養の工学、合成生物学と代謝工学、発酵、遺伝子工学、分離工学（下流工程）の単元がある。		
+PE8_14	ERC 2024	Automotive and rail engineering; multi-/inter-modal transport engineering	PE8 Products and Processes Engineering	欠け（既知）	E-191,E-090,E-048,E-186,P-258	鉄道固有の核は車輪とレールの接触とクリープ力で、これは既知の欠け「接触力学とトライボロジー」そのもの。残りは土台で、蛇行動と曲線通過は E-191 の車両運動力学と E-090・E-048 の振動と安定性、トンネル微気圧波は E-186・E-026、列車制御は運行の実務。自動車側は E-191・E-186 で足りる。		既知へ
+PE9_1	ERC 2024	Solar physics – the Sun and the heliosphere	PE9 Universe Sciences	本体	P-291,P-211,P-231,P-283,P-294	太陽の構造と活動、コロナと太陽風、コロナ質量放出、磁気リコネクション、MHD の単元がある。日震学と太陽ダイナモは専用の単元がなく MHD と W-039 で補う。		
+PE9_2	ERC 2024	Solar system science	PE9 Universe Sciences	本体	W-074,W-115,W-116,P-295,P-292	太陽系と探査、固体惑星の地質、小天体、惑星の大気、磁気圏の単元が揃う。		
+PE9_3	ERC 2024	Exoplanetary science, formation and characterization of extrasolar planets	PE9 Universe Sciences	本体	P-213,P-171,P-295,W-074	連星と系外惑星（トランジット法・視線速度法）、惑星系の形成、系外惑星の大気の単元がある。		
+PE9_4	ERC 2024	Astrobiology	PE9 Universe Sciences	本体	B-111,H-090,B-110,W-036,B-145	宇宙生物学、生命の起源の化学、真核生物の起源、地球と生命の共進化、微生物の代謝の多様性の単元がある。		
+PE9_5	ERC 2024	Interstellar medium and star formation	PE9 Universe Sciences	本体	P-164,P-163,P-214,P-231	星間物質と星形成、天体物理の放射過程、HII 領域と 21 cm 線、MHD の単元がある。		
+PE9_6	ERC 2024	Stars – stellar physics, stellar systems	PE9 Universe Sciences	本体	P-068,P-212,P-166,P-167,P-169	星の構造と進化、恒星の物理、超新星と元素の起源、中性子星、恒星系の力学の単元が揃う。		
+PE9_7	ERC 2024	The Milky Way	PE9 Universe Sciences	土台	P-214,P-169,P-162,P-212,P-166	銀河系は天体の項目で固有の理論は少なく、銀河系の構造と回転（P-214）、恒星系の力学、距離のはしご、恒星の物理、元素の起源の組み合わせで読める。		
+PE9_8	ERC 2024	Galaxies – formation, evolution, clusters	PE9 Universe Sciences	本体	P-169,P-170,P-229,P-168,P-214	銀河の構造、銀河の形成と大規模構造、宇宙の夜明けの天体、活動銀河核、銀河団の単元がある。		
+PE9_9	ERC 2024	Cosmology and large-scale structure, dark matter, dark energy	PE9 Universe Sciences	本体	P-064,P-066,P-215,P-228,P-222	膨張宇宙、構造形成、宇宙論の入口、精密宇宙論、暗黒物質の探索の単元が揃う。		
+PE9_10	ERC 2024	Relativistic astrophysics and compact objects	PE9 Universe Sciences	本体	P-061,P-063,P-167,P-165,P-168	一般相対論、ブラックホール、中性子星、降着円盤、高エネルギー天体の単元が揃う。		
+PE9_11	ERC 2024	Gravitational wave astronomy	PE9 Universe Sciences	本体	P-062,P-244,P-245,P-063	線形化重力と重力波、波形とデータ解析、検出器の光機械と量子測定の単元がある。		
+PE9_12	ERC 2024	High-energy and particle astronomy	PE9 Universe Sciences	本体	P-168,P-283,P-163,P-222,P-166	高エネルギー天体と宇宙線の加速、無衝突衝撃波、放射過程、暗黒物質の間接探索の単元がある。		
+PE9_13	ERC 2024	Astronomical instrumentation and data, e.g. telescopes, detectors, techniques, archives, analyses	PE9 Universe Sciences	本体	P-216,P-233,P-232,E-161,P-118	望遠鏡と観測の技術、天文観測の装置、電波干渉計、撮像素子、実験技術と計測の単元がある。		
+PE10_1	ERC 2024	Atmospheric chemistry, atmospheric composition, air pollution	PE10 Earth System Science	本体	W-034,H-080,E-220,H-043,P-131	大気化学、大気の化学と汚染、大気汚染の制御、環境の化学、大気放射の単元がある。		
+PE10_2	ERC 2024	Meteorology, atmospheric physics and dynamics	PE10 Earth System Science	本体	P-122,P-125,P-144,P-156,P-132	気象学入門から準地衡理論、熱帯気象、数値予報まで単元が揃う（P-123〜P-159 も）。		
+PE10_3	ERC 2024	Climatology and climate change	PE10 Earth System Science	本体	P-120,P-143,P-161,P-153,P-201	放射収支と気候変化、地球システムモデル、気候科学、気候データの統計、温室効果の単元がある。		
+PE10_4	ERC 2024	Terrestrial ecology, land cover change	PE10 Earth System Science	本体	B-056,B-057,B-103,B-060,E-200	群集生態学、生態系と生物圏の生態学、森林の生態、空間生態学、リモートセンシング（土地被覆の分類）の単元がある。		
+PE10_5	ERC 2024	Geology, tectonics, volcanology	PE10 Earth System Science	本体	W-012,W-020,W-030,W-040,W-112	プレートテクトニクス、構造地質学、火山の物理、造山運動、マグマの揮発性成分の単元が揃う。		
+PE10_6	ERC 2024	Palaeoclimatology, palaeoecology	PE10 Earth System Science	本体	W-041,W-032,W-036,W-010,W-014	古気候学、安定同位体（古水温）、地球と生命の共進化、放射年代測定、層序学の単元がある。古生態の微化石・花粉の方法は一言程度。		
+PE10_7	ERC 2024	Physics of earth’s interior, seismology, geodynamics	PE10 Earth System Science	本体	W-021,W-025,W-037,W-038,W-028	地震波、震源の物理、トモグラフィー、地震の発生、マントル対流など単元が揃う。		
+PE10_8	ERC 2024	Oceanography (physical, chemical, biological, geological)	PE10 Earth System Science	本体	W-063,W-104,P-128,P-129,B-154	海洋、海洋の生物地球化学、風成循環、大気・海洋の波、海洋生物学の単元がある（物理・化学・生物・地質の各面）。		
+PE10_9	ERC 2024	Biogeochemistry, biogeochemical cycles, environmental chemistry	PE10 Earth System Science	本体	W-033,W-104,W-103,B-041,H-043	炭素循環、海洋と陸水の生物地球化学、生態系の物質循環、環境の化学の単元がある。		
+PE10_10	ERC 2024	Mineralogy, petrology, igneous petrology, metamorphic petrology	PE10 Earth System Science	本体	W-007,W-013,W-016,W-019,W-008	鉱物、結晶化学、火成岩の成因、変成作用、岩石の循環の単元が揃う。		
+PE10_11	ERC 2024	Geochemistry, cosmochemistry, crystal chemistry, isotope geochemistry, thermodynamics	PE10 Earth System Science	本体	W-017,W-031,W-032,W-035,W-013	元素の分配、放射性・安定同位体地球化学、地球の形成と宇宙化学、結晶化学の単元が揃う。		
+PE10_12	ERC 2024	Sedimentology, soil science, palaeontology, earth evolution	PE10 Earth System Science	本体	W-018,W-062,W-070,W-009,W-036	堆積過程、土壌、地質年代と大量絶滅、地球と生命の共進化の単元がある。古生物学固有の方法（化石化過程・多様度の解析）は B-133, B-134, W-003 の組み合わせで補う。		
+PE10_13	ERC 2024	Physical geography, geomorphology	PE10 Earth System Science	本体	W-023,W-066,W-114,W-101,W-105	地形と地表の過程、地図と GIS、地理空間データの解析、流域の水文学、氷床と氷河の単元がある。		
+PE10_14	ERC 2024	Earth observations from space/remote sensing	PE10 Earth System Science	本体	E-200,W-042,W-121,W-122,P-131	リモートセンシング、宇宙測地学、写真測量、レーザ測量、大気放射の単元がある。		
+PE10_15	ERC 2024	Geomagnetism, palaeomagnetism	PE10 Earth System Science	本体	W-011,W-039	地磁気と古地磁気、地球ダイナモの単元がある。		
+PE10_16	ERC 2024	Ozone, upper atmosphere, ionosphere	PE10 Earth System Science	本体	W-034,P-293,P-294,P-292,H-080	オゾン層を含む大気化学、電離圏、宇宙天気、磁気圏の単元がある。		
+PE10_17	ERC 2024	Hydrology, hydrogeology, engineering and environmental geology, water and soil pollution	PE10 Earth System Science	本体	W-101,W-102,W-103,W-029,E-124	流域と地下水の水文学、汚染の移動、陸水の物理と化学、多孔質中の流れ、基礎と地盤の単元がある（E-221 も）。		
+PE10_18	ERC 2024	Cryosphere, dynamics of snow and ice cover, sea ice, permafrosts and ice sheets	PE10 Earth System Science	本体	W-105,W-106	氷床と氷河、海氷と永久凍土の単元がある。		
+PE10_19	ERC 2024	Planetary geology and geophysics	PE10 Earth System Science	本体	W-115,W-116,W-035,W-119,P-295	固体惑星の地質、小天体、地球の形成と惑星の分化、鉱物物理、惑星の大気の単元がある。		
+PE10_20	ERC 2024	Geohazards	PE10 Earth System Science	本体	W-064,W-110,W-111,W-113,E-100	自然災害と減災・応用地質、統計地震学、地震の監視、火山の監視、地震ハザード解析の単元がある。		
+PE10_21	ERC 2024	Earth system modelling and interactions	PE10 Earth System Science	本体	P-143,W-060,P-161,P-142,W-033	地球システムモデル、地球システムの見方、気候科学、環境流体の数値モデル、炭素循環の単元がある。		
+PE11_1	ERC 2024	Engineering of biomaterials, biomimetic, bioinspired and bio-enabled materials	PE11 Materials Engineering	本体	E-226,E-236,E-168,E-234	生体材料（生体適合性・分解性材料・組織工学の足場）、歯科材料、薬物送達の単元がある。生物に学ぶ材料（超撥水は P-272）は専用の単元がない。		
+PE11_2	ERC 2024	Engineering of metals and alloys	PE11 Materials Engineering	本体	E-163,E-164,H-108,E-015,E-014	転位と強化の機構、拡散と相変態と熱処理、製錬と冶金、疲労と破壊、塑性の単元が揃う。		
+PE11_3	ERC 2024	Engineering of ceramics and glasses	PE11 Materials Engineering	欠け		H-049 に「セラミックス」の一言、H-053（固相反応と欠陥）、E-164（拡散）、P-264（ガラス転移）はあるが、粉体の焼結、脆性破壊とワイブル統計、ガラスの構造と形成を受け持つ単元がなく、これらの組み合わせでは足りない。 ／反証：H-049 のセラミックスは一言で、焼結（拡散と表面エネルギーによる緻密化）、脆性材料の強度（グリフィスとワイブル統計）、ガラスの網目構造と粘度の温度依存はどの単元にも名指しされない。E-164 の拡散と E-015 の破壊と P-264 のガラス転移は材料にすぎず、焼結とワイブルの模型は導けない。金属は E-163・E-164、高分子は H-106・H-107 などがあるのに、セラミックスの単元だけがない。	セラミックス工学／粉体の成形、焼結の機構（拡散と粒成長と緻密化、粘性焼結を含む）、微構造と強度（脆性破壊とグリフィスの理論、ワイブル統計）、ジルコニアの相変態強化、ガラスの構造と形成（網目形成体、ガラス転移、粘度の温度依存）、結晶化ガラス、熱衝撃と高温の挙動（誘電・圧電・イオン伝導は P-035・H-103 などに属すので外し、繊維による靭性化は複合材料側なので外した）／E-164,E-015,H-053,H-019	残す
+PE11_4	ERC 2024	Engineering of polymers and plastics	PE11 Materials Engineering	本体	H-106,H-107,E-235,P-263,P-264	高分子の合成、物理化学、加工とレオロジー、ゴム弾性と網目、動力学の単元が揃う（H-035, P-262 も）。		
+PE11_5	ERC 2024	Engineering of composites and hybrid materials	PE11 Materials Engineering	土台	E-012,E-013,E-015,E-005,W-117,W-029,H-049	複合材料力学は異方性弾性と板理論と破壊の応用。積層板理論は E-012 の異方性材料と板・殻（板の積層は座標変換と層ごとの積分）、破壊基準と層間はく離は E-014・E-015、混合則は E-002 の弾性、均質化は W-117 の有効媒質の理論と同系、樹脂含浸の成形は W-029 のダルシー則と H-037 の硬化の速度論。迷い：エシェルビー型の均質化は直接の単元がなく、残す側もありうる。		土台へ
+PE11_6	ERC 2024	Engineering of carbon materials	PE11 Materials Engineering	土台	P-172,P-173,H-019,H-014,H-101	炭素材料は材料の種類で切った項目で、sp2・sp3 結合、グラフェンとナノチューブの物理、結晶構造、黒鉛電極の組み合わせで読める。炭素繊維と活性炭の製造は一言もない。		
+PE11_7	ERC 2024	Engineering of metal oxides	PE11 Materials Engineering	土台	H-053,H-101,H-103,H-091,P-250	金属酸化物は材料の種類で切った項目で、欠陥と不定比、酸化物の電極・固体電解質・光触媒、強相関酸化物の単元の組み合わせで読める。		
+PE11_8	ERC 2024	Engineering of alternative established or emergent materials	PE11 Materials Engineering	土台	H-092,P-172,P-173,H-054,P-102	新しい材料は対象の切り方で、二次元物質、トポロジカル物質、多孔性材料、計算探索の単元の組み合わせで読める。		
+PE11_9	ERC 2024	Nanomaterials engineering, e.g. nanoparticles, nanoporous materials, 1D & 2D nanomaterials	PE11 Materials Engineering	本体	P-173,H-049,P-174,E-165,P-172	低次元のナノ構造（量子ドット・ナノワイヤ・ナノチューブ）、ナノ粒子、ナノ光学、ナノの顕微鏡法、二次元物質の単元がある。		
+PE11_10	ERC 2024	Soft materials engineering, e.g. gels, foams, colloids	PE11 Materials Engineering	本体	P-103,P-265,P-263,P-266,P-268	ソフトマター、コロイドの相互作用、高分子の網目（ゲル）、液晶、充填とジャミング（泡）の単元が揃う。		
+PE11_11	ERC 2024	Porous materials engineering, e.g. covalent-organic, metal-organic, porous aromatic frameworks	PE11 Materials Engineering	本体	H-054,P-175,E-215,H-092	H-054 が多孔性材料（ゼオライトと金属有機構造体）を名指しし、吸着は P-175 と E-215、構造探索は H-092 が受け持つ。COF の設計の記述は一言程度。		
+PE11_12	ERC 2024	Semi-conducting and magnetic materials engineering	PE11 Materials Engineering	本体	P-095,P-096,P-097,E-162,E-230	バンド理論、半導体、磁性、永久磁石と磁性材料、先端 CMOS の単元が揃う（E-158, E-231 も）。		
+PE11_13	ERC 2024	Metamaterials engineering	PE11 Materials Engineering	土台	P-174,P-035,P-040,P-093,E-084	メタマテリアルは P-174 に一言あるが、有効媒質（P-035, P-040）、バンドと周期構造（P-093）、導波と共振（E-084）の組み合わせで読める。フォトニック結晶とメタサーフェスは専用の単元がない。		
+PE11_14	ERC 2024	Computational methods for materials engineering	PE11 Materials Engineering	土台	H-055,H-092,P-119,E-021,E-022	第一原理計算（H-055）、結晶構造の計算探索、分子動力学とモンテカルロ法（P-119）、有限要素法の組み合わせで読める。フェーズフィールドと状態図の計算（CALPHAD）は専用の単元がない。		
+LS1_1	ERC 2024	Macromolecular complexes including interactions involving nucleic acids, proteins, lipids and carbohydrates	LS1 Molecules of Life: Biological Mechanisms, Structures and Functions	本体	B-003,B-012,B-013	高分子の相互作用・自己集合・結合の協同性（B-003）、構造の手法（B-012）、熱力学（B-013）が受け持つ。		
+LS1_2	ERC 2024	Biochemistry	LS1 Molecules of Life: Biological Mechanisms, Structures and Functions	本体	B-006,B-007,B-008	生体分子の化学（B-006）、酵素学（B-007）、糖・脂肪・アミノ酸の代謝（B-008）が生化学そのもの。		
+LS1_3	ERC 2024	DNA and RNA biology	LS1 Molecules of Life: Biological Mechanisms, Structures and Functions	本体	B-009,B-001,B-032,B-186	DNA の複製・組換え・転写・翻訳（B-009, B-032）、染色体とゲノムの構造（B-001）、損傷と修復の経路（B-186）。RNA の制御（スプライシング・非コード RNA）は既知の欠けとして残る。		
+LS1_4	ERC 2024	Protein biology	LS1 Molecules of Life: Biological Mechanisms, Structures and Functions	本体	B-014,B-007,B-013,K-111	折りたたみ・誤った折りたたみ・凝集と品質管理（B-014）、酵素（B-007）、構造計算（K-111）。細胞内の分解系（オートファジー）は LS3_2 の案で扱う。		
+LS1_5	ERC 2024	Lipid biology	LS1 Molecules of Life: Biological Mechanisms, Structures and Functions	土台	B-008,B-005,H-044,I-046	脂質の代謝（B-008）、生体膜（B-005, H-044）、脂質異常症（I-046）の組み合わせで読める。脂質シグナルは既知の欠け、リピドミクスは LS2_10 に回る。		
+LS1_6	ERC 2024	Glycobiology	LS1 Molecules of Life: Biological Mechanisms, Structures and Functions	欠け	H-044,B-010	地図に「糖鎖」の語がどの単元にもなく、H-044 の「単糖と配糖体」は化学の入口まで、B-010 の括弧にも無い。糖転移酵素による非鋳型の合成、N 型・O 型の糖鎖付加、レクチンによる認識という固有の理論と測り方が欠けている。 ／反証：糖鎖・糖転移酵素・レクチンの語は地図のどこにも無く、H-044（単糖と配糖体）と B-006（糖の構造の化学）は化学の入口、B-008 は代謝で、糖鎖付加と糖鎖の認識の中身を受け持たない。案は妥当。	糖鎖生物学／N 型と O 型の糖鎖付加と糖転移酵素による非鋳型の生合成、小胞体での糖タンパク質の品質管理、グリコサミノグリカンとプロテオグリカン、レクチンと糖鎖の認識（セレクチン、シアル酸、ABO 式血液型）、糖鎖と免疫・がん・感染、糖鎖の解析（レクチンアレイ、質量分析）／H-044, B-010, B-006	残す
+LS1_7	ERC 2024	Molecular biophysics, biomechanics, bioenergetics	LS1 Molecules of Life: Biological Mechanisms, Structures and Functions	本体	B-005,B-013,B-003,B-004	生体膜・分子モーター・生体力学（B-005）、熱力学（B-013）、場と流れ（B-004）。ただし化学浸透とプロトン駆動力の定量（生体エネルギー）と膜輸送体の機構は B-030, B-031 の高校水準しかなく薄い。		
+LS1_8	ERC 2024	Structural biology	LS1 Molecules of Life: Biological Mechanisms, Structures and Functions	本体	B-012,K-111,H-041	結晶解析と電子顕微鏡（B-012）、NMR（H-041）、構造計算（K-111）。		
+LS1_9	ERC 2024	Molecular mechanisms of signalling processes	LS1 Molecules of Life: Biological Mechanisms, Structures and Functions	欠け（既知）	B-010,K-115	細胞の信号伝達（既知）。B-010 と K-115 の括弧に一言あるだけ。		
+LS1_10	ERC 2024	Synthetic biology	LS1 Molecules of Life: Biological Mechanisms, Structures and Functions	本体	E-229,B-180	遺伝子回路の設計と DBTL サイクル（E-229）、ゲノム全体の合成（B-180）。		
+LS1_11	ERC 2024	Chemical biology	LS1 Molecules of Life: Biological Mechanisms, Structures and Functions	本体	H-057,H-056	生体直交反応・化学プローブ・指向性進化（H-057）、医薬品化学（H-056）。		
+LS1_12	ERC 2024	Protein design	LS1 Molecules of Life: Biological Mechanisms, Structures and Functions	欠け	K-111,K-117,H-057,B-014	構造予測（K-111, K-117）と指向性進化（H-057）はあるが、骨格と配列を設計する方法（逆折りたたみ、エネルギー関数、正の設計と負の設計、生成モデルによる設計とその評価）が地図にない。これらの組み合わせでは導けない。 ／反証：構造予測（K-111, K-117）・生成モデル（K-162）・指向性進化（H-057）はあるが、骨格と配列を設計する枠組み（逆折りたたみ、正の設計と負の設計）が地図に無く、これらの組み合わせでは導けない。案は妥当。	タンパク質設計／逆折りたたみ問題と配列の設計、エネルギー関数とロータマー、正の設計と負の設計（状態の特異性）、骨格の生成（拡散モデル）と配列の設計（逆折りたたみのネット）、結合体と酵素の設計、設計の計算上の評価（予測構造との一致と信頼度）と実験の確かめ（安定性と結合の測定）、指向性進化との組み合わせ／K-111, K-117, K-162, B-014, H-057	残す
+LS1_13	ERC 2024	Early translational research and drug design	LS1 Molecules of Life: Biological Mechanisms, Structures and Functions	本体	H-056,H-058,H-059,I-001	医薬品化学・計算創薬・新しいモダリティ（H-056, H-058, H-059）と薬理学（I-001）。		
+LS1_14	ERC 2024	Innovative methods and modelling in molecular, structural and synthetic biology	LS1 Molecules of Life: Biological Mechanisms, Structures and Functions	本体	K-112,K-111,K-115,H-055	生体分子の三次元構造と動態の計算（K-112）、分子動力学（K-111, H-055）、分子・細胞系の解析（K-115）。		
+LS2_1	ERC 2024	Genetics	LS2 Integrative Biology: from Genes and Genomes to Systems	本体	B-001,B-002,B-045	遺伝子の構造と機能（B-001）、集団遺伝学と遺伝学の方法（B-002）、連鎖と組換え（B-045）。		
+LS2_2	ERC 2024	Gene editing	LS2 Integrative Biology: from Genes and Genomes to Systems	本体	B-053,B-080	CRISPR–Cas とベクター（B-053）、胚と細胞の操作（B-080）。		
+LS2_3	ERC 2024	Epigenetics	LS2 Integrative Biology: from Genes and Genomes to Systems	欠け（既知）	B-044,B-112	クロマチンとエピゲノム（既知）。B-044 はエピジェネティクスの入口、B-112 は時計の話にとどまる。		
+LS2_4	ERC 2024	Gene regulation	LS2 Integrative Biology: from Genes and Genomes to Systems	本体	B-044,B-009,K-107	オペロン・転写因子（B-044）、遺伝子制御（B-009）、制御モチーフ（K-107）。クロマチン層は既知の欠け。		
+LS2_5	ERC 2024	Genomics	LS2 Integrative Biology: from Genes and Genomes to Systems	本体	K-106,K-113,B-011,B-001	配列解析とゲノムの組み立て（K-106）、次世代シーケンシング（K-113）、比較ゲノミクス（B-011）。		
+LS2_6	ERC 2024	Metagenomics	LS2 Integrative Biology: from Genes and Genomes to Systems	本体	B-145,B-148,B-156,K-191	メタゲノムで見る系統（B-145）、マイクロバイオーム（B-148）、環境 DNA のメタバーコーディング（B-156）、パンゲノム（K-191）。		
+LS2_7	ERC 2024	Transcriptomics	LS2 Integrative Biology: from Genes and Genomes to Systems	本体	K-113,K-107,B-143	RNA-seq（K-113）、遺伝子発現解析（K-107）、1 細胞の発現（B-143）。		
+LS2_8	ERC 2024	Proteomics	LS2 Integrative Biology: from Genes and Genomes to Systems	欠け（既知）	K-117,H-041	プロテオミクス（既知）。H-041 の質量分析は構造決定の入口のみ。		
+LS2_9	ERC 2024	Metabolomics	LS2 Integrative Biology: from Genes and Genomes to Systems	欠け（既知）	H-041,B-008	メタボロミクス（既知）。H-041 の質量分析は入口のみ、B-008 は経路の知識。		
+LS2_10	ERC 2024	Glycomics/Lipidomics	LS2 Integrative Biology: from Genes and Genomes to Systems	欠け（既知）	H-041,H-044	質量分析による網羅解析はプロテオミクス・メタボロミクスと同じ既知の欠け。糖の側は LS1_6 の案（糖鎖生物学）に含める。		
+LS2_11	ERC 2024	Bioinformatics and computational biology	LS2 Integrative Biology: from Genes and Genomes to Systems	本体	K-105,K-109,K-110,K-118	配列解析・アラインメント（K-105, K-110）、HMM と EM（K-109）、計算分子生物学（K-118）。		
+LS2_12	ERC 2024	Biostatistics	LS2 Integrative Biology: from Genes and Genomes to Systems	本体	K-114,S-035,S-037,S-040	現代の生物学の確率と統計（K-114）、生存時間解析（S-035）、混合効果モデル（S-037）、多重検定（S-040）。		
+LS2_13	ERC 2024	Systems biology	LS2 Integrative Biology: from Genes and Genomes to Systems	本体	K-115,K-119,K-107,E-229	代謝と遺伝子制御のネットワーク（K-115）、計算細胞生物学（K-119）、生物ネットワーク（K-107）、代謝の流束（E-229）。		
+LS2_14	ERC 2024	Genetic diseases	LS2 Integrative Biology: from Genes and Genomes to Systems	本体	I-024,B-068,B-002	単一遺伝子病と多因子疾患（I-024）、神経遺伝学（B-068）。		
+LS2_15	ERC 2024	Integrative biology for personalised medicine	LS2 Integrative Biology: from Genes and Genomes to Systems	本体	I-053,I-024	精密医療とゲノム医療（I-053）、多遺伝子リスクスコア（I-024）。		
+LS2_16	ERC 2024	Innovative methods and modelling in integrative biology	LS2 Integrative Biology: from Genes and Genomes to Systems	本体	K-116,K-117,K-115,K-119	深層学習による生命科学（K-116）、分子・細胞生物学の機械学習（K-117）、分子・細胞系の解析（K-115）。		
+LS3_1	ERC 2024	Cell cycle, cell division and growth	LS3 Cell Biology, Development, Stem Cells and Regeneration	欠け（既知）	B-010,B-023	細胞周期の制御（既知）。B-010 の括弧と B-023 の分裂の記述にとどまる。		
+LS3_2	ERC 2024	Cell senescence, cell death, autophagy, cell ageing	LS3 Cell Biology, Development, Stem Cells and Regeneration	欠け	B-112,I-020,B-014,B-010	老化と細胞老化（B-112）、壊死とアポトーシス（I-020）はあるが、オートファジーとリソソーム分解、ユビキチン・プロテアソーム系という細胞内の分解系がどの単元の括弧にも無い。B-014 の品質管理は折りたたみの側。調節された細胞死（ネクロトーシスなど）も I-020 では薄い。 ／反証：細胞老化は B-112、壊死とアポトーシスは I-020 にあるが、オートファジーはどの括弧にも無い（B-014 は折りたたみの側、H-059 は標的タンパク質分解を薬の型として挙げるだけ）。案にはユビキチン・プロテアソーム系と調節された細胞死が混ざっていたので外した。兄弟：細胞内輸送・細胞骨格・細胞接着・オートファジー。	オートファジー／オートファジーの経路（ULK1 複合体、PI3K 複合体、ATG9 小胞、LC3 の脂質付加、オートファゴソームの形成とリソソームとの融合）、選択的オートファジー（受容体、ミトファジー、小胞体、凝集体、脂肪滴）、栄養と mTORC1・AMPK による制御とリソソームの信号（TFEB）、リソソームの機能と貯蔵病、シャペロン介在性オートファジー、神経変性・がん・老化との関係（老化は B-112 とつなぐ）、流量の測り方（LC3 の流量、阻害薬の使い方、誤読を避ける検出法）／B-010, B-014, B-008（外したもの：ユビキチン・プロテアソーム系と調節された細胞死は別単元の候補。パイロトーシスは自然免疫の案のインフラマソームに含む）	残す
+LS3_3	ERC 2024	Cell behaviour, including control of cell shape, cell migration	LS3 Cell Biology, Development, Stem Cells and Regeneration	欠け	B-010,B-005,P-267,B-003	細胞骨格は B-010 の括弧の一言、分子モーターと細胞の力学は B-005 にあるが、重合の動態・極性・細胞の移動という細胞運動の理論と測り方が地図にない（P-267 は集団運動の物理）。信号伝達と細胞周期を既知の欠けとする扱いと同じ基準。 ／反証：B-010 の括弧の一言と、分子モーター・細胞の力学（B-005）、集団運動の物理（P-267）だけで、重合の動態・極性・移動の中身が無い。信号伝達と細胞周期を既知の欠けにするのと同じ基準で残す。案はモーターの荷物の輸送（細胞内輸送の側）とがんの浸潤（I-023）を外して直した。	細胞骨格／アクチンの重合とトレッドミル（Arp2/3、フォルミン）、微小管の動的不安定性、中間径フィラメント、モータータンパク質（キネシン・ダイニン・ミオシン）の機構（荷物の輸送は細胞内輸送の案へ）、細胞の極性と Rho ファミリー GTPase、葉状仮足と細胞の移動（走化性、集団移動。がんの浸潤は I-023）、細胞の形の制御と収縮環による細胞質分裂、分子から細胞の運動への模型化／B-010, B-005, B-003	残す
+LS3_4	ERC 2024	Cell junctions, cell adhesion, the extracellular matrix, cell communication	LS3 Cell Biology, Development, Stem Cells and Regeneration	欠け	I-011,B-010,B-005	「細胞の結合と細胞外基質」が I-011（組織学）の括弧に一言あるだけで、カドヘリン・インテグリンなどの接着分子、結合の型、基底膜、基質のリモデリングの中身を扱う単元が無い。 ／反証：I-011（組織学）の括弧に「細胞の結合と細胞外基質」の一言、B-005 は細胞の力学、E-226 は材料の表面、I-021 は創傷の修復で、接着分子・結合の型・基底膜の中身が無い。細胞生物学の教科書では独立の章。案は妥当。	細胞接着／カドヘリン・インテグリン・セレクチン・免疫グロブリン族、結合の型（密着・接着・デスモソーム・ギャップ・ヘミデスモソーム）、細胞外基質（コラーゲン・ラミニン・フィブロネクチン・プロテオグリカン）と基底膜、焦点接着と力の感知、上皮の極性とバリア、基質の分解（MMP）と組織の作り替え、細胞の選別と組織の形づくり／B-010, I-011, B-005	残す
+LS3_5	ERC 2024	Cell signalling and signal transduction, exosome biology	LS3 Cell Biology, Development, Stem Cells and Regeneration	欠け（既知）	B-010,K-115,B-151	細胞の信号伝達（既知）。エキソソームなど細胞外小胞の生物学も、この単元を立てるときに含める。		
+LS3_6	ERC 2024	Organelle biology and trafficking	LS3 Cell Biology, Development, Stem Cells and Regeneration	欠け	B-010,B-014,B-005	膜と細胞小器官・輸送が B-010 の括弧に一言あるだけ（細胞全体を 1 単元で受け持つ）。分泌経路、小胞の被覆と膜融合、選別シグナルと標的化、核とミトコンドリアへの輸入という固有の模型と測り方が地図にない。 ／反証：B-010 の括弧の一言、B-031（小分子の膜輸送）、B-030（ミトコンドリアのエネルギー変換）、B-014（折りたたみの品質管理）では、分泌経路・膜融合・選別シグナルと標的化の中身が足りない。細胞生物学の教科書では独立の 2 章。案は妥当。	細胞内輸送／分泌経路（小胞体からゴルジ体から細胞膜）と被覆小胞（COPII・COPI・クラスリン）、Rab と SNARE による膜融合の特異性、タンパク質の選別シグナルと標的化（信号配列、核膜孔と核輸送、ミトコンドリアとペルオキシソームへの輸入）、エンドサイトーシスとエンドソームとリソソーム、小器官の接触部位と脂質の輸送、モータータンパク質による長距離輸送（軸索輸送）、膜のない区画（液–液相分離）、輸送の解析法（パルスチェイスとライブイメージング）／B-010, B-014, B-005	残す
+LS3_7	ERC 2024	Mechanobiology of cells, tissues and organs	LS3 Cell Biology, Development, Stem Cells and Regeneration	本体	B-005,B-141,B-004	細胞と組織の力学（B-005）、組織の力学と形の変化（B-141）、場と流れ（B-004）。		
+LS3_8	ERC 2024	Embryogenesis, pattern formation, morphogenesis	LS3 Cell Biology, Development, Stem Cells and Regeneration	本体	B-046,B-141,B-140	発生（B-046）、チューリング・パターンとモルフォゲン（B-141）、体軸と分節の遺伝子（B-140）。		
+LS3_9	ERC 2024	Cell differentiation, formation of tissues and organs	LS3 Cell Biology, Development, Stem Cells and Regeneration	本体	B-046,B-140,B-044,I-013	分化と誘導（B-046, B-044）、細胞の運命の決定（B-140）、ヒトの器官形成（I-013）。器官ごとの形成の詳細は薄いが固有の模型は B-140, B-141 にある。		
+LS3_10	ERC 2024	Developmental genetics	LS3 Cell Biology, Development, Stem Cells and Regeneration	本体	B-140,B-142,B-046	発生の遺伝学（B-140）、ツールキット遺伝子とシス制御（B-142）。		
+LS3_11	ERC 2024	Evolution of developmental strategies	LS3 Cell Biology, Development, Stem Cells and Regeneration	本体	B-142,B-130,B-131	進化発生学（B-142）、動物の体の設計と系統（B-130, B-131）。		
+LS3_12	ERC 2024	Organoids	LS3 Cell Biology, Development, Stem Cells and Regeneration	土台	B-054,E-226,B-080,B-046	オルガノイドは B-054 の括弧の一語。幹細胞（B-054）、3 次元の培養（B-080）、臓器チップ（E-226）、発生（B-046）の組み合わせで論文は読める。		
+LS3_13	ERC 2024	Stem cells	LS3 Cell Biology, Development, Stem Cells and Regeneration	本体	B-054,B-046,B-150	多能性幹細胞と初期化（B-054）、発生での幹細胞（B-046）、植物の分裂組織（B-150）。		
+LS3_14	ERC 2024	Regeneration	LS3 Cell Biology, Development, Stem Cells and Regeneration	欠け	B-054,B-046,I-021,B-080	再生は B-054（再生医療＝多能性幹細胞と細胞治療）と I-021（ヒトの創傷の治癒と線維化）にあるだけで、動物の再生そのもの（再生能力の系統分布、脱分化と芽体、位置情報の記憶、再生と瘢痕の分かれ道）を扱う単元が無い。 ／反証：B-054 は多能性幹細胞と細胞治療、I-021 はヒトの創傷、B-046 と B-142 は発生と進化で、動物の再生（芽体・位置情報の記憶・瘢痕との分かれ道）の単元は無い。案は妥当。	再生生物学／再生能力の系統分布（プラナリア、ヒドラ、イモリ、ゼブラフィッシュ、ほ乳類）、新生細胞と脱分化と芽体、位置情報の記憶、再生か瘢痕かの分かれ道（免疫細胞の役割）、器官ごとの再生（肝臓、心臓、四肢、毛、神経）、再生を制御するエンハンサー、再生能力が失われた進化上の理由、再生の遺伝学の道具／B-046, B-054, I-021	残す
+LS3_15	ERC 2024	Development of cell-based therapeutic approaches for tissue regeneration	LS3 Cell Biology, Development, Stem Cells and Regeneration	本体	B-054,I-054,E-226	多能性幹細胞・分化誘導・細胞治療（B-054）、細胞・遺伝子治療（I-054）、組織工学の足場（E-226）。		
+LS3_16	ERC 2024	Functional imaging of cells and tissues	LS3 Cell Biology, Development, Stem Cells and Regeneration	欠け	B-067,B-012,H-109,P-174	神経のカルシウムイメージング（B-067）、構造の手法の括弧にある光学顕微鏡の一語（B-012）、蛍光の光物理（H-109）、回折限界を超える顕微鏡（P-174）が散らばるだけで、生きた細胞と組織を蛍光で測る方法（蛍光タンパク質とセンサー、共焦点・二光子・ライトシート、FRAP・FLIM、画像の定量）を扱う単元が無い。 ／反証：蛍光の光物理（H-109 の FRET を含む）、分解能（P-023）、超解像（P-174）、神経のカルシウムイメージング（B-067）は括弧にあるが、蛍光タンパク質とセンサー、光学切片（共焦点・二光子・ライトシート）、生きた試料の撮り方と定量はどこにも無い。物理は既存に任せ生物の側を中心にした案は妥当。	蛍光イメージング／蛍光の原理と信号雑音比と光退色・光毒性、蛍光タンパク質と遺伝子にコードされたセンサー（カルシウム、電位、FRET）、共焦点・二光子・ライトシート、超解像（SIM・STED・PALM・STORM）、FRAP と FLIM、組織の透明化、画像の解析（細胞の分割と追跡、定量）、生きた組織を長時間撮る設計／P-023, H-109, K-117, B-012	残す
+LS3_17	ERC 2024	Theoretical modelling in cellular, developmental and regenerative biology	LS3 Cell Biology, Development, Stem Cells and Regeneration	本体	B-141,K-119,B-005	チューリング・パターンと組織の力学（B-141）、計算細胞生物学（K-119）、細胞の力学（B-005）。		
+LS4_1	ERC 2024	Organ and tissue physiology and pathophysiology	LS4 Physiology in Health, Disease and Ageing	本体	I-004,I-014,I-015,I-016,I-017	人体の生理学（I-004）と循環・呼吸・腎臓・消化管と肝臓の生理（I-014〜I-017）。血管内皮と血管新生の生物学は薄い。		
+LS4_2	ERC 2024	Comparative physiology	LS4 Physiology in Health, Disease and Ageing	本体	B-137,B-138,B-136,B-139	体温と体液の調節（B-137）、呼吸と循環の比較（B-138）、代謝のスケーリング（B-136）、動物の運動（B-139）。		
+LS4_3	ERC 2024	Physiology of ageing	LS4 Physiology in Health, Disease and Ageing	本体	B-112,I-049,I-066	老化の生物学（B-112）、一生の医学（I-049）、トレーニングへの適応と不活動と加齢による衰え（I-066）。		
+LS4_4	ERC 2024	Endocrinology	LS4 Physiology in Health, Disease and Ageing	本体	I-019,I-004,I-046,I-018	代謝と内分泌の統合（I-019）、内分泌系（I-004）、内分泌の病気（I-046）、視床下部・下垂体・性腺の軸（I-018）。受容体の信号は既知の欠け。		
+LS4_5	ERC 2024	Non-hormonal mechanisms of inter-organ and tissue communication	LS4 Physiology in Health, Disease and Ageing	土台	B-035,B-052,I-021,I-019	神経による調節（B-035, B-052）、炎症の仲介物質（I-021）、代謝の統合（I-019）の組み合わせ。細胞外小胞による連絡は LS3_5 の既知の欠けに含める。		
+LS4_6	ERC 2024	Microbiome and host physiology	LS4 Physiology in Health, Disease and Ageing	本体	I-032,B-148	宿主とマイクロバイオーム（I-032）、微生物の生態とマイクロバイオーム（B-148）。		
+LS4_7	ERC 2024	Nutrition and exercise physiology	LS4 Physiology in Health, Disease and Ageing	本体	I-052,I-009,I-065,I-066	栄養の科学（I-052）、運動生理学（I-065）、トレーニングへの適応（I-066）。		
+LS4_8	ERC 2024	Impact of stress (including environmental stress) on physiology	LS4 Physiology in Health, Disease and Ageing	土台	Q-012,I-019,I-020,B-137,I-004	ストレスと対処（Q-012）、副腎（I-019）、虚血と低酸素と活性酸素（I-020）、熱への耐性（B-137）、高地・潜水（I-004）の組み合わせ。		
+LS4_9	ERC 2024	Metabolism and metabolic disorders, including diabetes and obesity	LS4 Physiology in Health, Disease and Ageing	本体	B-008,I-019,I-046	代謝（B-008）、代謝と内分泌の統合（I-019）、糖尿病・肥満・脂質異常症（I-046）。		
+LS4_10	ERC 2024	The cardiovascular system and cardiovascular diseases	LS4 Physiology in Health, Disease and Ageing	本体	I-014,I-045,I-004	循環の生理（I-014）、循環と呼吸の病気（I-045）、人体の生理学（I-004）。		
+LS4_11	ERC 2024	Haematopoiesis and blood diseases	LS4 Physiology in Health, Disease and Ageing	本体	I-022,B-054,I-023	造血と血球・止血と凝固・貧血（I-022）、幹細胞（B-054）、がん（I-023）。		
+LS4_12	ERC 2024	Cancer	LS4 Physiology in Health, Disease and Ageing	本体	I-023,I-050,I-025	がんの生物学（I-023）、がんの臨床（I-050）、分子病理（I-025）。		
+LS4_13	ERC 2024	Other non-communicable diseases (except disorders of the nervous system and immunity-related diseases)	LS4 Physiology in Health, Disease and Ageing	土台	I-045,I-046,I-047,I-048,I-020	臓器別の病気（I-045〜I-048）と細胞の傷害・炎症（I-020, I-021）の組み合わせで読める。		
+LS5_1	ERC 2024	Neuronal cells	LS5 Neuroscience and Disorders of the Nervous System	本体	B-052,B-100,B-034	イオンチャネルと膜電位・シナプス（B-052）、神経組織（B-100）、神経と筋肉（B-034）。		
+LS5_2	ERC 2024	Glial cells and neuronal-glial communication	LS5 Neuroscience and Disorders of the Nervous System	欠け	B-100,B-052,B-064	グリアは B-100（組織学）の括弧に「種類」として出るだけで、アストロサイトの機能、ミクログリアのシナプス刈り込み、髄鞘化といったグリアの機能と神経とグリアの連絡を扱う単元が無い。 ／反証：グリアは B-100 に「種類」とあるだけで、アストロサイトの機能・ミクログリアの刈り込み・髄鞘化は B-052 B-064 I-021 の括弧のどれにも無い。細胞型で切った項目だが、寄生虫学と同じく中身が地図に無いので欠け。案は妥当。	グリア細胞の生物学／アストロサイトのイオンと伝達物質の取り込みと三者間シナプス、ミクログリアのシナプス刈り込みと貪食と炎症の応答、オリゴデンドロサイトと髄鞘の形成と跳躍伝導、シュワン細胞と末梢神経の再生、グリア瘢痕、グリアの異質性と 1 細胞の解析、グリアと神経変性・神経炎症／B-052, B-100, B-064	残す
+LS5_3	ERC 2024	Neural development and related disorders	LS5 Neuroscience and Disorders of the Nervous System	本体	B-064,B-068,Q-028	神経発生（B-064）、神経発達症（B-068）、発達精神病理学（Q-028）。		
+LS5_4	ERC 2024	Neural stem cells	LS5 Neuroscience and Disorders of the Nervous System	土台	B-054,B-064,B-046	幹細胞（B-054）、神経誘導と神経発生（B-064）、発生（B-046）の組み合わせ。成体の神経新生は薄い。		
+LS5_5	ERC 2024	Neural networks and plasticity	LS5 Neuroscience and Disorders of the Nervous System	本体	B-052,B-066,B-064	シナプスの可塑性（B-052）、学習則と回路の力学（B-066）、臨界期と経験による作り替え（B-064）。		
+LS5_6	ERC 2024	Neurovascular biology and blood-brain barrier	LS5 Neuroscience and Disorders of the Nervous System	欠け	I-014,B-052,I-011,B-100	血液脳関門・周皮細胞・神経血管の結合・脳のエネルギー代謝・脳脊髄液の流れを扱う単元も括弧の語も地図に無い（I-014 は全身の血行力学、I-011 は組織の一般論）。 ／反証：血液脳関門・神経血管カップリング・脳脊髄液の語がどの括弧にも無い（I-014 は全身の血行力学、I-011 は組織の一般論）。案は妥当。内皮と周細胞は血管生物学の案、結合と基底膜は細胞接着の案と重なるので、本単元は関門・血流の結合・老廃物の除去を中心にする。	神経血管ユニット／血液脳関門の構造（内皮の密着結合、周皮細胞、アストロサイトの足突起、基底膜）、輸送体と受容体による通り道と薬の送達、神経活動と血流の結合（機能的充血とその仲介物質）、脳のエネルギー代謝（乳酸シャトル）、脳脊髄液とグリンファティック系による老廃物の除去、関門の破綻と疾患（脳卒中、多発性硬化症、アルツハイマー病）、BOLD 信号の生理的な根拠／I-014, B-052, B-100, I-011	残す
+LS5_7	ERC 2024	Sensory systems, sensation and perception, including pain	LS5 Neuroscience and Disorders of the Nervous System	本体	I-056,I-057,I-058,Q-004,B-063	視覚・聴覚と平衡・化学感覚の生理（I-056〜I-058）、心理物理（Q-004）、感覚系（B-063）。皮膚の感覚は I-063 の一部のみで薄く、痛みは既知の欠け。		
+LS5_8	ERC 2024	Neural basis of behaviour (e.g. sleep, consciousness, addiction)	LS5 Neuroscience and Disorders of the Nervous System	欠け	B-065,B-114,Q-018,B-039	意識は B-114、依存は Q-018、報酬は B-065 で読めるが、睡眠は B-065 の括弧に一言、生物時計は B-039（高校水準）に一語で、概日時計の分子機構、睡眠の調節（二過程モデル）、睡眠の回路を扱う単元が無い。 ／反証：睡眠は B-065 の括弧に一語、生物時計は B-039（高校）に一語で、概日時計の分子機構と睡眠の二過程モデルの中身が無い（P-255 は振動子の同期の一般論）。案は妥当。	時間生物学／概日時計の分子機構（PER・CRY・CLOCK・BMAL1 の転写と翻訳のフィードバック、リン酸化と分解で決まる周期）、光による同調と位相反応曲線、視交叉上核と末梢時計、睡眠の二過程モデル（恒常性の睡眠圧と概日の位相）、睡眠段階と睡眠の脳回路（オレキシンなど）、睡眠と記憶の固定、時計の乱れ（交代勤務と時差）と病気、リズムの計測と解析（コサイナー法、周期の推定）、振動子の同期の数理／B-044, B-065, P-255, B-052	残す
+LS5_9	ERC 2024	Neural basis of cognition (e.g. learning, memory, attention, emotions, speech)	LS5 Neuroscience and Disorders of the Nervous System	本体	B-065,Q-005,Q-007,Q-015	認知と行動の神経科学（B-065）、注意と記憶（Q-005）、学習（Q-007）、計算論的認知科学（Q-015）。		
+LS5_10	ERC 2024	Ageing of the nervous system	LS5 Neuroscience and Disorders of the Nervous System	土台	B-112,B-068,Q-010	老化の生物学（B-112）、神経変性疾患（B-068）、生涯の認知の変化（Q-010）の組み合わせ。		
+LS5_11	ERC 2024	Neurological and neurodegenerative disorders	LS5 Neuroscience and Disorders of the Nervous System	本体	B-068,B-101,B-014	神経変性疾患と神経薬理（B-068）、神経疾患の診断（B-101）、凝集と誤った折りたたみ（B-014）。		
+LS5_12	ERC 2024	Mental disorders	LS5 Neuroscience and Disorders of the Nervous System	本体	Q-029,Q-014,Q-028,Q-016	精神疾患の各論（Q-029）、臨床心理の科学的な基礎（Q-014）、発達精神病理学（Q-028）、計算論的精神医学（Q-016）。		
+LS5_13	ERC 2024	Nervous system injuries and trauma, stroke	LS5 Neuroscience and Disorders of the Nervous System	土台	B-101,I-020,Q-027,Q-025	診断（B-101）、虚血の細胞傷害（I-020）、神経心理と回復（Q-027）、運動の回復（Q-025）の組み合わせ。		
+LS5_14	ERC 2024	Repair and regeneration of the nervous system	LS5 Neuroscience and Disorders of the Nervous System	土台	B-064,B-054,E-169,E-234	軸索の誘導（B-064）、幹細胞（B-054）、神経インターフェース（E-169, E-234）の組み合わせ。軸索再生とグリア瘢痕は LS5_2 の案と LS3_14 の案が支える。		
+LS5_15	ERC 2024	Neuroimmunology, neuroinflammation	LS5 Neuroscience and Disorders of the Nervous System	土台	I-005,I-021,I-030,B-068	免疫学（I-005）、炎症（I-021）、臨床免疫（I-030）、神経変性（B-068）の組み合わせ。ミクログリアの細部は LS5_2 の案と LS6_1 の案が支える。		
+LS5_16	ERC 2024	Systems and computational neuroscience (e.g. modelling, simulation, brain oscillations, connectomics)	LS5 Neuroscience and Disorders of the Nervous System	本体	B-066,B-063,B-067,Q-015	計算神経科学（B-066）、神経解剖とシステム神経科学（B-063）、回路の地図（B-067）。		
+LS5_17	ERC 2024	Imaging in neuroscience	LS5 Neuroscience and Disorders of the Nervous System	欠け（既知）	B-067,E-223,E-225	脳の画像の解析（fMRI、既知）。B-067 の脳の画像化は一語、E-223 は撮像の物理、E-225 は脳波の信号処理。		
+LS5_18	ERC 2024	Innovative methods and tools for neuroscience	LS5 Neuroscience and Disorders of the Nervous System	本体	B-067,B-170,B-171,E-169,E-234	計測と操作（B-067）、神経刺激のモデル（B-170）、皮質内 BCI（B-171）、神経インターフェース（E-169, E-234）。		
+LS6_1	ERC 2024	Innate immunity	LS6 Immunity, Infection and Immunotherapy	欠け	B-037,I-021,I-005,B-146	自然免疫は B-037（高校水準）の「自然免疫と獲得免疫」の一語、I-005 の括弧は獲得免疫の項目（抗原認識・MHC・抗体・T 細胞）、I-021 は炎症の仲介物質まで。パターン認識受容体・インターフェロン・インフラマソーム・補体という固有の中身が無い。 ／反証：自然免疫は B-037（高校）の一語だけで、I-005 の括弧は獲得免疫の項目、I-021 は炎症の仲介物質まで。パターン認識受容体・インターフェロン・インフラマソーム・補体の中身が無い。案は妥当。	自然免疫／パターン認識受容体（TLR・NLR・RLR・cGAS–STING）と信号、インターフェロンと抗ウイルス応答、インフラマソームと炎症性の細胞死、補体、貪食細胞（好中球・マクロファージ）と NK 細胞・自然リンパ球、訓練免疫、自然免疫と獲得免疫の橋渡し、病原体の回避と自然免疫の進化、自己炎症疾患／B-037, I-021, I-005	残す
+LS6_2	ERC 2024	Adaptive immunity	LS6 Immunity, Infection and Immunotherapy	本体	I-005,B-037,I-030	抗原認識と MHC・抗体の多様性・T 細胞の分化（I-005）。		
+LS6_3	ERC 2024	Regulation of the immune response	LS6 Immunity, Infection and Immunotherapy	本体	I-005,I-030	T 細胞の分化とサイトカイン（I-005）、自己免疫と免疫を抑える薬（I-030）。		
+LS6_4	ERC 2024	Immune-related diseases	LS6 Immunity, Infection and Immunotherapy	本体	I-030,I-021	自己免疫・アレルギー・移植と拒絶・免疫不全（I-030）、慢性炎症（I-021）。		
+LS6_5	ERC 2024	Biology of pathogens (e.g. bacteria, viruses, parasites, fungi)	LS6 Immunity, Infection and Immunotherapy	本体	I-028,B-144,B-146,B-147	病原体の生物学（I-028）、細菌（B-144）、ウイルス（B-146）、菌類（B-147）。寄生虫は既知の欠け。		
+LS6_6	ERC 2024	Infectious diseases	LS6 Immunity, Infection and Immunotherapy	本体	I-028,I-037,I-042,V-015	病原体（I-028）、感染症の数理モデル（I-037）、監視と対策（I-042）、人獣共通感染症（V-015）。寄生虫症は既知の欠け。		
+LS6_7	ERC 2024	Mechanisms of infection	LS6 Immunity, Infection and Immunotherapy	本体	I-028,B-146,B-144,B-152	毒素・感染の経路・免疫からの逃れ方（I-028）、ウイルスの複製と宿主との軍拡競争（B-146）、細菌の生理（B-144）、植物の免疫（B-152）。		
+LS6_8	ERC 2024	Biological basis of prevention and treatment of infection	LS6 Immunity, Infection and Immunotherapy	土台	I-031,I-029,I-042,I-037	ワクチン学（I-031）、抗微生物薬（I-029）、監視と対策（I-042）、集団免疫の数理（I-037）の組み合わせ。		
+LS6_9	ERC 2024	Antimicrobials, antimicrobial resistance	LS6 Immunity, Infection and Immunotherapy	本体	I-029,B-144	作用の標的・耐性の機構・耐性遺伝子の伝わり方（I-029）、遺伝子の水平伝播（B-144）。		
+LS6_10	ERC 2024	Vaccine development	LS6 Immunity, Infection and Immunotherapy	本体	I-031,I-005	ワクチンの種類・防御の相関・mRNA とベクターのワクチン（I-031）。		
+LS6_11	ERC 2024	Innovative immunological tools and approaches, including therapies	LS6 Immunity, Infection and Immunotherapy	土台	I-054,I-005,I-030,H-059	CAR-T と遺伝子治療（I-054）、免疫学（I-005）、抗体医薬（I-030）、新しいモダリティ（H-059）の組み合わせ。フローサイトメトリーなど測り方の単元は無いが固有の理論は薄い。		
+LS7_1	ERC 2024	Medical imaging for prevention, diagnosis and monitoring of diseases	LS7 Prevention, Diagnosis and Treatment of Human Diseases	本体	E-223,E-224,V-031	医用画像の物理（E-223）、再構成と AI（E-224）、獣医の画像診断（V-031）。		
+LS7_2	ERC 2024	Medical technologies and tools (including genetic tools and biomarkers) for prevention, diagnosis, monitoring and treatment of diseases	LS7 Prevention, Diagnosis and Treatment of Human Diseases	土台	E-227,I-043,I-053,E-225	医療機器の開発と規制（E-227）、臨床検査（I-043）、ゲノム医療（I-053）、生体信号（E-225）の組み合わせ。		
+LS7_3	ERC 2024	Nanomedicine	LS7 Prevention, Diagnosis and Treatment of Human Diseases	土台	E-168,H-049,I-002,E-226	薬物送達（E-168）、ナノ粒子（H-049）、薬物動態（I-002）、生体適合性（E-226）の組み合わせ。		
+LS7_4	ERC 2024	Regenerative medicine	LS7 Prevention, Diagnosis and Treatment of Human Diseases	本体	B-054,E-226	幹細胞と再生医療（B-054）、生体材料と組織工学の足場（E-226）。		
+LS7_5	ERC 2024	Applied gene, cell and immune therapies	LS7 Prevention, Diagnosis and Treatment of Human Diseases	本体	I-054,B-053	CAR-T・遺伝子治療・生体内のゲノム編集（I-054）、遺伝子工学（B-053）。		
+LS7_6	ERC 2024	Other medical therapeutic interventions, including transplantation	LS7 Prevention, Diagnosis and Treatment of Human Diseases	土台	I-030,I-050,I-051,E-234	移植と拒絶（I-030）、がんの臨床（I-050）、救急と集中治療（I-051）、埋め込み電極（E-234）の組み合わせ。放射線治療の物理と線量は既知の欠け。		
+LS7_7	ERC 2024	Pharmacology and toxicology	LS7 Prevention, Diagnosis and Treatment of Human Diseases	本体	I-001,I-002,I-026,I-027	薬理学（I-001）、薬物動態（I-002）、器官別の薬理（I-026）、毒性学（I-027）。		
+LS7_8	ERC 2024	Effectiveness of interventions, including resistance to therapies	LS7 Prevention, Diagnosis and Treatment of Human Diseases	土台	I-040,I-003,S-051,I-029,I-023	臨床研究の統計（I-040）、臨床試験（I-003）、推定対象（S-051）、耐性（I-029）、腫瘍の進化（I-023）の組み合わせ。		
+LS7_9	ERC 2024	Public health and epidemiology	LS7 Prevention, Diagnosis and Treatment of Human Diseases	本体	I-033,I-035,I-036,I-037,I-039	病気を数える（I-033）、疫学研究のデザイン（I-035）、世界の健康（I-036）、数理モデル（I-037）、因果と交絡（I-039）。		
+LS7_10	ERC 2024	Preventative and prognostic medicine	LS7 Prevention, Diagnosis and Treatment of Human Diseases	本体	I-038,I-044,I-053	スクリーニングと予防（I-038）、診断の推論（I-044）、ゲノム医療（I-053）。		
+LS7_11	ERC 2024	Environmental health, occupational medicine	LS7 Prevention, Diagnosis and Treatment of Human Diseases	本体	I-041,I-027,B-092	環境と労働の健康（I-041）、毒性学（I-027）、汚染と人の健康（B-092）。		
+LS7_12	ERC 2024	Health care, including care for the ageing population	LS7 Prevention, Diagnosis and Treatment of Human Diseases	土台	I-036,I-049,F-079,I-040	保健医療の制度（I-036）、老化とフレイル（I-049）、医療経済学（F-079）、評価の統計（I-040）の組み合わせ。看護や介護の実務は知の体系でない。		
+LS7_13	ERC 2024	Palliative medicine	LS7 Prevention, Diagnosis and Treatment of Human Diseases	土台	I-049,I-026,I-040	終末期の医療（I-049）、鎮痛などの薬理（I-026）、効果の評価（I-040）の組み合わせ。痛みの科学は既知の欠け。		
+LS7_14	ERC 2024	Digital medicine, e-medicine, medical applications of artificial intelligence	LS7 Prevention, Diagnosis and Treatment of Human Diseases	本体	I-055,E-224,E-225	医療の AI（I-055）、画像の AI（E-224）、生体信号の機械学習（E-225）。		
+LS7_15	ERC 2024	Medical ethics	LS7 Prevention, Diagnosis and Treatment of Human Diseases	入れない	I-034	倫理の判断は規範で範囲の外。事実の部分（研究倫理の歴史、審査と同意の制度、資源配分の原則の整理）だけ I-034 が持つ。		
+LS8_1	ERC 2024	Ecosystem and community ecology, macroecology	LS8 Environmental Biology, Ecology and Evolution	本体	B-056,B-057,B-040,B-136	群集生態学（B-056）、生態系の生態学（B-057）、多様性の指数（B-040）、代謝のスケーリング（B-136）。		
+LS8_2	ERC 2024	Biodiversity	LS8 Environmental Biology, Ecology and Evolution	本体	B-093,B-156,B-185,B-182	生物多様性への人の影響（B-093）、環境 DNA（B-156）、種の区切り（B-185）、絶滅の危険の評価（B-182）。		
+LS8_3	ERC 2024	Conservation biology	LS8 Environmental Biology, Ecology and Evolution	本体	B-060,B-182,B-183,B-093	空間生態学と保全生物学（B-060）、絶滅の危険の評価（B-182）、生態系の崩壊の評価（B-183）。		
+LS8_4	ERC 2024	Population biology, population dynamics, population genetics	LS8 Environmental Biology, Ecology and Evolution	本体	B-055,B-002,B-042,B-188	個体群の数理（B-055）、集団遺伝学（B-002）、進化のしくみ（B-042）、人類集団遺伝学（B-188）。		
+LS8_5	ERC 2024	Biological aspects of environmental change, including climate change	LS8 Environmental Biology, Ecology and Evolution	本体	B-093,B-057,B-154,B-184	気候変化と生物（B-093）、気候の変化と生態系（B-057）、海の温暖化と酸性化（B-154）、種の分布モデル（B-184）。		
+LS8_6	ERC 2024	Evolutionary ecology	LS8 Environmental Biology, Ecology and Evolution	本体	B-059,B-058,B-056	進化生態学（B-059）、行動生態学（B-058）、群集生態学（B-056）。		
+LS8_7	ERC 2024	Evolutionary genetics	LS8 Environmental Biology, Ecology and Evolution	本体	B-002,B-042,B-142,B-181	集団遺伝学（B-002）、進化のしくみ（B-042）、シス制御の進化（B-142）、実験進化（B-181）。		
+LS8_8	ERC 2024	Phylogenetics, systematics, comparative biology	LS8 Environmental Biology, Ecology and Evolution	本体	B-134,B-135,B-185,B-025	系統樹の推定と系統比較法（B-134）、系統ゲノミクス（B-135）、種の区切り（B-185）、多様性と系統（B-025）。		
+LS8_9	ERC 2024	Macroevolution and paleobiology	LS8 Environmental Biology, Ecology and Evolution	欠け	B-133,B-130,B-134,W-009,B-187	脊椎動物と動物の体の設計の進化（B-133, B-130）、化石を使った年代づけ（B-134）、地質年代と大量絶滅の入口（W-009）はあるが、化石記録を測定値として扱う方法（保存の偏り、標本の大きさの補正、出現と絶滅の速度の推定、形の多様性）が地図に無い。W-003, W-009 は小中の水準。 ／反証：B-133 B-130 は進化の記述、B-134 は系統比較と分子時計、W-003 W-009 W-014 は層序と年代の側で、化石記録を測定値として扱う方法（偏り・標本の大きさの補正・出現と絶滅の速度）が無い。案から B-134 B-133 にある化石と分子の年代づけを外し、前提に B-061 を足した。	古生物学／化石化と化石記録の偏り、地層の範囲と多様性の曲線、標本の大きさをそろえる（レアファクションと SQS）、出現と絶滅の速度の推定（出生死滅モデル、化石の捕獲と再捕獲）、形の多様性（ディスパリティ）の測り方、大量絶滅と回復の検出、体の大きさと古生態の復元、化石の形から機能を読む／W-003, W-009, B-134, B-061, S-024	残す
+LS8_10	ERC 2024	Ecology and evolution of species interactions	LS8 Environmental Biology, Ecology and Evolution	本体	B-056,B-059,B-148	競争と共存（B-056）、共進化と寄生者（B-059）、共生（B-148）。		
+LS8_11	ERC 2024	Behavioural ecology and evolution	LS8 Environmental Biology, Ecology and Evolution	本体	B-058,B-160,B-157,B-159	行動生態学（B-058）、動物の認知とコミュニケーション（B-160）、神経行動学（B-157）、移動（B-159）。		
+LS8_12	ERC 2024	Microbial ecology and evolution	LS8 Environmental Biology, Ecology and Evolution	本体	B-148,B-145,B-181	微生物の生態（B-148）、多様性と系統（B-145）、実験進化（B-181）。		
+LS8_13	ERC 2024	Marine biology and ecology	LS8 Environmental Biology, Ecology and Evolution	本体	B-154,W-104,V-013	海洋生物学（B-154）、海洋の生物地球化学（W-104）、水産資源（V-013）。		
+LS8_14	ERC 2024	Ecophysiology, from organisms to ecosystems	LS8 Environmental Biology, Ecology and Evolution	本体	B-137,B-138,B-136,B-153	体温と体液の調節（B-137）、呼吸と循環の比較（B-138）、代謝（B-136）、環境への応答（B-153）。		
+LS8_15	ERC 2024	Theoretical developments and modelling in environmental biology, ecology, and evolution	LS8 Environmental Biology, Ecology and Evolution	本体	B-062,B-055,B-058	理論生態学（B-062）、個体群の数理（B-055）、進化的に安定な戦略（B-058）。		
+LS9_1	ERC 2024	Bioengineering for synthetic and chemical biology	LS9 Biotechnology and Biosystems Engineering	本体	E-229,B-180,H-057	合成生物学と代謝工学（E-229）、合成ゲノミクス（B-180）、化学生物学（H-057）。		
+LS9_2	ERC 2024	Applied genetics, gene editing and transgenic organisms	LS9 Biotechnology and Biosystems Engineering	本体	B-053,B-080,V-007,B-081	遺伝子工学とゲノム編集（B-053）、胚の操作（B-080）、ゲノム育種（V-007）、規制（B-081）。		
+LS9_3	ERC 2024	Bioengineering of cells, tissues, organs and organisms	LS9 Biotechnology and Biosystems Engineering	土台	E-226,B-054,B-080,E-228	生体材料（E-226）、幹細胞（B-054）、細胞工学（B-080）、培養の工学（E-228）の組み合わせ。		
+LS9_4	ERC 2024	Microbial biotechnology and bioengineering	LS9 Biotechnology and Biosystems Engineering	本体	E-228,E-229,B-043,B-144	培養の工学（E-228）、代謝工学（E-229）、微生物と発酵（B-043）、細菌の生理（B-144）。		
+LS9_5	ERC 2024	Food biotechnology and bioengineering	LS9 Biotechnology and Biosystems Engineering	土台	V-016,B-043,E-228	食品の科学と安全（V-016）、発酵（B-043）、培養の工学（E-228）の組み合わせ。		
+LS9_6	ERC 2024	Marine biotechnology and bioengineering	LS9 Biotechnology and Biosystems Engineering	土台	V-013,B-154,H-105	養殖（V-013）、海洋生物学（B-154）、天然物化学（H-105）の組み合わせ。		
+LS9_7	ERC 2024	Environmental biotechnology and bioengineering	LS9 Biotechnology and Biosystems Engineering	土台	E-219,E-221,B-148,H-081	水処理（E-219）、廃棄物と汚染地の浄化（E-221）、微生物の生態（B-148）、水の処理と資源の循環（H-081）の組み合わせ。		
+LS9_8	ERC 2024	Applied plant sciences, plant breeding, agroecology and soil biology	LS9 Biotechnology and Biosystems Engineering	本体	V-006,V-007,V-005,V-008	量的遺伝と育種（V-006）、ゲノム育種（V-007）、作物の生理（V-005）、土壌（V-008）。		
+LS9_9	ERC 2024	Plant pathology and pest resistance	LS9 Biotechnology and Biosystems Engineering	本体	V-009,B-152	植物の病害虫と防除（V-009）、植物の免疫と共生（B-152）。		
+LS9_10	ERC 2024	Veterinary and applied animal sciences	LS9 Biotechnology and Biosystems Engineering	本体	V-011,V-014,V-015,V-035	家畜の生理（V-011）、比較の病理（V-014）、ワンヘルス（V-015）、獣医の臨床（V-030〜V-039）。		
+LS9_11	ERC 2024	Biomass production and utilisation, biofuels	LS9 Biotechnology and Biosystems Engineering	土台	E-228,E-229,B-153,E-219,P-203	発酵と培養（E-228）、代謝工学（E-229）、光合成（B-153）、嫌気性消化（E-219）、エネルギー供給（P-203）の組み合わせ。バイオマスの前処理など固有の理論は薄いが、単元を立てる線に届かない。		
+LS9_12	ERC 2024	Ecotoxicology, biohazards and biosafety	LS9 Biotechnology and Biosystems Engineering	土台	I-027,B-092,B-081,E-229	毒性学（I-027）、生物濃縮と用量反応（B-092）、生物の安全の規制（B-081）、封じ込め（E-229）の組み合わせ。		
+SH1_1	ERC 2024	Macroeconomics; monetary economics; economic growth, labour economics	SH1 Individuals, Markets and Organisations	本体	F-013,F-025,F-053,F-062,F-054	マクロ・貨幣政策・成長・労働市場の模型と統計がそれぞれ単元にある。		
+SH1_2	ERC 2024	International trade; international business; spatial economics	SH1 Individuals, Markets and Organisations	本体	F-051,F-050,F-083,F-075	貿易理論、開放マクロ、直接投資と労働の国際移動、地域経済が揃う。国際経営の経営面は F-043 で足りる。		
+SH1_3	ERC 2024	Development economics political economics	SH1 Individuals, Markets and Organisations	本体	F-065,F-063,F-086,F-072,Y-013	開発経済学（成長会計・RCT）、制度の経済学、政治経済（投票・制度の比較）が単元にある。		
+SH1_4	ERC 2024	Finance; financial markets	SH1 Individuals, Markets and Organisations	本体	F-020,F-022,F-036,F-070,F-021	ポートフォリオ、資産価格、市場の微細構造、デリバティブが揃う。		
+SH1_5	ERC 2024	Corporate finance; international finance	SH1 Individuals, Markets and Organisations	本体	F-023,F-011,F-050,F-071	資本コスト・資本構成・企業価値の評価と国際金融（為替・資本移動）が単元にある。		
+SH1_6	ERC 2024	Banking, insurance	SH1 Individuals, Markets and Organisations	本体	F-026,F-015,F-017,F-044,F-038	銀行（満期変換・取り付け・規制）と保険数理・保険規制が揃う。		
+SH1_7	ERC 2024	Accounting, asset prices, auditing	SH1 Individuals, Markets and Organisations	本体	F-004,F-010,F-042,F-036	簿記・財務会計・管理会計と資産価格の実証が単元にある。監査は基準に沿う実務で、標本の抽出は S-057 で読める。		
+SH1_8	ERC 2024	Econometrics, game theory, decision theory	SH1 Individuals, Markets and Organisations	本体	F-033,F-034,F-024,F-058,Q-009	計量経済学、時系列、ゲーム理論、一般均衡、意思決定の理論が揃う。		
+SH1_9	ERC 2024	Behavioural economics; experimental economics; neuro-economics	SH1 Individuals, Markets and Organisations	本体	F-049,Q-009,Q-016,Q-007,B-065	行動・実験経済学、意思決定の心理、報酬予測誤差の神経科学が単元にある。		
+SH1_10	ERC 2024	Microeconomics, industrial organisation, applied microeconomics	SH1 Individuals, Markets and Organisations	本体	F-012,F-060,F-074,F-076,F-073	ミクロ、不完全競争、規制と競争政策、離散選択、契約の理論が揃う。		
+SH1_11	ERC 2024	Innovation, research & development, entrepreneurship	SH1 Individuals, Markets and Organisations	本体	F-082,Y-022,F-047	技術革新の経済学（研究開発・普及・特許）と科学計量学が単元にある。起業の資金は F-047 の一部。		
+SH1_12	ERC 2024	Management; operations management, international management	SH1 Individuals, Markets and Organisations	土台	E-155,E-156,E-157,F-043,F-042	経営と生産運営は在庫・品質・OR・戦略・管理会計の組み合わせで読める。固有の模型は少ない。		
+SH1_13	ERC 2024	Human resource management; organisational behaviour	SH1 Individuals, Markets and Organisations	本体	Q-030,F-062,F-073,Q-011	産業・組織心理学（選抜・動機・チーム・リーダー）と労働市場・契約の理論が単元にある。		
+SH1_14	ERC 2024	Strategy, operation research	SH1 Individuals, Markets and Organisations	本体	E-157,K-010,K-011,F-043,F-024	OR（数理計画・待ち行列・シミュレーション）と戦略（競争戦略・ゲーム理論）がある。整数計画は欠け（既知）。		
+SH1_15	ERC 2024	Marketing, consumer behaviour	SH1 Individuals, Markets and Organisations	土台	F-060,F-076,F-049,Q-009,S-054	価格づけ、選択モデルと需要の推定、判断の偏り、A/B テストの組み合わせで読める。固有の模型は少ない。		
+SH1_16	ERC 2024	Quantitative economic history, economic systems, institutional economics	SH1 Individuals, Markets and Organisations	土台	F-063,F-065,F-033,F-025,Y-004	制度の経済学、歴史の自然実験、計量と成長の方法で読める。経済体制の比較は F-063 の範囲。		
+SH2_1	ERC 2024	Political systems, governance	SH2 Institutions, Governance and Legal Systems	本体	Y-013,Y-012,Y-020,F-072	比較政治・世論・議会の実証と投票の理論が単元にある。		
+SH2_2	ERC 2024	Democratisation and social movements	SH2 Institutions, Governance and Legal Systems	本体	Y-019,Y-013,Y-005	社会運動の実証（動員・成否）、民主主義の測定と制度の比較、ネットワークが単元にある。		
+SH2_3	ERC 2024	Conflict resolution, war, peace building	SH2 Institutions, Governance and Legal Systems	本体	Y-014,F-024,Y-004	戦争の交渉の模型、紛争のデータ、内戦の計量が単元にある。平和構築の効果は準実験で測る。		
+SH2_4	ERC 2024	Legal studies, comparative law, law and economics	SH2 Institutions, Governance and Legal Systems	入れない	Y-021,F-061,F-073,F-074,Y-010	法の解釈と比較法は規範・解釈の学で範囲外。測れる部分（裁判の実証、外部性・契約・規制の経済学、犯罪抑止）は列の単元が受け持つ。		
+SH2_5	ERC 2024	Constitutions, human rights, international law	SH2 Institutions, Governance and Legal Systems	入れない	Y-002,Y-013,Y-014	憲法・人権・国際法の解釈は規範で範囲外。測れる部分（民主主義と人権の指標、抑止と紛争の実証）は列の単元。		
+SH2_6	ERC 2024	International relations, global and transnational governance	SH2 Institutions, Governance and Legal Systems	土台	Y-014,F-051,F-024,F-061,Y-004	安全保障は Y-014、貿易の制度は F-051、協力のゲームは F-024、地球規模の公共財は F-061 で読める。		
+SH2_7	ERC 2024	Humanitarian assistance and development	SH2 Institutions, Governance and Legal Systems	土台	F-065,Y-003,Y-015,I-036,F-086	開発のランダム化実験、政策評価、世界の健康、農業の経済の組み合わせで読める。		
+SH2_8	ERC 2024	Political and legal philosophy	SH2 Institutions, Governance and Legal Systems	入れない	F-072,F-024	政治・法の哲学は規範の議論で範囲外。形式化できる部分（投票と集団選択の公理、ゲーム）は F-072・F-024。		
+SH2_9	ERC 2024	Digital approaches to political science and law	SH2 Institutions, Governance and Legal Systems	本体	Y-006,Y-012,K-216,K-217	計算社会科学（文章のデータ化・ネットワーク・MRP）が単元にある。		
+SH3_1	ERC 2024	Social structure, social mobility, social innovation	SH3 The Social World and Its Interactions	本体	Y-008,Y-011,Y-002,Y-005	社会階層と移動、近隣の効果、社会の測定、ネットワークが単元にある。社会的革新は F-082。		
+SH3_2	ERC 2024	Inequalities, discrimination, prejudice	SH3 The Social World and Its Interactions	本体	F-081,F-063,Q-011,Y-008	労働市場の差別、不平等、偏見の測り方、機会の不平等が単元にある。		
+SH3_3	ERC 2024	Aggression and violence, antisocial behaviour, crime	SH3 The Social World and Its Interactions	本体	Y-010,Q-028,Q-011	犯罪と刑事司法の実証、反社会的行動の発達、攻撃と集団の心理が単元にある。		
+SH3_4	ERC 2024	Social integration, exclusion, prosocial behaviour	SH3 The Social World and Its Interactions	土台	Q-011,Y-005,Y-011,F-049,P-257	協力と信頼の実験、ネットワーク、居住の分離、進化ゲームの組み合わせで読める。移民の統合は F-083。		
+SH3_5	ERC 2024	Social attitudes and beliefs	SH3 The Social World and Its Interactions	本体	Q-011,Y-012,Y-001,Y-016	態度と説得、世論の測り方、調査の設計、メディアの効果が単元にある。		
+SH3_6	ERC 2024	Social influence; power and group behaviour	SH3 The Social World and Its Interactions	本体	Q-011,Y-005,P-257,Q-030	同調・服従・集団、ネットワーク上の影響、意見形成の模型、チームの実証が単元にある。		
+SH3_7	ERC 2024	Social policies, welfare, work and employment	SH3 The Social World and Its Interactions	土台	Y-015,F-062,F-063,F-052,Y-004	政策の効果は政策評価・労働市場・再分配・準実験の組み合わせで測れる（政策の是非の判断は範囲外）。		
+SH3_8	ERC 2024	Poverty and poverty alleviation	SH3 The Social World and Its Interactions	土台	F-063,F-065,Y-002,Y-003,Y-015	分布と貧困の測定、開発の実験、政策評価で読める。貧困線や FGT 指数は単元の括弧にないが、独立の単元にするほどではない。		
+SH3_9	ERC 2024	Social aspects of teaching and learning, curriculum studies, education and educational policies	SH3 The Social World and Its Interactions	本体	Y-017,Y-018,F-080,Q-023,Q-024	教育の介入、学力の測定、教育の経済学、学習と指導の科学が揃う。教育政策の是非と課程の設計は範囲外。		
+SH3_10	ERC 2024	Communication and information, networks, media	SH3 The Social World and Its Interactions	本体	Y-016,Y-005,P-251,K-204,Y-006	メディアの効果、社会ネットワーク、ネットワークの構造、情報検索、計算社会科学が単元にある。		
+SH3_11	ERC 2024	Digital social research	SH3 The Social World and Its Interactions	本体	Y-006,Y-001,Y-005,K-216	計算社会科学、調査の設計、ネットワークの分析、文章の処理が単元にある。		
+SH3_12	ERC 2024	Social studies of science and technology	SH3 The Social World and Its Interactions	入れない	Y-022,F-082,Q-033	科学技術の社会研究（STS）は事例と解釈の学が主で範囲外に近い。測れる部分（引用の計量、技術の普及、科学観の測定）は列。		
+SH4_1	ERC 2024	Cognitive basis of human development, developmental disorders; comparative cognition	SH4 The Human Mind and Its Complexity	本体	Q-010,Q-028,B-160,Q-006	発達（乳児の認知・心の理論）、発達の障害、動物の認知の実験が単元にある。		
+SH4_2	ERC 2024	Personality and social cognition; emotion	SH4 The Human Mind and Its Complexity	本体	Q-013,Q-011,Q-012	性格の構造、社会的認知、感情の測り方と理論が単元にある。		
+SH4_3	ERC 2024	Clinical and health psychology	SH4 The Human Mind and Its Complexity	本体	Q-014,Q-018,Q-029,Q-028	臨床心理の科学、健康の行動、精神疾患、発達の障害が単元にある。		
+SH4_4	ERC 2024	Neurocognitive psychology	SH4 The Human Mind and Its Complexity	本体	Q-027,B-065,Q-005,B-114,E-225	神経心理学、認知と行動の神経科学、意識の科学、脳波の計測が単元にある。fMRI の解析は欠け（既知）。		
+SH4_5	ERC 2024	Attention, perception, action, consciousness	SH4 The Human Mind and Its Complexity	本体	Q-004,Q-005,Q-025,Q-015,B-114	心理物理、注意と記憶、運動の制御、推論としての認知、意識の科学が揃う。		
+SH4_6	ERC 2024	Learning, memory; cognition in ageing	SH4 The Human Mind and Its Complexity	本体	Q-005,Q-007,Q-010,Q-023	記憶、条件づけと予測誤差、生涯の認知の変化、学習と指導の科学が単元にある。		
+SH4_7	ERC 2024	Reasoning, decision-making; intelligence	SH4 The Human Mind and Its Complexity	本体	Q-009,Q-008,Q-013,Q-016	判断と意思決定、演繹と確率の推論、知能の構造、意思決定の計算模型が揃う。		
+SH4_8	ERC 2024	Language learning and processing (first and second languages)	SH4 The Human Mind and Its Complexity	本体	Q-008,Q-010,Q-026,K-216	語と文の処理、言語の獲得、音声言語、二言語の研究が単元にある。第二言語の習得は一部だけ。		
+SH4_9	ERC 2024	Theoretical linguistics; computational linguistics	SH4 The Human Mind and Its Complexity	土台	K-216,K-217,L-028,L-030,Q-008	実証：計算言語学は K-216・K-217 が本体、形式文法の階層は L-027・L-028、形式意味論の論理は L-024・L-030（ext2 で独立の単元にしないと決定済み）、受容性判断の実験は Q-008 と S-037 で読める。記述と解釈：音素表・形態素の分析・統語構造の言語ごとの記述と理論間の優劣の議論は D-120 のとおり入れない。単元は足さない。		土台へ
+SH4_10	ERC 2024	Language typology; historical linguistics	SH4 The Human Mind and Its Complexity	土台	B-134,S-037,S-061,S-039,K-110	実証：類型論は言語標本の統計（系統の非独立は B-134 の系統比較法、地域の偏りは S-061、混合効果は S-037）、歴史言語学は言語の系統樹と分岐年代のベイズ推定（B-134、S-039）と同根語の整列と系統樹（K-110）で、言語に固有の新しい法則や測り方ではなく組み合わせで読める。記述と解釈：言語ごとの格・時制の型の記述と、専門家による同根語の判定と原形の復元は D-120 のとおり入れない。		土台へ
+SH4_11	ERC 2024	Pragmatics, sociolinguistics, linguistic anthropology, discourse analysis	SH4 The Human Mind and Its Complexity	土台	S-037,K-063,Y-001,Q-015,F-024	実証：社会言語学の変異の定量は混合効果ロジスティック回帰（S-037、K-063）と調査の設計（Y-001）、語用論の実験は Q-008 とベイズ推論の模型（Q-015）とシグナリングゲーム（F-024）の再帰的な推論で読める。記述と解釈：言語人類学と談話分析は解釈が中心で入れない（D-120）。		土台へ
+SH5_1	ERC 2024	Classics, ancient literature	SH5 Texts and Concepts	入れない		古典・古代文学は人文で範囲外。		
+SH5_2	ERC 2024	Theory and history of literature, comparative literature	SH5 Texts and Concepts	入れない	K-216,K-217,Y-006	文学の理論と歴史は解釈の学で範囲外。測れる部分（文体と語の分布の計量）は列の単元。		
+SH5_3	ERC 2024	Book studies	SH5 Texts and Concepts	入れない	Y-022,K-204	書物の研究は書誌・出版史で人文、範囲外。測れる部分（出版と引用の計量、検索）は列の単元。		
+SH5_4	ERC 2024	Philology; text and image studies	SH5 Texts and Concepts	入れない	K-216,K-217,K-082	文献学とテキスト・図像の研究は校訂と解釈の学で範囲外。測れる部分（著者判定などの計量、画像の認識）は列の単元。		
+SH5_5	ERC 2024	Palaeography and codicology	SH5 Texts and Concepts	入れない	W-010,H-041,K-082	古文書の読解と写本の研究は人文と職人の技で範囲外。測れる部分（材料の年代・分光分析、文字の画像認識）は列の単元。		
+SH5_6	ERC 2024	Philosophy of mind, philosophy of language	SH5 Texts and Concepts	入れない	Q-004,Q-005,Q-015,B-114,Q-008	心の哲学・言語の哲学は概念の分析で範囲外。実証できる部分（知覚、意識の科学、言語の理解）は列の単元。		
+SH5_7	ERC 2024	Philosophy of science, epistemology, logic	SH5 Texts and Concepts	本体	L-023,L-024,L-029,L-034,L-043	論理は命題・述語論理、モデル理論、不完全性定理、証明論が単元にある。科学哲学と認識論は入れない（測れる部分は S-022, S-042, Q-006）。		
+SH5_8	ERC 2024	Metaphysics, philosophical anthropology; aesthetics	SH5 Texts and Concepts	入れない	Q-004,Q-012	形而上学・哲学的人間学・美学は概念の議論で範囲外。測れる部分（知覚と感情の実験）は列の単元。		
+SH5_9	ERC 2024	Ethics and its applications; social philosophy	SH5 Texts and Concepts	入れない	Q-011,F-049,F-072	倫理と社会哲学は規範の判断で範囲外。測れる部分（道徳判断・協力・分配の実験、集団選択の形式）は列の単元。		
+SH5_10	ERC 2024	History of philosophy	SH5 Texts and Concepts	入れない		哲学史は人文で範囲外。		
+SH5_11	ERC 2024	Digital humanities; digital approaches to literary studies and philosophy	SH5 Texts and Concepts	土台	K-216,K-217,Y-006,K-204,Y-005	文献の計量、テキストマイニング、ネットワーク、検索は列の単元の組み合わせで読める。対象の解釈は範囲外。		
+SH6_1	ERC 2024	Archaeological methods and theory, history of archaeology	SH6 The Study of the Human Past	入れない	W-014,W-010,W-066,S-023	考古学の理論と学史は解釈、発掘の手技は実務で範囲外。測れる部分（層序、年代、空間、型式の多変量解析）は列の単元。		
+SH6_2	ERC 2024	Prehistoric archaeology, archaeology of non-literate societies	SH6 The Study of the Human Past	入れない	B-187,B-188,W-010	先史の考古学は物質資料の解釈で範囲外。測れる部分（人類の進化、古代 DNA、年代）は列の単元。		
+SH6_3	ERC 2024	Archaeology of early literate societies and early civilizations	SH6 The Study of the Human Past	入れない	W-010,W-114,W-121,W-122	初期文明の考古学は解釈で範囲外。測れる部分（年代、遺跡の測量と空間解析）は列の単元。		
+SH6_4	ERC 2024	Medieval and post-medieval archaeologies	SH6 The Study of the Human Past	入れない	W-010,W-114,W-122	中世・近世の考古学は解釈で範囲外。測れる部分（年代、測量と空間解析）は列の単元。		
+SH6_5	ERC 2024	Archaeological science, bioarchaeology, environmental archaeology, geoarchaeology	SH6 The Study of the Human Past	欠け		近い W-010（崩壊と半減期の入口）、W-031（アイソクロン）、W-032（安定同位体）、B-188（古代 DNA）、W-041（古気候）では足りない。放射性炭素の較正、ルミネッセンス、ベイズ年代モデルが単元にない（食性・産地の同位体と古代 DNA は単元で読める）。 ／反証：食性・産地の同位体（W-032）と古代 DNA（B-188）は読める。年代測定は W-010（崩壊と半減期の入門）と W-031（アイソクロン）だけで、放射性炭素・ルミネッセンス・年輪年代・宇宙線生成核種・ベイズ年代モデルは地図のどこにも無い（放射性炭素、ルミネッセンス、較正で 0 件）。判定役のとおり欠け。	地質年代学／放射性炭素年代（較正曲線、貯留効果、加速器質量分析）、ルミネッセンス年代（線量率）、年輪年代、宇宙線生成核種による露出年代、ウラン系列、U–Pb の一致曲線と閉鎖温度（W-031 と重なる部分は書くときに外す）、ベイズ年代モデルと年代の不確かさの扱い／前提 W-010, W-031, S-022, S-039（MCMC を使うので S-039 を足した）	残す
+SH6_6	ERC 2024	Digital, computational, virtual and geospatial archaeologies	SH6 The Study of the Human Past	土台	W-114,W-066,W-120,W-121,W-122,K-081	空間データの解析、測量、写真測量、レーザ測量、三次元の復元の組み合わせで読める。		
+SH6_7	ERC 2024	Historiography, theory and methods of history, including the analysis of digital data	SH6 The Study of the Human Past	入れない	Y-006,K-216,F-033	歴史学の理論と方法は史料批判と解釈で範囲外。測れる部分（デジタル史料の文章解析、計量の分析）は列の単元。		
+SH6_8	ERC 2024	Ancient history, medieval history	SH6 The Study of the Human Past	入れない	W-041,B-188	古代・中世の歴史は人文で範囲外。測れる部分（古気候、古代 DNA）は列の単元。		
+SH6_9	ERC 2024	Early modern, modern, and contemporary history	SH6 The Study of the Human Past	入れない		近世・近現代の歴史は人文で範囲外。		
+SH6_10	ERC 2024	Colonial and post-colonial history	SH6 The Study of the Human Past	入れない	F-065,Y-004	植民地と脱植民地の歴史は人文・解釈で範囲外。測れる部分（制度の歴史の自然実験）は列の単元。		
+SH6_11	ERC 2024	Global, transnational, and comparative history	SH6 The Study of the Human Past	入れない	F-065,F-051	グローバル・比較の歴史は人文で範囲外。測れる部分（貿易と所得の長期の計量）は列の単元。		
+SH6_12	ERC 2024	Social and economic history	SH6 The Study of the Human Past	入れない	Y-007,Y-008,F-063,F-033	社会・経済の歴史の叙述は人文で範囲外。測れる部分（歴史人口学、階層の移動、長期の計量）は列の単元。		
+SH6_13	ERC 2024	Cultural history, intellectual history	SH6 The Study of the Human Past	入れない		文化史・思想史は人文で範囲外。		
+SH6_14	ERC 2024	History of science and technologies, environmental history	SH6 The Study of the Human Past	入れない	W-041,B-103,P-201	科学史・技術史・環境史は歴史叙述で範囲外。測れる部分（過去の気候と環境の復元）は列の単元。		
+SH7_1	ERC 2024	Human, economic and social geography	SH7 Human Mobility, Environment, and Space	土台	F-075,S-061,W-114,Y-011,Y-007	都市・地域経済、空間統計、空間データ、居住の分離、人口で読める。空間相互作用モデル（重力モデル）は欠け（既知）。		
+SH7_2	ERC 2024	Migration	SH7 Human Mobility, Environment, and Space	本体	F-083,Y-007,Y-011,F-065	人口移動の測り方、国際労働移動と送金、地域間の移動が単元にある。重力型の移動モデルは欠け（既知）。		
+SH7_3	ERC 2024	Population dynamics: households, family and fertility	SH7 Human Mobility, Environment, and Space	本体	Y-007,Y-009,B-090,F-029	人口学の方法、家族の実証、人口の変化、年金の定常人口が単元にある。		
+SH7_4	ERC 2024	Social aspects of health, ageing and society	SH7 Human Mobility, Environment, and Space	土台	I-036,F-079,Y-007,I-035,F-029	健康の社会的決定要因、医療経済、人口の高齢化、疫学の設計の組み合わせで読める。		
+SH7_5	ERC 2024	Sustainability sciences, environment and resources, ecosystem services	SH7 Human Mobility, Environment, and Space	土台	B-041,B-057,B-091,F-061,E-222,W-060	生態系、資源の利用、外部性と共有資源、ライフサイクル評価、地球システムの組み合わせで読める。生態系サービスの評価は F-061・F-076 で足りる。		
+SH7_6	ERC 2024	Environmental and climate change, societal impact and policy	SH7 Human Mobility, Environment, and Space	土台	P-201,P-143,P-153,F-061,F-078,V-010,I-041	気候の物理と統計、炭素価格の経済学、農業と健康への影響の組み合わせで読める。政策の是非は範囲外。		
+SH7_7	ERC 2024	Cities; urban, regional and rural studies	SH7 Human Mobility, Environment, and Space	土台	F-075,Y-011,Y-007,S-061,P-258	都市経済、居住の分離、人口、空間統計、交通流の組み合わせで読める。都市計画の設計は範囲外、建築環境工学は欠け（既知）。		
+SH7_8	ERC 2024	Land use and planning	SH7 Human Mobility, Environment, and Space	土台	F-075,W-114,E-200,B-060,B-091	土地の経済、空間データ、リモートセンシング、景観の生態の組み合わせで読める。計画の是非は範囲外。		
+SH7_9	ERC 2024	Energy, transportation and mobility	SH7 Human Mobility, Environment, and Space	土台	F-077,F-078,P-203,P-258,E-170,F-076	交通と資源・エネルギーの経済学、選択モデル、電力供給、交通流、電力系統の組み合わせで読める。		
+SH7_10	ERC 2024	GIS, spatial analysis; digital geography	SH7 Human Mobility, Environment, and Space	本体	W-114,S-061,W-066,E-200,W-121	地理空間データの解析、空間統計、地図と GIS、リモートセンシングが単元にある。		
+SH8_1	ERC 2024	Kinship; diversity and identities, gender, interethnic relations	SH8 Studies of Cultures and Arts	入れない	F-081,Y-009,Q-011,B-058	親族・アイデンティティ・民族関係の研究は文化人類学と規範の議論が主で範囲外。測れる部分（性別の賃金差、家族の実証、集団間の偏見、血縁選択）は列の単元。		
+SH8_2	ERC 2024	Religious studies, ritual; symbolic representation	SH8 Studies of Cultures and Arts	入れない	Q-011,Q-010	宗教学・儀礼・象徴の研究は解釈で範囲外。測れる部分（信念と集団の実験、発達）は列の単元。		
+SH8_3	ERC 2024	Cultural studies and theory, cultural identities and memories, cultural heritage	SH8 Studies of Cultures and Arts	入れない	Q-005,Y-006	文化研究・文化の記憶・文化遺産は解釈で範囲外。測れる部分（記憶の再構成、デジタル記録の計量）は列の単元。		
+SH8_4	ERC 2024	Museums, exhibitions, conservation and restoration	SH8 Studies of Cultures and Arts	入れない	H-041,H-042,W-010	博物館・展示・保存と修復は職業の実務で範囲外。測れる部分（材料の分析、年代）は列の単元。		
+SH8_5	ERC 2024	History of art and of architecture	SH8 Studies of Cultures and Arts	入れない		美術史・建築史は人文で範囲外。		
+SH8_6	ERC 2024	Architecture, design, craft, creative industries	SH8 Studies of Cultures and Arts	入れない	E-099,E-105,Q-020,Q-021,F-060	建築・デザイン・工芸は設計の実務で範囲外。測れる部分（構造、人間工学、利用者の研究、創造産業の市場）は列の単元。建築環境工学は欠け（既知）。		
+SH8_7	ERC 2024	Music and musicology; history of music	SH8 Studies of Cultures and Arts	入れない	P-022,E-149,I-057,Q-026	音楽学と音楽史は人文で範囲外。測れる部分（音の物理、心理音響、聴覚）は列の単元。		
+SH8_8	ERC 2024	Visual and performing arts, screen, arts-based research	SH8 Studies of Cultures and Arts	入れない	K-071,K-074,K-077,Q-004,E-149	美術・舞台・映画の研究は解釈と実技で範囲外。測れる部分（画像の生成、色、視覚と聴覚の知覚）は列の単元。		
+SH8_9	ERC 2024	Digital approaches to anthropology, cultural studies and art	SH8 Studies of Cultures and Arts	土台	Y-006,K-216,K-217,K-082,K-162	テキスト・画像・ネットワークの計量の組み合わせで読める。対象の解釈は範囲外。		
+T12350	OpenAlex	Particle Dynamics in Fluid Flows	Chemical Engineering / Fluid Flow and Transfer Processes	本体	P-275,P-274,E-195	粒子の運動方程式・ストークス数・乱流中の粒子の集まりが P-275 の中身そのもの。		
+T11593	OpenAlex	Carbon dioxide utilization in catalysis	Chemical Engineering / Process Chemistry and Technology	土台	H-052,H-033,E-214,H-091,E-218	CO2 を原料にする触媒反応で、触媒サイクル・カルボニル化学・反応器・CO2 の還元の組み合わせ。		
+T13840	OpenAlex	Chemical Safety and Risk Management	Chemical Engineering / Chemical Health and Safety	土台	E-217,H-031,H-070,I-027	化学物質の危険と毒性の見積もり（SDS、リスク評価）は E-217・I-027 で読める。安全文化の運営の話は範囲外。		
+T12270	OpenAlex	Microwave-Assisted Synthesis and Applications	Chemistry / Organic Chemistry	土台	H-047,H-037,P-040,E-039	有機合成の反応速度論と誘電加熱（誘電関数、熱の移動）の組み合わせで、固有の理論は少ない。		
+T13859	OpenAlex	Organic Chemistry Synthesis Methods	Chemistry / Organic Chemistry	本体	H-047,H-040,H-105	全合成・天然物合成・環化反応が有機合成と炭素骨格の組み立ての単元の中身。		
+T12240	OpenAlex	Nanomaterials for catalytic reactions	Chemistry / Organic Chemistry	土台	H-052,H-049,H-023,H-040	金属ナノ粒子の触媒による還元（水素化）で、触媒・ナノ材料・反応速度の組み合わせ。		
+T11931	OpenAlex	Organoselenium and organotellurium chemistry	Chemistry / Organic Chemistry	土台	H-028,H-012,H-039,I-027	セレン・テルルは周期性による典型元素の化学で、有機反応機構と毒性学に分けて読める。		
+T11281	OpenAlex	Asymmetric Hydrogenation and Catalysis	Chemistry / Inorganic Chemistry	本体	H-052,H-047,H-038	不斉水素化・移動水素化は触媒サイクルと不斉触媒が単元の括弧の中に明記されている。		
+T12189	OpenAlex	Sulfur-Based Synthesis Techniques	Chemistry / Organic Chemistry	土台	H-052,H-047,H-028,H-039	C–S 結合の形成は遷移金属触媒のクロスカップリングと有機合成と硫黄の化学の組み合わせ。		
+T12228	OpenAlex	Coordination Chemistry and Organometallics	Chemistry / Organic Chemistry	土台	H-040,H-039,H-052,H-028	有機リチウム・グリニャール試薬の金属化は有機金属試薬の反応機構で、H-040 などの組み合わせ。		
+T13239	OpenAlex	Phosphorus compounds and reactions	Chemistry / Organic Chemistry	土台	H-040,H-039,H-028,H-047	ウィッティヒ反応はカルボニル化学・反応機構・リンの化学の組み合わせで読める。		
+T13833	OpenAlex	Ferrocene Chemistry and Applications	Chemistry / Organic Chemistry	土台	H-046,H-052,H-048,H-071	フェロセンは錯体の結合・触媒・酸化還元（電気化学）の組み合わせ。		
+T13124	OpenAlex	Chemical synthesis and alkaloids	Chemistry / Organic Chemistry	本体	H-105,H-047	アルカロイドの生合成と合成が天然物化学の単元の中身。		
+T13539	OpenAlex	thermodynamics and calorimetric analyses	Chemistry / Physical and Theoretical Chemistry	土台	H-022,H-036,P-046,H-100	熱量測定による結合のエンタルピーは化学熱力学と熱量の測定で読める。		
+T13128	OpenAlex	Chromatography in Natural Products	Chemistry / Analytical Chemistry	土台	H-042,E-215,H-105,H-006	向流クロマトグラフィーは液液分配の分離で、分離工学と機器分析の組み合わせ。		
+T11460	OpenAlex	Analytical Methods in Pharmaceuticals	Chemistry / Analytical Chemistry	土台	H-042,H-031,E-156,S-018	医薬品分析法の検証は機器分析・定量・品質管理の統計の組み合わせ。		
+T12380	OpenAlex	Authorship Attribution and Profiling	Computer Science / Artificial Intelligence	土台	K-216,K-046,K-161,S-023	文体の統計とテキスト分類で、自然言語処理と機械学習の組み合わせ。法科学としての鑑定は既知の欠け。		
+T12326	OpenAlex	Network Packet Processing and Optimization	Computer Science / Hardware and Architecture	土台	K-198,K-043,K-038,K-023	パケット分類は転送表の検索・ファイアウォール・ハッシュ探索の組み合わせ（K-198 が近い）。		
+T13559	OpenAlex	Edcuational Technology Systems	Computer Science / Artificial Intelligence	土台	K-053,K-054,K-199	前向き・後ろ向き推論の規則ベースの助言系で、論理的な推論と確率推論とソフトウェア工学の組み合わせ。		
+T11450	OpenAlex	Model-Driven Software Engineering Techniques	Computer Science / Software	土台	K-199,K-017,K-039,K-200	モデル駆動開発は設計とアーキテクチャ・仕様・言語処理系の組み合わせで、固有の理論は少ない。		
+T11478	OpenAlex	Caching and Content Delivery	Computer Science / Computer Networks and Communications	土台	K-203,K-038,K-215,S-009	コンテンツ配信とキャッシュは Web のキャッシュと CDN・網・分散と待ち行列の組み合わせ。		
+T13373	OpenAlex	Data Mining and Machine Learning Applications	Computer Science / Information Systems	土台	K-049,K-060,K-105,K-048	決定木・ナイーブベイズ・クラスタリングの応用で、機械学習と統計的データ解析の組み合わせ。		
+T12535	OpenAlex	Machine Learning and Data Classification	Computer Science / Artificial Intelligence	土台	K-048,K-049,K-052,K-154	ラベル雑音・アンサンブル・自動機械学習は統計的な学習の枠組みの組み合わせ。		
+T12290	OpenAlex	Human Motion and Animation	Computer Science / Computer Graphics and Computer-Aided Design	本体	K-076,K-074,K-084,B-120	キャラクターのアニメーション・逆運動学・動作の合成が K-076 の中身。		
+T10444	OpenAlex	Context-Aware Activity Recognition Systems	Computer Science / Computer Vision and Pattern Recognition	本体	K-211,E-225,K-049	ウェアラブルのセンサーによる状況と行動の認識が K-211 の括弧の中にある。		
+T10286	OpenAlex	Information Retrieval and Search Behavior	Computer Science / Information Systems	本体	K-204	情報検索・検索エンジン・順位学習・評価が K-204 の中身。		
+T13693	OpenAlex	Smart Systems and Machine Learning	Computer Science / Computer Networks and Communications	土台	E-088,E-078,K-049,K-211	コグニティブ無線と機械学習の組み合わせ（無線通信路・検出理論・機械学習）。		
+T11612	OpenAlex	Stochastic Gradient Optimization Techniques	Computer Science / Artificial Intelligence	本体	K-046,K-050,K-052	確率的勾配法と損失地形が最適化の観点からの機械学習の単元の中身。		
+T10888	OpenAlex	Augmented Reality Applications	Computer Science / Computer Vision and Pattern Recognition	土台	K-081,K-072,K-091,K-211	拡張現実はカメラの位置姿勢の追跡と座標変換と描画の組み合わせ。		
+T10824	OpenAlex	Image Retrieval and Classification Techniques	Computer Science / Computer Vision and Pattern Recognition	土台	K-080,K-082,K-204,K-075	画像の特徴量による検索・分類は初期視覚・CNN・検索の組み合わせ。		
+T10828	OpenAlex	Biometric Identification and Security	Computer Science / Signal Processing	土台	K-080,K-082,K-043,K-049	生体認証は画像解析・機械学習・認証の安全の組み合わせ。		
+T12262	OpenAlex	Hate Speech and Cyberbullying Detection	Computer Science / Artificial Intelligence	土台	K-216,K-161,K-049,Y-006	攻撃的な言葉の自動検出は自然言語処理と機械学習で、何を攻撃的とするかの規範は範囲外。		
+T13270	OpenAlex	QR Code Applications and Technologies	Computer Science / Information Systems	土台	C-039,K-140,K-080	QR コードは誤り訂正符号と符号化と画像の読み取りの組み合わせ。		
+T12127	OpenAlex	Software System Performance and Reliability	Computer Science / Computer Networks and Communications	土台	K-215,K-199,K-049,K-206	ログの異常検知とマイクロサービスの診断は分散システム・ソフトウェア工学・機械学習の組み合わせ。		
+T13482	OpenAlex	Engineering Education and Technology	Computer Science / Information Systems	入れない	Y-017,K-211	大学の運営と情報基盤の整備方針の話で、知の体系でない。測れるのは教育の効果（Y-017）と IoT の端末（K-211）。		
+T10181	OpenAlex	Natural Language Processing Techniques	Computer Science / Artificial Intelligence	本体	K-216,K-217,K-051,K-161	統計的機械翻訳・品詞付け・語義の曖昧性の解消・ニューラル機械翻訳が K-216・K-217・K-051 の中身。		
+T12676	OpenAlex	Machine Learning and ELM	Computer Science / Artificial Intelligence	土台	K-046,K-048,K-047,M-015	極限学習機は擬似逆行列による線形回帰を使うニューラルネットで、機械学習と行列の組み合わせ。		
+T10215	OpenAlex	Semantic Web and Ontologies	Computer Science / Artificial Intelligence	欠け	K-053,L-024,K-169,K-203	RDF・OWL・記述論理・オントロジー・リンクトデータを受け持つ単元がない（grep で 0 件）。K-053 は制約充足と論理表現の推論だけ、L-024 は述語論理の完全性、K-169 は関係データベースで、決定可能な記述論理と知識グラフは扱えない。 ／反証：RDF・OWL・記述論理・SPARQL を受け持つ単元は地図に無い（記述論理、オントロジー、様相のどれも 0 件）。K-053 は命題・一階論理の推論と制約充足、K-169 は関係モデルの実務で、決定可能な論理の断片の推論と計算量（タブロー法）は導けない。迷う項目：標準規格の色が濃く、土台との境にある。	知識表現／記述論理（ALC とタブロー法、推論の計算量）と OWL、RDF と RDFS、SPARQL とグラフの問い合わせ、ルールとデータログ、オントロジーの対応づけとその評価（精度・再現率）、知識グラフ／前提 L-024, K-053, K-169（「設計」は実務の手技なので「対応づけの評価」に直した。T13514 は足さない）	残す
+T10648	OpenAlex	Virtual Reality Applications and Impacts	Computer Science / Human-Computer Interaction	土台	K-071,Q-004,Q-021,K-072	仮想現実の臨場感と酔いは描画と知覚の心理物理と人間工学の組み合わせ。		
+T11901	OpenAlex	Bayesian Methods and Mixture Models	Computer Science / Artificial Intelligence	土台	S-022,S-039,S-036,K-049	混合モデルは EM とベイズ推論と MCMC の組み合わせ。ディリクレ過程などノンパラメトリックベイズは S-022 の延長として読む。		
+T11448	OpenAlex	Face recognition and analysis	Computer Science / Computer Vision and Pattern Recognition	土台	K-082,K-080,K-049	顔認識は画像の特徴・CNN・機械学習の組み合わせ。		
+T13898	OpenAlex	Diverse Interdisciplinary Research Studies	Computer Science / Artificial Intelligence	土台	C-038,E-076,K-208,S-004	サイバネティクス・情報理論・リスク・認証の雑多な塊で、固有の理論はなく情報理論と制御と安全の組み合わせ。		
+T10579	OpenAlex	Cognitive Radio Networks and Spectrum Sensing	Computer Science / Computer Networks and Communications	土台	E-078,E-088,E-089,E-077	スペクトル検出は検出理論（整合フィルタ、仮説検定）と無線通信路の組み合わせ。		
+T10320	OpenAlex	Neural Networks and Applications	Computer Science / Artificial Intelligence	本体	K-047,K-050,K-051	誤差逆伝播・多層ネット・連想記憶が K-047・K-050・K-051 の中身。		
+T13514	OpenAlex	Experience-Based Knowledge Management	Computer Science / Artificial Intelligence	入れない	K-053,L-024	一つの研究群（Decisional DNA、SOEKS）の知識管理の枠組みで、再生可能エネルギーや IoT への当てはめが中心。検証された模型や測り方が示されず、組織の知識管理の実務の域。測れる知識表現の部分は T10215 の案（知識表現）で受け持つ。		入れないへ
+T13442	OpenAlex	Geochemistry and Geochronology of Asian Mineral Deposits	Earth and Planetary Sciences / Geochemistry and Petrology	欠け	W-065,W-016,W-017,W-031,W-029	鉱床の成因（熱水の鉱化作用、金属の運搬と沈殿、鉱床の型）を受け持つ単元がない。W-065 は「鉱床のでき方」が括弧の中に一言あるだけ、E-238 は品位の推定と採掘計画、W-016/W-017 は火成岩の成因と元素の分配で、流体からの鉱化は導けない。 ／反証：W-065 の「鉱床のでき方」は一言、E-238 は品位の推定と採掘の計画、W-029 の熱水は多孔質の流れとして、W-016・W-017 は火成岩の成因と元素の分配。金属の熱水中の溶解と錯体と沈殿、流体包有物、鉱床の型は地図にない。年代の側（地質年代学）は W-010・W-031 が受け持つ。	鉱床学／鉱床の分類と成因（岩漿・熱水・堆積・風化）、金属の熱水中での溶解と錯体と沈殿、流体包有物、斑岩型・火山性塊状硫化物・造山型金・スカルン、鉱化の構造規制、探査の指標／W-016,W-017,W-029,W-031,H-029,H-036（錯体と溶解の熱力学に H-029・H-036 を足し、H-026 を外した）	残す
+T10001	OpenAlex	Geological and Geochemical Analysis	Earth and Planetary Sciences / Geochemistry and Petrology	本体	W-016,W-031,W-010,W-019	火成岩の成因・ジルコン U–Pb などの年代・変成作用が W 流れの単元の中身。		
+T10572	OpenAlex	Geophysical and Geoelectrical Methods	Earth and Planetary Sciences / Geophysics	本体	W-118,W-117,P-141	電気探査・電磁探査・磁気探査が W-118 の括弧の中にある。		
+T10159	OpenAlex	Ionosphere and magnetosphere dynamics	Earth and Planetary Sciences / Space and Planetary Science	本体	P-292,P-293,P-294	磁気圏・電離圏・宇宙天気が P-292〜P-294 の中身。		
+T10109	OpenAlex	Paleontology and Stratigraphy of Fossils	Earth and Planetary Sciences / Paleontology	土台	W-003,W-014,B-133,B-130,B-134	化石による層序と生物の系統は層序学と動物の系統の組み合わせ。		
+T11333	OpenAlex	Climate change and permafrost	Earth and Planetary Sciences / Atmospheric Science	本体	W-106,P-161,W-033	永久凍土の熱と活動層、炭素の放出が W-106 の中身。		
+T14047	OpenAlex	Marine and environmental studies	Earth and Planetary Sciences / Oceanography	土台	W-041,W-063,W-014,W-032	黒海・地中海の古環境は古気候・海洋・層序・同位体の組み合わせ。		
+T10088	OpenAlex	Thermochemical Biomass Conversion Processes	Energy / Fuel Technology	土台	E-194,E-214,H-037,E-212	バイオマスの熱分解・ガス化は燃焼・反応工学・反応速度論・物質収支の組み合わせ。		
+T10476	OpenAlex	Algal biology and biofuel production	Energy / Renewable Energy, Sustainability and the Environment	土台	E-228,B-030,B-153,E-214	微細藻類の培養は増殖の速度論と光合成と反応器の組み合わせ。		
+T10680	OpenAlex	Wind Energy Research and Development	Energy / Renewable Energy, Sustainability and the Environment	本体	E-167	風力発電（翼素運動量理論、ベッツの限界、荷重と制御）が E-167 の中身。		
+T11802	OpenAlex	Chemical Looping and Thermochemical Processes	Energy / Fuel Technology	土台	H-036,H-108,E-214,E-218	ケミカルルーピングは酸素運搬体の酸化還元の熱力学（エリンガム図）と反応器とプロセス設計の組み合わせ。		
+T14428	OpenAlex	Coal and Coke Industries Research	Energy / Fuel Technology	土台	W-065,H-108,E-194,E-212	石炭の成因・コークスと製鉄・燃焼・物質収支の組み合わせ。		
+T14146	OpenAlex	Earthquake and Tsunami Effects	Engineering / Civil and Structural Engineering	土台	E-187,E-105,W-063,E-108,P-136	津波の伝播は浅水の波、構造物への力は水理学と荷重の分類で読める。		
+T12804	OpenAlex	Thermal Analysis in Power Transmission	Engineering / Electrical and Electronic Engineering	土台	E-170,E-039,E-040,E-197	送電線の許容電流は電力系統と熱伝導・対流の熱収支の組み合わせ。		
+T12959	OpenAlex	Engineering and Materials Science Studies	Engineering / Mechanical Engineering	土台	E-193,E-164,H-048,E-015	自動車の軽量化とめっきは製造法・合金・防食・疲労の組み合わせ。		
+T11946	OpenAlex	Antenna Design and Optimization	Engineering / Electrical and Electronic Engineering	本体	E-084,E-083,P-039,K-015	アンテナ・アレイの合成が E-084・E-083 の中身で、最適化は K-015。		
+T11524	OpenAlex	Advanced Aircraft Design and Technologies	Engineering / Aerospace Engineering	土台	E-026,E-042,E-043,E-199,P-161	航空機の設計と排出の気候影響は空力・推進・システム設計・気候の組み合わせ。		
+T12682	OpenAlex	Smart Materials for Construction	Engineering / Civil and Structural Engineering	土台	E-196,E-206,P-029,P-103	自己センシングコンクリートはコンクリートの材料・構造ヘルスモニタリング・導電の組み合わせ。		
+T12105	OpenAlex	Hygrothermal properties of building materials	Engineering / Building and Construction	欠け（既知）	E-196,E-124,E-039,H-042	建築環境工学（熱・空気・光）の既知の欠け。土壁の湿気と熱の移動（吸放湿）は建築環境の範囲。		
+T13685	OpenAlex	Material Science and Thermodynamics	Engineering / Mechanical Engineering	土台	E-015,E-090,E-120,E-191	鉄道の材料と運用は疲労・振動・鋼構造・車両運動の組み合わせ。車輪とレールの接触は既知の欠け。		
+T10121	OpenAlex	Building Energy and Comfort Optimization	Engineering / Building and Construction	欠け（既知）	E-039,P-042,P-203,E-148	建築環境工学（熱・空気・光）の既知の欠け。温熱の快適さと昼光と建物のエネルギー計算。		
+T13027	OpenAlex	Applied Advanced Technologies	Engineering / Industrial and Manufacturing Engineering	土台	E-154,E-199,E-193,K-211	スマート生産とデジタルツインは生産管理・システム設計・製造法・IoT の組み合わせ。		
+T12941	OpenAlex	Embedded Systems and FPGA Design	Engineering / Control and Systems Engineering	土台	K-197,K-030,K-193,E-183	組込みシステムと FPGA は実時間 OS・論理回路設計・マイコンの組み合わせ。		
+T10173	OpenAlex	Computational Fluid Dynamics and Aerodynamics	Engineering / Computational Mechanics	本体	E-035,E-036,E-037,E-195	数値流体力学・衝撃波・乱流モデルが E-035〜E-037・E-195 の中身。		
+T11945	OpenAlex	Heat Transfer Mechanisms	Engineering / Mechanical Engineering	本体	E-040,E-039,E-213	強制対流・噴流衝突の熱伝達の相関式が E-040 の中身。		
+T12567	OpenAlex	Heat transfer and supercritical fluids	Engineering / Computational Mechanics	土台	E-040,E-195,P-046,E-045	超臨界流体の熱伝達の悪化は強制対流の熱伝達に物性の急変と乱流モデルを加えた組み合わせ。		
+T12677	OpenAlex	Sports Dynamics and Biomechanics	Engineering / Biomedical Engineering	本体	B-120,B-139,P-011,P-006	関節の角度・運動連鎖・動作の計測が B-120 の中身。		
+T12300	OpenAlex	Advanced Electrical Measurement Techniques	Engineering / Electrical and Electronic Engineering	土台	E-081,E-056,E-170,P-118	周波数・高調波の推定はスペクトル解析と推定と計測の組み合わせ。		
+T10944	OpenAlex	Turbomachinery Performance and Optimization	Engineering / Aerospace Engineering	土台	E-043,E-024,E-040,E-025	ターボ機械は圧縮機・タービンのサイクルと相似則と境界層と冷却の組み合わせ（翼列の損失の理論は単元に独立してない）。		
+T12791	OpenAlex	Full-Duplex Wireless Communications	Engineering / Electrical and Electronic Engineering	土台	E-088,E-083,E-188,E-089	全二重通信は自己干渉の除去（適応フィルタ）と無線通信路と RF 回路の組み合わせ。		
+T13020	OpenAlex	Heat Transfer and Mathematical Modeling	Engineering / Mechanical Engineering	土台	E-039,E-040,E-213,H-021	雑多な伝熱・材料の塊で、伝熱と移動現象の組み合わせ。		
+T14446	OpenAlex	Civil and Geotechnical Engineering Research	Engineering / General Engineering	土台	E-124,E-237,E-187,W-064	地盤・岩盤・地下の工事は土質力学・岩盤力学・水理の組み合わせ。		
+T14225	OpenAlex	Advanced Sensor and Control Systems	Engineering / Control and Systems Engineering	土台	E-049,E-183,E-216,E-180	温度制御の測定と調節は PID・マイコン・計装の組み合わせ。		
+T13344	OpenAlex	Industrial Automation and Control Systems	Engineering / Control and Systems Engineering	土台	E-216,K-197,K-141,K-126,E-049	PLC・SCADA は計装と制御・実時間・論理回路と状態機械の組み合わせ。		
+T13511	OpenAlex	Geodetic Measurements and Engineering Structures	Engineering / Civil and Structural Engineering	本体	W-120,W-121,W-122,E-206	測地・トータルステーション・水準測量・変位の計測が W-120 の中身。		
+T13601	OpenAlex	Urban Transport Systems Analysis	Engineering / Civil and Structural Engineering	土台	F-077,F-076,P-258,E-157	交通の計画は交通手段の選択・需要の推定・交通流・OR の組み合わせ。空間相互作用モデルは既知の欠け。		
+T14510	OpenAlex	Medical Imaging and Analysis	Engineering / Biomedical Engineering	土台	E-224,K-082,E-223	脊椎の自動分割は領域の分割と診断の支援と CNN と医用画像の物理の組み合わせ。		
+T10059	OpenAlex	Bone Tissue Engineering Materials	Engineering / Biomedical Engineering	本体	E-226,I-048,B-080	骨の再生の足場とセラミックスが E-226 の括弧の中にある。		
+T14189	OpenAlex	Intravenous Infusion Technology and Safety	Engineering / Biomedical Engineering	土台	E-227,P-013,E-049,H-026	輸液ポンプと薬の配合変化は医療機器の規制・管内の流れ・制御・溶解平衡の組み合わせ。		
+T11699	OpenAlex	High-Velocity Impact and Material Behavior	Engineering / Mechanics of Materials	土台	E-014,E-019,P-025,P-282,W-119	高ひずみ速度の変形は棒の中の波（ホプキンソン棒）と塑性と衝撃圧縮の状態方程式の組み合わせ。		
+T12719	OpenAlex	Aerospace Engineering and Energy Systems	Engineering / Aerospace Engineering	土台	E-026,E-167,E-060,P-013,E-190	飛行船・係留風力・パラシュートは空力・浮力・飛行力学・突入の組み合わせ。		
+T10868	OpenAlex	Soft Robotics and Applications	Engineering / Biomedical Engineering	土台	K-084,E-019,E-022,E-189	ソフトロボットは機構の運動学と超弾性の非線形有限要素と空気圧の組み合わせ。		
+T10247	OpenAlex	Perovskite Materials and Applications	Engineering / Electrical and Electronic Engineering	土台	E-160,H-049,H-053,P-096	ペロブスカイト太陽電池は太陽電池の物理と結晶成長と半導体の組み合わせ。		
+T13905	OpenAlex	Telecommunications and Broadcasting Technologies	Engineering / Media Technology	土台	E-086,E-088,E-089,E-085	放送の方式は変調・符号化・無線通信の組み合わせ。		
+T11978	OpenAlex	Soil Mechanics and Vehicle Dynamics	Engineering / Automotive Engineering	土台	E-124,E-191	タイヤと土の相互作用は土質力学と車両運動の組み合わせ。接触の部分は既知の欠け。		
+T10281	OpenAlex	Advanced Battery Materials and Technologies	Engineering / Electrical and Electronic Engineering	本体	H-102,H-103,H-101,H-048	リチウム金属・固体電解質・硫黄電池が H-101〜H-103 の中身。		
+T11201	OpenAlex	Metallurgy and Material Forming	Engineering / Mechanics of Materials	土台	E-163,E-164,E-193,E-014	熱間加工の動的再結晶は転位と拡散と相変態と塑性加工の組み合わせ。		
+T10220	OpenAlex	Machine Fault Diagnosis Techniques	Engineering / Control and Systems Engineering	土台	E-081,E-090,E-206,K-049	振動の信号による故障診断は時間周波数解析・構造動力学・機械学習の組み合わせ。		
+T12256	OpenAlex	Facilities and Workplace Management	Engineering / Architecture	土台	Q-030,Q-013,S-031	職場の環境と満足度の調査は産業・組織心理学と測定と調査の組み合わせ。施設管理の実務と室内環境の物理（既知の欠け）は別。		
+T12809	OpenAlex	Contact Mechanics and Variational Inequalities	Engineering / Computational Mechanics	欠け（既知）	E-022,D-058,D-089,E-014	接触力学とトライボロジー（既知の欠け）。変分不等式の数学は D-089 などにあるが接触の力学がない。		
+T12740	OpenAlex	Gait Recognition and Analysis	Engineering / Biomedical Engineering	土台	B-120,K-080,K-082,E-225	歩容の認識は動作の生体力学と画像解析と機械学習の組み合わせ。		
+T11941	OpenAlex	Power System Reliability and Maintenance	Engineering / Safety, Risk, Reliability and Quality	土台	S-009,S-010,S-035,S-002,S-024,E-217,E-170	電力系統の信頼性は確率の応用で、寿命分布とハザードは S-035、可用度のマルコフ模型は S-009 の連続時間マルコフ連鎖、保全の最適な取り換えは S-010 の再生理論、供給力不足確率は S-002 の母関数（容量停止確率表の畳み込み）と S-024 のモンテカルロ、故障の木は E-217、系統は E-170。SAIDI と SAIFI は顧客加重の平均。単元を立てる固有の法則はない。		土台へ
+T11408	OpenAlex	Advanced Optical Imaging Technologies	Engineering / Media Technology	土台	P-024,P-028,P-300,P-026	立体表示とホログラフィーは干渉・回折・コヒーレンス・空間光変調器の組み合わせ。		
+T11170	OpenAlex	Biomimetic flight and propulsion mechanisms	Engineering / Aerospace Engineering	土台	B-139,E-029,P-014,E-027,P-269	羽ばたきと魚の推進は動物の運動の力学と渦と翼の理論と低レイノルズ数の流れの組み合わせ。		
+T13477	OpenAlex	Sustainable Design and Development	Engineering / Building and Construction	土台	E-222,E-198,E-199,E-193	持続可能な設計はライフサイクル評価とシステム設計と製造の組み合わせ。		
+T10221	OpenAlex	Composite Structure Analysis and Optimization	Engineering / Mechanics of Materials	本体	E-012,E-013,E-090,E-020	傾斜機能・積層板の座屈と振動が板・殻・複合材料と Ritz 法の単元の中身。		
+T11417	OpenAlex	Advancements in PLL and VCO Technologies	Engineering / Electrical and Electronic Engineering	欠け（既知）	E-188,E-049,P-008,K-194	アナログ集積回路（既知の欠け）。PLL の雑音と VCO の回路設計は E-188（RF の回路）や K-194（クロック木）では足りない。		
+T13520	OpenAlex	Architectural and Urban Studies	Engineering / Architecture	入れない	E-039,P-203	建築の様式と文化遺産の保存は人文・芸術の領域。測れるのは気候への応答（建築環境工学、既知の欠け）だけ。		
+T11352	OpenAlex	Masonry and Concrete Structural Analysis	Engineering / Civil and Structural Engineering	土台	E-206,E-122,E-014,E-093	組積造の耐震補強は既存構造物の補強・部材の挙動・極限解析・耐震設計の組み合わせ。		
+T11557	OpenAlex	Lubricants and Their Additives	Engineering / Mechanical Engineering	欠け（既知）	E-189,P-190,H-107,E-235	接触力学とトライボロジー（既知の欠け）。潤滑油と摩擦の低減。		
+T11672	OpenAlex	Recycling and utilization of industrial and municipal waste in materials production	Engineering / Building and Construction	土台	E-221,E-222,E-196,H-053	廃棄物の再資源化は廃棄物の処理・循環・コンクリートの材料・固体化学の組み合わせ。		
+T14158	OpenAlex	Optical Systems and Laser Technology	Engineering / Electrical and Electronic Engineering	本体	P-028,E-159,P-091	レーザーのビーム光学と半導体レーザーが P-028・E-159 の中身。		
+T12019	OpenAlex	Calibration and Measurement Techniques	Engineering / Aerospace Engineering	土台	E-200,P-216,P-131,P-118	衛星センサーの放射の較正はリモートセンシング・測光・放射伝達・計測の組み合わせ。		
+T10790	OpenAlex	Heavy Metal Exposure and Toxicity	Environmental Science / Health, Toxicology and Mutagenesis	土台	I-027,I-041,B-092,H-028	鉛・カドミウムの曝露と毒性は毒性学と環境の健康と元素の化学の組み合わせ。		
+T11588	OpenAlex	Atmospheric and Environmental Gas Dynamics	Environmental Science / Global and Planetary Change	土台	E-200,P-131,P-141,P-161,W-034	温室効果気体の衛星観測は放射伝達と逆問題とリモートセンシングと気候の組み合わせ。		
+T11493	OpenAlex	Water Treatment and Disinfection	Environmental Science / Health, Toxicology and Mutagenesis	本体	E-219,I-027,H-043	消毒副生成物と上水の消毒が E-219 の括弧の中にある。		
+T13203	OpenAlex	Environmental Changes in China	Environmental Science / Global and Planetary Change	土台	W-114,W-066,E-200,W-060	土地利用の変化は GIS・リモートセンシング・地球システムの組み合わせ。		
+T12780	OpenAlex	Heavy Metal Pollution Remediation	Environmental Science / Water Science and Technology	土台	E-221,E-219,H-026,W-102	重金属による汚染の浄化は水処理・汚染地の浄化・溶解平衡・地下水の組み合わせ。		
+T13997	OpenAlex	Scientific Research and Studies	Environmental Science / Global and Planetary Change	土台	P-161,P-201,W-060,P-143	気候変化の影響の評価は気候科学と地球システムの組み合わせ。適応策の選択は規範で範囲外。		
+T12467	OpenAlex	Rangeland Management and Livestock Ecology	Environmental Science / Management, Monitoring, Policy and Law	土台	B-091,B-041,V-010,V-011,W-070	放牧地の劣化は土地利用・生態系・家畜の飼養・土壌の侵食の組み合わせ。		
+T11231	OpenAlex	Microbial Fuel Cells and Bioremediation	Environmental Science / Environmental Engineering	土台	H-048,H-100,B-145,B-148,E-221	微生物燃料電池は電極反応と電気化学の測定と微生物の代謝と浄化の組み合わせ。		
+T12922	OpenAlex	Business and Economic Development	Environmental Science / Management, Monitoring, Policy and Law	土台	F-061,F-065,Y-015,E-222	持続可能な開発の指標は環境の経済学と開発と政策の評価の組み合わせ。		
+T10266	OpenAlex	Plant Water Relations and Carbon Dynamics	Environmental Science / Global and Planetary Change	土台	B-038,B-031,B-153,E-115,P-161	蒸散・気孔・乾燥による樹木の枯死は植物生理と大気境界層のフラックス（渦相関）の組み合わせ。		
+T11371	OpenAlex	Wind and Air Flow Studies	Environmental Science / Environmental Engineering	本体	E-220,E-115,E-110,E-114	大気拡散・市街地の風が E-220（ガウスプルーム）・E-115・風工学の中身。		
+T11634	OpenAlex	Water Quality and Pollution Assessment	Environmental Science / Water Science and Technology	土台	W-103,W-102,S-023,H-043	水質の評価は河川・地下水・多変量解析・環境の化学の組み合わせ。		
+T10969	OpenAlex	Water resources management and optimization	Environmental Science / Water Science and Technology	土台	W-101,W-061,E-157,K-010	貯水池の運用と水の配分は水文学と数理計画の組み合わせ。		
+T13654	OpenAlex	Urban Planning and Landscape Design	Environmental Science / Management, Monitoring, Policy and Law	入れない	B-041,E-039	景観と公園の設計は計画・芸術と価値判断の領域。測れるのは生態（B-041）と熱環境（既知の欠け）だけ。		
+T11923	OpenAlex	Mine drainage and remediation techniques	Environmental Science / Environmental Chemistry	土台	E-221,H-043,B-148,H-017,E-219	酸性鉱山排水は硫化物の酸化還元・微生物・水処理の組み合わせ。		
+T13793	OpenAlex	Environmental and Analytical Chemistry Studies	Environmental Science / Water Science and Technology	土台	E-221,H-043,H-042,W-102	汚染地の調査は汚染地の浄化・環境の化学・機器分析・地下水の組み合わせ。		
+T13804	OpenAlex	Physical Activity and Education Research	Environmental Science / Water Science and Technology	土台	E-219,E-221,E-222	記述は再生水・廃棄物・再生可能エネルギーの利用（名前の「運動と教育」とは食い違う OpenAlex の塊）で、水処理と廃棄物と循環の組み合わせ。		
+T11188	OpenAlex	Coagulation and Flocculation Studies	Environmental Science / Water Science and Technology	本体	E-219,P-265,H-021	凝集とフロキュレーションが E-219 の括弧の中にあり、コロイドの凝集は P-265。		
+T14324	OpenAlex	Insects and Parasite Interactions	Environmental Science / Health, Toxicology and Mutagenesis	欠け（既知）	B-132,B-148,I-041	寄生虫と媒介生物（既知の欠け）。ゴキブリによる病原体の機械的な運搬は昆虫の生物学と衛生では足りない。		
+T14120	OpenAlex	Thallium and Germanium Studies	Environmental Science / Pollution	土台	I-027,I-041,H-028,H-043	タリウムの中毒と環境汚染は毒性学と環境の健康と元素の化学の組み合わせ。		
+T10610	OpenAlex	Advanced Cellulose Research Studies	Materials Science / Biomaterials	土台	H-107,P-103,P-265,H-044,H-049	ナノセルロースは高分子の物理化学・ソフトマター・コロイドと多糖の組み合わせ。		
+T13159	OpenAlex	Structural mechanics and materials	Materials Science / Materials Chemistry	土台	E-196,H-028,H-049,H-106	硫黄コンクリートはコンクリートの材料と硫黄の化学と高分子の組み合わせ。		
+T10179	OpenAlex	Supercapacitor Materials and Fabrication	Materials Science / Electronic, Optical and Magnetic Materials	土台	H-048,H-100,P-265,H-049	スーパーキャパシタは電気二重層と電気化学の測定と電極材料の組み合わせ。		
+T11224	OpenAlex	Electromagnetic wave absorption materials	Materials Science / Electronic, Optical and Magnetic Materials	土台	P-040,E-205,P-035,P-097	電磁波の吸収は誘電関数と伝送線路の反射と物質中の電磁場の組み合わせ。		
+T12416	OpenAlex	Polymer Nanocomposite Synthesis and Irradiation	Materials Science / Polymers and Plastics	土台	H-109,H-106,P-263,H-107	高分子の放射線による架橋は放射線化学と高分子の網目の組み合わせ。		
+T12613	OpenAlex	X-ray Diffraction in Crystallography	Materials Science / Materials Chemistry	欠け	P-092,B-012,R-006,D-075,P-118	粉末回折と構造の決定（構造因子、位相問題、リートベルト法）を受け持つ単元がない。P-092 は X 線回折とブラッグ散乱が括弧に一言、B-012 は生体分子の結晶構造解析の手法の一項目、P-118 は X 線による構造解析が一言で、強度から構造を決める計算は導けない。 ／反証：P-092 は X 線回折とブラッグ散乱の一言、B-012 は手法の一項目、P-118 は X 線による構造解析の一言で、構造因子から位相問題（パターソン法と直接法）、精密化と R 因子、粉末回折とリートベルト法は名指しされない。R-006 は空間群の数学だけ。	X 線結晶学／構造因子と回折強度（原子散乱因子とデバイ–ワラー因子）、空間群と系統消滅則、位相問題とパターソン法・直接法、構造の精密化と R 因子、粉末回折とリートベルト法、電子密度図／P-092,R-006,D-075,K-003（精密化の最小二乗に K-003 を足した）	残す
+T10612	OpenAlex	Magnetism in coordination complexes	Materials Science / Electronic, Optical and Magnetic Materials	土台	H-046,P-097,H-071,P-089	単分子磁石とスピンクロスオーバーは配位子場・磁性・原子の微細構造の組み合わせ。		
+T10736	OpenAlex	Hydrogen embrittlement and corrosion behaviors in metals	Materials Science / Metals and Alloys	土台	H-048,E-015,E-164,E-163	水素脆化と応力腐食割れは腐食・破壊・拡散・転位の組み合わせ。		
+T11782	OpenAlex	Magnetic Properties of Alloys	Materials Science / Electronic, Optical and Magnetic Materials	本体	E-162,P-097	保磁力と希土類磁石が E-162 の中身。		
+T11025	OpenAlex	Nonlinear Optical Materials Research	Materials Science / Electronic, Optical and Magnetic Materials	本体	P-234,P-027,H-045	2 次の非線形感受率と超分極率が P-234 の中身。		
+T11240	OpenAlex	Luminescence and Fluorescent Materials	Materials Science / Materials Chemistry	土台	H-109,H-050,H-045	凝集誘起発光は励起状態の失活と量子収率とヒュッケル法の組み合わせ。		
+T10321	OpenAlex	Quantum Dots Synthesis And Properties	Materials Science / Materials Chemistry	本体	P-173,H-049	量子ドットの量子閉じ込めと合成が P-173・H-049 の括弧の中にある。		
+T11511	OpenAlex	Dyeing and Modifying Textile Fibers	Materials Science / Polymers and Plastics	土台	H-035,H-041,H-045,P-175	染色は染料の共役と吸収・繊維の高分子・吸着の組み合わせ。		
+T11278	OpenAlex	Calcium Carbonate Crystallization and Inhibition	Materials Science / Biomaterials	土台	H-053,H-026,E-164,W-033,E-226	炭酸カルシウムの結晶化は溶解度積と核生成と成長と生体材料の組み合わせ。		
+T10097	OpenAlex	Luminescence Properties of Advanced Materials	Materials Science / Materials Chemistry	土台	H-109,H-050,E-159,H-046	蛍光体とアップコンバージョンは発光の光化学・分光・LED・配位子場の組み合わせ。		
+T13465	OpenAlex	Graphite, nuclear technology, radiation studies	Materials Science / Materials Chemistry	土台	P-290,E-163,H-053,P-104	原子炉用の黒鉛は原子力工学と照射による欠陥と固体化学の組み合わせ。		
+T12288	OpenAlex	Optimization and Search Problems	Mathematics / Theoretical Computer Science	欠け	K-025,K-024,K-028,K-010,S-002	競合比とオンラインアルゴリズム（オンラインのマッチング、秘書問題、予言者不等式）を受け持つ単元がない（grep で 0 件）。K-025 は貪欲法と償却解析、K-028 は下界と NP 完全性、K-150 は近似の困難さで、競合分析とオンラインの枠組みは扱えない。近似アルゴリズムも単元に独立していない。 ／反証：競合比と敵対者のモデル、ヤオの原理による下界は、償却解析（K-025）や NP 完全性の下界（K-028）、近似の困難さ（K-150）とは別の分析の枠組み。オンラインのマッチングと預言者不等式も組み合わせでは導けない（PE6_6 の判定も「薄い」）。判定役のとおり欠け。	オンラインアルゴリズム／競合比と競合分析（敵対者のモデル）、スキーレンタルとページング（LRU）、オンラインのスケジューリングと負荷分散、オンラインマッチングと双対フィッティング、秘書問題と預言者不等式、乱択とヤオの原理による下界／前提 K-025, K-011, S-002（K-024 を外し、ヤオの原理に要るゼロ和ゲームの K-011 を足す。近似アルゴリズムは別の欠けの候補でこの案には入れない）	残す
+T12404	OpenAlex	Mathematical Approximation and Integration	Mathematics / Numerical Analysis	本体	K-073,C-034,K-001,S-024	準モンテカルロ法と低食い違い列が K-073・C-034 の中身。		
+T13400	OpenAlex	Mathematical and Theoretical Analysis	Mathematics / Mathematical Physics	土台	L-029,D-024,D-025,D-007,D-020	中心は無限大・無限小の数体系（超準解析、非アルキメデス的な数）とコロンボー代数などの一般化関数という小さな研究群。移行原理は超積とロスの定理から立ち（coverage-fields-math の T-20 が超積を L-029 の受け持ちとしている）、一般化関数は D-024・D-025 で読め、固有の測り方は無い。グロスワン系の無限の計算体系は主流の数学の外で入れない。微局所解析（波面集合、擬微分作用素）は別の欠けの候補（0 件）。		土台へ
+T13030	OpenAlex	Survey Sampling and Estimation Techniques	Mathematics / Statistics and Probability	本体	S-057,S-031	標本調査の推定と無作為化の回答法が S-057 の中身。		
+T10968	OpenAlex	Statistical Distribution Estimation and Applications	Mathematics / Statistics and Probability	本体	S-021,S-018,S-019,S-033	最尤推定・順序統計量・適合度検定が S-018〜S-021・S-033 の中身。		
+T10304	OpenAlex	Geometric and Algebraic Topology	Mathematics / Geometry and Topology	本体	T-056,T-055,T-040,T-052,T-019	結び目・3 次元多様体・写像類群・フレアー理論が T-056・T-055・T-052 の中身。		
+T11545	OpenAlex	Advanced Banach Space Theory	Mathematics / Mathematical Physics	本体	D-062,D-063,D-067,D-069	バナッハ空間と有界作用素が D-062〜D-069 の中身。		
+T11871	OpenAlex	Advanced Statistical Methods and Models	Mathematics / Statistics and Probability	欠け	S-020,S-021,S-023,K-060,S-058	ロバスト統計（破綻点、影響関数、M 推定、ロバスト回帰）と回帰の診断（外れ値、影響点、多重共線性）を受け持つ単元がない（grep で 0 件）。S-020 は線形モデル、S-021 は尤度の漸近理論、K-060 は探索的なデータ解析で、汚染モデルのもとでの推定の理論は導けない。 ／反証：ロバスト統計（破綻点、影響関数、M 推定、ロバスト回帰）は 0 件。S-020 は線形モデル、S-021 は模型が正しいときの漸近理論で、汚染のもとでの推定量の理論は導けない。関数データは S-058 にあり、多重共線性の診断は線形モデル（S-020）側の話で入れず、残すのはロバスト統計の部分。	ロバスト統計／汚染モデルと破綻点、影響関数、M 推定量とフーバー損失、尺度のロバスト推定、ロバスト回帰（LTS・MM 推定）、データの深さ、外れ値と影響点の診断（てこ比・クックの距離）、模型の誤りに頑健な推論（サンドイッチ分散、不均一分散）／前提 S-020, S-021（S-033 を外す。VIF とリッジ回帰は S-020 と K-048 の側に任せて外す）	残す
+T11205	OpenAlex	Numerical methods in inverse problems	Mathematics / Mathematical Physics	本体	P-141,M-015,K-003	不適切問題と正則化が P-141（正則化・最尤）と M-015（特異値分解）の中身。		
+T11517	OpenAlex	Advanced optical system design	Physics and Astronomy / Atomic and Molecular Physics, and Optics	欠け	P-023,P-028,P-015,E-165	収差理論・光線追跡・レンズ設計・自由曲面・非結像光学を受け持つ単元がない。P-023 は薄いレンズの像と分解能、P-028 はビームとコヒーレンス、P-015 は変分法のフェルマーの原理、E-165 は電子顕微鏡の収差補正だけで、光学系の設計と評価は導けない。 ／反証：P-023 は薄いレンズの像と分解能、P-028 はビームとコヒーレンス、P-233 は望遠鏡の光学の一言、E-165 は電子顕微鏡の収差補正の一言。ザイデル収差と波面収差、光線追跡、像質の評価（MTF）、最適化による設計、自由曲面と非結像光学は名指しされない。	光学設計／ザイデル収差と波面収差、光線追跡とスポット図、MTF と像質の評価、設計の最適化（減衰最小二乗法）、非球面と自由曲面、非結像光学（エテンデュ保存）、回折光学素子／P-023,P-024,P-028,P-015,K-003（MTF と回折光学素子に P-024、最適化に K-003 を足した）	残す
+T10490	OpenAlex	Orbital Angular Momentum in Optics	Physics and Astronomy / Atomic and Molecular Physics, and Optics	本体	P-300	光の軌道角運動量・光渦・光ピンセットが P-300 の中身。		
+T11733	OpenAlex	X-ray Spectroscopy and Fluorescence Analysis	Physics and Astronomy / Radiation	土台	P-243,P-079,P-089,H-050	X 線吸収と蛍光は光の吸収の遷移確率（P-079）と内殻の原子スペクトル（P-089）と放射光（P-243）の組み合わせ。XAFS の解析が独立の単元でないのは弱い点。		
+T10425	OpenAlex	Cold Atom Physics and Bose-Einstein Condensates	Physics and Astronomy / Atomic and Molecular Physics, and Optics	本体	P-091,P-302,P-051	冷却原子とボース＝アインシュタイン凝縮が P-091・P-302・P-051 の中身。		
+T10642	OpenAlex	Atmospheric-Pressure Plasma Applications	Physics and Astronomy / Atomic and Molecular Physics, and Optics	本体	P-281	大気圧プラズマと医療への応用が P-281 の括弧の中にある。		
+T11050	OpenAlex	Photorefractive and Nonlinear Optics	Physics and Astronomy / Atomic and Molecular Physics, and Optics	土台	P-234,P-027,P-024,P-035	光屈折効果とニオブ酸リチウムは非線形光学（位相整合）と結晶光学と物質中の電磁場の組み合わせ。		
+T12153	OpenAlex	Advanced Optical Sensing Technologies	Physics and Astronomy / Instrumentation	土台	E-161,E-084,W-122,P-118	光子計数の測距は撮像素子の雑音・レーダ・レーザ測量・計数統計の組み合わせ。		
+T11449	OpenAlex	Mechanical and Optical Resonators	Physics and Astronomy / Atomic and Molecular Physics, and Optics	本体	P-245,P-242	光機械と機械共振器の量子測定が P-245 の中身。		
+T10295	OpenAlex	Plasmonic and Surface Plasmon Research	Physics and Astronomy / Atomic and Molecular Physics, and Optics	本体	P-174,P-098	表面プラズモンとナノ光学が P-174・P-098 の中身。		
+T10025	OpenAlex	Black Holes and Theoretical Physics	Physics and Astronomy / Nuclear and High Energy Physics	本体	P-224,P-063,P-297,P-236	AdS/CFT・ブラックホールの熱力学・弦理論が P-224・P-297 の中身。		
+T11176	OpenAlex	Radiation Therapy and Dosimetry	Physics and Astronomy / Radiation	欠け（既知）	P-104,E-223,P-290,I-065	放射線治療の物理と線量（既知の欠け）。陽子線・重粒子線の線量と生物学的効果比。		
+T11996	OpenAlex	Random lasers and scattering media	Physics and Astronomy / Atomic and Molecular Physics, and Optics	土台	P-028,P-131,P-301,E-224	ランダム媒質の光とゴーストイメージングはコヒーレンス・放射伝達・弱局在・圧縮センシングの組み合わせ。		
+T10463	OpenAlex	Pulsars and Gravitational Waves Research	Physics and Astronomy / Astronomy and Astrophysics	本体	P-244,P-167,P-062	重力波・パルサー・連星の合体が P-244・P-167・P-062 の中身。		
+T13396	OpenAlex	Agriculture and Rural Development Research	Agricultural and Biological Sciences / Ecology, Evolution, Behavior and Systematics	土台	F-086,V-010,V-011	家畜の飼養システムの持続性と小農の経営は、農業経済、持続可能な農業、家畜の飼養の組み合わせで読める		
+T12359	OpenAlex	Fern and Epiphyte Biology	Agricultural and Biological Sciences / Ecology, Evolution, Behavior and Systematics	土台	B-149,B-134,B-056	シダと着生植物の系統・適応放散・群集は、陸上植物の多様性、系統樹の推定、群集生態学で読める		
+T13008	OpenAlex	Agricultural Practices and Plant Genetics	Agricultural and Biological Sciences / Plant Science	土台	V-006,V-004,V-005	オクラの遺伝率・組み合わせ能力・雑種強勢・経路分析は、量的遺伝と育種の理論と作物の生理で読める		
+T12447	OpenAlex	Spider Taxonomy and Behavior Studies	Agricultural and Biological Sciences / Ecology, Evolution, Behavior and Systematics	土台	B-131,B-185,B-134	クモの形態と DNA バーコードによる分類と系統は、統合分類学と系統樹の推定で読める		
+T13010	OpenAlex	Agriculture and Agroindustry Studies	Agricultural and Biological Sciences / General Agricultural and Biological Sciences	土台	F-086,F-012,F-043	農産物の流通の利ざやと価値連鎖は、農業経済、ミクロ経済、経営戦略の組み合わせで読める		
+T13294	OpenAlex	Livestock and Poultry Management	Agricultural and Biological Sciences / Animal Science and Zoology	土台	V-004,V-006,V-011,F-086	鶏の家畜化と在来種の遺伝的多様性、農村の養鶏は、栽培化と育種と家畜の飼養と農業経済で読める		
+T12721	OpenAlex	Moringa oleifera research and applications	Agricultural and Biological Sciences / Plant Science	土台	H-105,I-001,I-052	モリンガの成分の抽出と抗酸化・抗炎症の試験は、天然物化学と薬理と栄養で読める（効果の確かめは I-040 の水準が要る）		
+T11404	OpenAlex	Irrigation Practices and Water Management	Agricultural and Biological Sciences / Soil Science	土台	V-005,V-008,V-010	不足灌漑と水の利用効率は、収量のなりたち、土の水と灌漑、気候と収量の予測で読める		
+T14272	OpenAlex	Agricultural and Food Production Studies	Agricultural and Biological Sciences / Food Science	土台	F-086,I-052,I-036	食料収支と栄養と農村開発は、農業経済、栄養の科学、世界の健康で読める		
+T13678	OpenAlex	Agricultural Research and Practices	Agricultural and Biological Sciences / General Agricultural and Biological Sciences	土台	F-086,V-010,Y-015	国際農業研究と小農の適応は、農業経済、持続可能な農業と気候、政策の評価で読める		
+T10141	OpenAlex	Probiotics and Fermented Foods	Agricultural and Biological Sciences / Food Science	土台	I-032,B-043,V-016	乳酸菌・プロバイオティクス・発酵食品は、宿主とマイクロバイオーム、微生物と発酵、食品の科学で読める		
+T11546	OpenAlex	Plant Physiology and Cultivation Studies	Agricultural and Biological Sciences / Plant Science	土台	V-005,B-038,B-151	果樹の休眠・低温要求・台木・糖の転流は、作物の生理と植物の生理とホルモンの信号で読める（園芸の単元はないが固有の模型は薄い）		
+T12606	OpenAlex	Diptera species taxonomy and behavior	Agricultural and Biological Sciences / Ecology, Evolution, Behavior and Systematics	土台	B-132,B-185,B-134	ハエ目の系統と分類と形態は、昆虫の生物学、統合分類学、系統樹の推定で読める		
+T12968	OpenAlex	Research on scale insects	Agricultural and Biological Sciences / Insect Science	土台	V-009,B-132,B-185	カイガラムシの防除（フェロモン・天敵）と分類は、病害虫の防除、昆虫の生物学、統合分類学で読める		
+T12310	OpenAlex	Crop Yield and Soil Fertility	Agricultural and Biological Sciences / Agronomy and Crop Science	土台	V-005,V-006,V-008	トウモロコシの収量・窒素・密度・倒伏・品種は、収量のなりたち、育種の理論、土と施肥で読める		
+T12033	OpenAlex	Agricultural Economics and Policy	Agricultural and Biological Sciences / General Agricultural and Biological Sciences	本体	F-086,F-061,Y-015	農業の補助と貿易の政策の効果、多面的機能（外部性）、政策の評価が F-086 F-061 Y-015 の項目にある		
+T13767	OpenAlex	Leech Biology and Applications	Agricultural and Biological Sciences / Animal Science and Zoology	土台	B-131,B-134,I-022	ヒルの系統と共生と唾液の抗凝固物質は、動物の体の設計の系統、止血と凝固で読める（ヒル療法の効果の確かめは I-040）		
+T10367	OpenAlex	Agricultural Innovations and Practices	Agricultural and Biological Sciences / General Agricultural and Biological Sciences	本体	F-086,F-012	新しい技術の採用の実証と農家の意思決定が F-086 の項目にある		
+T11641	OpenAlex	Insect and Pesticide Research	Agricultural and Biological Sciences / Insect Science	土台	B-132,V-009,I-027,B-148	ミツバチの病気（ダニ・ウイルス）、農薬の曝露、腸内細菌は、昆虫の生物学、病害虫、毒性学、微生物の生態で読める		
+T12713	OpenAlex	Forest Ecology and Biodiversity Studies	Agricultural and Biological Sciences / Insect Science	土台	B-103,B-056,B-132,B-147	枯れ木の昆虫と菌類は、森林の生態と管理、群集生態学、昆虫、菌類で読める		
+T10332	OpenAlex	Amphibian and Reptile Biology	Agricultural and Biological Sciences / Ecology, Evolution, Behavior and Systematics	土台	B-133,B-093,B-182,B-147	両生類・爬虫類の減少とカエルツボカビ病は、脊椎動物の進化、保全、絶滅の危険の評価、菌類の病原で読める		
+T12896	OpenAlex	Sustainable Agricultural Systems Analysis	Agricultural and Biological Sciences / Agronomy and Crop Science	土台	V-010,B-091,Y-015	農場の持続性の指標による評価は、持続可能な農業、土地と水の持続可能性、政策の評価の指標で読める		
+T12858	OpenAlex	Plant Disease Resistance and Genetics	Agricultural and Biological Sciences / Plant Science	土台	B-152,V-009,V-007	イネいもち病・根こぶ病などの抵抗性の遺伝と流行は、植物の免疫、病害虫の防除、ゲノム育種で読める		
+T11214	OpenAlex	Human-Animal Interaction Studies	Agricultural and Biological Sciences / Animal Science and Zoology	土台	B-160,V-004,V-012,Q-014	イヌの家畜化のゲノムと動物介在の療法は、動物の認知、栽培化、動物の福祉、療法の効果の研究で読める		
+T13069	OpenAlex	Cocoa and Sweet Potato Agronomy	Agricultural and Biological Sciences / Horticulture	土台	V-005,V-010,B-103,V-004	カカオとサツマイモの栽培と混農林業は、作物の生理、持続可能な農業、森林、栽培化で読める		
+T11706	OpenAlex	Forensic Entomology and Diptera Studies	Agricultural and Biological Sciences / Insect Science	欠け（既知）	B-132,I-028	法科学（死後経過時間の推定、法医昆虫学）は既知の欠け。昆虫の発育は B-132 で読めるが推定の枠組みが無い		
+T10174	OpenAlex	Animal Behavior and Reproduction	Agricultural and Biological Sciences / Ecology, Evolution, Behavior and Systematics	本体	B-058,B-059	性選択・配偶者選び・生活史の進化は B-058 B-059 の主な項目		
+T14054	OpenAlex	Humic Substances and Bio-Organic Studies	Agricultural and Biological Sciences / Soil Science	土台	W-062,V-008,H-044	腐植物質の抽出と構造は、土壌と生体分子の化学で読める（シラジットの治療効果は検証が弱く I-040 の水準が要る）		
+T11339	OpenAlex	Metabolism, Diabetes, and Cancer	Biochemistry, Genetics and Molecular Biology / Molecular Biology	欠け（既知）	I-019,B-008,B-010	AMPK とインスリンのキナーゼの経路と GLUT4 は、細胞の信号伝達（既知の欠け）。代謝の統合 I-019 B-008 は受け持つ		
+T10123	OpenAlex	DNA Repair Mechanisms	Biochemistry, Genetics and Molecular Biology / Molecular Biology	欠け	B-186,B-009,B-032	近い単元は B-186（放射線による損傷の修復の経路だけ）と B-009 B-032（複製と組換えで修復の経路が無い）。塩基除去・ヌクレオチド除去・ミスマッチ・損傷乗り越えの修復と遺伝病が地図にない ／反証：B-186 は放射線による損傷の修復の経路だけ、B-009 B-032 は複製と組換えで、塩基除去・ヌクレオチド除去・ミスマッチ・損傷乗り越え・架橋の修復と遺伝病が無い。トポイソメラーゼは複製と超らせんの側なので案から外し（T11845 は土台へ）、題名にある DNA 損傷応答を足した。	DNA 修復／損傷の種類と原因（紫外線、活性酸素、アルキル化、鎖切断、鎖間架橋）、直接修復、塩基除去修復、ヌクレオチド除去修復と色素性乾皮症、ミスマッチ修復とリンチ症候群、二本鎖切断の修復（相同組換え、非相同末端結合）と BRCA、損傷乗り越え合成、鎖間架橋の修復とファンコニ貧血、DNA–タンパク質架橋の修復、DNA 損傷の検知と応答（ATM・ATR、p53。チェックポイントの制御は細胞周期の単元へ）、PARP 阻害薬の合成致死、ゲノム不安定性とがん／B-032, B-009, B-006	残す
+T10422	OpenAlex	Angiogenesis and VEGF in Cancer	Biochemistry, Genetics and Molecular Biology / Molecular Biology	欠け	I-023,I-021,I-050,I-014	近い単元は I-023（腫瘍の微小環境）と I-021（修復）と I-050（分子標的薬）で、血管の出芽・内皮と周細胞・血管の成熟と正常化の模型が中身として無い（VEGF の信号は既知の欠け） ／反証：I-023（腫瘍の微小環境）、I-021（修復）、I-050（分子標的薬）、I-014（血行力学）では、血管の出芽・内皮と周細胞・血管の成熟と正常化・低酸素への応答（HIF）の中身が無い。VEGF の信号は既知の欠けだが血管の側は別。案は妥当。	血管生物学／脈管形成と血管新生、内皮細胞と周細胞、出芽血管新生と先端細胞と茎細胞の選択、VEGF と受容体、低酸素による誘導（HIF）、血管の成熟と正常化、リンパ管新生、内皮のずり応力への応答、アッセイ（管形成、大動脈輪、マトリゲルプラグ）、抗血管新生療法の根拠／I-014, B-046, I-021	残す
+T10434	OpenAlex	Chromosomal and Genetic Variations	Biochemistry, Genetics and Molecular Biology / Genetics	土台	B-011,B-135,B-149,B-001	染色体数・倍数化・転移因子・核型の進化は、比較ゲノミクス、系統ゲノミクス、陸上植物の倍数化、ゲノムの構造で読める		
+T11845	OpenAlex	Cancer therapeutics and mechanisms	Biochemistry, Genetics and Molecular Biology / Molecular Biology	土台	B-009,B-032,B-001,I-001,I-050	トポイソメラーゼの機構は DNA 複製と染色体の超らせんの側（B-009, B-032, B-001）、毒の作用は酵素阻害（I-001）、抗がん薬（I-050）とキノロンの標的（I-029）で読める。修復の単元に足す理由が無い（超らせんの扱いが B-009 B-001 の括弧に明記されていない点は、修復の案でなくその側の補足）。		土台へ
+T10724	OpenAlex	Ion Transport and Channel Regulation	Biochemistry, Genetics and Molecular Biology / Molecular Biology	土台	B-031,I-016,B-052	水チャネル・Na/K ポンプの輸送は、膜の輸送、腎臓と体液の生理、イオンチャネルで読める		
+T11618	OpenAlex	Cholesterol and Lipid Metabolism	Biochemistry, Genetics and Molecular Biology / Biochemistry	土台	B-008,I-019,I-046	コレステロールの代謝とリポタンパク質は、脂質の代謝、代謝の統合、脂質異常症で読める		
+T12820	OpenAlex	Chromatin Remodeling and Cancer	Biochemistry, Genetics and Molecular Biology / Molecular Biology	欠け（既知）	B-044,I-023	SWI/SNF などのクロマチンの再編成とがんは、クロマチンとエピゲノム（既知の欠け）		
+T11591	OpenAlex	NF-κB Signaling Pathways	Biochemistry, Genetics and Molecular Biology / Cancer Research	欠け（既知）	I-021,I-005,I-023	NF-κB の活性化の経路は、細胞の信号伝達（既知の欠け）。炎症と免疫の側は I-021 I-005		
+T10268	OpenAlex	Developmental Biology and Gene Regulation	Biochemistry, Genetics and Molecular Biology / Molecular Biology	欠け（既知）	B-140,B-046,B-044	Notch の信号と細胞の運命は、細胞の信号伝達（既知の欠け）。発生の枠組みは B-140 B-046		
+T11916	OpenAlex	Legionella and Acanthamoeba research	Biochemistry, Genetics and Molecular Biology / Endocrinology	土台	I-028,B-043,B-145,E-219	レジオネラとアメーバの相互作用と給水系は、病原体の生物学、細菌、微生物の多様性、水処理で読める		
+T12505	OpenAlex	Peptidase Inhibition and Analysis	Biochemistry, Genetics and Molecular Biology / Biochemistry	土台	I-023,B-007,E-223,H-056	線維芽細胞活性化タンパク質と阻害薬と PET は、腫瘍の微小環境、酵素学、核医学、医薬品化学で読める		
+T13426	OpenAlex	Kruppel-like factors research	Biochemistry, Genetics and Molecular Biology / Molecular Biology	土台	B-044,I-023,B-054	KLF など転写因子による遺伝子の調節と細胞の分化は、発現の調節、がんの生物学、幹細胞で読める		
+T12910	OpenAlex	Eicosanoids and Hypertension Pharmacology	Biochemistry, Genetics and Molecular Biology / Biochemistry	土台	B-008,I-001,I-014,I-021	アラキドン酸の代謝物・シトクロム P450・可溶性エポキシド加水分解酵素は、脂質の代謝、薬理、循環、炎症で読める		
+T11124	OpenAlex	Protein purification and stability	Biochemistry, Genetics and Molecular Biology / Molecular Biology	土台	B-014,E-215,E-228,I-064	封入体・再折りたたみ・抗体の凝集・クロマトグラフィーによる精製は、凝集と品質管理、分離工学、培養の工学、製剤学で読める		
+T10379	OpenAlex	Cellular Mechanics and Interactions	Biochemistry, Genetics and Molecular Biology / Cell Biology	本体	B-005,B-010	細胞の力学・細胞骨格・機械信号の変換が B-005 B-010 の項目にある		
+T12576	OpenAlex	vaccines and immunoinformatics approaches	Biochemistry, Genetics and Molecular Biology / Molecular Biology	土台	I-005,I-031,K-117,K-118	エピトープと MHC 結合の予測とワクチン設計は、免疫学、ワクチン学、機械学習、計算分子生物学で読める		
+T10957	OpenAlex	Photodynamic Therapy Research Studies	Biochemistry, Genetics and Molecular Biology / Cancer Research	土台	H-109,I-020,I-050	光増感剤・一重項酸素・活性酸素による細胞死は、光化学、細胞の傷害、がんの臨床で読める		
+T12610	OpenAlex	RNA regulation and disease	Biochemistry, Genetics and Molecular Biology / Molecular Biology	欠け（既知）	B-009,I-005	ADAR による RNA 編集は、RNA の制御（既知の欠け）		
+T10725	OpenAlex	RNA Interference and Gene Delivery	Biochemistry, Genetics and Molecular Biology / Molecular Biology	土台	B-053,E-168,H-059	siRNA の送達（脂質ナノ粒子・非ウイルスベクター）と核酸医薬は、遺伝子工学、薬物送達、新しい創薬で読める（RNA 干渉の機構そのものは RNA の制御で既知の欠け）		
+T12946	OpenAlex	Fractal and DNA sequence analysis	Biochemistry, Genetics and Molecular Biology / Molecular Biology	土台	K-105,K-106,E-073	DNA 配列の信号処理（カオスゲーム表現・ウェーブレット・周期性）は、配列解析、ゲノム、フーリエ解析で読める		
+T11908	OpenAlex	Protein Interaction Studies and Fluorescence Analysis	Biochemistry, Genetics and Molecular Biology / Molecular Biology	土台	B-003,B-013,H-109,I-002	血清アルブミンへの結合定数と蛍光の消光は、溶液中の高分子の結合、熱力学、光化学、薬物動態で読める		
+T12198	OpenAlex	Oral health in cancer treatment	Dentistry / General Dentistry	土台	I-062,I-050,B-186,I-021	口腔粘膜炎と放射線・化学療法の合併症は、口腔の病気、がんの臨床、放射線生物学、炎症と修復で読める		
+T11570	OpenAlex	Periodontal Regeneration and Treatments	Dentistry / Periodontics	土台	I-062,I-021,B-054	歯周組織の再生と血小板由来の成長因子は、口腔の病気、炎症と修復、幹細胞と再生医療で読める		
+T11919	OpenAlex	dental development and anomalies	Dentistry / General Dentistry	土台	I-061,B-140,B-046,I-013	歯の発生と異常は、口腔の構造、発生の遺伝学、発生、先天異常で読める		
+T11497	OpenAlex	Interprofessional Education and Collaboration	Health Professions / General Health Professions	入れない	Q-030	職種間の連携と教育は職業の実務と教育で知の体系でない。測れるチームの働きは Q-030		
+T13108	OpenAlex	Therapeutic Uses of Natural Elements	Health Professions / Complementary and Manual Therapy	入れない	H-043,I-040	温泉・泥・粘土の療法は代替医療で効果が検証で支持されない。成分と抗菌性の測定は H-043 と I-040 の枠で		
+T14407	OpenAlex	Athletic Training and Education	Health Professions / Physical Therapy, Sports Therapy and Rehabilitation	入れない	Q-030	アスレティックトレーナーの職業の社会化と教育は職業の実務。燃え尽きと満足の測定は Q-030		
+T11430	OpenAlex	Disaster Response and Management	Health Professions / Emergency Medical Services	土台	I-051,I-042,I-034,W-064	災害医療・大量傷病者・資源配分は、救急と集中治療、感染症の対策、資源配分の倫理、自然災害で読める		
+T14463	OpenAlex	Diverse Scientific Research Studies	Health Professions / General Health Professions	土台	I-037,I-031,I-042,I-028	新型コロナの疫学・治療・ワクチン・社会の負担は、感染症の数理モデル、ワクチン学、監視、病原体で読める		
+T13896	OpenAlex	Health Services Management and Policy	Health Professions / General Health Professions	入れない	F-079,I-036	NHS の改革と病院の運営は制度と政策の是非の議論が中心。測れる部分は医療経済と世界の健康		
+T11020	OpenAlex	Immune Cell Function and Interaction	Immunology and Microbiology / Immunology	土台	I-005,B-037,I-054	NK 細胞の受容体・活性化・細胞療法は、免疫学、免疫、細胞治療で読める		
+T11136	OpenAlex	Enzyme-mediated dye degradation	Immunology and Microbiology / Applied Microbiology and Biotechnology	土台	B-007,B-147,E-219	ラッカーゼ・リグニン分解酵素による染料の脱色は、酵素学、菌類、水処理で読める		
+T11086	OpenAlex	Parasitic Infections and Diagnostics	Immunology and Microbiology / Parasitology	欠け（既知）	I-028,I-042	ジアルジア・クリプトスポリジウムなど原虫の感染は、寄生虫と媒介生物（既知の欠け）		
+T11346	OpenAlex	Mast cells and histamine	Immunology and Microbiology / Immunology	土台	I-030,I-005,I-021	肥満細胞とヒスタミンは、アレルギー、免疫学、炎症で読める		
+T10695	OpenAlex	Parasites and Host Interactions	Immunology and Microbiology / Parasitology	欠け（既知）	I-028,I-042,I-036	住血吸虫・土壌伝播の蠕虫の疫学と宿主の応答は、寄生虫と媒介生物（既知の欠け）		
+T11780	OpenAlex	Rabies epidemiology and control	Immunology and Microbiology / Virology	土台	V-015,I-037,I-031,B-146	狂犬病の疫学・コウモリの宿主・曝露後の予防は、人獣共通感染症、感染症の数理、ワクチン学、ウイルスで読める		
+T14020	OpenAlex	General Medicine and Therapeutics	Medicine / Internal Medicine	土台	I-001,I-026,I-004	薬理・解剖・臨床の雑多な集まりで、薬理、器官別の薬理、人体の生理で読める		
+T13313	OpenAlex	Dupuytren's Contracture and Treatments	Medicine / Rheumatology	土台	I-021,I-048,I-024	手のひらの腱膜の線維化は、炎症と修復の線維化、骨と関節の病気、遺伝で読める		
+T11885	OpenAlex	MRI in cancer diagnosis	Medicine / Radiology, Nuclear Medicine and Imaging	土台	E-223,I-002,I-043,I-050	乳房 MRI の拡散強調と造影の動態は、医用画像の物理、コンパートメントモデル、検査の読み方、がんの臨床で読める		
+T12328	OpenAlex	Autoimmune and Inflammatory Disorders	Medicine / Dermatology	土台	I-048,I-047,I-030,I-021	好中球性皮膚症と炎症性腸疾患は、皮膚の病気、消化管の病気、臨床免疫、炎症で読める		
+T12578	OpenAlex	Diagnosis and treatment of tuberculosis	Medicine / Infectious Diseases	土台	I-028,I-029,I-047,I-043	腹部結核の診断と治療は、病原体、抗微生物薬、消化管の病気、検査の読み方で読める		
+T14275	OpenAlex	Historical Medical Research and Treatments	Medicine / Pharmacology (medical)	入れない	I-029,H-056	エールリヒの業績とサルバルサンの歴史は歴史。測れる抗菌薬の作用と創薬は I-029 H-056		
+T10285	OpenAlex	Venous Thromboembolism Diagnosis and Management	Medicine / Internal Medicine	土台	I-022,I-001,I-044,I-040	静脈血栓塞栓症の予防・診断・抗凝固は、血栓、薬理、診断の推論、臨床研究の統計で読める		
+T12731	OpenAlex	Hidradenitis Suppurativa and Treatments	Medicine / Dermatology	土台	I-048,I-063,I-030	化膿性汗腺炎は、皮膚の病気、皮膚の生理、臨床免疫で読める		
+T12183	OpenAlex	Teratomas and Epidermoid Cysts	Medicine / Surgery	土台	I-013,I-023,I-049	奇形腫と胎児・新生児の腫瘍と胎児手術は、ヒトの発生、がんの生物学、一生の医学で読める		
+T11364	OpenAlex	Cholangiocarcinoma and Gallbladder Cancer Studies	Medicine / Surgery	土台	I-023,I-047,I-050,I-025	胆管がん・胆のうがんの診断と治療は、がんの生物学、肝臓の病気、がんの臨床、分子病理で読める		
+T11658	OpenAlex	Esophageal and GI Pathology	Medicine / Surgery	土台	I-047,I-021,E-226,I-012	食道の穿孔・狭窄とステントは、消化管の病気、修復、生体材料、解剖で読める（手技そのものは実務）		
+T10291	OpenAlex	Dialysis and Renal Disease Management	Medicine / Nephrology	土台	I-016,I-047,I-002,E-215	透析の量・低血圧・尿毒素・栄養は、腎臓の生理、腎臓の病気、薬物動態の速度論、膜分離で読める（機器の工学は T10675 の案）		
+T10870	OpenAlex	Interstitial Lung Diseases and Idiopathic Pulmonary Fibrosis	Medicine / Pulmonary and Respiratory Medicine	土台	I-015,I-021,I-045	特発性肺線維症は、呼吸の生理、炎症と線維化、循環と呼吸の病気で読める		
+T10118	OpenAlex	SARS-CoV-2 and COVID-19 Research	Medicine / Infectious Diseases	土台	B-146,I-031,I-037,I-005	SARS-CoV-2 のスパイクと抗体と変異は、ウイルスの生物学、ワクチン学、感染症の数理、免疫学で読める		
+T13199	OpenAlex	Digestive system and related health	Medicine / Gastroenterology	土台	B-188,I-017,B-042	乳糖分解の持続の遺伝的な適応は、ヒトの適応と選択の検出、消化の生理、進化のしくみで読める		
+T10675	OpenAlex	Mechanical Circulatory Support Devices	Medicine / Cardiology and Cardiovascular Medicine	土台	E-024,E-215,I-014,I-022,E-226	機器で切った項目で固有の理論が無い。血液ポンプの圧–流量特性と運転点は E-024、人工肺と透析器の物質移動は E-215 E-213 と I-015、補助の血行力学は I-014、溶血と血栓は E-226 I-022、ショックと人工呼吸は I-051 で読める（判定役の言う I-051 の「循環の補助」は括弧に無いが、不要）。		土台へ
+T12193	OpenAlex	Trigeminal Neuralgia and Treatments	Medicine / Clinical Neurology	土台	B-101,B-063,I-026	三叉神経痛と神経血管の圧迫は、神経疾患の診断、神経解剖、器官別の薬理で読める（痛みの科学は既知の欠け）		
+T11531	OpenAlex	Healthcare Systems and Reforms	Medicine / Public Health, Environmental and Occupational Health	土台	F-079,I-036	医療の財源・自己負担・皆保険は、医療経済と世界の健康で読める		
+T12068	OpenAlex	Neonatal Health and Biochemistry	Medicine / Pediatrics, Perinatology and Child Health	土台	I-017,I-024,I-049,H-109	新生児黄疸のビリルビンの代謝・G6PD 欠損・光療法は、肝臓と胆汁、遺伝病、一生の医学、光化学で読める		
+T11752	OpenAlex	Cancer Treatment and Pharmacology	Medicine / Oncology	土台	I-027,I-026,I-050,B-101	抗がん剤による末梢神経障害は、毒性学、薬理、がんの臨床、神経疾患で読める		
+T11700	OpenAlex	Hemodynamic Monitoring and Therapy	Medicine / Surgery	土台	I-014,I-051,E-225	輸液の反応性と循環の監視は、循環の生理、救急と集中治療、生体信号の処理で読める		
+T12402	OpenAlex	Travel-related health issues	Medicine / Public Health, Environmental and Occupational Health	土台	I-042,I-028,I-031	旅行者の下痢と感染症は、感染症の監視、病原体、ワクチン学で読める		
+T10137	OpenAlex	Multiple Sclerosis Research Studies	Medicine / Clinical Neurology	土台	I-030,B-100,B-101,I-005	多発性硬化症は、臨床免疫、神経組織学、神経疾患の診断、免疫学で読める		
+T13505	OpenAlex	Apelin-related biomedical research	Medicine / Pharmacology (medical)	土台	I-001,I-014,I-019	アペリンと APJ 受容体の循環と代謝の働きは、薬理（受容体）、循環の生理、代謝の統合で読める（G タンパク質の信号は既知の欠け）		
+T12523	OpenAlex	Nasolacrimal Duct Obstruction Treatments	Medicine / Ophthalmology	土台	I-059,I-012,I-040	鼻涙管閉塞と涙嚢鼻腔吻合の成績は、眼の病気、解剖、臨床研究の統計で読める（手技は実務）		
+T13314	OpenAlex	Lymphadenopathy Diagnosis and Analysis	Medicine / Pathology and Forensic Medicine	土台	I-025,I-005,I-030	リンパ節腫脹と菊池病は、分子病理、免疫学、臨床免疫で読める		
+T13192	OpenAlex	Forensic Fingerprint Detection Methods	Medicine / Pathology and Forensic Medicine	欠け（既知）	H-042,H-041	指紋の検出と犯罪現場の証拠は、法科学（既知の欠け）		
+T10902	OpenAlex	Complementary and Alternative Medicine Studies	Medicine / Complementary and alternative medicine	入れない	I-027,I-001,I-040	ホメオパシーなど補完代替医療は効果が検証で支持されない。薬草の有害作用と相互作用の測定は I-027 I-001		
+T11518	OpenAlex	Cervical and Thoracic Myelopathy	Medicine / Surgery	土台	I-048,I-012,B-101,I-040	頸椎の手術と脊髄症は、骨と関節の病気、解剖、神経疾患の診断、臨床研究の統計で読める		
+T12871	OpenAlex	Healthcare Quality and Management	Medicine / Public Health, Environmental and Occupational Health	入れない	Q-030,I-040	病院の認証と質の管理は組織の運営と職業の実務。測れる成果の評価は臨床研究の統計 I-040 と Q-030		
+T12992	OpenAlex	Metastasis and carcinoma case studies	Medicine / Pulmonary and Respiratory Medicine	土台	I-023,I-025,I-050	まれな転移の症例と免疫染色は、がんの生物学、分子病理、がんの臨床で読める		
+T10727	OpenAlex	Ultrasound Imaging and Elastography	Medicine / Radiology, Nuclear Medicine and Imaging	土台	E-223,P-190,W-021,I-043	超音波のせん断波エラストグラフィは、医用画像の物理、弾性体、弾性体の波、検査の読み方で読める		
+T12453	OpenAlex	Infectious Aortic and Vascular Conditions	Medicine / Surgery	土台	I-028,I-029,I-014,E-226	血管の人工物の感染とマイコティック動脈瘤は、病原体、抗微生物薬、循環の生理、生体材料で読める		
+T12369	OpenAlex	Pneumocystis jirovecii pneumonia detection and treatment	Medicine / Epidemiology	土台	I-028,B-147,I-030	ニューモシスチス肺炎は、病原体（真菌）、菌類、免疫不全で読める		
+T11194	OpenAlex	Ocular Diseases and Behçet’s Syndrome	Medicine / Ophthalmology	土台	I-059,I-030,I-021	ぶどう膜炎とベーチェット病は、眼の病気、臨床免疫、炎症で読める		
+T10618	OpenAlex	Aortic Disease and Treatment Approaches	Medicine / Cardiology and Cardiovascular Medicine	土台	I-045,I-014,I-012	大動脈解離と動脈瘤は、循環の病気、血行力学、解剖で読める		
+T12096	OpenAlex	Ectopic Pregnancy Diagnosis and Management	Medicine / Obstetrics and Gynecology	土台	I-018,I-049,I-044	子宮外妊娠の診断と治療は、生殖の生理、一生の医学、診断の推論で読める		
+T12226	OpenAlex	Neuroblastoma Research and Treatments	Medicine / Oncology	土台	I-023,I-050,I-053,I-024	神経芽腫の MYCN 増幅・リスク分類・免疫療法は、がんの生物学、がんの臨床、ゲノム医療、遺伝病で読める		
+T10997	OpenAlex	Ocular Surface and Contact Lens	Medicine / Ophthalmology	土台	I-059,I-056,I-021	ドライアイと涙液は、眼の病気、視覚の生理（眼の光学）、炎症で読める		
+T10867	OpenAlex	Intensive Care Unit Cognitive Disorders	Medicine / Critical Care and Intensive Care Medicine	土台	I-051,Q-027,B-065	集中治療室のせん妄は、救急と集中治療、神経心理学、睡眠と覚醒で読める		
+T10745	OpenAlex	Heart Rate Variability and Autonomic Control	Medicine / Cardiology and Cardiovascular Medicine	土台	E-225,I-014,B-035	心拍変動と自律神経と圧受容体反射は、生体信号の処理（心拍変動）、循環の生理、恒常性で読める		
+T10697	OpenAlex	Vasculitis and related conditions	Medicine / Rheumatology	土台	I-030,I-021,I-045	血管炎は、臨床免疫、炎症、循環の病気で読める		
+T10854	OpenAlex	Bipolar Disorder and Treatment	Medicine / Psychiatry and Mental health	土台	Q-029,B-068,I-026	双極症は、精神疾患の各論、神経遺伝学と脳の病気、器官別の薬理で読める		
+T13147	OpenAlex	Ethics and bioethics in healthcare	Medicine / Public Health, Environmental and Occupational Health	入れない	I-034	医療倫理・安楽死・患者の自律は規範の判断。測れる原則と研究倫理の歴史は I-034		
+T11991	OpenAlex	Soft tissue tumor case studies	Medicine / Oncology	土台	I-023,I-025,I-050	線維性の腫瘍の遺伝子の融合と病理は、がんの生物学、分子病理、がんの臨床で読める		
+T11824	OpenAlex	Injury Epidemiology and Prevention	Medicine / Public Health, Environmental and Occupational Health	土台	I-035,I-036,I-041,I-033	子どもの外傷・溺水・ヘルメットの効果は、疫学研究のデザイン、世界の健康、環境と労働の健康、病気を数えるで読める		
+T12769	OpenAlex	Stoma care and complications	Medicine / Surgery	土台	I-047,I-063,Q-018	ストーマの合併症と生活の質は、消化管の病気、皮膚の生理、健康の行動の心理学で読める		
+T10961	OpenAlex	Hernia repair and management	Medicine / Surgery	土台	I-012,I-021,E-226,I-040	ヘルニア修復のメッシュと再発は、解剖、修復、生体材料、臨床研究の統計で読める（手技は実務）		
+T10510	OpenAlex	Stroke Rehabilitation and Recovery	Medicine / Rehabilitation	土台	Q-025,Q-027,B-064,E-169	脳卒中のあとの運動の回復・ロボット・拘束誘導療法は、運動の制御と学習、神経心理学、可塑性、神経インターフェースで読める		
+T11438	OpenAlex	Retinal Imaging and Analysis	Medicine / Radiology, Nuclear Medicine and Imaging	土台	I-059,K-082,I-055,K-117	眼底画像の血管の分割と網膜症の深層学習は、眼の病気、画像の CNN、医療の AI で読める		
+T11681	OpenAlex	Nosocomial Infections in ICU	Medicine / Critical Care and Intensive Care Medicine	土台	I-028,I-029,I-051,I-032	人工呼吸器関連肺炎と予防は、病原体、抗微生物薬、救急と集中治療、マイクロバイオームで読める		
+T13381	OpenAlex	Heart rate and cardiovascular health	Medicine / Cardiology and Cardiovascular Medicine	土台	I-014,I-001,I-045	安静時心拍数とイバブラジン（If 阻害）は、循環の生理、薬理、循環の病気で読める		
+T12438	OpenAlex	Urticaria and Related Conditions	Medicine / Dermatology	土台	I-030,I-005,I-026	蕁麻疹とオマリズマブは、臨床免疫、免疫学、器官別の薬理で読める		
+T12930	OpenAlex	Biomedical and Chemical Research	Medicine / Physiology (medical)	土台	I-004,B-035,I-014	生理学の教科書的な雑多な集まりで、人体の生理学、恒常性、循環の生理で読める		
+T11610	OpenAlex	Food Security and Health in Diverse Populations	Medicine / Public Health, Environmental and Occupational Health	土台	I-036,I-052,I-035	食料の不安定と健康は、世界の健康の社会的決定要因、栄養の科学、疫学研究のデザインで読める		
+T13123	OpenAlex	Advances in Oncology and Radiotherapy	Medicine / Radiology, Nuclear Medicine and Imaging	土台	I-036,F-079,B-186	放射線治療の普及と人材と設備の分析は、世界の健康、医療経済、放射線生物学で読める（線量の物理は既知の欠け）		
+T12747	OpenAlex	Moyamoya disease diagnosis and treatment	Medicine / Clinical Neurology	土台	B-101,I-045,I-024	もやもや病と RNF213 と血行再建は、神経疾患の診断、循環の病気、遺伝病で読める		
+T11207	OpenAlex	Alcohol Consumption and Health Effects	Medicine / Pathology and Forensic Medicine	土台	I-017,I-047,I-027,I-035	アルコールの代謝と肝障害は、肝臓の代謝と解毒、肝臓の病気、毒性学、疫学研究のデザインで読める		
+T11084	OpenAlex	Workplace Health and Well-being	Medicine / Public Health, Environmental and Occupational Health	土台	I-041,Q-018,Q-030,I-035	職場のストレスと健康は、環境と労働の健康、健康の行動の心理学、産業・組織心理学、疫学研究のデザインで読める		
+T11629	OpenAlex	Birth, Development, and Health	Medicine / Pediatrics, Perinatology and Child Health	土台	I-049,I-013,I-035,I-019	胎児期の環境と成人の病気（DOHaD）は、一生の医学、ヒトの発生、疫学研究のデザイン、代謝の統合で読める（エピゲノムは既知の欠け）		
+T11553	OpenAlex	Acne and Rosacea Treatments and Effects	Medicine / Dermatology	土台	I-063,I-029,I-028	ざ瘡と酒さは、皮膚の生理、抗微生物薬と耐性、病原体で読める		
+T14043	OpenAlex	Historical and modern epidemiology studies	Medicine / Epidemiology	土台	I-035,I-036	疫学の歴史とラテンアメリカの社会医学は、疫学研究のデザインと世界の健康で読める（歴史の叙述そのものは範囲外）		
+T12342	OpenAlex	Vascular anomalies and interventions	Medicine / Surgery	土台	I-012,I-013,I-014	静脈の先天異常と血管の圧迫症候群は、解剖、ヒトの発生、循環の生理で読める		
+T13544	OpenAlex	Women's cancer prevention and management	Medicine / Public Health, Environmental and Occupational Health	土台	I-038,I-023,Q-018,I-031	子宮頸がんと乳がんの検診と予防は、スクリーニングと予防、がんの生物学、健康の行動の心理学、ワクチン学で読める		
+T11785	OpenAlex	Nausea and vomiting management	Medicine / Surgery	土台	I-026,I-001,I-050	術後と化学療法の悪心・嘔吐の制吐薬は、器官別の薬理、薬理、がんの臨床で読める（鍼は代替医療で範囲外）		
+T13206	OpenAlex	Neonatal skin health care	Medicine / Pediatrics, Perinatology and Child Health	土台	I-063,I-049,I-028	新生児の皮膚のバリアとおむつ皮膚炎は、皮膚の生理、一生の医学、病原体で読める		
+T10839	OpenAlex	Pancreatic function and diabetes	Medicine / Endocrinology, Diabetes and Metabolism	土台	I-019,I-046,B-035,B-054	膵島の β 細胞とインスリンの分泌・移植・再生は、代謝の統合、糖尿病、恒常性、幹細胞で読める		
+T13252	OpenAlex	Sex and Gender in Healthcare	Medicine / Public Health, Environmental and Occupational Health	土台	I-035,I-040,I-039	医学研究の性差と性の偏りは、疫学研究のデザイン、臨床研究の統計、交絡と偏りで読める		
+T10129	OpenAlex	Glioma Diagnosis and Treatment	Medicine / Oncology	土台	I-023,I-050,I-053,I-025	神経膠腫・髄芽腫の遺伝子と治療は、がんの生物学、がんの臨床、ゲノム医療、分子病理で読める		
+T10950	OpenAlex	Acute Lymphoblastic Leukemia research	Medicine / Hematology	土台	I-023,I-022,I-050,I-053	小児の急性リンパ性白血病は、がんの生物学、造血、がんの臨床、薬理ゲノミクスで読める		
+T10394	OpenAlex	Lipoproteins and Cardiovascular Health	Medicine / Cardiology and Cardiovascular Medicine	土台	I-001,I-046,I-045,I-040	スタチンと LDL コレステロールの低下の効果は、薬理、脂質異常症、循環の病気、メタ分析で読める		
+T11909	OpenAlex	Histiocytic Disorders and Treatments	Medicine / Hematology	土台	I-023,I-025,I-022	組織球症は、がんの生物学、分子病理、造血で読める		
+T12849	OpenAlex	Parvovirus B19 Infection Studies	Medicine / Infectious Diseases	土台	I-028,B-146,I-013,I-022	パルボウイルス B19 は、病原体、ウイルス、胎児の病気、貧血で読める		
+T10336	OpenAlex	Cancer Cells and Metastasis	Medicine / Oncology	土台	I-023,B-054,B-046	がん幹細胞・上皮間葉転換・休眠は、がんの生物学、幹細胞、発生で読める		
+T10365	OpenAlex	Gastrointestinal motility and disorders	Medicine / Gastroenterology	土台	I-017,I-047,I-032	過敏性腸症候群と消化管の運動は、消化管の生理、消化管の病気、マイクロバイオームで読める		
+T11679	OpenAlex	Craniofacial Disorders and Treatments	Medicine / Surgery	土台	I-013,B-140,B-046,I-024	頭蓋縫合早期癒合と神経堤は、ヒトの発生、発生の遺伝学、発生、遺伝病で読める		
+T11627	OpenAlex	Autoimmune Neurological Disorders and Treatments	Medicine / Clinical Neurology	土台	I-030,B-101,B-052,I-005	抗 NMDA 受容体脳炎などの自己免疫性脳炎は、臨床免疫、神経疾患の診断、シナプス伝達、免疫学で読める		
+T12023	OpenAlex	Cholinesterase and Neurodegenerative Diseases	Medicine / Pharmacology (medical)	土台	B-007,I-001,I-027,B-068	コリンエステラーゼ阻害薬は、酵素学、薬理、毒性学、神経変性疾患で読める		
+T11035	OpenAlex	Salivary Gland Tumors Diagnosis and Treatment	Medicine / Surgery	土台	I-023,I-025,I-061	唾液腺腫瘍の病理と遺伝子は、がんの生物学、分子病理、口腔の構造で読める		
+T11601	OpenAlex	Neuroscience and Neural Engineering	Neuroscience / Cellular and Molecular Neuroscience	本体	B-170,E-169,E-234	神経の刺激・電極・網膜の人工器官が B-170 E-169 E-234 の項目にある		
+T10423	OpenAlex	Neurobiology and Insect Physiology Research	Neuroscience / Cellular and Molecular Neuroscience	土台	B-065,B-132,B-157,I-058	ショウジョウバエの嗅覚・記憶・インスリンの信号は、学習と記憶、昆虫、神経行動学、化学感覚で読める		
+T10918	OpenAlex	Memory Processes and Influences	Neuroscience / Cognitive Neuroscience	本体	Q-005,B-065	想起・再認・虚記憶・テスト効果が Q-005 B-065 の項目にある		
+T11094	OpenAlex	Face Recognition and Perception	Neuroscience / Cognitive Neuroscience	土台	Q-004,B-063,B-067	顔の知覚と皮質のネットワークは、知覚、システム神経科学、脳の計測で読める（fMRI の解析は既知の欠け）		
+T10971	OpenAlex	Olfactory and Sensory Function Studies	Neuroscience / Sensory Systems	土台	I-058,I-060,B-063	嗅覚の障害と無嗅覚は、化学感覚の生理、耳鼻咽喉の病気、システム神経科学で読める		
+T10448	OpenAlex	Memory and Neural Mechanisms	Neuroscience / Cognitive Neuroscience	本体	B-065,Q-007,Q-032	記憶の固定・恐怖条件づけ・海馬と空間の記憶が B-065 Q-007 Q-032 の項目にある		
+T13417	OpenAlex	Biomedical Ethics and Regulation	Nursing / Issues, ethics and legal aspects	入れない	I-034,B-054	幹細胞クリニックの規制とクローンの倫理は規範と規制。測れる幹細胞の科学は B-054 と I-034		
+T12638	OpenAlex	Pomegranate: compositions and health benefits	Nursing / Nutrition and Dietetics	土台	H-105,I-052,I-032	ザクロの成分（エラジタンニン）と腸内細菌による代謝は、天然物化学、栄養、マイクロバイオームで読める（健康効果の確かめは I-040）		
+T10140	OpenAlex	Food composition and properties	Nursing / Nutrition and Dietetics	土台	V-016,H-044,I-052	食物繊維・デンプン・血糖の指数は、食品の科学、生体分子の化学、栄養で読める		
+T13048	OpenAlex	Patient Dignity and Privacy	Nursing / Issues, ethics and legal aspects	入れない	Q-014,I-034	尊厳療法と患者の尊厳は規範の議論が中心。測れる心理療法の効果は Q-014		
+T12817	OpenAlex	Pharmacological Effects of Natural Compounds	Pharmacology, Toxicology and Pharmaceutics / Pharmacology	土台	H-105,I-001,I-027	甘草のグリチルリチンの薬理は、天然物化学、薬理、毒性学で読める		
+T10375	OpenAlex	Pharmacogenetics and Drug Metabolism	Pharmacology, Toxicology and Pharmaceutics / Pharmacology	本体	I-002,I-053,I-027,B-007	薬物代謝（CYP）と薬理ゲノミクスが I-002 I-053 の項目にある		
+T14331	OpenAlex	Medicinal Plant Pharmacodynamics Research	Pharmacology, Toxicology and Pharmaceutics / Pharmacology	土台	H-105,I-001,I-027	イカリソウのイカリインの薬理は、天然物化学、薬理、毒性学で読める		
+T13775	OpenAlex	Hydrogen's biological and therapeutic effects	Pharmacology, Toxicology and Pharmaceutics / Pharmacology	土台	I-001,I-020,I-040	水素水・水素吸入の抗酸化の主張は、薬理、活性酸素、臨床研究の統計で読める（効果の根拠は弱く確かめが要る）		
+T12281	OpenAlex	Animal testing and alternatives	Veterinary / Small Animals	土台	V-012,I-027,I-040	動物実験の報告の指針（ARRIVE）・3R・代替試験は、動物の福祉、毒性学、臨床研究の統計で読める		
+T11905	OpenAlex	Veterinary Pharmacology and Anesthesia	Veterinary / Small Animals	土台	V-033,V-032,V-012,I-002	実験動物の麻酔・鎮痛と痛みの評価は、獣医の麻酔、獣医の薬理、動物の福祉、薬物動態で読める		
+T12249	OpenAlex	Veterinary Orthopedics and Neurology	Veterinary / Small Animals	土台	V-034,B-120,I-048,V-006	犬の股関節形成不全・十字靭帯・歩行の解析は、獣医の外科、動作の生体力学、骨と関節の病気、育種の理論で読める		
+T14149	OpenAlex	Historical and Literary Analyses	Arts and Humanities / Literature and Literary Theory	入れない	-	文学史と文化史の解釈が中心で、反復して検証できる部分が見当たらない		
+T14197	OpenAlex	Historical Studies of Medieval Iberia	Arts and Humanities / Archeology (arts and humanities)	入れない	-	中世イベリアの歴史と建築史の解釈と保存の議論で、人文の範囲		
+T13484	OpenAlex	German History and Society	Arts and Humanities / History	入れない	-	東ドイツの記憶・アイデンティティ・戦後史の解釈で、人文の範囲		
+T13334	OpenAlex	South Asian Cinema and Culture	Arts and Humanities / Visual Arts and Performing Arts	入れない	-	映画と文化の批評・受容の解釈で、人文と芸術の範囲		
+T14441	OpenAlex	Religion, Theology, History, Judaism, Christianity	Arts and Humanities / Religious studies	入れない	-	宗教間の関係と神学の議論と歴史で、人文の範囲		
+T14385	OpenAlex	Franz Kafka Literary Studies	Arts and Humanities / Literature and Literary Theory	入れない	-	カフカの文学研究で、人文の範囲		
+T13006	OpenAlex	Spanish History and Politics	Arts and Humanities / History	入れない	-	スペイン内戦とフランコ体制の歴史叙述で、人文の範囲		
+T11846	OpenAlex	Cultural Heritage Management and Preservation	Arts and Humanities / Archeology (arts and humanities)	入れない	F-076	文化遺産の保存と管理の実務・規範の議論が中心。測れるのは遺産の価値の評価（表明選好）の部分だけ		
+T10165	OpenAlex	Classical Antiquity Studies	Arts and Humanities / Classics	入れない	-	古代ギリシャ・ローマの文学・宗教・社会の歴史叙述で、人文の範囲		
+T13122	OpenAlex	Turkic and Altaic Linguistics	Arts and Humanities / Language and Linguistics	入れない	K-216,Q-026,B-134	実証の部分：膠着語の形態素解析（有限状態の変換器）は K-216、音響の測定は Q-026、類型と系統の統計は SH4_10 の根拠単元で読める。残りは言語ごとの文法・語源・歴史音韻の記述と、口承叙事詩・写本の文献学で、記述と解釈（D-120）と人文。アルタイ諸語を一つの語族とする説は比較言語学の多数に支持されない。		入れないへ
+T13072	OpenAlex	Contemporary Christian Leadership and Education	Arts and Humanities / Religious studies	入れない	-	教会の指導・牧会・神学教育の実践と規範で、宗教の範囲		
+T14109	OpenAlex	Scottish History and National Identity	Arts and Humanities / History	入れない	-	スコットランドの歴史・文学・国民意識の叙述で、人文の範囲		
+T11893	OpenAlex	German Literature and Culture Studies	Arts and Humanities / Literature and Literary Theory	入れない	-	ドイツ文学の批評で、人文の範囲		
+T12739	OpenAlex	Historical Studies on Spain	Arts and Humanities / History	入れない	-	スペイン王室と宮廷の歴史叙述で、人文の範囲		
+T13413	OpenAlex	Cultural and Historical Studies	Arts and Humanities / Visual Arts and Performing Arts	入れない	E-198, F-061	ファッションのデザイン教育と型紙などの職業の手技が中心。測れるのは環境への影響（ライフサイクル評価）の部分だけ		
+T13707	OpenAlex	Literature, Language, and Rhetoric Studies	Arts and Humanities / Literature and Literary Theory	入れない	K-216	文学・修辞・文化研究の寄せ集めで特定の検証できる方法がない。コーパス分析の部分だけ K-216 が受け持つ		
+T10021	OpenAlex	EFL/ESL Teaching and Learning	Arts and Humanities / Language and Linguistics	土台	Q-023, Q-010, Q-012, Y-017	第二言語の習得と教え方の効果は、学習と指導の科学・言語の獲得・動機づけ・教育介入の効果の組み合わせで読める		
+T11794	OpenAlex	Early Modern Spanish Literature	Arts and Humanities / Literature and Literary Theory	入れない	-	スペイン黄金世紀の文学研究で、人文の範囲		
+T12517	OpenAlex	Seventeenth-Century Political and Philosophical Thought	Arts and Humanities / Philosophy	入れない	-	17 世紀の政治哲学の解釈で、人文の範囲		
+T14314	OpenAlex	Violence, Religion, and Philosophy	Arts and Humanities / Philosophy	入れない	Q-011	ジラールの模倣理論は暴力と宗教の哲学的な解釈で、反復して検証する形になっていない。模倣と社会的な学習の測れる部分だけ Q-011		
+T13409	OpenAlex	Paleopathology and ancient diseases	Arts and Humanities / Archeology (arts and humanities)	欠け（既知）	-	古寄生虫学が中心で、既知の欠け「寄生虫と媒介生物」に当たる。骨の病変の読みは I-020 などで近づくが寄生虫の生活環は扱えない		
+T12999	OpenAlex	Medieval History and Crusades	Arts and Humanities / History	入れない	-	十字軍と中世地中海の歴史叙述で、人文の範囲		
+T12977	OpenAlex	Spanish Literature and Culture Studies	Arts and Humanities / Literature and Literary Theory	入れない	-	スペイン文学の批評で、人文の範囲		
+T14506	OpenAlex	Historical and Architectural Studies	Arts and Humanities / Archeology (arts and humanities)	入れない	P-210, W-073, S-019	天文考古学は宗教と文化の解釈が中心。測れるのは天体の位置の計算（天球と歳差）と配列の検定の部分だけ		
+T13231	OpenAlex	History, Culture, and Diplomacy	Arts and Humanities / History	入れない	-	文化外交と文化交流の歴史叙述で、人文の範囲		
+T12283	OpenAlex	Latin American history and culture	Arts and Humanities / History	入れない	-	ラテンアメリカ植民地の歴史と文化の叙述で、人文の範囲		
+T13887	OpenAlex	Augustinian Studies and Theology	Arts and Humanities / Philosophy	入れない	-	アウグスティヌスの神学と哲学で、人文の範囲		
+T13933	OpenAlex	Whitehead's Philosophy and Applications	Arts and Humanities / Philosophy	入れない	F-061	ホワイトヘッドの過程哲学を足場にした緑の経済の主張で、哲学と規範が中心。測れるのは環境の経済学の部分だけ		
+T13068	OpenAlex	Ancient Mediterranean Archaeology and History	Arts and Humanities / Archeology (arts and humanities)	入れない	W-010, W-066	古代地中海の考古学と歴史の叙述が中心。年代決定と地図の解析の部分だけ地図の単元で読める		
+T14278	OpenAlex	Marxism and Critical Theory	Arts and Humanities / Philosophy	入れない	-	マルクス主義とアルチュセールの理論の解釈で、人文の範囲		
+T13342	OpenAlex	Art History and Market Analysis	Arts and Humanities / Visual Arts and Performing Arts	土台	F-047, F-020, F-075, F-033	美術品を投資資産とみる分析で、オルタナティブ投資・ポートフォリオ・ヘドニック価格・回帰の組み合わせで読める		
+T11463	OpenAlex	Classical Philosophy and Thought	Arts and Humanities / Philosophy	入れない	-	古代ギリシャ哲学で、人文の範囲		
+T13059	OpenAlex	Religion, Ecology, and Ethics	Arts and Humanities / Religious studies	入れない	Q-011, Y-001	宗教と環境倫理の議論が中心。宗教と環境への態度の調査の部分だけ測れる		
+T13803	OpenAlex	Organizational Strategy and Culture	Business, Management and Accounting / Organizational Behavior and Human Resource Management	土台	F-043, Q-030, Y-006, K-216	使命の文と組織の成果の関係は、経営戦略・組織の心理・文章をデータとして扱う方法で読める		
+T13366	OpenAlex	Accounting Theory and Financial Reporting	Business, Management and Accounting / Accounting	本体	F-010, F-042	会計基準と財務報告と財務分析は F-010 が、管理会計は F-042 が受け持つ		
+T12393	OpenAlex	Workplace Spirituality and Leadership	Business, Management and Accounting / Organizational Behavior and Human Resource Management	土台	Q-030, Q-013	職場の霊性と指導の成果は、仕事の態度と動機の測定と心理測定で読める。霊性や宗教の価値判断は範囲外		
+T13580	OpenAlex	Management and Performance Evaluation	Business, Management and Accounting / Organizational Behavior and Human Resource Management	土台	Q-030, F-042, F-062	人事の評価と学校の運営は、仕事の遂行の測り方・業績評価・労働市場の組み合わせで読める		
+T13963	OpenAlex	Organizational Management and Leadership	Business, Management and Accounting / Management of Technology and Innovation	土台	F-043, Q-030, F-082, E-154	経営の革新・指導・供給網は、戦略とガバナンス・組織の心理・技術革新・生産管理の組み合わせで読める		
+T11849	OpenAlex	Intellectual Capital and Performance Analysis	Business, Management and Accounting / Strategy and Management	土台	F-010, F-042, F-082	知的資本の測定と開示は、財務会計・管理会計・技術革新の測り方の組み合わせで読める		
+T13901	OpenAlex	State Capitalism and Financial Governance	Business, Management and Accounting / Strategy and Management	土台	F-047, F-043, F-054, F-052	政府系ファンドは、私募・資産運用・ガバナンス・国の経済の診断・財政の組み合わせで読める。安全保障と倫理の議論は範囲外		
+T10058	OpenAlex	Entrepreneurship Studies and Influences	Business, Management and Accounting / Management of Technology and Innovation	土台	F-082, F-062, Q-011, Q-030	起業と創業の研究は、技術革新・労働市場・態度と意図・組織の心理の組み合わせで読める		
+T13098	OpenAlex	Conferences and Exhibitions Management	Business, Management and Accounting / Tourism, Leisure and Hospitality Management	土台	F-076, Q-011, Y-001	会議や展示会の参加者の動機と行動は、選択のモデル・態度・調査の組み合わせで読める		
+T10880	OpenAlex	Environmental Sustainability in Business	Business, Management and Accounting / Marketing	土台	F-061, F-076, Q-011, Q-013	環境配慮の消費と企業行動は、環境の経済学・選択のモデル・態度の測定の組み合わせで読める		
+T11653	OpenAlex	Financial Distress and Bankruptcy Prediction	Business, Management and Accounting / Accounting	土台	F-071, F-010, S-020, S-025	倒産と信用の予測は、信用リスク・財務分析・線形モデル・統計的学習の組み合わせで読める		
+T14139	OpenAlex	E-commerce and Technology Innovations	Business, Management and Accounting / Business and International Management	土台	F-051, F-060, F-064, F-082	越境の電子商取引は、国際貿易・プラットフォーム・デジタル決済・技術の普及の組み合わせで読める		
+T13642	OpenAlex	Organizational Downsizing and Restructuring	Business, Management and Accounting / Organizational Behavior and Human Resource Management	土台	Q-030, F-062, F-043, Y-004	人員削減の効果は、仕事の心理・労働市場・経営・出来事の分析（差の差）の組み合わせで読める		
+T11843	OpenAlex	Family Business Performance and Succession	Business, Management and Accounting / Organizational Behavior and Human Resource Management	土台	F-043, F-073, F-023, Q-030	同族企業と事業承継は、ガバナンス・契約の理論（代理）・企業金融・組織の心理の組み合わせで読める		
+T12843	OpenAlex	Human Resource and Talent Management	Business, Management and Accounting / Organizational Behavior and Human Resource Management	土台	Q-030, F-062, F-073	人材の管理は、選抜と動機の心理・労働市場・契約の理論の組み合わせで読める		
+T10797	OpenAlex	Accounting and Organizational Management	Business, Management and Accounting / Accounting	本体	F-042, F-043	原価計算・予算管理・業績評価・管理統制は F-042 が受け持つ		
+T14031	OpenAlex	Global and Cross-Cultural Management	Business, Management and Accounting / Business and International Management	土台	Q-011, Q-013, Q-030, F-065	異文化の経営の比較は、文化による違いの実験・測定の同等性・組織の心理・制度と経済の差の組み合わせで読める		
+T12101	OpenAlex	Advanced Bandit Algorithms Research	Decision Sciences / Management Science and Operations Research	欠け	-	バンディットの後悔の解析、トンプソン抽出、UCB、文脈つきと敵対的なバンディット、ガウス過程の最適化。近い単元は K-059（強化学習 2、題に一語あるだけ）、S-022（逐次の実験計画）、K-009（凸最適化）だが、後悔の下界と上界の解析やオンライン学習の理論を中身として扱う単元がない ／反証：K-059 の題の「バンディット」は強化学習の一章の入口（ε 貪欲と UCB の紹介）で、後悔の下界と上界、敵対的バンディットの解析は中身に無い。S-022 は能動学習と逐次の実験計画の名前だけ。後悔の解析は S-004 の不等式に情報量の下界を足す別の理論で、導けない。判定役のとおり欠け。	バンディット問題／後悔の定義と対数の下界（ライ–ロビンス）、ε 貪欲・UCB・トンプソン抽出の後悔の上界、文脈つきバンディット（LinUCB）、敵対的バンディットと EXP3（専門家の助言による予測）、オンライン凸最適化の入口／前提 S-004, S-022, K-009（K-059 を外す。ガウス過程とベイズ最適化は地図に「ガウス過程」の単元が無いので案から外し、別の欠けの候補とする）	残す
+T13480	OpenAlex	Innovations and Analysis in Business and Education	Decision Sciences / Management Science and Operations Research	入れない	F-042	ABCD 分析は利点・便益・制約・欠点を並べる質的な枠組みで、検証できる法則や測り方がない。業績の測れる部分だけ F-042		
+T10068	OpenAlex	Technology Adoption and User Behaviour	Decision Sciences / Information Systems and Management	土台	Q-013, Q-011, Q-021, F-082	技術受容モデルは、態度と意図の理論・構造方程式による測定・使いやすさの評価・普及の研究の組み合わせで読める		
+T10974	OpenAlex	Advanced Queuing Theory Analysis	Decision Sciences / Management Science and Operations Research	本体	S-009, E-157, K-131	待ち行列は S-009 が名指しで受け持つ。コールセンターの人員配置の重交通の漸近は S-009 の中身次第		
+T13612	OpenAlex	Advanced Scientific and Engineering Studies	Decision Sciences / Management Science and Operations Research	土台	K-047, S-025, E-157	機械学習・自動化・データ解析の寄せ集めで固有の理論がなく、学習と最適化の単元で読める		
+T13473	OpenAlex	Economic Zones and Regional Development	Economics, Econometrics and Finance / General Economics, Econometrics and Finance	土台	F-083, F-075, F-051, Y-004	経済特区の効果は、直接投資・集積・貿易・準実験の評価（差の差）の組み合わせで読める		
+T13237	OpenAlex	Socio-economic Development and Sustainability	Economics, Econometrics and Finance / Economics and Econometrics	土台	F-065, F-025, F-061, F-082	持続可能な発展と経済成長は、成長会計・成長モデル・環境の経済学・技術革新の組み合わせで読める		
+T13411	OpenAlex	Labor Market and Education	Economics, Econometrics and Finance / Economics and Econometrics	土台	F-062, F-080, Y-007, F-033	地域の労働市場の予測は、労働市場・教育の経済学・人口の推計・計量経済学の組み合わせで読める		
+T13961	OpenAlex	Socioeconomics of Resources and Conservation	Economics, Econometrics and Finance / Economics and Econometrics	土台	F-086, F-061, F-076, Y-015	農地の保全計画への参加は、農業経済・環境の経済学・表明選好・政策評価の組み合わせで読める		
+T11014	OpenAlex	Agglomeration and Urban Systems	Economics, Econometrics and Finance / Economics and Econometrics	本体	F-075	集積の経済・都市の規模の分布・都市の模型は F-075 が受け持つ		
+T12446	OpenAlex	Economic Growth and Fiscal Policies	Economics, Econometrics and Finance / Economics and Econometrics	土台	F-084, F-052, F-065, Y-002	地方の財政と人間開発指数は、地方財政・財政・成長・合成指標の組み合わせで読める		
+T12708	OpenAlex	Economic and Financial Impacts of Cancer	Economics, Econometrics and Finance / Economics and Econometrics	土台	F-079, Q-013, I-050, Y-001	がん治療の経済的な負担は、医療経済・患者報告の尺度の測定・がんの臨床・調査の組み合わせで読める		
+T13378	OpenAlex	Agricultural Development and Policies	Economics, Econometrics and Finance / Economics and Econometrics	土台	F-086, F-052, V-010	ロシアの農業の効率と食料の安全は、農業経済・財政・持続可能な農業の組み合わせで読める		
+T13547	OpenAlex	Economic and Industrial Development	Economics, Econometrics and Finance / Economics and Econometrics	土台	F-082, F-054, Y-002, F-023	産業の統計・革新・中小企業の支援は、技術革新・国の経済統計・社会の測定・企業金融の組み合わせで読める		
+T11898	OpenAlex	Economics of Agriculture and Food Markets	Economics, Econometrics and Finance / Economics and Econometrics	土台	F-086, F-012, F-034, F-076	農産物価格の伝わり方は、農業経済・ミクロ経済・共和分・需要の推定の組み合わせで読める		
+T10632	OpenAlex	Housing Market and Economics	Economics, Econometrics and Finance / Economics and Econometrics	土台	F-075, F-059, F-026, F-076	住宅の価格と融資は、住宅市場とヘドニック価格・証券化・金融仲介・需要の推定の組み合わせで読める		
+T11496	OpenAlex	Credit Risk and Financial Regulations	Economics, Econometrics and Finance / Finance	本体	F-071, F-039, F-006	信用スプレッド・CDS・格付け・債券の価格づけは F-071、F-039、F-006 が受け持つ		
+T13074	OpenAlex	Global Financial Regulation and Crises	Economics, Econometrics and Finance / Finance	土台	F-026, F-038, F-053, F-044	銀行同盟とマクロプルーデンスは、金融仲介と規制・リスク尺度・金融政策・監督の組み合わせで読める。規制協調の政治の議論は範囲外		
+T10403	OpenAlex	Phonetics and Phonology Research	Psychology / Experimental and Cognitive Psychology	本体	Q-026, Q-010	音声の知覚と産出・韻律・乳児の音の聞き分けは Q-026 と Q-010 が受け持つ。音韻の理論は言語学の欠けに近い		
+T12448	OpenAlex	Paranormal Experiences and Beliefs	Psychology / Social Psychology	入れない	Q-009, Q-005, B-114, I-051	超心理学と超能力は検証で支持されない。信じる心理（確率判断のずれ・記憶）と臨死体験の生理だけ測れる		
+T11295	OpenAlex	Counseling Practices and Supervision	Psychology / Clinical Psychology	入れない	Q-014, Q-013	カウンセラーの養成と指導・多文化の力量の議論は職業の実務と規範。効果の研究の部分だけ Q-014		
+T12496	OpenAlex	Color perception and design	Psychology / Social Psychology	土台	Q-004, I-056, Q-012, Q-013	色の好みと感性工学は、知覚と心理物理・色覚・感情の測り方・測定の組み合わせで読める		
+T11345	OpenAlex	Cognitive and developmental aspects of mathematical skills	Psychology / Developmental and Educational Psychology	本体	Q-024, Q-010, Q-028	数の感覚・算数の学習・計算の障害は Q-024、Q-010、Q-028 が受け持つ		
+T12684	OpenAlex	Stuttering Research and Treatment	Psychology / Clinical Psychology	土台	Q-028, Q-025, Q-026, Q-014	吃音は、言語症と吃音（Q-028）・発話の運動の制御・音声・治療の効果の研究の組み合わせで読める。脳画像の部分は既知の欠け（fMRI）に依る		
+T12553	OpenAlex	Psychedelics and Drug Studies	Psychology / Clinical Psychology	土台	I-026, B-052, Q-014, Q-029, I-003	幻覚剤の治療は、中枢の薬理・受容体・治療の効果の研究・精神疾患・臨床試験の組み合わせで読める。脳画像の部分は既知の欠け（fMRI）に依る		
+T11761	OpenAlex	Resilience and Mental Health	Psychology / Clinical Psychology	本体	Q-014, Q-012, Q-013	回復力と逆境は Q-014、ストレスと対処は Q-012、尺度の測定は Q-013 が受け持つ		
+T12844	OpenAlex	Psychology and Mental Health	Psychology / Clinical Psychology	入れない	Q-014, Q-029	精神分析と臨床の語りが中心で、検証で支持されない説を含む。症状の測り方と治療の効果の部分だけ Q-014、Q-029		
+T12430	OpenAlex	Academic and Historical Perspectives in Psychology	Psychology / General Psychology	入れない	Q-006	心理学の歴史と哲学の議論で、人文の範囲。研究の方法と再現性の部分だけ Q-006		
+T10730	OpenAlex	Language Development and Disorders	Psychology / Developmental and Educational Psychology	本体	Q-010, Q-028, Q-026	子どもの言語の獲得と言語症は Q-010、Q-028、Q-026 が受け持つ		
+T13821	OpenAlex	Coaching Methods and Impact	Psychology / Applied Psychology	土台	Q-030, Q-014, Q-012	コーチングの効果は、組織の心理・介入の効果の研究・動機づけの組み合わせで読める		
+T14513	OpenAlex	Leadership, Courage, and Heroism Studies	Psychology / Social Psychology	土台	Q-011, Q-030, Q-013	勇気と英雄的な行為の心理は、社会の認知・指導の研究・測定の組み合わせで読める		
+T10475	OpenAlex	Psychological Well-being and Life Satisfaction	Psychology / Social Psychology	本体	Q-012, Q-013, Q-014	幸福感の測り方は Q-012、尺度は Q-013、ポジティブ心理学の介入の効果は Q-014 が受け持つ		
+T14379	OpenAlex	Diverse Cultural and Historical Studies	Social Sciences / Cultural Studies	入れない	-	人類学と文化研究の儀礼・記憶・植民地の叙述で、人文の範囲		
+T11500	OpenAlex	Evacuation and Crowd Dynamics	Social Sciences / Safety Research	土台	P-258, Q-032, Y-006, W-064	避難と群衆の動きは、歩行者の流れの模型・避難の判断・エージェントベースモデル・減災の組み合わせで読める		
+T13247	OpenAlex	Local Governance and Planning	Social Sciences / Geography, Planning and Development	入れない	F-075, F-084	ポーランドの土地利用計画と自治の制度の記述で、法と行政の制度。土地利用と地方財政の測れる部分だけ地図の単元が受け持つ		
+T11344	OpenAlex	Traffic Prediction and Management Techniques	Social Sciences / Transportation	土台	P-258, F-034, K-047, S-061	交通量の予測は、交通流・時系列・ニューラルネットワーク・空間統計の組み合わせで読める		
+T12877	OpenAlex	Social Issues in Poland	Social Sciences / General Social Sciences	土台	Y-001, Y-002, Y-007, F-062	ポーランドの社会の話題の寄せ集めで、調査・測定・人口・労働市場の組み合わせで読める		
+T13583	OpenAlex	Jury Decision Making Processes	Social Sciences / Law	土台	Y-021, Q-011, Q-009, Q-005	陪審の判断は、司法の実証・集団の認知・判断の偏り・目撃証言の組み合わせで読める。証拠法の解釈は範囲外		
+T11980	OpenAlex	Human Mobility and Location-Based Analysis	Social Sciences / Transportation	欠け（既知）	-	携帯電話の位置記録による人の移動は、既知の欠け「空間相互作用モデル」（重力モデルや放射モデル）に当たる。Y-006、Y-007、S-061 は近いが移動の模型を扱わない		
+T12687	OpenAlex	Public Administration in Developing Nations	Social Sciences / Political Science and International Relations	土台	Y-015, Y-001, Q-013	途上国の行政の質と市民の満足は、政策の実施の実証・調査・満足度の測定の組み合わせで読める。改革の是非は範囲外		
+T13755	OpenAlex	Global socioeconomic and cultural dynamics	Social Sciences / Geography, Planning and Development	土台	Y-002, F-054, Y-007, F-065	国際統計と人口・移住・成長の寄せ集めで、社会の測定・国の統計・人口・発展の単元で読める		
+T13352	OpenAlex	International Relations in Latin America	Social Sciences / Political Science and International Relations	土台	Y-014, F-051, Y-013	地域統合は、国際貿易の効果・紛争と同盟の実証・比較政治の組み合わせで読める。外交の記述的な部分は範囲外		
+T12767	OpenAlex	Conflict of Laws and Jurisdiction	Social Sciences / Law	入れない	-	国際私法の管轄と準拠法の解釈で、法の解釈		
+T12542	OpenAlex	Second Language Learning and Teaching	Social Sciences / Linguistics and Language	土台	Q-023, Q-010, Y-017	英語での授業の効果は、学習と指導の科学・言語の獲得・教育介入の効果の組み合わせで読める		
+T13609	OpenAlex	Economic, Social, and Public Health Issues in Russia and Globally	Social Sciences / Public Administration	土台	S-023, Y-002, Y-006	クラスター分析と統計の応用の話題で、多変量解析・社会の測定・計算社会科学の組み合わせで読める		
+T13994	OpenAlex	The Impact of Diversity and Innovation on Society	Social Sciences / Sociology and Political Science	土台	F-082, Q-030, Q-011	多様性と革新と指導の寄せ集めで固有の理論がなく、技術革新・組織の心理・集団の認知で読める		
+T14476	OpenAlex	Mental Health and Well-being	Social Sciences / Sociology and Political Science	土台	F-064, Q-018, Y-001, F-065	クラウドファンディング・健康信念・デジタル技能の寄せ集めで、デジタル金融・健康行動・調査・発展の組み合わせで読める		
+T13073	OpenAlex	China's Ethnic Minorities and Relations	Social Sciences / Sociology and Political Science	入れない	Y-014, Y-017	中国の民族政策と地域研究の議論で、解釈と政策の是非が中心。紛争と教育介入の測れる部分だけ		
+T13469	OpenAlex	Environmental, Ecological, and Cultural Studies	Social Sciences / Sociology and Political Science	入れない	F-061, B-093, V-010, F-065	崩壊学は検証された理論がなく、環境政策の主張が中心。測れるのは環境の経済・生物多様性・農業の部分		
+T14443	OpenAlex	COVID-19, Geopolitics, Technology, Migration	Social Sciences / Political Science and International Relations	土台	F-051, F-082, F-083, Y-014	米中の貿易摩擦と技術の競争は、国際貿易・技術革新・要素の移動・紛争の実証の組み合わせで読める		
+T14171	OpenAlex	Education, Law, and Society	Social Sciences / Law	入れない	Y-021, K-146	デジタル司法と電子証拠の制度と手続の解釈で、法の範囲。司法の実証と情報技術の部分だけ測れる		
+T12635	OpenAlex	African studies and sociopolitical issues	Social Sciences / Sociology and Political Science	入れない	Y-013, F-086	ジンバブエの歴史と政治の叙述で、解釈が中心。制度と土地の測れる部分だけ		
+T12863	OpenAlex	Web and Library Services	Social Sciences / Library and Information Sciences	入れない	K-204, Y-022, Q-020	図書館の広報とサービスの実務で、職業の手技。情報検索・科学計量・利用者の調査の部分だけ地図の単元が受け持つ		
+T14430	OpenAlex	Higher Education and Teaching Methods	Social Sciences / Education	土台	Q-023, Y-017	職業教育の改革と教え方は、学習と指導の科学と教育介入の効果で読める。改革の是非は範囲外		
+T13154	OpenAlex	Legal and Regulatory Analysis	Social Sciences / Transportation	入れない	F-077, F-074	道路運送と交通の法規の解釈で、法の範囲。交通と規制の経済の測れる部分だけ		
+T13491	OpenAlex	Social Policy and Social Work in Brazil	Social Sciences / Sociology and Political Science	土台	Y-015, F-063, Y-003, F-065	ブラジルの給付政策は、政策評価・再分配・社会実験・発展の組み合わせで読める。ソーシャルワークの実務と思想の批判は範囲外		
+T14473	OpenAlex	Social and Economic Development in India	Social Sciences / Sociology and Political Science	土台	F-065, Y-015, F-084, Y-004	インドの農村雇用保証と地方分権は、発展・政策評価・地方財政・準実験の組み合わせで読める		
+T14219	OpenAlex	Local Economic Development and Planning	Social Sciences / Geography, Planning and Development	土台	F-075, F-084, F-065, Y-015	地域の経済開発の政策は、都市と地域の経済・地方財政・発展・政策評価の組み合わせで読める		
+T14421	OpenAlex	Educational Philosophies and Pedagogies	Social Sciences / Education	入れない	Q-014, Q-023	観想的な教育と共感の教育の理念と規範が中心。警告表示の効果は曝露と学習の単元で近づく		
+T13456	OpenAlex	Religion, Society, and Development	Social Sciences / Sociology and Political Science	土台	Y-015, F-065, Y-001	宗教団体の社会事業の効果は、政策評価・発展・調査の組み合わせで読める。神学の議論は範囲外		
+T11507	OpenAlex	Religion and Society Interactions	Social Sciences / Sociology and Political Science	土台	Y-001, Y-007, Y-012	世俗化と宗教の測定は、調査・人口の変化・政治行動の組み合わせで読める		
+T14007	OpenAlex	Indigenous and Place-Based Education	Social Sciences / Education	入れない	Y-017, Q-023	場所に根ざした教育と先住民の教育は理念と規範の主張が中心。効果の測れる部分だけ地図の単元が受け持つ		
+T11198	OpenAlex	Japanese History and Culture	Social Sciences / Cultural Studies	入れない	-	日本の歴史と文化の叙述で、人文の範囲		
+T14229	OpenAlex	Physical education and sports games research	Social Sciences / Education	土台	Q-012, Q-025, I-065, Q-023	伝統的な遊びと体育の効果は、感情・運動の学習・運動の生理・学習と指導の組み合わせで読める		
+T11475	OpenAlex	French Territorial Governance	Social Sciences / Sociology and Political Science	入れない	F-084, F-075	フランスの広域行政の制度と参加の議論で、行政制度の記述。地方財政と地域の経済の測れる部分だけ		
+T14395	OpenAlex	African history and culture studies	Social Sciences / Anthropology	入れない	-	アフリカの植民地と独立の歴史叙述で、人文の範囲		
+T11756	OpenAlex	Mentoring and Academic Development	Social Sciences / Education	土台	Q-030, Y-017, Q-011	メンタリングの効果は、組織の心理・介入の効果・社会の認知の組み合わせで読める		
+T11544	OpenAlex	Gender, Labor, and Family Dynamics	Social Sciences / Gender Studies	土台	F-062, F-081, Y-009, F-063	女性の労働供給と家事の分担は、労働市場・差別・家族の実証・税と再分配の組み合わせで読める		
+T13296	OpenAlex	Sociology, History and Politics of Sport	Social Sciences / Sociology and Political Science	土台	K-070, F-084, F-007, Y-015	スポーツの政策と大会の効果は、スポーツ産業・地方財政・費用便益・政策評価の組み合わせで読める。社会学の理論の解釈は範囲外		
+T11461	OpenAlex	Local Government Finance and Decentralization	Social Sciences / Political Science and International Relations	本体	F-084	地方財政・財政の連邦主義・補助金・税の競争は F-084 が受け持つ		
+T13423	OpenAlex	Social Policies and Healthcare Reform	Social Sciences / Health	土台	F-079, F-028, Y-007, Y-015	介護保険と高齢化は、医療経済・多重状態モデル・人口の推計・政策評価の組み合わせで読める		
+T13633	OpenAlex	Public Health and Social Inequalities	Social Sciences / Health	本体	I-036, F-079, F-063	健康の社会的な決定要因と格差は I-036 が、医療と健康の格差は F-079 が受け持つ		
+T12275	OpenAlex	Gender and Feminist Studies	Social Sciences / Gender Studies	入れない	F-081, Y-009, Q-031	クィア理論とジェンダーの理論は批判と哲学が中心。差別・家族・性の発達の測れる部分だけ		
+T14462	OpenAlex	Educational Methods and Impacts	Social Sciences / Education	土台	Q-010, Y-009, Y-016, I-035	子どものメディア利用の影響は、発達・家族の実証・メディア接触の測り方・疫学のデザインの組み合わせで読める		
+T14167	OpenAlex	Consumer behavior in food and health	Social Sciences / Sociology and Political Science	土台	F-049, F-060, Y-019, Q-009	消費者の政策と運動は、行動経済学・市場の力・社会運動・判断の偏りの組み合わせで読める		
+T13620	OpenAlex	Education for Peace and Conflict Resolution	Social Sciences / Sociology and Political Science	入れない	Y-014, F-024, Q-011	平和教育と調停の実践と理念が中心。紛争の実証・交渉のゲーム理論・集団の認知の測れる部分だけ		
+T12693	OpenAlex	Migration, Ethnicity, and Economy	Social Sciences / Sociology and Political Science	土台	F-083, F-062, Y-005, Y-008	移民の起業は、要素の移動・労働市場・社会ネットワーク・階層の組み合わせで読める		
+T13406	OpenAlex	Human Resources and Workforce	Social Sciences / Geography, Planning and Development	土台	F-075, F-082, F-080, Y-004	大学の地域への経済効果は、都市と地域の経済・知識の波及・教育の経済・準実験の組み合わせで読める		
+T12645	OpenAlex	European history and politics	Social Sciences / Political Science and International Relations	入れない	Y-016	ナチス・ドイツの歴史叙述で、人文の範囲。宣伝の効果の測れる部分だけ Y-016		
+T10216	OpenAlex	Migration, Refugees, and Integration	Social Sciences / Sociology and Political Science	土台	F-083, Y-007, Y-011, Y-012	移民の統合と受け入れの態度は、要素の移動・人口移動の測り方・居住の分離・政治行動の組み合わせで読める。政策の是非は範囲外		
+T14141	OpenAlex	Colonial History and Postcolonial Studies	Social Sciences / Sociology and Political Science	入れない	F-065	植民地時代のインドの歴史叙述で、人文の範囲。植民地の経済への長期の効果の測れる部分だけ F-065		
+T10809	OpenAlex	Occupational Health and Safety Research	Social Sciences / Safety Research	土台	I-041, Q-021, Q-030, Q-013	職場の安全と事故は、仕事による病気とけが・ヒューマンエラー・組織の心理・安全風土の測定の組み合わせで読める		
+T14485	OpenAlex	Language Acquisition and Education	Social Sciences / Education	土台	Q-024, Q-023, Q-010	母語の読み書きの教え方は、読みの学習・学習と指導の科学・言語の獲得の組み合わせで読める		
+T13222	OpenAlex	Caribbean history, culture, and politics	Social Sciences / Cultural Studies	入れない	-	カリブの歴史と文化と政治の叙述で、人文の範囲		
+T13155	OpenAlex	Digital Communication and Language	Social Sciences / Linguistics and Language	土台	Y-006, K-216, Q-012	絵文字とネットの言葉は、文章をデータとして扱う方法・コーパスの処理・感情の測り方の組み合わせで読める		
+T13721	OpenAlex	Political Science Research and Education	Social Sciences / Political Science and International Relations	入れない	Y-004, Y-022	政治学の学史と学問の制度の議論で、人文の範囲。方法論の部分は Y-004、出版の分析は Y-022		
+T13210	OpenAlex	Historical Turkish Studies	Social Sciences / Political Science and International Relations	入れない	-	オスマン帝国とトルコ共和国の歴史叙述で、人文の範囲		
+T12090	OpenAlex	Language and cultural evolution	Social Sciences / Cultural Studies	欠け	-	社会的学習・累積的な文化・言語の系統・遺伝子と文化の共進化を扱う。近い単元は B-160（動物の文化の伝わり方、一項目）、B-134（系統樹）、B-042（進化のしくみ）、Q-007（観察による学習）、P-257（意見形成）だが、文化の伝達の模型や累積的な文化の実験を中身として扱う単元がない ／反証：文化の伝達の模型（同調・成功者・名声の偏り、プライスの式、中立な文化の変化）と累積的な文化の実験は、B-160（動物の文化の一項目）、B-058（ESS と血縁選択）、Q-007（観察による学習）のどれにも無い（社会的学習、文化進化、プライスの式は 0 件。Y-022 のプライスの模型は引用の話）。模型と実験が中心なので、D-120 の「文化人類学は入れない」とは別。	文化進化／社会的学習の戦略（同調・成功者・名声の偏り）と伝達の模型（プライスの式、中立な文化の変化）、累積的な文化（連鎖の伝達の実験、人口の大きさと技術の蓄積とその追試での争い）、言語の進化（反復学習の模型と言語の構造の出現の実験）、遺伝子と文化の共進化（乳糖の分解の持続性）／前提 B-042, B-058, Q-007（言語と文化の系統樹は SH4_10 と同じ土台で足りるので外し、動物の文化との比較は B-160 に任せ、言語の起源の推測は入れない。Q-011 と B-134 は前提から外す）	残す
+T14037	OpenAlex	Arabic Language Education Studies	Social Sciences / Education	土台	Q-023, Y-017, Q-024	外国語としてのアラビア語の教え方は、学習と指導の科学・教育介入の効果・読み書きの学習の組み合わせで読める		
+T13998	OpenAlex	History, Medicine, and Leadership	Social Sciences / Political Science and International Relations	入れない	Y-006, Q-013	指導者の病気と傲慢症候群は伝記と倫理（精神科医の診断の規則）の議論が中心で、検証に乏しい。言葉の指標の測れる部分だけ		
+T12469	OpenAlex	Chaos, Complexity, and Education	Social Sciences / Education	入れない	P-260, Y-006	複雑性の認識論と教育の哲学が中心。測れるのは複雑系の模型（自己組織化臨界・エージェントベースモデル）の部分		
+T11148	OpenAlex	Language, Metaphor, and Cognition	Social Sciences / Linguistics and Language	土台	Q-008, Q-032, K-217	比喩と時間の概念は、言語と思考の実験・空間の認知・語の意味の分布の組み合わせで読める		
+T12204	OpenAlex	African Education and Politics	Social Sciences / Education	土台	Y-017, F-080, Y-018, F-065	ナイジェリアの教育は、教育介入の効果・教育の経済・学力の測定・発展の組み合わせで読める		
+T10298	OpenAlex	Urban Transport and Accessibility	Social Sciences / Transportation	土台	F-077, I-035, W-114	歩行と自転車の環境は、交通の経済学・疫学のデザイン・地理空間データの解析の組み合わせで読める		
+T12210	OpenAlex	Policy Transfer and Learning	Social Sciences / Political Science and International Relations	土台	Y-015, Y-005, F-082, S-035	政策の普及と学習は、政策の実証・ネットワーク・普及の S 字・生存時間解析の組み合わせで読める。連携の枠組みなど政策過程の理論の質的な部分は弱い		
+T12437	OpenAlex	Balkans: History, Politics, Society	Social Sciences / Cultural Studies	入れない	-	バルカンの歴史と文化の叙述で、人文の範囲		
+T14180	OpenAlex	Law, logistics, and international trade	Social Sciences / Law	入れない	F-051	海上運送法と信用状の法の解釈で、法の範囲。貿易の測れる部分だけ F-051		
+T11147	OpenAlex	Misinformation and Its Impacts	Social Sciences / Sociology and Political Science	本体	Y-016, K-216	誤情報の広がりと訂正は Y-016、検出の技術は K-216 が受け持つ		
+T12978	OpenAlex	Innovative Teaching Methodologies in Social Sciences	Social Sciences / Education	土台	Q-023, Y-017, F-049	教室での模擬と役割演技の効果は、学習と指導の科学・教育介入の効果・実験経済学の組み合わせで読める		
+T10722	OpenAlex	Work-Family Balance Challenges	Social Sciences / Sociology and Political Science	土台	Q-030, Y-009, F-062, F-081	仕事と家庭の両立は、組織の心理・家族の実証・労働供給・差別の組み合わせで読める		
+T12839	OpenAlex	Emile Durkheim and Sociology	Social Sciences / Sociology and Political Science	入れない	Y-002, Y-005	デュルケームの社会学の学史と理論の解釈で、人文の範囲。測れるのは社会の測定と模倣・伝染の模型		
+T13800	OpenAlex	Earthquake and Disaster Impact Studies	Social Sciences / Geography, Planning and Development	土台	W-064, F-075, Y-015, Y-007	災害のあとの復興は、減災・地域の経済・政策評価・人口の推計の組み合わせで読める		
+T14218	OpenAlex	Engineering Education and Global Impact	Social Sciences / Development	入れない	E-198, F-065	技術者の社会的責任と人道の工学の教育は規範と理念が中心。職業の倫理は E-198		
+T13488	OpenAlex	Recreational Sport and Physical Activity	Social Sciences / Life-span and Life-course Studies	土台	Q-018, I-065, Y-001, I-035	身体活動とスポーツの参加は、健康の行動・運動の生理・調査・疫学の組み合わせで読める		
+T10652	OpenAlex	Racial and Ethnic Identity Research	Social Sciences / Sociology and Political Science	土台	Q-011, Q-013, F-081, I-036	人種と民族の同一性と差別の知覚は、偏見の測り方・測定の不変性・差別の実証・健康の格差の組み合わせで読める		
+T12546	OpenAlex	Smart Parking Systems Research	Social Sciences / Transportation	土台	F-077, K-047, E-182, P-258	駐車の管理は、交通の経済・ニューラルネットワーク・カメラによる検出・交通流の組み合わせで読める		
+T12364	OpenAlex	Archaeological Research and Protection	Social Sciences / Archeology	土台	W-122, W-114, W-010, K-047	遺跡の探査は、レーザ測量・地理空間データの解析・放射年代測定・画像の機械学習の組み合わせで読める		
+T13212	OpenAlex	German Social Sciences and History	Social Sciences / Sociology and Political Science	入れない	-	ドイツの社会学の学史と哲学的人間学の叙述で、人文の範囲		
+T14516	OpenAlex	English Language Learning and Teaching	Social Sciences / Education	土台	Q-023, Q-010, Y-017, Q-020	計算機を使った言語学習の効果は、学習と指導の科学・言語の獲得・教育介入の効果・利用者調査の組み合わせで読める		
+T12728	OpenAlex	Demographic Trends and Gender Preferences	Social Sciences / Gender Studies	土台	Y-007, Y-009, Y-015	出生性比と出生政策は、人口学の方法・出生の選択・政策評価の組み合わせで読める		
+T13623	OpenAlex	Linguistic Studies and Language Acquisition	Social Sciences / Linguistics and Language	土台	K-216, Q-026, Q-010	話し言葉のコーパスと韻律の注釈は、コーパスと注釈・音声・言語の獲得の組み合わせで読める。語用論の理論の部分は言語学の欠けに近い		
+T13455	OpenAlex	Decadence, Literature, and Society	Social Sciences / Sociology and Political Science	入れない	Y-010	ロンブローゾの犯罪人類学は上書きされた古い説で、文学の議論と合わさる。犯罪の測り方の部分だけ Y-010		
+T12872	OpenAlex	Philippine History and Culture	Social Sciences / Anthropology	入れない	-	フィリピンの歴史と文化の叙述で、人文の範囲		
+T14282	OpenAlex	Security, Politics, and Digital Transformation	Social Sciences / Political Science and International Relations	入れない	K-146, K-043	デジタル主権と情報安全の法と政策の議論で、規範が中心。情報技術と社会・システムの安全の部分だけ		
+T13305	OpenAlex	Teacher Professional Development and Motivation	Social Sciences / Education	土台	F-062, F-080, Q-030, Y-017	教師の確保と離職は、労働市場・教育の経済・仕事の動機・教育の研究の組み合わせで読める		
+T13271	OpenAlex	Ukrainian Legal and Forensic Studies	Social Sciences / Law	入れない	Y-010	ウクライナの刑事手続と捜査実務の法の解釈が中心。犯罪の測り方の部分だけ Y-010。法科学の部分は既知の欠け		
+T14429	OpenAlex	Global Political and Social Dynamics	Social Sciences / Political Science and International Relations	土台	Y-014, F-051, Y-013	地域機構と対外関係は、紛争と同盟の実証・国際貿易・比較政治の組み合わせで読める。外交の記述的な部分は範囲外		
+T13864	OpenAlex	Indigenous Cultures and History	Social Sciences / Anthropology	入れない	F-065	先住民の歴史と国家の政策の叙述で、人文の範囲。制度と発展の長期の効果の部分だけ F-065		
+T14125	OpenAlex	Education, Sociology, Communication Studies	Social Sciences / Education	入れない	Y-007	家政教育の理念と世代論（検証で支持されない）が中心。コーホートと期間の測れる部分だけ Y-007		
+T13416	OpenAlex	Educational Theory and Curriculum Studies	Social Sciences / Sociology and Political Science	入れない	Y-017, Y-018, Y-008	カリキュラムの政治と知識の社会学の理論の解釈。教育の効果・学力の測定・階層の部分だけ		
+T12498	OpenAlex	Latin American Cultural Politics	Social Sciences / Anthropology	入れない	-	ラテンアメリカの脱植民地の思想と哲学で、人文の範囲		
+T12070	OpenAlex	Writing and Handwriting Education	Social Sciences / Education	土台	Q-023, Q-024, Q-025, Y-017	書くことの指導は、学習と指導の科学・読み書きの学習・運動の学習・教育介入のメタ分析の組み合わせで読める		
+T13016	OpenAlex	Innovative Educational Technologies	Social Sciences / Education	土台	Q-023, Y-017, Q-020	クラウドを使う学習環境は、学習と指導の科学・教育介入の効果・利用者の調査の組み合わせで読める		

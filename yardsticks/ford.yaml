@@ -128,7 +128,7 @@ items:
     parent: "3"
     name: Clinical medicine
     ja: 臨床医学
-    units: [I-044, I-045, I-046, I-047, I-050, I-051, I-059, I-062]
+    units: [I-044, I-045, I-046, I-047, I-050, I-051, I-059, I-062, I-072, I-073]
     sources: [Y01]
   - id: "3.3"
     parent: "3"
