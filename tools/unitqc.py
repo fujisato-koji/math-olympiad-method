@@ -31,6 +31,9 @@ errs = RM.check(data, {u: problems[u] for u in ids})
 mine = [e for e in errs if any(u in e for u in ids)]
 grades = json.loads((REPO / 'tools' / 'kanji-grades.json').read_text(encoding='utf-8'))
 term_chars = {ch for t in data.get('glossary') or [] for ch in str(t.get('term', '')) if RM.is_kanji(ch)}
+# 用語集の語の字は、語のまま出なくても通る（「物質波」の質が「物質」で、「準同型の核」の核が「核の 数字」で通っていた）。
+# 誤りにはせず、語の外で通っている字を「用語集の字だけで通っている字」として出す（D-200。長い語から先に文から抜いてから数える）
+terms = sorted({str(t.get('term', '')) for t in data.get('glossary') or [] if any(RM.is_kanji(ch) for ch in str(t.get('term', '')))}, key=len, reverse=True)
 U = {u['id']: u for u in data['units']}
 for uid in ids:
     print(f'== {uid}（段 {U[uid]["stage"]}）')
@@ -51,6 +54,16 @@ for uid in ids:
             if any(jsbad(v) for v in vs):
                 e.append(f'{uid} {w}：{k} の小数 {[v for v in vs if jsbad(v)]} は画面で表し方が変わる（4.0 → 4）。引用符で "14.0" のように書く。'
                          '10 の何乗は 2 × 10⁻⁷ の形で書く')
+    # 同じ問題のくり返し（D-191）：文・図・選択肢・答えが同じ問題が、単元の中の別の場所にまた出る。子が答えを覚えて解けてしまう。見本は除く
+    seen = {}
+    for w, it in labeled:
+        if it.get('part') == '見本':
+            continue
+        k = json.dumps([it.get('text'), it.get('svg'), it.get('choices'), str(it.get('answer'))], ensure_ascii=False)
+        if k in seen:
+            e.append(f'{uid} {w}：{seen[k]} と同じ問題のくり返し。2 つ目からは数や場面を変えた新しい問題に作り直し、その id: の行を消す（D-191）')
+        else:
+            seen[k] = w
     print(f'  誤り {len(e)}')
     for x in e:
         print('   -', x)
@@ -60,8 +73,10 @@ for uid in ids:
         for g in range(1, min(st, 6) + 1):
             ok |= set(grades.get(str(g), []))
         head = {ch for no, line in enumerate((REPO / 'units' / f'{uid}.yaml').read_text(encoding='utf-8').splitlines()) if no and line.startswith('#') for ch in line if RM.is_kanji(ch)}
+        grade_ok = set(ok)
         ok_nohead = ok | term_chars
         ok |= term_chars | head
+        term_only = {}
         bad, head_only = {}, {}  # head_only：頭注に出るだけで通っている字（D-135。頭注は単元の説明なので、ふつうのことばも通ってしまう）
         def walk(x, key=None, where=''):
             if isinstance(x, str):
@@ -70,6 +85,13 @@ for uid in ids:
                     where = where + '（図の文字）'
                 elif key in ('check', 'figure', 'part', 'kinds', 'uses', 'type', 'like', 'note'):  # note は保護者用で、子の画面に出ない（D-135）
                     return
+                xs = x
+                for t in terms:
+                    if t in xs:
+                        xs = xs.replace(t, '・')
+                for i, ch in enumerate(xs):
+                    if RM.is_kanji(ch) and ch in term_chars and ch not in grade_ok and ch not in head:
+                        term_only.setdefault(ch, f'{where}「{xs[max(0, i - 2):i + 3]}」')
                 for i, ch in enumerate(x):
                     if RM.is_kanji(ch) and ch not in ok:
                         bad.setdefault(ch, where)
@@ -86,6 +108,9 @@ for uid in ids:
                 walk(it, None, f"{d.get('day')} 日目 {i}")
         walk(problems[uid].get('ri') or [], None, '腕だめし')
         print(f'  段 {st} の学年より上の漢字 {len(bad)}' + ('：' + '、'.join(f'{c}（{w}）' for c, w in list(bad.items())[:20]) if bad else ''))
+        if term_only:
+            print(f'  用語集の字だけで通っている字 {len(term_only)}（用語集の語の外で使っている。その単元で教える語なら頭注に書いて残し、ほかはかなに開く。D-200）：'
+                  + '、'.join(f'{c}{w}' for c, w in list(term_only.items())[:20]))
         if head_only:
             print(f'  頭注だけで通っている字 {len(head_only)}（その単元の用語なら残し、ふつうのことばならかなに開く。D-135）：'
                   + '、'.join(f'{c}{w}' for c, w in list(head_only.items())[:20]))

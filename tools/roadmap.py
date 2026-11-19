@@ -623,6 +623,20 @@ def check(data, problems):
                  for v in (it.get(k) if isinstance(it.get(k), list) else [it.get(k)]) if jsbad(v)})
     if fl:
         print(f"警告: 画面で表し方が変わる小数（4.0 → 4）を引用符なしで書いた単元が {len(fl)} 個：" + "、".join(fl[:10]))
+    # 同じ問題のくり返し（D-191）。直す係は unitqc.py で誤りとして直す。ここでは単元の数を警告で出す（全部の回のあとにまとめて直す）
+    rep = {}
+    for uid, doc in problems.items():
+        seen, n = set(), 0
+        for it in [x for d in doc.get("days", []) for x in d.get("items", []) + d.get("extra", [])] + list(doc.get("ri") or []):
+            if it.get("part") == "見本":
+                continue
+            k = json.dumps([it.get("text"), it.get("svg"), it.get("choices"), str(it.get("answer"))], ensure_ascii=False)
+            n += k in seen
+            seen.add(k)
+        if n:
+            rep[uid] = n
+    if rep:
+        print(f"警告: 同じ問題をくり返している単元が {len(rep)} 個（{sum(rep.values())} 問）：" + "、".join(sorted(rep, key=lambda u: -rep[u])[:10]))
     kanji_warnings(units, problems, data.get("glossary", []))
     return errors
 
