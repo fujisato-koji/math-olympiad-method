@@ -1953,10 +1953,14 @@
   function steps() {
     const s = session;
     let h = '';
+    const small = UNITS[s.id].stage <= 2;
     s.items.forEach((_, i) => {
       const r = s.results[i];
       const cls = r ? (r.first ? 'ok' : slow(r) ? 'slow' : 'help') : r === null ? 'ok' : i === s.idx ? 'on' : '';
-      h += (i ? `<i class="${i <= s.idx ? 'on' : ''}"></i>` : '') + `<b class="${cls}"></b>`;
+      // やった問題と見本の点は押すと見返せる。見返しているときは、いまの点で元の問題にもどる（D-194）
+      const act = i < s.idx && s.idx < s.items.length ? ` data-act="peek" data-i="${i}" role="button" tabindex="0" title="${small ? `${i + 1} もんめを みる` : `${i + 1} 問目を見る`}"`
+        : i === s.idx && s.peek != null ? ` data-act="peek-back" role="button" tabindex="0" title="${small ? 'いまの もんだいに もどる' : 'いまの問題にもどる'}"` : '';
+      h += (i ? `<i class="${i <= s.idx ? 'on' : ''}"></i>` : '') + `<b class="${cls}${s.peek === i ? ' peek' : ''}"${act}></b>`;
     });
     const lim = s.solved || s.dunno ? 0 : timeFor(s, s.items[s.idx]);
     return `<div class="play-top"><div class="steps">${h}</div>
@@ -2005,7 +2009,7 @@
   setInterval(tick, 500);
   document.addEventListener('visibilitychange', () => {
     const s = session;
-    if (!s || !s.run || s.solved || s.paused) return;
+    if (!s || !s.run || s.solved || s.paused || s.peek != null) return;  // 見返しているあいだは止めたまま（D-194）
     if (document.hidden) { s.el = spent(s); s.t0 = 0; } else s.t0 = Date.now();
   });
 
@@ -2140,6 +2144,7 @@
       return;
     }
     if (s.idx >= s.items.length) return drawFinish();
+    if (s.peek != null && s.peek < s.idx) return drawPeek();
     const it = s.items[s.idx];
     // 図の並びが折り返すと意味が変わるので、いちばん長い行が 1 行に収まる大きさにする
     // 半角（数字、英字、空白）は全角の半分ほどの幅として数え、数字の多い行で字が小さくなりすぎないようにする
@@ -2192,8 +2197,41 @@
     figMath(el);
     tick();
   }
+  // やった問題と見本を見返す（D-194、施主「うえの点をクリックするとやった問題や見本には戻れるようにしたい」）。
+  // 読むだけで、答えなおしはしない（記録は変えない）。見返しているあいだは、いまの問題の時計を止める
+  function drawPeek() {
+    const s = session, el = $('#play'), it = s.items[s.peek], r = s.results[s.peek], small = UNITS[s.id].stage <= 2;
+    const fig = (it.figure ? `<div class="fig" aria-label="え">${esc(it.figure)}</div>` : '')
+      + (it.svg ? `<div class="fig fig-svg" role="img" aria-label="ず">${it.svg}</div>` : '')
+      + (it.balance ? balanceHtml(it.balance) : '');
+    const how = r ? `<div class="muted peek-how">${r.first ? (small ? 'いちどで できた' : '一度にできた') : r.skipped ? (small ? 'とばした' : 'とばした') : (small ? 'ヒントや やりなおしで できた' : 'ヒントややり直しでできた')}</div>` : '';
+    const body = it.part === '見本' ? `${fig}<div class="explain">${fmtExplain(it.explain)}</div>`
+      : it.part === 'わけ' ? `${fig}${pathsHtml(it)}`
+      : `${fig}<div class="feedback">${small ? 'こたえは' : '答えは'} <b>${fmt(it.answer)}</b></div>${how}${pathsHtml(it)}`;
+    const back = small ? 'いまの もんだいに もどる' : 'いまの問題にもどる';
+    el.innerHTML = steps() + `<article class="card peek-card" id="card">
+      <span class="part">${esc(it.part === '離' ? '腕だめし' : it.part)}<span class="muted">・${small ? `${s.peek + 1} もんめ` : `${s.peek + 1} 問目`}</span></span>
+      <p class="q">${fmt(it.text)}</p>${body}
+      <div class="actions"><button class="pill solid" data-act="peek-back" type="button">${back}</button></div></article>`;
+    figMath(el);
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  }
+  function peekOpen(i) {
+    const s = session;
+    if (!(i >= 0 && i < s.idx)) return;
+    if (s.peek == null && s.t0) { s.el = spent(s); s.t0 = 0; s.peekPaused = true; }  // いまの問題の時計を止める
+    s.peek = i; Music.tap(); drawItem();
+  }
+  function peekClose() {
+    const s = session;
+    if (s.peek == null) return;
+    s.peek = null;
+    if (s.peekPaused) { s.peekPaused = false; s.t0 = document.hidden ? 0 : Date.now(); }
+    Music.tap(); drawItem();
+  }
   function submit(val) {
     const s = session, it = s.items[s.idx];
+    if (s.peek != null) return;
     if (s.solved || val === '') return;
     s.tries++;
     if (isRight(it, val)) {
@@ -2343,6 +2381,9 @@
       return;
     }
     const act = t.dataset.act;
+    if (act === 'peek') return peekOpen(+t.dataset.i);
+    if (act === 'peek-back') return peekClose();
+    if (s.peek != null) return;  // 見返しているあいだは、ほかのボタンは効かない
     if (act === 'hint') { s.hints = Math.min(3, s.hints + 1); Music.hint(); drawItem(); }
     if (act === 'said') {
       s.solved = true; s.tries = 1;
@@ -2368,7 +2409,9 @@
     if (act === 'back') endLook();
   });
   document.addEventListener('keydown', e => {
-    if (!session || session.solved || session.dk || $('#menu').open) return;
+    // 進みの点はキーでも押せる（D-194）
+    if ((e.key === 'Enter' || e.key === ' ') && e.target.closest && e.target.closest('.steps b[data-act]')) { e.preventDefault(); e.target.click(); return; }
+    if (!session || session.solved || session.dk || session.peek != null || $('#menu').open) return;
     const it = session.items[session.idx];
     if (!it || it.part === '見本' || it.choices) return;
     const k = e.key === '-' ? '−' : e.key;

@@ -445,6 +445,13 @@ section.next { margin: 12px 0 36px; }  /* 単元のページの次の日（.day.
 .steps b.ok { background: var(--c); border-color: var(--c); }
 .steps b.help { background: color-mix(in srgb, var(--c) 45%, var(--surface)); border-color: var(--c); }
 .steps i.on { background: var(--c); }
+/* やった問題と見本の点は押して見返せる（D-194）。点は小さいので、押せる範囲を広げる */
+.steps b[data-act] { position: relative; cursor: pointer; transition: transform .15s; }
+.steps b[data-act]::after { content: ""; position: absolute; inset: -12px; border-radius: 50%; }
+.steps b[data-act]:hover, .steps b[data-act]:focus-visible { transform: scale(1.35); outline: none; }
+.steps b.peek { box-shadow: 0 0 0 3px var(--surface), 0 0 0 5px var(--ink); transform: scale(1.2); }
+.peek-card .part .muted { margin-left: 4px; font-weight: 500; }
+.peek-card .peek-how { text-align: center; font-size: 13px; margin: -4px 0 8px; }
 .play-count { font-size: 14px; color: var(--muted); white-space: nowrap; }
 
 .card {
