@@ -104,6 +104,7 @@ items:
   units:
   - B-009
   - B-010
+  - B-212
 - id: T-06
   field: 生命
   topic: リボソームの活性中心は RNA であること 2017
@@ -112,6 +113,8 @@ items:
   units:
   - B-009
   - B-006
+  - B-210
+  - B-208
 - id: T-07
   field: 生命
   topic: Wnt シグナル経路と発生とがん 2017
@@ -189,7 +192,7 @@ items:
   sources:
   - CB016
   units:
-  - B-012
+  - B-215
 - id: T-17
   field: 生命
   topic: 細胞質の DNA を感じる自然免疫 2019
@@ -235,6 +238,7 @@ items:
   units:
   - K-111
   - K-117
+  - K-227
 - id: T-23
   field: 生命
   topic: 子育ての行動を担う神経細胞と回路 2021
@@ -407,6 +411,7 @@ items:
   - CB024
   units:
   - B-012
+  - B-215
 - id: T-45
   field: 生命
   topic: 遺伝学（メンデル遺伝、原核生物と酵母の遺伝学）
@@ -468,6 +473,8 @@ items:
   units:
   - B-001
   - B-009
+  - B-211
+  - B-212
 - id: T-52
   field: 生命
   topic: 分子の進化

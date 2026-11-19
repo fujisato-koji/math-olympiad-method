@@ -1,0 +1,2135 @@
+# 外の物差し：MeSH（NLM）の G 樹「現象と過程」の 3 段目で、生命科学のしくみ（現象と過程）の抜けを測る（段 B、2026-11-19、取りまとめ）。
+# G02〜G16 を group にし、その下の樹番号 3 段目（G04.144 など）を項目にした（352 項目）。G01 物理現象と G17 数学の概念は入れない。廃止の見出し（OBSOLETE）は none。
+# 判定と反証の結論は docs/research/yardstick-mesh-g-items.tsv。書き方と確かめ方は docs/yardsticks.md。
+title: "MeSH G 樹（現象と過程）の 3 段目"
+version: "2026"
+sources:
+  Y01: {title: "MeSH RDF（NLM）の SPARQL で取った 2026 年版の G 樹の樹番号 3 段目と記述子の名前", url: "https://id.nlm.nih.gov/mesh/sparql", date: 2026-11-19, license: "NLM の MeSH の利用条件（https://www.nlm.nih.gov/databases/download/terms_and_conditions_mesh.html）"}
+items:
+  - {id: "G02", name: "Chemical Phenomena", ja: "化学現象", group: true}
+  - id: "G02.010"
+    parent: "G02"
+    name: "Absorption"
+    ja: "吸収"
+    units: [H-042, P-027, E-215, I-002]
+    sources: [Y01]
+  - id: "G02.020"
+    parent: "G02"
+    name: "Adsorption"
+    ja: "吸着"
+    units: [H-112, P-175]
+    sources: [Y01]
+  - id: "G02.035"
+    parent: "G02"
+    name: "Air Ionization"
+    ja: "空気の電離"
+    units: [P-281, P-293]
+    sources: [Y01]
+  - id: "G02.050"
+    parent: "G02"
+    name: "Anisotropy"
+    ja: "異方性"
+    units: [P-027, E-012, E-162, P-266]
+    sources: [Y01]
+  - id: "G02.111"
+    parent: "G02"
+    name: "Biochemical Phenomena"
+    ja: "生化学的現象"
+    units: [B-007, B-008, B-028, B-006]
+    sources: [Y01]
+  - id: "G02.130"
+    parent: "G02"
+    name: "Catalysis"
+    ja: "触媒作用"
+    units: [H-052, H-112, H-023]
+    sources: [Y01]
+  - id: "G02.149"
+    parent: "G02"
+    name: "[OBSOLETE] Chemical Processes"
+    ja: "化学過程（廃止）"
+    none: "廃止（OBSOLETE）の見出しで説明文もなく、現象の範囲が定まらない。"
+    sources: [Y01]
+  - id: "G02.159"
+    parent: "G02"
+    name: "Chemical Precipitation"
+    ja: "化学的沈殿"
+    units: [H-026, H-006, E-215, E-219]
+    sources: [Y01]
+  - id: "G02.165"
+    parent: "G02"
+    name: "Corrosion"
+    ja: "腐食"
+    units: [E-242, H-048]
+    sources: [Y01]
+  - id: "G02.171"
+    parent: "G02"
+    name: "Crystallization"
+    ja: "結晶化"
+    units: [H-053, E-164, E-215, H-021]
+    sources: [Y01]
+  - id: "G02.176"
+    parent: "G02"
+    name: "Desiccation"
+    ja: "乾燥"
+    units: [E-215, E-041, V-016, B-153]
+    sources: [Y01]
+  - id: "G02.186"
+    parent: "G02"
+    name: "Dialysis"
+    ja: "透析"
+    gap: "膜分離（次の回の候補）。膜を通る溶質の選択的な除去の模型と透析器の設計（拡散と浸透は B-031・E-213、透析の臨床は I-047）"
+    sources: [Y01]
+  - id: "G02.196"
+    parent: "G02"
+    name: "Diffusion"
+    ja: "拡散"
+    units: [E-213, P-055, B-031, B-004]
+    sources: [Y01]
+  - id: "G02.206"
+    parent: "G02"
+    name: "Dimerization"
+    ja: "二量体化"
+    units: [B-003, B-013, H-106, H-109]
+    sources: [Y01]
+  - id: "G02.211"
+    parent: "G02"
+    name: "Drug Liberation"
+    ja: "薬物の放出"
+    units: [I-064, E-168]
+    sources: [Y01]
+  - id: "G02.216"
+    parent: "G02"
+    name: "Energy Transfer"
+    ja: "エネルギー移動"
+    units: [H-109, P-004, B-029]
+    sources: [Y01]
+  - id: "G02.225"
+    parent: "G02"
+    name: "Evolution, Chemical"
+    ja: "化学進化"
+    units: [H-090, P-166, P-068]
+    sources: [Y01]
+  - id: "G02.263"
+    parent: "G02"
+    name: "Filtration"
+    ja: "ろ過"
+    units: [H-063, H-006, E-219, E-220]
+    sources: [Y01]
+  - id: "G02.282"
+    parent: "G02"
+    name: "Hydrogen Bonding"
+    ja: "水素結合"
+    units: [H-018, B-028]
+    sources: [Y01]
+  - id: "G02.300"
+    parent: "G02"
+    name: "Hydrogen-Ion Concentration"
+    ja: "水素イオン濃度"
+    units: [H-025, H-026, I-015]
+    sources: [Y01]
+  - id: "G02.380"
+    parent: "G02"
+    name: "Hydrolysis"
+    ja: "加水分解"
+    units: [H-026, H-033, H-039, B-007]
+    sources: [Y01]
+  - id: "G02.409"
+    parent: "G02"
+    name: "Hydrophobic and Hydrophilic Interactions"
+    ja: "疎水性相互作用と親水性相互作用"
+    units: [H-018, B-003, B-013, B-028]
+    sources: [Y01]
+  - id: "G02.437"
+    parent: "G02"
+    name: "Ion Exchange"
+    ja: "イオン交換"
+    gap: "吸着分離（次の回の候補）。樹脂によるイオン交換の選択性・容量・破過（土壌の陽イオン交換は V-008・W-062）"
+    sources: [Y01]
+  - id: "G02.466"
+    parent: "G02"
+    name: "Molecular Structure"
+    ja: "分子構造"
+    units: [H-014, H-018, H-032, H-041]
+    sources: [Y01]
+  - id: "G02.494"
+    parent: "G02"
+    name: "Molecular Weight"
+    ja: "分子量"
+    units: [H-015, H-107, H-110]
+    sources: [Y01]
+  - id: "G02.551"
+    parent: "G02"
+    name: "Neutron Diffraction"
+    ja: "中性子回折"
+    units: [P-307, P-092, P-243]
+    sources: [Y01]
+  - id: "G02.607"
+    parent: "G02"
+    name: "Organic Chemistry Phenomena"
+    ja: "有機化学の現象"
+    units: [H-032, H-033, H-039, H-040, H-038]
+    sources: [Y01]
+  - id: "G02.640"
+    parent: "G02"
+    name: "Osmolar Concentration"
+    ja: "浸透圧濃度"
+    units: [H-021, H-015, B-031, I-016]
+    sources: [Y01]
+  - id: "G02.691"
+    parent: "G02"
+    name: "Osmosis"
+    ja: "浸透"
+    units: [B-031, H-021]
+    sources: [Y01]
+  - id: "G02.700"
+    parent: "G02"
+    name: "Oxidation-Reduction"
+    ja: "酸化還元"
+    units: [H-017, H-027, B-030, H-048]
+    sources: [Y01]
+  - id: "G02.712"
+    parent: "G02"
+    name: "Particle Size"
+    ja: "粒子径"
+    units: [P-055, P-190, P-039, E-239, H-107]
+    sources: [Y01]
+  - id: "G02.723"
+    parent: "G02"
+    name: "Permeability"
+    ja: "透過性"
+    units: [B-031, W-029, E-124, E-240, I-063]
+    sources: [Y01]
+  - id: "G02.734"
+    parent: "G02"
+    name: "Phase Transition"
+    ja: "相転移"
+    units: [P-052, P-046, H-036, P-042]
+    sources: [Y01]
+  - id: "G02.740"
+    parent: "G02"
+    name: "Photochemical Processes"
+    ja: "光化学過程"
+    units: [H-109, H-080, B-030, H-091]
+    sources: [Y01]
+  - id: "G02.750"
+    parent: "G02"
+    name: "Polymerization"
+    ja: "重合"
+    units: [H-106, H-035]
+    sources: [Y01]
+  - id: "G02.765"
+    parent: "G02"
+    name: "Proton-Motive Force"
+    ja: "プロトン駆動力"
+    units: [B-030, B-029, B-031, H-048]
+    sources: [Y01]
+  - id: "G02.785"
+    parent: "G02"
+    name: "Pyrolysis"
+    ja: "熱分解"
+    units: [E-194, E-214, E-212, H-037, E-221]
+    sources: [Y01]
+  - id: "G02.805"
+    parent: "G02"
+    name: "Solubility"
+    ja: "溶解度"
+    units: [H-006, H-021, H-026]
+    sources: [Y01]
+  - id: "G02.819"
+    parent: "G02"
+    name: "Specific Gravity"
+    ja: "比重"
+    units: [H-007, P-013]
+    sources: [Y01]
+  - id: "G02.833"
+    parent: "G02"
+    name: "Spontaneous Combustion"
+    ja: "自然発火"
+    units: [E-194, E-214, E-217, H-023]
+    sources: [Y01]
+  - id: "G02.842"
+    parent: "G02"
+    name: "[OBSOLETE] Physicochemical Phenomena"
+    ja: "物理化学的現象（廃止）"
+    none: "廃止（OBSOLETE）の見出しで、物理化学の全般を指し単独の現象の範囲が定まらない。"
+    sources: [Y01]
+  - id: "G02.860"
+    parent: "G02"
+    name: "Surface Properties"
+    ja: "表面の性質"
+    units: [P-175, P-272, P-265]
+    sources: [Y01]
+  - id: "G02.930"
+    parent: "G02"
+    name: "Viscosity"
+    ja: "粘度"
+    units: [P-190, P-270, P-014, E-031]
+    sources: [Y01]
+  - id: "G02.965"
+    parent: "G02"
+    name: "X-Ray Diffraction"
+    ja: "X 線回折"
+    units: [P-307, P-092, B-012]
+    sources: [Y01]
+  - {id: "G03", name: "Metabolism", ja: "代謝", group: true}
+  - id: "G03.015"
+    parent: "G03"
+    name: "Absorption"
+    ja: "吸収"
+    units: [B-036, I-017, I-002, I-063]
+    sources: [Y01]
+  - id: "G03.030"
+    parent: "G03"
+    name: "Acid-Base Equilibrium"
+    ja: "酸塩基平衡"
+    units: [I-015, H-025, H-026, I-047]
+    sources: [Y01]
+  - id: "G03.040"
+    parent: "G03"
+    name: "Acylation"
+    ja: "アシル化"
+    units: [H-040, H-033, B-007]
+    sources: [Y01]
+  - id: "G03.049"
+    parent: "G03"
+    name: "Aerobiosis"
+    ja: "好気呼吸"
+    units: [B-083, B-030, B-145]
+    sources: [Y01]
+  - id: "G03.059"
+    parent: "G03"
+    name: "Alkylation"
+    ja: "アルキル化"
+    units: [H-039, H-033, I-027]
+    sources: [Y01]
+  - id: "G03.068"
+    parent: "G03"
+    name: "Amination"
+    ja: "アミノ化"
+    units: [H-040, H-039, B-008, B-007]
+    sources: [Y01]
+  - id: "G03.078"
+    parent: "G03"
+    name: "Anaerobiosis"
+    ja: "嫌気呼吸"
+    units: [B-083, B-145, E-219]
+    sources: [Y01]
+  - id: "G03.087"
+    parent: "G03"
+    name: "Autotrophic Processes"
+    ja: "独立栄養の過程"
+    units: [B-030, B-145, B-153]
+    sources: [Y01]
+  - id: "G03.105"
+    parent: "G03"
+    name: "Biocatalysis"
+    ja: "生体触媒"
+    units: [B-007, B-029, E-229]
+    sources: [Y01]
+  - id: "G03.143"
+    parent: "G03"
+    name: "Biological Transport"
+    ja: "生体内輸送"
+    units: [B-031, B-052, B-004]
+    sources: [Y01]
+  - id: "G03.162"
+    parent: "G03"
+    name: "Biotinylation"
+    ja: "ビオチン化"
+    units: [H-057, H-110, B-013]
+    sources: [Y01]
+  - id: "G03.171"
+    parent: "G03"
+    name: "Biotransformation"
+    ja: "生体内変換"
+    units: [I-002, I-027, H-056, B-007, I-017]
+    sources: [Y01]
+  - id: "G03.180"
+    parent: "G03"
+    name: "Body Composition"
+    ja: "体組成"
+    units: [I-052, E-223, P-013, I-065]
+    sources: [Y01]
+  - id: "G03.185"
+    parent: "G03"
+    name: "Brain Chemistry"
+    ja: "脳の化学"
+    units: [B-052, B-068, B-067, I-026]
+    sources: [Y01]
+  - id: "G03.191"
+    parent: "G03"
+    name: "Carbohydrate Metabolism"
+    ja: "糖質代謝"
+    units: [B-008, B-030, I-019]
+    sources: [Y01]
+  - id: "G03.194"
+    parent: "G03"
+    name: "Catabolite Repression"
+    ja: "カタボライト抑制"
+    units: [B-044, B-144, B-008, E-228]
+    sources: [Y01]
+  - id: "G03.197"
+    parent: "G03"
+    name: "Cell Respiration"
+    ja: "細胞呼吸"
+    units: [B-030, B-083, B-029]
+    sources: [Y01]
+  - id: "G03.208"
+    parent: "G03"
+    name: "Cyclization"
+    ja: "環化"
+    units: [H-039, H-104, H-047, H-045]
+    sources: [Y01]
+  - id: "G03.219"
+    parent: "G03"
+    name: "Dealkylation"
+    ja: "脱アルキル化"
+    units: [I-002, H-056, B-007, H-039]
+    sources: [Y01]
+  - id: "G03.222"
+    parent: "G03"
+    name: "Deamination"
+    ja: "脱アミノ化"
+    units: [B-008, B-007, H-033]
+    sources: [Y01]
+  - id: "G03.225"
+    parent: "G03"
+    name: "Decarboxylation"
+    ja: "脱炭酸"
+    units: [B-030, B-008, H-033, B-007]
+    sources: [Y01]
+  - id: "G03.230"
+    parent: "G03"
+    name: "Dimerization"
+    ja: "二量体化"
+    units: [B-003, B-013, H-106, H-109]
+    sources: [Y01]
+  - id: "G03.295"
+    parent: "G03"
+    name: "Energy Metabolism"
+    ja: "エネルギー代謝"
+    units: [B-029, B-030, B-008, I-019, I-065]
+    sources: [Y01]
+  - id: "G03.312"
+    parent: "G03"
+    name: "Enterohepatic Circulation"
+    ja: "腸肝循環"
+    units: [I-017, I-002]
+    sources: [Y01]
+  - id: "G03.328"
+    parent: "G03"
+    name: "Enzyme Activation"
+    ja: "酵素の活性化"
+    units: [B-007, B-029, B-013]
+    sources: [Y01]
+  - id: "G03.344"
+    parent: "G03"
+    name: "Esterification"
+    ja: "エステル化"
+    units: [H-033, B-008]
+    sources: [Y01]
+  - id: "G03.360"
+    parent: "G03"
+    name: "Halogenation"
+    ja: "ハロゲン化"
+    units: [H-033, H-034, H-039]
+    sources: [Y01]
+  - id: "G03.393"
+    parent: "G03"
+    name: "Heterotrophic Processes"
+    ja: "従属栄養の過程"
+    units: [B-145, B-008, B-083, B-041]
+    sources: [Y01]
+  - id: "G03.409"
+    parent: "G03"
+    name: "Hydrogenation"
+    ja: "水素化"
+    units: [H-033, H-052, H-112, H-040]
+    sources: [Y01]
+  - id: "G03.425"
+    parent: "G03"
+    name: "Hydroxylation"
+    ja: "ヒドロキシ化"
+    units: [B-007, I-002, H-033]
+    sources: [Y01]
+  - id: "G03.442"
+    parent: "G03"
+    name: "Insulin Secretion"
+    ja: "インスリン分泌"
+    units: [I-019, B-035, B-052, I-046]
+    sources: [Y01]
+  - id: "G03.458"
+    parent: "G03"
+    name: "Lipid Metabolism"
+    ja: "脂質代謝"
+    units: [B-008, I-019, I-046]
+    sources: [Y01]
+  - id: "G03.474"
+    parent: "G03"
+    name: "Melanogenesis"
+    ja: "メラニン生成"
+    units: [I-063, B-007, B-008]
+    sources: [Y01]
+  - id: "G03.490"
+    parent: "G03"
+    name: "Metabolic Clearance Rate"
+    ja: "代謝クリアランス"
+    units: [I-002, I-016, I-017, I-019]
+    sources: [Y01]
+  - id: "G03.493"
+    parent: "G03"
+    name: "Metabolic Networks and Pathways"
+    ja: "代謝ネットワークと代謝経路"
+    units: [B-008, E-229, K-115, K-010]
+    sources: [Y01]
+  - id: "G03.500"
+    parent: "G03"
+    name: "Metabolome"
+    ja: "メタボローム"
+    units: [H-110, H-111, B-008, E-229]
+    sources: [Y01]
+  - id: "G03.558"
+    parent: "G03"
+    name: "Nitrosation"
+    ja: "ニトロソ化"
+    units: [H-039, H-034, I-027, H-070]
+    sources: [Y01]
+  - id: "G03.615"
+    parent: "G03"
+    name: "Osmoregulation"
+    ja: "浸透圧調節"
+    units: [B-137, I-016, B-035, B-031]
+    sources: [Y01]
+  - id: "G03.673"
+    parent: "G03"
+    name: "Oxidative Stress"
+    ja: "酸化ストレス"
+    units: [B-217]
+    sources: [Y01]
+  - id: "G03.680"
+    parent: "G03"
+    name: "Oxygen Consumption"
+    ja: "酸素消費"
+    units: [I-065, B-136, B-030, B-083]
+    sources: [Y01]
+  - id: "G03.707"
+    parent: "G03"
+    name: "Oxygen Saturation"
+    ja: "酸素飽和度"
+    units: [I-015, B-036, E-225]
+    sources: [Y01]
+  - id: "G03.734"
+    parent: "G03"
+    name: "Peptide Biosynthesis"
+    ja: "ペプチドの生合成"
+    units: [B-032, B-009]
+    sources: [Y01]
+  - id: "G03.787"
+    parent: "G03"
+    name: "Pharmacokinetics"
+    ja: "薬物動態"
+    units: [I-002, V-032, E-168]
+    sources: [Y01]
+  - id: "G03.796"
+    parent: "G03"
+    name: "Phosphorylation"
+    ja: "リン酸化"
+    units: [B-195, B-030]
+    sources: [Y01]
+  - id: "G03.800"
+    parent: "G03"
+    name: "Phototrophic Processes"
+    ja: "光栄養の過程"
+    units: [B-030, B-153, B-145, B-154]
+    sources: [Y01]
+  - id: "G03.804"
+    parent: "G03"
+    name: "Prenylation"
+    ja: "プレニル化"
+    units: [B-200, B-195, H-105]
+    sources: [Y01]
+  - id: "G03.808"
+    parent: "G03"
+    name: "Protein Binding"
+    ja: "タンパク質の結合"
+    units: [B-013, B-003, I-001]
+    sources: [Y01]
+  - id: "G03.812"
+    parent: "G03"
+    name: "Proteolysis"
+    ja: "タンパク質分解"
+    units: [B-007, B-014, I-017, B-199, B-198]
+    sources: [Y01]
+  - id: "G03.816"
+    parent: "G03"
+    name: "Proteostasis"
+    ja: "プロテオスタシス"
+    units: [B-014, B-013, B-199, B-198]
+    sources: [Y01]
+  - id: "G03.818"
+    parent: "G03"
+    name: "Proteotoxic Stress"
+    ja: "タンパク質毒性ストレス"
+    units: [B-014, I-020, B-013]
+    sources: [Y01]
+  - id: "G03.820"
+    parent: "G03"
+    name: "Renin-Angiotensin System"
+    ja: "レニン–アンジオテンシン系"
+    units: [I-014, I-016, B-035, I-026, I-045]
+    sources: [Y01]
+  - id: "G03.839"
+    parent: "G03"
+    name: "RNA Processing, Post-Transcriptional"
+    ja: "転写後の RNA プロセシング"
+    units: [B-208]
+    sources: [Y01]
+  - id: "G03.857"
+    parent: "G03"
+    name: "Secretory Rate"
+    ja: "分泌速度"
+    units: [B-035, I-017, I-019]
+    sources: [Y01]
+  - id: "G03.893"
+    parent: "G03"
+    name: "Toxicokinetics"
+    ja: "毒物動態"
+    units: [I-002, I-027]
+    sources: [Y01]
+  - {id: "G04", name: "Cell Physiological Phenomena", ja: "細胞の生理現象", group: true}
+  - id: "G04.011"
+    parent: "G04"
+    name: "Autophagy"
+    ja: "オートファジー"
+    units: [B-198]
+    sources: [Y01]
+  - id: "G04.022"
+    parent: "G04"
+    name: "Cell Adhesion"
+    ja: "細胞接着"
+    units: [B-203]
+    sources: [Y01]
+  - id: "G04.033"
+    parent: "G04"
+    name: "Cell Competition"
+    ja: "細胞競合"
+    units: [B-197, B-195, B-140]
+    sources: [Y01]
+  - id: "G04.043"
+    parent: "G04"
+    name: "Cellular Senescence"
+    ja: "細胞老化"
+    units: [B-112, I-020, I-023]
+    sources: [Y01]
+  - id: "G04.085"
+    parent: "G04"
+    name: "Cell Communication"
+    ja: "細胞間の情報伝達"
+    units: [B-195]
+    sources: [Y01]
+  - id: "G04.128"
+    parent: "G04"
+    name: "Cell Compartmentation"
+    ja: "細胞内の区画化"
+    units: [B-200, B-201]
+    sources: [Y01]
+  - id: "G04.140"
+    parent: "G04"
+    name: "Cell Count"
+    ja: "細胞数"
+    units: [B-074, E-228, I-043, B-144, P-118, B-216]
+    sources: [Y01]
+  - id: "G04.144"
+    parent: "G04"
+    name: "Cell Cycle"
+    ja: "細胞周期"
+    units: [B-196]
+    sources: [Y01]
+  - id: "G04.146"
+    parent: "G04"
+    name: "Cell Death"
+    ja: "細胞死"
+    units: [B-197]
+    sources: [Y01]
+  - id: "G04.148"
+    parent: "G04"
+    name: "Cell Dedifferentiation"
+    ja: "細胞の脱分化"
+    units: [B-193, B-054]
+    sources: [Y01]
+  - id: "G04.152"
+    parent: "G04"
+    name: "Cell Differentiation"
+    ja: "細胞分化"
+    units: [B-140, B-046, B-054, B-143]
+    sources: [Y01]
+  - id: "G04.155"
+    parent: "G04"
+    name: "Cell Fusion"
+    ja: "細胞融合"
+    units: [B-080]
+    sources: [Y01]
+  - id: "G04.161"
+    parent: "G04"
+    name: "Cell Growth Processes"
+    ja: "細胞の成長の過程"
+    units: [B-196, B-195]
+    sources: [Y01]
+  - id: "G04.165"
+    parent: "G04"
+    name: "Cell-in-Cell Formation"
+    ja: "細胞内細胞の形成"
+    units: [B-201, B-202, B-203, B-197]
+    sources: [Y01]
+  - id: "G04.172"
+    parent: "G04"
+    name: "Cell Lineage"
+    ja: "細胞系譜"
+    units: [B-143, B-193, B-140]
+    sources: [Y01]
+  - id: "G04.175"
+    parent: "G04"
+    name: "Cell Membrane Permeability"
+    ja: "細胞膜の透過性"
+    units: [B-205]
+    sources: [Y01]
+  - id: "G04.198"
+    parent: "G04"
+    name: "Cell Movement"
+    ja: "細胞の運動"
+    units: [B-202]
+    sources: [Y01]
+  - id: "G04.250"
+    parent: "G04"
+    name: "Cell Polarity"
+    ja: "細胞の極性"
+    units: [B-202, B-203, B-201]
+    sources: [Y01]
+  - id: "G04.270"
+    parent: "G04"
+    name: "Cell Respiration"
+    ja: "細胞呼吸"
+    units: [B-030, B-083, B-008]
+    sources: [Y01]
+  - id: "G04.299"
+    parent: "G04"
+    name: "[OBSOLETE] Cell Physiological Processes"
+    ja: "細胞の生理的過程（廃止）"
+    none: "廃止された見出しで、内容を持たない（子の項目で判定する）。"
+    sources: [Y01]
+  - id: "G04.320"
+    parent: "G04"
+    name: "Cell Shape"
+    ja: "細胞の形"
+    units: [B-202]
+    sources: [Y01]
+  - id: "G04.325"
+    parent: "G04"
+    name: "Cell Size"
+    ja: "細胞の大きさ"
+    units: [B-196]
+    sources: [Y01]
+  - id: "G04.346"
+    parent: "G04"
+    name: "Cell Survival"
+    ja: "細胞の生存"
+    units: [B-197, B-195]
+    sources: [Y01]
+  - id: "G04.356"
+    parent: "G04"
+    name: "Cell Transdifferentiation"
+    ja: "細胞の分化転換"
+    units: [B-054, B-193, B-140]
+    sources: [Y01]
+  - id: "G04.366"
+    parent: "G04"
+    name: "Cellular Microenvironment"
+    ja: "細胞の微小環境"
+    units: [B-204]
+    sources: [Y01]
+  - id: "G04.375"
+    parent: "G04"
+    name: "Clonal Evolution"
+    ja: "クローン進化"
+    units: [I-023, B-181, B-002]
+    sources: [Y01]
+  - id: "G04.383"
+    parent: "G04"
+    name: "Contact Inhibition"
+    ja: "接触阻害"
+    units: [B-204, B-202, B-203]
+    sources: [Y01]
+  - id: "G04.392"
+    parent: "G04"
+    name: "Cytoplasmic Streaming"
+    ja: "原形質流動"
+    units: [P-269, P-267, B-005]
+    sources: [Y01]
+  - id: "G04.400"
+    parent: "G04"
+    name: "DNA Packaging"
+    ja: "DNA の折りたたみ"
+    units: [B-207]
+    sources: [Y01]
+  - id: "G04.417"
+    parent: "G04"
+    name: "Endocytosis"
+    ja: "エンドサイトーシス"
+    units: [B-201]
+    sources: [Y01]
+  - id: "G04.434"
+    parent: "G04"
+    name: "Endoplasmic Reticulum Stress"
+    ja: "小胞体ストレス"
+    units: [B-014, B-010]
+    sources: [Y01]
+  - id: "G04.468"
+    parent: "G04"
+    name: "Exocytosis"
+    ja: "エキソサイトーシス"
+    units: [B-201]
+    sources: [Y01]
+  - id: "G04.502"
+    parent: "G04"
+    name: "Lymphocyte Cooperation"
+    ja: "リンパ球の協同"
+    units: [I-005, I-030, B-037]
+    sources: [Y01]
+  - id: "G04.536"
+    parent: "G04"
+    name: "Melanogenesis"
+    ja: "メラニン生成"
+    units: [I-063, B-029]
+    sources: [Y01]
+  - id: "G04.570"
+    parent: "G04"
+    name: "Membrane Fluidity"
+    ja: "膜の流動性"
+    units: [H-044, B-005, P-103, B-010]
+    sources: [Y01]
+  - id: "G04.575"
+    parent: "G04"
+    name: "Membrane Fusion"
+    ja: "膜融合"
+    units: [B-201]
+    sources: [Y01]
+  - id: "G04.580"
+    parent: "G04"
+    name: "Membrane Potentials"
+    ja: "膜電位"
+    units: [B-052, B-034, I-014, B-031]
+    sources: [Y01]
+  - id: "G04.590"
+    parent: "G04"
+    name: "Mitochondrial Swelling"
+    ja: "ミトコンドリアの膨潤"
+    units: [B-031, B-030, I-020]
+    sources: [Y01]
+  - id: "G04.599"
+    parent: "G04"
+    name: "Mitochondrial Turnover"
+    ja: "ミトコンドリアの代謝回転"
+    units: [B-198, B-200, B-201]
+    sources: [Y01]
+  - id: "G04.618"
+    parent: "G04"
+    name: "Organelle Biogenesis"
+    ja: "細胞小器官の生合成"
+    units: [B-200, B-201]
+    sources: [Y01]
+  - id: "G04.655"
+    parent: "G04"
+    name: "Organelle Shape"
+    ja: "細胞小器官の形"
+    units: [B-201]
+    sources: [Y01]
+  - id: "G04.670"
+    parent: "G04"
+    name: "Organelle Size"
+    ja: "細胞小器官の大きさ"
+    units: [B-200, B-201]
+    sources: [Y01]
+  - id: "G04.712"
+    parent: "G04"
+    name: "Radiation Tolerance"
+    ja: "放射線耐性"
+    units: [B-186, B-145]
+    sources: [Y01]
+  - id: "G04.753"
+    parent: "G04"
+    name: "Re-Epithelialization"
+    ja: "再上皮化"
+    units: [I-021, I-011, B-193, I-074]
+    sources: [Y01]
+  - id: "G04.774"
+    parent: "G04"
+    name: "Receptor Aggregation"
+    ja: "受容体の集合"
+    units: [B-195]
+    sources: [Y01]
+  - id: "G04.794"
+    parent: "G04"
+    name: "Receptor Cross-Talk"
+    ja: "受容体のクロストーク"
+    units: [B-195]
+    sources: [Y01]
+  - id: "G04.835"
+    parent: "G04"
+    name: "Signal Transduction"
+    ja: "シグナル伝達"
+    units: [B-195]
+    sources: [Y01]
+  - id: "G04.917"
+    parent: "G04"
+    name: "Trogocytosis"
+    ja: "トロゴサイトーシス"
+    units: [I-005, I-071, B-191]
+    sources: [Y01]
+  - {id: "G05", name: "Genetic Phenomena", ja: "遺伝現象", group: true}
+  - id: "G05.045"
+    parent: "G05"
+    name: "Biological Evolution"
+    ja: "生物の進化"
+    units: [B-042, B-059, B-134, B-135, B-181]
+    sources: [Y01]
+  - id: "G05.090"
+    parent: "G05"
+    name: "Breeding"
+    ja: "育種"
+    units: [V-006, V-007, V-004]
+    sources: [Y01]
+  - id: "G05.113"
+    parent: "G05"
+    name: "Cell Division"
+    ja: "細胞分裂"
+    units: [B-206, B-196]
+    sources: [Y01]
+  - id: "G05.135"
+    parent: "G05"
+    name: "Cellular Reprogramming"
+    ja: "細胞の初期化"
+    units: [B-054, B-080, B-193]
+    sources: [Y01]
+  - id: "G05.158"
+    parent: "G05"
+    name: "Clonal Evolution"
+    ja: "クローン進化"
+    units: [I-023, B-181, B-002]
+    sources: [Y01]
+  - id: "G05.180"
+    parent: "G05"
+    name: "Consanguinity"
+    ja: "近親婚"
+    units: [B-002, I-024, B-024, V-006]
+    sources: [Y01]
+  - id: "G05.193"
+    parent: "G05"
+    name: "DNA Cleavage"
+    ja: "DNA の切断"
+    units: [B-033, B-053, B-007]
+    sources: [Y01]
+  - id: "G05.200"
+    parent: "G05"
+    name: "DNA Damage"
+    ja: "DNA 損傷"
+    units: [B-212]
+    sources: [Y01]
+  - id: "G05.206"
+    parent: "G05"
+    name: "DNA Methylation"
+    ja: "DNA メチル化"
+    units: [B-207]
+    sources: [Y01]
+  - id: "G05.213"
+    parent: "G05"
+    name: "DNA Packaging"
+    ja: "DNA の折りたたみ"
+    units: [B-207]
+    sources: [Y01]
+  - id: "G05.219"
+    parent: "G05"
+    name: "DNA Repair"
+    ja: "DNA 修復"
+    units: [B-212]
+    sources: [Y01]
+  - id: "G05.226"
+    parent: "G05"
+    name: "DNA Replication"
+    ja: "DNA 複製"
+    units: [B-009, B-032, B-007, B-211]
+    sources: [Y01]
+  - id: "G05.232"
+    parent: "G05"
+    name: "DNA Transformation Competence"
+    ja: "DNA の形質転換能"
+    units: [B-144, B-033]
+    sources: [Y01]
+  - id: "G05.285"
+    parent: "G05"
+    name: "Founder Effect"
+    ja: "創始者効果"
+    units: [B-042, B-188, B-002]
+    sources: [Y01]
+  - id: "G05.297"
+    parent: "G05"
+    name: "Gene Expression"
+    ja: "遺伝子発現"
+    units: [B-032, B-009, B-044, B-209, B-210]
+    sources: [Y01]
+  - id: "G05.308"
+    parent: "G05"
+    name: "Gene Expression Regulation"
+    ja: "遺伝子発現の調節"
+    units: [B-044, B-009, K-107]
+    sources: [Y01]
+  - id: "G05.330"
+    parent: "G05"
+    name: "Gene Frequency"
+    ja: "遺伝子頻度"
+    units: [B-042, B-002]
+    sources: [Y01]
+  - id: "G05.340"
+    parent: "G05"
+    name: "Gene Order"
+    ja: "遺伝子の並び"
+    units: [B-045, B-001, K-106, K-191]
+    sources: [Y01]
+  - id: "G05.342"
+    parent: "G05"
+    name: "Gene Pool"
+    ja: "遺伝子プール"
+    units: [B-002, B-042, B-188]
+    sources: [Y01]
+  - id: "G05.344"
+    parent: "G05"
+    name: "Gene Rearrangement"
+    ja: "遺伝子の再編成"
+    units: [B-213]
+    sources: [Y01]
+  - id: "G05.346"
+    parent: "G05"
+    name: "Genetic Background"
+    ja: "遺伝的背景"
+    units: [B-045, B-140, B-002, V-006]
+    sources: [Y01]
+  - id: "G05.347"
+    parent: "G05"
+    name: "Genetic Fitness"
+    ja: "遺伝的適応度"
+    units: [B-042, B-181, B-059]
+    sources: [Y01]
+  - id: "G05.348"
+    parent: "G05"
+    name: "Genetic Linkage"
+    ja: "遺伝的連鎖"
+    units: [B-045, B-002]
+    sources: [Y01]
+  - id: "G05.350"
+    parent: "G05"
+    name: "Genetic Load"
+    ja: "遺伝的荷重"
+    units: [B-002, B-042, B-060]
+    sources: [Y01]
+  - id: "G05.355"
+    parent: "G05"
+    name: "[OBSOLETE] Genetic Processes"
+    ja: "遺伝的過程（廃止）"
+    none: "廃止された見出しで、内容を持たない（子の項目で判定する）。"
+    sources: [Y01]
+  - id: "G05.360"
+    parent: "G05"
+    name: "Genetic Structures"
+    ja: "遺伝的構造"
+    units: [B-001, B-032, B-023]
+    sources: [Y01]
+  - id: "G05.365"
+    parent: "G05"
+    name: "Genetic Variation"
+    ja: "遺伝的変異"
+    units: [B-002, B-188, K-118]
+    sources: [Y01]
+  - id: "G05.370"
+    parent: "G05"
+    name: "Genomic Instability"
+    ja: "ゲノム不安定性"
+    units: [B-212, B-206]
+    sources: [Y01]
+  - id: "G05.380"
+    parent: "G05"
+    name: "Genotype"
+    ja: "遺伝子型"
+    units: [B-024, B-045, B-002]
+    sources: [Y01]
+  - id: "G05.390"
+    parent: "G05"
+    name: "Heredity"
+    ja: "遺伝"
+    units: [B-024, B-045, B-023]
+    sources: [Y01]
+  - id: "G05.400"
+    parent: "G05"
+    name: "Hybrid Vigor"
+    ja: "雑種強勢"
+    units: [V-006, V-004]
+    sources: [Y01]
+  - id: "G05.410"
+    parent: "G05"
+    name: "Inbreeding Depression"
+    ja: "近交弱勢"
+    units: [V-006, B-002, B-060]
+    sources: [Y01]
+  - id: "G05.420"
+    parent: "G05"
+    name: "Inheritance Patterns"
+    ja: "遺伝の様式"
+    units: [B-024, B-045, I-024]
+    sources: [Y01]
+  - id: "G05.545"
+    parent: "G05"
+    name: "Molecular Mimicry"
+    ja: "分子擬態"
+    units: [I-030, I-028, I-005]
+    sources: [Y01]
+  - id: "G05.558"
+    parent: "G05"
+    name: "Mutagenesis"
+    ja: "突然変異誘発"
+    units: [B-032, B-002, I-027, B-181]
+    sources: [Y01]
+  - id: "G05.627"
+    parent: "G05"
+    name: "Nucleic Acid Denaturation"
+    ja: "核酸の変性"
+    units: [B-013, B-003, B-033, H-044]
+    sources: [Y01]
+  - id: "G05.695"
+    parent: "G05"
+    name: "Phenotype"
+    ja: "表現型"
+    units: [B-024, B-045, V-006, B-059]
+    sources: [Y01]
+  - id: "G05.700"
+    parent: "G05"
+    name: "Ploidies"
+    ja: "倍数性"
+    units: [B-023, B-149, I-024, B-001]
+    sources: [Y01]
+  - id: "G05.728"
+    parent: "G05"
+    name: "Recombination, Genetic"
+    ja: "遺伝的組換え"
+    units: [B-009, B-045, B-002, B-144]
+    sources: [Y01]
+  - id: "G05.755"
+    parent: "G05"
+    name: "RNA Cleavage"
+    ja: "RNA の切断"
+    units: [B-208]
+    sources: [Y01]
+  - id: "G05.762"
+    parent: "G05"
+    name: "RNA Damage"
+    ja: "RNA の損傷"
+    units: [B-208]
+    sources: [Y01]
+  - id: "G05.769"
+    parent: "G05"
+    name: "RNA Replication"
+    ja: "RNA の複製"
+    units: [B-146, B-043, H-090]
+    sources: [Y01]
+  - id: "G05.783"
+    parent: "G05"
+    name: "Selection, Genetic"
+    ja: "遺伝的選択"
+    units: [B-042, B-002, B-181, B-059, V-006]
+    sources: [Y01]
+  - id: "G05.810"
+    parent: "G05"
+    name: "Sequence Homology"
+    ja: "配列の相同性"
+    units: [K-110, K-105, K-109, B-134]
+    sources: [Y01]
+  - id: "G05.813"
+    parent: "G05"
+    name: "Sex Determination Processes"
+    ja: "性決定の過程"
+    units: [I-018, B-045, B-140]
+    sources: [Y01]
+  - id: "G05.815"
+    parent: "G05"
+    name: "Sex Ratio"
+    ja: "性比"
+    units: [B-058, B-059, B-002]
+    sources: [Y01]
+  - id: "G05.820"
+    parent: "G05"
+    name: "Structural Homology, Protein"
+    ja: "タンパク質の構造の相同性"
+    units: [K-110, K-111, K-117]
+    sources: [Y01]
+  - id: "G05.910"
+    parent: "G05"
+    name: "Sympatry"
+    ja: "同所性"
+    units: [B-042, B-059, B-185]
+    sources: [Y01]
+  - id: "G05.935"
+    parent: "G05"
+    name: "Virus Integration"
+    ja: "ウイルスの組み込み"
+    units: [B-146, B-043, B-053, I-054, B-213]
+    sources: [Y01]
+  - {id: "G06", name: "Microbiological Phenomena", ja: "微生物の現象", group: true}
+  - id: "G06.099"
+    parent: "G06"
+    name: "Bacterial Physiological Phenomena"
+    ja: "細菌の生理的現象"
+    units: [B-144, B-043, B-145]
+    sources: [Y01]
+  - id: "G06.120"
+    parent: "G06"
+    name: "Biofilms"
+    ja: "バイオフィルム"
+    units: [B-144, I-062, B-148]
+    sources: [Y01]
+  - id: "G06.173"
+    parent: "G06"
+    name: "Catabolite Repression"
+    ja: "カタボライト抑制"
+    units: [B-044, B-144, B-009]
+    sources: [Y01]
+  - id: "G06.225"
+    parent: "G06"
+    name: "Drug Resistance, Microbial"
+    ja: "微生物の薬剤耐性"
+    units: [I-029, I-067, B-181, K-191]
+    sources: [Y01]
+  - id: "G06.320"
+    parent: "G06"
+    name: "Germ-Free Life"
+    ja: "無菌の生物"
+    units: [I-032, B-148, B-043]
+    sources: [Y01]
+  - id: "G06.365"
+    parent: "G06"
+    name: "Hemadsorption"
+    ja: "赤血球吸着"
+    units: [B-146, I-028, I-031]
+    sources: [Y01]
+  - id: "G06.373"
+    parent: "G06"
+    name: "Host Microbial Interactions"
+    ja: "宿主と微生物の相互作用"
+    units: [B-148, I-032, B-152, I-028]
+    sources: [Y01]
+  - id: "G06.462"
+    parent: "G06"
+    name: "Host-Pathogen Interactions"
+    ja: "宿主と病原体の相互作用"
+    units: [I-028, I-071, B-146, B-152]
+    sources: [Y01]
+  - id: "G06.550"
+    parent: "G06"
+    name: "Microbial Interactions"
+    ja: "微生物の相互作用"
+    units: [B-148, B-144, B-145, B-056]
+    sources: [Y01]
+  - id: "G06.580"
+    parent: "G06"
+    name: "Microbial Viability"
+    ja: "微生物の生存"
+    units: [B-144, V-016, E-228, B-043]
+    sources: [Y01]
+  - id: "G06.590"
+    parent: "G06"
+    name: "[OBSOLETE] Microbiological Processes"
+    ja: "微生物学的過程（廃止）"
+    none: "MeSH の廃止項目（OBSOLETE）で、現象としての中身がない。"
+    sources: [Y01]
+  - id: "G06.591"
+    parent: "G06"
+    name: "Microbiota"
+    ja: "微生物叢"
+    units: [B-148, I-032, B-145]
+    sources: [Y01]
+  - id: "G06.625"
+    parent: "G06"
+    name: "Nitrogen Fixation"
+    ja: "窒素固定"
+    units: [B-152, B-145, V-008, W-104]
+    sources: [Y01]
+  - id: "G06.773"
+    parent: "G06"
+    name: "Toxin-Antitoxin Systems"
+    ja: "毒素–抗毒素系"
+    units: [B-144, B-009, B-014, B-146, I-029]
+    sources: [Y01]
+  - id: "G06.920"
+    parent: "G06"
+    name: "Virus Physiological Phenomena"
+    ja: "ウイルスの生理的現象"
+    units: [B-146, I-028, B-043]
+    sources: [Y01]
+  - id: "G06.930"
+    parent: "G06"
+    name: "Virulence"
+    ja: "病原性"
+    units: [I-028, B-059, B-146, B-152]
+    sources: [Y01]
+  - {id: "G07", name: "Physiological Phenomena", ja: "生理現象", group: true}
+  - id: "G07.025"
+    parent: "G07"
+    name: "Adaptation, Physiological"
+    ja: "生理的適応"
+    units: [I-004, I-066, B-137, B-138, I-065]
+    sources: [Y01]
+  - id: "G07.049"
+    parent: "G07"
+    name: "Anatomic Variation"
+    ja: "解剖学的変異"
+    units: [I-012, I-013, B-142]
+    sources: [Y01]
+  - id: "G07.075"
+    parent: "G07"
+    name: "Bacterial Shedding"
+    ja: "細菌の排出"
+    units: [I-007, I-028, I-042, I-032]
+    sources: [Y01]
+  - id: "G07.100"
+    parent: "G07"
+    name: "Body Constitution"
+    ja: "体質"
+    none: "体質を体型や気質や伝統医学の型で分ける古い類型論で、反復検証では支持されない。現代の個人差は遺伝（I-024）、栄養（I-052）、体組成の測定で別に扱う。4 段目の体組成は別に見る。"
+    sources: [Y01]
+  - id: "G07.110"
+    parent: "G07"
+    name: "Body Temperature"
+    ja: "体温"
+    units: [B-137, B-035, I-063, I-065]
+    sources: [Y01]
+  - id: "G07.180"
+    parent: "G07"
+    name: "Chronobiology Phenomena"
+    ja: "時間生物学的現象"
+    units: [B-192, B-039, B-065, B-151]
+    sources: [Y01]
+  - id: "G07.192"
+    parent: "G07"
+    name: "Cortisol Awakening Response"
+    ja: "起床時コルチゾール反応"
+    units: [I-019, B-192, Q-012, I-004]
+    sources: [Y01]
+  - id: "G07.203"
+    parent: "G07"
+    name: "Diet, Food, and Nutrition"
+    ja: "食事と食品と栄養"
+    units: [I-052, I-009, I-019, V-016]
+    sources: [Y01]
+  - id: "G07.225"
+    parent: "G07"
+    name: "Dose-Response Relationship, Radiation"
+    ja: "放射線の線量反応関係"
+    units: [B-186, E-244, I-041]
+    sources: [Y01]
+  - id: "G07.265"
+    parent: "G07"
+    name: "Electrophysiological Phenomena"
+    ja: "電気生理学的現象"
+    units: [B-052, I-014, E-225, B-067]
+    sources: [Y01]
+  - id: "G07.280"
+    parent: "G07"
+    name: "Fetal Viability"
+    ja: "胎児の生存能"
+    units: [I-049, I-013, I-018, I-015]
+    sources: [Y01]
+  - id: "G07.313"
+    parent: "G07"
+    name: "Fluid Shifts"
+    ja: "体液の移動"
+    units: [I-016, I-022, I-021]
+    sources: [Y01]
+  - id: "G07.345"
+    parent: "G07"
+    name: "Growth and Development"
+    ja: "成長と発達"
+    units: [I-049, B-046, B-140, Q-010]
+    sources: [Y01]
+  - id: "G07.410"
+    parent: "G07"
+    name: "Homeostasis"
+    ja: "恒常性"
+    units: [B-035, I-004, I-019, B-137]
+    sources: [Y01]
+  - id: "G07.443"
+    parent: "G07"
+    name: "Host Tropism"
+    ja: "宿主指向性"
+    units: [B-146, I-028, V-015, B-152]
+    sources: [Y01]
+  - id: "G07.475"
+    parent: "G07"
+    name: "Insulin Secretion"
+    ja: "インスリン分泌"
+    units: [I-019, I-046, B-052, B-035]
+    sources: [Y01]
+  - id: "G07.540"
+    parent: "G07"
+    name: "Longevity"
+    ja: "長寿"
+    units: [B-112, I-049]
+    sources: [Y01]
+  - id: "G07.568"
+    parent: "G07"
+    name: "Movement"
+    ja: "運動"
+    units: [B-139, Q-025, B-120, B-034]
+    sources: [Y01]
+  - id: "G07.650"
+    parent: "G07"
+    name: "Organ Specificity"
+    ja: "臓器特異性"
+    units: [B-044, B-143, I-011]
+    sources: [Y01]
+  - id: "G07.670"
+    parent: "G07"
+    name: "Organism Hydration Status"
+    ja: "体の水分状態"
+    units: [I-016, B-137, I-065, B-035]
+    sources: [Y01]
+  - id: "G07.690"
+    parent: "G07"
+    name: "Pharmacological and Toxicological Phenomena"
+    ja: "薬理学的現象と毒性学的現象"
+    units: [I-001, I-002, I-027, I-026]
+    sources: [Y01]
+  - id: "G07.700"
+    parent: "G07"
+    name: "[OBSOLETE] Physiological Processes"
+    ja: "生理的過程（廃止）"
+    none: "MeSH の廃止項目（OBSOLETE）で、現象としての中身がない。"
+    sources: [Y01]
+  - id: "G07.738"
+    parent: "G07"
+    name: "Radiation Tolerance"
+    ja: "放射線耐性"
+    units: [B-186, I-041]
+    sources: [Y01]
+  - id: "G07.757"
+    parent: "G07"
+    name: "Sex Differences"
+    ja: "性差"
+    units: [I-018, Q-031, B-058, I-049]
+    sources: [Y01]
+  - id: "G07.775"
+    parent: "G07"
+    name: "Stress, Physiological"
+    ja: "生理的ストレス"
+    units: [I-019, Q-012, Q-018, B-153]
+    sources: [Y01]
+  - id: "G07.850"
+    parent: "G07"
+    name: "Thermosensing"
+    ja: "温度の感知"
+    units: [I-063, B-189, B-052, B-063]
+    sources: [Y01]
+  - id: "G07.888"
+    parent: "G07"
+    name: "Vestibulocochlear Physiological Phenomena"
+    ja: "前庭と蝸牛の生理的現象"
+    units: [I-057, I-060]
+    sources: [Y01]
+  - id: "G07.925"
+    parent: "G07"
+    name: "Virus Shedding"
+    ja: "ウイルスの排出"
+    units: [I-007, I-042, B-146, I-037]
+    sources: [Y01]
+  - {id: "G08", name: "Reproductive and Urinary Physiological Phenomena", ja: "生殖と泌尿の生理現象", group: true}
+  - id: "G08.686"
+    parent: "G08"
+    name: "Reproductive Physiological Phenomena"
+    ja: "生殖の生理的現象"
+    units: [I-018, B-023, I-049, V-037]
+    sources: [Y01]
+  - id: "G08.852"
+    parent: "G08"
+    name: "Urinary Tract Physiological Phenomena"
+    ja: "尿路の生理的現象"
+    units: [I-016, I-047]
+    sources: [Y01]
+  - {id: "G09", name: "Circulatory and Respiratory Physiological Phenomena", ja: "循環と呼吸の生理現象", group: true}
+  - id: "G09.188"
+    parent: "G09"
+    name: "Blood Physiological Phenomena"
+    ja: "血液の生理的現象"
+    units: [I-022, I-015, B-036]
+    sources: [Y01]
+  - id: "G09.330"
+    parent: "G09"
+    name: "Cardiovascular Physiological Phenomena"
+    ja: "心血管の生理的現象"
+    units: [I-014, I-070, B-036, I-004]
+    sources: [Y01]
+  - id: "G09.772"
+    parent: "G09"
+    name: "Respiratory Physiological Phenomena"
+    ja: "呼吸の生理的現象"
+    units: [I-015, I-072, B-138, I-004]
+    sources: [Y01]
+  - {id: "G10", name: "Digestive System and Oral Physiological Phenomena", ja: "消化と口腔の生理現象", group: true}
+  - id: "G10.261"
+    parent: "G10"
+    name: "Digestive System Physiological Phenomena"
+    ja: "消化器系の生理的現象"
+    units: [I-017, I-073, B-036]
+    sources: [Y01]
+  - id: "G10.549"
+    parent: "G10"
+    name: "Dental Physiological Phenomena"
+    ja: "歯の生理的現象"
+    units: [I-061, I-062]
+    sources: [Y01]
+  - {id: "G11", name: "Musculoskeletal and Neural Physiological Phenomena", ja: "筋骨格と神経の生理現象", group: true}
+  - id: "G11.427"
+    parent: "G11"
+    name: "Musculoskeletal Physiological Phenomena"
+    ja: "筋骨格の生理的現象"
+    units: [I-075, B-034, B-139, I-065]
+    sources: [Y01]
+  - id: "G11.561"
+    parent: "G11"
+    name: "Nervous System Physiological Phenomena"
+    ja: "神経系の生理的現象"
+    units: [B-052, B-063, B-065, B-064]
+    sources: [Y01]
+  - {id: "G12", name: "Immune System Phenomena", ja: "免疫現象", group: true}
+  - id: "G12.040"
+    parent: "G12"
+    name: "Antibody Affinity"
+    ja: "抗体の親和性"
+    units: [I-005, B-013, B-003]
+    sources: [Y01]
+  - id: "G12.100"
+    parent: "G12"
+    name: "Antibody Specificity"
+    ja: "抗体の特異性"
+    units: [I-005, B-013, H-059]
+    sources: [Y01]
+  - id: "G12.113"
+    parent: "G12"
+    name: "Antibody-Dependent Enhancement"
+    ja: "抗体依存性感染増強"
+    units: [I-005, I-031, B-146, I-071]
+    sources: [Y01]
+  - id: "G12.119"
+    parent: "G12"
+    name: "Antigen Presentation"
+    ja: "抗原提示"
+    units: [I-005]
+    sources: [Y01]
+  - id: "G12.122"
+    parent: "G12"
+    name: "Antigen-Antibody Reactions"
+    ja: "抗原抗体反応"
+    units: [I-005, I-071, I-030, B-013]
+    sources: [Y01]
+  - id: "G12.125"
+    parent: "G12"
+    name: "Binding Sites, Antibody"
+    ja: "抗体の結合部位"
+    units: [I-005, B-012, B-013]
+    sources: [Y01]
+  - id: "G12.186"
+    parent: "G12"
+    name: "Blood Group Incompatibility"
+    ja: "血液型不適合"
+    units: [I-030, I-022, I-005, B-024]
+    sources: [Y01]
+  - id: "G12.248"
+    parent: "G12"
+    name: "CD4-CD8 Ratio"
+    ja: "CD4/CD8 比"
+    units: [I-005, I-030, I-043]
+    sources: [Y01]
+  - id: "G12.261"
+    parent: "G12"
+    name: "Clonal Selection, Antigen-Mediated"
+    ja: "抗原によるクローン選択"
+    units: [I-005, B-037]
+    sources: [Y01]
+  - id: "G12.274"
+    parent: "G12"
+    name: "Complement Activation"
+    ja: "補体の活性化"
+    units: [I-071]
+    sources: [Y01]
+  - id: "G12.287"
+    parent: "G12"
+    name: "Cytotoxicity, Immunologic"
+    ja: "免疫による細胞傷害"
+    units: [I-005, I-071, I-030]
+    sources: [Y01]
+  - id: "G12.300"
+    parent: "G12"
+    name: "Dose-Response Relationship, Immunologic"
+    ja: "免疫の用量反応関係"
+    units: [I-001, I-031, I-005]
+    sources: [Y01]
+  - id: "G12.350"
+    parent: "G12"
+    name: "Histamine Release"
+    ja: "ヒスタミンの遊離"
+    units: [I-030, I-021, I-001]
+    sources: [Y01]
+  - id: "G12.400"
+    parent: "G12"
+    name: "HIV Seronegativity"
+    ja: "HIV 抗体陰性"
+    units: [I-043, I-028, I-005, B-146]
+    sources: [Y01]
+  - id: "G12.413"
+    parent: "G12"
+    name: "Immune Evasion"
+    ja: "免疫回避"
+    units: [I-028, B-146, I-071, B-152]
+    sources: [Y01]
+  - id: "G12.425"
+    parent: "G12"
+    name: "[OBSOLETE] Immune System Processes"
+    ja: "免疫系の過程（廃止）"
+    none: "MeSH の廃止項目（OBSOLETE）で、現象としての中身がない。"
+    sources: [Y01]
+  - id: "G12.432"
+    parent: "G12"
+    name: "Immune Reconstitution"
+    ja: "免疫再構築"
+    units: [I-030, I-054, I-005]
+    sources: [Y01]
+  - id: "G12.450"
+    parent: "G12"
+    name: "Immunity"
+    ja: "免疫"
+    units: [I-005, I-071, I-031, B-037]
+    sources: [Y01]
+  - id: "G12.460"
+    parent: "G12"
+    name: "Immunocompetence"
+    ja: "免疫能"
+    units: [I-005, I-030, I-049]
+    sources: [Y01]
+  - id: "G12.470"
+    parent: "G12"
+    name: "Immunocompromised Host"
+    ja: "免疫不全の宿主"
+    units: [I-030, I-051, I-029]
+    sources: [Y01]
+  - id: "G12.485"
+    parent: "G12"
+    name: "Immunoediting, Cancer"
+    ja: "がんの免疫編集"
+    units: [I-005, I-071, I-023, I-054, I-050]
+    sources: [Y01]
+  - id: "G12.500"
+    parent: "G12"
+    name: "Immunogenetic Phenomena"
+    ja: "免疫遺伝学的現象"
+    units: [I-005, I-024, I-053]
+    sources: [Y01]
+  - id: "G12.513"
+    parent: "G12"
+    name: "Immunogenicity, Vaccine"
+    ja: "ワクチンの免疫原性"
+    units: [I-031, I-005]
+    sources: [Y01]
+  - id: "G12.525"
+    parent: "G12"
+    name: "Immunologic Surveillance"
+    ja: "免疫監視"
+    units: [I-005, I-071, I-023, I-054, I-050]
+    sources: [Y01]
+  - id: "G12.535"
+    parent: "G12"
+    name: "Immunomodulation"
+    ja: "免疫調節"
+    units: [I-030, I-050, I-031, I-001]
+    sources: [Y01]
+  - id: "G12.565"
+    parent: "G12"
+    name: "Lymphocyte Activation"
+    ja: "リンパ球の活性化"
+    units: [I-005, B-037]
+    sources: [Y01]
+  - id: "G12.575"
+    parent: "G12"
+    name: "Lymphocyte Cooperation"
+    ja: "リンパ球の協同"
+    units: [I-005, B-037]
+    sources: [Y01]
+  - id: "G12.590"
+    parent: "G12"
+    name: "Immune System Exhaustion"
+    ja: "免疫系の疲弊"
+    units: [I-005, I-030, I-028, I-050]
+    sources: [Y01]
+  - id: "G12.604"
+    parent: "G12"
+    name: "Neutrophil Activation"
+    ja: "好中球の活性化"
+    units: [I-021, I-071, I-020, B-217]
+    sources: [Y01]
+  - id: "G12.632"
+    parent: "G12"
+    name: "Neutrophil Infiltration"
+    ja: "好中球の浸潤"
+    units: [I-021, B-203]
+    sources: [Y01]
+  - id: "G12.688"
+    parent: "G12"
+    name: "Phagocytosis"
+    ja: "食作用"
+    units: [B-201, B-202, I-071, I-021]
+    sources: [Y01]
+  - id: "G12.800"
+    parent: "G12"
+    name: "Seroconversion"
+    ja: "セロコンバージョン"
+    units: [I-031, I-043, I-042, I-005]
+    sources: [Y01]
+  - id: "G12.838"
+    parent: "G12"
+    name: "Th1-Th2 Balance"
+    ja: "Th1 と Th2 の釣り合い"
+    units: [I-005, I-030]
+    sources: [Y01]
+  - id: "G12.875"
+    parent: "G12"
+    name: "Transplantation Immunology"
+    ja: "移植免疫"
+    units: [I-030, I-005]
+    sources: [Y01]
+  - id: "G12.888"
+    parent: "G12"
+    name: "Trogocytosis"
+    ja: "トロゴサイトーシス"
+    units: [B-203, B-202, I-005, I-071]
+    sources: [Y01]
+  - id: "G12.900"
+    parent: "G12"
+    name: "Tumor Escape"
+    ja: "腫瘍の免疫逃避"
+    units: [I-005, I-023, I-071, I-050]
+    sources: [Y01]
+  - {id: "G13", name: "Integumentary System Physiological Phenomena", ja: "外皮の生理現象", group: true}
+  - id: "G13.500"
+    parent: "G13"
+    name: "Hair Color"
+    ja: "毛の色"
+    units: [I-063, B-024, B-188, B-044]
+    sources: [Y01]
+  - id: "G13.750"
+    parent: "G13"
+    name: "Skin Physiological Phenomena"
+    ja: "皮膚の生理的現象"
+    units: [I-063, I-074]
+    sources: [Y01]
+  - {id: "G14", name: "Ocular Physiological Phenomena", ja: "眼の生理現象", group: true}
+  - id: "G14.010"
+    parent: "G14"
+    name: "Accommodation, Ocular"
+    ja: "眼の調節"
+    units: [I-056, I-059, P-023]
+    sources: [Y01]
+  - id: "G14.020"
+    parent: "G14"
+    name: "Adaptation, Ocular"
+    ja: "眼の順応"
+    units: [I-056, Q-004]
+    sources: [Y01]
+  - id: "G14.040"
+    parent: "G14"
+    name: "Afterimage"
+    ja: "残像"
+    units: [Q-001, I-056, Q-004]
+    sources: [Y01]
+  - id: "G14.152"
+    parent: "G14"
+    name: "Blinking"
+    ja: "まばたき"
+    units: [B-063, Q-007, B-034, I-056]
+    sources: [Y01]
+  - id: "G14.264"
+    parent: "G14"
+    name: "Dominance, Ocular"
+    ja: "利き目"
+    units: [B-064, I-056, B-052, B-063]
+    sources: [Y01]
+  - id: "G14.330"
+    parent: "G14"
+    name: "Evoked Potentials, Visual"
+    ja: "視覚誘発電位"
+    units: [I-056, E-225, B-190, B-067]
+    sources: [Y01]
+  - id: "G14.340"
+    parent: "G14"
+    name: "Eye Color"
+    ja: "眼の色"
+    units: [I-063, B-024, B-045, B-188]
+    sources: [Y01]
+  - id: "G14.350"
+    parent: "G14"
+    name: "Eye Movements"
+    ja: "眼球運動"
+    units: [I-056, B-063, Q-025, I-057, Q-005]
+    sources: [Y01]
+  - id: "G14.360"
+    parent: "G14"
+    name: "Figural Aftereffect"
+    ja: "図形残効"
+    units: [Q-004, Q-001, Q-015, I-056]
+    sources: [Y01]
+  - id: "G14.370"
+    parent: "G14"
+    name: "Flicker Fusion"
+    ja: "ちらつき融合"
+    units: [I-056, Q-004]
+    sources: [Y01]
+  - id: "G14.400"
+    parent: "G14"
+    name: "Glare"
+    ja: "まぶしさ"
+    units: [I-056, P-023, I-059, E-248]
+    sources: [Y01]
+  - id: "G14.440"
+    parent: "G14"
+    name: "Intraocular Pressure"
+    ja: "眼圧"
+    units: [I-059, I-016, B-031]
+    sources: [Y01]
+  - id: "G14.540"
+    parent: "G14"
+    name: "Lacrimal Elimination"
+    ja: "涙による排出"
+    units: [I-002, I-059, I-064]
+    sources: [Y01]
+  - id: "G14.590"
+    parent: "G14"
+    name: "Ocular Absorption"
+    ja: "眼からの吸収"
+    units: [I-002, I-064, E-168, I-059]
+    sources: [Y01]
+  - id: "G14.640"
+    parent: "G14"
+    name: "[OBSOLETE] Ocular Physiological Processes"
+    ja: "眼の生理的過程（廃止）"
+    none: "[OBSOLETE] 廃止された項目で、内容がない。"
+    sources: [Y01]
+  - id: "G14.700"
+    parent: "G14"
+    name: "Optic Flow"
+    ja: "オプティカルフロー"
+    units: [Q-004, K-080, I-056, B-157, Q-032]
+    sources: [Y01]
+  - id: "G14.760"
+    parent: "G14"
+    name: "Refraction, Ocular"
+    ja: "眼の屈折"
+    units: [I-056, I-059, P-023]
+    sources: [Y01]
+  - id: "G14.930"
+    parent: "G14"
+    name: "Vision Disparity"
+    ja: "両眼視差"
+    units: [Q-001, Q-004, I-056, B-063]
+    sources: [Y01]
+  - id: "G14.935"
+    parent: "G14"
+    name: "Vision, Ocular"
+    ja: "視覚"
+    units: [I-056, B-063, B-170]
+    sources: [Y01]
+  - id: "G14.940"
+    parent: "G14"
+    name: "Visual Acuity"
+    ja: "視力"
+    units: [I-056, P-023, Q-004, I-059]
+    sources: [Y01]
+  - id: "G14.950"
+    parent: "G14"
+    name: "Visual Fields"
+    ja: "視野"
+    units: [I-056, I-059, B-101, Q-027]
+    sources: [Y01]
+  - {id: "G15", name: "Plant Physiological Phenomena", ja: "植物の生理現象", group: true}
+  - id: "G15.150"
+    parent: "G15"
+    name: "Drought Resistance"
+    ja: "乾燥耐性"
+    units: [B-153, B-038, V-005, B-094, V-010]
+    sources: [Y01]
+  - id: "G15.300"
+    parent: "G15"
+    name: "Gametogenesis, Plant"
+    ja: "植物の配偶子形成"
+    units: [B-218]
+    sources: [Y01]
+  - id: "G15.375"
+    parent: "G15"
+    name: "Gravity Sensing"
+    ja: "重力の感知"
+    units: [B-038, B-151, I-057]
+    sources: [Y01]
+  - id: "G15.525"
+    parent: "G15"
+    name: "Organogenesis, Plant"
+    ja: "植物の器官形成"
+    units: [B-150, B-026]
+    sources: [Y01]
+  - id: "G15.547"
+    parent: "G15"
+    name: "Parthenogenesis"
+    ja: "単為生殖"
+    units: [B-023, B-045, B-059]
+    sources: [Y01]
+  - id: "G15.568"
+    parent: "G15"
+    name: "Photosynthesis"
+    ja: "光合成"
+    units: [B-030, B-153, B-019, B-038, B-083]
+    sources: [Y01]
+  - id: "G15.579"
+    parent: "G15"
+    name: "Plant Defense Against Herbivory"
+    ja: "植食者に対する植物の防御"
+    units: [B-059, B-132, B-151, B-152, H-105, V-009]
+    sources: [Y01]
+  - id: "G15.589"
+    parent: "G15"
+    name: "Plant Development"
+    ja: "植物の発生"
+    units: [B-150, B-151, B-038, B-026]
+    sources: [Y01]
+  - id: "G15.610"
+    parent: "G15"
+    name: "Plant Diseases"
+    ja: "植物の病気"
+    units: [V-009, B-152, B-147]
+    sources: [Y01]
+  - id: "G15.620"
+    parent: "G15"
+    name: "Plant Dispersal"
+    ja: "植物の分散"
+    units: [B-060, B-062, B-103, B-184]
+    sources: [Y01]
+  - id: "G15.630"
+    parent: "G15"
+    name: "Plant Immunity"
+    ja: "植物の免疫"
+    units: [B-152]
+    sources: [Y01]
+  - id: "G15.649"
+    parent: "G15"
+    name: "Plant Infertility"
+    ja: "植物の不稔"
+    units: [B-218]
+    sources: [Y01]
+  - id: "G15.682"
+    parent: "G15"
+    name: "Plant Root Nodulation"
+    ja: "根粒の形成"
+    units: [B-152, B-148, V-008]
+    sources: [Y01]
+  - id: "G15.698"
+    parent: "G15"
+    name: "Plant Somatic Embryogenesis Techniques"
+    ja: "植物の体細胞胚形成の技術"
+    units: [B-080, B-150, B-151]
+    sources: [Y01]
+  - id: "G15.713"
+    parent: "G15"
+    name: "Plant Transpiration"
+    ja: "植物の蒸散"
+    units: [B-019, B-038, B-031, B-151, B-153]
+    sources: [Y01]
+  - id: "G15.744"
+    parent: "G15"
+    name: "[OBSOLETE] Plant Physiological Processes"
+    ja: "植物の生理的過程（廃止）"
+    none: "[OBSOLETE] 廃止された項目で、内容がない。"
+    sources: [Y01]
+  - id: "G15.776"
+    parent: "G15"
+    name: "Pollination"
+    ja: "受粉"
+    units: [B-132, B-023, B-026, B-059]
+    sources: [Y01]
+  - id: "G15.808"
+    parent: "G15"
+    name: "Seed Dispersal"
+    ja: "種子の散布"
+    units: [B-060, B-062, B-103, B-159]
+    sources: [Y01]
+  - id: "G15.830"
+    parent: "G15"
+    name: "Self-Fertilization"
+    ja: "自家受精"
+    units: [B-002, B-024, B-059]
+    sources: [Y01]
+  - id: "G15.840"
+    parent: "G15"
+    name: "Self-Incompatibility in Flowering Plants"
+    ja: "被子植物の自家不和合性"
+    units: [B-218]
+    sources: [Y01]
+  - id: "G15.920"
+    parent: "G15"
+    name: "Tropism"
+    ja: "屈性"
+    units: [B-038, B-151]
+    sources: [Y01]
+  - {id: "G16", name: "Biological Phenomena", ja: "生物学的現象", group: true}
+  - id: "G16.012"
+    parent: "G16"
+    name: "Adaptation, Biological"
+    ja: "生物の適応"
+    units: [B-094, B-042, B-137, B-138, B-153]
+    sources: [Y01]
+  - id: "G16.024"
+    parent: "G16"
+    name: "Allelopathy"
+    ja: "他感作用"
+    units: [H-105, B-056, V-008, B-038, B-061]
+    sources: [Y01]
+  - id: "G16.049"
+    parent: "G16"
+    name: "Animal Distribution"
+    ja: "動物の分布"
+    units: [B-184, B-060, B-056, B-159]
+    sources: [Y01]
+  - id: "G16.062"
+    parent: "G16"
+    name: "Antibiosis"
+    ja: "抗生作用"
+    units: [B-148, I-029, H-105, B-144]
+    sources: [Y01]
+  - id: "G16.075"
+    parent: "G16"
+    name: "Biological Evolution"
+    ja: "生物の進化"
+    units: [B-042, B-011, B-002, B-059, B-134]
+    sources: [Y01]
+  - id: "G16.100"
+    parent: "G16"
+    name: "[OBSOLETE] Biological Processes"
+    ja: "生物学的過程（廃止）"
+    none: "[OBSOLETE] 廃止された項目で、内容がない。"
+    sources: [Y01]
+  - id: "G16.115"
+    parent: "G16"
+    name: "Biological Variation, Individual"
+    ja: "個体の生物学的変異"
+    units: [I-043, S-037, B-192, I-002]
+    sources: [Y01]
+  - id: "G16.117"
+    parent: "G16"
+    name: "Biological Variation, Population"
+    ja: "集団の生物学的変異"
+    units: [B-002, B-059, B-188, V-006, I-043]
+    sources: [Y01]
+  - id: "G16.150"
+    parent: "G16"
+    name: "Colony Collapse"
+    ja: "蜂群崩壊"
+    units: [B-132, V-009, B-040, I-028, B-093]
+    sources: [Y01]
+  - id: "G16.500"
+    parent: "G16"
+    name: "Ecological and Environmental Phenomena"
+    ja: "生態と環境の現象"
+    units: [B-021, B-040, B-041, B-056, B-057]
+    sources: [Y01]
+  - id: "G16.505"
+    parent: "G16"
+    name: "Environmental Biomarkers"
+    ja: "環境のバイオマーカー"
+    units: [I-027, B-092, B-102, B-156, I-041]
+    sources: [Y01]
+  - id: "G16.510"
+    parent: "G16"
+    name: "Extinction, Biological"
+    ja: "生物の絶滅"
+    units: [B-182, W-125, B-060, B-093, W-009]
+    sources: [Y01]
+  - id: "G16.527"
+    parent: "G16"
+    name: "Host Microbial Interactions"
+    ja: "宿主と微生物の相互作用"
+    units: [I-032, B-148, I-028, B-146, B-152]
+    sources: [Y01]
+  - id: "G16.559"
+    parent: "G16"
+    name: "Host-Seeking Behavior"
+    ja: "宿主の探索行動"
+    units: [B-039, I-058, I-067, B-058, B-157]
+    sources: [Y01]
+  - id: "G16.575"
+    parent: "G16"
+    name: "Life History Traits"
+    ja: "生活史の形質"
+    units: [B-059, B-136, B-055]
+    sources: [Y01]
+  - id: "G16.645"
+    parent: "G16"
+    name: "Organelle Biogenesis"
+    ja: "細胞小器官の生合成"
+    units: [B-200, B-201]
+    sources: [Y01]
+  - id: "G16.650"
+    parent: "G16"
+    name: "Origin of Life"
+    ja: "生命の起源"
+    units: [H-090, B-110, B-027, B-111]
+    sources: [Y01]
+  - id: "G16.690"
+    parent: "G16"
+    name: "Pigmentation"
+    ja: "色素沈着"
+    units: [I-063, B-188, B-072, B-024]
+    sources: [Y01]
+  - id: "G16.757"
+    parent: "G16"
+    name: "Recovery of Function"
+    ja: "機能の回復"
+    units: [Q-027, Q-025, B-064, I-021, B-193]
+    sources: [Y01]
+  - id: "G16.762"
+    parent: "G16"
+    name: "Regeneration"
+    ja: "再生"
+    units: [B-193, B-054, I-021]
+    sources: [Y01]
+  - id: "G16.767"
+    parent: "G16"
+    name: "Remission, Spontaneous"
+    ja: "自然寛解"
+    units: [Q-014, I-040, I-035, I-003]
+    sources: [Y01]
+  - id: "G16.824"
+    parent: "G16"
+    name: "Species Specificity"
+    ja: "種特異性"
+    units: [B-146, V-015, V-032, V-014, B-185]
+    sources: [Y01]
+  - id: "G16.840"
+    parent: "G16"
+    name: "Symbiosis"
+    ja: "共生"
+    units: [B-148, B-152, B-110, B-147, B-132]
+    sources: [Y01]
+  - id: "G16.920"
+    parent: "G16"
+    name: "Tissue Survival"
+    ja: "組織の生存"
+    units: [I-020, I-030, I-022, I-021]
+    sources: [Y01]

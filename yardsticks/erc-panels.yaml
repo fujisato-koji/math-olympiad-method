@@ -1133,7 +1133,7 @@ items:
     parent: "LS1"
     name: "DNA and RNA biology"
     ja: "DNA と RNA の生物学"
-    units: [B-009, B-001, B-032, B-186]
+    units: [B-009, B-001, B-032, B-186, B-208, B-209, B-210, B-211, B-212]
     sources: [Y01]
   - id: "LS1_4"
     parent: "LS1"
@@ -1151,7 +1151,7 @@ items:
     parent: "LS1"
     name: "Glycobiology"
     ja: "糖鎖生物学"
-    gap: "糖鎖生物学（ERC・OpenAlex の新しい欠け、docs/research/yardstick-erc-openalex.md の 5）"
+    units: [B-214, H-044, B-010]
     sources: [Y01]
   - id: "LS1_7"
     parent: "LS1"
@@ -1169,7 +1169,7 @@ items:
     parent: "LS1"
     name: "Molecular mechanisms of signalling processes"
     ja: "信号伝達の分子機構"
-    gap: "既知の欠け：細胞の信号伝達（docs/research/yardstick-journals.md の 3 と docs/yardsticks.md）"
+    units: [B-195, K-115]
     sources: [Y01]
   - id: "LS1_10"
     parent: "LS1"
@@ -1187,7 +1187,7 @@ items:
     parent: "LS1"
     name: "Protein design"
     ja: "タンパク質設計"
-    gap: "タンパク質設計（ERC・OpenAlex の新しい欠け、docs/research/yardstick-erc-openalex.md の 5）"
+    units: [K-227, K-111, K-117]
     sources: [Y01]
   - id: "LS1_13"
     parent: "LS1"
@@ -1217,13 +1217,13 @@ items:
     parent: "LS2"
     name: "Epigenetics"
     ja: "エピジェネティクス"
-    gap: "既知の欠け：クロマチンとエピゲノム（docs/research/yardstick-journals.md の 3 と docs/yardsticks.md）"
+    units: [B-207, B-044]
     sources: [Y01]
   - id: "LS2_4"
     parent: "LS2"
     name: "Gene regulation"
     ja: "遺伝子発現の制御"
-    units: [B-044, B-009, K-107]
+    units: [B-044, B-009, K-107, B-209, B-207]
     sources: [Y01]
   - id: "LS2_5"
     parent: "LS2"
@@ -1247,7 +1247,7 @@ items:
     parent: "LS2"
     name: "Proteomics"
     ja: "プロテオミクス"
-    gap: "既知の欠け：プロテオミクス（docs/research/yardstick-journals.md の 3 と docs/yardsticks.md）"
+    units: [K-228, H-110]
     sources: [Y01]
   - id: "LS2_9"
     parent: "LS2"
@@ -1259,7 +1259,7 @@ items:
     parent: "LS2"
     name: "Glycomics/Lipidomics"
     ja: "グライコミクスとリピドミクス"
-    gap: "既知の欠け：プロテオミクスとメタボロミクス（質量分析による網羅解析）（docs/research/yardstick-journals.md の 3 と docs/yardsticks.md）"
+    gap: "リピドミクス（脂質の網羅解析。糖の側は糖鎖生物学 B-214、質量分析による網羅はプロテオミクス K-228 が受け持つ。次の回の候補）"
     sources: [Y01]
   - id: "LS2_11"
     parent: "LS2"
@@ -1301,43 +1301,43 @@ items:
     parent: "LS3"
     name: "Cell cycle, cell division and growth"
     ja: "細胞周期・細胞分裂・成長"
-    gap: "既知の欠け：細胞周期の制御（docs/research/yardstick-journals.md の 3 と docs/yardsticks.md）"
+    units: [B-196, B-206]
     sources: [Y01]
   - id: "LS3_2"
     parent: "LS3"
     name: "Cell senescence, cell death, autophagy, cell ageing"
     ja: "細胞老化・細胞死・オートファジー"
-    gap: "オートファジー（ERC・OpenAlex の新しい欠け、docs/research/yardstick-erc-openalex.md の 5）"
+    units: [B-197, B-198, B-112]
     sources: [Y01]
   - id: "LS3_3"
     parent: "LS3"
     name: "Cell behaviour, including control of cell shape, cell migration"
     ja: "細胞の挙動（形の制御・細胞移動）"
-    gap: "細胞骨格（ERC・OpenAlex の新しい欠け、docs/research/yardstick-erc-openalex.md の 5）"
+    units: [B-202]
     sources: [Y01]
   - id: "LS3_4"
     parent: "LS3"
     name: "Cell junctions, cell adhesion, the extracellular matrix, cell communication"
     ja: "細胞間結合・細胞接着・細胞外基質・細胞間連絡"
-    gap: "細胞接着（ERC・OpenAlex の新しい欠け、docs/research/yardstick-erc-openalex.md の 5）"
+    units: [B-203]
     sources: [Y01]
   - id: "LS3_5"
     parent: "LS3"
     name: "Cell signalling and signal transduction, exosome biology"
     ja: "細胞の信号伝達とエキソソーム生物学"
-    gap: "既知の欠け：細胞の信号伝達（docs/research/yardstick-journals.md の 3 と docs/yardsticks.md）"
+    units: [B-195, B-201]
     sources: [Y01]
   - id: "LS3_6"
     parent: "LS3"
     name: "Organelle biology and trafficking"
     ja: "細胞小器官の生物学と輸送"
-    gap: "細胞内輸送（ERC・OpenAlex の新しい欠け、docs/research/yardstick-erc-openalex.md の 5）"
+    units: [B-200, B-201]
     sources: [Y01]
   - id: "LS3_7"
     parent: "LS3"
     name: "Mechanobiology of cells, tissues and organs"
     ja: "細胞・組織・器官のメカノバイオロジー"
-    units: [B-005, B-141, B-004]
+    units: [B-005, B-141, B-004, B-204]
     sources: [Y01]
   - id: "LS3_8"
     parent: "LS3"
@@ -1391,7 +1391,7 @@ items:
     parent: "LS3"
     name: "Functional imaging of cells and tissues"
     ja: "細胞と組織の機能イメージング"
-    gap: "蛍光イメージング（ERC・OpenAlex の新しい欠け、docs/research/yardstick-erc-openalex.md の 5）"
+    units: [B-215, B-067]
     sources: [Y01]
   - id: "LS3_17"
     parent: "LS3"

@@ -71,7 +71,7 @@ items:
     parent: "A"
     name: "Cells"
     ja: "細胞"
-    units: [B-010, B-022, I-011]
+    units: [B-010, B-022, I-011, B-200, B-201, B-202]
     sources: [Y01]
   - id: "A12"
     parent: "A"
@@ -368,7 +368,7 @@ items:
     parent: "D"
     name: "Nucleic Acids, Nucleotides, and Nucleosides"
     ja: "核酸・ヌクレオチド・ヌクレオシド"
-    units: [B-032, B-009, H-044, B-006]
+    units: [B-032, B-009, H-044, B-006, B-208]
     sources: [Y01]
   - id: "D20"
     parent: "D"
@@ -491,13 +491,13 @@ items:
     parent: "G"
     name: "Cell Physiological Phenomena"
     ja: "細胞の生理現象"
-    units: [B-010, B-031, B-052, I-020]
+    units: [B-010, B-031, B-052, I-020, B-195, B-196, B-197, B-201, B-202]
     sources: [Y01]
   - id: "G05"
     parent: "G"
     name: "Genetic Phenomena"
     ja: "遺伝現象"
-    units: [B-001, B-002, B-009, B-044, B-032, B-188]
+    units: [B-001, B-002, B-009, B-044, B-032, B-188, B-207, B-208, B-209, B-210, B-211, B-212, B-213]
     sources: [Y01]
   - id: "G06"
     parent: "G"

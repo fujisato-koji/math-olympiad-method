@@ -61,6 +61,7 @@ items:
   units:
   - H-044
   - B-053
+  - B-208
 - id: T-06
   field: 生命
   topic: 自然免疫による RNA の認識（樹状細胞、受容体）
@@ -91,6 +92,7 @@ items:
   units:
   - K-111
   - K-117
+  - K-227
 - id: T-10
   field: 化学
   topic: 分析化学（mRNA 医薬の品質の分析）

@@ -198,7 +198,7 @@ items:
     parent: "area:Biochemistry, Genetics and Molecular Biology"
     name: "Cell Biology"
     ja: "細胞生物学"
-    gap: "既知の欠け（細胞の信号伝達、細胞周期の制御）。生命科学の段 B でまとめて足す（docs/yardsticks.md の次の回の候補）"
+    units: [B-010, B-195, B-196, B-201, B-202]
     sources: [Y01]
   - id: "1308"
     parent: "area:Biochemistry, Genetics and Molecular Biology"
@@ -228,7 +228,7 @@ items:
     parent: "area:Biochemistry, Genetics and Molecular Biology"
     name: "Molecular Biology"
     ja: "分子生物学"
-    gap: "既知の欠け（クロマチンとエピゲノム、RNA の制御、プロテオミクス）。生命科学の段 B でまとめて足す（docs/yardsticks.md の次の回の候補）"
+    units: [B-207, B-208, K-228, B-009, B-044]
     sources: [Y01]
   - id: "1313"
     parent: "area:Biochemistry, Genetics and Molecular Biology"

@@ -2426,7 +2426,6 @@ lines:
   I-014>I-022: {type: 土台, strength: 2, why: 血流の理解が血栓や梗塞の土台}
   I-020>I-022: {type: 土台, strength: 2, why: 虚血による傷害が梗塞の土台}
   B-044>I-023: {type: 土台, strength: 3, why: 遺伝子発現の調節が土台}
-  B-010>I-023: {type: 土台, strength: 3, why: 細胞周期やシグナルが土台}
   B-042>I-023: {type: 応用, strength: 2, why: 選択を腫瘍の進化に当てはめる}
   B-045>I-024: {type: 土台, strength: 3, why: 連鎖と遺伝の型が土台}
   B-002>I-024: {type: 土台, strength: 3, why: 変異や集団遺伝が土台}
@@ -3181,7 +3180,6 @@ lines:
   B-046>B-054: {type: 土台, strength: 3, why: 発生と幹細胞が初期化の土台}
   I-005>B-054: {type: 土台, strength: 2, why: 細胞治療で免疫拒絶を扱う}
   B-053>B-054: {type: 道具, strength: 2, why: 遺伝子導入で初期化する}
-  B-010>B-054: {type: 土台, strength: 2, why: 細胞の仕組みが分化誘導の土台}
   B-064>B-068: {type: 土台, strength: 2, why: 神経発達症の発生的土台}
   B-065>B-068: {type: 土台, strength: 2, why: 精神疾患の認知機能の土台}
   I-001>B-068: {type: 土台, strength: 2, why: 神経薬理に受容体と用量反応}
@@ -3351,7 +3349,6 @@ lines:
   P-131>B-111: {type: 道具, strength: 2, why: 大気の分光に放射を使う}
   W-036>B-111: {type: 土台, strength: 2, why: 地球での生命の歴史を参照}
   H-090>B-111: {type: 土台, strength: 2, why: 生命の定義・起源の化学}
-  B-010>B-112: {type: 土台, strength: 3, why: 細胞周期・老化の土台}
   B-044>B-112: {type: 土台, strength: 2, why: エピジェネティクスの土台}
   B-054>B-112: {type: 土台, strength: 2, why: 幹細胞と細胞老化に使う}
   B-065>B-114: {type: 土台, strength: 3, why: 知覚・注意・睡眠が前提}
@@ -4363,3 +4360,112 @@ lines:
   I-021>I-074: {type: 土台, strength: 2, why: 褥瘡と創傷の治りで、炎症と修復を使う}
   I-030>I-074: {type: 土台, strength: 2, why: アトピー性皮膚炎・乾癬・じんま疹の免疫と抗体医薬}
   I-028>I-074: {type: 土台, strength: 2, why: 皮膚の感染症の病原体}
+  B-195>I-023: {type: 土台, strength: 3, why: がん遺伝子の多くは信号の部品（受容体型チロシンキナーゼ、Ras、PI3K）の変異}
+  B-196>I-023: {type: 土台, strength: 2, why: 抑制遺伝子の Rb と p53、CDK 阻害因子、チェックポイントの破綻}
+  B-197>I-023: {type: 土台, strength: 2, why: がんの特徴のうち細胞死の回避（BCL-2、p53 からアポトーシスへ）}
+  B-195>B-054: {type: 土台, strength: 2, why: 分化誘導とオルガノイドの培養は、Wnt・BMP・FGF・Notch・TGF-β の作動薬と阻害薬の組み立て}
+  B-207>B-054: {type: 土台, strength: 2, why: 初期化の機構（クロマチンの障壁、DNA の脱メチル化、X の再活性化、エピジェネティックな記憶）}
+  B-195>B-112: {type: 土台, strength: 2, why: 栄養感知の経路（インスリンと IGF-1、mTOR、AMPK）}
+  B-196>B-112: {type: 土台, strength: 2, why: 細胞老化は p53–p21 と p16–Rb による周期の停止}
+  B-199>H-059: {type: 土台, strength: 2, why: 標的タンパク質分解と分子のりは、E3 リガーゼとプロテアソームの機構が前提}
+  I-075>I-048: {type: 土台, strength: 2, why: 骨の代謝と骨粗しょう症、骨折の治り方、変形性関節症で、骨と軟骨の生物学を使う}
+  I-075>I-062: {type: 土台, strength: 2, why: 歯周病の骨の吸収と矯正の力による歯槽骨の改造で、破骨細胞と RANKL–OPG によるリモデリングを使う}
+  B-010>B-195: {type: 深める, strength: 3, why: 細胞生物学の概観のシグナル伝達を、経路と部品の機構へ深める}
+  B-044>B-195: {type: 土台, strength: 2, why: 経路の行き先の転写因子と標的遺伝子}
+  B-010>B-196: {type: 深める, strength: 3, why: 細胞周期の概観を、CDK とチェックポイントによる制御へ深める}
+  B-195>B-196: {type: 土台, strength: 2, why: 制限点の入口の増殖因子の信号}
+  B-010>B-197: {type: 土台, strength: 3, why: ミトコンドリアと細胞小器官の概観が、細胞死の経路の土台}
+  B-195>B-197: {type: 土台, strength: 2, why: 死の受容体、生存の信号（PI3K–Akt）、RIPK1 と NF-κB の信号}
+  B-010>B-198: {type: 土台, strength: 3, why: リソソームと小器官の概観が、自己貪食の土台}
+  B-195>B-198: {type: 土台, strength: 2, why: 栄養と mTORC1・AMPK による制御の信号}
+  B-199>B-198: {type: 土台, strength: 2, why: 選択的オートファジーの受容体がユビキチンの鎖を読み、PINK1–Parkin がユビキチンの連鎖を使う}
+  B-201>B-198: {type: 土台, strength: 2, why: 隔離膜の膜の由来、リソソームとの融合、エンドソームの経路}
+  B-007>B-199: {type: 土台, strength: 3, why: チオエステルの受け渡しと ATP 依存の分解を、酵素の機構で読む}
+  B-010>B-199: {type: 土台, strength: 2, why: 細胞質・核・小胞体の区画の概観}
+  B-014>B-199: {type: 土台, strength: 2, why: 誤った折りたたみの認識と品質管理が、小胞体関連分解の基質の土台}
+  B-010>B-200: {type: 深める, strength: 3, why: 膜と細胞小器官の概観を、選別の信号と輸送の装置へ深める}
+  B-010>B-201: {type: 深める, strength: 3, why: 輸送の概観を、分泌経路とエンドサイトーシスの機構へ深める}
+  B-200>B-201: {type: 土台, strength: 2, why: 信号配列と小胞体への入口}
+  B-202>B-201: {type: 土台, strength: 2, why: 軌道とモーターで荷物を運ぶ}
+  B-005>B-201: {type: 道具, strength: 2, why: 膜を曲げる力と融合のエネルギー}
+  B-010>B-202: {type: 深める, strength: 3, why: 細胞骨格の概観を、重合とモーターの機構へ深める}
+  B-005>B-202: {type: 土台, strength: 2, why: 力と速度の関係と細胞の力学}
+  B-003>B-202: {type: 道具, strength: 2, why: 重合の核形成と臨界濃度と協同性}
+  B-010>B-203: {type: 土台, strength: 2, why: 細胞膜と細胞の外の概観}
+  B-202>B-203: {type: 土台, strength: 2, why: 接着結合とデスモソームがアクチンと中間径フィラメントにつながる}
+  I-011>B-203: {type: 深める, strength: 2, why: 組織の型と細胞の結合と細胞外基質を、分子へ深める}
+  B-005>B-204: {type: 土台, strength: 3, why: 力の測り方と細胞の力学}
+  B-203>B-204: {type: 土台, strength: 3, why: 力を伝える接着斑と細胞外基質}
+  B-202>B-204: {type: 土台, strength: 3, why: 力を出すアクチンとミオシン}
+  B-195>B-204: {type: 土台, strength: 2, why: Hippo と Rho の信号}
+  B-205>B-204: {type: 土台, strength: 2, why: Piezo と MscL の機械受容チャネルのゲーティング}
+  B-215>B-204: {type: 道具, strength: 2, why: 牽引力顕微鏡と分子の張力センサーを、蛍光の測定で読む}
+  B-010>B-205: {type: 土台, strength: 2, why: 膜と細胞小器官の概観}
+  B-031>B-205: {type: 深める, strength: 3, why: 拡散・浸透・能動輸送の入口を、輸送体の速度論とエネルギー共役へ深める}
+  B-052>B-205: {type: 土台, strength: 3, why: 膜電位とチャネルの基本で、起電性のポンプと二次能動輸送の勘定を行う}
+  B-007>B-205: {type: 道具, strength: 2, why: 輸送体の速度論を、酵素の速度論と同じ形で読む}
+  B-001>B-206: {type: 土台, strength: 3, why: 染色体の構造}
+  B-009>B-206: {type: 土台, strength: 2, why: 遺伝的組換えの機構}
+  B-045>B-206: {type: 道具, strength: 2, why: 遺伝地図と交差の数え方}
+  B-196>B-206: {type: 土台, strength: 2, why: セパラーゼによる切断の時刻と紡錘体形成チェックポイントの論理}
+  B-202>B-206: {type: 土台, strength: 3, why: 微小管の動態とモーターで、紡錘体と付着を読む}
+  B-044>B-207: {type: 深める, strength: 3, why: エピジェネティクスの入口を、クロマチンと DNA のメチル化の機構へ深める}
+  B-009>B-207: {type: 土台, strength: 2, why: 遺伝子制御の概観}
+  B-001>B-207: {type: 土台, strength: 2, why: ヌクレオソームと染色体の構造}
+  K-113>B-207: {type: 道具, strength: 2, why: ChIP-seq・ATAC-seq・バイサルファイト・Hi-C を配列のデータとして読む}
+  B-009>B-208: {type: 深める, strength: 3, why: 転写と翻訳の概観を、RNA の加工と制御へ深める}
+  B-006>B-208: {type: 土台, strength: 2, why: 核酸の構造の化学}
+  B-007>B-208: {type: 道具, strength: 2, why: スプライセオソームとリボザイムの触媒の化学}
+  K-113>B-208: {type: 道具, strength: 2, why: CLIP-seq と代謝標識を、RNA-seq の延長として読む}
+  B-009>B-209: {type: 深める, strength: 3, why: 遺伝子制御の概観を、RNA ポリメラーゼの機構へ深める}
+  B-007>B-209: {type: 道具, strength: 2, why: 付加のサイクルと校正を、酵素の機構と速度論で読む}
+  S-009>B-209: {type: 道具, strength: 2, why: 転写のバーストの 2 状態の模型を、連続時間マルコフ連鎖で解く}
+  K-113>B-209: {type: 道具, strength: 2, why: PRO-seq と NET-seq で Pol II の位置を測る}
+  B-009>B-210: {type: 深める, strength: 3, why: 翻訳の概観を、リボソームの機構へ深める}
+  B-006>B-210: {type: 土台, strength: 2, why: tRNA と rRNA の構造の化学}
+  B-007>B-210: {type: 道具, strength: 2, why: aaRS の校正と GTP の加水分解を、速度論で読む}
+  K-113>B-210: {type: 道具, strength: 2, why: リボソームプロファイリングを配列のデータとして読む}
+  B-009>B-211: {type: 深める, strength: 3, why: DNA 複製の概観を、レプリソームの機構へ深める}
+  B-007>B-211: {type: 道具, strength: 2, why: ポリメラーゼの反応機構と校正}
+  B-006>B-211: {type: 土台, strength: 2, why: 二重らせんの幾何で、リンキング数とスーパーコイルを読む}
+  B-009>B-212: {type: 土台, strength: 3, why: 相同組換えと複製の概観}
+  B-007>B-212: {type: 道具, strength: 2, why: ヌクレアーゼ・グリコシラーゼ・PARP の反応機構}
+  B-211>B-212: {type: 土台, strength: 2, why: 損傷乗り越え合成・ミスマッチ修復・鎖間架橋の修復で、複製フォークの機構を使う}
+  B-196>B-212: {type: 土台, strength: 2, why: 細胞周期の位相による修復の経路の選択と、チェックポイントの行き先}
+  B-009>B-213: {type: 土台, strength: 3, why: 遺伝的組換えの概観}
+  B-001>B-213: {type: 土台, strength: 2, why: 反復配列とゲノムの構造}
+  H-044>B-214: {type: 土台, strength: 3, why: 単糖と配糖体の化学}
+  B-006>B-214: {type: 土台, strength: 2, why: 糖の構造の化学}
+  B-010>B-214: {type: 土台, strength: 2, why: 糖鎖付加の場の小胞体とゴルジ体の概観}
+  H-110>B-214: {type: 道具, strength: 2, why: 糖鎖の解析を質量分析で行う}
+  B-014>B-214: {type: 土台, strength: 2, why: カルネキシンのサイクルを、折りたたみの品質管理の上に置く}
+  K-111>K-227: {type: 土台, strength: 3, why: エネルギー関数と構造の最小化}
+  B-014>K-227: {type: 土台, strength: 2, why: 折りたたみの安定性}
+  K-117>K-227: {type: 道具, strength: 2, why: 構造予測のネットで設計を評価する}
+  K-162>K-227: {type: 道具, strength: 2, why: 骨格の生成に拡散モデルを使う}
+  H-057>K-227: {type: 道具, strength: 2, why: 実験の側の選択に指向性進化を使う}
+  H-110>K-228: {type: 土台, strength: 3, why: イオン化と分析計とタンデム質量分析の原理}
+  B-006>K-228: {type: 土台, strength: 2, why: ペプチドとアミノ酸の化学と修飾}
+  K-114>K-228: {type: 道具, strength: 2, why: 偽発見率と多重検定、主成分分析}
+  B-010>K-228: {type: 土台, strength: 2, why: 細胞分画と小器官の概観}
+  P-023>B-215: {type: 土台, strength: 3, why: レンズと開口数と分解能と測光}
+  P-024>B-215: {type: 土台, strength: 2, why: 回折限界と点像分布関数と干渉で、共焦点と超解像を読む}
+  P-069>B-215: {type: 土台, strength: 2, why: 光子のエネルギーとスペクトルで、励起と発光と光子の雑音を読む}
+  B-010>B-215: {type: 土台, strength: 2, why: 何を標識して何の動きを見るか（小器官、細胞骨格、膜）}
+  B-037>B-216: {type: 土台, strength: 3, why: 抗体による標識と免疫細胞の種類が、パネルの土台}
+  P-023>B-216: {type: 道具, strength: 2, why: 光学系と測光}
+  K-114>B-216: {type: 道具, strength: 2, why: 希少な事象の検定と多重検定と次元削減、漏れ込みの補正の線形の連立}
+  H-036>B-217: {type: 道具, strength: 2, why: 電極電位と ΔG で、グルタチオンの対のレドックス電位を読む}
+  H-037>B-217: {type: 土台, strength: 2, why: 連鎖反応と定常状態近似、速度定数による標的の選択}
+  B-030>B-217: {type: 土台, strength: 2, why: 電子伝達系の電子の漏れが生成源}
+  B-007>B-217: {type: 土台, strength: 2, why: 消去の酵素の触媒の機構}
+  B-010>B-217: {type: 土台, strength: 2, why: 生成の場の小器官と、信号としての過酸化水素の区画}
+  B-023>B-218: {type: 土台, strength: 3, why: 減数分裂と受精}
+  B-150>B-218: {type: 土台, strength: 2, why: 雄ずいと雌ずいの形成}
+  B-149>B-218: {type: 土台, strength: 2, why: 世代交代と配偶体の縮小}
+  B-045>B-218: {type: 道具, strength: 2, why: S 対立遺伝子と稔性回復遺伝子の遺伝}
+  B-010>B-218: {type: 土台, strength: 2, why: 花粉管の先端の成長と、受容体と配位子の信号}
+  I-011>I-075: {type: 土台, strength: 3, why: 骨と軟骨の組織}
+  I-004>I-075: {type: 土台, strength: 2, why: 腎臓と内分泌系によるカルシウムとリン酸の調節の帰還}
+  B-010>I-075: {type: 土台, strength: 2, why: RANK と Wnt の信号と細胞の概観}
+  P-190>I-075: {type: 道具, strength: 2, why: 応力とひずみとヤング率で、骨の強さと適応を読む}

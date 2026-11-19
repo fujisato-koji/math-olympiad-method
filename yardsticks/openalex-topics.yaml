@@ -533,7 +533,7 @@ items:
     parent: "field:Engineering"
     name: "Bone Tissue Engineering Materials"
     ja: "骨の組織工学の材料"
-    units: [E-226, I-048, B-080]
+    units: [E-226, I-048, B-080, I-075]
     sources: [Y01]
   - id: "T14189"
     parent: "field:Engineering"
@@ -1205,13 +1205,13 @@ items:
     parent: "field:Biochemistry, Genetics and Molecular Biology"
     name: "Metabolism, Diabetes, and Cancer"
     ja: "代謝・糖尿病・がん"
-    gap: "既知の欠け：細胞の信号伝達（docs/research/yardstick-journals.md の 3 と docs/yardsticks.md）"
+    units: [B-195, I-019, B-008]
     sources: [Y01]
   - id: "T10123"
     parent: "field:Biochemistry, Genetics and Molecular Biology"
     name: "DNA Repair Mechanisms"
     ja: "DNA 修復の機構"
-    gap: "DNA 修復（ERC・OpenAlex の新しい欠け、docs/research/yardstick-erc-openalex.md の 5）"
+    units: [B-212, B-186, B-009]
     sources: [Y01]
   - id: "T10422"
     parent: "field:Biochemistry, Genetics and Molecular Biology"
@@ -1229,7 +1229,7 @@ items:
     parent: "field:Biochemistry, Genetics and Molecular Biology"
     name: "Cancer therapeutics and mechanisms"
     ja: "がん治療薬とその機構"
-    units: [B-009, B-032, B-001, I-001, I-050]
+    units: [B-009, B-032, B-001, I-001, I-050, B-211, B-212]
     sources: [Y01]
   - id: "T10724"
     parent: "field:Biochemistry, Genetics and Molecular Biology"
@@ -1247,19 +1247,19 @@ items:
     parent: "field:Biochemistry, Genetics and Molecular Biology"
     name: "Chromatin Remodeling and Cancer"
     ja: "クロマチンの再編成とがん"
-    gap: "既知の欠け：クロマチンとエピゲノム（docs/research/yardstick-journals.md の 3 と docs/yardsticks.md）"
+    units: [B-207, B-044, I-023]
     sources: [Y01]
   - id: "T11591"
     parent: "field:Biochemistry, Genetics and Molecular Biology"
     name: "NF-κB Signaling Pathways"
     ja: "NF-κB の信号経路"
-    gap: "既知の欠け：細胞の信号伝達（docs/research/yardstick-journals.md の 3 と docs/yardsticks.md）"
+    units: [B-195, I-021, I-005]
     sources: [Y01]
   - id: "T10268"
     parent: "field:Biochemistry, Genetics and Molecular Biology"
     name: "Developmental Biology and Gene Regulation"
     ja: "発生生物学と遺伝子の調節"
-    gap: "既知の欠け：細胞の信号伝達（docs/research/yardstick-journals.md の 3 と docs/yardsticks.md）"
+    units: [B-195, B-140, B-046, B-044]
     sources: [Y01]
   - id: "T11916"
     parent: "field:Biochemistry, Genetics and Molecular Biology"
@@ -1295,7 +1295,7 @@ items:
     parent: "field:Biochemistry, Genetics and Molecular Biology"
     name: "Cellular Mechanics and Interactions"
     ja: "細胞の力学と相互作用"
-    units: [B-005, B-010]
+    units: [B-005, B-010, B-204]
     sources: [Y01]
   - id: "T12576"
     parent: "field:Biochemistry, Genetics and Molecular Biology"
@@ -1313,13 +1313,13 @@ items:
     parent: "field:Biochemistry, Genetics and Molecular Biology"
     name: "RNA regulation and disease"
     ja: "RNA の調節と疾患"
-    gap: "既知の欠け：RNA の制御（docs/research/yardstick-journals.md の 3 と docs/yardsticks.md）"
+    units: [B-208, B-009, I-005]
     sources: [Y01]
   - id: "T10725"
     parent: "field:Biochemistry, Genetics and Molecular Biology"
     name: "RNA Interference and Gene Delivery"
     ja: "RNA 干渉と遺伝子の導入"
-    units: [B-053, E-168, H-059]
+    units: [B-053, E-168, H-059, B-208]
     sources: [Y01]
   - id: "T12946"
     parent: "field:Biochemistry, Genetics and Molecular Biology"
@@ -1331,7 +1331,7 @@ items:
     parent: "field:Biochemistry, Genetics and Molecular Biology"
     name: "Protein Interaction Studies and Fluorescence Analysis"
     ja: "タンパク質の相互作用と蛍光分析"
-    units: [B-003, B-013, H-109, I-002]
+    units: [B-003, B-013, H-109, I-002, B-215]
     sources: [Y01]
   - id: "T12198"
     parent: "field:Dentistry"
