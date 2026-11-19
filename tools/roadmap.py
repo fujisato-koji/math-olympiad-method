@@ -806,8 +806,9 @@ def build(data, problems):
         for u in out_units:
             if u["stage"] != s["id"]:
                 continue
-            ready = sum(1 for d in u["days"] if d.get("items"))
-            extra = sum(len(d.get("extra", [])) for d in u["days"])
+            # 問題の中身は split_content で単元ごとのファイルに移したので、残した数（m、x）で数える（D-190）
+            ready = sum(1 for d in u["days"] if d.get("items") or d.get("m"))
+            extra = sum(len(d.get("extra", [])) or d.get("x", 0) for d in u["days"])
             note = f"{ready} 日分" + (f"、予備 {extra} 問" if extra else "") if ready else "—"
             lines.append(f"| {u['id']} {u['title']} | {lanes[u['lane']]['name']} | "
                          f"{'、'.join(u['needs']) or '—'} | {len(u['days'])} | {note} |")
