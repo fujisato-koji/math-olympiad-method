@@ -71,7 +71,8 @@ const judgePrompt = (id, solved) => `みちすじの単元 ${id} を、答えを
 3. 決める：(a) ファイルの答えがまちがい → answer、check、paths を直し、その問題の id: の行を消す。(b) 問いか図が 2 通りに読める・答えが決まらない → 図か文を直して答えを 1 つに決める（意味が変わったら id: を消す）。(c) 係のまちがい → 直さない（わけを書く）。kinds: [最難関] の問題は中身を変えず、kept にわけを書く。
 4. 書くのは units/${id}.yaml だけ。git、build、check はしない。直したら PYTHONIOENCODING=utf-8 python tools/unitqc.py --no-shot ${id} で誤り 0、漢字 0 を確かめる。
 5. 選ぶ問題（choices のある問題）は全部、ヒント 3 段でまちがいの選択肢を消しすぎていないかを見る。3 段を合わせて 2 つ以上消して答えだけが残る形、2 択で 1 つ消す形は、消すのを 1 つまでにし、残りを「何を見ればわかるか」「どう比べるか」に直す（D-133）。直した数を fixed に書き、直したら 4. の unitqc をもう一度通す。
-6. docs/problem-figures.md の決まりに従う。`
+6. 各日の見本の文と図が、同じ日の問題の答えをそのまま見せていないかを見る（D-193）。見せていれば見本の例を替え、fixed に書く。
+7. docs/problem-figures.md の決まりに従う。`
 
 // 軽い形（D-139。args.light: true）：D-138 の試しの手を当てる。直す・解く・照らすは Sonnet、直す係は要点 1 枚を読み、
 // 単元を日ごとのファイルに分けて直し（tools/assemble.py）、図は画像でなく tools/figlint.py で測る。解く係は 1 人で文だけ。
@@ -89,6 +90,7 @@ const fixLight = id => `みちすじ（子どもが毎日少しずつ解く学�
 - ヒント：3 段のうち 1〜2 段を図の付いたヒント（{text, svg}）にし、答えの手前までを絵で見せる（正解そのものは描かない）。図が助けにならない問題は文のままでよい。答えをほぼ言っているヒント、選択肢を 3 段で 2 つ以上消すヒントは、見方・調べ方・一歩手前に直す。
 - 文：段に合うことばと長さ。答えが 2 つになる問い、まぎれる選択肢を直す。段の学年より上の漢字（段 6 まで）をかなに開く。
 - 答え：全部の答える問題を自分で解き、ファイルの答えと照らす。まちがいは直す。
+- 見本：見本の文と図が、同じ日の問題の答えをそのまま見せていないかを見る（R-003 で見本が同じ日の 3 問の答えを書いていた。D-193）。見せていれば、見本の例を別のものに替える。
 【守ること】
 - Bash の timeout は 600000（長い道具を時間切れで止めると画面なしの Edge が残る。D-137）。
 - 問題の数・日の並び・part・qid のもとは変えない。答えや問いの意味を変えた問題だけ、その id: の行を消す。kinds: [最難関] の問題は中身を変えない。
@@ -108,7 +110,8 @@ const done = new Set((args && args.done) || [])
 log(`${ids.length} 単元を直す（同時に ${W} 単元まで${done.size ? `、直す段が済んだ ${done.size} 単元は解くから` : ''}）`)
 const one = async id => {
   const S = LIGHT ? { model: 'sonnet' } : {}
-  const w = done.has(id) ? '直す段は前の回で済み（args.done）' : await agent(LIGHT ? fixLight(id) : fixPrompt(id), { label: `直す:${id}`, phase: 'Fix', ...S })
+  // 直す係は考える量を medium に（D-201 の試し 3 で 4 割減り、出来は落ちなかった。解く・照らすは既定のまま。D-193）
+  const w = done.has(id) ? '直す段は前の回で済み（args.done）' : await agent(LIGHT ? fixLight(id) : fixPrompt(id), { label: `直す:${id}`, phase: 'Fix', ...(LIGHT ? { model: 'sonnet', effort: 'medium' } : {}) })
   if (!w) return null
   const s = LIGHT
     ? [await agent(solveLight(id), { label: `解く:${id}-b`, phase: 'Solve', schema: SOLVE, ...S }).then(r => r ? { t: 'b', answers: r.answers } : null)].filter(Boolean)
