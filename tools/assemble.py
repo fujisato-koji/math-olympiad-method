@@ -3,6 +3,7 @@
 #   python tools/assemble.py <記号>                 … head.yaml、day-1.yaml …、ri.yaml を並べて units/<記号>.yaml を書く
 #   python tools/assemble.py --append-ri <記号> <ファイル>  … 作ってある単元の ri: の後ろに、そのファイルの腕試しを足す
 #   python tools/assemble.py --split <記号>         … 作ってある units/<記号>.yaml を、日ごとの小さなファイルに分ける（直すとき用）
+# 日のファイルと ri.yaml の「fig: <式>」の行は、図の部品（tools/figparts、D-189）で svg に変えてから組み立てる。置き場の parts.py は単元だけの部品
 import sys, re, tempfile
 from pathlib import Path
 import yaml
@@ -70,9 +71,14 @@ elif args:
     days = sorted(w.glob('day-*.yaml'), key=lambda p: int(re.findall(r'\d+', p.stem)[0]))
     if not days:
         sys.exit(f'{w} に day-1.yaml などがない')
+    sys.path.insert(0, str(REPO / 'tools' / 'figparts'))
+    from expand import namespace, expand_text
+    ns = namespace(w / 'parts.py')
+    bad = []
     parts, n = [], 0
     for i, p in enumerate(days, 1):
-        t = p.read_text(encoding='utf-8')
+        t, e = expand_text(p.read_text(encoding='utf-8'), ns, p.name)
+        bad += e
         t = t if t.endswith('\n') else t + '\n'
         v = check_block(t, 'days', p.name)
         if len(v) != 1 or v[0].get('day') != i:
@@ -83,9 +89,13 @@ elif args:
     rp = w / 'ri.yaml'
     nri = 0
     if rp.exists() and rp.read_text(encoding='utf-8').strip():
-        t = rp.read_text(encoding='utf-8').rstrip('\n') + '\n'
+        t, e = expand_text(rp.read_text(encoding='utf-8'), ns, rp.name)
+        bad += e
+        t = t.rstrip('\n') + '\n'
         nri = len(check_block(t, 'ri', 'ri.yaml'))
         text += 'ri:\n' + t
+    if bad:
+        sys.exit('\n'.join(bad))
     yload(text)
     (REPO / 'units' / f'{uid}.yaml').write_text(text, encoding='utf-8', newline='\n')
     print(f'{uid}：{len(days)} 日、問題 {n}、腕試し {nri} を units/{uid}.yaml に組み立てた')
