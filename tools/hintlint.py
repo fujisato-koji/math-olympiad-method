@@ -44,7 +44,8 @@ def lint(it):
     ch = [str(c).strip() for c in it.get('choices') or []]
     q = str(it.get('text', '')) + ' ' + svg_text(it.get('svg'))
     hs = it.get('hints') or []
-    ht = [(h.get('text', '') if isinstance(h, dict) else str(h)) for h in hs]
+    # 頭の「1 段目：」「2 つ目：」の札は数えない（札の数を答えの数と取り違える）
+    ht = [re.sub(r'^\s*[0-9１-３] ?(?:段目|つ目)[：:]\s*', '', h.get('text', '') if isinstance(h, dict) else str(h)) for h in hs]
     hf = [svg_text(h.get('svg')) if isinstance(h, dict) else '' for h in hs]
     if ch:
         wrong = [c for c in ch if c != ans]

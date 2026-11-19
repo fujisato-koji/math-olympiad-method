@@ -509,3 +509,156 @@ def trend(prop='ie', syms=None, x=30, y=20, w=280, h=140, kind='line', marks=Non
     if kind == 'bar':
         return bars(x, y, w, h, [v if v is not None else 0 for v in vals], labels=syms, top=top, marks=mk, show=show)
     return plot(x, y, w, h, vals, labels=syms, top=top, marks=mk)
+
+
+# ── 段 5 の化学（分子の形と極性、結晶の単位格子、気体）。D-201 で足した ──
+def wedge(x1, y1, x2, y2, w=7):
+    """手前に出る結合（くさび。x1, y1 が細い側）"""
+    L = math.hypot(x2 - x1, y2 - y1) or 1
+    px, py = -(y2 - y1) / L * w / 2, (x2 - x1) / L * w / 2
+    return f'<polygon points="{n(x1)},{n(y1)} {n(x2 + px)},{n(y2 + py)} {n(x2 - px)},{n(y2 - py)}" fill="{CC}"/>'
+
+
+def hashed(x1, y1, x2, y2, w=8, k=6):
+    """奥へ引っこむ結合（点線のくさび）"""
+    L = math.hypot(x2 - x1, y2 - y1) or 1
+    ux, uy = (x2 - x1) / L, (y2 - y1) / L
+    out = []
+    for i in range(1, k + 1):
+        t = i / k
+        mx, my = x1 + (x2 - x1) * t, y1 + (y2 - y1) * t
+        h = w / 2 * t
+        out.append(line(mx - uy * h, my + ux * h, mx + uy * h, my - ux * h, w=1.5))
+    return ''.join(out)
+
+
+# 中心からの向き（度、右が 0、上が 90）と結合の種類（'' ふつう、'w' 手前、'h' 奥）
+SHAPES = {
+    'linear': [(180, ''), (0, '')],
+    'bent': [(215, ''), (325, '')],
+    'trigonal': [(90, ''), (210, ''), (330, '')],
+    'pyramidal': [(200, ''), (340, ''), (270, 'w')],
+    'tetrahedral': [(90, ''), (200, ''), (300, 'w'), (340, 'h')],
+}
+
+
+def shape(kind, center='C', outer='H', cx=160, cy=100, r=62, lone=0, style='line', label=None, size=15):
+    """分子の形（電子対の反発で決まる形）。kind：linear（直線 CO₂）、bent（折れ線 H₂O）、trigonal（平面三角 BF₃）、
+    pyramidal（三角すい NH₃）、tetrahedral（四面体 CH₄）。outer：まわりの原子（記号 1 つか、向きの数だけの並び）。
+    lone：中心の非共有電子対の数（上に点 2 つの組で描く）。style：'line'（記号と線、手前はくさび・奥は点線のくさび）か 'ball'"""
+    dirs = SHAPES[kind]
+    outs = outer if isinstance(outer, (list, tuple)) else [outer] * len(dirs)
+    rb = 18 if style == 'ball' else 11
+    out = []
+    for (a, t), s in zip(dirs, outs):
+        x, y = cx + r * math.cos(math.radians(a)), cy - r * math.sin(math.radians(a))
+        ux, uy = (x - cx) / r, (y - cy) / r
+        x0, y0, x1, y1 = cx + rb * ux, cy + rb * uy, x - rb * ux, y - rb * uy
+        out.append(wedge(x0, y0, x1, y1) if t == 'w' else hashed(x0, y0, x1, y1) if t == 'h' else line(x0, y0, x1, y1))
+        if style == 'ball':
+            out.append(circle(x, y, rb, fill=BALL.get(s, GRY), op=.6) + text(x, y + 5, s, 13))
+        else:
+            out.append(text(x, y + size * .35, s, size))
+    if style == 'ball':
+        out.append(circle(cx, cy, rb + 2, fill=BALL.get(center, GRY), op=.6) + text(cx, cy + 5, center, 14))
+    else:
+        out.append(text(cx, cy + size * .35, center, size))
+    for k in range(lone):
+        a = math.radians(90 + (k - (lone - 1) / 2) * 50)
+        bx, by = cx + 26 * math.cos(a), cy - 26 * math.sin(a)
+        ox, oy = 4.5 * math.sin(a), 4.5 * math.cos(a)
+        out.append(dot(bx - ox, by - oy, 3) + dot(bx + ox, by + oy, 3))
+    if label:
+        out.append(text(cx, min(cy + r + 30, 194), label, 14))
+    return ''.join(out)
+
+
+def dipole(x1, y1, x2, y2, w=2):
+    """極性の矢印（＋の側に短い縦棒。矢の先が電子を強く引きつける側＝δ−）"""
+    L = math.hypot(x2 - x1, y2 - y1) or 1
+    px, py = -(y2 - y1) / L * 6, (x2 - x1) / L * 6
+    bx, by = x1 + (x2 - x1) * .18, y1 + (y2 - y1) * .18
+    return arrow(x1, y1, x2, y2, w=w, head=9) + line(bx - px, by - py, bx + px, by + py, w=w)
+
+
+def delta(x, y, sign='+', size=14):
+    """部分的な電荷の札 δ+ や δ−"""
+    return text(x, y, 'δ' + ('+' if sign in ('+', 1) else '−'), size)
+
+
+def cube_pts(cx=160, cy=104, a=100, k=.42):
+    """斜めから見た立方体の 8 つの角（0〜3 が手前の面：左下・右下・右上・左上、4〜7 が同じ順の奥）、6 つの面の中心、体の中心"""
+    dx, dy = a * k * .8, -a * k * .6
+    f = [(cx - a / 2 - dx / 2, cy + a / 2 - dy / 2), (cx + a / 2 - dx / 2, cy + a / 2 - dy / 2),
+         (cx + a / 2 - dx / 2, cy - a / 2 - dy / 2), (cx - a / 2 - dx / 2, cy - a / 2 - dy / 2)]
+    c = f + [(x + dx, y + dy) for x, y in f]
+    mid = lambda *i: (sum(c[j][0] for j in i) / len(i), sum(c[j][1] for j in i) / len(i))
+    faces = {'front': mid(0, 1, 2, 3), 'back': mid(4, 5, 6, 7), 'left': mid(0, 3, 7, 4), 'right': mid(1, 2, 6, 5),
+             'top': mid(3, 2, 6, 7), 'bottom': mid(0, 1, 5, 4)}
+    return c, faces, mid(*range(8))
+
+
+CUBE_E = [(0, 1), (1, 2), (2, 3), (3, 0), (4, 5), (5, 6), (6, 7), (7, 4), (0, 4), (1, 5), (2, 6), (3, 7)]
+
+
+def cube(cx=160, cy=104, a=100, k=.42, fill=None):
+    """斜めから見た立方体（奥の左下の角につながる 3 本の辺は点線）"""
+    c, _, _ = cube_pts(cx, cy, a, k)
+    back = {(4, 5), (7, 4), (0, 4)}
+    out = [poly(c[:4], fill=fill, op=.15, w=0)] if fill else []
+    for i, j in CUBE_E:
+        out.append(line(*c[i], *c[j], w=1.5, dash='4 3' if (i, j) in back else None))
+    return ''.join(out)
+
+
+def unit_cell(kind='sc', cx=160, cy=104, a=100, r=11, fill=SKY, fill2=RED, k=.42):
+    """結晶の単位格子：sc（単純立方：角に 8）、bcc（体心立方：角と体の中心）、fcc（面心立方：角と 6 つの面の中心）、
+    nacl（塩化ナトリウム型：角と面の中心に fill、辺の中ほど 12 と体の中心に fill2）。奥の球から順に描く"""
+    c, faces, body = cube_pts(cx, cy, a, k)
+    pts = [(p, fill) for p in c]
+    if kind == 'bcc':
+        pts.append((body, fill2))
+    if kind in ('fcc', 'nacl'):
+        pts += [(p, fill) for p in faces.values()]
+    if kind == 'nacl':
+        pts += [(((c[i][0] + c[j][0]) / 2, (c[i][1] + c[j][1]) / 2), fill2) for i, j in CUBE_E] + [(body, fill2)]
+    out = [cube(cx, cy, a, k)]
+    for (x, y), f in sorted(pts, key=lambda p: (p[0][1] - p[0][0] * .2)):  # 奥（上・右）から先に
+        out.append(circle(x, y, r, fill=f, op=.75, w=1.5))
+    return ''.join(out)
+
+
+def cylinder(cx=160, y=30, w=110, h=150, piston=.45, gas=12, seed=5, push=False, label=None, weight=None):
+    """ピストンの付いた容器と気体のつぶ。piston：ピストンの高さ（上から 0〜1）、gas：つぶの数、
+    push：上から押す矢印、weight：ピストンの上のおもりの字、label：下の字"""
+    x0 = cx - w / 2
+    py = max(y + h * piston, y + 12)  # ピストンの板（厚さ 10）が容器の上の端からはみ出さないように
+    out = [path(f'M{n(x0)} {n(y)} L{n(x0)} {n(y + h)} L{n(x0 + w)} {n(y + h)} L{n(x0 + w)} {n(y)}'),
+           rect(x0 + 2, py - 10, w - 4, 10, fill=GRY, op=.8, sw=1.5)]
+    if not weight:  # おもりを載せるときは棒を描かない（札と重なる）
+        out.append(line(cx, py - 10, cx, max(y - 6, py - 40), w=3))
+    s0 = seed
+    gh = max(int(y + h - py - 12), 1)
+    for _ in range(gas):
+        s0 = (s0 * 1103515245 + 12345) % 2 ** 31
+        out.append(dot(x0 + 10 + (s0 >> 8) % max(int(w - 20), 1), py + 6 + (s0 >> 16) % gh, 4.5))
+    if push:
+        out.append(arrow(cx + 28, max(py - 46, 4), cx + 28, py - 14))
+    if weight:
+        out.append(rect(cx - 22, py - 34, 44, 22, fill=BRN, op=.6, rx=3) + text(cx, py - 18, weight, 13))
+    if label:
+        out.append(text(cx, min(y + h + 17, 196), label, 14))
+    return ''.join(out)
+
+
+def gauge(cx=260, cy=60, r=34, value=.5, label=None, ticks=5):
+    """圧力計（針は 0〜1 の value の位置。目盛りは ticks 本）"""
+    out = [circle(cx, cy, r, fill=GRY, op=.25)]
+    for i in range(ticks + 1):
+        a = math.radians(210 - 240 * i / ticks)
+        out.append(line(cx + (r - 7) * math.cos(a), cy - (r - 7) * math.sin(a), cx + r * math.cos(a), cy - r * math.sin(a), w=1.5))
+    a = math.radians(210 - 240 * max(0, min(1, value)))
+    out.append(line(cx, cy, cx + (r - 10) * math.cos(a), cy - (r - 10) * math.sin(a), w=2.5) + dot(cx, cy, 3))
+    if label:
+        out.append(text(cx, cy + r + 17, label, 13))
+    return ''.join(out)

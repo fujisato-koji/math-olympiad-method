@@ -67,7 +67,7 @@ for f in glob.glob(os.path.join(wf, 'agent-*.jsonl')):
     c['agents'] = 1
     c['cost'] = c['in'] + 1.25 * c['cw'] + 0.1 * c['cr'] + 5 * c['out']
     agg[f"{phase}（{model.replace('claude-', '')}）"].update(c)
-    if ':' in label and not label.startswith('基準'):  # 基準：前からの腕試しを同じやり方で測る係（単元の数に入れない）
+    if ':' in label and '基準' not in label and not label.startswith('較正'):  # 基準：前からの腕試しを同じやり方で測る係（単元の数に入れない）
         units.add(label.split(':', 1)[1][:5])
     v = res.get(key)
     if (label.startswith('測る') or label.startswith('基準')) and isinstance(v, dict) and v.get('answers'):
