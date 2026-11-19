@@ -366,7 +366,7 @@ days:
         note: 2ⁿ でわると (3/2)ⁿ が ∞ に発散して、極限がすぐには見えない。いちばん大きい累乗でわる。
       - part: 挑戦
         id: "0d041a4156"
-        text: a を正の数とします。lim (n→∞) (aⁿ⁺¹ + 1)/(aⁿ + 1) の値が 1 になる a の範囲はどれですか。
+        text: a を正の数とします。lim (n→∞) (aⁿ⁺¹ + 1)/(aⁿ + 1) の値が 1 になる a のはんいはどれですか。
         choices: [0 < a ≦ 1, 0 < a < 1, a > 1, a ≧ 1]
         answer: 0 < a ≦ 1
         check: "(lambda g: [c for c, p in {'0 < a ≦ 1': lambda a: 0 < a <= 1, '0 < a < 1': lambda a: 0 < a < 1, 'a > 1': lambda a: a > 1, 'a ≧ 1': lambda a: a >= 1}.items() if all(p(a) == (abs(g(a) - 1) < Fraction(1, 10**6)) for a in (Fraction(1, 3), Fraction(1, 2), Fraction(9, 10), Fraction(1), Fraction(11, 10), Fraction(2), Fraction(3)))][0])(lambda a: (a ** 301 + 1) / (a ** 300 + 1))"
@@ -556,7 +556,7 @@ days:
         note: 残りの 3 つは、和が 1、1、3/4 の収束する無限級数。
       - part: 挑戦
         id: "e5446add65"
-        text: 無限等比級数 1 + (x − 2) + (x − 2)² + (x − 2)³ + … が収束する x の範囲はどれですか。
+        text: 無限等比級数 1 + (x − 2) + (x − 2)² + (x − 2)³ + … が収束する x のはんいはどれですか。
         choices: [1 < x < 3, 1 ≦ x ≦ 3, x < 3, −1 < x < 1]
         answer: 1 < x < 3
         check: "[c for c, p in {'1 < x < 3': lambda x: 1 < x < 3, '1 ≦ x ≦ 3': lambda x: 1 <= x <= 3, 'x < 3': lambda x: x < 3, '−1 < x < 1': lambda x: -1 < x < 1}.items() if all(p(x) == (abs((x - 2) ** 2000) < Fraction(1, 10**6)) for x in (Fraction(0), Fraction(1, 2), Fraction(1), Fraction(6, 5), Fraction(2), Fraction(14, 5), Fraction(3), Fraction(7, 2), Fraction(4)))][0]"
@@ -594,7 +594,7 @@ days:
             <polygon points="202.5,197.5 202.5,92.5 97.5,92.5 97.5,197.5" stroke="currentColor" fill="none" stroke-width="2"/>
             <polygon points="202.5,145.0 150.0,92.5 97.5,145.0 150.0,197.5" stroke="currentColor" fill="none" stroke-width="2"/>
             <polygon points="176.2,171.2 176.2,118.8 123.8,118.8 123.8,171.2" stroke="currentColor" fill="none" stroke-width="2"/>
-            <text x="150.0" y="276.2" font-size="14" text-anchor="middle">2</text>
+            <text x="150.0" y="276.2" font-size="14" text-anchor="middle" fill="currentColor">2</text>
           </svg>
         answer: 8
         check: "Fraction(sum((2 * (math.sqrt(2) / 2) ** k) ** 2 for k in range(200))).limit_denominator(100)"
