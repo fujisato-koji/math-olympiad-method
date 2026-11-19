@@ -87260,6 +87260,133 @@ window.ROADMAP = {
      ],
      "note": "てんびんが つりあう とき、りょうがわの おもさは おなじ。⚪ の かずを かぞえて おもさに する。g（グラム）は まだ ならって いないので、「⚪ 1 こ ぶんの おもさ」と いいかえても よい。",
      "qid": "A-001:68627654cb"
+    },
+    {
+     "part": "離",
+     "kinds": [
+      "手数",
+      "総動員"
+     ],
+     "uses": [
+      "L-002",
+      "N-001"
+     ],
+     "text": "はこが なんこか あります。おもい はこが 1 つ だけ ある か、1 つも ない か の どちらかで、ほかの はこは みんな おなじ おもさです。てんびんを 2 かい つかって、おもい はこが あれば どれか、なければ「ない」と、かならず いいあてたい。はこが いちばん おおくて なんこ までなら、かならず いいあてられますか。",
+     "svg": "<svg viewBox=\"0 0 320 200\" xmlns=\"http://www.w3.org/2000/svg\"><path d=\"M66.2,166 h57.6 l-7.2,-12 h-43.2 Z\" fill=\"#c8ccd6\" fill-opacity=\".5\" stroke=\"currentColor\" stroke-width=\"2\"/><line x1=\"95\" y1=\"154\" x2=\"95\" y2=\"100\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\"/><line x1=\"40\" y1=\"100\" x2=\"150\" y2=\"100\" stroke=\"currentColor\" stroke-width=\"4\" stroke-linecap=\"round\"/><circle cx=\"95\" cy=\"100\" r=\"5\" fill=\"currentColor\"/><line x1=\"40\" y1=\"100\" x2=\"40\" y2=\"95.5\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\"/><path d=\"M8,90 Q40,101 72,90 Z\" fill=\"#c8ccd6\" fill-opacity=\".6\" stroke=\"currentColor\" stroke-width=\"2\"/><line x1=\"150\" y1=\"100\" x2=\"150\" y2=\"95.5\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\"/><path d=\"M118,90 Q150,101 182,90 Z\" fill=\"#c8ccd6\" fill-opacity=\".6\" stroke=\"currentColor\" stroke-width=\"2\"/><text x=\"95\" y=\"190\" font-size=\"15\" text-anchor=\"middle\" fill=\"currentColor\" font-weight=\"bold\">てんびんは 2 かい</text><rect x=\"190\" y=\"108\" width=\"22\" height=\"22\" rx=\"3\" fill=\"#c9a36b\" fill-opacity=\".6\" stroke=\"currentColor\" stroke-width=\"2\"/><text x=\"201\" y=\"124.04\" font-size=\"14\" text-anchor=\"middle\" fill=\"currentColor\" font-weight=\"bold\">?</text><rect x=\"216\" y=\"108\" width=\"22\" height=\"22\" rx=\"3\" fill=\"#c9a36b\" fill-opacity=\".6\" stroke=\"currentColor\" stroke-width=\"2\"/><text x=\"227\" y=\"124.04\" font-size=\"14\" text-anchor=\"middle\" fill=\"currentColor\" font-weight=\"bold\">?</text><rect x=\"242\" y=\"108\" width=\"22\" height=\"22\" rx=\"3\" fill=\"#c9a36b\" fill-opacity=\".6\" stroke=\"currentColor\" stroke-width=\"2\"/><text x=\"253\" y=\"124.04\" font-size=\"14\" text-anchor=\"middle\" fill=\"currentColor\" font-weight=\"bold\">?</text><rect x=\"290\" y=\"108\" width=\"22\" height=\"22\" rx=\"3\" fill=\"#c9a36b\" fill-opacity=\".6\" stroke=\"currentColor\" stroke-width=\"2\"/><text x=\"301\" y=\"124.04\" font-size=\"14\" text-anchor=\"middle\" fill=\"currentColor\" font-weight=\"bold\">?</text><text x=\"277\" y=\"124\" font-size=\"16\" text-anchor=\"middle\" fill=\"currentColor\" font-weight=\"bold\">…</text><text x=\"252\" y=\"68\" font-size=\"15\" text-anchor=\"middle\" fill=\"currentColor\" font-weight=\"bold\">おもい はこは</text><text x=\"252\" y=\"90\" font-size=\"15\" text-anchor=\"middle\" fill=\"currentColor\" font-weight=\"bold\">1 つ か、ない</text><text x=\"252\" y=\"160\" font-size=\"16\" text-anchor=\"middle\" fill=\"currentColor\" font-weight=\"bold\">なんこ まで？</text></svg>",
+     "answer": 8,
+     "check": "max(n for n in range(1, 13) if any(any(b <= 1 and a - 2 * b <= 1 for b in range(a // 2 + 1)) and any(b <= 1 and (n - 2 * a - 2 * b) + 1 <= 1 for b in range((n - 2 * a) // 2 + 1)) for a in range(n // 2 + 1)))",
+     "hints": [
+      "おもい はこが ない ことも あるよ。てんびんが つりあった とき、なにが わかるかな。",
+      {
+       "text": "さいごの 1 かいで つりあったら、のせなかった はこが おもいのか、おもい はこが ないのか、わからないね。",
+       "svg": "<svg viewBox=\"0 0 320 200\" xmlns=\"http://www.w3.org/2000/svg\"><text x=\"160\" y=\"24\" font-size=\"15\" text-anchor=\"middle\" fill=\"currentColor\" font-weight=\"bold\">さいごの 1 かいで つりあったら</text><text x=\"160\" y=\"50\" font-size=\"14\" text-anchor=\"middle\" fill=\"currentColor\">のせない はこ？ それとも ない？</text><path d=\"M112,186 h96 l-12,-12 h-72 Z\" fill=\"#c8ccd6\" fill-opacity=\".5\" stroke=\"currentColor\" stroke-width=\"2\"/><line x1=\"160\" y1=\"174\" x2=\"160\" y2=\"106\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\"/><line x1=\"60\" y1=\"106\" x2=\"260\" y2=\"106\" stroke=\"currentColor\" stroke-width=\"4\" stroke-linecap=\"round\"/><circle cx=\"160\" cy=\"106\" r=\"5\" fill=\"currentColor\"/><line x1=\"60\" y1=\"106\" x2=\"60\" y2=\"101\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\"/><path d=\"M14,94 Q60,108 106,94 Z\" fill=\"#c8ccd6\" fill-opacity=\".6\" stroke=\"currentColor\" stroke-width=\"2\"/><line x1=\"260\" y1=\"106\" x2=\"260\" y2=\"101\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\"/><path d=\"M214,94 Q260,108 306,94 Z\" fill=\"#c8ccd6\" fill-opacity=\".6\" stroke=\"currentColor\" stroke-width=\"2\"/><rect x=\"49\" y=\"72\" width=\"22\" height=\"22\" rx=\"3\" fill=\"#c9a36b\" fill-opacity=\".6\" stroke=\"currentColor\" stroke-width=\"2\"/><text x=\"60.0\" y=\"88.04\" font-size=\"14\" text-anchor=\"middle\" fill=\"currentColor\" font-weight=\"bold\">?</text><rect x=\"249\" y=\"72\" width=\"22\" height=\"22\" rx=\"3\" fill=\"#c9a36b\" fill-opacity=\".6\" stroke=\"currentColor\" stroke-width=\"2\"/><text x=\"260.0\" y=\"88.04\" font-size=\"14\" text-anchor=\"middle\" fill=\"currentColor\" font-weight=\"bold\">?</text><rect x=\"26\" y=\"132\" width=\"22\" height=\"22\" rx=\"3\" fill=\"#c9a36b\" fill-opacity=\".6\" stroke=\"currentColor\" stroke-width=\"2\"/><text x=\"37.0\" y=\"148.04\" font-size=\"14\" text-anchor=\"middle\" fill=\"currentColor\" font-weight=\"bold\">?</text><ellipse cx=\"37\" cy=\"143\" rx=\"20\" ry=\"18\" fill=\"none\" stroke=\"#b39ddb\" stroke-width=\"3\"/><text x=\"37\" y=\"182\" font-size=\"14\" text-anchor=\"middle\" fill=\"currentColor\">のせない</text></svg>"
+      },
+      "1 かいめで さがった さらには、かならず おもい はこが いるよ。「ない」が まざるのは、つりあった ときだけ。くみごとに、のこり 1 かいで いいあてられる かずを かんがえよう。"
+     ],
+     "paths": [
+      [
+       "うしろから かんがえる",
+       "さいごの 1 かいで おもい はこが かならず いる くみなら 3 こ まで（1 こ と 1 こ を のせて 1 こ のこす）",
+       "ない かも しれない くみなら 2 こ まで（1 こ と 1 こ を のせて つりあえば「ない」）",
+       "1 かいめで さがった さらには かならず いるので さらに 3 こ ずつ",
+       "のせない くみは ない かも しれないので 2 こ",
+       "3 と 3 と 2 で 8 こ"
+      ],
+      [
+       "いいあてる ことの かずから かんがえる",
+       "1 かいの けっかは ひだりが さがる・みぎが さがる・つりあう の 3 とおり",
+       "2 かいの けっかの ならびは 3 とおりが 3 くみ で 9 とおり",
+       "いいあてる ことは「どの はこか」と「ない」で はこの かずより 1 おおい",
+       "9 こ だと 10 とおりに なって 9 とおりでは みわけられない",
+       "3 こ・3 こ・のせない 2 こ に わければ 8 こ は できるので 8 こ"
+      ]
+     ],
+     "note": "かりた こうぞう：S16 うしろから かんがえる（さいごの 1 かいで いいあてられるのは、おもい はこが かならず いる くみで 3 こ、ない かも しれない くみで 2 こ）、S26 ろんり・じょうほう（2 かいの けっかは 9 とおり、いいあてる ことは はこの かずと「ない」）、S10 じょうげんと かげん（8 こは できる、9 こは できない）。たね：なし（ri_seeds.py で 0 けん。にせの きんかを さがす もんだいの ほねぐみに「にせものが ない かも しれない」を たし、ばめんと 数は あたらしく した）。なぜ むずかしいか：まえの かたち（かならず 1 つ おもい、こたえ 9 こ）は「3 こずつ 3 くみ」の てじゅんを あてれば すんだ。「ない かも しれない」を たすと、4 日目の「つりあえば のせなかった はこが おもい」が つかえなく なる ところが でる。それは 1 かいめで つりあった あとの くみ だけで、さがった さらの くみは 3 こ の まま。この ちがい（3 と 3 と 2）を 見ぬく 一てが かぎ。9 こ（まえの こたえ）や 6 こ（どの くみも 2 こ に する）と こたえる まちがいが でる。9 こが できない わけ（けっかは 9 とおり、いいあてる ことは 10 とおり）まで いえて、ほんとうに わかった ことに なる。くふうは 3 だん（さいごの 1 かいで「ない」が まざると 2 こ → さがった さらには かならず いる → 3・3・2 に わける）。L-002 の「てがかりから 1 つに きめる」と、N-001 の「8 は 3 と 3 と 2」を つかう。check は 1 かいめの わけかた ごとに、2 かいめで いいあてられるかを 12 こ まで そうあたりした（さらに ふつうの はこを たして のせても かわらない ことも べつに たしかめた）。",
+     "qid": "A-001:90f72dbc57"
+    },
+    {
+     "part": "離",
+     "kinds": [
+      "道筋",
+      "総動員"
+     ],
+     "uses": [
+      "N-001"
+     ],
+     "text": "おもさが 1、2、3、4、5、… と 1 ずつ ふえる はこが あります。はこを 1 こずつ てんびんに のせて、おもりで つりあわせたい。おもりは 3 つで、おもさは 1 と 2 と、もう 1 つです。おもりは、はこと おなじ さらに のせても よいです。1 の はこから じゅんに、とばさずに、できるだけ おもい はこまで つりあわせたい。もう 1 つの おもりの おもさを いくつに すれば よいですか。",
+     "svg": "<svg viewBox=\"0 0 320 200\" xmlns=\"http://www.w3.org/2000/svg\"><text x=\"93\" y=\"18\" font-size=\"14\" text-anchor=\"middle\" fill=\"currentColor\" font-weight=\"bold\">はこ</text><text x=\"260\" y=\"18\" font-size=\"14\" text-anchor=\"middle\" fill=\"currentColor\" font-weight=\"bold\">おもり</text><rect x=\"10\" y=\"30\" width=\"30\" height=\"28\" rx=\"3\" fill=\"#c9a36b\" fill-opacity=\".6\" stroke=\"currentColor\" stroke-width=\"2\"/><text x=\"25.0\" y=\"49.76\" font-size=\"16\" text-anchor=\"middle\" fill=\"currentColor\" font-weight=\"bold\">1</text><rect x=\"44\" y=\"30\" width=\"30\" height=\"28\" rx=\"3\" fill=\"#c9a36b\" fill-opacity=\".6\" stroke=\"currentColor\" stroke-width=\"2\"/><text x=\"59.0\" y=\"49.76\" font-size=\"16\" text-anchor=\"middle\" fill=\"currentColor\" font-weight=\"bold\">2</text><rect x=\"78\" y=\"30\" width=\"30\" height=\"28\" rx=\"3\" fill=\"#c9a36b\" fill-opacity=\".6\" stroke=\"currentColor\" stroke-width=\"2\"/><text x=\"93.0\" y=\"49.76\" font-size=\"16\" text-anchor=\"middle\" fill=\"currentColor\" font-weight=\"bold\">3</text><rect x=\"112\" y=\"30\" width=\"30\" height=\"28\" rx=\"3\" fill=\"#c9a36b\" fill-opacity=\".6\" stroke=\"currentColor\" stroke-width=\"2\"/><text x=\"127.0\" y=\"49.76\" font-size=\"16\" text-anchor=\"middle\" fill=\"currentColor\" font-weight=\"bold\">4</text><rect x=\"146\" y=\"30\" width=\"30\" height=\"28\" rx=\"3\" fill=\"#c9a36b\" fill-opacity=\".6\" stroke=\"currentColor\" stroke-width=\"2\"/><text x=\"161.0\" y=\"49.76\" font-size=\"16\" text-anchor=\"middle\" fill=\"currentColor\" font-weight=\"bold\">5</text><text x=\"190\" y=\"50\" font-size=\"16\" text-anchor=\"middle\" fill=\"currentColor\" font-weight=\"bold\">…</text><circle cx=\"222\" cy=\"29\" r=\"4.5\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\"/><path d=\"M206,60 L211,34 H233 L238,60 Z\" fill=\"#c8ccd6\" fill-opacity=\".6\" stroke=\"currentColor\" stroke-width=\"2\"/><text x=\"222\" y=\"53\" font-size=\"16\" text-anchor=\"middle\" fill=\"currentColor\" font-weight=\"bold\">1</text><circle cx=\"260\" cy=\"29\" r=\"4.5\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\"/><path d=\"M244,60 L249,34 H271 L276,60 Z\" fill=\"#c8ccd6\" fill-opacity=\".6\" stroke=\"currentColor\" stroke-width=\"2\"/><text x=\"260\" y=\"53\" font-size=\"16\" text-anchor=\"middle\" fill=\"currentColor\" font-weight=\"bold\">2</text><circle cx=\"298\" cy=\"29\" r=\"4.5\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\"/><path d=\"M282,60 L287,34 H309 L314,60 Z\" fill=\"#c8ccd6\" fill-opacity=\".6\" stroke=\"currentColor\" stroke-width=\"2\"/><text x=\"298\" y=\"53\" font-size=\"16\" text-anchor=\"middle\" fill=\"currentColor\" font-weight=\"bold\">？</text><path d=\"M112,186 h96 l-12,-12 h-72 Z\" fill=\"#c8ccd6\" fill-opacity=\".5\" stroke=\"currentColor\" stroke-width=\"2\"/><line x1=\"160\" y1=\"174\" x2=\"160\" y2=\"106\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\"/><line x1=\"60\" y1=\"106\" x2=\"260\" y2=\"106\" stroke=\"currentColor\" stroke-width=\"4\" stroke-linecap=\"round\"/><circle cx=\"160\" cy=\"106\" r=\"5\" fill=\"currentColor\"/><line x1=\"60\" y1=\"106\" x2=\"60\" y2=\"101\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\"/><path d=\"M14,94 Q60,108 106,94 Z\" fill=\"#c8ccd6\" fill-opacity=\".6\" stroke=\"currentColor\" stroke-width=\"2\"/><line x1=\"260\" y1=\"106\" x2=\"260\" y2=\"101\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\"/><path d=\"M214,94 Q260,108 306,94 Z\" fill=\"#c8ccd6\" fill-opacity=\".6\" stroke=\"currentColor\" stroke-width=\"2\"/></svg>",
+     "answer": 7,
+     "check": "(lambda R: (lambda s: s[0] if len(s) == 1 else s)([w for w in range(1, 21) if R(w) == max(R(v) for v in range(1, 21))]))(lambda w: min(x for x in range(1, 40) if all(a + 2 * b + w * c != x for a in (-1, 0, 1) for b in (-1, 0, 1) for c in (-1, 0, 1))) - 1)",
+     "hints": [
+      "まず、1 と 2 の おもり だけで、どの はこまで つりあわせられるかな。",
+      {
+       "text": "もし もう 1 つが 5 なら、1 と 2 を はこの がわ か、はんたいの がわに のせて、5 の まわりの はこも つりあわせられるよ。みどりの はこが できる はこ だね。",
+       "svg": "<svg viewBox=\"0 0 320 200\" xmlns=\"http://www.w3.org/2000/svg\"><text x=\"160\" y=\"24\" font-size=\"15\" text-anchor=\"middle\" fill=\"currentColor\" font-weight=\"bold\">もし もう 1 つが 5 なら</text><text x=\"143\" y=\"60\" font-size=\"14\" text-anchor=\"middle\" fill=\"currentColor\">5 を つかう</text><line x1=\"43\" y1=\"70\" x2=\"243\" y2=\"70\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\"/><line x1=\"43\" y1=\"70\" x2=\"43\" y2=\"77\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\"/><line x1=\"243\" y1=\"70\" x2=\"243\" y2=\"77\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\"/><rect x=\"14\" y=\"82\" width=\"26\" height=\"26\" rx=\"3\" fill=\"#7bc96f\" fill-opacity=\".55\" stroke=\"currentColor\" stroke-width=\"2\"/><text x=\"27\" y=\"100\" font-size=\"14\" text-anchor=\"middle\" fill=\"currentColor\" font-weight=\"bold\">1</text><rect x=\"43\" y=\"82\" width=\"26\" height=\"26\" rx=\"3\" fill=\"#7bc96f\" fill-opacity=\".55\" stroke=\"currentColor\" stroke-width=\"2\"/><text x=\"56\" y=\"100\" font-size=\"14\" text-anchor=\"middle\" fill=\"currentColor\" font-weight=\"bold\">2</text><rect x=\"72\" y=\"82\" width=\"26\" height=\"26\" rx=\"3\" fill=\"#7bc96f\" fill-opacity=\".55\" stroke=\"currentColor\" stroke-width=\"2\"/><text x=\"85\" y=\"100\" font-size=\"14\" text-anchor=\"middle\" fill=\"currentColor\" font-weight=\"bold\">3</text><rect x=\"101\" y=\"82\" width=\"26\" height=\"26\" rx=\"3\" fill=\"#7bc96f\" fill-opacity=\".55\" stroke=\"currentColor\" stroke-width=\"2\"/><text x=\"114\" y=\"100\" font-size=\"14\" text-anchor=\"middle\" fill=\"currentColor\" font-weight=\"bold\">4</text><rect x=\"130\" y=\"82\" width=\"26\" height=\"26\" rx=\"3\" fill=\"#7bc96f\" fill-opacity=\".55\" stroke=\"currentColor\" stroke-width=\"2\"/><text x=\"143\" y=\"100\" font-size=\"14\" text-anchor=\"middle\" fill=\"currentColor\" font-weight=\"bold\">5</text><rect x=\"159\" y=\"82\" width=\"26\" height=\"26\" rx=\"3\" fill=\"#7bc96f\" fill-opacity=\".55\" stroke=\"currentColor\" stroke-width=\"2\"/><text x=\"172\" y=\"100\" font-size=\"14\" text-anchor=\"middle\" fill=\"currentColor\" font-weight=\"bold\">6</text><rect x=\"188\" y=\"82\" width=\"26\" height=\"26\" rx=\"3\" fill=\"#7bc96f\" fill-opacity=\".55\" stroke=\"currentColor\" stroke-width=\"2\"/><text x=\"201\" y=\"100\" font-size=\"14\" text-anchor=\"middle\" fill=\"currentColor\" font-weight=\"bold\">7</text><rect x=\"217\" y=\"82\" width=\"26\" height=\"26\" rx=\"3\" fill=\"#7bc96f\" fill-opacity=\".55\" stroke=\"currentColor\" stroke-width=\"2\"/><text x=\"230\" y=\"100\" font-size=\"14\" text-anchor=\"middle\" fill=\"currentColor\" font-weight=\"bold\">8</text><rect x=\"246\" y=\"82\" width=\"26\" height=\"26\" rx=\"3\" fill=\"#c8ccd6\" fill-opacity=\".55\" stroke=\"currentColor\" stroke-width=\"2\"/><text x=\"259\" y=\"100\" font-size=\"14\" text-anchor=\"middle\" fill=\"currentColor\" font-weight=\"bold\">9</text><rect x=\"275\" y=\"82\" width=\"26\" height=\"26\" rx=\"3\" fill=\"#c8ccd6\" fill-opacity=\".55\" stroke=\"currentColor\" stroke-width=\"2\"/><text x=\"288\" y=\"100\" font-size=\"14\" text-anchor=\"middle\" fill=\"currentColor\" font-weight=\"bold\">10</text><line x1=\"14\" y1=\"120\" x2=\"98\" y2=\"120\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\"/><line x1=\"14\" y1=\"113\" x2=\"14\" y2=\"120\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\"/><line x1=\"98\" y1=\"113\" x2=\"98\" y2=\"120\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\"/><text x=\"56\" y=\"140\" font-size=\"14\" text-anchor=\"middle\" fill=\"currentColor\">1 と 2 だけ</text><rect x=\"150\" y=\"126\" width=\"16\" height=\"16\" rx=\"3\" fill=\"#7bc96f\" fill-opacity=\".55\" stroke=\"currentColor\" stroke-width=\"2\"/><text x=\"172\" y=\"139\" font-size=\"14\" text-anchor=\"start\" fill=\"currentColor\">つりあわせられる</text><rect x=\"150\" y=\"152\" width=\"16\" height=\"16\" rx=\"3\" fill=\"#c8ccd6\" fill-opacity=\".55\" stroke=\"currentColor\" stroke-width=\"2\"/><text x=\"172\" y=\"165\" font-size=\"14\" text-anchor=\"start\" fill=\"currentColor\">できない</text><text x=\"160\" y=\"192\" font-size=\"14\" text-anchor=\"middle\" fill=\"currentColor\" font-weight=\"bold\">もっと おもく したら？</text></svg>"
+      },
+      "もう 1 つを おもく すると、とどく はこは ふえるけど、とちゅうで とぶ はこが でて こないかな。3 の つぎの 4 に ちゅうい しよう。"
+     ],
+     "paths": [
+      [
+       "1 と 2 だけで 1・2・3 が できる",
+       "もう 1 つを ？ と すると 1 と 2 を はこの がわ か はんたいに のせて ？ より 3 かるい はこから 3 おもい はこまで できる",
+       "4 が とばない ためには ？ より 3 かるい はこが 4 より おもく ならない",
+       "そう なる いちばん おもい ？ は 7（4 の はこと 1 と 2 で 7 と つりあう）",
+       "7 なら 4 から 10 まで できて 1 から 10 まで とばない",
+       "だから 7"
+      ],
+      [
+       "おもい ほうから ためす",
+       "8 だと 4 の はこに 1 と 2 を そえても 7 で 8 に たりず 4 が とぶ",
+       "7 だと 4 は 1 と 2 を そえて・5 は 2 を そえて・6 は 1 を そえて・7・8・9・10 まで できる",
+       "6 だと 9 まで・5 だと 8 まで で 7 より みじかい",
+       "だから 7"
+      ]
+     ],
+     "note": "かりた こうぞう：S12 こうせい（おもりを きめて 1 から 10 まで つりあわせて みせる）、S07 きょくたんな ものを かんがえる（1 と 2 では とどかない さいしょの はこ 4 と、とどく いちばん おもい はこで しぼる）、S15 ばあいわけの せっけい（もう 1 つの おもさごとに、とどく はこを ひょうに する）。たね：なし（ri_seeds.py で 0 けん。てんびんの ふんどうの もんだい（バシェの ふんどう）の ほねぐみで、1 と 2 が きまって いる ところから はじめた）。なぜ むずかしいか：まえの かたち（1〜4 を はかる、おもり 2 つ、こたえ 3）は、もう 1 つを 1 から ためせば すぐ みつかった。こんどは つりあわせる はこの かずが きまって いないので、「どこまで とどくか」と「とちゅうで とばないか」を どうじに 見る。もう 1 つの おもり ？ で つりあわせられるのは、？ より 3 かるい はこから 3 おもい はこまで（1 と 2 を はこの がわ か はんたいに のせる）。4 が とばない いちばん おもい ？ が 7 で、1 から 10 まで とどく。「1、3、9」の ならびを おぼえて 9 と こたえる（4 と 5 が とぶ）まちがいや、3 と こたえる まちがいが でる。くふうは 3 だん（1 と 2 で 3 まで → ？ の まわり 3 ずつ → 4 が とばない いちばん おもい ？）。N-001 の いくつと いくつ（4 と 1 と 2 で 7）を てんびんに よみかえる。1〜20 の どれを ためしても、とぎれずに とどく はこが いちばん おもく なるのは 7 だけ（check で たしかめた）。",
+     "qid": "A-001:667bd2e528"
+    },
+    {
+     "part": "離",
+     "kinds": [
+      "読み取り",
+      "総動員"
+     ],
+     "uses": [
+      "L-002",
+      "N-001"
+     ],
+     "text": "🟥 🟦 🟨 🟩 🟪 の おもさは、1、2、3、4、5 の どれかで、みんな ちがいます。てんびんに のせたら、えの ように なりました。🟨 の おもさは いくつですか。",
+     "svg": "<svg viewBox=\"0 14 440 172\" xmlns=\"http://www.w3.org/2000/svg\"><line x1=\"220\" y1=\"24\" x2=\"220\" y2=\"172\" stroke=\"#c8ccd6\" stroke-width=\"1.5\" stroke-linecap=\"round\" stroke-dasharray=\"4 5\"/><path d=\"M81.2,156 h57.6 l-7.2,-12 h-43.2 Z\" fill=\"#c8ccd6\" fill-opacity=\".5\" stroke=\"currentColor\" stroke-width=\"2\"/><line x1=\"110\" y1=\"144\" x2=\"110\" y2=\"92\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\"/><line x1=\"50\" y1=\"92\" x2=\"170\" y2=\"92\" stroke=\"currentColor\" stroke-width=\"4\" stroke-linecap=\"round\"/><circle cx=\"110\" cy=\"92\" r=\"5\" fill=\"currentColor\"/><line x1=\"50\" y1=\"92\" x2=\"50\" y2=\"87.5\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\"/><path d=\"M14,82 Q50,93 86,82 Z\" fill=\"#c8ccd6\" fill-opacity=\".6\" stroke=\"currentColor\" stroke-width=\"2\"/><text x=\"33\" y=\"79\" font-size=\"32\" text-anchor=\"middle\">🟥</text><text x=\"67\" y=\"79\" font-size=\"32\" text-anchor=\"middle\">🟦</text><line x1=\"170\" y1=\"92\" x2=\"170\" y2=\"87.5\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\"/><path d=\"M134,82 Q170,93 206,82 Z\" fill=\"#c8ccd6\" fill-opacity=\".6\" stroke=\"currentColor\" stroke-width=\"2\"/><text x=\"153\" y=\"79\" font-size=\"32\" text-anchor=\"middle\">🟨</text><text x=\"187\" y=\"79\" font-size=\"32\" text-anchor=\"middle\">🟩</text><text x=\"110\" y=\"176\" font-size=\"16\" text-anchor=\"middle\" fill=\"currentColor\" font-weight=\"bold\">1 かいめ</text><path d=\"M301.2,156 h57.6 l-7.2,-12 h-43.2 Z\" fill=\"#c8ccd6\" fill-opacity=\".5\" stroke=\"currentColor\" stroke-width=\"2\"/><line x1=\"330\" y1=\"144\" x2=\"330\" y2=\"92\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\"/><line x1=\"270\" y1=\"92\" x2=\"390\" y2=\"92\" stroke=\"currentColor\" stroke-width=\"4\" stroke-linecap=\"round\"/><circle cx=\"330\" cy=\"92\" r=\"5\" fill=\"currentColor\"/><line x1=\"270\" y1=\"92\" x2=\"270\" y2=\"87.5\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\"/><path d=\"M234,82 Q270,93 306,82 Z\" fill=\"#c8ccd6\" fill-opacity=\".6\" stroke=\"currentColor\" stroke-width=\"2\"/><text x=\"270\" y=\"79\" font-size=\"32\" text-anchor=\"middle\">🟨</text><line x1=\"390\" y1=\"92\" x2=\"390\" y2=\"87.5\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\"/><path d=\"M354,82 Q390,93 426,82 Z\" fill=\"#c8ccd6\" fill-opacity=\".6\" stroke=\"currentColor\" stroke-width=\"2\"/><text x=\"373\" y=\"79\" font-size=\"32\" text-anchor=\"middle\">🟩</text><text x=\"407\" y=\"79\" font-size=\"32\" text-anchor=\"middle\">🟪</text><text x=\"330\" y=\"176\" font-size=\"16\" text-anchor=\"middle\" fill=\"currentColor\" font-weight=\"bold\">2 かいめ</text></svg>",
+     "answer": 4,
+     "check": "(lambda s: s[0] if len(s) == 1 else s)(sorted(set(p[2] for p in itertools.permutations((1, 2, 3, 4, 5)) if p[0] + p[1] == p[2] + p[3] and p[2] == p[3] + p[4])))",
+     "hints": [
+      "2 かいめを みよう。🟨 は 🟩 と 🟪 を あわせた おもさ だね。🟨 は いちばん かるくて いくつかな。",
+      {
+       "text": "1 かいめの 🟨 を、2 かいめで つりあった 🟩🟪 に とりかえたよ。それでも つりあうね。",
+       "svg": "<svg viewBox=\"0 0 320 200\" xmlns=\"http://www.w3.org/2000/svg\"><text x=\"160\" y=\"24\" font-size=\"15\" text-anchor=\"middle\" fill=\"currentColor\" font-weight=\"bold\">1 かいめの 🟨 を 🟩🟪 に とりかえると</text><path d=\"M112,186 h96 l-12,-12 h-72 Z\" fill=\"#c8ccd6\" fill-opacity=\".5\" stroke=\"currentColor\" stroke-width=\"2\"/><line x1=\"160\" y1=\"174\" x2=\"160\" y2=\"106\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\"/><line x1=\"60\" y1=\"106\" x2=\"260\" y2=\"106\" stroke=\"currentColor\" stroke-width=\"4\" stroke-linecap=\"round\"/><circle cx=\"160\" cy=\"106\" r=\"5\" fill=\"currentColor\"/><line x1=\"60\" y1=\"106\" x2=\"60\" y2=\"101\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\"/><path d=\"M14,94 Q60,108 106,94 Z\" fill=\"#c8ccd6\" fill-opacity=\".6\" stroke=\"currentColor\" stroke-width=\"2\"/><line x1=\"260\" y1=\"106\" x2=\"260\" y2=\"101\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\"/><path d=\"M214,94 Q260,108 306,94 Z\" fill=\"#c8ccd6\" fill-opacity=\".6\" stroke=\"currentColor\" stroke-width=\"2\"/><text x=\"45\" y=\"91\" font-size=\"26\" text-anchor=\"middle\">🟥</text><text x=\"75\" y=\"91\" font-size=\"26\" text-anchor=\"middle\">🟦</text><text x=\"230\" y=\"91\" font-size=\"26\" text-anchor=\"middle\">🟩</text><text x=\"260\" y=\"91\" font-size=\"26\" text-anchor=\"middle\">🟪</text><text x=\"290\" y=\"91\" font-size=\"26\" text-anchor=\"middle\">🟩</text><ellipse cx=\"245\" cy=\"81\" rx=\"33\" ry=\"19\" fill=\"none\" stroke=\"#b39ddb\" stroke-width=\"3\"/><text x=\"245\" y=\"136\" font-size=\"14\" text-anchor=\"middle\" fill=\"currentColor\">🟨 の かわり</text></svg>"
+      },
+      "🟨 を 3、4、5 と じゅんに ためそう。🟩 と 🟪 の くみが きまると、のこりが 🟥 と 🟦 に なるよ。"
+     ],
+     "paths": [
+      [
+       "2 かいめで 🟨 は 🟩 と 🟪 を あわせた おもさ",
+       "だから 🟨 は 3・4・5 の どれか",
+       "🟨 が 3 なら 🟩🟪 は 1 と 2 で 🟥🟦 は 4 と 5、1 かいめが つりあわない",
+       "🟨 が 5 なら 🟩🟪 は 1 と 4 か 2 と 3、どちらも 1 かいめが つりあわない",
+       "🟨 が 4 なら 🟩 は 3・🟪 は 1・🟥🟦 は 2 と 5 で 1 かいめが つりあう",
+       "だから 4"
+      ],
+      [
+       "ぜんぶで 1 + 2 + 3 + 4 + 5 = 15",
+       "1 かいめは つりあうので 🟪 を のぞいた 4 こは おなじ おもさ 2 つに わかれる",
+       "🟪 は 1・3・5 の どれか、🟨 は 🟩 と 🟪 を あわせた おもさ なので 🟪 は 5 では ない",
+       "🟪 が 3 なら かたがわ 6 で 🟩 + 🟩 + 3 = 6 に なる 🟩 が ない",
+       "🟪 が 1 なら かたがわ 7 で 🟩 + 🟩 + 1 = 7、🟩 は 3",
+       "🟨 は 3 + 1 = 4"
+      ]
+     ],
+     "note": "かりた こうぞう：S07 きょくたんな ものを かんがえる（🟨 は はこ 2 こ ぶん なので いちばん かるくても 3）、S15 ばあいわけの せっけい（🟨 を 3・4・5 で わける）、S05 にじゅうに かぞえる（ぜんぶで 15、1 かいめが つりあうので 🟪 を のぞいた 4 こは おなじ 2 つに わかれ、🟪 は 1・3・5）。たね：なし（ri_seeds.py で 0 けん。きまった おもさの 物を、てんびんの てがかりから わりあてる ほねぐみを くみたてた）。なぜ むずかしいか：まえの かたち（はこ 4 こ、1〜4）は「1 こで 2 こより おもい」から 🟥 が 4 と すぐ きまり、あとは 1 つずつ うめれば すんだ。こんどは はこを 5 こ に して、どの はこも 1 かいの てんびん だけでは きまらない。2 かいめの つりあいを 1 かいめに とりかえる（3 日目の とりかえ）か、ぜんぶの たしざんから 🟪 を しぼる 一てが いる。🟪 は 1 かいめに のって いないのに、1 かいめから 🟪 が わかる（のこりの 4 こが おなじ 2 つに わかれる）のが 見かたの きりかえ。ぜんぶの おもさは きまらず（🟥 と 🟦 は 2 と 5 の どちらか）、それでも 🟨 だけは 4 に きまる ことに 気づくのも かぎ。🟨 を いちばん おもい 5 と こたえる まちがいが でる。くふうは 3 だん（🟨 は 3 より かるくない → 3・4・5 を 1 かいめで ためす → 4 だけ のこる）。120 とおりの ならびを そうあたりして 🟨 は 4 だけ（check で たしかめた）。",
+     "qid": "A-001:3fb18fd3ee"
     }
    ],
    "f": "F03",
@@ -250403,6 +250530,124 @@ window.ROADMAP = {
      ],
      "note": "考えどころは 3 つ：①どのコインも 2 でわり切れない回数うら返される必要があるので、返す回数の合計は 2 でわり切れる数になり、7 × m が 2 でわり切れる数で m は 2 でわり切れる数、②m = 2 では同じコインを 1 回の作業で 2 度返せないので、どのコインも 1 回ずつ（合計 10 回）になり、14 回と合わない、③m = 4 の作り方（9 まいが 3 回、1 まいが 1 回で合計 28 回。返さない 3 まいを {10、1、2}、{10、3、4}、{10、5、6}、{7、8、9} にする）。2 本目は 1 本目とちがい、コインを 1 まいずつ見ず、表のまい数 1 つだけを追う。1 回の作業で表のまい数は 7 − 2 × j（2 でわり切れない数）だけかわるので、2 でわり切れるかどうかが毎回入れかわること、2 回目のあとは表が 6 まい以下であることを使い、4 回の作り方も表のまい数の動き 0 → 7 → 6 → 3 → 10 からさがす（1 本目はコインごとの回数の合計、2 本目は表のまい数の動き）。m が 2 でわり切れることの根は、2 本とも同じ「2 でわり切れるかどうか」で、ちがうのは 2 回を落とすわけと 4 回の作り方。check は、7 まいの選び方 120 通りを 10 けたの 2 進のしるし（返したコインを 1 にする）にして、^（ちがうところだけ 1 にする計算）で作業をつなげ、m 回でとどくならびの集まりを m = 1 から 4 まで作り、全部表（1023）が入るいちばん小さい m を出す式。「k まいずつ返す」は知られた型で、数は自作。10 ÷ 7 から 2 回と答えてしまうのがわな。L-009 の円の 12 まいのコイン（4 まいずつ、できるならびの数をたずねる問題）とは、問いがちがう。",
      "qid": "N-028:e2962c5964"
+    },
+    {
+     "part": "離",
+     "kinds": [
+      "道筋",
+      "数"
+     ],
+     "uses": [
+      "N-022",
+      "L-007"
+     ],
+     "text": "お店で、1 番から 2000 番までの番号札を、順に 1 まいずつ配ります。番号の各位の数字をたした和が 4 の《倍数》になる札は当たりで、そうでない札ははずれです（たとえば 13 番は 1 + 3 = 4 なので当たり、27 番は 2 + 7 = 9 なのではずれ）。当たりと当たりの間に、はずれが 5 まい以上続けてはさまっているところは、何か所ありますか。",
+     "svg": "<svg viewBox=\"0 0 320 200\" xmlns=\"http://www.w3.org/2000/svg\"><text x=\"160\" y=\"24\" font-size=\"14\" text-anchor=\"middle\" fill=\"currentColor\">各位の数字の和が 4 の倍数なら当たり</text><rect x=\"20\" y=\"40\" width=\"80\" height=\"76\" rx=\"8\" fill=\"#f3c969\" fill-opacity=\"0.45\" stroke=\"currentColor\" stroke-width=\"2\"/><circle cx=\"60\" cy=\"52\" r=\"4\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\"/><text x=\"60\" y=\"92\" font-size=\"16\" text-anchor=\"middle\" fill=\"currentColor\">13 番</text><text x=\"60\" y=\"142\" font-size=\"14\" text-anchor=\"middle\" fill=\"currentColor\">1 + 3 = 4</text><ellipse cx=\"60\" cy=\"167\" rx=\"32\" ry=\"14\" fill=\"#f08080\" fill-opacity=\"0.45\" stroke=\"currentColor\" stroke-width=\"1.5\"/><text x=\"60\" y=\"172\" font-size=\"15\" text-anchor=\"middle\" fill=\"currentColor\">当たり</text><rect x=\"120\" y=\"40\" width=\"80\" height=\"76\" rx=\"8\" fill=\"#f3c969\" fill-opacity=\"0.45\" stroke=\"currentColor\" stroke-width=\"2\"/><circle cx=\"160\" cy=\"52\" r=\"4\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\"/><text x=\"160\" y=\"92\" font-size=\"16\" text-anchor=\"middle\" fill=\"currentColor\">26 番</text><text x=\"160\" y=\"142\" font-size=\"14\" text-anchor=\"middle\" fill=\"currentColor\">2 + 6 = 8</text><ellipse cx=\"160\" cy=\"167\" rx=\"32\" ry=\"14\" fill=\"#f08080\" fill-opacity=\"0.45\" stroke=\"currentColor\" stroke-width=\"1.5\"/><text x=\"160\" y=\"172\" font-size=\"15\" text-anchor=\"middle\" fill=\"currentColor\">当たり</text><rect x=\"220\" y=\"40\" width=\"80\" height=\"76\" rx=\"8\" fill=\"#f3c969\" fill-opacity=\"0.45\" stroke=\"currentColor\" stroke-width=\"2\"/><circle cx=\"260\" cy=\"52\" r=\"4\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\"/><text x=\"260\" y=\"92\" font-size=\"16\" text-anchor=\"middle\" fill=\"currentColor\">27 番</text><text x=\"260\" y=\"142\" font-size=\"14\" text-anchor=\"middle\" fill=\"currentColor\">2 + 7 = 9</text><ellipse cx=\"260\" cy=\"167\" rx=\"32\" ry=\"14\" fill=\"#c8ccd6\" fill-opacity=\"0.45\" stroke=\"currentColor\" stroke-width=\"1.5\"/><text x=\"260\" y=\"172\" font-size=\"15\" text-anchor=\"middle\" fill=\"currentColor\">はずれ</text></svg>",
+     "answer": 11,
+     "check": "len([n for n in range(1, 2001) if sum(n // 10 ** k % 10 for k in range(4)) % 4 == 0 and all(sum((n + i) // 10 ** k % 10 for k in range(4)) % 4 for i in range(1, 6))])",
+     "hints": [
+      "番号が 1 ふえると、各位の数字の和はどうかわるかな。和を 4 でわったあまりで考えよう。",
+      {
+       "text": "一の位が 9 のときは、くり上がりで和がへるね。図は 18 番から 21 番。9 が 2 つ、3 つとならんでくり上がるときは、和を 4 でわったあまりはどうかわるかな。",
+       "svg": "<svg viewBox=\"0 0 320 144\" xmlns=\"http://www.w3.org/2000/svg\"><rect x=\"14\" y=\"40\" width=\"52\" height=\"36\" rx=\"6\" fill=\"#f3c969\" fill-opacity=\"0.45\" stroke=\"currentColor\" stroke-width=\"2\"/><text x=\"40\" y=\"64\" font-size=\"16\" text-anchor=\"middle\" fill=\"currentColor\">18</text><text x=\"40\" y=\"100\" font-size=\"14\" text-anchor=\"middle\" fill=\"currentColor\">和 9</text><text x=\"40\" y=\"128\" font-size=\"13\" text-anchor=\"middle\" fill=\"currentColor\">あまり 1</text><rect x=\"94\" y=\"40\" width=\"52\" height=\"36\" rx=\"6\" fill=\"#f3c969\" fill-opacity=\"0.45\" stroke=\"currentColor\" stroke-width=\"2\"/><text x=\"120\" y=\"64\" font-size=\"16\" text-anchor=\"middle\" fill=\"currentColor\">19</text><text x=\"120\" y=\"100\" font-size=\"14\" text-anchor=\"middle\" fill=\"currentColor\">和 10</text><text x=\"120\" y=\"128\" font-size=\"13\" text-anchor=\"middle\" fill=\"currentColor\">あまり 2</text><rect x=\"174\" y=\"40\" width=\"52\" height=\"36\" rx=\"6\" fill=\"#f3c969\" fill-opacity=\"0.45\" stroke=\"currentColor\" stroke-width=\"2\"/><text x=\"200\" y=\"64\" font-size=\"16\" text-anchor=\"middle\" fill=\"currentColor\">20</text><text x=\"200\" y=\"100\" font-size=\"14\" text-anchor=\"middle\" fill=\"currentColor\">和 2</text><text x=\"200\" y=\"128\" font-size=\"13\" text-anchor=\"middle\" fill=\"currentColor\">あまり 2</text><rect x=\"254\" y=\"40\" width=\"52\" height=\"36\" rx=\"6\" fill=\"#f3c969\" fill-opacity=\"0.45\" stroke=\"currentColor\" stroke-width=\"2\"/><text x=\"280\" y=\"64\" font-size=\"16\" text-anchor=\"middle\" fill=\"currentColor\">21</text><text x=\"280\" y=\"100\" font-size=\"14\" text-anchor=\"middle\" fill=\"currentColor\">和 3</text><text x=\"280\" y=\"128\" font-size=\"13\" text-anchor=\"middle\" fill=\"currentColor\">あまり 3</text><line x1=\"68\" y1=\"58\" x2=\"86\" y2=\"58\" stroke=\"currentColor\" stroke-width=\"2\"/><polygon points=\"85,54 92,58 85,62\" fill=\"currentColor\"/><text x=\"80\" y=\"30\" font-size=\"14\" text-anchor=\"middle\" fill=\"currentColor\">+1</text><line x1=\"148\" y1=\"58\" x2=\"166\" y2=\"58\" stroke=\"currentColor\" stroke-width=\"2\"/><polygon points=\"165,54 172,58 165,62\" fill=\"currentColor\"/><text x=\"160\" y=\"30\" font-size=\"14\" text-anchor=\"middle\" fill=\"currentColor\">−8</text><line x1=\"228\" y1=\"58\" x2=\"246\" y2=\"58\" stroke=\"currentColor\" stroke-width=\"2\"/><polygon points=\"245,54 252,58 245,62\" fill=\"currentColor\"/><text x=\"240\" y=\"30\" font-size=\"14\" text-anchor=\"middle\" fill=\"currentColor\">+1</text></svg>"
+      },
+      "あまりが 0 でないのは 1、2、3 だけ。くり上がりがないと、はずれは 3 まいまでしか続かないよ。5 まい以上続くのは、くり上がる 9 がいくつで、くり上がる前の番号の和のあまりがいくつのときかな。"
+     ],
+     "paths": [
+      [
+       "番号が 1 ふえると、一の位が 9 でなければ、各位の数字の和は 1 ふえる。和を 4 でわったあまりは 1、2、3、0 とくり返すので、くり上がりがなければ、はずれは 3 まいまで",
+       "一の位が 9 の番号から次へは、くり上がる 9 の数で分ける。9 が 1 つなら和は 8 へり、あまりはそのままなので、1、2、3、3 の 4 まいまで。9 が 2 つ（□99 → 次の数）なら 17 へり、あまりは 1 へる。9 が 3 つ（999 → 1000）なら 26 へり、あまりは 2 ふえる（3 なら 1 になる）",
+       "9 が 2 つのとき、□99 の和のあまりが 3 なら 1、2、3、2、3 の 5 まい、あまりが 2 なら 1、2、1、2、3 の 5 まい。あまりが 1 や 0 では 5 まいにならない。9 が 3 つのときは、999 の和 27 のあまりが 3 なので、1、2、3、1、2、3 の 6 まい。1999 は和 28 で当たり",
+       "2000 までの □99 は、99、199、…、899 と 1099、…、1899 の 18 こ（999 と 1999 はのぞく）。百の位の数字を a とすると、和は a + 18 か a + 19。あまりが 2 か 3 になるのは、a + 18 では a = 0、1、4、5、8、a + 19 では a = 0、3、4、7、8 の 5 こずつ。この 10 か所と、997 〜 1002 番の 1 か所で、答えは 11 か所"
+      ],
+      [
+       "小さい番号から調べる。はずれが 5 まい続くのは 98 〜 102 番（和 17、18、1、2、3）がはじめてで、次は 197 〜 201 番（和 17、18、19、2、3）。どちらも □99 から次の数へ、9 が 2 つくり上がるところをまたぐ",
+       "くり上がりのないところでは 4 まいに 1 まいは当たり、9 が 1 つのくり上がりではあまりがかわらないので、続くのは 4 まいまで。5 まい以上になりえるのは、9 が 2 つか 3 つくり上がるところだけ",
+       "299 は和 20、399 は和 21 で、そこでは 5 まい続かない。百の位が 4 ふえると □99 の和も 4 ふえて、あまりがもとにもどるので、99、199、299、399 の「あり、あり、なし、なし」が 4 つごとにくり返す",
+       "99 〜 899 の 9 こは、あり・あり・なし・なし・あり・あり・なし・なし・ありで 5 か所。1099 〜 1899 は和が 199 〜 999 と同じなので、あり・なし・なし・あり・あり・なし・なし・あり・ありで 5 か所。999 → 1000 は和 25、26、27、1、2、3 で 6 まい続き、1999 は和 28 で当たり。答えは 5 + 5 + 1 = 11 か所"
+      ]
+     ],
+     "note": "借りたもの：S15 場合分けのくみ立て（番号が 1 ふえるときの和のかわり方を、くり上がる 9 の数で分ける。−8、−17、−26 を 4 でわったあまりは 0、3、2。さらに、くり上がる前の和のあまりで分ける）、S14 小さい場合から（5 まいは 98 〜 102、197 〜 201 がはじめ）、S07 きょくたんなもの（はずれがいちばん長く続く 6 まいの 997 〜 1002 を、5 まい以上の中に数える）。種：JJMO-P-2026-4（各位の数字の平きんが整数でない数が続く、いちばん小さい数。位の数字の和が 1 ずつふえ、くり上がりで大きくへることをかぎに、場面を番号札、じょうけんを「和が 4 の倍数でない」にかえた）。組み合わせ：N-022 のあまりのせいしつ（和と差のあまり、くり返し）、L-007 の場合分け。やさしすぎたのでかえた（答えもヒントも見ない係が一度でとけた）：前の形は「はずれが 6 まい続くところがはじめて出る番号」で、6 まいの形から 999 → 1000 と当てれば、たしかめは 1 か所ですんだ。いまは 2000 番までの「5 まい以上」を数えるので、くり上がる 9 の数（2 つと 3 つ）と、くり上がる前の和のあまり（2 か 3）の両方で場合に分け、20 か所のくり上がりを 1 つずつ見るか、百の位で 4 ごとにくり返すことに気づく一手が要る。9 が 2 つのところで、あまり 2 の形（1、2、1、2、3）をおとして 6 か所、999 の 6 まいを数えわすれて 10 か所、1999 を数えて 12 か所とするまちがいが出やすい。工夫は 3 だん：和のあまりを 1、2、3、0 のくり返しと見る → くり上がる 9 の数と、くり上がる前のあまりで場合分け → 百の位を a として数える。2 本目は小さい場合を調べ、百の位が 4 ふえるとあまりがもどるくり返しで数える。check は 1 から 2000 までの当たりのうち、すぐあとに 5 まい続けてはずれが来るものを数える。",
+     "qid": "N-028:ae95916084"
+    },
+    {
+     "part": "離",
+     "kinds": [
+      "道筋",
+      "手数"
+     ],
+     "uses": [
+      "A-010",
+      "L-007"
+     ],
+     "text": "まとにボールを当てるゲームをします。まん中の円に当たると 8 点、外側の輪に当たると 5 点で、はずれはありません。ボールは何回投げてもよく、当たった点数をすべてたしたものが合計点です。8 点に何回、5 点に何回当たったかの組を当たり方といい、当たった順番は考えません。1 点以上の合計点のうち、当たり方がちょうど 1 通りしかないものは、全部でいくつありますか。",
+     "svg": "<svg viewBox=\"0 0 320 200\" xmlns=\"http://www.w3.org/2000/svg\"><circle cx=\"110\" cy=\"104\" r=\"82\" fill=\"#7fc8f8\" fill-opacity=\"0.4\" stroke=\"currentColor\" stroke-width=\"2\"/><circle cx=\"110\" cy=\"104\" r=\"38\" fill=\"#f08080\" fill-opacity=\"0.5\" stroke=\"currentColor\" stroke-width=\"2\"/><text x=\"110\" y=\"110\" font-size=\"16\" text-anchor=\"middle\" fill=\"currentColor\">8 点</text><text x=\"110\" y=\"50\" font-size=\"16\" text-anchor=\"middle\" fill=\"currentColor\">5 点</text><circle cx=\"252\" cy=\"40\" r=\"10\" fill=\"#f3c969\" fill-opacity=\"0.7\" stroke=\"currentColor\" stroke-width=\"2\"/><text x=\"255\" y=\"92\" font-size=\"14\" text-anchor=\"middle\" fill=\"currentColor\">たとえば</text><text x=\"255\" y=\"120\" font-size=\"15\" text-anchor=\"middle\" fill=\"currentColor\">8 + 5 + 5</text><text x=\"255\" y=\"146\" font-size=\"15\" text-anchor=\"middle\" fill=\"currentColor\">= 18 点</text></svg>",
+     "answer": 39,
+     "check": "len([n for n in range(1, 200) if sum(1 for a in range(n // 8 + 1) if (n - 8 * a) % 5 == 0) == 1])",
+     "hints": [
+      "5 点に何回当たっても、合計点を 5 でわったあまりはかわらないね。あまりで 5 つの列に分けて、列ごとに考えよう。",
+      {
+       "text": "表は、0 から 24 までを 5 でわったあまりでならべたもの。空色は 5 点だけで、赤は 8 点 1 回と 5 点でできる数だよ。赤の列をずっと下へ行くと、8 点が 1 回ではない当たり方も出てくるよ。それは 8 点が何回のときかな。",
+       "svg": "<svg viewBox=\"0 0 320 200\" xmlns=\"http://www.w3.org/2000/svg\"><text x=\"180\" y=\"18\" font-size=\"13\" text-anchor=\"middle\" fill=\"currentColor\">5 でわったあまり</text><text x=\"92\" y=\"37\" font-size=\"14\" text-anchor=\"middle\" fill=\"currentColor\">0</text><text x=\"136\" y=\"37\" font-size=\"14\" text-anchor=\"middle\" fill=\"currentColor\">1</text><text x=\"180\" y=\"37\" font-size=\"14\" text-anchor=\"middle\" fill=\"currentColor\">2</text><text x=\"224\" y=\"37\" font-size=\"14\" text-anchor=\"middle\" fill=\"currentColor\">3</text><text x=\"268\" y=\"37\" font-size=\"14\" text-anchor=\"middle\" fill=\"currentColor\">4</text><rect x=\"70\" y=\"44\" width=\"44\" height=\"30\" rx=\"0\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.2\"/><text x=\"92\" y=\"64\" font-size=\"14\" text-anchor=\"middle\" fill=\"currentColor\">0</text><rect x=\"114\" y=\"44\" width=\"44\" height=\"30\" rx=\"0\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.2\"/><text x=\"136\" y=\"64\" font-size=\"14\" text-anchor=\"middle\" fill=\"currentColor\">1</text><rect x=\"158\" y=\"44\" width=\"44\" height=\"30\" rx=\"0\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.2\"/><text x=\"180\" y=\"64\" font-size=\"14\" text-anchor=\"middle\" fill=\"currentColor\">2</text><rect x=\"202\" y=\"44\" width=\"44\" height=\"30\" rx=\"0\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.2\"/><text x=\"224\" y=\"64\" font-size=\"14\" text-anchor=\"middle\" fill=\"currentColor\">3</text><rect x=\"246\" y=\"44\" width=\"44\" height=\"30\" rx=\"0\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.2\"/><text x=\"268\" y=\"64\" font-size=\"14\" text-anchor=\"middle\" fill=\"currentColor\">4</text><rect x=\"70\" y=\"74\" width=\"44\" height=\"30\" rx=\"0\" fill=\"#7fc8f8\" fill-opacity=\"0.45\" stroke=\"currentColor\" stroke-width=\"1.2\"/><text x=\"92\" y=\"94\" font-size=\"14\" text-anchor=\"middle\" fill=\"currentColor\">5</text><rect x=\"114\" y=\"74\" width=\"44\" height=\"30\" rx=\"0\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.2\"/><text x=\"136\" y=\"94\" font-size=\"14\" text-anchor=\"middle\" fill=\"currentColor\">6</text><rect x=\"158\" y=\"74\" width=\"44\" height=\"30\" rx=\"0\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.2\"/><text x=\"180\" y=\"94\" font-size=\"14\" text-anchor=\"middle\" fill=\"currentColor\">7</text><rect x=\"202\" y=\"74\" width=\"44\" height=\"30\" rx=\"0\" fill=\"#f08080\" fill-opacity=\"0.45\" stroke=\"currentColor\" stroke-width=\"1.2\"/><text x=\"224\" y=\"94\" font-size=\"14\" text-anchor=\"middle\" fill=\"currentColor\">8</text><rect x=\"246\" y=\"74\" width=\"44\" height=\"30\" rx=\"0\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.2\"/><text x=\"268\" y=\"94\" font-size=\"14\" text-anchor=\"middle\" fill=\"currentColor\">9</text><rect x=\"70\" y=\"104\" width=\"44\" height=\"30\" rx=\"0\" fill=\"#7fc8f8\" fill-opacity=\"0.45\" stroke=\"currentColor\" stroke-width=\"1.2\"/><text x=\"92\" y=\"124\" font-size=\"14\" text-anchor=\"middle\" fill=\"currentColor\">10</text><rect x=\"114\" y=\"104\" width=\"44\" height=\"30\" rx=\"0\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.2\"/><text x=\"136\" y=\"124\" font-size=\"14\" text-anchor=\"middle\" fill=\"currentColor\">11</text><rect x=\"158\" y=\"104\" width=\"44\" height=\"30\" rx=\"0\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.2\"/><text x=\"180\" y=\"124\" font-size=\"14\" text-anchor=\"middle\" fill=\"currentColor\">12</text><rect x=\"202\" y=\"104\" width=\"44\" height=\"30\" rx=\"0\" fill=\"#f08080\" fill-opacity=\"0.45\" stroke=\"currentColor\" stroke-width=\"1.2\"/><text x=\"224\" y=\"124\" font-size=\"14\" text-anchor=\"middle\" fill=\"currentColor\">13</text><rect x=\"246\" y=\"104\" width=\"44\" height=\"30\" rx=\"0\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.2\"/><text x=\"268\" y=\"124\" font-size=\"14\" text-anchor=\"middle\" fill=\"currentColor\">14</text><rect x=\"70\" y=\"134\" width=\"44\" height=\"30\" rx=\"0\" fill=\"#7fc8f8\" fill-opacity=\"0.45\" stroke=\"currentColor\" stroke-width=\"1.2\"/><text x=\"92\" y=\"154\" font-size=\"14\" text-anchor=\"middle\" fill=\"currentColor\">15</text><rect x=\"114\" y=\"134\" width=\"44\" height=\"30\" rx=\"0\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.2\"/><text x=\"136\" y=\"154\" font-size=\"14\" text-anchor=\"middle\" fill=\"currentColor\">16</text><rect x=\"158\" y=\"134\" width=\"44\" height=\"30\" rx=\"0\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.2\"/><text x=\"180\" y=\"154\" font-size=\"14\" text-anchor=\"middle\" fill=\"currentColor\">17</text><rect x=\"202\" y=\"134\" width=\"44\" height=\"30\" rx=\"0\" fill=\"#f08080\" fill-opacity=\"0.45\" stroke=\"currentColor\" stroke-width=\"1.2\"/><text x=\"224\" y=\"154\" font-size=\"14\" text-anchor=\"middle\" fill=\"currentColor\">18</text><rect x=\"246\" y=\"134\" width=\"44\" height=\"30\" rx=\"0\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.2\"/><text x=\"268\" y=\"154\" font-size=\"14\" text-anchor=\"middle\" fill=\"currentColor\">19</text><rect x=\"70\" y=\"164\" width=\"44\" height=\"30\" rx=\"0\" fill=\"#7fc8f8\" fill-opacity=\"0.45\" stroke=\"currentColor\" stroke-width=\"1.2\"/><text x=\"92\" y=\"184\" font-size=\"14\" text-anchor=\"middle\" fill=\"currentColor\">20</text><rect x=\"114\" y=\"164\" width=\"44\" height=\"30\" rx=\"0\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.2\"/><text x=\"136\" y=\"184\" font-size=\"14\" text-anchor=\"middle\" fill=\"currentColor\">21</text><rect x=\"158\" y=\"164\" width=\"44\" height=\"30\" rx=\"0\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.2\"/><text x=\"180\" y=\"184\" font-size=\"14\" text-anchor=\"middle\" fill=\"currentColor\">22</text><rect x=\"202\" y=\"164\" width=\"44\" height=\"30\" rx=\"0\" fill=\"#f08080\" fill-opacity=\"0.45\" stroke=\"currentColor\" stroke-width=\"1.2\"/><text x=\"224\" y=\"184\" font-size=\"14\" text-anchor=\"middle\" fill=\"currentColor\">23</text><rect x=\"246\" y=\"164\" width=\"44\" height=\"30\" rx=\"0\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.2\"/><text x=\"268\" y=\"184\" font-size=\"14\" text-anchor=\"middle\" fill=\"currentColor\">24</text><line x1=\"32\" y1=\"64\" x2=\"32\" y2=\"178\" stroke=\"currentColor\" stroke-width=\"2\"/><polygon points=\"28,177 32,184 36,177\" fill=\"currentColor\"/><text x=\"50\" y=\"128\" font-size=\"14\" text-anchor=\"middle\" fill=\"currentColor\">+5</text></svg>"
+      },
+      "同じ合計点を 2 通りの当たり方で作ると、8 点の回数のちがいは 5 の倍数になるね。8 点 5 回と 5 点 8 回は、どちらも何点かな。"
+     ],
+     "paths": [
+      [
+       "合計点を 5 でわったあまりは、8 点の回数だけで決まる。8 点が 0、1、2、3、4 回なら、あまりは 0、3、1、4、2 で、5 回ごとに同じあまりにもどる",
+       "同じ列の 2 つの当たり方では、8 点の回数のちがいが 5、10、… になる。8 点 5 回と 5 点 8 回はどちらも 40 点なので、列でできるいちばん小さい数から 40 点上がる手前までは、8 点の回数は 1 つに決まり、当たり方は 1 通り。40 点上からは、8 点を 5 回ふやした当たり方もできて 2 通り以上",
+       "列ごとのいちばん小さい数は、あまり 0 は 0、あまり 3 は 8、あまり 1 は 16、あまり 4 は 24、あまり 2 は 32。どの列も、そこから 5 ずつ 8 こ（たとえばあまり 2 の列は 32、37、…、67）が 1 通り",
+       "5 つの列で 8 こずつ 40 こ。そのうち 0 点は 1 点以上でないのでのぞいて、答えは 39"
+      ],
+      [
+       "8 点 5 回と 5 点 8 回は、どちらも 40 点。合計点 n から 40 をひいた数ができるなら、それに 8 点 5 回か 5 点 8 回をたして、n には 2 通り以上の当たり方がある",
+       "ぎゃくに 2 通りあれば、8 点の回数のちがいは 5 の倍数なので、8 点の多いほうから 8 点を 5 回とりのぞくと、n − 40 の当たり方になる。だから 1 通りだけなのは、できる数のうち、n − 40 ができないもの",
+       "できない数は、0 から 27 を n と 27 − n の組 14 組にすると、どの組もちょうど 1 つがそれで、1、2、3、4、6、7、9、11、12、14、17、19、22、27 の 14 こ。28 から上はみなできる",
+       "1 から 39 でできるのは 39 − 14 = 25 こで、n − 40 は 0 より小さいので、どれも 1 通り。40 から上では、できない 14 こに 40 をたした 41、42、…、67 の 14 こが 1 通り（40 は n − 40 = 0 ができるので 2 通り）。25 + 14 = 39"
+      ]
+     ],
+     "note": "借りたもの：S15 場合分けのくみ立て（合計点を 5 でわったあまりの 5 つの列に分け、列ごとにできるいちばん小さい数から 40 点分が 1 通り）、S03 たいしょうと S04 1 対 1 のたいおう（2 通り以上の当たり方がある n と、できる n − 40 が 1 対 1。できない 14 こは n と 27 − n の組で数える）、S10 上からおさえる（列ごとのいちばん小さい数 + 40 からは 2 通り以上なので、1 通りの数は 67 まで）。種：なし（S の表から組み立てた。2 つの数の和で表せない数がいくつあるかを数える、シルベスターの形を、表し方の数にひろげた）。組み合わせ：A-010 の文字と式（8 × □ + 5 × △、8 × 5 = 5 × 8 の入れかえ）、L-007 の場合分け。やさしすぎたのでかえた（答えもヒントも見ない係が一度でとけた）：前の形は「合計点にできない点数の数」で、(8 − 1) × (5 − 1) ÷ 2 = 14 の知っている式や、0 から 27 の書き出しですぐ出た。いまは当たり方が 1 通りの数を数えるので、8 点 5 回と 5 点 8 回の入れかえ（40 点）で当たり方がふえることに気づき、列ごとに 40 点分を数えるか、前の形の 14 こを使って 25 + 14 とする一手が要る。40 より小さいところだけ数えて 25、0 点を入れて 40、40 点を 1 通りと数えて 40 とするまちがいが出やすい。工夫は 3 だん：あまりで列に分ける → 列ごとに 8 点の回数が 1 つに決まる、いちばん小さい数から 40 点分を見つける → 列ごとに 8 こずつ数えて 0 点をのぞく。2 本目は n と n − 40 を 1 対 1 にして、できない 14 こから数える。check は 1 から 199 までの点数ごとに、8 点の回数を全部ためして当たり方を数える。",
+     "qid": "N-028:5fced51ecd"
+    },
+    {
+     "part": "離",
+     "kinds": [
+      "総動員",
+      "道筋"
+     ],
+     "uses": [
+      "A-010",
+      "L-007",
+      "N-022"
+     ],
+     "text": "たて 7 ます、横 7 ますのます目があります。1 ます × 3 ますの細長い板 15 まいを、たてか横に、ます目にそって重ならないようにしきつめて、2 ます × 2 ますの正方形の形に 4 ますだけ空けます（図は、板の向きのれいと、空ける正方形の形）。空いた正方形の置き場所としてありえるのは、何か所ありますか。",
+     "svg": "<svg viewBox=\"0 0 320 200\" xmlns=\"http://www.w3.org/2000/svg\"><line x1=\"40\" y1=\"16\" x2=\"40\" y2=\"184\" stroke=\"currentColor\" stroke-width=\"1\"/><line x1=\"16\" y1=\"40\" x2=\"184\" y2=\"40\" stroke=\"currentColor\" stroke-width=\"1\"/><line x1=\"64\" y1=\"16\" x2=\"64\" y2=\"184\" stroke=\"currentColor\" stroke-width=\"1\"/><line x1=\"16\" y1=\"64\" x2=\"184\" y2=\"64\" stroke=\"currentColor\" stroke-width=\"1\"/><line x1=\"88\" y1=\"16\" x2=\"88\" y2=\"184\" stroke=\"currentColor\" stroke-width=\"1\"/><line x1=\"16\" y1=\"88\" x2=\"184\" y2=\"88\" stroke=\"currentColor\" stroke-width=\"1\"/><line x1=\"112\" y1=\"16\" x2=\"112\" y2=\"184\" stroke=\"currentColor\" stroke-width=\"1\"/><line x1=\"16\" y1=\"112\" x2=\"184\" y2=\"112\" stroke=\"currentColor\" stroke-width=\"1\"/><line x1=\"136\" y1=\"16\" x2=\"136\" y2=\"184\" stroke=\"currentColor\" stroke-width=\"1\"/><line x1=\"16\" y1=\"136\" x2=\"184\" y2=\"136\" stroke=\"currentColor\" stroke-width=\"1\"/><line x1=\"160\" y1=\"16\" x2=\"160\" y2=\"184\" stroke=\"currentColor\" stroke-width=\"1\"/><line x1=\"16\" y1=\"160\" x2=\"184\" y2=\"160\" stroke=\"currentColor\" stroke-width=\"1\"/><rect x=\"16\" y=\"16\" width=\"168\" height=\"168\" rx=\"0\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\"/><rect x=\"19\" y=\"19\" width=\"66\" height=\"18\" rx=\"5\" fill=\"#f3c969\" fill-opacity=\"0.55\" stroke=\"currentColor\" stroke-width=\"1.5\"/><rect x=\"163\" y=\"115\" width=\"18\" height=\"66\" rx=\"5\" fill=\"#7fc8f8\" fill-opacity=\"0.55\" stroke=\"currentColor\" stroke-width=\"1.5\"/><rect x=\"217\" y=\"24\" width=\"66\" height=\"18\" rx=\"5\" fill=\"#c8ccd6\" fill-opacity=\"0.55\" stroke=\"currentColor\" stroke-width=\"1.5\"/><text x=\"250\" y=\"64\" font-size=\"14\" text-anchor=\"middle\" fill=\"currentColor\">板（1 × 3 ます）</text><rect x=\"226\" y=\"88\" width=\"48\" height=\"48\" rx=\"0\" fill=\"#f08080\" fill-opacity=\"0.45\" stroke=\"currentColor\" stroke-width=\"2\"/><line x1=\"250\" y1=\"88\" x2=\"250\" y2=\"136\" stroke=\"currentColor\" stroke-width=\"1\"/><line x1=\"226\" y1=\"112\" x2=\"274\" y2=\"112\" stroke=\"currentColor\" stroke-width=\"1\"/><text x=\"250\" y=\"160\" font-size=\"14\" text-anchor=\"middle\" fill=\"currentColor\">空ける正方形</text><text x=\"250\" y=\"180\" font-size=\"13\" text-anchor=\"middle\" fill=\"currentColor\">（2 × 2 ます）</text></svg>",
+     "answer": 4,
+     "check": "(lambda T: len([(r, c) for r in range(6) for c in range(6) if T(T, 3 << 7 * r + c | 3 << 7 * r + c + 7)]))(lambda T, m: m == 2 ** 49 - 1 or (lambda c: (c % 7 < 5 and m >> c + 1 & 3 == 0 and T(T, m | 7 << c)) or (c < 35 and m >> c + 7 & 1 == 0 and m >> c + 14 & 1 == 0 and T(T, m | 1 << c | 1 << c + 7 | 1 << c + 14)))(min(i for i in range(49) if m >> i & 1 == 0)))",
+     "hints": [
+      "板 1 まいは、どこに置いても 3 ますをおおうね。49 ますを、3 でわったあまりを使って 3 つの組に分けてみよう。",
+      {
+       "text": "行の番号を 3 でわったあまりで、行を 3 つの組に分けたよ。横の板は 1 つの組から 3 ます、たての板は 3 つの組から 1 ますずつをおおうね。赤い正方形は、となり合う 2 つの行から 2 ますずつ空けるよ。",
+       "svg": "<svg viewBox=\"0 0 320 200\" xmlns=\"http://www.w3.org/2000/svg\"><rect x=\"30\" y=\"16\" width=\"168\" height=\"24\" fill=\"#f3c969\" fill-opacity=\"0.45\"/><text x=\"18\" y=\"33\" font-size=\"13\" text-anchor=\"middle\" fill=\"currentColor\">1</text><rect x=\"30\" y=\"40\" width=\"168\" height=\"24\" fill=\"#7fc8f8\" fill-opacity=\"0.45\"/><text x=\"18\" y=\"57\" font-size=\"13\" text-anchor=\"middle\" fill=\"currentColor\">2</text><rect x=\"30\" y=\"64\" width=\"168\" height=\"24\" fill=\"#7bc96f\" fill-opacity=\"0.45\"/><text x=\"18\" y=\"81\" font-size=\"13\" text-anchor=\"middle\" fill=\"currentColor\">3</text><rect x=\"30\" y=\"88\" width=\"168\" height=\"24\" fill=\"#f3c969\" fill-opacity=\"0.45\"/><text x=\"18\" y=\"105\" font-size=\"13\" text-anchor=\"middle\" fill=\"currentColor\">4</text><rect x=\"30\" y=\"112\" width=\"168\" height=\"24\" fill=\"#7fc8f8\" fill-opacity=\"0.45\"/><text x=\"18\" y=\"129\" font-size=\"13\" text-anchor=\"middle\" fill=\"currentColor\">5</text><rect x=\"30\" y=\"136\" width=\"168\" height=\"24\" fill=\"#7bc96f\" fill-opacity=\"0.45\"/><text x=\"18\" y=\"153\" font-size=\"13\" text-anchor=\"middle\" fill=\"currentColor\">6</text><rect x=\"30\" y=\"160\" width=\"168\" height=\"24\" fill=\"#f3c969\" fill-opacity=\"0.45\"/><text x=\"18\" y=\"177\" font-size=\"13\" text-anchor=\"middle\" fill=\"currentColor\">7</text><line x1=\"54\" y1=\"16\" x2=\"54\" y2=\"184\" stroke=\"currentColor\" stroke-width=\"1\"/><line x1=\"30\" y1=\"40\" x2=\"198\" y2=\"40\" stroke=\"currentColor\" stroke-width=\"1\"/><line x1=\"78\" y1=\"16\" x2=\"78\" y2=\"184\" stroke=\"currentColor\" stroke-width=\"1\"/><line x1=\"30\" y1=\"64\" x2=\"198\" y2=\"64\" stroke=\"currentColor\" stroke-width=\"1\"/><line x1=\"102\" y1=\"16\" x2=\"102\" y2=\"184\" stroke=\"currentColor\" stroke-width=\"1\"/><line x1=\"30\" y1=\"88\" x2=\"198\" y2=\"88\" stroke=\"currentColor\" stroke-width=\"1\"/><line x1=\"126\" y1=\"16\" x2=\"126\" y2=\"184\" stroke=\"currentColor\" stroke-width=\"1\"/><line x1=\"30\" y1=\"112\" x2=\"198\" y2=\"112\" stroke=\"currentColor\" stroke-width=\"1\"/><line x1=\"150\" y1=\"16\" x2=\"150\" y2=\"184\" stroke=\"currentColor\" stroke-width=\"1\"/><line x1=\"30\" y1=\"136\" x2=\"198\" y2=\"136\" stroke=\"currentColor\" stroke-width=\"1\"/><line x1=\"174\" y1=\"16\" x2=\"174\" y2=\"184\" stroke=\"currentColor\" stroke-width=\"1\"/><line x1=\"30\" y1=\"160\" x2=\"198\" y2=\"160\" stroke=\"currentColor\" stroke-width=\"1\"/><rect x=\"30\" y=\"16\" width=\"168\" height=\"168\" rx=\"0\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\"/><rect x=\"57\" y=\"43\" width=\"66\" height=\"18\" rx=\"5\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"3\"/><rect x=\"153\" y=\"67\" width=\"18\" height=\"66\" rx=\"5\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"3\"/><rect x=\"208\" y=\"52\" width=\"14\" height=\"14\" fill=\"#f3c969\" fill-opacity=\"0.55\" stroke=\"currentColor\" stroke-width=\"1\"/><text x=\"228\" y=\"64\" font-size=\"13\" text-anchor=\"start\" fill=\"currentColor\">1、4、7 行目</text><rect x=\"208\" y=\"88\" width=\"14\" height=\"14\" fill=\"#7fc8f8\" fill-opacity=\"0.55\" stroke=\"currentColor\" stroke-width=\"1\"/><text x=\"228\" y=\"100\" font-size=\"13\" text-anchor=\"start\" fill=\"currentColor\">2、5 行目</text><rect x=\"208\" y=\"124\" width=\"14\" height=\"14\" fill=\"#7bc96f\" fill-opacity=\"0.55\" stroke=\"currentColor\" stroke-width=\"1\"/><text x=\"228\" y=\"136\" font-size=\"13\" text-anchor=\"start\" fill=\"currentColor\">3、6 行目</text><rect x=\"33\" y=\"139\" width=\"42\" height=\"42\" rx=\"3\" fill=\"#f08080\" fill-opacity=\"0.55\" stroke=\"currentColor\" stroke-width=\"2\"/></svg>"
+      },
+      "たての板を t まいとして、それぞれの組で板がおおうますの数を 3 でわったあまりを考えよう。正方形がどの 2 つの組にまたがれば、つじつまが合うかな。列でも同じように考えて、のこりを本当にしきつめられるか、たしかめよう。"
+     ],
+     "paths": [
+      [
+       "ますの行の番号と列の番号をたした数を、3 でわったあまりで 3 色にぬり分ける。たてでも横でも、1 まいの板がおおう 3 ますは、たした数が 1 ずつちがうので、3 色を 1 ますずつおおう。数えると、あまり 2 の色が 17 ます、あまり 0 と 1 の色が 16 ますずつ",
+       "15 まいの板はどの色も 15 ますずつおおうので、空く 4 ますは、あまり 2 の色が 2 ます、0 と 1 の色が 1 ますずつ。左上のますが r 行 c 列の正方形では、たした数は r + c、r + c + 1 が 2 ます、r + c + 2 なので、r + c + 1 のあまりが 2。だから r + c を 3 でわったあまりは 1",
+       "左右を入れかえて、行の番号と（8 − 列の番号）をたした数で同じようにぬると、2 ます空くのは r + 8 − c の色で、これもあまり 2。だから r と c を 3 でわったあまりは同じ。2 つを合わせると、r も c もあまり 2 で、r、c は 2 か 5。左上が 2 行 2 列、2 行 5 列、5 行 2 列、5 行 5 列の 4 か所",
+       "4 か所はどれも本当にしきつめられる。左上が 2 行 2 列なら、1 行目の 1 〜 6 列目に横 2 まい、7 列目の 1 〜 3 行目にたて 1 まい、1 列目の 2 〜 4 行目にたて 1 まい、2 行目と 3 行目の 4 〜 6 列目に横 1 まいずつ、4 行目の 2 〜 7 列目に横 2 まい、5 〜 7 行目の 1 〜 6 列目に横 6 まい、7 列目の 5 〜 7 行目にたて 1 まい。ほかの 3 か所は、これを左右や上下に折り返す。答えは 4 か所"
+      ],
+      [
+       "行の番号を 3 でわったあまりで、行を 3 つの組に分ける。1・4・7 行目（21 ます）、2・5 行目（14 ます）、3・6 行目（14 ます）。横の板は 1 つの組の 3 ますを、たての板は 3 つの組から 1 ますずつをおおう",
+       "たての板を t まいとすると、どの組でも、板がおおうますの数は「3 の倍数 + t」なので、3 でわったあまりは 3 つの組で同じになる",
+       "正方形はとなり合う 2 行から 2 ますずつ空ける。1・2 行目のように 1・4・7 行目の組と 2・5 行目の組にまたがると、おおうますは 19、12、14 で、あまりが 1、0、2 とちがうのでできない。1・4・7 行目と 3・6 行目にまたがっても 19、14、12 でできない。2・5 行目と 3・6 行目にまたがるときだけ 21、12、12 で、あまりはどれも 0。だから正方形は 2・3 行目か 5・6 行目",
+       "列でも同じように考えると、正方形は 2・3 列目か 5・6 列目。ありえるのは 4 か所で、どれも 1 本目のしきつめ方とその折り返しでしきつめられる。答えは 4 か所"
+      ]
+     ],
+     "note": "借りたもの：S02 ぬり分け（行の番号 + 列の番号を 3 でわったあまりで 3 色、左右を入れかえてもう 1 回。正方形は 1 つの色を 2 ますおおう）、S09 あまり（行の番号のあまりで 3 つの組）、S12 作ってみせる（左上が 2 行 2 列の正方形のしきつめ方を作り、折り返して 4 か所）。種：なし（S の表から組み立てた。ます目を 1 × 3 の板でしきつめる、ぬり分けの古典の形を 7 × 7 にし、空きを 1 ますから 2 × 2 の正方形にかえた）。組み合わせ：A-010 の文字と式（たての板を t まいとして、組ごとのますの数を 3 の倍数 + t と表す。正方形の 4 ますを r + c、r + c + 1、r + c + 2 と表す）、L-007 の場合分け（正方形がまたがる 2 つの組で 3 通り）、N-022 のあまりのせいしつ（1 ずつちがう 3 つの数のあまりは 0、1、2 が 1 つずつ）。やさしすぎたのでかえた（答えもヒントも見ない係が一度でとけた）：前の形は 1 ますを空ける、よく知られた形で、ななめの 3 色ぬりを当てれば行も列も 1、4、7 の 9 ますと決まり、図のまん中の空きもそのまま答えの 1 つだった。いまは空きが 2 × 2 の正方形なので、4 ますの色が 2、1、1 とかたよることに気づき、どの色を 2 ます空けるかをますの数から決める一手が要る。図は板の向きと正方形の形だけを見せ、答えの置き場所は見せない。1 ますのときの 9 ますをふくむ正方形をえらぶまちがい（正しい 4 か所の正方形は、その 9 ますを 1 つもふくまない）や、まん中に置けると思うまちがいが出やすい。1 ますのときのしきつめ方も使えないので、作って見せる手も要る。工夫は 3 だん：あまりで 3 つの組に分ける → 正方形がおおう 4 ますの組のかたよりから、正方形の行をしぼる → 列でも同じことをして、しきつめ方を作って見せる。1 本目はななめの 3 色ぬり、2 本目は行の組とたての板の数 t。check は 36 か所のそれぞれに正方形を空けて、しきつめ方を全部さがす（ありえるのは 4 か所）。",
+     "qid": "N-028:5ce943fea9"
     }
    ],
    "f": "F03",
@@ -318975,32 +319220,1111 @@ window.ROADMAP = {
     {
      "kind": "導入",
      "aim": "",
+     "items": [
+      {
+       "part": "見本",
+       "text": "地球が できたのは 約 46 億年前です。この 46 億年を 1 年の カレンダーに ちぢめると、地球が できたのが 1 月 1 日、いまが 12 月 31 日の 夜 12 時です。最初の 生き物は 3 月はじめ、きょうりゅうが いなくなったのは 12 月 26 日、人が 生まれたのは 12 月 31 日の 夜の おわりごろです。",
+       "svg": "<svg viewBox=\"0 0 320 200\" xmlns=\"http://www.w3.org/2000/svg\"><rect x=\"16\" y=\"100\" width=\"24\" height=\"30\" fill=\"#c8ccd6\" fill-opacity=\"0.3\" stroke=\"currentColor\" stroke-width=\"2\"/><text x=\"28\" y=\"120\" font-size=\"13\" text-anchor=\"middle\" fill=\"currentColor\">1</text><rect x=\"40\" y=\"100\" width=\"24\" height=\"30\" fill=\"#c8ccd6\" fill-opacity=\"0.6\" stroke=\"currentColor\" stroke-width=\"2\"/><text x=\"52\" y=\"120\" font-size=\"13\" text-anchor=\"middle\" fill=\"currentColor\">2</text><rect x=\"64\" y=\"100\" width=\"24\" height=\"30\" fill=\"#c8ccd6\" fill-opacity=\"0.3\" stroke=\"currentColor\" stroke-width=\"2\"/><text x=\"76\" y=\"120\" font-size=\"13\" text-anchor=\"middle\" fill=\"currentColor\">3</text><rect x=\"88\" y=\"100\" width=\"24\" height=\"30\" fill=\"#c8ccd6\" fill-opacity=\"0.6\" stroke=\"currentColor\" stroke-width=\"2\"/><text x=\"100\" y=\"120\" font-size=\"13\" text-anchor=\"middle\" fill=\"currentColor\">4</text><rect x=\"112\" y=\"100\" width=\"24\" height=\"30\" fill=\"#c8ccd6\" fill-opacity=\"0.3\" stroke=\"currentColor\" stroke-width=\"2\"/><text x=\"124\" y=\"120\" font-size=\"13\" text-anchor=\"middle\" fill=\"currentColor\">5</text><rect x=\"136\" y=\"100\" width=\"24\" height=\"30\" fill=\"#c8ccd6\" fill-opacity=\"0.6\" stroke=\"currentColor\" stroke-width=\"2\"/><text x=\"148\" y=\"120\" font-size=\"13\" text-anchor=\"middle\" fill=\"currentColor\">6</text><rect x=\"160\" y=\"100\" width=\"24\" height=\"30\" fill=\"#c8ccd6\" fill-opacity=\"0.3\" stroke=\"currentColor\" stroke-width=\"2\"/><text x=\"172\" y=\"120\" font-size=\"13\" text-anchor=\"middle\" fill=\"currentColor\">7</text><rect x=\"184\" y=\"100\" width=\"24\" height=\"30\" fill=\"#c8ccd6\" fill-opacity=\"0.6\" stroke=\"currentColor\" stroke-width=\"2\"/><text x=\"196\" y=\"120\" font-size=\"13\" text-anchor=\"middle\" fill=\"currentColor\">8</text><rect x=\"208\" y=\"100\" width=\"24\" height=\"30\" fill=\"#c8ccd6\" fill-opacity=\"0.3\" stroke=\"currentColor\" stroke-width=\"2\"/><text x=\"220\" y=\"120\" font-size=\"13\" text-anchor=\"middle\" fill=\"currentColor\">9</text><rect x=\"232\" y=\"100\" width=\"24\" height=\"30\" fill=\"#c8ccd6\" fill-opacity=\"0.6\" stroke=\"currentColor\" stroke-width=\"2\"/><text x=\"244\" y=\"120\" font-size=\"13\" text-anchor=\"middle\" fill=\"currentColor\">10</text><rect x=\"256\" y=\"100\" width=\"24\" height=\"30\" fill=\"#c8ccd6\" fill-opacity=\"0.3\" stroke=\"currentColor\" stroke-width=\"2\"/><text x=\"268\" y=\"120\" font-size=\"13\" text-anchor=\"middle\" fill=\"currentColor\">11</text><rect x=\"280\" y=\"100\" width=\"24\" height=\"30\" fill=\"#c8ccd6\" fill-opacity=\"0.6\" stroke=\"currentColor\" stroke-width=\"2\"/><text x=\"292\" y=\"120\" font-size=\"13\" text-anchor=\"middle\" fill=\"currentColor\">12</text><line x1=\"16.48\" y1=\"100\" x2=\"16.48\" y2=\"39\" stroke=\"currentColor\" stroke-width=\"2\"/><circle cx=\"16.48\" cy=\"100\" r=\"5\" fill=\"#f08080\" stroke=\"currentColor\" stroke-width=\"2\"/><text x=\"20.48\" y=\"34\" font-size=\"14\" fill=\"currentColor\">地球が できた</text><line x1=\"67.12\" y1=\"100\" x2=\"67.12\" y2=\"71\" stroke=\"currentColor\" stroke-width=\"2\"/><circle cx=\"67.12\" cy=\"100\" r=\"5\" fill=\"#f08080\" stroke=\"currentColor\" stroke-width=\"2\"/><text x=\"71.12\" y=\"66\" font-size=\"14\" fill=\"currentColor\">最初の 生き物</text><line x1=\"299.44\" y1=\"130\" x2=\"299.44\" y2=\"152\" stroke=\"currentColor\" stroke-width=\"2\"/><circle cx=\"299.44\" cy=\"130\" r=\"5\" fill=\"#f08080\" stroke=\"currentColor\" stroke-width=\"2\"/><text x=\"295.44\" y=\"166\" font-size=\"14\" text-anchor=\"end\" fill=\"currentColor\">きょうりゅうが いなくなった</text><line x1=\"303.52\" y1=\"100\" x2=\"303.52\" y2=\"39\" stroke=\"currentColor\" stroke-width=\"2\"/><circle cx=\"303.52\" cy=\"100\" r=\"5\" fill=\"#f08080\" stroke=\"currentColor\" stroke-width=\"2\"/><text x=\"299.52\" y=\"34\" font-size=\"14\" text-anchor=\"end\" fill=\"currentColor\">人が 生まれた</text><text x=\"16\" y=\"150\" font-size=\"12\" fill=\"currentColor\">数字は 月</text></svg>",
+       "explain": "地球の年れいは約 46 億年（いん石や、地球で見つかる いちばん 古い 岩石などの 年代から 求められている）。この 長さを 1 年に ちぢめると、最初の 生物（約 38 億年前、海）は 3 月はじめ、きょうりゅう（鳥以外）が いなくなった 約 6600 万年前は 12 月 26 日、人（ホモ・サピエンス、約 30 万年前）は 12 月 31 日の 夜 11 時半ごろに あたる。人の 歴史は 地球の 歴史の ごく わずかで、まず この 長さの 感覚を つかむのが 今日の ねらい。年代の 求め方そのものは 後の 単元（W-010）で 学ぶ。",
+       "qid": "W-009:36ec6e6f65"
+      },
+      {
+       "part": "今日",
+       "text": "カレンダーの 図の ア・イ・ウは、「最初の 生き物が 生まれた」「魚が 出てきた」「人が 生まれた」の どれかの 日です。魚が 出てきたのは どれですか。",
+       "svg": "<svg viewBox=\"0 0 320 200\" xmlns=\"http://www.w3.org/2000/svg\"><rect x=\"16\" y=\"100\" width=\"24\" height=\"30\" fill=\"#c8ccd6\" fill-opacity=\"0.3\" stroke=\"currentColor\" stroke-width=\"2\"/><text x=\"28\" y=\"120\" font-size=\"13\" text-anchor=\"middle\" fill=\"currentColor\">1</text><rect x=\"40\" y=\"100\" width=\"24\" height=\"30\" fill=\"#c8ccd6\" fill-opacity=\"0.6\" stroke=\"currentColor\" stroke-width=\"2\"/><text x=\"52\" y=\"120\" font-size=\"13\" text-anchor=\"middle\" fill=\"currentColor\">2</text><rect x=\"64\" y=\"100\" width=\"24\" height=\"30\" fill=\"#c8ccd6\" fill-opacity=\"0.3\" stroke=\"currentColor\" stroke-width=\"2\"/><text x=\"76\" y=\"120\" font-size=\"13\" text-anchor=\"middle\" fill=\"currentColor\">3</text><rect x=\"88\" y=\"100\" width=\"24\" height=\"30\" fill=\"#c8ccd6\" fill-opacity=\"0.6\" stroke=\"currentColor\" stroke-width=\"2\"/><text x=\"100\" y=\"120\" font-size=\"13\" text-anchor=\"middle\" fill=\"currentColor\">4</text><rect x=\"112\" y=\"100\" width=\"24\" height=\"30\" fill=\"#c8ccd6\" fill-opacity=\"0.3\" stroke=\"currentColor\" stroke-width=\"2\"/><text x=\"124\" y=\"120\" font-size=\"13\" text-anchor=\"middle\" fill=\"currentColor\">5</text><rect x=\"136\" y=\"100\" width=\"24\" height=\"30\" fill=\"#c8ccd6\" fill-opacity=\"0.6\" stroke=\"currentColor\" stroke-width=\"2\"/><text x=\"148\" y=\"120\" font-size=\"13\" text-anchor=\"middle\" fill=\"currentColor\">6</text><rect x=\"160\" y=\"100\" width=\"24\" height=\"30\" fill=\"#c8ccd6\" fill-opacity=\"0.3\" stroke=\"currentColor\" stroke-width=\"2\"/><text x=\"172\" y=\"120\" font-size=\"13\" text-anchor=\"middle\" fill=\"currentColor\">7</text><rect x=\"184\" y=\"100\" width=\"24\" height=\"30\" fill=\"#c8ccd6\" fill-opacity=\"0.6\" stroke=\"currentColor\" stroke-width=\"2\"/><text x=\"196\" y=\"120\" font-size=\"13\" text-anchor=\"middle\" fill=\"currentColor\">8</text><rect x=\"208\" y=\"100\" width=\"24\" height=\"30\" fill=\"#c8ccd6\" fill-opacity=\"0.3\" stroke=\"currentColor\" stroke-width=\"2\"/><text x=\"220\" y=\"120\" font-size=\"13\" text-anchor=\"middle\" fill=\"currentColor\">9</text><rect x=\"232\" y=\"100\" width=\"24\" height=\"30\" fill=\"#c8ccd6\" fill-opacity=\"0.6\" stroke=\"currentColor\" stroke-width=\"2\"/><text x=\"244\" y=\"120\" font-size=\"13\" text-anchor=\"middle\" fill=\"currentColor\">10</text><rect x=\"256\" y=\"100\" width=\"24\" height=\"30\" fill=\"#c8ccd6\" fill-opacity=\"0.3\" stroke=\"currentColor\" stroke-width=\"2\"/><text x=\"268\" y=\"120\" font-size=\"13\" text-anchor=\"middle\" fill=\"currentColor\">11</text><rect x=\"280\" y=\"100\" width=\"24\" height=\"30\" fill=\"#c8ccd6\" fill-opacity=\"0.6\" stroke=\"currentColor\" stroke-width=\"2\"/><text x=\"292\" y=\"120\" font-size=\"13\" text-anchor=\"middle\" fill=\"currentColor\">12</text><line x1=\"67.12\" y1=\"100\" x2=\"67.12\" y2=\"39\" stroke=\"currentColor\" stroke-width=\"2\"/><circle cx=\"67.12\" cy=\"100\" r=\"5\" fill=\"#f3c969\" stroke=\"currentColor\" stroke-width=\"2\"/><text x=\"67.12\" y=\"34\" font-size=\"14\" text-anchor=\"middle\" fill=\"currentColor\">ア</text><line x1=\"271.12\" y1=\"100\" x2=\"271.12\" y2=\"39\" stroke=\"currentColor\" stroke-width=\"2\"/><circle cx=\"271.12\" cy=\"100\" r=\"5\" fill=\"#f3c969\" stroke=\"currentColor\" stroke-width=\"2\"/><text x=\"271.12\" y=\"34\" font-size=\"14\" text-anchor=\"middle\" fill=\"currentColor\">イ</text><line x1=\"303.52\" y1=\"100\" x2=\"303.52\" y2=\"39\" stroke=\"currentColor\" stroke-width=\"2\"/><circle cx=\"303.52\" cy=\"100\" r=\"5\" fill=\"#f3c969\" stroke=\"currentColor\" stroke-width=\"2\"/><text x=\"303.52\" y=\"34\" font-size=\"14\" text-anchor=\"middle\" fill=\"currentColor\">ウ</text><text x=\"16\" y=\"150\" font-size=\"12\" fill=\"currentColor\">数字は 月</text></svg>",
+       "choices": [
+        "ア",
+        "イ",
+        "ウ"
+       ],
+       "answer": "イ",
+       "check": "'イ'",
+       "hints": [
+        "カレンダーは 左が 古く、右が 新しい。「最初の 生き物」と「人」の 日は、見本の 図で 見つかる。",
+        {
+         "text": "見本の 図で、人が 生まれたのは 1 年の いちばん おわり。ウは 人の 日です。",
+         "svg": "<svg viewBox=\"0 0 320 200\" xmlns=\"http://www.w3.org/2000/svg\"><rect x=\"16\" y=\"100\" width=\"24\" height=\"30\" fill=\"#c8ccd6\" fill-opacity=\"0.3\" stroke=\"currentColor\" stroke-width=\"2\"/><text x=\"28\" y=\"120\" font-size=\"13\" text-anchor=\"middle\" fill=\"currentColor\">1</text><rect x=\"40\" y=\"100\" width=\"24\" height=\"30\" fill=\"#c8ccd6\" fill-opacity=\"0.6\" stroke=\"currentColor\" stroke-width=\"2\"/><text x=\"52\" y=\"120\" font-size=\"13\" text-anchor=\"middle\" fill=\"currentColor\">2</text><rect x=\"64\" y=\"100\" width=\"24\" height=\"30\" fill=\"#c8ccd6\" fill-opacity=\"0.3\" stroke=\"currentColor\" stroke-width=\"2\"/><text x=\"76\" y=\"120\" font-size=\"13\" text-anchor=\"middle\" fill=\"currentColor\">3</text><rect x=\"88\" y=\"100\" width=\"24\" height=\"30\" fill=\"#c8ccd6\" fill-opacity=\"0.6\" stroke=\"currentColor\" stroke-width=\"2\"/><text x=\"100\" y=\"120\" font-size=\"13\" text-anchor=\"middle\" fill=\"currentColor\">4</text><rect x=\"112\" y=\"100\" width=\"24\" height=\"30\" fill=\"#c8ccd6\" fill-opacity=\"0.3\" stroke=\"currentColor\" stroke-width=\"2\"/><text x=\"124\" y=\"120\" font-size=\"13\" text-anchor=\"middle\" fill=\"currentColor\">5</text><rect x=\"136\" y=\"100\" width=\"24\" height=\"30\" fill=\"#c8ccd6\" fill-opacity=\"0.6\" stroke=\"currentColor\" stroke-width=\"2\"/><text x=\"148\" y=\"120\" font-size=\"13\" text-anchor=\"middle\" fill=\"currentColor\">6</text><rect x=\"160\" y=\"100\" width=\"24\" height=\"30\" fill=\"#c8ccd6\" fill-opacity=\"0.3\" stroke=\"currentColor\" stroke-width=\"2\"/><text x=\"172\" y=\"120\" font-size=\"13\" text-anchor=\"middle\" fill=\"currentColor\">7</text><rect x=\"184\" y=\"100\" width=\"24\" height=\"30\" fill=\"#c8ccd6\" fill-opacity=\"0.6\" stroke=\"currentColor\" stroke-width=\"2\"/><text x=\"196\" y=\"120\" font-size=\"13\" text-anchor=\"middle\" fill=\"currentColor\">8</text><rect x=\"208\" y=\"100\" width=\"24\" height=\"30\" fill=\"#c8ccd6\" fill-opacity=\"0.3\" stroke=\"currentColor\" stroke-width=\"2\"/><text x=\"220\" y=\"120\" font-size=\"13\" text-anchor=\"middle\" fill=\"currentColor\">9</text><rect x=\"232\" y=\"100\" width=\"24\" height=\"30\" fill=\"#c8ccd6\" fill-opacity=\"0.6\" stroke=\"currentColor\" stroke-width=\"2\"/><text x=\"244\" y=\"120\" font-size=\"13\" text-anchor=\"middle\" fill=\"currentColor\">10</text><rect x=\"256\" y=\"100\" width=\"24\" height=\"30\" fill=\"#c8ccd6\" fill-opacity=\"0.3\" stroke=\"currentColor\" stroke-width=\"2\"/><text x=\"268\" y=\"120\" font-size=\"13\" text-anchor=\"middle\" fill=\"currentColor\">11</text><rect x=\"280\" y=\"100\" width=\"24\" height=\"30\" fill=\"#c8ccd6\" fill-opacity=\"0.6\" stroke=\"currentColor\" stroke-width=\"2\"/><text x=\"292\" y=\"120\" font-size=\"13\" text-anchor=\"middle\" fill=\"currentColor\">12</text><line x1=\"67.12\" y1=\"100\" x2=\"67.12\" y2=\"39\" stroke=\"currentColor\" stroke-width=\"2\"/><circle cx=\"67.12\" cy=\"100\" r=\"5\" fill=\"#f3c969\" stroke=\"currentColor\" stroke-width=\"2\"/><text x=\"67.12\" y=\"34\" font-size=\"14\" text-anchor=\"middle\" fill=\"currentColor\">ア</text><line x1=\"271.12\" y1=\"100\" x2=\"271.12\" y2=\"39\" stroke=\"currentColor\" stroke-width=\"2\"/><circle cx=\"271.12\" cy=\"100\" r=\"5\" fill=\"#f3c969\" stroke=\"currentColor\" stroke-width=\"2\"/><text x=\"271.12\" y=\"34\" font-size=\"14\" text-anchor=\"middle\" fill=\"currentColor\">イ</text><line x1=\"303.52\" y1=\"130\" x2=\"303.52\" y2=\"152\" stroke=\"currentColor\" stroke-width=\"2\"/><circle cx=\"303.52\" cy=\"130\" r=\"5\" fill=\"#f08080\" stroke=\"currentColor\" stroke-width=\"2\"/><text x=\"299.52\" y=\"166\" font-size=\"14\" text-anchor=\"end\" fill=\"currentColor\">ウ：人</text><text x=\"16\" y=\"150\" font-size=\"12\" fill=\"currentColor\">数字は 月</text></svg>"
+        },
+        "魚は、人より ずっと 前に 出てきました。「最初の 生き物」の 日と くらべて、どちらが あとかを 考えます。"
+       ],
+       "qid": "W-009:177dab88a0"
+      },
+      {
+       "part": "今日",
+       "text": "カレンダーの 図の 印は、きょうりゅうが 出てきた 日です。何月ですか。数で 答えましょう。",
+       "svg": "<svg viewBox=\"0 0 320 200\" xmlns=\"http://www.w3.org/2000/svg\"><rect x=\"16\" y=\"100\" width=\"24\" height=\"30\" fill=\"#c8ccd6\" fill-opacity=\"0.3\" stroke=\"currentColor\" stroke-width=\"2\"/><text x=\"28\" y=\"120\" font-size=\"13\" text-anchor=\"middle\" fill=\"currentColor\">1</text><rect x=\"40\" y=\"100\" width=\"24\" height=\"30\" fill=\"#c8ccd6\" fill-opacity=\"0.6\" stroke=\"currentColor\" stroke-width=\"2\"/><text x=\"52\" y=\"120\" font-size=\"13\" text-anchor=\"middle\" fill=\"currentColor\">2</text><rect x=\"64\" y=\"100\" width=\"24\" height=\"30\" fill=\"#c8ccd6\" fill-opacity=\"0.3\" stroke=\"currentColor\" stroke-width=\"2\"/><text x=\"76\" y=\"120\" font-size=\"13\" text-anchor=\"middle\" fill=\"currentColor\">3</text><rect x=\"88\" y=\"100\" width=\"24\" height=\"30\" fill=\"#c8ccd6\" fill-opacity=\"0.6\" stroke=\"currentColor\" stroke-width=\"2\"/><text x=\"100\" y=\"120\" font-size=\"13\" text-anchor=\"middle\" fill=\"currentColor\">4</text><rect x=\"112\" y=\"100\" width=\"24\" height=\"30\" fill=\"#c8ccd6\" fill-opacity=\"0.3\" stroke=\"currentColor\" stroke-width=\"2\"/><text x=\"124\" y=\"120\" font-size=\"13\" text-anchor=\"middle\" fill=\"currentColor\">5</text><rect x=\"136\" y=\"100\" width=\"24\" height=\"30\" fill=\"#c8ccd6\" fill-opacity=\"0.6\" stroke=\"currentColor\" stroke-width=\"2\"/><text x=\"148\" y=\"120\" font-size=\"13\" text-anchor=\"middle\" fill=\"currentColor\">6</text><rect x=\"160\" y=\"100\" width=\"24\" height=\"30\" fill=\"#c8ccd6\" fill-opacity=\"0.3\" stroke=\"currentColor\" stroke-width=\"2\"/><text x=\"172\" y=\"120\" font-size=\"13\" text-anchor=\"middle\" fill=\"currentColor\">7</text><rect x=\"184\" y=\"100\" width=\"24\" height=\"30\" fill=\"#c8ccd6\" fill-opacity=\"0.6\" stroke=\"currentColor\" stroke-width=\"2\"/><text x=\"196\" y=\"120\" font-size=\"13\" text-anchor=\"middle\" fill=\"currentColor\">8</text><rect x=\"208\" y=\"100\" width=\"24\" height=\"30\" fill=\"#c8ccd6\" fill-opacity=\"0.3\" stroke=\"currentColor\" stroke-width=\"2\"/><text x=\"220\" y=\"120\" font-size=\"13\" text-anchor=\"middle\" fill=\"currentColor\">9</text><rect x=\"232\" y=\"100\" width=\"24\" height=\"30\" fill=\"#c8ccd6\" fill-opacity=\"0.6\" stroke=\"currentColor\" stroke-width=\"2\"/><text x=\"244\" y=\"120\" font-size=\"13\" text-anchor=\"middle\" fill=\"currentColor\">10</text><rect x=\"256\" y=\"100\" width=\"24\" height=\"30\" fill=\"#c8ccd6\" fill-opacity=\"0.3\" stroke=\"currentColor\" stroke-width=\"2\"/><text x=\"268\" y=\"120\" font-size=\"13\" text-anchor=\"middle\" fill=\"currentColor\">11</text><rect x=\"280\" y=\"100\" width=\"24\" height=\"30\" fill=\"#c8ccd6\" fill-opacity=\"0.6\" stroke=\"currentColor\" stroke-width=\"2\"/><text x=\"292\" y=\"120\" font-size=\"13\" text-anchor=\"middle\" fill=\"currentColor\">12</text><line x1=\"289.36\" y1=\"100\" x2=\"289.36\" y2=\"39\" stroke=\"currentColor\" stroke-width=\"2\"/><circle cx=\"289.36\" cy=\"100\" r=\"5\" fill=\"#f08080\" stroke=\"currentColor\" stroke-width=\"2\"/><text x=\"285.36\" y=\"34\" font-size=\"14\" text-anchor=\"end\" fill=\"currentColor\">きょうりゅうが 出てきた</text><text x=\"16\" y=\"150\" font-size=\"12\" fill=\"currentColor\">数字は 月</text></svg>",
+       "answer": 12,
+       "check": "12",
+       "hints": [
+        "印の 下に ある 四角の 数字が、月を あらわしています。",
+        {
+         "text": "印の まっすぐ 下に ある 四角に、色を つけました。",
+         "svg": "<svg viewBox=\"0 0 320 200\" xmlns=\"http://www.w3.org/2000/svg\"><rect x=\"16\" y=\"100\" width=\"24\" height=\"30\" fill=\"#c8ccd6\" fill-opacity=\"0.3\" stroke=\"currentColor\" stroke-width=\"2\"/><text x=\"28\" y=\"120\" font-size=\"13\" text-anchor=\"middle\" fill=\"currentColor\">1</text><rect x=\"40\" y=\"100\" width=\"24\" height=\"30\" fill=\"#c8ccd6\" fill-opacity=\"0.6\" stroke=\"currentColor\" stroke-width=\"2\"/><text x=\"52\" y=\"120\" font-size=\"13\" text-anchor=\"middle\" fill=\"currentColor\">2</text><rect x=\"64\" y=\"100\" width=\"24\" height=\"30\" fill=\"#c8ccd6\" fill-opacity=\"0.3\" stroke=\"currentColor\" stroke-width=\"2\"/><text x=\"76\" y=\"120\" font-size=\"13\" text-anchor=\"middle\" fill=\"currentColor\">3</text><rect x=\"88\" y=\"100\" width=\"24\" height=\"30\" fill=\"#c8ccd6\" fill-opacity=\"0.6\" stroke=\"currentColor\" stroke-width=\"2\"/><text x=\"100\" y=\"120\" font-size=\"13\" text-anchor=\"middle\" fill=\"currentColor\">4</text><rect x=\"112\" y=\"100\" width=\"24\" height=\"30\" fill=\"#c8ccd6\" fill-opacity=\"0.3\" stroke=\"currentColor\" stroke-width=\"2\"/><text x=\"124\" y=\"120\" font-size=\"13\" text-anchor=\"middle\" fill=\"currentColor\">5</text><rect x=\"136\" y=\"100\" width=\"24\" height=\"30\" fill=\"#c8ccd6\" fill-opacity=\"0.6\" stroke=\"currentColor\" stroke-width=\"2\"/><text x=\"148\" y=\"120\" font-size=\"13\" text-anchor=\"middle\" fill=\"currentColor\">6</text><rect x=\"160\" y=\"100\" width=\"24\" height=\"30\" fill=\"#c8ccd6\" fill-opacity=\"0.3\" stroke=\"currentColor\" stroke-width=\"2\"/><text x=\"172\" y=\"120\" font-size=\"13\" text-anchor=\"middle\" fill=\"currentColor\">7</text><rect x=\"184\" y=\"100\" width=\"24\" height=\"30\" fill=\"#c8ccd6\" fill-opacity=\"0.6\" stroke=\"currentColor\" stroke-width=\"2\"/><text x=\"196\" y=\"120\" font-size=\"13\" text-anchor=\"middle\" fill=\"currentColor\">8</text><rect x=\"208\" y=\"100\" width=\"24\" height=\"30\" fill=\"#c8ccd6\" fill-opacity=\"0.3\" stroke=\"currentColor\" stroke-width=\"2\"/><text x=\"220\" y=\"120\" font-size=\"13\" text-anchor=\"middle\" fill=\"currentColor\">9</text><rect x=\"232\" y=\"100\" width=\"24\" height=\"30\" fill=\"#c8ccd6\" fill-opacity=\"0.6\" stroke=\"currentColor\" stroke-width=\"2\"/><text x=\"244\" y=\"120\" font-size=\"13\" text-anchor=\"middle\" fill=\"currentColor\">10</text><rect x=\"256\" y=\"100\" width=\"24\" height=\"30\" fill=\"#c8ccd6\" fill-opacity=\"0.3\" stroke=\"currentColor\" stroke-width=\"2\"/><text x=\"268\" y=\"120\" font-size=\"13\" text-anchor=\"middle\" fill=\"currentColor\">11</text><rect x=\"280\" y=\"100\" width=\"24\" height=\"30\" fill=\"#f3c969\" fill-opacity=\"0.8\" stroke=\"currentColor\" stroke-width=\"2\"/><text x=\"292\" y=\"120\" font-size=\"13\" text-anchor=\"middle\" fill=\"currentColor\">12</text><line x1=\"289.36\" y1=\"100\" x2=\"289.36\" y2=\"39\" stroke=\"currentColor\" stroke-width=\"2\"/><circle cx=\"289.36\" cy=\"100\" r=\"5\" fill=\"#f08080\" stroke=\"currentColor\" stroke-width=\"2\"/><text x=\"285.36\" y=\"34\" font-size=\"14\" text-anchor=\"end\" fill=\"currentColor\">きょうりゅうが 出てきた</text><text x=\"16\" y=\"150\" font-size=\"12\" fill=\"currentColor\">数字は 月</text></svg>"
+        },
+        "1 月から 順に 数えて、印の ある 四角が 何ばんめかを 数えます。"
+       ],
+       "qid": "W-009:c7882241f4"
+      },
+      {
+       "part": "今日",
+       "text": "46 億年は、何万年ですか。1 億は 1 万の 10000 倍です。数で 答えましょう。",
+       "svg": "<svg viewBox=\"0 0 320 200\" xmlns=\"http://www.w3.org/2000/svg\"><rect x=\"14\" y=\"70\" width=\"80\" height=\"52\" rx=\"6\" fill=\"#f3c969\" fill-opacity=\"0.55\" stroke=\"currentColor\" stroke-width=\"2\"/><text x=\"54\" y=\"62\" font-size=\"16\" text-anchor=\"middle\" fill=\"currentColor\">億</text><text x=\"54\" y=\"105\" font-size=\"26\" text-anchor=\"middle\" fill=\"currentColor\">46</text><rect x=\"102\" y=\"70\" width=\"100\" height=\"52\" rx=\"6\" fill=\"#c8ccd6\" fill-opacity=\"0.35\" stroke=\"currentColor\" stroke-width=\"2\"/><text x=\"152\" y=\"62\" font-size=\"16\" text-anchor=\"middle\" fill=\"currentColor\">万</text><text x=\"152\" y=\"105\" font-size=\"26\" text-anchor=\"middle\" fill=\"currentColor\">？</text><rect x=\"210\" y=\"70\" width=\"100\" height=\"52\" rx=\"6\" fill=\"#c8ccd6\" fill-opacity=\"0.35\" stroke=\"currentColor\" stroke-width=\"2\"/><text x=\"260\" y=\"62\" font-size=\"16\" text-anchor=\"middle\" fill=\"currentColor\">一</text><text x=\"260\" y=\"105\" font-size=\"26\" text-anchor=\"middle\" fill=\"currentColor\">？</text></svg>",
+       "answer": 460000,
+       "check": "46 * 10000",
+       "hints": [
+        "まず 1 億年が 何万年かを 考えます。1 億年は 1 万年が いくつ 分ですか。",
+        {
+         "text": "1 億年 ＝ 1 0000 0000 年。左の 2 つの 組で 万年を 数えます。",
+         "svg": "<svg viewBox=\"0 0 320 200\" xmlns=\"http://www.w3.org/2000/svg\"><rect x=\"14\" y=\"70\" width=\"80\" height=\"52\" rx=\"6\" fill=\"#f3c969\" fill-opacity=\"0.55\" stroke=\"currentColor\" stroke-width=\"2\"/><text x=\"54\" y=\"62\" font-size=\"16\" text-anchor=\"middle\" fill=\"currentColor\">億</text><text x=\"54\" y=\"105\" font-size=\"26\" text-anchor=\"middle\" fill=\"currentColor\">1</text><rect x=\"102\" y=\"70\" width=\"100\" height=\"52\" rx=\"6\" fill=\"#f3c969\" fill-opacity=\"0.55\" stroke=\"currentColor\" stroke-width=\"2\"/><text x=\"152\" y=\"62\" font-size=\"16\" text-anchor=\"middle\" fill=\"currentColor\">万</text><text x=\"152\" y=\"105\" font-size=\"26\" text-anchor=\"middle\" fill=\"currentColor\">0000</text><rect x=\"210\" y=\"70\" width=\"100\" height=\"52\" rx=\"6\" fill=\"#c8ccd6\" fill-opacity=\"0.35\" stroke=\"currentColor\" stroke-width=\"2\"/><text x=\"260\" y=\"62\" font-size=\"16\" text-anchor=\"middle\" fill=\"currentColor\">一</text><text x=\"260\" y=\"105\" font-size=\"26\" text-anchor=\"middle\" fill=\"currentColor\">0000</text><text x=\"160\" y=\"150\" font-size=\"14\" text-anchor=\"middle\" fill=\"currentColor\">ここまでが 万年の 数</text><line x1=\"18\" y1=\"136\" x2=\"200\" y2=\"136\" stroke=\"currentColor\" stroke-width=\"3\"/></svg>"
+        },
+        "46 億年は、1 億年が 46 こ 分です。"
+       ],
+       "qid": "W-009:b13f047bb7"
+      },
+      {
+       "part": "今日",
+       "text": "地球が できたのは 約 46 億年前、最初の 生き物が 生まれたのは 約 38 億年前です。地球が できてから 最初の 生き物が 生まれるまで、約 何億年 かかりましたか。数で 答えましょう。",
+       "svg": "<svg viewBox=\"0 0 320 200\" xmlns=\"http://www.w3.org/2000/svg\"><line x1=\"16\" y1=\"112\" x2=\"304\" y2=\"112\" stroke=\"currentColor\" stroke-width=\"3\"/><line x1=\"16\" y1=\"106\" x2=\"16\" y2=\"118\" stroke=\"currentColor\" stroke-width=\"2\"/><text x=\"16\" y=\"136\" font-size=\"13\" text-anchor=\"middle\" fill=\"currentColor\">46</text><line x1=\"53.5652\" y1=\"106\" x2=\"53.5652\" y2=\"118\" stroke=\"currentColor\" stroke-width=\"2\"/><text x=\"53.5652\" y=\"136\" font-size=\"13\" text-anchor=\"middle\" fill=\"currentColor\">40</text><line x1=\"116.174\" y1=\"106\" x2=\"116.174\" y2=\"118\" stroke=\"currentColor\" stroke-width=\"2\"/><text x=\"116.174\" y=\"136\" font-size=\"13\" text-anchor=\"middle\" fill=\"currentColor\">30</text><line x1=\"178.783\" y1=\"106\" x2=\"178.783\" y2=\"118\" stroke=\"currentColor\" stroke-width=\"2\"/><text x=\"178.783\" y=\"136\" font-size=\"13\" text-anchor=\"middle\" fill=\"currentColor\">20</text><line x1=\"241.391\" y1=\"106\" x2=\"241.391\" y2=\"118\" stroke=\"currentColor\" stroke-width=\"2\"/><text x=\"241.391\" y=\"136\" font-size=\"13\" text-anchor=\"middle\" fill=\"currentColor\">10</text><line x1=\"304\" y1=\"106\" x2=\"304\" y2=\"118\" stroke=\"currentColor\" stroke-width=\"2\"/><text x=\"304\" y=\"136\" font-size=\"13\" text-anchor=\"middle\" fill=\"currentColor\">いま</text><polygon points=\"10,90 22,90 16,104\" fill=\"#f08080\" stroke=\"currentColor\" stroke-width=\"2\"/><text x=\"24\" y=\"62\" font-size=\"14\" fill=\"currentColor\">地球が できた</text><polygon points=\"60.087,90 72.087,90 66.087,104\" fill=\"#f08080\" stroke=\"currentColor\" stroke-width=\"2\"/><text x=\"74.087\" y=\"84\" font-size=\"14\" fill=\"currentColor\">最初の 生き物</text></svg>",
+       "answer": 8,
+       "check": "46 - 38",
+       "hints": [
+        "「何億年前」の 数が 大きい ほど 古い。2 つの 数の 差が かかった 時間です。",
+        {
+         "text": "数直線で、2 つの 印の 間の 長さを 出します。",
+         "svg": "<svg viewBox=\"0 0 320 200\" xmlns=\"http://www.w3.org/2000/svg\"><line x1=\"16\" y1=\"112\" x2=\"304\" y2=\"112\" stroke=\"currentColor\" stroke-width=\"3\"/><line x1=\"16\" y1=\"106\" x2=\"16\" y2=\"118\" stroke=\"currentColor\" stroke-width=\"2\"/><text x=\"16\" y=\"136\" font-size=\"13\" text-anchor=\"middle\" fill=\"currentColor\">46</text><line x1=\"53.5652\" y1=\"106\" x2=\"53.5652\" y2=\"118\" stroke=\"currentColor\" stroke-width=\"2\"/><text x=\"53.5652\" y=\"136\" font-size=\"13\" text-anchor=\"middle\" fill=\"currentColor\">40</text><line x1=\"116.174\" y1=\"106\" x2=\"116.174\" y2=\"118\" stroke=\"currentColor\" stroke-width=\"2\"/><text x=\"116.174\" y=\"136\" font-size=\"13\" text-anchor=\"middle\" fill=\"currentColor\">30</text><line x1=\"178.783\" y1=\"106\" x2=\"178.783\" y2=\"118\" stroke=\"currentColor\" stroke-width=\"2\"/><text x=\"178.783\" y=\"136\" font-size=\"13\" text-anchor=\"middle\" fill=\"currentColor\">20</text><line x1=\"241.391\" y1=\"106\" x2=\"241.391\" y2=\"118\" stroke=\"currentColor\" stroke-width=\"2\"/><text x=\"241.391\" y=\"136\" font-size=\"13\" text-anchor=\"middle\" fill=\"currentColor\">10</text><line x1=\"304\" y1=\"106\" x2=\"304\" y2=\"118\" stroke=\"currentColor\" stroke-width=\"2\"/><text x=\"304\" y=\"136\" font-size=\"13\" text-anchor=\"middle\" fill=\"currentColor\">いま</text><polygon points=\"10,90 22,90 16,104\" fill=\"#f08080\" stroke=\"currentColor\" stroke-width=\"2\"/><text x=\"24\" y=\"62\" font-size=\"14\" fill=\"currentColor\">地球が できた</text><polygon points=\"60.087,90 72.087,90 66.087,104\" fill=\"#f08080\" stroke=\"currentColor\" stroke-width=\"2\"/><text x=\"74.087\" y=\"84\" font-size=\"14\" fill=\"currentColor\">最初の 生き物</text><line x1=\"16\" y1=\"152\" x2=\"66.087\" y2=\"152\" stroke=\"currentColor\" stroke-width=\"2\"/><line x1=\"16\" y1=\"146\" x2=\"16\" y2=\"158\" stroke=\"currentColor\" stroke-width=\"2\"/><line x1=\"66.087\" y1=\"146\" x2=\"66.087\" y2=\"158\" stroke=\"currentColor\" stroke-width=\"2\"/><text x=\"74.087\" y=\"176\" font-size=\"14\" fill=\"currentColor\">この 間の 長さを 出す</text></svg>"
+        },
+        "38 から 46 まで、数が いくつ ふえているかを 数えます。"
+       ],
+       "qid": "W-009:097fa71641"
+      },
+      {
+       "part": "今日",
+       "text": "46 億年を 1 年の カレンダーに ちぢめると、1 か月は 約 何億年に なりますか。46 を 12 で 分けて、一の 位までの がい数（四しゃ五入）で 答えましょう。",
+       "svg": "<svg viewBox=\"0 0 320 200\" xmlns=\"http://www.w3.org/2000/svg\"><rect x=\"16\" y=\"70\" width=\"288\" height=\"30\" fill=\"#c8ccd6\" fill-opacity=\"0.3\" stroke=\"currentColor\" stroke-width=\"2\"/><line x1=\"40\" y1=\"70\" x2=\"40\" y2=\"100\" stroke=\"currentColor\" stroke-width=\"2\"/><line x1=\"64\" y1=\"70\" x2=\"64\" y2=\"100\" stroke=\"currentColor\" stroke-width=\"2\"/><line x1=\"88\" y1=\"70\" x2=\"88\" y2=\"100\" stroke=\"currentColor\" stroke-width=\"2\"/><line x1=\"112\" y1=\"70\" x2=\"112\" y2=\"100\" stroke=\"currentColor\" stroke-width=\"2\"/><line x1=\"136\" y1=\"70\" x2=\"136\" y2=\"100\" stroke=\"currentColor\" stroke-width=\"2\"/><line x1=\"160\" y1=\"70\" x2=\"160\" y2=\"100\" stroke=\"currentColor\" stroke-width=\"2\"/><line x1=\"184\" y1=\"70\" x2=\"184\" y2=\"100\" stroke=\"currentColor\" stroke-width=\"2\"/><line x1=\"208\" y1=\"70\" x2=\"208\" y2=\"100\" stroke=\"currentColor\" stroke-width=\"2\"/><line x1=\"232\" y1=\"70\" x2=\"232\" y2=\"100\" stroke=\"currentColor\" stroke-width=\"2\"/><line x1=\"256\" y1=\"70\" x2=\"256\" y2=\"100\" stroke=\"currentColor\" stroke-width=\"2\"/><line x1=\"280\" y1=\"70\" x2=\"280\" y2=\"100\" stroke=\"currentColor\" stroke-width=\"2\"/><line x1=\"16\" y1=\"52\" x2=\"304\" y2=\"52\" stroke=\"currentColor\" stroke-width=\"2\"/><line x1=\"16\" y1=\"46\" x2=\"16\" y2=\"58\" stroke=\"currentColor\" stroke-width=\"2\"/><line x1=\"304\" y1=\"46\" x2=\"304\" y2=\"58\" stroke=\"currentColor\" stroke-width=\"2\"/><text x=\"160\" y=\"40\" font-size=\"16\" text-anchor=\"middle\" fill=\"currentColor\">46 億年</text><text x=\"28\" y=\"90\" font-size=\"16\" text-anchor=\"middle\" fill=\"currentColor\">？</text><text x=\"160\" y=\"130\" font-size=\"14\" text-anchor=\"middle\" fill=\"currentColor\">12 こに 同じ 長さで 分けた 1 こぶん</text></svg>",
+       "answer": 4,
+       "check": "(46 + 12 // 2) // 12",
+       "hints": [
+        "1 年は 12 か月。46 億年を 12 こに 同じ 長さで 分けます。",
+        {
+         "text": "12 に 3 や 4 を かけた 数を 46 と くらべます。",
+         "svg": "<svg viewBox=\"0 0 320 200\" xmlns=\"http://www.w3.org/2000/svg\"><rect x=\"16\" y=\"40\" width=\"288\" height=\"22\" fill=\"#c8ccd6\" fill-opacity=\"0.35\" stroke=\"currentColor\" stroke-width=\"2\"/><text x=\"160\" y=\"56\" font-size=\"14\" text-anchor=\"middle\" fill=\"currentColor\">46</text><rect x=\"16\" y=\"80\" width=\"225\" height=\"22\" fill=\"#7fc8f8\" fill-opacity=\"0.5\" stroke=\"currentColor\" stroke-width=\"2\"/><text x=\"128\" y=\"96\" font-size=\"14\" text-anchor=\"middle\" fill=\"currentColor\">12 × 3 ＝ 36</text><rect x=\"16\" y=\"120\" width=\"300\" height=\"22\" fill=\"#7bc96f\" fill-opacity=\"0.5\" stroke=\"currentColor\" stroke-width=\"2\"/><text x=\"166\" y=\"136\" font-size=\"14\" text-anchor=\"middle\" fill=\"currentColor\">12 × 4 ＝ 48</text><line x1=\"304\" y1=\"34\" x2=\"304\" y2=\"150\" stroke=\"currentColor\" stroke-width=\"1.5\" stroke-dasharray=\"4 3\"/><text x=\"302\" y=\"170\" font-size=\"13\" text-anchor=\"end\" fill=\"currentColor\">46 の 線</text></svg>"
+        },
+        "46 は、36 と 48 の どちらに 近いかを 見て、がい数に します。"
+       ],
+       "qid": "W-009:bd97205a30"
+      },
+      {
+       "part": "挑戦",
+       "text": "地球の 46 億年を、1 億年が 1 m に なる ひもに します（ひもの 長さは 46 m）。きょうりゅうが いなくなったのは 約 6600 万年前です。ひもの 右はし（いま）から 何 cm の ところですか。数で 答えましょう。",
+       "svg": "<svg viewBox=\"0 0 320 200\" xmlns=\"http://www.w3.org/2000/svg\"><rect x=\"16\" y=\"90\" width=\"288\" height=\"22\" fill=\"#c8ccd6\" fill-opacity=\"0.35\" stroke=\"currentColor\" stroke-width=\"2\"/><line x1=\"16\" y1=\"82\" x2=\"16\" y2=\"120\" stroke=\"currentColor\" stroke-width=\"2\"/><line x1=\"304\" y1=\"82\" x2=\"304\" y2=\"120\" stroke=\"currentColor\" stroke-width=\"2\"/><polygon points=\"294,74 306,74 300,88\" fill=\"#f08080\" stroke=\"currentColor\" stroke-width=\"2\"/><text x=\"20\" y=\"74\" font-size=\"14\" fill=\"currentColor\">地球が できた</text><text x=\"304\" y=\"66\" font-size=\"14\" text-anchor=\"end\" fill=\"currentColor\">いま</text><text x=\"296\" y=\"168\" font-size=\"14\" text-anchor=\"end\" fill=\"currentColor\">きょうりゅうが いなくなった</text><line x1=\"300\" y1=\"112\" x2=\"300\" y2=\"154\" stroke=\"currentColor\" stroke-width=\"1.5\" stroke-dasharray=\"4 3\"/><text x=\"160\" y=\"190\" font-size=\"13\" text-anchor=\"middle\" fill=\"currentColor\">ひもの 長さは 46 m（1 億年が 1 m）</text></svg>",
+       "answer": 66,
+       "check": "6600 * 100 // 10000",
+       "hints": [
+        "1 億年が 100 cm。6600 万年は、1 億年（10000 万年）より 短い。",
+        {
+         "text": "1 億年の ひもを 10 こに 分けると、1 目もりが 1000 万年です。",
+         "svg": "<svg viewBox=\"0 0 320 200\" xmlns=\"http://www.w3.org/2000/svg\"><rect x=\"30\" y=\"80\" width=\"260\" height=\"26\" fill=\"#c8ccd6\" fill-opacity=\"0.35\" stroke=\"currentColor\" stroke-width=\"2\"/><line x1=\"30\" y1=\"80\" x2=\"30\" y2=\"114\" stroke=\"currentColor\" stroke-width=\"2\"/><line x1=\"56\" y1=\"80\" x2=\"56\" y2=\"114\" stroke=\"currentColor\" stroke-width=\"2\"/><line x1=\"82\" y1=\"80\" x2=\"82\" y2=\"114\" stroke=\"currentColor\" stroke-width=\"2\"/><line x1=\"108\" y1=\"80\" x2=\"108\" y2=\"114\" stroke=\"currentColor\" stroke-width=\"2\"/><line x1=\"134\" y1=\"80\" x2=\"134\" y2=\"114\" stroke=\"currentColor\" stroke-width=\"2\"/><line x1=\"160\" y1=\"80\" x2=\"160\" y2=\"114\" stroke=\"currentColor\" stroke-width=\"2\"/><line x1=\"186\" y1=\"80\" x2=\"186\" y2=\"114\" stroke=\"currentColor\" stroke-width=\"2\"/><line x1=\"212\" y1=\"80\" x2=\"212\" y2=\"114\" stroke=\"currentColor\" stroke-width=\"2\"/><line x1=\"238\" y1=\"80\" x2=\"238\" y2=\"114\" stroke=\"currentColor\" stroke-width=\"2\"/><line x1=\"264\" y1=\"80\" x2=\"264\" y2=\"114\" stroke=\"currentColor\" stroke-width=\"2\"/><line x1=\"290\" y1=\"80\" x2=\"290\" y2=\"114\" stroke=\"currentColor\" stroke-width=\"2\"/><text x=\"290\" y=\"134\" font-size=\"14\" text-anchor=\"middle\" fill=\"currentColor\">0</text><text x=\"30\" y=\"134\" font-size=\"14\" text-anchor=\"middle\" fill=\"currentColor\">100</text><text x=\"160\" y=\"168\" font-size=\"13\" text-anchor=\"middle\" fill=\"currentColor\">1 億年 ＝ 100 cm。1 目もりは 1000 万年（10 cm）</text><text x=\"290\" y=\"70\" font-size=\"14\" text-anchor=\"end\" fill=\"currentColor\">いま</text></svg>"
+        },
+        "1000 万年が 10 cm なので、6600 万年は 1000 万年の 何こ分 かを 考えます。"
+       ],
+       "paths": [
+        [
+         "1 億年 ＝ 100 cm",
+         "1000 万年 ＝ 10 cm",
+         "6600 万年は 1000 万年の 6.6 こ分",
+         "6.6 × 10 ＝ 66 cm"
+        ],
+        [
+         "6600 万年 ＝ 0.66 億年",
+         "0.66 × 100 cm ＝ 66 cm"
+        ]
+       ],
+       "qid": "W-009:d5a5810acb"
+      }
+     ],
+     "extra": [
+      {
+       "part": "今日",
+       "text": "カレンダーの 図で、きょうりゅうが いなくなったのは 12 月 26 日、人が 生まれたのは 12 月 31 日です。26 日の 何日 あとが 31 日ですか。数で 答えましょう。",
+       "svg": "<svg viewBox=\"0 0 320 200\" xmlns=\"http://www.w3.org/2000/svg\"><rect x=\"16\" y=\"100\" width=\"24\" height=\"30\" fill=\"#c8ccd6\" fill-opacity=\"0.3\" stroke=\"currentColor\" stroke-width=\"2\"/><text x=\"28\" y=\"120\" font-size=\"13\" text-anchor=\"middle\" fill=\"currentColor\">1</text><rect x=\"40\" y=\"100\" width=\"24\" height=\"30\" fill=\"#c8ccd6\" fill-opacity=\"0.6\" stroke=\"currentColor\" stroke-width=\"2\"/><text x=\"52\" y=\"120\" font-size=\"13\" text-anchor=\"middle\" fill=\"currentColor\">2</text><rect x=\"64\" y=\"100\" width=\"24\" height=\"30\" fill=\"#c8ccd6\" fill-opacity=\"0.3\" stroke=\"currentColor\" stroke-width=\"2\"/><text x=\"76\" y=\"120\" font-size=\"13\" text-anchor=\"middle\" fill=\"currentColor\">3</text><rect x=\"88\" y=\"100\" width=\"24\" height=\"30\" fill=\"#c8ccd6\" fill-opacity=\"0.6\" stroke=\"currentColor\" stroke-width=\"2\"/><text x=\"100\" y=\"120\" font-size=\"13\" text-anchor=\"middle\" fill=\"currentColor\">4</text><rect x=\"112\" y=\"100\" width=\"24\" height=\"30\" fill=\"#c8ccd6\" fill-opacity=\"0.3\" stroke=\"currentColor\" stroke-width=\"2\"/><text x=\"124\" y=\"120\" font-size=\"13\" text-anchor=\"middle\" fill=\"currentColor\">5</text><rect x=\"136\" y=\"100\" width=\"24\" height=\"30\" fill=\"#c8ccd6\" fill-opacity=\"0.6\" stroke=\"currentColor\" stroke-width=\"2\"/><text x=\"148\" y=\"120\" font-size=\"13\" text-anchor=\"middle\" fill=\"currentColor\">6</text><rect x=\"160\" y=\"100\" width=\"24\" height=\"30\" fill=\"#c8ccd6\" fill-opacity=\"0.3\" stroke=\"currentColor\" stroke-width=\"2\"/><text x=\"172\" y=\"120\" font-size=\"13\" text-anchor=\"middle\" fill=\"currentColor\">7</text><rect x=\"184\" y=\"100\" width=\"24\" height=\"30\" fill=\"#c8ccd6\" fill-opacity=\"0.6\" stroke=\"currentColor\" stroke-width=\"2\"/><text x=\"196\" y=\"120\" font-size=\"13\" text-anchor=\"middle\" fill=\"currentColor\">8</text><rect x=\"208\" y=\"100\" width=\"24\" height=\"30\" fill=\"#c8ccd6\" fill-opacity=\"0.3\" stroke=\"currentColor\" stroke-width=\"2\"/><text x=\"220\" y=\"120\" font-size=\"13\" text-anchor=\"middle\" fill=\"currentColor\">9</text><rect x=\"232\" y=\"100\" width=\"24\" height=\"30\" fill=\"#c8ccd6\" fill-opacity=\"0.6\" stroke=\"currentColor\" stroke-width=\"2\"/><text x=\"244\" y=\"120\" font-size=\"13\" text-anchor=\"middle\" fill=\"currentColor\">10</text><rect x=\"256\" y=\"100\" width=\"24\" height=\"30\" fill=\"#c8ccd6\" fill-opacity=\"0.3\" stroke=\"currentColor\" stroke-width=\"2\"/><text x=\"268\" y=\"120\" font-size=\"13\" text-anchor=\"middle\" fill=\"currentColor\">11</text><rect x=\"280\" y=\"100\" width=\"24\" height=\"30\" fill=\"#c8ccd6\" fill-opacity=\"0.6\" stroke=\"currentColor\" stroke-width=\"2\"/><text x=\"292\" y=\"120\" font-size=\"13\" text-anchor=\"middle\" fill=\"currentColor\">12</text><line x1=\"299.44\" y1=\"130\" x2=\"299.44\" y2=\"152\" stroke=\"currentColor\" stroke-width=\"2\"/><circle cx=\"299.44\" cy=\"130\" r=\"5\" fill=\"#f08080\" stroke=\"currentColor\" stroke-width=\"2\"/><text x=\"295.44\" y=\"166\" font-size=\"14\" text-anchor=\"end\" fill=\"currentColor\">きょうりゅう 12 月 26 日</text><line x1=\"303.52\" y1=\"100\" x2=\"303.52\" y2=\"39\" stroke=\"currentColor\" stroke-width=\"2\"/><circle cx=\"303.52\" cy=\"100\" r=\"5\" fill=\"#f08080\" stroke=\"currentColor\" stroke-width=\"2\"/><text x=\"299.52\" y=\"34\" font-size=\"14\" text-anchor=\"end\" fill=\"currentColor\">人 12 月 31 日</text><text x=\"16\" y=\"150\" font-size=\"12\" fill=\"currentColor\">数字は 月</text></svg>",
+       "answer": 5,
+       "check": "31 - 26",
+       "hints": [
+        "同じ 12 月の 中なので、日にちの 数を ひき算します。",
+        {
+         "text": "26 日から 31 日まで、日にちを 数えて すすめます。",
+         "svg": "<svg viewBox=\"0 0 320 200\" xmlns=\"http://www.w3.org/2000/svg\"><line x1=\"24\" y1=\"100\" x2=\"296\" y2=\"100\" stroke=\"currentColor\" stroke-width=\"3\"/><line x1=\"24\" y1=\"92\" x2=\"24\" y2=\"108\" stroke=\"currentColor\" stroke-width=\"2\"/><line x1=\"78\" y1=\"92\" x2=\"78\" y2=\"108\" stroke=\"currentColor\" stroke-width=\"2\"/><line x1=\"132\" y1=\"92\" x2=\"132\" y2=\"108\" stroke=\"currentColor\" stroke-width=\"2\"/><line x1=\"186\" y1=\"92\" x2=\"186\" y2=\"108\" stroke=\"currentColor\" stroke-width=\"2\"/><line x1=\"240\" y1=\"92\" x2=\"240\" y2=\"108\" stroke=\"currentColor\" stroke-width=\"2\"/><line x1=\"294\" y1=\"92\" x2=\"294\" y2=\"108\" stroke=\"currentColor\" stroke-width=\"2\"/><text x=\"24\" y=\"130\" font-size=\"14\" text-anchor=\"middle\" fill=\"currentColor\">26</text><text x=\"78\" y=\"130\" font-size=\"14\" text-anchor=\"middle\" fill=\"currentColor\">27</text><text x=\"132\" y=\"130\" font-size=\"14\" text-anchor=\"middle\" fill=\"currentColor\">28</text><text x=\"186\" y=\"130\" font-size=\"14\" text-anchor=\"middle\" fill=\"currentColor\">29</text><text x=\"240\" y=\"130\" font-size=\"14\" text-anchor=\"middle\" fill=\"currentColor\">30</text><text x=\"294\" y=\"130\" font-size=\"14\" text-anchor=\"middle\" fill=\"currentColor\">31</text><text x=\"160\" y=\"60\" font-size=\"16\" text-anchor=\"middle\" fill=\"currentColor\">12 月</text></svg>"
+        },
+        "31 － 26 の ひき算を します。"
+       ],
+       "qid": "W-009:9f2ad4da4a"
+      },
+      {
+       "part": "今日",
+       "text": "2 億 5000 万年は、何万年ですか。1 億は 1 万の 10000 倍です。数で 答えましょう。",
+       "svg": "<svg viewBox=\"0 0 320 200\" xmlns=\"http://www.w3.org/2000/svg\"><rect x=\"14\" y=\"70\" width=\"80\" height=\"52\" rx=\"6\" fill=\"#f3c969\" fill-opacity=\"0.55\" stroke=\"currentColor\" stroke-width=\"2\"/><text x=\"54\" y=\"62\" font-size=\"16\" text-anchor=\"middle\" fill=\"currentColor\">億</text><text x=\"54\" y=\"105\" font-size=\"26\" text-anchor=\"middle\" fill=\"currentColor\">2</text><rect x=\"102\" y=\"70\" width=\"100\" height=\"52\" rx=\"6\" fill=\"#f3c969\" fill-opacity=\"0.55\" stroke=\"currentColor\" stroke-width=\"2\"/><text x=\"152\" y=\"62\" font-size=\"16\" text-anchor=\"middle\" fill=\"currentColor\">万</text><text x=\"152\" y=\"105\" font-size=\"26\" text-anchor=\"middle\" fill=\"currentColor\">5000</text><rect x=\"210\" y=\"70\" width=\"100\" height=\"52\" rx=\"6\" fill=\"#c8ccd6\" fill-opacity=\"0.35\" stroke=\"currentColor\" stroke-width=\"2\"/><text x=\"260\" y=\"62\" font-size=\"16\" text-anchor=\"middle\" fill=\"currentColor\">一</text><text x=\"260\" y=\"105\" font-size=\"26\" text-anchor=\"middle\" fill=\"currentColor\">？</text></svg>",
+       "answer": 25000,
+       "check": "2 * 10000 + 5000",
+       "hints": [
+        "2 億年と 5000 万年に 分けて 考えます。",
+        {
+         "text": "2 億年は 万年で 何万年かを 先に 出します。",
+         "svg": "<svg viewBox=\"0 0 320 200\" xmlns=\"http://www.w3.org/2000/svg\"><rect x=\"14\" y=\"70\" width=\"80\" height=\"52\" rx=\"6\" fill=\"#f3c969\" fill-opacity=\"0.55\" stroke=\"currentColor\" stroke-width=\"2\"/><text x=\"54\" y=\"62\" font-size=\"16\" text-anchor=\"middle\" fill=\"currentColor\">億</text><text x=\"54\" y=\"105\" font-size=\"26\" text-anchor=\"middle\" fill=\"currentColor\">2</text><rect x=\"102\" y=\"70\" width=\"100\" height=\"52\" rx=\"6\" fill=\"#c8ccd6\" fill-opacity=\"0.35\" stroke=\"currentColor\" stroke-width=\"2\"/><text x=\"152\" y=\"62\" font-size=\"16\" text-anchor=\"middle\" fill=\"currentColor\">万</text><text x=\"152\" y=\"105\" font-size=\"26\" text-anchor=\"middle\" fill=\"currentColor\">0000</text><rect x=\"210\" y=\"70\" width=\"100\" height=\"52\" rx=\"6\" fill=\"#c8ccd6\" fill-opacity=\"0.35\" stroke=\"currentColor\" stroke-width=\"2\"/><text x=\"260\" y=\"62\" font-size=\"16\" text-anchor=\"middle\" fill=\"currentColor\">一</text><text x=\"260\" y=\"105\" font-size=\"26\" text-anchor=\"middle\" fill=\"currentColor\">0000</text><text x=\"160\" y=\"150\" font-size=\"14\" text-anchor=\"middle\" fill=\"currentColor\">2 億年 ＝ 2 0000 0000 年</text></svg>"
+        },
+        "2 億年を 万年に した 数に、5000 万年を たします。"
+       ],
+       "qid": "W-009:99b420cedc"
+      }
+     ],
      "key": "導入#1"
     },
     {
      "kind": "練習",
      "aim": "",
+     "items": [
+      {
+       "part": "見本",
+       "text": "地球の 歴史は、化石の ちがいで、古生代・中生代・新生代に 分けられます（ちしつ年代）。古生代は 三葉虫や 魚、中生代は きょうりゅうや アンモナイト、新生代は ナウマンゾウや 人の 時代です。魚の あとに、両生類、は虫類、ほにゅう類の じゅんに 出てきました。両生類は カエルの なかま、は虫類は トカゲの なかまです。図は 3 つの 時代の 長さを そろえて かいてあります。",
+       "svg": "<svg viewBox=\"0 0 320 200\" xmlns=\"http://www.w3.org/2000/svg\"><rect x=\"10\" y=\"8\" width=\"100\" height=\"26\" fill=\"#7fc8f8\" fill-opacity=\"0.45\" stroke=\"currentColor\" stroke-width=\"2\"/><text x=\"60\" y=\"27\" font-size=\"16\" text-anchor=\"middle\" fill=\"currentColor\">古生代</text><rect x=\"10\" y=\"34\" width=\"100\" height=\"138\" fill=\"#7fc8f8\" fill-opacity=\"0.2\" stroke=\"currentColor\" stroke-width=\"2\"/><g transform=\"translate(60 70) scale(0.5)\"><ellipse cx=\"0\" cy=\"0\" rx=\"38\" ry=\"19\" fill=\"#c9a36b\" fill-opacity=\"0.6\" stroke=\"currentColor\" stroke-width=\"2\"/><path d=\"M-20 -17 Q-28 0 -20 17\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\"/><path d=\"M-6 -19 V19 M8 -19 V19 M21 -16 V16\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.5\"/></g><text x=\"60\" y=\"104\" font-size=\"13\" text-anchor=\"middle\" fill=\"currentColor\">三葉虫</text><g transform=\"translate(60 130) scale(0.5)\"><ellipse cx=\"-6\" cy=\"0\" rx=\"28\" ry=\"15\" fill=\"#7fc8f8\" fill-opacity=\"0.6\" stroke=\"currentColor\" stroke-width=\"2\"/><polygon points=\"20,0 40,-15 40,15\" fill=\"#7fc8f8\" fill-opacity=\"0.6\" stroke=\"currentColor\" stroke-width=\"2\"/><circle cx=\"-22\" cy=\"-3\" r=\"3\" fill=\"currentColor\"/></g><text x=\"60\" y=\"164\" font-size=\"13\" text-anchor=\"middle\" fill=\"currentColor\">魚</text><rect x=\"110\" y=\"8\" width=\"100\" height=\"26\" fill=\"#7bc96f\" fill-opacity=\"0.45\" stroke=\"currentColor\" stroke-width=\"2\"/><text x=\"160\" y=\"27\" font-size=\"16\" text-anchor=\"middle\" fill=\"currentColor\">中生代</text><rect x=\"110\" y=\"34\" width=\"100\" height=\"138\" fill=\"#7bc96f\" fill-opacity=\"0.2\" stroke=\"currentColor\" stroke-width=\"2\"/><g transform=\"translate(160 70) scale(0.5)\"><ellipse cx=\"0\" cy=\"6\" rx=\"24\" ry=\"14\" fill=\"#7bc96f\" fill-opacity=\"0.6\" stroke=\"currentColor\" stroke-width=\"2\"/><polygon points=\"-16,0 -28,-22 -20,-26 -4,-6\" fill=\"#7bc96f\" fill-opacity=\"0.6\" stroke=\"currentColor\" stroke-width=\"2\"/><ellipse cx=\"-27\" cy=\"-27\" rx=\"10\" ry=\"6\" fill=\"#7bc96f\" fill-opacity=\"0.6\" stroke=\"currentColor\" stroke-width=\"2\"/><circle cx=\"-30\" cy=\"-29\" r=\"2\" fill=\"currentColor\"/><polygon points=\"20,0 48,14 20,17\" fill=\"#7bc96f\" fill-opacity=\"0.6\" stroke=\"currentColor\" stroke-width=\"2\"/><rect x=\"-12\" y=\"17\" width=\"7\" height=\"14\" fill=\"#7bc96f\" fill-opacity=\"0.6\" stroke=\"currentColor\" stroke-width=\"2\"/><rect x=\"6\" y=\"17\" width=\"7\" height=\"14\" fill=\"#7bc96f\" fill-opacity=\"0.6\" stroke=\"currentColor\" stroke-width=\"2\"/></g><text x=\"160\" y=\"104\" font-size=\"13\" text-anchor=\"middle\" fill=\"currentColor\">きょうりゅう</text><g transform=\"translate(160 130) scale(0.5)\"><circle cx=\"0\" cy=\"0\" r=\"22\" fill=\"#c9a36b\" fill-opacity=\"0.55\" stroke=\"currentColor\" stroke-width=\"2\"/><path d=\"M0 0 a4 4 0 0 1 8 0 a8 8 0 0 1 -16 0 a12 12 0 0 1 24 0\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\"/></g><text x=\"160\" y=\"164\" font-size=\"13\" text-anchor=\"middle\" fill=\"currentColor\">アンモナイト</text><rect x=\"210\" y=\"8\" width=\"100\" height=\"26\" fill=\"#f3c969\" fill-opacity=\"0.45\" stroke=\"currentColor\" stroke-width=\"2\"/><text x=\"260\" y=\"27\" font-size=\"16\" text-anchor=\"middle\" fill=\"currentColor\">新生代</text><rect x=\"210\" y=\"34\" width=\"100\" height=\"138\" fill=\"#f3c969\" fill-opacity=\"0.2\" stroke=\"currentColor\" stroke-width=\"2\"/><g transform=\"translate(260 70) scale(0.5)\"><ellipse cx=\"6\" cy=\"2\" rx=\"28\" ry=\"19\" fill=\"#c8ccd6\" fill-opacity=\"0.8\" stroke=\"currentColor\" stroke-width=\"2\"/><circle cx=\"-24\" cy=\"-2\" r=\"14\" fill=\"#c8ccd6\" fill-opacity=\"0.8\" stroke=\"currentColor\" stroke-width=\"2\"/><path d=\"M-34 4 Q-42 18 -34 30\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"5\" stroke-linecap=\"round\"/><path d=\"M-30 8 Q-44 10 -46 0\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\"/><circle cx=\"-27\" cy=\"-6\" r=\"2\" fill=\"currentColor\"/><rect x=\"-10\" y=\"17\" width=\"9\" height=\"16\" fill=\"#c8ccd6\" fill-opacity=\"0.8\" stroke=\"currentColor\" stroke-width=\"2\"/><rect x=\"14\" y=\"17\" width=\"9\" height=\"16\" fill=\"#c8ccd6\" fill-opacity=\"0.8\" stroke=\"currentColor\" stroke-width=\"2\"/></g><text x=\"260\" y=\"104\" font-size=\"13\" text-anchor=\"middle\" fill=\"currentColor\">ナウマンゾウ</text><g transform=\"translate(260 130) scale(0.5)\"><circle cx=\"0\" cy=\"-24\" r=\"8\" fill=\"#f3c969\" fill-opacity=\"0.8\" stroke=\"currentColor\" stroke-width=\"2\"/><path d=\"M0 -16 V8 M-12 -6 L0 -12 L12 -6 M0 8 L-9 30 M0 8 L9 30\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"3\" stroke-linecap=\"round\"/></g><text x=\"260\" y=\"164\" font-size=\"13\" text-anchor=\"middle\" fill=\"currentColor\">人</text><text x=\"10\" y=\"192\" font-size=\"13\" fill=\"currentColor\">5.4 億年前</text><text x=\"110\" y=\"192\" font-size=\"13\" text-anchor=\"middle\" fill=\"currentColor\">2.5 億年前</text><text x=\"210\" y=\"192\" font-size=\"13\" text-anchor=\"middle\" fill=\"currentColor\">6600 万年前</text><text x=\"310\" y=\"192\" font-size=\"13\" text-anchor=\"end\" fill=\"currentColor\">いま</text></svg>",
+       "explain": "ちしつ年代は、化石に見られる生き物の大きな入れかわりで、地球の歴史を区切ったもの。古生代（約 5 億 4000 万年前〜約 2 億 5000 万年前）は三葉虫・魚・陸上植物・両生類・フズリナ、中生代（約 2 億 5000 万年前〜約 6600 万年前）はきょうりゅう・アンモナイト・は虫類・（のちに）鳥、新生代（約 6600 万年前〜いま）はほにゅう類と人の時代。せきつい動物が出てきた順は、魚類、両生類、は虫類、ほにゅう類（鳥類は中生代に、きょうりゅうの仲間から）。図では 3 つの時代を同じ長さにかいたが、ほんとうの長さは古生代が約 2 億 9000 万年、中生代が約 1 億 8400 万年、新生代が約 6600 万年。",
+       "qid": "W-009:45b4f13e1a"
+      },
+      {
+       "part": "思い出す",
+       "text": "46 億年を 1 年の カレンダーに ちぢめました。人が 生まれたのは、図の ア・イ・ウの どれですか。",
+       "svg": "<svg viewBox=\"0 0 320 200\" xmlns=\"http://www.w3.org/2000/svg\"><rect x=\"16\" y=\"100\" width=\"24\" height=\"30\" fill=\"#c8ccd6\" fill-opacity=\"0.3\" stroke=\"currentColor\" stroke-width=\"2\"/><text x=\"28\" y=\"120\" font-size=\"13\" text-anchor=\"middle\" fill=\"currentColor\">1</text><rect x=\"40\" y=\"100\" width=\"24\" height=\"30\" fill=\"#c8ccd6\" fill-opacity=\"0.6\" stroke=\"currentColor\" stroke-width=\"2\"/><text x=\"52\" y=\"120\" font-size=\"13\" text-anchor=\"middle\" fill=\"currentColor\">2</text><rect x=\"64\" y=\"100\" width=\"24\" height=\"30\" fill=\"#c8ccd6\" fill-opacity=\"0.3\" stroke=\"currentColor\" stroke-width=\"2\"/><text x=\"76\" y=\"120\" font-size=\"13\" text-anchor=\"middle\" fill=\"currentColor\">3</text><rect x=\"88\" y=\"100\" width=\"24\" height=\"30\" fill=\"#c8ccd6\" fill-opacity=\"0.6\" stroke=\"currentColor\" stroke-width=\"2\"/><text x=\"100\" y=\"120\" font-size=\"13\" text-anchor=\"middle\" fill=\"currentColor\">4</text><rect x=\"112\" y=\"100\" width=\"24\" height=\"30\" fill=\"#c8ccd6\" fill-opacity=\"0.3\" stroke=\"currentColor\" stroke-width=\"2\"/><text x=\"124\" y=\"120\" font-size=\"13\" text-anchor=\"middle\" fill=\"currentColor\">5</text><rect x=\"136\" y=\"100\" width=\"24\" height=\"30\" fill=\"#c8ccd6\" fill-opacity=\"0.6\" stroke=\"currentColor\" stroke-width=\"2\"/><text x=\"148\" y=\"120\" font-size=\"13\" text-anchor=\"middle\" fill=\"currentColor\">6</text><rect x=\"160\" y=\"100\" width=\"24\" height=\"30\" fill=\"#c8ccd6\" fill-opacity=\"0.3\" stroke=\"currentColor\" stroke-width=\"2\"/><text x=\"172\" y=\"120\" font-size=\"13\" text-anchor=\"middle\" fill=\"currentColor\">7</text><rect x=\"184\" y=\"100\" width=\"24\" height=\"30\" fill=\"#c8ccd6\" fill-opacity=\"0.6\" stroke=\"currentColor\" stroke-width=\"2\"/><text x=\"196\" y=\"120\" font-size=\"13\" text-anchor=\"middle\" fill=\"currentColor\">8</text><rect x=\"208\" y=\"100\" width=\"24\" height=\"30\" fill=\"#c8ccd6\" fill-opacity=\"0.3\" stroke=\"currentColor\" stroke-width=\"2\"/><text x=\"220\" y=\"120\" font-size=\"13\" text-anchor=\"middle\" fill=\"currentColor\">9</text><rect x=\"232\" y=\"100\" width=\"24\" height=\"30\" fill=\"#c8ccd6\" fill-opacity=\"0.6\" stroke=\"currentColor\" stroke-width=\"2\"/><text x=\"244\" y=\"120\" font-size=\"13\" text-anchor=\"middle\" fill=\"currentColor\">10</text><rect x=\"256\" y=\"100\" width=\"24\" height=\"30\" fill=\"#c8ccd6\" fill-opacity=\"0.3\" stroke=\"currentColor\" stroke-width=\"2\"/><text x=\"268\" y=\"120\" font-size=\"13\" text-anchor=\"middle\" fill=\"currentColor\">11</text><rect x=\"280\" y=\"100\" width=\"24\" height=\"30\" fill=\"#c8ccd6\" fill-opacity=\"0.6\" stroke=\"currentColor\" stroke-width=\"2\"/><text x=\"292\" y=\"120\" font-size=\"13\" text-anchor=\"middle\" fill=\"currentColor\">12</text><line x1=\"16.48\" y1=\"100\" x2=\"16.48\" y2=\"39\" stroke=\"currentColor\" stroke-width=\"2\"/><circle cx=\"16.48\" cy=\"100\" r=\"5\" fill=\"#f3c969\" stroke=\"currentColor\" stroke-width=\"2\"/><text x=\"16.48\" y=\"34\" font-size=\"14\" text-anchor=\"middle\" fill=\"currentColor\">ア</text><line x1=\"148\" y1=\"100\" x2=\"148\" y2=\"39\" stroke=\"currentColor\" stroke-width=\"2\"/><circle cx=\"148\" cy=\"100\" r=\"5\" fill=\"#f3c969\" stroke=\"currentColor\" stroke-width=\"2\"/><text x=\"148\" y=\"34\" font-size=\"14\" text-anchor=\"middle\" fill=\"currentColor\">イ</text><line x1=\"303.52\" y1=\"100\" x2=\"303.52\" y2=\"39\" stroke=\"currentColor\" stroke-width=\"2\"/><circle cx=\"303.52\" cy=\"100\" r=\"5\" fill=\"#f3c969\" stroke=\"currentColor\" stroke-width=\"2\"/><text x=\"303.52\" y=\"34\" font-size=\"14\" text-anchor=\"middle\" fill=\"currentColor\">ウ</text><text x=\"16\" y=\"150\" font-size=\"12\" fill=\"currentColor\">数字は 月</text></svg>",
+       "choices": [
+        "ア",
+        "イ",
+        "ウ"
+       ],
+       "answer": "ウ",
+       "check": "'ウ'",
+       "hints": [
+        "人が 生まれたのは、地球の 歴史の 中で とても 新しい できごと。",
+        {
+         "text": "カレンダーの 右が 新しい。ア・イ・ウの うち、人の 印は どの あたりに くるでしょう。",
+         "svg": "<svg viewBox=\"0 0 320 200\" xmlns=\"http://www.w3.org/2000/svg\"><rect x=\"16\" y=\"100\" width=\"24\" height=\"30\" fill=\"#c8ccd6\" fill-opacity=\"0.3\" stroke=\"currentColor\" stroke-width=\"2\"/><text x=\"28\" y=\"120\" font-size=\"13\" text-anchor=\"middle\" fill=\"currentColor\">1</text><rect x=\"40\" y=\"100\" width=\"24\" height=\"30\" fill=\"#c8ccd6\" fill-opacity=\"0.6\" stroke=\"currentColor\" stroke-width=\"2\"/><text x=\"52\" y=\"120\" font-size=\"13\" text-anchor=\"middle\" fill=\"currentColor\">2</text><rect x=\"64\" y=\"100\" width=\"24\" height=\"30\" fill=\"#c8ccd6\" fill-opacity=\"0.3\" stroke=\"currentColor\" stroke-width=\"2\"/><text x=\"76\" y=\"120\" font-size=\"13\" text-anchor=\"middle\" fill=\"currentColor\">3</text><rect x=\"88\" y=\"100\" width=\"24\" height=\"30\" fill=\"#c8ccd6\" fill-opacity=\"0.6\" stroke=\"currentColor\" stroke-width=\"2\"/><text x=\"100\" y=\"120\" font-size=\"13\" text-anchor=\"middle\" fill=\"currentColor\">4</text><rect x=\"112\" y=\"100\" width=\"24\" height=\"30\" fill=\"#c8ccd6\" fill-opacity=\"0.3\" stroke=\"currentColor\" stroke-width=\"2\"/><text x=\"124\" y=\"120\" font-size=\"13\" text-anchor=\"middle\" fill=\"currentColor\">5</text><rect x=\"136\" y=\"100\" width=\"24\" height=\"30\" fill=\"#c8ccd6\" fill-opacity=\"0.6\" stroke=\"currentColor\" stroke-width=\"2\"/><text x=\"148\" y=\"120\" font-size=\"13\" text-anchor=\"middle\" fill=\"currentColor\">6</text><rect x=\"160\" y=\"100\" width=\"24\" height=\"30\" fill=\"#c8ccd6\" fill-opacity=\"0.3\" stroke=\"currentColor\" stroke-width=\"2\"/><text x=\"172\" y=\"120\" font-size=\"13\" text-anchor=\"middle\" fill=\"currentColor\">7</text><rect x=\"184\" y=\"100\" width=\"24\" height=\"30\" fill=\"#c8ccd6\" fill-opacity=\"0.6\" stroke=\"currentColor\" stroke-width=\"2\"/><text x=\"196\" y=\"120\" font-size=\"13\" text-anchor=\"middle\" fill=\"currentColor\">8</text><rect x=\"208\" y=\"100\" width=\"24\" height=\"30\" fill=\"#c8ccd6\" fill-opacity=\"0.3\" stroke=\"currentColor\" stroke-width=\"2\"/><text x=\"220\" y=\"120\" font-size=\"13\" text-anchor=\"middle\" fill=\"currentColor\">9</text><rect x=\"232\" y=\"100\" width=\"24\" height=\"30\" fill=\"#c8ccd6\" fill-opacity=\"0.6\" stroke=\"currentColor\" stroke-width=\"2\"/><text x=\"244\" y=\"120\" font-size=\"13\" text-anchor=\"middle\" fill=\"currentColor\">10</text><rect x=\"256\" y=\"100\" width=\"24\" height=\"30\" fill=\"#c8ccd6\" fill-opacity=\"0.3\" stroke=\"currentColor\" stroke-width=\"2\"/><text x=\"268\" y=\"120\" font-size=\"13\" text-anchor=\"middle\" fill=\"currentColor\">11</text><rect x=\"280\" y=\"100\" width=\"24\" height=\"30\" fill=\"#c8ccd6\" fill-opacity=\"0.6\" stroke=\"currentColor\" stroke-width=\"2\"/><text x=\"292\" y=\"120\" font-size=\"13\" text-anchor=\"middle\" fill=\"currentColor\">12</text><line x1=\"16.48\" y1=\"100\" x2=\"16.48\" y2=\"39\" stroke=\"currentColor\" stroke-width=\"2\"/><circle cx=\"16.48\" cy=\"100\" r=\"5\" fill=\"#f08080\" stroke=\"currentColor\" stroke-width=\"2\"/><text x=\"20.48\" y=\"34\" font-size=\"14\" fill=\"currentColor\">地球が できた</text><text x=\"16\" y=\"150\" font-size=\"12\" fill=\"currentColor\">数字は 月</text></svg>"
+        },
+        "きょうりゅうが いなくなったのは 12 月 26 日でした。人が 生まれたのは、それと くらべて どうでしょう。"
+       ],
+       "qid": "W-009:b331da4f1e"
+      },
+      {
+       "part": "思い出す",
+       "text": "2 億年は、何万年ですか。1 億は 1 万の 10000 倍です。数で 答えましょう。",
+       "svg": "<svg viewBox=\"0 0 320 200\" xmlns=\"http://www.w3.org/2000/svg\"><rect x=\"14\" y=\"70\" width=\"80\" height=\"52\" rx=\"6\" fill=\"#f3c969\" fill-opacity=\"0.55\" stroke=\"currentColor\" stroke-width=\"2\"/><text x=\"54\" y=\"62\" font-size=\"16\" text-anchor=\"middle\" fill=\"currentColor\">億</text><text x=\"54\" y=\"105\" font-size=\"26\" text-anchor=\"middle\" fill=\"currentColor\">2</text><rect x=\"102\" y=\"70\" width=\"100\" height=\"52\" rx=\"6\" fill=\"#c8ccd6\" fill-opacity=\"0.35\" stroke=\"currentColor\" stroke-width=\"2\"/><text x=\"152\" y=\"62\" font-size=\"16\" text-anchor=\"middle\" fill=\"currentColor\">万</text><text x=\"152\" y=\"105\" font-size=\"26\" text-anchor=\"middle\" fill=\"currentColor\">？</text><rect x=\"210\" y=\"70\" width=\"100\" height=\"52\" rx=\"6\" fill=\"#c8ccd6\" fill-opacity=\"0.35\" stroke=\"currentColor\" stroke-width=\"2\"/><text x=\"260\" y=\"62\" font-size=\"16\" text-anchor=\"middle\" fill=\"currentColor\">一</text><text x=\"260\" y=\"105\" font-size=\"26\" text-anchor=\"middle\" fill=\"currentColor\">？</text></svg>",
+       "answer": 20000,
+       "check": "2 * 10000",
+       "hints": [
+        "1 億年が 何万年かを 思い出します。",
+        {
+         "text": "1 億年の 万年の 数に、2 を かけます。",
+         "svg": "<svg viewBox=\"0 0 320 200\" xmlns=\"http://www.w3.org/2000/svg\"><rect x=\"14\" y=\"70\" width=\"80\" height=\"52\" rx=\"6\" fill=\"#f3c969\" fill-opacity=\"0.55\" stroke=\"currentColor\" stroke-width=\"2\"/><text x=\"54\" y=\"62\" font-size=\"16\" text-anchor=\"middle\" fill=\"currentColor\">億</text><text x=\"54\" y=\"105\" font-size=\"26\" text-anchor=\"middle\" fill=\"currentColor\">1</text><rect x=\"102\" y=\"70\" width=\"100\" height=\"52\" rx=\"6\" fill=\"#f3c969\" fill-opacity=\"0.55\" stroke=\"currentColor\" stroke-width=\"2\"/><text x=\"152\" y=\"62\" font-size=\"16\" text-anchor=\"middle\" fill=\"currentColor\">万</text><text x=\"152\" y=\"105\" font-size=\"26\" text-anchor=\"middle\" fill=\"currentColor\">0000</text><rect x=\"210\" y=\"70\" width=\"100\" height=\"52\" rx=\"6\" fill=\"#c8ccd6\" fill-opacity=\"0.35\" stroke=\"currentColor\" stroke-width=\"2\"/><text x=\"260\" y=\"62\" font-size=\"16\" text-anchor=\"middle\" fill=\"currentColor\">一</text><text x=\"260\" y=\"105\" font-size=\"26\" text-anchor=\"middle\" fill=\"currentColor\">0000</text><text x=\"160\" y=\"150\" font-size=\"14\" text-anchor=\"middle\" fill=\"currentColor\">1 億年 ＝ 1 0000 0000 年</text></svg>"
+        },
+        "1 億年は 1 万年が 10000 こ 分。"
+       ],
+       "qid": "W-009:a466a15662"
+      },
+      {
+       "part": "今日",
+       "text": "この 生き物は 三葉虫です。三葉虫は、どの 時代の 生き物ですか。",
+       "svg": "<svg viewBox=\"0 0 320 200\" xmlns=\"http://www.w3.org/2000/svg\"><g transform=\"translate(160 56) scale(1.1)\"><ellipse cx=\"0\" cy=\"0\" rx=\"38\" ry=\"19\" fill=\"#c9a36b\" fill-opacity=\"0.6\" stroke=\"currentColor\" stroke-width=\"2\"/><path d=\"M-20 -17 Q-28 0 -20 17\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\"/><path d=\"M-6 -19 V19 M8 -19 V19 M21 -16 V16\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.5\"/></g><text x=\"160\" y=\"106\" font-size=\"16\" text-anchor=\"middle\" fill=\"currentColor\">三葉虫</text><rect x=\"10\" y=\"128\" width=\"100\" height=\"28\" fill=\"#7fc8f8\" fill-opacity=\"0.5\" stroke=\"currentColor\" stroke-width=\"2\"/><text x=\"60\" y=\"148\" font-size=\"16\" text-anchor=\"middle\" fill=\"currentColor\">古生代</text><rect x=\"110\" y=\"128\" width=\"100\" height=\"28\" fill=\"#7bc96f\" fill-opacity=\"0.5\" stroke=\"currentColor\" stroke-width=\"2\"/><text x=\"160\" y=\"148\" font-size=\"16\" text-anchor=\"middle\" fill=\"currentColor\">中生代</text><rect x=\"210\" y=\"128\" width=\"100\" height=\"28\" fill=\"#f3c969\" fill-opacity=\"0.5\" stroke=\"currentColor\" stroke-width=\"2\"/><text x=\"260\" y=\"148\" font-size=\"16\" text-anchor=\"middle\" fill=\"currentColor\">新生代</text></svg>",
+       "choices": [
+        "新生代",
+        "中生代",
+        "古生代"
+       ],
+       "answer": "古生代",
+       "check": "'古生代'",
+       "hints": [
+        "見本の 図で、三葉虫の 絵が どの 時代の 列に かいてあったかを 思い出します。",
+        {
+         "text": "三葉虫が 出てきたのは 約 5 億年前です。時代の 目もりの どこに 当たりますか。",
+         "svg": "<svg viewBox=\"0 0 320 200\" xmlns=\"http://www.w3.org/2000/svg\"><rect x=\"14\" y=\"88\" width=\"156.815\" height=\"26\" fill=\"#7fc8f8\" fill-opacity=\"0.45\" stroke=\"currentColor\" stroke-width=\"2\"/><text x=\"92.4074\" y=\"107\" font-size=\"14\" text-anchor=\"middle\" fill=\"currentColor\">古生代</text><rect x=\"170.815\" y=\"88\" width=\"99.4963\" height=\"26\" fill=\"#7bc96f\" fill-opacity=\"0.45\" stroke=\"currentColor\" stroke-width=\"2\"/><text x=\"220.563\" y=\"107\" font-size=\"14\" text-anchor=\"middle\" fill=\"currentColor\">中生代</text><rect x=\"270.311\" y=\"88\" width=\"35.6889\" height=\"26\" fill=\"#f3c969\" fill-opacity=\"0.45\" stroke=\"currentColor\" stroke-width=\"2\"/><text x=\"288.156\" y=\"107\" font-size=\"11\" text-anchor=\"middle\" fill=\"currentColor\">新生代</text><text x=\"14\" y=\"134\" font-size=\"13\" fill=\"currentColor\">5.4 億年前</text><text x=\"170.815\" y=\"134\" font-size=\"13\" text-anchor=\"middle\" fill=\"currentColor\">2.5 億年前</text><text x=\"270.311\" y=\"134\" font-size=\"13\" text-anchor=\"middle\" fill=\"currentColor\">6600 万年前</text><text x=\"306\" y=\"154\" font-size=\"13\" text-anchor=\"end\" fill=\"currentColor\">いま</text></svg>"
+        },
+        "約 5 億年前が、3 つの 時代の どの 間に 入るかを 見ます。"
+       ],
+       "qid": "W-009:43640f8880"
+      },
+      {
+       "part": "今日",
+       "text": "古生代は 三葉虫や 魚、中生代は きょうりゅうや アンモナイト、新生代は ナウマンゾウや 人の 時代です。中生代の 生き物は、この 6 つの 中に いくつ ありますか。数で 答えましょう。",
+       "svg": "<svg viewBox=\"0 0 320 200\" xmlns=\"http://www.w3.org/2000/svg\"><g transform=\"translate(60 46) scale(0.6)\"><ellipse cx=\"6\" cy=\"2\" rx=\"28\" ry=\"19\" fill=\"#c8ccd6\" fill-opacity=\"0.8\" stroke=\"currentColor\" stroke-width=\"2\"/><circle cx=\"-24\" cy=\"-2\" r=\"14\" fill=\"#c8ccd6\" fill-opacity=\"0.8\" stroke=\"currentColor\" stroke-width=\"2\"/><path d=\"M-34 4 Q-42 18 -34 30\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"5\" stroke-linecap=\"round\"/><path d=\"M-30 8 Q-44 10 -46 0\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\"/><circle cx=\"-27\" cy=\"-6\" r=\"2\" fill=\"currentColor\"/><rect x=\"-10\" y=\"17\" width=\"9\" height=\"16\" fill=\"#c8ccd6\" fill-opacity=\"0.8\" stroke=\"currentColor\" stroke-width=\"2\"/><rect x=\"14\" y=\"17\" width=\"9\" height=\"16\" fill=\"#c8ccd6\" fill-opacity=\"0.8\" stroke=\"currentColor\" stroke-width=\"2\"/></g><text x=\"60\" y=\"86\" font-size=\"13\" text-anchor=\"middle\" fill=\"currentColor\">ナウマンゾウ</text><g transform=\"translate(160 46) scale(0.6)\"><ellipse cx=\"0\" cy=\"0\" rx=\"38\" ry=\"19\" fill=\"#c9a36b\" fill-opacity=\"0.6\" stroke=\"currentColor\" stroke-width=\"2\"/><path d=\"M-20 -17 Q-28 0 -20 17\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\"/><path d=\"M-6 -19 V19 M8 -19 V19 M21 -16 V16\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.5\"/></g><text x=\"160\" y=\"86\" font-size=\"13\" text-anchor=\"middle\" fill=\"currentColor\">三葉虫</text><g transform=\"translate(260 46) scale(0.6)\"><ellipse cx=\"0\" cy=\"6\" rx=\"24\" ry=\"14\" fill=\"#7bc96f\" fill-opacity=\"0.6\" stroke=\"currentColor\" stroke-width=\"2\"/><polygon points=\"-16,0 -28,-22 -20,-26 -4,-6\" fill=\"#7bc96f\" fill-opacity=\"0.6\" stroke=\"currentColor\" stroke-width=\"2\"/><ellipse cx=\"-27\" cy=\"-27\" rx=\"10\" ry=\"6\" fill=\"#7bc96f\" fill-opacity=\"0.6\" stroke=\"currentColor\" stroke-width=\"2\"/><circle cx=\"-30\" cy=\"-29\" r=\"2\" fill=\"currentColor\"/><polygon points=\"20,0 48,14 20,17\" fill=\"#7bc96f\" fill-opacity=\"0.6\" stroke=\"currentColor\" stroke-width=\"2\"/><rect x=\"-12\" y=\"17\" width=\"7\" height=\"14\" fill=\"#7bc96f\" fill-opacity=\"0.6\" stroke=\"currentColor\" stroke-width=\"2\"/><rect x=\"6\" y=\"17\" width=\"7\" height=\"14\" fill=\"#7bc96f\" fill-opacity=\"0.6\" stroke=\"currentColor\" stroke-width=\"2\"/></g><text x=\"260\" y=\"86\" font-size=\"13\" text-anchor=\"middle\" fill=\"currentColor\">きょうりゅう</text><g transform=\"translate(60 128) scale(0.6)\"><ellipse cx=\"-6\" cy=\"0\" rx=\"28\" ry=\"15\" fill=\"#7fc8f8\" fill-opacity=\"0.6\" stroke=\"currentColor\" stroke-width=\"2\"/><polygon points=\"20,0 40,-15 40,15\" fill=\"#7fc8f8\" fill-opacity=\"0.6\" stroke=\"currentColor\" stroke-width=\"2\"/><circle cx=\"-22\" cy=\"-3\" r=\"3\" fill=\"currentColor\"/></g><text x=\"60\" y=\"168\" font-size=\"13\" text-anchor=\"middle\" fill=\"currentColor\">魚</text><g transform=\"translate(160 128) scale(0.6)\"><circle cx=\"0\" cy=\"0\" r=\"22\" fill=\"#c9a36b\" fill-opacity=\"0.55\" stroke=\"currentColor\" stroke-width=\"2\"/><path d=\"M0 0 a4 4 0 0 1 8 0 a8 8 0 0 1 -16 0 a12 12 0 0 1 24 0\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\"/></g><text x=\"160\" y=\"168\" font-size=\"13\" text-anchor=\"middle\" fill=\"currentColor\">アンモナイト</text><g transform=\"translate(260 128) scale(0.6)\"><circle cx=\"0\" cy=\"-24\" r=\"8\" fill=\"#f3c969\" fill-opacity=\"0.8\" stroke=\"currentColor\" stroke-width=\"2\"/><path d=\"M0 -16 V8 M-12 -6 L0 -12 L12 -6 M0 8 L-9 30 M0 8 L9 30\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"3\" stroke-linecap=\"round\"/></g><text x=\"260\" y=\"168\" font-size=\"13\" text-anchor=\"middle\" fill=\"currentColor\">人</text></svg>",
+       "answer": 2,
+       "check": "2",
+       "hints": [
+        "問題の 文に、中生代の 生き物の 名前が 書いて あります。",
+        {
+         "text": "図の 中生代の 列には、きょうりゅうが います。ほかには？",
+         "svg": "<svg viewBox=\"0 0 320 200\" xmlns=\"http://www.w3.org/2000/svg\"><rect x=\"10\" y=\"8\" width=\"100\" height=\"26\" fill=\"#7fc8f8\" fill-opacity=\"0.45\" stroke=\"currentColor\" stroke-width=\"2\"/><text x=\"60\" y=\"27\" font-size=\"16\" text-anchor=\"middle\" fill=\"currentColor\">古生代</text><rect x=\"10\" y=\"34\" width=\"100\" height=\"138\" fill=\"#7fc8f8\" fill-opacity=\"0.2\" stroke=\"currentColor\" stroke-width=\"2\"/><rect x=\"110\" y=\"8\" width=\"100\" height=\"26\" fill=\"#7bc96f\" fill-opacity=\"0.45\" stroke=\"currentColor\" stroke-width=\"2\"/><text x=\"160\" y=\"27\" font-size=\"16\" text-anchor=\"middle\" fill=\"currentColor\">中生代</text><rect x=\"110\" y=\"34\" width=\"100\" height=\"138\" fill=\"#7bc96f\" fill-opacity=\"0.2\" stroke=\"currentColor\" stroke-width=\"2\"/><g transform=\"translate(160 70) scale(0.5)\"><ellipse cx=\"0\" cy=\"6\" rx=\"24\" ry=\"14\" fill=\"#7bc96f\" fill-opacity=\"0.6\" stroke=\"currentColor\" stroke-width=\"2\"/><polygon points=\"-16,0 -28,-22 -20,-26 -4,-6\" fill=\"#7bc96f\" fill-opacity=\"0.6\" stroke=\"currentColor\" stroke-width=\"2\"/><ellipse cx=\"-27\" cy=\"-27\" rx=\"10\" ry=\"6\" fill=\"#7bc96f\" fill-opacity=\"0.6\" stroke=\"currentColor\" stroke-width=\"2\"/><circle cx=\"-30\" cy=\"-29\" r=\"2\" fill=\"currentColor\"/><polygon points=\"20,0 48,14 20,17\" fill=\"#7bc96f\" fill-opacity=\"0.6\" stroke=\"currentColor\" stroke-width=\"2\"/><rect x=\"-12\" y=\"17\" width=\"7\" height=\"14\" fill=\"#7bc96f\" fill-opacity=\"0.6\" stroke=\"currentColor\" stroke-width=\"2\"/><rect x=\"6\" y=\"17\" width=\"7\" height=\"14\" fill=\"#7bc96f\" fill-opacity=\"0.6\" stroke=\"currentColor\" stroke-width=\"2\"/></g><text x=\"160\" y=\"104\" font-size=\"13\" text-anchor=\"middle\" fill=\"currentColor\">きょうりゅう</text><rect x=\"210\" y=\"8\" width=\"100\" height=\"26\" fill=\"#f3c969\" fill-opacity=\"0.45\" stroke=\"currentColor\" stroke-width=\"2\"/><text x=\"260\" y=\"27\" font-size=\"16\" text-anchor=\"middle\" fill=\"currentColor\">新生代</text><rect x=\"210\" y=\"34\" width=\"100\" height=\"138\" fill=\"#f3c969\" fill-opacity=\"0.2\" stroke=\"currentColor\" stroke-width=\"2\"/><text x=\"10\" y=\"192\" font-size=\"13\" fill=\"currentColor\">5.4 億年前</text><text x=\"110\" y=\"192\" font-size=\"13\" text-anchor=\"middle\" fill=\"currentColor\">2.5 億年前</text><text x=\"210\" y=\"192\" font-size=\"13\" text-anchor=\"middle\" fill=\"currentColor\">6600 万年前</text><text x=\"310\" y=\"192\" font-size=\"13\" text-anchor=\"end\" fill=\"currentColor\">いま</text></svg>"
+        },
+        "6 つの 生き物を 1 つずつ 見て、中生代の 生き物か どうかを 数えます。"
+       ],
+       "qid": "W-009:644f2131db"
+      },
+      {
+       "part": "今日",
+       "text": "古生代は、約 5 億 4000 万年前から 約 2 億 5000 万年前までです。古生代は、約 何万年 つづきましたか。数で 答えましょう。",
+       "svg": "<svg viewBox=\"0 0 320 200\" xmlns=\"http://www.w3.org/2000/svg\"><rect x=\"14\" y=\"88\" width=\"156.815\" height=\"26\" fill=\"#7fc8f8\" fill-opacity=\"0.75\" stroke=\"currentColor\" stroke-width=\"2\"/><text x=\"92.4074\" y=\"107\" font-size=\"14\" text-anchor=\"middle\" fill=\"currentColor\">古生代</text><rect x=\"170.815\" y=\"88\" width=\"99.4963\" height=\"26\" fill=\"#7bc96f\" fill-opacity=\"0.45\" stroke=\"currentColor\" stroke-width=\"2\"/><text x=\"220.563\" y=\"107\" font-size=\"14\" text-anchor=\"middle\" fill=\"currentColor\">中生代</text><rect x=\"270.311\" y=\"88\" width=\"35.6889\" height=\"26\" fill=\"#f3c969\" fill-opacity=\"0.45\" stroke=\"currentColor\" stroke-width=\"2\"/><text x=\"288.156\" y=\"107\" font-size=\"11\" text-anchor=\"middle\" fill=\"currentColor\">新生代</text><text x=\"14\" y=\"134\" font-size=\"13\" fill=\"currentColor\">5.4 億年前</text><text x=\"170.815\" y=\"134\" font-size=\"13\" text-anchor=\"middle\" fill=\"currentColor\">2.5 億年前</text><text x=\"270.311\" y=\"134\" font-size=\"13\" text-anchor=\"middle\" fill=\"currentColor\">6600 万年前</text><text x=\"306\" y=\"154\" font-size=\"13\" text-anchor=\"end\" fill=\"currentColor\">いま</text><line x1=\"14\" y1=\"156\" x2=\"170.815\" y2=\"156\" stroke=\"currentColor\" stroke-width=\"2\"/><line x1=\"14\" y1=\"150\" x2=\"14\" y2=\"162\" stroke=\"currentColor\" stroke-width=\"2\"/><line x1=\"170.815\" y1=\"150\" x2=\"170.815\" y2=\"162\" stroke=\"currentColor\" stroke-width=\"2\"/><text x=\"92.4074\" y=\"182\" font-size=\"14\" text-anchor=\"middle\" fill=\"currentColor\">何万年？</text></svg>",
+       "answer": 29000,
+       "check": "54000 - 25000",
+       "hints": [
+        "古い ほうの 年数から、新しい ほうの 年数を ひきます。",
+        {
+         "text": "億と 万を、どちらも 万年に そろえます。",
+         "svg": "<svg viewBox=\"0 0 320 200\" xmlns=\"http://www.w3.org/2000/svg\"><rect x=\"20\" y=\"50\" width=\"280\" height=\"40\" fill=\"#f3c969\" fill-opacity=\"0.4\" stroke=\"currentColor\" stroke-width=\"2\"/><text x=\"160\" y=\"76\" font-size=\"16\" text-anchor=\"middle\" fill=\"currentColor\">5 億 4000 万年 ＝ 54000 万年</text><rect x=\"20\" y=\"106\" width=\"280\" height=\"40\" fill=\"#f3c969\" fill-opacity=\"0.4\" stroke=\"currentColor\" stroke-width=\"2\"/><text x=\"160\" y=\"132\" font-size=\"16\" text-anchor=\"middle\" fill=\"currentColor\">2 億 5000 万年 ＝ 25000 万年</text></svg>"
+        },
+        "万年に そろえた 2 つの 数で、ひき算を します。"
+       ],
+       "qid": "W-009:ccdeb67f57"
+      },
+      {
+       "part": "今日",
+       "text": "がけの 地そうの 図です。B の 地そうから、アンモナイトの 化石が 出ました。B の 地そうは、どの 時代に できましたか。",
+       "svg": "<svg viewBox=\"0 0 320 200\" xmlns=\"http://www.w3.org/2000/svg\"><rect x=\"40\" y=\"30\" width=\"110\" height=\"48\" fill=\"#c8ccd6\" fill-opacity=\"0.55\" stroke=\"currentColor\" stroke-width=\"2\"/><text x=\"26\" y=\"59\" font-size=\"16\" text-anchor=\"middle\" fill=\"currentColor\">A</text><rect x=\"40\" y=\"78\" width=\"110\" height=\"48\" fill=\"#c9a36b\" fill-opacity=\"0.55\" stroke=\"currentColor\" stroke-width=\"2\"/><text x=\"26\" y=\"107\" font-size=\"16\" text-anchor=\"middle\" fill=\"currentColor\">B</text><g transform=\"translate(95 102) scale(0.42)\"><circle cx=\"0\" cy=\"0\" r=\"22\" fill=\"#c9a36b\" fill-opacity=\"0.55\" stroke=\"currentColor\" stroke-width=\"2\"/><path d=\"M0 0 a4 4 0 0 1 8 0 a8 8 0 0 1 -16 0 a12 12 0 0 1 24 0\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\"/></g><rect x=\"40\" y=\"126\" width=\"110\" height=\"48\" fill=\"#c8ccd6\" fill-opacity=\"0.55\" stroke=\"currentColor\" stroke-width=\"2\"/><text x=\"26\" y=\"155\" font-size=\"16\" text-anchor=\"middle\" fill=\"currentColor\">C</text><text x=\"160\" y=\"108\" font-size=\"14\" fill=\"currentColor\">アンモナイトの 化石</text></svg>",
+       "choices": [
+        "中生代",
+        "新生代",
+        "古生代"
+       ],
+       "answer": "中生代",
+       "check": "'中生代'",
+       "hints": [
+        "ある 時代に だけ さかえた 生き物の 化石から、その 地そうが できた 時代が わかります。",
+        {
+         "text": "時代の 目もりです。アンモナイトが さかえた ころは、約 2 億年前から 約 1 億年前ごろです。",
+         "svg": "<svg viewBox=\"0 0 320 200\" xmlns=\"http://www.w3.org/2000/svg\"><rect x=\"14\" y=\"88\" width=\"156.815\" height=\"26\" fill=\"#7fc8f8\" fill-opacity=\"0.45\" stroke=\"currentColor\" stroke-width=\"2\"/><text x=\"92.4074\" y=\"107\" font-size=\"14\" text-anchor=\"middle\" fill=\"currentColor\">古生代</text><rect x=\"170.815\" y=\"88\" width=\"99.4963\" height=\"26\" fill=\"#7bc96f\" fill-opacity=\"0.45\" stroke=\"currentColor\" stroke-width=\"2\"/><text x=\"220.563\" y=\"107\" font-size=\"14\" text-anchor=\"middle\" fill=\"currentColor\">中生代</text><rect x=\"270.311\" y=\"88\" width=\"35.6889\" height=\"26\" fill=\"#f3c969\" fill-opacity=\"0.45\" stroke=\"currentColor\" stroke-width=\"2\"/><text x=\"288.156\" y=\"107\" font-size=\"11\" text-anchor=\"middle\" fill=\"currentColor\">新生代</text><text x=\"14\" y=\"134\" font-size=\"13\" fill=\"currentColor\">5.4 億年前</text><text x=\"170.815\" y=\"134\" font-size=\"13\" text-anchor=\"middle\" fill=\"currentColor\">2.5 億年前</text><text x=\"270.311\" y=\"134\" font-size=\"13\" text-anchor=\"middle\" fill=\"currentColor\">6600 万年前</text><text x=\"306\" y=\"154\" font-size=\"13\" text-anchor=\"end\" fill=\"currentColor\">いま</text></svg>"
+        },
+        "見本の 図で、アンモナイトが かいてあった 列の 時代の 名前を 答えます。"
+       ],
+       "qid": "W-009:a37d3ca295"
+      },
+      {
+       "part": "今日",
+       "text": "魚、両生類、は虫類、ほにゅう類が、地球に 出てきた 順に ならべた ものは どれですか。",
+       "svg": "<svg viewBox=\"0 0 320 200\" xmlns=\"http://www.w3.org/2000/svg\"><rect x=\"10\" y=\"12\" width=\"145\" height=\"82\" rx=\"8\" fill=\"#7bc96f\" fill-opacity=\"0.5\" stroke=\"currentColor\" stroke-width=\"2\"/><g transform=\"translate(82 46) scale(0.85)\"><ellipse cx=\"0\" cy=\"4\" rx=\"26\" ry=\"10\" fill=\"#7bc96f\" fill-opacity=\"0.8\" stroke=\"currentColor\" stroke-width=\"2\"/><ellipse cx=\"-32\" cy=\"-2\" rx=\"11\" ry=\"8\" fill=\"#7bc96f\" fill-opacity=\"0.8\" stroke=\"currentColor\" stroke-width=\"2\"/><circle cx=\"-36\" cy=\"-4\" r=\"2\" fill=\"currentColor\"/><path d=\"M26 4 Q42 8 38 20 Q36 26 46 26\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"3\" stroke-linecap=\"round\"/><path d=\"M-14 12 L-20 24 M-2 13 L-6 25 M10 13 L12 25 M20 11 L26 22\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"3\" stroke-linecap=\"round\"/></g><text x=\"82\" y=\"86\" font-size=\"16\" text-anchor=\"middle\" fill=\"currentColor\">は虫類</text><rect x=\"165\" y=\"12\" width=\"145\" height=\"82\" rx=\"8\" fill=\"#7fc8f8\" fill-opacity=\"0.5\" stroke=\"currentColor\" stroke-width=\"2\"/><g transform=\"translate(237 46) scale(0.85)\"><ellipse cx=\"-6\" cy=\"0\" rx=\"28\" ry=\"15\" fill=\"#7fc8f8\" fill-opacity=\"0.8\" stroke=\"currentColor\" stroke-width=\"2\"/><polygon points=\"20,0 40,-15 40,15\" fill=\"#7fc8f8\" fill-opacity=\"0.8\" stroke=\"currentColor\" stroke-width=\"2\"/><circle cx=\"-22\" cy=\"-3\" r=\"3\" fill=\"currentColor\"/></g><text x=\"237\" y=\"86\" font-size=\"16\" text-anchor=\"middle\" fill=\"currentColor\">魚</text><rect x=\"10\" y=\"106\" width=\"145\" height=\"82\" rx=\"8\" fill=\"#f3c969\" fill-opacity=\"0.5\" stroke=\"currentColor\" stroke-width=\"2\"/><g transform=\"translate(82 140) scale(0.85)\"><ellipse cx=\"6\" cy=\"4\" rx=\"26\" ry=\"16\" fill=\"#f3c969\" fill-opacity=\"0.8\" stroke=\"currentColor\" stroke-width=\"2\"/><circle cx=\"-26\" cy=\"2\" r=\"11\" fill=\"#f3c969\" fill-opacity=\"0.8\" stroke=\"currentColor\" stroke-width=\"2\"/><circle cx=\"-24\" cy=\"-10\" r=\"6\" fill=\"#f3c969\" fill-opacity=\"0.8\" stroke=\"currentColor\" stroke-width=\"2\"/><circle cx=\"-30\" cy=\"0\" r=\"2\" fill=\"currentColor\"/><circle cx=\"-37\" cy=\"4\" r=\"2.5\" fill=\"currentColor\"/><path d=\"M32 6 Q48 4 46 -12\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\"/><rect x=\"-4\" y=\"18\" width=\"8\" height=\"7\" fill=\"#f3c969\" fill-opacity=\"0.8\" stroke=\"currentColor\" stroke-width=\"2\"/><rect x=\"16\" y=\"18\" width=\"8\" height=\"7\" fill=\"#f3c969\" fill-opacity=\"0.8\" stroke=\"currentColor\" stroke-width=\"2\"/></g><text x=\"82\" y=\"180\" font-size=\"16\" text-anchor=\"middle\" fill=\"currentColor\">ほにゅう類</text><rect x=\"165\" y=\"106\" width=\"145\" height=\"82\" rx=\"8\" fill=\"#b39ddb\" fill-opacity=\"0.5\" stroke=\"currentColor\" stroke-width=\"2\"/><g transform=\"translate(237 140) scale(0.85)\"><ellipse cx=\"0\" cy=\"6\" rx=\"28\" ry=\"18\" fill=\"#b39ddb\" fill-opacity=\"0.8\" stroke=\"currentColor\" stroke-width=\"2\"/><circle cx=\"-14\" cy=\"-12\" r=\"8\" fill=\"#b39ddb\" fill-opacity=\"0.8\" stroke=\"currentColor\" stroke-width=\"2\"/><circle cx=\"14\" cy=\"-12\" r=\"8\" fill=\"#b39ddb\" fill-opacity=\"0.8\" stroke=\"currentColor\" stroke-width=\"2\"/><circle cx=\"-14\" cy=\"-12\" r=\"3\" fill=\"currentColor\"/><circle cx=\"14\" cy=\"-12\" r=\"3\" fill=\"currentColor\"/><path d=\"M-22 16 Q-40 18 -38 28 L-24 26 M22 16 Q40 18 38 28 L24 26\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\"/><path d=\"M-10 8 Q0 14 10 8\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\"/></g><text x=\"237\" y=\"180\" font-size=\"16\" text-anchor=\"middle\" fill=\"currentColor\">両生類</text></svg>",
+       "choices": [
+        "両生類 → 魚 → は虫類 → ほにゅう類",
+        "魚 → 両生類 → は虫類 → ほにゅう類",
+        "魚 → は虫類 → 両生類 → ほにゅう類"
+       ],
+       "answer": "魚 → 両生類 → は虫類 → ほにゅう類",
+       "check": "'魚 → 両生類 → は虫類 → ほにゅう類'",
+       "hints": [
+        "いちばん 先に 出てきたのは、水の 中だけで くらす 生き物です。",
+        {
+         "text": "魚と ほにゅう類が 出てきた ころを 時代の 目もりで 見ます。",
+         "svg": "<svg viewBox=\"0 0 320 200\" xmlns=\"http://www.w3.org/2000/svg\"><rect x=\"14\" y=\"88\" width=\"156.815\" height=\"26\" fill=\"#7fc8f8\" fill-opacity=\"0.45\" stroke=\"currentColor\" stroke-width=\"2\"/><text x=\"92.4074\" y=\"107\" font-size=\"14\" text-anchor=\"middle\" fill=\"currentColor\">古生代</text><rect x=\"170.815\" y=\"88\" width=\"99.4963\" height=\"26\" fill=\"#7bc96f\" fill-opacity=\"0.45\" stroke=\"currentColor\" stroke-width=\"2\"/><text x=\"220.563\" y=\"107\" font-size=\"14\" text-anchor=\"middle\" fill=\"currentColor\">中生代</text><rect x=\"270.311\" y=\"88\" width=\"35.6889\" height=\"26\" fill=\"#f3c969\" fill-opacity=\"0.45\" stroke=\"currentColor\" stroke-width=\"2\"/><text x=\"288.156\" y=\"107\" font-size=\"11\" text-anchor=\"middle\" fill=\"currentColor\">新生代</text><text x=\"14\" y=\"134\" font-size=\"13\" fill=\"currentColor\">5.4 億年前</text><text x=\"170.815\" y=\"134\" font-size=\"13\" text-anchor=\"middle\" fill=\"currentColor\">2.5 億年前</text><text x=\"270.311\" y=\"134\" font-size=\"13\" text-anchor=\"middle\" fill=\"currentColor\">6600 万年前</text><text x=\"306\" y=\"154\" font-size=\"13\" text-anchor=\"end\" fill=\"currentColor\">いま</text><polygon points=\"29.6296,70 41.6296,70 35.6296,84\" fill=\"#f08080\" stroke=\"currentColor\" stroke-width=\"2\"/><text x=\"35.6296\" y=\"60\" font-size=\"14\" text-anchor=\"middle\" fill=\"currentColor\">魚</text><polygon points=\"181.037,70 193.037,70 187.037,84\" fill=\"#f08080\" stroke=\"currentColor\" stroke-width=\"2\"/><text x=\"187.037\" y=\"60\" font-size=\"14\" text-anchor=\"middle\" fill=\"currentColor\">ほにゅう類</text></svg>"
+        },
+        "見本の 文を 思い出します。魚の あとに 出てきた じゅんが 書いて ありました。"
+       ],
+       "qid": "W-009:46dc182248"
+      },
+      {
+       "part": "挑戦",
+       "text": "古生代より 前の、とても 長い 時代を 先カンブリア時代と いいます。地球が できてから、古生代の はじまり（約 5 億 4000 万年前）までです。地球の 年れいは 約 46 億年です。先カンブリア時代は、約 何万年 ありましたか。数で 答えましょう。",
+       "svg": "<svg viewBox=\"0 0 320 200\" xmlns=\"http://www.w3.org/2000/svg\"><rect x=\"16\" y=\"90\" width=\"254\" height=\"28\" fill=\"#c8ccd6\" fill-opacity=\"0.5\" stroke=\"currentColor\" stroke-width=\"2\"/><rect x=\"270\" y=\"90\" width=\"34\" height=\"28\" fill=\"#7fc8f8\" fill-opacity=\"0.5\" stroke=\"currentColor\" stroke-width=\"2\"/><line x1=\"270\" y1=\"80\" x2=\"270\" y2=\"126\" stroke=\"currentColor\" stroke-width=\"2\"/><text x=\"143\" y=\"80\" font-size=\"14\" text-anchor=\"middle\" fill=\"currentColor\">先カンブリア時代 ？</text><text x=\"16\" y=\"144\" font-size=\"14\" fill=\"currentColor\">地球が できた</text><text x=\"304\" y=\"144\" font-size=\"14\" text-anchor=\"end\" fill=\"currentColor\">古生代の はじまり</text><line x1=\"270\" y1=\"126\" x2=\"270\" y2=\"132\" stroke=\"currentColor\" stroke-width=\"1.5\" stroke-dasharray=\"4 3\"/><text x=\"304\" y=\"176\" font-size=\"13\" text-anchor=\"end\" fill=\"currentColor\">ここから いまが 約 5 億 4000 万年</text></svg>",
+       "answer": 406000,
+       "check": "46 * 10000 - 54000",
+       "hints": [
+        "地球の 年れいの 中から、古生代の はじまりから いままでの 長さを とると、先カンブリア時代が のこります。",
+        {
+         "text": "46 億年の ぜんたいの うち、右の 5 億 4000 万年を ひきます。",
+         "svg": "<svg viewBox=\"0 0 320 200\" xmlns=\"http://www.w3.org/2000/svg\"><rect x=\"16\" y=\"70\" width=\"288\" height=\"28\" fill=\"#c8ccd6\" fill-opacity=\"0.3\" stroke=\"currentColor\" stroke-width=\"2\"/><rect x=\"270\" y=\"70\" width=\"34\" height=\"28\" fill=\"#7fc8f8\" fill-opacity=\"0.5\" stroke=\"currentColor\" stroke-width=\"2\"/><line x1=\"16\" y1=\"112\" x2=\"304\" y2=\"112\" stroke=\"currentColor\" stroke-width=\"2\"/><text x=\"160\" y=\"134\" font-size=\"16\" text-anchor=\"middle\" fill=\"currentColor\">46 億年</text><line x1=\"270\" y1=\"150\" x2=\"304\" y2=\"150\" stroke=\"currentColor\" stroke-width=\"2\"/><text x=\"304\" y=\"174\" font-size=\"13\" text-anchor=\"end\" fill=\"currentColor\">5 億 4000 万年</text></svg>"
+        },
+        "億と 万を 万年に そろえて ひき算します。46 億年は 460000 万年です。"
+       ],
+       "paths": [
+        [
+         "46 億年 ＝ 460000 万年",
+         "5 億 4000 万年 ＝ 54000 万年",
+         "460000 － 54000 ＝ 406000 万年"
+        ],
+        [
+         "億で ひく：46 － 5.4 ＝ 40.6 億年",
+         "40.6 億年 ＝ 40 億 6000 万年 ＝ 406000 万年"
+        ]
+       ],
+       "qid": "W-009:084ef91690"
+      }
+     ],
+     "extra": [
+      {
+       "part": "今日",
+       "text": "3 つの 生き物を、地球に 出てきた 古い 順に ならべた ものは どれですか。",
+       "svg": "<svg viewBox=\"0 0 320 200\" xmlns=\"http://www.w3.org/2000/svg\"><g transform=\"translate(60 56) scale(0.6)\"><ellipse cx=\"6\" cy=\"2\" rx=\"28\" ry=\"19\" fill=\"#c8ccd6\" fill-opacity=\"0.8\" stroke=\"currentColor\" stroke-width=\"2\"/><circle cx=\"-24\" cy=\"-2\" r=\"14\" fill=\"#c8ccd6\" fill-opacity=\"0.8\" stroke=\"currentColor\" stroke-width=\"2\"/><path d=\"M-34 4 Q-42 18 -34 30\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"5\" stroke-linecap=\"round\"/><path d=\"M-30 8 Q-44 10 -46 0\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\"/><circle cx=\"-27\" cy=\"-6\" r=\"2\" fill=\"currentColor\"/><rect x=\"-10\" y=\"17\" width=\"9\" height=\"16\" fill=\"#c8ccd6\" fill-opacity=\"0.8\" stroke=\"currentColor\" stroke-width=\"2\"/><rect x=\"14\" y=\"17\" width=\"9\" height=\"16\" fill=\"#c8ccd6\" fill-opacity=\"0.8\" stroke=\"currentColor\" stroke-width=\"2\"/></g><text x=\"60\" y=\"98\" font-size=\"13\" text-anchor=\"middle\" fill=\"currentColor\">ナウマンゾウ</text><g transform=\"translate(160 56) scale(0.6)\"><ellipse cx=\"0\" cy=\"0\" rx=\"38\" ry=\"19\" fill=\"#c9a36b\" fill-opacity=\"0.6\" stroke=\"currentColor\" stroke-width=\"2\"/><path d=\"M-20 -17 Q-28 0 -20 17\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\"/><path d=\"M-6 -19 V19 M8 -19 V19 M21 -16 V16\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.5\"/></g><text x=\"160\" y=\"98\" font-size=\"13\" text-anchor=\"middle\" fill=\"currentColor\">三葉虫</text><g transform=\"translate(260 56) scale(0.6)\"><ellipse cx=\"0\" cy=\"6\" rx=\"24\" ry=\"14\" fill=\"#7bc96f\" fill-opacity=\"0.6\" stroke=\"currentColor\" stroke-width=\"2\"/><polygon points=\"-16,0 -28,-22 -20,-26 -4,-6\" fill=\"#7bc96f\" fill-opacity=\"0.6\" stroke=\"currentColor\" stroke-width=\"2\"/><ellipse cx=\"-27\" cy=\"-27\" rx=\"10\" ry=\"6\" fill=\"#7bc96f\" fill-opacity=\"0.6\" stroke=\"currentColor\" stroke-width=\"2\"/><circle cx=\"-30\" cy=\"-29\" r=\"2\" fill=\"currentColor\"/><polygon points=\"20,0 48,14 20,17\" fill=\"#7bc96f\" fill-opacity=\"0.6\" stroke=\"currentColor\" stroke-width=\"2\"/><rect x=\"-12\" y=\"17\" width=\"7\" height=\"14\" fill=\"#7bc96f\" fill-opacity=\"0.6\" stroke=\"currentColor\" stroke-width=\"2\"/><rect x=\"6\" y=\"17\" width=\"7\" height=\"14\" fill=\"#7bc96f\" fill-opacity=\"0.6\" stroke=\"currentColor\" stroke-width=\"2\"/></g><text x=\"260\" y=\"98\" font-size=\"13\" text-anchor=\"middle\" fill=\"currentColor\">きょうりゅう</text><text x=\"160\" y=\"160\" font-size=\"14\" text-anchor=\"middle\" fill=\"currentColor\">ならべかえよう</text></svg>",
+       "choices": [
+        "三葉虫 → きょうりゅう → ナウマンゾウ",
+        "きょうりゅう → 三葉虫 → ナウマンゾウ",
+        "三葉虫 → ナウマンゾウ → きょうりゅう"
+       ],
+       "answer": "三葉虫 → きょうりゅう → ナウマンゾウ",
+       "check": "'三葉虫 → きょうりゅう → ナウマンゾウ'",
+       "hints": [
+        "古生代、中生代、新生代の 順に、古い ものから 新しい ものへ。",
+        {
+         "text": "時代の 目もりは、左が 古く、右が 新しい。",
+         "svg": "<svg viewBox=\"0 0 320 200\" xmlns=\"http://www.w3.org/2000/svg\"><rect x=\"14\" y=\"88\" width=\"156.815\" height=\"26\" fill=\"#7fc8f8\" fill-opacity=\"0.45\" stroke=\"currentColor\" stroke-width=\"2\"/><text x=\"92.4074\" y=\"107\" font-size=\"14\" text-anchor=\"middle\" fill=\"currentColor\">古生代</text><rect x=\"170.815\" y=\"88\" width=\"99.4963\" height=\"26\" fill=\"#7bc96f\" fill-opacity=\"0.45\" stroke=\"currentColor\" stroke-width=\"2\"/><text x=\"220.563\" y=\"107\" font-size=\"14\" text-anchor=\"middle\" fill=\"currentColor\">中生代</text><rect x=\"270.311\" y=\"88\" width=\"35.6889\" height=\"26\" fill=\"#f3c969\" fill-opacity=\"0.45\" stroke=\"currentColor\" stroke-width=\"2\"/><text x=\"288.156\" y=\"107\" font-size=\"11\" text-anchor=\"middle\" fill=\"currentColor\">新生代</text><text x=\"14\" y=\"134\" font-size=\"13\" fill=\"currentColor\">5.4 億年前</text><text x=\"170.815\" y=\"134\" font-size=\"13\" text-anchor=\"middle\" fill=\"currentColor\">2.5 億年前</text><text x=\"270.311\" y=\"134\" font-size=\"13\" text-anchor=\"middle\" fill=\"currentColor\">6600 万年前</text><text x=\"306\" y=\"154\" font-size=\"13\" text-anchor=\"end\" fill=\"currentColor\">いま</text></svg>"
+        },
+        "3 つの 生き物が いた 時代を、見本の 図で 1 つずつ たしかめます。"
+       ],
+       "qid": "W-009:0e808de8da"
+      },
+      {
+       "part": "今日",
+       "text": "古生代は 三葉虫や 魚、中生代は きょうりゅうや アンモナイト、新生代は ナウマンゾウや 人の 時代です。古生代の 生き物は、この 6 つの 中に いくつ ありますか。数で 答えましょう。",
+       "svg": "<svg viewBox=\"0 0 320 200\" xmlns=\"http://www.w3.org/2000/svg\"><g transform=\"translate(60 46) scale(0.6)\"><circle cx=\"0\" cy=\"-24\" r=\"8\" fill=\"#f3c969\" fill-opacity=\"0.8\" stroke=\"currentColor\" stroke-width=\"2\"/><path d=\"M0 -16 V8 M-12 -6 L0 -12 L12 -6 M0 8 L-9 30 M0 8 L9 30\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"3\" stroke-linecap=\"round\"/></g><text x=\"60\" y=\"86\" font-size=\"13\" text-anchor=\"middle\" fill=\"currentColor\">人</text><g transform=\"translate(160 46) scale(0.6)\"><circle cx=\"0\" cy=\"0\" r=\"22\" fill=\"#c9a36b\" fill-opacity=\"0.55\" stroke=\"currentColor\" stroke-width=\"2\"/><path d=\"M0 0 a4 4 0 0 1 8 0 a8 8 0 0 1 -16 0 a12 12 0 0 1 24 0\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\"/></g><text x=\"160\" y=\"86\" font-size=\"13\" text-anchor=\"middle\" fill=\"currentColor\">アンモナイト</text><g transform=\"translate(260 46) scale(0.6)\"><ellipse cx=\"-6\" cy=\"0\" rx=\"28\" ry=\"15\" fill=\"#7fc8f8\" fill-opacity=\"0.6\" stroke=\"currentColor\" stroke-width=\"2\"/><polygon points=\"20,0 40,-15 40,15\" fill=\"#7fc8f8\" fill-opacity=\"0.6\" stroke=\"currentColor\" stroke-width=\"2\"/><circle cx=\"-22\" cy=\"-3\" r=\"3\" fill=\"currentColor\"/></g><text x=\"260\" y=\"86\" font-size=\"13\" text-anchor=\"middle\" fill=\"currentColor\">魚</text><g transform=\"translate(60 128) scale(0.6)\"><ellipse cx=\"0\" cy=\"6\" rx=\"24\" ry=\"14\" fill=\"#7bc96f\" fill-opacity=\"0.6\" stroke=\"currentColor\" stroke-width=\"2\"/><polygon points=\"-16,0 -28,-22 -20,-26 -4,-6\" fill=\"#7bc96f\" fill-opacity=\"0.6\" stroke=\"currentColor\" stroke-width=\"2\"/><ellipse cx=\"-27\" cy=\"-27\" rx=\"10\" ry=\"6\" fill=\"#7bc96f\" fill-opacity=\"0.6\" stroke=\"currentColor\" stroke-width=\"2\"/><circle cx=\"-30\" cy=\"-29\" r=\"2\" fill=\"currentColor\"/><polygon points=\"20,0 48,14 20,17\" fill=\"#7bc96f\" fill-opacity=\"0.6\" stroke=\"currentColor\" stroke-width=\"2\"/><rect x=\"-12\" y=\"17\" width=\"7\" height=\"14\" fill=\"#7bc96f\" fill-opacity=\"0.6\" stroke=\"currentColor\" stroke-width=\"2\"/><rect x=\"6\" y=\"17\" width=\"7\" height=\"14\" fill=\"#7bc96f\" fill-opacity=\"0.6\" stroke=\"currentColor\" stroke-width=\"2\"/></g><text x=\"60\" y=\"168\" font-size=\"13\" text-anchor=\"middle\" fill=\"currentColor\">きょうりゅう</text><g transform=\"translate(160 128) scale(0.6)\"><ellipse cx=\"0\" cy=\"0\" rx=\"38\" ry=\"19\" fill=\"#c9a36b\" fill-opacity=\"0.6\" stroke=\"currentColor\" stroke-width=\"2\"/><path d=\"M-20 -17 Q-28 0 -20 17\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\"/><path d=\"M-6 -19 V19 M8 -19 V19 M21 -16 V16\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.5\"/></g><text x=\"160\" y=\"168\" font-size=\"13\" text-anchor=\"middle\" fill=\"currentColor\">三葉虫</text><g transform=\"translate(260 128) scale(0.6)\"><ellipse cx=\"6\" cy=\"2\" rx=\"28\" ry=\"19\" fill=\"#c8ccd6\" fill-opacity=\"0.8\" stroke=\"currentColor\" stroke-width=\"2\"/><circle cx=\"-24\" cy=\"-2\" r=\"14\" fill=\"#c8ccd6\" fill-opacity=\"0.8\" stroke=\"currentColor\" stroke-width=\"2\"/><path d=\"M-34 4 Q-42 18 -34 30\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"5\" stroke-linecap=\"round\"/><path d=\"M-30 8 Q-44 10 -46 0\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\"/><circle cx=\"-27\" cy=\"-6\" r=\"2\" fill=\"currentColor\"/><rect x=\"-10\" y=\"17\" width=\"9\" height=\"16\" fill=\"#c8ccd6\" fill-opacity=\"0.8\" stroke=\"currentColor\" stroke-width=\"2\"/><rect x=\"14\" y=\"17\" width=\"9\" height=\"16\" fill=\"#c8ccd6\" fill-opacity=\"0.8\" stroke=\"currentColor\" stroke-width=\"2\"/></g><text x=\"260\" y=\"168\" font-size=\"13\" text-anchor=\"middle\" fill=\"currentColor\">ナウマンゾウ</text></svg>",
+       "answer": 2,
+       "check": "2",
+       "hints": [
+        "問題の 文に、古生代の 生き物の 名前が 書いて あります。",
+        {
+         "text": "図の 古生代の 列には、三葉虫が います。ほかには？",
+         "svg": "<svg viewBox=\"0 0 320 200\" xmlns=\"http://www.w3.org/2000/svg\"><rect x=\"10\" y=\"8\" width=\"100\" height=\"26\" fill=\"#7fc8f8\" fill-opacity=\"0.45\" stroke=\"currentColor\" stroke-width=\"2\"/><text x=\"60\" y=\"27\" font-size=\"16\" text-anchor=\"middle\" fill=\"currentColor\">古生代</text><rect x=\"10\" y=\"34\" width=\"100\" height=\"138\" fill=\"#7fc8f8\" fill-opacity=\"0.2\" stroke=\"currentColor\" stroke-width=\"2\"/><g transform=\"translate(60 70) scale(0.5)\"><ellipse cx=\"0\" cy=\"0\" rx=\"38\" ry=\"19\" fill=\"#c9a36b\" fill-opacity=\"0.6\" stroke=\"currentColor\" stroke-width=\"2\"/><path d=\"M-20 -17 Q-28 0 -20 17\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\"/><path d=\"M-6 -19 V19 M8 -19 V19 M21 -16 V16\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.5\"/></g><text x=\"60\" y=\"104\" font-size=\"13\" text-anchor=\"middle\" fill=\"currentColor\">三葉虫</text><rect x=\"110\" y=\"8\" width=\"100\" height=\"26\" fill=\"#7bc96f\" fill-opacity=\"0.45\" stroke=\"currentColor\" stroke-width=\"2\"/><text x=\"160\" y=\"27\" font-size=\"16\" text-anchor=\"middle\" fill=\"currentColor\">中生代</text><rect x=\"110\" y=\"34\" width=\"100\" height=\"138\" fill=\"#7bc96f\" fill-opacity=\"0.2\" stroke=\"currentColor\" stroke-width=\"2\"/><rect x=\"210\" y=\"8\" width=\"100\" height=\"26\" fill=\"#f3c969\" fill-opacity=\"0.45\" stroke=\"currentColor\" stroke-width=\"2\"/><text x=\"260\" y=\"27\" font-size=\"16\" text-anchor=\"middle\" fill=\"currentColor\">新生代</text><rect x=\"210\" y=\"34\" width=\"100\" height=\"138\" fill=\"#f3c969\" fill-opacity=\"0.2\" stroke=\"currentColor\" stroke-width=\"2\"/><text x=\"10\" y=\"192\" font-size=\"13\" fill=\"currentColor\">5.4 億年前</text><text x=\"110\" y=\"192\" font-size=\"13\" text-anchor=\"middle\" fill=\"currentColor\">2.5 億年前</text><text x=\"210\" y=\"192\" font-size=\"13\" text-anchor=\"middle\" fill=\"currentColor\">6600 万年前</text><text x=\"310\" y=\"192\" font-size=\"13\" text-anchor=\"end\" fill=\"currentColor\">いま</text></svg>"
+        },
+        "6 つの 生き物を 1 つずつ 見て、古生代の 生き物か どうかを 数えます。"
+       ],
+       "qid": "W-009:8f3e18b44f"
+      }
+     ],
      "key": "練習#1"
     },
     {
      "kind": "練習",
      "aim": "",
+     "items": [
+      {
+       "part": "見本",
+       "text": "ある 生き物の なかまが、地球から ぜんぶ いなくなる ことを、ぜつめつと いいます。みじかい 間に、たくさんの なかまが ぜつめつする ことを、大量ぜつめつと いいます。古生代の おわりには 三葉虫や フズリナが、中生代の おわりには きょうりゅうや アンモナイトが ぜつめつしました。フズリナは 古生代の 海に いた 小さな 生き物です。",
+       "svg": "<svg viewBox=\"0 0 320 200\" xmlns=\"http://www.w3.org/2000/svg\"><rect x=\"5\" y=\"40\" width=\"150\" height=\"142\" fill=\"#7fc8f8\" fill-opacity=\"0.2\" stroke=\"currentColor\" stroke-width=\"2\"/><rect x=\"5\" y=\"8\" width=\"150\" height=\"26\" fill=\"#7fc8f8\" fill-opacity=\"0.6\" stroke=\"currentColor\" stroke-width=\"2\"/><text x=\"80\" y=\"27\" font-size=\"15\" text-anchor=\"middle\" fill=\"currentColor\">古生代の おわり</text><text x=\"80\" y=\"58\" font-size=\"13\" text-anchor=\"middle\" fill=\"currentColor\">約 2 億 5000 万年前</text><text x=\"80\" y=\"172\" font-size=\"18\" text-anchor=\"middle\" fill=\"currentColor\">ぜつめつ</text><rect x=\"165\" y=\"40\" width=\"150\" height=\"142\" fill=\"#7bc96f\" fill-opacity=\"0.2\" stroke=\"currentColor\" stroke-width=\"2\"/><rect x=\"165\" y=\"8\" width=\"150\" height=\"26\" fill=\"#7bc96f\" fill-opacity=\"0.6\" stroke=\"currentColor\" stroke-width=\"2\"/><text x=\"240\" y=\"27\" font-size=\"15\" text-anchor=\"middle\" fill=\"currentColor\">中生代の おわり</text><text x=\"240\" y=\"58\" font-size=\"13\" text-anchor=\"middle\" fill=\"currentColor\">約 6600 万年前</text><text x=\"240\" y=\"172\" font-size=\"18\" text-anchor=\"middle\" fill=\"currentColor\">ぜつめつ</text><g transform=\"translate(45 98) scale(0.55)\"><ellipse cx=\"0\" cy=\"0\" rx=\"38\" ry=\"19\" fill=\"#c9a36b\" fill-opacity=\"0.6\" stroke=\"currentColor\" stroke-width=\"2\"/><path d=\"M-20 -17 Q-28 0 -20 17\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\"/><path d=\"M-6 -19 V19 M8 -19 V19 M21 -16 V16\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.5\"/></g><line x1=\"29\" y1=\"86\" x2=\"61\" y2=\"110\" stroke=\"currentColor\" stroke-width=\"3\"/><line x1=\"29\" y1=\"110\" x2=\"61\" y2=\"86\" stroke=\"currentColor\" stroke-width=\"3\"/><text x=\"45\" y=\"134\" font-size=\"13\" text-anchor=\"middle\" fill=\"currentColor\">三葉虫</text><g transform=\"translate(118 98) scale(0.55)\"><ellipse cx=\"0\" cy=\"0\" rx=\"26\" ry=\"12\" fill=\"#c9a36b\" fill-opacity=\"0.6\" stroke=\"currentColor\" stroke-width=\"2\"/><path d=\"M-14 -10 Q-9 0 -14 10 M0 -12 V12 M14 -10 Q9 0 14 10\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.5\"/></g><line x1=\"102\" y1=\"86\" x2=\"134\" y2=\"110\" stroke=\"currentColor\" stroke-width=\"3\"/><line x1=\"102\" y1=\"110\" x2=\"134\" y2=\"86\" stroke=\"currentColor\" stroke-width=\"3\"/><text x=\"118\" y=\"134\" font-size=\"13\" text-anchor=\"middle\" fill=\"currentColor\">フズリナ</text><g transform=\"translate(195 98) scale(0.55)\"><ellipse cx=\"0\" cy=\"6\" rx=\"24\" ry=\"14\" fill=\"#7bc96f\" fill-opacity=\"0.6\" stroke=\"currentColor\" stroke-width=\"2\"/><polygon points=\"-16,0 -28,-22 -20,-26 -4,-6\" fill=\"#7bc96f\" fill-opacity=\"0.6\" stroke=\"currentColor\" stroke-width=\"2\"/><ellipse cx=\"-27\" cy=\"-27\" rx=\"10\" ry=\"6\" fill=\"#7bc96f\" fill-opacity=\"0.6\" stroke=\"currentColor\" stroke-width=\"2\"/><circle cx=\"-30\" cy=\"-29\" r=\"2\" fill=\"currentColor\"/><polygon points=\"20,0 48,14 20,17\" fill=\"#7bc96f\" fill-opacity=\"0.6\" stroke=\"currentColor\" stroke-width=\"2\"/><rect x=\"-12\" y=\"17\" width=\"7\" height=\"14\" fill=\"#7bc96f\" fill-opacity=\"0.6\" stroke=\"currentColor\" stroke-width=\"2\"/><rect x=\"6\" y=\"17\" width=\"7\" height=\"14\" fill=\"#7bc96f\" fill-opacity=\"0.6\" stroke=\"currentColor\" stroke-width=\"2\"/></g><line x1=\"179\" y1=\"86\" x2=\"211\" y2=\"110\" stroke=\"currentColor\" stroke-width=\"3\"/><line x1=\"179\" y1=\"110\" x2=\"211\" y2=\"86\" stroke=\"currentColor\" stroke-width=\"3\"/><text x=\"195\" y=\"134\" font-size=\"13\" text-anchor=\"middle\" fill=\"currentColor\">きょうりゅう</text><g transform=\"translate(277 98) scale(0.55)\"><circle cx=\"0\" cy=\"0\" r=\"22\" fill=\"#c9a36b\" fill-opacity=\"0.55\" stroke=\"currentColor\" stroke-width=\"2\"/><path d=\"M0 0 a4 4 0 0 1 8 0 a8 8 0 0 1 -16 0 a12 12 0 0 1 24 0\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\"/></g><line x1=\"261\" y1=\"86\" x2=\"293\" y2=\"110\" stroke=\"currentColor\" stroke-width=\"3\"/><line x1=\"261\" y1=\"110\" x2=\"293\" y2=\"86\" stroke=\"currentColor\" stroke-width=\"3\"/><text x=\"277\" y=\"134\" font-size=\"13\" text-anchor=\"middle\" fill=\"currentColor\">アンモナイト</text></svg>",
+       "explain": "ぜつめつは、ある種類の生き物が地球からいなくなること。大量ぜつめつは、短い あいだに多くの種類がいっしょにいなくなること。古生代の終わり（約 2 億 5000 万年前）には、海にいた生き物の種類の 10 のうち 9 より多くがいなくなり、三葉虫やフズリナもいなくなった（これまでで最大）。中生代の終わり（約 6600 万年前）には、きょうりゅう（鳥以外）やアンモナイトなどがいなくなった。原因は、前者は大きな火山のふん火などが、後者は大きないん石のしょうとつが考えられているが、まだわかっていないことも多い。大量ぜつめつのあと、生き残った仲間が広がって、つぎの時代の生き物になる。",
+       "qid": "W-009:dd7137608a"
+      },
+      {
+       "part": "思い出す",
+       "text": "中生代の 生き物は どれですか。",
+       "svg": "<svg viewBox=\"0 0 320 200\" xmlns=\"http://www.w3.org/2000/svg\"><rect x=\"10\" y=\"24\" width=\"100\" height=\"140\" rx=\"8\" fill=\"#c8ccd6\" fill-opacity=\"0.25\" stroke=\"currentColor\" stroke-width=\"2\"/><g transform=\"translate(65 84) scale(0.9)\"><ellipse cx=\"6\" cy=\"2\" rx=\"28\" ry=\"19\" fill=\"#c8ccd6\" fill-opacity=\"0.8\" stroke=\"currentColor\" stroke-width=\"2\"/><circle cx=\"-24\" cy=\"-2\" r=\"14\" fill=\"#c8ccd6\" fill-opacity=\"0.8\" stroke=\"currentColor\" stroke-width=\"2\"/><path d=\"M-34 4 Q-42 18 -34 30\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"5\" stroke-linecap=\"round\"/><path d=\"M-30 8 Q-44 10 -46 0\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\"/><circle cx=\"-27\" cy=\"-6\" r=\"2\" fill=\"currentColor\"/><rect x=\"-10\" y=\"17\" width=\"9\" height=\"16\" fill=\"#c8ccd6\" fill-opacity=\"0.8\" stroke=\"currentColor\" stroke-width=\"2\"/><rect x=\"14\" y=\"17\" width=\"9\" height=\"16\" fill=\"#c8ccd6\" fill-opacity=\"0.8\" stroke=\"currentColor\" stroke-width=\"2\"/></g><text x=\"60\" y=\"146\" font-size=\"14\" text-anchor=\"middle\" fill=\"currentColor\">ナウマンゾウ</text><rect x=\"110\" y=\"24\" width=\"100\" height=\"140\" rx=\"8\" fill=\"#c8ccd6\" fill-opacity=\"0.25\" stroke=\"currentColor\" stroke-width=\"2\"/><g transform=\"translate(160 84) scale(0.9)\"><ellipse cx=\"0\" cy=\"0\" rx=\"38\" ry=\"19\" fill=\"#c9a36b\" fill-opacity=\"0.6\" stroke=\"currentColor\" stroke-width=\"2\"/><path d=\"M-20 -17 Q-28 0 -20 17\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\"/><path d=\"M-6 -19 V19 M8 -19 V19 M21 -16 V16\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.5\"/></g><text x=\"160\" y=\"146\" font-size=\"14\" text-anchor=\"middle\" fill=\"currentColor\">三葉虫</text><rect x=\"210\" y=\"24\" width=\"100\" height=\"140\" rx=\"8\" fill=\"#c8ccd6\" fill-opacity=\"0.25\" stroke=\"currentColor\" stroke-width=\"2\"/><g transform=\"translate(252 84) scale(0.9)\"><ellipse cx=\"0\" cy=\"6\" rx=\"24\" ry=\"14\" fill=\"#7bc96f\" fill-opacity=\"0.6\" stroke=\"currentColor\" stroke-width=\"2\"/><polygon points=\"-16,0 -28,-22 -20,-26 -4,-6\" fill=\"#7bc96f\" fill-opacity=\"0.6\" stroke=\"currentColor\" stroke-width=\"2\"/><ellipse cx=\"-27\" cy=\"-27\" rx=\"10\" ry=\"6\" fill=\"#7bc96f\" fill-opacity=\"0.6\" stroke=\"currentColor\" stroke-width=\"2\"/><circle cx=\"-30\" cy=\"-29\" r=\"2\" fill=\"currentColor\"/><polygon points=\"20,0 48,14 20,17\" fill=\"#7bc96f\" fill-opacity=\"0.6\" stroke=\"currentColor\" stroke-width=\"2\"/><rect x=\"-12\" y=\"17\" width=\"7\" height=\"14\" fill=\"#7bc96f\" fill-opacity=\"0.6\" stroke=\"currentColor\" stroke-width=\"2\"/><rect x=\"6\" y=\"17\" width=\"7\" height=\"14\" fill=\"#7bc96f\" fill-opacity=\"0.6\" stroke=\"currentColor\" stroke-width=\"2\"/></g><text x=\"260\" y=\"146\" font-size=\"14\" text-anchor=\"middle\" fill=\"currentColor\">きょうりゅう</text></svg>",
+       "choices": [
+        "ナウマンゾウ",
+        "きょうりゅう",
+        "三葉虫"
+       ],
+       "answer": "きょうりゅう",
+       "check": "'きょうりゅう'",
+       "hints": [
+        "見本の 図で、中生代の 列に かいてあった 生き物を 思い出します。",
+        {
+         "text": "3 つの 時代の 順に、古い ものが 左です。",
+         "svg": "<svg viewBox=\"0 0 320 200\" xmlns=\"http://www.w3.org/2000/svg\"><rect x=\"14\" y=\"88\" width=\"156.815\" height=\"26\" fill=\"#7fc8f8\" fill-opacity=\"0.45\" stroke=\"currentColor\" stroke-width=\"2\"/><text x=\"92.4074\" y=\"107\" font-size=\"14\" text-anchor=\"middle\" fill=\"currentColor\">古生代</text><rect x=\"170.815\" y=\"88\" width=\"99.4963\" height=\"26\" fill=\"#7bc96f\" fill-opacity=\"0.45\" stroke=\"currentColor\" stroke-width=\"2\"/><text x=\"220.563\" y=\"107\" font-size=\"14\" text-anchor=\"middle\" fill=\"currentColor\">中生代</text><rect x=\"270.311\" y=\"88\" width=\"35.6889\" height=\"26\" fill=\"#f3c969\" fill-opacity=\"0.45\" stroke=\"currentColor\" stroke-width=\"2\"/><text x=\"288.156\" y=\"107\" font-size=\"11\" text-anchor=\"middle\" fill=\"currentColor\">新生代</text><text x=\"14\" y=\"134\" font-size=\"13\" fill=\"currentColor\">5.4 億年前</text><text x=\"170.815\" y=\"134\" font-size=\"13\" text-anchor=\"middle\" fill=\"currentColor\">2.5 億年前</text><text x=\"270.311\" y=\"134\" font-size=\"13\" text-anchor=\"middle\" fill=\"currentColor\">6600 万年前</text><text x=\"306\" y=\"154\" font-size=\"13\" text-anchor=\"end\" fill=\"currentColor\">いま</text></svg>"
+        },
+        "ちしつ年代の 順は、古生代、中生代、新生代です。"
+       ],
+       "qid": "W-009:7ab60f1142"
+      },
+      {
+       "part": "思い出す",
+       "text": "色の ついた 3 つの 帯は、古生代・中生代・新生代を あらわしています。ア・イ・ウを、古い 順に ならべた ものは どれですか。",
+       "svg": "<svg viewBox=\"0 0 320 200\" xmlns=\"http://www.w3.org/2000/svg\"><rect x=\"14\" y=\"88\" width=\"156.815\" height=\"26\" fill=\"#7fc8f8\" fill-opacity=\"0.45\" stroke=\"currentColor\" stroke-width=\"2\"/><text x=\"92.4074\" y=\"107\" font-size=\"16\" text-anchor=\"middle\" fill=\"currentColor\">ウ</text><rect x=\"170.815\" y=\"88\" width=\"99.4963\" height=\"26\" fill=\"#7bc96f\" fill-opacity=\"0.45\" stroke=\"currentColor\" stroke-width=\"2\"/><text x=\"220.563\" y=\"107\" font-size=\"16\" text-anchor=\"middle\" fill=\"currentColor\">ア</text><rect x=\"270.311\" y=\"88\" width=\"35.6889\" height=\"26\" fill=\"#f3c969\" fill-opacity=\"0.45\" stroke=\"currentColor\" stroke-width=\"2\"/><text x=\"288.156\" y=\"107\" font-size=\"16\" text-anchor=\"middle\" fill=\"currentColor\">イ</text></svg>",
+       "choices": [
+        "ウ → ア → イ",
+        "ア → イ → ウ",
+        "イ → ア → ウ"
+       ],
+       "answer": "ウ → ア → イ",
+       "check": "'ウ → ア → イ'",
+       "hints": [
+        "時代の 目もりは、左が 古く、右が 新しい。",
+        {
+         "text": "古生代は 約 5 億 4000 万年前に はじまりました。",
+         "svg": "<svg viewBox=\"0 0 320 200\" xmlns=\"http://www.w3.org/2000/svg\"><rect x=\"14\" y=\"88\" width=\"156.815\" height=\"26\" fill=\"#7fc8f8\" fill-opacity=\"0.45\" stroke=\"currentColor\" stroke-width=\"2\"/><text x=\"92.4074\" y=\"107\" font-size=\"14\" text-anchor=\"middle\" fill=\"currentColor\">古生代</text><rect x=\"170.815\" y=\"88\" width=\"99.4963\" height=\"26\" fill=\"#7bc96f\" fill-opacity=\"0.45\" stroke=\"currentColor\" stroke-width=\"2\"/><text x=\"220.563\" y=\"107\" font-size=\"14\" text-anchor=\"middle\" fill=\"currentColor\">中生代</text><rect x=\"270.311\" y=\"88\" width=\"35.6889\" height=\"26\" fill=\"#f3c969\" fill-opacity=\"0.45\" stroke=\"currentColor\" stroke-width=\"2\"/><text x=\"288.156\" y=\"107\" font-size=\"11\" text-anchor=\"middle\" fill=\"currentColor\">新生代</text><text x=\"14\" y=\"134\" font-size=\"13\" fill=\"currentColor\">5.4 億年前</text><text x=\"170.815\" y=\"134\" font-size=\"13\" text-anchor=\"middle\" fill=\"currentColor\">2.5 億年前</text><text x=\"270.311\" y=\"134\" font-size=\"13\" text-anchor=\"middle\" fill=\"currentColor\">6600 万年前</text><text x=\"306\" y=\"154\" font-size=\"13\" text-anchor=\"end\" fill=\"currentColor\">いま</text></svg>"
+        },
+        "三葉虫の 時代が いちばん 古く、人の 時代が いちばん 新しい。"
+       ],
+       "qid": "W-009:a10d4a2e66"
+      },
+      {
+       "part": "今日",
+       "text": "5 つの 地そうを、下（古い）から 上（新しい）へ 調べた 表です。● は、その 化石が 出た しるしです。A、B、C は 化石の しゅるいです。ぜつめつした 生き物は どれですか。",
+       "svg": "<svg viewBox=\"0 0 320 200\" xmlns=\"http://www.w3.org/2000/svg\"><text x=\"14\" y=\"62\" font-size=\"13\" fill=\"currentColor\">新しい</text><text x=\"14\" y=\"156\" font-size=\"13\" fill=\"currentColor\">古い</text><text x=\"140\" y=\"30\" font-size=\"18\" text-anchor=\"middle\" fill=\"currentColor\">A</text><text x=\"200\" y=\"30\" font-size=\"18\" text-anchor=\"middle\" fill=\"currentColor\">B</text><text x=\"260\" y=\"30\" font-size=\"18\" text-anchor=\"middle\" fill=\"currentColor\">C</text><rect x=\"110\" y=\"40\" width=\"60\" height=\"24\" fill=\"#c8ccd6\" fill-opacity=\"0.3\" stroke=\"currentColor\" stroke-width=\"2\"/><circle cx=\"140\" cy=\"52\" r=\"7\" fill=\"#f08080\" stroke=\"currentColor\" stroke-width=\"2\"/><rect x=\"170\" y=\"40\" width=\"60\" height=\"24\" fill=\"#c8ccd6\" fill-opacity=\"0.3\" stroke=\"currentColor\" stroke-width=\"2\"/><rect x=\"230\" y=\"40\" width=\"60\" height=\"24\" fill=\"#c8ccd6\" fill-opacity=\"0.3\" stroke=\"currentColor\" stroke-width=\"2\"/><circle cx=\"260\" cy=\"52\" r=\"7\" fill=\"#f08080\" stroke=\"currentColor\" stroke-width=\"2\"/><rect x=\"110\" y=\"64\" width=\"60\" height=\"24\" fill=\"#c8ccd6\" fill-opacity=\"0.15\" stroke=\"currentColor\" stroke-width=\"2\"/><circle cx=\"140\" cy=\"76\" r=\"7\" fill=\"#f08080\" stroke=\"currentColor\" stroke-width=\"2\"/><rect x=\"170\" y=\"64\" width=\"60\" height=\"24\" fill=\"#c8ccd6\" fill-opacity=\"0.15\" stroke=\"currentColor\" stroke-width=\"2\"/><rect x=\"230\" y=\"64\" width=\"60\" height=\"24\" fill=\"#c8ccd6\" fill-opacity=\"0.15\" stroke=\"currentColor\" stroke-width=\"2\"/><circle cx=\"260\" cy=\"76\" r=\"7\" fill=\"#f08080\" stroke=\"currentColor\" stroke-width=\"2\"/><rect x=\"110\" y=\"88\" width=\"60\" height=\"24\" fill=\"#c8ccd6\" fill-opacity=\"0.3\" stroke=\"currentColor\" stroke-width=\"2\"/><circle cx=\"140\" cy=\"100\" r=\"7\" fill=\"#f08080\" stroke=\"currentColor\" stroke-width=\"2\"/><rect x=\"170\" y=\"88\" width=\"60\" height=\"24\" fill=\"#c8ccd6\" fill-opacity=\"0.3\" stroke=\"currentColor\" stroke-width=\"2\"/><circle cx=\"200\" cy=\"100\" r=\"7\" fill=\"#f08080\" stroke=\"currentColor\" stroke-width=\"2\"/><rect x=\"230\" y=\"88\" width=\"60\" height=\"24\" fill=\"#c8ccd6\" fill-opacity=\"0.3\" stroke=\"currentColor\" stroke-width=\"2\"/><rect x=\"110\" y=\"112\" width=\"60\" height=\"24\" fill=\"#c8ccd6\" fill-opacity=\"0.15\" stroke=\"currentColor\" stroke-width=\"2\"/><circle cx=\"140\" cy=\"124\" r=\"7\" fill=\"#f08080\" stroke=\"currentColor\" stroke-width=\"2\"/><rect x=\"170\" y=\"112\" width=\"60\" height=\"24\" fill=\"#c8ccd6\" fill-opacity=\"0.15\" stroke=\"currentColor\" stroke-width=\"2\"/><circle cx=\"200\" cy=\"124\" r=\"7\" fill=\"#f08080\" stroke=\"currentColor\" stroke-width=\"2\"/><rect x=\"230\" y=\"112\" width=\"60\" height=\"24\" fill=\"#c8ccd6\" fill-opacity=\"0.15\" stroke=\"currentColor\" stroke-width=\"2\"/><rect x=\"110\" y=\"136\" width=\"60\" height=\"24\" fill=\"#c8ccd6\" fill-opacity=\"0.3\" stroke=\"currentColor\" stroke-width=\"2\"/><circle cx=\"140\" cy=\"148\" r=\"7\" fill=\"#f08080\" stroke=\"currentColor\" stroke-width=\"2\"/><rect x=\"170\" y=\"136\" width=\"60\" height=\"24\" fill=\"#c8ccd6\" fill-opacity=\"0.3\" stroke=\"currentColor\" stroke-width=\"2\"/><circle cx=\"200\" cy=\"148\" r=\"7\" fill=\"#f08080\" stroke=\"currentColor\" stroke-width=\"2\"/><rect x=\"230\" y=\"136\" width=\"60\" height=\"24\" fill=\"#c8ccd6\" fill-opacity=\"0.3\" stroke=\"currentColor\" stroke-width=\"2\"/></svg>",
+       "choices": [
+        "A",
+        "B",
+        "C"
+       ],
+       "answer": "B",
+       "check": "'B'",
+       "hints": [
+        "ぜつめつ ＝ ある 時から あとは、新しい 地そうに 出なくなる こと。",
+        {
+         "text": "いちばん 上（新しい）の 地そうに 出る 化石は どれかを 見ます。",
+         "svg": "<svg viewBox=\"0 0 320 200\" xmlns=\"http://www.w3.org/2000/svg\"><text x=\"14\" y=\"62\" font-size=\"13\" fill=\"currentColor\">新しい</text><text x=\"14\" y=\"156\" font-size=\"13\" fill=\"currentColor\">古い</text><text x=\"140\" y=\"30\" font-size=\"18\" text-anchor=\"middle\" fill=\"currentColor\">A</text><text x=\"200\" y=\"30\" font-size=\"18\" text-anchor=\"middle\" fill=\"currentColor\">B</text><text x=\"260\" y=\"30\" font-size=\"18\" text-anchor=\"middle\" fill=\"currentColor\">C</text><rect x=\"110\" y=\"40\" width=\"60\" height=\"24\" fill=\"#c8ccd6\" fill-opacity=\"0.3\" stroke=\"currentColor\" stroke-width=\"2\"/><circle cx=\"140\" cy=\"52\" r=\"7\" fill=\"#f08080\" stroke=\"currentColor\" stroke-width=\"2\"/><rect x=\"170\" y=\"40\" width=\"60\" height=\"24\" fill=\"#c8ccd6\" fill-opacity=\"0.3\" stroke=\"currentColor\" stroke-width=\"2\"/><rect x=\"230\" y=\"40\" width=\"60\" height=\"24\" fill=\"#c8ccd6\" fill-opacity=\"0.3\" stroke=\"currentColor\" stroke-width=\"2\"/><circle cx=\"260\" cy=\"52\" r=\"7\" fill=\"#f08080\" stroke=\"currentColor\" stroke-width=\"2\"/><rect x=\"110\" y=\"64\" width=\"60\" height=\"24\" fill=\"#c8ccd6\" fill-opacity=\"0.15\" stroke=\"currentColor\" stroke-width=\"2\"/><circle cx=\"140\" cy=\"76\" r=\"7\" fill=\"#f08080\" stroke=\"currentColor\" stroke-width=\"2\"/><rect x=\"170\" y=\"64\" width=\"60\" height=\"24\" fill=\"#c8ccd6\" fill-opacity=\"0.15\" stroke=\"currentColor\" stroke-width=\"2\"/><rect x=\"230\" y=\"64\" width=\"60\" height=\"24\" fill=\"#c8ccd6\" fill-opacity=\"0.15\" stroke=\"currentColor\" stroke-width=\"2\"/><circle cx=\"260\" cy=\"76\" r=\"7\" fill=\"#f08080\" stroke=\"currentColor\" stroke-width=\"2\"/><rect x=\"110\" y=\"88\" width=\"60\" height=\"24\" fill=\"#c8ccd6\" fill-opacity=\"0.3\" stroke=\"currentColor\" stroke-width=\"2\"/><circle cx=\"140\" cy=\"100\" r=\"7\" fill=\"#f08080\" stroke=\"currentColor\" stroke-width=\"2\"/><rect x=\"170\" y=\"88\" width=\"60\" height=\"24\" fill=\"#c8ccd6\" fill-opacity=\"0.3\" stroke=\"currentColor\" stroke-width=\"2\"/><circle cx=\"200\" cy=\"100\" r=\"7\" fill=\"#f08080\" stroke=\"currentColor\" stroke-width=\"2\"/><rect x=\"230\" y=\"88\" width=\"60\" height=\"24\" fill=\"#c8ccd6\" fill-opacity=\"0.3\" stroke=\"currentColor\" stroke-width=\"2\"/><rect x=\"110\" y=\"112\" width=\"60\" height=\"24\" fill=\"#c8ccd6\" fill-opacity=\"0.15\" stroke=\"currentColor\" stroke-width=\"2\"/><circle cx=\"140\" cy=\"124\" r=\"7\" fill=\"#f08080\" stroke=\"currentColor\" stroke-width=\"2\"/><rect x=\"170\" y=\"112\" width=\"60\" height=\"24\" fill=\"#c8ccd6\" fill-opacity=\"0.15\" stroke=\"currentColor\" stroke-width=\"2\"/><circle cx=\"200\" cy=\"124\" r=\"7\" fill=\"#f08080\" stroke=\"currentColor\" stroke-width=\"2\"/><rect x=\"230\" y=\"112\" width=\"60\" height=\"24\" fill=\"#c8ccd6\" fill-opacity=\"0.15\" stroke=\"currentColor\" stroke-width=\"2\"/><rect x=\"110\" y=\"136\" width=\"60\" height=\"24\" fill=\"#c8ccd6\" fill-opacity=\"0.3\" stroke=\"currentColor\" stroke-width=\"2\"/><circle cx=\"140\" cy=\"148\" r=\"7\" fill=\"#f08080\" stroke=\"currentColor\" stroke-width=\"2\"/><rect x=\"170\" y=\"136\" width=\"60\" height=\"24\" fill=\"#c8ccd6\" fill-opacity=\"0.3\" stroke=\"currentColor\" stroke-width=\"2\"/><circle cx=\"200\" cy=\"148\" r=\"7\" fill=\"#f08080\" stroke=\"currentColor\" stroke-width=\"2\"/><rect x=\"230\" y=\"136\" width=\"60\" height=\"24\" fill=\"#c8ccd6\" fill-opacity=\"0.3\" stroke=\"currentColor\" stroke-width=\"2\"/><rect x=\"106\" y=\"38\" width=\"188\" height=\"28\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-dasharray=\"6 4\"/></svg>"
+        },
+        "新しい 地そうに 出ない 化石でも、古い 地そうに 出ていた ものが ぜつめつした 生き物です。まだ 生まれて いない ものとは ちがいます。"
+       ],
+       "qid": "W-009:11ccaf545b"
+      },
+      {
+       "part": "今日",
+       "text": "中生代の おわりに ぜつめつした 生き物の 組は どれですか。",
+       "svg": "<svg viewBox=\"0 0 320 200\" xmlns=\"http://www.w3.org/2000/svg\"><rect x=\"14\" y=\"88\" width=\"156.815\" height=\"26\" fill=\"#7fc8f8\" fill-opacity=\"0.45\" stroke=\"currentColor\" stroke-width=\"2\"/><text x=\"92.4074\" y=\"107\" font-size=\"14\" text-anchor=\"middle\" fill=\"currentColor\">古生代</text><rect x=\"170.815\" y=\"88\" width=\"99.4963\" height=\"26\" fill=\"#7bc96f\" fill-opacity=\"0.45\" stroke=\"currentColor\" stroke-width=\"2\"/><text x=\"220.563\" y=\"107\" font-size=\"14\" text-anchor=\"middle\" fill=\"currentColor\">中生代</text><rect x=\"270.311\" y=\"88\" width=\"35.6889\" height=\"26\" fill=\"#f3c969\" fill-opacity=\"0.45\" stroke=\"currentColor\" stroke-width=\"2\"/><text x=\"288.156\" y=\"107\" font-size=\"11\" text-anchor=\"middle\" fill=\"currentColor\">新生代</text><text x=\"14\" y=\"134\" font-size=\"13\" fill=\"currentColor\">5.4 億年前</text><text x=\"170.815\" y=\"134\" font-size=\"13\" text-anchor=\"middle\" fill=\"currentColor\">2.5 億年前</text><text x=\"270.311\" y=\"134\" font-size=\"13\" text-anchor=\"middle\" fill=\"currentColor\">6600 万年前</text><text x=\"306\" y=\"154\" font-size=\"13\" text-anchor=\"end\" fill=\"currentColor\">いま</text><polygon points=\"264.311,70 276.311,70 270.311,84\" fill=\"#f08080\" stroke=\"currentColor\" stroke-width=\"2\"/><text x=\"264.311\" y=\"60\" font-size=\"14\" text-anchor=\"end\" fill=\"currentColor\">中生代の おわり</text></svg>",
+       "choices": [
+        "三葉虫と フズリナ",
+        "ナウマンゾウと 人",
+        "きょうりゅうと アンモナイト"
+       ],
+       "answer": "きょうりゅうと アンモナイト",
+       "check": "'きょうりゅうと アンモナイト'",
+       "hints": [
+        "大量ぜつめつは、古生代の おわりと 中生代の おわりに ありました。見本の 図を 思い出します。",
+        {
+         "text": "三葉虫と フズリナは、古生代の 生き物です。",
+         "svg": "<svg viewBox=\"0 0 320 200\" xmlns=\"http://www.w3.org/2000/svg\"><rect x=\"10\" y=\"8\" width=\"100\" height=\"26\" fill=\"#7fc8f8\" fill-opacity=\"0.45\" stroke=\"currentColor\" stroke-width=\"2\"/><text x=\"60\" y=\"27\" font-size=\"16\" text-anchor=\"middle\" fill=\"currentColor\">古生代</text><rect x=\"10\" y=\"34\" width=\"100\" height=\"138\" fill=\"#7fc8f8\" fill-opacity=\"0.2\" stroke=\"currentColor\" stroke-width=\"2\"/><g transform=\"translate(60 70) scale(0.5)\"><ellipse cx=\"0\" cy=\"0\" rx=\"38\" ry=\"19\" fill=\"#c9a36b\" fill-opacity=\"0.6\" stroke=\"currentColor\" stroke-width=\"2\"/><path d=\"M-20 -17 Q-28 0 -20 17\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\"/><path d=\"M-6 -19 V19 M8 -19 V19 M21 -16 V16\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.5\"/></g><text x=\"60\" y=\"104\" font-size=\"13\" text-anchor=\"middle\" fill=\"currentColor\">三葉虫</text><g transform=\"translate(60 130) scale(0.5)\"><ellipse cx=\"0\" cy=\"0\" rx=\"26\" ry=\"12\" fill=\"#c9a36b\" fill-opacity=\"0.6\" stroke=\"currentColor\" stroke-width=\"2\"/><path d=\"M-14 -10 Q-9 0 -14 10 M0 -12 V12 M14 -10 Q9 0 14 10\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.5\"/></g><text x=\"60\" y=\"164\" font-size=\"13\" text-anchor=\"middle\" fill=\"currentColor\">フズリナ</text><rect x=\"110\" y=\"8\" width=\"100\" height=\"26\" fill=\"#7bc96f\" fill-opacity=\"0.45\" stroke=\"currentColor\" stroke-width=\"2\"/><text x=\"160\" y=\"27\" font-size=\"16\" text-anchor=\"middle\" fill=\"currentColor\">中生代</text><rect x=\"110\" y=\"34\" width=\"100\" height=\"138\" fill=\"#7bc96f\" fill-opacity=\"0.2\" stroke=\"currentColor\" stroke-width=\"2\"/><rect x=\"210\" y=\"8\" width=\"100\" height=\"26\" fill=\"#f3c969\" fill-opacity=\"0.45\" stroke=\"currentColor\" stroke-width=\"2\"/><text x=\"260\" y=\"27\" font-size=\"16\" text-anchor=\"middle\" fill=\"currentColor\">新生代</text><rect x=\"210\" y=\"34\" width=\"100\" height=\"138\" fill=\"#f3c969\" fill-opacity=\"0.2\" stroke=\"currentColor\" stroke-width=\"2\"/><text x=\"10\" y=\"192\" font-size=\"13\" fill=\"currentColor\">5.4 億年前</text><text x=\"110\" y=\"192\" font-size=\"13\" text-anchor=\"middle\" fill=\"currentColor\">2.5 億年前</text><text x=\"210\" y=\"192\" font-size=\"13\" text-anchor=\"middle\" fill=\"currentColor\">6600 万年前</text><text x=\"310\" y=\"192\" font-size=\"13\" text-anchor=\"end\" fill=\"currentColor\">いま</text></svg>"
+        },
+        "ぜつめつした 生き物は、その 時代の おわりまで いた 生き物です。"
+       ],
+       "qid": "W-009:97ff8c6a04"
+      },
+      {
+       "part": "今日",
+       "text": "古生代の おわりの 大量ぜつめつで、海に いた 生き物の しゅるいの 10 のうち 9 が ぜつめつしました。海に 200 しゅるい いたと すると、のこったのは 何しゅるいですか。数で 答えましょう。",
+       "svg": "<svg viewBox=\"0 0 320 200\" xmlns=\"http://www.w3.org/2000/svg\"><rect x=\"20\" y=\"80\" width=\"28\" height=\"36\" fill=\"#c8ccd6\" fill-opacity=\"0.35\" stroke=\"currentColor\" stroke-width=\"2\"/><rect x=\"48\" y=\"80\" width=\"28\" height=\"36\" fill=\"#c8ccd6\" fill-opacity=\"0.35\" stroke=\"currentColor\" stroke-width=\"2\"/><rect x=\"76\" y=\"80\" width=\"28\" height=\"36\" fill=\"#c8ccd6\" fill-opacity=\"0.35\" stroke=\"currentColor\" stroke-width=\"2\"/><rect x=\"104\" y=\"80\" width=\"28\" height=\"36\" fill=\"#c8ccd6\" fill-opacity=\"0.35\" stroke=\"currentColor\" stroke-width=\"2\"/><rect x=\"132\" y=\"80\" width=\"28\" height=\"36\" fill=\"#c8ccd6\" fill-opacity=\"0.35\" stroke=\"currentColor\" stroke-width=\"2\"/><rect x=\"160\" y=\"80\" width=\"28\" height=\"36\" fill=\"#c8ccd6\" fill-opacity=\"0.35\" stroke=\"currentColor\" stroke-width=\"2\"/><rect x=\"188\" y=\"80\" width=\"28\" height=\"36\" fill=\"#c8ccd6\" fill-opacity=\"0.35\" stroke=\"currentColor\" stroke-width=\"2\"/><rect x=\"216\" y=\"80\" width=\"28\" height=\"36\" fill=\"#c8ccd6\" fill-opacity=\"0.35\" stroke=\"currentColor\" stroke-width=\"2\"/><rect x=\"244\" y=\"80\" width=\"28\" height=\"36\" fill=\"#c8ccd6\" fill-opacity=\"0.35\" stroke=\"currentColor\" stroke-width=\"2\"/><rect x=\"272\" y=\"80\" width=\"28\" height=\"36\" fill=\"#7bc96f\" fill-opacity=\"0.7\" stroke=\"currentColor\" stroke-width=\"2\"/><line x1=\"25\" y1=\"93\" x2=\"43\" y2=\"103\" stroke=\"currentColor\" stroke-width=\"3\"/><line x1=\"25\" y1=\"103\" x2=\"43\" y2=\"93\" stroke=\"currentColor\" stroke-width=\"3\"/><line x1=\"53\" y1=\"93\" x2=\"71\" y2=\"103\" stroke=\"currentColor\" stroke-width=\"3\"/><line x1=\"53\" y1=\"103\" x2=\"71\" y2=\"93\" stroke=\"currentColor\" stroke-width=\"3\"/><line x1=\"81\" y1=\"93\" x2=\"99\" y2=\"103\" stroke=\"currentColor\" stroke-width=\"3\"/><line x1=\"81\" y1=\"103\" x2=\"99\" y2=\"93\" stroke=\"currentColor\" stroke-width=\"3\"/><line x1=\"109\" y1=\"93\" x2=\"127\" y2=\"103\" stroke=\"currentColor\" stroke-width=\"3\"/><line x1=\"109\" y1=\"103\" x2=\"127\" y2=\"93\" stroke=\"currentColor\" stroke-width=\"3\"/><line x1=\"137\" y1=\"93\" x2=\"155\" y2=\"103\" stroke=\"currentColor\" stroke-width=\"3\"/><line x1=\"137\" y1=\"103\" x2=\"155\" y2=\"93\" stroke=\"currentColor\" stroke-width=\"3\"/><line x1=\"165\" y1=\"93\" x2=\"183\" y2=\"103\" stroke=\"currentColor\" stroke-width=\"3\"/><line x1=\"165\" y1=\"103\" x2=\"183\" y2=\"93\" stroke=\"currentColor\" stroke-width=\"3\"/><line x1=\"193\" y1=\"93\" x2=\"211\" y2=\"103\" stroke=\"currentColor\" stroke-width=\"3\"/><line x1=\"193\" y1=\"103\" x2=\"211\" y2=\"93\" stroke=\"currentColor\" stroke-width=\"3\"/><line x1=\"221\" y1=\"93\" x2=\"239\" y2=\"103\" stroke=\"currentColor\" stroke-width=\"3\"/><line x1=\"221\" y1=\"103\" x2=\"239\" y2=\"93\" stroke=\"currentColor\" stroke-width=\"3\"/><line x1=\"249\" y1=\"93\" x2=\"267\" y2=\"103\" stroke=\"currentColor\" stroke-width=\"3\"/><line x1=\"249\" y1=\"103\" x2=\"267\" y2=\"93\" stroke=\"currentColor\" stroke-width=\"3\"/><line x1=\"20\" y1=\"66\" x2=\"300\" y2=\"66\" stroke=\"currentColor\" stroke-width=\"2\"/><line x1=\"20\" y1=\"60\" x2=\"20\" y2=\"72\" stroke=\"currentColor\" stroke-width=\"2\"/><line x1=\"300\" y1=\"60\" x2=\"300\" y2=\"72\" stroke=\"currentColor\" stroke-width=\"2\"/><text x=\"160\" y=\"52\" font-size=\"16\" text-anchor=\"middle\" fill=\"currentColor\">200 しゅるい</text><text x=\"160\" y=\"148\" font-size=\"14\" text-anchor=\"middle\" fill=\"currentColor\">10 に 分けた うち、9 が ぜつめつ</text></svg>",
+       "answer": 20,
+       "check": "200 - 200 // 10 * 9",
+       "hints": [
+        "10 のうち 9 が いなくなった とき、のこりは 10 のうち いくつですか。",
+        {
+         "text": "200 しゅるいを 10 こに 同じ 数ずつ 分けた 1 こ分が、いくつかを 出します。",
+         "svg": "<svg viewBox=\"0 0 320 200\" xmlns=\"http://www.w3.org/2000/svg\"><rect x=\"20\" y=\"80\" width=\"280\" height=\"36\" fill=\"#c8ccd6\" fill-opacity=\"0.35\" stroke=\"currentColor\" stroke-width=\"2\"/><line x1=\"48\" y1=\"80\" x2=\"48\" y2=\"116\" stroke=\"currentColor\" stroke-width=\"2\"/><line x1=\"76\" y1=\"80\" x2=\"76\" y2=\"116\" stroke=\"currentColor\" stroke-width=\"2\"/><line x1=\"104\" y1=\"80\" x2=\"104\" y2=\"116\" stroke=\"currentColor\" stroke-width=\"2\"/><line x1=\"132\" y1=\"80\" x2=\"132\" y2=\"116\" stroke=\"currentColor\" stroke-width=\"2\"/><line x1=\"160\" y1=\"80\" x2=\"160\" y2=\"116\" stroke=\"currentColor\" stroke-width=\"2\"/><line x1=\"188\" y1=\"80\" x2=\"188\" y2=\"116\" stroke=\"currentColor\" stroke-width=\"2\"/><line x1=\"216\" y1=\"80\" x2=\"216\" y2=\"116\" stroke=\"currentColor\" stroke-width=\"2\"/><line x1=\"244\" y1=\"80\" x2=\"244\" y2=\"116\" stroke=\"currentColor\" stroke-width=\"2\"/><line x1=\"272\" y1=\"80\" x2=\"272\" y2=\"116\" stroke=\"currentColor\" stroke-width=\"2\"/><line x1=\"20\" y1=\"66\" x2=\"300\" y2=\"66\" stroke=\"currentColor\" stroke-width=\"2\"/><line x1=\"20\" y1=\"60\" x2=\"20\" y2=\"72\" stroke=\"currentColor\" stroke-width=\"2\"/><line x1=\"300\" y1=\"60\" x2=\"300\" y2=\"72\" stroke=\"currentColor\" stroke-width=\"2\"/><text x=\"160\" y=\"52\" font-size=\"16\" text-anchor=\"middle\" fill=\"currentColor\">200 しゅるい</text><text x=\"34\" y=\"100\" font-size=\"16\" text-anchor=\"middle\" fill=\"currentColor\">？</text><text x=\"160\" y=\"148\" font-size=\"14\" text-anchor=\"middle\" fill=\"currentColor\">1 こ分は 何しゅるい？</text></svg>"
+        },
+        "200 ÷ 10 の 1 こ分が のこった しゅるいです。"
+       ],
+       "qid": "W-009:f50d0ede1b"
+      },
+      {
+       "part": "今日",
+       "text": "中生代の おわりの 大量ぜつめつの あと、地球で 大きく 広がった なかまは どれですか。",
+       "svg": "<svg viewBox=\"0 0 320 200\" xmlns=\"http://www.w3.org/2000/svg\"><rect x=\"10\" y=\"8\" width=\"100\" height=\"26\" fill=\"#7fc8f8\" fill-opacity=\"0.45\" stroke=\"currentColor\" stroke-width=\"2\"/><text x=\"60\" y=\"27\" font-size=\"16\" text-anchor=\"middle\" fill=\"currentColor\">古生代</text><rect x=\"10\" y=\"34\" width=\"100\" height=\"138\" fill=\"#7fc8f8\" fill-opacity=\"0.2\" stroke=\"currentColor\" stroke-width=\"2\"/><rect x=\"110\" y=\"8\" width=\"100\" height=\"26\" fill=\"#7bc96f\" fill-opacity=\"0.45\" stroke=\"currentColor\" stroke-width=\"2\"/><text x=\"160\" y=\"27\" font-size=\"16\" text-anchor=\"middle\" fill=\"currentColor\">中生代</text><rect x=\"110\" y=\"34\" width=\"100\" height=\"138\" fill=\"#7bc96f\" fill-opacity=\"0.2\" stroke=\"currentColor\" stroke-width=\"2\"/><g transform=\"translate(160 70) scale(0.5)\"><ellipse cx=\"0\" cy=\"6\" rx=\"24\" ry=\"14\" fill=\"#7bc96f\" fill-opacity=\"0.6\" stroke=\"currentColor\" stroke-width=\"2\"/><polygon points=\"-16,0 -28,-22 -20,-26 -4,-6\" fill=\"#7bc96f\" fill-opacity=\"0.6\" stroke=\"currentColor\" stroke-width=\"2\"/><ellipse cx=\"-27\" cy=\"-27\" rx=\"10\" ry=\"6\" fill=\"#7bc96f\" fill-opacity=\"0.6\" stroke=\"currentColor\" stroke-width=\"2\"/><circle cx=\"-30\" cy=\"-29\" r=\"2\" fill=\"currentColor\"/><polygon points=\"20,0 48,14 20,17\" fill=\"#7bc96f\" fill-opacity=\"0.6\" stroke=\"currentColor\" stroke-width=\"2\"/><rect x=\"-12\" y=\"17\" width=\"7\" height=\"14\" fill=\"#7bc96f\" fill-opacity=\"0.6\" stroke=\"currentColor\" stroke-width=\"2\"/><rect x=\"6\" y=\"17\" width=\"7\" height=\"14\" fill=\"#7bc96f\" fill-opacity=\"0.6\" stroke=\"currentColor\" stroke-width=\"2\"/></g><text x=\"160\" y=\"104\" font-size=\"13\" text-anchor=\"middle\" fill=\"currentColor\">きょうりゅう</text><g transform=\"translate(160 130) scale(0.5)\"><circle cx=\"0\" cy=\"0\" r=\"22\" fill=\"#c9a36b\" fill-opacity=\"0.55\" stroke=\"currentColor\" stroke-width=\"2\"/><path d=\"M0 0 a4 4 0 0 1 8 0 a8 8 0 0 1 -16 0 a12 12 0 0 1 24 0\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\"/></g><text x=\"160\" y=\"164\" font-size=\"13\" text-anchor=\"middle\" fill=\"currentColor\">アンモナイト</text><rect x=\"210\" y=\"8\" width=\"100\" height=\"26\" fill=\"#f3c969\" fill-opacity=\"0.45\" stroke=\"currentColor\" stroke-width=\"2\"/><text x=\"260\" y=\"27\" font-size=\"16\" text-anchor=\"middle\" fill=\"currentColor\">新生代</text><rect x=\"210\" y=\"34\" width=\"100\" height=\"138\" fill=\"#f3c969\" fill-opacity=\"0.2\" stroke=\"currentColor\" stroke-width=\"2\"/><text x=\"260\" y=\"80\" font-size=\"30\" text-anchor=\"middle\" fill=\"currentColor\">？</text><text x=\"10\" y=\"192\" font-size=\"13\" fill=\"currentColor\">5.4 億年前</text><text x=\"110\" y=\"192\" font-size=\"13\" text-anchor=\"middle\" fill=\"currentColor\">2.5 億年前</text><text x=\"210\" y=\"192\" font-size=\"13\" text-anchor=\"middle\" fill=\"currentColor\">6600 万年前</text><text x=\"310\" y=\"192\" font-size=\"13\" text-anchor=\"end\" fill=\"currentColor\">いま</text><line x1=\"142\" y1=\"56\" x2=\"178\" y2=\"84\" stroke=\"currentColor\" stroke-width=\"3\"/><line x1=\"142\" y1=\"84\" x2=\"178\" y2=\"56\" stroke=\"currentColor\" stroke-width=\"3\"/><line x1=\"146\" y1=\"120\" x2=\"174\" y2=\"140\" stroke=\"currentColor\" stroke-width=\"3\"/><line x1=\"146\" y1=\"140\" x2=\"174\" y2=\"120\" stroke=\"currentColor\" stroke-width=\"3\"/></svg>",
+       "choices": [
+        "フズリナ",
+        "三葉虫",
+        "ほにゅう類"
+       ],
+       "answer": "ほにゅう類",
+       "check": "'ほにゅう類'",
+       "hints": [
+        "大量ぜつめつで あいた 場所に、生き のこった 仲間が 広がりました。",
+        {
+         "text": "新生代の 列には、ナウマンゾウと 人が かいて ありました。",
+         "svg": "<svg viewBox=\"0 0 320 200\" xmlns=\"http://www.w3.org/2000/svg\"><rect x=\"10\" y=\"8\" width=\"100\" height=\"26\" fill=\"#7fc8f8\" fill-opacity=\"0.45\" stroke=\"currentColor\" stroke-width=\"2\"/><text x=\"60\" y=\"27\" font-size=\"16\" text-anchor=\"middle\" fill=\"currentColor\">古生代</text><rect x=\"10\" y=\"34\" width=\"100\" height=\"138\" fill=\"#7fc8f8\" fill-opacity=\"0.2\" stroke=\"currentColor\" stroke-width=\"2\"/><rect x=\"110\" y=\"8\" width=\"100\" height=\"26\" fill=\"#7bc96f\" fill-opacity=\"0.45\" stroke=\"currentColor\" stroke-width=\"2\"/><text x=\"160\" y=\"27\" font-size=\"16\" text-anchor=\"middle\" fill=\"currentColor\">中生代</text><rect x=\"110\" y=\"34\" width=\"100\" height=\"138\" fill=\"#7bc96f\" fill-opacity=\"0.2\" stroke=\"currentColor\" stroke-width=\"2\"/><rect x=\"210\" y=\"8\" width=\"100\" height=\"26\" fill=\"#f3c969\" fill-opacity=\"0.45\" stroke=\"currentColor\" stroke-width=\"2\"/><text x=\"260\" y=\"27\" font-size=\"16\" text-anchor=\"middle\" fill=\"currentColor\">新生代</text><rect x=\"210\" y=\"34\" width=\"100\" height=\"138\" fill=\"#f3c969\" fill-opacity=\"0.2\" stroke=\"currentColor\" stroke-width=\"2\"/><g transform=\"translate(260 70) scale(0.5)\"><ellipse cx=\"6\" cy=\"2\" rx=\"28\" ry=\"19\" fill=\"#c8ccd6\" fill-opacity=\"0.8\" stroke=\"currentColor\" stroke-width=\"2\"/><circle cx=\"-24\" cy=\"-2\" r=\"14\" fill=\"#c8ccd6\" fill-opacity=\"0.8\" stroke=\"currentColor\" stroke-width=\"2\"/><path d=\"M-34 4 Q-42 18 -34 30\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"5\" stroke-linecap=\"round\"/><path d=\"M-30 8 Q-44 10 -46 0\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\"/><circle cx=\"-27\" cy=\"-6\" r=\"2\" fill=\"currentColor\"/><rect x=\"-10\" y=\"17\" width=\"9\" height=\"16\" fill=\"#c8ccd6\" fill-opacity=\"0.8\" stroke=\"currentColor\" stroke-width=\"2\"/><rect x=\"14\" y=\"17\" width=\"9\" height=\"16\" fill=\"#c8ccd6\" fill-opacity=\"0.8\" stroke=\"currentColor\" stroke-width=\"2\"/></g><text x=\"260\" y=\"104\" font-size=\"13\" text-anchor=\"middle\" fill=\"currentColor\">ナウマンゾウ</text><g transform=\"translate(260 130) scale(0.5)\"><circle cx=\"0\" cy=\"-24\" r=\"8\" fill=\"#f3c969\" fill-opacity=\"0.8\" stroke=\"currentColor\" stroke-width=\"2\"/><path d=\"M0 -16 V8 M-12 -6 L0 -12 L12 -6 M0 8 L-9 30 M0 8 L9 30\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"3\" stroke-linecap=\"round\"/></g><text x=\"260\" y=\"164\" font-size=\"13\" text-anchor=\"middle\" fill=\"currentColor\">人</text><text x=\"10\" y=\"192\" font-size=\"13\" fill=\"currentColor\">5.4 億年前</text><text x=\"110\" y=\"192\" font-size=\"13\" text-anchor=\"middle\" fill=\"currentColor\">2.5 億年前</text><text x=\"210\" y=\"192\" font-size=\"13\" text-anchor=\"middle\" fill=\"currentColor\">6600 万年前</text><text x=\"310\" y=\"192\" font-size=\"13\" text-anchor=\"end\" fill=\"currentColor\">いま</text></svg>"
+        },
+        "三葉虫は、もっと 前の 大量ぜつめつで いなくなりました。"
+       ],
+       "qid": "W-009:63d2330480"
+      },
+      {
+       "part": "今日",
+       "text": "2 回の 大量ぜつめつは、約 2 億 5000 万年前と 約 6600 万年前です。1 回目から 2 回目まで、約 何万年 あいだが あきましたか。数で 答えましょう。",
+       "svg": "<svg viewBox=\"0 0 320 200\" xmlns=\"http://www.w3.org/2000/svg\"><rect x=\"14\" y=\"88\" width=\"156.815\" height=\"26\" fill=\"#7fc8f8\" fill-opacity=\"0.45\" stroke=\"currentColor\" stroke-width=\"2\"/><text x=\"92.4074\" y=\"107\" font-size=\"14\" text-anchor=\"middle\" fill=\"currentColor\">古生代</text><rect x=\"170.815\" y=\"88\" width=\"99.4963\" height=\"26\" fill=\"#7bc96f\" fill-opacity=\"0.45\" stroke=\"currentColor\" stroke-width=\"2\"/><text x=\"220.563\" y=\"107\" font-size=\"14\" text-anchor=\"middle\" fill=\"currentColor\">中生代</text><rect x=\"270.311\" y=\"88\" width=\"35.6889\" height=\"26\" fill=\"#f3c969\" fill-opacity=\"0.45\" stroke=\"currentColor\" stroke-width=\"2\"/><text x=\"288.156\" y=\"107\" font-size=\"11\" text-anchor=\"middle\" fill=\"currentColor\">新生代</text><text x=\"14\" y=\"134\" font-size=\"13\" fill=\"currentColor\">5.4 億年前</text><text x=\"170.815\" y=\"134\" font-size=\"13\" text-anchor=\"middle\" fill=\"currentColor\">2.5 億年前</text><text x=\"270.311\" y=\"134\" font-size=\"13\" text-anchor=\"middle\" fill=\"currentColor\">6600 万年前</text><text x=\"306\" y=\"154\" font-size=\"13\" text-anchor=\"end\" fill=\"currentColor\">いま</text><polygon points=\"164.815,70 176.815,70 170.815,84\" fill=\"#f08080\" stroke=\"currentColor\" stroke-width=\"2\"/><text x=\"164.815\" y=\"60\" font-size=\"14\" text-anchor=\"end\" fill=\"currentColor\">大量ぜつめつ</text><polygon points=\"264.311,70 276.311,70 270.311,84\" fill=\"#f08080\" stroke=\"currentColor\" stroke-width=\"2\"/><text x=\"264.311\" y=\"40\" font-size=\"14\" text-anchor=\"end\" fill=\"currentColor\">大量ぜつめつ</text><line x1=\"170.815\" y1=\"156\" x2=\"270.311\" y2=\"156\" stroke=\"currentColor\" stroke-width=\"2\"/><line x1=\"170.815\" y1=\"150\" x2=\"170.815\" y2=\"162\" stroke=\"currentColor\" stroke-width=\"2\"/><line x1=\"270.311\" y1=\"150\" x2=\"270.311\" y2=\"162\" stroke=\"currentColor\" stroke-width=\"2\"/><text x=\"220.563\" y=\"182\" font-size=\"14\" text-anchor=\"middle\" fill=\"currentColor\">何万年？</text></svg>",
+       "answer": 18400,
+       "check": "25000 - 6600",
+       "hints": [
+        "2 つの 年数を 万年に そろえて、古い ほうから 新しい ほうを ひきます。",
+        {
+         "text": "2 億 5000 万年は 25000 万年。6600 万年は そのまま 6600 万年です。",
+         "svg": "<svg viewBox=\"0 0 320 200\" xmlns=\"http://www.w3.org/2000/svg\"><rect x=\"20\" y=\"50\" width=\"280\" height=\"40\" fill=\"#f3c969\" fill-opacity=\"0.4\" stroke=\"currentColor\" stroke-width=\"2\"/><text x=\"160\" y=\"76\" font-size=\"16\" text-anchor=\"middle\" fill=\"currentColor\">2 億 5000 万年 ＝ 25000 万年</text><rect x=\"20\" y=\"106\" width=\"280\" height=\"40\" fill=\"#f3c969\" fill-opacity=\"0.4\" stroke=\"currentColor\" stroke-width=\"2\"/><text x=\"160\" y=\"132\" font-size=\"16\" text-anchor=\"middle\" fill=\"currentColor\">6600 万年 ＝ 6600 万年</text></svg>"
+        },
+        "25000 － 6600 を 計算します。"
+       ],
+       "qid": "W-009:e1e8f5f932"
+      },
+      {
+       "part": "挑戦",
+       "text": "きょうりゅうが いなくなったのは 約 6600 万年前、人が 生まれたのは 約 30 万年前です。きょうりゅうが いなくなってから 人が 生まれるまで、約 何万年 たちましたか。数で 答えましょう。",
+       "svg": "<svg viewBox=\"0 0 320 200\" xmlns=\"http://www.w3.org/2000/svg\"><rect x=\"14\" y=\"88\" width=\"156.815\" height=\"26\" fill=\"#7fc8f8\" fill-opacity=\"0.45\" stroke=\"currentColor\" stroke-width=\"2\"/><rect x=\"170.815\" y=\"88\" width=\"99.4963\" height=\"26\" fill=\"#7bc96f\" fill-opacity=\"0.45\" stroke=\"currentColor\" stroke-width=\"2\"/><rect x=\"270.311\" y=\"88\" width=\"35.6889\" height=\"26\" fill=\"#f3c969\" fill-opacity=\"0.45\" stroke=\"currentColor\" stroke-width=\"2\"/><text x=\"14\" y=\"134\" font-size=\"13\" fill=\"currentColor\">5.4 億年前</text><text x=\"170.815\" y=\"134\" font-size=\"13\" text-anchor=\"middle\" fill=\"currentColor\">2.5 億年前</text><text x=\"270.311\" y=\"134\" font-size=\"13\" text-anchor=\"middle\" fill=\"currentColor\">6600 万年前</text><text x=\"306\" y=\"154\" font-size=\"13\" text-anchor=\"end\" fill=\"currentColor\">いま</text><polygon points=\"264.311,70 276.311,70 270.311,84\" fill=\"#f08080\" stroke=\"currentColor\" stroke-width=\"2\"/><text x=\"264.311\" y=\"40\" font-size=\"14\" text-anchor=\"end\" fill=\"currentColor\">きょうりゅうが いなくなった</text><polygon points=\"299.838,70 311.838,70 305.838,84\" fill=\"#f08080\" stroke=\"currentColor\" stroke-width=\"2\"/><text x=\"299.838\" y=\"60\" font-size=\"14\" text-anchor=\"end\" fill=\"currentColor\">人が 生まれた</text></svg>",
+       "answer": 6570,
+       "check": "6600 - 30",
+       "hints": [
+        "どちらも 「何万年前」。2 つの 数の 差が、2 つの できごとの 間の 年数です。",
+        {
+         "text": "6600 万年と 30 万年を 長さで くらべると、30 万年は ほんの わずかです。",
+         "svg": "<svg viewBox=\"0 0 320 200\" xmlns=\"http://www.w3.org/2000/svg\"><rect x=\"20\" y=\"60\" width=\"280\" height=\"28\" fill=\"#f3c969\" fill-opacity=\"0.5\" stroke=\"currentColor\" stroke-width=\"2\"/><text x=\"160\" y=\"80\" font-size=\"16\" text-anchor=\"middle\" fill=\"currentColor\">6600 万年</text><rect x=\"20\" y=\"112\" width=\"3\" height=\"28\" fill=\"#f3c969\" fill-opacity=\"0.9\" stroke=\"currentColor\" stroke-width=\"2\"/><text x=\"32\" y=\"132\" font-size=\"16\" fill=\"currentColor\">30 万年</text><text x=\"160\" y=\"176\" font-size=\"14\" text-anchor=\"middle\" fill=\"currentColor\">はなれて いる 年数は？</text></svg>"
+        },
+        "6600 から 30 を ひきます。"
+       ],
+       "paths": [
+        [
+         "6600 万年前 － 30 万年前 ＝ 6570 万年",
+         "人は きょうりゅうと 同じ ころに 生きて いなかった"
+        ],
+        [
+         "億に そろえる：6600 万年 ＝ 0.66 億年、30 万年 ＝ 0.003 億年",
+         "0.66 － 0.003 ＝ 0.657 億年 ＝ 6570 万年"
+        ]
+       ],
+       "qid": "W-009:4f51212a28"
+      }
+     ],
+     "extra": [
+      {
+       "part": "今日",
+       "text": "5 つの 地そうを、下（古い）から 上（新しい）へ 調べた 表です。● は、その 化石が 出た しるしです。A、B、C は 化石の しゅるいです。ぜつめつした 生き物は どれですか。",
+       "svg": "<svg viewBox=\"0 0 320 200\" xmlns=\"http://www.w3.org/2000/svg\"><text x=\"14\" y=\"62\" font-size=\"13\" fill=\"currentColor\">新しい</text><text x=\"14\" y=\"156\" font-size=\"13\" fill=\"currentColor\">古い</text><text x=\"140\" y=\"30\" font-size=\"18\" text-anchor=\"middle\" fill=\"currentColor\">A</text><text x=\"200\" y=\"30\" font-size=\"18\" text-anchor=\"middle\" fill=\"currentColor\">B</text><text x=\"260\" y=\"30\" font-size=\"18\" text-anchor=\"middle\" fill=\"currentColor\">C</text><rect x=\"110\" y=\"40\" width=\"60\" height=\"24\" fill=\"#c8ccd6\" fill-opacity=\"0.3\" stroke=\"currentColor\" stroke-width=\"2\"/><circle cx=\"140\" cy=\"52\" r=\"7\" fill=\"#f08080\" stroke=\"currentColor\" stroke-width=\"2\"/><rect x=\"170\" y=\"40\" width=\"60\" height=\"24\" fill=\"#c8ccd6\" fill-opacity=\"0.3\" stroke=\"currentColor\" stroke-width=\"2\"/><circle cx=\"200\" cy=\"52\" r=\"7\" fill=\"#f08080\" stroke=\"currentColor\" stroke-width=\"2\"/><rect x=\"230\" y=\"40\" width=\"60\" height=\"24\" fill=\"#c8ccd6\" fill-opacity=\"0.3\" stroke=\"currentColor\" stroke-width=\"2\"/><rect x=\"110\" y=\"64\" width=\"60\" height=\"24\" fill=\"#c8ccd6\" fill-opacity=\"0.15\" stroke=\"currentColor\" stroke-width=\"2\"/><circle cx=\"140\" cy=\"76\" r=\"7\" fill=\"#f08080\" stroke=\"currentColor\" stroke-width=\"2\"/><rect x=\"170\" y=\"64\" width=\"60\" height=\"24\" fill=\"#c8ccd6\" fill-opacity=\"0.15\" stroke=\"currentColor\" stroke-width=\"2\"/><circle cx=\"200\" cy=\"76\" r=\"7\" fill=\"#f08080\" stroke=\"currentColor\" stroke-width=\"2\"/><rect x=\"230\" y=\"64\" width=\"60\" height=\"24\" fill=\"#c8ccd6\" fill-opacity=\"0.15\" stroke=\"currentColor\" stroke-width=\"2\"/><rect x=\"110\" y=\"88\" width=\"60\" height=\"24\" fill=\"#c8ccd6\" fill-opacity=\"0.3\" stroke=\"currentColor\" stroke-width=\"2\"/><circle cx=\"140\" cy=\"100\" r=\"7\" fill=\"#f08080\" stroke=\"currentColor\" stroke-width=\"2\"/><rect x=\"170\" y=\"88\" width=\"60\" height=\"24\" fill=\"#c8ccd6\" fill-opacity=\"0.3\" stroke=\"currentColor\" stroke-width=\"2\"/><circle cx=\"200\" cy=\"100\" r=\"7\" fill=\"#f08080\" stroke=\"currentColor\" stroke-width=\"2\"/><rect x=\"230\" y=\"88\" width=\"60\" height=\"24\" fill=\"#c8ccd6\" fill-opacity=\"0.3\" stroke=\"currentColor\" stroke-width=\"2\"/><rect x=\"110\" y=\"112\" width=\"60\" height=\"24\" fill=\"#c8ccd6\" fill-opacity=\"0.15\" stroke=\"currentColor\" stroke-width=\"2\"/><circle cx=\"140\" cy=\"124\" r=\"7\" fill=\"#f08080\" stroke=\"currentColor\" stroke-width=\"2\"/><rect x=\"170\" y=\"112\" width=\"60\" height=\"24\" fill=\"#c8ccd6\" fill-opacity=\"0.15\" stroke=\"currentColor\" stroke-width=\"2\"/><rect x=\"230\" y=\"112\" width=\"60\" height=\"24\" fill=\"#c8ccd6\" fill-opacity=\"0.15\" stroke=\"currentColor\" stroke-width=\"2\"/><circle cx=\"260\" cy=\"124\" r=\"7\" fill=\"#f08080\" stroke=\"currentColor\" stroke-width=\"2\"/><rect x=\"110\" y=\"136\" width=\"60\" height=\"24\" fill=\"#c8ccd6\" fill-opacity=\"0.3\" stroke=\"currentColor\" stroke-width=\"2\"/><circle cx=\"140\" cy=\"148\" r=\"7\" fill=\"#f08080\" stroke=\"currentColor\" stroke-width=\"2\"/><rect x=\"170\" y=\"136\" width=\"60\" height=\"24\" fill=\"#c8ccd6\" fill-opacity=\"0.3\" stroke=\"currentColor\" stroke-width=\"2\"/><rect x=\"230\" y=\"136\" width=\"60\" height=\"24\" fill=\"#c8ccd6\" fill-opacity=\"0.3\" stroke=\"currentColor\" stroke-width=\"2\"/><circle cx=\"260\" cy=\"148\" r=\"7\" fill=\"#f08080\" stroke=\"currentColor\" stroke-width=\"2\"/></svg>",
+       "choices": [
+        "A",
+        "B",
+        "C"
+       ],
+       "answer": "C",
+       "check": "'C'",
+       "hints": [
+        "ぜつめつ ＝ ある 時から あとは、新しい 地そうに 出なくなる こと。",
+        {
+         "text": "いちばん 上（新しい）の 地そうに 出る 化石は どれかを 見ます。",
+         "svg": "<svg viewBox=\"0 0 320 200\" xmlns=\"http://www.w3.org/2000/svg\"><text x=\"14\" y=\"62\" font-size=\"13\" fill=\"currentColor\">新しい</text><text x=\"14\" y=\"156\" font-size=\"13\" fill=\"currentColor\">古い</text><text x=\"140\" y=\"30\" font-size=\"18\" text-anchor=\"middle\" fill=\"currentColor\">A</text><text x=\"200\" y=\"30\" font-size=\"18\" text-anchor=\"middle\" fill=\"currentColor\">B</text><text x=\"260\" y=\"30\" font-size=\"18\" text-anchor=\"middle\" fill=\"currentColor\">C</text><rect x=\"110\" y=\"40\" width=\"60\" height=\"24\" fill=\"#c8ccd6\" fill-opacity=\"0.3\" stroke=\"currentColor\" stroke-width=\"2\"/><circle cx=\"140\" cy=\"52\" r=\"7\" fill=\"#f08080\" stroke=\"currentColor\" stroke-width=\"2\"/><rect x=\"170\" y=\"40\" width=\"60\" height=\"24\" fill=\"#c8ccd6\" fill-opacity=\"0.3\" stroke=\"currentColor\" stroke-width=\"2\"/><circle cx=\"200\" cy=\"52\" r=\"7\" fill=\"#f08080\" stroke=\"currentColor\" stroke-width=\"2\"/><rect x=\"230\" y=\"40\" width=\"60\" height=\"24\" fill=\"#c8ccd6\" fill-opacity=\"0.3\" stroke=\"currentColor\" stroke-width=\"2\"/><rect x=\"110\" y=\"64\" width=\"60\" height=\"24\" fill=\"#c8ccd6\" fill-opacity=\"0.15\" stroke=\"currentColor\" stroke-width=\"2\"/><circle cx=\"140\" cy=\"76\" r=\"7\" fill=\"#f08080\" stroke=\"currentColor\" stroke-width=\"2\"/><rect x=\"170\" y=\"64\" width=\"60\" height=\"24\" fill=\"#c8ccd6\" fill-opacity=\"0.15\" stroke=\"currentColor\" stroke-width=\"2\"/><circle cx=\"200\" cy=\"76\" r=\"7\" fill=\"#f08080\" stroke=\"currentColor\" stroke-width=\"2\"/><rect x=\"230\" y=\"64\" width=\"60\" height=\"24\" fill=\"#c8ccd6\" fill-opacity=\"0.15\" stroke=\"currentColor\" stroke-width=\"2\"/><rect x=\"110\" y=\"88\" width=\"60\" height=\"24\" fill=\"#c8ccd6\" fill-opacity=\"0.3\" stroke=\"currentColor\" stroke-width=\"2\"/><circle cx=\"140\" cy=\"100\" r=\"7\" fill=\"#f08080\" stroke=\"currentColor\" stroke-width=\"2\"/><rect x=\"170\" y=\"88\" width=\"60\" height=\"24\" fill=\"#c8ccd6\" fill-opacity=\"0.3\" stroke=\"currentColor\" stroke-width=\"2\"/><circle cx=\"200\" cy=\"100\" r=\"7\" fill=\"#f08080\" stroke=\"currentColor\" stroke-width=\"2\"/><rect x=\"230\" y=\"88\" width=\"60\" height=\"24\" fill=\"#c8ccd6\" fill-opacity=\"0.3\" stroke=\"currentColor\" stroke-width=\"2\"/><rect x=\"110\" y=\"112\" width=\"60\" height=\"24\" fill=\"#c8ccd6\" fill-opacity=\"0.15\" stroke=\"currentColor\" stroke-width=\"2\"/><circle cx=\"140\" cy=\"124\" r=\"7\" fill=\"#f08080\" stroke=\"currentColor\" stroke-width=\"2\"/><rect x=\"170\" y=\"112\" width=\"60\" height=\"24\" fill=\"#c8ccd6\" fill-opacity=\"0.15\" stroke=\"currentColor\" stroke-width=\"2\"/><rect x=\"230\" y=\"112\" width=\"60\" height=\"24\" fill=\"#c8ccd6\" fill-opacity=\"0.15\" stroke=\"currentColor\" stroke-width=\"2\"/><circle cx=\"260\" cy=\"124\" r=\"7\" fill=\"#f08080\" stroke=\"currentColor\" stroke-width=\"2\"/><rect x=\"110\" y=\"136\" width=\"60\" height=\"24\" fill=\"#c8ccd6\" fill-opacity=\"0.3\" stroke=\"currentColor\" stroke-width=\"2\"/><circle cx=\"140\" cy=\"148\" r=\"7\" fill=\"#f08080\" stroke=\"currentColor\" stroke-width=\"2\"/><rect x=\"170\" y=\"136\" width=\"60\" height=\"24\" fill=\"#c8ccd6\" fill-opacity=\"0.3\" stroke=\"currentColor\" stroke-width=\"2\"/><rect x=\"230\" y=\"136\" width=\"60\" height=\"24\" fill=\"#c8ccd6\" fill-opacity=\"0.3\" stroke=\"currentColor\" stroke-width=\"2\"/><circle cx=\"260\" cy=\"148\" r=\"7\" fill=\"#f08080\" stroke=\"currentColor\" stroke-width=\"2\"/><rect x=\"106\" y=\"38\" width=\"188\" height=\"28\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-dasharray=\"6 4\"/></svg>"
+        },
+        "古い 地そうに だけ 出ていた 化石を さがします。新しい 地そうに だけ 出る ものは、あとから 生まれた 生き物です。"
+       ],
+       "qid": "W-009:80360c776f"
+      },
+      {
+       "part": "今日",
+       "text": "中生代の おわりの 大量ぜつめつで、ある 海に いた 生き物の しゅるいの 10 のうち 7 が ぜつめつしました。その 海には 300 しゅるい いたと すると、ぜつめつしたのは 何しゅるいですか。数で 答えましょう。",
+       "svg": "<svg viewBox=\"0 0 320 200\" xmlns=\"http://www.w3.org/2000/svg\"><rect x=\"20\" y=\"80\" width=\"28\" height=\"36\" fill=\"#c8ccd6\" fill-opacity=\"0.35\" stroke=\"currentColor\" stroke-width=\"2\"/><rect x=\"48\" y=\"80\" width=\"28\" height=\"36\" fill=\"#c8ccd6\" fill-opacity=\"0.35\" stroke=\"currentColor\" stroke-width=\"2\"/><rect x=\"76\" y=\"80\" width=\"28\" height=\"36\" fill=\"#c8ccd6\" fill-opacity=\"0.35\" stroke=\"currentColor\" stroke-width=\"2\"/><rect x=\"104\" y=\"80\" width=\"28\" height=\"36\" fill=\"#c8ccd6\" fill-opacity=\"0.35\" stroke=\"currentColor\" stroke-width=\"2\"/><rect x=\"132\" y=\"80\" width=\"28\" height=\"36\" fill=\"#c8ccd6\" fill-opacity=\"0.35\" stroke=\"currentColor\" stroke-width=\"2\"/><rect x=\"160\" y=\"80\" width=\"28\" height=\"36\" fill=\"#c8ccd6\" fill-opacity=\"0.35\" stroke=\"currentColor\" stroke-width=\"2\"/><rect x=\"188\" y=\"80\" width=\"28\" height=\"36\" fill=\"#c8ccd6\" fill-opacity=\"0.35\" stroke=\"currentColor\" stroke-width=\"2\"/><rect x=\"216\" y=\"80\" width=\"28\" height=\"36\" fill=\"#7bc96f\" fill-opacity=\"0.7\" stroke=\"currentColor\" stroke-width=\"2\"/><rect x=\"244\" y=\"80\" width=\"28\" height=\"36\" fill=\"#7bc96f\" fill-opacity=\"0.7\" stroke=\"currentColor\" stroke-width=\"2\"/><rect x=\"272\" y=\"80\" width=\"28\" height=\"36\" fill=\"#7bc96f\" fill-opacity=\"0.7\" stroke=\"currentColor\" stroke-width=\"2\"/><line x1=\"25\" y1=\"93\" x2=\"43\" y2=\"103\" stroke=\"currentColor\" stroke-width=\"3\"/><line x1=\"25\" y1=\"103\" x2=\"43\" y2=\"93\" stroke=\"currentColor\" stroke-width=\"3\"/><line x1=\"53\" y1=\"93\" x2=\"71\" y2=\"103\" stroke=\"currentColor\" stroke-width=\"3\"/><line x1=\"53\" y1=\"103\" x2=\"71\" y2=\"93\" stroke=\"currentColor\" stroke-width=\"3\"/><line x1=\"81\" y1=\"93\" x2=\"99\" y2=\"103\" stroke=\"currentColor\" stroke-width=\"3\"/><line x1=\"81\" y1=\"103\" x2=\"99\" y2=\"93\" stroke=\"currentColor\" stroke-width=\"3\"/><line x1=\"109\" y1=\"93\" x2=\"127\" y2=\"103\" stroke=\"currentColor\" stroke-width=\"3\"/><line x1=\"109\" y1=\"103\" x2=\"127\" y2=\"93\" stroke=\"currentColor\" stroke-width=\"3\"/><line x1=\"137\" y1=\"93\" x2=\"155\" y2=\"103\" stroke=\"currentColor\" stroke-width=\"3\"/><line x1=\"137\" y1=\"103\" x2=\"155\" y2=\"93\" stroke=\"currentColor\" stroke-width=\"3\"/><line x1=\"165\" y1=\"93\" x2=\"183\" y2=\"103\" stroke=\"currentColor\" stroke-width=\"3\"/><line x1=\"165\" y1=\"103\" x2=\"183\" y2=\"93\" stroke=\"currentColor\" stroke-width=\"3\"/><line x1=\"193\" y1=\"93\" x2=\"211\" y2=\"103\" stroke=\"currentColor\" stroke-width=\"3\"/><line x1=\"193\" y1=\"103\" x2=\"211\" y2=\"93\" stroke=\"currentColor\" stroke-width=\"3\"/><line x1=\"20\" y1=\"66\" x2=\"300\" y2=\"66\" stroke=\"currentColor\" stroke-width=\"2\"/><line x1=\"20\" y1=\"60\" x2=\"20\" y2=\"72\" stroke=\"currentColor\" stroke-width=\"2\"/><line x1=\"300\" y1=\"60\" x2=\"300\" y2=\"72\" stroke=\"currentColor\" stroke-width=\"2\"/><text x=\"160\" y=\"52\" font-size=\"16\" text-anchor=\"middle\" fill=\"currentColor\">300 しゅるい</text><text x=\"160\" y=\"148\" font-size=\"14\" text-anchor=\"middle\" fill=\"currentColor\">10 に 分けた うち、7 が ぜつめつ</text></svg>",
+       "answer": 210,
+       "check": "300 // 10 * 7",
+       "hints": [
+        "300 しゅるいを 10 こに 同じ 数ずつ 分けます。",
+        {
+         "text": "1 こ分が 何しゅるいかを 先に 出します。",
+         "svg": "<svg viewBox=\"0 0 320 200\" xmlns=\"http://www.w3.org/2000/svg\"><rect x=\"20\" y=\"80\" width=\"280\" height=\"36\" fill=\"#c8ccd6\" fill-opacity=\"0.35\" stroke=\"currentColor\" stroke-width=\"2\"/><line x1=\"48\" y1=\"80\" x2=\"48\" y2=\"116\" stroke=\"currentColor\" stroke-width=\"2\"/><line x1=\"76\" y1=\"80\" x2=\"76\" y2=\"116\" stroke=\"currentColor\" stroke-width=\"2\"/><line x1=\"104\" y1=\"80\" x2=\"104\" y2=\"116\" stroke=\"currentColor\" stroke-width=\"2\"/><line x1=\"132\" y1=\"80\" x2=\"132\" y2=\"116\" stroke=\"currentColor\" stroke-width=\"2\"/><line x1=\"160\" y1=\"80\" x2=\"160\" y2=\"116\" stroke=\"currentColor\" stroke-width=\"2\"/><line x1=\"188\" y1=\"80\" x2=\"188\" y2=\"116\" stroke=\"currentColor\" stroke-width=\"2\"/><line x1=\"216\" y1=\"80\" x2=\"216\" y2=\"116\" stroke=\"currentColor\" stroke-width=\"2\"/><line x1=\"244\" y1=\"80\" x2=\"244\" y2=\"116\" stroke=\"currentColor\" stroke-width=\"2\"/><line x1=\"272\" y1=\"80\" x2=\"272\" y2=\"116\" stroke=\"currentColor\" stroke-width=\"2\"/><line x1=\"20\" y1=\"66\" x2=\"300\" y2=\"66\" stroke=\"currentColor\" stroke-width=\"2\"/><line x1=\"20\" y1=\"60\" x2=\"20\" y2=\"72\" stroke=\"currentColor\" stroke-width=\"2\"/><line x1=\"300\" y1=\"60\" x2=\"300\" y2=\"72\" stroke=\"currentColor\" stroke-width=\"2\"/><text x=\"160\" y=\"52\" font-size=\"16\" text-anchor=\"middle\" fill=\"currentColor\">300 しゅるい</text><text x=\"34\" y=\"100\" font-size=\"16\" text-anchor=\"middle\" fill=\"currentColor\">？</text><text x=\"160\" y=\"148\" font-size=\"14\" text-anchor=\"middle\" fill=\"currentColor\">1 こ分は 何しゅるい？</text></svg>"
+        },
+        "1 こ分の 何こ分が ぜつめつしたかを 考えます。"
+       ],
+       "qid": "W-009:d4e8b85d45"
+      }
+     ],
      "key": "練習#2"
     },
     {
      "kind": "わけ",
      "aim": "",
+     "items": [
+      {
+       "part": "わけ",
+       "text": "ちしつ年代の さかい目（古生代と 中生代の さかい目など）は、地そうの 化石が ガラッと かわる ところに 引かれています。なぜ、化石が ガラッと かわる ところを、時代の さかい目に すると よいのでしょうか。わけを 話して みましょう。",
+       "svg": "<svg viewBox=\"0 0 320 200\" xmlns=\"http://www.w3.org/2000/svg\"><rect x=\"40\" y=\"30\" width=\"110\" height=\"36\" fill=\"#7bc96f\" fill-opacity=\"0.55\" stroke=\"currentColor\" stroke-width=\"2\"/><g transform=\"translate(95 48) scale(0.42)\"><circle cx=\"0\" cy=\"0\" r=\"22\" fill=\"#c9a36b\" fill-opacity=\"0.55\" stroke=\"currentColor\" stroke-width=\"2\"/><path d=\"M0 0 a4 4 0 0 1 8 0 a8 8 0 0 1 -16 0 a12 12 0 0 1 24 0\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\"/></g><rect x=\"40\" y=\"66\" width=\"110\" height=\"36\" fill=\"#7bc96f\" fill-opacity=\"0.55\" stroke=\"currentColor\" stroke-width=\"2\"/><g transform=\"translate(95 84) scale(0.42)\"><circle cx=\"0\" cy=\"0\" r=\"22\" fill=\"#c9a36b\" fill-opacity=\"0.55\" stroke=\"currentColor\" stroke-width=\"2\"/><path d=\"M0 0 a4 4 0 0 1 8 0 a8 8 0 0 1 -16 0 a12 12 0 0 1 24 0\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\"/></g><rect x=\"40\" y=\"102\" width=\"110\" height=\"36\" fill=\"#7fc8f8\" fill-opacity=\"0.55\" stroke=\"currentColor\" stroke-width=\"2\"/><g transform=\"translate(95 120) scale(0.42)\"><ellipse cx=\"0\" cy=\"0\" rx=\"38\" ry=\"19\" fill=\"#c9a36b\" fill-opacity=\"0.6\" stroke=\"currentColor\" stroke-width=\"2\"/><path d=\"M-20 -17 Q-28 0 -20 17\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\"/><path d=\"M-6 -19 V19 M8 -19 V19 M21 -16 V16\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.5\"/></g><rect x=\"40\" y=\"138\" width=\"110\" height=\"36\" fill=\"#7fc8f8\" fill-opacity=\"0.55\" stroke=\"currentColor\" stroke-width=\"2\"/><g transform=\"translate(95 156) scale(0.42)\"><ellipse cx=\"0\" cy=\"0\" rx=\"26\" ry=\"12\" fill=\"#c9a36b\" fill-opacity=\"0.6\" stroke=\"currentColor\" stroke-width=\"2\"/><path d=\"M-14 -10 Q-9 0 -14 10 M0 -12 V12 M14 -10 Q9 0 14 10\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.5\"/></g><line x1=\"34\" y1=\"102\" x2=\"156\" y2=\"102\" stroke=\"currentColor\" stroke-width=\"3\" stroke-dasharray=\"6 4\"/><text x=\"162\" y=\"107\" font-size=\"13\" fill=\"currentColor\">化石が ガラッと かわる</text><text x=\"162\" y=\"60\" font-size=\"14\" fill=\"currentColor\">中生代の 地そう</text><text x=\"162\" y=\"154\" font-size=\"14\" fill=\"currentColor\">古生代の 地そう</text></svg>",
+       "explain": "ちしつ年代の さかい目は、地そうに のこる 化石の 組み合わせの 大きな 入れかわり（大量ぜつめつなど）を 目印に 決められている。ぜつめつは 地球 全体で 短い あいだに おきるので、世界の どこの 地そうでも「ある 化石が 消え、べつの 化石が 出てくる」という 同じ 変化が 見える。だから、はなれた 場所の 地そうも くらべられ、同じ さかい目を 引ける（しじゅん化石の 考え方）。さかい目の 年数（約 2 億 5000 万年前など）は、さかい目の まわりの 岩石の 年代を はかる ことで あとから 決められた もので、その はかり方は W-010 で 学ぶ。",
+       "hints": [
+        "大量ぜつめつの 前と あとで、地球に いる 生き物が どう ちがうかを 考えます。",
+        {
+         "text": "大量ぜつめつの 前と あとで、いる 生き物が 入れかわりました。",
+         "svg": "<svg viewBox=\"0 0 320 200\" xmlns=\"http://www.w3.org/2000/svg\"><rect x=\"10\" y=\"36\" width=\"135\" height=\"130\" rx=\"8\" fill=\"#7fc8f8\" fill-opacity=\"0.25\" stroke=\"currentColor\" stroke-width=\"2\"/><text x=\"77\" y=\"58\" font-size=\"14\" text-anchor=\"middle\" fill=\"currentColor\">ぜつめつの 前</text><g transform=\"translate(45 95) scale(0.5)\"><ellipse cx=\"0\" cy=\"0\" rx=\"38\" ry=\"19\" fill=\"#c9a36b\" fill-opacity=\"0.6\" stroke=\"currentColor\" stroke-width=\"2\"/><path d=\"M-20 -17 Q-28 0 -20 17\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\"/><path d=\"M-6 -19 V19 M8 -19 V19 M21 -16 V16\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.5\"/></g><text x=\"45\" y=\"124\" font-size=\"13\" text-anchor=\"middle\" fill=\"currentColor\">三葉虫</text><g transform=\"translate(108 95) scale(0.5)\"><ellipse cx=\"0\" cy=\"0\" rx=\"26\" ry=\"12\" fill=\"#c9a36b\" fill-opacity=\"0.6\" stroke=\"currentColor\" stroke-width=\"2\"/><path d=\"M-14 -10 Q-9 0 -14 10 M0 -12 V12 M14 -10 Q9 0 14 10\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.5\"/></g><text x=\"108\" y=\"124\" font-size=\"13\" text-anchor=\"middle\" fill=\"currentColor\">フズリナ</text><line x1=\"148\" y1=\"100\" x2=\"160\" y2=\"100\" stroke=\"currentColor\" stroke-width=\"3\"/><polygon points=\"158,92 170,100 158,108\" fill=\"currentColor\"/><rect x=\"172\" y=\"36\" width=\"140\" height=\"130\" rx=\"8\" fill=\"#7bc96f\" fill-opacity=\"0.25\" stroke=\"currentColor\" stroke-width=\"2\"/><text x=\"242\" y=\"58\" font-size=\"14\" text-anchor=\"middle\" fill=\"currentColor\">ぜつめつの あと</text><g transform=\"translate(205 92) scale(0.5)\"><ellipse cx=\"0\" cy=\"6\" rx=\"24\" ry=\"14\" fill=\"#7bc96f\" fill-opacity=\"0.6\" stroke=\"currentColor\" stroke-width=\"2\"/><polygon points=\"-16,0 -28,-22 -20,-26 -4,-6\" fill=\"#7bc96f\" fill-opacity=\"0.6\" stroke=\"currentColor\" stroke-width=\"2\"/><ellipse cx=\"-27\" cy=\"-27\" rx=\"10\" ry=\"6\" fill=\"#7bc96f\" fill-opacity=\"0.6\" stroke=\"currentColor\" stroke-width=\"2\"/><circle cx=\"-30\" cy=\"-29\" r=\"2\" fill=\"currentColor\"/><polygon points=\"20,0 48,14 20,17\" fill=\"#7bc96f\" fill-opacity=\"0.6\" stroke=\"currentColor\" stroke-width=\"2\"/><rect x=\"-12\" y=\"17\" width=\"7\" height=\"14\" fill=\"#7bc96f\" fill-opacity=\"0.6\" stroke=\"currentColor\" stroke-width=\"2\"/><rect x=\"6\" y=\"17\" width=\"7\" height=\"14\" fill=\"#7bc96f\" fill-opacity=\"0.6\" stroke=\"currentColor\" stroke-width=\"2\"/></g><text x=\"205\" y=\"124\" font-size=\"13\" text-anchor=\"middle\" fill=\"currentColor\">きょうりゅう</text><g transform=\"translate(275 92) scale(0.5)\"><circle cx=\"0\" cy=\"0\" r=\"22\" fill=\"#c9a36b\" fill-opacity=\"0.55\" stroke=\"currentColor\" stroke-width=\"2\"/><path d=\"M0 0 a4 4 0 0 1 8 0 a8 8 0 0 1 -16 0 a12 12 0 0 1 24 0\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\"/></g><text x=\"275\" y=\"148\" font-size=\"13\" text-anchor=\"middle\" fill=\"currentColor\">アンモナイト</text></svg>"
+        },
+        "地そうの 中の 化石を 見るだけで、その 地そうが さかい目の 前か あとかを 見わけられる ことに 目を 向けます。"
+       ],
+       "paths": [
+        [
+         "大量ぜつめつで、生き物が 一度に たくさん 入れかわる",
+         "だから 地そうの 化石も、さかい目の 前と あとで ガラッと かわる",
+         "化石の ちがいを 見れば、さかい目が どこか すぐ わかる"
+        ],
+        [
+         "三葉虫や アンモナイトの ように、ある 時代だけ さかえた 生き物の 化石は、地そうの 時代を 教えて くれる",
+         "大量ぜつめつは 世界中で ほぼ 同じ ころに おきた",
+         "はなれた 場所の 地そうでも、化石の かわり目を 同じ さかい目に そろえられる"
+        ]
+       ],
+       "qid": "W-009:aea99ead6a"
+      }
+     ],
+     "extra": [
+      {
+       "part": "今日",
+       "text": "がけの 地そうの 図です。上の ほうが 新しい 地そうです。化石が ガラッと かわる ところは どこですか。",
+       "svg": "<svg viewBox=\"0 0 320 200\" xmlns=\"http://www.w3.org/2000/svg\"><rect x=\"100\" y=\"18\" width=\"110\" height=\"32\" fill=\"#c8ccd6\" fill-opacity=\"0.55\" stroke=\"currentColor\" stroke-width=\"2\"/><text x=\"86\" y=\"39\" font-size=\"16\" text-anchor=\"middle\" fill=\"currentColor\">A</text><g transform=\"translate(155 34) scale(0.42)\"><circle cx=\"0\" cy=\"0\" r=\"22\" fill=\"#c9a36b\" fill-opacity=\"0.55\" stroke=\"currentColor\" stroke-width=\"2\"/><path d=\"M0 0 a4 4 0 0 1 8 0 a8 8 0 0 1 -16 0 a12 12 0 0 1 24 0\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\"/></g><rect x=\"100\" y=\"50\" width=\"110\" height=\"32\" fill=\"#c8ccd6\" fill-opacity=\"0.55\" stroke=\"currentColor\" stroke-width=\"2\"/><text x=\"86\" y=\"71\" font-size=\"16\" text-anchor=\"middle\" fill=\"currentColor\">B</text><g transform=\"translate(155 66) scale(0.42)\"><circle cx=\"0\" cy=\"0\" r=\"22\" fill=\"#c9a36b\" fill-opacity=\"0.55\" stroke=\"currentColor\" stroke-width=\"2\"/><path d=\"M0 0 a4 4 0 0 1 8 0 a8 8 0 0 1 -16 0 a12 12 0 0 1 24 0\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\"/></g><rect x=\"100\" y=\"82\" width=\"110\" height=\"32\" fill=\"#c8ccd6\" fill-opacity=\"0.55\" stroke=\"currentColor\" stroke-width=\"2\"/><text x=\"86\" y=\"103\" font-size=\"16\" text-anchor=\"middle\" fill=\"currentColor\">C</text><g transform=\"translate(155 98) scale(0.42)\"><ellipse cx=\"0\" cy=\"0\" rx=\"38\" ry=\"19\" fill=\"#c9a36b\" fill-opacity=\"0.6\" stroke=\"currentColor\" stroke-width=\"2\"/><path d=\"M-20 -17 Q-28 0 -20 17\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\"/><path d=\"M-6 -19 V19 M8 -19 V19 M21 -16 V16\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.5\"/></g><rect x=\"100\" y=\"114\" width=\"110\" height=\"32\" fill=\"#c8ccd6\" fill-opacity=\"0.55\" stroke=\"currentColor\" stroke-width=\"2\"/><text x=\"86\" y=\"135\" font-size=\"16\" text-anchor=\"middle\" fill=\"currentColor\">D</text><g transform=\"translate(155 130) scale(0.42)\"><ellipse cx=\"0\" cy=\"0\" rx=\"38\" ry=\"19\" fill=\"#c9a36b\" fill-opacity=\"0.6\" stroke=\"currentColor\" stroke-width=\"2\"/><path d=\"M-20 -17 Q-28 0 -20 17\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\"/><path d=\"M-6 -19 V19 M8 -19 V19 M21 -16 V16\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.5\"/></g><rect x=\"100\" y=\"146\" width=\"110\" height=\"32\" fill=\"#c8ccd6\" fill-opacity=\"0.55\" stroke=\"currentColor\" stroke-width=\"2\"/><text x=\"86\" y=\"167\" font-size=\"16\" text-anchor=\"middle\" fill=\"currentColor\">E</text><g transform=\"translate(155 162) scale(0.42)\"><ellipse cx=\"0\" cy=\"0\" rx=\"38\" ry=\"19\" fill=\"#c9a36b\" fill-opacity=\"0.6\" stroke=\"currentColor\" stroke-width=\"2\"/><path d=\"M-20 -17 Q-28 0 -20 17\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\"/><path d=\"M-6 -19 V19 M8 -19 V19 M21 -16 V16\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.5\"/></g></svg>",
+       "choices": [
+        "B と C の 間",
+        "A と B の 間",
+        "D と E の 間"
+       ],
+       "answer": "B と C の 間",
+       "check": "'B と C の 間'",
+       "hints": [
+        "となり合う 地そうで、出る 化石の しゅるいが かわる ところを さがします。",
+        {
+         "text": "古生代の 化石と、中生代の 化石を くらべます。",
+         "svg": "<svg viewBox=\"0 0 320 200\" xmlns=\"http://www.w3.org/2000/svg\"><rect x=\"10\" y=\"36\" width=\"135\" height=\"130\" rx=\"8\" fill=\"#7fc8f8\" fill-opacity=\"0.25\" stroke=\"currentColor\" stroke-width=\"2\"/><text x=\"77\" y=\"58\" font-size=\"14\" text-anchor=\"middle\" fill=\"currentColor\">ぜつめつの 前</text><g transform=\"translate(45 95) scale(0.5)\"><ellipse cx=\"0\" cy=\"0\" rx=\"38\" ry=\"19\" fill=\"#c9a36b\" fill-opacity=\"0.6\" stroke=\"currentColor\" stroke-width=\"2\"/><path d=\"M-20 -17 Q-28 0 -20 17\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\"/><path d=\"M-6 -19 V19 M8 -19 V19 M21 -16 V16\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.5\"/></g><text x=\"45\" y=\"124\" font-size=\"13\" text-anchor=\"middle\" fill=\"currentColor\">三葉虫</text><g transform=\"translate(108 95) scale(0.5)\"><ellipse cx=\"0\" cy=\"0\" rx=\"26\" ry=\"12\" fill=\"#c9a36b\" fill-opacity=\"0.6\" stroke=\"currentColor\" stroke-width=\"2\"/><path d=\"M-14 -10 Q-9 0 -14 10 M0 -12 V12 M14 -10 Q9 0 14 10\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.5\"/></g><text x=\"108\" y=\"124\" font-size=\"13\" text-anchor=\"middle\" fill=\"currentColor\">フズリナ</text><line x1=\"148\" y1=\"100\" x2=\"160\" y2=\"100\" stroke=\"currentColor\" stroke-width=\"3\"/><polygon points=\"158,92 170,100 158,108\" fill=\"currentColor\"/><rect x=\"172\" y=\"36\" width=\"140\" height=\"130\" rx=\"8\" fill=\"#7bc96f\" fill-opacity=\"0.25\" stroke=\"currentColor\" stroke-width=\"2\"/><text x=\"242\" y=\"58\" font-size=\"14\" text-anchor=\"middle\" fill=\"currentColor\">ぜつめつの あと</text><g transform=\"translate(205 92) scale(0.5)\"><ellipse cx=\"0\" cy=\"6\" rx=\"24\" ry=\"14\" fill=\"#7bc96f\" fill-opacity=\"0.6\" stroke=\"currentColor\" stroke-width=\"2\"/><polygon points=\"-16,0 -28,-22 -20,-26 -4,-6\" fill=\"#7bc96f\" fill-opacity=\"0.6\" stroke=\"currentColor\" stroke-width=\"2\"/><ellipse cx=\"-27\" cy=\"-27\" rx=\"10\" ry=\"6\" fill=\"#7bc96f\" fill-opacity=\"0.6\" stroke=\"currentColor\" stroke-width=\"2\"/><circle cx=\"-30\" cy=\"-29\" r=\"2\" fill=\"currentColor\"/><polygon points=\"20,0 48,14 20,17\" fill=\"#7bc96f\" fill-opacity=\"0.6\" stroke=\"currentColor\" stroke-width=\"2\"/><rect x=\"-12\" y=\"17\" width=\"7\" height=\"14\" fill=\"#7bc96f\" fill-opacity=\"0.6\" stroke=\"currentColor\" stroke-width=\"2\"/><rect x=\"6\" y=\"17\" width=\"7\" height=\"14\" fill=\"#7bc96f\" fill-opacity=\"0.6\" stroke=\"currentColor\" stroke-width=\"2\"/></g><text x=\"205\" y=\"124\" font-size=\"13\" text-anchor=\"middle\" fill=\"currentColor\">きょうりゅう</text><g transform=\"translate(275 92) scale(0.5)\"><circle cx=\"0\" cy=\"0\" r=\"22\" fill=\"#c9a36b\" fill-opacity=\"0.55\" stroke=\"currentColor\" stroke-width=\"2\"/><path d=\"M0 0 a4 4 0 0 1 8 0 a8 8 0 0 1 -16 0 a12 12 0 0 1 24 0\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\"/></g><text x=\"275\" y=\"148\" font-size=\"13\" text-anchor=\"middle\" fill=\"currentColor\">アンモナイト</text></svg>"
+        },
+        "D と E には、どちらにも 同じ 化石が 出ています。"
+       ],
+       "qid": "W-009:6c1b5e200c"
+      },
+      {
+       "part": "今日",
+       "text": "ア と イ は、とても はなれた 場所の がけです。どちらの がけにも、同じ 化石の かわり目が あります。2 つの かわり目は、同じ ころの できごとと 考えて よいですか。",
+       "svg": "<svg viewBox=\"0 0 320 200\" xmlns=\"http://www.w3.org/2000/svg\"><rect x=\"30\" y=\"34\" width=\"100\" height=\"34\" fill=\"#7bc96f\" fill-opacity=\"0.55\" stroke=\"currentColor\" stroke-width=\"2\"/><g transform=\"translate(80 51) scale(0.42)\"><circle cx=\"0\" cy=\"0\" r=\"22\" fill=\"#c9a36b\" fill-opacity=\"0.55\" stroke=\"currentColor\" stroke-width=\"2\"/><path d=\"M0 0 a4 4 0 0 1 8 0 a8 8 0 0 1 -16 0 a12 12 0 0 1 24 0\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\"/></g><rect x=\"30\" y=\"68\" width=\"100\" height=\"34\" fill=\"#7bc96f\" fill-opacity=\"0.55\" stroke=\"currentColor\" stroke-width=\"2\"/><g transform=\"translate(80 85) scale(0.42)\"><circle cx=\"0\" cy=\"0\" r=\"22\" fill=\"#c9a36b\" fill-opacity=\"0.55\" stroke=\"currentColor\" stroke-width=\"2\"/><path d=\"M0 0 a4 4 0 0 1 8 0 a8 8 0 0 1 -16 0 a12 12 0 0 1 24 0\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\"/></g><rect x=\"30\" y=\"102\" width=\"100\" height=\"34\" fill=\"#7fc8f8\" fill-opacity=\"0.55\" stroke=\"currentColor\" stroke-width=\"2\"/><g transform=\"translate(80 119) scale(0.42)\"><ellipse cx=\"0\" cy=\"0\" rx=\"38\" ry=\"19\" fill=\"#c9a36b\" fill-opacity=\"0.6\" stroke=\"currentColor\" stroke-width=\"2\"/><path d=\"M-20 -17 Q-28 0 -20 17\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\"/><path d=\"M-6 -19 V19 M8 -19 V19 M21 -16 V16\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.5\"/></g><rect x=\"30\" y=\"136\" width=\"100\" height=\"34\" fill=\"#7fc8f8\" fill-opacity=\"0.55\" stroke=\"currentColor\" stroke-width=\"2\"/><g transform=\"translate(80 153) scale(0.42)\"><ellipse cx=\"0\" cy=\"0\" rx=\"26\" ry=\"12\" fill=\"#c9a36b\" fill-opacity=\"0.6\" stroke=\"currentColor\" stroke-width=\"2\"/><path d=\"M-14 -10 Q-9 0 -14 10 M0 -12 V12 M14 -10 Q9 0 14 10\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.5\"/></g><rect x=\"190\" y=\"34\" width=\"100\" height=\"34\" fill=\"#7bc96f\" fill-opacity=\"0.55\" stroke=\"currentColor\" stroke-width=\"2\"/><g transform=\"translate(240 51) scale(0.42)\"><circle cx=\"0\" cy=\"0\" r=\"22\" fill=\"#c9a36b\" fill-opacity=\"0.55\" stroke=\"currentColor\" stroke-width=\"2\"/><path d=\"M0 0 a4 4 0 0 1 8 0 a8 8 0 0 1 -16 0 a12 12 0 0 1 24 0\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\"/></g><rect x=\"190\" y=\"68\" width=\"100\" height=\"34\" fill=\"#7bc96f\" fill-opacity=\"0.55\" stroke=\"currentColor\" stroke-width=\"2\"/><g transform=\"translate(240 85) scale(0.42)\"><circle cx=\"0\" cy=\"0\" r=\"22\" fill=\"#c9a36b\" fill-opacity=\"0.55\" stroke=\"currentColor\" stroke-width=\"2\"/><path d=\"M0 0 a4 4 0 0 1 8 0 a8 8 0 0 1 -16 0 a12 12 0 0 1 24 0\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\"/></g><rect x=\"190\" y=\"102\" width=\"100\" height=\"34\" fill=\"#7fc8f8\" fill-opacity=\"0.55\" stroke=\"currentColor\" stroke-width=\"2\"/><g transform=\"translate(240 119) scale(0.42)\"><ellipse cx=\"0\" cy=\"0\" rx=\"38\" ry=\"19\" fill=\"#c9a36b\" fill-opacity=\"0.6\" stroke=\"currentColor\" stroke-width=\"2\"/><path d=\"M-20 -17 Q-28 0 -20 17\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\"/><path d=\"M-6 -19 V19 M8 -19 V19 M21 -16 V16\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.5\"/></g><rect x=\"190\" y=\"136\" width=\"100\" height=\"34\" fill=\"#7fc8f8\" fill-opacity=\"0.55\" stroke=\"currentColor\" stroke-width=\"2\"/><g transform=\"translate(240 153) scale(0.42)\"><ellipse cx=\"0\" cy=\"0\" rx=\"26\" ry=\"12\" fill=\"#c9a36b\" fill-opacity=\"0.6\" stroke=\"currentColor\" stroke-width=\"2\"/><path d=\"M-14 -10 Q-9 0 -14 10 M0 -12 V12 M14 -10 Q9 0 14 10\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.5\"/></g><text x=\"80\" y=\"20\" font-size=\"14\" text-anchor=\"middle\" fill=\"currentColor\">ア の がけ</text><text x=\"240\" y=\"20\" font-size=\"14\" text-anchor=\"middle\" fill=\"currentColor\">イ の がけ</text><line x1=\"24\" y1=\"102\" x2=\"136\" y2=\"102\" stroke=\"currentColor\" stroke-width=\"3\" stroke-dasharray=\"6 4\"/><line x1=\"184\" y1=\"102\" x2=\"296\" y2=\"102\" stroke=\"currentColor\" stroke-width=\"3\" stroke-dasharray=\"6 4\"/><text x=\"160\" y=\"185\" font-size=\"14\" text-anchor=\"middle\" fill=\"currentColor\">化石の かわり目</text></svg>",
+       "choices": [
+        "よくない。化石の かわり目は 場所ごとに ちがう ころに できるから",
+        "よくない。場所が ちがうと、できた 時代も ちがうから",
+        "よい。大量ぜつめつは 世界中で おきたから"
+       ],
+       "answer": "よい。大量ぜつめつは 世界中で おきたから",
+       "check": "'よい。大量ぜつめつは 世界中で おきたから'",
+       "hints": [
+        "大量ぜつめつは、地球の 一部だけで おきたことでは ありません。",
+        {
+         "text": "2 つの がけで、出てくる 化石の ならびを くらべます。",
+         "svg": "<svg viewBox=\"0 0 320 200\" xmlns=\"http://www.w3.org/2000/svg\"><rect x=\"30\" y=\"34\" width=\"100\" height=\"34\" fill=\"#7bc96f\" fill-opacity=\"0.55\" stroke=\"currentColor\" stroke-width=\"2\"/><g transform=\"translate(80 51) scale(0.42)\"><circle cx=\"0\" cy=\"0\" r=\"22\" fill=\"#c9a36b\" fill-opacity=\"0.55\" stroke=\"currentColor\" stroke-width=\"2\"/><path d=\"M0 0 a4 4 0 0 1 8 0 a8 8 0 0 1 -16 0 a12 12 0 0 1 24 0\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\"/></g><rect x=\"30\" y=\"68\" width=\"100\" height=\"34\" fill=\"#7bc96f\" fill-opacity=\"0.55\" stroke=\"currentColor\" stroke-width=\"2\"/><g transform=\"translate(80 85) scale(0.42)\"><circle cx=\"0\" cy=\"0\" r=\"22\" fill=\"#c9a36b\" fill-opacity=\"0.55\" stroke=\"currentColor\" stroke-width=\"2\"/><path d=\"M0 0 a4 4 0 0 1 8 0 a8 8 0 0 1 -16 0 a12 12 0 0 1 24 0\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\"/></g><rect x=\"30\" y=\"102\" width=\"100\" height=\"34\" fill=\"#7fc8f8\" fill-opacity=\"0.55\" stroke=\"currentColor\" stroke-width=\"2\"/><g transform=\"translate(80 119) scale(0.42)\"><ellipse cx=\"0\" cy=\"0\" rx=\"38\" ry=\"19\" fill=\"#c9a36b\" fill-opacity=\"0.6\" stroke=\"currentColor\" stroke-width=\"2\"/><path d=\"M-20 -17 Q-28 0 -20 17\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\"/><path d=\"M-6 -19 V19 M8 -19 V19 M21 -16 V16\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.5\"/></g><rect x=\"30\" y=\"136\" width=\"100\" height=\"34\" fill=\"#7fc8f8\" fill-opacity=\"0.55\" stroke=\"currentColor\" stroke-width=\"2\"/><g transform=\"translate(80 153) scale(0.42)\"><ellipse cx=\"0\" cy=\"0\" rx=\"26\" ry=\"12\" fill=\"#c9a36b\" fill-opacity=\"0.6\" stroke=\"currentColor\" stroke-width=\"2\"/><path d=\"M-14 -10 Q-9 0 -14 10 M0 -12 V12 M14 -10 Q9 0 14 10\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.5\"/></g><rect x=\"190\" y=\"34\" width=\"100\" height=\"34\" fill=\"#7bc96f\" fill-opacity=\"0.55\" stroke=\"currentColor\" stroke-width=\"2\"/><g transform=\"translate(240 51) scale(0.42)\"><circle cx=\"0\" cy=\"0\" r=\"22\" fill=\"#c9a36b\" fill-opacity=\"0.55\" stroke=\"currentColor\" stroke-width=\"2\"/><path d=\"M0 0 a4 4 0 0 1 8 0 a8 8 0 0 1 -16 0 a12 12 0 0 1 24 0\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\"/></g><rect x=\"190\" y=\"68\" width=\"100\" height=\"34\" fill=\"#7bc96f\" fill-opacity=\"0.55\" stroke=\"currentColor\" stroke-width=\"2\"/><g transform=\"translate(240 85) scale(0.42)\"><circle cx=\"0\" cy=\"0\" r=\"22\" fill=\"#c9a36b\" fill-opacity=\"0.55\" stroke=\"currentColor\" stroke-width=\"2\"/><path d=\"M0 0 a4 4 0 0 1 8 0 a8 8 0 0 1 -16 0 a12 12 0 0 1 24 0\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\"/></g><rect x=\"190\" y=\"102\" width=\"100\" height=\"34\" fill=\"#7fc8f8\" fill-opacity=\"0.55\" stroke=\"currentColor\" stroke-width=\"2\"/><g transform=\"translate(240 119) scale(0.42)\"><ellipse cx=\"0\" cy=\"0\" rx=\"38\" ry=\"19\" fill=\"#c9a36b\" fill-opacity=\"0.6\" stroke=\"currentColor\" stroke-width=\"2\"/><path d=\"M-20 -17 Q-28 0 -20 17\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\"/><path d=\"M-6 -19 V19 M8 -19 V19 M21 -16 V16\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.5\"/></g><rect x=\"190\" y=\"136\" width=\"100\" height=\"34\" fill=\"#7fc8f8\" fill-opacity=\"0.55\" stroke=\"currentColor\" stroke-width=\"2\"/><g transform=\"translate(240 153) scale(0.42)\"><ellipse cx=\"0\" cy=\"0\" rx=\"26\" ry=\"12\" fill=\"#c9a36b\" fill-opacity=\"0.6\" stroke=\"currentColor\" stroke-width=\"2\"/><path d=\"M-14 -10 Q-9 0 -14 10 M0 -12 V12 M14 -10 Q9 0 14 10\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.5\"/></g><text x=\"80\" y=\"20\" font-size=\"14\" text-anchor=\"middle\" fill=\"currentColor\">ア の がけ</text><text x=\"240\" y=\"20\" font-size=\"14\" text-anchor=\"middle\" fill=\"currentColor\">イ の がけ</text></svg>"
+        },
+        "同じ 化石の ならびで かわり目が あるなら、同じ できごとの あとだと 考えられます。"
+       ],
+       "qid": "W-009:cd5aa33538"
+      }
+     ],
      "key": "わけ#1"
     },
     {
      "kind": "混ぜる",
      "aim": "",
+     "items": [
+      {
+       "part": "今日",
+       "text": "地そうの 図です。上の ほうが 新しい 地そうです。中生代に できた 地そうは どれですか。",
+       "svg": "<svg viewBox=\"0 0 320 200\" xmlns=\"http://www.w3.org/2000/svg\"><rect x=\"100\" y=\"18\" width=\"110\" height=\"36\" fill=\"#c8ccd6\" fill-opacity=\"0.55\" stroke=\"currentColor\" stroke-width=\"2\"/><text x=\"86\" y=\"41\" font-size=\"16\" text-anchor=\"middle\" fill=\"currentColor\">A</text><g transform=\"translate(155 36) scale(0.42)\"><ellipse cx=\"6\" cy=\"2\" rx=\"28\" ry=\"19\" fill=\"#c8ccd6\" fill-opacity=\"0.8\" stroke=\"currentColor\" stroke-width=\"2\"/><circle cx=\"-24\" cy=\"-2\" r=\"14\" fill=\"#c8ccd6\" fill-opacity=\"0.8\" stroke=\"currentColor\" stroke-width=\"2\"/><path d=\"M-34 4 Q-42 18 -34 30\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"5\" stroke-linecap=\"round\"/><path d=\"M-30 8 Q-44 10 -46 0\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\"/><circle cx=\"-27\" cy=\"-6\" r=\"2\" fill=\"currentColor\"/><rect x=\"-10\" y=\"17\" width=\"9\" height=\"16\" fill=\"#c8ccd6\" fill-opacity=\"0.8\" stroke=\"currentColor\" stroke-width=\"2\"/><rect x=\"14\" y=\"17\" width=\"9\" height=\"16\" fill=\"#c8ccd6\" fill-opacity=\"0.8\" stroke=\"currentColor\" stroke-width=\"2\"/></g><rect x=\"100\" y=\"54\" width=\"110\" height=\"36\" fill=\"#c8ccd6\" fill-opacity=\"0.55\" stroke=\"currentColor\" stroke-width=\"2\"/><text x=\"86\" y=\"77\" font-size=\"16\" text-anchor=\"middle\" fill=\"currentColor\">B</text><g transform=\"translate(155 72) scale(0.42)\"><circle cx=\"0\" cy=\"0\" r=\"22\" fill=\"#c9a36b\" fill-opacity=\"0.55\" stroke=\"currentColor\" stroke-width=\"2\"/><path d=\"M0 0 a4 4 0 0 1 8 0 a8 8 0 0 1 -16 0 a12 12 0 0 1 24 0\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\"/></g><rect x=\"100\" y=\"90\" width=\"110\" height=\"36\" fill=\"#c8ccd6\" fill-opacity=\"0.55\" stroke=\"currentColor\" stroke-width=\"2\"/><text x=\"86\" y=\"113\" font-size=\"16\" text-anchor=\"middle\" fill=\"currentColor\">C</text><g transform=\"translate(155 108) scale(0.42)\"><ellipse cx=\"0\" cy=\"0\" rx=\"38\" ry=\"19\" fill=\"#c9a36b\" fill-opacity=\"0.6\" stroke=\"currentColor\" stroke-width=\"2\"/><path d=\"M-20 -17 Q-28 0 -20 17\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\"/><path d=\"M-6 -19 V19 M8 -19 V19 M21 -16 V16\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.5\"/></g><rect x=\"100\" y=\"126\" width=\"110\" height=\"36\" fill=\"#c8ccd6\" fill-opacity=\"0.55\" stroke=\"currentColor\" stroke-width=\"2\"/><text x=\"86\" y=\"149\" font-size=\"16\" text-anchor=\"middle\" fill=\"currentColor\">D</text><g transform=\"translate(155 144) scale(0.42)\"><ellipse cx=\"0\" cy=\"0\" rx=\"26\" ry=\"12\" fill=\"#c9a36b\" fill-opacity=\"0.6\" stroke=\"currentColor\" stroke-width=\"2\"/><path d=\"M-14 -10 Q-9 0 -14 10 M0 -12 V12 M14 -10 Q9 0 14 10\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.5\"/></g></svg>",
+       "choices": [
+        "A",
+        "B",
+        "C",
+        "D"
+       ],
+       "answer": "B",
+       "check": "'B'",
+       "hints": [
+        "地そうごとに 出る 化石が ちがいます。中生代の 生き物を さがします。",
+        {
+         "text": "見本の 図で、中生代の 列に かいてあった 生き物の 1 つです。",
+         "svg": "<svg viewBox=\"0 0 320 200\" xmlns=\"http://www.w3.org/2000/svg\"><rect x=\"10\" y=\"8\" width=\"100\" height=\"26\" fill=\"#7fc8f8\" fill-opacity=\"0.45\" stroke=\"currentColor\" stroke-width=\"2\"/><text x=\"60\" y=\"27\" font-size=\"16\" text-anchor=\"middle\" fill=\"currentColor\">古生代</text><rect x=\"10\" y=\"34\" width=\"100\" height=\"138\" fill=\"#7fc8f8\" fill-opacity=\"0.2\" stroke=\"currentColor\" stroke-width=\"2\"/><rect x=\"110\" y=\"8\" width=\"100\" height=\"26\" fill=\"#7bc96f\" fill-opacity=\"0.45\" stroke=\"currentColor\" stroke-width=\"2\"/><text x=\"160\" y=\"27\" font-size=\"16\" text-anchor=\"middle\" fill=\"currentColor\">中生代</text><rect x=\"110\" y=\"34\" width=\"100\" height=\"138\" fill=\"#7bc96f\" fill-opacity=\"0.2\" stroke=\"currentColor\" stroke-width=\"2\"/><g transform=\"translate(160 70) scale(0.5)\"><ellipse cx=\"0\" cy=\"6\" rx=\"24\" ry=\"14\" fill=\"#7bc96f\" fill-opacity=\"0.6\" stroke=\"currentColor\" stroke-width=\"2\"/><polygon points=\"-16,0 -28,-22 -20,-26 -4,-6\" fill=\"#7bc96f\" fill-opacity=\"0.6\" stroke=\"currentColor\" stroke-width=\"2\"/><ellipse cx=\"-27\" cy=\"-27\" rx=\"10\" ry=\"6\" fill=\"#7bc96f\" fill-opacity=\"0.6\" stroke=\"currentColor\" stroke-width=\"2\"/><circle cx=\"-30\" cy=\"-29\" r=\"2\" fill=\"currentColor\"/><polygon points=\"20,0 48,14 20,17\" fill=\"#7bc96f\" fill-opacity=\"0.6\" stroke=\"currentColor\" stroke-width=\"2\"/><rect x=\"-12\" y=\"17\" width=\"7\" height=\"14\" fill=\"#7bc96f\" fill-opacity=\"0.6\" stroke=\"currentColor\" stroke-width=\"2\"/><rect x=\"6\" y=\"17\" width=\"7\" height=\"14\" fill=\"#7bc96f\" fill-opacity=\"0.6\" stroke=\"currentColor\" stroke-width=\"2\"/></g><text x=\"160\" y=\"104\" font-size=\"13\" text-anchor=\"middle\" fill=\"currentColor\">きょうりゅう</text><rect x=\"210\" y=\"8\" width=\"100\" height=\"26\" fill=\"#f3c969\" fill-opacity=\"0.45\" stroke=\"currentColor\" stroke-width=\"2\"/><text x=\"260\" y=\"27\" font-size=\"16\" text-anchor=\"middle\" fill=\"currentColor\">新生代</text><rect x=\"210\" y=\"34\" width=\"100\" height=\"138\" fill=\"#f3c969\" fill-opacity=\"0.2\" stroke=\"currentColor\" stroke-width=\"2\"/><text x=\"10\" y=\"192\" font-size=\"13\" fill=\"currentColor\">5.4 億年前</text><text x=\"110\" y=\"192\" font-size=\"13\" text-anchor=\"middle\" fill=\"currentColor\">2.5 億年前</text><text x=\"210\" y=\"192\" font-size=\"13\" text-anchor=\"middle\" fill=\"currentColor\">6600 万年前</text><text x=\"310\" y=\"192\" font-size=\"13\" text-anchor=\"end\" fill=\"currentColor\">いま</text></svg>"
+        },
+        "4 つの 地そうの 化石を 1 つずつ、どの 時代の 生き物か たしかめます。"
+       ],
+       "qid": "W-009:9251ac8987"
+      },
+      {
+       "part": "今日",
+       "text": "中生代は 約 1 億 8400 万年、新生代は 約 6600 万年です。中生代は 新生代より 約 何万年 長いですか。数で 答えましょう。",
+       "svg": "<svg viewBox=\"0 0 320 200\" xmlns=\"http://www.w3.org/2000/svg\"><rect x=\"16\" y=\"56\" width=\"288\" height=\"30\" fill=\"#7bc96f\" fill-opacity=\"0.55\" stroke=\"currentColor\" stroke-width=\"2\"/><text x=\"16\" y=\"48\" font-size=\"14\" fill=\"currentColor\">中生代  18400 万年</text><rect x=\"16\" y=\"112\" width=\"103.304\" height=\"30\" fill=\"#f3c969\" fill-opacity=\"0.55\" stroke=\"currentColor\" stroke-width=\"2\"/><text x=\"16\" y=\"104\" font-size=\"14\" fill=\"currentColor\">新生代  6600 万年</text></svg>",
+       "answer": 11800,
+       "check": "18400 - 6600",
+       "hints": [
+        "長い ほうから みじかい ほうを ひくと、ちがいが 出ます。",
+        {
+         "text": "2 本の ぼうの 長さの ちがいを 出します。",
+         "svg": "<svg viewBox=\"0 0 320 200\" xmlns=\"http://www.w3.org/2000/svg\"><rect x=\"16\" y=\"56\" width=\"288\" height=\"30\" fill=\"#7bc96f\" fill-opacity=\"0.55\" stroke=\"currentColor\" stroke-width=\"2\"/><text x=\"16\" y=\"48\" font-size=\"14\" fill=\"currentColor\">中生代  18400 万年</text><rect x=\"16\" y=\"112\" width=\"103.304\" height=\"30\" fill=\"#f3c969\" fill-opacity=\"0.55\" stroke=\"currentColor\" stroke-width=\"2\"/><text x=\"16\" y=\"104\" font-size=\"14\" fill=\"currentColor\">新生代  6600 万年</text><rect x=\"119.304\" y=\"112\" width=\"184.696\" height=\"30\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-dasharray=\"6 4\"/><text x=\"211.652\" y=\"132\" font-size=\"16\" text-anchor=\"middle\" fill=\"currentColor\">？</text></svg>"
+        },
+        "1 億 8400 万年は 18400 万年です。18400 － 6600 を 計算します。"
+       ],
+       "qid": "W-009:ff600753d6"
+      },
+      {
+       "part": "今日",
+       "text": "5 つの 地そうを、下（古い）から 上（新しい）へ 調べた 表です。● は、その 化石が 出た しるしです。A、B、C は 化石の しゅるいです。ぜつめつした 生き物は どれですか。",
+       "svg": "<svg viewBox=\"0 0 320 200\" xmlns=\"http://www.w3.org/2000/svg\"><text x=\"14\" y=\"62\" font-size=\"13\" fill=\"currentColor\">新しい</text><text x=\"14\" y=\"156\" font-size=\"13\" fill=\"currentColor\">古い</text><text x=\"140\" y=\"30\" font-size=\"18\" text-anchor=\"middle\" fill=\"currentColor\">A</text><text x=\"200\" y=\"30\" font-size=\"18\" text-anchor=\"middle\" fill=\"currentColor\">B</text><text x=\"260\" y=\"30\" font-size=\"18\" text-anchor=\"middle\" fill=\"currentColor\">C</text><rect x=\"110\" y=\"40\" width=\"60\" height=\"24\" fill=\"#c8ccd6\" fill-opacity=\"0.3\" stroke=\"currentColor\" stroke-width=\"2\"/><circle cx=\"140\" cy=\"52\" r=\"7\" fill=\"#f08080\" stroke=\"currentColor\" stroke-width=\"2\"/><rect x=\"170\" y=\"40\" width=\"60\" height=\"24\" fill=\"#c8ccd6\" fill-opacity=\"0.3\" stroke=\"currentColor\" stroke-width=\"2\"/><circle cx=\"200\" cy=\"52\" r=\"7\" fill=\"#f08080\" stroke=\"currentColor\" stroke-width=\"2\"/><rect x=\"230\" y=\"40\" width=\"60\" height=\"24\" fill=\"#c8ccd6\" fill-opacity=\"0.3\" stroke=\"currentColor\" stroke-width=\"2\"/><rect x=\"110\" y=\"64\" width=\"60\" height=\"24\" fill=\"#c8ccd6\" fill-opacity=\"0.15\" stroke=\"currentColor\" stroke-width=\"2\"/><circle cx=\"140\" cy=\"76\" r=\"7\" fill=\"#f08080\" stroke=\"currentColor\" stroke-width=\"2\"/><rect x=\"170\" y=\"64\" width=\"60\" height=\"24\" fill=\"#c8ccd6\" fill-opacity=\"0.15\" stroke=\"currentColor\" stroke-width=\"2\"/><circle cx=\"200\" cy=\"76\" r=\"7\" fill=\"#f08080\" stroke=\"currentColor\" stroke-width=\"2\"/><rect x=\"230\" y=\"64\" width=\"60\" height=\"24\" fill=\"#c8ccd6\" fill-opacity=\"0.15\" stroke=\"currentColor\" stroke-width=\"2\"/><circle cx=\"260\" cy=\"76\" r=\"7\" fill=\"#f08080\" stroke=\"currentColor\" stroke-width=\"2\"/><rect x=\"110\" y=\"88\" width=\"60\" height=\"24\" fill=\"#c8ccd6\" fill-opacity=\"0.3\" stroke=\"currentColor\" stroke-width=\"2\"/><circle cx=\"140\" cy=\"100\" r=\"7\" fill=\"#f08080\" stroke=\"currentColor\" stroke-width=\"2\"/><rect x=\"170\" y=\"88\" width=\"60\" height=\"24\" fill=\"#c8ccd6\" fill-opacity=\"0.3\" stroke=\"currentColor\" stroke-width=\"2\"/><rect x=\"230\" y=\"88\" width=\"60\" height=\"24\" fill=\"#c8ccd6\" fill-opacity=\"0.3\" stroke=\"currentColor\" stroke-width=\"2\"/><circle cx=\"260\" cy=\"100\" r=\"7\" fill=\"#f08080\" stroke=\"currentColor\" stroke-width=\"2\"/><rect x=\"110\" y=\"112\" width=\"60\" height=\"24\" fill=\"#c8ccd6\" fill-opacity=\"0.15\" stroke=\"currentColor\" stroke-width=\"2\"/><circle cx=\"140\" cy=\"124\" r=\"7\" fill=\"#f08080\" stroke=\"currentColor\" stroke-width=\"2\"/><rect x=\"170\" y=\"112\" width=\"60\" height=\"24\" fill=\"#c8ccd6\" fill-opacity=\"0.15\" stroke=\"currentColor\" stroke-width=\"2\"/><rect x=\"230\" y=\"112\" width=\"60\" height=\"24\" fill=\"#c8ccd6\" fill-opacity=\"0.15\" stroke=\"currentColor\" stroke-width=\"2\"/><circle cx=\"260\" cy=\"124\" r=\"7\" fill=\"#f08080\" stroke=\"currentColor\" stroke-width=\"2\"/><rect x=\"110\" y=\"136\" width=\"60\" height=\"24\" fill=\"#c8ccd6\" fill-opacity=\"0.3\" stroke=\"currentColor\" stroke-width=\"2\"/><circle cx=\"140\" cy=\"148\" r=\"7\" fill=\"#f08080\" stroke=\"currentColor\" stroke-width=\"2\"/><rect x=\"170\" y=\"136\" width=\"60\" height=\"24\" fill=\"#c8ccd6\" fill-opacity=\"0.3\" stroke=\"currentColor\" stroke-width=\"2\"/><rect x=\"230\" y=\"136\" width=\"60\" height=\"24\" fill=\"#c8ccd6\" fill-opacity=\"0.3\" stroke=\"currentColor\" stroke-width=\"2\"/><circle cx=\"260\" cy=\"148\" r=\"7\" fill=\"#f08080\" stroke=\"currentColor\" stroke-width=\"2\"/></svg>",
+       "choices": [
+        "A",
+        "B",
+        "C"
+       ],
+       "answer": "C",
+       "check": "'C'",
+       "hints": [
+        "ぜつめつ ＝ ある 時から あとは、新しい 地そうに 出なくなる こと。",
+        {
+         "text": "いちばん 上（新しい）の 地そうに 出る 化石は どれかを 見ます。",
+         "svg": "<svg viewBox=\"0 0 320 200\" xmlns=\"http://www.w3.org/2000/svg\"><text x=\"14\" y=\"62\" font-size=\"13\" fill=\"currentColor\">新しい</text><text x=\"14\" y=\"156\" font-size=\"13\" fill=\"currentColor\">古い</text><text x=\"140\" y=\"30\" font-size=\"18\" text-anchor=\"middle\" fill=\"currentColor\">A</text><text x=\"200\" y=\"30\" font-size=\"18\" text-anchor=\"middle\" fill=\"currentColor\">B</text><text x=\"260\" y=\"30\" font-size=\"18\" text-anchor=\"middle\" fill=\"currentColor\">C</text><rect x=\"110\" y=\"40\" width=\"60\" height=\"24\" fill=\"#c8ccd6\" fill-opacity=\"0.3\" stroke=\"currentColor\" stroke-width=\"2\"/><circle cx=\"140\" cy=\"52\" r=\"7\" fill=\"#f08080\" stroke=\"currentColor\" stroke-width=\"2\"/><rect x=\"170\" y=\"40\" width=\"60\" height=\"24\" fill=\"#c8ccd6\" fill-opacity=\"0.3\" stroke=\"currentColor\" stroke-width=\"2\"/><circle cx=\"200\" cy=\"52\" r=\"7\" fill=\"#f08080\" stroke=\"currentColor\" stroke-width=\"2\"/><rect x=\"230\" y=\"40\" width=\"60\" height=\"24\" fill=\"#c8ccd6\" fill-opacity=\"0.3\" stroke=\"currentColor\" stroke-width=\"2\"/><rect x=\"110\" y=\"64\" width=\"60\" height=\"24\" fill=\"#c8ccd6\" fill-opacity=\"0.15\" stroke=\"currentColor\" stroke-width=\"2\"/><circle cx=\"140\" cy=\"76\" r=\"7\" fill=\"#f08080\" stroke=\"currentColor\" stroke-width=\"2\"/><rect x=\"170\" y=\"64\" width=\"60\" height=\"24\" fill=\"#c8ccd6\" fill-opacity=\"0.15\" stroke=\"currentColor\" stroke-width=\"2\"/><circle cx=\"200\" cy=\"76\" r=\"7\" fill=\"#f08080\" stroke=\"currentColor\" stroke-width=\"2\"/><rect x=\"230\" y=\"64\" width=\"60\" height=\"24\" fill=\"#c8ccd6\" fill-opacity=\"0.15\" stroke=\"currentColor\" stroke-width=\"2\"/><circle cx=\"260\" cy=\"76\" r=\"7\" fill=\"#f08080\" stroke=\"currentColor\" stroke-width=\"2\"/><rect x=\"110\" y=\"88\" width=\"60\" height=\"24\" fill=\"#c8ccd6\" fill-opacity=\"0.3\" stroke=\"currentColor\" stroke-width=\"2\"/><circle cx=\"140\" cy=\"100\" r=\"7\" fill=\"#f08080\" stroke=\"currentColor\" stroke-width=\"2\"/><rect x=\"170\" y=\"88\" width=\"60\" height=\"24\" fill=\"#c8ccd6\" fill-opacity=\"0.3\" stroke=\"currentColor\" stroke-width=\"2\"/><rect x=\"230\" y=\"88\" width=\"60\" height=\"24\" fill=\"#c8ccd6\" fill-opacity=\"0.3\" stroke=\"currentColor\" stroke-width=\"2\"/><circle cx=\"260\" cy=\"100\" r=\"7\" fill=\"#f08080\" stroke=\"currentColor\" stroke-width=\"2\"/><rect x=\"110\" y=\"112\" width=\"60\" height=\"24\" fill=\"#c8ccd6\" fill-opacity=\"0.15\" stroke=\"currentColor\" stroke-width=\"2\"/><circle cx=\"140\" cy=\"124\" r=\"7\" fill=\"#f08080\" stroke=\"currentColor\" stroke-width=\"2\"/><rect x=\"170\" y=\"112\" width=\"60\" height=\"24\" fill=\"#c8ccd6\" fill-opacity=\"0.15\" stroke=\"currentColor\" stroke-width=\"2\"/><rect x=\"230\" y=\"112\" width=\"60\" height=\"24\" fill=\"#c8ccd6\" fill-opacity=\"0.15\" stroke=\"currentColor\" stroke-width=\"2\"/><circle cx=\"260\" cy=\"124\" r=\"7\" fill=\"#f08080\" stroke=\"currentColor\" stroke-width=\"2\"/><rect x=\"110\" y=\"136\" width=\"60\" height=\"24\" fill=\"#c8ccd6\" fill-opacity=\"0.3\" stroke=\"currentColor\" stroke-width=\"2\"/><circle cx=\"140\" cy=\"148\" r=\"7\" fill=\"#f08080\" stroke=\"currentColor\" stroke-width=\"2\"/><rect x=\"170\" y=\"136\" width=\"60\" height=\"24\" fill=\"#c8ccd6\" fill-opacity=\"0.3\" stroke=\"currentColor\" stroke-width=\"2\"/><rect x=\"230\" y=\"136\" width=\"60\" height=\"24\" fill=\"#c8ccd6\" fill-opacity=\"0.3\" stroke=\"currentColor\" stroke-width=\"2\"/><circle cx=\"260\" cy=\"148\" r=\"7\" fill=\"#f08080\" stroke=\"currentColor\" stroke-width=\"2\"/><rect x=\"106\" y=\"38\" width=\"188\" height=\"28\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-dasharray=\"6 4\"/></svg>"
+        },
+        "古い 地そうに 出ていた 化石が、ある 地そうから 出なくなって います。"
+       ],
+       "qid": "W-009:25d0b4e9d5"
+      },
+      {
+       "part": "今日",
+       "text": "B の 地そうから、サンゴの 化石が 出ました。サンゴは、いまも いる 生き物です。B の 地そうは、どんな ところで できましたか。",
+       "svg": "<svg viewBox=\"0 0 320 200\" xmlns=\"http://www.w3.org/2000/svg\"><rect x=\"40\" y=\"30\" width=\"110\" height=\"48\" fill=\"#c8ccd6\" fill-opacity=\"0.55\" stroke=\"currentColor\" stroke-width=\"2\"/><text x=\"26\" y=\"59\" font-size=\"16\" text-anchor=\"middle\" fill=\"currentColor\">A</text><rect x=\"40\" y=\"78\" width=\"110\" height=\"48\" fill=\"#c9a36b\" fill-opacity=\"0.55\" stroke=\"currentColor\" stroke-width=\"2\"/><text x=\"26\" y=\"107\" font-size=\"16\" text-anchor=\"middle\" fill=\"currentColor\">B</text><g transform=\"translate(95 102) scale(0.42)\"><path d=\"M0 26 V-6 M0 10 L-14 -8 M0 4 L14 -12 M0 -6 L-6 -24 M0 -6 L8 -22\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"5\" stroke-linecap=\"round\"/><ellipse cx=\"0\" cy=\"28\" rx=\"22\" ry=\"5\" fill=\"#c9a36b\" fill-opacity=\"0.6\" stroke=\"currentColor\" stroke-width=\"2\"/></g><rect x=\"40\" y=\"126\" width=\"110\" height=\"48\" fill=\"#c8ccd6\" fill-opacity=\"0.55\" stroke=\"currentColor\" stroke-width=\"2\"/><text x=\"26\" y=\"155\" font-size=\"16\" text-anchor=\"middle\" fill=\"currentColor\">C</text><text x=\"160\" y=\"108\" font-size=\"14\" fill=\"currentColor\">サンゴの 化石</text></svg>",
+       "choices": [
+        "あたたかく あさい 海",
+        "冷たい ふかい 海",
+        "山おくの 湖"
+       ],
+       "answer": "あたたかく あさい 海",
+       "check": "'あたたかく あさい 海'",
+       "hints": [
+        "しそう化石は、その 生き物が すんでいた 場所の ようすを 教えてくれる 化石です。",
+        {
+         "text": "いまの サンゴが どんな 海に いるかを 思い出します。",
+         "svg": "<svg viewBox=\"0 0 320 200\" xmlns=\"http://www.w3.org/2000/svg\"><rect x=\"10\" y=\"70\" width=\"300\" height=\"110\" fill=\"#7fc8f8\" fill-opacity=\"0.3\" stroke=\"currentColor\" stroke-width=\"2\"/><line x1=\"10\" y1=\"70\" x2=\"310\" y2=\"70\" stroke=\"currentColor\" stroke-width=\"2\"/><g transform=\"translate(90 130) scale(1.2)\"><path d=\"M0 26 V-6 M0 10 L-14 -8 M0 4 L14 -12 M0 -6 L-6 -24 M0 -6 L8 -22\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"5\" stroke-linecap=\"round\"/><ellipse cx=\"0\" cy=\"28\" rx=\"22\" ry=\"5\" fill=\"#c9a36b\" fill-opacity=\"0.6\" stroke=\"currentColor\" stroke-width=\"2\"/></g><g transform=\"translate(200 138) scale(1)\"><path d=\"M0 26 V-6 M0 10 L-14 -8 M0 4 L14 -12 M0 -6 L-6 -24 M0 -6 L8 -22\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"5\" stroke-linecap=\"round\"/><ellipse cx=\"0\" cy=\"28\" rx=\"22\" ry=\"5\" fill=\"#c9a36b\" fill-opacity=\"0.6\" stroke=\"currentColor\" stroke-width=\"2\"/></g><text x=\"160\" y=\"40\" font-size=\"16\" text-anchor=\"middle\" fill=\"currentColor\">いまの サンゴの すむ 海</text></svg>"
+        },
+        "サンゴは 光と 水の あたたかさに かんけい します。"
+       ],
+       "qid": "W-009:47184fe69c"
+      },
+      {
+       "part": "今日",
+       "text": "カレンダーの 図で、古生代の はじまりは 11 月 18 日、きょうりゅうが いなくなったのは 12 月 26 日です。11 月 18 日の 何日 あとが 12 月 26 日ですか。11 月は 30 日までです。数で 答えましょう。",
+       "svg": "<svg viewBox=\"0 0 320 200\" xmlns=\"http://www.w3.org/2000/svg\"><rect x=\"16\" y=\"100\" width=\"24\" height=\"30\" fill=\"#c8ccd6\" fill-opacity=\"0.3\" stroke=\"currentColor\" stroke-width=\"2\"/><text x=\"28\" y=\"120\" font-size=\"13\" text-anchor=\"middle\" fill=\"currentColor\">1</text><rect x=\"40\" y=\"100\" width=\"24\" height=\"30\" fill=\"#c8ccd6\" fill-opacity=\"0.6\" stroke=\"currentColor\" stroke-width=\"2\"/><text x=\"52\" y=\"120\" font-size=\"13\" text-anchor=\"middle\" fill=\"currentColor\">2</text><rect x=\"64\" y=\"100\" width=\"24\" height=\"30\" fill=\"#c8ccd6\" fill-opacity=\"0.3\" stroke=\"currentColor\" stroke-width=\"2\"/><text x=\"76\" y=\"120\" font-size=\"13\" text-anchor=\"middle\" fill=\"currentColor\">3</text><rect x=\"88\" y=\"100\" width=\"24\" height=\"30\" fill=\"#c8ccd6\" fill-opacity=\"0.6\" stroke=\"currentColor\" stroke-width=\"2\"/><text x=\"100\" y=\"120\" font-size=\"13\" text-anchor=\"middle\" fill=\"currentColor\">4</text><rect x=\"112\" y=\"100\" width=\"24\" height=\"30\" fill=\"#c8ccd6\" fill-opacity=\"0.3\" stroke=\"currentColor\" stroke-width=\"2\"/><text x=\"124\" y=\"120\" font-size=\"13\" text-anchor=\"middle\" fill=\"currentColor\">5</text><rect x=\"136\" y=\"100\" width=\"24\" height=\"30\" fill=\"#c8ccd6\" fill-opacity=\"0.6\" stroke=\"currentColor\" stroke-width=\"2\"/><text x=\"148\" y=\"120\" font-size=\"13\" text-anchor=\"middle\" fill=\"currentColor\">6</text><rect x=\"160\" y=\"100\" width=\"24\" height=\"30\" fill=\"#c8ccd6\" fill-opacity=\"0.3\" stroke=\"currentColor\" stroke-width=\"2\"/><text x=\"172\" y=\"120\" font-size=\"13\" text-anchor=\"middle\" fill=\"currentColor\">7</text><rect x=\"184\" y=\"100\" width=\"24\" height=\"30\" fill=\"#c8ccd6\" fill-opacity=\"0.6\" stroke=\"currentColor\" stroke-width=\"2\"/><text x=\"196\" y=\"120\" font-size=\"13\" text-anchor=\"middle\" fill=\"currentColor\">8</text><rect x=\"208\" y=\"100\" width=\"24\" height=\"30\" fill=\"#c8ccd6\" fill-opacity=\"0.3\" stroke=\"currentColor\" stroke-width=\"2\"/><text x=\"220\" y=\"120\" font-size=\"13\" text-anchor=\"middle\" fill=\"currentColor\">9</text><rect x=\"232\" y=\"100\" width=\"24\" height=\"30\" fill=\"#c8ccd6\" fill-opacity=\"0.6\" stroke=\"currentColor\" stroke-width=\"2\"/><text x=\"244\" y=\"120\" font-size=\"13\" text-anchor=\"middle\" fill=\"currentColor\">10</text><rect x=\"256\" y=\"100\" width=\"24\" height=\"30\" fill=\"#c8ccd6\" fill-opacity=\"0.3\" stroke=\"currentColor\" stroke-width=\"2\"/><text x=\"268\" y=\"120\" font-size=\"13\" text-anchor=\"middle\" fill=\"currentColor\">11</text><rect x=\"280\" y=\"100\" width=\"24\" height=\"30\" fill=\"#c8ccd6\" fill-opacity=\"0.6\" stroke=\"currentColor\" stroke-width=\"2\"/><text x=\"292\" y=\"120\" font-size=\"13\" text-anchor=\"middle\" fill=\"currentColor\">12</text><line x1=\"269.68\" y1=\"130\" x2=\"269.68\" y2=\"152\" stroke=\"currentColor\" stroke-width=\"2\"/><circle cx=\"269.68\" cy=\"130\" r=\"5\" fill=\"#f08080\" stroke=\"currentColor\" stroke-width=\"2\"/><text x=\"265.68\" y=\"166\" font-size=\"14\" text-anchor=\"end\" fill=\"currentColor\">古生代の はじまり 11 月 18 日</text><line x1=\"299.44\" y1=\"100\" x2=\"299.44\" y2=\"39\" stroke=\"currentColor\" stroke-width=\"2\"/><circle cx=\"299.44\" cy=\"100\" r=\"5\" fill=\"#f08080\" stroke=\"currentColor\" stroke-width=\"2\"/><text x=\"295.44\" y=\"34\" font-size=\"14\" text-anchor=\"end\" fill=\"currentColor\">きょうりゅう 12 月 26 日</text><text x=\"16\" y=\"150\" font-size=\"12\" fill=\"currentColor\">数字は 月</text></svg>",
+       "answer": 38,
+       "check": "(30 - 18) + 26",
+       "hints": [
+        "11 月 18 日から 11 月の おわりまでと、12 月 1 日から 26 日までに 分けて 数えます。",
+        {
+         "text": "2 つの 月に 分けて、日数を たします。",
+         "svg": "<svg viewBox=\"0 0 320 200\" xmlns=\"http://www.w3.org/2000/svg\"><rect x=\"16\" y=\"70\" width=\"140\" height=\"34\" fill=\"#c8ccd6\" fill-opacity=\"0.5\" stroke=\"currentColor\" stroke-width=\"2\"/><text x=\"86\" y=\"92\" font-size=\"14\" text-anchor=\"middle\" fill=\"currentColor\">11 月 18 日 → 30 日</text><rect x=\"156\" y=\"70\" width=\"148\" height=\"34\" fill=\"#c8ccd6\" fill-opacity=\"0.3\" stroke=\"currentColor\" stroke-width=\"2\"/><text x=\"230\" y=\"92\" font-size=\"14\" text-anchor=\"middle\" fill=\"currentColor\">12 月 1 日 → 26 日</text><text x=\"86\" y=\"130\" font-size=\"16\" text-anchor=\"middle\" fill=\"currentColor\">？ 日</text><text x=\"230\" y=\"130\" font-size=\"16\" text-anchor=\"middle\" fill=\"currentColor\">26 日</text></svg>"
+        },
+        "11 月の ぶんは 30 － 18 の ひき算で 出ます。"
+       ],
+       "qid": "W-009:5a882d5bfa"
+      },
+      {
+       "part": "今日",
+       "text": "時代の 目もりの 図に、いろいろな 生き物が いた ころが しるして あります。まちがって いる 文は どれですか。",
+       "svg": "<svg viewBox=\"0 0 320 200\" xmlns=\"http://www.w3.org/2000/svg\"><rect x=\"14\" y=\"88\" width=\"156.815\" height=\"26\" fill=\"#7fc8f8\" fill-opacity=\"0.45\" stroke=\"currentColor\" stroke-width=\"2\"/><text x=\"92.4074\" y=\"107\" font-size=\"14\" text-anchor=\"middle\" fill=\"currentColor\">古生代</text><rect x=\"170.815\" y=\"88\" width=\"99.4963\" height=\"26\" fill=\"#7bc96f\" fill-opacity=\"0.45\" stroke=\"currentColor\" stroke-width=\"2\"/><text x=\"220.563\" y=\"107\" font-size=\"14\" text-anchor=\"middle\" fill=\"currentColor\">中生代</text><rect x=\"270.311\" y=\"88\" width=\"35.6889\" height=\"26\" fill=\"#f3c969\" fill-opacity=\"0.45\" stroke=\"currentColor\" stroke-width=\"2\"/><text x=\"288.156\" y=\"107\" font-size=\"11\" text-anchor=\"middle\" fill=\"currentColor\">新生代</text><text x=\"14\" y=\"134\" font-size=\"13\" fill=\"currentColor\">5.4 億年前</text><text x=\"170.815\" y=\"134\" font-size=\"13\" text-anchor=\"middle\" fill=\"currentColor\">2.5 億年前</text><text x=\"270.311\" y=\"134\" font-size=\"13\" text-anchor=\"middle\" fill=\"currentColor\">6600 万年前</text><text x=\"306\" y=\"154\" font-size=\"13\" text-anchor=\"end\" fill=\"currentColor\">いま</text><polygon points=\"56.6667,70 68.6667,70 62.6667,84\" fill=\"#f08080\" stroke=\"currentColor\" stroke-width=\"2\"/><text x=\"68.6667\" y=\"60\" font-size=\"14\" fill=\"currentColor\">三葉虫が いた</text><polygon points=\"218.889,70 230.889,70 224.889,84\" fill=\"#f08080\" stroke=\"currentColor\" stroke-width=\"2\"/><text x=\"218.889\" y=\"40\" font-size=\"14\" text-anchor=\"end\" fill=\"currentColor\">きょうりゅうが いた</text><polygon points=\"299.838,70 311.838,70 305.838,84\" fill=\"#f08080\" stroke=\"currentColor\" stroke-width=\"2\"/><text x=\"299.838\" y=\"20\" font-size=\"14\" text-anchor=\"end\" fill=\"currentColor\">人が 生まれた</text></svg>",
+       "choices": [
+        "人は、新生代に 生まれた",
+        "三葉虫と きょうりゅうは、同じ 時代に 生きていた",
+        "きょうりゅうと アンモナイトは、どちらも 中生代の おわりに ぜつめつした"
+       ],
+       "answer": "三葉虫と きょうりゅうは、同じ 時代に 生きていた",
+       "check": "'三葉虫と きょうりゅうは、同じ 時代に 生きていた'",
+       "hints": [
+        "3 つの 文を 1 つずつ、図と くらべて たしかめます。",
+        {
+         "text": "見本の 図です。生き物ごとの 時代を たしかめます。",
+         "svg": "<svg viewBox=\"0 0 320 200\" xmlns=\"http://www.w3.org/2000/svg\"><rect x=\"10\" y=\"8\" width=\"100\" height=\"26\" fill=\"#7fc8f8\" fill-opacity=\"0.45\" stroke=\"currentColor\" stroke-width=\"2\"/><text x=\"60\" y=\"27\" font-size=\"16\" text-anchor=\"middle\" fill=\"currentColor\">古生代</text><rect x=\"10\" y=\"34\" width=\"100\" height=\"138\" fill=\"#7fc8f8\" fill-opacity=\"0.2\" stroke=\"currentColor\" stroke-width=\"2\"/><g transform=\"translate(60 70) scale(0.5)\"><ellipse cx=\"0\" cy=\"0\" rx=\"38\" ry=\"19\" fill=\"#c9a36b\" fill-opacity=\"0.6\" stroke=\"currentColor\" stroke-width=\"2\"/><path d=\"M-20 -17 Q-28 0 -20 17\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\"/><path d=\"M-6 -19 V19 M8 -19 V19 M21 -16 V16\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.5\"/></g><text x=\"60\" y=\"104\" font-size=\"13\" text-anchor=\"middle\" fill=\"currentColor\">三葉虫</text><g transform=\"translate(60 130) scale(0.5)\"><ellipse cx=\"-6\" cy=\"0\" rx=\"28\" ry=\"15\" fill=\"#7fc8f8\" fill-opacity=\"0.6\" stroke=\"currentColor\" stroke-width=\"2\"/><polygon points=\"20,0 40,-15 40,15\" fill=\"#7fc8f8\" fill-opacity=\"0.6\" stroke=\"currentColor\" stroke-width=\"2\"/><circle cx=\"-22\" cy=\"-3\" r=\"3\" fill=\"currentColor\"/></g><text x=\"60\" y=\"164\" font-size=\"13\" text-anchor=\"middle\" fill=\"currentColor\">魚</text><rect x=\"110\" y=\"8\" width=\"100\" height=\"26\" fill=\"#7bc96f\" fill-opacity=\"0.45\" stroke=\"currentColor\" stroke-width=\"2\"/><text x=\"160\" y=\"27\" font-size=\"16\" text-anchor=\"middle\" fill=\"currentColor\">中生代</text><rect x=\"110\" y=\"34\" width=\"100\" height=\"138\" fill=\"#7bc96f\" fill-opacity=\"0.2\" stroke=\"currentColor\" stroke-width=\"2\"/><g transform=\"translate(160 70) scale(0.5)\"><ellipse cx=\"0\" cy=\"6\" rx=\"24\" ry=\"14\" fill=\"#7bc96f\" fill-opacity=\"0.6\" stroke=\"currentColor\" stroke-width=\"2\"/><polygon points=\"-16,0 -28,-22 -20,-26 -4,-6\" fill=\"#7bc96f\" fill-opacity=\"0.6\" stroke=\"currentColor\" stroke-width=\"2\"/><ellipse cx=\"-27\" cy=\"-27\" rx=\"10\" ry=\"6\" fill=\"#7bc96f\" fill-opacity=\"0.6\" stroke=\"currentColor\" stroke-width=\"2\"/><circle cx=\"-30\" cy=\"-29\" r=\"2\" fill=\"currentColor\"/><polygon points=\"20,0 48,14 20,17\" fill=\"#7bc96f\" fill-opacity=\"0.6\" stroke=\"currentColor\" stroke-width=\"2\"/><rect x=\"-12\" y=\"17\" width=\"7\" height=\"14\" fill=\"#7bc96f\" fill-opacity=\"0.6\" stroke=\"currentColor\" stroke-width=\"2\"/><rect x=\"6\" y=\"17\" width=\"7\" height=\"14\" fill=\"#7bc96f\" fill-opacity=\"0.6\" stroke=\"currentColor\" stroke-width=\"2\"/></g><text x=\"160\" y=\"104\" font-size=\"13\" text-anchor=\"middle\" fill=\"currentColor\">きょうりゅう</text><g transform=\"translate(160 130) scale(0.5)\"><circle cx=\"0\" cy=\"0\" r=\"22\" fill=\"#c9a36b\" fill-opacity=\"0.55\" stroke=\"currentColor\" stroke-width=\"2\"/><path d=\"M0 0 a4 4 0 0 1 8 0 a8 8 0 0 1 -16 0 a12 12 0 0 1 24 0\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\"/></g><text x=\"160\" y=\"164\" font-size=\"13\" text-anchor=\"middle\" fill=\"currentColor\">アンモナイト</text><rect x=\"210\" y=\"8\" width=\"100\" height=\"26\" fill=\"#f3c969\" fill-opacity=\"0.45\" stroke=\"currentColor\" stroke-width=\"2\"/><text x=\"260\" y=\"27\" font-size=\"16\" text-anchor=\"middle\" fill=\"currentColor\">新生代</text><rect x=\"210\" y=\"34\" width=\"100\" height=\"138\" fill=\"#f3c969\" fill-opacity=\"0.2\" stroke=\"currentColor\" stroke-width=\"2\"/><g transform=\"translate(260 70) scale(0.5)\"><ellipse cx=\"6\" cy=\"2\" rx=\"28\" ry=\"19\" fill=\"#c8ccd6\" fill-opacity=\"0.8\" stroke=\"currentColor\" stroke-width=\"2\"/><circle cx=\"-24\" cy=\"-2\" r=\"14\" fill=\"#c8ccd6\" fill-opacity=\"0.8\" stroke=\"currentColor\" stroke-width=\"2\"/><path d=\"M-34 4 Q-42 18 -34 30\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"5\" stroke-linecap=\"round\"/><path d=\"M-30 8 Q-44 10 -46 0\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\"/><circle cx=\"-27\" cy=\"-6\" r=\"2\" fill=\"currentColor\"/><rect x=\"-10\" y=\"17\" width=\"9\" height=\"16\" fill=\"#c8ccd6\" fill-opacity=\"0.8\" stroke=\"currentColor\" stroke-width=\"2\"/><rect x=\"14\" y=\"17\" width=\"9\" height=\"16\" fill=\"#c8ccd6\" fill-opacity=\"0.8\" stroke=\"currentColor\" stroke-width=\"2\"/></g><text x=\"260\" y=\"104\" font-size=\"13\" text-anchor=\"middle\" fill=\"currentColor\">ナウマンゾウ</text><g transform=\"translate(260 130) scale(0.5)\"><circle cx=\"0\" cy=\"-24\" r=\"8\" fill=\"#f3c969\" fill-opacity=\"0.8\" stroke=\"currentColor\" stroke-width=\"2\"/><path d=\"M0 -16 V8 M-12 -6 L0 -12 L12 -6 M0 8 L-9 30 M0 8 L9 30\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"3\" stroke-linecap=\"round\"/></g><text x=\"260\" y=\"164\" font-size=\"13\" text-anchor=\"middle\" fill=\"currentColor\">人</text><text x=\"10\" y=\"192\" font-size=\"13\" fill=\"currentColor\">5.4 億年前</text><text x=\"110\" y=\"192\" font-size=\"13\" text-anchor=\"middle\" fill=\"currentColor\">2.5 億年前</text><text x=\"210\" y=\"192\" font-size=\"13\" text-anchor=\"middle\" fill=\"currentColor\">6600 万年前</text><text x=\"310\" y=\"192\" font-size=\"13\" text-anchor=\"end\" fill=\"currentColor\">いま</text></svg>"
+        },
+        "大量ぜつめつは 2 回 ありました。1 回目と 2 回目で、いなくなった 生き物は ちがいます。"
+       ],
+       "qid": "W-009:f60ea65c0a"
+      }
+     ],
+     "extra": [
+      {
+       "part": "今日",
+       "text": "古生代は 約 2 億 9000 万年、中生代は 約 1 億 8400 万年です。2 つを あわせると、約 何万年ですか。数で 答えましょう。",
+       "svg": "<svg viewBox=\"0 0 320 200\" xmlns=\"http://www.w3.org/2000/svg\"><rect x=\"16\" y=\"70\" width=\"176.2\" height=\"30\" fill=\"#7fc8f8\" fill-opacity=\"0.5\" stroke=\"currentColor\" stroke-width=\"2\"/><rect x=\"192.2\" y=\"70\" width=\"111.8\" height=\"30\" fill=\"#7bc96f\" fill-opacity=\"0.5\" stroke=\"currentColor\" stroke-width=\"2\"/><text x=\"104\" y=\"60\" font-size=\"14\" text-anchor=\"middle\" fill=\"currentColor\">古生代 29000 万年</text><text x=\"248\" y=\"128\" font-size=\"14\" text-anchor=\"middle\" fill=\"currentColor\">中生代 18400 万年</text><line x1=\"248\" y1=\"100\" x2=\"248\" y2=\"112\" stroke=\"currentColor\" stroke-width=\"2\"/></svg>",
+       "answer": 47400,
+       "check": "29000 + 18400",
+       "hints": [
+        "2 つの 長さを つなぐと、ぜんぶの 長さに なります。",
+        {
+         "text": "2 本の ぼうを つないで、ぜんぶの 長さを 出します。",
+         "svg": "<svg viewBox=\"0 0 320 200\" xmlns=\"http://www.w3.org/2000/svg\"><rect x=\"16\" y=\"70\" width=\"176.2\" height=\"30\" fill=\"#7fc8f8\" fill-opacity=\"0.5\" stroke=\"currentColor\" stroke-width=\"2\"/><rect x=\"192.2\" y=\"70\" width=\"111.8\" height=\"30\" fill=\"#7bc96f\" fill-opacity=\"0.5\" stroke=\"currentColor\" stroke-width=\"2\"/><line x1=\"16\" y1=\"116\" x2=\"304\" y2=\"116\" stroke=\"currentColor\" stroke-width=\"2\"/><text x=\"160\" y=\"142\" font-size=\"16\" text-anchor=\"middle\" fill=\"currentColor\">？ 万年</text></svg>"
+        },
+        "29000 ＋ 18400 を 計算します。"
+       ],
+       "qid": "W-009:ddaf769fe0"
+      },
+      {
+       "part": "今日",
+       "text": "B の 地そうから、ナウマンゾウの 化石が 出ました。B の 地そうは、どの 時代に できましたか。",
+       "svg": "<svg viewBox=\"0 0 320 200\" xmlns=\"http://www.w3.org/2000/svg\"><rect x=\"40\" y=\"30\" width=\"110\" height=\"48\" fill=\"#c8ccd6\" fill-opacity=\"0.55\" stroke=\"currentColor\" stroke-width=\"2\"/><text x=\"26\" y=\"59\" font-size=\"16\" text-anchor=\"middle\" fill=\"currentColor\">A</text><rect x=\"40\" y=\"78\" width=\"110\" height=\"48\" fill=\"#c9a36b\" fill-opacity=\"0.55\" stroke=\"currentColor\" stroke-width=\"2\"/><text x=\"26\" y=\"107\" font-size=\"16\" text-anchor=\"middle\" fill=\"currentColor\">B</text><g transform=\"translate(95 102) scale(0.42)\"><ellipse cx=\"6\" cy=\"2\" rx=\"28\" ry=\"19\" fill=\"#c8ccd6\" fill-opacity=\"0.8\" stroke=\"currentColor\" stroke-width=\"2\"/><circle cx=\"-24\" cy=\"-2\" r=\"14\" fill=\"#c8ccd6\" fill-opacity=\"0.8\" stroke=\"currentColor\" stroke-width=\"2\"/><path d=\"M-34 4 Q-42 18 -34 30\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"5\" stroke-linecap=\"round\"/><path d=\"M-30 8 Q-44 10 -46 0\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\"/><circle cx=\"-27\" cy=\"-6\" r=\"2\" fill=\"currentColor\"/><rect x=\"-10\" y=\"17\" width=\"9\" height=\"16\" fill=\"#c8ccd6\" fill-opacity=\"0.8\" stroke=\"currentColor\" stroke-width=\"2\"/><rect x=\"14\" y=\"17\" width=\"9\" height=\"16\" fill=\"#c8ccd6\" fill-opacity=\"0.8\" stroke=\"currentColor\" stroke-width=\"2\"/></g><rect x=\"40\" y=\"126\" width=\"110\" height=\"48\" fill=\"#c8ccd6\" fill-opacity=\"0.55\" stroke=\"currentColor\" stroke-width=\"2\"/><text x=\"26\" y=\"155\" font-size=\"16\" text-anchor=\"middle\" fill=\"currentColor\">C</text><text x=\"160\" y=\"108\" font-size=\"14\" fill=\"currentColor\">ナウマンゾウの 化石</text></svg>",
+       "choices": [
+        "古生代",
+        "中生代",
+        "新生代"
+       ],
+       "answer": "新生代",
+       "check": "'新生代'",
+       "hints": [
+        "ある 時代に だけ さかえた 生き物の 化石から、地そうの できた 時代が わかります。",
+        {
+         "text": "見本の 図で、ナウマンゾウの 絵が かいてあった 列を 思い出します。",
+         "svg": "<svg viewBox=\"0 0 320 200\" xmlns=\"http://www.w3.org/2000/svg\"><rect x=\"10\" y=\"8\" width=\"100\" height=\"26\" fill=\"#7fc8f8\" fill-opacity=\"0.45\" stroke=\"currentColor\" stroke-width=\"2\"/><text x=\"60\" y=\"27\" font-size=\"16\" text-anchor=\"middle\" fill=\"currentColor\">古生代</text><rect x=\"10\" y=\"34\" width=\"100\" height=\"138\" fill=\"#7fc8f8\" fill-opacity=\"0.2\" stroke=\"currentColor\" stroke-width=\"2\"/><g transform=\"translate(60 70) scale(0.5)\"><ellipse cx=\"0\" cy=\"0\" rx=\"38\" ry=\"19\" fill=\"#c9a36b\" fill-opacity=\"0.6\" stroke=\"currentColor\" stroke-width=\"2\"/><path d=\"M-20 -17 Q-28 0 -20 17\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\"/><path d=\"M-6 -19 V19 M8 -19 V19 M21 -16 V16\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.5\"/></g><text x=\"60\" y=\"104\" font-size=\"13\" text-anchor=\"middle\" fill=\"currentColor\">三葉虫</text><rect x=\"110\" y=\"8\" width=\"100\" height=\"26\" fill=\"#7bc96f\" fill-opacity=\"0.45\" stroke=\"currentColor\" stroke-width=\"2\"/><text x=\"160\" y=\"27\" font-size=\"16\" text-anchor=\"middle\" fill=\"currentColor\">中生代</text><rect x=\"110\" y=\"34\" width=\"100\" height=\"138\" fill=\"#7bc96f\" fill-opacity=\"0.2\" stroke=\"currentColor\" stroke-width=\"2\"/><g transform=\"translate(160 70) scale(0.5)\"><ellipse cx=\"0\" cy=\"6\" rx=\"24\" ry=\"14\" fill=\"#7bc96f\" fill-opacity=\"0.6\" stroke=\"currentColor\" stroke-width=\"2\"/><polygon points=\"-16,0 -28,-22 -20,-26 -4,-6\" fill=\"#7bc96f\" fill-opacity=\"0.6\" stroke=\"currentColor\" stroke-width=\"2\"/><ellipse cx=\"-27\" cy=\"-27\" rx=\"10\" ry=\"6\" fill=\"#7bc96f\" fill-opacity=\"0.6\" stroke=\"currentColor\" stroke-width=\"2\"/><circle cx=\"-30\" cy=\"-29\" r=\"2\" fill=\"currentColor\"/><polygon points=\"20,0 48,14 20,17\" fill=\"#7bc96f\" fill-opacity=\"0.6\" stroke=\"currentColor\" stroke-width=\"2\"/><rect x=\"-12\" y=\"17\" width=\"7\" height=\"14\" fill=\"#7bc96f\" fill-opacity=\"0.6\" stroke=\"currentColor\" stroke-width=\"2\"/><rect x=\"6\" y=\"17\" width=\"7\" height=\"14\" fill=\"#7bc96f\" fill-opacity=\"0.6\" stroke=\"currentColor\" stroke-width=\"2\"/></g><text x=\"160\" y=\"104\" font-size=\"13\" text-anchor=\"middle\" fill=\"currentColor\">きょうりゅう</text><rect x=\"210\" y=\"8\" width=\"100\" height=\"26\" fill=\"#f3c969\" fill-opacity=\"0.45\" stroke=\"currentColor\" stroke-width=\"2\"/><text x=\"260\" y=\"27\" font-size=\"16\" text-anchor=\"middle\" fill=\"currentColor\">新生代</text><rect x=\"210\" y=\"34\" width=\"100\" height=\"138\" fill=\"#f3c969\" fill-opacity=\"0.2\" stroke=\"currentColor\" stroke-width=\"2\"/><text x=\"10\" y=\"192\" font-size=\"13\" fill=\"currentColor\">5.4 億年前</text><text x=\"110\" y=\"192\" font-size=\"13\" text-anchor=\"middle\" fill=\"currentColor\">2.5 億年前</text><text x=\"210\" y=\"192\" font-size=\"13\" text-anchor=\"middle\" fill=\"currentColor\">6600 万年前</text><text x=\"310\" y=\"192\" font-size=\"13\" text-anchor=\"end\" fill=\"currentColor\">いま</text></svg>"
+        },
+        "3 つの 時代の うち、いちばん 新しい 時代の 生き物かどうかを 考えます。"
+       ],
+       "qid": "W-009:ea3ce6a9ff"
+      }
+     ],
      "key": "混ぜる#1"
     },
     {
      "kind": "確認",
      "aim": "",
+     "items": [
+      {
+       "part": "今日",
+       "text": "カレンダーの 図の ア・イ・ウは、「古生代の はじまり」「中生代の はじまり」「きょうりゅうが いなくなった 日」の どれかです。中生代の はじまりは どれですか。",
+       "svg": "<svg viewBox=\"0 0 320 200\" xmlns=\"http://www.w3.org/2000/svg\"><rect x=\"16\" y=\"100\" width=\"24\" height=\"30\" fill=\"#c8ccd6\" fill-opacity=\"0.3\" stroke=\"currentColor\" stroke-width=\"2\"/><text x=\"28\" y=\"120\" font-size=\"13\" text-anchor=\"middle\" fill=\"currentColor\">1</text><rect x=\"40\" y=\"100\" width=\"24\" height=\"30\" fill=\"#c8ccd6\" fill-opacity=\"0.6\" stroke=\"currentColor\" stroke-width=\"2\"/><text x=\"52\" y=\"120\" font-size=\"13\" text-anchor=\"middle\" fill=\"currentColor\">2</text><rect x=\"64\" y=\"100\" width=\"24\" height=\"30\" fill=\"#c8ccd6\" fill-opacity=\"0.3\" stroke=\"currentColor\" stroke-width=\"2\"/><text x=\"76\" y=\"120\" font-size=\"13\" text-anchor=\"middle\" fill=\"currentColor\">3</text><rect x=\"88\" y=\"100\" width=\"24\" height=\"30\" fill=\"#c8ccd6\" fill-opacity=\"0.6\" stroke=\"currentColor\" stroke-width=\"2\"/><text x=\"100\" y=\"120\" font-size=\"13\" text-anchor=\"middle\" fill=\"currentColor\">4</text><rect x=\"112\" y=\"100\" width=\"24\" height=\"30\" fill=\"#c8ccd6\" fill-opacity=\"0.3\" stroke=\"currentColor\" stroke-width=\"2\"/><text x=\"124\" y=\"120\" font-size=\"13\" text-anchor=\"middle\" fill=\"currentColor\">5</text><rect x=\"136\" y=\"100\" width=\"24\" height=\"30\" fill=\"#c8ccd6\" fill-opacity=\"0.6\" stroke=\"currentColor\" stroke-width=\"2\"/><text x=\"148\" y=\"120\" font-size=\"13\" text-anchor=\"middle\" fill=\"currentColor\">6</text><rect x=\"160\" y=\"100\" width=\"24\" height=\"30\" fill=\"#c8ccd6\" fill-opacity=\"0.3\" stroke=\"currentColor\" stroke-width=\"2\"/><text x=\"172\" y=\"120\" font-size=\"13\" text-anchor=\"middle\" fill=\"currentColor\">7</text><rect x=\"184\" y=\"100\" width=\"24\" height=\"30\" fill=\"#c8ccd6\" fill-opacity=\"0.6\" stroke=\"currentColor\" stroke-width=\"2\"/><text x=\"196\" y=\"120\" font-size=\"13\" text-anchor=\"middle\" fill=\"currentColor\">8</text><rect x=\"208\" y=\"100\" width=\"24\" height=\"30\" fill=\"#c8ccd6\" fill-opacity=\"0.3\" stroke=\"currentColor\" stroke-width=\"2\"/><text x=\"220\" y=\"120\" font-size=\"13\" text-anchor=\"middle\" fill=\"currentColor\">9</text><rect x=\"232\" y=\"100\" width=\"24\" height=\"30\" fill=\"#c8ccd6\" fill-opacity=\"0.6\" stroke=\"currentColor\" stroke-width=\"2\"/><text x=\"244\" y=\"120\" font-size=\"13\" text-anchor=\"middle\" fill=\"currentColor\">10</text><rect x=\"256\" y=\"100\" width=\"24\" height=\"30\" fill=\"#c8ccd6\" fill-opacity=\"0.3\" stroke=\"currentColor\" stroke-width=\"2\"/><text x=\"268\" y=\"120\" font-size=\"13\" text-anchor=\"middle\" fill=\"currentColor\">11</text><rect x=\"280\" y=\"100\" width=\"24\" height=\"30\" fill=\"#c8ccd6\" fill-opacity=\"0.6\" stroke=\"currentColor\" stroke-width=\"2\"/><text x=\"292\" y=\"120\" font-size=\"13\" text-anchor=\"middle\" fill=\"currentColor\">12</text><line x1=\"269.68\" y1=\"100\" x2=\"269.68\" y2=\"39\" stroke=\"currentColor\" stroke-width=\"2\"/><circle cx=\"269.68\" cy=\"100\" r=\"5\" fill=\"#f3c969\" stroke=\"currentColor\" stroke-width=\"2\"/><text x=\"269.68\" y=\"34\" font-size=\"14\" text-anchor=\"middle\" fill=\"currentColor\">ア</text><line x1=\"287.68\" y1=\"100\" x2=\"287.68\" y2=\"71\" stroke=\"currentColor\" stroke-width=\"2\"/><circle cx=\"287.68\" cy=\"100\" r=\"5\" fill=\"#f3c969\" stroke=\"currentColor\" stroke-width=\"2\"/><text x=\"287.68\" y=\"66\" font-size=\"14\" text-anchor=\"middle\" fill=\"currentColor\">イ</text><line x1=\"299.44\" y1=\"100\" x2=\"299.44\" y2=\"39\" stroke=\"currentColor\" stroke-width=\"2\"/><circle cx=\"299.44\" cy=\"100\" r=\"5\" fill=\"#f3c969\" stroke=\"currentColor\" stroke-width=\"2\"/><text x=\"299.44\" y=\"34\" font-size=\"14\" text-anchor=\"middle\" fill=\"currentColor\">ウ</text><text x=\"16\" y=\"150\" font-size=\"12\" fill=\"currentColor\">数字は 月</text></svg>",
+       "choices": [
+        "ア",
+        "イ",
+        "ウ"
+       ],
+       "answer": "イ",
+       "check": "'イ'",
+       "hints": [
+        "カレンダーでは 左が 古く、右が 新しい。ア・イ・ウを 左から 順に 見ていきます。",
+        {
+         "text": "きょうりゅうが いなくなったのは、中生代の おわりです。",
+         "svg": "<svg viewBox=\"0 0 320 200\" xmlns=\"http://www.w3.org/2000/svg\"><rect x=\"16\" y=\"100\" width=\"24\" height=\"30\" fill=\"#c8ccd6\" fill-opacity=\"0.3\" stroke=\"currentColor\" stroke-width=\"2\"/><text x=\"28\" y=\"120\" font-size=\"13\" text-anchor=\"middle\" fill=\"currentColor\">1</text><rect x=\"40\" y=\"100\" width=\"24\" height=\"30\" fill=\"#c8ccd6\" fill-opacity=\"0.6\" stroke=\"currentColor\" stroke-width=\"2\"/><text x=\"52\" y=\"120\" font-size=\"13\" text-anchor=\"middle\" fill=\"currentColor\">2</text><rect x=\"64\" y=\"100\" width=\"24\" height=\"30\" fill=\"#c8ccd6\" fill-opacity=\"0.3\" stroke=\"currentColor\" stroke-width=\"2\"/><text x=\"76\" y=\"120\" font-size=\"13\" text-anchor=\"middle\" fill=\"currentColor\">3</text><rect x=\"88\" y=\"100\" width=\"24\" height=\"30\" fill=\"#c8ccd6\" fill-opacity=\"0.6\" stroke=\"currentColor\" stroke-width=\"2\"/><text x=\"100\" y=\"120\" font-size=\"13\" text-anchor=\"middle\" fill=\"currentColor\">4</text><rect x=\"112\" y=\"100\" width=\"24\" height=\"30\" fill=\"#c8ccd6\" fill-opacity=\"0.3\" stroke=\"currentColor\" stroke-width=\"2\"/><text x=\"124\" y=\"120\" font-size=\"13\" text-anchor=\"middle\" fill=\"currentColor\">5</text><rect x=\"136\" y=\"100\" width=\"24\" height=\"30\" fill=\"#c8ccd6\" fill-opacity=\"0.6\" stroke=\"currentColor\" stroke-width=\"2\"/><text x=\"148\" y=\"120\" font-size=\"13\" text-anchor=\"middle\" fill=\"currentColor\">6</text><rect x=\"160\" y=\"100\" width=\"24\" height=\"30\" fill=\"#c8ccd6\" fill-opacity=\"0.3\" stroke=\"currentColor\" stroke-width=\"2\"/><text x=\"172\" y=\"120\" font-size=\"13\" text-anchor=\"middle\" fill=\"currentColor\">7</text><rect x=\"184\" y=\"100\" width=\"24\" height=\"30\" fill=\"#c8ccd6\" fill-opacity=\"0.6\" stroke=\"currentColor\" stroke-width=\"2\"/><text x=\"196\" y=\"120\" font-size=\"13\" text-anchor=\"middle\" fill=\"currentColor\">8</text><rect x=\"208\" y=\"100\" width=\"24\" height=\"30\" fill=\"#c8ccd6\" fill-opacity=\"0.3\" stroke=\"currentColor\" stroke-width=\"2\"/><text x=\"220\" y=\"120\" font-size=\"13\" text-anchor=\"middle\" fill=\"currentColor\">9</text><rect x=\"232\" y=\"100\" width=\"24\" height=\"30\" fill=\"#c8ccd6\" fill-opacity=\"0.6\" stroke=\"currentColor\" stroke-width=\"2\"/><text x=\"244\" y=\"120\" font-size=\"13\" text-anchor=\"middle\" fill=\"currentColor\">10</text><rect x=\"256\" y=\"100\" width=\"24\" height=\"30\" fill=\"#c8ccd6\" fill-opacity=\"0.3\" stroke=\"currentColor\" stroke-width=\"2\"/><text x=\"268\" y=\"120\" font-size=\"13\" text-anchor=\"middle\" fill=\"currentColor\">11</text><rect x=\"280\" y=\"100\" width=\"24\" height=\"30\" fill=\"#c8ccd6\" fill-opacity=\"0.6\" stroke=\"currentColor\" stroke-width=\"2\"/><text x=\"292\" y=\"120\" font-size=\"13\" text-anchor=\"middle\" fill=\"currentColor\">12</text><line x1=\"269.68\" y1=\"100\" x2=\"269.68\" y2=\"39\" stroke=\"currentColor\" stroke-width=\"2\"/><circle cx=\"269.68\" cy=\"100\" r=\"5\" fill=\"#f3c969\" stroke=\"currentColor\" stroke-width=\"2\"/><text x=\"269.68\" y=\"34\" font-size=\"14\" text-anchor=\"middle\" fill=\"currentColor\">ア</text><line x1=\"287.68\" y1=\"100\" x2=\"287.68\" y2=\"71\" stroke=\"currentColor\" stroke-width=\"2\"/><circle cx=\"287.68\" cy=\"100\" r=\"5\" fill=\"#f3c969\" stroke=\"currentColor\" stroke-width=\"2\"/><text x=\"287.68\" y=\"66\" font-size=\"14\" text-anchor=\"middle\" fill=\"currentColor\">イ</text><line x1=\"299.44\" y1=\"130\" x2=\"299.44\" y2=\"152\" stroke=\"currentColor\" stroke-width=\"2\"/><circle cx=\"299.44\" cy=\"130\" r=\"5\" fill=\"#f08080\" stroke=\"currentColor\" stroke-width=\"2\"/><text x=\"295.44\" y=\"166\" font-size=\"14\" text-anchor=\"end\" fill=\"currentColor\">ウ：いなくなった日</text><text x=\"16\" y=\"150\" font-size=\"12\" fill=\"currentColor\">数字は 月</text></svg>"
+        },
+        "古生代、中生代、新生代の 順に、時代が すすみます。"
+       ],
+       "qid": "W-009:011c24b3a8"
+      },
+      {
+       "part": "今日",
+       "text": "古生代は 約 2 億 9000 万年、中生代は 約 1 億 8400 万年、新生代は 約 6600 万年です。3 つの 時代を あわせると、約 何万年ですか。数で 答えましょう。",
+       "svg": "<svg viewBox=\"0 0 320 200\" xmlns=\"http://www.w3.org/2000/svg\"><rect x=\"16\" y=\"70\" width=\"154.7\" height=\"30\" fill=\"#7fc8f8\" fill-opacity=\"0.5\" stroke=\"currentColor\" stroke-width=\"2\"/><rect x=\"170.7\" y=\"70\" width=\"98.1\" height=\"30\" fill=\"#7bc96f\" fill-opacity=\"0.5\" stroke=\"currentColor\" stroke-width=\"2\"/><rect x=\"268.8\" y=\"70\" width=\"35.2\" height=\"30\" fill=\"#f3c969\" fill-opacity=\"0.5\" stroke=\"currentColor\" stroke-width=\"2\"/><text x=\"16\" y=\"60\" font-size=\"14\" fill=\"currentColor\">古生代 29000 万年</text><text x=\"304\" y=\"60\" font-size=\"14\" text-anchor=\"end\" fill=\"currentColor\">新生代 6600 万年</text><line x1=\"220\" y1=\"100\" x2=\"220\" y2=\"112\" stroke=\"currentColor\" stroke-width=\"2\"/><text x=\"220\" y=\"130\" font-size=\"14\" text-anchor=\"middle\" fill=\"currentColor\">中生代 18400 万年</text></svg>",
+       "answer": 54000,
+       "check": "29000 + 18400 + 6600",
+       "hints": [
+        "3 つの 長さを 全部 つなげると、古生代の はじまりから いままでに なります。",
+        {
+         "text": "3 つの 長さを つないで、ぜんぶの 長さを 出します。",
+         "svg": "<svg viewBox=\"0 0 320 200\" xmlns=\"http://www.w3.org/2000/svg\"><rect x=\"16\" y=\"70\" width=\"154.7\" height=\"30\" fill=\"#7fc8f8\" fill-opacity=\"0.5\" stroke=\"currentColor\" stroke-width=\"2\"/><rect x=\"170.7\" y=\"70\" width=\"98.1\" height=\"30\" fill=\"#7bc96f\" fill-opacity=\"0.5\" stroke=\"currentColor\" stroke-width=\"2\"/><rect x=\"268.8\" y=\"70\" width=\"35.2\" height=\"30\" fill=\"#f3c969\" fill-opacity=\"0.5\" stroke=\"currentColor\" stroke-width=\"2\"/><line x1=\"16\" y1=\"118\" x2=\"304\" y2=\"118\" stroke=\"currentColor\" stroke-width=\"2\"/><line x1=\"16\" y1=\"112\" x2=\"16\" y2=\"124\" stroke=\"currentColor\" stroke-width=\"2\"/><line x1=\"304\" y1=\"112\" x2=\"304\" y2=\"124\" stroke=\"currentColor\" stroke-width=\"2\"/><text x=\"160\" y=\"146\" font-size=\"16\" text-anchor=\"middle\" fill=\"currentColor\">あわせて ？ 万年</text></svg>"
+        },
+        "万年に そろえた 29000、18400、6600 を たします。"
+       ],
+       "qid": "W-009:8b0df08fe7"
+      },
+      {
+       "part": "今日",
+       "text": "古生代の おわりに ぜつめつした 生き物の 組は どれですか。",
+       "svg": "<svg viewBox=\"0 0 320 200\" xmlns=\"http://www.w3.org/2000/svg\"><rect x=\"14\" y=\"88\" width=\"156.815\" height=\"26\" fill=\"#7fc8f8\" fill-opacity=\"0.45\" stroke=\"currentColor\" stroke-width=\"2\"/><text x=\"92.4074\" y=\"107\" font-size=\"14\" text-anchor=\"middle\" fill=\"currentColor\">古生代</text><rect x=\"170.815\" y=\"88\" width=\"99.4963\" height=\"26\" fill=\"#7bc96f\" fill-opacity=\"0.45\" stroke=\"currentColor\" stroke-width=\"2\"/><text x=\"220.563\" y=\"107\" font-size=\"14\" text-anchor=\"middle\" fill=\"currentColor\">中生代</text><rect x=\"270.311\" y=\"88\" width=\"35.6889\" height=\"26\" fill=\"#f3c969\" fill-opacity=\"0.45\" stroke=\"currentColor\" stroke-width=\"2\"/><text x=\"288.156\" y=\"107\" font-size=\"11\" text-anchor=\"middle\" fill=\"currentColor\">新生代</text><text x=\"14\" y=\"134\" font-size=\"13\" fill=\"currentColor\">5.4 億年前</text><text x=\"170.815\" y=\"134\" font-size=\"13\" text-anchor=\"middle\" fill=\"currentColor\">2.5 億年前</text><text x=\"270.311\" y=\"134\" font-size=\"13\" text-anchor=\"middle\" fill=\"currentColor\">6600 万年前</text><text x=\"306\" y=\"154\" font-size=\"13\" text-anchor=\"end\" fill=\"currentColor\">いま</text><polygon points=\"164.815,70 176.815,70 170.815,84\" fill=\"#f08080\" stroke=\"currentColor\" stroke-width=\"2\"/><text x=\"164.815\" y=\"60\" font-size=\"14\" text-anchor=\"end\" fill=\"currentColor\">古生代の おわり</text></svg>",
+       "choices": [
+        "三葉虫と フズリナ",
+        "きょうりゅうと アンモナイト",
+        "ナウマンゾウと 人"
+       ],
+       "answer": "三葉虫と フズリナ",
+       "check": "'三葉虫と フズリナ'",
+       "hints": [
+        "大量ぜつめつは 2 回 ありました。古生代の おわりは、その 1 回目です。",
+        {
+         "text": "きょうりゅうと アンモナイトは、中生代の 生き物です。",
+         "svg": "<svg viewBox=\"0 0 320 200\" xmlns=\"http://www.w3.org/2000/svg\"><rect x=\"10\" y=\"8\" width=\"100\" height=\"26\" fill=\"#7fc8f8\" fill-opacity=\"0.45\" stroke=\"currentColor\" stroke-width=\"2\"/><text x=\"60\" y=\"27\" font-size=\"16\" text-anchor=\"middle\" fill=\"currentColor\">古生代</text><rect x=\"10\" y=\"34\" width=\"100\" height=\"138\" fill=\"#7fc8f8\" fill-opacity=\"0.2\" stroke=\"currentColor\" stroke-width=\"2\"/><rect x=\"110\" y=\"8\" width=\"100\" height=\"26\" fill=\"#7bc96f\" fill-opacity=\"0.45\" stroke=\"currentColor\" stroke-width=\"2\"/><text x=\"160\" y=\"27\" font-size=\"16\" text-anchor=\"middle\" fill=\"currentColor\">中生代</text><rect x=\"110\" y=\"34\" width=\"100\" height=\"138\" fill=\"#7bc96f\" fill-opacity=\"0.2\" stroke=\"currentColor\" stroke-width=\"2\"/><g transform=\"translate(160 70) scale(0.5)\"><ellipse cx=\"0\" cy=\"6\" rx=\"24\" ry=\"14\" fill=\"#7bc96f\" fill-opacity=\"0.6\" stroke=\"currentColor\" stroke-width=\"2\"/><polygon points=\"-16,0 -28,-22 -20,-26 -4,-6\" fill=\"#7bc96f\" fill-opacity=\"0.6\" stroke=\"currentColor\" stroke-width=\"2\"/><ellipse cx=\"-27\" cy=\"-27\" rx=\"10\" ry=\"6\" fill=\"#7bc96f\" fill-opacity=\"0.6\" stroke=\"currentColor\" stroke-width=\"2\"/><circle cx=\"-30\" cy=\"-29\" r=\"2\" fill=\"currentColor\"/><polygon points=\"20,0 48,14 20,17\" fill=\"#7bc96f\" fill-opacity=\"0.6\" stroke=\"currentColor\" stroke-width=\"2\"/><rect x=\"-12\" y=\"17\" width=\"7\" height=\"14\" fill=\"#7bc96f\" fill-opacity=\"0.6\" stroke=\"currentColor\" stroke-width=\"2\"/><rect x=\"6\" y=\"17\" width=\"7\" height=\"14\" fill=\"#7bc96f\" fill-opacity=\"0.6\" stroke=\"currentColor\" stroke-width=\"2\"/></g><text x=\"160\" y=\"104\" font-size=\"13\" text-anchor=\"middle\" fill=\"currentColor\">きょうりゅう</text><g transform=\"translate(160 130) scale(0.5)\"><circle cx=\"0\" cy=\"0\" r=\"22\" fill=\"#c9a36b\" fill-opacity=\"0.55\" stroke=\"currentColor\" stroke-width=\"2\"/><path d=\"M0 0 a4 4 0 0 1 8 0 a8 8 0 0 1 -16 0 a12 12 0 0 1 24 0\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\"/></g><text x=\"160\" y=\"164\" font-size=\"13\" text-anchor=\"middle\" fill=\"currentColor\">アンモナイト</text><rect x=\"210\" y=\"8\" width=\"100\" height=\"26\" fill=\"#f3c969\" fill-opacity=\"0.45\" stroke=\"currentColor\" stroke-width=\"2\"/><text x=\"260\" y=\"27\" font-size=\"16\" text-anchor=\"middle\" fill=\"currentColor\">新生代</text><rect x=\"210\" y=\"34\" width=\"100\" height=\"138\" fill=\"#f3c969\" fill-opacity=\"0.2\" stroke=\"currentColor\" stroke-width=\"2\"/><text x=\"10\" y=\"192\" font-size=\"13\" fill=\"currentColor\">5.4 億年前</text><text x=\"110\" y=\"192\" font-size=\"13\" text-anchor=\"middle\" fill=\"currentColor\">2.5 億年前</text><text x=\"210\" y=\"192\" font-size=\"13\" text-anchor=\"middle\" fill=\"currentColor\">6600 万年前</text><text x=\"310\" y=\"192\" font-size=\"13\" text-anchor=\"end\" fill=\"currentColor\">いま</text></svg>"
+        },
+        "ぜつめつした 生き物は、その 時代の おわりまで いた 生き物です。"
+       ],
+       "qid": "W-009:547c6e2348"
+      },
+      {
+       "part": "今日",
+       "text": "地そうの 化石が ガラッと かわる ところが、時代の さかい目に なるのは、なぜですか。",
+       "svg": "<svg viewBox=\"0 0 320 200\" xmlns=\"http://www.w3.org/2000/svg\"><rect x=\"40\" y=\"30\" width=\"110\" height=\"36\" fill=\"#7bc96f\" fill-opacity=\"0.55\" stroke=\"currentColor\" stroke-width=\"2\"/><g transform=\"translate(95 48) scale(0.42)\"><circle cx=\"0\" cy=\"0\" r=\"22\" fill=\"#c9a36b\" fill-opacity=\"0.55\" stroke=\"currentColor\" stroke-width=\"2\"/><path d=\"M0 0 a4 4 0 0 1 8 0 a8 8 0 0 1 -16 0 a12 12 0 0 1 24 0\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\"/></g><rect x=\"40\" y=\"66\" width=\"110\" height=\"36\" fill=\"#7bc96f\" fill-opacity=\"0.55\" stroke=\"currentColor\" stroke-width=\"2\"/><g transform=\"translate(95 84) scale(0.42)\"><circle cx=\"0\" cy=\"0\" r=\"22\" fill=\"#c9a36b\" fill-opacity=\"0.55\" stroke=\"currentColor\" stroke-width=\"2\"/><path d=\"M0 0 a4 4 0 0 1 8 0 a8 8 0 0 1 -16 0 a12 12 0 0 1 24 0\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\"/></g><rect x=\"40\" y=\"102\" width=\"110\" height=\"36\" fill=\"#7fc8f8\" fill-opacity=\"0.55\" stroke=\"currentColor\" stroke-width=\"2\"/><g transform=\"translate(95 120) scale(0.42)\"><ellipse cx=\"0\" cy=\"0\" rx=\"38\" ry=\"19\" fill=\"#c9a36b\" fill-opacity=\"0.6\" stroke=\"currentColor\" stroke-width=\"2\"/><path d=\"M-20 -17 Q-28 0 -20 17\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\"/><path d=\"M-6 -19 V19 M8 -19 V19 M21 -16 V16\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.5\"/></g><rect x=\"40\" y=\"138\" width=\"110\" height=\"36\" fill=\"#7fc8f8\" fill-opacity=\"0.55\" stroke=\"currentColor\" stroke-width=\"2\"/><g transform=\"translate(95 156) scale(0.42)\"><ellipse cx=\"0\" cy=\"0\" rx=\"26\" ry=\"12\" fill=\"#c9a36b\" fill-opacity=\"0.6\" stroke=\"currentColor\" stroke-width=\"2\"/><path d=\"M-14 -10 Q-9 0 -14 10 M0 -12 V12 M14 -10 Q9 0 14 10\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.5\"/></g><line x1=\"34\" y1=\"102\" x2=\"156\" y2=\"102\" stroke=\"currentColor\" stroke-width=\"3\" stroke-dasharray=\"6 4\"/><text x=\"162\" y=\"107\" font-size=\"13\" fill=\"currentColor\">化石が ガラッと かわる</text><text x=\"162\" y=\"60\" font-size=\"14\" fill=\"currentColor\">中生代の 地そう</text><text x=\"162\" y=\"154\" font-size=\"14\" fill=\"currentColor\">古生代の 地そう</text></svg>",
+       "choices": [
+        "大量ぜつめつで、生き物が 一度に 入れかわったから",
+        "地そうが あつく なるから",
+        "地そうの 色が かわるから"
+       ],
+       "answer": "大量ぜつめつで、生き物が 一度に 入れかわったから",
+       "check": "'大量ぜつめつで、生き物が 一度に 入れかわったから'",
+       "hints": [
+        "化石の かわり目で、地球に いる 生き物が どう かわったかを 考えます。",
+        {
+         "text": "さかい目の 前と あとで、いる 生き物が 入れかわりました。",
+         "svg": "<svg viewBox=\"0 0 320 200\" xmlns=\"http://www.w3.org/2000/svg\"><rect x=\"10\" y=\"36\" width=\"135\" height=\"130\" rx=\"8\" fill=\"#7fc8f8\" fill-opacity=\"0.25\" stroke=\"currentColor\" stroke-width=\"2\"/><text x=\"77\" y=\"58\" font-size=\"14\" text-anchor=\"middle\" fill=\"currentColor\">ぜつめつの 前</text><g transform=\"translate(45 95) scale(0.5)\"><ellipse cx=\"0\" cy=\"0\" rx=\"38\" ry=\"19\" fill=\"#c9a36b\" fill-opacity=\"0.6\" stroke=\"currentColor\" stroke-width=\"2\"/><path d=\"M-20 -17 Q-28 0 -20 17\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\"/><path d=\"M-6 -19 V19 M8 -19 V19 M21 -16 V16\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.5\"/></g><text x=\"45\" y=\"124\" font-size=\"13\" text-anchor=\"middle\" fill=\"currentColor\">三葉虫</text><g transform=\"translate(108 95) scale(0.5)\"><ellipse cx=\"0\" cy=\"0\" rx=\"26\" ry=\"12\" fill=\"#c9a36b\" fill-opacity=\"0.6\" stroke=\"currentColor\" stroke-width=\"2\"/><path d=\"M-14 -10 Q-9 0 -14 10 M0 -12 V12 M14 -10 Q9 0 14 10\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.5\"/></g><text x=\"108\" y=\"124\" font-size=\"13\" text-anchor=\"middle\" fill=\"currentColor\">フズリナ</text><line x1=\"148\" y1=\"100\" x2=\"160\" y2=\"100\" stroke=\"currentColor\" stroke-width=\"3\"/><polygon points=\"158,92 170,100 158,108\" fill=\"currentColor\"/><rect x=\"172\" y=\"36\" width=\"140\" height=\"130\" rx=\"8\" fill=\"#7bc96f\" fill-opacity=\"0.25\" stroke=\"currentColor\" stroke-width=\"2\"/><text x=\"242\" y=\"58\" font-size=\"14\" text-anchor=\"middle\" fill=\"currentColor\">ぜつめつの あと</text><g transform=\"translate(205 92) scale(0.5)\"><ellipse cx=\"0\" cy=\"6\" rx=\"24\" ry=\"14\" fill=\"#7bc96f\" fill-opacity=\"0.6\" stroke=\"currentColor\" stroke-width=\"2\"/><polygon points=\"-16,0 -28,-22 -20,-26 -4,-6\" fill=\"#7bc96f\" fill-opacity=\"0.6\" stroke=\"currentColor\" stroke-width=\"2\"/><ellipse cx=\"-27\" cy=\"-27\" rx=\"10\" ry=\"6\" fill=\"#7bc96f\" fill-opacity=\"0.6\" stroke=\"currentColor\" stroke-width=\"2\"/><circle cx=\"-30\" cy=\"-29\" r=\"2\" fill=\"currentColor\"/><polygon points=\"20,0 48,14 20,17\" fill=\"#7bc96f\" fill-opacity=\"0.6\" stroke=\"currentColor\" stroke-width=\"2\"/><rect x=\"-12\" y=\"17\" width=\"7\" height=\"14\" fill=\"#7bc96f\" fill-opacity=\"0.6\" stroke=\"currentColor\" stroke-width=\"2\"/><rect x=\"6\" y=\"17\" width=\"7\" height=\"14\" fill=\"#7bc96f\" fill-opacity=\"0.6\" stroke=\"currentColor\" stroke-width=\"2\"/></g><text x=\"205\" y=\"124\" font-size=\"13\" text-anchor=\"middle\" fill=\"currentColor\">きょうりゅう</text><g transform=\"translate(275 92) scale(0.5)\"><circle cx=\"0\" cy=\"0\" r=\"22\" fill=\"#c9a36b\" fill-opacity=\"0.55\" stroke=\"currentColor\" stroke-width=\"2\"/><path d=\"M0 0 a4 4 0 0 1 8 0 a8 8 0 0 1 -16 0 a12 12 0 0 1 24 0\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\"/></g><text x=\"275\" y=\"148\" font-size=\"13\" text-anchor=\"middle\" fill=\"currentColor\">アンモナイト</text></svg>"
+        },
+        "地そうの あつさは、場所ごとに ちがいます。"
+       ],
+       "qid": "W-009:61f90f549b"
+      },
+      {
+       "part": "今日",
+       "text": "A、B、C の 地そうを、できた 古い 順に ならべた ものは どれですか。上の ほうが 新しい 地そうです。",
+       "svg": "<svg viewBox=\"0 0 320 200\" xmlns=\"http://www.w3.org/2000/svg\"><rect x=\"100\" y=\"24\" width=\"110\" height=\"48\" fill=\"#c8ccd6\" fill-opacity=\"0.55\" stroke=\"currentColor\" stroke-width=\"2\"/><text x=\"86\" y=\"53\" font-size=\"16\" text-anchor=\"middle\" fill=\"currentColor\">A</text><g transform=\"translate(155 48) scale(0.42)\"><ellipse cx=\"6\" cy=\"2\" rx=\"28\" ry=\"19\" fill=\"#c8ccd6\" fill-opacity=\"0.8\" stroke=\"currentColor\" stroke-width=\"2\"/><circle cx=\"-24\" cy=\"-2\" r=\"14\" fill=\"#c8ccd6\" fill-opacity=\"0.8\" stroke=\"currentColor\" stroke-width=\"2\"/><path d=\"M-34 4 Q-42 18 -34 30\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"5\" stroke-linecap=\"round\"/><path d=\"M-30 8 Q-44 10 -46 0\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\"/><circle cx=\"-27\" cy=\"-6\" r=\"2\" fill=\"currentColor\"/><rect x=\"-10\" y=\"17\" width=\"9\" height=\"16\" fill=\"#c8ccd6\" fill-opacity=\"0.8\" stroke=\"currentColor\" stroke-width=\"2\"/><rect x=\"14\" y=\"17\" width=\"9\" height=\"16\" fill=\"#c8ccd6\" fill-opacity=\"0.8\" stroke=\"currentColor\" stroke-width=\"2\"/></g><rect x=\"100\" y=\"72\" width=\"110\" height=\"48\" fill=\"#c8ccd6\" fill-opacity=\"0.55\" stroke=\"currentColor\" stroke-width=\"2\"/><text x=\"86\" y=\"101\" font-size=\"16\" text-anchor=\"middle\" fill=\"currentColor\">B</text><g transform=\"translate(155 96) scale(0.42)\"><ellipse cx=\"0\" cy=\"6\" rx=\"24\" ry=\"14\" fill=\"#7bc96f\" fill-opacity=\"0.6\" stroke=\"currentColor\" stroke-width=\"2\"/><polygon points=\"-16,0 -28,-22 -20,-26 -4,-6\" fill=\"#7bc96f\" fill-opacity=\"0.6\" stroke=\"currentColor\" stroke-width=\"2\"/><ellipse cx=\"-27\" cy=\"-27\" rx=\"10\" ry=\"6\" fill=\"#7bc96f\" fill-opacity=\"0.6\" stroke=\"currentColor\" stroke-width=\"2\"/><circle cx=\"-30\" cy=\"-29\" r=\"2\" fill=\"currentColor\"/><polygon points=\"20,0 48,14 20,17\" fill=\"#7bc96f\" fill-opacity=\"0.6\" stroke=\"currentColor\" stroke-width=\"2\"/><rect x=\"-12\" y=\"17\" width=\"7\" height=\"14\" fill=\"#7bc96f\" fill-opacity=\"0.6\" stroke=\"currentColor\" stroke-width=\"2\"/><rect x=\"6\" y=\"17\" width=\"7\" height=\"14\" fill=\"#7bc96f\" fill-opacity=\"0.6\" stroke=\"currentColor\" stroke-width=\"2\"/></g><rect x=\"100\" y=\"120\" width=\"110\" height=\"48\" fill=\"#c8ccd6\" fill-opacity=\"0.55\" stroke=\"currentColor\" stroke-width=\"2\"/><text x=\"86\" y=\"149\" font-size=\"16\" text-anchor=\"middle\" fill=\"currentColor\">C</text><g transform=\"translate(155 144) scale(0.42)\"><ellipse cx=\"0\" cy=\"0\" rx=\"38\" ry=\"19\" fill=\"#c9a36b\" fill-opacity=\"0.6\" stroke=\"currentColor\" stroke-width=\"2\"/><path d=\"M-20 -17 Q-28 0 -20 17\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\"/><path d=\"M-6 -19 V19 M8 -19 V19 M21 -16 V16\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.5\"/></g></svg>",
+       "choices": [
+        "C → B → A",
+        "A → B → C",
+        "B → C → A"
+       ],
+       "answer": "C → B → A",
+       "check": "'C → B → A'",
+       "hints": [
+        "地そうは、下から 順に つもっていきます。",
+        {
+         "text": "化石の 生き物が いた 時代を たしかめます。",
+         "svg": "<svg viewBox=\"0 0 320 200\" xmlns=\"http://www.w3.org/2000/svg\"><rect x=\"10\" y=\"8\" width=\"100\" height=\"26\" fill=\"#7fc8f8\" fill-opacity=\"0.45\" stroke=\"currentColor\" stroke-width=\"2\"/><text x=\"60\" y=\"27\" font-size=\"16\" text-anchor=\"middle\" fill=\"currentColor\">古生代</text><rect x=\"10\" y=\"34\" width=\"100\" height=\"138\" fill=\"#7fc8f8\" fill-opacity=\"0.2\" stroke=\"currentColor\" stroke-width=\"2\"/><g transform=\"translate(60 70) scale(0.5)\"><ellipse cx=\"0\" cy=\"0\" rx=\"38\" ry=\"19\" fill=\"#c9a36b\" fill-opacity=\"0.6\" stroke=\"currentColor\" stroke-width=\"2\"/><path d=\"M-20 -17 Q-28 0 -20 17\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\"/><path d=\"M-6 -19 V19 M8 -19 V19 M21 -16 V16\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.5\"/></g><text x=\"60\" y=\"104\" font-size=\"13\" text-anchor=\"middle\" fill=\"currentColor\">三葉虫</text><g transform=\"translate(60 130) scale(0.5)\"><ellipse cx=\"-6\" cy=\"0\" rx=\"28\" ry=\"15\" fill=\"#7fc8f8\" fill-opacity=\"0.6\" stroke=\"currentColor\" stroke-width=\"2\"/><polygon points=\"20,0 40,-15 40,15\" fill=\"#7fc8f8\" fill-opacity=\"0.6\" stroke=\"currentColor\" stroke-width=\"2\"/><circle cx=\"-22\" cy=\"-3\" r=\"3\" fill=\"currentColor\"/></g><text x=\"60\" y=\"164\" font-size=\"13\" text-anchor=\"middle\" fill=\"currentColor\">魚</text><rect x=\"110\" y=\"8\" width=\"100\" height=\"26\" fill=\"#7bc96f\" fill-opacity=\"0.45\" stroke=\"currentColor\" stroke-width=\"2\"/><text x=\"160\" y=\"27\" font-size=\"16\" text-anchor=\"middle\" fill=\"currentColor\">中生代</text><rect x=\"110\" y=\"34\" width=\"100\" height=\"138\" fill=\"#7bc96f\" fill-opacity=\"0.2\" stroke=\"currentColor\" stroke-width=\"2\"/><g transform=\"translate(160 70) scale(0.5)\"><ellipse cx=\"0\" cy=\"6\" rx=\"24\" ry=\"14\" fill=\"#7bc96f\" fill-opacity=\"0.6\" stroke=\"currentColor\" stroke-width=\"2\"/><polygon points=\"-16,0 -28,-22 -20,-26 -4,-6\" fill=\"#7bc96f\" fill-opacity=\"0.6\" stroke=\"currentColor\" stroke-width=\"2\"/><ellipse cx=\"-27\" cy=\"-27\" rx=\"10\" ry=\"6\" fill=\"#7bc96f\" fill-opacity=\"0.6\" stroke=\"currentColor\" stroke-width=\"2\"/><circle cx=\"-30\" cy=\"-29\" r=\"2\" fill=\"currentColor\"/><polygon points=\"20,0 48,14 20,17\" fill=\"#7bc96f\" fill-opacity=\"0.6\" stroke=\"currentColor\" stroke-width=\"2\"/><rect x=\"-12\" y=\"17\" width=\"7\" height=\"14\" fill=\"#7bc96f\" fill-opacity=\"0.6\" stroke=\"currentColor\" stroke-width=\"2\"/><rect x=\"6\" y=\"17\" width=\"7\" height=\"14\" fill=\"#7bc96f\" fill-opacity=\"0.6\" stroke=\"currentColor\" stroke-width=\"2\"/></g><text x=\"160\" y=\"104\" font-size=\"13\" text-anchor=\"middle\" fill=\"currentColor\">きょうりゅう</text><g transform=\"translate(160 130) scale(0.5)\"><circle cx=\"0\" cy=\"0\" r=\"22\" fill=\"#c9a36b\" fill-opacity=\"0.55\" stroke=\"currentColor\" stroke-width=\"2\"/><path d=\"M0 0 a4 4 0 0 1 8 0 a8 8 0 0 1 -16 0 a12 12 0 0 1 24 0\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\"/></g><text x=\"160\" y=\"164\" font-size=\"13\" text-anchor=\"middle\" fill=\"currentColor\">アンモナイト</text><rect x=\"210\" y=\"8\" width=\"100\" height=\"26\" fill=\"#f3c969\" fill-opacity=\"0.45\" stroke=\"currentColor\" stroke-width=\"2\"/><text x=\"260\" y=\"27\" font-size=\"16\" text-anchor=\"middle\" fill=\"currentColor\">新生代</text><rect x=\"210\" y=\"34\" width=\"100\" height=\"138\" fill=\"#f3c969\" fill-opacity=\"0.2\" stroke=\"currentColor\" stroke-width=\"2\"/><g transform=\"translate(260 70) scale(0.5)\"><ellipse cx=\"6\" cy=\"2\" rx=\"28\" ry=\"19\" fill=\"#c8ccd6\" fill-opacity=\"0.8\" stroke=\"currentColor\" stroke-width=\"2\"/><circle cx=\"-24\" cy=\"-2\" r=\"14\" fill=\"#c8ccd6\" fill-opacity=\"0.8\" stroke=\"currentColor\" stroke-width=\"2\"/><path d=\"M-34 4 Q-42 18 -34 30\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"5\" stroke-linecap=\"round\"/><path d=\"M-30 8 Q-44 10 -46 0\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\"/><circle cx=\"-27\" cy=\"-6\" r=\"2\" fill=\"currentColor\"/><rect x=\"-10\" y=\"17\" width=\"9\" height=\"16\" fill=\"#c8ccd6\" fill-opacity=\"0.8\" stroke=\"currentColor\" stroke-width=\"2\"/><rect x=\"14\" y=\"17\" width=\"9\" height=\"16\" fill=\"#c8ccd6\" fill-opacity=\"0.8\" stroke=\"currentColor\" stroke-width=\"2\"/></g><text x=\"260\" y=\"104\" font-size=\"13\" text-anchor=\"middle\" fill=\"currentColor\">ナウマンゾウ</text><g transform=\"translate(260 130) scale(0.5)\"><circle cx=\"0\" cy=\"-24\" r=\"8\" fill=\"#f3c969\" fill-opacity=\"0.8\" stroke=\"currentColor\" stroke-width=\"2\"/><path d=\"M0 -16 V8 M-12 -6 L0 -12 L12 -6 M0 8 L-9 30 M0 8 L9 30\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"3\" stroke-linecap=\"round\"/></g><text x=\"260\" y=\"164\" font-size=\"13\" text-anchor=\"middle\" fill=\"currentColor\">人</text><text x=\"10\" y=\"192\" font-size=\"13\" fill=\"currentColor\">5.4 億年前</text><text x=\"110\" y=\"192\" font-size=\"13\" text-anchor=\"middle\" fill=\"currentColor\">2.5 億年前</text><text x=\"210\" y=\"192\" font-size=\"13\" text-anchor=\"middle\" fill=\"currentColor\">6600 万年前</text><text x=\"310\" y=\"192\" font-size=\"13\" text-anchor=\"end\" fill=\"currentColor\">いま</text></svg>"
+        },
+        "地そうの 重なりからの 答えと、化石からの 答えが 同じに なるかを 見ます。"
+       ],
+       "qid": "W-009:1a9ce4ac0d"
+      },
+      {
+       "part": "今日",
+       "text": "古生代の おわりの 大量ぜつめつで、海に いた 生き物の しゅるいの 10 のうち 9 が ぜつめつしました。海に 500 しゅるい いたと すると、のこったのは 何しゅるいですか。数で 答えましょう。",
+       "svg": "<svg viewBox=\"0 0 320 200\" xmlns=\"http://www.w3.org/2000/svg\"><rect x=\"20\" y=\"80\" width=\"28\" height=\"36\" fill=\"#c8ccd6\" fill-opacity=\"0.35\" stroke=\"currentColor\" stroke-width=\"2\"/><rect x=\"48\" y=\"80\" width=\"28\" height=\"36\" fill=\"#c8ccd6\" fill-opacity=\"0.35\" stroke=\"currentColor\" stroke-width=\"2\"/><rect x=\"76\" y=\"80\" width=\"28\" height=\"36\" fill=\"#c8ccd6\" fill-opacity=\"0.35\" stroke=\"currentColor\" stroke-width=\"2\"/><rect x=\"104\" y=\"80\" width=\"28\" height=\"36\" fill=\"#c8ccd6\" fill-opacity=\"0.35\" stroke=\"currentColor\" stroke-width=\"2\"/><rect x=\"132\" y=\"80\" width=\"28\" height=\"36\" fill=\"#c8ccd6\" fill-opacity=\"0.35\" stroke=\"currentColor\" stroke-width=\"2\"/><rect x=\"160\" y=\"80\" width=\"28\" height=\"36\" fill=\"#c8ccd6\" fill-opacity=\"0.35\" stroke=\"currentColor\" stroke-width=\"2\"/><rect x=\"188\" y=\"80\" width=\"28\" height=\"36\" fill=\"#c8ccd6\" fill-opacity=\"0.35\" stroke=\"currentColor\" stroke-width=\"2\"/><rect x=\"216\" y=\"80\" width=\"28\" height=\"36\" fill=\"#c8ccd6\" fill-opacity=\"0.35\" stroke=\"currentColor\" stroke-width=\"2\"/><rect x=\"244\" y=\"80\" width=\"28\" height=\"36\" fill=\"#c8ccd6\" fill-opacity=\"0.35\" stroke=\"currentColor\" stroke-width=\"2\"/><rect x=\"272\" y=\"80\" width=\"28\" height=\"36\" fill=\"#7bc96f\" fill-opacity=\"0.7\" stroke=\"currentColor\" stroke-width=\"2\"/><line x1=\"25\" y1=\"93\" x2=\"43\" y2=\"103\" stroke=\"currentColor\" stroke-width=\"3\"/><line x1=\"25\" y1=\"103\" x2=\"43\" y2=\"93\" stroke=\"currentColor\" stroke-width=\"3\"/><line x1=\"53\" y1=\"93\" x2=\"71\" y2=\"103\" stroke=\"currentColor\" stroke-width=\"3\"/><line x1=\"53\" y1=\"103\" x2=\"71\" y2=\"93\" stroke=\"currentColor\" stroke-width=\"3\"/><line x1=\"81\" y1=\"93\" x2=\"99\" y2=\"103\" stroke=\"currentColor\" stroke-width=\"3\"/><line x1=\"81\" y1=\"103\" x2=\"99\" y2=\"93\" stroke=\"currentColor\" stroke-width=\"3\"/><line x1=\"109\" y1=\"93\" x2=\"127\" y2=\"103\" stroke=\"currentColor\" stroke-width=\"3\"/><line x1=\"109\" y1=\"103\" x2=\"127\" y2=\"93\" stroke=\"currentColor\" stroke-width=\"3\"/><line x1=\"137\" y1=\"93\" x2=\"155\" y2=\"103\" stroke=\"currentColor\" stroke-width=\"3\"/><line x1=\"137\" y1=\"103\" x2=\"155\" y2=\"93\" stroke=\"currentColor\" stroke-width=\"3\"/><line x1=\"165\" y1=\"93\" x2=\"183\" y2=\"103\" stroke=\"currentColor\" stroke-width=\"3\"/><line x1=\"165\" y1=\"103\" x2=\"183\" y2=\"93\" stroke=\"currentColor\" stroke-width=\"3\"/><line x1=\"193\" y1=\"93\" x2=\"211\" y2=\"103\" stroke=\"currentColor\" stroke-width=\"3\"/><line x1=\"193\" y1=\"103\" x2=\"211\" y2=\"93\" stroke=\"currentColor\" stroke-width=\"3\"/><line x1=\"221\" y1=\"93\" x2=\"239\" y2=\"103\" stroke=\"currentColor\" stroke-width=\"3\"/><line x1=\"221\" y1=\"103\" x2=\"239\" y2=\"93\" stroke=\"currentColor\" stroke-width=\"3\"/><line x1=\"249\" y1=\"93\" x2=\"267\" y2=\"103\" stroke=\"currentColor\" stroke-width=\"3\"/><line x1=\"249\" y1=\"103\" x2=\"267\" y2=\"93\" stroke=\"currentColor\" stroke-width=\"3\"/><line x1=\"20\" y1=\"66\" x2=\"300\" y2=\"66\" stroke=\"currentColor\" stroke-width=\"2\"/><line x1=\"20\" y1=\"60\" x2=\"20\" y2=\"72\" stroke=\"currentColor\" stroke-width=\"2\"/><line x1=\"300\" y1=\"60\" x2=\"300\" y2=\"72\" stroke=\"currentColor\" stroke-width=\"2\"/><text x=\"160\" y=\"52\" font-size=\"16\" text-anchor=\"middle\" fill=\"currentColor\">500 しゅるい</text><text x=\"160\" y=\"148\" font-size=\"14\" text-anchor=\"middle\" fill=\"currentColor\">10 に 分けた うち、9 が ぜつめつ</text></svg>",
+       "answer": 50,
+       "check": "500 - 500 // 10 * 9",
+       "hints": [
+        "10 のうち 9 が いなくなった とき、のこりは 10 のうち いくつですか。",
+        {
+         "text": "500 しゅるいを 10 こに 同じ 数ずつ 分けた 1 こ分が、いくつかを 出します。",
+         "svg": "<svg viewBox=\"0 0 320 200\" xmlns=\"http://www.w3.org/2000/svg\"><rect x=\"20\" y=\"80\" width=\"280\" height=\"36\" fill=\"#c8ccd6\" fill-opacity=\"0.35\" stroke=\"currentColor\" stroke-width=\"2\"/><line x1=\"48\" y1=\"80\" x2=\"48\" y2=\"116\" stroke=\"currentColor\" stroke-width=\"2\"/><line x1=\"76\" y1=\"80\" x2=\"76\" y2=\"116\" stroke=\"currentColor\" stroke-width=\"2\"/><line x1=\"104\" y1=\"80\" x2=\"104\" y2=\"116\" stroke=\"currentColor\" stroke-width=\"2\"/><line x1=\"132\" y1=\"80\" x2=\"132\" y2=\"116\" stroke=\"currentColor\" stroke-width=\"2\"/><line x1=\"160\" y1=\"80\" x2=\"160\" y2=\"116\" stroke=\"currentColor\" stroke-width=\"2\"/><line x1=\"188\" y1=\"80\" x2=\"188\" y2=\"116\" stroke=\"currentColor\" stroke-width=\"2\"/><line x1=\"216\" y1=\"80\" x2=\"216\" y2=\"116\" stroke=\"currentColor\" stroke-width=\"2\"/><line x1=\"244\" y1=\"80\" x2=\"244\" y2=\"116\" stroke=\"currentColor\" stroke-width=\"2\"/><line x1=\"272\" y1=\"80\" x2=\"272\" y2=\"116\" stroke=\"currentColor\" stroke-width=\"2\"/><line x1=\"20\" y1=\"66\" x2=\"300\" y2=\"66\" stroke=\"currentColor\" stroke-width=\"2\"/><line x1=\"20\" y1=\"60\" x2=\"20\" y2=\"72\" stroke=\"currentColor\" stroke-width=\"2\"/><line x1=\"300\" y1=\"60\" x2=\"300\" y2=\"72\" stroke=\"currentColor\" stroke-width=\"2\"/><text x=\"160\" y=\"52\" font-size=\"16\" text-anchor=\"middle\" fill=\"currentColor\">500 しゅるい</text><text x=\"34\" y=\"100\" font-size=\"16\" text-anchor=\"middle\" fill=\"currentColor\">？</text><text x=\"160\" y=\"148\" font-size=\"14\" text-anchor=\"middle\" fill=\"currentColor\">1 こ分は 何しゅるい？</text></svg>"
+        },
+        "500 ÷ 10 の 1 こ分が のこった しゅるいです。"
+       ],
+       "qid": "W-009:b0651a4767"
+      }
+     ],
+     "extra": [
+      {
+       "part": "今日",
+       "text": "時代の 目もりの 図を 見て、正しい 文を 1 つ えらびましょう。",
+       "svg": "<svg viewBox=\"0 0 320 200\" xmlns=\"http://www.w3.org/2000/svg\"><rect x=\"14\" y=\"88\" width=\"156.815\" height=\"26\" fill=\"#7fc8f8\" fill-opacity=\"0.45\" stroke=\"currentColor\" stroke-width=\"2\"/><text x=\"92.4074\" y=\"107\" font-size=\"14\" text-anchor=\"middle\" fill=\"currentColor\">古生代</text><rect x=\"170.815\" y=\"88\" width=\"99.4963\" height=\"26\" fill=\"#7bc96f\" fill-opacity=\"0.45\" stroke=\"currentColor\" stroke-width=\"2\"/><text x=\"220.563\" y=\"107\" font-size=\"14\" text-anchor=\"middle\" fill=\"currentColor\">中生代</text><rect x=\"270.311\" y=\"88\" width=\"35.6889\" height=\"26\" fill=\"#f3c969\" fill-opacity=\"0.45\" stroke=\"currentColor\" stroke-width=\"2\"/><text x=\"288.156\" y=\"107\" font-size=\"11\" text-anchor=\"middle\" fill=\"currentColor\">新生代</text><text x=\"14\" y=\"134\" font-size=\"13\" fill=\"currentColor\">5.4 億年前</text><text x=\"170.815\" y=\"134\" font-size=\"13\" text-anchor=\"middle\" fill=\"currentColor\">2.5 億年前</text><text x=\"270.311\" y=\"134\" font-size=\"13\" text-anchor=\"middle\" fill=\"currentColor\">6600 万年前</text><text x=\"306\" y=\"154\" font-size=\"13\" text-anchor=\"end\" fill=\"currentColor\">いま</text><polygon points=\"245.926,70 257.926,70 251.926,84\" fill=\"#f08080\" stroke=\"currentColor\" stroke-width=\"2\"/><text x=\"245.926\" y=\"60\" font-size=\"14\" text-anchor=\"end\" fill=\"currentColor\">きょうりゅうが いた</text><polygon points=\"299.838,70 311.838,70 305.838,84\" fill=\"#f08080\" stroke=\"currentColor\" stroke-width=\"2\"/><text x=\"299.838\" y=\"40\" font-size=\"14\" text-anchor=\"end\" fill=\"currentColor\">人が 生まれた</text></svg>",
+       "choices": [
+        "人は、古生代に 生まれた",
+        "きょうりゅうは、中生代の おわりに いなくなった",
+        "三葉虫は、新生代まで 生きていた"
+       ],
+       "answer": "きょうりゅうは、中生代の おわりに いなくなった",
+       "check": "'きょうりゅうは、中生代の おわりに いなくなった'",
+       "hints": [
+        "3 つの 文を 1 つずつ、図や 見本と くらべて たしかめます。",
+        {
+         "text": "見本の 図です。生き物ごとの 時代を たしかめます。",
+         "svg": "<svg viewBox=\"0 0 320 200\" xmlns=\"http://www.w3.org/2000/svg\"><rect x=\"10\" y=\"8\" width=\"100\" height=\"26\" fill=\"#7fc8f8\" fill-opacity=\"0.45\" stroke=\"currentColor\" stroke-width=\"2\"/><text x=\"60\" y=\"27\" font-size=\"16\" text-anchor=\"middle\" fill=\"currentColor\">古生代</text><rect x=\"10\" y=\"34\" width=\"100\" height=\"138\" fill=\"#7fc8f8\" fill-opacity=\"0.2\" stroke=\"currentColor\" stroke-width=\"2\"/><g transform=\"translate(60 70) scale(0.5)\"><ellipse cx=\"0\" cy=\"0\" rx=\"38\" ry=\"19\" fill=\"#c9a36b\" fill-opacity=\"0.6\" stroke=\"currentColor\" stroke-width=\"2\"/><path d=\"M-20 -17 Q-28 0 -20 17\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\"/><path d=\"M-6 -19 V19 M8 -19 V19 M21 -16 V16\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.5\"/></g><text x=\"60\" y=\"104\" font-size=\"13\" text-anchor=\"middle\" fill=\"currentColor\">三葉虫</text><g transform=\"translate(60 130) scale(0.5)\"><ellipse cx=\"-6\" cy=\"0\" rx=\"28\" ry=\"15\" fill=\"#7fc8f8\" fill-opacity=\"0.6\" stroke=\"currentColor\" stroke-width=\"2\"/><polygon points=\"20,0 40,-15 40,15\" fill=\"#7fc8f8\" fill-opacity=\"0.6\" stroke=\"currentColor\" stroke-width=\"2\"/><circle cx=\"-22\" cy=\"-3\" r=\"3\" fill=\"currentColor\"/></g><text x=\"60\" y=\"164\" font-size=\"13\" text-anchor=\"middle\" fill=\"currentColor\">魚</text><rect x=\"110\" y=\"8\" width=\"100\" height=\"26\" fill=\"#7bc96f\" fill-opacity=\"0.45\" stroke=\"currentColor\" stroke-width=\"2\"/><text x=\"160\" y=\"27\" font-size=\"16\" text-anchor=\"middle\" fill=\"currentColor\">中生代</text><rect x=\"110\" y=\"34\" width=\"100\" height=\"138\" fill=\"#7bc96f\" fill-opacity=\"0.2\" stroke=\"currentColor\" stroke-width=\"2\"/><g transform=\"translate(160 70) scale(0.5)\"><ellipse cx=\"0\" cy=\"6\" rx=\"24\" ry=\"14\" fill=\"#7bc96f\" fill-opacity=\"0.6\" stroke=\"currentColor\" stroke-width=\"2\"/><polygon points=\"-16,0 -28,-22 -20,-26 -4,-6\" fill=\"#7bc96f\" fill-opacity=\"0.6\" stroke=\"currentColor\" stroke-width=\"2\"/><ellipse cx=\"-27\" cy=\"-27\" rx=\"10\" ry=\"6\" fill=\"#7bc96f\" fill-opacity=\"0.6\" stroke=\"currentColor\" stroke-width=\"2\"/><circle cx=\"-30\" cy=\"-29\" r=\"2\" fill=\"currentColor\"/><polygon points=\"20,0 48,14 20,17\" fill=\"#7bc96f\" fill-opacity=\"0.6\" stroke=\"currentColor\" stroke-width=\"2\"/><rect x=\"-12\" y=\"17\" width=\"7\" height=\"14\" fill=\"#7bc96f\" fill-opacity=\"0.6\" stroke=\"currentColor\" stroke-width=\"2\"/><rect x=\"6\" y=\"17\" width=\"7\" height=\"14\" fill=\"#7bc96f\" fill-opacity=\"0.6\" stroke=\"currentColor\" stroke-width=\"2\"/></g><text x=\"160\" y=\"104\" font-size=\"13\" text-anchor=\"middle\" fill=\"currentColor\">きょうりゅう</text><g transform=\"translate(160 130) scale(0.5)\"><circle cx=\"0\" cy=\"0\" r=\"22\" fill=\"#c9a36b\" fill-opacity=\"0.55\" stroke=\"currentColor\" stroke-width=\"2\"/><path d=\"M0 0 a4 4 0 0 1 8 0 a8 8 0 0 1 -16 0 a12 12 0 0 1 24 0\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\"/></g><text x=\"160\" y=\"164\" font-size=\"13\" text-anchor=\"middle\" fill=\"currentColor\">アンモナイト</text><rect x=\"210\" y=\"8\" width=\"100\" height=\"26\" fill=\"#f3c969\" fill-opacity=\"0.45\" stroke=\"currentColor\" stroke-width=\"2\"/><text x=\"260\" y=\"27\" font-size=\"16\" text-anchor=\"middle\" fill=\"currentColor\">新生代</text><rect x=\"210\" y=\"34\" width=\"100\" height=\"138\" fill=\"#f3c969\" fill-opacity=\"0.2\" stroke=\"currentColor\" stroke-width=\"2\"/><g transform=\"translate(260 70) scale(0.5)\"><ellipse cx=\"6\" cy=\"2\" rx=\"28\" ry=\"19\" fill=\"#c8ccd6\" fill-opacity=\"0.8\" stroke=\"currentColor\" stroke-width=\"2\"/><circle cx=\"-24\" cy=\"-2\" r=\"14\" fill=\"#c8ccd6\" fill-opacity=\"0.8\" stroke=\"currentColor\" stroke-width=\"2\"/><path d=\"M-34 4 Q-42 18 -34 30\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"5\" stroke-linecap=\"round\"/><path d=\"M-30 8 Q-44 10 -46 0\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\"/><circle cx=\"-27\" cy=\"-6\" r=\"2\" fill=\"currentColor\"/><rect x=\"-10\" y=\"17\" width=\"9\" height=\"16\" fill=\"#c8ccd6\" fill-opacity=\"0.8\" stroke=\"currentColor\" stroke-width=\"2\"/><rect x=\"14\" y=\"17\" width=\"9\" height=\"16\" fill=\"#c8ccd6\" fill-opacity=\"0.8\" stroke=\"currentColor\" stroke-width=\"2\"/></g><text x=\"260\" y=\"104\" font-size=\"13\" text-anchor=\"middle\" fill=\"currentColor\">ナウマンゾウ</text><g transform=\"translate(260 130) scale(0.5)\"><circle cx=\"0\" cy=\"-24\" r=\"8\" fill=\"#f3c969\" fill-opacity=\"0.8\" stroke=\"currentColor\" stroke-width=\"2\"/><path d=\"M0 -16 V8 M-12 -6 L0 -12 L12 -6 M0 8 L-9 30 M0 8 L9 30\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"3\" stroke-linecap=\"round\"/></g><text x=\"260\" y=\"164\" font-size=\"13\" text-anchor=\"middle\" fill=\"currentColor\">人</text><text x=\"10\" y=\"192\" font-size=\"13\" fill=\"currentColor\">5.4 億年前</text><text x=\"110\" y=\"192\" font-size=\"13\" text-anchor=\"middle\" fill=\"currentColor\">2.5 億年前</text><text x=\"210\" y=\"192\" font-size=\"13\" text-anchor=\"middle\" fill=\"currentColor\">6600 万年前</text><text x=\"310\" y=\"192\" font-size=\"13\" text-anchor=\"end\" fill=\"currentColor\">いま</text></svg>"
+        },
+        "大量ぜつめつは、古生代の おわりと 中生代の おわりに ありました。"
+       ],
+       "qid": "W-009:3e9ead5a6c"
+      },
+      {
+       "part": "今日",
+       "text": "この 6 つの 生き物の うち、中生代の おわりの 大量ぜつめつで ぜつめつした ものは いくつ ですか。数で 答えましょう。",
+       "svg": "<svg viewBox=\"0 0 320 200\" xmlns=\"http://www.w3.org/2000/svg\"><g transform=\"translate(60 46) scale(0.6)\"><ellipse cx=\"0\" cy=\"0\" rx=\"38\" ry=\"19\" fill=\"#c9a36b\" fill-opacity=\"0.6\" stroke=\"currentColor\" stroke-width=\"2\"/><path d=\"M-20 -17 Q-28 0 -20 17\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\"/><path d=\"M-6 -19 V19 M8 -19 V19 M21 -16 V16\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.5\"/></g><text x=\"60\" y=\"86\" font-size=\"13\" text-anchor=\"middle\" fill=\"currentColor\">三葉虫</text><g transform=\"translate(160 46) scale(0.6)\"><ellipse cx=\"0\" cy=\"6\" rx=\"24\" ry=\"14\" fill=\"#7bc96f\" fill-opacity=\"0.6\" stroke=\"currentColor\" stroke-width=\"2\"/><polygon points=\"-16,0 -28,-22 -20,-26 -4,-6\" fill=\"#7bc96f\" fill-opacity=\"0.6\" stroke=\"currentColor\" stroke-width=\"2\"/><ellipse cx=\"-27\" cy=\"-27\" rx=\"10\" ry=\"6\" fill=\"#7bc96f\" fill-opacity=\"0.6\" stroke=\"currentColor\" stroke-width=\"2\"/><circle cx=\"-30\" cy=\"-29\" r=\"2\" fill=\"currentColor\"/><polygon points=\"20,0 48,14 20,17\" fill=\"#7bc96f\" fill-opacity=\"0.6\" stroke=\"currentColor\" stroke-width=\"2\"/><rect x=\"-12\" y=\"17\" width=\"7\" height=\"14\" fill=\"#7bc96f\" fill-opacity=\"0.6\" stroke=\"currentColor\" stroke-width=\"2\"/><rect x=\"6\" y=\"17\" width=\"7\" height=\"14\" fill=\"#7bc96f\" fill-opacity=\"0.6\" stroke=\"currentColor\" stroke-width=\"2\"/></g><text x=\"160\" y=\"86\" font-size=\"13\" text-anchor=\"middle\" fill=\"currentColor\">きょうりゅう</text><g transform=\"translate(260 46) scale(0.6)\"><circle cx=\"0\" cy=\"-24\" r=\"8\" fill=\"#f3c969\" fill-opacity=\"0.8\" stroke=\"currentColor\" stroke-width=\"2\"/><path d=\"M0 -16 V8 M-12 -6 L0 -12 L12 -6 M0 8 L-9 30 M0 8 L9 30\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"3\" stroke-linecap=\"round\"/></g><text x=\"260\" y=\"86\" font-size=\"13\" text-anchor=\"middle\" fill=\"currentColor\">人</text><g transform=\"translate(60 128) scale(0.6)\"><ellipse cx=\"-6\" cy=\"0\" rx=\"28\" ry=\"15\" fill=\"#7fc8f8\" fill-opacity=\"0.6\" stroke=\"currentColor\" stroke-width=\"2\"/><polygon points=\"20,0 40,-15 40,15\" fill=\"#7fc8f8\" fill-opacity=\"0.6\" stroke=\"currentColor\" stroke-width=\"2\"/><circle cx=\"-22\" cy=\"-3\" r=\"3\" fill=\"currentColor\"/></g><text x=\"60\" y=\"168\" font-size=\"13\" text-anchor=\"middle\" fill=\"currentColor\">魚</text><g transform=\"translate(160 128) scale(0.6)\"><ellipse cx=\"6\" cy=\"2\" rx=\"28\" ry=\"19\" fill=\"#c8ccd6\" fill-opacity=\"0.8\" stroke=\"currentColor\" stroke-width=\"2\"/><circle cx=\"-24\" cy=\"-2\" r=\"14\" fill=\"#c8ccd6\" fill-opacity=\"0.8\" stroke=\"currentColor\" stroke-width=\"2\"/><path d=\"M-34 4 Q-42 18 -34 30\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"5\" stroke-linecap=\"round\"/><path d=\"M-30 8 Q-44 10 -46 0\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\"/><circle cx=\"-27\" cy=\"-6\" r=\"2\" fill=\"currentColor\"/><rect x=\"-10\" y=\"17\" width=\"9\" height=\"16\" fill=\"#c8ccd6\" fill-opacity=\"0.8\" stroke=\"currentColor\" stroke-width=\"2\"/><rect x=\"14\" y=\"17\" width=\"9\" height=\"16\" fill=\"#c8ccd6\" fill-opacity=\"0.8\" stroke=\"currentColor\" stroke-width=\"2\"/></g><text x=\"160\" y=\"168\" font-size=\"13\" text-anchor=\"middle\" fill=\"currentColor\">ナウマンゾウ</text><g transform=\"translate(260 128) scale(0.6)\"><circle cx=\"0\" cy=\"0\" r=\"22\" fill=\"#c9a36b\" fill-opacity=\"0.55\" stroke=\"currentColor\" stroke-width=\"2\"/><path d=\"M0 0 a4 4 0 0 1 8 0 a8 8 0 0 1 -16 0 a12 12 0 0 1 24 0\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\"/></g><text x=\"260\" y=\"168\" font-size=\"13\" text-anchor=\"middle\" fill=\"currentColor\">アンモナイト</text></svg>",
+       "answer": 2,
+       "check": "2",
+       "hints": [
+        "中生代の おわりの 大量ぜつめつで いなくなった 生き物を 思い出します。",
+        {
+         "text": "大量ぜつめつは 2 回 ありました。中生代の おわりは、その 2 回目です。",
+         "svg": "<svg viewBox=\"0 0 320 200\" xmlns=\"http://www.w3.org/2000/svg\"><rect x=\"14\" y=\"88\" width=\"156.815\" height=\"26\" fill=\"#7fc8f8\" fill-opacity=\"0.45\" stroke=\"currentColor\" stroke-width=\"2\"/><text x=\"92.4074\" y=\"107\" font-size=\"14\" text-anchor=\"middle\" fill=\"currentColor\">古生代</text><rect x=\"170.815\" y=\"88\" width=\"99.4963\" height=\"26\" fill=\"#7bc96f\" fill-opacity=\"0.45\" stroke=\"currentColor\" stroke-width=\"2\"/><text x=\"220.563\" y=\"107\" font-size=\"14\" text-anchor=\"middle\" fill=\"currentColor\">中生代</text><rect x=\"270.311\" y=\"88\" width=\"35.6889\" height=\"26\" fill=\"#f3c969\" fill-opacity=\"0.45\" stroke=\"currentColor\" stroke-width=\"2\"/><text x=\"288.156\" y=\"107\" font-size=\"11\" text-anchor=\"middle\" fill=\"currentColor\">新生代</text><text x=\"14\" y=\"134\" font-size=\"13\" fill=\"currentColor\">5.4 億年前</text><text x=\"170.815\" y=\"134\" font-size=\"13\" text-anchor=\"middle\" fill=\"currentColor\">2.5 億年前</text><text x=\"270.311\" y=\"134\" font-size=\"13\" text-anchor=\"middle\" fill=\"currentColor\">6600 万年前</text><text x=\"306\" y=\"154\" font-size=\"13\" text-anchor=\"end\" fill=\"currentColor\">いま</text><polygon points=\"264.311,70 276.311,70 270.311,84\" fill=\"#f08080\" stroke=\"currentColor\" stroke-width=\"2\"/><text x=\"264.311\" y=\"60\" font-size=\"14\" text-anchor=\"end\" fill=\"currentColor\">中生代の おわり</text></svg>"
+        },
+        "6 つの 生き物を 1 つずつ 見て、ぜつめつした 時代を たしかめます。"
+       ],
+       "qid": "W-009:0f5353bc25"
+      }
+     ],
      "key": "確認#1"
+    }
+   ],
+   "ver": "cee90edbb4",
+   "ri": [
+    {
+     "part": "離",
+     "kinds": [
+      "総動員",
+      "読み取り"
+     ],
+     "uses": [
+      "W-003"
+     ],
+     "text": "左と 右の がけに、地そうが 重なって います。〇の 中の ア〜カは、それぞれの 地そうから 出た 化石です。表は、その 化石の 生き物が 生きていた ころです。地そうが できた ときには、その 地そうの 化石の 生き物が 生きていました。左右の 火山ばいの 地そうは、同じ ふん火で 同じ ときに できました。B が できた ときとして ありえるのは、何億何万年前から 何億何万年前までの 間ですか。その 間の 長さを 万年で 答えましょう（1 億年なら 10000）。",
+     "svg": "<svg viewBox=\"0 0 320 240\" xmlns=\"http://www.w3.org/2000/svg\"><text x=\"35\" y=\"22\" font-size=\"13\" text-anchor=\"middle\" fill=\"currentColor\">左の がけ</text><rect x=\"10\" y=\"30\" width=\"50\" height=\"40\" fill=\"#c8ccd6\" fill-opacity=\"0.55\" stroke=\"currentColor\" stroke-width=\"2\"/><text x=\"22\" y=\"55\" font-size=\"16\" text-anchor=\"middle\" fill=\"currentColor\">A</text><circle cx=\"44\" cy=\"50\" r=\"10\" fill=\"#f3c969\" fill-opacity=\"0.6\" stroke=\"currentColor\" stroke-width=\"2\"/><text x=\"44\" y=\"55\" font-size=\"14\" text-anchor=\"middle\" fill=\"currentColor\">エ</text><rect x=\"10\" y=\"70\" width=\"50\" height=\"40\" fill=\"#c8ccd6\" fill-opacity=\"0.55\" stroke=\"currentColor\" stroke-width=\"2\"/><text x=\"22\" y=\"95\" font-size=\"16\" text-anchor=\"middle\" fill=\"currentColor\">B</text><circle cx=\"44\" cy=\"90\" r=\"10\" fill=\"#f3c969\" fill-opacity=\"0.6\" stroke=\"currentColor\" stroke-width=\"2\"/><text x=\"44\" y=\"95\" font-size=\"14\" text-anchor=\"middle\" fill=\"currentColor\">ウ</text><rect x=\"10\" y=\"126\" width=\"50\" height=\"40\" fill=\"#c8ccd6\" fill-opacity=\"0.55\" stroke=\"currentColor\" stroke-width=\"2\"/><text x=\"22\" y=\"151\" font-size=\"16\" text-anchor=\"middle\" fill=\"currentColor\">C</text><circle cx=\"44\" cy=\"146\" r=\"10\" fill=\"#f3c969\" fill-opacity=\"0.6\" stroke=\"currentColor\" stroke-width=\"2\"/><text x=\"44\" y=\"151\" font-size=\"14\" text-anchor=\"middle\" fill=\"currentColor\">ア</text><rect x=\"10\" y=\"110\" width=\"50\" height=\"16\" fill=\"#f08080\" fill-opacity=\"0.45\" stroke=\"currentColor\" stroke-width=\"2\"/><text x=\"105\" y=\"62\" font-size=\"13\" text-anchor=\"middle\" fill=\"currentColor\">右の がけ</text><rect x=\"80\" y=\"70\" width=\"50\" height=\"40\" fill=\"#c8ccd6\" fill-opacity=\"0.55\" stroke=\"currentColor\" stroke-width=\"2\"/><text x=\"92\" y=\"95\" font-size=\"16\" text-anchor=\"middle\" fill=\"currentColor\">D</text><circle cx=\"114\" cy=\"90\" r=\"10\" fill=\"#f3c969\" fill-opacity=\"0.6\" stroke=\"currentColor\" stroke-width=\"2\"/><text x=\"114\" y=\"95\" font-size=\"14\" text-anchor=\"middle\" fill=\"currentColor\">カ</text><rect x=\"80\" y=\"126\" width=\"50\" height=\"40\" fill=\"#c8ccd6\" fill-opacity=\"0.55\" stroke=\"currentColor\" stroke-width=\"2\"/><text x=\"92\" y=\"151\" font-size=\"16\" text-anchor=\"middle\" fill=\"currentColor\">E</text><circle cx=\"114\" cy=\"146\" r=\"10\" fill=\"#f3c969\" fill-opacity=\"0.6\" stroke=\"currentColor\" stroke-width=\"2\"/><text x=\"114\" y=\"151\" font-size=\"14\" text-anchor=\"middle\" fill=\"currentColor\">イ</text><rect x=\"80\" y=\"166\" width=\"50\" height=\"40\" fill=\"#c8ccd6\" fill-opacity=\"0.55\" stroke=\"currentColor\" stroke-width=\"2\"/><text x=\"92\" y=\"191\" font-size=\"16\" text-anchor=\"middle\" fill=\"currentColor\">F</text><circle cx=\"114\" cy=\"186\" r=\"10\" fill=\"#f3c969\" fill-opacity=\"0.6\" stroke=\"currentColor\" stroke-width=\"2\"/><text x=\"114\" y=\"191\" font-size=\"14\" text-anchor=\"middle\" fill=\"currentColor\">オ</text><rect x=\"80\" y=\"110\" width=\"50\" height=\"16\" fill=\"#f08080\" fill-opacity=\"0.45\" stroke=\"currentColor\" stroke-width=\"2\"/><line x1=\"60\" y1=\"118\" x2=\"80\" y2=\"118\" stroke=\"currentColor\" stroke-width=\"2\" stroke-dasharray=\"4 3\"/><text x=\"35\" y=\"186\" font-size=\"13\" text-anchor=\"middle\" fill=\"currentColor\">上ほど</text><text x=\"35\" y=\"204\" font-size=\"13\" text-anchor=\"middle\" fill=\"currentColor\">新しい</text><rect x=\"10\" y=\"216\" width=\"20\" height=\"12\" fill=\"#f08080\" fill-opacity=\"0.45\" stroke=\"currentColor\" stroke-width=\"2\"/><text x=\"36\" y=\"227\" font-size=\"13\" text-anchor=\"start\" fill=\"currentColor\">火山ばいの 地そう（左右で 同じ とき）</text><text x=\"146\" y=\"24\" font-size=\"13\" text-anchor=\"start\" fill=\"currentColor\">生きていた ころ（年前）</text><circle cx=\"154\" cy=\"48\" r=\"10\" fill=\"#f3c969\" fill-opacity=\"0.6\" stroke=\"currentColor\" stroke-width=\"2\"/><text x=\"154\" y=\"53\" font-size=\"14\" text-anchor=\"middle\" fill=\"currentColor\">ア</text><text x=\"168\" y=\"53\" font-size=\"13\" text-anchor=\"start\" fill=\"currentColor\">3億8000万 〜 3億</text><circle cx=\"154\" cy=\"76\" r=\"10\" fill=\"#f3c969\" fill-opacity=\"0.6\" stroke=\"currentColor\" stroke-width=\"2\"/><text x=\"154\" y=\"81\" font-size=\"14\" text-anchor=\"middle\" fill=\"currentColor\">イ</text><text x=\"168\" y=\"81\" font-size=\"13\" text-anchor=\"start\" fill=\"currentColor\">3億6000万 〜 2億9000万</text><circle cx=\"154\" cy=\"104\" r=\"10\" fill=\"#f3c969\" fill-opacity=\"0.6\" stroke=\"currentColor\" stroke-width=\"2\"/><text x=\"154\" y=\"109\" font-size=\"14\" text-anchor=\"middle\" fill=\"currentColor\">ウ</text><text x=\"168\" y=\"109\" font-size=\"13\" text-anchor=\"start\" fill=\"currentColor\">3億6000万 〜 2億7000万</text><circle cx=\"154\" cy=\"132\" r=\"10\" fill=\"#f3c969\" fill-opacity=\"0.6\" stroke=\"currentColor\" stroke-width=\"2\"/><text x=\"154\" y=\"137\" font-size=\"14\" text-anchor=\"middle\" fill=\"currentColor\">エ</text><text x=\"168\" y=\"137\" font-size=\"13\" text-anchor=\"start\" fill=\"currentColor\">3億2000万 〜 2億9000万</text><circle cx=\"154\" cy=\"160\" r=\"10\" fill=\"#f3c969\" fill-opacity=\"0.6\" stroke=\"currentColor\" stroke-width=\"2\"/><text x=\"154\" y=\"165\" font-size=\"14\" text-anchor=\"middle\" fill=\"currentColor\">オ</text><text x=\"168\" y=\"165\" font-size=\"13\" text-anchor=\"start\" fill=\"currentColor\">3億3000万 〜 2億8000万</text><circle cx=\"154\" cy=\"188\" r=\"10\" fill=\"#f3c969\" fill-opacity=\"0.6\" stroke=\"currentColor\" stroke-width=\"2\"/><text x=\"154\" y=\"193\" font-size=\"14\" text-anchor=\"middle\" fill=\"currentColor\">カ</text><text x=\"168\" y=\"193\" font-size=\"13\" text-anchor=\"start\" fill=\"currentColor\">3億5000万 〜 3億1000万</text></svg>",
+     "answer": 4000,
+     "check": "min(36000, 38000, 36000, 33000) - max(27000, 29000)",
+     "hints": [
+      "B の 化石 ウ だけを 見ると、3億6000万年前から 2億7000万年前の 間。B より 古いと わかる 地そう、B より 新しいと わかる 地そうを さがして、もっと せまく しよう。",
+      {
+       "text": "図は、わかって いる 前後を 線で むすんだ もの。火山ばいで、左と 右の がけが つながる。線を たどって 行ける ものだけ、どちらが 新しいかが 決まるよ。",
+       "svg": "<svg viewBox=\"0 0 320 210\" xmlns=\"http://www.w3.org/2000/svg\"><rect x=\"40\" y=\"10\" width=\"50\" height=\"26\" fill=\"#c8ccd6\" fill-opacity=\"0.55\" stroke=\"currentColor\" stroke-width=\"2\"/><text x=\"65.0\" y=\"28\" font-size=\"14\" text-anchor=\"middle\" fill=\"currentColor\">A エ</text><rect x=\"40\" y=\"52\" width=\"50\" height=\"26\" fill=\"#c8ccd6\" fill-opacity=\"0.55\" stroke=\"currentColor\" stroke-width=\"2\"/><text x=\"65.0\" y=\"70\" font-size=\"14\" text-anchor=\"middle\" fill=\"currentColor\">B ウ</text><rect x=\"170\" y=\"52\" width=\"50\" height=\"26\" fill=\"#c8ccd6\" fill-opacity=\"0.55\" stroke=\"currentColor\" stroke-width=\"2\"/><text x=\"195.0\" y=\"70\" font-size=\"14\" text-anchor=\"middle\" fill=\"currentColor\">D カ</text><rect x=\"90\" y=\"96\" width=\"90\" height=\"26\" fill=\"#f08080\" fill-opacity=\"0.45\" stroke=\"currentColor\" stroke-width=\"2\"/><text x=\"135.0\" y=\"114\" font-size=\"14\" text-anchor=\"middle\" fill=\"currentColor\">火山ばい</text><rect x=\"40\" y=\"142\" width=\"50\" height=\"26\" fill=\"#c8ccd6\" fill-opacity=\"0.55\" stroke=\"currentColor\" stroke-width=\"2\"/><text x=\"65.0\" y=\"160\" font-size=\"14\" text-anchor=\"middle\" fill=\"currentColor\">C ア</text><rect x=\"170\" y=\"142\" width=\"50\" height=\"26\" fill=\"#c8ccd6\" fill-opacity=\"0.55\" stroke=\"currentColor\" stroke-width=\"2\"/><text x=\"195.0\" y=\"160\" font-size=\"14\" text-anchor=\"middle\" fill=\"currentColor\">E イ</text><rect x=\"170\" y=\"178\" width=\"50\" height=\"26\" fill=\"#c8ccd6\" fill-opacity=\"0.55\" stroke=\"currentColor\" stroke-width=\"2\"/><text x=\"195.0\" y=\"196\" font-size=\"14\" text-anchor=\"middle\" fill=\"currentColor\">F オ</text><line x1=\"65\" y1=\"36\" x2=\"65\" y2=\"52\" stroke=\"currentColor\" stroke-width=\"2\"/><line x1=\"65\" y1=\"78\" x2=\"110\" y2=\"96\" stroke=\"currentColor\" stroke-width=\"2\"/><line x1=\"195\" y1=\"78\" x2=\"160\" y2=\"96\" stroke=\"currentColor\" stroke-width=\"2\"/><line x1=\"110\" y1=\"122\" x2=\"65\" y2=\"142\" stroke=\"currentColor\" stroke-width=\"2\"/><line x1=\"160\" y1=\"122\" x2=\"195\" y2=\"142\" stroke=\"currentColor\" stroke-width=\"2\"/><line x1=\"195\" y1=\"168\" x2=\"195\" y2=\"178\" stroke=\"currentColor\" stroke-width=\"2\"/><line x1=\"92\" y1=\"65\" x2=\"168\" y2=\"65\" stroke=\"currentColor\" stroke-width=\"2\" stroke-dasharray=\"4 3\"/><text x=\"130\" y=\"58\" font-size=\"16\" text-anchor=\"middle\" fill=\"currentColor\">？</text><text x=\"232\" y=\"24\" font-size=\"13\" text-anchor=\"start\" fill=\"currentColor\">上ほど</text><text x=\"232\" y=\"42\" font-size=\"13\" text-anchor=\"start\" fill=\"currentColor\">新しい</text><text x=\"232\" y=\"88\" font-size=\"13\" text-anchor=\"start\" fill=\"currentColor\">B と D は</text><text x=\"232\" y=\"106\" font-size=\"13\" text-anchor=\"start\" fill=\"currentColor\">どちらが</text><text x=\"232\" y=\"124\" font-size=\"13\" text-anchor=\"start\" fill=\"currentColor\">新しい？</text></svg>"
+      },
+      "B より 古い 地そうは、その 化石の 生き物が 出てきた あとに できた。B は それより もっと あと。B より 新しい 地そうは、その 化石の 生き物が いなくなる 前に できた。B は それより もっと 前。"
+     ],
+     "paths": [
+      [
+       "火山ばいは 左右で 同じ とき。B より 古いのは 火山ばい、C、E、F。B より 新しいのは A。D は 火山ばいより 新しいだけで、B との 前後は わからない",
+       "B より 古い 地そうの 化石で、いちばん おそく 出てきたのは F の オ（3億3000万年前）。F は 火山ばいより 古く、B は 火山ばいより 新しいので、B は 3億3000万年前より 新しい",
+       "B より 新しい A の エ は 2億9000万年前に いなくなった。A は それより 古く、B は A より もっと 古いので、B は 2億9000万年前より 古い",
+       "B の ウ の ころにも 入るので、B は 3億3000万〜2億9000万年前。長さは 4000万年"
+      ],
+      [
+       "1000万年ごとに 区切って、B が そこで できたと して ためす",
+       "3億4000万年前だと、火山ばいは それより 古く、E と F は もっと 古い。でも F の オ は まだ 出てきて いない ので だめ。3億3000万年前より 古い 区切りは ぜんぶ だめ",
+       "2億8000万年前だと、A は それより 新しいのに、A の エ は もう いない ので だめ。2億9000万年前より 新しい 区切りも だめ。D は B を しばらない（カ に 合わせても、D は B より 古くても 新しくても よい）",
+       "のこるのは 3億3000万年前から 2億9000万年前の 4 区切り。4 × 1000万年 = 4000万年"
+      ]
+     ],
+     "note": "借りたもの：S10 上限と下限（B の古いほうのはしを、B より古い地そうの化石のうちいちばんおそく出てきたもので、新しいほうのはしを、B より新しい地そうの化石のうちいちばん早くいなくなったもので決める）、S07 きょくたんなものを考える。種：なし（S の表から組み立てた）。組み合わせ：W-003 の地そうの重なり（下ほど古い）と化石で時代を決める考え、火山ばいの地そうで 2 つのがけをつなぐ考え、W-009 の億と万の年数。前の問題（がけ 1 つ、地そう 3 まい、答え 5000）は答えを見ない係が一度でといたので、がけを 2 つにし、火山ばいでつながるようにした。なぜむずかしいか：古いほうのはしを決めるのは、B と同じがけの C（ア、3億8000万年前）でなく、火山ばいをこえた右のがけの F（オ、3億3000万年前）で、E もこえて 2 まい下までたどる一手が要る。さらに、右のがけの D は火山ばいより新しいだけで、B との前後は決まらない。D を B より新しいとみなすと 2億9000万年前のかわりに カ の 3億1000万年前を使って 2000、左のがけだけで考えると 7000、ウ だけなら 9000 とまちがえる。工夫は 3 段：ウだけのはば → 火山ばいで 2 つのがけをつなぎ、前後の決まる地そうと決まらない地そうを分ける → 古いほうと新しいほうのはしを、いちばんきびしい化石で決める。",
+     "qid": "W-009:7ca45a8a9d"
+    },
+    {
+     "part": "離",
+     "kinds": [
+      "手数",
+      "総動員"
+     ],
+     "uses": [
+      "W-003"
+     ],
+     "text": "がけに、30 まいの 地そうが 重なって います。下の ほうは 古生代、上の ほうは 中生代の 地そうで、1 は 古生代、30 は 中生代と わかって います。古生代の 地そうからは、どれも 三葉虫の 化石が 出ます。中生代の 地そうからは、三葉虫の 化石は 出ません。何人かで 手分けして 調べます。毎朝、だれが どの 地そうを 調べるかを、前の 日までの 結果を 見て 決めます。1 人は 1 日に 1 まいを 調べ、三葉虫の 化石が 出るか 出ないかが 夕方に わかります。古生代と 中生代の さかい目が どの 2 まいの 間に あっても、3 日で かならず 見つけるには、いちばん 少なくて 何人 いれば よいですか。数で 答えましょう。",
+     "svg": "<svg viewBox=\"0 0 320 220\" xmlns=\"http://www.w3.org/2000/svg\"><rect x=\"110\" y=\"194\" width=\"90\" height=\"6\" fill=\"#c8ccd6\" fill-opacity=\"0.55\" stroke=\"currentColor\" stroke-width=\"1\"/><rect x=\"110\" y=\"188\" width=\"90\" height=\"6\" fill=\"#c9a36b\" fill-opacity=\"0.35\" stroke=\"currentColor\" stroke-width=\"1\"/><rect x=\"110\" y=\"182\" width=\"90\" height=\"6\" fill=\"#c8ccd6\" fill-opacity=\"0.55\" stroke=\"currentColor\" stroke-width=\"1\"/><rect x=\"110\" y=\"176\" width=\"90\" height=\"6\" fill=\"#c9a36b\" fill-opacity=\"0.35\" stroke=\"currentColor\" stroke-width=\"1\"/><rect x=\"110\" y=\"170\" width=\"90\" height=\"6\" fill=\"#c8ccd6\" fill-opacity=\"0.55\" stroke=\"currentColor\" stroke-width=\"1\"/><rect x=\"110\" y=\"164\" width=\"90\" height=\"6\" fill=\"#c9a36b\" fill-opacity=\"0.35\" stroke=\"currentColor\" stroke-width=\"1\"/><rect x=\"110\" y=\"158\" width=\"90\" height=\"6\" fill=\"#c8ccd6\" fill-opacity=\"0.55\" stroke=\"currentColor\" stroke-width=\"1\"/><rect x=\"110\" y=\"152\" width=\"90\" height=\"6\" fill=\"#c9a36b\" fill-opacity=\"0.35\" stroke=\"currentColor\" stroke-width=\"1\"/><rect x=\"110\" y=\"146\" width=\"90\" height=\"6\" fill=\"#c8ccd6\" fill-opacity=\"0.55\" stroke=\"currentColor\" stroke-width=\"1\"/><rect x=\"110\" y=\"140\" width=\"90\" height=\"6\" fill=\"#c9a36b\" fill-opacity=\"0.35\" stroke=\"currentColor\" stroke-width=\"1\"/><rect x=\"110\" y=\"134\" width=\"90\" height=\"6\" fill=\"#c8ccd6\" fill-opacity=\"0.55\" stroke=\"currentColor\" stroke-width=\"1\"/><rect x=\"110\" y=\"128\" width=\"90\" height=\"6\" fill=\"#c9a36b\" fill-opacity=\"0.35\" stroke=\"currentColor\" stroke-width=\"1\"/><rect x=\"110\" y=\"122\" width=\"90\" height=\"6\" fill=\"#c8ccd6\" fill-opacity=\"0.55\" stroke=\"currentColor\" stroke-width=\"1\"/><rect x=\"110\" y=\"116\" width=\"90\" height=\"6\" fill=\"#c9a36b\" fill-opacity=\"0.35\" stroke=\"currentColor\" stroke-width=\"1\"/><rect x=\"110\" y=\"110\" width=\"90\" height=\"6\" fill=\"#c8ccd6\" fill-opacity=\"0.55\" stroke=\"currentColor\" stroke-width=\"1\"/><rect x=\"110\" y=\"104\" width=\"90\" height=\"6\" fill=\"#c9a36b\" fill-opacity=\"0.35\" stroke=\"currentColor\" stroke-width=\"1\"/><rect x=\"110\" y=\"98\" width=\"90\" height=\"6\" fill=\"#c8ccd6\" fill-opacity=\"0.55\" stroke=\"currentColor\" stroke-width=\"1\"/><rect x=\"110\" y=\"92\" width=\"90\" height=\"6\" fill=\"#c9a36b\" fill-opacity=\"0.35\" stroke=\"currentColor\" stroke-width=\"1\"/><rect x=\"110\" y=\"86\" width=\"90\" height=\"6\" fill=\"#c8ccd6\" fill-opacity=\"0.55\" stroke=\"currentColor\" stroke-width=\"1\"/><rect x=\"110\" y=\"80\" width=\"90\" height=\"6\" fill=\"#c9a36b\" fill-opacity=\"0.35\" stroke=\"currentColor\" stroke-width=\"1\"/><rect x=\"110\" y=\"74\" width=\"90\" height=\"6\" fill=\"#c8ccd6\" fill-opacity=\"0.55\" stroke=\"currentColor\" stroke-width=\"1\"/><rect x=\"110\" y=\"68\" width=\"90\" height=\"6\" fill=\"#c9a36b\" fill-opacity=\"0.35\" stroke=\"currentColor\" stroke-width=\"1\"/><rect x=\"110\" y=\"62\" width=\"90\" height=\"6\" fill=\"#c8ccd6\" fill-opacity=\"0.55\" stroke=\"currentColor\" stroke-width=\"1\"/><rect x=\"110\" y=\"56\" width=\"90\" height=\"6\" fill=\"#c9a36b\" fill-opacity=\"0.35\" stroke=\"currentColor\" stroke-width=\"1\"/><rect x=\"110\" y=\"50\" width=\"90\" height=\"6\" fill=\"#c8ccd6\" fill-opacity=\"0.55\" stroke=\"currentColor\" stroke-width=\"1\"/><rect x=\"110\" y=\"44\" width=\"90\" height=\"6\" fill=\"#c9a36b\" fill-opacity=\"0.35\" stroke=\"currentColor\" stroke-width=\"1\"/><rect x=\"110\" y=\"38\" width=\"90\" height=\"6\" fill=\"#c8ccd6\" fill-opacity=\"0.55\" stroke=\"currentColor\" stroke-width=\"1\"/><rect x=\"110\" y=\"32\" width=\"90\" height=\"6\" fill=\"#c9a36b\" fill-opacity=\"0.35\" stroke=\"currentColor\" stroke-width=\"1\"/><rect x=\"110\" y=\"26\" width=\"90\" height=\"6\" fill=\"#c8ccd6\" fill-opacity=\"0.55\" stroke=\"currentColor\" stroke-width=\"1\"/><rect x=\"110\" y=\"20\" width=\"90\" height=\"6\" fill=\"#c9a36b\" fill-opacity=\"0.35\" stroke=\"currentColor\" stroke-width=\"1\"/><text x=\"98\" y=\"201\" font-size=\"13\" text-anchor=\"end\" fill=\"currentColor\">1</text><text x=\"98\" y=\"147\" font-size=\"13\" text-anchor=\"end\" fill=\"currentColor\">10</text><text x=\"98\" y=\"87\" font-size=\"13\" text-anchor=\"end\" fill=\"currentColor\">20</text><text x=\"98\" y=\"27\" font-size=\"13\" text-anchor=\"end\" fill=\"currentColor\">30</text><text x=\"208\" y=\"28\" font-size=\"13\" text-anchor=\"start\" fill=\"currentColor\">中生代</text><text x=\"208\" y=\"201\" font-size=\"13\" text-anchor=\"start\" fill=\"currentColor\">古生代</text><g transform=\"translate(262 104) scale(0.7)\"><ellipse cx=\"0\" cy=\"0\" rx=\"38\" ry=\"19\" fill=\"#c9a36b\" fill-opacity=\"0.6\" stroke=\"currentColor\" stroke-width=\"2\"/><path d=\"M-20 -17 Q-28 0 -20 17\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\"/><path d=\"M-6 -19 V19 M8 -19 V19 M21 -16 V16\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.5\"/></g><text x=\"268\" y=\"140\" font-size=\"14\" text-anchor=\"middle\" fill=\"currentColor\">三葉虫</text><text x=\"268\" y=\"160\" font-size=\"13\" text-anchor=\"middle\" fill=\"currentColor\">出る？ 出ない？</text><text x=\"46\" y=\"36\" font-size=\"13\" text-anchor=\"middle\" fill=\"currentColor\">3 日で</text><text x=\"46\" y=\"54\" font-size=\"13\" text-anchor=\"middle\" fill=\"currentColor\">見つける</text><text x=\"46\" y=\"92\" font-size=\"13\" text-anchor=\"middle\" fill=\"currentColor\">上ほど</text><text x=\"46\" y=\"110\" font-size=\"13\" text-anchor=\"middle\" fill=\"currentColor\">新しい</text><circle cx=\"46\" cy=\"140\" r=\"9\" fill=\"#7fc8f8\" fill-opacity=\"0.5\" stroke=\"currentColor\" stroke-width=\"2\"/><path d=\"M30 174 Q46 146 62 174 Z\" fill=\"#7fc8f8\" fill-opacity=\"0.5\" stroke=\"currentColor\" stroke-width=\"2\"/><text x=\"46\" y=\"196\" font-size=\"14\" text-anchor=\"middle\" fill=\"currentColor\">何人？</text></svg>",
+     "answer": 3,
+     "check": "min(m for m in range(1, 30) if (m + 1) ** 3 >= 30 - 1)",
+     "hints": [
+      "さかい目の ありえる 場所は 何か所 あるかな。1 人なら、1 日で 結果は 出る・出ないの 2 通り。2 人で 同じ 日に 2 まい 調べると、結果は 何通りに なるかな。",
+      {
+       "text": "2 人で 同じ 日に 2 まい 調べた ときの 結果。三葉虫は ぜつめつして、もう もどって こない。だから × の 結果は ありえない。",
+       "svg": "<svg viewBox=\"0 0 320 200\" xmlns=\"http://www.w3.org/2000/svg\"><text x=\"160\" y=\"18\" font-size=\"13\" text-anchor=\"middle\" fill=\"currentColor\">同じ 日に 2 まい 調べた ときの 結果</text><rect x=\"12\" y=\"110\" width=\"62\" height=\"16\" fill=\"#c8ccd6\" fill-opacity=\"0.35\" stroke=\"currentColor\" stroke-width=\"2\"/><rect x=\"12\" y=\"94\" width=\"62\" height=\"16\" fill=\"#f3c969\" fill-opacity=\"0.7\" stroke=\"currentColor\" stroke-width=\"2\"/><rect x=\"12\" y=\"78\" width=\"62\" height=\"16\" fill=\"#c8ccd6\" fill-opacity=\"0.35\" stroke=\"currentColor\" stroke-width=\"2\"/><rect x=\"12\" y=\"62\" width=\"62\" height=\"16\" fill=\"#c8ccd6\" fill-opacity=\"0.35\" stroke=\"currentColor\" stroke-width=\"2\"/><rect x=\"12\" y=\"46\" width=\"62\" height=\"16\" fill=\"#f3c969\" fill-opacity=\"0.7\" stroke=\"currentColor\" stroke-width=\"2\"/><rect x=\"12\" y=\"30\" width=\"62\" height=\"16\" fill=\"#c8ccd6\" fill-opacity=\"0.35\" stroke=\"currentColor\" stroke-width=\"2\"/><text x=\"43\" y=\"58\" font-size=\"13\" text-anchor=\"middle\" fill=\"currentColor\">出る</text><text x=\"43\" y=\"106\" font-size=\"13\" text-anchor=\"middle\" fill=\"currentColor\">出る</text><text x=\"43\" y=\"148\" font-size=\"13\" text-anchor=\"middle\" fill=\"currentColor\">さかい目は</text><text x=\"43\" y=\"166\" font-size=\"13\" text-anchor=\"middle\" fill=\"currentColor\">上の ほう</text><rect x=\"90\" y=\"110\" width=\"62\" height=\"16\" fill=\"#c8ccd6\" fill-opacity=\"0.35\" stroke=\"currentColor\" stroke-width=\"2\"/><rect x=\"90\" y=\"94\" width=\"62\" height=\"16\" fill=\"#f3c969\" fill-opacity=\"0.7\" stroke=\"currentColor\" stroke-width=\"2\"/><rect x=\"90\" y=\"78\" width=\"62\" height=\"16\" fill=\"#c8ccd6\" fill-opacity=\"0.35\" stroke=\"currentColor\" stroke-width=\"2\"/><rect x=\"90\" y=\"62\" width=\"62\" height=\"16\" fill=\"#c8ccd6\" fill-opacity=\"0.35\" stroke=\"currentColor\" stroke-width=\"2\"/><rect x=\"90\" y=\"46\" width=\"62\" height=\"16\" fill=\"#f3c969\" fill-opacity=\"0.7\" stroke=\"currentColor\" stroke-width=\"2\"/><rect x=\"90\" y=\"30\" width=\"62\" height=\"16\" fill=\"#c8ccd6\" fill-opacity=\"0.35\" stroke=\"currentColor\" stroke-width=\"2\"/><text x=\"121\" y=\"58\" font-size=\"13\" text-anchor=\"middle\" fill=\"currentColor\">出ない</text><text x=\"121\" y=\"106\" font-size=\"13\" text-anchor=\"middle\" fill=\"currentColor\">出る</text><text x=\"121\" y=\"148\" font-size=\"13\" text-anchor=\"middle\" fill=\"currentColor\">さかい目は</text><text x=\"121\" y=\"166\" font-size=\"13\" text-anchor=\"middle\" fill=\"currentColor\">2 まいの 間</text><rect x=\"168\" y=\"110\" width=\"62\" height=\"16\" fill=\"#c8ccd6\" fill-opacity=\"0.35\" stroke=\"currentColor\" stroke-width=\"2\"/><rect x=\"168\" y=\"94\" width=\"62\" height=\"16\" fill=\"#f3c969\" fill-opacity=\"0.7\" stroke=\"currentColor\" stroke-width=\"2\"/><rect x=\"168\" y=\"78\" width=\"62\" height=\"16\" fill=\"#c8ccd6\" fill-opacity=\"0.35\" stroke=\"currentColor\" stroke-width=\"2\"/><rect x=\"168\" y=\"62\" width=\"62\" height=\"16\" fill=\"#c8ccd6\" fill-opacity=\"0.35\" stroke=\"currentColor\" stroke-width=\"2\"/><rect x=\"168\" y=\"46\" width=\"62\" height=\"16\" fill=\"#f3c969\" fill-opacity=\"0.7\" stroke=\"currentColor\" stroke-width=\"2\"/><rect x=\"168\" y=\"30\" width=\"62\" height=\"16\" fill=\"#c8ccd6\" fill-opacity=\"0.35\" stroke=\"currentColor\" stroke-width=\"2\"/><text x=\"199\" y=\"58\" font-size=\"13\" text-anchor=\"middle\" fill=\"currentColor\">出ない</text><text x=\"199\" y=\"106\" font-size=\"13\" text-anchor=\"middle\" fill=\"currentColor\">出ない</text><text x=\"199\" y=\"148\" font-size=\"13\" text-anchor=\"middle\" fill=\"currentColor\">さかい目は</text><text x=\"199\" y=\"166\" font-size=\"13\" text-anchor=\"middle\" fill=\"currentColor\">下の ほう</text><rect x=\"246\" y=\"110\" width=\"62\" height=\"16\" fill=\"#c8ccd6\" fill-opacity=\"0.35\" stroke=\"currentColor\" stroke-width=\"2\"/><rect x=\"246\" y=\"94\" width=\"62\" height=\"16\" fill=\"#f3c969\" fill-opacity=\"0.7\" stroke=\"currentColor\" stroke-width=\"2\"/><rect x=\"246\" y=\"78\" width=\"62\" height=\"16\" fill=\"#c8ccd6\" fill-opacity=\"0.35\" stroke=\"currentColor\" stroke-width=\"2\"/><rect x=\"246\" y=\"62\" width=\"62\" height=\"16\" fill=\"#c8ccd6\" fill-opacity=\"0.35\" stroke=\"currentColor\" stroke-width=\"2\"/><rect x=\"246\" y=\"46\" width=\"62\" height=\"16\" fill=\"#f3c969\" fill-opacity=\"0.7\" stroke=\"currentColor\" stroke-width=\"2\"/><rect x=\"246\" y=\"30\" width=\"62\" height=\"16\" fill=\"#c8ccd6\" fill-opacity=\"0.35\" stroke=\"currentColor\" stroke-width=\"2\"/><text x=\"277\" y=\"58\" font-size=\"13\" text-anchor=\"middle\" fill=\"currentColor\">出る</text><text x=\"277\" y=\"106\" font-size=\"13\" text-anchor=\"middle\" fill=\"currentColor\">出ない</text><text x=\"277\" y=\"148\" font-size=\"13\" text-anchor=\"middle\" fill=\"currentColor\">ありえない</text><line x1=\"244\" y1=\"28\" x2=\"310\" y2=\"128\" stroke=\"currentColor\" stroke-width=\"2\"/><line x1=\"310\" y1=\"28\" x2=\"244\" y2=\"128\" stroke=\"currentColor\" stroke-width=\"2\"/><text x=\"160\" y=\"192\" font-size=\"13\" text-anchor=\"middle\" fill=\"currentColor\">上が 新しい（どの 図も）</text></svg>"
+      },
+      "1 日で さかい目の 場所を いくつの 組に 分けられるかを 人数ごとに 考えよう。3 日 たつと、いくつの 場所まで 見分けられるかな。"
+     ],
+     "paths": [
+      [
+       "さかい目の ありえる 場所は 1 と 2 の 間から 29 と 30 の 間まで 29 か所",
+       "同じ 日に 2 人で 2 まい 調べても、三葉虫は もどらないので、結果は 出る出る・下が 出て 上が 出ない・出ない出ないの 3 通り。1 日で 3 組にしか 分けられない",
+       "2 人だと 3 日で 3 × 3 × 3 = 27 か所までしか 見分けられず、29 か所には 足りない（1 人 1 日 2 まいずつ 6 まい 調べても だめ）",
+       "3 人なら 1 日で 4 組に 分けられる。29 か所を 8・7・7・7 か所に、8 か所を 2 か所ずつに、2 か所を 1 か所に しぼれる。答えは 3 人"
+      ],
+      [
+       "さいごから 考える。3 日目の 朝に のこって いる 場所が 何か所 までなら、その 日の うちに 1 か所に しぼれるか",
+       "2 人なら 2 まいで 3 つに 分けるので 3 か所まで。2 日目の 朝は 3 × 3 = 9 か所まで。1 日目の 朝は 9 × 3 = 27 か所まで",
+       "さかい目の 場所は 29 か所なので、2 人では 足りない",
+       "3 人なら 4 か所 → 16 か所 → 64 か所まで しぼれて、29 か所に 足りる。答えは 3 人"
+      ]
+     ],
+     "note": "借りたもの：S28 中間値（下は三葉虫が出る、上は出ない、そのあいだのどこか 1 か所で切りかわる）、S10 上限と下限（2 人では 3 日で 27 か所までしか見分けられない、3 人なら 64 か所までできる）。種：なし（S の表から組み立てた）。組み合わせ：W-003 の地そうの重なり（下ほど古い）と、W-009 の大量ぜつめつ（三葉虫は古生代の終わりにいなくなり、もどってこない）。前の問題（12 まいを 1 まいずつ、答え 4）は答えを見ない係が一度でといたので、何人かで同じ日にいっしょに調べる決まりを足して、逆に人数を問うた。なぜむずかしいか：1 人なら 5 回（2 × 2 × 2 × 2 × 2 = 32 が 29 より多い）でよいので、3 日で 6 まい調べられる 2 人で足りると思いやすい。また、2 人の結果を 2 × 2 = 4 通りと数えると、4 × 4 × 4 = 64 で 2 人と答えてしまう。三葉虫はもどってこないので、下が出なくて上が出る結果はなく、2 まいでも 3 通りにしか分かれないことに気づく一手が要る。工夫は 3 段：さかい目の場所を数える → 同じ日の 2 まいの結果が 3 通りしかないわけを、ぜつめつから見ぬく → 人数ごとに 3 日で見分けられる数をかけ算で出す。答えを見ない係が気づいて、問題文に「中生代の 地そうからは、三葉虫の 化石は 出ません」を足した（ないと、中生代にも三葉虫が出うるのか決まらない）。",
+     "qid": "W-009:86243a8587"
+    },
+    {
+     "part": "離",
+     "kinds": [
+      "数",
+      "総動員"
+     ],
+     "uses": [
+      "W-003"
+     ],
+     "text": "がけの 5 まいの 地そうから 出た 化石を 調べました。地そうの 中の 数は、その 地そうから 出た 化石の しゅるいの 数です。さかい目の「つづく」の 数は、すぐ 下と すぐ 上の 両方の 地そうから 出た しゅるいの 数です。図の 下の 数は、1 まい とばした 2 まいの 地そうの 両方から 出た しゅるいの 数です。どの 化石も、出はじめてから 出なくなるまで、とちゅうの 地そうからは かならず 出ます。一度 出なくなった 化石は、もう 出ません。1 まいの 地そうだけから 出て、ほかの 地そうからは 出なかった しゅるいは、ぜんぶで 何しゅるいですか。数で 答えましょう。",
+     "svg": "<svg viewBox=\"0 0 320 250\" xmlns=\"http://www.w3.org/2000/svg\"><rect x=\"96\" y=\"144\" width=\"110\" height=\"32\" fill=\"#c8ccd6\" fill-opacity=\"0.55\" stroke=\"currentColor\" stroke-width=\"2\"/><text x=\"151\" y=\"165\" font-size=\"14\" text-anchor=\"middle\" fill=\"currentColor\">6 しゅるい</text><text x=\"84\" y=\"165\" font-size=\"14\" text-anchor=\"end\" fill=\"currentColor\">1</text><rect x=\"96\" y=\"112\" width=\"110\" height=\"32\" fill=\"#c8ccd6\" fill-opacity=\"0.55\" stroke=\"currentColor\" stroke-width=\"2\"/><text x=\"151\" y=\"133\" font-size=\"14\" text-anchor=\"middle\" fill=\"currentColor\">8 しゅるい</text><text x=\"84\" y=\"133\" font-size=\"14\" text-anchor=\"end\" fill=\"currentColor\">2</text><rect x=\"96\" y=\"80\" width=\"110\" height=\"32\" fill=\"#c8ccd6\" fill-opacity=\"0.55\" stroke=\"currentColor\" stroke-width=\"2\"/><text x=\"151\" y=\"101\" font-size=\"14\" text-anchor=\"middle\" fill=\"currentColor\">7 しゅるい</text><text x=\"84\" y=\"101\" font-size=\"14\" text-anchor=\"end\" fill=\"currentColor\">3</text><rect x=\"96\" y=\"48\" width=\"110\" height=\"32\" fill=\"#c8ccd6\" fill-opacity=\"0.55\" stroke=\"currentColor\" stroke-width=\"2\"/><text x=\"151\" y=\"69\" font-size=\"14\" text-anchor=\"middle\" fill=\"currentColor\">3 しゅるい</text><text x=\"84\" y=\"69\" font-size=\"14\" text-anchor=\"end\" fill=\"currentColor\">4</text><rect x=\"96\" y=\"16\" width=\"110\" height=\"32\" fill=\"#c8ccd6\" fill-opacity=\"0.55\" stroke=\"currentColor\" stroke-width=\"2\"/><text x=\"151\" y=\"37\" font-size=\"14\" text-anchor=\"middle\" fill=\"currentColor\">4 しゅるい</text><text x=\"84\" y=\"37\" font-size=\"14\" text-anchor=\"end\" fill=\"currentColor\">5</text><line x1=\"206\" y1=\"144\" x2=\"222\" y2=\"144\" stroke=\"currentColor\" stroke-width=\"2\"/><text x=\"226\" y=\"149\" font-size=\"13\" text-anchor=\"start\" fill=\"currentColor\">つづく 4</text><line x1=\"206\" y1=\"112\" x2=\"222\" y2=\"112\" stroke=\"currentColor\" stroke-width=\"2\"/><text x=\"226\" y=\"117\" font-size=\"13\" text-anchor=\"start\" fill=\"currentColor\">つづく 5</text><line x1=\"206\" y1=\"80\" x2=\"222\" y2=\"80\" stroke=\"currentColor\" stroke-width=\"2\"/><text x=\"226\" y=\"85\" font-size=\"13\" text-anchor=\"start\" fill=\"currentColor\">つづく 1</text><line x1=\"206\" y1=\"48\" x2=\"222\" y2=\"48\" stroke=\"currentColor\" stroke-width=\"2\"/><text x=\"226\" y=\"53\" font-size=\"13\" text-anchor=\"start\" fill=\"currentColor\">つづく 2</text><line x1=\"14\" y1=\"80\" x2=\"96\" y2=\"80\" stroke=\"currentColor\" stroke-width=\"2\" stroke-dasharray=\"5 4\"/><text x=\"38\" y=\"53\" font-size=\"14\" text-anchor=\"middle\" fill=\"currentColor\">中生代</text><text x=\"38\" y=\"133\" font-size=\"14\" text-anchor=\"middle\" fill=\"currentColor\">古生代</text><text x=\"214\" y=\"20\" font-size=\"13\" text-anchor=\"start\" fill=\"currentColor\">上ほど 新しい</text><text x=\"96\" y=\"202\" font-size=\"13\" text-anchor=\"start\" fill=\"currentColor\">1 と 3 の 両方から 2 しゅるい</text><text x=\"96\" y=\"222\" font-size=\"13\" text-anchor=\"start\" fill=\"currentColor\">2 と 4 の 両方から 1 しゅるい</text><text x=\"96\" y=\"242\" font-size=\"13\" text-anchor=\"start\" fill=\"currentColor\">3 と 5 の 両方から 0 しゅるい</text></svg>",
+     "answer": 7,
+     "check": "(6 + 8 + 7 + 3 + 4) - 2 * (4 + 5 + 1 + 2) + (2 + 1 + 0)",
+     "hints": [
+      "1 まいだけの しゅるいは、すぐ 下にも すぐ 上にも 出ない しゅるい。地そうごとに 数えて、あとで たそう。",
+      {
+       "text": "小さな 例。まん中の 4 しゅるいから、下と つづく 2 と 上と つづく 2 を ひくと 0。でも まん中 だけの ぼうは ある。どこで ひきすぎたかな。",
+       "svg": "<svg viewBox=\"0 0 320 200\" xmlns=\"http://www.w3.org/2000/svg\"><rect x=\"110\" y=\"30\" width=\"120\" height=\"40\" fill=\"#c8ccd6\" fill-opacity=\"0.55\" stroke=\"currentColor\" stroke-width=\"2\"/><rect x=\"110\" y=\"70\" width=\"120\" height=\"40\" fill=\"#c8ccd6\" fill-opacity=\"0.55\" stroke=\"currentColor\" stroke-width=\"2\"/><rect x=\"110\" y=\"110\" width=\"120\" height=\"40\" fill=\"#c8ccd6\" fill-opacity=\"0.55\" stroke=\"currentColor\" stroke-width=\"2\"/><rect x=\"126\" y=\"36\" width=\"8\" height=\"108\" fill=\"#f3c969\" fill-opacity=\"0.7\" stroke=\"currentColor\" stroke-width=\"2\"/><rect x=\"150\" y=\"76\" width=\"8\" height=\"68\" fill=\"#f3c969\" fill-opacity=\"0.7\" stroke=\"currentColor\" stroke-width=\"2\"/><rect x=\"174\" y=\"36\" width=\"8\" height=\"68\" fill=\"#f3c969\" fill-opacity=\"0.7\" stroke=\"currentColor\" stroke-width=\"2\"/><rect x=\"198\" y=\"76\" width=\"8\" height=\"28\" fill=\"#f3c969\" fill-opacity=\"0.7\" stroke=\"currentColor\" stroke-width=\"2\"/><text x=\"100\" y=\"55\" font-size=\"14\" text-anchor=\"end\" fill=\"currentColor\">2 しゅるい</text><text x=\"100\" y=\"95\" font-size=\"14\" text-anchor=\"end\" fill=\"currentColor\">4 しゅるい</text><text x=\"100\" y=\"135\" font-size=\"14\" text-anchor=\"end\" fill=\"currentColor\">2 しゅるい</text><line x1=\"230\" y1=\"70\" x2=\"244\" y2=\"70\" stroke=\"currentColor\" stroke-width=\"2\"/><text x=\"248\" y=\"75\" font-size=\"13\" text-anchor=\"start\" fill=\"currentColor\">つづく 2</text><line x1=\"230\" y1=\"110\" x2=\"244\" y2=\"110\" stroke=\"currentColor\" stroke-width=\"2\"/><text x=\"248\" y=\"115\" font-size=\"13\" text-anchor=\"start\" fill=\"currentColor\">つづく 2</text><text x=\"170\" y=\"172\" font-size=\"14\" text-anchor=\"middle\" fill=\"currentColor\">ぼう 1 本が 1 しゅるい</text><text x=\"170\" y=\"192\" font-size=\"13\" text-anchor=\"middle\" fill=\"currentColor\">上と 下の 両方から 1 しゅるい</text></svg>"
+      },
+      "3 まい つづけて 出る しゅるいは、まん中の 地そうで「下と つづく」にも「上と つづく」にも 入って いる。その 数は、図の 下に 書いて あるよ。"
+     ],
+     "paths": [
+      [
+       "その 地そうだけの しゅるい ＝ その 地そうの 数 − 下と つづく − 上と つづく ＋ 下と 上の 両方に つづく（2 回 ひいた 分を もどす）",
+       "1 は 6 − 4 = 2。2 は 8 − 4 − 5 + 2 = 1。3 は 7 − 5 − 1 + 1 = 2",
+       "4 は 3 − 1 − 2 + 0 = 0。5 は 4 − 2 = 2",
+       "2 + 1 + 2 + 0 + 2 = 7 しゅるい"
+      ],
+      [
+       "ぜんぶの しゅるいは、6 + 8 + 7 + 3 + 4 = 28 から つづくの 合計 4 + 5 + 1 + 2 = 12 を ひいて 16",
+       "2 まい 以上に 出る しゅるいは、またぐ さかい目の 数が、1 まい とばしで 数えられる 回数より ちょうど 1 多い（2 まいなら 1 と 0、3 まいなら 2 と 1、4 まいなら 3 と 2）",
+       "だから 2 まい 以上に 出る しゅるいは 12 − (2 + 1 + 0) = 9",
+       "1 まいだけの しゅるいは 16 − 9 = 7"
+      ]
+     ],
+     "note": "借りたもの：S05 二重に数える（地そうの数 − 下とつづく − 上とつづく ＋ 3 まいつづく。どのしゅるいも出る地そうが続いているので、1 まいとばした 2 まいの両方に出るしゅるいは、まん中にも出る）、S04 言いかえ（2 まい以上のしゅるいを、またぐさかい目の数 − 1 まいとばしの数 ＝ 1 で 1 つずつ数える）。種：なし（S の表から組み立てた）。組み合わせ：W-003 の地そうの重なりと化石、W-009 の生き物の移り変わりとぜつめつ（一度いなくなったものはもどらない、3 と 4 のさかい目は古生代と中生代のさかい目で、つづくのは 1 しゅるいだけ）。前の問題（ぜんぶのしゅるいの数、答え 14）は答えを見ない係が一度でといたので、1 まいだけから出たしゅるいを問い、1 まいとばしの数を足した。なぜむずかしいか：ぜんぶの数 28 − 12 = 16 で止まる、地そうごとに下と上のつづくをひくだけだと 28 − 24 = 4 になる。3 まい以上つづくしゅるいをまん中の地そうで 2 回ひいていると見ぬき、1 まいとばしの数でもどす一手が要る。なり立つ並びの例：1〜3 に 2、1〜2 に 2、1 だけ 2、2 だけ 1、2〜3 に 2、2〜4 に 1、3 だけ 2、4〜5 に 2、5 だけ 2（ぜんぶで 16、1 まいだけは 7。どの並びでも数の式から 7 に決まる）。工夫は 3 段：1 まいだけを地そうごとに数える → 下と上のつづくをひく → 3 まいつづくしゅるいの分をもどす。",
+     "qid": "W-009:357e58f111"
     }
    ],
    "f": "F05",
@@ -321426,22 +322750,920 @@ window.ROADMAP = {
     {
      "kind": "導入",
      "aim": "",
+     "items": [
+      {
+       "part": "見本",
+       "text": "岩は、温度の変化やこおった水、木の根のはたらきでひびが入り、少しずつくだけます。これを風化といいます。風化でできたつぶに、落ち葉や虫のあとがまざって、土壌（どじょう）になります。土をたてにきると、色やつぶのちがいで層（そう）に分かれています。",
+       "svg": "<svg viewBox=\"0 0 320 200\" xmlns=\"http://www.w3.org/2000/svg\" font-size=\"14\"><g stroke=\"currentColor\" stroke-width=\"2\"><ellipse cx=\"34\" cy=\"31\" rx=\"13\" ry=\"5\" fill=\"#7bc96f\" fill-opacity=\".6\"/><ellipse cx=\"70\" cy=\"33\" rx=\"13\" ry=\"5\" fill=\"#f3c969\" fill-opacity=\".6\"/><ellipse cx=\"106\" cy=\"31\" rx=\"13\" ry=\"5\" fill=\"#7bc96f\" fill-opacity=\".6\"/><rect x=\"16\" y=\"40\" width=\"134\" height=\"40\" fill=\"#6b5344\" fill-opacity=\".75\"/><rect x=\"16\" y=\"80\" width=\"134\" height=\"35\" fill=\"#c9a36b\" fill-opacity=\".7\"/><rect x=\"16\" y=\"115\" width=\"134\" height=\"35\" fill=\"#c8ccd6\" fill-opacity=\".6\"/><rect x=\"16\" y=\"150\" width=\"134\" height=\"36\" fill=\"#8f96a6\" fill-opacity=\".8\"/><polygon points=\"28,128 40,119 50,131 38,142\" fill=\"#8f96a6\" fill-opacity=\".8\"/><polygon points=\"66,126 82,120 90,134 74,142\" fill=\"#8f96a6\" fill-opacity=\".8\"/><polygon points=\"108,124 124,119 134,132 118,142\" fill=\"#8f96a6\" fill-opacity=\".8\"/><path d=\"M50 150 L60 166 L52 186 M100 150 L92 168 L104 186\" fill=\"none\"/><path d=\"M292 160 V60\" fill=\"none\"/><polygon points=\"292,44 282,62 302,62\" fill=\"currentColor\"/></g><g fill=\"currentColor\"><text x=\"160\" y=\"36\">落ち葉</text><text x=\"160\" y=\"64\">黒い土</text><text x=\"160\" y=\"102\">茶色い土</text><text x=\"160\" y=\"138\">岩のかけら</text><text x=\"160\" y=\"172\">もとの岩</text><text x=\"292\" y=\"178\" text-anchor=\"middle\">風化が</text><text x=\"292\" y=\"194\" text-anchor=\"middle\">すすむ</text></g></svg>",
+       "explain": "風化は、岩がその場所でひびが入り、小さくくだけることです。川や雨がけずってはこぶはたらきとはちがいます。くだけたつぶに、落ち葉や虫や根のあとがくさってまざり、水と空気もふくんで土になります。上のほうは生き物のあとが多くて黒っぽく、下にいくほどもとの岩に近くなります。層の名前は、上から落ち葉の層、黒い土の層、茶色い土の層、岩のかけらの層、もとの岩です。",
+       "qid": "W-070:07286a4f4d"
+      },
+      {
+       "part": "今日",
+       "text": "岩が風化しているようすはどれでしょう。",
+       "svg": "<svg viewBox=\"0 0 320 200\" xmlns=\"http://www.w3.org/2000/svg\" font-size=\"13\"><g stroke=\"currentColor\" stroke-width=\"2\"><rect x=\"3\" y=\"3\" width=\"154\" height=\"94\" rx=\"8\" fill=\"none\" stroke-opacity=\".35\"/><rect x=\"163\" y=\"3\" width=\"154\" height=\"94\" rx=\"8\" fill=\"none\" stroke-opacity=\".35\"/><rect x=\"3\" y=\"103\" width=\"154\" height=\"94\" rx=\"8\" fill=\"none\" stroke-opacity=\".35\"/><rect x=\"163\" y=\"103\" width=\"154\" height=\"94\" rx=\"8\" fill=\"none\" stroke-opacity=\".35\"/><polygon points=\"40,66 46,32 78,24 108,38 112,66\" fill=\"#c8ccd6\" fill-opacity=\".7\"/><path d=\"M76 25 L70 40 L82 48 L74 66\" fill=\"none\"/><ellipse cx=\"76\" cy=\"46\" rx=\"4\" ry=\"3\" fill=\"#7fc8f8\" fill-opacity=\".8\"/><path d=\"M180 62 q10 -8 20 0 t20 0 t20 0 t20 0\" fill=\"none\" stroke=\"#7fc8f8\" stroke-width=\"3\"/><circle cx=\"205\" cy=\"48\" r=\"7\" fill=\"#c8ccd6\" fill-opacity=\".8\"/><circle cx=\"228\" cy=\"52\" r=\"5\" fill=\"#c8ccd6\" fill-opacity=\".8\"/><polygon points=\"256,40 272,48 256,56\" fill=\"currentColor\"/><polygon points=\"24,172 124,134 124,172\" fill=\"#c9a36b\" fill-opacity=\".6\"/><path d=\"M44 112 l-6 12 M68 112 l-6 12 M92 112 l-6 12\" stroke=\"#7fc8f8\" stroke-width=\"3\" fill=\"none\"/><polygon points=\"190,176 232,130 274,176\" fill=\"#f08080\" fill-opacity=\".5\"/><path d=\"M232 130 l-8 -14 M232 130 l0 -18 M232 130 l8 -14\" fill=\"none\"/><circle cx=\"222\" cy=\"112\" r=\"4\" fill=\"#c8ccd6\"/><circle cx=\"244\" cy=\"110\" r=\"4\" fill=\"#c8ccd6\"/></g><g fill=\"currentColor\"><text x=\"10\" y=\"90\">ア われ目の水がこおる</text><text x=\"170\" y=\"90\">イ 川が石をはこぶ</text><text x=\"10\" y=\"190\">ウ 雨が土を流す</text><text x=\"170\" y=\"190\">エ 火山から岩が出る</text></g></svg>",
+       "choices": [
+        "ア",
+        "イ",
+        "ウ",
+        "エ"
+       ],
+       "answer": "ア",
+       "check": "'ア'",
+       "hints": [
+        "風化は、岩に何がおきることだったかな。見本を思い出そう。",
+        {
+         "text": "見本にあった、岩をくだくもとを思い出そう。",
+         "svg": "<svg viewBox=\"0 0 320 200\" xmlns=\"http://www.w3.org/2000/svg\" font-size=\"14\"><g stroke=\"currentColor\" stroke-width=\"2\"><circle cx=\"38\" cy=\"66\" r=\"14\" fill=\"#f3c969\" fill-opacity=\".7\"/><circle cx=\"78\" cy=\"66\" r=\"14\" fill=\"#b39ddb\" fill-opacity=\".6\"/><polygon points=\"160,40 180,52 180,78 160,90 140,78 140,52\" fill=\"#7fc8f8\" fill-opacity=\".6\"/><polygon points=\"228,94 232,56 258,46 290,58 292,94\" fill=\"#c8ccd6\" fill-opacity=\".7\"/><path d=\"M262 20 V48 L256 66 M262 48 L274 68\" fill=\"none\" stroke=\"#c9a36b\" stroke-width=\"4\"/></g><g fill=\"currentColor\"><text x=\"160\" y=\"150\" text-anchor=\"middle\">岩をくだくもと</text></g></svg>"
+        },
+        "火山のふんかは、岩をくだくはなしではなく、岩ができるほうのはなし。"
+       ],
+       "qid": "W-070:c7e5d38eda"
+      },
+      {
+       "part": "今日",
+       "text": "土をたてにきりました。自然の土の層のならびをあらわしているのはどれでしょう。",
+       "svg": "<svg viewBox=\"0 0 320 200\" xmlns=\"http://www.w3.org/2000/svg\" font-size=\"14\"><g stroke=\"currentColor\" stroke-width=\"2\"><rect x=\"18\" y=\"26\" width=\"84\" height=\"30\" fill=\"#c9a36b\" fill-opacity=\".7\"/><rect x=\"18\" y=\"56\" width=\"84\" height=\"30\" fill=\"#6b5344\" fill-opacity=\".75\"/><rect x=\"18\" y=\"86\" width=\"84\" height=\"30\" fill=\"#c8ccd6\" fill-opacity=\".6\"/><rect x=\"18\" y=\"116\" width=\"84\" height=\"30\" fill=\"#8f96a6\" fill-opacity=\".8\"/><rect x=\"118\" y=\"26\" width=\"84\" height=\"30\" fill=\"#6b5344\" fill-opacity=\".75\"/><rect x=\"118\" y=\"56\" width=\"84\" height=\"30\" fill=\"#c9a36b\" fill-opacity=\".7\"/><rect x=\"118\" y=\"86\" width=\"84\" height=\"30\" fill=\"#c8ccd6\" fill-opacity=\".6\"/><rect x=\"118\" y=\"116\" width=\"84\" height=\"30\" fill=\"#8f96a6\" fill-opacity=\".8\"/><rect x=\"218\" y=\"26\" width=\"84\" height=\"30\" fill=\"#8f96a6\" fill-opacity=\".8\"/><rect x=\"218\" y=\"56\" width=\"84\" height=\"30\" fill=\"#c8ccd6\" fill-opacity=\".6\"/><rect x=\"218\" y=\"86\" width=\"84\" height=\"30\" fill=\"#c9a36b\" fill-opacity=\".7\"/><rect x=\"218\" y=\"116\" width=\"84\" height=\"30\" fill=\"#6b5344\" fill-opacity=\".75\"/><rect x=\"18\" y=\"156\" width=\"12\" height=\"12\" fill=\"#6b5344\" fill-opacity=\".75\"/><rect x=\"150\" y=\"156\" width=\"12\" height=\"12\" fill=\"#c9a36b\" fill-opacity=\".7\"/><rect x=\"18\" y=\"178\" width=\"12\" height=\"12\" fill=\"#c8ccd6\" fill-opacity=\".6\"/><rect x=\"150\" y=\"178\" width=\"12\" height=\"12\" fill=\"#8f96a6\" fill-opacity=\".8\"/></g><g fill=\"currentColor\"><text x=\"60\" y=\"18\" text-anchor=\"middle\">ア</text><text x=\"160\" y=\"18\" text-anchor=\"middle\">イ</text><text x=\"260\" y=\"18\" text-anchor=\"middle\">ウ</text><text x=\"36\" y=\"167\">黒い土</text><text x=\"168\" y=\"167\">茶色い土</text><text x=\"36\" y=\"189\">岩のかけら</text><text x=\"168\" y=\"189\">もとの岩</text></g></svg>",
+       "choices": [
+        "ア",
+        "イ",
+        "ウ"
+       ],
+       "answer": "イ",
+       "check": "'イ'",
+       "hints": [
+        "上から下へすすむと、何が多いかが少しずつかわっていく。",
+        {
+         "text": "地面にちかいところと、もとの岩にちかいところをくらべよう。",
+         "svg": "<svg viewBox=\"0 0 320 200\" xmlns=\"http://www.w3.org/2000/svg\" font-size=\"14\"><g stroke=\"currentColor\" stroke-width=\"2\"><rect x=\"50\" y=\"14\" width=\"220\" height=\"52\" rx=\"8\" fill=\"#6b5344\" fill-opacity=\".2\"/><rect x=\"50\" y=\"134\" width=\"220\" height=\"52\" rx=\"8\" fill=\"#8f96a6\" fill-opacity=\".25\"/><path d=\"M160 70 V114\" fill=\"none\"/><polygon points=\"160,130 150,112 170,112\" fill=\"currentColor\"/></g><g fill=\"currentColor\"><text x=\"160\" y=\"36\" text-anchor=\"middle\">地面にちかいところ</text><text x=\"160\" y=\"56\" text-anchor=\"middle\">生き物のあとが多い</text><text x=\"160\" y=\"156\" text-anchor=\"middle\">もとの岩にちかいところ</text><text x=\"160\" y=\"176\" text-anchor=\"middle\">岩のつぶが多い</text></g></svg>"
+        },
+        "もとの岩はいちばん下。その上は、岩のかけらが多い層。"
+       ],
+       "qid": "W-070:bd8d3bdf85"
+      },
+      {
+       "part": "今日",
+       "text": "土は、1 cm のあつさになるのに、およそ 100 年かかります。あつさ 30 cm の土ができるまでには、およそ何年かかるでしょう。",
+       "svg": "<svg viewBox=\"0 0 320 200\" xmlns=\"http://www.w3.org/2000/svg\" font-size=\"14\"><g stroke=\"currentColor\" stroke-width=\"2\"><rect x=\"80\" y=\"20\" width=\"70\" height=\"24\" fill=\"#c9a36b\" fill-opacity=\".6\"/><rect x=\"80\" y=\"44\" width=\"70\" height=\"24\" fill=\"#c9a36b\" fill-opacity=\".6\"/><rect x=\"80\" y=\"68\" width=\"70\" height=\"24\" fill=\"#c9a36b\" fill-opacity=\".6\"/><rect x=\"80\" y=\"92\" width=\"70\" height=\"24\" fill=\"#c9a36b\" fill-opacity=\".6\"/><path d=\"M80 116 V172 M150 116 V172\" fill=\"none\" stroke-dasharray=\"5 5\"/><path d=\"M162 20 H170 V172 H162\" fill=\"none\"/><path d=\"M72 20 H66 V44 H72\" fill=\"none\"/></g><g fill=\"currentColor\"><text x=\"178\" y=\"100\">30 cm</text><text x=\"60\" y=\"28\" text-anchor=\"end\">1 cm で</text><text x=\"60\" y=\"44\" text-anchor=\"end\">100 年</text><text x=\"115\" y=\"146\" text-anchor=\"middle\">・・・</text></g></svg>",
+       "answer": 3000,
+       "check": "30*100",
+       "note": "土が 1 cm できる年数は場所で 100 年から 1000 年ほどとはばがある。ここでは計算しやすい 100 年にした。",
+       "hints": [
+        "1 cm ごとに 100 年かかる。",
+        {
+         "text": "30 cm は、1 cm が何こ分かな。",
+         "svg": "<svg viewBox=\"0 0 320 200\" xmlns=\"http://www.w3.org/2000/svg\" font-size=\"14\"><g stroke=\"currentColor\" stroke-width=\"2\"><rect x=\"50\" y=\"20\" width=\"100\" height=\"26\" fill=\"#c9a36b\" fill-opacity=\".6\"/><rect x=\"50\" y=\"50\" width=\"100\" height=\"26\" fill=\"#c9a36b\" fill-opacity=\".6\"/><rect x=\"50\" y=\"80\" width=\"100\" height=\"26\" fill=\"#c9a36b\" fill-opacity=\".6\"/></g><g fill=\"currentColor\"><text x=\"162\" y=\"38\">1 cm … 100 年</text><text x=\"162\" y=\"68\">1 cm … 100 年</text><text x=\"162\" y=\"98\">1 cm … 100 年</text><text x=\"100\" y=\"134\" text-anchor=\"middle\">・・・</text><text x=\"160\" y=\"176\" text-anchor=\"middle\">30 cm は 1 cm の何こ分かな</text></g></svg>"
+        },
+        "100 年が 30 こ分あることになる。"
+       ],
+       "qid": "W-070:6b43f54710"
+      },
+      {
+       "part": "今日",
+       "text": "同じ種類の岩を、3 つの場所に長い間おきました。温度の変化と、こおる水のはたらきで考えると、いちばんはやく風化が進むのはどこでしょう。",
+       "svg": "<svg viewBox=\"0 0 320 200\" xmlns=\"http://www.w3.org/2000/svg\" font-size=\"14\"><g stroke=\"currentColor\" stroke-width=\"2\"><path d=\"M24 112 V84 Q54 44 84 84 V112 Z\" fill=\"#8f96a6\" fill-opacity=\".5\"/><ellipse cx=\"54\" cy=\"100\" rx=\"12\" ry=\"8\" fill=\"#c8ccd6\" fill-opacity=\".8\"/><polygon points=\"126,112 160,52 194,112\" fill=\"#c8ccd6\" fill-opacity=\".7\"/><circle cx=\"128\" cy=\"38\" r=\"10\" fill=\"#f3c969\" fill-opacity=\".7\"/><polygon points=\"188,38 196,44 196,54 188,60 180,54 180,44\" fill=\"#7fc8f8\" fill-opacity=\".6\"/><rect x=\"232\" y=\"64\" width=\"68\" height=\"48\" fill=\"#7fc8f8\" fill-opacity=\".15\"/><polygon points=\"248,104 252,84 268,78 286,88 286,104\" fill=\"#c8ccd6\" fill-opacity=\".8\"/></g><g fill=\"currentColor\" font-size=\"13\"><text x=\"54\" y=\"136\" text-anchor=\"middle\">ア ほらあな</text><text x=\"54\" y=\"154\" text-anchor=\"middle\">いつも</text><text x=\"54\" y=\"172\" text-anchor=\"middle\">同じ温度</text><text x=\"160\" y=\"136\" text-anchor=\"middle\">イ 山の上</text><text x=\"160\" y=\"154\" text-anchor=\"middle\">昼はあつく</text><text x=\"160\" y=\"172\" text-anchor=\"middle\">夜はこおる</text><text x=\"266\" y=\"136\" text-anchor=\"middle\">ウ ケースの中</text><text x=\"266\" y=\"154\" text-anchor=\"middle\">雨も風も</text><text x=\"266\" y=\"172\" text-anchor=\"middle\">当たらない</text></g></svg>",
+       "choices": [
+        "ア",
+        "イ",
+        "ウ"
+       ],
+       "answer": "イ",
+       "check": "'イ'",
+       "hints": [
+        "温度が大きくかわるほど、また水がこおったりとけたりするほど、岩はいたむ。",
+        {
+         "text": "岩のわれ目で何がおきるかを見よう。",
+         "svg": "<svg viewBox=\"0 0 320 200\" xmlns=\"http://www.w3.org/2000/svg\" font-size=\"14\"><g stroke=\"currentColor\" stroke-width=\"2\"><polygon points=\"12,100 16,52 46,42 88,54 92,100\" fill=\"#c8ccd6\" fill-opacity=\".7\"/><path d=\"M48 43 L44 62 L52 74\" fill=\"none\"/><ellipse cx=\"49\" cy=\"64\" rx=\"3\" ry=\"6\" fill=\"#7fc8f8\" fill-opacity=\".8\"/><polygon points=\"118,100 122,52 152,42 194,54 198,100\" fill=\"#c8ccd6\" fill-opacity=\".7\"/><path d=\"M154 43 L150 62 L158 74\" fill=\"none\"/><polygon points=\"155,56 162,62 162,72 155,80 148,72 148,62\" fill=\"#7fc8f8\" fill-opacity=\".6\"/><polygon points=\"224,100 228,52 258,42 300,54 304,100\" fill=\"#c8ccd6\" fill-opacity=\".7\"/><path d=\"M258 43 L248 62 L258 76 M266 43 L274 62 L264 76\" fill=\"none\"/><polygon points=\"98,70 108,76 98,82\" fill=\"currentColor\"/><polygon points=\"204,70 214,76 204,82\" fill=\"currentColor\"/></g><g fill=\"currentColor\" font-size=\"13\"><text x=\"52\" y=\"124\" text-anchor=\"middle\">水がしみこむ</text><text x=\"158\" y=\"124\" text-anchor=\"middle\">こおってふくらむ</text><text x=\"264\" y=\"124\" text-anchor=\"middle\">ひびが広がる</text><text x=\"160\" y=\"170\" text-anchor=\"middle\">これがくりかえされる</text></g></svg>"
+        },
+        "ガラスのケースの中は、雨も風も当たらない。"
+       ],
+       "qid": "W-070:71a92e44b6"
+      },
+      {
+       "part": "今日",
+       "text": "①から ④を、土ができるじゅんにならべましょう。",
+       "svg": "<svg viewBox=\"0 0 320 200\" xmlns=\"http://www.w3.org/2000/svg\" font-size=\"13\"><g stroke=\"currentColor\" stroke-width=\"2\"><rect x=\"3\" y=\"3\" width=\"154\" height=\"94\" rx=\"8\" fill=\"none\" stroke-opacity=\".35\"/><rect x=\"163\" y=\"3\" width=\"154\" height=\"94\" rx=\"8\" fill=\"none\" stroke-opacity=\".35\"/><rect x=\"3\" y=\"103\" width=\"154\" height=\"94\" rx=\"8\" fill=\"none\" stroke-opacity=\".35\"/><rect x=\"163\" y=\"103\" width=\"154\" height=\"94\" rx=\"8\" fill=\"none\" stroke-opacity=\".35\"/><path d=\"M52 36 H108 M60 50 H116 M52 64 H108\" fill=\"none\" stroke=\"#8f96a6\" stroke-width=\"6\" stroke-linecap=\"round\" stroke-dasharray=\"0 9\"/><polygon points=\"200,74 208,30 244,20 280,34 284,74\" fill=\"#c8ccd6\" fill-opacity=\".7\"/><rect x=\"44\" y=\"128\" width=\"72\" height=\"38\" fill=\"#6b5344\" fill-opacity=\".75\"/><ellipse cx=\"64\" cy=\"122\" rx=\"10\" ry=\"4\" fill=\"#7bc96f\" fill-opacity=\".6\"/><ellipse cx=\"94\" cy=\"124\" rx=\"10\" ry=\"4\" fill=\"#f3c969\" fill-opacity=\".6\"/><polygon points=\"200,172 208,128 244,118 280,132 284,172\" fill=\"#c8ccd6\" fill-opacity=\".7\"/><path d=\"M244 119 L238 140 L250 152 L242 172\" fill=\"none\"/></g><g fill=\"currentColor\"><text x=\"10\" y=\"90\">① 小さなつぶ</text><text x=\"170\" y=\"90\">② 大きな岩</text><text x=\"10\" y=\"190\">③ 黒い土</text><text x=\"170\" y=\"190\">④ ひびが入った岩</text></g></svg>",
+       "choices": [
+        "② → ④ → ① → ③",
+        "② → ① → ④ → ③",
+        "② → ④ → ③ → ①"
+       ],
+       "answer": "② → ④ → ① → ③",
+       "check": "'② → ④ → ① → ③'",
+       "hints": [
+        "4 つの絵がそれぞれ何かをたしかめよう。",
+        {
+         "text": "風化は、岩がくだけて小さなつぶになるまで。",
+         "svg": "<svg viewBox=\"0 0 320 200\" xmlns=\"http://www.w3.org/2000/svg\" font-size=\"14\"><g stroke=\"currentColor\" stroke-width=\"2\"><rect x=\"70\" y=\"6\" width=\"180\" height=\"34\" rx=\"8\" fill=\"#c8ccd6\" fill-opacity=\".5\"/><rect x=\"70\" y=\"54\" width=\"180\" height=\"34\" rx=\"8\" fill=\"none\" stroke-dasharray=\"6 5\"/><rect x=\"70\" y=\"102\" width=\"180\" height=\"34\" rx=\"8\" fill=\"none\" stroke-dasharray=\"6 5\"/><rect x=\"70\" y=\"150\" width=\"180\" height=\"34\" rx=\"8\" fill=\"none\" stroke-dasharray=\"6 5\"/><polygon points=\"160,52 150,42 170,42\" fill=\"currentColor\"/><polygon points=\"160,100 150,90 170,90\" fill=\"currentColor\"/><polygon points=\"160,148 150,138 170,138\" fill=\"currentColor\"/></g><g fill=\"currentColor\" text-anchor=\"middle\"><text x=\"160\" y=\"29\">大きな岩</text><text x=\"160\" y=\"77\">？</text><text x=\"160\" y=\"125\">？</text><text x=\"160\" y=\"173\">？</text></g></svg>"
+        },
+        "さいごは、生き物のあとがまざった黒い土になる。"
+       ],
+       "qid": "W-070:669ef6f626"
+      },
+      {
+       "part": "挑戦",
+       "text": "A の森では土が 1 cm できるのに 100 年、B の森では 250 年かかります。どちらも 20 cm の土になるまでの年のちがいは何年でしょう。",
+       "svg": "<svg viewBox=\"0 0 320 200\" xmlns=\"http://www.w3.org/2000/svg\" font-size=\"14\"><g stroke=\"currentColor\" stroke-width=\"2\"><rect x=\"70\" y=\"36\" width=\"70\" height=\"100\" fill=\"#c9a36b\" fill-opacity=\".7\"/><rect x=\"180\" y=\"36\" width=\"70\" height=\"100\" fill=\"#c9a36b\" fill-opacity=\".7\"/><path d=\"M64 36 H58 V136 H64\" fill=\"none\"/><path d=\"M256 36 H262 V136 H256\" fill=\"none\"/></g><g fill=\"currentColor\"><text x=\"105\" y=\"24\" text-anchor=\"middle\">A の森</text><text x=\"215\" y=\"24\" text-anchor=\"middle\">B の森</text><text x=\"50\" y=\"90\" text-anchor=\"end\">20 cm</text><text x=\"270\" y=\"90\">20 cm</text><text x=\"105\" y=\"160\" text-anchor=\"middle\">1 cm に 100 年</text><text x=\"215\" y=\"160\" text-anchor=\"middle\">1 cm に 250 年</text></g></svg>",
+       "answer": 3000,
+       "check": "20*250-20*100",
+       "hints": [
+        "A と B が 20 cm になるまでの年を、それぞれ考えてくらべよう。",
+        {
+         "text": "年のながさを絵でくらべると、ちがいはどのぶぶんかな。",
+         "svg": "<svg viewBox=\"0 0 320 200\" xmlns=\"http://www.w3.org/2000/svg\" font-size=\"14\"><g stroke=\"currentColor\" stroke-width=\"2\"><rect x=\"20\" y=\"40\" width=\"80\" height=\"26\" fill=\"#7bc96f\" fill-opacity=\".6\"/><rect x=\"20\" y=\"96\" width=\"200\" height=\"26\" fill=\"#f3c969\" fill-opacity=\".6\"/><path d=\"M100 53 H220\" fill=\"none\" stroke-dasharray=\"5 4\"/><path d=\"M220 36 V70\" fill=\"none\"/></g><g fill=\"currentColor\"><text x=\"20\" y=\"32\">A：100 年の 20 こ分</text><text x=\"20\" y=\"88\">B：250 年の 20 こ分</text><text x=\"226\" y=\"58\">ちがい</text><text x=\"160\" y=\"172\" text-anchor=\"middle\">ちがいは何年分かな</text></g></svg>"
+        },
+        "A は 100 年の 20 こ分、B は 250 年の 20 こ分。"
+       ],
+       "paths": [
+        [
+         "A の森は 20 × 100 = 2000 年",
+         "B の森は 20 × 250 = 5000 年",
+         "5000 − 2000 = 3000 年"
+        ],
+        [
+         "1 cm あたりのちがいは 250 − 100 = 150 年",
+         "それが 20 cm 分あるので 20 × 150",
+         "= 3000 年"
+        ]
+       ],
+       "qid": "W-070:c8ce329c8b"
+      }
+     ],
+     "extra": [
+      {
+       "part": "今日",
+       "text": "風化のせつめいとして正しいものはどれでしょう。",
+       "svg": "<svg viewBox=\"0 0 320 200\" xmlns=\"http://www.w3.org/2000/svg\" font-size=\"14\"><g stroke=\"currentColor\" stroke-width=\"2\"><polygon points=\"70,150 76,80 120,56 166,78 172,150\" fill=\"#c8ccd6\" fill-opacity=\".7\"/><path d=\"M118 57 L108 90 L124 110 L112 150\" fill=\"none\"/><polygon points=\"196,150 206,134 222,140 214,152\" fill=\"#c8ccd6\" fill-opacity=\".8\"/><polygon points=\"230,152 242,140 256,146 250,154\" fill=\"#c8ccd6\" fill-opacity=\".8\"/><polygon points=\"262,152 272,144 284,150 278,156\" fill=\"#c8ccd6\" fill-opacity=\".8\"/></g></svg>",
+       "choices": [
+        "小さなつぶが海の底につもること",
+        "川の水が石を下流へはこぶこと",
+        "岩がその場所でひびが入り、小さくくだけること"
+       ],
+       "answer": "岩がその場所でひびが入り、小さくくだけること",
+       "check": "'岩がその場所でひびが入り、小さくくだけること'",
+       "hints": [
+        "岩に何がおきているかをたしかめよう。",
+        {
+         "text": "岩のわれ目で何がおきるかを見よう。",
+         "svg": "<svg viewBox=\"0 0 320 200\" xmlns=\"http://www.w3.org/2000/svg\" font-size=\"14\"><g stroke=\"currentColor\" stroke-width=\"2\"><polygon points=\"12,100 16,52 46,42 88,54 92,100\" fill=\"#c8ccd6\" fill-opacity=\".7\"/><path d=\"M48 43 L44 62 L52 74\" fill=\"none\"/><ellipse cx=\"49\" cy=\"64\" rx=\"3\" ry=\"6\" fill=\"#7fc8f8\" fill-opacity=\".8\"/><polygon points=\"118,100 122,52 152,42 194,54 198,100\" fill=\"#c8ccd6\" fill-opacity=\".7\"/><path d=\"M154 43 L150 62 L158 74\" fill=\"none\"/><polygon points=\"155,56 162,62 162,72 155,80 148,72 148,62\" fill=\"#7fc8f8\" fill-opacity=\".6\"/><polygon points=\"224,100 228,52 258,42 300,54 304,100\" fill=\"#c8ccd6\" fill-opacity=\".7\"/><path d=\"M258 43 L248 62 L258 76 M266 43 L274 62 L264 76\" fill=\"none\"/><polygon points=\"98,70 108,76 98,82\" fill=\"currentColor\"/><polygon points=\"204,70 214,76 204,82\" fill=\"currentColor\"/></g><g fill=\"currentColor\" font-size=\"13\"><text x=\"52\" y=\"124\" text-anchor=\"middle\">水がしみこむ</text><text x=\"158\" y=\"124\" text-anchor=\"middle\">こおってふくらむ</text><text x=\"264\" y=\"124\" text-anchor=\"middle\">ひびが広がる</text><text x=\"160\" y=\"170\" text-anchor=\"middle\">これがくりかえされる</text></g></svg>"
+        },
+        "川が石をはこぶのは、風化ではなくはこぶはたらき。"
+       ],
+       "qid": "W-070:6690657c63"
+      },
+      {
+       "part": "今日",
+       "text": "もとの岩の上にある、黒い土、茶色い土、岩のかけらの層を全部たすと、何 cm でしょう。（もとの岩は入れません）",
+       "svg": "<svg viewBox=\"0 0 320 200\" xmlns=\"http://www.w3.org/2000/svg\" font-size=\"14\"><g stroke=\"currentColor\" stroke-width=\"2\"><rect x=\"40\" y=\"20\" width=\"100\" height=\"16\" fill=\"#6b5344\" fill-opacity=\".75\"/><rect x=\"40\" y=\"36\" width=\"100\" height=\"44\" fill=\"#c9a36b\" fill-opacity=\".7\"/><rect x=\"40\" y=\"80\" width=\"100\" height=\"60\" fill=\"#c8ccd6\" fill-opacity=\".6\"/><rect x=\"40\" y=\"140\" width=\"100\" height=\"30\" fill=\"#8f96a6\" fill-opacity=\".8\"/></g><g fill=\"currentColor\"><text x=\"150\" y=\"34\">黒い土 8 cm</text><text x=\"150\" y=\"62\">茶色い土 22 cm</text><text x=\"150\" y=\"114\">岩のかけら 30 cm</text><text x=\"150\" y=\"160\">もとの岩</text></g></svg>",
+       "answer": 60,
+       "check": "8+22+30",
+       "hints": [
+        "たす数は 3 つ。もとの岩は入れない。",
+        {
+         "text": "3 つの層のあつさを、ひとまとめにして考えよう。",
+         "svg": "<svg viewBox=\"0 0 320 200\" xmlns=\"http://www.w3.org/2000/svg\" font-size=\"14\"><g stroke=\"currentColor\" stroke-width=\"2\"><rect x=\"40\" y=\"30\" width=\"100\" height=\"16\" fill=\"#6b5344\" fill-opacity=\".75\"/><rect x=\"40\" y=\"46\" width=\"100\" height=\"44\" fill=\"#c9a36b\" fill-opacity=\".7\"/><rect x=\"40\" y=\"90\" width=\"100\" height=\"60\" fill=\"#c8ccd6\" fill-opacity=\".6\"/><path d=\"M152 30 H162 V150 H152\" fill=\"none\"/></g><g fill=\"currentColor\"><text x=\"172\" y=\"96\">ぜんぶで ？ cm</text></g></svg>"
+        },
+        "8 + 22 を先に計算してから、30 をたそう。"
+       ],
+       "qid": "W-070:a5e32b1ba0"
+      }
+     ],
      "key": "導入#1"
     },
     {
      "kind": "練習",
      "aim": "",
+     "items": [
+      {
+       "part": "見本",
+       "text": "土のつぶは、大きさで 4 つに分けます。大きいじゅんに、れき、すな、シルト、ねんどです（シルトはすなとねんどの間の大きさです）。つぶがどれだけまざっているかを土性（どせい）といいます。この単元のやくそく：すなが 70% 以上ならすなタイプ、ねんどが 35% 以上ならねんどタイプ、どちらでもなければ壌土（じょうど）です。",
+       "svg": "<svg viewBox=\"0 0 320 200\" xmlns=\"http://www.w3.org/2000/svg\" font-size=\"14\"><g stroke=\"currentColor\" stroke-width=\"2\"><circle cx=\"34\" cy=\"30\" r=\"18\" fill=\"#c8ccd6\" fill-opacity=\".7\"/><circle cx=\"34\" cy=\"76\" r=\"12\" fill=\"#f3c969\" fill-opacity=\".7\"/><circle cx=\"34\" cy=\"122\" r=\"7\" fill=\"#b39ddb\" fill-opacity=\".7\"/><circle cx=\"34\" cy=\"168\" r=\"3\" fill=\"#c9a36b\" fill-opacity=\".8\"/><path d=\"M294 30 V158\" fill=\"none\"/><polygon points=\"294,172 284,154 304,154\" fill=\"currentColor\"/></g><g fill=\"currentColor\"><text x=\"66\" y=\"27\" font-size=\"15\">れき</text><text x=\"66\" y=\"45\" font-size=\"13\">2 mm より大きい</text><text x=\"66\" y=\"73\" font-size=\"15\">すな</text><text x=\"66\" y=\"91\" font-size=\"13\">2 mm 〜 0.02 mm</text><text x=\"66\" y=\"119\" font-size=\"15\">シルト</text><text x=\"66\" y=\"137\" font-size=\"13\">0.02 mm 〜 0.002 mm</text><text x=\"66\" y=\"165\" font-size=\"15\">ねんど</text><text x=\"66\" y=\"183\" font-size=\"13\">0.002 mm より小さい</text><text x=\"294\" y=\"20\" text-anchor=\"middle\">大きい</text><text x=\"294\" y=\"194\" text-anchor=\"middle\">小さい</text></g></svg>",
+       "explain": "土のつぶの分け方は、世界でよく使われるきまりにあわせています。絵の円の大きさは、ほんとうの大きさのくらべではありません（ねんどのつぶは、すなのつぶより 10 倍から 1000 倍ほど小さい）。土性はふつう三角形の図で 12 種類ほどに分けますが、ここでは考えやすいように 3 つにしました。",
+       "qid": "W-070:7582aaff89"
+      },
+      {
+       "part": "見本",
+       "text": "つぶが大きい土は、すきまも大きいので、水がはやくぬけます。これを透水性（とうすいせい）が高いといいます。つぶが小さい土は、すきまがせまくて水がぬけにくく、水をためやすいです。これを保水性（ほすいせい）が高いといいます。",
+       "svg": "<svg viewBox=\"0 0 320 200\" xmlns=\"http://www.w3.org/2000/svg\" font-size=\"14\"><g stroke=\"currentColor\" stroke-width=\"2\"><rect x=\"28\" y=\"36\" width=\"96\" height=\"100\" rx=\"4\" fill=\"none\"/><rect x=\"196\" y=\"36\" width=\"96\" height=\"100\" rx=\"4\" fill=\"none\"/></g><rect x=\"198\" y=\"38\" width=\"92\" height=\"28\" fill=\"#7fc8f8\" fill-opacity=\".5\"/><path d=\"M42 70 H116 M50 88 H116 M42 106 H116 M50 124 H116\" fill=\"none\" stroke=\"#f3c969\" stroke-width=\"14\" stroke-linecap=\"round\" stroke-dasharray=\"0 17\"/><path d=\"M202 74 H286 M202 82 H286 M202 90 H286 M202 98 H286 M202 106 H286 M202 114 H286 M202 122 H286 M202 130 H286\" fill=\"none\" stroke=\"#c9a36b\" stroke-width=\"6\" stroke-linecap=\"round\" stroke-dasharray=\"0 8\"/><path d=\"M60 142 V170 M92 142 V170\" fill=\"none\" stroke=\"#7fc8f8\" stroke-width=\"4\" stroke-dasharray=\"6 8\"/><path d=\"M244 142 V152\" fill=\"none\" stroke=\"#7fc8f8\" stroke-width=\"4\"/><g fill=\"currentColor\"><text x=\"76\" y=\"24\" text-anchor=\"middle\" font-size=\"15\">すな</text><text x=\"244\" y=\"24\" text-anchor=\"middle\" font-size=\"15\">ねんど</text><text x=\"76\" y=\"192\" text-anchor=\"middle\">水がはやくぬける</text><text x=\"244\" y=\"192\" text-anchor=\"middle\">水がたまる</text></g></svg>",
+       "explain": "水は、つぶとつぶのすきまをとおります。すきまが大きいほど水ははやく通り、せまいほどゆっくり通って、そのぶんつぶの間にのこります。ねんどの土は水をためる力が強い反面、水が通りにくく、雨のあとに水たまりができやすくなります。すなの土は水がすぐぬけるので、かわきやすい土です。",
+       "qid": "W-070:c3ae27d340"
+      },
+      {
+       "part": "思い出す",
+       "text": "生き物のあとがいちばん多い層はどれでしょう。",
+       "svg": "<svg viewBox=\"0 0 320 200\" xmlns=\"http://www.w3.org/2000/svg\" font-size=\"14\"><g stroke=\"currentColor\" stroke-width=\"2\"><rect x=\"60\" y=\"24\" width=\"120\" height=\"36\" fill=\"#6b5344\" fill-opacity=\".75\"/><rect x=\"60\" y=\"60\" width=\"120\" height=\"36\" fill=\"#c9a36b\" fill-opacity=\".7\"/><rect x=\"60\" y=\"96\" width=\"120\" height=\"36\" fill=\"#c8ccd6\" fill-opacity=\".6\"/><rect x=\"60\" y=\"132\" width=\"120\" height=\"36\" fill=\"#8f96a6\" fill-opacity=\".8\"/></g><g fill=\"currentColor\"><text x=\"196\" y=\"48\">ウ</text><text x=\"196\" y=\"84\">ア</text><text x=\"196\" y=\"120\">エ</text><text x=\"196\" y=\"156\">イ</text></g></svg>",
+       "choices": [
+        "ア",
+        "イ",
+        "ウ",
+        "エ"
+       ],
+       "answer": "ウ",
+       "check": "'ウ'",
+       "hints": [
+        "生き物のあとが多い層は、色がどうなっていたかな。",
+        {
+         "text": "落ち葉や虫のあとがまざると、土はどうなるかな。",
+         "svg": "<svg viewBox=\"0 0 320 200\" xmlns=\"http://www.w3.org/2000/svg\" font-size=\"14\"><g stroke=\"currentColor\" stroke-width=\"2\"><ellipse cx=\"60\" cy=\"86\" rx=\"22\" ry=\"9\" fill=\"#7bc96f\" fill-opacity=\".6\"/><ellipse cx=\"92\" cy=\"100\" rx=\"16\" ry=\"7\" fill=\"#f3c969\" fill-opacity=\".6\"/><path d=\"M130 94 H178\" fill=\"none\"/><polygon points=\"196,94 178,84 178,104\" fill=\"currentColor\"/><rect x=\"208\" y=\"64\" width=\"90\" height=\"60\" fill=\"none\" stroke-dasharray=\"6 5\"/></g><g fill=\"currentColor\"><text x=\"76\" y=\"140\" text-anchor=\"middle\">落ち葉や虫のあと</text><text x=\"253\" y=\"102\" text-anchor=\"middle\" font-size=\"22\">？</text><text x=\"160\" y=\"40\" text-anchor=\"middle\">生き物のあとがまざると</text></g></svg>"
+        },
+        "生き物のあとは、地面の上からおちてくる。まざった土は、黒っぽくなる。"
+       ],
+       "qid": "W-070:2f6a2122cf"
+      },
+      {
+       "part": "思い出す",
+       "text": "土は、1 cm のあつさになるのに、およそ 100 年かかります。5 cm の土ができるまでには、およそ何年かかるでしょう。",
+       "svg": "<svg viewBox=\"0 0 320 200\" xmlns=\"http://www.w3.org/2000/svg\" font-size=\"14\"><g stroke=\"currentColor\" stroke-width=\"2\"><rect x=\"70\" y=\"30\" width=\"80\" height=\"24\" fill=\"#c9a36b\" fill-opacity=\".6\"/><rect x=\"70\" y=\"54\" width=\"80\" height=\"24\" fill=\"#c9a36b\" fill-opacity=\".6\"/><rect x=\"70\" y=\"78\" width=\"80\" height=\"24\" fill=\"#c9a36b\" fill-opacity=\".6\"/><rect x=\"70\" y=\"102\" width=\"80\" height=\"24\" fill=\"#c9a36b\" fill-opacity=\".6\"/><rect x=\"70\" y=\"126\" width=\"80\" height=\"24\" fill=\"#c9a36b\" fill-opacity=\".6\"/><path d=\"M162 30 H170 V150 H162\" fill=\"none\"/></g><g fill=\"currentColor\"><text x=\"178\" y=\"94\">5 cm</text><text x=\"160\" y=\"180\" text-anchor=\"middle\">1 cm あたり 100 年</text></g></svg>",
+       "answer": 500,
+       "check": "5*100",
+       "hints": [
+        "1 cm ごとに 100 年かかる。",
+        {
+         "text": "5 cm は、1 cm が何こ分かな。",
+         "svg": "<svg viewBox=\"0 0 320 200\" xmlns=\"http://www.w3.org/2000/svg\" font-size=\"14\"><g stroke=\"currentColor\" stroke-width=\"2\"><rect x=\"10\" y=\"60\" width=\"54\" height=\"40\" rx=\"6\" fill=\"#c9a36b\" fill-opacity=\".35\"/><rect x=\"70\" y=\"60\" width=\"54\" height=\"40\" rx=\"6\" fill=\"#c9a36b\" fill-opacity=\".35\"/><rect x=\"130\" y=\"60\" width=\"54\" height=\"40\" rx=\"6\" fill=\"#c9a36b\" fill-opacity=\".35\"/><rect x=\"190\" y=\"60\" width=\"54\" height=\"40\" rx=\"6\" fill=\"#c9a36b\" fill-opacity=\".35\"/><rect x=\"250\" y=\"60\" width=\"54\" height=\"40\" rx=\"6\" fill=\"#c9a36b\" fill-opacity=\".35\"/></g><g fill=\"currentColor\" text-anchor=\"middle\"><text x=\"37\" y=\"85\">100 年</text><text x=\"97\" y=\"85\">100 年</text><text x=\"157\" y=\"85\">100 年</text><text x=\"217\" y=\"85\">100 年</text><text x=\"277\" y=\"85\">100 年</text><text x=\"160\" y=\"150\">ぜんぶで ？ 年</text></g></svg>"
+        },
+        "100 年が 5 こ分あることになる。"
+       ],
+       "qid": "W-070:cd247551c7"
+      },
+      {
+       "part": "今日",
+       "text": "つぶの大きさが 0.5 mm でした。このつぶは、何とよびますか。",
+       "svg": "<svg viewBox=\"0 0 320 200\" xmlns=\"http://www.w3.org/2000/svg\" font-size=\"14\"><g stroke=\"currentColor\" stroke-width=\"2\"><path d=\"M20 120 H300 M80 108 V132 M160 108 V132 M240 108 V132\" fill=\"none\"/><circle cx=\"205\" cy=\"88\" r=\"8\" fill=\"#f3c969\" fill-opacity=\".8\"/><path d=\"M205 96 V120\" fill=\"none\"/></g><g fill=\"currentColor\"><text x=\"20\" y=\"36\">← 小さい</text><text x=\"300\" y=\"36\" text-anchor=\"end\">大きい →</text><text x=\"205\" y=\"66\" text-anchor=\"middle\">0.5 mm</text><text x=\"80\" y=\"152\" text-anchor=\"middle\">0.002</text><text x=\"160\" y=\"152\" text-anchor=\"middle\">0.02</text><text x=\"240\" y=\"152\" text-anchor=\"middle\">2</text><text x=\"300\" y=\"152\" text-anchor=\"end\">mm</text><text x=\"160\" y=\"190\" font-size=\"13\" text-anchor=\"middle\">目もりのはばはそろえていません</text></g></svg>",
+       "choices": [
+        "れき",
+        "シルト",
+        "すな",
+        "ねんど"
+       ],
+       "answer": "すな",
+       "check": "'すな'",
+       "hints": [
+        "目もりの 3 つの数は、よび名のさかい目。",
+        {
+         "text": "さかい目で区切ると、4 つのよび名がならぶ。",
+         "svg": "<svg viewBox=\"0 0 320 200\" xmlns=\"http://www.w3.org/2000/svg\" font-size=\"14\"><g stroke=\"none\"><rect x=\"20\" y=\"86\" width=\"60\" height=\"16\" fill=\"#c9a36b\" fill-opacity=\".7\"/><rect x=\"80\" y=\"86\" width=\"80\" height=\"16\" fill=\"#b39ddb\" fill-opacity=\".7\"/><rect x=\"160\" y=\"86\" width=\"80\" height=\"16\" fill=\"#f3c969\" fill-opacity=\".7\"/><rect x=\"240\" y=\"86\" width=\"60\" height=\"16\" fill=\"#c8ccd6\" fill-opacity=\".7\"/></g><path d=\"M80 78 V110 M160 78 V110 M240 78 V110\" stroke=\"currentColor\" stroke-width=\"2\"/><g fill=\"currentColor\"><text x=\"80\" y=\"70\" text-anchor=\"middle\">0.002</text><text x=\"160\" y=\"70\" text-anchor=\"middle\">0.02</text><text x=\"240\" y=\"70\" text-anchor=\"middle\">2</text><text x=\"50\" y=\"130\" text-anchor=\"middle\">ねんど</text><text x=\"120\" y=\"130\" text-anchor=\"middle\">シルト</text><text x=\"200\" y=\"130\" text-anchor=\"middle\">すな</text><text x=\"270\" y=\"130\" text-anchor=\"middle\">れき</text><text x=\"160\" y=\"180\" text-anchor=\"middle\">0.5 mm はどこに入るかな</text></g></svg>"
+        },
+        "0.5 と、さかいの 3 つの数を見くらべよう。"
+       ],
+       "qid": "W-070:afa920a7f8"
+      },
+      {
+       "part": "今日",
+       "text": "ぜんぶで 100% の土です。ねんどは何% でしょう。",
+       "svg": "<svg viewBox=\"0 0 320 200\" xmlns=\"http://www.w3.org/2000/svg\" font-size=\"13\"><g stroke=\"currentColor\" stroke-width=\"2\"><rect x=\"20\" y=\"60\" width=\"154\" height=\"36\" fill=\"#f3c969\" fill-opacity=\".6\"/><rect x=\"174\" y=\"60\" width=\"84\" height=\"36\" fill=\"#b39ddb\" fill-opacity=\".6\"/><rect x=\"258\" y=\"60\" width=\"42\" height=\"36\" fill=\"#c9a36b\" fill-opacity=\".7\"/><path d=\"M279 98 V124\" fill=\"none\"/></g><g fill=\"currentColor\"><text x=\"20\" y=\"50\">0%</text><text x=\"300\" y=\"50\" text-anchor=\"end\">100%</text><text x=\"97\" y=\"118\" text-anchor=\"middle\">すな 55%</text><text x=\"216\" y=\"118\" text-anchor=\"middle\">シルト 30%</text><text x=\"279\" y=\"146\" text-anchor=\"middle\">ねんど ？</text></g></svg>",
+       "answer": 15,
+       "check": "100-55-30",
+       "hints": [
+        "ぜんぶたすと 100% になる。",
+        {
+         "text": "すなとシルトをひとまとめにして考えよう。",
+         "svg": "<svg viewBox=\"0 0 320 200\" xmlns=\"http://www.w3.org/2000/svg\" font-size=\"14\"><g stroke=\"currentColor\" stroke-width=\"2\"><rect x=\"20\" y=\"40\" width=\"154\" height=\"30\" fill=\"#f3c969\" fill-opacity=\".6\"/><rect x=\"174\" y=\"40\" width=\"84\" height=\"30\" fill=\"#b39ddb\" fill-opacity=\".6\"/><rect x=\"258\" y=\"40\" width=\"42\" height=\"30\" fill=\"none\" stroke-dasharray=\"5 4\"/><path d=\"M20 82 V92 H258 V82\" fill=\"none\"/><path d=\"M258 82 V92 H300 V82\" fill=\"none\" stroke-dasharray=\"5 4\"/></g><g fill=\"currentColor\"><text x=\"139\" y=\"114\" text-anchor=\"middle\">すな ＋ シルト ＝ ？%</text><text x=\"279\" y=\"138\" text-anchor=\"middle\">のこり</text><text x=\"160\" y=\"180\" text-anchor=\"middle\">100% からひくとのこりがわかる</text></g></svg>"
+        },
+        "55 と 30 をたした数を、100 からひこう。"
+       ],
+       "qid": "W-070:813a51975d"
+      },
+      {
+       "part": "今日",
+       "text": "この土は、やくそくによるとどのタイプでしょう。",
+       "svg": "<svg viewBox=\"0 0 320 200\" xmlns=\"http://www.w3.org/2000/svg\" font-size=\"14\"><g stroke=\"currentColor\" stroke-width=\"2\"><rect x=\"20\" y=\"28\" width=\"70\" height=\"34\" fill=\"#f3c969\" fill-opacity=\".6\"/><rect x=\"90\" y=\"28\" width=\"84\" height=\"34\" fill=\"#b39ddb\" fill-opacity=\".6\"/><rect x=\"174\" y=\"28\" width=\"126\" height=\"34\" fill=\"#c9a36b\" fill-opacity=\".7\"/></g><g fill=\"currentColor\" font-size=\"13\"><text x=\"55\" y=\"20\" text-anchor=\"middle\">すな 25%</text><text x=\"132\" y=\"20\" text-anchor=\"middle\">シルト 30%</text><text x=\"237\" y=\"20\" text-anchor=\"middle\">ねんど 45%</text><text x=\"20\" y=\"104\">やくそく</text><text x=\"20\" y=\"126\">すなが 70% 以上 → すなタイプ</text><text x=\"20\" y=\"148\">ねんどが 35% 以上 → ねんどタイプ</text><text x=\"20\" y=\"170\">どちらでもない → 壌土</text></g></svg>",
+       "choices": [
+        "ねんどタイプ",
+        "すなタイプ",
+        "壌土"
+       ],
+       "answer": "ねんどタイプ",
+       "check": "'ねんどタイプ'",
+       "hints": [
+        "やくそくの 2 つの数を、土の数と見くらべよう。",
+        {
+         "text": "さかいの数を、0% から 100% のものさしで見よう。",
+         "svg": "<svg viewBox=\"0 0 320 200\" xmlns=\"http://www.w3.org/2000/svg\" font-size=\"13\"><g stroke=\"currentColor\" stroke-width=\"2\"><rect x=\"70\" y=\"40\" width=\"200\" height=\"22\" fill=\"none\"/><rect x=\"70\" y=\"100\" width=\"200\" height=\"22\" fill=\"none\"/><path d=\"M210 30 V72 M140 90 V132\" fill=\"none\" stroke-dasharray=\"5 4\"/></g><g fill=\"currentColor\"><text x=\"8\" y=\"56\">すな</text><text x=\"8\" y=\"116\">ねんど</text><text x=\"210\" y=\"24\" text-anchor=\"middle\">70%</text><text x=\"70\" y=\"150\">0%</text><text x=\"140\" y=\"150\" text-anchor=\"middle\">35%</text><text x=\"270\" y=\"150\" text-anchor=\"end\">100%</text></g></svg>"
+        },
+        "どちらの数にもとどいていないときだけ、壌土。"
+       ],
+       "qid": "W-070:07ce4ed9a2"
+      },
+      {
+       "part": "今日",
+       "text": "同じ量の水をいっしょにそそぎます。水がいちばんはやくぬけきるのはどれでしょう。",
+       "svg": "<svg viewBox=\"0 0 320 200\" xmlns=\"http://www.w3.org/2000/svg\" font-size=\"14\"><g stroke=\"currentColor\" stroke-width=\"2\"><rect x=\"24\" y=\"30\" width=\"80\" height=\"108\" rx=\"4\" fill=\"none\"/><rect x=\"120\" y=\"30\" width=\"80\" height=\"108\" rx=\"4\" fill=\"none\"/><rect x=\"216\" y=\"30\" width=\"80\" height=\"108\" rx=\"4\" fill=\"none\"/></g><g fill=\"none\" stroke=\"#f3c969\" stroke-linecap=\"round\"><path d=\"M32 46 H96 M32 58 H96 M32 70 H96 M32 82 H96 M32 94 H96 M32 106 H96 M32 118 H96\" stroke-width=\"10\" stroke-dasharray=\"0 12\"/><path d=\"M128 40 H192 M128 49 H192 M128 58 H192 M128 67 H192 M128 76 H192 M128 85 H192 M128 94 H192 M128 103 H192 M128 112 H192 M128 121 H192 M128 130 H192\" stroke-width=\"6\" stroke-dasharray=\"0 8\"/><path d=\"M232 48 H288 M242 70 H288 M232 92 H288 M242 114 H288\" stroke-width=\"16\" stroke-dasharray=\"0 21\"/></g><g fill=\"currentColor\"><text x=\"64\" y=\"20\" text-anchor=\"middle\">ア</text><text x=\"160\" y=\"20\" text-anchor=\"middle\">イ</text><text x=\"256\" y=\"20\" text-anchor=\"middle\">ウ</text><text x=\"160\" y=\"170\" text-anchor=\"middle\">同じ量の水をそそぐ</text></g></svg>",
+       "choices": [
+        "ア",
+        "イ",
+        "ウ"
+       ],
+       "answer": "ウ",
+       "check": "'ウ'",
+       "hints": [
+        "水がとおる道は、つぶとつぶのすきま。",
+        {
+         "text": "つぶの大きさで、すきまはどうかわるかな。",
+         "svg": "<svg viewBox=\"0 0 320 200\" xmlns=\"http://www.w3.org/2000/svg\" font-size=\"14\"><g stroke=\"currentColor\" stroke-width=\"2\"><circle cx=\"46\" cy=\"80\" r=\"30\" fill=\"#f3c969\" fill-opacity=\".7\"/><circle cx=\"118\" cy=\"80\" r=\"30\" fill=\"#f3c969\" fill-opacity=\".7\"/><circle cx=\"214\" cy=\"80\" r=\"12\" fill=\"#f3c969\" fill-opacity=\".7\"/><circle cx=\"240\" cy=\"80\" r=\"12\" fill=\"#f3c969\" fill-opacity=\".7\"/><circle cx=\"266\" cy=\"80\" r=\"12\" fill=\"#f3c969\" fill-opacity=\".7\"/></g><path d=\"M82 30 V114\" stroke=\"#7fc8f8\" stroke-width=\"6\"/><polygon points=\"82,132 72,112 92,112\" fill=\"#7fc8f8\"/><path d=\"M227 40 V104\" stroke=\"#7fc8f8\" stroke-width=\"2\"/><polygon points=\"227,114 222,102 232,102\" fill=\"#7fc8f8\"/><g fill=\"currentColor\"><text x=\"82\" y=\"160\" text-anchor=\"middle\">つぶが大きい</text><text x=\"240\" y=\"160\" text-anchor=\"middle\">つぶが小さい</text></g></svg>"
+        },
+        "3 つのつぶの大きさをくらべて、すきまの広さを考えよう。"
+       ],
+       "qid": "W-070:1fb4903cfa"
+      },
+      {
+       "part": "今日",
+       "text": "すなとねんどの土に、どちらも 100 mL の水をそそぎました。下に出た水は図のとおりです。土がためた水（そそいだ水 − 出た水）は、ねんどのほうがすなより何 mL 多いでしょう。",
+       "svg": "<svg viewBox=\"0 0 320 200\" xmlns=\"http://www.w3.org/2000/svg\" font-size=\"14\"><g stroke=\"currentColor\" stroke-width=\"2\"><rect x=\"36\" y=\"70\" width=\"50\" height=\"100\" fill=\"none\"/><rect x=\"170\" y=\"70\" width=\"50\" height=\"100\" fill=\"none\"/></g><rect x=\"37\" y=\"85\" width=\"48\" height=\"84\" fill=\"#7fc8f8\" fill-opacity=\".6\"/><rect x=\"171\" y=\"155\" width=\"48\" height=\"14\" fill=\"#7fc8f8\" fill-opacity=\".6\"/><g fill=\"currentColor\"><text x=\"160\" y=\"24\" text-anchor=\"middle\">どちらにも 100 mL の水をそそぐ</text><text x=\"160\" y=\"46\" font-size=\"13\" text-anchor=\"middle\">下のビーカーに出た水</text><text x=\"61\" y=\"192\" text-anchor=\"middle\">すな</text><text x=\"195\" y=\"192\" text-anchor=\"middle\">ねんど</text><text x=\"94\" y=\"126\">出た水</text><text x=\"94\" y=\"144\">85 mL</text><text x=\"228\" y=\"146\">出た水</text><text x=\"228\" y=\"164\">15 mL</text></g></svg>",
+       "answer": 70,
+       "check": "(100-15)-(100-85)",
+       "hints": [
+        "ためた水 ＝ そそいだ水 − 出た水。",
+        {
+         "text": "あいているところが、土がためた水。",
+         "svg": "<svg viewBox=\"0 0 320 200\" xmlns=\"http://www.w3.org/2000/svg\" font-size=\"13\"><g stroke=\"currentColor\" stroke-width=\"2\"><rect x=\"60\" y=\"30\" width=\"200\" height=\"26\" fill=\"none\"/><rect x=\"60\" y=\"100\" width=\"200\" height=\"26\" fill=\"none\"/></g><rect x=\"61\" y=\"31\" width=\"170\" height=\"24\" fill=\"#7fc8f8\" fill-opacity=\".6\"/><rect x=\"61\" y=\"101\" width=\"30\" height=\"24\" fill=\"#7fc8f8\" fill-opacity=\".6\"/><g fill=\"currentColor\"><text x=\"8\" y=\"48\">すな</text><text x=\"8\" y=\"118\">ねんど</text><text x=\"245\" y=\"78\" text-anchor=\"middle\">ためた ？</text><text x=\"175\" y=\"148\" text-anchor=\"middle\">ためた ？</text><text x=\"160\" y=\"186\" text-anchor=\"middle\">あいているぶぶんがためた水</text></g></svg>"
+        },
+        "すなとねんどそれぞれのためた水を出してから、ちがいを見よう。"
+       ],
+       "qid": "W-070:8e6de2cf28"
+      },
+      {
+       "part": "挑戦",
+       "text": "すなタイプの土を 300 g あつめました。この土に、すなは少なくとも何 g 入っているでしょう。",
+       "svg": "<svg viewBox=\"0 0 320 200\" xmlns=\"http://www.w3.org/2000/svg\" font-size=\"14\"><g stroke=\"currentColor\" stroke-width=\"2\"><rect x=\"20\" y=\"64\" width=\"196\" height=\"40\" fill=\"#f3c969\" fill-opacity=\".6\"/><rect x=\"216\" y=\"64\" width=\"84\" height=\"40\" fill=\"#c8ccd6\" fill-opacity=\".5\"/><path d=\"M216 56 V112\" fill=\"none\"/></g><g fill=\"currentColor\"><text x=\"160\" y=\"44\" text-anchor=\"middle\">土ぜんぶで 300 g</text><text x=\"118\" y=\"134\" text-anchor=\"middle\">すな（70% 以上）</text><text x=\"258\" y=\"134\" text-anchor=\"middle\">ほか</text><text x=\"216\" y=\"170\" font-size=\"13\" text-anchor=\"middle\">ここが 70%</text></g></svg>",
+       "answer": 210,
+       "check": "300*70//100",
+       "hints": [
+        "すなタイプは、すなが 70% 以上の土。",
+        {
+         "text": "300 g を同じ大きさに分けて考えよう。",
+         "svg": "<svg viewBox=\"0 0 320 200\" xmlns=\"http://www.w3.org/2000/svg\" font-size=\"14\"><g stroke=\"currentColor\" stroke-width=\"2\"><rect x=\"20\" y=\"70\" width=\"280\" height=\"40\" fill=\"#f3c969\" fill-opacity=\".35\"/><path d=\"M48 70 V110 M76 70 V110 M104 70 V110 M132 70 V110 M160 70 V110 M188 70 V110 M216 70 V110 M244 70 V110 M272 70 V110\" fill=\"none\"/></g><g fill=\"currentColor\"><text x=\"160\" y=\"52\" text-anchor=\"middle\">300 g を同じ 10 こに分ける</text><text x=\"160\" y=\"140\" text-anchor=\"middle\">1 こぶんは 10%</text><text x=\"160\" y=\"176\" text-anchor=\"middle\">70% は何こ分かな</text></g></svg>"
+        },
+        "10% ぶんが何 g かを先に考えるといい。"
+       ],
+       "paths": [
+        [
+         "すなが 70% 以上だから、300 g の 70% を出す",
+         "300 × 70 ÷ 100",
+         "= 210 g"
+        ],
+        [
+         "300 g の 10% は 30 g",
+         "70% は 10% の 7 こ分",
+         "30 × 7 = 210 g"
+        ]
+       ],
+       "qid": "W-070:bdc9668331"
+      }
+     ],
+     "extra": [
+      {
+       "part": "今日",
+       "text": "シルトにあたるつぶはどれでしょう。",
+       "svg": "<svg viewBox=\"0 0 320 200\" xmlns=\"http://www.w3.org/2000/svg\" font-size=\"14\"><g stroke=\"currentColor\" stroke-width=\"2\"><circle cx=\"60\" cy=\"86\" r=\"3\" fill=\"#c9a36b\" fill-opacity=\".8\"/><circle cx=\"160\" cy=\"86\" r=\"12\" fill=\"#f3c969\" fill-opacity=\".7\"/><circle cx=\"260\" cy=\"86\" r=\"7\" fill=\"#b39ddb\" fill-opacity=\".7\"/></g><g fill=\"currentColor\"><text x=\"60\" y=\"40\" text-anchor=\"middle\">ア</text><text x=\"160\" y=\"40\" text-anchor=\"middle\">イ</text><text x=\"260\" y=\"40\" text-anchor=\"middle\">ウ</text><text x=\"60\" y=\"140\" text-anchor=\"middle\">0.0008 mm</text><text x=\"160\" y=\"140\" text-anchor=\"middle\">0.3 mm</text><text x=\"260\" y=\"140\" text-anchor=\"middle\">0.01 mm</text></g></svg>",
+       "choices": [
+        "ア",
+        "イ",
+        "ウ"
+       ],
+       "answer": "ウ",
+       "check": "'ウ'",
+       "hints": [
+        "シルトのはんいは、0.02 mm から 0.002 mm の間。",
+        {
+         "text": "シルトのさかいの数を、ものさしでたしかめよう。",
+         "svg": "<svg viewBox=\"0 0 320 200\" xmlns=\"http://www.w3.org/2000/svg\" font-size=\"14\"><g stroke=\"none\"><rect x=\"80\" y=\"86\" width=\"80\" height=\"16\" fill=\"#b39ddb\" fill-opacity=\".7\"/></g><path d=\"M20 94 H300 M80 78 V110 M160 78 V110\" stroke=\"currentColor\" stroke-width=\"2\"/><g fill=\"currentColor\"><text x=\"80\" y=\"70\" text-anchor=\"middle\">0.002</text><text x=\"160\" y=\"70\" text-anchor=\"middle\">0.02</text><text x=\"120\" y=\"130\" text-anchor=\"middle\">シルト</text><text x=\"160\" y=\"180\" text-anchor=\"middle\">この間に入る数はどれ</text></g></svg>"
+        },
+        "3 つの数が、0.02 と 0.002 の間に入るか見くらべよう。"
+       ],
+       "qid": "W-070:d22a4af566"
+      },
+      {
+       "part": "今日",
+       "text": "しらべた土は全部で 250 g で、すなが 150 g、シルトが 75 g、ねんどが 25 g でした。ねんどは全体の何% でしょう。",
+       "svg": "<svg viewBox=\"0 0 320 200\" xmlns=\"http://www.w3.org/2000/svg\" font-size=\"13\"><g stroke=\"currentColor\" stroke-width=\"2\"><rect x=\"20\" y=\"60\" width=\"168\" height=\"36\" fill=\"#f3c969\" fill-opacity=\".6\"/><rect x=\"188\" y=\"60\" width=\"84\" height=\"36\" fill=\"#b39ddb\" fill-opacity=\".6\"/><rect x=\"272\" y=\"60\" width=\"28\" height=\"36\" fill=\"#c9a36b\" fill-opacity=\".7\"/><path d=\"M286 98 V130\" fill=\"none\"/></g><g fill=\"currentColor\"><text x=\"104\" y=\"118\" text-anchor=\"middle\">すな 150 g</text><text x=\"230\" y=\"118\" text-anchor=\"middle\">シルト 75 g</text><text x=\"300\" y=\"146\" text-anchor=\"end\">ねんど 25 g</text><text x=\"160\" y=\"46\" text-anchor=\"middle\">土ぜんぶで 250 g</text></g></svg>",
+       "answer": 10,
+       "check": "25*100//250",
+       "hints": [
+        "全体の 250 g を 100% と考える。",
+        {
+         "text": "250 g を 10 こに分けると、1 こは何% かな。",
+         "svg": "<svg viewBox=\"0 0 320 200\" xmlns=\"http://www.w3.org/2000/svg\" font-size=\"14\"><g stroke=\"currentColor\" stroke-width=\"2\"><rect x=\"20\" y=\"70\" width=\"280\" height=\"40\" fill=\"#c9a36b\" fill-opacity=\".25\"/><path d=\"M48 70 V110 M76 70 V110 M104 70 V110 M132 70 V110 M160 70 V110 M188 70 V110 M216 70 V110 M244 70 V110 M272 70 V110\" fill=\"none\"/></g><g fill=\"currentColor\"><text x=\"160\" y=\"52\" text-anchor=\"middle\">250 g を同じ 10 こに分ける</text><text x=\"160\" y=\"140\" text-anchor=\"middle\">1 こぶんは何 g で何% かな</text></g></svg>"
+        },
+        "ねんどの 25 g は、1 こぶんの何こ分かを考えよう。"
+       ],
+       "qid": "W-070:0b65f7475b"
+      }
+     ],
      "key": "練習#1"
     },
     {
      "kind": "わけ",
      "aim": "",
+     "items": [
+      {
+       "part": "見本",
+       "text": "雨や風が土のつぶをけずってはこぶことを、侵食（しんしょく）といいます。草や木の根は土をつかまえ、葉や草は雨をうけとめて、侵食をおさえます。土をまもるくふうには、だんだん畑、風よけの林、わらをしくことなどがあります。",
+       "svg": "<svg viewBox=\"0 0 320 200\" xmlns=\"http://www.w3.org/2000/svg\" font-size=\"14\"><g stroke=\"currentColor\" stroke-width=\"2\"><polygon points=\"10,100 150,160 150,176 10,176\" fill=\"#c9a36b\" fill-opacity=\".6\"/><polygon points=\"170,100 310,160 310,176 170,176\" fill=\"#c9a36b\" fill-opacity=\".6\"/><path d=\"M30 24 l-6 12 M60 24 l-6 12 M90 24 l-6 12 M120 24 l-6 12 M45 46 l-6 12 M75 46 l-6 12 M105 46 l-6 12 M190 24 l-6 12 M220 24 l-6 12 M250 24 l-6 12 M280 24 l-6 12 M205 46 l-6 12 M235 46 l-6 12 M265 46 l-6 12\" fill=\"none\" stroke=\"#7fc8f8\" stroke-width=\"3\"/><path d=\"M40 104 L108 133\" fill=\"none\" stroke=\"#8b5e34\" stroke-width=\"6\"/><polygon points=\"122,139 106,140 112,127\" fill=\"#8b5e34\"/><path d=\"M200 99 L226 110\" fill=\"none\" stroke=\"#7fc8f8\" stroke-width=\"2\"/><polygon points=\"236,114 225,115 229,105\" fill=\"#7fc8f8\"/><path d=\"M190 108 l-4 -10 M190 108 v-12 M190 108 l4 -10 M230 126 l-4 -10 M230 126 v-12 M230 126 l4 -10 M270 143 l-4 -10 M270 143 v-12 M270 143 l4 -10\" fill=\"none\" stroke=\"#7bc96f\" stroke-width=\"3\"/><path d=\"M190 110 v18 M184 112 l-4 12 M196 112 l4 12 M230 128 v18 M224 130 l-4 12 M236 130 l4 12 M270 145 v18 M264 147 l-4 12 M276 147 l4 12\" fill=\"none\" stroke=\"#8b5e34\" stroke-width=\"1.5\"/></g><g fill=\"currentColor\"><text x=\"80\" y=\"88\" text-anchor=\"middle\">土が流れる</text><text x=\"240\" y=\"88\" text-anchor=\"middle\">あまり流れない</text><text x=\"80\" y=\"196\" text-anchor=\"middle\">草がない坂</text><text x=\"240\" y=\"196\" text-anchor=\"middle\">草がある坂</text></g></svg>",
+       "explain": "雨は、地面に当たるときのいきおいで土のつぶをはね飛ばし、そのあと流れる水がつぶをはこびます。坂がきゅうなほど水ははやく流れ、はこぶ力が強くなります。草や木の根は、土をあみのようにつなぎとめ、葉は雨つぶのいきおいを弱めます。だんだん畑は坂を平らな面に分けて水の流れをゆるめ、風よけの林は風の強さを弱めて土がとばされるのをふせぎます。",
+       "qid": "W-070:faea15dd07"
+      },
+      {
+       "part": "思い出す",
+       "text": "すな、シルト、ねんどのうち、透水性がいちばん高い（水がいちばんはやくぬける）土はどれでしょう。",
+       "svg": "<svg viewBox=\"0 0 320 200\" xmlns=\"http://www.w3.org/2000/svg\" font-size=\"14\"><g stroke=\"currentColor\" stroke-width=\"2\"><circle cx=\"60\" cy=\"90\" r=\"14\" fill=\"#f3c969\" fill-opacity=\".7\"/><circle cx=\"160\" cy=\"90\" r=\"8\" fill=\"#b39ddb\" fill-opacity=\".7\"/><circle cx=\"260\" cy=\"90\" r=\"3\" fill=\"#c9a36b\" fill-opacity=\".8\"/></g><g fill=\"currentColor\"><text x=\"60\" y=\"140\" text-anchor=\"middle\">すな</text><text x=\"160\" y=\"140\" text-anchor=\"middle\">シルト</text><text x=\"260\" y=\"140\" text-anchor=\"middle\">ねんど</text></g></svg>",
+       "choices": [
+        "シルト",
+        "すな",
+        "ねんど"
+       ],
+       "answer": "すな",
+       "check": "'すな'",
+       "hints": [
+        "水がとおる道は、つぶとつぶのすきま。",
+        {
+         "text": "つぶの大きさで、すきまはどうかわるかな。",
+         "svg": "<svg viewBox=\"0 0 320 200\" xmlns=\"http://www.w3.org/2000/svg\" font-size=\"14\"><g stroke=\"currentColor\" stroke-width=\"2\"><circle cx=\"46\" cy=\"80\" r=\"30\" fill=\"#f3c969\" fill-opacity=\".7\"/><circle cx=\"118\" cy=\"80\" r=\"30\" fill=\"#f3c969\" fill-opacity=\".7\"/><circle cx=\"214\" cy=\"80\" r=\"12\" fill=\"#f3c969\" fill-opacity=\".7\"/><circle cx=\"240\" cy=\"80\" r=\"12\" fill=\"#f3c969\" fill-opacity=\".7\"/><circle cx=\"266\" cy=\"80\" r=\"12\" fill=\"#f3c969\" fill-opacity=\".7\"/></g><path d=\"M82 30 V114\" stroke=\"#7fc8f8\" stroke-width=\"6\"/><polygon points=\"82,132 72,112 92,112\" fill=\"#7fc8f8\"/><path d=\"M227 40 V104\" stroke=\"#7fc8f8\" stroke-width=\"2\"/><polygon points=\"227,114 222,102 232,102\" fill=\"#7fc8f8\"/><g fill=\"currentColor\"><text x=\"82\" y=\"160\" text-anchor=\"middle\">つぶが大きい</text><text x=\"240\" y=\"160\" text-anchor=\"middle\">つぶが小さい</text></g></svg>"
+        },
+        "つぶの大きいじゅんに 3 つをならべて考えよう。"
+       ],
+       "qid": "W-070:99cbf8e4da"
+      },
+      {
+       "part": "思い出す",
+       "text": "つぎのうち、風化ではないものはどれでしょう。",
+       "svg": "<svg viewBox=\"0 0 320 200\" xmlns=\"http://www.w3.org/2000/svg\" font-size=\"13\"><g stroke=\"currentColor\" stroke-width=\"2\"><path d=\"M8 80 q10 -8 20 0 t20 0 t20 0\" fill=\"none\" stroke=\"#7fc8f8\" stroke-width=\"3\"/><circle cx=\"30\" cy=\"64\" r=\"9\" fill=\"#c8ccd6\" fill-opacity=\".8\"/><polygon points=\"76,48 92,58 76,68\" fill=\"currentColor\"/><polygon points=\"120,100 124,60 150,50 188,62 192,100\" fill=\"#c8ccd6\" fill-opacity=\".7\"/><path d=\"M154 20 V52 L148 74 M154 52 L168 76\" fill=\"none\" stroke=\"#c9a36b\" stroke-width=\"4\"/><polygon points=\"224,100 228,60 254,50 292,62 296,100\" fill=\"#c8ccd6\" fill-opacity=\".7\"/><path d=\"M256 51 L250 70 L260 80\" fill=\"none\"/><polygon points=\"258,66 264,70 264,78 258,82 252,78 252,70\" fill=\"#7fc8f8\" fill-opacity=\".6\"/></g><g fill=\"currentColor\"><text x=\"54\" y=\"126\" text-anchor=\"middle\">ア 川が岩を</text><text x=\"54\" y=\"144\" text-anchor=\"middle\">けずって</text><text x=\"54\" y=\"162\" text-anchor=\"middle\">はこぶ</text><text x=\"156\" y=\"126\" text-anchor=\"middle\">イ 木の根が</text><text x=\"156\" y=\"144\" text-anchor=\"middle\">われ目を</text><text x=\"156\" y=\"162\" text-anchor=\"middle\">広げる</text><text x=\"260\" y=\"126\" text-anchor=\"middle\">ウ 水がこおって</text><text x=\"260\" y=\"144\" text-anchor=\"middle\">ひびが</text><text x=\"260\" y=\"162\" text-anchor=\"middle\">入る</text></g></svg>",
+       "choices": [
+        "ア",
+        "イ",
+        "ウ"
+       ],
+       "answer": "ア",
+       "check": "'ア'",
+       "hints": [
+        "風化は、岩がその場所でくだけること。",
+        {
+         "text": "風化のれいを思い出そう。",
+         "svg": "<svg viewBox=\"0 0 320 200\" xmlns=\"http://www.w3.org/2000/svg\" font-size=\"14\"><g stroke=\"currentColor\" stroke-width=\"2\"><polygon points=\"12,100 16,52 46,42 88,54 92,100\" fill=\"#c8ccd6\" fill-opacity=\".7\"/><path d=\"M48 43 L44 62 L52 74\" fill=\"none\"/><ellipse cx=\"49\" cy=\"64\" rx=\"3\" ry=\"6\" fill=\"#7fc8f8\" fill-opacity=\".8\"/><polygon points=\"118,100 122,52 152,42 194,54 198,100\" fill=\"#c8ccd6\" fill-opacity=\".7\"/><path d=\"M154 43 L150 62 L158 74\" fill=\"none\"/><polygon points=\"155,56 162,62 162,72 155,80 148,72 148,62\" fill=\"#7fc8f8\" fill-opacity=\".6\"/><polygon points=\"224,100 228,52 258,42 300,54 304,100\" fill=\"#c8ccd6\" fill-opacity=\".7\"/><path d=\"M258 43 L248 62 L258 76 M266 43 L274 62 L264 76\" fill=\"none\"/><polygon points=\"98,70 108,76 98,82\" fill=\"currentColor\"/><polygon points=\"204,70 214,76 204,82\" fill=\"currentColor\"/></g><g fill=\"currentColor\" font-size=\"13\"><text x=\"52\" y=\"124\" text-anchor=\"middle\">水がしみこむ</text><text x=\"158\" y=\"124\" text-anchor=\"middle\">こおってふくらむ</text><text x=\"264\" y=\"124\" text-anchor=\"middle\">ひびが広がる</text><text x=\"160\" y=\"170\" text-anchor=\"middle\">これがくりかえされる</text></g></svg>"
+        },
+        "「その場所で」ということばに合わないものをさがそう。"
+       ],
+       "qid": "W-070:704a1b648d"
+      },
+      {
+       "part": "今日",
+       "text": "同じ土で、草のない 3 つの坂に、同じ雨がふりました。いちばん土が流されやすい坂はどれでしょう。",
+       "svg": "<svg viewBox=\"0 0 320 200\" xmlns=\"http://www.w3.org/2000/svg\" font-size=\"14\"><g stroke=\"currentColor\" stroke-width=\"2\"><polygon points=\"16,130 106,150 16,150\" fill=\"#c9a36b\" fill-opacity=\".6\"/><polygon points=\"118,105 208,150 118,150\" fill=\"#c9a36b\" fill-opacity=\".6\"/><polygon points=\"220,75 310,150 220,150\" fill=\"#c9a36b\" fill-opacity=\".6\"/><path d=\"M30 28 l-6 12 M60 28 l-6 12 M90 28 l-6 12 M132 28 l-6 12 M162 28 l-6 12 M192 28 l-6 12 M234 28 l-6 12 M264 28 l-6 12 M294 28 l-6 12\" fill=\"none\" stroke=\"#7fc8f8\" stroke-width=\"3\"/></g><g fill=\"currentColor\"><text x=\"61\" y=\"172\" text-anchor=\"middle\">ア</text><text x=\"163\" y=\"172\" text-anchor=\"middle\">イ</text><text x=\"265\" y=\"172\" text-anchor=\"middle\">ウ</text><text x=\"160\" y=\"194\" font-size=\"13\" text-anchor=\"middle\">同じ土、同じ雨、草はなし</text></g></svg>",
+       "choices": [
+        "ア",
+        "イ",
+        "ウ"
+       ],
+       "answer": "ウ",
+       "check": "'ウ'",
+       "hints": [
+        "坂のきゅうさと、水の流れるはやさを考えよう。",
+        {
+         "text": "ゆるやかな坂ときゅうな坂で、水の流れ方をくらべよう。",
+         "svg": "<svg viewBox=\"0 0 320 200\" xmlns=\"http://www.w3.org/2000/svg\" font-size=\"14\"><g stroke=\"currentColor\" stroke-width=\"2\"><polygon points=\"16,120 136,150 16,150\" fill=\"#c9a36b\" fill-opacity=\".6\"/><polygon points=\"176,70 296,150 176,150\" fill=\"#c9a36b\" fill-opacity=\".6\"/><path d=\"M22 108 L60 118\" fill=\"none\" stroke=\"#7fc8f8\" stroke-width=\"5\"/><polygon points=\"70,119 57,122 60,111\" fill=\"#7fc8f8\"/><path d=\"M182 58 L262 112\" fill=\"none\" stroke=\"#7fc8f8\" stroke-width=\"5\"/><polygon points=\"274,119 261,117 267,107\" fill=\"#7fc8f8\"/></g><g fill=\"currentColor\"><text x=\"76\" y=\"176\" text-anchor=\"middle\">ゆるやかな坂</text><text x=\"236\" y=\"176\" text-anchor=\"middle\">きゅうな坂</text></g></svg>"
+        },
+        "水がはやく流れるほど、土をはこぶ力が大きい。"
+       ],
+       "qid": "W-070:bd3b6ebad3"
+      },
+      {
+       "part": "今日",
+       "text": "同じ雨がふったあと、3 つの坂から流れ出た土の重さをはかりました。何もない坂は、草がびっしりの坂の何倍の土が流れましたか。",
+       "svg": "<svg viewBox=\"0 0 320 200\" xmlns=\"http://www.w3.org/2000/svg\" font-size=\"14\"><g stroke=\"currentColor\" stroke-width=\"2\"><path d=\"M20 160 H300\" fill=\"none\"/><rect x=\"50\" y=\"155\" width=\"40\" height=\"5\" fill=\"#c9a36b\" fill-opacity=\".7\"/><rect x=\"140\" y=\"138\" width=\"40\" height=\"22\" fill=\"#c9a36b\" fill-opacity=\".7\"/><rect x=\"230\" y=\"60\" width=\"40\" height=\"100\" fill=\"#c9a36b\" fill-opacity=\".7\"/></g><g fill=\"currentColor\"><text x=\"160\" y=\"24\" text-anchor=\"middle\">流れ出た土の重さ</text><text x=\"70\" y=\"146\" text-anchor=\"middle\">2 kg</text><text x=\"160\" y=\"128\" text-anchor=\"middle\">9 kg</text><text x=\"250\" y=\"50\" text-anchor=\"middle\">40 kg</text><text x=\"70\" y=\"184\" text-anchor=\"middle\">びっしり</text><text x=\"160\" y=\"184\" text-anchor=\"middle\">ところどころ</text><text x=\"250\" y=\"184\" text-anchor=\"middle\">何もない</text></g></svg>",
+       "answer": 20,
+       "check": "40//2",
+       "hints": [
+        "「何倍」かは、わり算でくらべる。",
+        {
+         "text": "40 kg を、2 kg ずつのだんに分けてみよう。",
+         "svg": "<svg viewBox=\"0 0 320 200\" xmlns=\"http://www.w3.org/2000/svg\" font-size=\"14\"><g stroke=\"currentColor\" stroke-width=\"2\"><rect x=\"50\" y=\"20\" width=\"80\" height=\"24\" fill=\"#c9a36b\" fill-opacity=\".6\"/><rect x=\"50\" y=\"44\" width=\"80\" height=\"24\" fill=\"#c9a36b\" fill-opacity=\".6\"/><rect x=\"50\" y=\"68\" width=\"80\" height=\"24\" fill=\"#c9a36b\" fill-opacity=\".6\"/><path d=\"M142 20 H150 V150 H142\" fill=\"none\"/></g><g fill=\"currentColor\"><text x=\"90\" y=\"37\" text-anchor=\"middle\">2 kg</text><text x=\"90\" y=\"61\" text-anchor=\"middle\">2 kg</text><text x=\"90\" y=\"85\" text-anchor=\"middle\">2 kg</text><text x=\"90\" y=\"124\" text-anchor=\"middle\">・・・</text><text x=\"160\" y=\"90\">？ こ</text><text x=\"160\" y=\"184\" text-anchor=\"middle\">40 kg を 2 kg ずつのだんに分ける</text></g></svg>"
+        },
+        "2 kg が何こ分かを考えよう。わり算だよ。"
+       ],
+       "qid": "W-070:192694e541"
+      },
+      {
+       "part": "今日",
+       "text": "雨で土が流れやすい坂の畑をまもるくふうはどれでしょう。",
+       "svg": "<svg viewBox=\"0 0 320 200\" xmlns=\"http://www.w3.org/2000/svg\" font-size=\"13\"><g stroke=\"currentColor\" stroke-width=\"2\"><polygon points=\"10,80 36,80 36,98 62,98 62,116 88,116 88,134 10,134\" fill=\"#c9a36b\" fill-opacity=\".6\"/><path d=\"M14 76 V70 M24 76 V70 M40 94 V88 M50 94 V88 M66 112 V106 M76 112 V106\" fill=\"none\" stroke=\"#7bc96f\" stroke-width=\"3\"/><polygon points=\"114,80 190,134 114,134\" fill=\"#c9a36b\" fill-opacity=\".6\"/><polygon points=\"218,80 226,82 230,90 238,92 244,100 252,100 258,110 268,112 274,122 284,124 294,134 218,134\" fill=\"#c9a36b\" fill-opacity=\".6\"/><circle cx=\"236\" cy=\"82\" r=\"4\" fill=\"#c9a36b\" fill-opacity=\".8\"/><circle cx=\"256\" cy=\"98\" r=\"4\" fill=\"#c9a36b\" fill-opacity=\".8\"/><circle cx=\"276\" cy=\"113\" r=\"4\" fill=\"#c9a36b\" fill-opacity=\".8\"/></g><g fill=\"currentColor\"><text x=\"52\" y=\"30\" text-anchor=\"middle\" font-size=\"14\">ア</text><text x=\"156\" y=\"30\" text-anchor=\"middle\" font-size=\"14\">イ</text><text x=\"260\" y=\"30\" text-anchor=\"middle\" font-size=\"14\">ウ</text><text x=\"52\" y=\"160\" text-anchor=\"middle\">だんだんに</text><text x=\"52\" y=\"178\" text-anchor=\"middle\">平らにする</text><text x=\"156\" y=\"160\" text-anchor=\"middle\">草を</text><text x=\"156\" y=\"178\" text-anchor=\"middle\">ぜんぶぬく</text><text x=\"260\" y=\"160\" text-anchor=\"middle\">土をふかくほって</text><text x=\"260\" y=\"178\" text-anchor=\"middle\">やわらかくする</text></g></svg>",
+       "choices": [
+        "ア",
+        "イ",
+        "ウ"
+       ],
+       "answer": "ア",
+       "check": "'ア'",
+       "hints": [
+        "水が坂を下るはやさを小さくできるかどうかで考えよう。",
+        {
+         "text": "水の流れを、坂とだんだんの面でくらべよう。",
+         "svg": "<svg viewBox=\"0 0 320 200\" xmlns=\"http://www.w3.org/2000/svg\" font-size=\"14\"><g stroke=\"currentColor\" stroke-width=\"2\"><polygon points=\"20,70 140,150 20,150\" fill=\"#c9a36b\" fill-opacity=\".6\"/><path d=\"M30 64 L112 118\" fill=\"none\" stroke=\"#7fc8f8\" stroke-width=\"5\"/><polygon points=\"180,70 210,70 210,90 240,90 240,110 270,110 270,130 300,130 300,150 180,150\" fill=\"#c9a36b\" fill-opacity=\".6\"/><path d=\"M186 64 H206 M216 84 H236 M246 104 H266 M276 124 H296\" fill=\"none\" stroke=\"#7fc8f8\" stroke-width=\"5\"/></g><g fill=\"currentColor\"><text x=\"80\" y=\"176\" text-anchor=\"middle\">ずっとつづく坂</text><text x=\"240\" y=\"176\" text-anchor=\"middle\">平らなところで止まる</text></g></svg>"
+        },
+        "草や作物をとりのぞいて土をむき出しにすることは、まもることになるかな。"
+       ],
+       "qid": "W-070:aa60d79e2c"
+      },
+      {
+       "part": "わけ",
+       "text": "草がはえている坂では、雨がふっても土が流されにくいのはなぜでしょう。",
+       "svg": "<svg viewBox=\"0 0 320 200\" xmlns=\"http://www.w3.org/2000/svg\" font-size=\"14\"><g stroke=\"currentColor\" stroke-width=\"2\"><polygon points=\"20,110 300,150 300,180 20,180\" fill=\"#c9a36b\" fill-opacity=\".6\"/><path d=\"M50 30 l-6 12 M100 30 l-6 12 M150 30 l-6 12 M200 30 l-6 12 M250 30 l-6 12 M75 52 l-6 12 M125 52 l-6 12 M175 52 l-6 12 M225 52 l-6 12 M275 52 l-6 12\" fill=\"none\" stroke=\"#7fc8f8\" stroke-width=\"3\"/><path d=\"M60 116 l-5 -14 M60 116 v-16 M60 116 l5 -14 M130 126 l-5 -14 M130 126 v-16 M130 126 l5 -14 M200 136 l-5 -14 M200 136 v-16 M200 136 l5 -14 M270 146 l-5 -14 M270 146 v-16 M270 146 l5 -14\" fill=\"none\" stroke=\"#7bc96f\" stroke-width=\"3\"/><path d=\"M60 118 v22 M54 120 l-5 14 M66 120 l5 14 M130 128 v22 M124 130 l-5 14 M136 130 l5 14 M200 138 v22 M194 140 l-5 14 M206 140 l5 14\" fill=\"none\" stroke=\"#8b5e34\" stroke-width=\"1.5\"/><path d=\"M222 122 L252 126\" fill=\"none\" stroke=\"#7fc8f8\" stroke-width=\"3\"/><polygon points=\"262,127 250,131 250,121\" fill=\"#7fc8f8\"/></g><g fill=\"currentColor\"><text x=\"160\" y=\"18\" text-anchor=\"middle\" font-size=\"13\">① 葉と草　② 根　③ 地面を流れる水</text><text x=\"84\" y=\"96\">①</text><text x=\"92\" y=\"164\">②</text><text x=\"232\" y=\"114\">③</text></g></svg>",
+       "choices": [
+        "根が土の中の水をぜんぶすいとって、土をかちかちにかためてしまうから",
+        "葉や草が雨をぜんぶはじいて、雨つぶが地面にとどかなくなるから",
+        "根が土をつかまえ、葉や草が雨のいきおいと水の流れをやわらげるから"
+       ],
+       "answer": "根が土をつかまえ、葉や草が雨のいきおいと水の流れをやわらげるから",
+       "check": "'根が土をつかまえ、葉や草が雨のいきおいと水の流れをやわらげるから'",
+       "explain": "草がある坂で土が流されにくいのには、2 つのわけがあります。1 つめは、草の葉やくきが雨つぶをうけとめて、地面に当たる強さと水の流れるはやさを弱めること。2 つめは、根が土のつぶをあみのようにつなぎとめて、はなれにくくすること。どちらも侵食をおさえるはたらきです。",
+       "hints": [
+        "草の葉、根、地面を流れる水。3 つのぶぶんで何がおきているか考えよう。",
+        {
+         "text": "草がないときとあるときで、雨つぶが地面に当たるようすをくらべよう。",
+         "svg": "<svg viewBox=\"0 0 320 200\" xmlns=\"http://www.w3.org/2000/svg\" font-size=\"13\"><g stroke=\"currentColor\" stroke-width=\"2\"><rect x=\"16\" y=\"130\" width=\"120\" height=\"40\" fill=\"#c9a36b\" fill-opacity=\".6\"/><path d=\"M76 60 V114\" stroke=\"#7fc8f8\" stroke-width=\"4\" fill=\"none\"/><polygon points=\"76,126 68,110 84,110\" fill=\"#7fc8f8\"/><path d=\"M46 124 l-8 -10 M106 124 l8 -10 M58 122 l-4 -12 M94 122 l4 -12\" fill=\"none\" stroke=\"#8b5e34\" stroke-width=\"3\"/><rect x=\"184\" y=\"150\" width=\"120\" height=\"20\" fill=\"#c9a36b\" fill-opacity=\".6\"/><path d=\"M200 112 Q244 80 288 112 Z\" fill=\"#7bc96f\" fill-opacity=\".6\"/><path d=\"M244 40 V76\" stroke=\"#7fc8f8\" stroke-width=\"4\" fill=\"none\"/><polygon points=\"244,88 236,72 252,72\" fill=\"#7fc8f8\"/></g><g fill=\"currentColor\"><text x=\"76\" y=\"192\" text-anchor=\"middle\">草がないとき</text><text x=\"244\" y=\"192\" text-anchor=\"middle\">草があるとき</text></g></svg>"
+        },
+        "根は土の中でどうなっているか思い出そう。"
+       ],
+       "paths": [
+        [
+         "草の葉や草が雨つぶをうけとめる",
+         "雨が地面に強く当たらず、水の流れもゆっくりになる",
+         "土をはこぶ力が小さい"
+        ],
+        [
+         "根が土の中であみのようにひろがり、土のつぶをつなぎとめる",
+         "つぶがはなれにくくなる",
+         "だから流されにくい"
+        ]
+       ],
+       "qid": "W-070:b3614269e0"
+      },
+      {
+       "part": "挑戦",
+       "text": "ある畑では、土が 1 年に 1 mm ずつ流されています。いっぽう、新しい土は 100 年で 1 cm、つまり 1 年に 0.1 mm できます。いまの土のあつさは 18 cm です。このままだと、何年で土がなくなるでしょう。",
+       "svg": "<svg viewBox=\"0 0 320 200\" xmlns=\"http://www.w3.org/2000/svg\" font-size=\"14\"><g stroke=\"currentColor\" stroke-width=\"2\"><rect x=\"40\" y=\"40\" width=\"70\" height=\"120\" fill=\"#c9a36b\" fill-opacity=\".6\"/><path d=\"M136 50 V82\" fill=\"none\" stroke=\"#f08080\" stroke-width=\"5\"/><polygon points=\"136,94 126,78 146,78\" fill=\"#f08080\"/><path d=\"M136 146 V122\" fill=\"none\" stroke=\"#7bc96f\" stroke-width=\"5\"/><polygon points=\"136,108 126,124 146,124\" fill=\"#7bc96f\"/></g><g fill=\"currentColor\"><text x=\"75\" y=\"30\" text-anchor=\"middle\">18 cm</text><text x=\"158\" y=\"66\">1 年に 1 mm</text><text x=\"158\" y=\"84\">流される</text><text x=\"158\" y=\"130\">1 年に 0.1 mm</text><text x=\"158\" y=\"148\">できる</text></g></svg>",
+       "answer": 200,
+       "check": "1800//(10-1)",
+       "note": "新しい土ができる年数は場所でちがう。ここでは 100 年で 1 cm として計算した。",
+       "hints": [
+        "へるはやさと、できるはやさを、両方見よう。",
+        {
+         "text": "100 年たつと、流される土とできる土はどれだけちがうかな。",
+         "svg": "<svg viewBox=\"0 0 320 200\" xmlns=\"http://www.w3.org/2000/svg\" font-size=\"14\"><g stroke=\"currentColor\" stroke-width=\"2\"><rect x=\"20\" y=\"50\" width=\"200\" height=\"22\" fill=\"#f08080\" fill-opacity=\".6\"/><rect x=\"20\" y=\"110\" width=\"20\" height=\"22\" fill=\"#7bc96f\" fill-opacity=\".6\"/></g><g fill=\"currentColor\"><text x=\"20\" y=\"40\">100 年で流される土：100 mm</text><text x=\"20\" y=\"100\">100 年でできる土：10 mm</text><text x=\"160\" y=\"172\" text-anchor=\"middle\">ほんとうにへるのは何 mm かな</text></g></svg>"
+        },
+        "18 cm は何 mm か、先に単位をそろえて考えよう。"
+       ],
+       "paths": [
+        [
+         "18 cm ＝ 180 mm",
+         "1 年にへるぶんは 1 − 0.1 ＝ 0.9 mm",
+         "180 ÷ 0.9 ＝ 200 年"
+        ],
+        [
+         "100 年では 100 mm 流され、10 mm できるので、へるのは 90 mm",
+         "180 mm は 90 mm の 2 つ分",
+         "100 年 × 2 ＝ 200 年"
+        ]
+       ],
+       "qid": "W-070:d15b7dff7e"
+      }
+     ],
+     "extra": [
+      {
+       "part": "今日",
+       "text": "風がつよい土地で、畑の土が風でとばされます。土をまもるくふうはどれでしょう。",
+       "svg": "<svg viewBox=\"0 0 320 200\" xmlns=\"http://www.w3.org/2000/svg\" font-size=\"14\"><g stroke=\"currentColor\" stroke-width=\"2\"><rect x=\"10\" y=\"150\" width=\"300\" height=\"30\" fill=\"#c9a36b\" fill-opacity=\".6\"/><path d=\"M20 70 H200 M30 100 H220 M20 128 H190\" fill=\"none\" stroke=\"#7fc8f8\" stroke-width=\"3\"/><polygon points=\"200,64 212,70 200,76\" fill=\"#7fc8f8\"/><polygon points=\"220,94 232,100 220,106\" fill=\"#7fc8f8\"/><polygon points=\"190,122 202,128 190,134\" fill=\"#7fc8f8\"/><circle cx=\"244\" cy=\"76\" r=\"3\" fill=\"#c9a36b\"/><circle cx=\"262\" cy=\"96\" r=\"3\" fill=\"#c9a36b\"/><circle cx=\"282\" cy=\"82\" r=\"3\" fill=\"#c9a36b\"/><circle cx=\"252\" cy=\"118\" r=\"3\" fill=\"#c9a36b\"/><circle cx=\"276\" cy=\"130\" r=\"3\" fill=\"#c9a36b\"/><circle cx=\"298\" cy=\"108\" r=\"3\" fill=\"#c9a36b\"/><circle cx=\"224\" cy=\"132\" r=\"3\" fill=\"#c9a36b\"/></g><path d=\"M60 146 H84 M44 140 H52\" stroke=\"#8b5e34\" stroke-width=\"4\" stroke-dasharray=\"0 8\" stroke-linecap=\"round\" fill=\"none\"/></svg>",
+       "choices": [
+        "畑の草や作物をぜんぶとりのぞく",
+        "畑の土をふかくほって細かくする",
+        "畑のまわりに木を植えて風よけにする"
+       ],
+       "answer": "畑のまわりに木を植えて風よけにする",
+       "check": "'畑のまわりに木を植えて風よけにする'",
+       "hints": [
+        "風が土をはこぶのを、どうしたら弱められるかな。",
+        {
+         "text": "風の通り道に何があると、風はどうなるかな。",
+         "svg": "<svg viewBox=\"0 0 320 200\" xmlns=\"http://www.w3.org/2000/svg\" font-size=\"14\"><g stroke=\"currentColor\" stroke-width=\"2\"><path d=\"M10 60 H120 M10 90 H120 M10 120 H120\" fill=\"none\" stroke=\"#7fc8f8\" stroke-width=\"5\"/><rect x=\"146\" y=\"84\" width=\"8\" height=\"66\" fill=\"#c9a36b\"/><circle cx=\"150\" cy=\"70\" r=\"28\" fill=\"#7bc96f\" fill-opacity=\".6\"/><path d=\"M180 90 H230 M180 120 H230\" fill=\"none\" stroke=\"#7fc8f8\" stroke-width=\"2\"/></g><g fill=\"currentColor\"><text x=\"64\" y=\"176\" text-anchor=\"middle\">木の前</text><text x=\"210\" y=\"176\" text-anchor=\"middle\">木の後ろ</text></g></svg>"
+        },
+        "作物や草をとりのぞくと、土はむき出しになる。"
+       ],
+       "qid": "W-070:99c352305e"
+      },
+      {
+       "part": "今日",
+       "text": "同じ雨で、草がある坂から 3 kg、草がない坂から 24 kg の土が流れました。草がない坂は、草がある坂の何倍の土が流れましたか。",
+       "svg": "<svg viewBox=\"0 0 320 200\" xmlns=\"http://www.w3.org/2000/svg\" font-size=\"14\"><g stroke=\"currentColor\" stroke-width=\"2\"><path d=\"M20 160 H300\" fill=\"none\"/><rect x=\"80\" y=\"148\" width=\"50\" height=\"12\" fill=\"#c9a36b\" fill-opacity=\".7\"/><rect x=\"200\" y=\"64\" width=\"50\" height=\"96\" fill=\"#c9a36b\" fill-opacity=\".7\"/></g><g fill=\"currentColor\"><text x=\"105\" y=\"138\" text-anchor=\"middle\">3 kg</text><text x=\"225\" y=\"54\" text-anchor=\"middle\">24 kg</text><text x=\"105\" y=\"184\" text-anchor=\"middle\">草がある</text><text x=\"225\" y=\"184\" text-anchor=\"middle\">草がない</text></g></svg>",
+       "answer": 8,
+       "check": "24//3",
+       "hints": [
+        "「何倍」かは、わり算でくらべる。",
+        {
+         "text": "24 kg を、3 kg ずつのだんに分けてみよう。",
+         "svg": "<svg viewBox=\"0 0 320 200\" xmlns=\"http://www.w3.org/2000/svg\" font-size=\"14\"><g stroke=\"currentColor\" stroke-width=\"2\"><rect x=\"50\" y=\"20\" width=\"80\" height=\"24\" fill=\"#c9a36b\" fill-opacity=\".6\"/><rect x=\"50\" y=\"44\" width=\"80\" height=\"24\" fill=\"#c9a36b\" fill-opacity=\".6\"/><rect x=\"50\" y=\"68\" width=\"80\" height=\"24\" fill=\"#c9a36b\" fill-opacity=\".6\"/><path d=\"M142 20 H150 V150 H142\" fill=\"none\"/></g><g fill=\"currentColor\"><text x=\"90\" y=\"37\" text-anchor=\"middle\">3 kg</text><text x=\"90\" y=\"61\" text-anchor=\"middle\">3 kg</text><text x=\"90\" y=\"85\" text-anchor=\"middle\">3 kg</text><text x=\"90\" y=\"124\" text-anchor=\"middle\">・・・</text><text x=\"160\" y=\"90\">？ こ</text><text x=\"160\" y=\"184\" text-anchor=\"middle\">24 kg を 3 kg ずつのだんに分ける</text></g></svg>"
+        },
+        "3 kg が何こ分かを考えよう。"
+       ],
+       "qid": "W-070:57ef6a86bb"
+      }
+     ],
      "key": "わけ#1"
     },
     {
      "kind": "確認",
      "aim": "",
+     "items": [
+      {
+       "part": "今日",
+       "text": "茶色い土の層のすぐ下にある層はどれでしょう。",
+       "svg": "<svg viewBox=\"0 0 320 200\" xmlns=\"http://www.w3.org/2000/svg\" font-size=\"14\"><g stroke=\"currentColor\" stroke-width=\"2\"><rect x=\"60\" y=\"20\" width=\"90\" height=\"30\" fill=\"#6b5344\" fill-opacity=\".75\"/><rect x=\"60\" y=\"50\" width=\"90\" height=\"30\" fill=\"#c9a36b\" fill-opacity=\".7\"/><rect x=\"60\" y=\"80\" width=\"90\" height=\"30\" fill=\"#c8ccd6\" fill-opacity=\".6\"/><rect x=\"60\" y=\"110\" width=\"90\" height=\"30\" fill=\"#8f96a6\" fill-opacity=\".8\"/><rect x=\"18\" y=\"156\" width=\"12\" height=\"12\" fill=\"#6b5344\" fill-opacity=\".75\"/><rect x=\"150\" y=\"156\" width=\"12\" height=\"12\" fill=\"#c9a36b\" fill-opacity=\".7\"/><rect x=\"18\" y=\"178\" width=\"12\" height=\"12\" fill=\"#c8ccd6\" fill-opacity=\".6\"/><rect x=\"150\" y=\"178\" width=\"12\" height=\"12\" fill=\"#8f96a6\" fill-opacity=\".8\"/></g><g fill=\"currentColor\"><text x=\"166\" y=\"40\">エ</text><text x=\"166\" y=\"70\">イ</text><text x=\"166\" y=\"100\">ア</text><text x=\"166\" y=\"130\">ウ</text><text x=\"36\" y=\"167\">黒い土</text><text x=\"168\" y=\"167\">茶色い土</text><text x=\"36\" y=\"189\">岩のかけら</text><text x=\"168\" y=\"189\">もとの岩</text></g></svg>",
+       "choices": [
+        "ア",
+        "イ",
+        "ウ",
+        "エ"
+       ],
+       "answer": "ア",
+       "check": "'ア'",
+       "hints": [
+        "まず、色と名前を見くらべて、茶色い土の層を見つけよう。",
+        {
+         "text": "見つけた層から、ひとつ下を見よう。",
+         "svg": "<svg viewBox=\"0 0 320 200\" xmlns=\"http://www.w3.org/2000/svg\" font-size=\"14\"><g stroke=\"currentColor\" stroke-width=\"2\"><rect x=\"80\" y=\"14\" width=\"160\" height=\"40\" rx=\"8\" fill=\"#c9a36b\" fill-opacity=\".5\"/><path d=\"M160 58 V84\" fill=\"none\"/><polygon points=\"160,100 150,82 170,82\" fill=\"currentColor\"/><rect x=\"80\" y=\"104\" width=\"160\" height=\"40\" rx=\"8\" fill=\"none\" stroke-dasharray=\"6 5\"/></g><g fill=\"currentColor\" text-anchor=\"middle\"><text x=\"160\" y=\"39\">茶色い土の層</text><text x=\"160\" y=\"129\">？</text><text x=\"160\" y=\"180\">すぐ下にある層</text></g></svg>"
+        },
+        "下にすすむほど、もとの岩に近づく。"
+       ],
+       "qid": "W-070:b6c892bdcd"
+      },
+      {
+       "part": "今日",
+       "text": "ある森の土は、3000 年かけてできました。土は 1 cm できるのに 100 年かかるとすると、この土のあつさは何 cm でしょう。",
+       "svg": "<svg viewBox=\"0 0 320 200\" xmlns=\"http://www.w3.org/2000/svg\" font-size=\"14\"><g stroke=\"currentColor\" stroke-width=\"2\"><rect x=\"20\" y=\"36\" width=\"9.3\" height=\"30\" fill=\"#c9a36b\" fill-opacity=\".6\"/><rect x=\"20\" y=\"110\" width=\"280\" height=\"30\" fill=\"#f3c969\" fill-opacity=\".5\"/><path d=\"M290 100 V150\" fill=\"none\" stroke-dasharray=\"3 4\"/></g><g fill=\"currentColor\"><text x=\"40\" y=\"58\">100 年 ＝ 1 cm の土</text><text x=\"160\" y=\"102\" text-anchor=\"middle\">3000 年</text><text x=\"160\" y=\"176\" text-anchor=\"middle\">3000 年 ＝ ？ cm の土</text></g></svg>",
+       "answer": 30,
+       "check": "3000//100",
+       "hints": [
+        "100 年で 1 cm。3000 年は、100 年の何こ分かな。",
+        {
+         "text": "年がふえると、あつさも同じぶんだけふえていく。",
+         "svg": "<svg viewBox=\"0 0 320 200\" xmlns=\"http://www.w3.org/2000/svg\" font-size=\"14\"><g stroke=\"currentColor\" stroke-width=\"2\"><rect x=\"60\" y=\"12\" width=\"200\" height=\"28\" rx=\"6\" fill=\"#c9a36b\" fill-opacity=\".25\"/><rect x=\"60\" y=\"44\" width=\"200\" height=\"28\" rx=\"6\" fill=\"#c9a36b\" fill-opacity=\".25\"/><rect x=\"60\" y=\"76\" width=\"200\" height=\"28\" rx=\"6\" fill=\"#c9a36b\" fill-opacity=\".25\"/><rect x=\"60\" y=\"152\" width=\"200\" height=\"28\" rx=\"6\" fill=\"none\" stroke-dasharray=\"6 5\"/></g><g fill=\"currentColor\" text-anchor=\"middle\"><text x=\"160\" y=\"32\">100 年 → 1 cm</text><text x=\"160\" y=\"64\">200 年 → 2 cm</text><text x=\"160\" y=\"96\">300 年 → 3 cm</text><text x=\"160\" y=\"132\">・・・</text><text x=\"160\" y=\"172\">3000 年 → ？ cm</text></g></svg>"
+        },
+        "3000 は 100 の何こ分か、わり算で出そう。"
+       ],
+       "qid": "W-070:f78475a3de"
+      },
+      {
+       "part": "今日",
+       "text": "土 200 g をしらべたら、すなが 130 g、シルトが 50 g、ねんどが 20 g でした。やくそくによると、この土はどのタイプでしょう。",
+       "svg": "<svg viewBox=\"0 0 320 200\" xmlns=\"http://www.w3.org/2000/svg\" font-size=\"13\"><g stroke=\"currentColor\" stroke-width=\"2\"><rect x=\"20\" y=\"36\" width=\"182\" height=\"30\" fill=\"#f3c969\" fill-opacity=\".6\"/><rect x=\"202\" y=\"36\" width=\"70\" height=\"30\" fill=\"#b39ddb\" fill-opacity=\".6\"/><rect x=\"272\" y=\"36\" width=\"28\" height=\"30\" fill=\"#c9a36b\" fill-opacity=\".7\"/><path d=\"M286 68 V94\" fill=\"none\"/></g><g fill=\"currentColor\"><text x=\"160\" y=\"24\" text-anchor=\"middle\" font-size=\"14\">土ぜんぶで 200 g</text><text x=\"111\" y=\"86\" text-anchor=\"middle\">すな 130 g</text><text x=\"237\" y=\"86\" text-anchor=\"middle\">シルト 50 g</text><text x=\"300\" y=\"108\" text-anchor=\"end\">ねんど 20 g</text><text x=\"20\" y=\"138\">すなが 70% 以上 → すなタイプ</text><text x=\"20\" y=\"158\">ねんどが 35% 以上 → ねんどタイプ</text><text x=\"20\" y=\"178\">どちらでもない → 壌土</text></g></svg>",
+       "choices": [
+        "ねんどタイプ",
+        "壌土",
+        "すなタイプ"
+       ],
+       "answer": "壌土",
+       "check": "'壌土'",
+       "hints": [
+        "g を % に直して、やくそくとくらべよう。（全体は 200 g）",
+        {
+         "text": "200 g を 10 こに分けると、1 こは何 g で何% かな。",
+         "svg": "<svg viewBox=\"0 0 320 200\" xmlns=\"http://www.w3.org/2000/svg\" font-size=\"14\"><g stroke=\"currentColor\" stroke-width=\"2\"><rect x=\"20\" y=\"70\" width=\"280\" height=\"40\" fill=\"#c9a36b\" fill-opacity=\".25\"/><path d=\"M48 70 V110 M76 70 V110 M104 70 V110 M132 70 V110 M160 70 V110 M188 70 V110 M216 70 V110 M244 70 V110 M272 70 V110\" fill=\"none\"/></g><g fill=\"currentColor\"><text x=\"160\" y=\"52\" text-anchor=\"middle\">200 g を同じ 10 こに分ける</text><text x=\"160\" y=\"140\" text-anchor=\"middle\">1 こぶんは何 g で何% かな</text></g></svg>"
+        },
+        "すなのわりあいが 70% にとどくか、ねんどのわりあいが 35% にとどくかを調べよう。"
+       ],
+       "qid": "W-070:600f5b8240"
+      },
+      {
+       "part": "今日",
+       "text": "A の土と B の土に、どちらも 120 mL の水をそそぎました。下に出た水は図のとおりです。保水性が高い（水をたくさんためる）のはどちらでしょう。",
+       "svg": "<svg viewBox=\"0 0 320 200\" xmlns=\"http://www.w3.org/2000/svg\" font-size=\"14\"><g stroke=\"currentColor\" stroke-width=\"2\"><rect x=\"46\" y=\"60\" width=\"50\" height=\"120\" fill=\"none\"/><rect x=\"190\" y=\"60\" width=\"50\" height=\"120\" fill=\"none\"/></g><rect x=\"47\" y=\"90\" width=\"48\" height=\"89\" fill=\"#7fc8f8\" fill-opacity=\".6\"/><rect x=\"191\" y=\"150\" width=\"48\" height=\"29\" fill=\"#7fc8f8\" fill-opacity=\".6\"/><g fill=\"currentColor\"><text x=\"160\" y=\"24\" text-anchor=\"middle\">どちらにも 120 mL の水をそそぐ</text><text x=\"160\" y=\"44\" font-size=\"13\" text-anchor=\"middle\">下のビーカーに出た水</text><text x=\"71\" y=\"196\" text-anchor=\"middle\">A の土</text><text x=\"215\" y=\"196\" text-anchor=\"middle\">B の土</text><text x=\"104\" y=\"130\">出た水</text><text x=\"104\" y=\"148\">90 mL</text><text x=\"248\" y=\"170\">出た水</text><text x=\"248\" y=\"188\">30 mL</text></g></svg>",
+       "choices": [
+        "B の土",
+        "A の土",
+        "同じ"
+       ],
+       "answer": "B の土",
+       "check": "'B の土'",
+       "hints": [
+        "ためた水 ＝ そそいだ水 − 出た水。",
+        {
+         "text": "あいているところが、土がためた水。",
+         "svg": "<svg viewBox=\"0 0 320 200\" xmlns=\"http://www.w3.org/2000/svg\" font-size=\"13\"><g stroke=\"currentColor\" stroke-width=\"2\"><rect x=\"60\" y=\"30\" width=\"240\" height=\"26\" fill=\"none\"/><rect x=\"60\" y=\"100\" width=\"240\" height=\"26\" fill=\"none\"/></g><rect x=\"61\" y=\"31\" width=\"180\" height=\"24\" fill=\"#7fc8f8\" fill-opacity=\".6\"/><rect x=\"61\" y=\"101\" width=\"60\" height=\"24\" fill=\"#7fc8f8\" fill-opacity=\".6\"/><g fill=\"currentColor\"><text x=\"8\" y=\"48\">A</text><text x=\"8\" y=\"118\">B</text><text x=\"270\" y=\"78\" text-anchor=\"middle\">ためた ？</text><text x=\"210\" y=\"148\" text-anchor=\"middle\">ためた ？</text><text x=\"160\" y=\"186\" text-anchor=\"middle\">あいているぶぶんがためた水</text></g></svg>"
+        },
+        "A と B のためた水をそれぞれ出してからくらべよう。"
+       ],
+       "qid": "W-070:a7773ae98f"
+      },
+      {
+       "part": "今日",
+       "text": "山の坂の畑で、雨で土が流れ、強い風で土がとばされてこまっています。両方をふせぐ組み合わせはどれでしょう。",
+       "svg": "<svg viewBox=\"0 0 320 200\" xmlns=\"http://www.w3.org/2000/svg\" font-size=\"14\"><g stroke=\"currentColor\" stroke-width=\"2\"><polygon points=\"20,110 200,170 200,184 20,184\" fill=\"#c9a36b\" fill-opacity=\".6\"/><path d=\"M40 24 l-6 12 M80 24 l-6 12 M120 24 l-6 12 M160 24 l-6 12 M60 48 l-6 12 M100 48 l-6 12 M140 48 l-6 12\" fill=\"none\" stroke=\"#7fc8f8\" stroke-width=\"3\"/><path d=\"M40 106 L150 144\" fill=\"none\" stroke=\"#8b5e34\" stroke-width=\"5\"/><polygon points=\"162,149 149,151 153,139\" fill=\"#8b5e34\"/><path d=\"M216 70 H294 M216 100 H294 M216 130 H294\" fill=\"none\" stroke=\"#7fc8f8\" stroke-width=\"3\"/><polygon points=\"306,70 292,63 292,77\" fill=\"#7fc8f8\"/><polygon points=\"306,100 292,93 292,107\" fill=\"#7fc8f8\"/><polygon points=\"306,130 292,123 292,137\" fill=\"#7fc8f8\"/><path d=\"M236 154 H292\" fill=\"none\" stroke=\"#8b5e34\" stroke-width=\"5\" stroke-linecap=\"round\" stroke-dasharray=\"0 9\"/></g><g fill=\"currentColor\"><text x=\"105\" y=\"96\" text-anchor=\"middle\">雨で流れる</text><text x=\"262\" y=\"186\" text-anchor=\"middle\">風でとばされる</text></g></svg>",
+       "choices": [
+        "だんだん畑にするだけで、風よけは作らない",
+        "草をぜんぶぬいて、土をむき出しにする",
+        "だんだん畑にして、畑のまわりに風よけの木を植える"
+       ],
+       "answer": "だんだん畑にして、畑のまわりに風よけの木を植える",
+       "check": "'だんだん畑にして、畑のまわりに風よけの木を植える'",
+       "hints": [
+        "雨で土が流れるもんだいと、風で土がとばされるもんだいは、べつのもんだい。",
+        {
+         "text": "雨と風、それぞれにくふうが要る。",
+         "svg": "<svg viewBox=\"0 0 320 200\" xmlns=\"http://www.w3.org/2000/svg\" font-size=\"14\"><g stroke=\"currentColor\" stroke-width=\"2\"><rect x=\"10\" y=\"36\" width=\"50\" height=\"34\" rx=\"8\" fill=\"#7fc8f8\" fill-opacity=\".4\"/><rect x=\"76\" y=\"36\" width=\"116\" height=\"34\" rx=\"8\" fill=\"#c9a36b\" fill-opacity=\".4\"/><rect x=\"224\" y=\"36\" width=\"82\" height=\"34\" rx=\"8\" fill=\"none\" stroke-dasharray=\"6 5\"/><rect x=\"10\" y=\"110\" width=\"50\" height=\"34\" rx=\"8\" fill=\"#7fc8f8\" fill-opacity=\".4\"/><rect x=\"76\" y=\"110\" width=\"116\" height=\"34\" rx=\"8\" fill=\"#c9a36b\" fill-opacity=\".4\"/><rect x=\"224\" y=\"110\" width=\"82\" height=\"34\" rx=\"8\" fill=\"none\" stroke-dasharray=\"6 5\"/><polygon points=\"72,53 62,45 62,61\" fill=\"currentColor\"/><polygon points=\"220,53 210,45 210,61\" fill=\"currentColor\"/><polygon points=\"72,127 62,119 62,135\" fill=\"currentColor\"/><polygon points=\"220,127 210,119 210,135\" fill=\"currentColor\"/></g><g fill=\"currentColor\" text-anchor=\"middle\"><text x=\"35\" y=\"59\">雨</text><text x=\"134\" y=\"59\">土が流れる</text><text x=\"265\" y=\"59\">？</text><text x=\"35\" y=\"133\">風</text><text x=\"134\" y=\"133\">土がとばされる</text><text x=\"265\" y=\"133\">？</text><text x=\"160\" y=\"180\">それぞれにくふうが要る</text></g></svg>"
+        },
+        "雨と風のどちらにもきくくふうがそろっているかを見よう。"
+       ],
+       "qid": "W-070:ebb53f2e7d"
+      },
+      {
+       "part": "今日",
+       "text": "土のつぶの大きさと、水がぬけるはやさのかんけいをあらわしているのはどれでしょう。（よこはつぶの大きさ、たては水がぬけるはやさ）",
+       "svg": "<svg viewBox=\"0 0 320 200\" xmlns=\"http://www.w3.org/2000/svg\" font-size=\"14\"><g stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"><path d=\"M16 50 V150 H96 M118 50 V150 H198 M220 50 V150 H300\"/><path d=\"M24 62 L90 140\" stroke=\"#f08080\" stroke-width=\"3\"/><path d=\"M126 100 H192\" stroke=\"#b39ddb\" stroke-width=\"3\"/><path d=\"M228 140 L294 62\" stroke=\"#7bc96f\" stroke-width=\"3\"/></g><g fill=\"currentColor\"><text x=\"160\" y=\"24\" text-anchor=\"middle\" font-size=\"13\">よこ：つぶの大きさ　たて：ぬけるはやさ</text><text x=\"56\" y=\"176\" text-anchor=\"middle\">ア</text><text x=\"158\" y=\"176\" text-anchor=\"middle\">イ</text><text x=\"260\" y=\"176\" text-anchor=\"middle\">ウ</text></g></svg>",
+       "choices": [
+        "ア",
+        "イ",
+        "ウ"
+       ],
+       "answer": "ウ",
+       "check": "'ウ'",
+       "hints": [
+        "つぶが大きくなると、すきまはどうなるかな。",
+        {
+         "text": "つぶが大きいときと小さいときの水のとおり方をくらべよう。",
+         "svg": "<svg viewBox=\"0 0 320 200\" xmlns=\"http://www.w3.org/2000/svg\" font-size=\"14\"><g stroke=\"currentColor\" stroke-width=\"2\"><circle cx=\"46\" cy=\"80\" r=\"30\" fill=\"#f3c969\" fill-opacity=\".7\"/><circle cx=\"118\" cy=\"80\" r=\"30\" fill=\"#f3c969\" fill-opacity=\".7\"/><circle cx=\"214\" cy=\"80\" r=\"12\" fill=\"#f3c969\" fill-opacity=\".7\"/><circle cx=\"240\" cy=\"80\" r=\"12\" fill=\"#f3c969\" fill-opacity=\".7\"/><circle cx=\"266\" cy=\"80\" r=\"12\" fill=\"#f3c969\" fill-opacity=\".7\"/></g><path d=\"M82 30 V114\" stroke=\"#7fc8f8\" stroke-width=\"6\"/><polygon points=\"82,132 72,112 92,112\" fill=\"#7fc8f8\"/><path d=\"M227 40 V104\" stroke=\"#7fc8f8\" stroke-width=\"2\"/><polygon points=\"227,114 222,102 232,102\" fill=\"#7fc8f8\"/><g fill=\"currentColor\"><text x=\"82\" y=\"160\" text-anchor=\"middle\">つぶが大きい</text><text x=\"240\" y=\"160\" text-anchor=\"middle\">つぶが小さい</text></g></svg>"
+        },
+        "よこの数がふえると、たての数はふえるかへるかを見よう。"
+       ],
+       "qid": "W-070:1f5e6304a8"
+      }
+     ],
+     "extra": [
+      {
+       "part": "今日",
+       "text": "つぎの 4 つの層を、地面にちかいじゅんにならべたものはどれでしょう。",
+       "svg": "<svg viewBox=\"0 0 320 200\" xmlns=\"http://www.w3.org/2000/svg\" font-size=\"12\"><g stroke=\"currentColor\" stroke-width=\"2\"><rect x=\"20\" y=\"50\" width=\"56\" height=\"70\" fill=\"#8f96a6\" fill-opacity=\".8\"/><rect x=\"96\" y=\"50\" width=\"56\" height=\"70\" fill=\"#6b5344\" fill-opacity=\".75\"/><rect x=\"172\" y=\"50\" width=\"56\" height=\"70\" fill=\"#c8ccd6\" fill-opacity=\".6\"/><rect x=\"248\" y=\"50\" width=\"56\" height=\"70\" fill=\"#c9a36b\" fill-opacity=\".7\"/></g><g fill=\"currentColor\" text-anchor=\"middle\"><text x=\"48\" y=\"142\">もとの岩</text><text x=\"124\" y=\"142\">黒い土</text><text x=\"200\" y=\"142\">岩のかけら</text><text x=\"276\" y=\"142\">茶色い土</text></g></svg>",
+       "choices": [
+        "黒い土 → 茶色い土 → 岩のかけら → もとの岩",
+        "黒い土 → 岩のかけら → 茶色い土 → もとの岩",
+        "茶色い土 → 黒い土 → 岩のかけら → もとの岩"
+       ],
+       "answer": "黒い土 → 茶色い土 → 岩のかけら → もとの岩",
+       "check": "'黒い土 → 茶色い土 → 岩のかけら → もとの岩'",
+       "hints": [
+        "地面にちかいほど、生き物のあとが多い。",
+        {
+         "text": "地面にちかいところと、もとの岩にちかいところをくらべよう。",
+         "svg": "<svg viewBox=\"0 0 320 200\" xmlns=\"http://www.w3.org/2000/svg\" font-size=\"14\"><g stroke=\"currentColor\" stroke-width=\"2\"><rect x=\"50\" y=\"14\" width=\"220\" height=\"52\" rx=\"8\" fill=\"#6b5344\" fill-opacity=\".2\"/><rect x=\"50\" y=\"134\" width=\"220\" height=\"52\" rx=\"8\" fill=\"#8f96a6\" fill-opacity=\".25\"/><path d=\"M160 70 V114\" fill=\"none\"/><polygon points=\"160,130 150,112 170,112\" fill=\"currentColor\"/></g><g fill=\"currentColor\"><text x=\"160\" y=\"36\" text-anchor=\"middle\">地面にちかいところ</text><text x=\"160\" y=\"56\" text-anchor=\"middle\">生き物のあとが多い</text><text x=\"160\" y=\"156\" text-anchor=\"middle\">もとの岩にちかいところ</text><text x=\"160\" y=\"176\" text-anchor=\"middle\">岩のつぶが多い</text></g></svg>"
+        },
+        "もとの岩はいちばん下。"
+       ],
+       "qid": "W-070:a01c9e4e3d"
+      },
+      {
+       "part": "今日",
+       "text": "土のつぶをはかったら、すなが 80%、シルトが 12%、ねんどが 8% でした。やくそくによると、この土はどのタイプでしょう。",
+       "svg": "<svg viewBox=\"0 0 320 200\" xmlns=\"http://www.w3.org/2000/svg\" font-size=\"14\"><g stroke=\"currentColor\" stroke-width=\"2\"><rect x=\"20\" y=\"28\" width=\"224\" height=\"34\" fill=\"#f3c969\" fill-opacity=\".6\"/><rect x=\"244\" y=\"28\" width=\"34\" height=\"34\" fill=\"#b39ddb\" fill-opacity=\".6\"/><rect x=\"278\" y=\"28\" width=\"22\" height=\"34\" fill=\"#c9a36b\" fill-opacity=\".7\"/><path d=\"M261 64 V84 M289 64 V100\" fill=\"none\"/></g><g fill=\"currentColor\" font-size=\"13\"><text x=\"132\" y=\"20\" text-anchor=\"middle\">すな 80%</text><text x=\"250\" y=\"84\" text-anchor=\"end\">シルト 12%</text><text x=\"300\" y=\"116\" text-anchor=\"end\">ねんど 8%</text><text x=\"20\" y=\"144\">すなが 70% 以上 → すなタイプ</text><text x=\"20\" y=\"162\">ねんどが 35% 以上 → ねんどタイプ</text><text x=\"20\" y=\"180\">どちらでもない → 壌土</text></g></svg>",
+       "choices": [
+        "すなタイプ",
+        "ねんどタイプ",
+        "壌土"
+       ],
+       "answer": "すなタイプ",
+       "check": "'すなタイプ'",
+       "hints": [
+        "やくそくの 2 つの数と、土の数をくらべよう。",
+        {
+         "text": "さかいの数を、0% から 100% のものさしで見よう。",
+         "svg": "<svg viewBox=\"0 0 320 200\" xmlns=\"http://www.w3.org/2000/svg\" font-size=\"13\"><g stroke=\"currentColor\" stroke-width=\"2\"><rect x=\"70\" y=\"40\" width=\"200\" height=\"22\" fill=\"none\"/><rect x=\"70\" y=\"100\" width=\"200\" height=\"22\" fill=\"none\"/><path d=\"M210 30 V72 M140 90 V132\" fill=\"none\" stroke-dasharray=\"5 4\"/></g><g fill=\"currentColor\"><text x=\"8\" y=\"56\">すな</text><text x=\"8\" y=\"116\">ねんど</text><text x=\"210\" y=\"24\" text-anchor=\"middle\">70%</text><text x=\"70\" y=\"150\">0%</text><text x=\"140\" y=\"150\" text-anchor=\"middle\">35%</text><text x=\"270\" y=\"150\" text-anchor=\"end\">100%</text></g></svg>"
+        },
+        "すなの数が 70% にとどいているかを見よう。"
+       ],
+       "qid": "W-070:13bd4fe513"
+      }
+     ],
      "key": "確認#1"
+    }
+   ],
+   "ver": "720f793121",
+   "ri": [
+    {
+     "part": "離",
+     "kinds": [
+      "道筋",
+      "読み取り"
+     ],
+     "uses": [
+      "A-005"
+     ],
+     "text": "すな、シルト、ねんどが、5 g ずつ ふくろに 入って たくさん あります。ふくろを 合わせて 20 こ えらび、まぜて 100 g の 土を つくります。入れない 種類が あっても かまいません。図の やくそくで 壌土に なる 組み合わせ（すな・シルト・ねんどを それぞれ 何ふくろに するか）は、何通り あるでしょう。",
+     "svg": "<svg viewBox=\"0 0 320 200\" xmlns=\"http://www.w3.org/2000/svg\" font-size=\"14\"><g stroke=\"currentColor\" stroke-width=\"2\"><path d=\"M26 24 Q18 54 24 64 H62 Q68 54 60 24 Z\" fill=\"#f3c969\" fill-opacity=\".35\"/><path d=\"M32 24 L37 14 H49 L54 24\" fill=\"none\"/><path d=\"M30 24 H56\" fill=\"none\"/><circle cx=\"34\" cy=\"42\" r=\"6\" fill=\"currentColor\" fill-opacity=\".55\" stroke=\"none\"/><circle cx=\"50\" cy=\"40\" r=\"6\" fill=\"currentColor\" fill-opacity=\".55\" stroke=\"none\"/><circle cx=\"42\" cy=\"54\" r=\"6\" fill=\"currentColor\" fill-opacity=\".55\" stroke=\"none\"/><circle cx=\"54\" cy=\"54\" r=\"6\" fill=\"currentColor\" fill-opacity=\".55\" stroke=\"none\"/><path d=\"M92 24 Q84 54 90 64 H128 Q134 54 126 24 Z\" fill=\"#c9a36b\" fill-opacity=\".35\"/><path d=\"M98 24 L103 14 H115 L120 24\" fill=\"none\"/><path d=\"M96 24 H122\" fill=\"none\"/><circle cx=\"99\" cy=\"40\" r=\"3.2\" fill=\"currentColor\" fill-opacity=\".55\" stroke=\"none\"/><circle cx=\"109\" cy=\"38\" r=\"3.2\" fill=\"currentColor\" fill-opacity=\".55\" stroke=\"none\"/><circle cx=\"119\" cy=\"41\" r=\"3.2\" fill=\"currentColor\" fill-opacity=\".55\" stroke=\"none\"/><circle cx=\"103\" cy=\"50\" r=\"3.2\" fill=\"currentColor\" fill-opacity=\".55\" stroke=\"none\"/><circle cx=\"114\" cy=\"51\" r=\"3.2\" fill=\"currentColor\" fill-opacity=\".55\" stroke=\"none\"/><circle cx=\"108\" cy=\"59\" r=\"3.2\" fill=\"currentColor\" fill-opacity=\".55\" stroke=\"none\"/><circle cx=\"120\" cy=\"58\" r=\"3.2\" fill=\"currentColor\" fill-opacity=\".55\" stroke=\"none\"/><circle cx=\"97\" cy=\"58\" r=\"3.2\" fill=\"currentColor\" fill-opacity=\".55\" stroke=\"none\"/><path d=\"M158 24 Q150 54 156 64 H194 Q200 54 192 24 Z\" fill=\"#b39ddb\" fill-opacity=\".35\"/><path d=\"M164 24 L169 14 H181 L186 24\" fill=\"none\"/><path d=\"M162 24 H188\" fill=\"none\"/><circle cx=\"164\" cy=\"38\" r=\"1.3\" fill=\"currentColor\" fill-opacity=\".55\" stroke=\"none\"/><circle cx=\"169\" cy=\"38\" r=\"1.3\" fill=\"currentColor\" fill-opacity=\".55\" stroke=\"none\"/><circle cx=\"174\" cy=\"38\" r=\"1.3\" fill=\"currentColor\" fill-opacity=\".55\" stroke=\"none\"/><circle cx=\"179\" cy=\"38\" r=\"1.3\" fill=\"currentColor\" fill-opacity=\".55\" stroke=\"none\"/><circle cx=\"184\" cy=\"38\" r=\"1.3\" fill=\"currentColor\" fill-opacity=\".55\" stroke=\"none\"/><circle cx=\"189\" cy=\"38\" r=\"1.3\" fill=\"currentColor\" fill-opacity=\".55\" stroke=\"none\"/><circle cx=\"164\" cy=\"43\" r=\"1.3\" fill=\"currentColor\" fill-opacity=\".55\" stroke=\"none\"/><circle cx=\"169\" cy=\"43\" r=\"1.3\" fill=\"currentColor\" fill-opacity=\".55\" stroke=\"none\"/><circle cx=\"174\" cy=\"43\" r=\"1.3\" fill=\"currentColor\" fill-opacity=\".55\" stroke=\"none\"/><circle cx=\"179\" cy=\"43\" r=\"1.3\" fill=\"currentColor\" fill-opacity=\".55\" stroke=\"none\"/><circle cx=\"184\" cy=\"43\" r=\"1.3\" fill=\"currentColor\" fill-opacity=\".55\" stroke=\"none\"/><circle cx=\"189\" cy=\"43\" r=\"1.3\" fill=\"currentColor\" fill-opacity=\".55\" stroke=\"none\"/><circle cx=\"164\" cy=\"48\" r=\"1.3\" fill=\"currentColor\" fill-opacity=\".55\" stroke=\"none\"/><circle cx=\"169\" cy=\"48\" r=\"1.3\" fill=\"currentColor\" fill-opacity=\".55\" stroke=\"none\"/><circle cx=\"174\" cy=\"48\" r=\"1.3\" fill=\"currentColor\" fill-opacity=\".55\" stroke=\"none\"/><circle cx=\"179\" cy=\"48\" r=\"1.3\" fill=\"currentColor\" fill-opacity=\".55\" stroke=\"none\"/><circle cx=\"184\" cy=\"48\" r=\"1.3\" fill=\"currentColor\" fill-opacity=\".55\" stroke=\"none\"/><circle cx=\"189\" cy=\"48\" r=\"1.3\" fill=\"currentColor\" fill-opacity=\".55\" stroke=\"none\"/><circle cx=\"164\" cy=\"53\" r=\"1.3\" fill=\"currentColor\" fill-opacity=\".55\" stroke=\"none\"/><circle cx=\"169\" cy=\"53\" r=\"1.3\" fill=\"currentColor\" fill-opacity=\".55\" stroke=\"none\"/><circle cx=\"174\" cy=\"53\" r=\"1.3\" fill=\"currentColor\" fill-opacity=\".55\" stroke=\"none\"/><circle cx=\"179\" cy=\"53\" r=\"1.3\" fill=\"currentColor\" fill-opacity=\".55\" stroke=\"none\"/><circle cx=\"184\" cy=\"53\" r=\"1.3\" fill=\"currentColor\" fill-opacity=\".55\" stroke=\"none\"/><circle cx=\"189\" cy=\"53\" r=\"1.3\" fill=\"currentColor\" fill-opacity=\".55\" stroke=\"none\"/><circle cx=\"164\" cy=\"58\" r=\"1.3\" fill=\"currentColor\" fill-opacity=\".55\" stroke=\"none\"/><circle cx=\"169\" cy=\"58\" r=\"1.3\" fill=\"currentColor\" fill-opacity=\".55\" stroke=\"none\"/><circle cx=\"174\" cy=\"58\" r=\"1.3\" fill=\"currentColor\" fill-opacity=\".55\" stroke=\"none\"/><circle cx=\"179\" cy=\"58\" r=\"1.3\" fill=\"currentColor\" fill-opacity=\".55\" stroke=\"none\"/><circle cx=\"184\" cy=\"58\" r=\"1.3\" fill=\"currentColor\" fill-opacity=\".55\" stroke=\"none\"/><circle cx=\"189\" cy=\"58\" r=\"1.3\" fill=\"currentColor\" fill-opacity=\".55\" stroke=\"none\"/><rect x=\"12\" y=\"106\" width=\"296\" height=\"92\" rx=\"10\" fill=\"#c8ccd6\" fill-opacity=\".35\"/></g><g fill=\"currentColor\"><text x=\"43\" y=\"84\" text-anchor=\"middle\">すな</text><text x=\"43\" y=\"101\" text-anchor=\"middle\">5 g</text><text x=\"109\" y=\"84\" text-anchor=\"middle\">シルト</text><text x=\"109\" y=\"101\" text-anchor=\"middle\">5 g</text><text x=\"175\" y=\"84\" text-anchor=\"middle\">ねんど</text><text x=\"175\" y=\"101\" text-anchor=\"middle\">5 g</text><text x=\"256\" y=\"46\" text-anchor=\"middle\">合わせて</text><text x=\"256\" y=\"66\" text-anchor=\"middle\">20 ふくろ</text><text x=\"256\" y=\"86\" text-anchor=\"middle\">= 100 g</text><text x=\"24\" y=\"123\" font-size=\"13\">やくそく</text><text x=\"24\" y=\"141\">すなが 70% 以上 → すなタイプ</text><text x=\"24\" y=\"158\">ねんどが 35% 以上 → ねんどタイプ</text><text x=\"24\" y=\"175\">シルトが 50% 以上 → シルトタイプ</text><text x=\"24\" y=\"192\">どれでも ない → 壌土（じょうど）</text></g></svg>",
+     "answer": 42,
+     "check": "sum(1 for s in range(21) for c in range(21 - s) if s * 5 < 70 and c * 5 < 35 and (20 - s - c) * 5 < 50)",
+     "hints": [
+      "1 ふくろは 100 g の 何% かな。70%、35%、50% は、それぞれ 何ふくろに あたるかな。「以上」に 気を つけよう。",
+      {
+       "text": "すなと ねんどの ふくろの 数を 決めると、シルトの 数は のこりで 決まる。",
+       "svg": "<svg viewBox=\"0 0 320 200\" xmlns=\"http://www.w3.org/2000/svg\" font-size=\"14\"><g stroke=\"currentColor\" stroke-width=\"1.5\"><rect x=\"20\" y=\"76\" width=\"12\" height=\"30\" rx=\"2\" fill=\"#f3c969\" fill-opacity=\".6\"/><rect x=\"34\" y=\"76\" width=\"12\" height=\"30\" rx=\"2\" fill=\"#f3c969\" fill-opacity=\".6\"/><rect x=\"48\" y=\"76\" width=\"12\" height=\"30\" rx=\"2\" fill=\"#f3c969\" fill-opacity=\".6\"/><rect x=\"62\" y=\"76\" width=\"12\" height=\"30\" rx=\"2\" fill=\"#f3c969\" fill-opacity=\".6\"/><rect x=\"76\" y=\"76\" width=\"12\" height=\"30\" rx=\"2\" fill=\"#f3c969\" fill-opacity=\".6\"/><rect x=\"90\" y=\"76\" width=\"12\" height=\"30\" rx=\"2\" fill=\"#f3c969\" fill-opacity=\".6\"/><rect x=\"104\" y=\"76\" width=\"12\" height=\"30\" rx=\"2\" fill=\"#f3c969\" fill-opacity=\".6\"/><rect x=\"118\" y=\"76\" width=\"12\" height=\"30\" rx=\"2\" fill=\"#f3c969\" fill-opacity=\".6\"/><rect x=\"132\" y=\"76\" width=\"12\" height=\"30\" rx=\"2\" fill=\"#f3c969\" fill-opacity=\".6\"/><rect x=\"146\" y=\"76\" width=\"12\" height=\"30\" rx=\"2\" fill=\"#c8ccd6\" fill-opacity=\".6\"/><rect x=\"160\" y=\"76\" width=\"12\" height=\"30\" rx=\"2\" fill=\"#c8ccd6\" fill-opacity=\".6\"/><rect x=\"174\" y=\"76\" width=\"12\" height=\"30\" rx=\"2\" fill=\"#c8ccd6\" fill-opacity=\".6\"/><rect x=\"188\" y=\"76\" width=\"12\" height=\"30\" rx=\"2\" fill=\"#c8ccd6\" fill-opacity=\".6\"/><rect x=\"202\" y=\"76\" width=\"12\" height=\"30\" rx=\"2\" fill=\"#c8ccd6\" fill-opacity=\".6\"/><rect x=\"216\" y=\"76\" width=\"12\" height=\"30\" rx=\"2\" fill=\"#c8ccd6\" fill-opacity=\".6\"/><rect x=\"230\" y=\"76\" width=\"12\" height=\"30\" rx=\"2\" fill=\"#c8ccd6\" fill-opacity=\".6\"/><rect x=\"244\" y=\"76\" width=\"12\" height=\"30\" rx=\"2\" fill=\"#b39ddb\" fill-opacity=\".6\"/><rect x=\"258\" y=\"76\" width=\"12\" height=\"30\" rx=\"2\" fill=\"#b39ddb\" fill-opacity=\".6\"/><rect x=\"272\" y=\"76\" width=\"12\" height=\"30\" rx=\"2\" fill=\"#b39ddb\" fill-opacity=\".6\"/><rect x=\"286\" y=\"76\" width=\"12\" height=\"30\" rx=\"2\" fill=\"#b39ddb\" fill-opacity=\".6\"/><path d=\"M20 116 V124 H298 V116 M159 124 V132\" fill=\"none\"/><path d=\"M20 70 V64 H144 V70 M146 70 V64 H242 V70 M244 70 V64 H298 V70\" fill=\"none\"/></g><g fill=\"currentColor\"><text x=\"82\" y=\"54\" text-anchor=\"middle\">すな 9</text><text x=\"194\" y=\"54\" text-anchor=\"middle\">シルト ?</text><text x=\"271\" y=\"54\" text-anchor=\"middle\">ねんど 4</text><text x=\"159\" y=\"150\" text-anchor=\"middle\">合わせて 20 ふくろ</text><text x=\"160\" y=\"182\" text-anchor=\"middle\" font-size=\"13\">すなと ねんどを 決めると、のこりが シルト</text></g></svg>"
+      },
+      "シルトが 多すぎない ことは、すなと ねんどを 合わせた 数が 少なすぎない ことと 同じ。ねんどの 数ごとに、すなが 何ふくろから 何ふくろまで よいかを 書き出そう。"
+     ],
+     "paths": [
+      [
+       "1 ふくろは 100 g の 5%",
+       "すなタイプは すな 14 ふくろ 以上、ねんどタイプは ねんど 7 ふくろ 以上、シルトタイプは シルト 10 ふくろ 以上",
+       "壌土は すなが 13 ふくろ まで、ねんどが 6 ふくろ まで、シルトが 9 ふくろ まで",
+       "シルトが 9 ふくろ までなので、すなと ねんどは 合わせて 11 ふくろ 以上",
+       "ねんどが 0、1、2、3、4、5、6 ふくろの とき、すなは 11〜13、10〜13、9〜13、8〜13、7〜13、6〜13、5〜13 ふくろ",
+       "3 + 4 + 5 + 6 + 7 + 8 + 9 ＝ 42"
+      ],
+      [
+       "すなと ねんどの 数を 決めると シルトが 決まるので、全部の 組み合わせは 21 + 20 + … + 1 ＝ 231 通り",
+       "すなタイプ（すな 14〜20 ふくろ）は 7 + 6 + … + 1 ＝ 28 通り、ねんどタイプ（ねんど 7〜20 ふくろ）は 14 + 13 + … + 1 ＝ 105 通り",
+       "シルトタイプ（シルト 10 ふくろ 以上、つまり すなと ねんどが 合わせて 10 ふくろ まで）は 11 + 10 + … + 1 ＝ 66 通り",
+       "すなタイプは ほかと 重ならないが、ねんど 7 ふくろ 以上で シルトも 10 ふくろ 以上の 組み合わせが 4 + 3 + 2 + 1 ＝ 10 通り あり、2 回 引いて いる",
+       "231 − 28 − 105 − 66 + 10 ＝ 42"
+      ]
+     ],
+     "note": "S04 言いかえ（3 つのふくろの数を、すなとねんどの 2 つの数の組に言いかえる。シルトはのこりで決まる）と S15 場合分けの組み立て（全体 231 から 3 つのタイプを引き、重なりを足しもどす道）。種なし（S の表から組み立てた）。やさしすぎた（Haiku が一度でといた）ので、シルトタイプのやくそく（50% 以上）を足した。なぜむずかしいか：シルトの上限は、のこりで決まるシルトを通して「すなとねんどの和が 11 ふくろ以上」という下限に言いかえないと使えず、すなとねんどの長方形の角が切れて 2 つの数の積で数えられなくなる。ねんどタイプとシルトタイプは重なる（ねんど 7 以上でシルト 10 以上）ので、引くだけの道では 32 とまちがえる。シルトの上限を見落とすと 98。手順は「% をふくろに直す → シルトの上限を和の下限に言いかえる → ねんどの数ごとに数える」の 3 段。A-005 の % の計算を合わせる。",
+     "qid": "W-070:90c117445e"
+    },
+    {
+     "part": "離",
+     "kinds": [
+      "総動員",
+      "道筋"
+     ],
+     "uses": [
+      "A-005"
+     ],
+     "text": "風の 強い 土地の 畑に、土が 1000 kg あります。中身は すな 490 kg、シルト 180 kg、ねんど 330 kg で、壌土です。強い 風で、細かい シルトと ねんどだけが とばされ、すなは とばされません。シルトの ほうが とばされやすく、シルトが のこって いる あいだは、シルト 2 kg に ねんど 1 kg の わりあいで とばされます。シルトが なくなると、ねんどだけが とばされます。この 土が はじめて すなタイプ（すなが 70% 以上）に なった とき、のこって いる ねんどは 何 kg でしょう。",
+     "svg": "<svg viewBox=\"0 0 320 200\" xmlns=\"http://www.w3.org/2000/svg\" font-size=\"14\"><g stroke=\"currentColor\" stroke-width=\"2\"><rect x=\"20\" y=\"30\" width=\"137.2\" height=\"26\" fill=\"#f3c969\" fill-opacity=\".6\"/><rect x=\"157.2\" y=\"30\" width=\"50.4\" height=\"26\" fill=\"#c9a36b\" fill-opacity=\".6\"/><rect x=\"207.6\" y=\"30\" width=\"92.4\" height=\"26\" fill=\"#b39ddb\" fill-opacity=\".6\"/><rect x=\"20\" y=\"112\" width=\"196.0\" height=\"26\" fill=\"#f3c969\" fill-opacity=\".6\"/><rect x=\"216.0\" y=\"112\" width=\"84.0\" height=\"26\" fill=\"#c8ccd6\" fill-opacity=\".6\"/><path d=\"M20 186 H150\" fill=\"none\"/><circle cx=\"34\" cy=\"179\" r=\"6\" fill=\"#f3c969\" fill-opacity=\".7\"/><circle cx=\"56\" cy=\"179\" r=\"6\" fill=\"#f3c969\" fill-opacity=\".7\"/><circle cx=\"78\" cy=\"179\" r=\"6\" fill=\"#f3c969\" fill-opacity=\".7\"/><circle cx=\"100\" cy=\"179\" r=\"6\" fill=\"#f3c969\" fill-opacity=\".7\"/><circle cx=\"122\" cy=\"179\" r=\"6\" fill=\"#f3c969\" fill-opacity=\".7\"/><circle cx=\"140\" cy=\"179\" r=\"6\" fill=\"#f3c969\" fill-opacity=\".7\"/><path d=\"M160 170 q14 -6 28 0 t28 0 M168 186 q14 -6 28 0 t28 0\" fill=\"none\" stroke=\"#7fc8f8\" stroke-width=\"3\"/><polygon points=\"244,164 256,170 244,176\" fill=\"#7fc8f8\" stroke=\"none\"/><polygon points=\"252,180 264,186 252,192\" fill=\"#7fc8f8\" stroke=\"none\"/></g><g stroke=\"none\"><circle cx=\"274\" cy=\"166\" r=\"3\" fill=\"#c9a36b\"/><circle cx=\"288\" cy=\"174\" r=\"3\" fill=\"#b39ddb\"/><circle cx=\"300\" cy=\"164\" r=\"3\" fill=\"#c9a36b\"/><circle cx=\"278\" cy=\"188\" r=\"3\" fill=\"#c9a36b\"/><circle cx=\"294\" cy=\"190\" r=\"3\" fill=\"#c9a36b\"/><circle cx=\"308\" cy=\"180\" r=\"3\" fill=\"#b39ddb\"/></g><g fill=\"currentColor\"><text x=\"20\" y=\"22\">はじめ（1000 kg）</text><text x=\"88\" y=\"75\" text-anchor=\"middle\">すな 49%</text><text x=\"182\" y=\"75\" text-anchor=\"middle\" font-size=\"13\">シルト 18%</text><text x=\"256\" y=\"75\" text-anchor=\"middle\" font-size=\"13\">ねんど 33%</text><text x=\"20\" y=\"104\">風で とばされた あと</text><text x=\"300\" y=\"104\" text-anchor=\"end\" font-size=\"13\">すな 以外</text><text x=\"118\" y=\"157\" text-anchor=\"middle\">すな 70%</text><text x=\"258\" y=\"157\" text-anchor=\"middle\">30%</text></g></svg>",
+     "answer": 210,
+     "check": "(lambda S, T, C: (lambda F: F - S if S + C - T // 2 > F else C - (S + T + C - F) / 3)(Fraction(S * 100, 70)))(490, 180, 330)",
+     "hints": [
+      "とばされない ものは どれかな。その 重さは、とばされた あとも かわらない。",
+      {
+       "text": "すなは 490 kg の まま。あとの 土では、この 490 kg が 全体の 70% に あたる。",
+       "svg": "<svg viewBox=\"0 0 320 200\" xmlns=\"http://www.w3.org/2000/svg\" font-size=\"14\"><g stroke=\"currentColor\" stroke-width=\"2\"><rect x=\"20\" y=\"34\" width=\"137\" height=\"26\" fill=\"#f3c969\" fill-opacity=\".6\"/><rect x=\"157\" y=\"34\" width=\"143\" height=\"26\" fill=\"#c8ccd6\" fill-opacity=\".4\"/><rect x=\"20\" y=\"118\" width=\"137\" height=\"26\" fill=\"#f3c969\" fill-opacity=\".6\"/><rect x=\"157\" y=\"118\" width=\"59\" height=\"26\" fill=\"#c8ccd6\" fill-opacity=\".4\" stroke-dasharray=\"5 4\"/><path d=\"M20 64 V96 M157 64 V96\" fill=\"none\" stroke-dasharray=\"3 4\" stroke-width=\"1.5\"/></g><g fill=\"currentColor\"><text x=\"20\" y=\"26\">はじめ 1000 kg</text><text x=\"88\" y=\"52\" text-anchor=\"middle\">すな 490 kg</text><text x=\"228\" y=\"52\" text-anchor=\"middle\" font-size=\"13\">シルト・ねんど</text><text x=\"88\" y=\"84\" text-anchor=\"middle\" font-size=\"13\">かわらない</text><text x=\"20\" y=\"110\">あと</text><text x=\"88\" y=\"136\" text-anchor=\"middle\">490 kg</text><text x=\"186\" y=\"136\" text-anchor=\"middle\">?</text><text x=\"88\" y=\"166\" text-anchor=\"middle\">ここが 70%</text><text x=\"186\" y=\"166\" text-anchor=\"middle\">30%</text><text x=\"160\" y=\"192\" text-anchor=\"middle\" font-size=\"13\">あとの 土 全体は 何 kg かな</text></g></svg>"
+      },
+      "シルト 2 kg と ねんど 1 kg の わりあいの まま、さいごまで とばされたと して よいかな。シルトが ちょうど なくなる ときの 土の 重さと、あとの 土の 重さを くらべよう。"
+     ],
+     "paths": [
+      [
+       "すなは とばされないので 490 kg の まま",
+       "490 kg が 70% なので、あとの 土は 490 ÷ 0.7 ＝ 700 kg",
+       "シルト 180 kg が ぜんぶ とばされる までに、ねんどは その 半分の 90 kg とばされ、土は 1000 − 270 ＝ 730 kg",
+       "730 kg は 700 kg より 重いので、シルトが なくなった ときは まだ すなタイプでは ない",
+       "あとの 700 kg は すな 490 kg と ねんどだけ なので、ねんどは 700 − 490 ＝ 210 kg"
+      ],
+      [
+       "まず わりあいの まま とばされると して みる：とばされるのは 1000 − 700 ＝ 300 kg で、シルト 200 kg、ねんど 100 kg",
+       "でも シルトは 180 kg しか ないので、とちゅうで シルトが なくなり、わりあいの まま では ない",
+       "シルトが なくなる ときは シルト 180 kg、ねんど 90 kg が とばされ、すなは 490 ÷ 730 で、730 の 70%（511 kg）に 足りない",
+       "その あとは ねんどだけが とばされ、さいごは すな 70%、ねんど 30% で、ねんどは すなの 3/7",
+       "490 × 3/7 ＝ 210 kg"
+      ]
+     ],
+     "note": "S01 不変量（とばされないすなの重さ 490 kg が、あとの土の 70% にあたる）に S15 場合分け（シルトがのこっているあいだと、なくなったあと）を足した。種なし（S01 から組み立てた。よく知られた「じゃがいもの水分」と同じほね組みを、侵食で土の中身が変わる場面にした）。やさしすぎた（Haiku が一度でといた）ので、とばされるわりあい（シルト 2：ねんど 1）をのこりのわりあいとちがえ、とちゅうでシルトがなくなるようにした。なぜむずかしいか：すなを足場にあとの土 700 kg を出したあと、とばされた 300 kg を 2：1 に分けると ねんど 230 kg とまちがえる（シルトが 200 kg 要るのに 180 kg しかない）。のこりの 210 kg を 2：1 に分けると 70 kg とまちがえる。シルトがなくなるときの土 730 kg と 700 kg をくらべて、どちらの場合でさかい目をこえるかを決める一手が要る。手順は「すなが変わらないと見る → あとの土の全体を出す → シルトがなくなる時とくらべる → ねんどを出す」の 4 段。2 本目はわりあいのまま進めてくいちがいを見つける道。A-005 の % の計算を合わせる。",
+     "qid": "W-070:e48131482d"
+    },
+    {
+     "part": "離",
+     "kinds": [
+      "総動員",
+      "手数"
+     ],
+     "uses": [
+      "W-002"
+     ],
+     "text": "坂の 畑が、図の ように 区切られて います。どの 畑にも 同じ 雨が ふり、1 まいの 畑に ふる 雨水を バケツ 1 ぱい分と します。雨水は 矢印の とおりに 次の 畑へ 流れ、右下の 畑から 川へ 出ます。バケツ 1 ぱい分の 雨水が 通るたびに、通った 畑の 土が 1 kg 流されます（自分の 畑に ふった 雨水も 通ったと 数えます）。この うち 2 まいを 草地に します。草地に 入った 雨水は、ほかの 畑から 来た 分も すべて しみこんで 先へは 流れず、草地の 土は 流されません。流される 土の 合計を いちばん 少なく すると、何 kg に なるでしょう。",
+     "svg": "<svg viewBox=\"0 0 320 200\" xmlns=\"http://www.w3.org/2000/svg\" font-size=\"14\"><g stroke=\"currentColor\" stroke-width=\"2\"><rect x=\"14\" y=\"30\" width=\"60\" height=\"46\" fill=\"#c9a36b\" fill-opacity=\".35\"/><rect x=\"74\" y=\"30\" width=\"60\" height=\"46\" fill=\"#c9a36b\" fill-opacity=\".35\"/><rect x=\"134\" y=\"30\" width=\"60\" height=\"46\" fill=\"#c9a36b\" fill-opacity=\".35\"/><rect x=\"194\" y=\"30\" width=\"60\" height=\"46\" fill=\"#c9a36b\" fill-opacity=\".35\"/><rect x=\"14\" y=\"76\" width=\"60\" height=\"46\" fill=\"#c9a36b\" fill-opacity=\".35\"/><rect x=\"74\" y=\"76\" width=\"60\" height=\"46\" fill=\"#c9a36b\" fill-opacity=\".35\"/><rect x=\"134\" y=\"76\" width=\"60\" height=\"46\" fill=\"#c9a36b\" fill-opacity=\".35\"/><rect x=\"194\" y=\"76\" width=\"60\" height=\"46\" fill=\"#c9a36b\" fill-opacity=\".35\"/><rect x=\"14\" y=\"122\" width=\"60\" height=\"46\" fill=\"#c9a36b\" fill-opacity=\".35\"/><rect x=\"74\" y=\"122\" width=\"60\" height=\"46\" fill=\"#c9a36b\" fill-opacity=\".35\"/><rect x=\"134\" y=\"122\" width=\"60\" height=\"46\" fill=\"#c9a36b\" fill-opacity=\".35\"/><rect x=\"194\" y=\"122\" width=\"60\" height=\"46\" fill=\"#c9a36b\" fill-opacity=\".35\"/><path d=\"M264 116 Q280 142 274 196 H306 Q312 142 298 116 Z\" fill=\"#7fc8f8\" fill-opacity=\".6\"/><path d=\"M30 8 l-4 12\" fill=\"none\" stroke=\"#7fc8f8\" stroke-width=\"2.5\"/><path d=\"M60 8 l-4 12\" fill=\"none\" stroke=\"#7fc8f8\" stroke-width=\"2.5\"/><path d=\"M90 8 l-4 12\" fill=\"none\" stroke=\"#7fc8f8\" stroke-width=\"2.5\"/><path d=\"M120 8 l-4 12\" fill=\"none\" stroke=\"#7fc8f8\" stroke-width=\"2.5\"/><path d=\"M150 8 l-4 12\" fill=\"none\" stroke=\"#7fc8f8\" stroke-width=\"2.5\"/><path d=\"M180 8 l-4 12\" fill=\"none\" stroke=\"#7fc8f8\" stroke-width=\"2.5\"/><path d=\"M210 8 l-4 12\" fill=\"none\" stroke=\"#7fc8f8\" stroke-width=\"2.5\"/><path d=\"M240 8 l-4 12\" fill=\"none\" stroke=\"#7fc8f8\" stroke-width=\"2.5\"/></g><g stroke=\"currentColor\" stroke-width=\"2.5\" fill=\"currentColor\"><path d=\"M54 43 V60\" fill=\"none\"/><polygon points=\"48,60 60,60 54,69\" stroke=\"none\"/><path d=\"M114 43 V60\" fill=\"none\"/><polygon points=\"108,60 120,60 114,69\" stroke=\"none\"/><path d=\"M174 43 V60\" fill=\"none\"/><polygon points=\"168,60 180,60 174,69\" stroke=\"none\"/><path d=\"M234 43 V60\" fill=\"none\"/><polygon points=\"228,60 240,60 234,69\" stroke=\"none\"/><path d=\"M40 103 H58\" fill=\"none\"/><polygon points=\"58,97 58,109 67,103\" stroke=\"none\"/><path d=\"M100 103 H118\" fill=\"none\"/><polygon points=\"118,97 118,109 127,103\" stroke=\"none\"/><path d=\"M174 89 V106\" fill=\"none\"/><polygon points=\"168,106 180,106 174,115\" stroke=\"none\"/><path d=\"M234 89 V106\" fill=\"none\"/><polygon points=\"228,106 240,106 234,115\" stroke=\"none\"/><path d=\"M40 149 H58\" fill=\"none\"/><polygon points=\"58,143 58,155 67,149\" stroke=\"none\"/><path d=\"M100 149 H118\" fill=\"none\"/><polygon points=\"118,143 118,155 127,149\" stroke=\"none\"/><path d=\"M160 149 H178\" fill=\"none\"/><polygon points=\"178,143 178,155 187,149\" stroke=\"none\"/><path d=\"M220 149 H256\" fill=\"none\"/><polygon points=\"256,143 256,155 265,149\" stroke=\"none\"/></g><g fill=\"currentColor\"><text x=\"286\" y=\"190\" text-anchor=\"middle\">川</text></g></svg>",
+     "answer": 16,
+     "check": "(lambda P: min((lambda f: sum(f(f, u, G) for u in range(12)))(lambda f, u, G: 0 if u < 0 or u in G else 1 + f(f, P[u], G)) for G in itertools.combinations(range(12), 2)))([4, 5, 6, 7, 5, 6, 10, 11, 9, 10, 11, -1])",
+     "hints": [
+      "まず 草地が ない とき、それぞれの 畑を バケツ 何ばい分の 雨水が 通るかを 書きこもう。いちばん 上の 畑は 1 ぱい分。",
+      {
+       "text": "上から じゅんに 足して いく。下の 畑ほど、通る 雨水が ふえる。",
+       "svg": "<svg viewBox=\"0 0 320 200\" xmlns=\"http://www.w3.org/2000/svg\" font-size=\"14\"><g stroke=\"currentColor\" stroke-width=\"2\"><rect x=\"14\" y=\"30\" width=\"60\" height=\"46\" fill=\"#c9a36b\" fill-opacity=\".35\"/><rect x=\"74\" y=\"30\" width=\"60\" height=\"46\" fill=\"#c9a36b\" fill-opacity=\".35\"/><rect x=\"134\" y=\"30\" width=\"60\" height=\"46\" fill=\"#c9a36b\" fill-opacity=\".35\"/><rect x=\"194\" y=\"30\" width=\"60\" height=\"46\" fill=\"#c9a36b\" fill-opacity=\".35\"/><rect x=\"14\" y=\"76\" width=\"60\" height=\"46\" fill=\"#c9a36b\" fill-opacity=\".35\"/><rect x=\"74\" y=\"76\" width=\"60\" height=\"46\" fill=\"#c9a36b\" fill-opacity=\".35\"/><rect x=\"134\" y=\"76\" width=\"60\" height=\"46\" fill=\"#c9a36b\" fill-opacity=\".35\"/><rect x=\"194\" y=\"76\" width=\"60\" height=\"46\" fill=\"#c9a36b\" fill-opacity=\".35\"/><rect x=\"14\" y=\"122\" width=\"60\" height=\"46\" fill=\"#c9a36b\" fill-opacity=\".35\"/><rect x=\"74\" y=\"122\" width=\"60\" height=\"46\" fill=\"#c9a36b\" fill-opacity=\".35\"/><rect x=\"134\" y=\"122\" width=\"60\" height=\"46\" fill=\"#c9a36b\" fill-opacity=\".35\"/><rect x=\"194\" y=\"122\" width=\"60\" height=\"46\" fill=\"#c9a36b\" fill-opacity=\".35\"/><path d=\"M264 116 Q280 142 274 196 H306 Q312 142 298 116 Z\" fill=\"#7fc8f8\" fill-opacity=\".6\"/><path d=\"M30 8 l-4 12\" fill=\"none\" stroke=\"#7fc8f8\" stroke-width=\"2.5\"/><path d=\"M60 8 l-4 12\" fill=\"none\" stroke=\"#7fc8f8\" stroke-width=\"2.5\"/><path d=\"M90 8 l-4 12\" fill=\"none\" stroke=\"#7fc8f8\" stroke-width=\"2.5\"/><path d=\"M120 8 l-4 12\" fill=\"none\" stroke=\"#7fc8f8\" stroke-width=\"2.5\"/><path d=\"M150 8 l-4 12\" fill=\"none\" stroke=\"#7fc8f8\" stroke-width=\"2.5\"/><path d=\"M180 8 l-4 12\" fill=\"none\" stroke=\"#7fc8f8\" stroke-width=\"2.5\"/><path d=\"M210 8 l-4 12\" fill=\"none\" stroke=\"#7fc8f8\" stroke-width=\"2.5\"/><path d=\"M240 8 l-4 12\" fill=\"none\" stroke=\"#7fc8f8\" stroke-width=\"2.5\"/></g><g stroke=\"currentColor\" stroke-width=\"2.5\" fill=\"currentColor\"><path d=\"M54 43 V60\" fill=\"none\"/><polygon points=\"48,60 60,60 54,69\" stroke=\"none\"/><path d=\"M114 43 V60\" fill=\"none\"/><polygon points=\"108,60 120,60 114,69\" stroke=\"none\"/><path d=\"M174 43 V60\" fill=\"none\"/><polygon points=\"168,60 180,60 174,69\" stroke=\"none\"/><path d=\"M234 43 V60\" fill=\"none\"/><polygon points=\"228,60 240,60 234,69\" stroke=\"none\"/><path d=\"M40 103 H58\" fill=\"none\"/><polygon points=\"58,97 58,109 67,103\" stroke=\"none\"/><path d=\"M100 103 H118\" fill=\"none\"/><polygon points=\"118,97 118,109 127,103\" stroke=\"none\"/><path d=\"M174 89 V106\" fill=\"none\"/><polygon points=\"168,106 180,106 174,115\" stroke=\"none\"/><path d=\"M234 89 V106\" fill=\"none\"/><polygon points=\"228,106 240,106 234,115\" stroke=\"none\"/><path d=\"M40 149 H58\" fill=\"none\"/><polygon points=\"58,143 58,155 67,149\" stroke=\"none\"/><path d=\"M100 149 H118\" fill=\"none\"/><polygon points=\"118,143 118,155 127,149\" stroke=\"none\"/><path d=\"M160 149 H178\" fill=\"none\"/><polygon points=\"178,143 178,155 187,149\" stroke=\"none\"/><path d=\"M220 149 H256\" fill=\"none\"/><polygon points=\"256,143 256,155 265,149\" stroke=\"none\"/></g><g fill=\"currentColor\"><text x=\"286\" y=\"190\" text-anchor=\"middle\">川</text><text x=\"21\" y=\"49\" font-size=\"15\">1</text><text x=\"81\" y=\"49\" font-size=\"15\">1</text><text x=\"141\" y=\"49\" font-size=\"15\">1</text><text x=\"201\" y=\"49\" font-size=\"15\">1</text><text x=\"21\" y=\"95\" font-size=\"15\">2</text><text x=\"81\" y=\"95\" font-size=\"15\">4</text><text x=\"141\" y=\"95\" font-size=\"15\">6</text><text x=\"201\" y=\"95\" font-size=\"15\">2</text><text x=\"21\" y=\"141\" font-size=\"15\">?</text><text x=\"81\" y=\"141\" font-size=\"15\">?</text><text x=\"141\" y=\"141\" font-size=\"15\">?</text><text x=\"201\" y=\"141\" font-size=\"15\">?</text></g></svg>"
+      },
+      "草地 1 まいで へる 土は（その 畑を 通る 雨水）×（その 畑から 川までの 畑の まい数）。2 まいが 1 つの 流れの 上と 下に あると、上の 草地で へるのは、下の 草地の 手前までの 分だけ。へる 分を 組ごとに くらべよう。"
+     ],
+     "paths": [
+      [
+       "畑ごとに 通る 雨水を 書く（上の 列は 1、1、1、1、中の 列は 2、4、6、2、下の 列は 1、2、9、12）",
+       "草地が ない ときの 合計は 42 kg",
+       "1 まいで へる 土は（通る 雨水）×（川までの 畑の まい数）で、大きいのは 下の 列 右から 2 つ目と 中の 列 右から 2 つ目の 18、中の 列 左から 2 つ目の 16、右下の 12",
+       "18 の 2 まいは 1 つの 流れの 上と 下なので、組むと 18 + 6 × 1 ＝ 24 しか へらない。下の 列 右から 2 つ目と 中の 列 左から 2 つ目を 組むと、18 + 4 × 2 ＝ 26",
+       "ほかの 組は どれも 26 より へらないので、42 − 26 ＝ 16 kg"
+      ],
+      [
+       "雨水 1 ぱい分ずつ、川までに 通る 畑の まい数を 足すと 42 kg",
+       "2 まいの 草地で へる 土は、1 まいずつで へる 土を 足した 数より 多く ならない（同じ 流れに あると、へる 分が 重なる）",
+       "1 まいずつで へる 土は 18、18、16、12、10、6、6、5、4、4、4、3 なので、足して 27 以上に なる 組は、18・18・16・12・10 の 5 まいから 2 まいを えらぶ 組だけ",
+       "その 組を 1 つずつ しらべると、へる 土は 24、26、22、21、24、24、24、22 で、いちばん 大きいのは 26",
+       "42 − 26 ＝ 16 kg"
+      ]
+     ],
+     "note": "S05 二重に数える（畑ごとに通る雨水を数えて足す見方と、雨水ごとに通る畑の数を数えて足す見方が、同じ合計 42 になる）と S07 いちばんはしを考える（いちばんへる 1 まいを 2 まいならべても、いちばんよい組にならない）。種なし（S の表から組み立てた。坂の水が集まる数え方）。やさしすぎた（Haiku が一度でといた）ので、草地を 2 まいにし、中の列の左はしの矢印を右向きにかえた。なぜむずかしいか：1 まいでへる土は（集まる雨水）×（川までの道のり）だが、2 まいが同じ流れの上と下にあると、へる分が重なって足し算にならない。1 まいずつの上位 2 つ（18 と 18）を足すと 42 − 36 ＝ 6 とまちがえ、その 2 まいは同じ流れにあるので本当は 24 しかへらない。いちばんよい組は、同じ流れの上と下にあるのに 26 へる組（下で 18、上で 4 × 2）。1 まいずつの和が 27 以上の組だけを調べればよいと見ぬく一手が要る。手順は「通る雨水を書きこむ → 1 まいずつのへる量を積で出す → 重なりを引いて組をくらべる」の 3 段。",
+     "qid": "W-070:7bcc2dc05c"
     }
    ],
    "f": "F05",
@@ -321483,32 +323705,1066 @@ window.ROADMAP = {
     {
      "kind": "導入",
      "aim": "",
+     "items": [
+      {
+       "part": "見本",
+       "text": "地球は 1 日に 1 回、西から東へ回っている（自転）。1 年かけて太陽のまわりを 1 周することは、公転という。空を、自分を中心にした大きな丸い屋根（ドーム）と見たものを天球という。自転のせいで、太陽も星も天球の上を東から西へ、1 時間に 15° ずつ動いて見える（日周運動）。",
+       "svg": "<svg viewBox=\"0 0 320 200\" xmlns=\"http://www.w3.org/2000/svg\"><path d=\"M30 165 A130 130 0 0 1 290 165 Z\" fill=\"#7fc8f8\" fill-opacity=\"0.18\" stroke=\"currentColor\" stroke-width=\"2\"/><line x1=\"20\" y1=\"165\" x2=\"300\" y2=\"165\" stroke=\"currentColor\" stroke-width=\"2\"/><text x=\"30\" y=\"187\" font-size=\"14\" text-anchor=\"middle\" fill=\"currentColor\">東</text><text x=\"160\" y=\"187\" font-size=\"14\" text-anchor=\"middle\" fill=\"currentColor\">南</text><text x=\"290\" y=\"187\" font-size=\"14\" text-anchor=\"middle\" fill=\"currentColor\">西</text><path d=\"M30 165 A130 130 0 0 1 290 165\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.5\" stroke-dasharray=\"5 4\"/><circle cx=\"47.4\" cy=\"100\" r=\"10\" fill=\"#f3c969\" fill-opacity=\"0.8\" stroke=\"currentColor\" stroke-width=\"2\"/><circle cx=\"160\" cy=\"35\" r=\"10\" fill=\"#f3c969\" fill-opacity=\"0.8\" stroke=\"currentColor\" stroke-width=\"2\"/><circle cx=\"272.6\" cy=\"100\" r=\"10\" fill=\"#f3c969\" fill-opacity=\"0.8\" stroke=\"currentColor\" stroke-width=\"2\"/><text x=\"55.4\" y=\"128\" font-size=\"13\" text-anchor=\"middle\" fill=\"currentColor\">8 時</text><text x=\"160\" y=\"62\" font-size=\"13\" text-anchor=\"middle\" fill=\"currentColor\">12 時</text><text x=\"264.6\" y=\"128\" font-size=\"13\" text-anchor=\"middle\" fill=\"currentColor\">16 時</text><line x1=\"61.9\" y1=\"79.7\" x2=\"89.2\" y2=\"57.6\" stroke=\"currentColor\" stroke-width=\"2\"/><polygon points=\"97,51.3 92.3,61.5 86.1,53.7\" fill=\"currentColor\" stroke=\"currentColor\" stroke-width=\"1\"/><line x1=\"223\" y1=\"51.3\" x2=\"250.3\" y2=\"73.4\" stroke=\"currentColor\" stroke-width=\"2\"/><polygon points=\"258.1,79.7 247.2,77.3 253.5,69.5\" fill=\"currentColor\" stroke=\"currentColor\" stroke-width=\"1\"/><text x=\"160\" y=\"120\" font-size=\"15\" text-anchor=\"middle\" fill=\"currentColor\">1 時間に 15°</text></svg>",
+       "explain": "地球は 24 時間で 360° 自転するので、1 時間に 360 ÷ 24 = 15° 回る。地球の上の人から見ると、その逆向きに、天球の太陽や星が 1 時間に 15° ずつ東から西へ動くように見える（日周運動）。北半球で南を向くと、東は左、西は右にくる。公転は 1 年（約 365 日）で 360° なので 1 日に約 1° 進む。これは 3 日目に使う。",
+       "qid": "W-073:ef46e099dd"
+      },
+      {
+       "part": "今日",
+       "text": "図の ア と イ は、地球の 2 つの動きだ。約 1 年で 1 周する動きは、どちらか。",
+       "svg": "<svg viewBox=\"0 0 320 200\" xmlns=\"http://www.w3.org/2000/svg\"><circle cx=\"50\" cy=\"100\" r=\"24\" fill=\"#f3c969\" fill-opacity=\"0.7\" stroke=\"currentColor\" stroke-width=\"2\"/><text x=\"50\" y=\"104\" font-size=\"12\" text-anchor=\"middle\" fill=\"currentColor\">太陽</text><path d=\"M188.6 180 A160 160 0 0 0 188.6 20\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.5\" stroke-dasharray=\"5 4\"/><line x1=\"198.3\" y1=\"40.1\" x2=\"188.8\" y2=\"21.7\" stroke=\"currentColor\" stroke-width=\"2\"/><polygon points=\"184.2,12.9 193.2,19.4 184.4,24\" fill=\"currentColor\" stroke=\"currentColor\" stroke-width=\"1\"/><circle cx=\"210\" cy=\"100\" r=\"18\" fill=\"#7fc8f8\" fill-opacity=\"0.6\" stroke=\"currentColor\" stroke-width=\"2\"/><text x=\"232\" y=\"148\" font-size=\"13\" text-anchor=\"start\" fill=\"currentColor\">地球</text><path d=\"M233 80.7 A30 30 0 1 0 225 126\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\"/><line x1=\"225\" y1=\"126\" x2=\"231.3\" y2=\"118.8\" stroke=\"currentColor\" stroke-width=\"2\"/><polygon points=\"237.8,111.2 235,122.1 227.5,115.5\" fill=\"currentColor\" stroke=\"currentColor\" stroke-width=\"1\"/><text x=\"213\" y=\"24\" font-size=\"15\" text-anchor=\"middle\" fill=\"currentColor\">ア</text><text x=\"258\" y=\"104\" font-size=\"15\" text-anchor=\"middle\" fill=\"currentColor\">イ</text></svg>",
+       "choices": [
+        "ア",
+        "イ"
+       ],
+       "answer": "ア",
+       "check": "'ア'",
+       "hints": [
+        "「自転」と「公転」は、何のまわりを回る動きか。見本の文を読み直そう。",
+        {
+         "text": "点線は、それぞれの矢印が回る中心を表している。",
+         "svg": "<svg viewBox=\"0 0 320 200\" xmlns=\"http://www.w3.org/2000/svg\"><circle cx=\"50\" cy=\"100\" r=\"24\" fill=\"#f3c969\" fill-opacity=\"0.7\" stroke=\"currentColor\" stroke-width=\"2\"/><text x=\"50\" y=\"104\" font-size=\"12\" text-anchor=\"middle\" fill=\"currentColor\">太陽</text><path d=\"M188.6 180 A160 160 0 0 0 188.6 20\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.5\" stroke-dasharray=\"5 4\"/><line x1=\"198.3\" y1=\"40.1\" x2=\"188.8\" y2=\"21.7\" stroke=\"currentColor\" stroke-width=\"2\"/><polygon points=\"184.2,12.9 193.2,19.4 184.4,24\" fill=\"currentColor\" stroke=\"currentColor\" stroke-width=\"1\"/><circle cx=\"210\" cy=\"100\" r=\"18\" fill=\"#7fc8f8\" fill-opacity=\"0.6\" stroke=\"currentColor\" stroke-width=\"2\"/><text x=\"232\" y=\"148\" font-size=\"13\" text-anchor=\"start\" fill=\"currentColor\">地球</text><path d=\"M233 80.7 A30 30 0 1 0 225 126\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\"/><line x1=\"225\" y1=\"126\" x2=\"231.3\" y2=\"118.8\" stroke=\"currentColor\" stroke-width=\"2\"/><polygon points=\"237.8,111.2 235,122.1 227.5,115.5\" fill=\"currentColor\" stroke=\"currentColor\" stroke-width=\"1\"/><text x=\"213\" y=\"24\" font-size=\"15\" text-anchor=\"middle\" fill=\"currentColor\">ア</text><text x=\"258\" y=\"104\" font-size=\"15\" text-anchor=\"middle\" fill=\"currentColor\">イ</text><line x1=\"73.2\" y1=\"88.2\" x2=\"192.6\" y2=\"27.4\" stroke=\"currentColor\" stroke-width=\"1.5\" stroke-dasharray=\"3 3\"/><line x1=\"210\" y1=\"100\" x2=\"180\" y2=\"100\" stroke=\"currentColor\" stroke-width=\"1.5\" stroke-dasharray=\"3 3\"/></svg>"
+        },
+        "矢印が回る中心が、地球か太陽かを見分けて、「1 年で 1 周」に合うほうを選ぼう。"
+       ],
+       "qid": "W-073:c6aed898b5"
+      },
+      {
+       "part": "今日",
+       "text": "北の空を 3 時間、カメラでとり続けた。北極星のまわりを回る星 ● は、3 時間で何度動くか。",
+       "svg": "<svg viewBox=\"0 0 320 200\" xmlns=\"http://www.w3.org/2000/svg\"><text x=\"8\" y=\"16\" font-size=\"12\" text-anchor=\"start\" fill=\"currentColor\">北の空（北を向いて見る）</text><text x=\"18\" y=\"109\" font-size=\"14\" text-anchor=\"middle\" fill=\"currentColor\">西</text><text x=\"302\" y=\"109\" font-size=\"14\" text-anchor=\"middle\" fill=\"currentColor\">東</text><circle cx=\"160\" cy=\"104\" r=\"4\" fill=\"#f3c969\" fill-opacity=\"0.9\" stroke=\"currentColor\" stroke-width=\"1.5\"/><text x=\"160\" y=\"124\" font-size=\"12\" text-anchor=\"middle\" fill=\"currentColor\">北極星</text><circle cx=\"160\" cy=\"104\" r=\"66\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.5\" stroke-dasharray=\"5 4\"/><circle cx=\"137.4\" cy=\"42\" r=\"6\" fill=\"#f3c969\" fill-opacity=\"0.9\" stroke=\"currentColor\" stroke-width=\"1.5\"/></svg>",
+       "answer": 45,
+       "check": "3 * 15",
+       "hints": [
+        "星は 1 時間に 何度動くのか、見本を思い出そう。",
+        {
+         "text": "1 時間で、星は 図の角の分だけ動く。",
+         "svg": "<svg viewBox=\"0 0 320 200\" xmlns=\"http://www.w3.org/2000/svg\"><text x=\"8\" y=\"16\" font-size=\"12\" text-anchor=\"start\" fill=\"currentColor\">北の空（北を向いて見る）</text><text x=\"18\" y=\"109\" font-size=\"14\" text-anchor=\"middle\" fill=\"currentColor\">西</text><text x=\"302\" y=\"109\" font-size=\"14\" text-anchor=\"middle\" fill=\"currentColor\">東</text><circle cx=\"160\" cy=\"104\" r=\"4\" fill=\"#f3c969\" fill-opacity=\"0.9\" stroke=\"currentColor\" stroke-width=\"1.5\"/><text x=\"160\" y=\"124\" font-size=\"12\" text-anchor=\"middle\" fill=\"currentColor\">北極星</text><circle cx=\"160\" cy=\"104\" r=\"66\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.5\" stroke-dasharray=\"5 4\"/><line x1=\"160\" y1=\"104\" x2=\"137.4\" y2=\"42\" stroke=\"currentColor\" stroke-width=\"1.5\" stroke-dasharray=\"3 3\"/><line x1=\"160\" y1=\"104\" x2=\"122.1\" y2=\"49.9\" stroke=\"currentColor\" stroke-width=\"1.5\" stroke-dasharray=\"3 3\"/><circle cx=\"137.4\" cy=\"42\" r=\"6\" fill=\"#f3c969\" fill-opacity=\"0.9\" stroke=\"currentColor\" stroke-width=\"1.5\"/><circle cx=\"122.1\" cy=\"49.9\" r=\"6\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.5\" stroke-dasharray=\"2 2\"/><path d=\"M149.7 75.8 A30 30 0 0 0 142.8 79.4\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.5\"/><text x=\"122\" y=\"80\" font-size=\"12\" text-anchor=\"middle\" fill=\"currentColor\">15°</text><text x=\"112.1\" y=\"39.9\" font-size=\"12\" text-anchor=\"end\" fill=\"currentColor\">1 時間後</text></svg>"
+        },
+        "1 時間分の角が、3 回分たまる。"
+       ],
+       "qid": "W-073:dfe2c126f5"
+      },
+      {
+       "part": "今日",
+       "text": "北の空をカメラでとり続けたら、1 つの星が、北極星を中心に図のような光の線をのこした。さつえいした時間は何時間か。",
+       "svg": "<svg viewBox=\"0 0 320 200\" xmlns=\"http://www.w3.org/2000/svg\"><text x=\"8\" y=\"16\" font-size=\"12\" text-anchor=\"start\" fill=\"currentColor\">北の空（北を向いて見る）</text><text x=\"18\" y=\"109\" font-size=\"14\" text-anchor=\"middle\" fill=\"currentColor\">西</text><text x=\"302\" y=\"109\" font-size=\"14\" text-anchor=\"middle\" fill=\"currentColor\">東</text><circle cx=\"160\" cy=\"104\" r=\"4\" fill=\"#f3c969\" fill-opacity=\"0.9\" stroke=\"currentColor\" stroke-width=\"1.5\"/><text x=\"160\" y=\"124\" font-size=\"12\" text-anchor=\"middle\" fill=\"currentColor\">北極星</text><circle cx=\"160\" cy=\"104\" r=\"66\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.5\" stroke-dasharray=\"5 4\"/><path d=\"M160 38 A66 66 0 0 0 94 104\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"3\"/><circle cx=\"160\" cy=\"38\" r=\"6\" fill=\"#f3c969\" fill-opacity=\"0.9\" stroke=\"currentColor\" stroke-width=\"1.5\"/><circle cx=\"94\" cy=\"104\" r=\"6\" fill=\"#f3c969\" fill-opacity=\"0.9\" stroke=\"currentColor\" stroke-width=\"1.5\"/><path d=\"M160 95 L151 95 L151 104\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.5\"/></svg>",
+       "answer": 6,
+       "check": "90 // 15",
+       "hints": [
+        "光の線は、星が動いたあとだ。円のどれだけの部分かを見よう。",
+        {
+         "text": "光の線がつくる角は、直角（90°）だ。",
+         "svg": "<svg viewBox=\"0 0 320 200\" xmlns=\"http://www.w3.org/2000/svg\"><text x=\"8\" y=\"16\" font-size=\"12\" text-anchor=\"start\" fill=\"currentColor\">北の空（北を向いて見る）</text><text x=\"18\" y=\"109\" font-size=\"14\" text-anchor=\"middle\" fill=\"currentColor\">西</text><text x=\"302\" y=\"109\" font-size=\"14\" text-anchor=\"middle\" fill=\"currentColor\">東</text><circle cx=\"160\" cy=\"104\" r=\"4\" fill=\"#f3c969\" fill-opacity=\"0.9\" stroke=\"currentColor\" stroke-width=\"1.5\"/><text x=\"160\" y=\"124\" font-size=\"12\" text-anchor=\"middle\" fill=\"currentColor\">北極星</text><circle cx=\"160\" cy=\"104\" r=\"66\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.5\" stroke-dasharray=\"5 4\"/><path d=\"M160 38 A66 66 0 0 0 94 104\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"3\"/><circle cx=\"160\" cy=\"38\" r=\"6\" fill=\"#f3c969\" fill-opacity=\"0.9\" stroke=\"currentColor\" stroke-width=\"1.5\"/><circle cx=\"94\" cy=\"104\" r=\"6\" fill=\"#f3c969\" fill-opacity=\"0.9\" stroke=\"currentColor\" stroke-width=\"1.5\"/><path d=\"M160 95 L151 95 L151 104\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.5\"/><text x=\"136\" y=\"80\" font-size=\"13\" text-anchor=\"middle\" fill=\"currentColor\">90°</text></svg>"
+        },
+        "90° の中に、1 時間分の角（15°）がいくつ入るか。"
+       ],
+       "qid": "W-073:e7eb340031"
+      },
+      {
+       "part": "今日",
+       "text": "北の空の星は、北極星を中心に円をえがいて動く。北を向いて立つと、東は右、西は左になる。星 ● は、北極星の右がわに見える。しばらく見ていると、星 ● はどう動くか。",
+       "svg": "<svg viewBox=\"0 0 320 200\" xmlns=\"http://www.w3.org/2000/svg\"><text x=\"8\" y=\"16\" font-size=\"12\" text-anchor=\"start\" fill=\"currentColor\">北の空（北を向いて見る）</text><text x=\"18\" y=\"109\" font-size=\"14\" text-anchor=\"middle\" fill=\"currentColor\">西</text><text x=\"302\" y=\"109\" font-size=\"14\" text-anchor=\"middle\" fill=\"currentColor\">東</text><circle cx=\"160\" cy=\"104\" r=\"4\" fill=\"#f3c969\" fill-opacity=\"0.9\" stroke=\"currentColor\" stroke-width=\"1.5\"/><text x=\"160\" y=\"124\" font-size=\"12\" text-anchor=\"middle\" fill=\"currentColor\">北極星</text><circle cx=\"160\" cy=\"104\" r=\"66\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.5\" stroke-dasharray=\"5 4\"/><circle cx=\"226\" cy=\"104\" r=\"6\" fill=\"#f3c969\" fill-opacity=\"0.9\" stroke=\"currentColor\" stroke-width=\"1.5\"/></svg>",
+       "choices": [
+        "上へ向かう",
+        "北極星に近づく",
+        "北極星から遠ざかる",
+        "下へ向かう"
+       ],
+       "answer": "上へ向かう",
+       "check": "'上へ向かう'",
+       "hints": [
+        "星は、東の空でのぼり、西の空でしずむ。",
+        {
+         "text": "北を向いたとき、北極星の右がわは東か西か。そこにある星は、のぼるところか、しずむところか。",
+         "svg": "<svg viewBox=\"0 0 320 200\" xmlns=\"http://www.w3.org/2000/svg\"><text x=\"8\" y=\"16\" font-size=\"12\" text-anchor=\"start\" fill=\"currentColor\">北の空（北を向いて見る）</text><text x=\"18\" y=\"109\" font-size=\"14\" text-anchor=\"middle\" fill=\"currentColor\">西</text><text x=\"302\" y=\"109\" font-size=\"14\" text-anchor=\"middle\" fill=\"currentColor\">東</text><circle cx=\"160\" cy=\"104\" r=\"4\" fill=\"#f3c969\" fill-opacity=\"0.9\" stroke=\"currentColor\" stroke-width=\"1.5\"/><text x=\"160\" y=\"124\" font-size=\"12\" text-anchor=\"middle\" fill=\"currentColor\">北極星</text><circle cx=\"160\" cy=\"104\" r=\"66\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.5\" stroke-dasharray=\"5 4\"/><circle cx=\"226\" cy=\"104\" r=\"6\" fill=\"#f3c969\" fill-opacity=\"0.9\" stroke=\"currentColor\" stroke-width=\"1.5\"/><text x=\"296\" y=\"88\" font-size=\"12\" text-anchor=\"middle\" fill=\"currentColor\">のぼる</text><text x=\"24\" y=\"88\" font-size=\"12\" text-anchor=\"middle\" fill=\"currentColor\">しずむ</text></svg>"
+        },
+        "東がわの星と西がわの星では、動く向きがぎゃくになる。のぼる星は、高くなるか、低くなるか。"
+       ],
+       "qid": "W-073:b0969000a6"
+      },
+      {
+       "part": "今日",
+       "text": "図は、南を向いて見た天球で、ある日の太陽の通り道だ。この日の太陽は、午前 6 時に真東からのぼり、午後 6 時に真西にしずむ。午前 9 時の太陽は、ア〜エ のどの位置か。",
+       "svg": "<svg viewBox=\"0 0 320 200\" xmlns=\"http://www.w3.org/2000/svg\"><path d=\"M30 165 A130 130 0 0 1 290 165 Z\" fill=\"#7fc8f8\" fill-opacity=\"0.18\" stroke=\"currentColor\" stroke-width=\"2\"/><line x1=\"20\" y1=\"165\" x2=\"300\" y2=\"165\" stroke=\"currentColor\" stroke-width=\"2\"/><text x=\"30\" y=\"187\" font-size=\"14\" text-anchor=\"middle\" fill=\"currentColor\">東</text><text x=\"160\" y=\"187\" font-size=\"14\" text-anchor=\"middle\" fill=\"currentColor\">南</text><text x=\"290\" y=\"187\" font-size=\"14\" text-anchor=\"middle\" fill=\"currentColor\">西</text><path d=\"M30 165 A130 130 0 0 1 290 165\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.5\" stroke-dasharray=\"5 4\"/><circle cx=\"251.9\" cy=\"73.1\" r=\"9\" fill=\"#f3c969\" fill-opacity=\"0.85\" stroke=\"currentColor\" stroke-width=\"2\"/><text x=\"269.9\" y=\"73.1\" font-size=\"15\" text-anchor=\"middle\" fill=\"currentColor\">ア</text><circle cx=\"95\" cy=\"52.4\" r=\"9\" fill=\"#f3c969\" fill-opacity=\"0.85\" stroke=\"currentColor\" stroke-width=\"2\"/><text x=\"97\" y=\"38.4\" font-size=\"15\" text-anchor=\"middle\" fill=\"currentColor\">イ</text><circle cx=\"68.1\" cy=\"73.1\" r=\"9\" fill=\"#f3c969\" fill-opacity=\"0.85\" stroke=\"currentColor\" stroke-width=\"2\"/><text x=\"50.1\" y=\"79.1\" font-size=\"15\" text-anchor=\"middle\" fill=\"currentColor\">ウ</text><circle cx=\"160\" cy=\"35\" r=\"9\" fill=\"#f3c969\" fill-opacity=\"0.85\" stroke=\"currentColor\" stroke-width=\"2\"/><text x=\"160\" y=\"21\" font-size=\"15\" text-anchor=\"middle\" fill=\"currentColor\">エ</text></svg>",
+       "choices": [
+        "ア",
+        "イ",
+        "ウ",
+        "エ"
+       ],
+       "answer": "ウ",
+       "check": "'ウ'",
+       "hints": [
+        "太陽は 1 時間に 15° ずつ進む。午前 6 時から午前 9 時まで、何時間か。",
+        {
+         "text": "東のはしから 1 時間で 進む角は、これだけだ。",
+         "svg": "<svg viewBox=\"0 0 320 200\" xmlns=\"http://www.w3.org/2000/svg\"><path d=\"M30 165 A130 130 0 0 1 290 165 Z\" fill=\"#7fc8f8\" fill-opacity=\"0.18\" stroke=\"currentColor\" stroke-width=\"2\"/><line x1=\"20\" y1=\"165\" x2=\"300\" y2=\"165\" stroke=\"currentColor\" stroke-width=\"2\"/><text x=\"30\" y=\"187\" font-size=\"14\" text-anchor=\"middle\" fill=\"currentColor\">東</text><text x=\"160\" y=\"187\" font-size=\"14\" text-anchor=\"middle\" fill=\"currentColor\">南</text><text x=\"290\" y=\"187\" font-size=\"14\" text-anchor=\"middle\" fill=\"currentColor\">西</text><path d=\"M30 165 A130 130 0 0 1 290 165\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.5\" stroke-dasharray=\"5 4\"/><line x1=\"160\" y1=\"165\" x2=\"30\" y2=\"165\" stroke=\"currentColor\" stroke-width=\"1.5\" stroke-dasharray=\"3 3\"/><line x1=\"160\" y1=\"165\" x2=\"34.4\" y2=\"131.4\" stroke=\"currentColor\" stroke-width=\"1.5\" stroke-dasharray=\"3 3\"/><circle cx=\"30\" cy=\"165\" r=\"5\" fill=\"#f3c969\" fill-opacity=\"0.9\" stroke=\"currentColor\" stroke-width=\"1.5\"/><text x=\"78\" y=\"130\" font-size=\"12\" text-anchor=\"middle\" fill=\"currentColor\">15°</text><text x=\"160\" y=\"120\" font-size=\"13\" text-anchor=\"middle\" fill=\"currentColor\">6 時から 1 時間</text></svg>"
+        },
+        "東のはしから、1 時間分の角を 3 つ分 進んだ位置をさがそう。"
+       ],
+       "qid": "W-073:eeb31a16aa"
+      },
+      {
+       "part": "挑戦",
+       "text": "北の空で、星 ● が北極星の真上にある。星は北極星のまわりを 1 時間に 15° ずつ回る。9 時間後の星は、ア〜エ のどこにあるか。",
+       "svg": "<svg viewBox=\"0 0 320 200\" xmlns=\"http://www.w3.org/2000/svg\"><text x=\"8\" y=\"16\" font-size=\"12\" text-anchor=\"start\" fill=\"currentColor\">北の空（北を向いて見る）</text><text x=\"18\" y=\"109\" font-size=\"14\" text-anchor=\"middle\" fill=\"currentColor\">西</text><text x=\"302\" y=\"109\" font-size=\"14\" text-anchor=\"middle\" fill=\"currentColor\">東</text><circle cx=\"160\" cy=\"104\" r=\"4\" fill=\"#f3c969\" fill-opacity=\"0.9\" stroke=\"currentColor\" stroke-width=\"1.5\"/><text x=\"160\" y=\"124\" font-size=\"12\" text-anchor=\"middle\" fill=\"currentColor\">北極星</text><circle cx=\"160\" cy=\"104\" r=\"66\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.5\" stroke-dasharray=\"5 4\"/><circle cx=\"160\" cy=\"38\" r=\"6\" fill=\"#f3c969\" fill-opacity=\"0.9\" stroke=\"currentColor\" stroke-width=\"1.5\"/><circle cx=\"113.3\" cy=\"57.3\" r=\"5\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.5\"/><text x=\"100.6\" y=\"49.6\" font-size=\"15\" text-anchor=\"middle\" fill=\"currentColor\">ア</text><circle cx=\"113.3\" cy=\"150.7\" r=\"5\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.5\"/><text x=\"100.6\" y=\"168.4\" font-size=\"15\" text-anchor=\"middle\" fill=\"currentColor\">イ</text><circle cx=\"206.7\" cy=\"150.7\" r=\"5\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.5\"/><text x=\"219.4\" y=\"168.4\" font-size=\"15\" text-anchor=\"middle\" fill=\"currentColor\">ウ</text><circle cx=\"206.7\" cy=\"57.3\" r=\"5\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.5\"/><text x=\"219.4\" y=\"49.6\" font-size=\"15\" text-anchor=\"middle\" fill=\"currentColor\">エ</text></svg>",
+       "choices": [
+        "ア",
+        "イ",
+        "ウ",
+        "エ"
+       ],
+       "answer": "イ",
+       "check": "'イ'",
+       "hints": [
+        "星が回る向きは、前の問題でたしかめた。9 時間で何度回るかも出そう。",
+        {
+         "text": "6 時間後と 12 時間後の星の位置は、図の点だ。",
+         "svg": "<svg viewBox=\"0 0 320 200\" xmlns=\"http://www.w3.org/2000/svg\"><text x=\"8\" y=\"16\" font-size=\"12\" text-anchor=\"start\" fill=\"currentColor\">北の空（北を向いて見る）</text><text x=\"18\" y=\"109\" font-size=\"14\" text-anchor=\"middle\" fill=\"currentColor\">西</text><text x=\"302\" y=\"109\" font-size=\"14\" text-anchor=\"middle\" fill=\"currentColor\">東</text><circle cx=\"160\" cy=\"104\" r=\"4\" fill=\"#f3c969\" fill-opacity=\"0.9\" stroke=\"currentColor\" stroke-width=\"1.5\"/><text x=\"160\" y=\"124\" font-size=\"12\" text-anchor=\"middle\" fill=\"currentColor\">北極星</text><circle cx=\"160\" cy=\"104\" r=\"66\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.5\" stroke-dasharray=\"5 4\"/><circle cx=\"160\" cy=\"38\" r=\"6\" fill=\"#f3c969\" fill-opacity=\"0.9\" stroke=\"currentColor\" stroke-width=\"1.5\"/><circle cx=\"94\" cy=\"104\" r=\"3\" fill=\"currentColor\" fill-opacity=\"0.6\" stroke=\"currentColor\" stroke-width=\"2\"/><text x=\"84\" y=\"108\" font-size=\"12\" text-anchor=\"end\" fill=\"currentColor\">6 時間後</text><circle cx=\"160\" cy=\"170\" r=\"3\" fill=\"currentColor\" fill-opacity=\"0.6\" stroke=\"currentColor\" stroke-width=\"2\"/><text x=\"160\" y=\"190\" font-size=\"12\" text-anchor=\"middle\" fill=\"currentColor\">12 時間後</text><circle cx=\"113.3\" cy=\"57.3\" r=\"5\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.5\"/><text x=\"100.6\" y=\"49.6\" font-size=\"15\" text-anchor=\"middle\" fill=\"currentColor\">ア</text><circle cx=\"113.3\" cy=\"150.7\" r=\"5\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.5\"/><text x=\"100.6\" y=\"168.4\" font-size=\"15\" text-anchor=\"middle\" fill=\"currentColor\">イ</text><circle cx=\"206.7\" cy=\"150.7\" r=\"5\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.5\"/><text x=\"219.4\" y=\"168.4\" font-size=\"15\" text-anchor=\"middle\" fill=\"currentColor\">ウ</text><circle cx=\"206.7\" cy=\"57.3\" r=\"5\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.5\"/><text x=\"219.4\" y=\"49.6\" font-size=\"15\" text-anchor=\"middle\" fill=\"currentColor\">エ</text></svg>"
+        },
+        "9 時間後は、6 時間後と 12 時間後の、どのあたりか。"
+       ],
+       "paths": [
+        [
+         "9 × 15 = 135°。星は北極星のまわりを、上から反時計回りに回る（東がわの星はのぼる）",
+         "真上から反時計回りに 135° 進むと、左下になる",
+         "左下の点を選ぶ"
+        ],
+        [
+         "6 時間で 90°（真横の左）、12 時間で 180°（真下）まで回る",
+         "9 時間後は、その まん中の、左下",
+         "左下の点を選ぶ"
+        ]
+       ],
+       "qid": "W-073:bfab2e2165"
+      }
+     ],
+     "extra": [
+      {
+       "part": "今日",
+       "text": "北の空の星 ● は、5 時間で何度動くか。",
+       "svg": "<svg viewBox=\"0 0 320 200\" xmlns=\"http://www.w3.org/2000/svg\"><text x=\"8\" y=\"16\" font-size=\"12\" text-anchor=\"start\" fill=\"currentColor\">北の空（北を向いて見る）</text><text x=\"18\" y=\"109\" font-size=\"14\" text-anchor=\"middle\" fill=\"currentColor\">西</text><text x=\"302\" y=\"109\" font-size=\"14\" text-anchor=\"middle\" fill=\"currentColor\">東</text><circle cx=\"160\" cy=\"104\" r=\"4\" fill=\"#f3c969\" fill-opacity=\"0.9\" stroke=\"currentColor\" stroke-width=\"1.5\"/><text x=\"160\" y=\"124\" font-size=\"12\" text-anchor=\"middle\" fill=\"currentColor\">北極星</text><circle cx=\"160\" cy=\"104\" r=\"66\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.5\" stroke-dasharray=\"5 4\"/><circle cx=\"217.2\" cy=\"71\" r=\"6\" fill=\"#f3c969\" fill-opacity=\"0.9\" stroke=\"currentColor\" stroke-width=\"1.5\"/></svg>",
+       "answer": 75,
+       "check": "5 * 15",
+       "hints": [
+        "星は 1 時間に 何度動くか。",
+        "5 時間分を、かけ算で出そう。",
+        "1 時間分の角が 5 回分たまる。"
+       ],
+       "qid": "W-073:e48b8f0322"
+      },
+      {
+       "part": "今日",
+       "text": "図は、南を向いて見た天球で、ある日の太陽の通り道だ。この日の太陽は、午前 6 時に真東からのぼり、午後 6 時に真西にしずむ。午後 3 時（15 時）の太陽は、ア〜エ のどの位置か。",
+       "svg": "<svg viewBox=\"0 0 320 200\" xmlns=\"http://www.w3.org/2000/svg\"><path d=\"M30 165 A130 130 0 0 1 290 165 Z\" fill=\"#7fc8f8\" fill-opacity=\"0.18\" stroke=\"currentColor\" stroke-width=\"2\"/><line x1=\"20\" y1=\"165\" x2=\"300\" y2=\"165\" stroke=\"currentColor\" stroke-width=\"2\"/><text x=\"30\" y=\"187\" font-size=\"14\" text-anchor=\"middle\" fill=\"currentColor\">東</text><text x=\"160\" y=\"187\" font-size=\"14\" text-anchor=\"middle\" fill=\"currentColor\">南</text><text x=\"290\" y=\"187\" font-size=\"14\" text-anchor=\"middle\" fill=\"currentColor\">西</text><path d=\"M30 165 A130 130 0 0 1 290 165\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.5\" stroke-dasharray=\"5 4\"/><circle cx=\"68.1\" cy=\"73.1\" r=\"9\" fill=\"#f3c969\" fill-opacity=\"0.85\" stroke=\"currentColor\" stroke-width=\"2\"/><text x=\"50.1\" y=\"79.1\" font-size=\"15\" text-anchor=\"middle\" fill=\"currentColor\">ア</text><circle cx=\"160\" cy=\"35\" r=\"9\" fill=\"#f3c969\" fill-opacity=\"0.85\" stroke=\"currentColor\" stroke-width=\"2\"/><text x=\"160\" y=\"21\" font-size=\"15\" text-anchor=\"middle\" fill=\"currentColor\">イ</text><circle cx=\"225\" cy=\"52.4\" r=\"9\" fill=\"#f3c969\" fill-opacity=\"0.85\" stroke=\"currentColor\" stroke-width=\"2\"/><text x=\"225\" y=\"38.4\" font-size=\"15\" text-anchor=\"middle\" fill=\"currentColor\">ウ</text><circle cx=\"251.9\" cy=\"73.1\" r=\"9\" fill=\"#f3c969\" fill-opacity=\"0.85\" stroke=\"currentColor\" stroke-width=\"2\"/><text x=\"269.9\" y=\"73.1\" font-size=\"15\" text-anchor=\"middle\" fill=\"currentColor\">エ</text></svg>",
+       "choices": [
+        "ア",
+        "イ",
+        "ウ",
+        "エ"
+       ],
+       "answer": "エ",
+       "check": "'エ'",
+       "hints": [
+        "太陽は、半円を 12 時間でわたる。1 時間に何度か。",
+        "正午（12 時）の太陽は、いちばん高い位置にある。そこから何時間あとか。",
+        "正午から 3 時間分、西へ進んだ位置をさがそう。"
+       ],
+       "qid": "W-073:4bfb7a782c"
+      }
+     ],
      "key": "導入#1"
     },
     {
      "kind": "練習",
      "aim": "",
+     "items": [
+      {
+       "part": "見本",
+       "text": "地球の上の場所は、いどとけいどで表す。いどは、赤道から北か南へ何度か（北極は きたいど 90°）、けいどは、グリニッジ（イギリス）を 0° として東か西へ何度かで表す。北極星の高度（地平線からの角）は、その場所の きたいど と同じになる。けいどが 15° ちがうと、太陽が真南にくる（南中する）時こくが 1 時間ちがい、東の場所ほど早い（図は B が A より 1 時間早い）。",
+       "svg": "<svg viewBox=\"0 0 320 200\" xmlns=\"http://www.w3.org/2000/svg\"><circle cx=\"110\" cy=\"112\" r=\"62\" fill=\"#7fc8f8\" fill-opacity=\"0.5\" stroke=\"currentColor\" stroke-width=\"2\"/><line x1=\"110\" y1=\"40\" x2=\"110\" y2=\"184\" stroke=\"currentColor\" stroke-width=\"2\"/><line x1=\"38\" y1=\"112\" x2=\"182\" y2=\"112\" stroke=\"currentColor\" stroke-width=\"1.5\" stroke-dasharray=\"5 4\"/><circle cx=\"160.8\" cy=\"76.4\" r=\"4.5\" fill=\"#f08080\" fill-opacity=\"0.9\" stroke=\"currentColor\" stroke-width=\"1.5\"/><line x1=\"140.1\" y1=\"46.9\" x2=\"181.4\" y2=\"105.9\" stroke=\"currentColor\" stroke-width=\"2\"/><line x1=\"160.8\" y1=\"76.4\" x2=\"160.8\" y2=\"40.4\" stroke=\"currentColor\" stroke-width=\"2\"/><polygon points=\"160.8,30.4 165.8,40.4 155.8,40.4\" fill=\"currentColor\" stroke=\"currentColor\" stroke-width=\"1\"/><circle cx=\"160.8\" cy=\"24.4\" r=\"6\" fill=\"#f3c969\" fill-opacity=\"0.9\" stroke=\"currentColor\" stroke-width=\"1.5\"/><text x=\"171.8\" y=\"28.4\" font-size=\"13\" text-anchor=\"start\" fill=\"currentColor\">北極星</text><path d=\"M160.8 50.4 A26 26 0 0 0 145.9 55.1\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.5\"/><text x=\"140.8\" y=\"40.4\" font-size=\"13\" text-anchor=\"end\" fill=\"currentColor\">35°</text><text x=\"110\" y=\"34\" font-size=\"12\" text-anchor=\"middle\" fill=\"currentColor\">北極</text><text x=\"254\" y=\"62\" font-size=\"13\" text-anchor=\"middle\" fill=\"currentColor\">北極星の高度</text><text x=\"254\" y=\"82\" font-size=\"13\" text-anchor=\"middle\" fill=\"currentColor\">＝ きたいど</text><rect x=\"196\" y=\"112\" width=\"114\" height=\"24\" fill=\"#7fc8f8\" fill-opacity=\"0.3\" stroke=\"currentColor\" stroke-width=\"2\"/><line x1=\"222\" y1=\"106\" x2=\"222\" y2=\"142\" stroke=\"currentColor\" stroke-width=\"2\"/><line x1=\"284\" y1=\"106\" x2=\"284\" y2=\"142\" stroke=\"currentColor\" stroke-width=\"2\"/><text x=\"222\" y=\"102\" font-size=\"14\" text-anchor=\"middle\" fill=\"currentColor\">A</text><text x=\"284\" y=\"102\" font-size=\"14\" text-anchor=\"middle\" fill=\"currentColor\">B</text><text x=\"207\" y=\"128\" font-size=\"12\" text-anchor=\"middle\" fill=\"currentColor\">西</text><text x=\"299\" y=\"128\" font-size=\"12\" text-anchor=\"middle\" fill=\"currentColor\">東</text><text x=\"253\" y=\"160\" font-size=\"12\" text-anchor=\"middle\" fill=\"currentColor\">15° ちがうと</text><text x=\"253\" y=\"178\" font-size=\"12\" text-anchor=\"middle\" fill=\"currentColor\">B が 1 時間早い</text></svg>",
+       "explain": "北極星はとても遠いので、地球のどこから見ても地じくと同じ向きに見える。きたいど φ の場所では、地平線が地じくの向きと φ の角をつくるので、北極星の高度は φ になる（図の角）。けいどは、地球が 24 時間で 360° 自転するので、360 ÷ 24 = 15° で 1 時間。太陽は東から西へ動くので、東の場所のほうが先に南中する。",
+       "qid": "W-073:3b79d96378"
+      },
+      {
+       "part": "今日",
+       "text": "きたいど 35° の町 A で、北極星の高度は 35° だ。A から真北へ、地球の上を 10° 進んだ場所 B では、北極星の高度は何度か。",
+       "svg": "<svg viewBox=\"0 0 320 200\" xmlns=\"http://www.w3.org/2000/svg\"><circle cx=\"110\" cy=\"112\" r=\"62\" fill=\"#7fc8f8\" fill-opacity=\"0.5\" stroke=\"currentColor\" stroke-width=\"2\"/><line x1=\"110\" y1=\"40\" x2=\"110\" y2=\"184\" stroke=\"currentColor\" stroke-width=\"2\"/><line x1=\"38\" y1=\"112\" x2=\"182\" y2=\"112\" stroke=\"currentColor\" stroke-width=\"1.5\" stroke-dasharray=\"5 4\"/><circle cx=\"160.8\" cy=\"76.4\" r=\"4.5\" fill=\"#f08080\" fill-opacity=\"0.9\" stroke=\"currentColor\" stroke-width=\"1.5\"/><text x=\"179.9\" y=\"71.3\" font-size=\"14\" text-anchor=\"middle\" fill=\"currentColor\">A</text><line x1=\"167.5\" y1=\"68.7\" x2=\"164.1\" y2=\"65\" stroke=\"currentColor\" stroke-width=\"2\"/><polygon points=\"157.2,57.7 167.7,61.6 160.4,68.4\" fill=\"currentColor\" stroke=\"currentColor\" stroke-width=\"1\"/><text x=\"175.1\" y=\"46.9\" font-size=\"13\" text-anchor=\"start\" fill=\"currentColor\">北へ 10°</text></svg>",
+       "answer": 45,
+       "check": "35 + 10",
+       "hints": [
+        "北極星の高度は、その場所の きたいど と同じだった。",
+        {
+         "text": "北へ進むと、きたいどは どうなるか。図の B の位置を見よう。",
+         "svg": "<svg viewBox=\"0 0 320 200\" xmlns=\"http://www.w3.org/2000/svg\"><circle cx=\"110\" cy=\"112\" r=\"62\" fill=\"#7fc8f8\" fill-opacity=\"0.5\" stroke=\"currentColor\" stroke-width=\"2\"/><line x1=\"110\" y1=\"40\" x2=\"110\" y2=\"184\" stroke=\"currentColor\" stroke-width=\"2\"/><line x1=\"38\" y1=\"112\" x2=\"182\" y2=\"112\" stroke=\"currentColor\" stroke-width=\"1.5\" stroke-dasharray=\"5 4\"/><circle cx=\"160.8\" cy=\"76.4\" r=\"4.5\" fill=\"#f08080\" fill-opacity=\"0.9\" stroke=\"currentColor\" stroke-width=\"1.5\"/><text x=\"179.9\" y=\"71.3\" font-size=\"14\" text-anchor=\"middle\" fill=\"currentColor\">A</text><circle cx=\"153.8\" cy=\"68.2\" r=\"4.5\" fill=\"#f08080\" fill-opacity=\"0.9\" stroke=\"currentColor\" stroke-width=\"1.5\"/><text x=\"171.2\" y=\"60.8\" font-size=\"14\" text-anchor=\"middle\" fill=\"currentColor\">B</text><path d=\"M169 70.7 A72 72 0 0 0 160.9 61.1\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\"/><text x=\"180.5\" y=\"52.9\" font-size=\"13\" text-anchor=\"start\" fill=\"currentColor\">10°</text></svg>"
+        },
+        "B の きたいどを出して、それが B の北極星の高度になる。"
+       ],
+       "qid": "W-073:bcac5ed7de"
+      },
+      {
+       "part": "今日",
+       "text": "場所 A では北極星の高度が 52°、場所 B では 34° だった。A は B より、地球の上で何度北にあるか。",
+       "svg": "<svg viewBox=\"0 0 320 200\" xmlns=\"http://www.w3.org/2000/svg\"><circle cx=\"110\" cy=\"112\" r=\"62\" fill=\"#7fc8f8\" fill-opacity=\"0.5\" stroke=\"currentColor\" stroke-width=\"2\"/><line x1=\"110\" y1=\"40\" x2=\"110\" y2=\"184\" stroke=\"currentColor\" stroke-width=\"2\"/><line x1=\"38\" y1=\"112\" x2=\"182\" y2=\"112\" stroke=\"currentColor\" stroke-width=\"1.5\" stroke-dasharray=\"5 4\"/><circle cx=\"148.2\" cy=\"63.1\" r=\"4.5\" fill=\"#f08080\" fill-opacity=\"0.9\" stroke=\"currentColor\" stroke-width=\"1.5\"/><text x=\"164\" y=\"54.5\" font-size=\"14\" text-anchor=\"middle\" fill=\"currentColor\">A</text><circle cx=\"161.4\" cy=\"77.3\" r=\"4.5\" fill=\"#f08080\" fill-opacity=\"0.9\" stroke=\"currentColor\" stroke-width=\"1.5\"/><text x=\"180.7\" y=\"72.4\" font-size=\"14\" text-anchor=\"middle\" fill=\"currentColor\">B</text></svg>",
+       "answer": 18,
+       "check": "52 - 34",
+       "hints": [
+        "北極星の高度は、その場所のきたいどと同じだ。A と B のきたいどは、それぞれ何度か。",
+        {
+         "text": "知りたいのは、図の 2 つの場所のあいだの角だ。",
+         "svg": "<svg viewBox=\"0 0 320 200\" xmlns=\"http://www.w3.org/2000/svg\"><circle cx=\"110\" cy=\"112\" r=\"62\" fill=\"#7fc8f8\" fill-opacity=\"0.5\" stroke=\"currentColor\" stroke-width=\"2\"/><line x1=\"110\" y1=\"40\" x2=\"110\" y2=\"184\" stroke=\"currentColor\" stroke-width=\"2\"/><line x1=\"38\" y1=\"112\" x2=\"182\" y2=\"112\" stroke=\"currentColor\" stroke-width=\"1.5\" stroke-dasharray=\"5 4\"/><circle cx=\"148.2\" cy=\"63.1\" r=\"4.5\" fill=\"#f08080\" fill-opacity=\"0.9\" stroke=\"currentColor\" stroke-width=\"1.5\"/><text x=\"164\" y=\"54.5\" font-size=\"14\" text-anchor=\"middle\" fill=\"currentColor\">A</text><circle cx=\"161.4\" cy=\"77.3\" r=\"4.5\" fill=\"#f08080\" fill-opacity=\"0.9\" stroke=\"currentColor\" stroke-width=\"1.5\"/><text x=\"180.7\" y=\"72.4\" font-size=\"14\" text-anchor=\"middle\" fill=\"currentColor\">B</text><path d=\"M169.7 71.7 A72 72 0 0 0 154.3 55.3\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\"/><text x=\"175.8\" y=\"50.6\" font-size=\"13\" text-anchor=\"start\" fill=\"currentColor\">？°</text></svg>"
+        },
+        "きたいどの大きいほうから、小さいほうをひく。"
+       ],
+       "qid": "W-073:16d495e258"
+      },
+      {
+       "part": "今日",
+       "text": "図は、ひがしけいど 135° の場所 A と、ひがしけいど 150° の場所 B を、東西にならべたものだ。太陽は東から西へ動いて見える。A と B は、同じ 1 つの時計を見ている。その時計で、A で太陽が南中するのは 12 時だ。B で太陽が南中するのは、同じ時計で午前何時か。",
+       "svg": "<svg viewBox=\"0 0 320 200\" xmlns=\"http://www.w3.org/2000/svg\"><rect x=\"20\" y=\"88\" width=\"280\" height=\"36\" fill=\"#7fc8f8\" fill-opacity=\"0.3\" stroke=\"currentColor\" stroke-width=\"2\"/><line x1=\"116.7\" y1=\"80\" x2=\"116.7\" y2=\"132\" stroke=\"currentColor\" stroke-width=\"2\"/><text x=\"116.7\" y=\"150\" font-size=\"12\" text-anchor=\"middle\" fill=\"currentColor\">A（ひがしけいど 135°）</text><line x1=\"203.3\" y1=\"80\" x2=\"203.3\" y2=\"132\" stroke=\"currentColor\" stroke-width=\"2\"/><text x=\"203.3\" y=\"172\" font-size=\"12\" text-anchor=\"middle\" fill=\"currentColor\">B（ひがしけいど 150°）</text><circle cx=\"116.7\" cy=\"50\" r=\"14\" fill=\"#f3c969\" fill-opacity=\"0.7\" stroke=\"currentColor\" stroke-width=\"2\"/><text x=\"136.7\" y=\"54\" font-size=\"13\" text-anchor=\"start\" fill=\"currentColor\">12 時（南中）</text><line x1=\"300\" y1=\"26\" x2=\"210\" y2=\"26\" stroke=\"currentColor\" stroke-width=\"2\"/><polygon points=\"200,26 210,21 210,31\" fill=\"currentColor\" stroke=\"currentColor\" stroke-width=\"1\"/><text x=\"250\" y=\"18\" font-size=\"12\" text-anchor=\"middle\" fill=\"currentColor\">太陽の動き</text></svg>",
+       "answer": 11,
+       "check": "12 - (150 - 135) // 15",
+       "hints": [
+        "太陽は東から西へ動く。B は A の東にあるか、西にあるか。",
+        {
+         "text": "A と B のけいどのちがいは、図のとおりだ。",
+         "svg": "<svg viewBox=\"0 0 320 200\" xmlns=\"http://www.w3.org/2000/svg\"><rect x=\"20\" y=\"88\" width=\"280\" height=\"36\" fill=\"#7fc8f8\" fill-opacity=\"0.3\" stroke=\"currentColor\" stroke-width=\"2\"/><line x1=\"116.7\" y1=\"80\" x2=\"116.7\" y2=\"132\" stroke=\"currentColor\" stroke-width=\"2\"/><text x=\"116.7\" y=\"150\" font-size=\"12\" text-anchor=\"middle\" fill=\"currentColor\">A（ひがしけいど 135°）</text><line x1=\"203.3\" y1=\"80\" x2=\"203.3\" y2=\"132\" stroke=\"currentColor\" stroke-width=\"2\"/><text x=\"203.3\" y=\"172\" font-size=\"12\" text-anchor=\"middle\" fill=\"currentColor\">B（ひがしけいど 150°）</text><line x1=\"116.7\" y1=\"112\" x2=\"203.3\" y2=\"112\" stroke=\"currentColor\" stroke-width=\"1.5\"/><text x=\"160\" y=\"104\" font-size=\"13\" text-anchor=\"middle\" fill=\"currentColor\">15°</text><line x1=\"300\" y1=\"26\" x2=\"210\" y2=\"26\" stroke=\"currentColor\" stroke-width=\"2\"/><polygon points=\"200,26 210,21 210,31\" fill=\"currentColor\" stroke=\"currentColor\" stroke-width=\"1\"/><text x=\"250\" y=\"18\" font-size=\"12\" text-anchor=\"middle\" fill=\"currentColor\">太陽の動き</text></svg>"
+        },
+        "けいど 15° で 1 時間ちがう。太陽が先に来るのは、A と B のどちらか。"
+       ],
+       "qid": "W-073:817dc31b3e"
+      },
+      {
+       "part": "今日",
+       "text": "日本（ひがしけいど 135°）の時計が、午後 3 時（15 時）をさしている。そのとき、グリニッジ（けいど 0°）では、午前何時か。どちらも、その場所の太陽の動きに合わせた時こくとする。",
+       "svg": "<svg viewBox=\"0 0 320 200\" xmlns=\"http://www.w3.org/2000/svg\"><rect x=\"20\" y=\"88\" width=\"280\" height=\"36\" fill=\"#7fc8f8\" fill-opacity=\"0.3\" stroke=\"currentColor\" stroke-width=\"2\"/><line x1=\"60.6\" y1=\"80\" x2=\"60.6\" y2=\"132\" stroke=\"currentColor\" stroke-width=\"2\"/><text x=\"64.6\" y=\"150\" font-size=\"12\" text-anchor=\"start\" fill=\"currentColor\">グリニッジ（けいど 0°）</text><line x1=\"267.1\" y1=\"80\" x2=\"267.1\" y2=\"132\" stroke=\"currentColor\" stroke-width=\"2\"/><text x=\"263.1\" y=\"172\" font-size=\"12\" text-anchor=\"end\" fill=\"currentColor\">日本（ひがしけいど 135°）</text><text x=\"60.6\" y=\"72\" font-size=\"13\" text-anchor=\"middle\" fill=\"currentColor\">午前 ？ 時</text><text x=\"267.1\" y=\"72\" font-size=\"13\" text-anchor=\"middle\" fill=\"currentColor\">午後 3 時</text><line x1=\"300\" y1=\"26\" x2=\"210\" y2=\"26\" stroke=\"currentColor\" stroke-width=\"2\"/><polygon points=\"200,26 210,21 210,31\" fill=\"currentColor\" stroke=\"currentColor\" stroke-width=\"1\"/><text x=\"250\" y=\"18\" font-size=\"12\" text-anchor=\"middle\" fill=\"currentColor\">太陽の動き</text></svg>",
+       "answer": 6,
+       "check": "15 - 135 // 15",
+       "hints": [
+        "グリニッジは、日本の東にあるか、西にあるか。西の場所ほど、時こくは早いか、おそいか。",
+        {
+         "text": "2 つの場所のけいどのちがいを、時間にかえよう。",
+         "svg": "<svg viewBox=\"0 0 320 200\" xmlns=\"http://www.w3.org/2000/svg\"><rect x=\"20\" y=\"88\" width=\"280\" height=\"36\" fill=\"#7fc8f8\" fill-opacity=\"0.3\" stroke=\"currentColor\" stroke-width=\"2\"/><line x1=\"60.6\" y1=\"80\" x2=\"60.6\" y2=\"132\" stroke=\"currentColor\" stroke-width=\"2\"/><text x=\"64.6\" y=\"150\" font-size=\"12\" text-anchor=\"start\" fill=\"currentColor\">グリニッジ（けいど 0°）</text><line x1=\"267.1\" y1=\"80\" x2=\"267.1\" y2=\"132\" stroke=\"currentColor\" stroke-width=\"2\"/><text x=\"263.1\" y=\"172\" font-size=\"12\" text-anchor=\"end\" fill=\"currentColor\">日本（ひがしけいど 135°）</text><line x1=\"60.6\" y1=\"112\" x2=\"267.1\" y2=\"112\" stroke=\"currentColor\" stroke-width=\"1.5\"/><text x=\"163.8\" y=\"104\" font-size=\"13\" text-anchor=\"middle\" fill=\"currentColor\">135° ÷ 15° ＝ ？ 時間</text><line x1=\"300\" y1=\"26\" x2=\"210\" y2=\"26\" stroke=\"currentColor\" stroke-width=\"2\"/><polygon points=\"200,26 210,21 210,31\" fill=\"currentColor\" stroke=\"currentColor\" stroke-width=\"1\"/><text x=\"250\" y=\"18\" font-size=\"12\" text-anchor=\"middle\" fill=\"currentColor\">太陽の動き</text></svg>"
+        },
+        "日本の 15 時から、その時間ぶんだけ ひく。"
+       ],
+       "qid": "W-073:91886db663"
+      },
+      {
+       "part": "今日",
+       "text": "きたいど 35° の場所では、北極星の高度は 35° だ。北極星から 20° はなれた星は、北極星のまわりを円をえがいて回る。図は、この星がいちばん高くなったところだ。この星がいちばん低くなったときの高度は何度か。ただし、地平線の下にはしずまない。",
+       "svg": "<svg viewBox=\"0 0 320 200\" xmlns=\"http://www.w3.org/2000/svg\"><line x1=\"20\" y1=\"160\" x2=\"300\" y2=\"160\" stroke=\"currentColor\" stroke-width=\"2\"/><text x=\"290\" y=\"182\" font-size=\"14\" text-anchor=\"middle\" fill=\"currentColor\">北</text><text x=\"60\" y=\"182\" font-size=\"14\" text-anchor=\"middle\" fill=\"currentColor\">南</text><line x1=\"40\" y1=\"160\" x2=\"179.3\" y2=\"62.5\" stroke=\"currentColor\" stroke-width=\"2\"/><line x1=\"40\" y1=\"160\" x2=\"137.5\" y2=\"20.7\" stroke=\"currentColor\" stroke-width=\"2\"/><circle cx=\"179.3\" cy=\"62.5\" r=\"6\" fill=\"#f3c969\" fill-opacity=\"0.9\" stroke=\"currentColor\" stroke-width=\"1.5\"/><circle cx=\"137.5\" cy=\"20.7\" r=\"6\" fill=\"#f3c969\" fill-opacity=\"0.9\" stroke=\"currentColor\" stroke-width=\"1.5\"/><path d=\"M86 160 A46 46 0 0 0 77.7 133.6\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.5\"/><text x=\"100\" y=\"150\" font-size=\"13\" text-anchor=\"middle\" fill=\"currentColor\">35°</text><path d=\"M99 118.7 A72 72 0 0 0 81.3 101\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.5\"/><text x=\"105.1\" y=\"94.9\" font-size=\"13\" text-anchor=\"middle\" fill=\"currentColor\">20°</text><text x=\"189.3\" y=\"58.5\" font-size=\"13\" text-anchor=\"start\" fill=\"currentColor\">北極星</text><text x=\"147.5\" y=\"24.7\" font-size=\"13\" text-anchor=\"start\" fill=\"currentColor\">星</text></svg>",
+       "answer": 15,
+       "check": "35 - 20",
+       "hints": [
+        "星は、北極星から同じ角だけはなれたまま、まわりを回る。",
+        {
+         "text": "いちばん低くなるのは、北極星の反対がわ（下）に来たときだ。",
+         "svg": "<svg viewBox=\"0 0 320 200\" xmlns=\"http://www.w3.org/2000/svg\"><line x1=\"20\" y1=\"160\" x2=\"300\" y2=\"160\" stroke=\"currentColor\" stroke-width=\"2\"/><text x=\"290\" y=\"182\" font-size=\"14\" text-anchor=\"middle\" fill=\"currentColor\">北</text><text x=\"60\" y=\"182\" font-size=\"14\" text-anchor=\"middle\" fill=\"currentColor\">南</text><line x1=\"40\" y1=\"160\" x2=\"179.3\" y2=\"62.5\" stroke=\"currentColor\" stroke-width=\"2\"/><line x1=\"40\" y1=\"160\" x2=\"137.5\" y2=\"20.7\" stroke=\"currentColor\" stroke-width=\"2\"/><circle cx=\"179.3\" cy=\"62.5\" r=\"6\" fill=\"#f3c969\" fill-opacity=\"0.9\" stroke=\"currentColor\" stroke-width=\"1.5\"/><circle cx=\"137.5\" cy=\"20.7\" r=\"6\" fill=\"#f3c969\" fill-opacity=\"0.9\" stroke=\"currentColor\" stroke-width=\"1.5\"/><path d=\"M86 160 A46 46 0 0 0 77.7 133.6\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.5\"/><text x=\"100\" y=\"150\" font-size=\"13\" text-anchor=\"middle\" fill=\"currentColor\">35°</text><path d=\"M99 118.7 A72 72 0 0 0 81.3 101\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.5\"/><text x=\"105.1\" y=\"94.9\" font-size=\"13\" text-anchor=\"middle\" fill=\"currentColor\">20°</text><text x=\"189.3\" y=\"58.5\" font-size=\"13\" text-anchor=\"start\" fill=\"currentColor\">北極星</text><text x=\"147.5\" y=\"24.7\" font-size=\"13\" text-anchor=\"start\" fill=\"currentColor\">星</text><line x1=\"137.5\" y1=\"20.7\" x2=\"204.2\" y2=\"116\" stroke=\"currentColor\" stroke-width=\"1.5\" stroke-dasharray=\"3 3\"/><circle cx=\"204.2\" cy=\"116\" r=\"6\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.5\" stroke-dasharray=\"2 2\"/></svg>"
+        },
+        "北極星の高度から、北極星とのはなれた角をひけばよい。"
+       ],
+       "qid": "W-073:9bda069f9d"
+      },
+      {
+       "part": "挑戦",
+       "text": "場所 A（きたいど 35°、ひがしけいど 135°）では、太陽が 12 時に南中する。場所 B は、A から真北へ 10°、真東へ 45° 進んだ場所だ。B について、北極星の高度と、太陽が南中する時こくの正しい組を選べ。",
+       "svg": "<svg viewBox=\"0 0 320 200\" xmlns=\"http://www.w3.org/2000/svg\"><line x1=\"8\" y1=\"150\" x2=\"300\" y2=\"150\" stroke=\"currentColor\" stroke-width=\"1.5\"/><line x1=\"8\" y1=\"110\" x2=\"300\" y2=\"110\" stroke=\"currentColor\" stroke-width=\"1.5\"/><line x1=\"120\" y1=\"60\" x2=\"120\" y2=\"175\" stroke=\"currentColor\" stroke-width=\"1.5\"/><line x1=\"277.5\" y1=\"60\" x2=\"277.5\" y2=\"175\" stroke=\"currentColor\" stroke-width=\"1.5\"/><text x=\"8\" y=\"144\" font-size=\"12\" text-anchor=\"start\" fill=\"currentColor\">きたいど 35°</text><text x=\"8\" y=\"104\" font-size=\"12\" text-anchor=\"start\" fill=\"currentColor\">きたいど 45°</text><text x=\"8\" y=\"190\" font-size=\"12\" text-anchor=\"start\" fill=\"currentColor\">ひがし</text><text x=\"120\" y=\"190\" font-size=\"12\" text-anchor=\"middle\" fill=\"currentColor\">135°</text><text x=\"277.5\" y=\"190\" font-size=\"12\" text-anchor=\"middle\" fill=\"currentColor\">180°</text><circle cx=\"120\" cy=\"150\" r=\"4.5\" fill=\"#f08080\" fill-opacity=\"0.9\" stroke=\"currentColor\" stroke-width=\"1.5\"/><text x=\"128\" y=\"166\" font-size=\"15\" text-anchor=\"start\" fill=\"currentColor\">A</text><line x1=\"120\" y1=\"144\" x2=\"120\" y2=\"124\" stroke=\"currentColor\" stroke-width=\"2\"/><polygon points=\"120,114 125,124 115,124\" fill=\"currentColor\" stroke=\"currentColor\" stroke-width=\"1\"/><text x=\"112\" y=\"130\" font-size=\"12\" text-anchor=\"end\" fill=\"currentColor\">北へ 10°</text><line x1=\"120\" y1=\"110\" x2=\"259.5\" y2=\"110\" stroke=\"currentColor\" stroke-width=\"2\"/><polygon points=\"269.5,110 259.5,115 259.5,105\" fill=\"currentColor\" stroke=\"currentColor\" stroke-width=\"1\"/><text x=\"194.8\" y=\"102\" font-size=\"12\" text-anchor=\"middle\" fill=\"currentColor\">東へ 45°</text><circle cx=\"277.5\" cy=\"110\" r=\"4.5\" fill=\"#f08080\" fill-opacity=\"0.9\" stroke=\"currentColor\" stroke-width=\"1.5\"/><text x=\"285.5\" y=\"126\" font-size=\"15\" text-anchor=\"start\" fill=\"currentColor\">B</text></svg>",
+       "choices": [
+        "北極星の高度 45°、南中は 9 時",
+        "北極星の高度 45°、南中は 15 時",
+        "北極星の高度 25°、南中は 9 時",
+        "北極星の高度 25°、南中は 15 時"
+       ],
+       "answer": "北極星の高度 45°、南中は 9 時",
+       "check": "'北極星の高度 45°、南中は 9 時'",
+       "hints": [
+        "北極星の高度と、南中の時こくは、べつべつに考えよう。北へ進むと、北極星の高度は どうなるか。",
+        {
+         "text": "東へ進んだ角を、時間にかえよう。東の場所の南中は、早いか おそいか。",
+         "svg": "<svg viewBox=\"0 0 320 200\" xmlns=\"http://www.w3.org/2000/svg\"><rect x=\"20\" y=\"88\" width=\"280\" height=\"36\" fill=\"#7fc8f8\" fill-opacity=\"0.3\" stroke=\"currentColor\" stroke-width=\"2\"/><line x1=\"82\" y1=\"80\" x2=\"82\" y2=\"132\" stroke=\"currentColor\" stroke-width=\"2\"/><text x=\"82\" y=\"150\" font-size=\"12\" text-anchor=\"middle\" fill=\"currentColor\">A</text><line x1=\"238\" y1=\"80\" x2=\"238\" y2=\"132\" stroke=\"currentColor\" stroke-width=\"2\"/><text x=\"238\" y=\"172\" font-size=\"12\" text-anchor=\"middle\" fill=\"currentColor\">B（A の 45° 東）</text><line x1=\"82\" y1=\"112\" x2=\"238\" y2=\"112\" stroke=\"currentColor\" stroke-width=\"1.5\"/><text x=\"160\" y=\"104\" font-size=\"13\" text-anchor=\"middle\" fill=\"currentColor\">45°</text><line x1=\"300\" y1=\"26\" x2=\"210\" y2=\"26\" stroke=\"currentColor\" stroke-width=\"2\"/><polygon points=\"200,26 210,21 210,31\" fill=\"currentColor\" stroke=\"currentColor\" stroke-width=\"1\"/><text x=\"250\" y=\"18\" font-size=\"12\" text-anchor=\"middle\" fill=\"currentColor\">太陽の動き</text></svg>"
+        },
+        "高度の組は 2 つ、時こくの組も 2 つにしぼれる。両方に合う組を選ぼう。"
+       ],
+       "paths": [
+        [
+         "きたいどは 35° + 10° = 45°。北極星の高度は きたいどと同じなので 45°",
+         "けいどは 45° 東。45° ÷ 15° = 3 時間。東は南中が早いので、12 時の 3 時間前の 9 時",
+         "北極星の高度 45°、南中は 9 時を選ぶ"
+        ],
+        [
+         "北へ進むと北極星は高く見えるので、35° より高い。45° と 25° のうち 45°",
+         "東へ進むと、太陽が先に来るので、南中は 12 時より前。9 時と 15 時のうち 9 時",
+         "北極星の高度 45°、南中は 9 時を選ぶ"
+        ]
+       ],
+       "qid": "W-073:48e79bb849"
+      },
+      {
+       "part": "思い出す",
+       "text": "1 日目に学んだこと。北の空をとり続けたら、星の光の線が、北極星を中心に 120° のこった。さつえいした時間は何時間か。",
+       "svg": "<svg viewBox=\"0 0 320 200\" xmlns=\"http://www.w3.org/2000/svg\"><text x=\"8\" y=\"16\" font-size=\"12\" text-anchor=\"start\" fill=\"currentColor\">北の空（北を向いて見る）</text><text x=\"18\" y=\"109\" font-size=\"14\" text-anchor=\"middle\" fill=\"currentColor\">西</text><text x=\"302\" y=\"109\" font-size=\"14\" text-anchor=\"middle\" fill=\"currentColor\">東</text><circle cx=\"160\" cy=\"104\" r=\"4\" fill=\"#f3c969\" fill-opacity=\"0.9\" stroke=\"currentColor\" stroke-width=\"1.5\"/><text x=\"160\" y=\"124\" font-size=\"12\" text-anchor=\"middle\" fill=\"currentColor\">北極星</text><circle cx=\"160\" cy=\"104\" r=\"66\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.5\" stroke-dasharray=\"5 4\"/><path d=\"M160 38 A66 66 0 0 0 102.8 137\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"3\"/><circle cx=\"160\" cy=\"38\" r=\"6\" fill=\"#f3c969\" fill-opacity=\"0.9\" stroke=\"currentColor\" stroke-width=\"1.5\"/><circle cx=\"102.8\" cy=\"137\" r=\"6\" fill=\"#f3c969\" fill-opacity=\"0.9\" stroke=\"currentColor\" stroke-width=\"1.5\"/></svg>",
+       "answer": 8,
+       "check": "120 // 15",
+       "hints": [
+        "星は 1 時間に 何度 動くか。",
+        "光の線の角を、1 時間分の角でわる。",
+        "15° が何こ分かを数えよう。"
+       ],
+       "qid": "W-073:24d9eb7b13"
+      },
+      {
+       "part": "思い出す",
+       "text": "1 日目に学んだこと。南を向いて立つと、午前の太陽は、東の空にある。この太陽は、午前から午後にかけて、どちらへ動いて見えるか。",
+       "svg": "<svg viewBox=\"0 0 320 200\" xmlns=\"http://www.w3.org/2000/svg\"><path d=\"M30 165 A130 130 0 0 1 290 165 Z\" fill=\"#7fc8f8\" fill-opacity=\"0.18\" stroke=\"currentColor\" stroke-width=\"2\"/><line x1=\"20\" y1=\"165\" x2=\"300\" y2=\"165\" stroke=\"currentColor\" stroke-width=\"2\"/><text x=\"30\" y=\"187\" font-size=\"14\" text-anchor=\"middle\" fill=\"currentColor\">東</text><text x=\"160\" y=\"187\" font-size=\"14\" text-anchor=\"middle\" fill=\"currentColor\">南</text><text x=\"290\" y=\"187\" font-size=\"14\" text-anchor=\"middle\" fill=\"currentColor\">西</text><circle cx=\"53.5\" cy=\"90.4\" r=\"10\" fill=\"#f3c969\" fill-opacity=\"0.85\" stroke=\"currentColor\" stroke-width=\"2\"/><text x=\"70.5\" y=\"98.4\" font-size=\"13\" text-anchor=\"start\" fill=\"currentColor\">午前</text></svg>",
+       "choices": [
+        "上から下へ",
+        "右から左へ",
+        "左から右へ",
+        "下から上へ"
+       ],
+       "answer": "左から右へ",
+       "check": "'左から右へ'",
+       "hints": [
+        "太陽は、東から西へ動く。",
+        "南を向いたとき、東は左と右のどちらがわか。",
+        "図の「東」と「西」の文字を見て、動く向きを考えよう。"
+       ],
+       "qid": "W-073:c901124672"
+      }
+     ],
+     "extra": [
+      {
+       "part": "今日",
+       "text": "ひがしけいど 135° の場所 A で、太陽の動きに合わせた時こくが午前 10 時のとき、ひがしけいど 90° の場所 B では、午前何時か。",
+       "svg": "<svg viewBox=\"0 0 320 200\" xmlns=\"http://www.w3.org/2000/svg\"><rect x=\"20\" y=\"88\" width=\"280\" height=\"36\" fill=\"#7fc8f8\" fill-opacity=\"0.3\" stroke=\"currentColor\" stroke-width=\"2\"/><line x1=\"82\" y1=\"80\" x2=\"82\" y2=\"132\" stroke=\"currentColor\" stroke-width=\"2\"/><text x=\"86\" y=\"150\" font-size=\"12\" text-anchor=\"start\" fill=\"currentColor\">B（ひがしけいど 90°）</text><line x1=\"238\" y1=\"80\" x2=\"238\" y2=\"132\" stroke=\"currentColor\" stroke-width=\"2\"/><text x=\"234\" y=\"172\" font-size=\"12\" text-anchor=\"end\" fill=\"currentColor\">A（ひがしけいど 135°）</text><text x=\"82\" y=\"72\" font-size=\"13\" text-anchor=\"middle\" fill=\"currentColor\">午前 ？ 時</text><text x=\"238\" y=\"72\" font-size=\"13\" text-anchor=\"middle\" fill=\"currentColor\">午前 10 時</text><line x1=\"300\" y1=\"26\" x2=\"210\" y2=\"26\" stroke=\"currentColor\" stroke-width=\"2\"/><polygon points=\"200,26 210,21 210,31\" fill=\"currentColor\" stroke=\"currentColor\" stroke-width=\"1\"/><text x=\"250\" y=\"18\" font-size=\"12\" text-anchor=\"middle\" fill=\"currentColor\">太陽の動き</text></svg>",
+       "answer": 7,
+       "check": "10 - (135 - 90) // 15",
+       "hints": [
+        "B は A の東にあるか、西にあるか。",
+        "2 つの場所のけいどのちがいを、時間にかえよう。",
+        "西の場所ほど 太陽が来るのがおそいので、時こくは早い。"
+       ],
+       "qid": "W-073:c951c8384b"
+      },
+      {
+       "part": "今日",
+       "text": "きたいど 35° の場所 A から、真南へ地球の上を 15° 進んだ。そこでの北極星の高度は何度か。",
+       "svg": "<svg viewBox=\"0 0 320 200\" xmlns=\"http://www.w3.org/2000/svg\"><circle cx=\"110\" cy=\"112\" r=\"62\" fill=\"#7fc8f8\" fill-opacity=\"0.5\" stroke=\"currentColor\" stroke-width=\"2\"/><line x1=\"110\" y1=\"40\" x2=\"110\" y2=\"184\" stroke=\"currentColor\" stroke-width=\"2\"/><line x1=\"38\" y1=\"112\" x2=\"182\" y2=\"112\" stroke=\"currentColor\" stroke-width=\"1.5\" stroke-dasharray=\"5 4\"/><circle cx=\"160.8\" cy=\"76.4\" r=\"4.5\" fill=\"#f08080\" fill-opacity=\"0.9\" stroke=\"currentColor\" stroke-width=\"1.5\"/><text x=\"179.9\" y=\"71.3\" font-size=\"14\" text-anchor=\"middle\" fill=\"currentColor\">A</text><line x1=\"170.4\" y1=\"72.8\" x2=\"172.7\" y2=\"77.3\" stroke=\"currentColor\" stroke-width=\"2\"/><polygon points=\"177.2,86.2 168.2,79.6 177.1,75\" fill=\"currentColor\" stroke=\"currentColor\" stroke-width=\"1\"/><text x=\"186.6\" y=\"73\" font-size=\"13\" text-anchor=\"start\" fill=\"currentColor\">南へ 15°</text></svg>",
+       "answer": 20,
+       "check": "35 - 15",
+       "hints": [
+        "北極星の高度は、その場所の きたいど と同じだ。",
+        "南へ進むと、きたいどは ふえるか、へるか。",
+        "35° から 15° ぶん動かした きたいどを出す。"
+       ],
+       "qid": "W-073:bc94aff55f"
+      }
+     ],
      "key": "練習#1"
     },
     {
      "kind": "練習",
      "aim": "",
+     "items": [
+      {
+       "part": "見本",
+       "text": "地球は、地じくを 23.4° かたむけ、その向きをかえずに、1 年かけて太陽のまわりを回る（公転）。図は北極の上から見たようすで、矢印は地じくがかたむく向きだ。矢印が太陽に向くげし（昼がいちばん長い日）のころは、北半球に太陽が高くのぼり、反対を向くとうじ（昼がいちばん短い日）のころは、太陽が低くなる。また、公転で 1 年に 360° 回るので、同じ時こくに見える星ざは、1 日に約 1° ずつ西へずれる（年周運動）。",
+       "svg": "<svg viewBox=\"0 0 320 200\" xmlns=\"http://www.w3.org/2000/svg\"><circle cx=\"160\" cy=\"100\" r=\"60\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.5\" stroke-dasharray=\"5 4\"/><circle cx=\"160\" cy=\"100\" r=\"18\" fill=\"#f3c969\" fill-opacity=\"0.7\" stroke=\"currentColor\" stroke-width=\"2\"/><text x=\"160\" y=\"104\" font-size=\"12\" text-anchor=\"middle\" fill=\"currentColor\">太陽</text><circle cx=\"100\" cy=\"100\" r=\"14\" fill=\"#7fc8f8\" fill-opacity=\"0.6\" stroke=\"currentColor\" stroke-width=\"2\"/><line x1=\"100\" y1=\"100\" x2=\"122\" y2=\"100\" stroke=\"currentColor\" stroke-width=\"2\"/><polygon points=\"132,100 122,105 122,95\" fill=\"currentColor\" stroke=\"currentColor\" stroke-width=\"1\"/><circle cx=\"160\" cy=\"160\" r=\"14\" fill=\"#7fc8f8\" fill-opacity=\"0.6\" stroke=\"currentColor\" stroke-width=\"2\"/><line x1=\"160\" y1=\"160\" x2=\"182\" y2=\"160\" stroke=\"currentColor\" stroke-width=\"2\"/><polygon points=\"192,160 182,165 182,155\" fill=\"currentColor\" stroke=\"currentColor\" stroke-width=\"1\"/><circle cx=\"220\" cy=\"100\" r=\"14\" fill=\"#7fc8f8\" fill-opacity=\"0.6\" stroke=\"currentColor\" stroke-width=\"2\"/><line x1=\"220\" y1=\"100\" x2=\"242\" y2=\"100\" stroke=\"currentColor\" stroke-width=\"2\"/><polygon points=\"252,100 242,105 242,95\" fill=\"currentColor\" stroke=\"currentColor\" stroke-width=\"1\"/><circle cx=\"160\" cy=\"40\" r=\"14\" fill=\"#7fc8f8\" fill-opacity=\"0.6\" stroke=\"currentColor\" stroke-width=\"2\"/><line x1=\"160\" y1=\"40\" x2=\"182\" y2=\"40\" stroke=\"currentColor\" stroke-width=\"2\"/><polygon points=\"192,40 182,45 182,35\" fill=\"currentColor\" stroke=\"currentColor\" stroke-width=\"1\"/><line x1=\"117.6\" y1=\"142.4\" x2=\"126.7\" y2=\"149.1\" stroke=\"currentColor\" stroke-width=\"1.5\"/><polygon points=\"134,154.4 124.1,152.7 129.4,145.5\" fill=\"currentColor\" stroke=\"currentColor\" stroke-width=\"1\"/><text x=\"96\" y=\"78\" font-size=\"14\" text-anchor=\"end\" fill=\"currentColor\">げし</text><text x=\"160\" y=\"194\" font-size=\"14\" text-anchor=\"middle\" fill=\"currentColor\">秋分</text><text x=\"224\" y=\"78\" font-size=\"14\" text-anchor=\"start\" fill=\"currentColor\">とうじ</text><text x=\"160\" y=\"16\" font-size=\"14\" text-anchor=\"middle\" fill=\"currentColor\">春分</text><line x1=\"8\" y1=\"14\" x2=\"30\" y2=\"14\" stroke=\"currentColor\" stroke-width=\"2\"/><polygon points=\"40,14 30,19 30,9\" fill=\"currentColor\" stroke=\"currentColor\" stroke-width=\"1\"/><text x=\"46\" y=\"18\" font-size=\"12\" text-anchor=\"start\" fill=\"currentColor\">＝ 地じくの</text><text x=\"46\" y=\"33\" font-size=\"12\" text-anchor=\"start\" fill=\"currentColor\">かたむく向き</text></svg>",
+       "explain": "図は北極の上から見たもので、矢印は地じくがかたむく向き（北極がかたむいていく向き）を表す。地じくは公転面に対して 23.4° かたむいたまま、向きを変えずに公転するので、矢印はどの位置でも同じ向き（図では右）を向く。矢印が太陽のほうを向く位置では、夏は北半球が太陽のほうにかたむく。すると太陽の南中高度が高くなり、同じ面積に当たる光が多くなる上に、昼も長いので、気温が上がる。冬はその反対。春分と秋分には、地じくのかたむきが太陽の向きとちょうど直角になり、昼と夜がほぼ同じ長さになる。公転は 1 年（約 365 日）で 360° なので 1 日に約 1°。地球から見ると、太陽が星ざの間を 1 日に約 1° 東へ進むので、同じ時こくに見える星ざは西へ約 1° ずれる。星が 1° 動くのに 4 分かかる（15° で 1 時間）ので、同じ星は毎日約 4 分早くのぼる。",
+       "qid": "W-073:887aca5968"
+      },
+      {
+       "part": "今日",
+       "text": "図は、北極の上から見た、地球が太陽のまわりを回るようすで、4 つの位置を ア〜エ で表したものだ。矢印は、地じくがかたむく向きだ。日本で昼がいちばん短い、とうじのころの地球は、どれか。",
+       "svg": "<svg viewBox=\"0 0 320 200\" xmlns=\"http://www.w3.org/2000/svg\"><circle cx=\"160\" cy=\"100\" r=\"60\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.5\" stroke-dasharray=\"5 4\"/><circle cx=\"160\" cy=\"100\" r=\"18\" fill=\"#f3c969\" fill-opacity=\"0.7\" stroke=\"currentColor\" stroke-width=\"2\"/><text x=\"160\" y=\"104\" font-size=\"12\" text-anchor=\"middle\" fill=\"currentColor\">太陽</text><circle cx=\"100\" cy=\"100\" r=\"14\" fill=\"#7fc8f8\" fill-opacity=\"0.6\" stroke=\"currentColor\" stroke-width=\"2\"/><line x1=\"100\" y1=\"100\" x2=\"122\" y2=\"100\" stroke=\"currentColor\" stroke-width=\"2\"/><polygon points=\"132,100 122,105 122,95\" fill=\"currentColor\" stroke=\"currentColor\" stroke-width=\"1\"/><circle cx=\"160\" cy=\"160\" r=\"14\" fill=\"#7fc8f8\" fill-opacity=\"0.6\" stroke=\"currentColor\" stroke-width=\"2\"/><line x1=\"160\" y1=\"160\" x2=\"182\" y2=\"160\" stroke=\"currentColor\" stroke-width=\"2\"/><polygon points=\"192,160 182,165 182,155\" fill=\"currentColor\" stroke=\"currentColor\" stroke-width=\"1\"/><circle cx=\"220\" cy=\"100\" r=\"14\" fill=\"#7fc8f8\" fill-opacity=\"0.6\" stroke=\"currentColor\" stroke-width=\"2\"/><line x1=\"220\" y1=\"100\" x2=\"242\" y2=\"100\" stroke=\"currentColor\" stroke-width=\"2\"/><polygon points=\"252,100 242,105 242,95\" fill=\"currentColor\" stroke=\"currentColor\" stroke-width=\"1\"/><circle cx=\"160\" cy=\"40\" r=\"14\" fill=\"#7fc8f8\" fill-opacity=\"0.6\" stroke=\"currentColor\" stroke-width=\"2\"/><line x1=\"160\" y1=\"40\" x2=\"182\" y2=\"40\" stroke=\"currentColor\" stroke-width=\"2\"/><polygon points=\"192,40 182,45 182,35\" fill=\"currentColor\" stroke=\"currentColor\" stroke-width=\"1\"/><line x1=\"117.6\" y1=\"142.4\" x2=\"126.7\" y2=\"149.1\" stroke=\"currentColor\" stroke-width=\"1.5\"/><polygon points=\"134,154.4 124.1,152.7 129.4,145.5\" fill=\"currentColor\" stroke=\"currentColor\" stroke-width=\"1\"/><text x=\"96\" y=\"78\" font-size=\"14\" text-anchor=\"end\" fill=\"currentColor\">エ</text><text x=\"160\" y=\"194\" font-size=\"14\" text-anchor=\"middle\" fill=\"currentColor\">ア</text><text x=\"224\" y=\"78\" font-size=\"14\" text-anchor=\"start\" fill=\"currentColor\">イ</text><text x=\"160\" y=\"16\" font-size=\"14\" text-anchor=\"middle\" fill=\"currentColor\">ウ</text><line x1=\"8\" y1=\"14\" x2=\"30\" y2=\"14\" stroke=\"currentColor\" stroke-width=\"2\"/><polygon points=\"40,14 30,19 30,9\" fill=\"currentColor\" stroke=\"currentColor\" stroke-width=\"1\"/><text x=\"46\" y=\"18\" font-size=\"12\" text-anchor=\"start\" fill=\"currentColor\">＝ 地じくの</text><text x=\"46\" y=\"33\" font-size=\"12\" text-anchor=\"start\" fill=\"currentColor\">かたむく向き</text></svg>",
+       "choices": [
+        "ア",
+        "イ",
+        "ウ",
+        "エ"
+       ],
+       "answer": "イ",
+       "check": "'イ'",
+       "hints": [
+        "とうじのころは、北半球が太陽からはなれるほうにかたむく。",
+        {
+         "text": "点線は、それぞれの地球から太陽へ向かう線だ。矢印（地じくのかたむく向き）が、太陽に向くか、反対か、横かを見よう。",
+         "svg": "<svg viewBox=\"0 0 320 200\" xmlns=\"http://www.w3.org/2000/svg\"><line x1=\"100\" y1=\"100\" x2=\"140\" y2=\"100\" stroke=\"currentColor\" stroke-width=\"1.2\" stroke-dasharray=\"3 3\"/><line x1=\"160\" y1=\"160\" x2=\"160\" y2=\"120\" stroke=\"currentColor\" stroke-width=\"1.2\" stroke-dasharray=\"3 3\"/><line x1=\"220\" y1=\"100\" x2=\"180\" y2=\"100\" stroke=\"currentColor\" stroke-width=\"1.2\" stroke-dasharray=\"3 3\"/><line x1=\"160\" y1=\"40\" x2=\"160\" y2=\"80\" stroke=\"currentColor\" stroke-width=\"1.2\" stroke-dasharray=\"3 3\"/><circle cx=\"160\" cy=\"100\" r=\"60\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.5\" stroke-dasharray=\"5 4\"/><circle cx=\"160\" cy=\"100\" r=\"18\" fill=\"#f3c969\" fill-opacity=\"0.7\" stroke=\"currentColor\" stroke-width=\"2\"/><text x=\"160\" y=\"104\" font-size=\"12\" text-anchor=\"middle\" fill=\"currentColor\">太陽</text><circle cx=\"100\" cy=\"100\" r=\"14\" fill=\"#7fc8f8\" fill-opacity=\"0.6\" stroke=\"currentColor\" stroke-width=\"2\"/><line x1=\"100\" y1=\"100\" x2=\"122\" y2=\"100\" stroke=\"currentColor\" stroke-width=\"2\"/><polygon points=\"132,100 122,105 122,95\" fill=\"currentColor\" stroke=\"currentColor\" stroke-width=\"1\"/><circle cx=\"160\" cy=\"160\" r=\"14\" fill=\"#7fc8f8\" fill-opacity=\"0.6\" stroke=\"currentColor\" stroke-width=\"2\"/><line x1=\"160\" y1=\"160\" x2=\"182\" y2=\"160\" stroke=\"currentColor\" stroke-width=\"2\"/><polygon points=\"192,160 182,165 182,155\" fill=\"currentColor\" stroke=\"currentColor\" stroke-width=\"1\"/><circle cx=\"220\" cy=\"100\" r=\"14\" fill=\"#7fc8f8\" fill-opacity=\"0.6\" stroke=\"currentColor\" stroke-width=\"2\"/><line x1=\"220\" y1=\"100\" x2=\"242\" y2=\"100\" stroke=\"currentColor\" stroke-width=\"2\"/><polygon points=\"252,100 242,105 242,95\" fill=\"currentColor\" stroke=\"currentColor\" stroke-width=\"1\"/><circle cx=\"160\" cy=\"40\" r=\"14\" fill=\"#7fc8f8\" fill-opacity=\"0.6\" stroke=\"currentColor\" stroke-width=\"2\"/><line x1=\"160\" y1=\"40\" x2=\"182\" y2=\"40\" stroke=\"currentColor\" stroke-width=\"2\"/><polygon points=\"192,40 182,45 182,35\" fill=\"currentColor\" stroke=\"currentColor\" stroke-width=\"1\"/><line x1=\"117.6\" y1=\"142.4\" x2=\"126.7\" y2=\"149.1\" stroke=\"currentColor\" stroke-width=\"1.5\"/><polygon points=\"134,154.4 124.1,152.7 129.4,145.5\" fill=\"currentColor\" stroke=\"currentColor\" stroke-width=\"1\"/><text x=\"96\" y=\"78\" font-size=\"14\" text-anchor=\"end\" fill=\"currentColor\">エ</text><text x=\"160\" y=\"194\" font-size=\"14\" text-anchor=\"middle\" fill=\"currentColor\">ア</text><text x=\"224\" y=\"78\" font-size=\"14\" text-anchor=\"start\" fill=\"currentColor\">イ</text><text x=\"160\" y=\"16\" font-size=\"14\" text-anchor=\"middle\" fill=\"currentColor\">ウ</text><line x1=\"8\" y1=\"14\" x2=\"30\" y2=\"14\" stroke=\"currentColor\" stroke-width=\"2\"/><polygon points=\"40,14 30,19 30,9\" fill=\"currentColor\" stroke=\"currentColor\" stroke-width=\"1\"/><text x=\"46\" y=\"18\" font-size=\"12\" text-anchor=\"start\" fill=\"currentColor\">＝ 地じくの</text><text x=\"46\" y=\"33\" font-size=\"12\" text-anchor=\"start\" fill=\"currentColor\">かたむく向き</text></svg>"
+        },
+        "矢印が、太陽と反対の向きを向いている地球をさがそう。"
+       ],
+       "qid": "W-073:df6515180a"
+      },
+      {
+       "part": "今日",
+       "text": "きたいど 35° の場所で、春分の日に太陽が南中したときの高度（南中高度）は何度か。春分の日は、赤道で太陽が真上に来る。",
+       "svg": "<svg viewBox=\"0 0 320 200\" xmlns=\"http://www.w3.org/2000/svg\"><circle cx=\"110\" cy=\"112\" r=\"62\" fill=\"#7fc8f8\" fill-opacity=\"0.5\" stroke=\"currentColor\" stroke-width=\"2\"/><line x1=\"110\" y1=\"40\" x2=\"110\" y2=\"184\" stroke=\"currentColor\" stroke-width=\"2\"/><line x1=\"38\" y1=\"112\" x2=\"182\" y2=\"112\" stroke=\"currentColor\" stroke-width=\"1.5\" stroke-dasharray=\"5 4\"/><circle cx=\"160.8\" cy=\"76.4\" r=\"4.5\" fill=\"#f08080\" fill-opacity=\"0.9\" stroke=\"currentColor\" stroke-width=\"1.5\"/><line x1=\"140.1\" y1=\"46.9\" x2=\"181.4\" y2=\"105.9\" stroke=\"currentColor\" stroke-width=\"2\"/><text x=\"127\" y=\"33.8\" font-size=\"13\" text-anchor=\"middle\" fill=\"currentColor\">北</text><text x=\"198.6\" y=\"127\" font-size=\"13\" text-anchor=\"middle\" fill=\"currentColor\">南</text><line x1=\"300\" y1=\"112\" x2=\"185\" y2=\"112\" stroke=\"currentColor\" stroke-width=\"2\"/><polygon points=\"175,112 185,107 185,117\" fill=\"currentColor\" stroke=\"currentColor\" stroke-width=\"1\"/><line x1=\"290.8\" y1=\"76.4\" x2=\"178.8\" y2=\"76.4\" stroke=\"currentColor\" stroke-width=\"2\"/><polygon points=\"168.8,76.4 178.8,71.4 178.8,81.4\" fill=\"currentColor\" stroke=\"currentColor\" stroke-width=\"1\"/><path d=\"M180.3 104.3 A34 34 0 0 0 194.8 76.4\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.5\"/><text x=\"208.7\" y=\"101.4\" font-size=\"13\" text-anchor=\"start\" fill=\"currentColor\">？°</text><text x=\"262\" y=\"66\" font-size=\"13\" text-anchor=\"middle\" fill=\"currentColor\">太陽の光</text><text x=\"262\" y=\"130\" font-size=\"12\" text-anchor=\"middle\" fill=\"currentColor\">赤道ぞい</text></svg>",
+       "answer": 55,
+       "check": "90 - 35",
+       "hints": [
+        "太陽は遠いので、光は平行に来る。赤道で真上に来る光は、この場所にも同じ向きで来る。",
+        {
+         "text": "地平線に立てた真上の線と、太陽の光がつくる角を見よう。",
+         "svg": "<svg viewBox=\"0 0 320 200\" xmlns=\"http://www.w3.org/2000/svg\"><circle cx=\"110\" cy=\"112\" r=\"62\" fill=\"#7fc8f8\" fill-opacity=\"0.5\" stroke=\"currentColor\" stroke-width=\"2\"/><line x1=\"110\" y1=\"40\" x2=\"110\" y2=\"184\" stroke=\"currentColor\" stroke-width=\"2\"/><line x1=\"38\" y1=\"112\" x2=\"182\" y2=\"112\" stroke=\"currentColor\" stroke-width=\"1.5\" stroke-dasharray=\"5 4\"/><circle cx=\"160.8\" cy=\"76.4\" r=\"4.5\" fill=\"#f08080\" fill-opacity=\"0.9\" stroke=\"currentColor\" stroke-width=\"1.5\"/><line x1=\"140.1\" y1=\"46.9\" x2=\"181.4\" y2=\"105.9\" stroke=\"currentColor\" stroke-width=\"2\"/><text x=\"127\" y=\"33.8\" font-size=\"13\" text-anchor=\"middle\" fill=\"currentColor\">北</text><text x=\"198.6\" y=\"127\" font-size=\"13\" text-anchor=\"middle\" fill=\"currentColor\">南</text><line x1=\"300\" y1=\"112\" x2=\"185\" y2=\"112\" stroke=\"currentColor\" stroke-width=\"2\"/><polygon points=\"175,112 185,107 185,117\" fill=\"currentColor\" stroke=\"currentColor\" stroke-width=\"1\"/><line x1=\"290.8\" y1=\"76.4\" x2=\"178.8\" y2=\"76.4\" stroke=\"currentColor\" stroke-width=\"2\"/><polygon points=\"168.8,76.4 178.8,71.4 178.8,81.4\" fill=\"currentColor\" stroke=\"currentColor\" stroke-width=\"1\"/><line x1=\"160.8\" y1=\"76.4\" x2=\"198.5\" y2=\"50.1\" stroke=\"currentColor\" stroke-width=\"1.5\" stroke-dasharray=\"3 3\"/><path d=\"M190.8 76.4 A30 30 0 0 0 185.4 59.2\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.5\"/><text x=\"199.9\" y=\"68.1\" font-size=\"13\" text-anchor=\"start\" fill=\"currentColor\">35°</text><text x=\"262\" y=\"66\" font-size=\"13\" text-anchor=\"middle\" fill=\"currentColor\">太陽の光</text></svg>"
+        },
+        "地平線と真上の線は直角（90°）だ。そこから、光と真上の線の角をひけば、高度が出る。"
+       ],
+       "qid": "W-073:bcff7e3310"
+      },
+      {
+       "part": "今日",
+       "text": "きたいど 35° の場所で、げしの日の南中高度は何度か。げしの日は、太陽の光が、赤道をふくむ面から 23.4° 上の向きから来る。",
+       "svg": "<svg viewBox=\"0 0 320 200\" xmlns=\"http://www.w3.org/2000/svg\"><circle cx=\"110\" cy=\"112\" r=\"62\" fill=\"#7fc8f8\" fill-opacity=\"0.5\" stroke=\"currentColor\" stroke-width=\"2\"/><line x1=\"110\" y1=\"40\" x2=\"110\" y2=\"184\" stroke=\"currentColor\" stroke-width=\"2\"/><line x1=\"38\" y1=\"112\" x2=\"182\" y2=\"112\" stroke=\"currentColor\" stroke-width=\"1.5\" stroke-dasharray=\"5 4\"/><circle cx=\"160.8\" cy=\"76.4\" r=\"4.5\" fill=\"#f08080\" fill-opacity=\"0.9\" stroke=\"currentColor\" stroke-width=\"1.5\"/><line x1=\"140.1\" y1=\"46.9\" x2=\"181.4\" y2=\"105.9\" stroke=\"currentColor\" stroke-width=\"2\"/><text x=\"127\" y=\"33.8\" font-size=\"13\" text-anchor=\"middle\" fill=\"currentColor\">北</text><text x=\"198.6\" y=\"127\" font-size=\"13\" text-anchor=\"middle\" fill=\"currentColor\">南</text><line x1=\"280.1\" y1=\"24.8\" x2=\"177.3\" y2=\"69.3\" stroke=\"currentColor\" stroke-width=\"2\"/><polygon points=\"168.1,73.3 175.3,64.7 179.3,73.9\" fill=\"currentColor\" stroke=\"currentColor\" stroke-width=\"1\"/><path d=\"M180.3 104.3 A34 34 0 0 0 192 62.9\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.5\"/><text x=\"216.6\" y=\"92.2\" font-size=\"13\" text-anchor=\"start\" fill=\"currentColor\">？°</text><line x1=\"160.8\" y1=\"76.4\" x2=\"270.8\" y2=\"76.4\" stroke=\"currentColor\" stroke-width=\"1.5\" stroke-dasharray=\"3 3\"/><path d=\"M240.8 76.4 A80 80 0 0 0 234.2 44.7\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.5\"/><text x=\"248.8\" y=\"64.4\" font-size=\"12\" text-anchor=\"start\" fill=\"currentColor\">23.4°</text><text x=\"250\" y=\"20\" font-size=\"13\" text-anchor=\"middle\" fill=\"currentColor\">太陽の光</text></svg>",
+       "answer": "78.4",
+       "check": "90 - 35 + 23.4",
+       "hints": [
+        "春分の日は、赤道で太陽が真上に来た。げしの日は、太陽が真上に来る場所が北へずれる。",
+        {
+         "text": "げしの日に太陽が真上に来るのは、赤道から 23.4° 北の場所だ。",
+         "svg": "<svg viewBox=\"0 0 320 200\" xmlns=\"http://www.w3.org/2000/svg\"><circle cx=\"110\" cy=\"112\" r=\"62\" fill=\"#7fc8f8\" fill-opacity=\"0.5\" stroke=\"currentColor\" stroke-width=\"2\"/><line x1=\"110\" y1=\"40\" x2=\"110\" y2=\"184\" stroke=\"currentColor\" stroke-width=\"2\"/><line x1=\"38\" y1=\"112\" x2=\"182\" y2=\"112\" stroke=\"currentColor\" stroke-width=\"1.5\" stroke-dasharray=\"5 4\"/><circle cx=\"160.8\" cy=\"76.4\" r=\"4.5\" fill=\"#f08080\" fill-opacity=\"0.9\" stroke=\"currentColor\" stroke-width=\"1.5\"/><line x1=\"140.1\" y1=\"46.9\" x2=\"181.4\" y2=\"105.9\" stroke=\"currentColor\" stroke-width=\"2\"/><text x=\"127\" y=\"33.8\" font-size=\"13\" text-anchor=\"middle\" fill=\"currentColor\">北</text><text x=\"198.6\" y=\"127\" font-size=\"13\" text-anchor=\"middle\" fill=\"currentColor\">南</text><line x1=\"280.1\" y1=\"24.8\" x2=\"177.3\" y2=\"69.3\" stroke=\"currentColor\" stroke-width=\"2\"/><polygon points=\"168.1,73.3 175.3,64.7 179.3,73.9\" fill=\"currentColor\" stroke=\"currentColor\" stroke-width=\"1\"/><circle cx=\"166.9\" cy=\"87.4\" r=\"4.5\" fill=\"#f08080\" fill-opacity=\"0.9\" stroke=\"currentColor\" stroke-width=\"1.5\"/><line x1=\"258.7\" y1=\"47.7\" x2=\"183.4\" y2=\"80.2\" stroke=\"currentColor\" stroke-width=\"2\" stroke-dasharray=\"3 3\"/><polygon points=\"174.2,84.2 181.4,75.6 185.4,84.8\" fill=\"currentColor\" stroke=\"currentColor\" stroke-width=\"1\"/><text x=\"206\" y=\"104\" font-size=\"12\" text-anchor=\"start\" fill=\"currentColor\">真上に来る場所</text></svg>"
+        },
+        "この場所と、太陽が真上に来る場所は、何度はなれているか。そのぶん、太陽は真上から南へずれる。"
+       ],
+       "qid": "W-073:c6a2f5e4be"
+      },
+      {
+       "part": "今日",
+       "text": "きたいど 35° の場所で、げしの日の南中高度と、とうじの日の南中高度のちがいは、何度か。げしの日は赤道をふくむ面から 23.4° 上から、とうじの日は 23.4° 下から、太陽の光が来る。",
+       "svg": "<svg viewBox=\"0 0 320 200\" xmlns=\"http://www.w3.org/2000/svg\"><circle cx=\"110\" cy=\"112\" r=\"62\" fill=\"#7fc8f8\" fill-opacity=\"0.5\" stroke=\"currentColor\" stroke-width=\"2\"/><line x1=\"110\" y1=\"40\" x2=\"110\" y2=\"184\" stroke=\"currentColor\" stroke-width=\"2\"/><line x1=\"38\" y1=\"112\" x2=\"182\" y2=\"112\" stroke=\"currentColor\" stroke-width=\"1.5\" stroke-dasharray=\"5 4\"/><circle cx=\"160.8\" cy=\"76.4\" r=\"4.5\" fill=\"#f08080\" fill-opacity=\"0.9\" stroke=\"currentColor\" stroke-width=\"1.5\"/><line x1=\"140.1\" y1=\"46.9\" x2=\"181.4\" y2=\"105.9\" stroke=\"currentColor\" stroke-width=\"2\"/><text x=\"127\" y=\"33.8\" font-size=\"13\" text-anchor=\"middle\" fill=\"currentColor\">北</text><text x=\"198.6\" y=\"127\" font-size=\"13\" text-anchor=\"middle\" fill=\"currentColor\">南</text><line x1=\"280.1\" y1=\"24.8\" x2=\"177.3\" y2=\"69.3\" stroke=\"currentColor\" stroke-width=\"2\"/><polygon points=\"168.1,73.3 175.3,64.7 179.3,73.9\" fill=\"currentColor\" stroke=\"currentColor\" stroke-width=\"1\"/><line x1=\"280.1\" y1=\"128.1\" x2=\"177.3\" y2=\"83.6\" stroke=\"currentColor\" stroke-width=\"2\"/><polygon points=\"168.1,79.6 179.3,79 175.3,88.2\" fill=\"currentColor\" stroke=\"currentColor\" stroke-width=\"1\"/><text x=\"268\" y=\"16\" font-size=\"13\" text-anchor=\"middle\" fill=\"currentColor\">げし</text><text x=\"268\" y=\"144\" font-size=\"13\" text-anchor=\"middle\" fill=\"currentColor\">とうじ</text><path d=\"M219.5 101.9 A64 64 0 0 0 219.5 51\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.5\"/><text x=\"230.8\" y=\"80.4\" font-size=\"13\" text-anchor=\"start\" fill=\"currentColor\">？°</text></svg>",
+       "answer": "46.8",
+       "check": "23.4 * 2",
+       "hints": [
+        "南中高度のちがいは、2 本の光の向きのちがいと同じになる。",
+        {
+         "text": "赤道の面を基準にして、2 本の光がそれぞれ 23.4° ずつはなれている。",
+         "svg": "<svg viewBox=\"0 0 320 200\" xmlns=\"http://www.w3.org/2000/svg\"><circle cx=\"110\" cy=\"112\" r=\"62\" fill=\"#7fc8f8\" fill-opacity=\"0.5\" stroke=\"currentColor\" stroke-width=\"2\"/><line x1=\"110\" y1=\"40\" x2=\"110\" y2=\"184\" stroke=\"currentColor\" stroke-width=\"2\"/><line x1=\"38\" y1=\"112\" x2=\"182\" y2=\"112\" stroke=\"currentColor\" stroke-width=\"1.5\" stroke-dasharray=\"5 4\"/><circle cx=\"160.8\" cy=\"76.4\" r=\"4.5\" fill=\"#f08080\" fill-opacity=\"0.9\" stroke=\"currentColor\" stroke-width=\"1.5\"/><line x1=\"140.1\" y1=\"46.9\" x2=\"181.4\" y2=\"105.9\" stroke=\"currentColor\" stroke-width=\"2\"/><text x=\"127\" y=\"33.8\" font-size=\"13\" text-anchor=\"middle\" fill=\"currentColor\">北</text><text x=\"198.6\" y=\"127\" font-size=\"13\" text-anchor=\"middle\" fill=\"currentColor\">南</text><line x1=\"280.1\" y1=\"24.8\" x2=\"177.3\" y2=\"69.3\" stroke=\"currentColor\" stroke-width=\"2\"/><polygon points=\"168.1,73.3 175.3,64.7 179.3,73.9\" fill=\"currentColor\" stroke=\"currentColor\" stroke-width=\"1\"/><line x1=\"280.1\" y1=\"128.1\" x2=\"177.3\" y2=\"83.6\" stroke=\"currentColor\" stroke-width=\"2\"/><polygon points=\"168.1,79.6 179.3,79 175.3,88.2\" fill=\"currentColor\" stroke=\"currentColor\" stroke-width=\"1\"/><line x1=\"160.8\" y1=\"76.4\" x2=\"270.8\" y2=\"76.4\" stroke=\"currentColor\" stroke-width=\"1.5\" stroke-dasharray=\"3 3\"/><path d=\"M204.8 76.4 A44 44 0 0 0 201.2 59\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.5\"/><path d=\"M201.2 93.9 A44 44 0 0 0 204.8 76.4\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.5\"/><text x=\"210.8\" y=\"68.4\" font-size=\"12\" text-anchor=\"start\" fill=\"currentColor\">23.4°</text><text x=\"210.8\" y=\"89.4\" font-size=\"12\" text-anchor=\"start\" fill=\"currentColor\">23.4°</text></svg>"
+        },
+        "上へ 23.4°、下へ 23.4°。あわせて何度の角になるか。"
+       ],
+       "qid": "W-073:2be70287b4"
+      },
+      {
+       "part": "今日",
+       "text": "星ざ（星のならび）は、同じ時こくに見ると、1 日に約 1° ずつ西へずれて見える。ある星ざが、1 月 1 日の午後 9 時に真南に見えた。60 日後の午後 9 時には、この星ざは、真南からどちらへ、およそ何度ずれて見えるか。",
+       "svg": "<svg viewBox=\"0 0 320 200\" xmlns=\"http://www.w3.org/2000/svg\"><path d=\"M30 165 A130 130 0 0 1 290 165 Z\" fill=\"#7fc8f8\" fill-opacity=\"0.18\" stroke=\"currentColor\" stroke-width=\"2\"/><line x1=\"20\" y1=\"165\" x2=\"300\" y2=\"165\" stroke=\"currentColor\" stroke-width=\"2\"/><text x=\"30\" y=\"187\" font-size=\"14\" text-anchor=\"middle\" fill=\"currentColor\">東</text><text x=\"160\" y=\"187\" font-size=\"14\" text-anchor=\"middle\" fill=\"currentColor\">南</text><text x=\"290\" y=\"187\" font-size=\"14\" text-anchor=\"middle\" fill=\"currentColor\">西</text><circle cx=\"160\" cy=\"35\" r=\"9\" fill=\"#f3c969\" fill-opacity=\"0.85\" stroke=\"currentColor\" stroke-width=\"2\"/><text x=\"160\" y=\"21\" font-size=\"13\" text-anchor=\"middle\" fill=\"currentColor\">星ざ</text><line x1=\"160\" y1=\"165\" x2=\"47.4\" y2=\"100\" stroke=\"currentColor\" stroke-width=\"1\" stroke-dasharray=\"3 3\"/><line x1=\"160\" y1=\"165\" x2=\"95\" y2=\"52.4\" stroke=\"currentColor\" stroke-width=\"1\" stroke-dasharray=\"3 3\"/><line x1=\"160\" y1=\"165\" x2=\"225\" y2=\"52.4\" stroke=\"currentColor\" stroke-width=\"1\" stroke-dasharray=\"3 3\"/><line x1=\"160\" y1=\"165\" x2=\"272.6\" y2=\"100\" stroke=\"currentColor\" stroke-width=\"1\" stroke-dasharray=\"3 3\"/><text x=\"89\" y=\"42\" font-size=\"12\" text-anchor=\"middle\" fill=\"currentColor\">30°</text><text x=\"37\" y=\"94\" font-size=\"12\" text-anchor=\"middle\" fill=\"currentColor\">60°</text><text x=\"231\" y=\"42\" font-size=\"12\" text-anchor=\"middle\" fill=\"currentColor\">30°</text><text x=\"283\" y=\"94\" font-size=\"12\" text-anchor=\"middle\" fill=\"currentColor\">60°</text></svg>",
+       "choices": [
+        "西へ約 30°",
+        "東へ約 60°",
+        "西へ約 60°",
+        "東へ約 30°"
+       ],
+       "answer": "西へ約 60°",
+       "check": "'西へ約 60°'",
+       "hints": [
+        "ずれる向きは、見本の文でたしかめよう。",
+        {
+         "text": "1 日に約 1° のずれが、60 日分たまる。",
+         "svg": "<svg viewBox=\"0 0 320 200\" xmlns=\"http://www.w3.org/2000/svg\"><line x1=\"14\" y1=\"110\" x2=\"296\" y2=\"110\" stroke=\"currentColor\" stroke-width=\"2\"/><polygon points=\"306,110 296,115 296,105\" fill=\"currentColor\" stroke=\"currentColor\" stroke-width=\"1\"/><text x=\"300\" y=\"134\" font-size=\"13\" text-anchor=\"middle\" fill=\"currentColor\">西</text><line x1=\"50\" y1=\"100\" x2=\"50\" y2=\"120\" stroke=\"currentColor\" stroke-width=\"2\"/><text x=\"50\" y=\"92\" font-size=\"12\" text-anchor=\"middle\" fill=\"currentColor\">真南</text><text x=\"50\" y=\"140\" font-size=\"12\" text-anchor=\"middle\" fill=\"currentColor\">0°</text><line x1=\"110\" y1=\"100\" x2=\"110\" y2=\"120\" stroke=\"currentColor\" stroke-width=\"2\"/><text x=\"110\" y=\"92\" font-size=\"12\" text-anchor=\"middle\" fill=\"currentColor\">1 日後</text><text x=\"110\" y=\"140\" font-size=\"12\" text-anchor=\"middle\" fill=\"currentColor\">1°</text><line x1=\"170\" y1=\"100\" x2=\"170\" y2=\"120\" stroke=\"currentColor\" stroke-width=\"2\"/><text x=\"170\" y=\"92\" font-size=\"12\" text-anchor=\"middle\" fill=\"currentColor\">2 日後</text><text x=\"170\" y=\"140\" font-size=\"12\" text-anchor=\"middle\" fill=\"currentColor\">2°</text><line x1=\"230\" y1=\"100\" x2=\"230\" y2=\"120\" stroke=\"currentColor\" stroke-width=\"2\"/><text x=\"230\" y=\"92\" font-size=\"12\" text-anchor=\"middle\" fill=\"currentColor\">3 日後</text><text x=\"230\" y=\"140\" font-size=\"12\" text-anchor=\"middle\" fill=\"currentColor\">3°</text><text x=\"272\" y=\"100\" font-size=\"16\" text-anchor=\"middle\" fill=\"currentColor\">…</text><text x=\"160\" y=\"176\" font-size=\"13\" text-anchor=\"middle\" fill=\"currentColor\">60 日後は、60 こ分たまって ？°</text></svg>"
+        },
+        "図の点線は、真南から 30° ごとの目もりだ。ずれた角に合う目もりを見つけよう。"
+       ],
+       "qid": "W-073:8b15cfa372"
+      },
+      {
+       "part": "今日",
+       "text": "ある星が、午後 8 時に真東の地平線からのぼった。同じ星は、同じ時こくに見ると 1 日に約 1° ずつ西へずれる。星は 1 時間に 15° 動く。30 日後、この星が真東の地平線からのぼるのは、午後何時か。",
+       "svg": "<svg viewBox=\"0 0 320 200\" xmlns=\"http://www.w3.org/2000/svg\"><path d=\"M30 165 A130 130 0 0 1 290 165 Z\" fill=\"#7fc8f8\" fill-opacity=\"0.18\" stroke=\"currentColor\" stroke-width=\"2\"/><line x1=\"20\" y1=\"165\" x2=\"300\" y2=\"165\" stroke=\"currentColor\" stroke-width=\"2\"/><text x=\"30\" y=\"187\" font-size=\"14\" text-anchor=\"middle\" fill=\"currentColor\">東</text><text x=\"160\" y=\"187\" font-size=\"14\" text-anchor=\"middle\" fill=\"currentColor\">南</text><text x=\"290\" y=\"187\" font-size=\"14\" text-anchor=\"middle\" fill=\"currentColor\">西</text><circle cx=\"30\" cy=\"165\" r=\"7\" fill=\"#f3c969\" fill-opacity=\"0.9\" stroke=\"currentColor\" stroke-width=\"1.5\"/><text x=\"42\" y=\"151\" font-size=\"13\" text-anchor=\"start\" fill=\"currentColor\">午後 8 時</text></svg>",
+       "answer": 6,
+       "check": "8 - 30 // 15",
+       "hints": [
+        "30 日たつと、同じ時こくの星の位置は、何度ずれるか。",
+        {
+         "text": "30 日後の午後 8 時には、星はもう図の位置まで動いている。",
+         "svg": "<svg viewBox=\"0 0 320 200\" xmlns=\"http://www.w3.org/2000/svg\"><path d=\"M30 165 A130 130 0 0 1 290 165 Z\" fill=\"#7fc8f8\" fill-opacity=\"0.18\" stroke=\"currentColor\" stroke-width=\"2\"/><line x1=\"20\" y1=\"165\" x2=\"300\" y2=\"165\" stroke=\"currentColor\" stroke-width=\"2\"/><text x=\"30\" y=\"187\" font-size=\"14\" text-anchor=\"middle\" fill=\"currentColor\">東</text><text x=\"160\" y=\"187\" font-size=\"14\" text-anchor=\"middle\" fill=\"currentColor\">南</text><text x=\"290\" y=\"187\" font-size=\"14\" text-anchor=\"middle\" fill=\"currentColor\">西</text><circle cx=\"30\" cy=\"165\" r=\"7\" fill=\"#f3c969\" fill-opacity=\"0.9\" stroke=\"currentColor\" stroke-width=\"1.5\"/><text x=\"42\" y=\"151\" font-size=\"13\" text-anchor=\"start\" fill=\"currentColor\">午後 8 時</text><circle cx=\"47.4\" cy=\"100\" r=\"7\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.5\" stroke-dasharray=\"2 2\"/><text x=\"61.4\" y=\"114\" font-size=\"12\" text-anchor=\"start\" fill=\"currentColor\">30 日後の午後 8 時</text><path d=\"M30 165 A130 130 0 0 1 47.4 100\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.5\" stroke-dasharray=\"3 3\"/></svg>"
+        },
+        "そのずれは、星が何時間で動く角か。のぼる時こくは、そのぶん早くなる。"
+       ],
+       "qid": "W-073:2b110e69fc"
+      },
+      {
+       "part": "挑戦",
+       "text": "北半球のある場所で、春分の日の南中高度は 45° だった。この場所での、とうじの日の南中高度は何度か。とうじの日は、太陽の光が赤道をふくむ面から 23.4° 下から来る。",
+       "svg": "<svg viewBox=\"0 0 320 200\" xmlns=\"http://www.w3.org/2000/svg\"><circle cx=\"110\" cy=\"112\" r=\"62\" fill=\"#7fc8f8\" fill-opacity=\"0.5\" stroke=\"currentColor\" stroke-width=\"2\"/><line x1=\"110\" y1=\"40\" x2=\"110\" y2=\"184\" stroke=\"currentColor\" stroke-width=\"2\"/><line x1=\"38\" y1=\"112\" x2=\"182\" y2=\"112\" stroke=\"currentColor\" stroke-width=\"1.5\" stroke-dasharray=\"5 4\"/><circle cx=\"153.8\" cy=\"68.2\" r=\"4.5\" fill=\"#f08080\" fill-opacity=\"0.9\" stroke=\"currentColor\" stroke-width=\"1.5\"/><line x1=\"128.4\" y1=\"42.7\" x2=\"179.3\" y2=\"93.6\" stroke=\"currentColor\" stroke-width=\"2\"/><text x=\"113.1\" y=\"31.4\" font-size=\"13\" text-anchor=\"middle\" fill=\"currentColor\">北</text><text x=\"198.6\" y=\"132\" font-size=\"13\" text-anchor=\"middle\" fill=\"currentColor\">南</text><line x1=\"300\" y1=\"112\" x2=\"185\" y2=\"112\" stroke=\"currentColor\" stroke-width=\"2\"/><polygon points=\"175,112 185,107 185,117\" fill=\"currentColor\" stroke=\"currentColor\" stroke-width=\"1\"/><line x1=\"283.8\" y1=\"68.2\" x2=\"171.8\" y2=\"68.2\" stroke=\"currentColor\" stroke-width=\"2\"/><polygon points=\"161.8,68.2 171.8,63.2 171.8,73.2\" fill=\"currentColor\" stroke=\"currentColor\" stroke-width=\"1\"/><path d=\"M177.9 92.2 A34 34 0 0 0 187.8 68.2\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.5\"/><text x=\"202.1\" y=\"87.6\" font-size=\"13\" text-anchor=\"start\" fill=\"currentColor\">45°</text><text x=\"262\" y=\"58.2\" font-size=\"13\" text-anchor=\"middle\" fill=\"currentColor\">春分の日</text></svg>",
+       "answer": "21.6",
+       "check": "45 - 23.4",
+       "hints": [
+        "春分の日の高度から、この場所のきたいどが分かる。",
+        {
+         "text": "とうじの日は、春分の日より、太陽の光の向きが 23.4° 下になる。",
+         "svg": "<svg viewBox=\"0 0 320 200\" xmlns=\"http://www.w3.org/2000/svg\"><circle cx=\"110\" cy=\"112\" r=\"62\" fill=\"#7fc8f8\" fill-opacity=\"0.5\" stroke=\"currentColor\" stroke-width=\"2\"/><line x1=\"110\" y1=\"40\" x2=\"110\" y2=\"184\" stroke=\"currentColor\" stroke-width=\"2\"/><line x1=\"38\" y1=\"112\" x2=\"182\" y2=\"112\" stroke=\"currentColor\" stroke-width=\"1.5\" stroke-dasharray=\"5 4\"/><circle cx=\"153.8\" cy=\"68.2\" r=\"4.5\" fill=\"#f08080\" fill-opacity=\"0.9\" stroke=\"currentColor\" stroke-width=\"1.5\"/><line x1=\"128.4\" y1=\"42.7\" x2=\"179.3\" y2=\"93.6\" stroke=\"currentColor\" stroke-width=\"2\"/><text x=\"113.1\" y=\"31.4\" font-size=\"13\" text-anchor=\"middle\" fill=\"currentColor\">北</text><text x=\"198.6\" y=\"132\" font-size=\"13\" text-anchor=\"middle\" fill=\"currentColor\">南</text><line x1=\"283.8\" y1=\"68.2\" x2=\"171.8\" y2=\"68.2\" stroke=\"currentColor\" stroke-width=\"2\"/><polygon points=\"161.8,68.2 171.8,63.2 171.8,73.2\" fill=\"currentColor\" stroke=\"currentColor\" stroke-width=\"1\"/><line x1=\"273.1\" y1=\"119.8\" x2=\"170.4\" y2=\"75.3\" stroke=\"currentColor\" stroke-width=\"2\" stroke-dasharray=\"3 3\"/><polygon points=\"161.2,71.3 172.3,70.7 168.4,79.9\" fill=\"currentColor\" stroke=\"currentColor\" stroke-width=\"1\"/><path d=\"M208.9 92 A60 60 0 0 0 213.8 68.2\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.5\"/><text x=\"222.3\" y=\"82.7\" font-size=\"12\" text-anchor=\"start\" fill=\"currentColor\">23.4°</text><text x=\"262\" y=\"58.2\" font-size=\"13\" text-anchor=\"middle\" fill=\"currentColor\">春分の日</text><text x=\"300\" y=\"142\" font-size=\"13\" text-anchor=\"end\" fill=\"currentColor\">とうじ</text></svg>"
+        },
+        "とうじの太陽は、春分の太陽より、高いか低いか。そのちがいは何度か。"
+       ],
+       "paths": [
+        [
+         "春分の南中高度は 90° − きたいど なので、きたいどは 90° − 45° = 45°",
+         "とうじの南中高度は 90° − きたいど − 23.4° = 90° − 45° − 23.4°",
+         "21.6°"
+        ],
+        [
+         "とうじの日は、春分の日より太陽の光の向きが 23.4° 下になる",
+         "南中高度も、そのぶん 23.4° 低くなる",
+         "45° − 23.4° = 21.6°"
+        ]
+       ],
+       "qid": "W-073:94779e3bef"
+      },
+      {
+       "part": "思い出す",
+       "text": "2 日目に学んだこと。場所 A では、北極星の高度が 41° だった。A から真北へ地球の上を 5° 進んだ場所では、北極星の高度は何度か。",
+       "svg": "<svg viewBox=\"0 0 320 200\" xmlns=\"http://www.w3.org/2000/svg\"><circle cx=\"110\" cy=\"112\" r=\"62\" fill=\"#7fc8f8\" fill-opacity=\"0.5\" stroke=\"currentColor\" stroke-width=\"2\"/><line x1=\"110\" y1=\"40\" x2=\"110\" y2=\"184\" stroke=\"currentColor\" stroke-width=\"2\"/><line x1=\"38\" y1=\"112\" x2=\"182\" y2=\"112\" stroke=\"currentColor\" stroke-width=\"1.5\" stroke-dasharray=\"5 4\"/><circle cx=\"156.8\" cy=\"71.3\" r=\"4.5\" fill=\"#f08080\" fill-opacity=\"0.9\" stroke=\"currentColor\" stroke-width=\"1.5\"/><text x=\"174.9\" y=\"64.8\" font-size=\"14\" text-anchor=\"middle\" fill=\"currentColor\">A</text><line x1=\"163.5\" y1=\"63.8\" x2=\"156.8\" y2=\"58.1\" stroke=\"currentColor\" stroke-width=\"2\"/><polygon points=\"149.2,51.6 160.1,54.3 153.6,61.9\" fill=\"currentColor\" stroke=\"currentColor\" stroke-width=\"1\"/><text x=\"169.1\" y=\"41.5\" font-size=\"13\" text-anchor=\"start\" fill=\"currentColor\">北へ 5°</text></svg>",
+       "answer": 46,
+       "check": "41 + 5",
+       "hints": [
+        "北極星の高度は、その場所の きたいど と同じだ。",
+        "北へ進むと、きたいどは ふえる。",
+        "41° に、進んだ角をたそう。"
+       ],
+       "qid": "W-073:538d399cdb"
+      },
+      {
+       "part": "思い出す",
+       "text": "2 日目に学んだこと。ひがしけいど 135° の場所 A より、ひがしけいど 120° の場所 C のほうが、太陽が南中する時こくは、何時間おそいか。",
+       "svg": "<svg viewBox=\"0 0 320 200\" xmlns=\"http://www.w3.org/2000/svg\"><rect x=\"20\" y=\"88\" width=\"280\" height=\"36\" fill=\"#7fc8f8\" fill-opacity=\"0.3\" stroke=\"currentColor\" stroke-width=\"2\"/><line x1=\"116.7\" y1=\"80\" x2=\"116.7\" y2=\"132\" stroke=\"currentColor\" stroke-width=\"2\"/><text x=\"116.7\" y=\"150\" font-size=\"12\" text-anchor=\"middle\" fill=\"currentColor\">C（ひがしけいど 120°）</text><line x1=\"203.3\" y1=\"80\" x2=\"203.3\" y2=\"132\" stroke=\"currentColor\" stroke-width=\"2\"/><text x=\"203.3\" y=\"172\" font-size=\"12\" text-anchor=\"middle\" fill=\"currentColor\">A（ひがしけいど 135°）</text><line x1=\"116.7\" y1=\"112\" x2=\"203.3\" y2=\"112\" stroke=\"currentColor\" stroke-width=\"1.5\"/><text x=\"160\" y=\"104\" font-size=\"13\" text-anchor=\"middle\" fill=\"currentColor\">15°</text><line x1=\"300\" y1=\"26\" x2=\"210\" y2=\"26\" stroke=\"currentColor\" stroke-width=\"2\"/><polygon points=\"200,26 210,21 210,31\" fill=\"currentColor\" stroke=\"currentColor\" stroke-width=\"1\"/><text x=\"250\" y=\"18\" font-size=\"12\" text-anchor=\"middle\" fill=\"currentColor\">太陽の動き</text></svg>",
+       "answer": 1,
+       "check": "(135 - 120) // 15",
+       "hints": [
+        "太陽は東から西へ動く。C は A の東と西の、どちらか。",
+        "けいどのちがいは 15°。15° で 何時間ちがうか。",
+        "西の場所ほど、太陽が来るのはおそい。"
+       ],
+       "qid": "W-073:813697d0fa"
+      }
+     ],
+     "extra": [
+      {
+       "part": "今日",
+       "text": "きたいど 40° の場所で、秋分の日の南中高度は何度か。秋分の日は、春分の日と同じように、赤道で太陽が真上に来る。",
+       "svg": "<svg viewBox=\"0 0 320 200\" xmlns=\"http://www.w3.org/2000/svg\"><circle cx=\"110\" cy=\"112\" r=\"62\" fill=\"#7fc8f8\" fill-opacity=\"0.5\" stroke=\"currentColor\" stroke-width=\"2\"/><line x1=\"110\" y1=\"40\" x2=\"110\" y2=\"184\" stroke=\"currentColor\" stroke-width=\"2\"/><line x1=\"38\" y1=\"112\" x2=\"182\" y2=\"112\" stroke=\"currentColor\" stroke-width=\"1.5\" stroke-dasharray=\"5 4\"/><circle cx=\"157.5\" cy=\"72.1\" r=\"4.5\" fill=\"#f08080\" fill-opacity=\"0.9\" stroke=\"currentColor\" stroke-width=\"1.5\"/><line x1=\"134.4\" y1=\"44.6\" x2=\"180.6\" y2=\"99.7\" stroke=\"currentColor\" stroke-width=\"2\"/><text x=\"120.1\" y=\"32.3\" font-size=\"13\" text-anchor=\"middle\" fill=\"currentColor\">北</text><text x=\"198.9\" y=\"132\" font-size=\"13\" text-anchor=\"middle\" fill=\"currentColor\">南</text><line x1=\"300\" y1=\"112\" x2=\"185\" y2=\"112\" stroke=\"currentColor\" stroke-width=\"2\"/><polygon points=\"175,112 185,107 185,117\" fill=\"currentColor\" stroke=\"currentColor\" stroke-width=\"1\"/><line x1=\"287.5\" y1=\"72.1\" x2=\"175.5\" y2=\"72.1\" stroke=\"currentColor\" stroke-width=\"2\"/><polygon points=\"165.5,72.1 175.5,67.1 175.5,77.1\" fill=\"currentColor\" stroke=\"currentColor\" stroke-width=\"1\"/><path d=\"M179.3 98.2 A34 34 0 0 0 191.5 72.1\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.5\"/><text x=\"206.4\" y=\"95\" font-size=\"13\" text-anchor=\"start\" fill=\"currentColor\">？°</text><text x=\"262\" y=\"62.1\" font-size=\"13\" text-anchor=\"middle\" fill=\"currentColor\">太陽の光</text></svg>",
+       "answer": 50,
+       "check": "90 - 40",
+       "hints": [
+        "赤道で真上に来る光は、この場所にも同じ向きで来る。",
+        "光と真上の線の角は、きたいどと同じ大きさになる。",
+        "直角（90°）から、その角をひこう。"
+       ],
+       "qid": "W-073:d41cca5f18"
+      },
+      {
+       "part": "今日",
+       "text": "きたいど 30° の場所で、とうじの日の南中高度は何度か。とうじの日は、太陽の光が赤道をふくむ面から 23.4° 下から来る。",
+       "svg": "<svg viewBox=\"0 0 320 200\" xmlns=\"http://www.w3.org/2000/svg\"><circle cx=\"110\" cy=\"112\" r=\"62\" fill=\"#7fc8f8\" fill-opacity=\"0.5\" stroke=\"currentColor\" stroke-width=\"2\"/><line x1=\"110\" y1=\"40\" x2=\"110\" y2=\"184\" stroke=\"currentColor\" stroke-width=\"2\"/><line x1=\"38\" y1=\"112\" x2=\"182\" y2=\"112\" stroke=\"currentColor\" stroke-width=\"1.5\" stroke-dasharray=\"5 4\"/><circle cx=\"163.7\" cy=\"81\" r=\"4.5\" fill=\"#f08080\" fill-opacity=\"0.9\" stroke=\"currentColor\" stroke-width=\"1.5\"/><line x1=\"145.7\" y1=\"49.8\" x2=\"181.7\" y2=\"112.2\" stroke=\"currentColor\" stroke-width=\"2\"/><text x=\"133.7\" y=\"36\" font-size=\"13\" text-anchor=\"middle\" fill=\"currentColor\">北</text><text x=\"197.7\" y=\"134\" font-size=\"13\" text-anchor=\"middle\" fill=\"currentColor\">南</text><line x1=\"283\" y1=\"132.6\" x2=\"180.2\" y2=\"88.1\" stroke=\"currentColor\" stroke-width=\"2\"/><polygon points=\"171,84.2 182.2,83.6 178.2,92.7\" fill=\"currentColor\" stroke=\"currentColor\" stroke-width=\"1\"/><path d=\"M180.7 110.4 A34 34 0 0 0 194.9 94.5\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.5\"/><text x=\"205.5\" y=\"123.3\" font-size=\"13\" text-anchor=\"start\" fill=\"currentColor\">？°</text><text x=\"300\" y=\"156\" font-size=\"13\" text-anchor=\"end\" fill=\"currentColor\">とうじ</text></svg>",
+       "answer": "36.6",
+       "check": "90 - 30 - 23.4",
+       "hints": [
+        "春分の日の南中高度は、90° − きたいど だった。",
+        "とうじの日は、春分の日より、光の向きが 23.4° 下になる。",
+        "そのぶん、南中高度は 低くなる。"
+       ],
+       "qid": "W-073:f9ef460ac5"
+      }
+     ],
      "key": "練習#2"
     },
     {
      "kind": "わけ",
      "aim": "",
+     "items": [
+      {
+       "part": "わけ",
+       "text": "新月も満月も、1 か月（約 29.5 日）に 1 回ずつ来る。日食は新月のとき、月食は満月のときに、太陽・月・地球が一直線にならんで起こる。それなのに、日食や月食は毎月は起こらない。どうしてだろう。",
+       "svg": "<svg viewBox=\"0 0 320 200\" xmlns=\"http://www.w3.org/2000/svg\"><text x=\"160\" y=\"22\" font-size=\"13\" text-anchor=\"middle\" fill=\"currentColor\">新月のとき（日食になるならび）</text><line x1=\"56\" y1=\"62\" x2=\"246\" y2=\"62\" stroke=\"currentColor\" stroke-width=\"1.5\" stroke-dasharray=\"5 4\"/><circle cx=\"38\" cy=\"62\" r=\"18\" fill=\"#f3c969\" fill-opacity=\"0.7\" stroke=\"currentColor\" stroke-width=\"2\"/><text x=\"38\" y=\"66\" font-size=\"12\" text-anchor=\"middle\" fill=\"currentColor\">太陽</text><circle cx=\"150\" cy=\"62\" r=\"8\" fill=\"#c8ccd6\" fill-opacity=\"0.9\" stroke=\"currentColor\" stroke-width=\"2\"/><text x=\"150\" y=\"88\" font-size=\"12\" text-anchor=\"middle\" fill=\"currentColor\">月</text><circle cx=\"262\" cy=\"62\" r=\"16\" fill=\"#7fc8f8\" fill-opacity=\"0.6\" stroke=\"currentColor\" stroke-width=\"2\"/><text x=\"262\" y=\"94\" font-size=\"12\" text-anchor=\"middle\" fill=\"currentColor\">地球</text><text x=\"160\" y=\"118\" font-size=\"13\" text-anchor=\"middle\" fill=\"currentColor\">満月のとき（月食になるならび）</text><line x1=\"56\" y1=\"152\" x2=\"246\" y2=\"152\" stroke=\"currentColor\" stroke-width=\"1.5\" stroke-dasharray=\"5 4\"/><circle cx=\"38\" cy=\"152\" r=\"18\" fill=\"#f3c969\" fill-opacity=\"0.7\" stroke=\"currentColor\" stroke-width=\"2\"/><text x=\"38\" y=\"156\" font-size=\"12\" text-anchor=\"middle\" fill=\"currentColor\">太陽</text><circle cx=\"150\" cy=\"152\" r=\"16\" fill=\"#7fc8f8\" fill-opacity=\"0.6\" stroke=\"currentColor\" stroke-width=\"2\"/><text x=\"150\" y=\"182\" font-size=\"12\" text-anchor=\"middle\" fill=\"currentColor\">地球</text><circle cx=\"262\" cy=\"152\" r=\"8\" fill=\"#c8ccd6\" fill-opacity=\"0.9\" stroke=\"currentColor\" stroke-width=\"2\"/><text x=\"262\" y=\"178\" font-size=\"12\" text-anchor=\"middle\" fill=\"currentColor\">月</text></svg>",
+       "explain": "月が地球のまわりを回る通り道の面は、地球が太陽のまわりを回る面（公転面）に対して、約 5° かたむいている。そのため、新月や満月のとき、月は公転面の上か下にずれていることが多く、月のかげは地球に当たらず（日食にならない）、地球のかげも月に当たらない（月食にならない）。月の通り道が公転面と交わる 2 つの点の近くで、新月や満月になったときだけ、3 つの天体が一直線にならんで、日食や月食が起こる。このため、日食や月食の起こりやすい時期は、半年ごとにめぐってくる。もし月の通り道がかたむいていなければ、毎月起こるはずである。",
+       "hints": [
+        "日食や月食になるには、太陽・月・地球が、真横から見ても一直線にならぶ必要がある。真上から見た図だけで、それが言えるだろうか。",
+        {
+         "text": "月が地球のまわりを回る通り道を、真横から見た図だ。点線は、地球が太陽のまわりを回る面を表す。",
+         "svg": "<svg viewBox=\"0 0 320 200\" xmlns=\"http://www.w3.org/2000/svg\"><circle cx=\"30\" cy=\"100\" r=\"16\" fill=\"#f3c969\" fill-opacity=\"0.7\" stroke=\"currentColor\" stroke-width=\"2\"/><text x=\"30\" y=\"104\" font-size=\"12\" text-anchor=\"middle\" fill=\"currentColor\">太陽</text><line x1=\"46\" y1=\"100\" x2=\"310\" y2=\"100\" stroke=\"currentColor\" stroke-width=\"1.5\" stroke-dasharray=\"5 4\"/><circle cx=\"250\" cy=\"100\" r=\"12\" fill=\"#7fc8f8\" fill-opacity=\"0.6\" stroke=\"currentColor\" stroke-width=\"2\"/><ellipse cx=\"250\" cy=\"100\" rx=\"48\" ry=\"13\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.5\" transform=\"rotate(-14 250 100)\"/><circle cx=\"203.4\" cy=\"111.6\" r=\"7\" fill=\"#c8ccd6\" fill-opacity=\"0.9\" stroke=\"currentColor\" stroke-width=\"2\"/><circle cx=\"296.6\" cy=\"88.4\" r=\"7\" fill=\"#c8ccd6\" fill-opacity=\"0.9\" stroke=\"currentColor\" stroke-width=\"2\"/><text x=\"203.4\" y=\"135.6\" font-size=\"12\" text-anchor=\"middle\" fill=\"currentColor\">新月</text><text x=\"296.6\" y=\"74.4\" font-size=\"12\" text-anchor=\"middle\" fill=\"currentColor\">満月</text><text x=\"130\" y=\"90\" font-size=\"12\" text-anchor=\"middle\" fill=\"currentColor\">地球が公転する面</text><text x=\"160\" y=\"190\" font-size=\"12\" text-anchor=\"middle\" fill=\"currentColor\">（かたむきを大きくかいてある）</text></svg>"
+        },
+        {
+         "text": "月の通り道と点線が交わるのは、2 か所だけだ。新月や満月の月は、ふつう点線のどこにあるか。ちょうどならぶのは、どんなときか。",
+         "svg": "<svg viewBox=\"0 0 320 200\" xmlns=\"http://www.w3.org/2000/svg\"><circle cx=\"30\" cy=\"100\" r=\"16\" fill=\"#f3c969\" fill-opacity=\"0.7\" stroke=\"currentColor\" stroke-width=\"2\"/><text x=\"30\" y=\"104\" font-size=\"12\" text-anchor=\"middle\" fill=\"currentColor\">太陽</text><line x1=\"46\" y1=\"100\" x2=\"310\" y2=\"100\" stroke=\"currentColor\" stroke-width=\"1.5\" stroke-dasharray=\"5 4\"/><circle cx=\"250\" cy=\"100\" r=\"12\" fill=\"#7fc8f8\" fill-opacity=\"0.6\" stroke=\"currentColor\" stroke-width=\"2\"/><ellipse cx=\"250\" cy=\"100\" rx=\"48\" ry=\"13\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.5\" transform=\"rotate(-14 250 100)\"/><circle cx=\"203.4\" cy=\"111.6\" r=\"7\" fill=\"#c8ccd6\" fill-opacity=\"0.9\" stroke=\"currentColor\" stroke-width=\"2\"/><circle cx=\"296.6\" cy=\"88.4\" r=\"7\" fill=\"#c8ccd6\" fill-opacity=\"0.9\" stroke=\"currentColor\" stroke-width=\"2\"/><text x=\"203.4\" y=\"135.6\" font-size=\"12\" text-anchor=\"middle\" fill=\"currentColor\">新月</text><text x=\"296.6\" y=\"74.4\" font-size=\"12\" text-anchor=\"middle\" fill=\"currentColor\">満月</text><text x=\"130\" y=\"90\" font-size=\"12\" text-anchor=\"middle\" fill=\"currentColor\">地球が公転する面</text><text x=\"160\" y=\"190\" font-size=\"12\" text-anchor=\"middle\" fill=\"currentColor\">（かたむきを大きくかいてある）</text><circle cx=\"286.4\" cy=\"100\" r=\"4\" fill=\"#f08080\" fill-opacity=\"0.95\" stroke=\"currentColor\" stroke-width=\"1.5\"/><circle cx=\"213.6\" cy=\"100\" r=\"4\" fill=\"#f08080\" fill-opacity=\"0.95\" stroke=\"currentColor\" stroke-width=\"1.5\"/><text x=\"110\" y=\"152\" font-size=\"12\" text-anchor=\"start\" fill=\"currentColor\">公転面と 2 か所で交わる</text></svg>"
+        }
+       ],
+       "paths": [
+        [
+         "日食は太陽・月・地球が一直線のとき（新月）、月食は太陽・地球・月が一直線のとき（満月）に起こる",
+         "月が地球のまわりを回る通り道は、地球の公転面に対して約 5° かたむいている",
+         "新月や満月のとき、月は公転面の上か下にずれていることが多く、かげが地球（月）に当たらない",
+         "月が公転面と交わる点の近くで新月や満月になったときだけ一直線にならぶので、毎月は起こらない"
+        ],
+        [
+         "地球から月までは約 38 万 km。通り道が約 5° かたむいているので、月は公転面から 38 万 km × 0.09 ≒ 3.3 万 km ほどずれることがある",
+         "地球の直径は約 1.3 万 km、月の直径は約 3500 km。3.3 万 km もずれると、月のかげは地球をはずれ、地球のかげも月をはずれる",
+         "ずれが小さい（公転面の近くにいる）ときだけかげが当たるので、毎月は起こらない"
+        ]
+       ],
+       "qid": "W-073:0774e6fa38"
+      }
+     ],
+     "extra": [
+      {
+       "part": "今日",
+       "text": "日の入りのころ、南の空に、右半分が光る半月が見えた。図は、そのときの空のようすだ。この月が西の空にしずむのは、およそいつか。月も、星や太陽と同じように、1 時間に約 15° ずつ東から西へ動いて見える。",
+       "svg": "<svg viewBox=\"0 0 320 200\" xmlns=\"http://www.w3.org/2000/svg\"><path d=\"M30 165 A130 130 0 0 1 290 165 Z\" fill=\"#7fc8f8\" fill-opacity=\"0.18\" stroke=\"currentColor\" stroke-width=\"2\"/><line x1=\"20\" y1=\"165\" x2=\"300\" y2=\"165\" stroke=\"currentColor\" stroke-width=\"2\"/><text x=\"30\" y=\"187\" font-size=\"14\" text-anchor=\"middle\" fill=\"currentColor\">東</text><text x=\"160\" y=\"187\" font-size=\"14\" text-anchor=\"middle\" fill=\"currentColor\">南</text><text x=\"290\" y=\"187\" font-size=\"14\" text-anchor=\"middle\" fill=\"currentColor\">西</text><circle cx=\"160\" cy=\"35\" r=\"10\" fill=\"#c8ccd6\" fill-opacity=\"0.6\" stroke=\"currentColor\" stroke-width=\"1.5\"/><path d=\"M160 25 A10 10 0 0 1 160 45 Z\" fill=\"#f3c969\" fill-opacity=\"0.9\" stroke=\"currentColor\" stroke-width=\"1.5\"/><circle cx=\"290\" cy=\"165\" r=\"10\" fill=\"#f3c969\" fill-opacity=\"0.5\" stroke=\"currentColor\" stroke-width=\"1.5\"/><text x=\"262\" y=\"150\" font-size=\"12\" text-anchor=\"middle\" fill=\"currentColor\">日の入り</text></svg>",
+       "choices": [
+        "日の入りのすぐあと",
+        "明け方",
+        "昼ごろ",
+        "真夜中ごろ"
+       ],
+       "answer": "真夜中ごろ",
+       "check": "'真夜中ごろ'",
+       "hints": [
+        "南の空の いちばん高い所から、西の地平線まで、何度あるか。",
+        {
+         "text": "半円のまん中（南）から西のはしまでの角を見よう。",
+         "svg": "<svg viewBox=\"0 0 320 200\" xmlns=\"http://www.w3.org/2000/svg\"><path d=\"M30 165 A130 130 0 0 1 290 165 Z\" fill=\"#7fc8f8\" fill-opacity=\"0.18\" stroke=\"currentColor\" stroke-width=\"2\"/><line x1=\"20\" y1=\"165\" x2=\"300\" y2=\"165\" stroke=\"currentColor\" stroke-width=\"2\"/><text x=\"30\" y=\"187\" font-size=\"14\" text-anchor=\"middle\" fill=\"currentColor\">東</text><text x=\"160\" y=\"187\" font-size=\"14\" text-anchor=\"middle\" fill=\"currentColor\">南</text><text x=\"290\" y=\"187\" font-size=\"14\" text-anchor=\"middle\" fill=\"currentColor\">西</text><circle cx=\"160\" cy=\"35\" r=\"10\" fill=\"#c8ccd6\" fill-opacity=\"0.6\" stroke=\"currentColor\" stroke-width=\"1.5\"/><path d=\"M160 25 A10 10 0 0 1 160 45 Z\" fill=\"#f3c969\" fill-opacity=\"0.9\" stroke=\"currentColor\" stroke-width=\"1.5\"/><line x1=\"160\" y1=\"165\" x2=\"160\" y2=\"40\" stroke=\"currentColor\" stroke-width=\"1.5\" stroke-dasharray=\"3 3\"/><line x1=\"160\" y1=\"165\" x2=\"290\" y2=\"165\" stroke=\"currentColor\" stroke-width=\"1.5\" stroke-dasharray=\"3 3\"/><path d=\"M160 135 A30 30 0 0 1 190 165\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.5\"/><text x=\"196\" y=\"140\" font-size=\"13\" text-anchor=\"start\" fill=\"currentColor\">？°</text></svg>"
+        },
+        "1 時間に 15° ずつ動くなら、その角を動くのに何時間かかるか。日の入りは午後 6 時ごろだ。"
+       ],
+       "qid": "W-073:20b4fb283f"
+      },
+      {
+       "part": "今日",
+       "text": "図のように、太陽・地球・月がこの順に一直線にならぶとき、月は地球から見てどんな形に見えるか。ただし、月がかげに入らないものとする。",
+       "svg": "<svg viewBox=\"0 0 320 200\" xmlns=\"http://www.w3.org/2000/svg\"><circle cx=\"40\" cy=\"100\" r=\"20\" fill=\"#f3c969\" fill-opacity=\"0.7\" stroke=\"currentColor\" stroke-width=\"2\"/><text x=\"40\" y=\"104\" font-size=\"12\" text-anchor=\"middle\" fill=\"currentColor\">太陽</text><circle cx=\"160\" cy=\"100\" r=\"16\" fill=\"#7fc8f8\" fill-opacity=\"0.6\" stroke=\"currentColor\" stroke-width=\"2\"/><circle cx=\"270\" cy=\"100\" r=\"9\" fill=\"#c8ccd6\" fill-opacity=\"0.9\" stroke=\"currentColor\" stroke-width=\"2\"/><line x1=\"62\" y1=\"100\" x2=\"142\" y2=\"100\" stroke=\"currentColor\" stroke-width=\"1.5\" stroke-dasharray=\"5 4\"/><line x1=\"178\" y1=\"100\" x2=\"256\" y2=\"100\" stroke=\"currentColor\" stroke-width=\"1.5\" stroke-dasharray=\"5 4\"/><text x=\"160\" y=\"132\" font-size=\"12\" text-anchor=\"middle\" fill=\"currentColor\">地球</text><text x=\"270\" y=\"128\" font-size=\"12\" text-anchor=\"middle\" fill=\"currentColor\">月</text><text x=\"160\" y=\"40\" font-size=\"13\" text-anchor=\"middle\" fill=\"currentColor\">太陽・地球・月の順にならぶ</text></svg>",
+       "choices": [
+        "新月",
+        "満月",
+        "半月",
+        "三日月"
+       ],
+       "answer": "満月",
+       "check": "'満月'",
+       "hints": [
+        "月は、太陽の光が当たっている半分だけが光って見える。",
+        "月の光っている面は、太陽の向きを向いている。それは地球から見えるか。",
+        {
+         "text": "太陽の光は、図の左から月に当たる。",
+         "svg": "<svg viewBox=\"0 0 320 200\" xmlns=\"http://www.w3.org/2000/svg\"><circle cx=\"40\" cy=\"100\" r=\"20\" fill=\"#f3c969\" fill-opacity=\"0.7\" stroke=\"currentColor\" stroke-width=\"2\"/><text x=\"40\" y=\"104\" font-size=\"12\" text-anchor=\"middle\" fill=\"currentColor\">太陽</text><circle cx=\"160\" cy=\"100\" r=\"16\" fill=\"#7fc8f8\" fill-opacity=\"0.6\" stroke=\"currentColor\" stroke-width=\"2\"/><circle cx=\"270\" cy=\"100\" r=\"9\" fill=\"#c8ccd6\" fill-opacity=\"0.9\" stroke=\"currentColor\" stroke-width=\"2\"/><line x1=\"70\" y1=\"70\" x2=\"110\" y2=\"70\" stroke=\"currentColor\" stroke-width=\"2\"/><polygon points=\"120,70 110,75 110,65\" fill=\"currentColor\" stroke=\"currentColor\" stroke-width=\"1\"/><line x1=\"190\" y1=\"70\" x2=\"230\" y2=\"70\" stroke=\"currentColor\" stroke-width=\"2\"/><polygon points=\"240,70 230,75 230,65\" fill=\"currentColor\" stroke=\"currentColor\" stroke-width=\"1\"/><text x=\"160\" y=\"44\" font-size=\"12\" text-anchor=\"middle\" fill=\"currentColor\">光の向き</text></svg>"
+        }
+       ],
+       "qid": "W-073:9d7ab57dbc"
+      }
+     ],
      "key": "わけ#1"
     },
     {
      "kind": "混ぜる",
      "aim": "",
+     "items": [
+      {
+       "part": "今日",
+       "text": "図は、地球を北極の上から見たようすで、太陽の光は左から来る。● は地球の上の人で、いま午前 0 時（真夜中）だ。月が ア〜エ のどの位置にあるとき、この人から月が真南の高い所に見えるか。",
+       "svg": "<svg viewBox=\"0 0 320 200\" xmlns=\"http://www.w3.org/2000/svg\"><circle cx=\"30\" cy=\"100\" r=\"20\" fill=\"#f3c969\" fill-opacity=\"0.7\" stroke=\"currentColor\" stroke-width=\"2\"/><text x=\"30\" y=\"104\" font-size=\"12\" text-anchor=\"middle\" fill=\"currentColor\">太陽</text><line x1=\"58\" y1=\"70\" x2=\"85\" y2=\"70\" stroke=\"currentColor\" stroke-width=\"1.5\"/><polygon points=\"94,70 85,74.5 85,65.5\" fill=\"currentColor\" stroke=\"currentColor\" stroke-width=\"1\"/><line x1=\"58\" y1=\"130\" x2=\"85\" y2=\"130\" stroke=\"currentColor\" stroke-width=\"1.5\"/><polygon points=\"94,130 85,134.5 85,125.5\" fill=\"currentColor\" stroke=\"currentColor\" stroke-width=\"1\"/><circle cx=\"170\" cy=\"100\" r=\"66\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.5\" stroke-dasharray=\"5 4\"/><circle cx=\"170\" cy=\"100\" r=\"22\" fill=\"#7fc8f8\" fill-opacity=\"0.6\" stroke=\"currentColor\" stroke-width=\"2\"/><text x=\"170\" y=\"104\" font-size=\"12\" text-anchor=\"middle\" fill=\"currentColor\">地球</text><circle cx=\"192\" cy=\"100\" r=\"5\" fill=\"#f08080\" fill-opacity=\"0.95\" stroke=\"currentColor\" stroke-width=\"1.5\"/><circle cx=\"170\" cy=\"34\" r=\"8\" fill=\"#c8ccd6\" fill-opacity=\"0.9\" stroke=\"currentColor\" stroke-width=\"2\"/><text x=\"170\" y=\"20\" font-size=\"15\" text-anchor=\"middle\" fill=\"currentColor\">ア</text><circle cx=\"104\" cy=\"100\" r=\"8\" fill=\"#c8ccd6\" fill-opacity=\"0.9\" stroke=\"currentColor\" stroke-width=\"2\"/><text x=\"84\" y=\"105\" font-size=\"15\" text-anchor=\"middle\" fill=\"currentColor\">イ</text><circle cx=\"170\" cy=\"166\" r=\"8\" fill=\"#c8ccd6\" fill-opacity=\"0.9\" stroke=\"currentColor\" stroke-width=\"2\"/><text x=\"170\" y=\"191\" font-size=\"15\" text-anchor=\"middle\" fill=\"currentColor\">ウ</text><circle cx=\"236\" cy=\"100\" r=\"8\" fill=\"#c8ccd6\" fill-opacity=\"0.9\" stroke=\"currentColor\" stroke-width=\"2\"/><text x=\"254\" y=\"105\" font-size=\"15\" text-anchor=\"middle\" fill=\"currentColor\">エ</text></svg>",
+       "choices": [
+        "ア",
+        "イ",
+        "ウ",
+        "エ"
+       ],
+       "answer": "エ",
+       "check": "'エ'",
+       "hints": [
+        "午前 0 時の人は、太陽が地球の反対がわにある。● の人は、地球のどちらがわにいるか。",
+        {
+         "text": "地球の、昼のがわと夜のがわを分けてみた。● の人は、夜のがわのまん中にいる。",
+         "svg": "<svg viewBox=\"0 0 320 200\" xmlns=\"http://www.w3.org/2000/svg\"><circle cx=\"30\" cy=\"100\" r=\"20\" fill=\"#f3c969\" fill-opacity=\"0.7\" stroke=\"currentColor\" stroke-width=\"2\"/><text x=\"30\" y=\"104\" font-size=\"12\" text-anchor=\"middle\" fill=\"currentColor\">太陽</text><line x1=\"58\" y1=\"70\" x2=\"85\" y2=\"70\" stroke=\"currentColor\" stroke-width=\"1.5\"/><polygon points=\"94,70 85,74.5 85,65.5\" fill=\"currentColor\" stroke=\"currentColor\" stroke-width=\"1\"/><line x1=\"58\" y1=\"130\" x2=\"85\" y2=\"130\" stroke=\"currentColor\" stroke-width=\"1.5\"/><polygon points=\"94,130 85,134.5 85,125.5\" fill=\"currentColor\" stroke=\"currentColor\" stroke-width=\"1\"/><circle cx=\"170\" cy=\"100\" r=\"66\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.5\" stroke-dasharray=\"5 4\"/><circle cx=\"170\" cy=\"100\" r=\"22\" fill=\"#7fc8f8\" fill-opacity=\"0.6\" stroke=\"currentColor\" stroke-width=\"2\"/><path d=\"M170 78 A22 22 0 0 1 170 122 Z\" fill=\"#c8ccd6\" fill-opacity=\"0.75\" stroke=\"currentColor\" stroke-width=\"1.5\"/><text x=\"157\" y=\"104\" font-size=\"12\" text-anchor=\"middle\" fill=\"currentColor\">昼</text><text x=\"179\" y=\"104\" font-size=\"12\" text-anchor=\"middle\" fill=\"currentColor\">夜</text><circle cx=\"192\" cy=\"100\" r=\"5\" fill=\"#f08080\" fill-opacity=\"0.95\" stroke=\"currentColor\" stroke-width=\"1.5\"/><circle cx=\"170\" cy=\"34\" r=\"8\" fill=\"#c8ccd6\" fill-opacity=\"0.9\" stroke=\"currentColor\" stroke-width=\"2\"/><text x=\"170\" y=\"20\" font-size=\"15\" text-anchor=\"middle\" fill=\"currentColor\">ア</text><circle cx=\"104\" cy=\"100\" r=\"8\" fill=\"#c8ccd6\" fill-opacity=\"0.9\" stroke=\"currentColor\" stroke-width=\"2\"/><text x=\"84\" y=\"105\" font-size=\"15\" text-anchor=\"middle\" fill=\"currentColor\">イ</text><circle cx=\"170\" cy=\"166\" r=\"8\" fill=\"#c8ccd6\" fill-opacity=\"0.9\" stroke=\"currentColor\" stroke-width=\"2\"/><text x=\"170\" y=\"191\" font-size=\"15\" text-anchor=\"middle\" fill=\"currentColor\">ウ</text><circle cx=\"236\" cy=\"100\" r=\"8\" fill=\"#c8ccd6\" fill-opacity=\"0.9\" stroke=\"currentColor\" stroke-width=\"2\"/><text x=\"254\" y=\"105\" font-size=\"15\" text-anchor=\"middle\" fill=\"currentColor\">エ</text></svg>"
+        },
+        "地球の中心から ● の人の方へ、まっすぐ線をのばした先にある月をさがそう。"
+       ],
+       "qid": "W-073:2c1c7c9dee"
+      },
+      {
+       "part": "今日",
+       "text": "ある場所で、北極星の高度をはかったら 40° だった。この場所での、とうじの日の南中高度は何度か。とうじの日は、太陽の光が赤道をふくむ面から 23.4° 下から来る。",
+       "svg": "<svg viewBox=\"0 0 320 200\" xmlns=\"http://www.w3.org/2000/svg\"><circle cx=\"110\" cy=\"112\" r=\"62\" fill=\"#7fc8f8\" fill-opacity=\"0.5\" stroke=\"currentColor\" stroke-width=\"2\"/><line x1=\"110\" y1=\"40\" x2=\"110\" y2=\"184\" stroke=\"currentColor\" stroke-width=\"2\"/><line x1=\"38\" y1=\"112\" x2=\"182\" y2=\"112\" stroke=\"currentColor\" stroke-width=\"1.5\" stroke-dasharray=\"5 4\"/><circle cx=\"157.5\" cy=\"72.1\" r=\"4.5\" fill=\"#f08080\" fill-opacity=\"0.9\" stroke=\"currentColor\" stroke-width=\"1.5\"/><line x1=\"134.4\" y1=\"44.6\" x2=\"180.6\" y2=\"99.7\" stroke=\"currentColor\" stroke-width=\"2\"/><text x=\"198.9\" y=\"120\" font-size=\"13\" text-anchor=\"middle\" fill=\"currentColor\">南</text><line x1=\"157.5\" y1=\"72.1\" x2=\"157.5\" y2=\"36.1\" stroke=\"currentColor\" stroke-width=\"2\"/><polygon points=\"157.5,26.1 162.5,36.1 152.5,36.1\" fill=\"currentColor\" stroke=\"currentColor\" stroke-width=\"1\"/><circle cx=\"157.5\" cy=\"20.1\" r=\"6\" fill=\"#f3c969\" fill-opacity=\"0.9\" stroke=\"currentColor\" stroke-width=\"1.5\"/><text x=\"168.5\" y=\"24.1\" font-size=\"13\" text-anchor=\"start\" fill=\"currentColor\">北極星</text><path d=\"M157.5 46.1 A26 26 0 0 0 140.8 52.2\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.5\"/><text x=\"137.5\" y=\"36.1\" font-size=\"13\" text-anchor=\"end\" fill=\"currentColor\">40°</text><line x1=\"276.8\" y1=\"123.8\" x2=\"174\" y2=\"79.3\" stroke=\"currentColor\" stroke-width=\"2\"/><polygon points=\"164.8,75.3 176,74.7 172,83.9\" fill=\"currentColor\" stroke=\"currentColor\" stroke-width=\"1\"/><path d=\"M179.3 98.2 A34 34 0 0 0 188.7 85.7\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.5\"/><text x=\"214\" y=\"120\" font-size=\"13\" text-anchor=\"start\" fill=\"currentColor\">？°</text><text x=\"316\" y=\"150\" font-size=\"12\" text-anchor=\"end\" fill=\"currentColor\">とうじの日の太陽の光</text></svg>",
+       "answer": "26.6",
+       "check": "90 - 40 - 23.4",
+       "hints": [
+        "北極星の高度は、その場所のきたいどと同じだ。春分の日の南中高度は、90° からきたいどをひいた角だった。",
+        {
+         "text": "春分の日の光は、赤道に真上から来る。この場所の春分の南中高度は、図の？の角だ。",
+         "svg": "<svg viewBox=\"0 0 320 200\" xmlns=\"http://www.w3.org/2000/svg\"><circle cx=\"110\" cy=\"112\" r=\"62\" fill=\"#7fc8f8\" fill-opacity=\"0.5\" stroke=\"currentColor\" stroke-width=\"2\"/><line x1=\"110\" y1=\"40\" x2=\"110\" y2=\"184\" stroke=\"currentColor\" stroke-width=\"2\"/><line x1=\"38\" y1=\"112\" x2=\"182\" y2=\"112\" stroke=\"currentColor\" stroke-width=\"1.5\" stroke-dasharray=\"5 4\"/><circle cx=\"157.5\" cy=\"72.1\" r=\"4.5\" fill=\"#f08080\" fill-opacity=\"0.9\" stroke=\"currentColor\" stroke-width=\"1.5\"/><line x1=\"134.4\" y1=\"44.6\" x2=\"180.6\" y2=\"99.7\" stroke=\"currentColor\" stroke-width=\"2\"/><text x=\"198.9\" y=\"120\" font-size=\"13\" text-anchor=\"middle\" fill=\"currentColor\">南</text><line x1=\"287.5\" y1=\"72.1\" x2=\"175.5\" y2=\"72.1\" stroke=\"currentColor\" stroke-width=\"2\"/><polygon points=\"165.5,72.1 175.5,67.1 175.5,77.1\" fill=\"currentColor\" stroke=\"currentColor\" stroke-width=\"1\"/><line x1=\"157.5\" y1=\"72.1\" x2=\"203.5\" y2=\"33.6\" stroke=\"currentColor\" stroke-width=\"1.5\" stroke-dasharray=\"3 3\"/><path d=\"M187.5 72.1 A30 30 0 0 0 180.5 52.9\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.5\"/><text x=\"200.2\" y=\"61.5\" font-size=\"13\" text-anchor=\"start\" fill=\"currentColor\">？°</text><text x=\"262\" y=\"48\" font-size=\"12\" text-anchor=\"middle\" fill=\"currentColor\">春分の日の光</text></svg>"
+        },
+        "とうじの日は、春分の日より、光の向きが 23.4° 下になる。そのぶん、南中高度は低くなる。"
+       ],
+       "qid": "W-073:8588d73923"
+      },
+      {
+       "part": "今日",
+       "text": "太陽が南中してから次に南中するまでの時間を太陽日、星が南中してから次に南中するまでの時間をこうせい日という。こうせい日は、地球が 360° 自転する時間だ。1 回自転すると、地球は太陽のまわりを約 1° 進むので、太陽が次に南中するには、あと約 1° 回る。地球は 1 時間に約 15° 自転するとして、太陽日は、こうせい日より何分長いか。",
+       "svg": "<svg viewBox=\"0 0 320 200\" xmlns=\"http://www.w3.org/2000/svg\"><circle cx=\"36\" cy=\"100\" r=\"20\" fill=\"#f3c969\" fill-opacity=\"0.7\" stroke=\"currentColor\" stroke-width=\"2\"/><text x=\"36\" y=\"104\" font-size=\"12\" text-anchor=\"middle\" fill=\"currentColor\">太陽</text><path d=\"M176 100 A140 140 0 0 0 152.1 21.7\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.5\" stroke-dasharray=\"5 4\"/><line x1=\"173.9\" y1=\"75.7\" x2=\"114.8\" y2=\"86.1\" stroke=\"currentColor\" stroke-width=\"1.5\" stroke-dasharray=\"4 3\"/><circle cx=\"173.9\" cy=\"75.7\" r=\"11\" fill=\"#7fc8f8\" fill-opacity=\"0.6\" stroke=\"currentColor\" stroke-width=\"2\"/><circle cx=\"163\" cy=\"77.6\" r=\"3.5\" fill=\"#f08080\" fill-opacity=\"0.95\" stroke=\"currentColor\" stroke-width=\"1\"/><line x1=\"161.8\" y1=\"38.6\" x2=\"107.9\" y2=\"64.9\" stroke=\"currentColor\" stroke-width=\"1.5\" stroke-dasharray=\"4 3\"/><line x1=\"161.8\" y1=\"38.6\" x2=\"114.6\" y2=\"47\" stroke=\"currentColor\" stroke-width=\"1.5\"/><polygon points=\"106.7,48.4 113.9,43 115.3,50.9\" fill=\"currentColor\" stroke=\"currentColor\" stroke-width=\"1\"/><circle cx=\"161.8\" cy=\"38.6\" r=\"11\" fill=\"#7fc8f8\" fill-opacity=\"0.6\" stroke=\"currentColor\" stroke-width=\"2\"/><circle cx=\"151\" cy=\"40.5\" r=\"3.5\" fill=\"#f08080\" fill-opacity=\"0.95\" stroke=\"currentColor\" stroke-width=\"1\"/><text x=\"191.9\" y=\"91.7\" font-size=\"12\" text-anchor=\"start\" fill=\"currentColor\">ある日の南中</text><text x=\"179.8\" y=\"42.6\" font-size=\"12\" text-anchor=\"start\" fill=\"currentColor\">1 回自転したあと</text><text x=\"98\" y=\"60\" font-size=\"13\" text-anchor=\"end\" fill=\"currentColor\">約 1°</text><text x=\"160\" y=\"188\" font-size=\"12\" text-anchor=\"middle\" fill=\"currentColor\">（太陽のまわりの角は、大きくかいてある）</text></svg>",
+       "answer": 4,
+       "check": "60 // 15",
+       "hints": [
+        "図で、1 回自転したあとの人は、まだ太陽の方を向いていない。あと約 1° 回る必要がある。",
+        {
+         "text": "15° 回るのに 1 時間、つまり何分かかるか。",
+         "svg": "<svg viewBox=\"0 0 320 200\" xmlns=\"http://www.w3.org/2000/svg\"><text x=\"160\" y=\"44\" font-size=\"14\" text-anchor=\"middle\" fill=\"currentColor\">15° ＝ 1 時間 ＝ 60 分</text><rect x=\"20\" y=\"66\" width=\"18.7\" height=\"30\" fill=\"#f3c969\" fill-opacity=\"0.85\" stroke=\"currentColor\" stroke-width=\"1.5\"/><rect x=\"38.7\" y=\"66\" width=\"18.7\" height=\"30\" fill=\"#7fc8f8\" fill-opacity=\"0.35\" stroke=\"currentColor\" stroke-width=\"1.5\"/><rect x=\"57.3\" y=\"66\" width=\"18.7\" height=\"30\" fill=\"#7fc8f8\" fill-opacity=\"0.35\" stroke=\"currentColor\" stroke-width=\"1.5\"/><rect x=\"76\" y=\"66\" width=\"18.7\" height=\"30\" fill=\"#7fc8f8\" fill-opacity=\"0.35\" stroke=\"currentColor\" stroke-width=\"1.5\"/><rect x=\"94.7\" y=\"66\" width=\"18.7\" height=\"30\" fill=\"#7fc8f8\" fill-opacity=\"0.35\" stroke=\"currentColor\" stroke-width=\"1.5\"/><rect x=\"113.3\" y=\"66\" width=\"18.7\" height=\"30\" fill=\"#7fc8f8\" fill-opacity=\"0.35\" stroke=\"currentColor\" stroke-width=\"1.5\"/><rect x=\"132\" y=\"66\" width=\"18.7\" height=\"30\" fill=\"#7fc8f8\" fill-opacity=\"0.35\" stroke=\"currentColor\" stroke-width=\"1.5\"/><rect x=\"150.7\" y=\"66\" width=\"18.7\" height=\"30\" fill=\"#7fc8f8\" fill-opacity=\"0.35\" stroke=\"currentColor\" stroke-width=\"1.5\"/><rect x=\"169.3\" y=\"66\" width=\"18.7\" height=\"30\" fill=\"#7fc8f8\" fill-opacity=\"0.35\" stroke=\"currentColor\" stroke-width=\"1.5\"/><rect x=\"188\" y=\"66\" width=\"18.7\" height=\"30\" fill=\"#7fc8f8\" fill-opacity=\"0.35\" stroke=\"currentColor\" stroke-width=\"1.5\"/><rect x=\"206.7\" y=\"66\" width=\"18.7\" height=\"30\" fill=\"#7fc8f8\" fill-opacity=\"0.35\" stroke=\"currentColor\" stroke-width=\"1.5\"/><rect x=\"225.3\" y=\"66\" width=\"18.7\" height=\"30\" fill=\"#7fc8f8\" fill-opacity=\"0.35\" stroke=\"currentColor\" stroke-width=\"1.5\"/><rect x=\"244\" y=\"66\" width=\"18.7\" height=\"30\" fill=\"#7fc8f8\" fill-opacity=\"0.35\" stroke=\"currentColor\" stroke-width=\"1.5\"/><rect x=\"262.7\" y=\"66\" width=\"18.7\" height=\"30\" fill=\"#7fc8f8\" fill-opacity=\"0.35\" stroke=\"currentColor\" stroke-width=\"1.5\"/><rect x=\"281.3\" y=\"66\" width=\"18.7\" height=\"30\" fill=\"#7fc8f8\" fill-opacity=\"0.35\" stroke=\"currentColor\" stroke-width=\"1.5\"/><text x=\"160\" y=\"122\" font-size=\"12\" text-anchor=\"middle\" fill=\"currentColor\">15° を、1° ずつの 15 こに分ける</text><line x1=\"29.3\" y1=\"100\" x2=\"29.3\" y2=\"140\" stroke=\"currentColor\" stroke-width=\"1.5\" stroke-dasharray=\"3 3\"/><text x=\"36\" y=\"158\" font-size=\"13\" text-anchor=\"start\" fill=\"currentColor\">この 1 こ分（1°）は ？ 分</text></svg>"
+        },
+        "15° の 15 分の 1 が 1° だ。時間も 15 分の 1 になる。"
+       ],
+       "qid": "W-073:b4e9ea2129"
+      },
+      {
+       "part": "今日",
+       "text": "日本の時計は、ひがしけいど 135° の場所の太陽の動きに合わせてある。ひがしけいど 135° の場所 A で、太陽が 12 時ちょうどに南中する日、ひがしけいど 141° のさっぽろでは、太陽は 12 時の何分前に南中するか。",
+       "svg": "<svg viewBox=\"0 0 320 200\" xmlns=\"http://www.w3.org/2000/svg\"><rect x=\"20\" y=\"88\" width=\"280\" height=\"36\" fill=\"#7fc8f8\" fill-opacity=\"0.3\" stroke=\"currentColor\" stroke-width=\"2\"/><line x1=\"116.7\" y1=\"80\" x2=\"116.7\" y2=\"132\" stroke=\"currentColor\" stroke-width=\"2\"/><text x=\"116.7\" y=\"150\" font-size=\"12\" text-anchor=\"middle\" fill=\"currentColor\">A（ひがしけいど 135°）</text><line x1=\"220.7\" y1=\"80\" x2=\"220.7\" y2=\"132\" stroke=\"currentColor\" stroke-width=\"2\"/><text x=\"220.7\" y=\"172\" font-size=\"12\" text-anchor=\"middle\" fill=\"currentColor\">さっぽろ（ひがしけいど 141°）</text><circle cx=\"116.7\" cy=\"50\" r=\"14\" fill=\"#f3c969\" fill-opacity=\"0.7\" stroke=\"currentColor\" stroke-width=\"2\"/><text x=\"136.7\" y=\"54\" font-size=\"13\" text-anchor=\"start\" fill=\"currentColor\">12 時</text><line x1=\"300\" y1=\"26\" x2=\"210\" y2=\"26\" stroke=\"currentColor\" stroke-width=\"2\"/><polygon points=\"200,26 210,21 210,31\" fill=\"currentColor\" stroke=\"currentColor\" stroke-width=\"1\"/><text x=\"250\" y=\"18\" font-size=\"12\" text-anchor=\"middle\" fill=\"currentColor\">太陽の動き</text><text x=\"160\" y=\"193\" font-size=\"12\" text-anchor=\"middle\" fill=\"currentColor\">（けいどのちがいを大きくかいてある）</text></svg>",
+       "answer": 24,
+       "check": "(141 - 135) * 4",
+       "hints": [
+        "東の場所ほど、太陽は先に南中する。さっぽろは A より何度東か。",
+        {
+         "text": "2 つの場所のけいどのちがいは、図のとおりだ。",
+         "svg": "<svg viewBox=\"0 0 320 200\" xmlns=\"http://www.w3.org/2000/svg\"><rect x=\"20\" y=\"88\" width=\"280\" height=\"36\" fill=\"#7fc8f8\" fill-opacity=\"0.3\" stroke=\"currentColor\" stroke-width=\"2\"/><line x1=\"116.7\" y1=\"80\" x2=\"116.7\" y2=\"132\" stroke=\"currentColor\" stroke-width=\"2\"/><text x=\"116.7\" y=\"150\" font-size=\"12\" text-anchor=\"middle\" fill=\"currentColor\">A（ひがしけいど 135°）</text><line x1=\"220.7\" y1=\"80\" x2=\"220.7\" y2=\"132\" stroke=\"currentColor\" stroke-width=\"2\"/><text x=\"220.7\" y=\"172\" font-size=\"12\" text-anchor=\"middle\" fill=\"currentColor\">さっぽろ（ひがしけいど 141°）</text><line x1=\"116.7\" y1=\"112\" x2=\"220.7\" y2=\"112\" stroke=\"currentColor\" stroke-width=\"1.5\"/><text x=\"168.7\" y=\"104\" font-size=\"13\" text-anchor=\"middle\" fill=\"currentColor\">？°</text><line x1=\"300\" y1=\"26\" x2=\"210\" y2=\"26\" stroke=\"currentColor\" stroke-width=\"2\"/><polygon points=\"200,26 210,21 210,31\" fill=\"currentColor\" stroke=\"currentColor\" stroke-width=\"1\"/><text x=\"250\" y=\"18\" font-size=\"12\" text-anchor=\"middle\" fill=\"currentColor\">太陽の動き</text><text x=\"160\" y=\"193\" font-size=\"12\" text-anchor=\"middle\" fill=\"currentColor\">（けいどのちがいを大きくかいてある）</text></svg>"
+        },
+        "けいど 15° で 60 分。けいど 1° では何分か考えて、ちがいの角をかけよう。"
+       ],
+       "qid": "W-073:55bf743141"
+      },
+      {
+       "part": "今日",
+       "text": "海の水面は、月の引力（水を引きよせる力）で、月に向いたがわと、その反対がわの 2 か所でふくらむ。ふくらんだ所が満ちょう（みちしお）だ。ある場所で、月が南中したときに満ちょうになった。月が南中してから次に南中するまでは、およそ 24 時間 48 分かかる。この数を使って答えよう。この場所で次に満ちょうになるのは、何分後か。海の動きのおくれは考えない。",
+       "svg": "<svg viewBox=\"0 0 320 200\" xmlns=\"http://www.w3.org/2000/svg\"><ellipse cx=\"160\" cy=\"100\" rx=\"58\" ry=\"44\" fill=\"#7fc8f8\" fill-opacity=\"0.3\" stroke=\"currentColor\" stroke-width=\"1.5\"/><circle cx=\"160\" cy=\"100\" r=\"40\" fill=\"#7fc8f8\" fill-opacity=\"0.6\" stroke=\"currentColor\" stroke-width=\"2\"/><circle cx=\"292\" cy=\"100\" r=\"12\" fill=\"#c8ccd6\" fill-opacity=\"0.9\" stroke=\"currentColor\" stroke-width=\"2\"/><text x=\"292\" y=\"128\" font-size=\"13\" text-anchor=\"middle\" fill=\"currentColor\">月</text><circle cx=\"200\" cy=\"100\" r=\"5\" fill=\"#f08080\" fill-opacity=\"0.95\" stroke=\"currentColor\" stroke-width=\"1.5\"/><text x=\"193\" y=\"104\" font-size=\"12\" text-anchor=\"end\" fill=\"currentColor\">この場所</text><text x=\"98\" y=\"104\" font-size=\"12\" text-anchor=\"end\" fill=\"currentColor\">ふくらみ</text><text x=\"224\" y=\"84\" font-size=\"12\" text-anchor=\"start\" fill=\"currentColor\">ふくらみ</text></svg>",
+       "answer": 744,
+       "check": "(24 * 60 + 48) // 2",
+       "hints": [
+        "水面のふくらみは 2 か所ある。地球が自転すると、この場所は 2 つのふくらみのあいだを動く。",
+        {
+         "text": "次にふくらみが来るのは、この場所が反対がわのふくらみまで動いたときだ。",
+         "svg": "<svg viewBox=\"0 0 320 200\" xmlns=\"http://www.w3.org/2000/svg\"><ellipse cx=\"160\" cy=\"100\" rx=\"58\" ry=\"44\" fill=\"#7fc8f8\" fill-opacity=\"0.3\" stroke=\"currentColor\" stroke-width=\"1.5\"/><circle cx=\"160\" cy=\"100\" r=\"40\" fill=\"#7fc8f8\" fill-opacity=\"0.6\" stroke=\"currentColor\" stroke-width=\"2\"/><circle cx=\"292\" cy=\"100\" r=\"12\" fill=\"#c8ccd6\" fill-opacity=\"0.9\" stroke=\"currentColor\" stroke-width=\"2\"/><text x=\"292\" y=\"128\" font-size=\"13\" text-anchor=\"middle\" fill=\"currentColor\">月</text><circle cx=\"120\" cy=\"100\" r=\"5\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.5\" stroke-dasharray=\"2 2\"/><circle cx=\"200\" cy=\"100\" r=\"5\" fill=\"#f08080\" fill-opacity=\"0.95\" stroke=\"currentColor\" stroke-width=\"1.5\"/><path d=\"M200 90 A40 40 0 0 0 120 90\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.5\" stroke-dasharray=\"4 3\"/><text x=\"160\" y=\"40\" font-size=\"12\" text-anchor=\"middle\" fill=\"currentColor\">半回転</text><text x=\"98\" y=\"104\" font-size=\"12\" text-anchor=\"end\" fill=\"currentColor\">ふくらみ</text><text x=\"224\" y=\"84\" font-size=\"12\" text-anchor=\"start\" fill=\"currentColor\">ふくらみ</text></svg>"
+        },
+        "反対がわのふくらみに行くのは、1 周のどれだけの回転か。24 時間 48 分は、分にするといくつか。"
+       ],
+       "qid": "W-073:51a1a77ce7"
+      },
+      {
+       "part": "今日",
+       "text": "年の数が 4 でわりきれる年は、うるう年で、2 月が 29 日まである。ただし、100 でわりきれる年はふつうの年にする。そのうち 400 でもわりきれる年だけは、うるう年にする。2001 年から 2100 年までに、うるう年は何回あるか。",
+       "svg": "<svg viewBox=\"0 0 320 200\" xmlns=\"http://www.w3.org/2000/svg\"><rect x=\"110\" y=\"30\" width=\"100\" height=\"120\" rx=\"8\" fill=\"#f3c969\" fill-opacity=\"0.35\" stroke=\"currentColor\" stroke-width=\"2\"/><rect x=\"110\" y=\"30\" width=\"100\" height=\"30\" rx=\"8\" fill=\"#f08080\" fill-opacity=\"0.5\" stroke=\"currentColor\" stroke-width=\"2\"/><text x=\"160\" y=\"52\" font-size=\"16\" text-anchor=\"middle\" fill=\"currentColor\">2 月</text><text x=\"160\" y=\"118\" font-size=\"44\" text-anchor=\"middle\" fill=\"currentColor\">29</text><text x=\"160\" y=\"182\" font-size=\"13\" text-anchor=\"middle\" fill=\"currentColor\">2 月 29 日 は うるう年だけ</text></svg>",
+       "answer": 24,
+       "check": "len([y for y in range(2001, 2101) if y % 4 == 0 and (y % 100 != 0 or y % 400 == 0)])",
+       "hints": [
+        "2001 年から 2100 年のうち、4 でわりきれる年は、2004 年から何年おきにあるか。",
+        {
+         "text": "4 でわりきれる年の数を出したら、そのうち 100 でわりきれる年を ひく。",
+         "svg": "<svg viewBox=\"0 0 320 200\" xmlns=\"http://www.w3.org/2000/svg\"><rect x=\"10\" y=\"8\" width=\"120\" height=\"40\" rx=\"6\" fill=\"#f3c969\" fill-opacity=\"0.35\" stroke=\"currentColor\" stroke-width=\"2\"/><text x=\"70\" y=\"33\" font-size=\"12\" text-anchor=\"middle\" fill=\"currentColor\">4 で わりきれる？</text><rect x=\"10\" y=\"76\" width=\"120\" height=\"40\" rx=\"6\" fill=\"#f3c969\" fill-opacity=\"0.35\" stroke=\"currentColor\" stroke-width=\"2\"/><text x=\"70\" y=\"101\" font-size=\"12\" text-anchor=\"middle\" fill=\"currentColor\">100 で わりきれる？</text><rect x=\"10\" y=\"144\" width=\"120\" height=\"40\" rx=\"6\" fill=\"#f3c969\" fill-opacity=\"0.35\" stroke=\"currentColor\" stroke-width=\"2\"/><text x=\"70\" y=\"169\" font-size=\"12\" text-anchor=\"middle\" fill=\"currentColor\">400 で わりきれる？</text><line x1=\"70\" y1=\"48\" x2=\"70\" y2=\"68\" stroke=\"currentColor\" stroke-width=\"1.5\"/><polygon points=\"70,76 66,68 74,68\" fill=\"currentColor\" stroke=\"currentColor\" stroke-width=\"1\"/><text x=\"78\" y=\"67\" font-size=\"12\" text-anchor=\"start\" fill=\"currentColor\">はい</text><line x1=\"70\" y1=\"116\" x2=\"70\" y2=\"136\" stroke=\"currentColor\" stroke-width=\"1.5\"/><polygon points=\"70,144 66,136 74,136\" fill=\"currentColor\" stroke=\"currentColor\" stroke-width=\"1\"/><text x=\"78\" y=\"135\" font-size=\"12\" text-anchor=\"start\" fill=\"currentColor\">はい</text><line x1=\"130\" y1=\"28\" x2=\"162\" y2=\"28\" stroke=\"currentColor\" stroke-width=\"1.5\"/><polygon points=\"170,28 162,32 162,24\" fill=\"currentColor\" stroke=\"currentColor\" stroke-width=\"1\"/><text x=\"150\" y=\"20\" font-size=\"12\" text-anchor=\"middle\" fill=\"currentColor\">いいえ</text><text x=\"176\" y=\"32\" font-size=\"13\" text-anchor=\"start\" fill=\"currentColor\">ふつうの年</text><line x1=\"130\" y1=\"96\" x2=\"162\" y2=\"96\" stroke=\"currentColor\" stroke-width=\"1.5\"/><polygon points=\"170,96 162,100 162,92\" fill=\"currentColor\" stroke=\"currentColor\" stroke-width=\"1\"/><text x=\"150\" y=\"88\" font-size=\"12\" text-anchor=\"middle\" fill=\"currentColor\">いいえ</text><text x=\"176\" y=\"100\" font-size=\"13\" text-anchor=\"start\" fill=\"currentColor\">うるう年</text><line x1=\"130\" y1=\"152\" x2=\"162\" y2=\"152\" stroke=\"currentColor\" stroke-width=\"1.5\"/><polygon points=\"170,152 162,156 162,148\" fill=\"currentColor\" stroke=\"currentColor\" stroke-width=\"1\"/><text x=\"150\" y=\"144\" font-size=\"12\" text-anchor=\"middle\" fill=\"currentColor\">はい</text><text x=\"176\" y=\"156\" font-size=\"13\" text-anchor=\"start\" fill=\"currentColor\">うるう年</text><line x1=\"130\" y1=\"180\" x2=\"162\" y2=\"180\" stroke=\"currentColor\" stroke-width=\"1.5\"/><polygon points=\"170,180 162,184 162,176\" fill=\"currentColor\" stroke=\"currentColor\" stroke-width=\"1\"/><text x=\"150\" y=\"172\" font-size=\"12\" text-anchor=\"middle\" fill=\"currentColor\">いいえ</text><text x=\"176\" y=\"184\" font-size=\"13\" text-anchor=\"start\" fill=\"currentColor\">ふつうの年</text></svg>"
+        },
+        "最後の 2100 年は、100 でわりきれるが、400 ではわりきれない。"
+       ],
+       "qid": "W-073:94d6f7d595"
+      }
+     ],
+     "extra": [
+      {
+       "part": "今日",
+       "text": "満月の月は、太陽の反対の向きにある。ある日の満月が南中するのは、その日に太陽が南中してから、何時間後か。",
+       "svg": "<svg viewBox=\"0 0 320 200\" xmlns=\"http://www.w3.org/2000/svg\"><circle cx=\"30\" cy=\"100\" r=\"20\" fill=\"#f3c969\" fill-opacity=\"0.7\" stroke=\"currentColor\" stroke-width=\"2\"/><text x=\"30\" y=\"104\" font-size=\"12\" text-anchor=\"middle\" fill=\"currentColor\">太陽</text><line x1=\"58\" y1=\"70\" x2=\"85\" y2=\"70\" stroke=\"currentColor\" stroke-width=\"1.5\"/><polygon points=\"94,70 85,74.5 85,65.5\" fill=\"currentColor\" stroke=\"currentColor\" stroke-width=\"1\"/><line x1=\"58\" y1=\"130\" x2=\"85\" y2=\"130\" stroke=\"currentColor\" stroke-width=\"1.5\"/><polygon points=\"94,130 85,134.5 85,125.5\" fill=\"currentColor\" stroke=\"currentColor\" stroke-width=\"1\"/><circle cx=\"170\" cy=\"100\" r=\"66\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.5\" stroke-dasharray=\"5 4\"/><circle cx=\"170\" cy=\"100\" r=\"22\" fill=\"#7fc8f8\" fill-opacity=\"0.6\" stroke=\"currentColor\" stroke-width=\"2\"/><text x=\"170\" y=\"104\" font-size=\"12\" text-anchor=\"middle\" fill=\"currentColor\">地球</text><circle cx=\"148\" cy=\"100\" r=\"5\" fill=\"#f08080\" fill-opacity=\"0.95\" stroke=\"currentColor\" stroke-width=\"1.5\"/><circle cx=\"170\" cy=\"34\" r=\"8\" fill=\"#c8ccd6\" fill-opacity=\"0.9\" stroke=\"currentColor\" stroke-width=\"2\"/><circle cx=\"104\" cy=\"100\" r=\"8\" fill=\"#c8ccd6\" fill-opacity=\"0.9\" stroke=\"currentColor\" stroke-width=\"2\"/><circle cx=\"170\" cy=\"166\" r=\"8\" fill=\"#c8ccd6\" fill-opacity=\"0.9\" stroke=\"currentColor\" stroke-width=\"2\"/><circle cx=\"236\" cy=\"100\" r=\"8\" fill=\"#c8ccd6\" fill-opacity=\"0.9\" stroke=\"currentColor\" stroke-width=\"2\"/><text x=\"248\" y=\"105\" font-size=\"12\" text-anchor=\"start\" fill=\"currentColor\">満月</text><text x=\"92\" y=\"105\" font-size=\"12\" text-anchor=\"end\" fill=\"currentColor\">新月</text></svg>",
+       "answer": 12,
+       "check": "24 // 2",
+       "hints": [
+        "満月の月は、地球を中心にして、太陽の反対がわにある。",
+        "太陽が南中した人は、地球のどちらがわにいるか。その人が自転で、月の向きまで回るには、何度回ればよいか。",
+        "地球は 1 時間に 15° 回る。"
+       ],
+       "qid": "W-073:b0c8201455"
+      },
+      {
+       "part": "今日",
+       "text": "ひがしけいど 135° の場所 A で、太陽が 12 時ちょうどに南中する日、ひがしけいど 125° の場所 D では、太陽は 12 時の何分後に南中するか。",
+       "svg": "<svg viewBox=\"0 0 320 200\" xmlns=\"http://www.w3.org/2000/svg\"><rect x=\"20\" y=\"88\" width=\"280\" height=\"36\" fill=\"#7fc8f8\" fill-opacity=\"0.3\" stroke=\"currentColor\" stroke-width=\"2\"/><line x1=\"203.3\" y1=\"80\" x2=\"203.3\" y2=\"132\" stroke=\"currentColor\" stroke-width=\"2\"/><text x=\"203.3\" y=\"150\" font-size=\"12\" text-anchor=\"middle\" fill=\"currentColor\">A（ひがしけいど 135°）</text><line x1=\"116.7\" y1=\"80\" x2=\"116.7\" y2=\"132\" stroke=\"currentColor\" stroke-width=\"2\"/><text x=\"116.7\" y=\"172\" font-size=\"12\" text-anchor=\"middle\" fill=\"currentColor\">D（ひがしけいど 125°）</text><circle cx=\"203.3\" cy=\"50\" r=\"14\" fill=\"#f3c969\" fill-opacity=\"0.7\" stroke=\"currentColor\" stroke-width=\"2\"/><text x=\"223.3\" y=\"54\" font-size=\"13\" text-anchor=\"start\" fill=\"currentColor\">12 時</text><line x1=\"300\" y1=\"26\" x2=\"210\" y2=\"26\" stroke=\"currentColor\" stroke-width=\"2\"/><polygon points=\"200,26 210,21 210,31\" fill=\"currentColor\" stroke=\"currentColor\" stroke-width=\"1\"/><text x=\"250\" y=\"18\" font-size=\"12\" text-anchor=\"middle\" fill=\"currentColor\">太陽の動き</text></svg>",
+       "answer": 40,
+       "check": "(135 - 125) * 4",
+       "hints": [
+        "D は A の東か、西か。西の場所ほど、太陽が来るのはおそい。",
+        "けいど 1° ではどれだけ時間がちがうか。15° で 60 分だ。",
+        "A と D のけいどのちがいは 10° だ。"
+       ],
+       "qid": "W-073:12cb0298bf"
+      }
+     ],
      "key": "混ぜる#1"
     },
     {
      "kind": "確認",
      "aim": "",
+     "items": [
+      {
+       "part": "今日",
+       "text": "午後 9 時に、星 ● が北極星の真上に見えた。星は、北極星を中心に反時計回りに、1 時間に 15° ずつ回る。この星が北極星の真左（西がわ）に来るのは、午前何時か。",
+       "svg": "<svg viewBox=\"0 0 320 200\" xmlns=\"http://www.w3.org/2000/svg\"><text x=\"8\" y=\"16\" font-size=\"12\" text-anchor=\"start\" fill=\"currentColor\">北の空（北を向いて見る）</text><text x=\"18\" y=\"109\" font-size=\"14\" text-anchor=\"middle\" fill=\"currentColor\">西</text><text x=\"302\" y=\"109\" font-size=\"14\" text-anchor=\"middle\" fill=\"currentColor\">東</text><circle cx=\"160\" cy=\"104\" r=\"4\" fill=\"#f3c969\" fill-opacity=\"0.9\" stroke=\"currentColor\" stroke-width=\"1.5\"/><text x=\"160\" y=\"124\" font-size=\"12\" text-anchor=\"middle\" fill=\"currentColor\">北極星</text><circle cx=\"160\" cy=\"104\" r=\"66\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.5\" stroke-dasharray=\"5 4\"/><circle cx=\"160\" cy=\"38\" r=\"6\" fill=\"#f3c969\" fill-opacity=\"0.9\" stroke=\"currentColor\" stroke-width=\"1.5\"/><circle cx=\"94\" cy=\"104\" r=\"6\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.5\" stroke-dasharray=\"2 2\"/><text x=\"86\" y=\"92\" font-size=\"12\" text-anchor=\"end\" fill=\"currentColor\">真左</text><text x=\"168\" y=\"36\" font-size=\"12\" text-anchor=\"start\" fill=\"currentColor\">午後 9 時</text></svg>",
+       "answer": 3,
+       "check": "9 + 90 // 15 - 12",
+       "hints": [
+        "星が真上から真左まで回るあいだに、何度動くか。",
+        {
+         "text": "真上と真左は、北極星から見て直角にある。",
+         "svg": "<svg viewBox=\"0 0 320 200\" xmlns=\"http://www.w3.org/2000/svg\"><text x=\"8\" y=\"16\" font-size=\"12\" text-anchor=\"start\" fill=\"currentColor\">北の空（北を向いて見る）</text><text x=\"18\" y=\"109\" font-size=\"14\" text-anchor=\"middle\" fill=\"currentColor\">西</text><text x=\"302\" y=\"109\" font-size=\"14\" text-anchor=\"middle\" fill=\"currentColor\">東</text><circle cx=\"160\" cy=\"104\" r=\"4\" fill=\"#f3c969\" fill-opacity=\"0.9\" stroke=\"currentColor\" stroke-width=\"1.5\"/><text x=\"160\" y=\"124\" font-size=\"12\" text-anchor=\"middle\" fill=\"currentColor\">北極星</text><circle cx=\"160\" cy=\"104\" r=\"66\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.5\" stroke-dasharray=\"5 4\"/><circle cx=\"160\" cy=\"38\" r=\"6\" fill=\"#f3c969\" fill-opacity=\"0.9\" stroke=\"currentColor\" stroke-width=\"1.5\"/><circle cx=\"94\" cy=\"104\" r=\"6\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.5\" stroke-dasharray=\"2 2\"/><line x1=\"160\" y1=\"104\" x2=\"160\" y2=\"38\" stroke=\"currentColor\" stroke-width=\"1.5\" stroke-dasharray=\"3 3\"/><line x1=\"160\" y1=\"104\" x2=\"94\" y2=\"104\" stroke=\"currentColor\" stroke-width=\"1.5\" stroke-dasharray=\"3 3\"/><path d=\"M160 95 L151 95 L151 104\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.5\"/><text x=\"136\" y=\"80\" font-size=\"13\" text-anchor=\"middle\" fill=\"currentColor\">？°</text></svg>"
+        },
+        "その角を 1 時間に 15° の速さで動くと、何時間かかるか。それを午後 9 時にたして、午前何時になるか考えよう。"
+       ],
+       "qid": "W-073:5511573144"
+      },
+      {
+       "part": "今日",
+       "text": "ある場所で、げしの日の南中高度をはかったら 70° だった。このとき太陽は、南の空に見えた。この場所のきたいどは何度か。げしの日は、太陽が真上に来る場所が、赤道から 23.4° 北にある。",
+       "svg": "<svg viewBox=\"0 0 320 200\" xmlns=\"http://www.w3.org/2000/svg\"><circle cx=\"110\" cy=\"112\" r=\"62\" fill=\"#7fc8f8\" fill-opacity=\"0.5\" stroke=\"currentColor\" stroke-width=\"2\"/><line x1=\"110\" y1=\"40\" x2=\"110\" y2=\"184\" stroke=\"currentColor\" stroke-width=\"2\"/><line x1=\"38\" y1=\"112\" x2=\"182\" y2=\"112\" stroke=\"currentColor\" stroke-width=\"1.5\" stroke-dasharray=\"5 4\"/><circle cx=\"155\" cy=\"69.4\" r=\"4.5\" fill=\"#f08080\" fill-opacity=\"0.9\" stroke=\"currentColor\" stroke-width=\"1.5\"/><line x1=\"130.3\" y1=\"43.2\" x2=\"179.8\" y2=\"95.6\" stroke=\"currentColor\" stroke-width=\"2\"/><text x=\"115.3\" y=\"31.6\" font-size=\"13\" text-anchor=\"middle\" fill=\"currentColor\">北</text><text x=\"198.8\" y=\"115.2\" font-size=\"13\" text-anchor=\"middle\" fill=\"currentColor\">南</text><line x1=\"274.4\" y1=\"17.8\" x2=\"171.6\" y2=\"62.3\" stroke=\"currentColor\" stroke-width=\"2\"/><polygon points=\"162.4,66.2 169.6,57.7 173.6,66.8\" fill=\"currentColor\" stroke=\"currentColor\" stroke-width=\"1\"/><path d=\"M178.4 94.1 A34 34 0 0 0 186.3 55.9\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.5\"/><text x=\"209.9\" y=\"80.7\" font-size=\"13\" text-anchor=\"start\" fill=\"currentColor\">70°</text><text x=\"240\" y=\"14\" font-size=\"13\" text-anchor=\"middle\" fill=\"currentColor\">太陽の光</text></svg>",
+       "answer": "43.4",
+       "check": "90 - 70 + 23.4",
+       "hints": [
+        "太陽の光と、この場所の真上の線がつくる角は、直角から南中高度をひいた角だ。",
+        {
+         "text": "太陽が真上に来る場所は、赤道から 23.4° 北だ。この場所は、そこから何度はなれているか。",
+         "svg": "<svg viewBox=\"0 0 320 200\" xmlns=\"http://www.w3.org/2000/svg\"><circle cx=\"110\" cy=\"112\" r=\"62\" fill=\"#7fc8f8\" fill-opacity=\"0.5\" stroke=\"currentColor\" stroke-width=\"2\"/><line x1=\"110\" y1=\"40\" x2=\"110\" y2=\"184\" stroke=\"currentColor\" stroke-width=\"2\"/><line x1=\"38\" y1=\"112\" x2=\"182\" y2=\"112\" stroke=\"currentColor\" stroke-width=\"1.5\" stroke-dasharray=\"5 4\"/><circle cx=\"155\" cy=\"69.4\" r=\"4.5\" fill=\"#f08080\" fill-opacity=\"0.9\" stroke=\"currentColor\" stroke-width=\"1.5\"/><line x1=\"130.3\" y1=\"43.2\" x2=\"179.8\" y2=\"95.6\" stroke=\"currentColor\" stroke-width=\"2\"/><text x=\"115.3\" y=\"31.6\" font-size=\"13\" text-anchor=\"middle\" fill=\"currentColor\">北</text><text x=\"198.8\" y=\"115.2\" font-size=\"13\" text-anchor=\"middle\" fill=\"currentColor\">南</text><line x1=\"274.4\" y1=\"17.8\" x2=\"171.6\" y2=\"62.3\" stroke=\"currentColor\" stroke-width=\"2\"/><polygon points=\"162.4,66.2 169.6,57.7 173.6,66.8\" fill=\"currentColor\" stroke=\"currentColor\" stroke-width=\"1\"/><circle cx=\"166.9\" cy=\"87.4\" r=\"5\" fill=\"#f3c969\" fill-opacity=\"0.95\" stroke=\"currentColor\" stroke-width=\"1.5\"/><line x1=\"249.5\" y1=\"51.6\" x2=\"183.4\" y2=\"80.2\" stroke=\"currentColor\" stroke-width=\"2\" stroke-dasharray=\"3 3\"/><polygon points=\"174.2,84.2 181.4,75.6 185.4,84.8\" fill=\"currentColor\" stroke=\"currentColor\" stroke-width=\"1\"/><path d=\"M176.1 83.4 A72 72 0 0 0 162.3 62.5\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\"/><text x=\"168\" y=\"48\" font-size=\"13\" text-anchor=\"start\" fill=\"currentColor\">？°</text><text x=\"214\" y=\"98\" font-size=\"12\" text-anchor=\"start\" fill=\"currentColor\">真上に来る場所</text></svg>"
+        },
+        "この場所では、太陽は真上より南の空に見える。太陽が真上に来る場所は、この場所の北か南か。"
+       ],
+       "qid": "W-073:6fa0b9f06f"
+      },
+      {
+       "part": "今日",
+       "text": "A と C は、同じ時計（ひがしけいど 135° に合わせたもの）を使っている。この時計で、場所 A（ひがしけいど 135°）では太陽が 12 時に南中し、場所 C では 13 時（午後 1 時）に南中した。C は、ひがしけいど何度の場所か。",
+       "svg": "<svg viewBox=\"0 0 320 200\" xmlns=\"http://www.w3.org/2000/svg\"><rect x=\"20\" y=\"88\" width=\"280\" height=\"36\" fill=\"#7fc8f8\" fill-opacity=\"0.3\" stroke=\"currentColor\" stroke-width=\"2\"/><line x1=\"116.7\" y1=\"80\" x2=\"116.7\" y2=\"132\" stroke=\"currentColor\" stroke-width=\"2\"/><text x=\"116.7\" y=\"172\" font-size=\"12\" text-anchor=\"middle\" fill=\"currentColor\">C（ひがしけいど ？°）</text><line x1=\"203.3\" y1=\"80\" x2=\"203.3\" y2=\"132\" stroke=\"currentColor\" stroke-width=\"2\"/><text x=\"203.3\" y=\"150\" font-size=\"12\" text-anchor=\"middle\" fill=\"currentColor\">A（ひがしけいど 135°）</text><text x=\"116.7\" y=\"72\" font-size=\"13\" text-anchor=\"middle\" fill=\"currentColor\">午後 1 時</text><text x=\"203.3\" y=\"72\" font-size=\"13\" text-anchor=\"middle\" fill=\"currentColor\">12 時</text><line x1=\"300\" y1=\"26\" x2=\"210\" y2=\"26\" stroke=\"currentColor\" stroke-width=\"2\"/><polygon points=\"200,26 210,21 210,31\" fill=\"currentColor\" stroke=\"currentColor\" stroke-width=\"1\"/><text x=\"250\" y=\"18\" font-size=\"12\" text-anchor=\"middle\" fill=\"currentColor\">太陽の動き</text></svg>",
+       "answer": 120,
+       "check": "135 - (13 - 12) * 15",
+       "hints": [
+        "C は A より南中がおそい。太陽は東から西へ動くので、C は A の東か、西か。",
+        {
+         "text": "1 時間のちがいを、けいどの角にかえよう。",
+         "svg": "<svg viewBox=\"0 0 320 200\" xmlns=\"http://www.w3.org/2000/svg\"><rect x=\"20\" y=\"88\" width=\"280\" height=\"36\" fill=\"#7fc8f8\" fill-opacity=\"0.3\" stroke=\"currentColor\" stroke-width=\"2\"/><line x1=\"116.7\" y1=\"80\" x2=\"116.7\" y2=\"132\" stroke=\"currentColor\" stroke-width=\"2\"/><text x=\"116.7\" y=\"172\" font-size=\"12\" text-anchor=\"middle\" fill=\"currentColor\">C（ひがしけいど ？°）</text><line x1=\"203.3\" y1=\"80\" x2=\"203.3\" y2=\"132\" stroke=\"currentColor\" stroke-width=\"2\"/><text x=\"203.3\" y=\"150\" font-size=\"12\" text-anchor=\"middle\" fill=\"currentColor\">A（ひがしけいど 135°）</text><line x1=\"116.7\" y1=\"112\" x2=\"203.3\" y2=\"112\" stroke=\"currentColor\" stroke-width=\"1.5\"/><text x=\"160\" y=\"104\" font-size=\"13\" text-anchor=\"middle\" fill=\"currentColor\">？°</text><line x1=\"300\" y1=\"26\" x2=\"210\" y2=\"26\" stroke=\"currentColor\" stroke-width=\"2\"/><polygon points=\"200,26 210,21 210,31\" fill=\"currentColor\" stroke=\"currentColor\" stroke-width=\"1\"/><text x=\"250\" y=\"18\" font-size=\"12\" text-anchor=\"middle\" fill=\"currentColor\">太陽の動き</text></svg>"
+        },
+        "けいど 15° で 1 時間ちがう。A のけいどから、そのぶんだけ、C のある向きへずらす。"
+       ],
+       "qid": "W-073:7b5e059d5f"
+      },
+      {
+       "part": "今日",
+       "text": "日本の時計は、ひがしけいど 135° の場所の太陽の動きに合わせてある。太陽が南中する時こくは、日によっても少しずれる（これをきんじさという）。11 月ごろは、きんじさのない日より、太陽が 16 分早く南中する。この時期、ひがしけいど 120° の場所では、太陽は日本の時計で 12 時の何分後に南中するか。",
+       "svg": "<svg viewBox=\"0 0 320 200\" xmlns=\"http://www.w3.org/2000/svg\"><line x1=\"30\" y1=\"110\" x2=\"290\" y2=\"110\" stroke=\"currentColor\" stroke-width=\"2\"/><line x1=\"60\" y1=\"100\" x2=\"60\" y2=\"120\" stroke=\"currentColor\" stroke-width=\"2\"/><line x1=\"240\" y1=\"100\" x2=\"240\" y2=\"120\" stroke=\"currentColor\" stroke-width=\"2\"/><text x=\"60\" y=\"138\" font-size=\"13\" text-anchor=\"middle\" fill=\"currentColor\">12 時</text><text x=\"240\" y=\"138\" font-size=\"13\" text-anchor=\"middle\" fill=\"currentColor\">13 時</text><circle cx=\"60\" cy=\"74\" r=\"10\" fill=\"#f3c969\" fill-opacity=\"0.8\" stroke=\"currentColor\" stroke-width=\"2\"/><text x=\"30\" y=\"34\" font-size=\"12\" text-anchor=\"start\" fill=\"currentColor\">135° の場所の南中（きんじさのない日）</text><text x=\"310\" y=\"52\" font-size=\"12\" text-anchor=\"end\" fill=\"currentColor\">120° の場所の南中は？</text><text x=\"160\" y=\"190\" font-size=\"12\" text-anchor=\"middle\" fill=\"currentColor\">日本の時計</text></svg>",
+       "answer": 44,
+       "check": "(135 - 120) * 4 - 16",
+       "hints": [
+        "まず、きんじさを考えないで、けいどのちがいだけで、120° の場所の南中が何分おそいかを出そう。",
+        {
+         "text": "けいどが 15° 西にある場所の南中は、1 時間おそい。",
+         "svg": "<svg viewBox=\"0 0 320 200\" xmlns=\"http://www.w3.org/2000/svg\"><line x1=\"30\" y1=\"110\" x2=\"290\" y2=\"110\" stroke=\"currentColor\" stroke-width=\"2\"/><line x1=\"60\" y1=\"100\" x2=\"60\" y2=\"120\" stroke=\"currentColor\" stroke-width=\"2\"/><line x1=\"240\" y1=\"100\" x2=\"240\" y2=\"120\" stroke=\"currentColor\" stroke-width=\"2\"/><text x=\"60\" y=\"138\" font-size=\"13\" text-anchor=\"middle\" fill=\"currentColor\">12 時</text><text x=\"240\" y=\"138\" font-size=\"13\" text-anchor=\"middle\" fill=\"currentColor\">13 時</text><circle cx=\"60\" cy=\"74\" r=\"10\" fill=\"#f3c969\" fill-opacity=\"0.8\" stroke=\"currentColor\" stroke-width=\"2\"/><text x=\"30\" y=\"34\" font-size=\"12\" text-anchor=\"start\" fill=\"currentColor\">135° の場所の南中（きんじさのない日）</text><text x=\"310\" y=\"52\" font-size=\"12\" text-anchor=\"end\" fill=\"currentColor\">120° の場所の南中は？</text><text x=\"160\" y=\"190\" font-size=\"12\" text-anchor=\"middle\" fill=\"currentColor\">日本の時計</text><circle cx=\"240\" cy=\"74\" r=\"10\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.5\" stroke-dasharray=\"3 3\"/><line x1=\"72\" y1=\"74\" x2=\"219\" y2=\"74\" stroke=\"currentColor\" stroke-width=\"1.5\"/><polygon points=\"228,74 219,78.5 219,69.5\" fill=\"currentColor\" stroke=\"currentColor\" stroke-width=\"1\"/><text x=\"150\" y=\"96\" font-size=\"12\" text-anchor=\"middle\" fill=\"currentColor\">西のぶん おそい</text></svg>"
+        },
+        "つぎに、きんじさの 16 分を、足すかひくか。太陽は早く南中する。"
+       ],
+       "qid": "W-073:1ea8e6fdd9"
+      },
+      {
+       "part": "今日",
+       "text": "日の入りのころ、東の空から月がのぼってきた。図は、そのときの空のようすだ。この月の形は何か。",
+       "svg": "<svg viewBox=\"0 0 320 200\" xmlns=\"http://www.w3.org/2000/svg\"><path d=\"M30 165 A130 130 0 0 1 290 165 Z\" fill=\"#7fc8f8\" fill-opacity=\"0.18\" stroke=\"currentColor\" stroke-width=\"2\"/><line x1=\"20\" y1=\"165\" x2=\"300\" y2=\"165\" stroke=\"currentColor\" stroke-width=\"2\"/><text x=\"30\" y=\"187\" font-size=\"14\" text-anchor=\"middle\" fill=\"currentColor\">東</text><text x=\"160\" y=\"187\" font-size=\"14\" text-anchor=\"middle\" fill=\"currentColor\">南</text><text x=\"290\" y=\"187\" font-size=\"14\" text-anchor=\"middle\" fill=\"currentColor\">西</text><circle cx=\"290\" cy=\"165\" r=\"10\" fill=\"#f3c969\" fill-opacity=\"0.6\" stroke=\"currentColor\" stroke-width=\"1.5\"/><text x=\"262\" y=\"150\" font-size=\"12\" text-anchor=\"middle\" fill=\"currentColor\">日の入り</text><circle cx=\"30.1\" cy=\"160.5\" r=\"10\" fill=\"#c8ccd6\" fill-opacity=\"0.6\" stroke=\"currentColor\" stroke-width=\"1.5\"/><text x=\"60\" y=\"148\" font-size=\"13\" text-anchor=\"middle\" fill=\"currentColor\">月</text></svg>",
+       "choices": [
+        "新月",
+        "三日月",
+        "半月",
+        "満月"
+       ],
+       "answer": "満月",
+       "check": "'満月'",
+       "hints": [
+        "月が東からのぼるとき、太陽は西にしずむ。2 つは空のどんな位置にあるか。",
+        {
+         "text": "太陽と月は、自分をはさんで反対の向きにある。",
+         "svg": "<svg viewBox=\"0 0 320 200\" xmlns=\"http://www.w3.org/2000/svg\"><path d=\"M30 165 A130 130 0 0 1 290 165 Z\" fill=\"#7fc8f8\" fill-opacity=\"0.18\" stroke=\"currentColor\" stroke-width=\"2\"/><line x1=\"20\" y1=\"165\" x2=\"300\" y2=\"165\" stroke=\"currentColor\" stroke-width=\"2\"/><text x=\"30\" y=\"187\" font-size=\"14\" text-anchor=\"middle\" fill=\"currentColor\">東</text><text x=\"160\" y=\"187\" font-size=\"14\" text-anchor=\"middle\" fill=\"currentColor\">南</text><text x=\"290\" y=\"187\" font-size=\"14\" text-anchor=\"middle\" fill=\"currentColor\">西</text><circle cx=\"290\" cy=\"165\" r=\"10\" fill=\"#f3c969\" fill-opacity=\"0.6\" stroke=\"currentColor\" stroke-width=\"1.5\"/><text x=\"262\" y=\"156\" font-size=\"13\" text-anchor=\"middle\" fill=\"currentColor\">太陽</text><circle cx=\"30.1\" cy=\"160.5\" r=\"10\" fill=\"#c8ccd6\" fill-opacity=\"0.6\" stroke=\"currentColor\" stroke-width=\"1.5\"/><text x=\"52\" y=\"156\" font-size=\"13\" text-anchor=\"middle\" fill=\"currentColor\">月</text><circle cx=\"160\" cy=\"165\" r=\"4.5\" fill=\"#f08080\" fill-opacity=\"0.9\" stroke=\"currentColor\" stroke-width=\"1.5\"/><line x1=\"160\" y1=\"160\" x2=\"160\" y2=\"134\" stroke=\"currentColor\" stroke-width=\"1\" stroke-dasharray=\"2 3\"/><text x=\"160\" y=\"128\" font-size=\"13\" text-anchor=\"middle\" fill=\"currentColor\">自分</text><line x1=\"150\" y1=\"140\" x2=\"71\" y2=\"140\" stroke=\"currentColor\" stroke-width=\"1.5\"/><polygon points=\"62,140 71,135.5 71,144.5\" fill=\"currentColor\" stroke=\"currentColor\" stroke-width=\"1\"/><text x=\"106\" y=\"132\" font-size=\"12\" text-anchor=\"middle\" fill=\"currentColor\">月の向き</text><line x1=\"170\" y1=\"140\" x2=\"249\" y2=\"140\" stroke=\"currentColor\" stroke-width=\"1.5\"/><polygon points=\"258,140 249,144.5 249,135.5\" fill=\"currentColor\" stroke=\"currentColor\" stroke-width=\"1\"/><text x=\"214\" y=\"132\" font-size=\"12\" text-anchor=\"middle\" fill=\"currentColor\">太陽の向き</text></svg>"
+        },
+        "太陽の反対がわにある月は、地球から見て、光る面が見えるか、見えないか。"
+       ],
+       "qid": "W-073:1990c7d434"
+      },
+      {
+       "part": "今日",
+       "text": "太陽の引力も、海の水を引く。新月も満月も、太陽・月・地球が一直線にならぶので、太陽によるふくらみと月によるふくらみが重なり、満ちひきの差が大きい「おおしお」になる。新月から次の新月までは約 29.5 日だ。ある「おおしお」から次の「おおしお」までは、何日か。",
+       "svg": "<svg viewBox=\"0 0 320 200\" xmlns=\"http://www.w3.org/2000/svg\"><text x=\"160\" y=\"22\" font-size=\"13\" text-anchor=\"middle\" fill=\"currentColor\">新月のころ（おおしお）</text><line x1=\"56\" y1=\"62\" x2=\"246\" y2=\"62\" stroke=\"currentColor\" stroke-width=\"1.5\" stroke-dasharray=\"5 4\"/><circle cx=\"38\" cy=\"62\" r=\"18\" fill=\"#f3c969\" fill-opacity=\"0.7\" stroke=\"currentColor\" stroke-width=\"2\"/><text x=\"38\" y=\"66\" font-size=\"12\" text-anchor=\"middle\" fill=\"currentColor\">太陽</text><circle cx=\"150\" cy=\"62\" r=\"8\" fill=\"#c8ccd6\" fill-opacity=\"0.9\" stroke=\"currentColor\" stroke-width=\"2\"/><text x=\"150\" y=\"88\" font-size=\"12\" text-anchor=\"middle\" fill=\"currentColor\">月</text><circle cx=\"262\" cy=\"62\" r=\"16\" fill=\"#7fc8f8\" fill-opacity=\"0.6\" stroke=\"currentColor\" stroke-width=\"2\"/><text x=\"262\" y=\"94\" font-size=\"12\" text-anchor=\"middle\" fill=\"currentColor\">地球</text><text x=\"160\" y=\"118\" font-size=\"13\" text-anchor=\"middle\" fill=\"currentColor\">満月のころ（おおしお）</text><line x1=\"56\" y1=\"152\" x2=\"246\" y2=\"152\" stroke=\"currentColor\" stroke-width=\"1.5\" stroke-dasharray=\"5 4\"/><circle cx=\"38\" cy=\"152\" r=\"18\" fill=\"#f3c969\" fill-opacity=\"0.7\" stroke=\"currentColor\" stroke-width=\"2\"/><text x=\"38\" y=\"156\" font-size=\"12\" text-anchor=\"middle\" fill=\"currentColor\">太陽</text><circle cx=\"150\" cy=\"152\" r=\"16\" fill=\"#7fc8f8\" fill-opacity=\"0.6\" stroke=\"currentColor\" stroke-width=\"2\"/><text x=\"150\" y=\"182\" font-size=\"12\" text-anchor=\"middle\" fill=\"currentColor\">地球</text><circle cx=\"262\" cy=\"152\" r=\"8\" fill=\"#c8ccd6\" fill-opacity=\"0.9\" stroke=\"currentColor\" stroke-width=\"2\"/><text x=\"262\" y=\"178\" font-size=\"12\" text-anchor=\"middle\" fill=\"currentColor\">月</text></svg>",
+       "answer": "14.75",
+       "check": "29.5 / 2",
+       "hints": [
+        "新月から次の新月まで 1 回りするあいだに、おおしおになるのは何回か。",
+        {
+         "text": "月が地球のまわりを 1 回りするあいだの形の変わりかたは、図のとおりだ。",
+         "svg": "<svg viewBox=\"0 0 320 200\" xmlns=\"http://www.w3.org/2000/svg\"><circle cx=\"160\" cy=\"100\" r=\"52\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.5\" stroke-dasharray=\"5 4\"/><circle cx=\"160\" cy=\"48\" r=\"9\" fill=\"#c8ccd6\" fill-opacity=\"0.9\" stroke=\"currentColor\" stroke-width=\"2\"/><text x=\"160\" y=\"30\" font-size=\"13\" text-anchor=\"middle\" fill=\"currentColor\">新月</text><circle cx=\"212\" cy=\"100\" r=\"9\" fill=\"#c8ccd6\" fill-opacity=\"0.9\" stroke=\"currentColor\" stroke-width=\"2\"/><text x=\"236\" y=\"104\" font-size=\"13\" text-anchor=\"start\" fill=\"currentColor\">半月</text><circle cx=\"160\" cy=\"152\" r=\"9\" fill=\"#c8ccd6\" fill-opacity=\"0.9\" stroke=\"currentColor\" stroke-width=\"2\"/><text x=\"160\" y=\"182\" font-size=\"13\" text-anchor=\"middle\" fill=\"currentColor\">満月</text><circle cx=\"108\" cy=\"100\" r=\"9\" fill=\"#c8ccd6\" fill-opacity=\"0.9\" stroke=\"currentColor\" stroke-width=\"2\"/><text x=\"84\" y=\"104\" font-size=\"13\" text-anchor=\"end\" fill=\"currentColor\">半月</text><circle cx=\"160\" cy=\"100\" r=\"14\" fill=\"#7fc8f8\" fill-opacity=\"0.6\" stroke=\"currentColor\" stroke-width=\"2\"/><text x=\"160\" y=\"130\" font-size=\"12\" text-anchor=\"middle\" fill=\"currentColor\">地球</text></svg>"
+        },
+        "新月から満月までは、1 周の何分の 1 か。1 周は約 29.5 日だ。"
+       ],
+       "qid": "W-073:e85f028632"
+      }
+     ],
+     "extra": [
+      {
+       "part": "今日",
+       "text": "北の空の星は、北極星を中心に反時計回りに円をえがいて動く。星 ● は、北極星の左がわに見える。しばらく見ていると、星 ● はどう動くか。北を向いて立つと、東は右、西は左になる。",
+       "svg": "<svg viewBox=\"0 0 320 200\" xmlns=\"http://www.w3.org/2000/svg\"><text x=\"8\" y=\"16\" font-size=\"12\" text-anchor=\"start\" fill=\"currentColor\">北の空（北を向いて見る）</text><text x=\"18\" y=\"109\" font-size=\"14\" text-anchor=\"middle\" fill=\"currentColor\">西</text><text x=\"302\" y=\"109\" font-size=\"14\" text-anchor=\"middle\" fill=\"currentColor\">東</text><circle cx=\"160\" cy=\"104\" r=\"4\" fill=\"#f3c969\" fill-opacity=\"0.9\" stroke=\"currentColor\" stroke-width=\"1.5\"/><text x=\"160\" y=\"124\" font-size=\"12\" text-anchor=\"middle\" fill=\"currentColor\">北極星</text><circle cx=\"160\" cy=\"104\" r=\"66\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.5\" stroke-dasharray=\"5 4\"/><circle cx=\"94\" cy=\"104\" r=\"6\" fill=\"#f3c969\" fill-opacity=\"0.9\" stroke=\"currentColor\" stroke-width=\"1.5\"/></svg>",
+       "choices": [
+        "上へ向かう",
+        "北極星から遠ざかる",
+        "下へ向かう",
+        "北極星に近づく"
+       ],
+       "answer": "下へ向かう",
+       "check": "'下へ向かう'",
+       "hints": [
+        "星は、東の空でのぼり、西の空でしずむ。",
+        "北極星の左は、東と西のどちらがわか。",
+        "西がわの星は、しずむほうへ向かうか、のぼるほうへ向かうか。"
+       ],
+       "qid": "W-073:c0b23649ce"
+      },
+      {
+       "part": "今日",
+       "text": "年の数が 4 でわりきれる年は、うるう年で、2 月が 29 日まである。ただし、100 でわりきれる年はふつうの年にする。そのうち 400 でもわりきれる年だけは、うるう年にする。1900 年、2000 年、2100 年のうち、2 月が 29 日まである年はどれか。",
+       "svg": "<svg viewBox=\"0 0 320 200\" xmlns=\"http://www.w3.org/2000/svg\"><rect x=\"20\" y=\"40\" width=\"80\" height=\"76\" rx=\"6\" fill=\"#f3c969\" fill-opacity=\"0.35\" stroke=\"currentColor\" stroke-width=\"2\"/><rect x=\"20\" y=\"40\" width=\"80\" height=\"20\" rx=\"6\" fill=\"#f08080\" fill-opacity=\"0.5\" stroke=\"currentColor\" stroke-width=\"2\"/><rect x=\"120\" y=\"40\" width=\"80\" height=\"76\" rx=\"6\" fill=\"#f3c969\" fill-opacity=\"0.35\" stroke=\"currentColor\" stroke-width=\"2\"/><rect x=\"120\" y=\"40\" width=\"80\" height=\"20\" rx=\"6\" fill=\"#f08080\" fill-opacity=\"0.5\" stroke=\"currentColor\" stroke-width=\"2\"/><rect x=\"220\" y=\"40\" width=\"80\" height=\"76\" rx=\"6\" fill=\"#f3c969\" fill-opacity=\"0.35\" stroke=\"currentColor\" stroke-width=\"2\"/><rect x=\"220\" y=\"40\" width=\"80\" height=\"20\" rx=\"6\" fill=\"#f08080\" fill-opacity=\"0.5\" stroke=\"currentColor\" stroke-width=\"2\"/><text x=\"60\" y=\"56\" font-size=\"13\" text-anchor=\"middle\" fill=\"currentColor\">2 月</text><text x=\"160\" y=\"56\" font-size=\"13\" text-anchor=\"middle\" fill=\"currentColor\">2 月</text><text x=\"260\" y=\"56\" font-size=\"13\" text-anchor=\"middle\" fill=\"currentColor\">2 月</text><text x=\"60\" y=\"100\" font-size=\"28\" text-anchor=\"middle\" fill=\"currentColor\">？</text><text x=\"160\" y=\"100\" font-size=\"28\" text-anchor=\"middle\" fill=\"currentColor\">？</text><text x=\"260\" y=\"100\" font-size=\"28\" text-anchor=\"middle\" fill=\"currentColor\">？</text><text x=\"60\" y=\"148\" font-size=\"14\" text-anchor=\"middle\" fill=\"currentColor\">1900 年</text><text x=\"160\" y=\"148\" font-size=\"14\" text-anchor=\"middle\" fill=\"currentColor\">2000 年</text><text x=\"260\" y=\"148\" font-size=\"14\" text-anchor=\"middle\" fill=\"currentColor\">2100 年</text></svg>",
+       "choices": [
+        "1900 年だけ",
+        "3 つともうるう年",
+        "2100 年だけ",
+        "2000 年だけ"
+       ],
+       "answer": "2000 年だけ",
+       "check": "'2000 年だけ'",
+       "hints": [
+        "3 つの年は、どれも 4 でわりきれる。つぎに、100 でわりきれるかを見よう。",
+        {
+         "text": "100 でわりきれる年は、ふつうの年にする。ただし、例外がある。",
+         "svg": "<svg viewBox=\"0 0 320 200\" xmlns=\"http://www.w3.org/2000/svg\"><rect x=\"10\" y=\"8\" width=\"120\" height=\"40\" rx=\"6\" fill=\"#f3c969\" fill-opacity=\"0.35\" stroke=\"currentColor\" stroke-width=\"2\"/><text x=\"70\" y=\"33\" font-size=\"12\" text-anchor=\"middle\" fill=\"currentColor\">4 で わりきれる？</text><rect x=\"10\" y=\"76\" width=\"120\" height=\"40\" rx=\"6\" fill=\"#f3c969\" fill-opacity=\"0.35\" stroke=\"currentColor\" stroke-width=\"2\"/><text x=\"70\" y=\"101\" font-size=\"12\" text-anchor=\"middle\" fill=\"currentColor\">100 で わりきれる？</text><rect x=\"10\" y=\"144\" width=\"120\" height=\"40\" rx=\"6\" fill=\"#f3c969\" fill-opacity=\"0.35\" stroke=\"currentColor\" stroke-width=\"2\"/><text x=\"70\" y=\"169\" font-size=\"12\" text-anchor=\"middle\" fill=\"currentColor\">400 で わりきれる？</text><line x1=\"70\" y1=\"48\" x2=\"70\" y2=\"68\" stroke=\"currentColor\" stroke-width=\"1.5\"/><polygon points=\"70,76 66,68 74,68\" fill=\"currentColor\" stroke=\"currentColor\" stroke-width=\"1\"/><text x=\"78\" y=\"67\" font-size=\"12\" text-anchor=\"start\" fill=\"currentColor\">はい</text><line x1=\"70\" y1=\"116\" x2=\"70\" y2=\"136\" stroke=\"currentColor\" stroke-width=\"1.5\"/><polygon points=\"70,144 66,136 74,136\" fill=\"currentColor\" stroke=\"currentColor\" stroke-width=\"1\"/><text x=\"78\" y=\"135\" font-size=\"12\" text-anchor=\"start\" fill=\"currentColor\">はい</text><line x1=\"130\" y1=\"28\" x2=\"162\" y2=\"28\" stroke=\"currentColor\" stroke-width=\"1.5\"/><polygon points=\"170,28 162,32 162,24\" fill=\"currentColor\" stroke=\"currentColor\" stroke-width=\"1\"/><text x=\"150\" y=\"20\" font-size=\"12\" text-anchor=\"middle\" fill=\"currentColor\">いいえ</text><text x=\"176\" y=\"32\" font-size=\"13\" text-anchor=\"start\" fill=\"currentColor\">ふつうの年</text><line x1=\"130\" y1=\"96\" x2=\"162\" y2=\"96\" stroke=\"currentColor\" stroke-width=\"1.5\"/><polygon points=\"170,96 162,100 162,92\" fill=\"currentColor\" stroke=\"currentColor\" stroke-width=\"1\"/><text x=\"150\" y=\"88\" font-size=\"12\" text-anchor=\"middle\" fill=\"currentColor\">いいえ</text><text x=\"176\" y=\"100\" font-size=\"13\" text-anchor=\"start\" fill=\"currentColor\">うるう年</text><line x1=\"130\" y1=\"152\" x2=\"162\" y2=\"152\" stroke=\"currentColor\" stroke-width=\"1.5\"/><polygon points=\"170,152 162,156 162,148\" fill=\"currentColor\" stroke=\"currentColor\" stroke-width=\"1\"/><text x=\"150\" y=\"144\" font-size=\"12\" text-anchor=\"middle\" fill=\"currentColor\">はい</text><text x=\"176\" y=\"156\" font-size=\"13\" text-anchor=\"start\" fill=\"currentColor\">うるう年</text><line x1=\"130\" y1=\"180\" x2=\"162\" y2=\"180\" stroke=\"currentColor\" stroke-width=\"1.5\"/><polygon points=\"170,180 162,184 162,176\" fill=\"currentColor\" stroke=\"currentColor\" stroke-width=\"1\"/><text x=\"150\" y=\"172\" font-size=\"12\" text-anchor=\"middle\" fill=\"currentColor\">いいえ</text><text x=\"176\" y=\"184\" font-size=\"13\" text-anchor=\"start\" fill=\"currentColor\">ふつうの年</text></svg>"
+        },
+        "100 でわりきれる年のうち、400 でもわりきれる年はどれか。"
+       ],
+       "qid": "W-073:7e6af11c3a"
+      }
+     ],
      "key": "確認#1"
+    }
+   ],
+   "ver": "a46d05ddff",
+   "ri": [
+    {
+     "part": "離",
+     "kinds": [
+      "総動員",
+      "道筋"
+     ],
+     "uses": [
+      "G-021"
+     ],
+     "text": "げしの日、北の国の町 Q では、太陽が 1 日中しずまなかった。図は、真北を向いて、1 時間ごとに太陽をとった写真だ。太陽がいちばん低くなったのは真北の空で、高度は 10° だった。同じ日、赤道からのはなれ方が Q とはちがう町 R でも、太陽がいちばん高くなったときの高度は、Q でいちばん高くなったときと同じだった。R は、赤道から何度はなれているか。げしの日は、太陽が真上に来る場所が、赤道から 23.4° 北にある。",
+     "svg": "<svg viewBox=\"0 0 320 200\" xmlns=\"http://www.w3.org/2000/svg\"><text x=\"160\" y=\"22\" font-size=\"13\" text-anchor=\"middle\" fill=\"currentColor\">真北を向いて、1 時間ごとにとった太陽</text><rect x=\"10\" y=\"160\" width=\"300\" height=\"10\" fill=\"#7bc96f\" fill-opacity=\".35\"/><line x1=\"10\" y1=\"160\" x2=\"310\" y2=\"160\" stroke=\"currentColor\" stroke-width=\"2\"/><circle cx=\"40\" cy=\"55\" r=\"8\" fill=\"#f3c969\" fill-opacity=\".8\" stroke=\"currentColor\" stroke-width=\"2\"/><circle cx=\"80\" cy=\"99\" r=\"8\" fill=\"#f3c969\" fill-opacity=\".8\" stroke=\"currentColor\" stroke-width=\"2\"/><circle cx=\"120\" cy=\"126\" r=\"8\" fill=\"#f3c969\" fill-opacity=\".8\" stroke=\"currentColor\" stroke-width=\"2\"/><circle cx=\"160\" cy=\"135\" r=\"8\" fill=\"#f3c969\" fill-opacity=\".8\" stroke=\"currentColor\" stroke-width=\"2\"/><circle cx=\"200\" cy=\"126\" r=\"8\" fill=\"#f3c969\" fill-opacity=\".8\" stroke=\"currentColor\" stroke-width=\"2\"/><circle cx=\"240\" cy=\"99\" r=\"8\" fill=\"#f3c969\" fill-opacity=\".8\" stroke=\"currentColor\" stroke-width=\"2\"/><circle cx=\"280\" cy=\"55\" r=\"8\" fill=\"#f3c969\" fill-opacity=\".8\" stroke=\"currentColor\" stroke-width=\"2\"/><line x1=\"160\" y1=\"145\" x2=\"160\" y2=\"160\" stroke=\"currentColor\" stroke-width=\"1.5\" stroke-dasharray=\"3 3\"/><text x=\"150\" y=\"156\" font-size=\"13\" text-anchor=\"end\" fill=\"currentColor\">高度 10°</text><text x=\"30\" y=\"188\" font-size=\"14\" text-anchor=\"middle\" fill=\"currentColor\">西</text><text x=\"160\" y=\"188\" font-size=\"14\" text-anchor=\"middle\" fill=\"currentColor\">北</text><text x=\"290\" y=\"188\" font-size=\"14\" text-anchor=\"middle\" fill=\"currentColor\">東</text></svg>",
+     "answer": "29.8",
+     "check": "abs(234 - (900 - (2 * 234 - 100))) / 10",
+     "hints": [
+      "まず Q で、太陽がいちばん高くなったときの高度を出そう。北極（きたいど 90°）に立ったとして考えると、げしの日の太陽は 1 日中どんな高さを回るか。",
+      {
+       "text": "北極では、太陽は地平線と同じ向きの輪をえがく。南へ進むと北極星が低くなり、太陽の輪も同じだけかたむく。南のはしが上がった分だけ、北のはしが下がる。",
+       "svg": "<svg viewBox=\"0 0 320 200\" xmlns=\"http://www.w3.org/2000/svg\"><path d=\"M23 140 A62 62 0 0 1 147 140 Z\" fill=\"#7fc8f8\" fill-opacity=\".18\" stroke=\"currentColor\" stroke-width=\"2\"/><line x1=\"15\" y1=\"140\" x2=\"155\" y2=\"140\" stroke=\"currentColor\" stroke-width=\"2\"/><circle cx=\"85\" cy=\"78\" r=\"3.5\" fill=\"#f3c969\" fill-opacity=\".9\" stroke=\"currentColor\" stroke-width=\"1.5\"/><text x=\"85\" y=\"68\" font-size=\"13\" text-anchor=\"middle\" fill=\"currentColor\">北極星</text><line x1=\"28.1\" y1=\"115.4\" x2=\"141.9\" y2=\"115.4\" stroke=\"currentColor\" stroke-width=\"1.5\" stroke-dasharray=\"5 4\"/><circle cx=\"28.1\" cy=\"115.4\" r=\"6\" fill=\"#f3c969\" fill-opacity=\".8\" stroke=\"currentColor\" stroke-width=\"2\"/><circle cx=\"141.9\" cy=\"115.4\" r=\"6\" fill=\"#f3c969\" fill-opacity=\".8\" stroke=\"currentColor\" stroke-width=\"2\"/><text x=\"85\" y=\"108\" font-size=\"13\" text-anchor=\"middle\" fill=\"currentColor\">どこも 23.4°</text><text x=\"85\" y=\"180\" font-size=\"14\" text-anchor=\"middle\" fill=\"currentColor\">北極</text><path d=\"M173 140 A62 62 0 0 1 297 140 Z\" fill=\"#7fc8f8\" fill-opacity=\".18\" stroke=\"currentColor\" stroke-width=\"2\"/><line x1=\"165\" y1=\"140\" x2=\"305\" y2=\"140\" stroke=\"currentColor\" stroke-width=\"2\"/><circle cx=\"220.6\" cy=\"79.7\" r=\"3.5\" fill=\"#f3c969\" fill-opacity=\".9\" stroke=\"currentColor\" stroke-width=\"1.5\"/><text x=\"214\" y=\"70\" font-size=\"13\" text-anchor=\"end\" fill=\"currentColor\">北極星</text><line x1=\"173.9\" y1=\"129.2\" x2=\"284.6\" y2=\"102.9\" stroke=\"currentColor\" stroke-width=\"1.5\" stroke-dasharray=\"5 4\"/><circle cx=\"173.9\" cy=\"129.2\" r=\"6\" fill=\"#f3c969\" fill-opacity=\".8\" stroke=\"currentColor\" stroke-width=\"2\"/><circle cx=\"284.6\" cy=\"102.9\" r=\"6\" fill=\"#f3c969\" fill-opacity=\".8\" stroke=\"currentColor\" stroke-width=\"2\"/><text x=\"166\" y=\"128\" font-size=\"13\" text-anchor=\"end\" fill=\"currentColor\">10°</text><text x=\"294\" y=\"96\" font-size=\"14\" text-anchor=\"start\" fill=\"currentColor\">?</text><text x=\"175\" y=\"158\" font-size=\"14\" text-anchor=\"middle\" fill=\"currentColor\">北</text><text x=\"295\" y=\"158\" font-size=\"14\" text-anchor=\"middle\" fill=\"currentColor\">南</text><text x=\"235\" y=\"180\" font-size=\"14\" text-anchor=\"middle\" fill=\"currentColor\">町 Q</text></svg>"
+      },
+      "太陽がいちばん高くなるときの高度は、その場所が、太陽が真上に来る場所から何度はなれているかだけで決まる。真上に来る場所の北にも南にも、同じだけはなれた場所がある。"
+     ],
+     "paths": [
+      [
+       "北極（きたいど 90°）では、太陽が真上に来る場所まで 90 − 23.4 = 66.6° はなれているので、太陽は 1 日中、地平線から 90 − 66.6 = 23.4° の高さを回る",
+       "北極から南へ進むと、太陽の輪は北極星を中心にかたむき、南のはしが上がった分だけ北のはしが下がる。2 つのはしの高さの和は、どこでも 23.4 + 23.4 = 46.8°",
+       "Q で太陽がいちばん高くなったときの高度は 46.8 − 10 = 36.8°。90 − 36.8 = 53.2 なので、Q は、太陽が真上に来る場所から 53.2° はなれている",
+       "いちばん高くなるときの高度は、真上に来る場所からのはなれ方だけで決まる。真上に来る場所から南へ 53.2° の場所でも 36.8° で、そこでは太陽は北の空でいちばん高くなる",
+       "真上に来る場所は赤道から北へ 23.4° なので、そこから南へ 53.2° の R は、53.2 − 23.4 = 29.8 で、赤道から南へ 29.8°"
+      ],
+      [
+       "Q のきたいどを □ とすると、北極星の高度は □°。げしの日の太陽は北極星から 90 − 23.4 = 66.6° はなれて回るので、いちばん低い太陽は □ − 66.6 = 10 で、□ = 76.6",
+       "Q は、太陽が真上に来る場所（きたいど 23.4°）より 76.6 − 23.4 = 53.2° 北にある。いちばん高い太陽の高度は、どちらも 90 − 53.2 = 36.8°",
+       "R も、真上に来る場所から 53.2° はなれていて、Q とはちがうので、真上に来る場所より 53.2° 南にある",
+       "23.4 − 53.2 = −29.8 なので、R は赤道から南へ 29.8°"
+      ]
+     ],
+     "note": "工夫は 4 段：①きたいど 90° の北極を考え、げしの日の太陽が 1 日中 23.4° の高さを回ることを出す（いちばんはしの場合を考える、docs/hardest-structures.md の S07）、②南へ進むと空全体が北極星を中心にかたむくので、輪の南のはしと北のはしの高さの和 46.8° はかわらないと見て（不変量 S01、対称 S03）、Q の南中高度 36.8° を出す、③いちばん高い高度は、太陽が真上に来る場所からのはなれ方 53.2° だけで決まると見なおし、真上に来る場所（きたいど 23.4°）について Q と対称な、もう 1 つの場所をさがす（対称 S03、場合分け）、④23.4 − 53.2 = −29.8 で赤道から南へ 29.8°（R では太陽は北の空でいちばん高くなる）。2 本目は、北極星から太陽までの角 66.6° からきたいど 76.6° を出し、真上に来る場所との差 53.2° を南へうつす道（G-021 の空間図形：天球の上の輪のかたむき）。種：なし（docs/hardest-structures.md の S から組み立てた）。むずかしいわけ（2026-11-19 に一段上げた）：前の版は南中高度 36.8° を問い、教わった南中高度の式を 2 回当てれば解けた。いまは「同じ高さになるもう 1 つの町」を問うので、南中高度の式（90 − きたいど + 23.4）だけでは見つからず、真上に来る場所の南がわでは太陽が北の空でいちばん高くなる、と場合を広げる一手が要る。赤道について Q と対称な なんいど 76.6°（げしの日は太陽がのぼらない）や、Q そのものの 76.6° と答えやすい。",
+     "qid": "W-073:ff85cd561e"
+    },
+    {
+     "part": "離",
+     "kinds": [
+      "総動員",
+      "手数"
+     ],
+     "uses": [
+      "N-059"
+     ],
+     "text": "東京（ひがしけいど 135°）から町 P まで、飛行機で西へ飛んで行った。帰りは P からさらに西へ飛び、地球を 1 周して東京にもどった。行きも帰りも、飛行機が 1 時間に進むけいどは同じだった。図の時こくは、東京では東京の時計、P では P の時計で見たものだ。どちらの時計も、その場所のけいどの太陽に合わせてあり、けいどが 15° ちがうと 1 時間ちがう。日づけは、けいど 180° の線を西へこえると 1 日進む。P のけいどは何度か。ひがしけいどなら そのままの数で、にしけいど（グリニッジから西へはかったけいど）なら − をつけて答える。",
+     "svg": "<svg viewBox=\"0 0 320 200\" xmlns=\"http://www.w3.org/2000/svg\"><text x=\"160\" y=\"18\" font-size=\"13\" text-anchor=\"middle\" fill=\"currentColor\">時こくは、その町の時計で見たもの</text><circle cx=\"100\" cy=\"100\" r=\"16\" fill=\"#7bc96f\" fill-opacity=\".5\" stroke=\"currentColor\" stroke-width=\"2\"/><text x=\"100\" y=\"105\" font-size=\"14\" text-anchor=\"middle\" fill=\"currentColor\">P</text><circle cx=\"240\" cy=\"100\" r=\"16\" fill=\"#7fc8f8\" fill-opacity=\".5\" stroke=\"currentColor\" stroke-width=\"2\"/><text x=\"240\" y=\"105\" font-size=\"13\" text-anchor=\"middle\" fill=\"currentColor\">東京</text><path d=\"M224 89 Q170 40 116 89\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\"/><polygon points=\"115,90 125.4,86.6 119.4,80\" fill=\"currentColor\" stroke=\"currentColor\" stroke-width=\"1\"/><text x=\"170\" y=\"56\" font-size=\"14\" text-anchor=\"middle\" fill=\"currentColor\">行き（西へ）</text><path d=\"M86 111 Q50 136 16 136\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\"/><polygon points=\"6,136 16,131.5 16,140.5\" fill=\"currentColor\" stroke=\"currentColor\" stroke-width=\"1\"/><path d=\"M314 136 Q282 136 258 112\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\"/><polygon points=\"255,109 265.3,112.9 258.9,119.3\" fill=\"currentColor\" stroke=\"currentColor\" stroke-width=\"1\"/><text x=\"170\" y=\"140\" font-size=\"13\" text-anchor=\"middle\" fill=\"currentColor\">帰り（西へ、地球を 1 周）</text><text x=\"314\" y=\"62\" font-size=\"13\" text-anchor=\"end\" fill=\"currentColor\">1 日 10 時 発</text><text x=\"6\" y=\"62\" font-size=\"13\" text-anchor=\"start\" fill=\"currentColor\">1 日 15 時 着</text><text x=\"6\" y=\"166\" font-size=\"13\" text-anchor=\"start\" fill=\"currentColor\">3 日 9 時 発</text><text x=\"314\" y=\"166\" font-size=\"13\" text-anchor=\"end\" fill=\"currentColor\">4 日 16 時 着</text><text x=\"6\" y=\"190\" font-size=\"13\" text-anchor=\"start\" fill=\"currentColor\">P：けいどは？</text><text x=\"314\" y=\"190\" font-size=\"13\" text-anchor=\"end\" fill=\"currentColor\">東京：ひがしけいど 135°</text></svg>",
+     "answer": "−15",
+     "check": "(lambda L: f'−{-L}' if L < 0 else f'{L}')(135 - Fraction((24 + 15) - (24 + 10)) / (Fraction(((96 + 16) - (24 + 10)) - ((72 + 9) - (24 + 15)), 360) - Fraction(1, 15)))",
+     "hints": [
+      "旅の全部の長さ（東京の時計）と、P にいた長さ（P の時計）は、どちらも本当の長さだ。その差が、飛んでいた時間の合計になる。地球を 1 周するのに何時間かかったか。",
+      {
+       "text": "行きの時間を、P の時計で見よう。本当に飛んだ時間から、P の時計のおくれを引いたものが、時計の上の 5 時間だ。",
+       "svg": "<svg viewBox=\"0 0 320 200\" xmlns=\"http://www.w3.org/2000/svg\"><text x=\"160\" y=\"24\" font-size=\"13\" text-anchor=\"middle\" fill=\"currentColor\">行きの時間を、時計の上で見ると</text><rect x=\"30\" y=\"44\" width=\"260\" height=\"28\" fill=\"#7fc8f8\" fill-opacity=\".5\" stroke=\"currentColor\" stroke-width=\"2\"/><text x=\"160\" y=\"63\" font-size=\"13\" text-anchor=\"middle\" fill=\"currentColor\">本当に飛んだ時間</text><rect x=\"30\" y=\"96\" width=\"140\" height=\"28\" fill=\"#f08080\" fill-opacity=\".45\" stroke=\"currentColor\" stroke-width=\"2\"/><text x=\"100\" y=\"115\" font-size=\"13\" text-anchor=\"middle\" fill=\"currentColor\">P の時計のおくれ</text><rect x=\"170\" y=\"96\" width=\"120\" height=\"28\" fill=\"#7bc96f\" fill-opacity=\".45\" stroke=\"currentColor\" stroke-width=\"2\"/><text x=\"230\" y=\"115\" font-size=\"13\" text-anchor=\"middle\" fill=\"currentColor\">時計の上の 5 時間</text><text x=\"160\" y=\"152\" font-size=\"13\" text-anchor=\"middle\" fill=\"currentColor\">飛んだ時間も、時計のおくれも、</text><text x=\"160\" y=\"172\" font-size=\"13\" text-anchor=\"middle\" fill=\"currentColor\">行きで進んだけいどで決まる</text><text x=\"160\" y=\"192\" font-size=\"13\" text-anchor=\"middle\" fill=\"currentColor\">（長さは図のとおりではない）</text></svg>"
+      },
+      "飛行機が 1 時間に進むけいどと、時計が 1 時間ずれるけいど 15° をくらべよう。飛んだ時間と時計のおくれを、進んだけいどで表すと、どちらがどれだけ長いか。"
+     ],
+     "paths": [
+      [
+       "東京の時計で、1 日 10 時に出て 4 日 16 時に帰ったので、旅の全部は 3 日と 6 時間 = 78 時間",
+       "P の時計で、1 日 15 時に着いて 3 日 9 時に出たので、P にいたのは 1 日と 18 時間 = 42 時間",
+       "飛んでいた時間の合計は 78 − 42 = 36 時間。そのあいだに地球を 1 周（360°）したので、飛行機は 1 時間に 360 ÷ 36 = 10° 進んだ",
+       "行きで 1 時間飛ぶと、10° 西へ進む。10° は時計の 40 分ぶんなので、飛行機の真下の時計は、1 時間に 60 − 40 = 20 分しか進まない",
+       "時計の上では 1 日 10 時から 1 日 15 時まで 5 時間 = 300 分進んだので、本当に飛んだのは 300 ÷ 20 = 15 時間で、進んだけいどは 15 × 10 = 150°",
+       "東京から西へ 150° なので、135 − 150 = −15 で、にしけいど 15°。答えは −15"
+      ],
+      [
+       "旅の全部 78 時間から P にいた 42 時間を引いて、飛んだ時間の合計は 36 時間。1 周 360° なので、10° 進むのに 1 時間かかる",
+       "行きで進んだけいどを △° とすると、本当に飛んだ時間は △ ÷ 10 時間、P の時計のおくれは △ ÷ 15 時間",
+       "時計の上の時間は、飛んだ時間から時計のおくれを引いたものなので、△ ÷ 10 − △ ÷ 15 = 5。△ ÷ 30 = 5 で、△ = 150",
+       "帰りでたしかめる：のこりの 360 − 150 = 210° を 21 時間で飛ぶ。西へ 210° 進むと時計は 14 時間おくれるが、180° の線をこえて日づけが 1 日進むので、東京の時計は P の時計より 10 時間進んでいる。P の時計で 3 日 9 時に出ると、着いたとき P の時計は 4 日 6 時、東京の時計は 4 日 16 時で合う",
+       "けいどは 135 − 150 = −15、にしけいど 15°"
+      ]
+     ],
+     "note": "工夫は 4 段：①東京の時計で見た旅の全部 78 時間から、P の時計で見た P にいた 42 時間を引くと、時計のずれが消えて飛んだ時間の合計 36 時間が出る（不変量、docs/hardest-structures.md の S01）、②1 周 360° を 36 時間で飛んだので 1 時間に 10°、③行きでは 1 時間ごとに 10° 西へ進み、真下の時計は 40 分おくれた場所になるので、真下の時計は 1 時間に 20 分しか進まないと見る（見る場所を変える S04）。時計の上の 5 時間から、本当に 15 時間飛んで 150° 進んだと出す、④135 − 150 = −15 で、にしけいど 15°。帰りは 180° の線をこえて日づけが 1 日進むことでたしかめる（N-059 の日をまたぐ時間の計算）。2 本目は、進んだけいどを △ として △ ÷ 10 − △ ÷ 15 = 5 を解く道（置きかえ S19）。種：なし（docs/hardest-structures.md の S から組み立てた）。むずかしいわけ（2026-11-19 に一段上げた）：前の版は「行きと帰りの飛んだ時間が同じ」で、時計の上の時間の和と差の 2 つの式ですんだ。いまは行きと帰りの時間がちがい、旅の全部がわかると帰りの式は行きの式と同じことしか言わない（時計の上の 5 時間と 31 時間の和はいつも 36 時間）。1 周の時間から飛行機の速さを出し、飛んだ時間も時計のおくれも進んだけいどで表す一手が要る。前の版の和差算をそのまま当てると、飛んだ時間 18 時間・おくれ 13 時間で −60 になる。5 時間をそのまま飛んだ時間と見て 85、時計のおくれと見て 60 ともまちがえやすい。",
+     "qid": "W-073:81e5a95f52"
+    },
+    {
+     "part": "離",
+     "kinds": [
+      "総動員",
+      "読み取り"
+     ],
+     "uses": [
+      "W-045"
+     ],
+     "text": "月は、いつも同じ面を地球に向けたまま、地球のまわりを回っている。図は、北極の上から見たようすで、月は満月の位置にある。月の赤道の上にある きち B では、太陽は空の真上を通る。この満月のとき、B では、のぼってきた太陽が、地平線から 30° の高さにあった。満月のあと、B で初めて太陽がしずむころ、日本で月が南中するのは何時ごろか。満月は、午前 0 時ごろに南中する。時こくは 0 時から 23 時で答える。",
+     "svg": "<svg viewBox=\"0 0 320 200\" xmlns=\"http://www.w3.org/2000/svg\"><circle cx=\"30\" cy=\"100\" r=\"20\" fill=\"#f3c969\" fill-opacity=\"0.7\" stroke=\"currentColor\" stroke-width=\"2\"/><text x=\"30\" y=\"104\" font-size=\"13\" text-anchor=\"middle\" fill=\"currentColor\">太陽</text><line x1=\"58\" y1=\"70\" x2=\"85\" y2=\"70\" stroke=\"currentColor\" stroke-width=\"1.5\"/><polygon points=\"94,70 85,74.5 85,65.5\" fill=\"currentColor\" stroke=\"currentColor\" stroke-width=\"1\"/><line x1=\"58\" y1=\"130\" x2=\"85\" y2=\"130\" stroke=\"currentColor\" stroke-width=\"1.5\"/><polygon points=\"94,130 85,134.5 85,125.5\" fill=\"currentColor\" stroke=\"currentColor\" stroke-width=\"1\"/><circle cx=\"170\" cy=\"100\" r=\"66\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.5\" stroke-dasharray=\"5 4\"/><polygon points=\"152,34 162,29 162,39\" fill=\"currentColor\" stroke=\"currentColor\" stroke-width=\"1\"/><text x=\"170\" y=\"20\" font-size=\"13\" text-anchor=\"middle\" fill=\"currentColor\">月の回る向き</text><circle cx=\"170\" cy=\"100\" r=\"22\" fill=\"#7fc8f8\" fill-opacity=\"0.6\" stroke=\"currentColor\" stroke-width=\"2\"/><text x=\"170\" y=\"104\" font-size=\"13\" text-anchor=\"middle\" fill=\"currentColor\">地球</text><circle cx=\"236\" cy=\"100\" r=\"9\" fill=\"#c8ccd6\" fill-opacity=\"0.9\" stroke=\"currentColor\" stroke-width=\"2\"/><text x=\"250\" y=\"105\" font-size=\"13\" text-anchor=\"start\" fill=\"currentColor\">満月</text><text x=\"8\" y=\"190\" font-size=\"13\" text-anchor=\"start\" fill=\"currentColor\">北極の上から見た図</text></svg>",
+     "answer": 10,
+     "check": "(0 + 24 * ((90 - 30) + 90) // 360) % 24",
+     "hints": [
+      "B の空で太陽が動くのは、月が回っているからだ。満月から次の満月まで、月が地球のまわりを 1 回りすると、B の空で太陽は何度動くか。",
+      {
+       "text": "B の空で、太陽がいまの高さから、真上を通ってしずむまでに動く角を見よう。",
+       "svg": "<svg viewBox=\"0 0 320 200\" xmlns=\"http://www.w3.org/2000/svg\"><path d=\"M50 160 A110 110 0 0 1 270 160\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.5\" stroke-dasharray=\"5 4\"/><line x1=\"30\" y1=\"160\" x2=\"290\" y2=\"160\" stroke=\"currentColor\" stroke-width=\"2\"/><line x1=\"160\" y1=\"160\" x2=\"64.7\" y2=\"105\" stroke=\"currentColor\" stroke-width=\"1.5\"/><path d=\"M130 160 A30 30 0 0 1 134 145\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.5\"/><text x=\"120\" y=\"155\" font-size=\"13\" text-anchor=\"end\" fill=\"currentColor\">30°</text><circle cx=\"64.7\" cy=\"105\" r=\"9\" fill=\"#f3c969\" fill-opacity=\".8\" stroke=\"currentColor\" stroke-width=\"2\"/><text x=\"40\" y=\"100\" font-size=\"13\" text-anchor=\"end\" fill=\"currentColor\">太陽</text><polygon points=\"168,50 159,45.5 159,54.5\" fill=\"currentColor\" stroke=\"currentColor\" stroke-width=\"1\"/><text x=\"222\" y=\"38\" font-size=\"13\" text-anchor=\"middle\" fill=\"currentColor\">しずむまで ?°</text><circle cx=\"160\" cy=\"160\" r=\"3.5\" fill=\"currentColor\"/><text x=\"160\" y=\"180\" font-size=\"14\" text-anchor=\"middle\" fill=\"currentColor\">B</text><text x=\"50\" y=\"180\" font-size=\"13\" text-anchor=\"middle\" fill=\"currentColor\">のぼる がわ</text><text x=\"270\" y=\"180\" font-size=\"13\" text-anchor=\"middle\" fill=\"currentColor\">しずむ がわ</text></svg>"
+      },
+      "月が満月の位置から、その角だけ回ったとき、地球から見て、月は太陽から何度はなれているか。月が太陽より 15° 西にあると、南中は太陽より 1 時間早い。"
+     ],
+     "paths": [
+      [
+       "月は同じ面を地球に向けたまま回るので、満月から次の満月までに、太陽に対して 1 回転する。月が満月の位置から回った角だけ、B の空で太陽も動く",
+       "B では、太陽はのぼって 30° の高さ。真上（90°）を通って反対がわの地平線にしずむまで、あと 180 − 30 = 150° 動く",
+       "だから B で初めて太陽がしずむのは、月が満月の位置から 150° 回ったとき。そのとき地球から見た月は、太陽から 180 − 150 = 30° 西にある細い月",
+       "太陽より 30° 西にある月は、30 ÷ 15 = 2 時間早く南中するので、昼の 12 時より 2 時間早い 10 時ごろ"
+      ],
+      [
+       "B の 1 日（太陽がのぼってから次にのぼるまで）は、満月から次の満月までの長さと同じ",
+       "B で太陽がしずむまでに動く角は 180 − 30 = 150° で、1 日の 360° の 150 ÷ 360 = 12 分の 5。満月から 12 分の 5 か月たったとき",
+       "地球から見ると、月の南中は毎日少しずつおくれ、満月から次の満月までに、ちょうど 24 時間おくれて元にもどる",
+       "12 分の 5 か月では 24 × 5 ÷ 12 = 10 時間おくれるので、満月の午前 0 時から 10 時間おくれて、10 時ごろ"
+      ]
+     ],
+     "note": "工夫は 3 段：①月は同じ面を地球に向けたまま回るので、満月から次の満月までに太陽に対して 1 回転し、月が満月の位置から回った角だけ B の空で太陽も動くと見る（見る場所を変える言いかえ、docs/hardest-structures.md の S04）、②B では太陽がのぼって 30° なので、真上を通ってしずむまであと 150° 動く。月が 150° 回ると、地球から見た月は太陽から 30° 西の細い月になる（W-045 の電灯と球の模型）、③日周運動の 1 時間 15° で、太陽より 2 時間早い 10 時ごろに南中する。2 本目は、B の 1 日が満ち欠けの 1 回り（約 29.5 日）と同じことを使い、12 分の 5 か月で南中が 10 時間おくれると数える道（周期性 S32）。種：なし（docs/hardest-structures.md の S から組み立てた）。むずかしいわけ（2026-11-19 に一段上げた）：前の版は地球から見た月の真ん中の きち A で、日の入りが左半分が光る半月と決まり、よく知られた形（その半月は 6 時に南中）を当てれば解けた。いまは B の場所を太陽の高さであたえたので、B の空で太陽が動く角と月が回る角が同じだと見ぬき、のこりの角 150° を数える一手が要る。真上までの 60° で止めて 4 時、30 + 90 = 120° として 8 時、回る向きを逆にして 14 時とまちがえやすい。午前・午後を問いに書かないので、どちらがわかも自分で決める。",
+     "qid": "W-073:2981aa6936"
     }
    ],
    "f": "F04",
@@ -350428,6 +353684,131 @@ window.ROADMAP = {
      ],
      "note": "桁数（24 桁）を求める問題の先にある。小数の部分 0.855 を、いくつもの対数の値とくらべる手数が要る。与えた対数は 4 桁の近い値で、50 倍しても誤差は 0.003 ほどなので、0.8451 と 0.855 の差（約 0.01）で結論は変わらないことにもふれる。",
      "qid": "D-001:e095a17975"
+    },
+    {
+     "part": "離",
+     "kinds": [
+      "総動員",
+      "手数"
+     ],
+     "uses": [
+      "A-015",
+      "A-009"
+     ],
+     "text": "黒板に √2、³√2、⁴√2、⁵√2、⁶√2 と 1/√2、1/³√2、1/⁴√2、1/⁵√2、1/⁶√2 の 10 個の数が書いてあります。このうち 2 つの数 a、b を消して、かわりに a × b × a^(log₂ b) を 1 つ書きます（どちらを a にしても、書く数は同じです）。これを、黒板の数が 1 つになるまでくり返します。どの 2 つをどんな順に選んでも、最後に残る数は同じになります。最後に残る数は 2 の何乗ですか。",
+     "svg": "<svg viewBox=\"0 0 320 200\" xmlns=\"http://www.w3.org/2000/svg\"><rect x=\"14\" y=\"8\" width=\"292\" height=\"100\" rx=\"6\" fill=\"#7bc96f\" fill-opacity=\".45\" stroke=\"currentColor\" stroke-width=\"2\"/><text x=\"44\" y=\"50\" font-size=\"18\" text-anchor=\"middle\" fill=\"currentColor\" font-weight=\"bold\">√2</text><text x=\"102\" y=\"50\" font-size=\"18\" text-anchor=\"middle\" fill=\"currentColor\" font-weight=\"bold\">³√2</text><text x=\"160\" y=\"50\" font-size=\"18\" text-anchor=\"middle\" fill=\"currentColor\" font-weight=\"bold\">⁴√2</text><text x=\"218\" y=\"50\" font-size=\"18\" text-anchor=\"middle\" fill=\"currentColor\" font-weight=\"bold\">⁵√2</text><text x=\"276\" y=\"50\" font-size=\"18\" text-anchor=\"middle\" fill=\"currentColor\" font-weight=\"bold\">⁶√2</text><text x=\"44\" y=\"92\" font-size=\"18\" text-anchor=\"middle\" fill=\"currentColor\" font-weight=\"bold\">1/√2</text><text x=\"102\" y=\"92\" font-size=\"18\" text-anchor=\"middle\" fill=\"currentColor\" font-weight=\"bold\">1/³√2</text><text x=\"160\" y=\"92\" font-size=\"18\" text-anchor=\"middle\" fill=\"currentColor\" font-weight=\"bold\">1/⁴√2</text><text x=\"218\" y=\"92\" font-size=\"18\" text-anchor=\"middle\" fill=\"currentColor\" font-weight=\"bold\">1/⁵√2</text><text x=\"276\" y=\"92\" font-size=\"18\" text-anchor=\"middle\" fill=\"currentColor\" font-weight=\"bold\">1/⁶√2</text><text x=\"160\" y=\"136\" font-size=\"15\" text-anchor=\"middle\" fill=\"currentColor\">2 つの数 a、b を消して</text><text x=\"160\" y=\"162\" font-size=\"16\" text-anchor=\"middle\" fill=\"currentColor\" font-weight=\"bold\">a × b × a<tspan dy=\"-7\" font-size=\"13\">log₂ b</tspan><tspan dy=\"7\"> を書く</tspan></text><text x=\"160\" y=\"190\" font-size=\"14\" text-anchor=\"middle\" fill=\"currentColor\">例：4 と 8 なら 4 × 8 × 4³ = 2048</text></svg>",
+     "answer": "−5/12",
+     "check": "(lambda g, L: (lambda s: (lambda v: f'−{-v}' if v < 0 else f'{v}')(min(s)) if len(s) == 1 else s)({Fraction(math.log2(g(g, l))).limit_denominator(100) for l in (L, L[::-1], sorted(L))}))(lambda g, l: l[0] if len(l) == 1 else g(g, [l[0] * l[1] * l[0] ** math.log2(l[1])] + l[2:]), [2 ** (s / k) for s in (1, -1) for k in range(2, 7)])",
+     "hints": [
+      "黒板の数を、どれも 2 の何乗かで表しましょう。³√2 と 1/³√2 は、2 の何乗でしょう。a = 2ᵘ、b = 2ᵛ のとき、a^(log₂ b) は 2 の何乗でしょう。",
+      {
+       "text": "指数だけを見ると、u と v を消して u + v + uv を書くことになります。図は √2 と ³√2（指数は 1/2 と 1/3）を選んだときです。",
+       "svg": "<svg viewBox=\"0 0 320 200\" xmlns=\"http://www.w3.org/2000/svg\"><text x=\"160\" y=\"22\" font-size=\"14\" text-anchor=\"middle\" fill=\"currentColor\">指数だけを書いた黒板</text><rect x=\"14\" y=\"32\" width=\"292\" height=\"84\" rx=\"6\" fill=\"#7bc96f\" fill-opacity=\".45\" stroke=\"currentColor\" stroke-width=\"2\"/><text x=\"44\" y=\"66\" font-size=\"18\" text-anchor=\"middle\" fill=\"currentColor\" font-weight=\"bold\">1/2</text><text x=\"102\" y=\"66\" font-size=\"18\" text-anchor=\"middle\" fill=\"currentColor\" font-weight=\"bold\">1/3</text><text x=\"160\" y=\"66\" font-size=\"18\" text-anchor=\"middle\" fill=\"currentColor\" font-weight=\"bold\">1/4</text><text x=\"218\" y=\"66\" font-size=\"18\" text-anchor=\"middle\" fill=\"currentColor\" font-weight=\"bold\">1/5</text><text x=\"276\" y=\"66\" font-size=\"18\" text-anchor=\"middle\" fill=\"currentColor\" font-weight=\"bold\">1/6</text><text x=\"44\" y=\"104\" font-size=\"18\" text-anchor=\"middle\" fill=\"currentColor\" font-weight=\"bold\">−1/2</text><text x=\"102\" y=\"104\" font-size=\"18\" text-anchor=\"middle\" fill=\"currentColor\" font-weight=\"bold\">−1/3</text><text x=\"160\" y=\"104\" font-size=\"18\" text-anchor=\"middle\" fill=\"currentColor\" font-weight=\"bold\">−1/4</text><text x=\"218\" y=\"104\" font-size=\"18\" text-anchor=\"middle\" fill=\"currentColor\" font-weight=\"bold\">−1/5</text><text x=\"276\" y=\"104\" font-size=\"18\" text-anchor=\"middle\" fill=\"currentColor\" font-weight=\"bold\">−1/6</text><ellipse cx=\"44\" cy=\"60\" rx=\"22\" ry=\"16\" fill=\"none\" stroke=\"#f08080\" stroke-width=\"3\"/><ellipse cx=\"102\" cy=\"60\" rx=\"22\" ry=\"16\" fill=\"none\" stroke=\"#f08080\" stroke-width=\"3\"/><text x=\"160\" y=\"140\" font-size=\"15\" text-anchor=\"middle\" fill=\"currentColor\">1/2 と 1/3 を消すと</text><text x=\"160\" y=\"164\" font-size=\"16\" text-anchor=\"middle\" fill=\"currentColor\" font-weight=\"bold\">1/2 + 1/3 + 1/2 × 1/3 = 1 を書く</text><text x=\"160\" y=\"192\" font-size=\"15\" text-anchor=\"middle\" fill=\"currentColor\">u と v なら u + v + uv を書く</text></svg>"
+      },
+      "u + v + uv に 1 をたすと、因数分解できます。黒板の指数のそれぞれに 1 をたした数を全部かけた積は、2 つを消して 1 つ書いたあと、どうなるでしょう。1 をたした数を分数で書いて、ならべてみましょう。"
+     ],
+     "paths": [
+      [
+       "ᵏ√2 = 2^(1/k)、1/ᵏ√2 = 2^(−1/k) と、どの数も 2 の何乗かで表す",
+       "a = 2ᵘ、b = 2ᵛ なら a^(log₂ b) = (2ᵘ)ᵛ = 2ᵘᵛ で、書く数の指数は u + v + uv",
+       "u + v + uv + 1 = (u + 1)(v + 1) なので、指数に 1 をたした数の積は、消して書いても変わらない",
+       "はじめの積は 3/2 × 4/3 × 5/4 × 6/5 × 7/6 = 7/2 と 1/2 × 2/3 × 3/4 × 4/5 × 5/6 = 1/6 をかけて 7/12",
+       "最後の指数は 7/12 − 1 = −5/12"
+      ],
+      [
+       "どの順でも同じなので、ᵏ√2 と 1/ᵏ√2 を組にして先に消す",
+       "指数 1/k と −1/k からは 1/k − 1/k − 1/k² = −1/k² を書き、黒板の指数は −1/4、−1/9、−1/16、−1/25、−1/36 になる",
+       "前から順に消すと、−1/4 と −1/9 から −1/3、−1/3 と −1/16 から −3/8、−3/8 と −1/25 から −2/5",
+       "−1/4、−2/6、−3/8、−4/10 ときまりよく続き、−2/5 と −1/36 から −5/12",
+       "最後に残る数は 2 の −5/12 乗"
+      ]
+     ],
+     "note": "借りた構造：S01 不変量・単調量（指数に 1 をたした数の積は、どの 2 つを消しても変わらない）、S18 因数分解（u + v + uv + 1 = (u + 1)(v + 1)）、S14 小さい場合から（2 本目の −1/4、−2/6、−3/8、−4/10 のきまり）。種：なし（ri_seeds.py で 0 件。黒板の 2 つの数を消して 1 つ書くくり返しの不変量の骨組みを構造のいちらんから組み立て、消して書く数を対数で包んだ）。一段難しくした（2026-11-19）：前の版は 2、4、…、256 で、指数が 1 から 8 の整数だったので、小さいほうから順に消して 5、23、119、719 とためすだけで答えが出た。黒板を累乗根とその逆数（指数が 1/k と −1/k）にかえ、ためすと分数の計算が続くようにした。なぜ難しいか：³√2 = 2^(1/3)、1/³√2 = 2^(−1/3) と 2 日目と 1 日目のきまりで指数に直す一手、a^(log₂ b) を 2ᵘᵛ に直す一手、u + v + uv を (u + 1)(v + 1) − 1 と見る A-015 の因数分解が要る。そのうえで 3/2 × 4/3 × … が約分で次々に消える積（7/2）と 1/2 × 2/3 × …（1/6）を見ぬく。2 本目は ᵏ√2 と 1/ᵏ√2 を組にすると −1/k² になり、そこから −(k − 1)/(2k) のきまりが見える。7/12 − 1 の符号をまちがえると 5/12 になる。工夫は 4 段（指数に直す → 変わらない量を見つける → 約分で消える積を見ぬく → 1 をひく）。",
+     "qid": "D-001:23b2e95e50"
+    },
+    {
+     "part": "離",
+     "kinds": [
+      "総動員",
+      "数"
+     ],
+     "uses": [
+      "N-021",
+      "N-017"
+     ],
+     "text": "ある正の整数 N の約数（1 と N もふくめて）をすべて考えます。それぞれの約数 d について log₃₆ d を求め、それらを全部たすと 45 になりました。N はいくつですか。",
+     "svg": "<svg viewBox=\"0 0 320 200\" xmlns=\"http://www.w3.org/2000/svg\"><text x=\"160\" y=\"22\" font-size=\"15\" text-anchor=\"middle\" fill=\"currentColor\" font-weight=\"bold\">N の約数を全部ならべる</text><rect x=\"12\" y=\"34\" width=\"40\" height=\"30\" rx=\"4\" fill=\"#f3c969\" fill-opacity=\".5\" stroke=\"currentColor\" stroke-width=\"2\"/><text x=\"32\" y=\"55\" font-size=\"16\" text-anchor=\"middle\" fill=\"currentColor\">1</text><text x=\"84\" y=\"55\" font-size=\"16\" text-anchor=\"middle\" fill=\"currentColor\">…</text><rect x=\"116\" y=\"34\" width=\"40\" height=\"30\" rx=\"4\" fill=\"#f3c969\" fill-opacity=\".5\" stroke=\"currentColor\" stroke-width=\"2\"/><text x=\"136\" y=\"55\" font-size=\"16\" text-anchor=\"middle\" fill=\"currentColor\"><tspan font-style=\"italic\">d</tspan></text><text x=\"188\" y=\"55\" font-size=\"16\" text-anchor=\"middle\" fill=\"currentColor\">…</text><rect x=\"232\" y=\"34\" width=\"76\" height=\"30\" rx=\"4\" fill=\"#f3c969\" fill-opacity=\".5\" stroke=\"currentColor\" stroke-width=\"2\"/><text x=\"270\" y=\"55\" font-size=\"16\" text-anchor=\"middle\" fill=\"currentColor\"><tspan font-style=\"italic\">N</tspan></text><line x1=\"160\" y1=\"74\" x2=\"160\" y2=\"96\" stroke=\"currentColor\" stroke-width=\"2\"/><polygon points=\"153,94 167,94 160,106\" fill=\"currentColor\"/><text x=\"150\" y=\"94\" font-size=\"14\" text-anchor=\"end\" fill=\"currentColor\">それぞれ log₃₆ にして</text><text x=\"160\" y=\"130\" font-size=\"14\" text-anchor=\"middle\" fill=\"currentColor\">log₃₆ 1 + … + log₃₆ d + … + log₃₆ N</text><text x=\"160\" y=\"158\" font-size=\"18\" text-anchor=\"middle\" fill=\"currentColor\" font-weight=\"bold\">= 45</text><text x=\"160\" y=\"188\" font-size=\"16\" text-anchor=\"middle\" fill=\"currentColor\" font-weight=\"bold\">N はいくつ？</text></svg>",
+     "answer": 7776,
+     "check": "(lambda s: s[0] if len(s) == 1 else s)([n for n in range(2, 10 ** 5) if 36 ** 45 % n == 0 and math.prod(d for d in range(1, n + 1) if n % d == 0) == 36 ** 45])",
+     "hints": [
+      "約数を全部かけた積を考えましょう。log₃₆ の和が 45 なら、積は 36 の何乗でしょう。N も約数の 1 つなので、その積をわり切ります。",
+      {
+       "text": "約数 d と N ÷ d を組にしましょう。約数を全部かけた積は、N の何乗になるでしょう。約数の個数が 2 でわり切れないときも、同じ式で表せるか考えましょう。",
+       "svg": "<svg viewBox=\"0 0 320 200\" xmlns=\"http://www.w3.org/2000/svg\"><text x=\"160\" y=\"22\" font-size=\"15\" text-anchor=\"middle\" fill=\"currentColor\" font-weight=\"bold\">約数を 2 つずつ組にする</text><rect x=\"20\" y=\"38\" width=\"50\" height=\"34\" rx=\"4\" fill=\"#f3c969\" fill-opacity=\".5\" stroke=\"currentColor\" stroke-width=\"2\"/><text x=\"45\" y=\"61\" font-size=\"16\" text-anchor=\"middle\" fill=\"currentColor\"><tspan font-style=\"italic\">d</tspan></text><text x=\"88\" y=\"61\" font-size=\"16\" text-anchor=\"middle\" fill=\"currentColor\">×</text><rect x=\"106\" y=\"38\" width=\"80\" height=\"34\" rx=\"4\" fill=\"#f3c969\" fill-opacity=\".5\" stroke=\"currentColor\" stroke-width=\"2\"/><text x=\"146\" y=\"61\" font-size=\"16\" text-anchor=\"middle\" fill=\"currentColor\"><tspan font-style=\"italic\">N</tspan> ÷ <tspan font-style=\"italic\">d</tspan></text><text x=\"204\" y=\"61\" font-size=\"16\" text-anchor=\"middle\" fill=\"currentColor\">=</text><text x=\"258\" y=\"62\" font-size=\"18\" text-anchor=\"middle\" fill=\"currentColor\" font-weight=\"bold\"><tspan font-style=\"italic\">N</tspan></text><path d=\"M45,76 Q95,100 146,76\" fill=\"none\" stroke=\"#b39ddb\" stroke-width=\"3\"/><text x=\"160\" y=\"126\" font-size=\"15\" text-anchor=\"middle\" fill=\"currentColor\">log₃₆ d + log₃₆ (N ÷ d)</text><text x=\"160\" y=\"152\" font-size=\"15\" text-anchor=\"middle\" fill=\"currentColor\">= log₃₆ N</text><text x=\"160\" y=\"184\" font-size=\"14\" text-anchor=\"middle\" fill=\"currentColor\">どの組も、たすと log₃₆ N になる</text></svg>"
+      },
+      "N を素因数分解すると、2 と 3 しか出てきません。N = 2ᵃ × 3ᵇ とおくと、約数の個数は (a + 1)(b + 1) 個です。約数の積の 2 の指数と 3 の指数をくらべましょう。"
+     ],
+     "paths": [
+      [
+       "和が 45 なので、約数を全部かけた積は 36⁴⁵ = 6⁹⁰ = 2⁹⁰ × 3⁹⁰",
+       "N はその積をわり切るので N = 2ᵃ × 3ᵇ で、約数は (a + 1)(b + 1) 個",
+       "d と N ÷ d を組にすると、約数の積は N の (a + 1)(b + 1)/2 乗なので、N の (a + 1)(b + 1) 乗が 2¹⁸⁰ × 3¹⁸⁰",
+       "2 の指数で a(a + 1)(b + 1) = 180、3 の指数で b(a + 1)(b + 1) = 180 なので a = b",
+       "a(a + 1)² = 180 で、a = 4 なら 100、a = 5 なら 180 なので a = 5",
+       "N = 2⁵ × 3⁵ = 6⁵ = 7776"
+      ],
+      [
+       "約数の積は 36⁴⁵ = 2⁹⁰ × 3⁹⁰ なので、N = 2ᵃ × 3ᵇ と書ける",
+       "約数 2ⁱ × 3ʲ（i は 0 から a、j は 0 から b）を全部かけると、2 の指数は i の和 a(a + 1)/2 が j の (b + 1) 通りずつで (b + 1) × a(a + 1)/2",
+       "3 の指数も同じように (a + 1) × b(b + 1)/2",
+       "どちらも 90 なので (a + 1)(b + 1)a = (a + 1)(b + 1)b となり a = b、a(a + 1)² = 180",
+       "a = 1、2、3、4、5 で 4、18、48、100、180 なので a = 5 で N = 7776"
+      ]
+     ],
+     "note": "借りた構造：S04 1 対 1 の対応・言いかえ（d と N ÷ d を組にする）、S11 素因数・約数の構造（約数の積 2⁹⁰ × 3⁹⁰ から N = 2ᵃ × 3ᵇ、2 と 3 の指数をくらべて a = b）、S05 二重に数える（2 本目は 2 と 3 の指数の和を数える）、S16 後ろから考える（和から N へもどる）。種：なし（ri_seeds.py で 0 件。約数を組にして対数の和を出す大会問題の骨組みを構造のいちらんから組み立て、向きを逆にした）。一段難しくした（2026-11-19）：前の版は 20736 が与えられ、12⁴ と見ぬいて組にすれば和 90 が出た（約数の積の公式を当てるだけで済んだ）。和から N へもどる向きにし、底を 36 にした。なぜ難しいか：N を 36 の何乗かとためすと 36 で 9/2、1296 で 25、36³ で 147/2 となって 45 にならず、36 の累乗でなく 6 の累乗だと、素因数分解（N-021）で 2 と 3 の指数をくらべて見ぬく一手が要る。N が 36⁴⁵ をわり切ることから素因数が 2 と 3 だけになることに気づく必要もある。a(a + 1)² = 180 は a を 1 ずつ大きくして 4、18、48、100、180 とくらべて決める（3 次方程式は解かない）。log₃₆ 2 と log₃₆ 3 の係数をくらべる道は、log₂ 3 が無理数であることが要るのでとらず、積を整数のまま素因数分解でくらべる。check は N が 36⁴⁵ をわり切ることでしぼり、約数の積が 36⁴⁵ になる N を 10 万までさがして 1 つだけと確かめる。工夫は 4 段（積にもどす → 素因数は 2 と 3 だけ → 組にして指数をくらべ a = b → 整数を入れて a を決める）。",
+     "qid": "D-001:2a3acb7026"
+    },
+    {
+     "part": "離",
+     "kinds": [
+      "総動員",
+      "道筋"
+     ],
+     "uses": [
+      "A-019",
+      "A-009"
+     ],
+     "text": "n を 2 以上の整数とします。y = log₂ x のグラフと y = log₃ x のグラフと直線 x = n で囲まれた部分を考えます（2 つのグラフの上、直線 x = n の上の点もふくめます）。この部分にある点のうち、x と y がどちらも整数である点の個数が、はじめて 1000 個をこえる n はいくつですか。",
+     "svg": "<svg viewBox=\"0 0 320 200\" xmlns=\"http://www.w3.org/2000/svg\"><polygon points=\"48,168 52.5,158 57,149.8 61.5,142.7 66,136.5 70.5,131 75,126.1 79.5,121.6 84,117.5 88.5,113.7 93,110.2 97.5,106.9 102,103.8 106.5,100.9 111,98.2 115.5,95.6 120,93.1 124.5,90.8 129,88.6 133.5,86.4 138,84.4 142.5,82.4 147,80.5 151.5,78.7 156,76.9 160.5,75.3 165,73.6 169.5,72 174,70.5 178.5,69 183,67.6 187.5,66.2 192,64.8 196.5,63.5 201,62.2 205.5,60.9 210,59.7 214.5,58.5 219,57.3 223.5,56.2 228,55.1 228,96.7 223.5,97.4 219,98.2 214.5,98.9 210,99.7 205.5,100.4 201,101.2 196.5,102 192,102.9 187.5,103.7 183,104.6 178.5,105.5 174,106.5 169.5,107.4 165,108.4 160.5,109.5 156,110.6 151.5,111.7 147,112.8 142.5,114 138,115.2 133.5,116.5 129,117.9 124.5,119.3 120,120.8 115.5,122.3 111,124 106.5,125.7 102,127.5 97.5,129.5 93,131.5 88.5,133.7 84,136.1 79.5,138.7 75,141.6 70.5,144.7 66,148.1 61.5,152 57,156.5 52.5,161.7 48,168\" fill=\"#f3c969\" fill-opacity=\".45\" stroke=\"none\"/><line x1=\"14\" y1=\"168\" x2=\"302\" y2=\"168\" stroke=\"currentColor\" stroke-width=\"2\"/><polygon points=\"312,168 302,163 302,173\" fill=\"currentColor\"/><line x1=\"28\" y1=\"196\" x2=\"28\" y2=\"16\" stroke=\"currentColor\" stroke-width=\"2\"/><polygon points=\"28,6 23,16 33,16\" fill=\"currentColor\"/><path d=\"M40.4,191.4 L45.8,173.8 L51.1,160.9 L56.5,150.7 L61.8,142.2 L67.2,135 L72.5,128.8 L77.9,123.2 L83.2,118.2 L88.6,113.6 L93.9,109.5 L99.3,105.7 L104.6,102.1 L110,98.8 L115.3,95.7 L120.7,92.8 L126,90 L131.4,87.4 L136.7,84.9 L142.1,82.6 L147.4,80.3 L152.8,78.2 L158.1,76.1 L163.5,74.2 L168.8,72.3 L174.2,70.4 L179.6,68.7 L184.9,67 L190.3,65.3 L195.6,63.7 L201,62.2 L206.3,60.7 L211.7,59.2 L217,57.8 L222.4,56.5 L227.7,55.1 L233.1,53.8 L238.4,52.6 L243.8,51.3 L249.1,50.1 L254.5,49 L259.8,47.8 L265.2,46.7 L270.5,45.6 L275.9,44.5 L281.2,43.5 L286.6,42.5 L291.9,41.4 L297.3,40.5 L302.6,39.5 L308,38.5\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\"/><path d=\"M38,189.5 L43.4,176.1 L48.8,166.8 L54.2,159.6 L59.6,153.8 L65,149 L70.4,144.7 L75.8,141 L81.2,137.7 L86.6,134.7 L92,132 L97.4,129.5 L102.8,127.2 L108.2,125 L113.6,123 L119,121.1 L124.4,119.3 L129.8,117.6 L135.2,116 L140.6,114.5 L146,113.1 L151.4,111.7 L156.8,110.4 L162.2,109.1 L167.6,107.9 L173,106.7 L178.4,105.6 L183.8,104.5 L189.2,103.4 L194.6,102.4 L200,101.4 L205.4,100.5 L210.8,99.5 L216.2,98.6 L221.6,97.7 L227,96.9 L232.4,96.1 L237.8,95.3 L243.2,94.5 L248.6,93.7 L254,93 L259.4,92.2 L264.8,91.5 L270.2,90.8 L275.6,90.1 L281,89.5 L286.4,88.8 L291.8,88.2 L297.2,87.5 L302.6,86.9 L308,86.3\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\"/><line x1=\"228\" y1=\"168\" x2=\"228\" y2=\"34\" stroke=\"#2f7fc1\" stroke-width=\"2\"/><circle cx=\"48\" cy=\"168\" r=\"3.2\" fill=\"currentColor\"/><circle cx=\"68\" cy=\"134\" r=\"3.2\" fill=\"currentColor\"/><circle cx=\"88\" cy=\"134\" r=\"3.2\" fill=\"currentColor\"/><circle cx=\"108\" cy=\"100\" r=\"3.2\" fill=\"currentColor\"/><circle cx=\"128\" cy=\"100\" r=\"3.2\" fill=\"currentColor\"/><circle cx=\"148\" cy=\"100\" r=\"3.2\" fill=\"currentColor\"/><circle cx=\"168\" cy=\"100\" r=\"3.2\" fill=\"currentColor\"/><circle cx=\"188\" cy=\"100\" r=\"3.2\" fill=\"currentColor\"/><circle cx=\"188\" cy=\"66\" r=\"3.2\" fill=\"currentColor\"/><circle cx=\"208\" cy=\"100\" r=\"3.2\" fill=\"currentColor\"/><circle cx=\"208\" cy=\"66\" r=\"3.2\" fill=\"currentColor\"/><circle cx=\"228\" cy=\"66\" r=\"3.2\" fill=\"currentColor\"/><text x=\"18\" y=\"184\" font-size=\"13\" text-anchor=\"middle\" fill=\"currentColor\">O</text><text x=\"48\" y=\"186\" font-size=\"13\" text-anchor=\"middle\" fill=\"currentColor\">1</text><text x=\"306\" y=\"158\" font-size=\"14\" text-anchor=\"middle\" fill=\"currentColor\">x</text><text x=\"40\" y=\"18\" font-size=\"14\" text-anchor=\"middle\" fill=\"currentColor\">y</text><text x=\"312\" y=\"28\" font-size=\"14\" text-anchor=\"end\" fill=\"currentColor\">y = log₂ x</text><text x=\"312\" y=\"122\" font-size=\"14\" text-anchor=\"end\" fill=\"currentColor\">y = log₃ x</text><text x=\"228\" y=\"188\" font-size=\"15\" text-anchor=\"middle\" fill=\"#2f7fc1\" font-weight=\"bold\">x = n</text></svg>",
+     "answer": 380,
+     "check": "(lambda c: min(n for n in range(2, 1000) if sum(c[1:n + 1]) > 1000))([len([y for y in range(12) if 2 ** y <= x <= 3 ** y]) for x in range(1000)])",
+     "hints": [
+      "まず図の n = 10 のとき、点を全部数えてみましょう。たて（x を決めて）に数えても、横（y を決めて）に数えてもかまいません。",
+      {
+       "text": "横に数えましょう。y = k の列の点は、y = log₂ x の上の点から y = log₃ x の上の点までで、x = n より右には出ません。図は y = 2 の列です。",
+       "svg": "<svg viewBox=\"0 0 320 200\" xmlns=\"http://www.w3.org/2000/svg\"><rect x=\"100\" y=\"92\" width=\"116\" height=\"16\" rx=\"8\" fill=\"#f08080\" fill-opacity=\".45\" stroke=\"#f08080\" stroke-width=\"2\"/><line x1=\"14\" y1=\"168\" x2=\"302\" y2=\"168\" stroke=\"currentColor\" stroke-width=\"2\"/><polygon points=\"312,168 302,163 302,173\" fill=\"currentColor\"/><line x1=\"28\" y1=\"196\" x2=\"28\" y2=\"16\" stroke=\"currentColor\" stroke-width=\"2\"/><polygon points=\"28,6 23,16 33,16\" fill=\"currentColor\"/><path d=\"M40.4,191.4 L45.8,173.8 L51.1,160.9 L56.5,150.7 L61.8,142.2 L67.2,135 L72.5,128.8 L77.9,123.2 L83.2,118.2 L88.6,113.6 L93.9,109.5 L99.3,105.7 L104.6,102.1 L110,98.8 L115.3,95.7 L120.7,92.8 L126,90 L131.4,87.4 L136.7,84.9 L142.1,82.6 L147.4,80.3 L152.8,78.2 L158.1,76.1 L163.5,74.2 L168.8,72.3 L174.2,70.4 L179.6,68.7 L184.9,67 L190.3,65.3 L195.6,63.7 L201,62.2 L206.3,60.7 L211.7,59.2 L217,57.8 L222.4,56.5 L227.7,55.1 L233.1,53.8 L238.4,52.6 L243.8,51.3 L249.1,50.1 L254.5,49 L259.8,47.8 L265.2,46.7 L270.5,45.6 L275.9,44.5 L281.2,43.5 L286.6,42.5 L291.9,41.4 L297.3,40.5 L302.6,39.5 L308,38.5\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\"/><path d=\"M38,189.5 L43.4,176.1 L48.8,166.8 L54.2,159.6 L59.6,153.8 L65,149 L70.4,144.7 L75.8,141 L81.2,137.7 L86.6,134.7 L92,132 L97.4,129.5 L102.8,127.2 L108.2,125 L113.6,123 L119,121.1 L124.4,119.3 L129.8,117.6 L135.2,116 L140.6,114.5 L146,113.1 L151.4,111.7 L156.8,110.4 L162.2,109.1 L167.6,107.9 L173,106.7 L178.4,105.6 L183.8,104.5 L189.2,103.4 L194.6,102.4 L200,101.4 L205.4,100.5 L210.8,99.5 L216.2,98.6 L221.6,97.7 L227,96.9 L232.4,96.1 L237.8,95.3 L243.2,94.5 L248.6,93.7 L254,93 L259.4,92.2 L264.8,91.5 L270.2,90.8 L275.6,90.1 L281,89.5 L286.4,88.8 L291.8,88.2 L297.2,87.5 L302.6,86.9 L308,86.3\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\"/><line x1=\"228\" y1=\"168\" x2=\"228\" y2=\"34\" stroke=\"#2f7fc1\" stroke-width=\"2\"/><circle cx=\"48\" cy=\"168\" r=\"3.2\" fill=\"currentColor\"/><circle cx=\"68\" cy=\"134\" r=\"3.2\" fill=\"currentColor\"/><circle cx=\"88\" cy=\"134\" r=\"3.2\" fill=\"currentColor\"/><circle cx=\"108\" cy=\"100\" r=\"3.2\" fill=\"#d0504a\"/><circle cx=\"128\" cy=\"100\" r=\"3.2\" fill=\"#d0504a\"/><circle cx=\"148\" cy=\"100\" r=\"3.2\" fill=\"#d0504a\"/><circle cx=\"168\" cy=\"100\" r=\"3.2\" fill=\"#d0504a\"/><circle cx=\"188\" cy=\"100\" r=\"3.2\" fill=\"#d0504a\"/><circle cx=\"188\" cy=\"66\" r=\"3.2\" fill=\"currentColor\"/><circle cx=\"208\" cy=\"100\" r=\"3.2\" fill=\"#d0504a\"/><circle cx=\"208\" cy=\"66\" r=\"3.2\" fill=\"currentColor\"/><circle cx=\"228\" cy=\"66\" r=\"3.2\" fill=\"currentColor\"/><text x=\"18\" y=\"184\" font-size=\"13\" text-anchor=\"middle\" fill=\"currentColor\">O</text><text x=\"48\" y=\"186\" font-size=\"13\" text-anchor=\"middle\" fill=\"currentColor\">1</text><text x=\"306\" y=\"158\" font-size=\"14\" text-anchor=\"middle\" fill=\"currentColor\">x</text><text x=\"40\" y=\"18\" font-size=\"14\" text-anchor=\"middle\" fill=\"currentColor\">y</text><text x=\"312\" y=\"28\" font-size=\"14\" text-anchor=\"end\" fill=\"currentColor\">y = log₂ x</text><text x=\"312\" y=\"122\" font-size=\"14\" text-anchor=\"end\" fill=\"currentColor\">y = log₃ x</text><text x=\"228\" y=\"186\" font-size=\"14\" text-anchor=\"middle\" fill=\"#2f7fc1\" font-weight=\"bold\">n</text><text x=\"58\" y=\"52\" font-size=\"14\" text-anchor=\"start\" fill=\"currentColor\">y = 2 の列：4 ≦ x ≦ 9</text></svg>"
+      },
+      "x = n で切れるのは、右のはしが n より右にある列だけです。n を 2ⁱ や 3ʲ の形の数にしたときの個数をくらべて n のありかをしぼり、その間で点の個数を n の 1 次式で表しましょう。"
+     ],
+     "paths": [
+      [
+       "横に数える：y = k の列には x = 2ᵏ から x = 3ᵏ までの点があり、x = n で切れる",
+       "3ᵏ ≦ n の列は 3ᵏ − 2ᵏ + 1 個で、y = 0 から 5 の列は 1 + 2 + 6 + 20 + 66 + 212 = 307 個",
+       "n = 255 では y = 6、7 の列が 192 + 128 = 320 個で合わせて 627 個、n = 511 では 1395 個なので、n は 256 から 511 の間",
+       "256 ≦ n ≦ 511 では y = 6、7、8 の列が n − 63、n − 127、n − 255 個で、全部で 307 + 3n − 445 = 3n − 138 個",
+       "n = 379 で 999 個、n = 380 で 1002 個",
+       "はじめて 1000 個をこえるのは n = 380"
+      ],
+      [
+       "たてに数える（x を決める）：x の列の点は、y が log₃ x 以上で log₂ x 以下の整数",
+       "x = 243 までで 603 個、x = 255 までで 627 個で、まだ 1000 個にとどかない",
+       "x が 256 から 511 の列は、3⁵ < x < 3⁶ と 2⁸ ≦ x < 2⁹ から y = 6、7、8 の 3 個ずつ",
+       "1000 − 627 = 373 で、3 × 124 = 372 では 999 個、3 × 125 = 375 で 1002 個",
+       "n = 255 + 125 = 380"
+      ]
+     ],
+     "note": "借りた構造：S05 二重に数える（たての列でなく横の列で数える）、S15 場合分けの設計（右のはしが 3ᵏ の列と、x = n で切れる列に分ける）、S10 上限と下限の評価（n = 255 と n = 511 ではさんで n のありかを決める）、S14 小さい場合から（n = 10 でためす）。種：なし（ri_seeds.py で 0 件。対数のグラフの間の格子点を数える入試の骨組みに「はじめてこえる」を足し、構造のいちらんから組み立てた）。一段難しくした（2026-11-19）：前の版は y = log₂ x と x 軸の間で、横の列はどれも x = 2ᵏ から n までと 1 通りに決まり、8n − 247 に入れるだけで答えが出た。下の線を y = log₃ x にかえ、列の右のはしが 3ᵏ か n かで 2 通りに分かれるようにした。なぜ難しいか：横に数えると y = k の列は x = 2ᵏ から 3ᵏ までと見えるが、n より左で終わる列（3ᵏ ≦ n）と x = n で切れる列（2ᵏ ≦ n < 3ᵏ）を分けて数える場合分けが要る。n のありかは 2 の累乗と 3 の累乗の両方の切れ目で変わるので、n = 243、255、511 などで個数を出してしぼってから、3n − 138 という n の 1 次式（A-019）に整数を入れてくらべる（不等式は解かない。頭注の決まりどおり）。n = 379 で 999 個とぎりぎりとどかず、1000 個「をこえる」の読みちがいで 379 と答えやすい。(1, 0) は 2 つのグラフが交わる点で、数え落とすと 1 つずれる。工夫は 4 段（横に数える → 切れる列と切れない列に分ける → n のありかをはさむ → 1 次式に整数を入れてくらべる）。",
+     "qid": "D-001:9bd3f36821"
     }
    ],
    "f": "F04",
