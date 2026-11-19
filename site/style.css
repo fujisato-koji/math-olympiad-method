@@ -895,7 +895,10 @@ body[data-page="map"] .icon[aria-pressed="true"] { color: #ffe2a8; background: r
 .fig-svg text { font-family: var(--font); fill: currentColor; letter-spacing: 0; }  /* 文字の図（.fig）の字間を引き継がない（D-060） */
 
 /* 数式の見せ方（D-042）：文字は斜体のセリフ体（× と見分ける）、分数は上下に重ねる */
-.v { font-family: "Cambria Math", "STIX Two Math", "Times New Roman", "Noto Serif", serif; font-style: italic; font-size: 1.12em; padding: 0 .04em; }
+/* 変数は、教科書の数式と同じ TeX の数式の斜体（KaTeX_Math、MIT、site/vendor/fonts）で、どの端末でも同じ形にする（D-196、施主「f(x) の f と ( がかぶって見にくい」） */
+@font-face { font-family: "KaTeX_Math"; src: url("vendor/fonts/KaTeX_Math-Italic.woff2") format("woff2"); font-style: italic; font-weight: 400; font-display: swap; }
+.v { font-family: "KaTeX_Math", "Cambria Math", "STIX Two Math", "Times New Roman", "Noto Serif", serif; font-style: italic; font-size: 1.16em; padding: 0 .04em; }
+.v.vf { margin-right: .1em; }  /* f は上の曲がりが右へ張り出すので、後ろの ( や ′ とかぶらないよう斜体の補正を足す */
 .frac { display: inline-flex; flex-direction: column; align-items: stretch; text-align: center; vertical-align: middle; line-height: 1.05; margin: 0 .12em; font-size: .86em; }
 /* 横線は分子と分母の広いほうの幅（D-061）。入れ子（連分数）は小さくしすぎない */
 .frac .frac { font-size: .94em; }
@@ -929,7 +932,7 @@ body[data-page="map"] .icon[aria-pressed="true"] { color: #ffe2a8; background: r
 .mat .mcell { padding: 0 .08em; }
 .mat .par { width: .3em; stroke-width: .09em; }
 .display .mat { font-size: .8em; }
-.pr { font-family: "Cambria Math", "STIX Two Math", "Times New Roman", serif; margin: 0 .02em 0 -.04em; }
+.pr { font-family: "Cambria Math", "STIX Two Math", "Times New Roman", serif; margin: 0 .02em 0 .03em; }  /* ′ を字に重ねない（D-196） */
 .lim { display: inline-flex; flex-direction: column; align-items: center; line-height: 1.1; margin: 0 .2em 0 .05em; }
 .lim-to { font-size: .68em; white-space: nowrap; }
 .int { font-family: "Cambria Math", "STIX Two Math", "Times New Roman", serif; font-size: 1.45em; line-height: 1; vertical-align: -.22em; margin-right: .02em; }

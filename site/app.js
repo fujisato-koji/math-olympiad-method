@@ -184,7 +184,7 @@
   const raw = x => x.map(a => a.k === 'g' ? `(${a.v})${a.t}` : a.k === 'frac' ? raw(a.num) + '/' + raw(a.den) : (a.v || '') + (a.t || '')).join('');
   // 分子と分母は、かっこの組 1 つだけなら外側のかっこを外す
   const part = x => x.length === 1 && x[0].k === 'g' && !x[0].t ? mx(x[0].v) : html(x);
-  const letters = v => Array.from(v).map(ch => (/[a-zα-ω]/.test(ch) && ch !== 'π') ? `<i class="v">${ch}</i>` : esc(ch)).join('');
+  const letters = v => Array.from(v).map(ch => (/[a-zα-ω]/.test(ch) && ch !== 'π') ? `<i class="v${ch === 'f' ? ' vf' : ''}">${ch}</i>` : esc(ch)).join('');  // f は斜体の補正（D-196）
   // 分数・根号・積分・極限・行列を含むかっこは、中身の高さに合わせて伸ばす
   const tallGroup = v => {
     if (v.includes(MAT0) || v.includes(MAT1)) return true;

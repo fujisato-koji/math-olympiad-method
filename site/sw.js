@@ -3,7 +3,7 @@
    Google のログインとドライブ、フォントは、ほかのサイトのものなので触らない。 */
 const CACHE = 'michisuji-v1';
 const SHELL = ['./', 'index.html', 'style.css', 'app.js', 'space.js', 'music.js', 'sync.js', 'data.js', 'problems.js',
-  'vendor/three.module.min.js', 'manifest.webmanifest', 'icons/icon-192.png'];
+  'vendor/three.module.min.js', 'vendor/fonts/KaTeX_Math-Italic.woff2', 'manifest.webmanifest', 'icons/icon-192.png'];
 
 self.addEventListener('install', e => {
   e.waitUntil(caches.open(CACHE).then(c => c.addAll(SHELL)).then(() => self.skipWaiting()));
