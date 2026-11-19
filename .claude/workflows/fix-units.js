@@ -47,13 +47,14 @@ const fixPrompt = id => `みちすじ（子どもが毎日少しずつ解く学�
 - 文：段に合うことばと長さ。答えが 2 つになる問い、まぎれる選択肢を直す。段の学年より上の漢字（段 6 まで）をかなに開く。
 - 答え：全部の答える問題を自分で解き、ファイルの答えと照らす。まちがいは直す。
 【守ること】
+- 長くかかる道具（tools/unitqc.py、tools/blind.py render）は Bash の timeout を 600000（10 分）にして動かす（時間切れで止めると画面なしの Edge が残り、PC のメモリを食う。D-137）。
 - 問題の数・日の並び・part・qid のもとは変えない。答えや問いの意味を変えた問題だけ、その id: の行を消す。kinds: [最難関] の問題は中身を変えない（答えのまちがいを見つけたら返す要約に書く）。
 - 書くのは units/${id}.yaml だけ。git の操作、tools/roadmap.py の build と check はしない（ほかの係とまざる）。下書きのスクリプトや控えは、自分の一時フォルダ（scratchpad）の中に ${id}/ を作ってそこだけに置き、終わったらその ${id}/ だけを消す。scratchpad のほかのファイルは主会話やほかの係のものなので、消さない・書きかえない。
 - 確かめ：PYTHONIOENCODING=utf-8 python tools/unitqc.py ${id} で誤り 0、漢字 0 まで直す。できた PNG は全部 Read で見て、はみ出し・かさなり・何の絵かわからない図を直し、見たら python tools/unitqc.py --clean ${id} で消す（画像をためない）。
 【返すもの】10 行以内：足した図の数（見本・問題・ヒント）、直したヒントと文と漢字の数、見つけた答えのまちがい、最難関で気づいたこと、qc の結果。`
 
 const solvePrompt = (id, t) => `あなたは、みちすじの単元 ${id} の問題を、答えを知らずに解く係。日本語で考え、答える。作業ツリーの根（いまの作業フォルダ）で動く。
-【守ること】答えを見ない：units/、site/、docs/ のファイルは開かない・grep しない。tools/blind.py の key は使わない。ファイルを書き換えない。
+【守ること】長くかかる道具（tools/unitqc.py、tools/blind.py render）は Bash の timeout を 600000（10 分）にして動かす（時間切れで止めると画面なしの Edge が残り、PC のメモリを食う。D-137）。答えを見ない：units/、site/、docs/ のファイルは開かない・grep しない。tools/blind.py の key は使わない。ファイルを書き換えない。
 【手順】
 1. PYTHONIOENCODING=utf-8 python tools/blind.py build ${id} を実行し、表示された一時フォルダの ${id}.json（key、part、text、choices、svg、figure）を読む。roadmap.yaml の ${id} の行で段（stage）を見る（子の学年の目安）。
 2. PYTHONIOENCODING=utf-8 python tools/blind.py render ${id} ${t} を実行し、できた画像（${id}-${t}-1.png、-2.png …、同じ一時フォルダ）を全部 Read で見る。図が細かいときは json の svg の中身（座標と文字）も読んでよい。

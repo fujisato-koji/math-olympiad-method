@@ -52,7 +52,7 @@ const JUDGE = {
 const writePrompt = id => `みちすじ（子どもが毎日少しずつ解く学びの地図）の単元 ${id} に、まだ問題がない。新しく units/${id}.yaml を作る。日本語で考え、答える。作業ツリーの根（いまの作業フォルダ）で動く。
 まず docs/problem-figures.md を全部読み、その決まり（ファイルの形、日の並び、図とイラストの描き方、試しの審査で多かった指摘、確かめ）で書く。手本は units/H-002.yaml（段 1、図の多い単元）と units/P-181.yaml（頭注と分かち書き）。roadmap.yaml で ${id} の行（題、段、日数、前提）と前提の単元の題を見る。
 書くのは units/${id}.yaml だけ。git の操作、tools/roadmap.py の build と check はしない。下書きのスクリプトや控えは、自分の一時フォルダ（scratchpad）の中に ${id}/ を作ってそこだけに置き、終わったらその ${id}/ だけを消す。scratchpad のほかのファイルは主会話やほかの係のものなので、消さない・書きかえない。
-確かめは PYTHONIOENCODING=utf-8 python tools/unitqc.py ${id}（誤り 0、漢字 0 まで）。PNG は全部 Read で見て直し、見たら --clean で消す。全部の問題を自分で解き、答えが 1 つに決まること、ヒントが答えを書いていないことを確かめる。
+確かめは PYTHONIOENCODING=utf-8 python tools/unitqc.py ${id}（誤り 0、漢字 0 まで）。長くかかる道具（tools/unitqc.py、tools/blind.py render）は Bash の timeout を 600000（10 分）にして動かす（時間切れで止めると画面なしの Edge が残り、PC のメモリを食う。D-137）。PNG は全部 Read で見て直し、見たら --clean で消す。全部の問題を自分で解き、答えが 1 つに決まること、ヒントが答えを書いていないことを確かめる。
 最後に、docs/problem-figures.md の「戻すもの」を返す。`
 
 const reviewPrompt = id => `みちすじの単元 ${id} の問題を、別の係が新しく作った（units/${id}.yaml）。審査してほしい。日本語で答える。ファイルは書かない（読むだけ）。作業ツリーの根で動く。
@@ -65,7 +65,7 @@ const fixPrompt = (id, r) => `みちすじの単元 ${id} の問題（units/${id
 直したら PYTHONIOENCODING=utf-8 python tools/unitqc.py ${id} で誤り 0・漢字 0 を確かめ、PNG を見て、見たら --clean で消す。最後に、直したこと・直さなかった指摘とわけ・qc の結果を 10 行以内で返す。`
 
 const solvePrompt = (id, t) => `あなたは、みちすじの単元 ${id} の問題を、答えを知らずに解く係。日本語で考え、答える。作業ツリーの根（いまの作業フォルダ）で動く。
-【守ること】答えを見ない：units/、site/、docs/ のファイルは開かない・grep しない。tools/blind.py の key は使わない。ファイルを書き換えない。
+【守ること】長くかかる道具（tools/unitqc.py、tools/blind.py render）は Bash の timeout を 600000（10 分）にして動かす（時間切れで止めると画面なしの Edge が残り、PC のメモリを食う。D-137）。答えを見ない：units/、site/、docs/ のファイルは開かない・grep しない。tools/blind.py の key は使わない。ファイルを書き換えない。
 【手順】
 1. PYTHONIOENCODING=utf-8 python tools/blind.py build ${id} を実行し、表示された一時フォルダの ${id}.json（key、part、text、choices、svg、figure）を読む。roadmap.yaml の ${id} の行で段（stage）を見る（子の学年の目安）。
 2. PYTHONIOENCODING=utf-8 python tools/blind.py render ${id} ${t} を実行し、できた画像（${id}-${t}-1.png、-2.png …、同じ一時フォルダ）を全部 Read で見る。図が細かいときは json の svg の中身（座標と文字）も読んでよい。

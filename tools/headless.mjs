@@ -15,7 +15,7 @@ import { spawn, execFileSync } from 'node:child_process';
 import fs from 'node:fs';
 import os from 'node:os';
 import path from 'node:path';
-import { pathToFileURL } from 'node:url';
+import { pathToFileURL, fileURLToPath } from 'node:url';
 
 const sleep = ms => new Promise(r => setTimeout(r, ms));
 const BROWSERS = [
@@ -77,7 +77,21 @@ process.on('exit', cleanupAll);
 for (const sig of ['SIGINT', 'SIGTERM', 'SIGHUP']) process.on(sig, () => { cleanupAll(); process.exit(130); });
 process.on('uncaughtException', e => { console.error(e); cleanupAll(); process.exit(1); });
 
+// 置き去りの Edge を止める（D-137）：係のコマンドが時間切れで止められると node は消えるが、Windows では Edge が残る。
+// 立てるたびに、15 分より前にできた画面なしの Edge を tools/reap_edge.py が木ごと止める（2 分に 1 回まで。待たずに裏で）
+function reap() {
+  if (process.platform !== 'win32') return;
+  const stamp = path.join(os.tmpdir(), PREFIX + 'reap.stamp');
+  try { if (Date.now() - fs.statSync(stamp).mtimeMs < 120000) return; } catch { /* 目印がない */ }
+  try { fs.writeFileSync(stamp, String(process.pid)); } catch { return; }
+  try {
+    const py = spawn('python', [path.join(path.dirname(fileURLToPath(import.meta.url)), 'reap_edge.py'), '--kill', '15'], { detached: true, stdio: 'ignore' });
+    py.on('error', () => {}); py.unref();
+  } catch { /* python がない */ }
+}
+
 export async function open({ width = 1300, height = 860, port = 9200 + Math.floor(Math.random() * 700), browser } = {}) {
+  reap();
   const exe = browser || BROWSERS.find(p => fs.existsSync(p));
   if (!exe) throw new Error('Edge か Chrome が見つからない（HEADLESS_BROWSER で場所を渡せる）');
   const profile = fs.mkdtempSync(path.join(os.tmpdir(), PREFIX));
