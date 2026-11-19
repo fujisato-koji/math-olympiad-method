@@ -1,7 +1,7 @@
 export const meta = {
   name: 'fix-units',
   description: '作ってある単元を、図とイラストの多い形（docs/problem-figures.md）に直し、答えを見ない係 2 人の解き直しで確かめて直す（D-131）',
-  whenToUse: 'みちすじの作ってある単元を、試しの 6 単元の水準に直すとき。args は { units: ["A-001", ...], width: 4 }（width は同時に進める単元の数、省くと 4。止めたあと動かし直すときは done: [直す段が済んだ単元] を足すと、その単元は解くから始める）。1 回に 12 単元ほど',
+  whenToUse: 'みちすじの作ってある単元を、試しの 6 単元の水準に直すとき。args は { units: ["A-001", ...], width: 4 }（width は同時に進める単元の数、省くと 4。止めたあと動かし直すときは done: [直す段が済んだ単元] を足すと、その単元は解くから始める。light: true で軽い形＝Sonnet・日ごとのファイル・画像なし・解く係 1 人、D-139）。1 回に 12 単元ほど',
   phases: [
     { title: 'Fix', detail: '記号を固定し、図・ヒント・文・漢字・答えを直す' },
     { title: 'Solve', detail: '答えを見ない係 2 人が解き直す' },
@@ -73,6 +73,32 @@ const judgePrompt = (id, solved) => `みちすじの単元 ${id} を、答えを
 5. 選ぶ問題（choices のある問題）は全部、ヒント 3 段でまちがいの選択肢を消しすぎていないかを見る。3 段を合わせて 2 つ以上消して答えだけが残る形、2 択で 1 つ消す形は、消すのを 1 つまでにし、残りを「何を見ればわかるか」「どう比べるか」に直す（D-133）。直した数を fixed に書き、直したら 4. の unitqc をもう一度通す。
 6. docs/problem-figures.md の決まりに従う。`
 
+// 軽い形（D-139。args.light: true）：D-138 の試しの手を当てる。直す・解く・照らすは Sonnet、直す係は要点 1 枚を読み、
+// 単元を日ごとのファイルに分けて直し（tools/assemble.py）、図は画像でなく tools/figlint.py で測る。解く係は 1 人で文だけ。
+const LIGHT = !!(args && args.light)
+const fixLight = id => `みちすじ（子どもが毎日少しずつ解く学びの地図）の、作ってある単元 ${id} を直す。日本語で考え、答える。作業ツリーの根（いまの作業フォルダ）で動く。
+施主の願い：見ただけでわかるように。見本とヒントはできるだけ図とイラストで。図だけでなく、ヒント・文・漢字・答えのまちがいも合わせて直す。
+【まず】
+1. PYTHONIOENCODING=utf-8 python tools/stamp.py ${id}（全部の問題に今の記号を id: として書く。子の記録を引き継ぐため。D-044）。
+2. docs/problem-card.md を全部読む（決まりの要点）。docs/problem-figures.md は「作ってある単元を直すとき」の節だけ読む。
+3. roadmap.yaml で ${id} の行を grep で見る。docs/research/unit-quality.md に「### ${id}」の節があれば、その節だけ読む。
+4. python tools/assemble.py --split ${id} で日ごとのファイルに分け（置き場が出る）、すぐ python tools/assemble.py ${id} で組み立て直し、git diff --ignore-cr-at-eol --stat units/${id}.yaml が空なことを確かめる（空でなければ git checkout -- units/${id}.yaml で戻し、分けずに単元のファイルを直に直す）。単元のファイル全体は読まない。日のファイルを 1 つずつ読んで直す。
+【直すこと】
+- 見本：どの見本にも、その日の新しいことが 1 枚で見てわかる svg の図かイラストを付ける。
+- 答える問題：絵や図で見せられるものは、図を見て答える形にする（問いの文は短く）。段 5 以上では、数直線・面積図・表・グラフ・図形・対応の図・模式図など。
+- ヒント：3 段のうち 1〜2 段を図の付いたヒント（{text, svg}）にし、答えの手前までを絵で見せる（正解そのものは描かない）。図が助けにならない問題は文のままでよい。答えをほぼ言っているヒント、選択肢を 3 段で 2 つ以上消すヒントは、見方・調べ方・一歩手前に直す。
+- 文：段に合うことばと長さ。答えが 2 つになる問い、まぎれる選択肢を直す。段の学年より上の漢字（段 6 まで）をかなに開く。
+- 答え：全部の答える問題を自分で解き、ファイルの答えと照らす。まちがいは直す。
+【守ること】
+- Bash の timeout は 600000（長い道具を時間切れで止めると画面なしの Edge が残る。D-137）。
+- 問題の数・日の並び・part・qid のもとは変えない。答えや問いの意味を変えた問題だけ、その id: の行を消す。kinds: [最難関] の問題は中身を変えない。
+- 直すのは置き場の head.yaml・day-n.yaml・ri.yaml で、直したら python tools/assemble.py ${id} で組み立てる（units/${id}.yaml を直に直さない。組み立てで上書きされる）。git の操作、build、check はしない。下書きは scratchpad の ${id}/ だけ。
+- 確かめ：PYTHONIOENCODING=utf-8 python tools/unitqc.py --no-shot ${id}（誤り 0、漢字 0）と PYTHONIOENCODING=utf-8 python tools/figlint.py ${id}（図の直すところ 0）。画像は見ない。1 日分は 1 回の Write か少ない Edit で直し、何度も読み直さない。
+【返すもの】10 行以内：足した図の数（見本・問題・ヒント）、直したヒントと文と漢字の数、見つけた答えのまちがい、最難関で気づいたこと、qc と figlint の結果。`
+const solveLight = id => solvePrompt(id, 'b')
+  .replace(/2\. PYTHONIOENCODING=utf-8 python tools\/blind\.py render[^\n]*\n/, '2. 図は json の svg の中身（座標と文字）を読んで判断する。画像は作らない。\n')
+  .replace(/5\. 見終わったら[^\n]*\n/, '')
+
 const ids = (args && args.units) || []
 // 同時に進める単元の数（PC を軽くする。D-132）。args.width で変えられる。1 単元は 直す → 解く 2 人 → 照らす の順
 const W = Math.max(1, Math.min(ids.length || 1, (args && args.width) || 4))
@@ -81,11 +107,15 @@ const W = Math.max(1, Math.min(ids.length || 1, (args && args.width) || 4))
 const done = new Set((args && args.done) || [])
 log(`${ids.length} 単元を直す（同時に ${W} 単元まで${done.size ? `、直す段が済んだ ${done.size} 単元は解くから` : ''}）`)
 const one = async id => {
-  const w = done.has(id) ? '直す段は前の回で済み（args.done）' : await agent(fixPrompt(id), { label: `直す:${id}`, phase: 'Fix' })
+  const S = LIGHT ? { model: 'sonnet' } : {}
+  const w = done.has(id) ? '直す段は前の回で済み（args.done）' : await agent(LIGHT ? fixLight(id) : fixPrompt(id), { label: `直す:${id}`, phase: 'Fix', ...S })
   if (!w) return null
-  const s = (await parallel(['a', 'b'].map(t => () => agent(solvePrompt(id, t), { label: `解く:${id}-${t}`, phase: 'Solve', schema: SOLVE })
-    .then(r => r ? { t, answers: r.answers } : null)))).filter(Boolean)
-  const j = await agent(judgePrompt(id, s), { label: `照らす:${id}`, phase: 'Judge', schema: JUDGE })
+  const s = LIGHT
+    ? [await agent(solveLight(id), { label: `解く:${id}-b`, phase: 'Solve', schema: SOLVE, ...S }).then(r => r ? { t: 'b', answers: r.answers } : null)].filter(Boolean)
+    : (await parallel(['a', 'b'].map(t => () => agent(solvePrompt(id, t), { label: `解く:${id}-${t}`, phase: 'Solve', schema: SOLVE })
+      .then(r => r ? { t, answers: r.answers } : null)))).filter(Boolean)
+  const jp = LIGHT ? judgePrompt(id, s).replace('係 2 人（a、b）', '係（b、文だけで解いた）').replace(/（図は python tools\/blind\.py render [^）]*）/, '（図は svg の中身を読む。画像は作らない）') : judgePrompt(id, s)
+  const j = await agent(jp, { label: `照らす:${id}`, phase: 'Judge', schema: JUDGE, ...S })
   return { id, fix: w, judge: j }
 }
 const out = ids.map(() => null)
