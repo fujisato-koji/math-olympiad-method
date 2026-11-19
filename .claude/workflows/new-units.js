@@ -124,7 +124,7 @@ ${RUN}
 const reviewL = id => `${HOME}
 みちすじの単元 ${id} を別の係が新しく作った。全日を審査し、見つけたまちがいはその場で直す（抜き取りにしない。答えを見ない解き直しは、ヒントのよしあしや文と図の食い違いをすり抜けるため。D-201）。
 1. docs/problem-card.md を読む。${WORK(id)}の day-1.yaml から順に全部の日を読む。図は fig: の式で読む（部品の意味は PYTHONIOENCODING=utf-8 python tools/figparts/catalog.py、置き場の parts.py は単元だけの部品）。${LEAN}
-2. 全部の問題を自分で解き、疑ってかかって見る：見本の文と図が、同じ日の問題の答えをそのまま見せていないか（R-003 で見本が共役類を 3 つとも書き、同じ日の 3 問の答えになっていた。D-193）、事実と計算のまちがい、答えが 2 つ、図と答えの食い違い、図の字や数や比がそのまま答えになる、問いの文に答えが書いてある、文と図の数（箱、つぶ、高さ）が合わない、まぎれる選択肢、段に合わない字やことばや書き方、説明していない用語、ヒントが答えを言う・ヒントの図の輪や四角が答えを囲む・選択肢を消しすぎる（3 段で 2 つ以上、2 択で 1 つ）、図がない見本、段の子に難しすぎる・易しすぎる。数は python で確かめてよい。
+2. 全部の問題を自分で解き、疑ってかかって見る：見本の文と図が、同じ日の問題の答えをそのまま見せていないか（R-003 で見本が共役類を 3 つとも書き、同じ日の 3 問の答えになっていた。D-193）、ヒントの図が問いの図の字を落として、輪や四角が何もない所を囲んでいないか（D-210）、問いの図が答えと逆の形や大小を描いていないか、事実と計算のまちがい、答えが 2 つ、図と答えの食い違い、図の字や数や比がそのまま答えになる、問いの文に答えが書いてある、文と図の数（箱、つぶ、高さ）が合わない、まぎれる選択肢、段に合わない字やことばや書き方、説明していない用語、ヒントが答えを言う・ヒントの図の輪や四角が答えを囲む・選択肢を消しすぎる（3 段で 2 つ以上、2 択で 1 つ）、図がない見本、段の子に難しすぎる・易しすぎる。数は python で確かめてよい。
 3. 直す前の出来に点を付ける（1〜5）。
 4. 直すべきものを、その日のファイルで Edit で直す（正解を絵に描く直しはしない。答えを変えたら check と paths も合わせる）。直したら PYTHONIOENCODING=utf-8 python tools/selfcheck.py ${id} で誤り 0・漢字 0・図 0。腕だめし（ri.yaml）は別の係が書いているので触らない。
 ${RUN}`
@@ -178,8 +178,14 @@ ${RUN}`
 const probeManyL = async (id, keys, tag) => {
   const ans = await parallel(keys.map(k => () => agent(probeL(id, k), { label: `${tag}:${id}:${k}`, phase: 'Ri', schema: SOLVE, ...HAI })
     .then(x => x && x.answers && x.answers[0] ? { ...x.answers[0], key: k } : { key: k, answer: '（なし）', sure: false, issue: '' })))
-  const m = await agent(measureL(keys.map(k => `${tag}:${id}:${k}`)), { label: `数える:${id}:${tag}`, phase: 'Ri', schema: L_MEASURE, ...HAI, effort: 'low' })
-  return keys.map((k, i) => ({ key: k, tok: m && m.tokens ? m.tokens[i] : -1, answer: (ans[i] || {}).answer, sure: (ans[i] || {}).sure }))
+  const labels = keys.map(k => `${tag}:${id}:${k}`)
+  let m = await agent(measureL(labels), { label: `数える:${id}:${tag}`, phase: 'Ri', schema: L_MEASURE, ...HAI, effort: 'low' })
+  // Haiku の low が道具を呼ばずに空の並びを返すことがある（make56 の 1 回目で 13 回のうち 5 回、D-210）。数が足りなければ 1 回だけ数え直す
+  if (!m || !m.tokens || m.tokens.length !== keys.length) {
+    m = await agent(measureL(labels), { label: `数え直す:${id}:${tag}`, phase: 'Ri', schema: L_MEASURE, model: 'sonnet', effort: 'low' })
+    if (!m || !m.tokens || m.tokens.length !== keys.length) log(`${id} ${tag}：数える係が数を返さなかった（上げる段を飛ばす）`)
+  }
+  return keys.map((k, i) => ({ key: k, tok: m && m.tokens && m.tokens[i] != null ? m.tokens[i] : -1, answer: (ans[i] || {}).answer, sure: (ans[i] || {}).sure }))
 }
 const riChainL = async id => {
   const h = await agent(riL(id), { label: `腕:${id}`, phase: 'Ri', ...MED })

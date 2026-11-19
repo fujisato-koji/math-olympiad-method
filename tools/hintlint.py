@@ -36,8 +36,58 @@ def items(d):
         yield f'腕だめし {i}', it
 
 
-def lint(it):
+NUM = r'(-?[0-9.]+)'
+
+
+def svg_texts(s):
+    """svg の字と位置：[(x, y, 字)]"""
     out = []
+    for a, body in re.findall(r'<text\b([^>]*)>(.*?)</text>', s or '', re.S):
+        x, y = re.search(r'\bx="' + NUM, a), re.search(r'\by="' + NUM, a)
+        if x and y:
+            out.append((float(x.group(1)), float(y.group(1)), re.sub(r'<[^>]+>', '', body).strip()))
+    return out
+
+
+def svg_marks(s):
+    """ヒントで見るところの点線の輪（ring）と四角（box_mark）：[(x0, y0, x1, y1)]"""
+    out = []
+    for a in re.findall(r'<circle\b([^>]*stroke-dasharray="6 4"[^>]*)/?>', s or ''):
+        c = [re.search(rf'\b{k}="' + NUM, a) for k in ('cx', 'cy', 'r')]
+        if all(c):
+            cx, cy, r = (float(m.group(1)) for m in c)
+            out.append((cx - r, cy - r, cx + r, cy + r))
+    for a in re.findall(r'<rect\b([^>]*fill="none"[^>]*stroke-dasharray="6 4"[^>]*)/?>', s or ''):
+        c = [re.search(rf'\b{k}="' + NUM, a) for k in ('x', 'y', 'width', 'height')]
+        if all(c):
+            x, y, w, h = (float(m.group(1)) for m in c)
+            out.append((x, y, x + w, y + h))
+    return out
+
+
+def empty_marks(it):
+    """空の囲み（D-210）：ヒントの図の輪・四角が、問いの図にある字の場所を囲むのに、ヒントの図にその字がない。
+    ヒントの図を「問いの図＋輪」で描き直すとき、字を落とすと、子には何もない所を囲む図に見える"""
+    out = []
+    q = svg_texts(it.get('svg'))
+    for k, h in enumerate(it.get('hints') or [], 1):
+        if not isinstance(h, dict) or not h.get('svg'):
+            continue
+        ht = svg_texts(h['svg'])
+        have = {t for _, _, t in ht}
+        lost = []
+        inside = lambda x, y, b: b[0] - 4 <= x <= b[2] + 4 and b[1] - 4 <= y <= b[3] + 10
+        for b in svg_marks(h['svg']):
+            if any(t and inside(x, y, b) for x, y, t in ht):
+                continue  # 囲みの中にヒントの字がある（途中の式などに置きかえた）なら空ではない
+            lost += [t for x, y, t in q if t and t not in have and t not in lost and inside(x, y, b)]
+        if lost:
+            out.append(f'空の囲み？ ヒント {k} の図の輪か四角が、問いの図の字「{"」「".join(lost)}」の場所を囲むが、ヒントの図にその字がない（字も描き入れる）')
+    return out
+
+
+def lint(it):
+    out = empty_marks(it)
     if it.get('part') in ('見本', 'わけ') or 'answer' not in it:
         return out
     ans = str(it['answer']).strip()

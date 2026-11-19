@@ -1,0 +1,826 @@
+# P-012 非慣性系（慣性力、遠心力、コリオリ力、回転座標系での位置エネルギー）
+#
+# 段 5・水準 3・8 日。前提は P-007、D-004。加速する台や回る円板の上から見たときの見かけの力：慣性力、遠心力、コリオリ力、遠心力の位置エネルギー。
+# 重力加速度は 10 m/s²、円周率は 3。単位は m、s、kg、N、J、m/s、m/s²、rad/s。
+id: P-012
+days:
+  - day: 1
+    items:
+      - part: 見本
+        text: 電車が右へ加速すると、中の人は左へ引かれるように感じる。これが慣性力。大きさは、質量 × 加速度で、向きは加速度と逆になる。
+        svg: '<svg viewBox="0 0 320 200" xmlns="http://www.w3.org/2000/svg"><rect x="95" y="126" width="110" height="28" fill="#c8ccd6" fill-opacity="0.5" stroke="currentColor" stroke-width="2"/><circle cx="122.5" cy="158" r="7" fill="#c8ccd6" fill-opacity="0.7" stroke="currentColor" stroke-width="2"/><circle cx="177.5" cy="158" r="7" fill="#c8ccd6" fill-opacity="0.7" stroke="currentColor" stroke-width="2"/><circle cx="150" cy="108" r="10" fill="#f3c969" fill-opacity="0.7" stroke="currentColor" stroke-width="2"/><line x1="215" y1="60" x2="265" y2="60" fill="none" stroke="currentColor" stroke-width="2"/><polygon points="275,60 265,65 265,55" fill="currentColor"/><text x="245" y="50" font-size="14" text-anchor="middle" fill="currentColor">加速度 a</text><line x1="150" y1="108" x2="105" y2="108" fill="none" stroke="#f08080" stroke-width="2"/><polygon points="95,108 105,103 105,113" fill="#f08080"/><text x="105" y="92" font-size="14" text-anchor="middle" fill="currentColor">慣性力</text></svg>'
+        explain: 加速する電車の中（加速している場所）では、ニュートンの運動の法則をそのまま使えない。そこで、加速度と逆向きに大きさ m a の見かけの力（慣性力）をつけ足すと、電車の中ではふつうの力のつりあいで考えられる。電車の外（止まっている場所）から見れば、慣性力はなく、人は慣性で進み続けようとしているだけ。
+      - part: 今日
+        text: 質量 50 kg の人が、加速度 2 m/s² で加速する電車に乗っている。この人にはたらく慣性力の大きさは何 N か。
+        svg: '<svg viewBox="0 0 320 200" xmlns="http://www.w3.org/2000/svg"><rect x="95" y="126" width="110" height="28" fill="#c8ccd6" fill-opacity="0.5" stroke="currentColor" stroke-width="2"/><circle cx="122.5" cy="158" r="7" fill="#c8ccd6" fill-opacity="0.7" stroke="currentColor" stroke-width="2"/><circle cx="177.5" cy="158" r="7" fill="#c8ccd6" fill-opacity="0.7" stroke="currentColor" stroke-width="2"/><circle cx="150" cy="108" r="14" fill="#f3c969" fill-opacity="0.7" stroke="currentColor" stroke-width="2"/><line x1="215" y1="60" x2="265" y2="60" fill="none" stroke="currentColor" stroke-width="2"/><polygon points="275,60 265,65 265,55" fill="currentColor"/><text x="245" y="50" font-size="14" text-anchor="middle" fill="currentColor">2 m/s²</text><text x="150" y="70" font-size="14" text-anchor="middle" fill="currentColor">50 kg</text></svg>'
+        choices: [25 N, 52 N, 100 N, 150 N]
+        answer: 100 N
+        check: "'100 N'"
+        hints:
+          - 慣性力の大きさは、質量と加速度でわかる。
+          - text: 質量と加速度の 2 つの数を、図で見つける。
+            svg: '<svg viewBox="0 0 320 200" xmlns="http://www.w3.org/2000/svg"><rect x="95" y="126" width="110" height="28" fill="#c8ccd6" fill-opacity="0.5" stroke="currentColor" stroke-width="2"/><circle cx="122.5" cy="158" r="7" fill="#c8ccd6" fill-opacity="0.7" stroke="currentColor" stroke-width="2"/><circle cx="177.5" cy="158" r="7" fill="#c8ccd6" fill-opacity="0.7" stroke="currentColor" stroke-width="2"/><circle cx="150" cy="108" r="14" fill="#f3c969" fill-opacity="0.7" stroke="currentColor" stroke-width="2"/><circle cx="245" cy="55" r="26" fill="none" stroke="#f08080" stroke-width="3" stroke-dasharray="6 4"/><circle cx="150" cy="70" r="22" fill="none" stroke="#f08080" stroke-width="3" stroke-dasharray="6 4"/><text x="245" y="50" font-size="14" text-anchor="middle" fill="currentColor">2 m/s²</text><text x="150" y="70" font-size="14" text-anchor="middle" fill="currentColor">50 kg</text></svg>'
+          - 質量に加速度をかける。
+        paths:
+          - [慣性力の式 m a, 50 × 2]
+          - [力の単位 N は kg m/s², 質量 × 加速度]
+      - part: 今日
+        text: 電車が右へ進みながら、ブレーキをかけて速さを落としている。電車の中の人にはたらく慣性力は、どちら向きか。
+        svg: '<svg viewBox="0 0 320 200" xmlns="http://www.w3.org/2000/svg"><rect x="95" y="126" width="110" height="28" fill="#c8ccd6" fill-opacity="0.5" stroke="currentColor" stroke-width="2"/><circle cx="122.5" cy="158" r="7" fill="#c8ccd6" fill-opacity="0.7" stroke="currentColor" stroke-width="2"/><circle cx="177.5" cy="158" r="7" fill="#c8ccd6" fill-opacity="0.7" stroke="currentColor" stroke-width="2"/><circle cx="150" cy="108" r="10" fill="#f3c969" fill-opacity="0.7" stroke="currentColor" stroke-width="2"/><line x1="215" y1="60" x2="265" y2="60" fill="none" stroke="currentColor" stroke-width="2"/><polygon points="275,60 265,65 265,55" fill="currentColor"/><text x="245" y="50" font-size="14" text-anchor="middle" fill="currentColor">進む向き</text><text x="150" y="70" font-size="14" text-anchor="middle" fill="currentColor">ブレーキ</text></svg>'
+        choices: [右向き, 左向き, はたらかない]
+        answer: 右向き
+        check: "'右向き'"
+        hints:
+          - 速さが落ちるとき、加速度は進む向きとどう関係するか。
+          - text: 加速度の向きが決まれば、慣性力はその逆向き。加速度の向きを図に出した。
+            svg: '<svg viewBox="0 0 320 200" xmlns="http://www.w3.org/2000/svg"><rect x="95" y="126" width="110" height="28" fill="#c8ccd6" fill-opacity="0.5" stroke="currentColor" stroke-width="2"/><circle cx="122.5" cy="158" r="7" fill="#c8ccd6" fill-opacity="0.7" stroke="currentColor" stroke-width="2"/><circle cx="177.5" cy="158" r="7" fill="#c8ccd6" fill-opacity="0.7" stroke="currentColor" stroke-width="2"/><line x1="215" y1="60" x2="170" y2="60" fill="none" stroke="currentColor" stroke-width="2" stroke-dasharray="4 4"/><polygon points="160,60 170,55 170,65" fill="currentColor"/><text x="190" y="50" font-size="14" text-anchor="middle" fill="currentColor">加速度</text></svg>'
+          - 慣性力は加速度と逆向き。
+      - part: 今日
+        text: 右へ加速する電車のてんじょうから、糸で玉をつるした。電車の中から見ると、玉はどうなるか。
+        svg: '<svg viewBox="0 0 320 200" xmlns="http://www.w3.org/2000/svg"><rect x="75" y="136" width="150" height="28" fill="#c8ccd6" fill-opacity="0.5" stroke="currentColor" stroke-width="2"/><circle cx="112.5" cy="168" r="7" fill="#c8ccd6" fill-opacity="0.7" stroke="currentColor" stroke-width="2"/><circle cx="187.5" cy="168" r="7" fill="#c8ccd6" fill-opacity="0.7" stroke="currentColor" stroke-width="2"/><line x1="150" y1="60" x2="150" y2="100" fill="none" stroke="currentColor" stroke-width="2" stroke-dasharray="4 4"/><circle cx="150" cy="100" r="11" fill="#f3c969" fill-opacity="0.7" stroke="currentColor" stroke-width="2"/><line x1="260" y1="50" x2="290" y2="50" fill="none" stroke="currentColor" stroke-width="2"/><polygon points="300,50 290,55 290,45" fill="currentColor"/><text x="280" y="40" font-size="14" text-anchor="middle" fill="currentColor">加速</text></svg>'
+        choices: [進む向きにかたむく, 進む向きと逆にかたむく, まっすぐ下がる]
+        answer: 進む向きと逆にかたむく
+        check: "'進む向きと逆にかたむく'"
+        hints:
+          - 玉には、重力と糸の力のほかに、電車の中から見たときの見かけの力がはたらく。
+          - text: 見かけの力の向きは、加速度の逆。重力と見かけの力を合わせた向きを考える。
+            svg: '<svg viewBox="0 0 320 200" xmlns="http://www.w3.org/2000/svg"><circle cx="150" cy="100" r="10" fill="#f3c969" fill-opacity="0.7" stroke="currentColor" stroke-width="2"/><line x1="150" y1="100" x2="150" y2="140" fill="none" stroke="currentColor" stroke-width="2"/><polygon points="150,150 145,140 155,140" fill="currentColor"/><line x1="150" y1="100" x2="115" y2="100" fill="none" stroke="#f08080" stroke-width="2"/><polygon points="105,100 115,95 115,105" fill="#f08080"/><text x="170" y="150" font-size="14" text-anchor="middle" fill="currentColor">重力</text></svg>'
+          - 糸は、重力と見かけの力を合わせた向きにのびる。
+      - part: 今日
+        text: 質量 2 kg の玉を糸でつるした電車が、右へ 7.5 m/s² で加速している。糸が玉を引く力は何 N か。重力加速度は 10 m/s² とする。
+        svg: '<svg viewBox="0 0 320 200" xmlns="http://www.w3.org/2000/svg"><rect x="75" y="136" width="150" height="28" fill="#c8ccd6" fill-opacity="0.5" stroke="currentColor" stroke-width="2"/><circle cx="112.5" cy="168" r="7" fill="#c8ccd6" fill-opacity="0.7" stroke="currentColor" stroke-width="2"/><circle cx="187.5" cy="168" r="7" fill="#c8ccd6" fill-opacity="0.7" stroke="currentColor" stroke-width="2"/><line x1="150" y1="60" x2="150" y2="100" fill="none" stroke="currentColor" stroke-width="2" stroke-dasharray="4 4"/><circle cx="150" cy="100" r="11" fill="#f3c969" fill-opacity="0.7" stroke="currentColor" stroke-width="2"/><line x1="200" y1="50" x2="250" y2="50" fill="none" stroke="currentColor" stroke-width="2"/><polygon points="260,50 250,55 250,45" fill="currentColor"/><text x="230" y="40" font-size="14" text-anchor="middle" fill="currentColor">7.5 m/s²</text></svg>'
+        choices: [15 N, 20 N, 25 N, 35 N]
+        answer: 25 N
+        check: "'25 N'"
+        hints:
+          - 玉はつりあっている。糸の力は、重力と慣性力を合わせた力と同じ大きさ。
+          - text: 重力は下向きに 20 N。慣性力は横向きに何 N かを出す。2 つは直角になる。
+            svg: '<svg viewBox="0 0 320 200" xmlns="http://www.w3.org/2000/svg"><circle cx="150" cy="100" r="10" fill="#f3c969" fill-opacity="0.7" stroke="currentColor" stroke-width="2"/><line x1="150" y1="100" x2="150" y2="150" fill="none" stroke="currentColor" stroke-width="2"/><polygon points="150,160 145,150 155,150" fill="currentColor"/><line x1="150" y1="100" x2="100" y2="100" fill="none" stroke="#f08080" stroke-width="2"/><polygon points="90,100 100,95 100,105" fill="#f08080"/><text x="170" y="160" font-size="14" text-anchor="middle" fill="currentColor">重力 20 N</text><text x="100" y="85" font-size="14" text-anchor="middle" fill="currentColor">慣性力</text></svg>'
+          - 直角をはさむ 2 辺の長さから、三平方の定理でななめの長さを出す。
+        paths:
+          - [重力 m g = 20 N, 慣性力 m a = 15 N, 三平方の定理で 25 N]
+          - [見かけの重力加速度 √(10² + 7.5²) = 12.5 m/s², 2 kg をかける]
+      - part: 今日
+        text: 上向きに加速度 2 m/s² で動くエレベーターの中で、質量 60 kg の人が体重計に乗った。体重計は何 N を示すか。
+        svg: '<svg viewBox="0 0 320 200" xmlns="http://www.w3.org/2000/svg"><rect x="100" y="50" width="100" height="100" fill="#7fc8f8" fill-opacity="0.25" stroke="currentColor" stroke-width="2"/><line x1="90" y1="150" x2="210" y2="150" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="150" cy="105" r="12" fill="#f3c969" fill-opacity="0.7" stroke="currentColor" stroke-width="2"/><line x1="250" y1="140" x2="250" y2="80" fill="none" stroke="currentColor" stroke-width="2"/><polygon points="250,70 255,80 245,80" fill="currentColor"/><text x="270" y="105" font-size="14" text-anchor="middle" fill="currentColor">2 m/s²</text></svg>'
+        choices: [480 N, 600 N, 720 N, 120 N]
+        answer: 720 N
+        check: "'720 N'"
+        hints:
+          - 体重計の読みは、体重計が人をおす力の大きさ。
+          - text: エレベーターの中では、慣性力が下向きにはたらく。重力と同じ向きか逆向きかを見る。
+            svg: '<svg viewBox="0 0 320 200" xmlns="http://www.w3.org/2000/svg"><rect x="100" y="50" width="100" height="100" fill="#7fc8f8" fill-opacity="0.25" stroke="currentColor" stroke-width="2"/><line x1="90" y1="150" x2="210" y2="150" fill="none" stroke="currentColor" stroke-width="2"/><line x1="150" y1="100" x2="150" y2="140" fill="none" stroke="currentColor" stroke-width="2"/><polygon points="150,150 145,140 155,140" fill="currentColor"/><line x1="150" y1="100" x2="150" y2="140" fill="none" stroke="#f08080" stroke-width="2"/><polygon points="150,150 145,140 155,140" fill="#f08080"/><text x="190" y="120" font-size="14" text-anchor="middle" fill="currentColor">重力と慣性力</text></svg>'
+          - 体重計が支える力は、重力と慣性力を足した大きさ。
+      - part: 挑戦
+        text: 台車の上に、質量 m の荷物がある。荷物と台車のあいだの静止まさつ係数は 0.4 で、重力加速度は 10 m/s²。台車を加速させたとき、荷物がすべり出さない最大の加速度は何 m/s² か。
+        svg: '<svg viewBox="0 0 320 200" xmlns="http://www.w3.org/2000/svg"><rect x="75" y="136" width="150" height="28" fill="#c8ccd6" fill-opacity="0.5" stroke="currentColor" stroke-width="2"/><circle cx="112.5" cy="168" r="7" fill="#c8ccd6" fill-opacity="0.7" stroke="currentColor" stroke-width="2"/><circle cx="187.5" cy="168" r="7" fill="#c8ccd6" fill-opacity="0.7" stroke="currentColor" stroke-width="2"/><rect x="130" y="105" width="40" height="30" fill="#c9a36b" fill-opacity="0.5" stroke="currentColor" stroke-width="2"/><line x1="215" y1="70" x2="265" y2="70" fill="none" stroke="currentColor" stroke-width="2"/><polygon points="275,70 265,75 265,65" fill="currentColor"/><text x="245" y="60" font-size="14" text-anchor="middle" fill="currentColor">加速</text></svg>'
+        choices: [0.4 m/s², 2.5 m/s², 4 m/s², 10 m/s²]
+        answer: 4 m/s²
+        check: "'4 m/s²'"
+        hints:
+          - 台車といっしょに動く人から見ると、荷物は止まっている。力のつりあいで考える。
+          - text: 荷物にはたらく力は、慣性力とまさつ力。まさつ力の最大は、係数 × 面からの力。
+            svg: '<svg viewBox="0 0 320 200" xmlns="http://www.w3.org/2000/svg"><rect x="130" y="100" width="40" height="30" fill="#c9a36b" fill-opacity="0.5" stroke="currentColor" stroke-width="2"/><line x1="150" y1="115" x2="110" y2="115" fill="none" stroke="#f08080" stroke-width="2"/><polygon points="100,115 110,110 110,120" fill="#f08080"/><line x1="150" y1="115" x2="190" y2="115" fill="none" stroke="currentColor" stroke-width="2"/><polygon points="200,115 190,120 190,110" fill="currentColor"/><text x="100" y="95" font-size="14" text-anchor="middle" fill="currentColor">慣性力</text><text x="205" y="100" font-size="14" text-anchor="middle" fill="currentColor">まさつ力</text></svg>'
+          - 慣性力が、まさつ力の最大の大きさと同じになるところが限界。質量は両方に出て消える。
+        paths:
+          - [慣性力 m a ＝ 最大まさつ力 0.4 m g, a ＝ 0.4 × 10]
+          - [台車の外から見て、荷物を加速させる力はまさつ力だけ, m a ＝ 0.4 m g]
+    extra:
+      - part: 今日
+        text: 質量 20 kg の人が、加速度 3 m/s² で加速する電車に乗っている。この人にはたらく慣性力の大きさは何 N か。
+        svg: '<svg viewBox="0 0 320 200" xmlns="http://www.w3.org/2000/svg"><rect x="95" y="126" width="110" height="28" fill="#c8ccd6" fill-opacity="0.5" stroke="currentColor" stroke-width="2"/><circle cx="122.5" cy="158" r="7" fill="#c8ccd6" fill-opacity="0.7" stroke="currentColor" stroke-width="2"/><circle cx="177.5" cy="158" r="7" fill="#c8ccd6" fill-opacity="0.7" stroke="currentColor" stroke-width="2"/><circle cx="150" cy="108" r="14" fill="#f3c969" fill-opacity="0.7" stroke="currentColor" stroke-width="2"/><line x1="215" y1="60" x2="265" y2="60" fill="none" stroke="currentColor" stroke-width="2"/><polygon points="275,60 265,65 265,55" fill="currentColor"/><text x="245" y="50" font-size="14" text-anchor="middle" fill="currentColor">3 m/s²</text><text x="150" y="70" font-size="14" text-anchor="middle" fill="currentColor">20 kg</text></svg>'
+        choices: [17 N, 23 N, 60 N, 6 N]
+        answer: 60 N
+        check: "'60 N'"
+        hints:
+          - 慣性力の大きさは、質量と加速度でわかる。
+          - text: 質量と加速度の 2 つの数を、図で見つける。
+            svg: '<svg viewBox="0 0 320 200" xmlns="http://www.w3.org/2000/svg"><rect x="95" y="126" width="110" height="28" fill="#c8ccd6" fill-opacity="0.5" stroke="currentColor" stroke-width="2"/><circle cx="122.5" cy="158" r="7" fill="#c8ccd6" fill-opacity="0.7" stroke="currentColor" stroke-width="2"/><circle cx="177.5" cy="158" r="7" fill="#c8ccd6" fill-opacity="0.7" stroke="currentColor" stroke-width="2"/><circle cx="150" cy="108" r="14" fill="#f3c969" fill-opacity="0.7" stroke="currentColor" stroke-width="2"/><circle cx="245" cy="55" r="26" fill="none" stroke="#f08080" stroke-width="3" stroke-dasharray="6 4"/><circle cx="150" cy="70" r="22" fill="none" stroke="#f08080" stroke-width="3" stroke-dasharray="6 4"/><text x="245" y="50" font-size="14" text-anchor="middle" fill="currentColor">3 m/s²</text><text x="150" y="70" font-size="14" text-anchor="middle" fill="currentColor">20 kg</text></svg>'
+          - 質量に加速度をかける。
+      - part: 今日
+        text: 下向きに加速度 2 m/s² で動くエレベーターの中で、質量 60 kg の人が体重計に乗った。体重計は何 N を示すか。
+        svg: '<svg viewBox="0 0 320 200" xmlns="http://www.w3.org/2000/svg"><rect x="100" y="50" width="100" height="100" fill="#7fc8f8" fill-opacity="0.25" stroke="currentColor" stroke-width="2"/><line x1="90" y1="150" x2="210" y2="150" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="150" cy="105" r="12" fill="#f3c969" fill-opacity="0.7" stroke="currentColor" stroke-width="2"/><line x1="250" y1="70" x2="250" y2="130" fill="none" stroke="currentColor" stroke-width="2"/><polygon points="250,140 245,130 255,130" fill="currentColor"/><text x="270" y="105" font-size="14" text-anchor="middle" fill="currentColor">2 m/s²</text></svg>'
+        choices: [120 N, 480 N, 600 N, 720 N]
+        answer: 480 N
+        check: "'480 N'"
+        hints:
+          - 体重計の読みは、体重計が人をおす力の大きさ。
+          - text: 下向きに加速すると、慣性力は上向き。重力に対してどうはたらくか見る。
+            svg: '<svg viewBox="0 0 320 200" xmlns="http://www.w3.org/2000/svg"><rect x="100" y="50" width="100" height="100" fill="#7fc8f8" fill-opacity="0.25" stroke="currentColor" stroke-width="2"/><line x1="90" y1="150" x2="210" y2="150" fill="none" stroke="currentColor" stroke-width="2"/><line x1="150" y1="100" x2="150" y2="140" fill="none" stroke="currentColor" stroke-width="2"/><polygon points="150,150 145,140 155,140" fill="currentColor"/><line x1="150" y1="100" x2="150" y2="60" fill="none" stroke="#f08080" stroke-width="2"/><polygon points="150,50 155,60 145,60" fill="#f08080"/><text x="200" y="70" font-size="14" text-anchor="middle" fill="currentColor">慣性力</text></svg>'
+          - 重力から慣性力を引いた大きさが、体重計の読み。
+  - day: 2
+    items:
+      - part: 見本
+        text: 糸でつるした玉を、右へ加速する電車の中で見ると、玉は左へかたむく。重力 m g と慣性力 m a が合わさって、かたむきの大きさは、慣性力 ÷ 重力 ＝ a ÷ g で決まる。
+        svg: '<svg viewBox="0 0 320 200" xmlns="http://www.w3.org/2000/svg"><rect x="75" y="136" width="150" height="28" fill="#c8ccd6" fill-opacity="0.5" stroke="currentColor" stroke-width="2"/><circle cx="112.5" cy="168" r="7" fill="#c8ccd6" fill-opacity="0.7" stroke="currentColor" stroke-width="2"/><circle cx="187.5" cy="168" r="7" fill="#c8ccd6" fill-opacity="0.7" stroke="currentColor" stroke-width="2"/><line x1="150" y1="60" x2="120" y2="110" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="120" cy="110" r="11" fill="#f3c969" fill-opacity="0.7" stroke="currentColor" stroke-width="2"/><line x1="215" y1="60" x2="265" y2="60" fill="none" stroke="currentColor" stroke-width="2"/><polygon points="275,60 265,65 265,55" fill="currentColor"/><text x="245" y="50" font-size="14" text-anchor="middle" fill="currentColor">加速度 a</text><line x1="120" y1="110" x2="120" y2="140" fill="none" stroke="currentColor" stroke-width="2"/><polygon points="120,150 115,140 125,140" fill="currentColor"/><line x1="120" y1="110" x2="90" y2="110" fill="none" stroke="#f08080" stroke-width="2"/><polygon points="80,110 90,105 90,115" fill="#f08080"/><text x="70" y="95" font-size="14" text-anchor="middle" fill="currentColor">慣性力</text><text x="145" y="150" font-size="14" text-anchor="middle" fill="currentColor">重力</text></svg>'
+        explain: 電車の中では、玉にかかる力は重力 m g（下向き）、慣性力 m a（加速度と逆向き）、糸の力の 3 つで、つりあっている。糸の向きは、重力と慣性力を合わせた向き。糸が下向きとなす角を θ とすると、tan θ ＝ m a ÷ m g ＝ a ÷ g。質量は消える。見かけの重力加速度は √(g² + a²) となる。
+      - part: 今日
+        text: 上向きに加速度 3 m/s² で動くエレベーターの中で、質量 50 kg の人が体重計に乗った。体重計は何 N を示すか。
+        svg: '<svg viewBox="0 0 320 200" xmlns="http://www.w3.org/2000/svg"><rect x="100" y="50" width="100" height="100" fill="#7fc8f8" fill-opacity="0.25" stroke="currentColor" stroke-width="2"/><line x1="90" y1="150" x2="210" y2="150" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="150" cy="105" r="12" fill="#f3c969" fill-opacity="0.7" stroke="currentColor" stroke-width="2"/><line x1="250" y1="140" x2="250" y2="80" fill="none" stroke="currentColor" stroke-width="2"/><polygon points="250,70 255,80 245,80" fill="currentColor"/><text x="270" y="105" font-size="14" text-anchor="middle" fill="currentColor">3 m/s²</text></svg>'
+        choices: [150 N, 350 N, 500 N, 650 N]
+        answer: 650 N
+        check: "'650 N'"
+        hints:
+          - 上向きに加速すると、慣性力は下向きにはたらく。
+          - text: 下向きの力が 2 つ。重力と慣性力を図で確かめる。
+            svg: '<svg viewBox="0 0 320 200" xmlns="http://www.w3.org/2000/svg"><rect x="100" y="50" width="100" height="100" fill="#7fc8f8" fill-opacity="0.25" stroke="currentColor" stroke-width="2"/><line x1="90" y1="150" x2="210" y2="150" fill="none" stroke="currentColor" stroke-width="2"/><line x1="150" y1="100" x2="150" y2="140" fill="none" stroke="currentColor" stroke-width="2"/><polygon points="150,150 145,140 155,140" fill="currentColor"/><line x1="150" y1="100" x2="150" y2="140" fill="none" stroke="#f08080" stroke-width="2"/><polygon points="150,150 145,140 155,140" fill="#f08080"/><text x="200" y="125" font-size="14" text-anchor="middle" fill="currentColor">2 つの力</text></svg>'
+          - 重力と慣性力を足した大きさを、体重計が支える。
+      - part: 今日
+        text: 下向きに加速度 4 m/s² で動くエレベーターの中で、質量 60 kg の人が体重計に乗った。体重計は何 N を示すか。
+        svg: '<svg viewBox="0 0 320 200" xmlns="http://www.w3.org/2000/svg"><rect x="100" y="50" width="100" height="100" fill="#7fc8f8" fill-opacity="0.25" stroke="currentColor" stroke-width="2"/><line x1="90" y1="150" x2="210" y2="150" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="150" cy="105" r="12" fill="#f3c969" fill-opacity="0.7" stroke="currentColor" stroke-width="2"/><line x1="250" y1="70" x2="250" y2="130" fill="none" stroke="currentColor" stroke-width="2"/><polygon points="250,140 245,130 255,130" fill="currentColor"/><text x="270" y="105" font-size="14" text-anchor="middle" fill="currentColor">4 m/s²</text></svg>'
+        choices: [240 N, 360 N, 600 N, 840 N]
+        answer: 360 N
+        check: "'360 N'"
+        hints:
+          - 下向きに加速すると、慣性力は上向きにはたらく。
+          - text: 重力は下向き、慣性力は上向き。2 つの向きが逆なことを図で見る。
+            svg: '<svg viewBox="0 0 320 200" xmlns="http://www.w3.org/2000/svg"><rect x="100" y="50" width="100" height="100" fill="#7fc8f8" fill-opacity="0.25" stroke="currentColor" stroke-width="2"/><line x1="90" y1="150" x2="210" y2="150" fill="none" stroke="currentColor" stroke-width="2"/><line x1="150" y1="100" x2="150" y2="140" fill="none" stroke="currentColor" stroke-width="2"/><polygon points="150,150 145,140 155,140" fill="currentColor"/><line x1="150" y1="100" x2="150" y2="65" fill="none" stroke="#f08080" stroke-width="2"/><polygon points="150,55 155,65 145,65" fill="#f08080"/><text x="205" y="70" font-size="14" text-anchor="middle" fill="currentColor">慣性力</text><text x="195" y="150" font-size="14" text-anchor="middle" fill="currentColor">重力</text></svg>'
+          - 重力から慣性力を引いた大きさを、体重計が支える。
+      - part: 今日
+        text: 質量 60 kg の人が乗った箱が、ひもが切れて自由に落ちている。箱の加速度は重力加速度 10 m/s² と同じ。箱の中の体重計は何 N を示すか。
+        svg: '<svg viewBox="0 0 320 200" xmlns="http://www.w3.org/2000/svg"><rect x="105" y="55" width="90" height="90" fill="#7fc8f8" fill-opacity="0.25" stroke="currentColor" stroke-width="2"/><line x1="95" y1="145" x2="205" y2="145" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="150" cy="110" r="11" fill="#f3c969" fill-opacity="0.7" stroke="currentColor" stroke-width="2"/><line x1="250" y1="70" x2="250" y2="130" fill="none" stroke="currentColor" stroke-width="2"/><polygon points="250,140 245,130 255,130" fill="currentColor"/><text x="270" y="105" font-size="14" text-anchor="middle" fill="currentColor">10 m/s²</text></svg>'
+        choices: [0 N, 6 N, 60 N, 600 N]
+        answer: 0 N
+        check: "'0 N'"
+        hints:
+          - 箱は下向きに、重力加速度と同じ加速度で動いている。
+          - text: 慣性力は上向き。重力と慣性力の大きさを比べる。
+            svg: '<svg viewBox="0 0 320 200" xmlns="http://www.w3.org/2000/svg"><circle cx="150" cy="100" r="14" fill="#f3c969" fill-opacity="0.7" stroke="currentColor" stroke-width="2"/><line x1="150" y1="100" x2="150" y2="140" fill="none" stroke="currentColor" stroke-width="2"/><polygon points="150,150 145,140 155,140" fill="currentColor"/><line x1="150" y1="100" x2="150" y2="60" fill="none" stroke="#f08080" stroke-width="2"/><polygon points="150,50 155,60 145,60" fill="#f08080"/><text x="200" y="70" font-size="14" text-anchor="middle" fill="currentColor">慣性力</text><text x="195" y="150" font-size="14" text-anchor="middle" fill="currentColor">重力</text></svg>'
+          - 2 つの力の大きさを比べて、合わせた大きさを考える。
+      - part: 今日
+        text: 台車が右へ 5 m/s² で加速している。台車からつるした玉の糸は、真下の向きから角 θ だけかたむいてつりあう。tan θ はいくらか。重力加速度は 10 m/s² とする。
+        svg: '<svg viewBox="0 0 320 200" xmlns="http://www.w3.org/2000/svg"><rect x="75" y="136" width="150" height="28" fill="#c8ccd6" fill-opacity="0.5" stroke="currentColor" stroke-width="2"/><circle cx="112.5" cy="168" r="7" fill="#c8ccd6" fill-opacity="0.7" stroke="currentColor" stroke-width="2"/><circle cx="187.5" cy="168" r="7" fill="#c8ccd6" fill-opacity="0.7" stroke="currentColor" stroke-width="2"/><line x1="150" y1="60" x2="120" y2="110" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="120" cy="110" r="11" fill="#f3c969" fill-opacity="0.7" stroke="currentColor" stroke-width="2"/><line x1="215" y1="60" x2="265" y2="60" fill="none" stroke="currentColor" stroke-width="2"/><polygon points="275,60 265,65 265,55" fill="currentColor"/><text x="245" y="50" font-size="14" text-anchor="middle" fill="currentColor">5 m/s²</text><line x1="150" y1="60" x2="150" y2="110" fill="none" stroke="currentColor" stroke-width="2" stroke-dasharray="4 4"/><text x="160" y="95" font-size="14" text-anchor="start" fill="currentColor">θ</text></svg>'
+        choices: [0.2, 0.5, 2, 5]
+        answer: '0.5'
+        check: "'0.5'"
+        hints:
+          - 玉には重力と慣性力がはたらき、糸の向きは 2 つを合わせた向き。
+          - text: 糸のかたむきは、慣性力の大きさ ÷ 重力の大きさで決まる。
+            svg: '<svg viewBox="0 0 320 200" xmlns="http://www.w3.org/2000/svg"><circle cx="150" cy="100" r="11" fill="#f3c969" fill-opacity="0.7" stroke="currentColor" stroke-width="2"/><line x1="150" y1="100" x2="150" y2="140" fill="none" stroke="currentColor" stroke-width="2"/><polygon points="150,150 145,140 155,140" fill="currentColor"/><line x1="150" y1="100" x2="110" y2="100" fill="none" stroke="#f08080" stroke-width="2"/><polygon points="100,100 110,95 110,105" fill="#f08080"/><line x1="100" y1="150" x2="150" y2="150" fill="none" stroke="currentColor" stroke-width="2" stroke-dasharray="4 4"/><line x1="100" y1="100" x2="100" y2="150" fill="none" stroke="currentColor" stroke-width="2" stroke-dasharray="4 4"/><text x="105" y="85" font-size="14" text-anchor="middle" fill="currentColor">慣性力</text><text x="170" y="150" font-size="14" text-anchor="middle" fill="currentColor">重力</text></svg>'
+          - 質量は消えるので、加速度 ÷ 重力加速度。
+        paths:
+          - [慣性力 m a ÷ 重力 m g, 5 ÷ 10]
+          - [見かけの重力の向き, 横 5 に対して下向き 10]
+      - part: 今日
+        text: 長さ 40 cm の水そうをのせた台車が、右へ 7.5 m/s² で加速している。水面はかたむいて止まった。右はしと左はしの水面の高さの差は何 cm か。重力加速度は 10 m/s² とする。
+        svg: '<svg viewBox="0 0 320 200" xmlns="http://www.w3.org/2000/svg"><rect x="90" y="90" width="140" height="60" fill="none" stroke="currentColor" stroke-width="2"/><polygon points="90,150 90,100 230,125 230,150" fill="#7fc8f8" fill-opacity="0.5" stroke="currentColor" stroke-width="2"/><line x1="235" y1="60" x2="275" y2="60" fill="none" stroke="currentColor" stroke-width="2"/><polygon points="285,60 275,65 275,55" fill="currentColor"/><text x="260" y="50" font-size="14" text-anchor="middle" fill="currentColor">7.5 m/s²</text><text x="160" y="175" font-size="14" text-anchor="middle" fill="currentColor">40 cm</text></svg>'
+        choices: [10 cm, 20 cm, 30 cm, 40 cm]
+        answer: 30 cm
+        check: "'30 cm'"
+        hints:
+          - 水面は、見かけの重力の向きに対して直角になる。
+          - text: 水面のかたむきは、糸でつるした玉のかたむきと同じ大きさで考える。
+            svg: '<svg viewBox="0 0 320 200" xmlns="http://www.w3.org/2000/svg"><circle cx="150" cy="90" r="11" fill="#f3c969" fill-opacity="0.7" stroke="currentColor" stroke-width="2"/><line x1="150" y1="90" x2="150" y2="130" fill="none" stroke="currentColor" stroke-width="2"/><polygon points="150,140 145,130 155,130" fill="currentColor"/><line x1="150" y1="90" x2="110" y2="90" fill="none" stroke="#f08080" stroke-width="2"/><polygon points="100,90 110,85 110,95" fill="#f08080"/><text x="105" y="75" font-size="14" text-anchor="middle" fill="currentColor">慣性力</text></svg>'
+          - かたむきの大きさは a ÷ g。高さの差は、水そうの長さにこれをかける。
+      - part: 挑戦
+        text: 上向きに加速度 5 m/s² で動くエレベーターの中のてんじょうから、ばね定数 200 N/m のばねで質量 2 kg のおもりをつるす。ばねののびは何 cm か。重力加速度は 10 m/s² とする。
+        svg: '<svg viewBox="0 0 320 200" xmlns="http://www.w3.org/2000/svg"><rect x="100" y="45" width="100" height="110" fill="#7fc8f8" fill-opacity="0.25" stroke="currentColor" stroke-width="2"/><line x1="90" y1="155" x2="210" y2="155" fill="none" stroke="currentColor" stroke-width="2"/><line x1="150" y1="45" x2="150" y2="70" fill="none" stroke="currentColor" stroke-width="2"/><rect x="135" y="70" width="30" height="30" fill="#c9a36b" fill-opacity="0.5" stroke="currentColor" stroke-width="2"/><line x1="250" y1="140" x2="250" y2="80" fill="none" stroke="currentColor" stroke-width="2"/><polygon points="250,70 255,80 245,80" fill="currentColor"/><text x="270" y="105" font-size="14" text-anchor="middle" fill="currentColor">5 m/s²</text></svg>'
+        choices: [10 cm, 15 cm, 20 cm, 30 cm]
+        answer: 15 cm
+        check: "'15 cm'"
+        hints:
+          - エレベーターの中では、おもりは止まっているので力がつりあう。
+          - text: 下向きの力は重力と慣性力。ばねの力はそれらを合わせた大きさと同じ。
+            svg: '<svg viewBox="0 0 320 200" xmlns="http://www.w3.org/2000/svg"><rect x="135" y="80" width="30" height="30" fill="#c9a36b" fill-opacity="0.5" stroke="currentColor" stroke-width="2"/><line x1="150" y1="80" x2="150" y2="50" fill="none" stroke="currentColor" stroke-width="2"/><polygon points="150,40 155,50 145,50" fill="currentColor"/><line x1="150" y1="110" x2="150" y2="150" fill="none" stroke="currentColor" stroke-width="2"/><polygon points="150,160 145,150 155,150" fill="currentColor"/><line x1="150" y1="110" x2="150" y2="150" fill="none" stroke="#f08080" stroke-width="2"/><polygon points="150,160 145,150 155,150" fill="#f08080"/><text x="210" y="135" font-size="14" text-anchor="middle" fill="currentColor">重力と慣性力</text></svg>'
+          - ばねの力 ＝ ばね定数 × のび。長さの単位を m から cm に直すことに気をつける。
+        paths:
+          - [見かけの重力 m (g + a) ＝ 30 N, 30 ÷ 200 ＝ 0.15 m]
+          - [見かけの重力加速度 15 m/s², k x ＝ m × 15]
+      - part: 思い出す
+        text: 質量 30 kg の人が、加速度 4 m/s² で加速する電車に乗っている。この人にはたらく慣性力の大きさは何 N か。
+        svg: '<svg viewBox="0 0 320 200" xmlns="http://www.w3.org/2000/svg"><rect x="95" y="126" width="110" height="28" fill="#c8ccd6" fill-opacity="0.5" stroke="currentColor" stroke-width="2"/><circle cx="122.5" cy="158" r="7" fill="#c8ccd6" fill-opacity="0.7" stroke="currentColor" stroke-width="2"/><circle cx="177.5" cy="158" r="7" fill="#c8ccd6" fill-opacity="0.7" stroke="currentColor" stroke-width="2"/><circle cx="150" cy="108" r="14" fill="#f3c969" fill-opacity="0.7" stroke="currentColor" stroke-width="2"/><line x1="215" y1="60" x2="265" y2="60" fill="none" stroke="currentColor" stroke-width="2"/><polygon points="275,60 265,65 265,55" fill="currentColor"/><text x="245" y="50" font-size="14" text-anchor="middle" fill="currentColor">4 m/s²</text><text x="150" y="70" font-size="14" text-anchor="middle" fill="currentColor">30 kg</text></svg>'
+        choices: [34 N, 26 N, 120 N, 7.5 N]
+        answer: 120 N
+        check: "'120 N'"
+        hints:
+          - 慣性力の大きさは、質量と加速度でわかる。
+          - text: 質量と加速度を図から読む。
+            svg: '<svg viewBox="0 0 320 200" xmlns="http://www.w3.org/2000/svg"><rect x="95" y="126" width="110" height="28" fill="#c8ccd6" fill-opacity="0.5" stroke="currentColor" stroke-width="2"/><circle cx="122.5" cy="158" r="7" fill="#c8ccd6" fill-opacity="0.7" stroke="currentColor" stroke-width="2"/><circle cx="177.5" cy="158" r="7" fill="#c8ccd6" fill-opacity="0.7" stroke="currentColor" stroke-width="2"/><circle cx="150" cy="108" r="14" fill="#f3c969" fill-opacity="0.7" stroke="currentColor" stroke-width="2"/><circle cx="245" cy="55" r="26" fill="none" stroke="#f08080" stroke-width="3" stroke-dasharray="6 4"/><circle cx="150" cy="70" r="22" fill="none" stroke="#f08080" stroke-width="3" stroke-dasharray="6 4"/><text x="245" y="50" font-size="14" text-anchor="middle" fill="currentColor">4 m/s²</text><text x="150" y="70" font-size="14" text-anchor="middle" fill="currentColor">30 kg</text></svg>'
+          - 質量に加速度をかける。
+    extra:
+      - part: 今日
+        text: 台車が右へ 2 m/s² で加速している。台車からつるした玉の糸が、真下から角 θ だけかたむいてつりあう。tan θ はいくらか。重力加速度は 10 m/s² とする。
+        svg: '<svg viewBox="0 0 320 200" xmlns="http://www.w3.org/2000/svg"><rect x="75" y="136" width="150" height="28" fill="#c8ccd6" fill-opacity="0.5" stroke="currentColor" stroke-width="2"/><circle cx="112.5" cy="168" r="7" fill="#c8ccd6" fill-opacity="0.7" stroke="currentColor" stroke-width="2"/><circle cx="187.5" cy="168" r="7" fill="#c8ccd6" fill-opacity="0.7" stroke="currentColor" stroke-width="2"/><line x1="150" y1="60" x2="120" y2="110" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="120" cy="110" r="11" fill="#f3c969" fill-opacity="0.7" stroke="currentColor" stroke-width="2"/><line x1="215" y1="60" x2="265" y2="60" fill="none" stroke="currentColor" stroke-width="2"/><polygon points="275,60 265,65 265,55" fill="currentColor"/><text x="245" y="50" font-size="14" text-anchor="middle" fill="currentColor">2 m/s²</text><line x1="150" y1="60" x2="150" y2="110" fill="none" stroke="currentColor" stroke-width="2" stroke-dasharray="4 4"/></svg>'
+        choices: [0.2, 0.5, 2, 5]
+        answer: '0.2'
+        check: "'0.2'"
+        hints:
+          - 玉には重力と慣性力がはたらき、糸の向きは 2 つを合わせた向き。
+          - text: 糸のかたむきは、慣性力 ÷ 重力で決まる。
+            svg: '<svg viewBox="0 0 320 200" xmlns="http://www.w3.org/2000/svg"><circle cx="150" cy="100" r="11" fill="#f3c969" fill-opacity="0.7" stroke="currentColor" stroke-width="2"/><line x1="150" y1="100" x2="150" y2="140" fill="none" stroke="currentColor" stroke-width="2"/><polygon points="150,150 145,140 155,140" fill="currentColor"/><line x1="150" y1="100" x2="110" y2="100" fill="none" stroke="#f08080" stroke-width="2"/><polygon points="100,100 110,95 110,105" fill="#f08080"/><text x="105" y="85" font-size="14" text-anchor="middle" fill="currentColor">慣性力</text><text x="170" y="150" font-size="14" text-anchor="middle" fill="currentColor">重力</text></svg>'
+          - 質量は消えるので、加速度 ÷ 重力加速度。
+      - part: 今日
+        text: 上向きに加速度 1 m/s² で動くエレベーターの中で、質量 40 kg の人が体重計に乗った。体重計は何 N を示すか。
+        svg: '<svg viewBox="0 0 320 200" xmlns="http://www.w3.org/2000/svg"><rect x="100" y="50" width="100" height="100" fill="#7fc8f8" fill-opacity="0.25" stroke="currentColor" stroke-width="2"/><line x1="90" y1="150" x2="210" y2="150" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="150" cy="105" r="12" fill="#f3c969" fill-opacity="0.7" stroke="currentColor" stroke-width="2"/><line x1="250" y1="140" x2="250" y2="80" fill="none" stroke="currentColor" stroke-width="2"/><polygon points="250,70 255,80 245,80" fill="currentColor"/><text x="270" y="105" font-size="14" text-anchor="middle" fill="currentColor">1 m/s²</text></svg>'
+        choices: [360 N, 400 N, 440 N, 40 N]
+        answer: 440 N
+        check: "'440 N'"
+        hints:
+          - 上向きに加速すると、慣性力は下向きにはたらく。
+          - text: 下向きの力が 2 つ。図で確かめる。
+            svg: '<svg viewBox="0 0 320 200" xmlns="http://www.w3.org/2000/svg"><rect x="100" y="50" width="100" height="100" fill="#7fc8f8" fill-opacity="0.25" stroke="currentColor" stroke-width="2"/><line x1="90" y1="150" x2="210" y2="150" fill="none" stroke="currentColor" stroke-width="2"/><line x1="150" y1="100" x2="150" y2="140" fill="none" stroke="currentColor" stroke-width="2"/><polygon points="150,150 145,140 155,140" fill="currentColor"/><line x1="150" y1="100" x2="150" y2="140" fill="none" stroke="#f08080" stroke-width="2"/><polygon points="150,150 145,140 155,140" fill="#f08080"/><text x="200" y="125" font-size="14" text-anchor="middle" fill="currentColor">2 つの力</text></svg>'
+          - 重力と慣性力を足した大きさを、体重計が支える。
+  - day: 3
+    items:
+      - part: 見本
+        text: 回る円板の上の人から見ると、物は外へ引かれるように感じる。これが遠心力。大きさは m r ω²（m は質量、r は回る半径、ω は 1 秒に回る角で単位は rad/s）で、向きは中心から外向き。
+        svg: '<svg viewBox="0 0 320 200" xmlns="http://www.w3.org/2000/svg"><circle cx="150" cy="100" r="70" fill="#c8ccd6" fill-opacity="0.35" stroke="currentColor" stroke-width="2"/><circle cx="150" cy="100" r="3" fill="currentColor"/><circle cx="210" cy="100" r="11" fill="#f3c969" fill-opacity="0.7" stroke="currentColor" stroke-width="2"/><line x1="210" y1="100" x2="255" y2="100" fill="none" stroke="#f08080" stroke-width="2"/><polygon points="265,100 255,105 255,95" fill="#f08080"/><text x="240" y="85" font-size="14" text-anchor="middle" fill="currentColor">遠心力</text><line x1="150" y1="100" x2="210" y2="100" fill="none" stroke="currentColor" stroke-width="2" stroke-dasharray="4 4"/><text x="180" y="118" font-size="14" text-anchor="middle" fill="currentColor">r</text><path d="M120 60 Q151.7 77.4 172.2 61.2" fill="none" stroke="currentColor" stroke-width="2"/><polygon points="180,55 175.3,65.1 169.1,57.3" fill="currentColor"/></svg>'
+        explain: 円板の外（止まっている場所）から見ると、円板上の物は向心力 m r ω²（内向き）を受けて円運動している。円板の上（回っている場所）から見ると物は止まっているので、向心力とつりあう外向きの力 m r ω² がある、と考える。これが遠心力で、v ＝ r ω を使えば m v² ÷ r とも書ける。
+      - part: 今日
+        text: 質量 2 kg の物が、半径 0.5 m、角速度 4 rad/s で回る円板の上で、円板といっしょに回っている。回る人から見た遠心力の大きさは何 N か。
+        svg: '<svg viewBox="0 0 320 200" xmlns="http://www.w3.org/2000/svg"><circle cx="150" cy="100" r="70" fill="#c8ccd6" fill-opacity="0.35" stroke="currentColor" stroke-width="2"/><circle cx="150" cy="100" r="3" fill="currentColor"/><circle cx="200" cy="100" r="11" fill="#f3c969" fill-opacity="0.7" stroke="currentColor" stroke-width="2"/><line x1="150" y1="100" x2="200" y2="100" fill="none" stroke="currentColor" stroke-width="2" stroke-dasharray="4 4"/><text x="175" y="118" font-size="14" text-anchor="middle" fill="currentColor">0.5 m</text><text x="250" y="60" font-size="14" text-anchor="middle" fill="currentColor">4 rad/s</text><text x="250" y="130" font-size="14" text-anchor="middle" fill="currentColor">2 kg</text></svg>'
+        choices: [4 N, 8 N, 16 N, 32 N]
+        answer: 16 N
+        check: "'16 N'"
+        hints:
+          - 遠心力の大きさは、m r ω² で、角速度は 2 回かける。
+          - text: 質量、半径、角速度の 3 つを図から見つける。
+            svg: '<svg viewBox="0 0 320 200" xmlns="http://www.w3.org/2000/svg"><circle cx="150" cy="100" r="70" fill="#c8ccd6" fill-opacity="0.35" stroke="currentColor" stroke-width="2"/><circle cx="150" cy="100" r="3" fill="currentColor"/><circle cx="200" cy="100" r="11" fill="#f3c969" fill-opacity="0.7" stroke="currentColor" stroke-width="2"/><circle cx="175" cy="118" r="22" fill="none" stroke="#f08080" stroke-width="3" stroke-dasharray="6 4"/><circle cx="250" cy="60" r="26" fill="none" stroke="#f08080" stroke-width="3" stroke-dasharray="6 4"/><circle cx="250" cy="130" r="24" fill="none" stroke="#f08080" stroke-width="3" stroke-dasharray="6 4"/><text x="175" y="118" font-size="14" text-anchor="middle" fill="currentColor">0.5 m</text><text x="250" y="60" font-size="14" text-anchor="middle" fill="currentColor">4 rad/s</text><text x="250" y="130" font-size="14" text-anchor="middle" fill="currentColor">2 kg</text></svg>'
+          - 2 × 0.5 × 4 × 4 を計算する。
+      - part: 今日
+        text: 質量 1 kg の物が、半径 0.9 m の円を、速さ 3 m/s で回っている。回る人から見た遠心力の大きさは何 N か。
+        svg: '<svg viewBox="0 0 320 200" xmlns="http://www.w3.org/2000/svg"><circle cx="150" cy="100" r="70" fill="#c8ccd6" fill-opacity="0.35" stroke="currentColor" stroke-width="2"/><circle cx="150" cy="100" r="3" fill="currentColor"/><circle cx="210" cy="100" r="11" fill="#f3c969" fill-opacity="0.7" stroke="currentColor" stroke-width="2"/><line x1="150" y1="100" x2="210" y2="100" fill="none" stroke="currentColor" stroke-width="2" stroke-dasharray="4 4"/><text x="180" y="118" font-size="14" text-anchor="middle" fill="currentColor">0.9 m</text><line x1="210" y1="100" x2="210" y2="65" fill="none" stroke="currentColor" stroke-width="2"/><polygon points="210,55 215,65 205,65" fill="currentColor"/><text x="250" y="70" font-size="14" text-anchor="middle" fill="currentColor">3 m/s</text></svg>'
+        choices: [3 N, 5 N, 10 N, 30 N]
+        answer: 10 N
+        check: "'10 N'"
+        hints:
+          - 速さと半径がわかっているときの遠心力の式を思い出す。
+          - text: 速さを 2 回かけて、半径でわる形になる。図で数をさがす。
+            svg: '<svg viewBox="0 0 320 200" xmlns="http://www.w3.org/2000/svg"><circle cx="150" cy="100" r="70" fill="#c8ccd6" fill-opacity="0.35" stroke="currentColor" stroke-width="2"/><circle cx="150" cy="100" r="3" fill="currentColor"/><circle cx="210" cy="100" r="11" fill="#f3c969" fill-opacity="0.7" stroke="currentColor" stroke-width="2"/><circle cx="180" cy="118" r="22" fill="none" stroke="#f08080" stroke-width="3" stroke-dasharray="6 4"/><circle cx="250" cy="70" r="26" fill="none" stroke="#f08080" stroke-width="3" stroke-dasharray="6 4"/><text x="180" y="118" font-size="14" text-anchor="middle" fill="currentColor">0.9 m</text><text x="250" y="70" font-size="14" text-anchor="middle" fill="currentColor">3 m/s</text></svg>'
+          - 質量 × 速さ × 速さ ÷ 半径。
+        paths:
+          - [m v² ÷ r, 1 × 9 ÷ 0.9]
+          - [ω ＝ v ÷ r ＝ 10 ÷ 3, m r ω²]
+      - part: 今日
+        text: 質量 3 kg の物が、半径 0.5 m の所で、円板といっしょに回っている。回る人から見た遠心力の大きさが 6 N のとき、円板の角速度は何 rad/s か。
+        svg: '<svg viewBox="0 0 320 200" xmlns="http://www.w3.org/2000/svg"><circle cx="150" cy="100" r="70" fill="#c8ccd6" fill-opacity="0.35" stroke="currentColor" stroke-width="2"/><circle cx="150" cy="100" r="3" fill="currentColor"/><circle cx="210" cy="100" r="11" fill="#f3c969" fill-opacity="0.7" stroke="currentColor" stroke-width="2"/><line x1="150" y1="100" x2="210" y2="100" fill="none" stroke="currentColor" stroke-width="2" stroke-dasharray="4 4"/><text x="180" y="118" font-size="14" text-anchor="middle" fill="currentColor">0.5 m</text><line x1="210" y1="100" x2="255" y2="100" fill="none" stroke="#f08080" stroke-width="2"/><polygon points="265,100 255,105 255,95" fill="#f08080"/><text x="245" y="85" font-size="14" text-anchor="middle" fill="currentColor">6 N</text><text x="250" y="140" font-size="14" text-anchor="middle" fill="currentColor">3 kg</text></svg>'
+        choices: [1 rad/s, 2 rad/s, 4 rad/s, 8 rad/s]
+        answer: 2 rad/s
+        check: "'2 rad/s'"
+        hints:
+          - 遠心力の式 m r ω² に、わかっている数を入れて、ω を出す。
+          - text: 質量、半径、遠心力の 3 つを図から見つける。
+            svg: '<svg viewBox="0 0 320 200" xmlns="http://www.w3.org/2000/svg"><circle cx="150" cy="100" r="70" fill="#c8ccd6" fill-opacity="0.35" stroke="currentColor" stroke-width="2"/><circle cx="150" cy="100" r="3" fill="currentColor"/><circle cx="210" cy="100" r="11" fill="#f3c969" fill-opacity="0.7" stroke="currentColor" stroke-width="2"/><circle cx="180" cy="118" r="24" fill="none" stroke="#f08080" stroke-width="3" stroke-dasharray="6 4"/><circle cx="245" cy="90" r="22" fill="none" stroke="#f08080" stroke-width="3" stroke-dasharray="6 4"/><circle cx="250" cy="140" r="24" fill="none" stroke="#f08080" stroke-width="3" stroke-dasharray="6 4"/><text x="180" y="118" font-size="14" text-anchor="middle" fill="currentColor">0.5 m</text><text x="245" y="85" font-size="14" text-anchor="middle" fill="currentColor">6 N</text><text x="250" y="140" font-size="14" text-anchor="middle" fill="currentColor">3 kg</text></svg>'
+          - 3 × 0.5 × ω² ＝ 6 から ω² を出して、平方根をとる。
+      - part: 今日
+        text: 回る円板の上の物の角速度を 2 倍にした。回る半径と質量は変えない。遠心力は何倍になるか。
+        svg: '<svg viewBox="0 0 320 200" xmlns="http://www.w3.org/2000/svg"><g transform="translate(10 4) scale(0.453)"><circle cx="160" cy="100" r="60" fill="#c8ccd6" fill-opacity="0.35" stroke="currentColor" stroke-width="2"/><circle cx="160" cy="100" r="3" fill="currentColor"/><circle cx="200" cy="100" r="9" fill="#f3c969" fill-opacity="0.7" stroke="currentColor" stroke-width="2"/><path d="M110 50 Q150.9 62.5 180.9 49.1" fill="none" stroke="currentColor" stroke-width="2"/><polygon points="190,45 182.9,53.6 178.8,44.5" fill="currentColor"/></g><text x="82.5" y="194" font-size="14" text-anchor="middle" fill="currentColor">ω</text><line x1="151" y1="90" x2="162" y2="90" fill="none" stroke="currentColor" stroke-width="2"/><polygon points="169,90 162,93.5 162,86.5" fill="currentColor"/><g transform="translate(165 4) scale(0.453)"><circle cx="160" cy="100" r="60" fill="#c8ccd6" fill-opacity="0.35" stroke="currentColor" stroke-width="2"/><circle cx="160" cy="100" r="3" fill="currentColor"/><circle cx="200" cy="100" r="9" fill="#f3c969" fill-opacity="0.7" stroke="currentColor" stroke-width="2"/><path d="M110 50 Q150.9 62.5 180.9 49.1" fill="none" stroke="currentColor" stroke-width="2"/><polygon points="190,45 182.9,53.6 178.8,44.5" fill="currentColor"/><path d="M110 150 Q150.9 137.5 180.9 150.9" fill="none" stroke="currentColor" stroke-width="2"/><polygon points="190,155 178.8,155.5 182.9,146.4" fill="currentColor"/></g><text x="237.5" y="194" font-size="14" text-anchor="middle" fill="currentColor">2 ω</text></svg>'
+        choices: [2 倍, 3 倍, 4 倍, 8 倍]
+        answer: 4 倍
+        check: "'4 倍'"
+        hints:
+          - 遠心力 m r ω² の式で、ω はどう入っているか。
+          - text: 式の中で ω は 2 回かけられている。
+            svg: '<svg viewBox="0 0 320 200" xmlns="http://www.w3.org/2000/svg"><text x="160" y="80" font-size="16" text-anchor="middle" fill="currentColor">m × r × ω × ω</text><circle cx="180" cy="70" r="40" fill="none" stroke="#f08080" stroke-width="3" stroke-dasharray="6 4"/></svg>'
+          - ω を 2 倍にすると、ω × ω の 2 つの ω が、どちらも 2 倍になる。
+      - part: 今日
+        text: 半径 0.2 m の位置に物をのせた円板を、だんだん速く回す。物と円板のあいだの静止まさつ係数は 0.5。重力加速度は 10 m/s²。物がすべり出す直前の角速度は何 rad/s か。
+        svg: '<svg viewBox="0 0 320 200" xmlns="http://www.w3.org/2000/svg"><circle cx="150" cy="100" r="80" fill="#c8ccd6" fill-opacity="0.35" stroke="currentColor" stroke-width="2"/><circle cx="150" cy="100" r="3" fill="currentColor"/><rect x="200" y="92" width="18" height="16" fill="#c9a36b" fill-opacity="0.5" stroke="currentColor" stroke-width="2"/><line x1="150" y1="100" x2="200" y2="100" fill="none" stroke="currentColor" stroke-width="2" stroke-dasharray="4 4"/><text x="175" y="120" font-size="14" text-anchor="middle" fill="currentColor">0.2 m</text><path d="M110 40 Q150 60 181.1 44.5" fill="none" stroke="currentColor" stroke-width="2"/><polygon points="190,40 183.3,48.9 178.8,40" fill="currentColor"/></svg>'
+        choices: [2 rad/s, 5 rad/s, 10 rad/s, 25 rad/s]
+        answer: 5 rad/s
+        check: "'5 rad/s'"
+        hints:
+          - 回る人から見ると、物にはたらく遠心力と、まさつ力がつりあっている。
+          - text: すべり出す直前は、まさつ力が最大。向きは遠心力と逆。
+            svg: '<svg viewBox="0 0 320 200" xmlns="http://www.w3.org/2000/svg"><rect x="150" y="92" width="18" height="16" fill="#c9a36b" fill-opacity="0.5" stroke="currentColor" stroke-width="2"/><line x1="160" y1="100" x2="200" y2="100" fill="none" stroke="#f08080" stroke-width="2"/><polygon points="210,100 200,105 200,95" fill="#f08080"/><line x1="160" y1="100" x2="120" y2="100" fill="none" stroke="currentColor" stroke-width="2"/><polygon points="110,100 120,95 120,105" fill="currentColor"/><text x="210" y="85" font-size="14" text-anchor="middle" fill="currentColor">遠心力</text><text x="115" y="85" font-size="14" text-anchor="middle" fill="currentColor">まさつ力</text></svg>'
+          - m r ω² ＝ 0.5 m g。質量は消えて、ω² が出る。
+      - part: 挑戦
+        text: 半径 40 m の大きな輪の内側にそって人が立ち、輪を中心のまわりに回して、外向きの遠心力で人工の重力をつくる。人が受ける遠心力が、地上の重力と同じ大きさ（重力加速度 10 m/s²）になる角速度は何 rad/s か。
+        svg: '<svg viewBox="0 0 320 200" xmlns="http://www.w3.org/2000/svg"><circle cx="160" cy="100" r="80" fill="#c8ccd6" fill-opacity="0.2" stroke="currentColor" stroke-width="2"/><circle cx="160" cy="100" r="66" fill="#ffffff" fill-opacity="0.9" stroke="currentColor" stroke-width="2"/><circle cx="160" cy="36" r="8" fill="#f3c969" fill-opacity="0.7" stroke="currentColor" stroke-width="2"/><line x1="160" y1="36" x2="160" y2="16" fill="none" stroke="#f08080" stroke-width="2"/><polygon points="160,6 165,16 155,16" fill="#f08080"/><line x1="160" y1="100" x2="160" y2="36" fill="none" stroke="currentColor" stroke-width="2" stroke-dasharray="4 4"/><text x="180" y="75" font-size="14" text-anchor="middle" fill="currentColor">40 m</text></svg>'
+        choices: [0.25 rad/s, 0.5 rad/s, 2 rad/s, 4 rad/s]
+        answer: 0.5 rad/s
+        check: "'0.5 rad/s'"
+        hints:
+          - 人がいる半径は 40 m で、遠心力が重力と同じ大きさになる。
+          - text: 人にはたらく遠心力は m r ω²。重力は m g。質量は両方に出てくる。
+            svg: '<svg viewBox="0 0 320 200" xmlns="http://www.w3.org/2000/svg"><circle cx="150" cy="100" r="11" fill="#f3c969" fill-opacity="0.7" stroke="currentColor" stroke-width="2"/><line x1="150" y1="100" x2="200" y2="100" fill="none" stroke="#f08080" stroke-width="2"/><polygon points="210,100 200,105 200,95" fill="#f08080"/><line x1="150" y1="100" x2="150" y2="150" fill="none" stroke="currentColor" stroke-width="2"/><polygon points="150,160 145,150 155,150" fill="currentColor"/><text x="215" y="85" font-size="14" text-anchor="middle" fill="currentColor">遠心力</text><text x="180" y="160" font-size="14" text-anchor="middle" fill="currentColor">重力</text></svg>'
+          - r ω² ＝ g の形から、ω² を出して、平方根をとる。
+        paths:
+          - [m r ω² ＝ m g, ω² ＝ 10 ÷ 40 ＝ 0.25, ω ＝ 0.5]
+          - [向心加速度 r ω² が 10 m/s² になる条件]
+      - part: 思い出す
+        text: 台車が右へ 2.5 m/s² で加速している。台車からつるした玉の糸が、真下から角 θ だけかたむいてつりあう。tan θ はいくらか。重力加速度は 10 m/s² とする。
+        svg: '<svg viewBox="0 0 320 200" xmlns="http://www.w3.org/2000/svg"><rect x="75" y="136" width="150" height="28" fill="#c8ccd6" fill-opacity="0.5" stroke="currentColor" stroke-width="2"/><circle cx="112.5" cy="168" r="7" fill="#c8ccd6" fill-opacity="0.7" stroke="currentColor" stroke-width="2"/><circle cx="187.5" cy="168" r="7" fill="#c8ccd6" fill-opacity="0.7" stroke="currentColor" stroke-width="2"/><line x1="150" y1="60" x2="125" y2="110" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="125" cy="110" r="11" fill="#f3c969" fill-opacity="0.7" stroke="currentColor" stroke-width="2"/><line x1="215" y1="60" x2="265" y2="60" fill="none" stroke="currentColor" stroke-width="2"/><polygon points="275,60 265,65 265,55" fill="currentColor"/><text x="245" y="50" font-size="14" text-anchor="middle" fill="currentColor">2.5 m/s²</text><line x1="150" y1="60" x2="150" y2="110" fill="none" stroke="currentColor" stroke-width="2" stroke-dasharray="4 4"/></svg>'
+        choices: [0.25, 0.4, 2.5, 4]
+        answer: '0.25'
+        check: "'0.25'"
+        hints:
+          - 玉には重力と慣性力がはたらく。
+          - text: かたむきは、慣性力 ÷ 重力。
+            svg: '<svg viewBox="0 0 320 200" xmlns="http://www.w3.org/2000/svg"><circle cx="150" cy="100" r="11" fill="#f3c969" fill-opacity="0.7" stroke="currentColor" stroke-width="2"/><line x1="150" y1="100" x2="150" y2="140" fill="none" stroke="currentColor" stroke-width="2"/><polygon points="150,150 145,140 155,140" fill="currentColor"/><line x1="150" y1="100" x2="120" y2="100" fill="none" stroke="#f08080" stroke-width="2"/><polygon points="110,100 120,95 120,105" fill="#f08080"/><text x="105" y="85" font-size="14" text-anchor="middle" fill="currentColor">慣性力</text><text x="170" y="150" font-size="14" text-anchor="middle" fill="currentColor">重力</text></svg>'
+          - 加速度 ÷ 重力加速度。
+    extra:
+      - part: 今日
+        text: 質量 3 kg の物が、半径 2 m、角速度 2 rad/s で回る円板の上で、円板といっしょに回っている。回る人から見た遠心力の大きさは何 N か。
+        svg: '<svg viewBox="0 0 320 200" xmlns="http://www.w3.org/2000/svg"><circle cx="150" cy="100" r="70" fill="#c8ccd6" fill-opacity="0.35" stroke="currentColor" stroke-width="2"/><circle cx="150" cy="100" r="3" fill="currentColor"/><circle cx="210" cy="100" r="11" fill="#f3c969" fill-opacity="0.7" stroke="currentColor" stroke-width="2"/><line x1="150" y1="100" x2="210" y2="100" fill="none" stroke="currentColor" stroke-width="2" stroke-dasharray="4 4"/><text x="180" y="118" font-size="14" text-anchor="middle" fill="currentColor">2 m</text><text x="250" y="60" font-size="14" text-anchor="middle" fill="currentColor">2 rad/s</text><text x="250" y="130" font-size="14" text-anchor="middle" fill="currentColor">3 kg</text></svg>'
+        choices: [12 N, 18 N, 24 N, 36 N]
+        answer: 24 N
+        check: "'24 N'"
+        hints:
+          - 遠心力の大きさは、m r ω² で、角速度は 2 回かける。
+          - text: 質量、半径、角速度の 3 つを図から見つける。
+            svg: '<svg viewBox="0 0 320 200" xmlns="http://www.w3.org/2000/svg"><circle cx="150" cy="100" r="70" fill="#c8ccd6" fill-opacity="0.35" stroke="currentColor" stroke-width="2"/><circle cx="150" cy="100" r="3" fill="currentColor"/><circle cx="210" cy="100" r="11" fill="#f3c969" fill-opacity="0.7" stroke="currentColor" stroke-width="2"/><circle cx="180" cy="118" r="22" fill="none" stroke="#f08080" stroke-width="3" stroke-dasharray="6 4"/><circle cx="250" cy="60" r="26" fill="none" stroke="#f08080" stroke-width="3" stroke-dasharray="6 4"/><circle cx="250" cy="130" r="24" fill="none" stroke="#f08080" stroke-width="3" stroke-dasharray="6 4"/><text x="180" y="118" font-size="14" text-anchor="middle" fill="currentColor">2 m</text><text x="250" y="60" font-size="14" text-anchor="middle" fill="currentColor">2 rad/s</text><text x="250" y="130" font-size="14" text-anchor="middle" fill="currentColor">3 kg</text></svg>'
+          - 3 × 2 × 2 × 2 を計算する。
+      - part: 今日
+        text: 回る円板の上の物の回る半径を 3 倍にした。質量と角速度は変えない。遠心力は何倍になるか。
+        svg: '<svg viewBox="0 0 320 200" xmlns="http://www.w3.org/2000/svg"><g transform="translate(10 4) scale(0.453)"><circle cx="160" cy="100" r="60" fill="#c8ccd6" fill-opacity="0.35" stroke="currentColor" stroke-width="2"/><circle cx="160" cy="100" r="3" fill="currentColor"/><circle cx="190" cy="100" r="9" fill="#f3c969" fill-opacity="0.7" stroke="currentColor" stroke-width="2"/></g><text x="82.5" y="194" font-size="14" text-anchor="middle" fill="currentColor">r</text><line x1="151" y1="90" x2="162" y2="90" fill="none" stroke="currentColor" stroke-width="2"/><polygon points="169,90 162,93.5 162,86.5" fill="currentColor"/><g transform="translate(165 4) scale(0.453)"><circle cx="160" cy="100" r="60" fill="#c8ccd6" fill-opacity="0.35" stroke="currentColor" stroke-width="2"/><circle cx="160" cy="100" r="3" fill="currentColor"/><circle cx="250" cy="100" r="9" fill="#f3c969" fill-opacity="0.7" stroke="currentColor" stroke-width="2"/></g><text x="237.5" y="194" font-size="14" text-anchor="middle" fill="currentColor">3 r</text></svg>'
+        choices: [3 倍, 6 倍, 9 倍, 27 倍]
+        answer: 3 倍
+        check: "'3 倍'"
+        hints:
+          - 遠心力 m r ω² の式で、r はいくつ入っているか。
+          - text: 式の中で r は 1 回だけかけられている。
+            svg: '<svg viewBox="0 0 320 200" xmlns="http://www.w3.org/2000/svg"><text x="160" y="80" font-size="16" text-anchor="middle" fill="currentColor">m × r × ω × ω</text><circle cx="135" cy="70" r="14" fill="none" stroke="#f08080" stroke-width="3" stroke-dasharray="6 4"/></svg>'
+          - r を 3 倍にすると、遠心力もそのまま同じ倍になる。
+  - day: 4
+    items:
+      - part: 見本
+        text: 回る円板の上で、物が外へ動くと、遠心力は物を外へ動かして仕事をする。中心から r の所での遠心力の位置エネルギー U は、U ＝ −½ m ω² r² で、外へ行くほど小さくなる。r₁ から r₂ へ動くときの遠心力の仕事は、½ m ω² (r₂² − r₁²)。
+        svg: '<svg viewBox="0 0 320 200" xmlns="http://www.w3.org/2000/svg"><circle cx="130" cy="100" r="70" fill="#c8ccd6" fill-opacity="0.35" stroke="currentColor" stroke-width="2"/><circle cx="130" cy="100" r="3" fill="currentColor"/><circle cx="130" cy="100" r="4" fill="#f3c969" fill-opacity="0.7" stroke="currentColor" stroke-width="2"/><line x1="130" y1="100" x2="190" y2="100" fill="none" stroke="currentColor" stroke-width="2" stroke-dasharray="4 4"/><polygon points="200,100 190,105 190,95" fill="currentColor"/><circle cx="160" cy="100" r="8" fill="#f3c969" fill-opacity="0.7" stroke="currentColor" stroke-width="2"/><circle cx="195" cy="100" r="8" fill="#f3c969" fill-opacity="0.7" stroke="currentColor" stroke-width="2"/><line x1="160" y1="80" x2="185" y2="80" fill="none" stroke="currentColor" stroke-width="2"/><polygon points="195,80 185,85 185,75" fill="currentColor"/><text x="178" y="68" font-size="14" text-anchor="middle" fill="currentColor">外へ</text><text x="262" y="120" font-size="14" text-anchor="middle" fill="currentColor">仕事 ＞ 0</text></svg>'
+        explain: 回る人から見ると、遠心力 m r ω² は外向きの力で、r だけの関数なので位置エネルギーが決められる。F ＝ −dU/dr から U ＝ −½ m ω² r²。回る人から見ると、運動エネルギー ＋ 遠心力の位置エネルギー（＋ほかの力の位置エネルギー）が、一定に保たれる。
+      - part: 今日
+        text: 回る円板の上で、質量 2 kg の物を、中心 (r ＝ 0) から r ＝ 2 m まで外へ動かす。角速度は 3 rad/s。この間に遠心力がする仕事は何 J か。
+        svg: '<svg viewBox="0 0 320 200" xmlns="http://www.w3.org/2000/svg"><circle cx="130" cy="100" r="80" fill="#c8ccd6" fill-opacity="0.35" stroke="currentColor" stroke-width="2"/><circle cx="130" cy="100" r="3" fill="currentColor"/><line x1="130" y1="100" x2="200" y2="100" fill="none" stroke="currentColor" stroke-width="2"/><polygon points="210,100 200,105 200,95" fill="currentColor"/><circle cx="210" cy="100" r="9" fill="#f3c969" fill-opacity="0.7" stroke="currentColor" stroke-width="2"/><text x="170" y="120" font-size="14" text-anchor="middle" fill="currentColor">2 m</text><text x="262" y="80" font-size="14" text-anchor="middle" fill="currentColor">3 rad/s</text><text x="262" y="130" font-size="14" text-anchor="middle" fill="currentColor">2 kg</text></svg>'
+        choices: [12 J, 18 J, 36 J, 72 J]
+        answer: 36 J
+        check: "'36 J'"
+        hints:
+          - 遠心力の仕事は、½ m ω² × (r₂² − r₁²) で出せる。
+          - text: 動き始めの r₁ と終わりの r₂ を図から読む。
+            svg: '<svg viewBox="0 0 320 200" xmlns="http://www.w3.org/2000/svg"><circle cx="130" cy="100" r="80" fill="#c8ccd6" fill-opacity="0.35" stroke="currentColor" stroke-width="2"/><circle cx="130" cy="100" r="3" fill="currentColor"/><circle cx="130" cy="100" r="10" fill="none" stroke="#f08080" stroke-width="3" stroke-dasharray="6 4"/><circle cx="210" cy="100" r="14" fill="none" stroke="#f08080" stroke-width="3" stroke-dasharray="6 4"/><text x="170" y="120" font-size="14" text-anchor="middle" fill="currentColor">2 m</text></svg>'
+          - r₁ は 0。½ × 2 × 9 × 2² を計算する。
+      - part: 今日
+        text: 回る円板の上で、質量 1 kg の物を、中心から 1 m の所から 3 m の所まで外へ動かす。角速度は 2 rad/s。この間に遠心力がする仕事は何 J か。
+        svg: '<svg viewBox="0 0 320 200" xmlns="http://www.w3.org/2000/svg"><circle cx="130" cy="100" r="80" fill="#c8ccd6" fill-opacity="0.35" stroke="currentColor" stroke-width="2"/><circle cx="130" cy="100" r="3" fill="currentColor"/><line x1="180" y1="100" x2="200" y2="100" fill="none" stroke="currentColor" stroke-width="2"/><polygon points="210,100 200,105 200,95" fill="currentColor"/><circle cx="180" cy="100" r="7" fill="#f3c969" fill-opacity="0.7" stroke="currentColor" stroke-width="2"/><circle cx="210" cy="100" r="7" fill="#f3c969" fill-opacity="0.7" stroke="currentColor" stroke-width="2"/><text x="165" y="120" font-size="14" text-anchor="middle" fill="currentColor">1 m</text><text x="262" y="80" font-size="14" text-anchor="middle" fill="currentColor">2 rad/s</text><text x="262" y="130" font-size="14" text-anchor="middle" fill="currentColor">1 kg</text><line x1="130" y1="100" x2="180" y2="100" fill="none" stroke="currentColor" stroke-width="2" stroke-dasharray="4 4"/></svg>'
+        choices: [8 J, 16 J, 24 J, 32 J]
+        answer: 16 J
+        check: "'16 J'"
+        hints:
+          - 仕事は、½ m ω² × (r₂² − r₁²)。2 乗をそれぞれ先に出す。
+          - text: r₁ ＝ 1 m、r₂ ＝ 3 m。2 乗の差を出す。
+            svg: '<svg viewBox="0 0 320 200" xmlns="http://www.w3.org/2000/svg"><text x="160" y="90" font-size="16" text-anchor="middle" fill="currentColor">r₂² − r₁²</text><circle cx="160" cy="85" r="50" fill="none" stroke="#f08080" stroke-width="3" stroke-dasharray="6 4"/></svg>'
+          - 9 − 1 ＝ 8 に、½ × 1 × 4 をかける。
+        paths:
+          - [½ × 1 × 2² × (3² − 1²), 2 × 8]
+          - [U(r) ＝ −½ m ω² r² の差, U(1) − U(3)]
+      - part: 今日
+        text: 中心から出た、なめらかなまっすぐな管を、角速度 2 rad/s で回す。管の中の玉を、回る人から見ると、中心の近くから静かに出て、中心から 3 m の所まで外へ動いた。そこでの管にそった速さは何 m/s か。玉は管の中で止まっていた状態から動き出したとする。
+        svg: '<svg viewBox="0 0 320 200" xmlns="http://www.w3.org/2000/svg"><circle cx="130" cy="100" r="80" fill="#c8ccd6" fill-opacity="0.35" stroke="currentColor" stroke-width="2"/><circle cx="130" cy="100" r="3" fill="currentColor"/><line x1="130" y1="100" x2="210" y2="100" fill="none" stroke="currentColor" stroke-width="4"/><circle cx="130" cy="100" r="7" fill="#f3c969" fill-opacity="0.7" stroke="currentColor" stroke-width="2"/><circle cx="210" cy="100" r="8" fill="#f3c969" fill-opacity="0.7" stroke="currentColor" stroke-width="2"/><line x1="215" y1="85" x2="245" y2="85" fill="none" stroke="currentColor" stroke-width="2"/><polygon points="255,85 245,90 245,80" fill="currentColor"/><text x="260" y="105" font-size="14" text-anchor="middle" fill="currentColor">3 m</text><text x="262" y="70" font-size="14" text-anchor="middle" fill="currentColor">2 rad/s</text></svg>'
+        choices: [3 m/s, 6 m/s, 9 m/s, 12 m/s]
+        answer: 6 m/s
+        check: "'6 m/s'"
+        hints:
+          - 遠心力がした仕事が、玉の運動エネルギーになる。
+          - text: 仕事は ½ m ω² r²。運動エネルギーは ½ m v²。
+            svg: '<svg viewBox="0 0 320 200" xmlns="http://www.w3.org/2000/svg"><text x="160" y="80" font-size="16" text-anchor="middle" fill="currentColor">½ m v² ＝ ½ m ω² r²</text><circle cx="110" cy="70" r="36" fill="none" stroke="#f08080" stroke-width="3" stroke-dasharray="6 4"/></svg>'
+          - 質量と ½ が消えて、v² ＝ ω² r² となる。平方根をとる。
+      - part: 今日
+        text: 回る円板の上で、遠心力の位置エネルギー U を、中心からの長さ r に対してグラフにする。U のグラフとして正しいものはどれか。
+        svg: '<svg viewBox="0 0 320 200" xmlns="http://www.w3.org/2000/svg"><line x1="9.3" y1="126" x2="97.3" y2="126" fill="none" stroke="currentColor" stroke-width="2"/><line x1="9.3" y1="46" x2="9.3" y2="126" fill="none" stroke="currentColor" stroke-width="2"/><path d="M 9.333333333333336 116 Q 53.333333333333336 116 97.33333333333334 56" fill="none" fill-opacity="0.5" stroke="currentColor" stroke-width="2"/><text x="53.3" y="176" font-size="16" text-anchor="middle" fill="currentColor">ア</text><line x1="116" y1="126" x2="204" y2="126" fill="none" stroke="currentColor" stroke-width="2"/><line x1="116" y1="46" x2="116" y2="126" fill="none" stroke="currentColor" stroke-width="2"/><path d="M 116.0 56 Q 160.0 56 204.0 116" fill="none" fill-opacity="0.5" stroke="currentColor" stroke-width="2"/><text x="160" y="176" font-size="16" text-anchor="middle" fill="currentColor">イ</text><line x1="222.7" y1="126" x2="310.7" y2="126" fill="none" stroke="currentColor" stroke-width="2"/><line x1="222.7" y1="46" x2="222.7" y2="126" fill="none" stroke="currentColor" stroke-width="2"/><line x1="222.7" y1="86" x2="310.7" y2="86" fill="none" stroke="currentColor" stroke-width="2"/><text x="266.7" y="176" font-size="16" text-anchor="middle" fill="currentColor">ウ</text></svg>'
+        choices: [ア, イ, ウ]
+        answer: イ
+        check: "'イ'"
+        hints:
+          - 外へ動くと遠心力は仕事をして、そのぶん位置エネルギーはどうなるか。
+          - text: 遠心力は、中心から遠いほど大きい。大きい力ほど、短い間にたくさん仕事をする。
+            svg: '<svg viewBox="0 0 320 200" xmlns="http://www.w3.org/2000/svg"><text x="110" y="70" font-size="14" text-anchor="middle" fill="currentColor">中心に近い</text><line x1="80" y1="90" x2="110" y2="90" fill="none" stroke="#f08080" stroke-width="2"/><polygon points="120,90 110,95 110,85" fill="#f08080"/><text x="110" y="130" font-size="14" text-anchor="middle" fill="currentColor">中心から遠い</text><line x1="80" y1="150" x2="180" y2="150" fill="none" stroke="#f08080" stroke-width="2"/><polygon points="190,150 180,155 180,145" fill="#f08080"/></svg>'
+          - 外へ行くとエネルギーは減り、その減り方は、外へ行くほどだんだん急になる。
+      - part: 今日
+        text: 回る円板の上の、中心の上に物をそっと置いた。遠心力だけがはたらく。中心から少しだけ外へずれたとき、物はどうなるか。
+        svg: '<svg viewBox="0 0 320 200" xmlns="http://www.w3.org/2000/svg"><circle cx="160" cy="100" r="70" fill="#c8ccd6" fill-opacity="0.35" stroke="currentColor" stroke-width="2"/><circle cx="160" cy="100" r="3" fill="currentColor"/><circle cx="160" cy="100" r="9" fill="#f3c969" fill-opacity="0.7" stroke="currentColor" stroke-width="2"/><line x1="160" y1="100" x2="185" y2="100" fill="none" stroke="currentColor" stroke-width="2" stroke-dasharray="4 4"/><polygon points="195,100 185,105 185,95" fill="currentColor"/><text x="200" y="88" font-size="14" text-anchor="middle" fill="currentColor">ずれる</text></svg>'
+        choices: [中心にもどる, さらに外へ出ていく]
+        answer: さらに外へ出ていく
+        check: "'さらに外へ出ていく'"
+        hints:
+          - 外へずれた所の遠心力の向きを考える。
+          - text: 遠心力は外向き。ずれた向きと同じか逆かを図で見る。
+            svg: '<svg viewBox="0 0 320 200" xmlns="http://www.w3.org/2000/svg"><circle cx="160" cy="100" r="70" fill="#c8ccd6" fill-opacity="0.35" stroke="currentColor" stroke-width="2"/><circle cx="160" cy="100" r="3" fill="currentColor"/><circle cx="190" cy="100" r="9" fill="#f3c969" fill-opacity="0.7" stroke="currentColor" stroke-width="2"/><line x1="190" y1="100" x2="225" y2="100" fill="none" stroke="#f08080" stroke-width="2"/><polygon points="235,100 225,105 225,95" fill="#f08080"/><text x="225" y="85" font-size="14" text-anchor="middle" fill="currentColor">遠心力</text></svg>'
+          - ずれたあとの力が、もとへもどす向きか、ずれを大きくする向きかを考える。
+      - part: 挑戦
+        text: 中心から出たなめらかな管を、角速度 2 rad/s で回す。管の中に、中心とばね（自然長 0.5 m、ばね定数 12 N/m）でつないだ質量 1 kg の玉がある。玉が回る人から見て止まるのは、中心から何 m の所か。
+        svg: '<svg viewBox="0 0 320 200" xmlns="http://www.w3.org/2000/svg"><circle cx="130" cy="100" r="80" fill="#c8ccd6" fill-opacity="0.35" stroke="currentColor" stroke-width="2"/><circle cx="130" cy="100" r="3" fill="currentColor"/><line x1="130" y1="100" x2="215" y2="100" fill="none" stroke="currentColor" stroke-width="4"/><polyline points="130,100 145,90 160,110 175,90 190,100" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="215" cy="100" r="9" fill="#f3c969" fill-opacity="0.7" stroke="currentColor" stroke-width="2"/><text x="215" y="80" font-size="14" text-anchor="middle" fill="currentColor">？</text><text x="262" y="70" font-size="14" text-anchor="middle" fill="currentColor">2 rad/s</text></svg>'
+        choices: [0.5 m, 0.6 m, 0.75 m, 1.5 m]
+        answer: 0.75 m
+        check: "'0.75 m'"
+        hints:
+          - 回る人から見て止まるとき、玉にはたらく管にそった力がつりあう。
+          - text: 外向きは遠心力 m r ω²。内向きはばねの力で、ばね定数 × (今の長さ − 自然長)。
+            svg: '<svg viewBox="0 0 320 200" xmlns="http://www.w3.org/2000/svg"><circle cx="160" cy="100" r="9" fill="#f3c969" fill-opacity="0.7" stroke="currentColor" stroke-width="2"/><line x1="160" y1="100" x2="205" y2="100" fill="none" stroke="#f08080" stroke-width="2"/><polygon points="215,100 205,105 205,95" fill="#f08080"/><line x1="160" y1="100" x2="115" y2="100" fill="none" stroke="currentColor" stroke-width="2"/><polygon points="105,100 115,95 115,105" fill="currentColor"/><text x="215" y="85" font-size="14" text-anchor="middle" fill="currentColor">遠心力</text><text x="105" y="85" font-size="14" text-anchor="middle" fill="currentColor">ばね</text></svg>'
+          - 今の長さを r とすると、1 × r × 4 ＝ 12 × (r − 0.5)。
+        paths:
+          - [m r ω² ＝ k (r − L), 4 r ＝ 12 r − 6, r ＝ 0.75]
+          - [U ＝ −½ m ω² r² ＋ ½ k (r − L)² が最小になる r を見つける]
+      - part: 思い出す
+        text: 質量 5 kg の物が、半径 1 m、角速度 3 rad/s で回る円板の上で、円板といっしょに回っている。回る人から見た遠心力の大きさは何 N か。
+        svg: '<svg viewBox="0 0 320 200" xmlns="http://www.w3.org/2000/svg"><circle cx="150" cy="100" r="70" fill="#c8ccd6" fill-opacity="0.35" stroke="currentColor" stroke-width="2"/><circle cx="150" cy="100" r="3" fill="currentColor"/><circle cx="210" cy="100" r="11" fill="#f3c969" fill-opacity="0.7" stroke="currentColor" stroke-width="2"/><line x1="150" y1="100" x2="210" y2="100" fill="none" stroke="currentColor" stroke-width="2" stroke-dasharray="4 4"/><text x="180" y="118" font-size="14" text-anchor="middle" fill="currentColor">1 m</text><text x="250" y="60" font-size="14" text-anchor="middle" fill="currentColor">3 rad/s</text><text x="250" y="130" font-size="14" text-anchor="middle" fill="currentColor">5 kg</text></svg>'
+        choices: [15 N, 30 N, 45 N, 90 N]
+        answer: 45 N
+        check: "'45 N'"
+        hints:
+          - 遠心力の大きさは、m r ω² で、角速度は 2 回かける。
+          - text: 質量、半径、角速度の 3 つを図から見つける。
+            svg: '<svg viewBox="0 0 320 200" xmlns="http://www.w3.org/2000/svg"><circle cx="150" cy="100" r="70" fill="#c8ccd6" fill-opacity="0.35" stroke="currentColor" stroke-width="2"/><circle cx="150" cy="100" r="3" fill="currentColor"/><circle cx="210" cy="100" r="11" fill="#f3c969" fill-opacity="0.7" stroke="currentColor" stroke-width="2"/><circle cx="180" cy="118" r="22" fill="none" stroke="#f08080" stroke-width="3" stroke-dasharray="6 4"/><circle cx="250" cy="60" r="26" fill="none" stroke="#f08080" stroke-width="3" stroke-dasharray="6 4"/><circle cx="250" cy="130" r="24" fill="none" stroke="#f08080" stroke-width="3" stroke-dasharray="6 4"/><text x="180" y="118" font-size="14" text-anchor="middle" fill="currentColor">1 m</text><text x="250" y="60" font-size="14" text-anchor="middle" fill="currentColor">3 rad/s</text><text x="250" y="130" font-size="14" text-anchor="middle" fill="currentColor">5 kg</text></svg>'
+          - 5 × 1 × 3 × 3 を計算する。
+    extra:
+      - part: 今日
+        text: 回る円板の上で、質量 4 kg の物を、中心から 3 m の所まで外へ動かす。角速度は 1 rad/s。中心から動かし始めたとき、この間に遠心力がする仕事は何 J か。
+        svg: '<svg viewBox="0 0 320 200" xmlns="http://www.w3.org/2000/svg"><circle cx="130" cy="100" r="80" fill="#c8ccd6" fill-opacity="0.35" stroke="currentColor" stroke-width="2"/><circle cx="130" cy="100" r="3" fill="currentColor"/><line x1="130" y1="100" x2="190" y2="100" fill="none" stroke="currentColor" stroke-width="2"/><polygon points="200,100 190,105 190,95" fill="currentColor"/><circle cx="200" cy="100" r="9" fill="#f3c969" fill-opacity="0.7" stroke="currentColor" stroke-width="2"/><text x="165" y="120" font-size="14" text-anchor="middle" fill="currentColor">3 m</text><text x="262" y="80" font-size="14" text-anchor="middle" fill="currentColor">1 rad/s</text><text x="262" y="130" font-size="14" text-anchor="middle" fill="currentColor">4 kg</text></svg>'
+        choices: [6 J, 12 J, 18 J, 36 J]
+        answer: 18 J
+        check: "'18 J'"
+        hints:
+          - 遠心力の仕事は、½ m ω² × (r₂² − r₁²) で出せる。
+          - text: 動き始めの r₁ と終わりの r₂ を図から読む。
+            svg: '<svg viewBox="0 0 320 200" xmlns="http://www.w3.org/2000/svg"><circle cx="130" cy="100" r="80" fill="#c8ccd6" fill-opacity="0.35" stroke="currentColor" stroke-width="2"/><circle cx="130" cy="100" r="3" fill="currentColor"/><circle cx="130" cy="100" r="10" fill="none" stroke="#f08080" stroke-width="3" stroke-dasharray="6 4"/><circle cx="200" cy="100" r="14" fill="none" stroke="#f08080" stroke-width="3" stroke-dasharray="6 4"/><text x="165" y="120" font-size="14" text-anchor="middle" fill="currentColor">3 m</text></svg>'
+          - r₁ は 0。½ × 4 × 1 × 3² を計算する。
+      - part: 今日
+        text: 回る円板の上で、質量 2 kg の物を、中心から 2 m の所から 4 m の所まで外へ動かす。角速度は 2 rad/s。この間に遠心力がする仕事は何 J か。
+        svg: '<svg viewBox="0 0 320 200" xmlns="http://www.w3.org/2000/svg"><circle cx="130" cy="100" r="80" fill="#c8ccd6" fill-opacity="0.35" stroke="currentColor" stroke-width="2"/><circle cx="130" cy="100" r="3" fill="currentColor"/><line x1="165" y1="100" x2="205" y2="100" fill="none" stroke="currentColor" stroke-width="2"/><polygon points="215,100 205,105 205,95" fill="currentColor"/><circle cx="165" cy="100" r="7" fill="#f3c969" fill-opacity="0.7" stroke="currentColor" stroke-width="2"/><circle cx="215" cy="100" r="7" fill="#f3c969" fill-opacity="0.7" stroke="currentColor" stroke-width="2"/><text x="165" y="120" font-size="14" text-anchor="middle" fill="currentColor">2 m</text><text x="262" y="80" font-size="14" text-anchor="middle" fill="currentColor">2 rad/s</text><text x="262" y="130" font-size="14" text-anchor="middle" fill="currentColor">2 kg</text><line x1="130" y1="100" x2="165" y2="100" fill="none" stroke="currentColor" stroke-width="2" stroke-dasharray="4 4"/></svg>'
+        choices: [16 J, 24 J, 48 J, 96 J]
+        answer: 48 J
+        check: "'48 J'"
+        hints:
+          - 仕事は、½ m ω² × (r₂² − r₁²)。2 乗をそれぞれ先に出す。
+          - text: r₁ ＝ 2 m、r₂ ＝ 4 m。2 乗の差を出す。
+            svg: '<svg viewBox="0 0 320 200" xmlns="http://www.w3.org/2000/svg"><text x="160" y="90" font-size="16" text-anchor="middle" fill="currentColor">r₂² − r₁²</text><circle cx="160" cy="85" r="50" fill="none" stroke="#f08080" stroke-width="3" stroke-dasharray="6 4"/></svg>'
+          - 16 − 4 ＝ 12 に、½ × 2 × 4 をかける。
+  - day: 5
+    items:
+      - part: 見本
+        text: 回る円板の上で動く物には、もう 1 つ見かけの力がはたらく。これがコリオリ力。大きさは 2 m ω v（v は円板の上から見た速さ）で、向きは動く向きに直角。上から見て反時計回りの円板では、進む向きに向かって右へはたらく。
+        svg: '<svg viewBox="0 0 320 200" xmlns="http://www.w3.org/2000/svg"><circle cx="130" cy="100" r="75" fill="#c8ccd6" fill-opacity="0.35" stroke="currentColor" stroke-width="2"/><circle cx="130" cy="100" r="3" fill="currentColor"/><circle cx="110" cy="100" r="8" fill="#f3c969" fill-opacity="0.7" stroke="currentColor" stroke-width="2"/><line x1="110" y1="100" x2="160" y2="100" fill="none" stroke="currentColor" stroke-width="2"/><polygon points="170,100 160,105 160,95" fill="currentColor"/><text x="150" y="85" font-size="14" text-anchor="middle" fill="currentColor">速さ v</text><line x1="170" y1="100" x2="170" y2="135" fill="none" stroke="#f08080" stroke-width="2"/><polygon points="170,145 165,135 175,135" fill="#f08080"/><text x="210" y="135" font-size="14" text-anchor="middle" fill="currentColor">コリオリ力</text><path d="M130 35 Q103 57.8 79.3 48.6" fill="none" stroke="currentColor" stroke-width="2"/><polygon points="70,45 81.1,43.9 77.5,53.3" fill="currentColor"/><text x="262" y="55" font-size="14" text-anchor="middle" fill="currentColor">反時計回り</text></svg>'
+        explain: 回る人から見た物の加速度には、遠心力のほかに、動く速さ v に比例するものが出る。これを力の形で書いたものがコリオリ力 −2 m ω × v で、大きさは 2 m ω v（v が回る中心の線に直角のとき）。仕事はしない（速度に直角）ので、エネルギーは変えず、向きだけを曲げる。
+      - part: 今日
+        text: 質量 0.5 kg の物が、角速度 2 rad/s で回る円板の上で、中心から外へ向かって、円板の上から見て速さ 3 m/s で動いている。コリオリ力の大きさは何 N か。
+        svg: '<svg viewBox="0 0 320 200" xmlns="http://www.w3.org/2000/svg"><circle cx="130" cy="100" r="75" fill="#c8ccd6" fill-opacity="0.35" stroke="currentColor" stroke-width="2"/><circle cx="130" cy="100" r="3" fill="currentColor"/><circle cx="140" cy="100" r="9" fill="#f3c969" fill-opacity="0.7" stroke="currentColor" stroke-width="2"/><line x1="140" y1="100" x2="185" y2="100" fill="none" stroke="currentColor" stroke-width="2"/><polygon points="195,100 185,105 185,95" fill="currentColor"/><text x="180" y="85" font-size="14" text-anchor="middle" fill="currentColor">3 m/s</text><text x="262" y="70" font-size="14" text-anchor="middle" fill="currentColor">2 rad/s</text><text x="262" y="130" font-size="14" text-anchor="middle" fill="currentColor">0.5 kg</text></svg>'
+        choices: [1.5 N, 3 N, 6 N, 12 N]
+        answer: 6 N
+        check: "'6 N'"
+        hints:
+          - コリオリ力の大きさは、2 m ω v。
+          - text: 質量、角速度、速さの 3 つを図から見つける。
+            svg: '<svg viewBox="0 0 320 200" xmlns="http://www.w3.org/2000/svg"><circle cx="130" cy="100" r="75" fill="#c8ccd6" fill-opacity="0.35" stroke="currentColor" stroke-width="2"/><circle cx="130" cy="100" r="3" fill="currentColor"/><circle cx="140" cy="100" r="9" fill="#f3c969" fill-opacity="0.7" stroke="currentColor" stroke-width="2"/><circle cx="180" cy="85" r="24" fill="none" stroke="#f08080" stroke-width="3" stroke-dasharray="6 4"/><circle cx="262" cy="70" r="28" fill="none" stroke="#f08080" stroke-width="3" stroke-dasharray="6 4"/><circle cx="262" cy="130" r="24" fill="none" stroke="#f08080" stroke-width="3" stroke-dasharray="6 4"/><text x="180" y="85" font-size="14" text-anchor="middle" fill="currentColor">3 m/s</text><text x="262" y="70" font-size="14" text-anchor="middle" fill="currentColor">2 rad/s</text><text x="262" y="130" font-size="14" text-anchor="middle" fill="currentColor">0.5 kg</text></svg>'
+          - 2 × 0.5 × 2 × 3 を計算する。
+      - part: 今日
+        text: 上から見て時計回りに回る円板の上で、玉を中心から外へころがした。円板の上の人から見ると、玉はどうなるか。
+        svg: '<svg viewBox="0 0 320 200" xmlns="http://www.w3.org/2000/svg"><circle cx="130" cy="100" r="75" fill="#c8ccd6" fill-opacity="0.35" stroke="currentColor" stroke-width="2"/><circle cx="130" cy="100" r="3" fill="currentColor"/><circle cx="135" cy="100" r="8" fill="#f3c969" fill-opacity="0.7" stroke="currentColor" stroke-width="2"/><line x1="135" y1="100" x2="180" y2="100" fill="none" stroke="currentColor" stroke-width="2"/><polygon points="190,100 180,105 180,95" fill="currentColor"/><path d="M70 45 Q103 57.8 122.3 41.4" fill="none" stroke="currentColor" stroke-width="2"/><polygon points="130,35 125.6,45.3 119.1,37.6" fill="currentColor"/><text x="262" y="70" font-size="14" text-anchor="middle" fill="currentColor">時計回り</text></svg>'
+        choices: [進む向きに向かって右へ曲がる, 進む向きに向かって左へ曲がる, まっすぐ進む]
+        answer: 進む向きに向かって左へ曲がる
+        check: "'進む向きに向かって左へ曲がる'"
+        hints:
+          - 回る人から見た玉には、コリオリ力がはたらく。
+          - text: コリオリ力は進む向きに直角で、回る向きによって右か左かが決まる。見本の図を思い出す。
+            svg: '<svg viewBox="0 0 320 200" xmlns="http://www.w3.org/2000/svg"><line x1="110" y1="100" x2="160" y2="100" fill="none" stroke="currentColor" stroke-width="2"/><polygon points="170,100 160,105 160,95" fill="currentColor"/><text x="150" y="85" font-size="14" text-anchor="middle" fill="currentColor">進む向き</text><circle cx="170" cy="100" r="20" fill="none" stroke="#f08080" stroke-width="3" stroke-dasharray="6 4"/></svg>'
+          - 見本は反時計回り。回る向きが逆になると、力の向きも逆になる。
+      - part: 今日
+        text: 地球は、北極の上から見て反時計回りに回っている。北半球で、地面の上を南へ進む物は、進む向きに向かって右へそれる。それは東西のどちらか。
+        svg: '<svg viewBox="0 0 320 200" xmlns="http://www.w3.org/2000/svg"><text x="160" y="40" font-size="16" text-anchor="middle" fill="currentColor">北</text><text x="160" y="180" font-size="16" text-anchor="middle" fill="currentColor">南</text><text x="40" y="105" font-size="16" text-anchor="middle" fill="currentColor">西</text><text x="280" y="105" font-size="16" text-anchor="middle" fill="currentColor">東</text><line x1="160" y1="70" x2="160" y2="140" fill="none" stroke="currentColor" stroke-width="2"/><polygon points="160,150 155,140 165,140" fill="currentColor"/><text x="190" y="110" font-size="14" text-anchor="middle" fill="currentColor">進む向き</text></svg>'
+        choices: [東へそれる, 西へそれる]
+        answer: 西へそれる
+        check: "'西へそれる'"
+        hints:
+          - 南へ進む人が、進む向きに向かって右手を出すようすを思いうかべる。
+          - text: 南を向いた人の、右手の向きを地図の方角で見る。
+            svg: '<svg viewBox="0 0 320 200" xmlns="http://www.w3.org/2000/svg"><circle cx="160" cy="100" r="8" fill="#f3c969" fill-opacity="0.7" stroke="currentColor" stroke-width="2"/><line x1="160" y1="100" x2="160" y2="140" fill="none" stroke="currentColor" stroke-width="2"/><polygon points="160,150 155,140 165,140" fill="currentColor"/><circle cx="125" cy="100" r="18" fill="none" stroke="#f08080" stroke-width="3" stroke-dasharray="6 4"/><circle cx="195" cy="100" r="18" fill="none" stroke="#f08080" stroke-width="3" stroke-dasharray="6 4"/><text x="190" y="110" font-size="14" text-anchor="middle" fill="currentColor">進む向き</text></svg>'
+          - 地図の上を向くと北、右手は東。では南を向いたときの右手は。
+      - part: 今日
+        text: 質量 1 kg の物が、角速度 3 rad/s で回る円板の上を、円板の上から見て速さ 2 m/s で動いている。コリオリ力で横へ生じる加速度の大きさは何 m/s² か。
+        svg: '<svg viewBox="0 0 320 200" xmlns="http://www.w3.org/2000/svg"><circle cx="130" cy="100" r="75" fill="#c8ccd6" fill-opacity="0.35" stroke="currentColor" stroke-width="2"/><circle cx="130" cy="100" r="3" fill="currentColor"/><circle cx="140" cy="100" r="9" fill="#f3c969" fill-opacity="0.7" stroke="currentColor" stroke-width="2"/><line x1="140" y1="100" x2="185" y2="100" fill="none" stroke="currentColor" stroke-width="2"/><polygon points="195,100 185,105 185,95" fill="currentColor"/><text x="180" y="85" font-size="14" text-anchor="middle" fill="currentColor">2 m/s</text><text x="262" y="70" font-size="14" text-anchor="middle" fill="currentColor">3 rad/s</text><text x="262" y="130" font-size="14" text-anchor="middle" fill="currentColor">1 kg</text></svg>'
+        choices: [3 m/s², 6 m/s², 12 m/s², 18 m/s²]
+        answer: 12 m/s²
+        check: "'12 m/s²'"
+        hints:
+          - 加速度は、力を質量でわったもの。
+          - text: コリオリ力は 2 m ω v。質量でわると、何が残るか。
+            svg: '<svg viewBox="0 0 320 200" xmlns="http://www.w3.org/2000/svg"><text x="160" y="90" font-size="16" text-anchor="middle" fill="currentColor">2 m ω v ÷ m</text><circle cx="120" cy="80" r="22" fill="none" stroke="#f08080" stroke-width="3" stroke-dasharray="6 4"/></svg>'
+          - 質量は消えて、2 × ω × v を計算する。
+      - part: 今日
+        text: 回る円板の上で動く物がある。角速度を 2 倍にして、円板の上から見た速さを半分にした。コリオリ力の大きさは何倍になるか。
+        svg: '<svg viewBox="0 0 320 200" xmlns="http://www.w3.org/2000/svg"><g transform="translate(10 4) scale(0.453)"><circle cx="160" cy="100" r="60" fill="#c8ccd6" fill-opacity="0.35" stroke="currentColor" stroke-width="2"/><circle cx="160" cy="100" r="3" fill="currentColor"/><circle cx="150" cy="100" r="9" fill="#f3c969" fill-opacity="0.7" stroke="currentColor" stroke-width="2"/><line x1="150" y1="100" x2="205" y2="100" fill="none" stroke="currentColor" stroke-width="2"/><polygon points="215,100 205,105 205,95" fill="currentColor"/></g><text x="82.5" y="194" font-size="14" text-anchor="middle" fill="currentColor">前</text><line x1="151" y1="90" x2="162" y2="90" fill="none" stroke="currentColor" stroke-width="2"/><polygon points="169,90 162,93.5 162,86.5" fill="currentColor"/><g transform="translate(165 4) scale(0.453)"><circle cx="160" cy="100" r="60" fill="#c8ccd6" fill-opacity="0.35" stroke="currentColor" stroke-width="2"/><circle cx="160" cy="100" r="3" fill="currentColor"/><circle cx="150" cy="100" r="9" fill="#f3c969" fill-opacity="0.7" stroke="currentColor" stroke-width="2"/><line x1="150" y1="100" x2="173" y2="100" fill="none" stroke="currentColor" stroke-width="2"/><polygon points="183,100 173,105 173,95" fill="currentColor"/><path d="M110 50 Q150.9 62.5 180.9 49.1" fill="none" stroke="currentColor" stroke-width="2"/><polygon points="190,45 182.9,53.6 178.8,44.5" fill="currentColor"/></g><text x="237.5" y="194" font-size="14" text-anchor="middle" fill="currentColor">後</text></svg>'
+        choices: [0.5 倍, 1 倍, 2 倍, 4 倍]
+        answer: 1 倍
+        check: "'1 倍'"
+        hints:
+          - コリオリ力の式の中で、ω と v がどう入っているか。
+          - text: 式は 2 m ω v で、ω と v は 1 回ずつかけられている。
+            svg: '<svg viewBox="0 0 320 200" xmlns="http://www.w3.org/2000/svg"><text x="160" y="80" font-size="16" text-anchor="middle" fill="currentColor">2 × m × ω × v</text><circle cx="155" cy="70" r="36" fill="none" stroke="#f08080" stroke-width="3" stroke-dasharray="6 4"/></svg>'
+          - ω が 2 倍、v が半分。2 × ½ を計算する。
+      - part: 挑戦
+        text: 質量 1 kg の玉が、角速度 2 rad/s で反時計回りに回る円板の上で、中心から 0.5 m の円周上を、回る向きと逆向きに、円板の上から見て速さ 1 m/s で動く。円板の上の人から見て、遠心力とコリオリ力の合力の大きさは何 N か。
+        svg: '<svg viewBox="0 0 320 200" xmlns="http://www.w3.org/2000/svg"><circle cx="130" cy="100" r="75" fill="#c8ccd6" fill-opacity="0.35" stroke="currentColor" stroke-width="2"/><circle cx="130" cy="100" r="3" fill="currentColor"/><circle cx="180" cy="100" r="9" fill="#f3c969" fill-opacity="0.7" stroke="currentColor" stroke-width="2"/><line x1="130" y1="100" x2="180" y2="100" fill="none" stroke="currentColor" stroke-width="2" stroke-dasharray="4 4"/><text x="155" y="118" font-size="14" text-anchor="middle" fill="currentColor">0.5 m</text><line x1="180" y1="100" x2="180" y2="140" fill="none" stroke="currentColor" stroke-width="2"/><polygon points="180,150 175,140 185,140" fill="currentColor"/><text x="215" y="140" font-size="14" text-anchor="middle" fill="currentColor">1 m/s</text><path d="M130 35 Q103 57.8 79.3 48.6" fill="none" stroke="currentColor" stroke-width="2"/><polygon points="70,45 81.1,43.9 77.5,53.3" fill="currentColor"/><text x="262" y="55" font-size="14" text-anchor="middle" fill="currentColor">2 rad/s</text></svg>'
+        choices: [1 N, 2 N, 4 N, 8 N]
+        answer: 2 N
+        check: "'2 N'"
+        hints:
+          - 遠心力は外向き、コリオリ力の向きを先に決める。
+          - text: 反時計回りの円板で、回る向きと逆に動くと、進む向きの右は中心の向き。2 つの力は逆向きになる。
+            svg: '<svg viewBox="0 0 320 200" xmlns="http://www.w3.org/2000/svg"><circle cx="160" cy="100" r="9" fill="#f3c969" fill-opacity="0.7" stroke="currentColor" stroke-width="2"/><line x1="160" y1="100" x2="205" y2="100" fill="none" stroke="#f08080" stroke-width="2"/><polygon points="215,100 205,105 205,95" fill="#f08080"/><line x1="160" y1="100" x2="110" y2="100" fill="none" stroke="currentColor" stroke-width="2"/><polygon points="100,100 110,95 110,105" fill="currentColor"/><text x="215" y="85" font-size="14" text-anchor="middle" fill="currentColor">遠心力</text><text x="100" y="85" font-size="14" text-anchor="middle" fill="currentColor">コリオリ力</text></svg>'
+          - 遠心力 m r ω² と、コリオリ力 2 m ω v を別々に出して、差をとる。
+        paths:
+          - [遠心力 1 × 0.5 × 4 ＝ 2 N, コリオリ力 2 × 1 × 2 × 1 ＝ 4 N, 差は 2 N]
+          - [円板の外から見ると玉は止まっている, 回る人から見た円運動の向心力 m r ω² ＝ 2 N]
+      - part: 思い出す
+        text: 回る円板の上で、質量 2 kg の物を、中心から 4 m の所まで外へ動かす。角速度は 1 rad/s。中心から動かし始めたとき、この間に遠心力がする仕事は何 J か。
+        svg: '<svg viewBox="0 0 320 200" xmlns="http://www.w3.org/2000/svg"><circle cx="130" cy="100" r="80" fill="#c8ccd6" fill-opacity="0.35" stroke="currentColor" stroke-width="2"/><circle cx="130" cy="100" r="3" fill="currentColor"/><line x1="130" y1="100" x2="195" y2="100" fill="none" stroke="currentColor" stroke-width="2"/><polygon points="205,100 195,105 195,95" fill="currentColor"/><circle cx="205" cy="100" r="9" fill="#f3c969" fill-opacity="0.7" stroke="currentColor" stroke-width="2"/><text x="170" y="120" font-size="14" text-anchor="middle" fill="currentColor">4 m</text><text x="262" y="80" font-size="14" text-anchor="middle" fill="currentColor">1 rad/s</text><text x="262" y="130" font-size="14" text-anchor="middle" fill="currentColor">2 kg</text></svg>'
+        choices: [8 J, 16 J, 24 J, 32 J]
+        answer: 16 J
+        check: "'16 J'"
+        hints:
+          - 遠心力の仕事は、½ m ω² × (r₂² − r₁²) で出せる。
+          - text: 動き始めの r₁ と終わりの r₂ を図から読む。
+            svg: '<svg viewBox="0 0 320 200" xmlns="http://www.w3.org/2000/svg"><circle cx="130" cy="100" r="80" fill="#c8ccd6" fill-opacity="0.35" stroke="currentColor" stroke-width="2"/><circle cx="130" cy="100" r="3" fill="currentColor"/><circle cx="130" cy="100" r="10" fill="none" stroke="#f08080" stroke-width="3" stroke-dasharray="6 4"/><circle cx="205" cy="100" r="14" fill="none" stroke="#f08080" stroke-width="3" stroke-dasharray="6 4"/><text x="170" y="120" font-size="14" text-anchor="middle" fill="currentColor">4 m</text></svg>'
+          - r₁ は 0。½ × 2 × 1 × 4² を計算する。
+    extra:
+      - part: 今日
+        text: 質量 1 kg の物が、角速度 4 rad/s で回る円板の上で、円板の上から見て速さ 0.5 m/s で動いている。コリオリ力の大きさは何 N か。
+        svg: '<svg viewBox="0 0 320 200" xmlns="http://www.w3.org/2000/svg"><circle cx="130" cy="100" r="75" fill="#c8ccd6" fill-opacity="0.35" stroke="currentColor" stroke-width="2"/><circle cx="130" cy="100" r="3" fill="currentColor"/><circle cx="140" cy="100" r="9" fill="#f3c969" fill-opacity="0.7" stroke="currentColor" stroke-width="2"/><line x1="140" y1="100" x2="185" y2="100" fill="none" stroke="currentColor" stroke-width="2"/><polygon points="195,100 185,105 185,95" fill="currentColor"/><text x="180" y="85" font-size="14" text-anchor="middle" fill="currentColor">0.5 m/s</text><text x="262" y="70" font-size="14" text-anchor="middle" fill="currentColor">4 rad/s</text><text x="262" y="130" font-size="14" text-anchor="middle" fill="currentColor">1 kg</text></svg>'
+        choices: [2 N, 4 N, 8 N, 16 N]
+        answer: 4 N
+        check: "'4 N'"
+        hints:
+          - コリオリ力の大きさは、2 m ω v。
+          - text: 質量、角速度、速さの 3 つを図から見つける。
+            svg: '<svg viewBox="0 0 320 200" xmlns="http://www.w3.org/2000/svg"><circle cx="130" cy="100" r="75" fill="#c8ccd6" fill-opacity="0.35" stroke="currentColor" stroke-width="2"/><circle cx="130" cy="100" r="3" fill="currentColor"/><circle cx="140" cy="100" r="9" fill="#f3c969" fill-opacity="0.7" stroke="currentColor" stroke-width="2"/><circle cx="180" cy="85" r="28" fill="none" stroke="#f08080" stroke-width="3" stroke-dasharray="6 4"/><circle cx="262" cy="70" r="28" fill="none" stroke="#f08080" stroke-width="3" stroke-dasharray="6 4"/><circle cx="262" cy="130" r="24" fill="none" stroke="#f08080" stroke-width="3" stroke-dasharray="6 4"/><text x="180" y="85" font-size="14" text-anchor="middle" fill="currentColor">0.5 m/s</text><text x="262" y="70" font-size="14" text-anchor="middle" fill="currentColor">4 rad/s</text><text x="262" y="130" font-size="14" text-anchor="middle" fill="currentColor">1 kg</text></svg>'
+          - 2 × 1 × 4 × 0.5 を計算する。
+      - part: 今日
+        text: 地球は、北極の上から見て反時計回りに回っている。北半球で、地面の上を北へ進む物は、進む向きに向かって右へそれる。それは東西のどちらか。
+        svg: '<svg viewBox="0 0 320 200" xmlns="http://www.w3.org/2000/svg"><text x="160" y="40" font-size="16" text-anchor="middle" fill="currentColor">北</text><text x="160" y="180" font-size="16" text-anchor="middle" fill="currentColor">南</text><text x="40" y="105" font-size="16" text-anchor="middle" fill="currentColor">西</text><text x="280" y="105" font-size="16" text-anchor="middle" fill="currentColor">東</text><line x1="160" y1="150" x2="160" y2="80" fill="none" stroke="currentColor" stroke-width="2"/><polygon points="160,70 165,80 155,80" fill="currentColor"/><text x="190" y="110" font-size="14" text-anchor="middle" fill="currentColor">進む向き</text></svg>'
+        choices: [東へそれる, 西へそれる]
+        answer: 東へそれる
+        check: "'東へそれる'"
+        hints:
+          - 北へ進む人が、進む向きに向かって右手を出すようすを思いうかべる。
+          - text: 北を向いた人の、右手の向きを地図の方角で見る。
+            svg: '<svg viewBox="0 0 320 200" xmlns="http://www.w3.org/2000/svg"><circle cx="160" cy="100" r="8" fill="#f3c969" fill-opacity="0.7" stroke="currentColor" stroke-width="2"/><line x1="160" y1="100" x2="160" y2="60" fill="none" stroke="currentColor" stroke-width="2"/><polygon points="160,50 165,60 155,60" fill="currentColor"/><circle cx="125" cy="100" r="18" fill="none" stroke="#f08080" stroke-width="3" stroke-dasharray="6 4"/><circle cx="195" cy="100" r="18" fill="none" stroke="#f08080" stroke-width="3" stroke-dasharray="6 4"/><text x="190" y="110" font-size="14" text-anchor="middle" fill="currentColor">進む向き</text></svg>'
+          - 地図の上を向くと北。そのときの右手の方角を考える。
+  - day: 6
+    items:
+      - part: わけ
+        text: 質量 2 kg の物が、半径 0.5 m の所で、角速度 3 rad/s で回る円板の上にのっている。円板といっしょに回って、円板の上ですべらずに止まって見える。物にはたらくまさつ力の大きさは何 N か。
+        svg: '<svg viewBox="0 0 320 200" xmlns="http://www.w3.org/2000/svg"><circle cx="130" cy="100" r="80" fill="#c8ccd6" fill-opacity="0.35" stroke="currentColor" stroke-width="2"/><circle cx="130" cy="100" r="3" fill="currentColor"/><rect x="172" y="92" width="18" height="16" fill="#c9a36b" fill-opacity="0.5" stroke="currentColor" stroke-width="2"/><line x1="130" y1="100" x2="172" y2="100" fill="none" stroke="currentColor" stroke-width="2" stroke-dasharray="4 4"/><text x="150" y="118" font-size="14" text-anchor="middle" fill="currentColor">0.5 m</text><path d="M80 40 Q122.2 52.9 151.4 35.2" fill="none" stroke="currentColor" stroke-width="2"/><polygon points="160,30 154,39.5 148.9,30.9" fill="currentColor"/><text x="262" y="70" font-size="14" text-anchor="middle" fill="currentColor">3 rad/s</text><text x="262" y="130" font-size="14" text-anchor="middle" fill="currentColor">2 kg</text></svg>'
+        choices: [3 N, 6 N, 9 N, 18 N]
+        answer: 9 N
+        check: "'9 N'"
+        explain: 同じ現象を、2 つの見方で説明できる。円板の外（止まっている場所）から見ると、物は円運動をしているので、中心へ向かう向心力 m r ω² が必要で、これをまさつ力が出している。円板の上（回っている場所）から見ると、物は止まっているので、外向きの遠心力 m r ω² と、内向きのまさつ力がつりあっている。どちらでも、まさつ力は m r ω² ＝ 2 × 0.5 × 9 ＝ 9 N。遠心力は回る人にだけ見える見かけの力で、外から見る人は使わない。2 つの見方を混ぜて、向心力と遠心力を両方つけ足さないこと。
+        hints:
+          - 物は円板の上で止まって見える。力のつりあいか、円運動かのどちらで考えるか、決める。
+          - text: 回る人から見ると、物にはたらく力は、外向きと内向きの 2 つ。
+            svg: '<svg viewBox="0 0 320 200" xmlns="http://www.w3.org/2000/svg"><rect x="150" y="92" width="18" height="16" fill="#c9a36b" fill-opacity="0.5" stroke="currentColor" stroke-width="2"/><line x1="160" y1="100" x2="205" y2="100" fill="none" stroke="#f08080" stroke-width="2"/><polygon points="215,100 205,105 205,95" fill="#f08080"/><line x1="160" y1="100" x2="115" y2="100" fill="none" stroke="currentColor" stroke-width="2"/><polygon points="105,100 115,95 115,105" fill="currentColor"/><text x="215" y="85" font-size="14" text-anchor="middle" fill="currentColor">見かけの力</text><text x="105" y="85" font-size="14" text-anchor="middle" fill="currentColor">まさつ力</text></svg>'
+          - 外向きの力の大きさは m r ω²。内向きの力は、それとつりあう。
+        paths:
+          - [回る人から見る, 外向きの遠心力 m r ω² ＝ 2 × 0.5 × 9, まさつ力はそれとつりあう 9 N]
+          - [外から見る, 円運動に向心力 m r ω² が要る, 向心力を出すのはまさつ力 9 N]
+    extra:
+      - part: 今日
+        text: 質量 4 kg の物が、半径 0.25 m の所で、角速度 2 rad/s で回る円板の上にのっている。円板といっしょに回って、円板の上ですべらずに止まって見える。物にはたらくまさつ力の大きさは何 N か。
+        svg: '<svg viewBox="0 0 320 200" xmlns="http://www.w3.org/2000/svg"><circle cx="130" cy="100" r="80" fill="#c8ccd6" fill-opacity="0.35" stroke="currentColor" stroke-width="2"/><circle cx="130" cy="100" r="3" fill="currentColor"/><rect x="162" y="92" width="18" height="16" fill="#c9a36b" fill-opacity="0.5" stroke="currentColor" stroke-width="2"/><line x1="130" y1="100" x2="162" y2="100" fill="none" stroke="currentColor" stroke-width="2" stroke-dasharray="4 4"/><text x="146" y="118" font-size="14" text-anchor="middle" fill="currentColor">0.25 m</text><text x="262" y="70" font-size="14" text-anchor="middle" fill="currentColor">2 rad/s</text><text x="262" y="130" font-size="14" text-anchor="middle" fill="currentColor">4 kg</text></svg>'
+        choices: [1 N, 2 N, 4 N, 8 N]
+        answer: 4 N
+        check: "'4 N'"
+        hints:
+          - 物は円板の上で止まって見える。外向きの見かけの力とつりあう力を考える。
+          - text: 外向きの力の大きさは m r ω²。質量、半径、角速度を図から見つける。
+            svg: '<svg viewBox="0 0 320 200" xmlns="http://www.w3.org/2000/svg"><circle cx="130" cy="100" r="80" fill="#c8ccd6" fill-opacity="0.35" stroke="currentColor" stroke-width="2"/><circle cx="130" cy="100" r="3" fill="currentColor"/><circle cx="146" cy="118" r="24" fill="none" stroke="#f08080" stroke-width="3" stroke-dasharray="6 4"/><circle cx="262" cy="70" r="28" fill="none" stroke="#f08080" stroke-width="3" stroke-dasharray="6 4"/><circle cx="262" cy="130" r="24" fill="none" stroke="#f08080" stroke-width="3" stroke-dasharray="6 4"/><text x="146" y="118" font-size="14" text-anchor="middle" fill="currentColor">0.25 m</text><text x="262" y="70" font-size="14" text-anchor="middle" fill="currentColor">2 rad/s</text><text x="262" y="130" font-size="14" text-anchor="middle" fill="currentColor">4 kg</text></svg>'
+          - 4 × 0.25 × 2 × 2 を計算する。
+      - part: 今日
+        text: 質量 3 kg の物が、半径 0.5 m の所で、角速度 2 rad/s で回る円板の上にのっている。円板の外から見たとき、この物を円運動させている向心力の大きさは何 N か。
+        svg: '<svg viewBox="0 0 320 200" xmlns="http://www.w3.org/2000/svg"><circle cx="130" cy="100" r="80" fill="#c8ccd6" fill-opacity="0.35" stroke="currentColor" stroke-width="2"/><circle cx="130" cy="100" r="3" fill="currentColor"/><rect x="172" y="92" width="18" height="16" fill="#c9a36b" fill-opacity="0.5" stroke="currentColor" stroke-width="2"/><line x1="130" y1="100" x2="172" y2="100" fill="none" stroke="currentColor" stroke-width="2" stroke-dasharray="4 4"/><text x="150" y="118" font-size="14" text-anchor="middle" fill="currentColor">0.5 m</text><text x="262" y="70" font-size="14" text-anchor="middle" fill="currentColor">2 rad/s</text><text x="262" y="130" font-size="14" text-anchor="middle" fill="currentColor">3 kg</text></svg>'
+        choices: [3 N, 6 N, 12 N, 24 N]
+        answer: 6 N
+        check: "'6 N'"
+        hints:
+          - 円板の外から見ると、物は円運動をしている。
+          - text: 円運動に必要な向心力の式は、質量、半径、角速度でわかる。図から数を見つける。
+            svg: '<svg viewBox="0 0 320 200" xmlns="http://www.w3.org/2000/svg"><circle cx="130" cy="100" r="80" fill="#c8ccd6" fill-opacity="0.35" stroke="currentColor" stroke-width="2"/><circle cx="130" cy="100" r="3" fill="currentColor"/><circle cx="150" cy="118" r="24" fill="none" stroke="#f08080" stroke-width="3" stroke-dasharray="6 4"/><circle cx="262" cy="70" r="28" fill="none" stroke="#f08080" stroke-width="3" stroke-dasharray="6 4"/><circle cx="262" cy="130" r="24" fill="none" stroke="#f08080" stroke-width="3" stroke-dasharray="6 4"/><text x="150" y="118" font-size="14" text-anchor="middle" fill="currentColor">0.5 m</text><text x="262" y="70" font-size="14" text-anchor="middle" fill="currentColor">2 rad/s</text><text x="262" y="130" font-size="14" text-anchor="middle" fill="currentColor">3 kg</text></svg>'
+          - 3 × 0.5 × 2 × 2 を計算する。
+  - day: 7
+    items:
+      - part: 今日
+        text: 台車が右へ 7.5 m/s² で加速している。台車の中の人から見た、見かけの重力加速度（重力と慣性力を合わせた加速度）の大きさは何 m/s² か。重力加速度は 10 m/s² とする。
+        svg: '<svg viewBox="0 0 320 200" xmlns="http://www.w3.org/2000/svg"><circle cx="150" cy="100" r="8" fill="#f3c969" fill-opacity="0.7" stroke="currentColor" stroke-width="2"/><line x1="150" y1="100" x2="150" y2="150" fill="none" stroke="currentColor" stroke-width="2"/><polygon points="150,160 145,150 155,150" fill="currentColor"/><line x1="150" y1="100" x2="90" y2="100" fill="none" stroke="#f08080" stroke-width="2"/><polygon points="80,100 90,95 90,105" fill="#f08080"/><line x1="80" y1="100" x2="150" y2="160" fill="none" stroke="currentColor" stroke-width="2" stroke-dasharray="4 4"/><text x="165" y="150" font-size="14" text-anchor="middle" fill="currentColor">10</text><text x="110" y="85" font-size="14" text-anchor="middle" fill="currentColor">7.5</text></svg>'
+        choices: [2.5 m/s², 12.5 m/s², 17.5 m/s², 75 m/s²]
+        answer: 12.5 m/s²
+        check: "'12.5 m/s²'"
+        hints:
+          - 重力加速度は下向きに 10、慣性力の加速度は横向きに 7.5 で、直角になる。
+          - text: 2 つを直角をはさむ辺にして、ななめの長さを考える。
+            svg: '<svg viewBox="0 0 320 200" xmlns="http://www.w3.org/2000/svg"><line x1="80" y1="100" x2="150" y2="100" fill="none" stroke="currentColor" stroke-width="2"/><line x1="150" y1="100" x2="150" y2="160" fill="none" stroke="currentColor" stroke-width="2"/><line x1="80" y1="100" x2="150" y2="160" fill="none" stroke="currentColor" stroke-width="2" stroke-dasharray="4 4"/><text x="115" y="90" font-size="14" text-anchor="middle" fill="currentColor">7.5</text><text x="165" y="135" font-size="14" text-anchor="middle" fill="currentColor">10</text><rect x="92" y="127" width="26" height="26" rx="6" fill="#c8ccd6" fill-opacity="0.5" stroke="currentColor" stroke-width="2"/><text x="105" y="145" font-size="16" text-anchor="middle" fill="currentColor">？</text></svg>'
+          - 三平方の定理を使う。10 × 10 ＋ 7.5 × 7.5 の平方根。
+      - part: 今日
+        text: 台車の上にのっている荷物に、静止まさつ係数 0.5 がある。台車が加速して、荷物がすべり出す直前の、台車の加速度は何 m/s² か。重力加速度は 10 m/s² とする。
+        svg: '<svg viewBox="0 0 320 200" xmlns="http://www.w3.org/2000/svg"><rect x="75" y="136" width="150" height="28" fill="#c8ccd6" fill-opacity="0.5" stroke="currentColor" stroke-width="2"/><circle cx="112.5" cy="168" r="7" fill="#c8ccd6" fill-opacity="0.7" stroke="currentColor" stroke-width="2"/><circle cx="187.5" cy="168" r="7" fill="#c8ccd6" fill-opacity="0.7" stroke="currentColor" stroke-width="2"/><rect x="130" y="105" width="40" height="30" fill="#c9a36b" fill-opacity="0.5" stroke="currentColor" stroke-width="2"/><line x1="215" y1="70" x2="265" y2="70" fill="none" stroke="currentColor" stroke-width="2"/><polygon points="275,70 265,75 265,65" fill="currentColor"/><text x="245" y="60" font-size="14" text-anchor="middle" fill="currentColor">加速</text></svg>'
+        choices: [0.5 m/s², 2.5 m/s², 5 m/s², 10 m/s²]
+        answer: 5 m/s²
+        check: "'5 m/s²'"
+        hints:
+          - 台車の上の人から見ると、荷物は止まっている。力のつりあいを考える。
+          - text: 慣性力とまさつ力のつりあい。まさつ力の最大は、係数 × 重さ。
+            svg: '<svg viewBox="0 0 320 200" xmlns="http://www.w3.org/2000/svg"><rect x="130" y="100" width="40" height="30" fill="#c9a36b" fill-opacity="0.5" stroke="currentColor" stroke-width="2"/><line x1="150" y1="115" x2="110" y2="115" fill="none" stroke="#f08080" stroke-width="2"/><polygon points="100,115 110,110 110,120" fill="#f08080"/><line x1="150" y1="115" x2="190" y2="115" fill="none" stroke="currentColor" stroke-width="2"/><polygon points="200,115 190,120 190,110" fill="currentColor"/><text x="100" y="95" font-size="14" text-anchor="middle" fill="currentColor">慣性力</text><text x="205" y="100" font-size="14" text-anchor="middle" fill="currentColor">まさつ力</text></svg>'
+          - m a ＝ 0.5 m g。質量は消える。
+      - part: 今日
+        text: 質量 1 kg の玉が、長さ 2 m の糸の先で、角速度 3 rad/s で回る円板の上にのっていて、円板の上で止まって見える。糸は中心につながっていて、玉と円板のあいだにまさつはない。糸が玉を引く力は何 N か。
+        svg: '<svg viewBox="0 0 320 200" xmlns="http://www.w3.org/2000/svg"><circle cx="130" cy="100" r="80" fill="#c8ccd6" fill-opacity="0.35" stroke="currentColor" stroke-width="2"/><circle cx="130" cy="100" r="3" fill="currentColor"/><circle cx="190" cy="100" r="9" fill="#f3c969" fill-opacity="0.7" stroke="currentColor" stroke-width="2"/><line x1="130" y1="100" x2="181" y2="100" fill="none" stroke="currentColor" stroke-width="3"/><text x="160" y="118" font-size="14" text-anchor="middle" fill="currentColor">2 m</text><text x="262" y="70" font-size="14" text-anchor="middle" fill="currentColor">3 rad/s</text><text x="262" y="130" font-size="14" text-anchor="middle" fill="currentColor">1 kg</text></svg>'
+        choices: [6 N, 9 N, 18 N, 36 N]
+        answer: 18 N
+        check: "'18 N'"
+        hints:
+          - 回る人から見ると、玉は止まっている。糸の力と、見かけの力がつりあう。
+          - text: 外向きの見かけの力は m r ω²。半径は糸の長さと同じ。
+            svg: '<svg viewBox="0 0 320 200" xmlns="http://www.w3.org/2000/svg"><circle cx="160" cy="100" r="9" fill="#f3c969" fill-opacity="0.7" stroke="currentColor" stroke-width="2"/><line x1="160" y1="100" x2="205" y2="100" fill="none" stroke="#f08080" stroke-width="2"/><polygon points="215,100 205,105 205,95" fill="#f08080"/><line x1="160" y1="100" x2="115" y2="100" fill="none" stroke="currentColor" stroke-width="2"/><polygon points="105,100 115,95 115,105" fill="currentColor"/><text x="215" y="85" font-size="14" text-anchor="middle" fill="currentColor">遠心力</text><text x="105" y="85" font-size="14" text-anchor="middle" fill="currentColor">糸の力</text></svg>'
+          - 1 × 2 × 3 × 3 を計算する。
+      - part: 今日
+        text: 中心から出たなめらかな管を、角速度 2 rad/s で回す。管の中の玉は、中心と、自然長 1 m、ばね定数 20 N/m のばねでつながれている。玉の質量は 1 kg。回る人から見て玉が止まるのは、中心から何 m の所か。
+        svg: '<svg viewBox="0 0 320 200" xmlns="http://www.w3.org/2000/svg"><circle cx="130" cy="100" r="80" fill="#c8ccd6" fill-opacity="0.35" stroke="currentColor" stroke-width="2"/><circle cx="130" cy="100" r="3" fill="currentColor"/><line x1="130" y1="100" x2="215" y2="100" fill="none" stroke="currentColor" stroke-width="4"/><polyline points="130,100 145,90 160,110 175,90 190,100" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="215" cy="100" r="9" fill="#f3c969" fill-opacity="0.7" stroke="currentColor" stroke-width="2"/><text x="262" y="70" font-size="14" text-anchor="middle" fill="currentColor">2 rad/s</text><text x="215" y="80" font-size="14" text-anchor="middle" fill="currentColor">？</text></svg>'
+        choices: [1 m, 1.25 m, 1.5 m, 2 m]
+        answer: 1.25 m
+        check: "'1.25 m'"
+        hints:
+          - 回る人から見て止まるとき、外向きの遠心力と、内向きのばねの力がつりあう。
+          - text: 長さ r のとき、ばねののびは r − 1。ばねの力は 20 × (r − 1)。
+            svg: '<svg viewBox="0 0 320 200" xmlns="http://www.w3.org/2000/svg"><line x1="100" y1="110" x2="200" y2="110" fill="none" stroke="currentColor" stroke-width="2"/><line x1="100" y1="100" x2="100" y2="120" fill="none" stroke="currentColor" stroke-width="2"/><line x1="150" y1="100" x2="150" y2="120" fill="none" stroke="currentColor" stroke-width="2"/><line x1="200" y1="100" x2="200" y2="120" fill="none" stroke="currentColor" stroke-width="2"/><text x="125" y="135" font-size="14" text-anchor="middle" fill="currentColor">自然長 1 m</text><text x="200" y="135" font-size="14" text-anchor="middle" fill="currentColor">r</text></svg>'
+          - 1 × r × 4 ＝ 20 × (r − 1) を解く。
+      - part: 今日
+        text: 回る円板の上で、質量 1 kg の物を、中心から 2 m の所から 5 m の所まで外へ動かす。角速度は 2 rad/s。この間に遠心力がする仕事は何 J か。
+        svg: '<svg viewBox="0 0 320 200" xmlns="http://www.w3.org/2000/svg"><circle cx="130" cy="100" r="80" fill="#c8ccd6" fill-opacity="0.35" stroke="currentColor" stroke-width="2"/><circle cx="130" cy="100" r="3" fill="currentColor"/><line x1="170" y1="100" x2="210" y2="100" fill="none" stroke="currentColor" stroke-width="2"/><polygon points="220,100 210,105 210,95" fill="currentColor"/><circle cx="170" cy="100" r="7" fill="#f3c969" fill-opacity="0.7" stroke="currentColor" stroke-width="2"/><circle cx="220" cy="100" r="7" fill="#f3c969" fill-opacity="0.7" stroke="currentColor" stroke-width="2"/><text x="170" y="120" font-size="14" text-anchor="middle" fill="currentColor">2 m</text><text x="262" y="80" font-size="14" text-anchor="middle" fill="currentColor">2 rad/s</text><text x="262" y="130" font-size="14" text-anchor="middle" fill="currentColor">1 kg</text></svg>'
+        choices: [21 J, 42 J, 84 J, 168 J]
+        answer: 42 J
+        check: "'42 J'"
+        hints:
+          - 遠心力の仕事は、½ m ω² × (r₂² − r₁²) で出せる。
+          - text: r₁ ＝ 2 m、r₂ ＝ 5 m。2 乗の差を出す。
+            svg: '<svg viewBox="0 0 320 200" xmlns="http://www.w3.org/2000/svg"><text x="160" y="90" font-size="16" text-anchor="middle" fill="currentColor">r₂² − r₁²</text><circle cx="160" cy="85" r="50" fill="none" stroke="#f08080" stroke-width="3" stroke-dasharray="6 4"/></svg>'
+          - 25 − 4 ＝ 21 に、½ × 1 × 4 をかける。
+      - part: 今日
+        text: 質量 2 kg の物が、角速度 5 rad/s で回る円板の上で、中心から外へ向かって、円板の上から見て速さ 1.2 m/s で動いている。コリオリ力の大きさは何 N か。
+        svg: '<svg viewBox="0 0 320 200" xmlns="http://www.w3.org/2000/svg"><circle cx="130" cy="100" r="75" fill="#c8ccd6" fill-opacity="0.35" stroke="currentColor" stroke-width="2"/><circle cx="130" cy="100" r="3" fill="currentColor"/><circle cx="140" cy="100" r="9" fill="#f3c969" fill-opacity="0.7" stroke="currentColor" stroke-width="2"/><line x1="140" y1="100" x2="185" y2="100" fill="none" stroke="currentColor" stroke-width="2"/><polygon points="195,100 185,105 185,95" fill="currentColor"/><text x="180" y="85" font-size="14" text-anchor="middle" fill="currentColor">1.2 m/s</text><text x="262" y="70" font-size="14" text-anchor="middle" fill="currentColor">5 rad/s</text><text x="262" y="130" font-size="14" text-anchor="middle" fill="currentColor">2 kg</text></svg>'
+        choices: [6 N, 12 N, 24 N, 48 N]
+        answer: 24 N
+        check: "'24 N'"
+        hints:
+          - コリオリ力の大きさは、2 m ω v。
+          - text: 質量、角速度、速さの 3 つを図から見つける。
+            svg: '<svg viewBox="0 0 320 200" xmlns="http://www.w3.org/2000/svg"><circle cx="130" cy="100" r="75" fill="#c8ccd6" fill-opacity="0.35" stroke="currentColor" stroke-width="2"/><circle cx="130" cy="100" r="3" fill="currentColor"/><circle cx="140" cy="100" r="9" fill="#f3c969" fill-opacity="0.7" stroke="currentColor" stroke-width="2"/><circle cx="180" cy="85" r="28" fill="none" stroke="#f08080" stroke-width="3" stroke-dasharray="6 4"/><circle cx="262" cy="70" r="28" fill="none" stroke="#f08080" stroke-width="3" stroke-dasharray="6 4"/><circle cx="262" cy="130" r="24" fill="none" stroke="#f08080" stroke-width="3" stroke-dasharray="6 4"/><text x="180" y="85" font-size="14" text-anchor="middle" fill="currentColor">1.2 m/s</text><text x="262" y="70" font-size="14" text-anchor="middle" fill="currentColor">5 rad/s</text><text x="262" y="130" font-size="14" text-anchor="middle" fill="currentColor">2 kg</text></svg>'
+          - 2 × 2 × 5 × 1.2 を計算する。
+    extra:
+      - part: 今日
+        text: 台車が右へ 24 m/s² で加速している。台車の中の人から見た、見かけの重力加速度（重力と慣性力を合わせた加速度）の大きさは何 m/s² か。重力加速度は 10 m/s² とする。
+        svg: '<svg viewBox="0 0 320 200" xmlns="http://www.w3.org/2000/svg"><circle cx="150" cy="100" r="8" fill="#f3c969" fill-opacity="0.7" stroke="currentColor" stroke-width="2"/><line x1="150" y1="100" x2="150" y2="150" fill="none" stroke="currentColor" stroke-width="2"/><polygon points="150,160 145,150 155,150" fill="currentColor"/><line x1="150" y1="100" x2="100" y2="100" fill="none" stroke="#f08080" stroke-width="2"/><polygon points="90,100 100,95 100,105" fill="#f08080"/><line x1="90" y1="100" x2="150" y2="160" fill="none" stroke="currentColor" stroke-width="2" stroke-dasharray="4 4"/><text x="165" y="150" font-size="14" text-anchor="middle" fill="currentColor">10</text><text x="115" y="85" font-size="14" text-anchor="middle" fill="currentColor">24</text></svg>'
+        choices: [14 m/s², 26 m/s², 34 m/s², 240 m/s²]
+        answer: 26 m/s²
+        check: "'26 m/s²'"
+        hints:
+          - 重力加速度は下向きに 10、慣性力の加速度は横向きに 24 で、直角になる。
+          - text: 2 つを直角をはさむ辺にして、ななめの長さを考える。
+            svg: '<svg viewBox="0 0 320 200" xmlns="http://www.w3.org/2000/svg"><line x1="90" y1="100" x2="150" y2="100" fill="none" stroke="currentColor" stroke-width="2"/><line x1="150" y1="100" x2="150" y2="160" fill="none" stroke="currentColor" stroke-width="2"/><line x1="90" y1="100" x2="150" y2="160" fill="none" stroke="currentColor" stroke-width="2" stroke-dasharray="4 4"/><text x="120" y="90" font-size="14" text-anchor="middle" fill="currentColor">24</text><text x="165" y="135" font-size="14" text-anchor="middle" fill="currentColor">10</text><rect x="92" y="127" width="26" height="26" rx="6" fill="#c8ccd6" fill-opacity="0.5" stroke="currentColor" stroke-width="2"/><text x="105" y="145" font-size="16" text-anchor="middle" fill="currentColor">？</text></svg>'
+          - 三平方の定理を使う。10 × 10 ＋ 24 × 24 の平方根。
+      - part: 今日
+        text: 台車の上の荷物に、静止まさつ係数 0.3 がある。荷物がすべり出す直前の、台車の加速度は何 m/s² か。重力加速度は 10 m/s² とする。
+        svg: '<svg viewBox="0 0 320 200" xmlns="http://www.w3.org/2000/svg"><rect x="75" y="136" width="150" height="28" fill="#c8ccd6" fill-opacity="0.5" stroke="currentColor" stroke-width="2"/><circle cx="112.5" cy="168" r="7" fill="#c8ccd6" fill-opacity="0.7" stroke="currentColor" stroke-width="2"/><circle cx="187.5" cy="168" r="7" fill="#c8ccd6" fill-opacity="0.7" stroke="currentColor" stroke-width="2"/><rect x="130" y="105" width="40" height="30" fill="#c9a36b" fill-opacity="0.5" stroke="currentColor" stroke-width="2"/><line x1="215" y1="70" x2="265" y2="70" fill="none" stroke="currentColor" stroke-width="2"/><polygon points="275,70 265,75 265,65" fill="currentColor"/><text x="245" y="60" font-size="14" text-anchor="middle" fill="currentColor">加速</text></svg>'
+        choices: [0.3 m/s², 3 m/s², 6 m/s², 10 m/s²]
+        answer: 3 m/s²
+        check: "'3 m/s²'"
+        hints:
+          - 台車の上の人から見ると、荷物は止まっている。力のつりあいを考える。
+          - text: 慣性力とまさつ力のつりあい。まさつ力の最大は、係数 × 重さ。
+            svg: '<svg viewBox="0 0 320 200" xmlns="http://www.w3.org/2000/svg"><rect x="130" y="100" width="40" height="30" fill="#c9a36b" fill-opacity="0.5" stroke="currentColor" stroke-width="2"/><line x1="150" y1="115" x2="110" y2="115" fill="none" stroke="#f08080" stroke-width="2"/><polygon points="100,115 110,110 110,120" fill="#f08080"/><line x1="150" y1="115" x2="190" y2="115" fill="none" stroke="currentColor" stroke-width="2"/><polygon points="200,115 190,120 190,110" fill="currentColor"/><text x="100" y="95" font-size="14" text-anchor="middle" fill="currentColor">慣性力</text><text x="205" y="100" font-size="14" text-anchor="middle" fill="currentColor">まさつ力</text></svg>'
+          - m a ＝ 0.3 m g。質量は消える。
+  - day: 8
+    items:
+      - part: 今日
+        text: 質量 40 kg の人が、加速度 1.5 m/s² で加速する電車に乗っている。この人にはたらく慣性力の大きさは何 N か。
+        svg: '<svg viewBox="0 0 320 200" xmlns="http://www.w3.org/2000/svg"><rect x="95" y="126" width="110" height="28" fill="#c8ccd6" fill-opacity="0.5" stroke="currentColor" stroke-width="2"/><circle cx="122.5" cy="158" r="7" fill="#c8ccd6" fill-opacity="0.7" stroke="currentColor" stroke-width="2"/><circle cx="177.5" cy="158" r="7" fill="#c8ccd6" fill-opacity="0.7" stroke="currentColor" stroke-width="2"/><circle cx="150" cy="108" r="14" fill="#f3c969" fill-opacity="0.7" stroke="currentColor" stroke-width="2"/><line x1="215" y1="60" x2="265" y2="60" fill="none" stroke="currentColor" stroke-width="2"/><polygon points="275,60 265,65 265,55" fill="currentColor"/><text x="245" y="50" font-size="14" text-anchor="middle" fill="currentColor">1.5 m/s²</text><text x="150" y="70" font-size="14" text-anchor="middle" fill="currentColor">40 kg</text></svg>'
+        choices: [26 N, 40 N, 60 N, 80 N]
+        answer: 60 N
+        check: "'60 N'"
+        hints:
+          - 慣性力の大きさは、質量と加速度でわかる。
+          - text: 質量と加速度を図から読む。
+            svg: '<svg viewBox="0 0 320 200" xmlns="http://www.w3.org/2000/svg"><rect x="95" y="126" width="110" height="28" fill="#c8ccd6" fill-opacity="0.5" stroke="currentColor" stroke-width="2"/><circle cx="122.5" cy="158" r="7" fill="#c8ccd6" fill-opacity="0.7" stroke="currentColor" stroke-width="2"/><circle cx="177.5" cy="158" r="7" fill="#c8ccd6" fill-opacity="0.7" stroke="currentColor" stroke-width="2"/><circle cx="150" cy="108" r="14" fill="#f3c969" fill-opacity="0.7" stroke="currentColor" stroke-width="2"/><circle cx="245" cy="55" r="28" fill="none" stroke="#f08080" stroke-width="3" stroke-dasharray="6 4"/><circle cx="150" cy="70" r="22" fill="none" stroke="#f08080" stroke-width="3" stroke-dasharray="6 4"/><text x="245" y="50" font-size="14" text-anchor="middle" fill="currentColor">1.5 m/s²</text><text x="150" y="70" font-size="14" text-anchor="middle" fill="currentColor">40 kg</text></svg>'
+          - 質量に加速度をかける。
+      - part: 今日
+        text: 下向きに加速度 2.5 m/s² で動くエレベーターの中で、質量 48 kg の人が体重計に乗った。体重計は何 N を示すか。
+        svg: '<svg viewBox="0 0 320 200" xmlns="http://www.w3.org/2000/svg"><rect x="100" y="50" width="100" height="100" fill="#7fc8f8" fill-opacity="0.25" stroke="currentColor" stroke-width="2"/><line x1="90" y1="150" x2="210" y2="150" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="150" cy="105" r="12" fill="#f3c969" fill-opacity="0.7" stroke="currentColor" stroke-width="2"/><line x1="250" y1="70" x2="250" y2="130" fill="none" stroke="currentColor" stroke-width="2"/><polygon points="250,140 245,130 255,130" fill="currentColor"/><text x="275" y="105" font-size="14" text-anchor="middle" fill="currentColor">2.5 m/s²</text></svg>'
+        choices: [120 N, 360 N, 480 N, 600 N]
+        answer: 360 N
+        check: "'360 N'"
+        hints:
+          - 下向きに加速すると、慣性力は上向きにはたらく。
+          - text: 重力は下向き、慣性力は上向き。向きが逆なことを図で見る。
+            svg: '<svg viewBox="0 0 320 200" xmlns="http://www.w3.org/2000/svg"><rect x="100" y="50" width="100" height="100" fill="#7fc8f8" fill-opacity="0.25" stroke="currentColor" stroke-width="2"/><line x1="90" y1="150" x2="210" y2="150" fill="none" stroke="currentColor" stroke-width="2"/><line x1="150" y1="100" x2="150" y2="140" fill="none" stroke="currentColor" stroke-width="2"/><polygon points="150,150 145,140 155,140" fill="currentColor"/><line x1="150" y1="100" x2="150" y2="65" fill="none" stroke="#f08080" stroke-width="2"/><polygon points="150,55 155,65 145,65" fill="#f08080"/><text x="205" y="70" font-size="14" text-anchor="middle" fill="currentColor">慣性力</text><text x="195" y="150" font-size="14" text-anchor="middle" fill="currentColor">重力</text></svg>'
+          - 重力から慣性力を引いた大きさを、体重計が支える。
+      - part: 今日
+        text: 台車が右へ 4 m/s² で加速している。台車からつるした玉の糸が、真下から角 θ だけかたむいてつりあう。tan θ はいくらか。重力加速度は 10 m/s² とする。
+        svg: '<svg viewBox="0 0 320 200" xmlns="http://www.w3.org/2000/svg"><rect x="75" y="136" width="150" height="28" fill="#c8ccd6" fill-opacity="0.5" stroke="currentColor" stroke-width="2"/><circle cx="112.5" cy="168" r="7" fill="#c8ccd6" fill-opacity="0.7" stroke="currentColor" stroke-width="2"/><circle cx="187.5" cy="168" r="7" fill="#c8ccd6" fill-opacity="0.7" stroke="currentColor" stroke-width="2"/><line x1="150" y1="60" x2="122" y2="110" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="122" cy="110" r="11" fill="#f3c969" fill-opacity="0.7" stroke="currentColor" stroke-width="2"/><line x1="215" y1="60" x2="265" y2="60" fill="none" stroke="currentColor" stroke-width="2"/><polygon points="275,60 265,65 265,55" fill="currentColor"/><text x="245" y="50" font-size="14" text-anchor="middle" fill="currentColor">4 m/s²</text><line x1="150" y1="60" x2="150" y2="110" fill="none" stroke="currentColor" stroke-width="2" stroke-dasharray="4 4"/></svg>'
+        choices: [0.25, 0.4, 2.5, 4]
+        answer: '0.4'
+        check: "'0.4'"
+        hints:
+          - 玉には重力と慣性力がはたらき、糸の向きは 2 つを合わせた向き。
+          - text: かたむきは、慣性力 ÷ 重力で決まる。
+            svg: '<svg viewBox="0 0 320 200" xmlns="http://www.w3.org/2000/svg"><circle cx="150" cy="100" r="11" fill="#f3c969" fill-opacity="0.7" stroke="currentColor" stroke-width="2"/><line x1="150" y1="100" x2="150" y2="140" fill="none" stroke="currentColor" stroke-width="2"/><polygon points="150,150 145,140 155,140" fill="currentColor"/><line x1="150" y1="100" x2="115" y2="100" fill="none" stroke="#f08080" stroke-width="2"/><polygon points="105,100 115,95 115,105" fill="#f08080"/><text x="105" y="85" font-size="14" text-anchor="middle" fill="currentColor">慣性力</text><text x="170" y="150" font-size="14" text-anchor="middle" fill="currentColor">重力</text></svg>'
+          - 質量は消えるので、加速度 ÷ 重力加速度。
+      - part: 今日
+        text: 質量 0.5 kg の物が、半径 0.4 m、角速度 5 rad/s で回る円板の上で、円板といっしょに回っている。回る人から見た遠心力の大きさは何 N か。
+        svg: '<svg viewBox="0 0 320 200" xmlns="http://www.w3.org/2000/svg"><circle cx="150" cy="100" r="70" fill="#c8ccd6" fill-opacity="0.35" stroke="currentColor" stroke-width="2"/><circle cx="150" cy="100" r="3" fill="currentColor"/><circle cx="210" cy="100" r="11" fill="#f3c969" fill-opacity="0.7" stroke="currentColor" stroke-width="2"/><line x1="150" y1="100" x2="210" y2="100" fill="none" stroke="currentColor" stroke-width="2" stroke-dasharray="4 4"/><text x="180" y="118" font-size="14" text-anchor="middle" fill="currentColor">0.4 m</text><text x="250" y="60" font-size="14" text-anchor="middle" fill="currentColor">5 rad/s</text><text x="250" y="130" font-size="14" text-anchor="middle" fill="currentColor">0.5 kg</text></svg>'
+        choices: [1 N, 2.5 N, 5 N, 10 N]
+        answer: 5 N
+        check: "'5 N'"
+        hints:
+          - 遠心力の大きさは、m r ω² で、角速度は 2 回かける。
+          - text: 質量、半径、角速度の 3 つを図から見つける。
+            svg: '<svg viewBox="0 0 320 200" xmlns="http://www.w3.org/2000/svg"><circle cx="150" cy="100" r="70" fill="#c8ccd6" fill-opacity="0.35" stroke="currentColor" stroke-width="2"/><circle cx="150" cy="100" r="3" fill="currentColor"/><circle cx="210" cy="100" r="11" fill="#f3c969" fill-opacity="0.7" stroke="currentColor" stroke-width="2"/><circle cx="180" cy="118" r="24" fill="none" stroke="#f08080" stroke-width="3" stroke-dasharray="6 4"/><circle cx="250" cy="60" r="26" fill="none" stroke="#f08080" stroke-width="3" stroke-dasharray="6 4"/><circle cx="250" cy="130" r="28" fill="none" stroke="#f08080" stroke-width="3" stroke-dasharray="6 4"/><text x="180" y="118" font-size="14" text-anchor="middle" fill="currentColor">0.4 m</text><text x="250" y="60" font-size="14" text-anchor="middle" fill="currentColor">5 rad/s</text><text x="250" y="130" font-size="14" text-anchor="middle" fill="currentColor">0.5 kg</text></svg>'
+          - 0.5 × 0.4 × 5 × 5 を計算する。
+      - part: 今日
+        text: 質量 3 kg の物が、角速度 0.5 rad/s で回る円板の上で、中心から外へ向かって、円板の上から見て速さ 4 m/s で動いている。コリオリ力の大きさは何 N か。
+        svg: '<svg viewBox="0 0 320 200" xmlns="http://www.w3.org/2000/svg"><circle cx="130" cy="100" r="75" fill="#c8ccd6" fill-opacity="0.35" stroke="currentColor" stroke-width="2"/><circle cx="130" cy="100" r="3" fill="currentColor"/><circle cx="140" cy="100" r="9" fill="#f3c969" fill-opacity="0.7" stroke="currentColor" stroke-width="2"/><line x1="140" y1="100" x2="185" y2="100" fill="none" stroke="currentColor" stroke-width="2"/><polygon points="195,100 185,105 185,95" fill="currentColor"/><text x="180" y="85" font-size="14" text-anchor="middle" fill="currentColor">4 m/s</text><text x="262" y="70" font-size="14" text-anchor="middle" fill="currentColor">0.5 rad/s</text><text x="262" y="130" font-size="14" text-anchor="middle" fill="currentColor">3 kg</text></svg>'
+        choices: [6 N, 12 N, 24 N, 48 N]
+        answer: 12 N
+        check: "'12 N'"
+        hints:
+          - コリオリ力の大きさは、2 m ω v。
+          - text: 質量、角速度、速さの 3 つを図から見つける。
+            svg: '<svg viewBox="0 0 320 200" xmlns="http://www.w3.org/2000/svg"><circle cx="130" cy="100" r="75" fill="#c8ccd6" fill-opacity="0.35" stroke="currentColor" stroke-width="2"/><circle cx="130" cy="100" r="3" fill="currentColor"/><circle cx="140" cy="100" r="9" fill="#f3c969" fill-opacity="0.7" stroke="currentColor" stroke-width="2"/><circle cx="180" cy="85" r="24" fill="none" stroke="#f08080" stroke-width="3" stroke-dasharray="6 4"/><circle cx="262" cy="70" r="32" fill="none" stroke="#f08080" stroke-width="3" stroke-dasharray="6 4"/><circle cx="262" cy="130" r="24" fill="none" stroke="#f08080" stroke-width="3" stroke-dasharray="6 4"/><text x="180" y="85" font-size="14" text-anchor="middle" fill="currentColor">4 m/s</text><text x="262" y="70" font-size="14" text-anchor="middle" fill="currentColor">0.5 rad/s</text><text x="262" y="130" font-size="14" text-anchor="middle" fill="currentColor">3 kg</text></svg>'
+          - 2 × 3 × 0.5 × 4 を計算する。
+      - part: 今日
+        text: 回る円板の上で、質量 4 kg の物を、中心から 1 m の所から 3 m の所まで外へ動かす。角速度は 1 rad/s。この間に遠心力がする仕事は何 J か。
+        svg: '<svg viewBox="0 0 320 200" xmlns="http://www.w3.org/2000/svg"><circle cx="130" cy="100" r="80" fill="#c8ccd6" fill-opacity="0.35" stroke="currentColor" stroke-width="2"/><circle cx="130" cy="100" r="3" fill="currentColor"/><line x1="165" y1="100" x2="200" y2="100" fill="none" stroke="currentColor" stroke-width="2"/><polygon points="210,100 200,105 200,95" fill="currentColor"/><circle cx="165" cy="100" r="7" fill="#f3c969" fill-opacity="0.7" stroke="currentColor" stroke-width="2"/><circle cx="210" cy="100" r="7" fill="#f3c969" fill-opacity="0.7" stroke="currentColor" stroke-width="2"/><text x="165" y="120" font-size="14" text-anchor="middle" fill="currentColor">1 m</text><text x="262" y="80" font-size="14" text-anchor="middle" fill="currentColor">1 rad/s</text><text x="262" y="130" font-size="14" text-anchor="middle" fill="currentColor">4 kg</text></svg>'
+        choices: [8 J, 16 J, 32 J, 64 J]
+        answer: 16 J
+        check: "'16 J'"
+        hints:
+          - 遠心力の仕事は、½ m ω² × (r₂² − r₁²) で出せる。
+          - text: r₁ ＝ 1 m、r₂ ＝ 3 m。2 乗の差を出す。
+            svg: '<svg viewBox="0 0 320 200" xmlns="http://www.w3.org/2000/svg"><text x="160" y="90" font-size="16" text-anchor="middle" fill="currentColor">r₂² − r₁²</text><circle cx="160" cy="85" r="50" fill="none" stroke="#f08080" stroke-width="3" stroke-dasharray="6 4"/></svg>'
+          - 9 − 1 ＝ 8 に、½ × 4 × 1 をかける。
+    extra:
+      - part: 今日
+        text: 質量 2 kg の物が、半径 1.5 m、角速度 2 rad/s で回る円板の上で、円板といっしょに回っている。回る人から見た遠心力の大きさは何 N か。
+        svg: '<svg viewBox="0 0 320 200" xmlns="http://www.w3.org/2000/svg"><circle cx="150" cy="100" r="70" fill="#c8ccd6" fill-opacity="0.35" stroke="currentColor" stroke-width="2"/><circle cx="150" cy="100" r="3" fill="currentColor"/><circle cx="210" cy="100" r="11" fill="#f3c969" fill-opacity="0.7" stroke="currentColor" stroke-width="2"/><line x1="150" y1="100" x2="210" y2="100" fill="none" stroke="currentColor" stroke-width="2" stroke-dasharray="4 4"/><text x="180" y="118" font-size="14" text-anchor="middle" fill="currentColor">1.5 m</text><text x="250" y="60" font-size="14" text-anchor="middle" fill="currentColor">2 rad/s</text><text x="250" y="130" font-size="14" text-anchor="middle" fill="currentColor">2 kg</text></svg>'
+        choices: [6 N, 12 N, 18 N, 24 N]
+        answer: 12 N
+        check: "'12 N'"
+        hints:
+          - 遠心力の大きさは、m r ω² で、角速度は 2 回かける。
+          - text: 質量、半径、角速度の 3 つを図から見つける。
+            svg: '<svg viewBox="0 0 320 200" xmlns="http://www.w3.org/2000/svg"><circle cx="150" cy="100" r="70" fill="#c8ccd6" fill-opacity="0.35" stroke="currentColor" stroke-width="2"/><circle cx="150" cy="100" r="3" fill="currentColor"/><circle cx="210" cy="100" r="11" fill="#f3c969" fill-opacity="0.7" stroke="currentColor" stroke-width="2"/><circle cx="180" cy="118" r="24" fill="none" stroke="#f08080" stroke-width="3" stroke-dasharray="6 4"/><circle cx="250" cy="60" r="26" fill="none" stroke="#f08080" stroke-width="3" stroke-dasharray="6 4"/><circle cx="250" cy="130" r="24" fill="none" stroke="#f08080" stroke-width="3" stroke-dasharray="6 4"/><text x="180" y="118" font-size="14" text-anchor="middle" fill="currentColor">1.5 m</text><text x="250" y="60" font-size="14" text-anchor="middle" fill="currentColor">2 rad/s</text><text x="250" y="130" font-size="14" text-anchor="middle" fill="currentColor">2 kg</text></svg>'
+          - 2 × 1.5 × 2 × 2 を計算する。
+      - part: 今日
+        text: 上向きに加速度 4 m/s² で動くエレベーターの中で、質量 25 kg の人が体重計に乗った。体重計は何 N を示すか。
+        svg: '<svg viewBox="0 0 320 200" xmlns="http://www.w3.org/2000/svg"><rect x="100" y="50" width="100" height="100" fill="#7fc8f8" fill-opacity="0.25" stroke="currentColor" stroke-width="2"/><line x1="90" y1="150" x2="210" y2="150" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="150" cy="105" r="12" fill="#f3c969" fill-opacity="0.7" stroke="currentColor" stroke-width="2"/><line x1="250" y1="140" x2="250" y2="80" fill="none" stroke="currentColor" stroke-width="2"/><polygon points="250,70 255,80 245,80" fill="currentColor"/><text x="270" y="105" font-size="14" text-anchor="middle" fill="currentColor">4 m/s²</text></svg>'
+        choices: [100 N, 150 N, 250 N, 350 N]
+        answer: 350 N
+        check: "'350 N'"
+        hints:
+          - 上向きに加速すると、慣性力は下向きにはたらく。
+          - text: 下向きの力が 2 つ。図で確かめる。
+            svg: '<svg viewBox="0 0 320 200" xmlns="http://www.w3.org/2000/svg"><rect x="100" y="50" width="100" height="100" fill="#7fc8f8" fill-opacity="0.25" stroke="currentColor" stroke-width="2"/><line x1="90" y1="150" x2="210" y2="150" fill="none" stroke="currentColor" stroke-width="2"/><line x1="150" y1="100" x2="150" y2="140" fill="none" stroke="currentColor" stroke-width="2"/><polygon points="150,150 145,140 155,140" fill="currentColor"/><line x1="150" y1="100" x2="150" y2="140" fill="none" stroke="#f08080" stroke-width="2"/><polygon points="150,150 145,140 155,140" fill="#f08080"/><text x="200" y="125" font-size="14" text-anchor="middle" fill="currentColor">2 つの力</text></svg>'
+          - 重力と慣性力を足した大きさを、体重計が支える。
+ri:
+  - part: 離
+    kinds: [総動員, 道筋]
+    uses: [P-007, D-004]
+    text: 水平でなめらかなぼうが、回る中心のまわりを回っています。ぼうはモーターで回されていて、角速度はいつも 4 rad/s に保たれています。ぼうを通った質量 0.5 kg の玉が、ばね定数 26 N/m のばねで回る中心につながれています。ばねの自然の長さは 0.9 m です。はじめ、玉はばねが自然の長さの位置で、ぼうに対して止まっていました。そこから玉は、ぼうにそって動き出します。ぼうに対する玉の速さがはじめて最大になるまでに、地面から見て、ぼうが玉にした仕事は何 J ですか。
+    svg: '<svg viewBox="0 0 320 200" xmlns="http://www.w3.org/2000/svg"><circle cx="60" cy="110" r="7" fill="#c8ccd6" fill-opacity="0.5" stroke="currentColor" stroke-width="2"/><line x1="60" y1="110" x2="290" y2="110" fill="none" stroke="currentColor" stroke-width="3"/><polyline points="60,110 75,96 90,124 105,96 120,124 135,96 150,110" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="150" cy="110" r="10" fill="#f3c969" fill-opacity="0.7" stroke="currentColor" stroke-width="2"/><text x="60" y="150" font-size="14" text-anchor="middle" fill="currentColor">中心</text><text x="60" y="85" font-size="14" text-anchor="middle" fill="currentColor">モーター</text><text x="150" y="150" font-size="14" text-anchor="middle" fill="currentColor">0.9 m</text><text x="230" y="60" font-size="14" text-anchor="middle" fill="currentColor">4 rad/s</text><path d="M200 75 Q230 95 251.7 80.5" fill="none" stroke="currentColor" stroke-width="2"/><polygon points="260,75 254.5,84.7 248.9,76.4" fill="currentColor"/><text x="230" y="140" font-size="14" text-anchor="middle" fill="currentColor">26 N/m</text></svg>'
+    answer: 7.04
+    check: "1.0 * (Fraction(1, 2) * 4 ** 2 * ((26 * Fraction(9, 10) / (26 - Fraction(1, 2) * 4 ** 2)) ** 2 - Fraction(9, 10) ** 2))"
+    hints:
+      - まず、ぼうといっしょに回る人から見て、ぼうに対する速さがはじめて最大になる位置を見つけます。そこは、ばねの力と外へ向かう力（遠心力）がつりあう所です。
+      - text: 地面から見ると、玉は外へ動きながら回るので、横向きの速さ（角速度 × 中心からのきょり）がふえていきます。その速さをふやしているのは、ぼうが横から玉をおす力です。
+        svg: '<svg viewBox="0 0 320 200" xmlns="http://www.w3.org/2000/svg"><circle cx="60" cy="110" r="7" fill="#c8ccd6" fill-opacity="0.5" stroke="currentColor" stroke-width="2"/><line x1="60" y1="110" x2="290" y2="110" fill="none" stroke="currentColor" stroke-width="3"/><circle cx="190" cy="110" r="10" fill="#f3c969" fill-opacity="0.7" stroke="currentColor" stroke-width="2"/><line x1="190" y1="110" x2="190" y2="70" fill="none" stroke="#f08080" stroke-width="2"/><polygon points="190,60 195,70 185,70" fill="#f08080"/><text x="240" y="55" font-size="14" text-anchor="middle" fill="currentColor">ぼうがおす力</text><circle cx="190" cy="110" r="22" fill="none" stroke="#f08080" stroke-width="3" stroke-dasharray="6 4"/><rect x="177" y="152" width="26" height="26" rx="6" fill="#c8ccd6" fill-opacity="0.5" stroke="currentColor" stroke-width="2"/><text x="190" y="170" font-size="16" text-anchor="middle" fill="currentColor">？</text></svg>'
+      - 地面から見たエネルギーは、運動エネルギー（ぼうにそった速さと横向きの速さの両方）と、ばねの位置エネルギーの和です。ぼうがした仕事は、この和がふえた分です。
+    paths:
+      - [回る人から見る：つりあう位置は 26 × 0.9 ÷（26 − 0.5 × 4 × 4）= 1.3 m で、ぼうに対する速さはそこではじめて最大, 力はばね定数 26 − 8 = 18 N/m のばねと同じ形なので、ふれはば 0.4 m、角振動数 6 rad/s の往復で、そこでのぼうにそった速さは 6 × 0.4 = 2.4 m/s, 地面から見た速さの 2 乗は 2.4² +（4 × 1.3）² = 32.8 で、運動エネルギーは 8.2 J、はじめは ½ × 0.5 ×（4 × 0.9）² = 3.24 J, ばねの位置エネルギーは ½ × 26 × 0.4² = 2.08 J, ぼうの仕事は（8.2 − 3.24）+ 2.08 = 7.04 J]
+      - [回る勢いで見る：地面から見て、ぼうの力が玉を中心のまわりに回そうとする強さ（力のモーメント）は、回る勢い m ω r² のふえ方に等しい, 仕事率は力のモーメント × ω なので、仕事は ω ×（回る勢いのふえた分）, 回る勢いは 0.5 × 4 × 0.9² = 1.62 から 0.5 × 4 × 1.3² = 3.38 にふえる, 仕事は 4 ×（3.38 − 1.62）= 7.04 J（ぼうにそった速さを出さなくてよい）]
+    note: かりた こうぞう：S19 おきかえ・変数の取り方（回る人の見方で、遠心力の位置エネルギーをばねに足すと、新しいばねの形になる。仕事は地面の見方にもどして数える）、S03 たいしょうせい（つりあいの位置を中心にした往復）、S01 ふへんりょう（回る人から見たエネルギーの和は変わらないが、地面から見たエネルギーは変わる）。たね：なし（ri_seeds.py で 0 けん。ばねと遠心力の問題を構造の一覧から組み立てた）。なぜ むずかしいか：ぼうに対する速さが最大になる位置を回る人の見方で出したうえで、仕事は地面から見て数えなおす、と見方を 2 回変える。回る人から見たエネルギーの和が変わらないので「ぼうは仕事をしない」とまちがえやすい。横向きの速さも運動エネルギーに入れる、ばねの位置エネルギーも足す、と落としやすい所が 2 つある。回る勢いで見ると、ぼうにそった速さを出さずに出る。2 回目の直し：もとの問い（ぼうに対する速さの最大 2.4 m/s）は手順を当てれば終わったので、地面から見た仕事を問う形にした。
+  - part: 離
+    kinds: [道筋, 読み取り]
+    uses: [P-007]
+    text: 水平でなめらかな円板が、中心のまわりを 3 rad/s で回っています。円板の半径は 2 m です。中心から 0.4 m の所にある小さな玉を、円板の上から見て、中心から遠ざかる向きに 1.2 m/s ですべらせました。玉は円板の上をなめらかに動いて、やがてふちに着きます。ふちに着いたときの、円板の上から見た玉の速さは何 m/s ですか。
+    svg: '<svg viewBox="0 0 320 200" xmlns="http://www.w3.org/2000/svg"><circle cx="150" cy="100" r="80" fill="#c8ccd6" fill-opacity="0.35" stroke="currentColor" stroke-width="2"/><circle cx="150" cy="100" r="3" fill="currentColor"/><circle cx="166" cy="100" r="6" fill="#f3c969" fill-opacity="0.7" stroke="currentColor" stroke-width="2"/><line x1="172" y1="100" x2="195" y2="100" fill="none" stroke="currentColor" stroke-width="2"/><polygon points="205,100 195,105 195,95" fill="currentColor"/><text x="190" y="88" font-size="14" text-anchor="middle" fill="currentColor">1.2 m/s</text><text x="300" y="40" font-size="14" text-anchor="middle" fill="currentColor">3 rad/s</text><path d="M262 70 Q264.4 99.2 278 112.9" fill="none" stroke="currentColor" stroke-width="2"/><polygon points="285,120 274.4,116.4 281.5,109.4" fill="currentColor"/><line x1="150" y1="100" x2="150" y2="20" fill="none" stroke="currentColor" stroke-width="2" stroke-dasharray="4 4"/><text x="120" y="60" font-size="14" text-anchor="middle" fill="currentColor">2 m</text><text x="150" y="190" font-size="14" text-anchor="middle" fill="currentColor">0.4 m は中心から玉まで</text></svg>'
+    answer: 6
+    check: "math.isqrt(144 + 9 * (400 - 16)) // 10"
+    hints:
+      - 円板の上から見る方法と、地面から見る方法があります。回る人から見ると、玉には遠心力のほかにコリオリ力もはたらきます。
+      - text: コリオリ力は、玉が動く向きといつも直角にはたらきます。直角にはたらく力は、玉の速さを変えるでしょうか。
+        svg: '<svg viewBox="0 0 320 200" xmlns="http://www.w3.org/2000/svg"><circle cx="150" cy="100" r="80" fill="#c8ccd6" fill-opacity="0.35" stroke="currentColor" stroke-width="2"/><circle cx="150" cy="100" r="3" fill="currentColor"/><circle cx="190" cy="70" r="6" fill="#f3c969" fill-opacity="0.7" stroke="currentColor" stroke-width="2"/><line x1="190" y1="70" x2="226.7" y2="45.5" fill="none" stroke="currentColor" stroke-width="2"/><polygon points="235,40 229.5,49.7 223.9,41.4" fill="currentColor"/><line x1="190" y1="70" x2="204.5" y2="91.7" fill="none" stroke="#f08080" stroke-width="2"/><polygon points="210,100 200.3,94.5 208.6,88.9" fill="#f08080"/><text x="255" y="40" font-size="14" text-anchor="middle" fill="currentColor">動く向き</text><text x="235" y="110" font-size="14" text-anchor="middle" fill="currentColor">コリオリ力</text><circle cx="210" cy="100" r="18" fill="none" stroke="#f08080" stroke-width="3" stroke-dasharray="6 4"/><text x="190" y="88" font-size="14" text-anchor="middle" fill="currentColor">1.2 m/s</text></svg>'
+      - 速さを変える力は遠心力だけです。遠心力がする仕事は、位置エネルギーの変化として、はじめとふちの半径だけで決まります。
+    paths:
+      - [円板の上から見る：コリオリ力は動く向きと直角なので、仕事をしない, 遠心力の位置エネルギーは − ½ m ω² r², 運動エネルギーと足した和が一定なので ½ v² − ½ ω² r² が一定, v² = 1.2² + 3² × (2² − 0.4²) = 36, v = 6 m/s]
+      - [地面から見る：玉には力がはたらかないので、まっすぐ一定の速さで進む, はじめの速度は、外向きに 1.2 m/s と、円板の回りの向きに 3 × 0.4 = 1.2 m/s の 2 つ, 玉の位置は x = 0.4 + 1.2 t、y = 1.2 t で、中心から 2 m になるのは 1 秒後, そこで円板がその点を動かす速度は 3 × 2 = 6 m/s で、向きは半径と直角, 玉の速度から円板の速度を引いて大きさを求めると 6 m/s]
+    note: かりた こうぞう：S01 ふへんりょう（回る人から見て、½ v² − ½ ω² r² が変わらない）、S19 おきかえ・変数の取り方（地面から見ると、力のない直線の運動になる）。たね：なし（ri_seeds.py で 0 けん。回る台の上のすべる玉を構造の一覧から組み立てた）。なぜ むずかしいか：コリオリ力が仕事をしないと気づくか、地面から見て直線にもどせるか、見方を変える一手が要る。数を出すだけなら、球の道すじを円板の上の曲線として追うと行きづまる。
+  - part: 離
+    kinds: [手数, 総動員]
+    uses: [P-007]
+    text: 台車が水平な地面の上を、右向きに 7.5 m/s² で一定に加速しています。台車の上のはしから、長さ 0.8 m の軽い糸で、質量 0.4 kg の玉をつるしました。台車が加速を始めたとき、糸は真下を向いていて、玉は台車に対して止まっていました。玉が台車に対してはじめていちばん大きくふれて止まったとき、台車は加速をやめ、そのあとは同じ速さで走り続けます。加速をやめる前とあとを通して、糸の張力の最大は何 N ですか。重力加速度は 10 m/s² とします。
+    svg: '<svg viewBox="0 0 320 200" xmlns="http://www.w3.org/2000/svg"><rect x="70" y="146" width="160" height="28" fill="#c8ccd6" fill-opacity="0.5" stroke="currentColor" stroke-width="2"/><circle cx="110" cy="178" r="7" fill="#c8ccd6" fill-opacity="0.7" stroke="currentColor" stroke-width="2"/><circle cx="190" cy="178" r="7" fill="#c8ccd6" fill-opacity="0.7" stroke="currentColor" stroke-width="2"/><line x1="150" y1="60" x2="150" y2="120" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="150" cy="125" r="11" fill="#f3c969" fill-opacity="0.7" stroke="currentColor" stroke-width="2"/><line x1="215" y1="60" x2="265" y2="60" fill="none" stroke="currentColor" stroke-width="2"/><polygon points="275,60 265,65 265,55" fill="currentColor"/><text x="245" y="50" font-size="14" text-anchor="middle" fill="currentColor">7.5 m/s²</text><text x="190" y="100" font-size="14" text-anchor="middle" fill="currentColor">0.8 m</text><text x="100" y="125" font-size="14" text-anchor="middle" fill="currentColor">0.4 kg</text></svg>'
+    answer: 9.76
+    check: "1.0 * max(Fraction(2, 5) * Fraction(math.isqrt(10000 + 5625), 10) * (3 - 2 * 10 / Fraction(math.isqrt(10000 + 5625), 10)), Fraction(2, 5) * 10 * (3 - 2 * (2 * (10 / Fraction(math.isqrt(10000 + 5625), 10)) ** 2 - 1)))"
+    hints:
+      - 加速しているあいだと、加速をやめたあとに分けて考えます。加速しているあいだは、台車の上から見て、重力と加速と反対向きの力（慣性力）をまとめた「新しい重力」で見ます。
+      - text: 玉は新しい重力の下向きをはさんで、左右に同じ角だけふれます。いちばんふれた所の糸は、真下からどれだけの角でしょう。
+        svg: '<svg viewBox="0 0 320 200" xmlns="http://www.w3.org/2000/svg"><line x1="150" y1="40" x2="150" y2="120" fill="none" stroke="currentColor" stroke-width="2" stroke-dasharray="4 4"/><circle cx="150" cy="120" r="8" fill="#f3c969" fill-opacity="0.7" stroke="currentColor" stroke-width="2"/><line x1="150" y1="40" x2="108" y2="96" fill="none" stroke="#f08080" stroke-width="2"/><polygon points="102,104 104,93 112,99" fill="#f08080"/><text x="95" y="125" font-size="14" text-anchor="middle" fill="currentColor">新しい下</text><line x1="150" y1="40" x2="75" y2="62" fill="none" stroke="currentColor" stroke-width="2" stroke-dasharray="4 4"/><rect x="47" y="42" width="26" height="26" rx="6" fill="#c8ccd6" fill-opacity="0.5" stroke="currentColor" stroke-width="2"/><text x="60" y="60" font-size="16" text-anchor="middle" fill="currentColor">？</text></svg>'
+      - 加速をやめると、台車の上から見ても重力だけになります。いちばんふれた所で止まっていた玉が、ふつうのふりことしてふれ出します。そのいちばん下での張力を、加速しているあいだの最大とくらべます。
+    paths:
+      - [台車の上から見る：加速中の新しい重力は 10 と 7.5 から 12.5 m/s² で、真下に対して cos θ = 0.8 の向き, 玉は新しい下をはさんで往復するので、いちばんふれた所は真下から 2θ で、cos 2θ = 2 × 0.8² − 1 = 0.28, 加速中の張力の最大は新しい下で 0.4 × 12.5 ×（3 − 2 × 0.8）= 7 N, 加速をやめたあとは、2θ の所で止まった玉がふつうのふりこになり、いちばん下で v² = 2 × 10 × 0.8 ×（1 − 0.28）= 11.52, 張力は 0.4 ×（10 + 11.52 ÷ 0.8）= 9.76 N で、こちらが最大]
+      - [仕事で見る：糸が真下から角 φ の所で台車に対して止まるのは、重力の仕事と慣性力の仕事の和が 0 のときで、10 ×（1 − cos φ）= 7.5 × sin φ, 半分の角で書くと tan（φ ÷ 2）= 0.75 なので、cos φ =（1 − 0.5625）÷（1 + 0.5625）= 0.28, 加速をやめたあとは、この角で止まった所から下りるふりこで、いちばん下の張力は m g（3 − 2 cos φ）= 4 × 2.44 = 9.76 N, 加速中の最大 7 N より大きいので、答えは 9.76 N]
+    note: かりた こうぞう：S19 おきかえ・変数の取り方（重力と慣性力を 1 つの新しい重力にまとめる）、S03 たいしょうせい（新しい下を中心にした往復で、いちばんふれた所は 2 θ）、S10 上限と下限の評価（加速中と加速をやめたあとの、2 つの場面の張力の最大をくらべる）。たね：なし（ri_seeds.py で 0 けん。加速する台車のふりこを構造の一覧から組み立てた）。なぜ むずかしいか：加速をやめる場面が足され、見方を 2 回変える（新しい重力のふりこから、ふつうの重力のふりこへ）。2 つ目の場面の出発点は、たいしょうせいで真下から 2 θ と見ぬき、2 倍の角の cos を出す一手が要る。加速中だけを見て 7 N と答えるまちがいが起こりやすい。2 回目の直し：もとの問い（加速を続けたときの最大 7 N）は手順を当てれば終わったので、加速をやめる場面を足した。
