@@ -5,3 +5,6 @@ __pycache__/
 .wrangler/
 .tmp/
 tools/fields/out/
+
+# 単元ごとの問題の中身（tools/roadmap.py build が作る。CI の pages が作り直すので、リポジトリには入れない。D-190）
+site/u/

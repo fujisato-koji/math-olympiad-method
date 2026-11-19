@@ -676,6 +676,41 @@ def load_fields():
     return fields, f_of, s_of, rows
 
 
+RI_KEEP = ("qid", "part", "kinds", "uses", "level")  # 地図と単元のページが使う腕だめしの項目（星の数、並べ方、使う単元）
+
+
+def split_content(out_units):
+    """問題の中身を単元ごとのファイル site/u/<記号>.json に分け、data.js には数だけを残す（D-190）。
+    data.js が 50 MB を超え、GitHub の 1 ファイル 100 MB の上限に近づいた（9 割以上が問題の中身）。画面は日のページを開くときに
+    その単元のファイルだけを読む。日ごとに n（見本でない問題の数）、m（問題の数）、x（予備の数）を残し、腕だめしは RI_KEEP だけ残す。"""
+    out = ROOT / "site" / "u"
+    out.mkdir(exist_ok=True)
+    keep = set()
+    for u in out_units:
+        days = u.get("days") or []
+        ri = u.get("ri") or []
+        if not any(d.get("items") or d.get("extra") for d in days) and not ri:
+            continue
+        content = {"days": [{"items": d.get("items") or [], **({"extra": d["extra"]} if d.get("extra") else {})} for d in days], "ri": ri}
+        (out / f"{u['id']}.json").write_text(json.dumps(content, ensure_ascii=False, separators=(",", ":"), default=str),
+                                              encoding="utf-8", newline="\n")
+        keep.add(f"{u['id']}.json")
+        for d in days:
+            its = d.pop("items", None) or []
+            ex = d.pop("extra", None) or []
+            if its:
+                d["m"] = len(its)
+                d["n"] = sum(1 for x in its if x.get("part") != "見本")
+            if ex:
+                d["x"] = len(ex)
+        if ri:
+            u["ri"] = [{k: it[k] for k in RI_KEEP if k in it} for it in ri]
+        u["c"] = 1  # 中身のファイルがある
+    for p in out.glob("*.json"):  # 消えた単元のファイルを残さない
+        if p.name not in keep:
+            p.unlink()
+
+
 def build(data, problems):
     lanes = {l["id"]: l for l in data["lanes"]}
     out_units = []
@@ -723,6 +758,7 @@ def build(data, problems):
                       **({"choices": cov["choices"]} if cov.get("choices") else {}),
                       "units": sorted(gu.get(g["id"], [])), "items": items,
                       **({"choiceUnits": sorted(gc[g["id"]] - gu[g["id"]])} if gc.get(g["id"], set()) - gu.get(g["id"], set()) else {})})
+    split_content(out_units)
     payload = {"lanes": data["lanes"], "stages": data["stages"], "regions": data.get("regions", []), "kinds": data["kinds"], "fields": fields, "rows": rows,
                "glossary": data.get("glossary", []),
                "goals": goals, "levels": THINKING_LEVELS,

@@ -5,6 +5,23 @@
   const LANES = Object.fromEntries(R.lanes.map(l => [l.id, l]));
   const LANE_ORDER = R.lanes.map(l => l.id);
   const UNITS = Object.fromEntries(R.units.map(u => [u.id, u]));
+  // 問題の中身は単元ごとのファイル u/<記号>.json にある（D-190。data.js が 50 MB を超えたため）。data.js には日ごとの問題の数（m、n、x）と、
+  // 腕だめしの記号・種類・使う単元・水準だけがある。日のページを開くときに読み込み、元の単元の日に差し込む（日のページのコードはそのまま動く）
+  const LOADED = {}, LOADING = {};
+  function attachUnit(id, c) {
+    const u = UNITS[id];
+    (c.days || []).forEach((d, i) => { if (u.days[i]) { u.days[i].items = d.items || []; if (d.extra) u.days[i].extra = d.extra; } });
+    if (c.ri) u.ri = c.ri;
+    LOADED[id] = true;
+    Object.keys(DAY_GRAMS).forEach(k => { if (k.startsWith(id + '/')) delete DAY_GRAMS[k]; });  // 中身の前に測ったことばの組は測り直す
+  }
+  function loadUnit(id) {
+    if (LOADED[id] || !UNITS[id] || !UNITS[id].c) return Promise.resolve();
+    return LOADING[id] || (LOADING[id] = fetch(`u/${id}.json`)
+      .then(r => { if (!r.ok) throw new Error(String(r.status)); return r.json(); })
+      .then(c => attachUnit(id, c))
+      .catch(e => { delete LOADING[id]; throw e; }));
+  }
   // 考え方の水準（D-028）。段（stage）は画面に出さない
   const THINK = Object.fromEntries((R.levels || []).map(l => [l.id, l]));
   const KEY = 'michisuji.progress.v1', PREF = 'michisuji.prefs.v1';
@@ -512,7 +529,7 @@
   // 論題に届いた＝その論題を受け持つ単元がすべて済
   const isDone = id => !!(progress.units[id] && progress.units[id].done);
   // その単元に問題が入っているか（2D の関係図で、まだ問題のない単元を薄くする）
-  const hasProblems = u => (u.days || []).some(d => (d.items || []).length);
+  const hasProblems = u => (u.days || []).some(d => (d.items || []).length || d.m);  // d.m：読み込む前の問題の数（D-190）
   const topicDone = it => !!(it.units && it.units.length && it.units.every(isDone));
   function goalStats(g) {
     // 選んで解く論題の組（choices）は、組ごとに選ぶ数だけを数える（道のりには入らない）
@@ -706,6 +723,17 @@
   function render() {
     const r = parse(), view = $('#view');
     if (r.name !== 'day') session = null;
+    // 日のページは、その単元の問題の中身を読み込んでから描く。前提の単元も裏で読む（「わからない」のときのふりかえりの候補に使う。D-190）
+    if (r.name === 'day' && !LOADED[r.id] && UNITS[r.id].c) {
+      $('#crumbs').innerHTML = crumbs(r);
+      $('#explore').hidden = true; if (cosmos) cosmos.pause();
+      view.hidden = false;
+      view.innerHTML = '<p class="muted loading">よみこんでいます…</p>';
+      loadUnit(r.id).then(() => { const q = parse(); if (q.name === 'day' && q.id === r.id) render(); })
+        .catch(() => { view.innerHTML = '<p class="muted">問題を よみこめませんでした。でんぱの ある ところで ひらきなおしてください。</p>'; });
+      return;
+    }
+    if (r.name === 'day') (UNITS[r.id].needs || []).forEach(n => loadUnit(n).catch(() => {}));
     Music.scene(r.name === 'day' ? 'play' : 'map');
     view.innerHTML = viewHtml(r);
     view.hidden = r.name === 'map';  // 地図の下は空（D-080）。空の余白でページが縦にはみ出さないようにする
@@ -1681,7 +1709,7 @@
     const st = stateOf(u.id), r = progress.units[u.id];
     const daysDone = Object.keys((r && r.days) || {}).length;
     const outside = u.needs.filter(x => UNITS[x].lane !== u.lane);
-    const ready = u.days.filter(d => d.items && d.items.length).length;
+    const ready = u.days.filter(d => (d.items && d.items.length) || d.m).length;
     return `
     <a class="station ${st}${inGoal(u.id) ? '' : ' off'}" href="#/unit/${u.id}" data-id="${u.id}" style="${lc(u.lane)}">
       <span class="dot ${st}"></span>
@@ -1719,7 +1747,7 @@
       const n = i + 1, dr = r.days && r.days[n], skipped = (r.skip || []).includes(n);
       const isNext = ns.day === n && st !== 'later' && (ns.type === 'extra' || !dr || st === 'review');
       const cls = isNext ? 'next' : dr ? 'done' : skipped ? 'skipped' : '';
-      const count = d.items && d.items.length ? `・${d.items.filter(x => x.part !== '見本').length} 問` : '・問題はまだ';
+      const count = (d.items && d.items.length) || d.m ? `・${d.items ? d.items.filter(x => x.part !== '見本').length : d.n} 問` : '・問題はまだ';
       const extra = r.extra && r.extra[n] ? `・おさらい ${r.extra[n]} 回` : '';
       const go = isNext ? (ns.type === 'extra' ? 'おさらい →' : 'つぎ →') : dr ? dr.date : skipped ? 'とばした' : '';
       return `
