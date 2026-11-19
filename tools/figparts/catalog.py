@@ -1,4 +1,4 @@
-# 図の部品の一覧（D-189）。係はこれを 1 回読めば部品を呼べる（部品のファイルの中身は読まなくてよい）。
+# 図の部品の一覧（D-200）。係はこれを 1 回読めば部品を呼べる（部品のファイルの中身は読まなくてよい）。
 #   python tools/figparts/catalog.py [分野…]   … 土台（base）と分野（chem など）の部品の呼び方と説明。分野を省くと全部
 import sys, inspect, importlib
 from pathlib import Path

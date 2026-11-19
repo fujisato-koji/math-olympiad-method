@@ -1,4 +1,4 @@
-# 書く係の確かめを 1 回で（D-189）：置き場があれば組み立て（assemble）、決まりと漢字（unitqc --no-shot）、図の測り（figlint）、ヒントの点検（hintlint）。
+# 書く係の確かめを 1 回で（D-200）：置き場があれば組み立て（assemble）、決まりと漢字（unitqc --no-shot）、図の測り（figlint）、ヒントの点検（hintlint）。
 #   python tools/selfcheck.py <記号>
 # 出力は要るところだけ（通ったものは 1 行）。Bash の timeout は 600000 にする（figlint は画面なしのブラウザを使う）。
 import sys, os, subprocess, tempfile

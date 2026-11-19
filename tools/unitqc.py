@@ -32,7 +32,7 @@ mine = [e for e in errs if any(u in e for u in ids)]
 grades = json.loads((REPO / 'tools' / 'kanji-grades.json').read_text(encoding='utf-8'))
 term_chars = {ch for t in data.get('glossary') or [] for ch in str(t.get('term', '')) if RM.is_kanji(ch)}
 # 用語集の語の字は、語のまま出なくても通る（「物質波」の質が「物質」で、「準同型の核」の核が「核の 数字」で通っていた）。
-# 誤りにはせず、語の外で通っている字を「用語集の字だけで通っている字」として出す（D-189。長い語から先に文から抜いてから数える）
+# 誤りにはせず、語の外で通っている字を「用語集の字だけで通っている字」として出す（D-200。長い語から先に文から抜いてから数える）
 terms = sorted({str(t.get('term', '')) for t in data.get('glossary') or [] if any(RM.is_kanji(ch) for ch in str(t.get('term', '')))}, key=len, reverse=True)
 U = {u['id']: u for u in data['units']}
 for uid in ids:
@@ -109,7 +109,7 @@ for uid in ids:
         walk(problems[uid].get('ri') or [], None, '腕だめし')
         print(f'  段 {st} の学年より上の漢字 {len(bad)}' + ('：' + '、'.join(f'{c}（{w}）' for c, w in list(bad.items())[:20]) if bad else ''))
         if term_only:
-            print(f'  用語集の字だけで通っている字 {len(term_only)}（用語集の語の外で使っている。その単元で教える語なら頭注に書いて残し、ほかはかなに開く。D-189）：'
+            print(f'  用語集の字だけで通っている字 {len(term_only)}（用語集の語の外で使っている。その単元で教える語なら頭注に書いて残し、ほかはかなに開く。D-200）：'
                   + '、'.join(f'{c}{w}' for c, w in list(term_only.items())[:20]))
         if head_only:
             print(f'  頭注だけで通っている字 {len(head_only)}（その単元の用語なら残し、ふつうのことばならかなに開く。D-135）：'

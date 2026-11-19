@@ -1,4 +1,4 @@
-# 図の部品の見本を PNG にする（D-189。部品を作った人が目で確かめるため。単元を作る係は使わない）。
+# 図の部品の見本を PNG にする（D-200。部品を作った人が目で確かめるため。単元を作る係は使わない）。
 #   python tools/figparts/gallery.py <式のファイル> <png>   … ファイルの 1 行に 1 つの fig の式。4 列に並べて撮る
 import sys, os, json, html, subprocess, tempfile
 from pathlib import Path

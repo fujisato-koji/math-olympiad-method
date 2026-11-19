@@ -3,7 +3,7 @@
 #   python tools/assemble.py <記号>                 … head.yaml、day-1.yaml …、ri.yaml を並べて units/<記号>.yaml を書く
 #   python tools/assemble.py --append-ri <記号> <ファイル>  … 作ってある単元の ri: の後ろに、そのファイルの腕試しを足す
 #   python tools/assemble.py --split <記号>         … 作ってある units/<記号>.yaml を、日ごとの小さなファイルに分ける（直すとき用）
-# 日のファイルと ri.yaml の「fig: <式>」の行は、図の部品（tools/figparts、D-189）で svg に変えてから組み立てる。置き場の parts.py は単元だけの部品
+# 日のファイルと ri.yaml の「fig: <式>」の行は、図の部品（tools/figparts、D-200）で svg に変えてから組み立てる。置き場の parts.py は単元だけの部品
 import sys, re, tempfile
 from pathlib import Path
 import yaml

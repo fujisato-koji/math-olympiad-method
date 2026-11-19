@@ -1,4 +1,4 @@
-# 日のファイルの「fig: <式>」を「svg: '<svg …>'」に変える（D-189）。tools/assemble.py が組み立てるときに使う。
+# 日のファイルの「fig: <式>」を「svg: '<svg …>'」に変える（D-200）。tools/assemble.py が組み立てるときに使う。
 # 式は 1 行の python の式で、部品（base.py と分野のファイルの関数）を呼ぶ。並び（[a, b, …]）を返せば 1 枚の svg に包む。
 # 単元だけの部品は、置き場（python tools/assemble.py --dir <記号>）の parts.py に書けば使える（分野のファイルを書きかえない）。
 import sys, re, importlib, types

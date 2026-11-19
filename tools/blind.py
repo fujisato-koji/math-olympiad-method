@@ -2,7 +2,7 @@
 #   python tools/blind.py build <記号…>    … <一時フォルダ>/michisuji-blind/<作業ツリーの名>/<記号>.json を作る（答える問題だけ。key は d<日>-<番>、予備は d<日>-x<番>、腕だめしは ri-<番>）
 #   python tools/blind.py render <記号> <係の名>   … <一時フォルダ>/michisuji-blind/<作業ツリーの名>/<記号>-<係の名>-1.png、-2.png … に、問題を 8 問ずつ画像にする（見たら clean で消す）
 #   python tools/blind.py clean <記号> <係の名>    … その係の画像を消す
-#   python tools/blind.py one <記号> <key>  … 1 問だけを答えなしで画面に出す（難しさを測る係が使う。D-189）
+#   python tools/blind.py one <記号> <key>  … 1 問だけを答えなしで画面に出す（難しさを測る係が使う。D-200）
 #   python tools/blind.py key <記号…>      … 主会話だけが使う：key ごとの答え（係には見せない）
 import sys, os, json, html, subprocess, tempfile
 from pathlib import Path
@@ -40,7 +40,7 @@ if cmd == 'build':
         (OUT / f'{uid}.json').write_text(json.dumps(rows, ensure_ascii=False, indent=1), encoding='utf-8')
         print(uid, len(rows), '問', OUT / f'{uid}.json')
 elif cmd == 'one':
-    # 1 問だけを答えなしで出す（難しさを測る係が、その問題だけを読む。D-189）：python tools/blind.py one <記号> <key>
+    # 1 問だけを答えなしで出す（難しさを測る係が、その問題だけを読む。D-200）：python tools/blind.py one <記号> <key>
     uid, key = ids[0], ids[1]
     it = dict(items(uid)).get(key)
     if not it or not answerable(it):
