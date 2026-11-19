@@ -51,6 +51,16 @@ for uid in ids:
             if any(jsbad(v) for v in vs):
                 e.append(f'{uid} {w}：{k} の小数 {[v for v in vs if jsbad(v)]} は画面で表し方が変わる（4.0 → 4）。引用符で "14.0" のように書く。'
                          '10 の何乗は 2 × 10⁻⁷ の形で書く')
+    # 同じ問題のくり返し（D-191）：文・図・選択肢・答えが同じ問題が、単元の中の別の場所にまた出る。子が答えを覚えて解けてしまう。見本は除く
+    seen = {}
+    for w, it in labeled:
+        if it.get('part') == '見本':
+            continue
+        k = json.dumps([it.get('text'), it.get('svg'), it.get('choices'), str(it.get('answer'))], ensure_ascii=False)
+        if k in seen:
+            e.append(f'{uid} {w}：{seen[k]} と同じ問題のくり返し。2 つ目からは数や場面を変えた新しい問題に作り直し、その id: の行を消す（D-191）')
+        else:
+            seen[k] = w
     print(f'  誤り {len(e)}')
     for x in e:
         print('   -', x)
