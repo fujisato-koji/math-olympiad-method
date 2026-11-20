@@ -2,7 +2,7 @@
 """小学・中学の数学単元の、腕だめしの網羅性を調べる。
 
 問題数ではなく、単元ごとに必要な「難しさの種類」がそろっているかを見る。
-段 1〜2 は 総動員・数・読み取り、段 3〜4 は 5 種類すべてを目標にする。
+水準 1〜2 は 総動員・数・読み取り、水準 3 は 5 種類すべてを目標にする（D-220。前の段 1〜4 にあたる）。
 """
 from __future__ import annotations
 
@@ -17,12 +17,12 @@ yload = lambda s: yaml.load(s, Loader=getattr(yaml, "CSafeLoader", yaml.SafeLoad
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 MATH = set("NACGLSF")
 KINDS = ["総動員", "数", "道筋", "手数", "読み取り"]
-TARGET = {1: ["総動員", "数", "読み取り"], 2: ["総動員", "数", "読み取り"], 3: KINDS, 4: KINDS}
+TARGET = {1: ["総動員", "数", "読み取り"], 2: ["総動員", "数", "読み取り"], 3: KINDS}
 
 
 def load():
     road = yload(open(os.path.join(ROOT, "roadmap.yaml"), encoding="utf-8"))
-    stages = {u["id"]: u.get("stage") for u in road["units"]}
+    stages = {u["id"]: u.get("level") for u in road["units"]}
     titles = {u["id"]: u.get("title", "") for u in road["units"]}
     rows = []
     for f in sorted(glob.glob(os.path.join(ROOT, "units", "*.yaml"))):
@@ -35,7 +35,7 @@ def load():
         miss = [k for k in TARGET[stages[uid]] if k not in have]
         rows.append({
             "id": uid,
-            "stage": stages[uid],
+            "level": stages[uid],
             "title": titles.get(uid, ""),
             "n": len(ri),
             "soudou": sum(1 for it in ri if "総動員" in (it.get("kinds") or [])),
@@ -54,13 +54,13 @@ def main():
     dist = Counter(len(r["missing"]) for r in rows)
     print("不足の数ごとの単元数:", dict(sorted(dist.items())))
     if args.md:
-        print("\n| 単元 | 段 | 題 | 腕だめし | 総動員 | 足りない種類 |")
+        print("\n| 単元 | 水準 | 題 | 腕だめし | 総動員 | 足りない種類 |")
         print("|---|---:|---|---:|---:|---|")
         for r in need:
-            print(f"| {r['id']} | {r['stage']} | {r['title']} | {r['n']} | {r['soudou']} | {'、'.join(r['missing'])} |")
+            print(f"| {r['id']} | {r['level']} | {r['title']} | {r['n']} | {r['soudou']} | {'、'.join(r['missing'])} |")
     else:
         for r in need:
-            print(f"{r['id']} 段{r['stage']} {r['title']}：足りない {'、'.join(r['missing'])}")
+            print(f"{r['id']} 水準{r['level']} {r['title']}：足りない {'、'.join(r['missing'])}")
 
 
 if __name__ == "__main__":

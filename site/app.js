@@ -1,4 +1,4 @@
-/* みちすじ：知の宇宙と全体の地図 → 考え方の水準のページ・組み合わせの層 → 単元の日 → 今日の問題を 1 問ずつ */
+/* みちすじ：知の宇宙と全体の地図 → 理解の水準のページ・組み合わせの層 → 単元の日 → 今日の問題を 1 問ずつ */
 (() => {
   'use strict';
   const R = window.ROADMAP;
@@ -35,7 +35,7 @@
     prefetching = true;
     ids.reduce((p, id) => p.then(() => loadUnit(id).catch(() => {})), Promise.resolve()).then(() => { prefetching = false; });
   }
-  // 考え方の水準（D-028）。段（stage）は画面に出さない
+  // 理解の水準（D-220、docs/thinking-levels.md）。名前・1 日の分・字の範囲などは roadmap.yaml の levels
   const THINK = Object.fromEntries((R.levels || []).map(l => [l.id, l]));
   const KEY = 'michisuji.progress.v1', PREF = 'michisuji.prefs.v1';
   const STATUS_NAME = { ri: '腕だめしまで', done: '済', doing: 'いま', review: '復習', ready: '次にできる', later: 'まだ' };
@@ -524,7 +524,7 @@
     const ks = Object.keys(L);
     if (ks.length > 400) ks.sort().slice(0, ks.length - 400).forEach(k => delete L[k]);
   }
-  // わけの深さ（D-016）。考え方の水準と同じ軸（D-028）
+  // わけの深さ（D-016）。水準ごとの深さは roadmap.yaml の levels の reason（D-220）
   const REASON = ['', '例で見せて口で言う', '代表の例で文に書く', '約束した定義と事実から筋道を立てて書く', '公理から体系として書く', '定義を選び直す'];
   const circled = n => '①②③④⑤'[n - 1] || '';
   const prefs = Object.assign({ music: true, goal: 'all', riGroup: 'order' }, load(PREF, {}));
@@ -633,11 +633,11 @@
     for (let i = 1; i <= u.days.length; i++) if (!days[i] && !skip.includes(i)) return { type: 'day', day: i };
     return { type: 'day', day: u.days.length };
   }
-  // 答えの鍵盤（D-039）：段 1〜2 は数字だけ 3 けた、段 3 から「.」「/」、段 4 から「−」、8 字まで
-  // 単元の keys（地図に書く）で鍵を足せる。段 2 の負の数の単元など
-  const padKeys = id => { const u = UNITS[id], st = u.stage, ks = [...(st >= 4 ? ['−'] : []), ...(st >= 3 ? ['.', '/'] : [])];
+  // 答えの鍵盤（D-039、D-220）：水準 1 は数字だけ 3 けた、水準 2 から「.」「−」と 8 字まで、水準 3 から「/」
+  // 単元の keys（地図に書く）で鍵を足せる。tools/roadmap.py の check と同じ決まり
+  const padKeys = id => { const u = UNITS[id], lv = u.level, ks = [...(lv >= 2 ? ['−', '.'] : []), ...(lv >= 3 ? ['/'] : [])];
     (u.keys || []).forEach(k => { if (!ks.includes(k)) ks.unshift(k); }); return ks; };
-  const padMax = id => UNITS[id].stage >= 3 ? 8 : (UNITS[id].keys || []).includes('−') ? 4 : 3;
+  const padMax = id => { const u = UNITS[id], ks = u.keys || []; return u.level >= 2 || ks.includes('.') || ks.includes('/') ? 8 : ks.includes('−') ? 4 : 3; };
   // 答え合わせ：マイナスの書き方をそろえ、空白を除いて比べる。accept は認める別の書き方
   const norm = v => String(v).replace(/[-‐－]/g, '−').replace(/\s+/g, '');
   const isRight = (it, v) => [it.answer, ...(it.accept || [])].some(a => norm(a) === norm(v));
@@ -978,7 +978,7 @@
     const f = forecast(), opts = options(), kind = kindNow(), near = nearGoals(5);
     return `${ayumiHtml()}
     <section class="hero hero-rest">
-      <div class="goal-pick levels" role="group" aria-label="考え方の水準"><span class="k">水準</span>${(R.levels || []).map(l => {
+      <div class="goal-pick levels" role="group" aria-label="理解の水準"><span class="k">水準</span>${(R.levels || []).map(l => {
         const us = R.units.filter(u => u.level === l.id && inGoal(u.id));
         return `<a class="pill" href="#/level/${l.id}">${l.id} ${esc(l.name)}<span class="n">${us.filter(u => isDone(u.id)).length} / ${us.length}</span></a>`;
       }).join('')}</div>
@@ -1584,7 +1584,7 @@
       y += h + 8;
     });
     const H = y + 6;
-    // 考え方の水準の帯（D-199、施主「名前付きの区切りの帯」）：描いている単元の深さの中央値を水準ごとのおよその位置とし、
+    // 理解の水準の帯（D-199、D-220、施主「名前付きの区切りの帯」）：描いている単元の深さの中央値を水準ごとのおよその位置とし、
     // となりの水準との中ほどで区切る。帯は上に貼り付け、縦に送っても残る。区切りは図に点線で引く
     const marks = (R.levels || []).map(s => {
       const ds = shownUnits.filter(u => u.level === s.id).map(u => DEPTH[u.id]).sort((a, b) => a - b);
@@ -1626,7 +1626,7 @@
     // 図（最初の svg。apply2D が使う）のあとに名前の層を重ねる
     // 中の箱は図の幅にする（貼り付けは箱の中でしか動かないので、画面幅の #map のままだと狭い画面で名前が左に切れる）
     // 水準の帯は上に、左上の角には帯の名前（上にも左にも貼り付ける）
-    host.innerHTML = `<div class="map-in">${svg}${labels}${bands.length ? band + `<div class="lv-corner" style="width:calc(var(--fx) + ${LW}px)" aria-hidden="true">考え方の水準</div>` : ''}</div>`;
+    host.innerHTML = `<div class="map-in">${svg}${labels}${bands.length ? band + `<div class="lv-corner" style="width:calc(var(--fx) + ${LW}px)" aria-hidden="true">理解の水準</div>` : ''}</div>`;
     labelShade();
     POS2D = pos;
     apply2D();
@@ -1717,7 +1717,7 @@
     </section>`;
   }
 
-  // ---- 考え方の水準のページ ----
+  // ---- 理解の水準のページ ----
   // 水準ごとに、流れの帯の中へ単元を前提の浅い順に並べる。いま進めている・次にできる単元のある流れを開いておく
   function viewLevel(n) {
     const s = THINK[n], g = GOALS.find(x => x.id === prefs.goal);
@@ -1730,9 +1730,9 @@
     }).join('');
     return `
     <section class="level-head">
-      <div class="eyebrow">考え方の水準 ${n}</div>
+      <div class="eyebrow">理解の水準 ${n}</div>
       <h1>${esc(s.name)}</h1>
-      <p>${esc(s.about)}。わけの示し方は ${circled(n)} ${esc(REASON[n])}。</p>
+      <p>${esc(s.about)}。わけの示し方は ${[...new Set(s.reason || [n, n])].map(k => `${circled(k)} ${esc(REASON[k])}`).join('、または ')}。</p>
       ${g ? `<p class="goal-banner">目標「${esc(g.name)}」の単元だけ<button class="pill" type="button" data-goal="all">すべて</button></p>` : ''}
     </section>
     <div class="legend">${['ri', 'done', 'doing', 'review', 'ready', 'later'].map(k =>
@@ -1862,7 +1862,7 @@
       return [...map.values()].sort((a, b) => {
         if (!a.unit) return -1;
         if (!b.unit) return 1;
-        return (UNITS[a.unit].stage - UNITS[b.unit].stage) || a.unit.localeCompare(b.unit);
+        return (UNITS[a.unit].level - UNITS[b.unit].level) || a.unit.localeCompare(b.unit);
       });
     }
     return [{ key: 'order', label: 'やさしい順', items: its }];
@@ -1992,7 +1992,7 @@
   function steps() {
     const s = session;
     let h = '';
-    const small = UNITS[s.id].stage <= 2;
+    const small = UNITS[s.id].level <= 2;
     s.items.forEach((_, i) => {
       const r = s.results[i];
       const cls = r ? (r.first ? 'ok' : slow(r) ? 'slow' : 'help') : r === null ? 'ok' : i === s.idx ? 'on' : '';
@@ -2017,16 +2017,16 @@
         }).join('')}</div></div>`).join('')}</div>`;
   }
   // ---- 目安の時間（D-045） ----
-  // 段の 1 日の分（stages の minutes）の 8 割を、問題の種類の重みで割り振る（30 秒きざみ）。問題に time（秒）を書けば、それにする。
+  // 水準の 1 日の分（levels の minutes、D-220）の 8 割を、問題の種類の重みで割り振る（30 秒きざみ）。問題に time（秒）を書けば、それにする。
   // 目安をすぎても解き続けられる。ただし、そうしてできた問題は「一度にできた」に数えない（確認の 8 割、おさらい、練習をとばす判定）
   const TIME_W = { 思い出す: 1, 今日: 1.5, 挑戦: 3, わけ: 2, 離: 6 };
-  const STAGE_TIME = Object.fromEntries(R.stages.map(st => {
+  const LEVEL_TIME = Object.fromEntries((R.levels || []).map(st => {
     const reason = (st.reason || [1, 1]).reduce((a, b) => a + b, 0) / 2;
     const w = Object.entries(st.day || {}).reduce((a, [p, k]) => a + k * (TIME_W[p] || 1), 0) + reason * TIME_W['わけ'];
     const per = (st.minutes || 20) * 60 * .8 / (w || 1);
     return [st.id, Object.fromEntries(Object.entries(TIME_W).map(([p, x]) => [p, Math.max(30, Math.round(per * x / 30) * 30)]))];
   }));
-  const timeFor = (s, it) => s.type === 'look' || !it || it.part === '見本' ? 0 : it.time || (STAGE_TIME[UNITS[s.id].stage] || {})[it.part] || 0;
+  const timeFor = (s, it) => s.type === 'look' || !it || it.part === '見本' ? 0 : it.time || (LEVEL_TIME[UNITS[s.id].level] || {})[it.part] || 0;
   // かかった時間：画面が隠れている間は数えない。解けたとき、「わからない」を押したときに止める
   const spent = s => (s.el || 0) + (s.t0 ? Date.now() - s.t0 : 0);
   const freeze = s => { s.el = spent(s); s.t0 = 0; s.paused = true; };
@@ -2040,7 +2040,7 @@
   function tick() {
     const c = document.getElementById('clock'), s = session;
     if (!c || !s) return;
-    const lim = +c.dataset.lim, t = spent(s) / 1000, over = t > lim, small = UNITS[s.id].stage <= 2, arc = c.querySelector('.arc');
+    const lim = +c.dataset.lim, t = spent(s) / 1000, over = t > lim, small = UNITS[s.id].level <= 2, arc = c.querySelector('.arc');
     if (arc) arc.setAttribute('stroke-dasharray', `${Math.min(100, t / lim * 100).toFixed(1)} 100`);
     c.classList.toggle('over', over);
     c.querySelector('.clock-t').textContent = over ? (small ? 'めやすを すぎたよ' : '目安をすぎました') : (small ? 'めやす' : '目安');
@@ -2067,7 +2067,7 @@
       offer: 'ふりかえる単元', now: '今ふりかえる',
       back: '問題にもどる', skip: 'この問題はとばす', self: 'この単元の見本', need: '前の単元', done: 'ふりかえり、できた！', ret: 'もとの問題にもどる' },
   };
-  const words = id => WORDS[UNITS[id].stage <= 2 ? 'small' : 'big'];
+  const words = id => WORDS[UNITS[id].level <= 2 ? 'small' : 'big'];
   // 文字の 1 つ組（ひらがなを除く）と 2 つ組。数字、空白、句読点は除く
   function grams(t) {
     const s = String(t || '').replace(/[\s\d.,、。・「」『』（）()？！?!:：]/g, ''), g = new Set();
@@ -2200,7 +2200,7 @@
     } else if (it.part === 'わけ' && !s.solved) {
       // わけを口で言う問題：保護者が聞いて「言えた」を押す（D-016）
       const hints = (it.hints || []).slice(0, s.hints).map((h, i) => `<div class="hint" data-n="${i + 1}">${hintHtml(h)}</div>`).join('');
-      const st = UNITS[s.id].stage, ask = st <= 2 ? ['くちで いってみよう。いえたら、おうちの ひとに「いえた」を おしてもらおう。', 'いえた']
+      const st = UNITS[s.id].level, ask = st <= 2 ? ['くちで いってみよう。いえたら、おうちの ひとに「いえた」を おしてもらおう。', 'いえた']
         : st === 3 ? ['ノートに、わけを文で書いてみよう。書けたら、おうちの人に見せて「書けた」をおしてもらおう。', '書けた']
         : ['決めたこと（文字や約束）から順に、筋道を立ててノートに書こう。書けたら、おうちの人に見てもらって「書けた」を押そう。', '書けた'];
       const first = (it.paths || [])[0] || [];
@@ -2239,7 +2239,7 @@
   // やった問題と見本を見返す（D-194、施主「うえの点をクリックするとやった問題や見本には戻れるようにしたい」）。
   // 読むだけで、答えなおしはしない（記録は変えない）。見返しているあいだは、いまの問題の時計を止める
   function drawPeek() {
-    const s = session, el = $('#play'), it = s.items[s.peek], r = s.results[s.peek], small = UNITS[s.id].stage <= 2;
+    const s = session, el = $('#play'), it = s.items[s.peek], r = s.results[s.peek], small = UNITS[s.id].level <= 2;
     const fig = (it.figure ? `<div class="fig" aria-label="え">${esc(it.figure)}</div>` : '')
       + (it.svg ? `<div class="fig fig-svg" role="img" aria-label="ず">${it.svg}</div>` : '')
       + (it.balance ? balanceHtml(it.balance) : '');

@@ -1,4 +1,4 @@
-# 1 つの単元の問題を速く確かめる（D-129）（check の決まり、段の学年より上の漢字）。図とイラストを 1 枚の PNG にまとめて見られるようにする。
+# 1 つの単元の問題を速く確かめる（D-129）（check の決まり、水準の字の範囲より上の漢字、分かち書き）。図とイラストを 1 枚の PNG にまとめて見られるようにする。
 #   python tools/unitqc.py <単元の記号…>            … 誤りと漢字を出し、図（日の問題とヒント、腕だめし）を <一時フォルダ>/michisuji-shots/<作業ツリーの名>/shot-<記号>.png にまとめる（同じ名前に上書き。18 図を越えると shot-<記号>-1.png、-2.png … に分ける）
 #   python tools/unitqc.py --no-shot <記号…>        … 図の PNG を作らない
 #   python tools/unitqc.py --clean <記号…>          … 図の PNG を消す（見たら消す。画像をためない）
@@ -36,7 +36,7 @@ term_chars = {ch for t in data.get('glossary') or [] for ch in str(t.get('term',
 terms = sorted({str(t.get('term', '')) for t in data.get('glossary') or [] if any(RM.is_kanji(ch) for ch in str(t.get('term', '')))}, key=len, reverse=True)
 U = {u['id']: u for u in data['units']}
 for uid in ids:
-    print(f'== {uid}（段 {U[uid]["stage"]}）')
+    print(f'== {uid}（水準 {U[uid]["level"]}）')
     e = [x for x in mine if uid in x]
     # 天びんは svg で描く。balance:（D-042）は答えを見ない係の道具（blind.py）にも図の PNG にも出ない（D-132 の追記）
     pu = problems[uid]
@@ -67,11 +67,17 @@ for uid in ids:
     print(f'  誤り {len(e)}')
     for x in e:
         print('   -', x)
-    st = U[uid]['stage']
-    if isinstance(st, int) and st <= 6:
-        ok = set()
-        for g in range(1, min(st, 6) + 1):
-            ok |= set(grades.get(str(g), []))
+    st = U[uid]['level']
+    LV = {l['id']: l for l in data['levels']}
+    kan = (LV.get(st) or {}).get('kanji')
+    if isinstance(kan, int) or kan == 'joyo':
+        # 水準の字の範囲（D-220）：教育漢字の学年までか、常用漢字（docs/kanji.md）
+        if kan == 'joyo':
+            ok = set(json.loads((REPO / 'tools' / 'kanji-joyo.json').read_text(encoding='utf-8')))
+        else:
+            ok = set()
+            for g in range(1, kan + 1):
+                ok |= set(grades.get(str(g), []))
         head = {ch for no, line in enumerate((REPO / 'units' / f'{uid}.yaml').read_text(encoding='utf-8').splitlines()) if no and line.startswith('#') for ch in line if RM.is_kanji(ch)}
         grade_ok = set(ok)
         ok_nohead = ok | term_chars
@@ -107,13 +113,42 @@ for uid in ids:
             for i, it in enumerate((d.get('items') or []) + (d.get('extra') or []), 1):
                 walk(it, None, f"{d.get('day')} 日目 {i}")
         walk(problems[uid].get('ri') or [], None, '腕だめし')
-        print(f'  段 {st} の学年より上の漢字 {len(bad)}' + ('：' + '、'.join(f'{c}（{w}）' for c, w in list(bad.items())[:20]) if bad else ''))
+        print(f'  水準 {st} の字の範囲より上の漢字 {len(bad)}' + ('：' + '、'.join(f'{c}（{w}）' for c, w in list(bad.items())[:20]) if bad else ''))
         if term_only:
             print(f'  用語集の字だけで通っている字 {len(term_only)}（用語集の語の外で使っている。その単元で教える語なら頭注に書いて残し、ほかはかなに開く。D-200）：'
                   + '、'.join(f'{c}{w}' for c, w in list(term_only.items())[:20]))
         if head_only:
             print(f'  頭注だけで通っている字 {len(head_only)}（その単元の用語なら残し、ふつうのことばならかなに開く。D-135）：'
                   + '、'.join(f'{c}{w}' for c, w in list(head_only.items())[:20]))
+    # 分かち書き（D-220、docs/thinking-levels.md の第 5 節）：水準 1〜2 は文節ごとに半角の空白、3 以上は区切らない
+    sp = (LV.get(st) or {}).get('spacing')
+    JP = r'[぀-ヿ一-鿿々ー]'
+    longrun, gaps = {}, {}
+    def walk_sp(x, key=None, where=''):
+        if isinstance(x, str):
+            if key in ('check', 'figure', 'part', 'kinds', 'uses', 'type', 'like', 'note', 'svg', 'answer', 'id'):
+                return
+            if sp:
+                m = re.search(JP + '{16,}', x)
+                if m:
+                    longrun.setdefault(where, m.group(0)[:20])
+            else:
+                m = re.search(JP + ' ' + JP, x)
+                if m:
+                    gaps.setdefault(where, x[max(0, m.start() - 4):m.end() + 4])
+        elif isinstance(x, dict):
+            for k, v in x.items():
+                walk_sp(v, k, where)
+        elif isinstance(x, list):
+            for v in x:
+                walk_sp(v, key, where)
+    for d in problems[uid].get('days') or []:
+        for i, it in enumerate((d.get('items') or []) + (d.get('extra') or []), 1):
+            walk_sp(it, None, f"{d.get('day')} 日目 {i}")
+    if sp and longrun:
+        print(f'  分かち書きの抜け？ {len(longrun)}（水準 {st} は文節ごとに半角の空白）：' + '、'.join(f'{w}「{s}」' for w, s in list(longrun.items())[:10]))
+    if sp is False and gaps:
+        print(f'  日本語の字のあいだの空白 {len(gaps)}（水準 {st} は区切らない）：' + '、'.join(f'{w}「{s}」' for w, s in list(gaps.items())[:10]))
     if shot:
         cells = []
         def add(label, s):

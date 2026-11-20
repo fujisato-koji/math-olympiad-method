@@ -4,6 +4,7 @@
     python tools/levels.py stats <a.json> <b.json>      2 人の付け方の一致（完全一致、1 つ違い、重み付き κ、AC1、境ごとの κ、95% の区間）
     python tools/levels.py hubs [上位の数]               子孫の多い単元と、流れをまたぐ前提の一覧
     python tools/levels.py check <levels.json>          付けた水準（{記号: 水準}）を前提と照らす（前提より低い、飛び越し、入口）
+    python tools/levels.py apply <levels.json> [--write] roadmap.yaml の段を水準に置き換える（水準の表と単元の level）
 
 付け方の json は [{"id": "N-009", "level": 2, ...}, ...]（ほかの項目は記録として残し、ここでは見ない）。
 """
@@ -207,6 +208,119 @@ def check(path):
     return low, jump, entry
 
 
+LEVEL_TABLE = [
+    # id, 名前, 中身, 1 日の分, 思い出す・今日・挑戦, わけの深さ, 字の範囲（教育漢字の学年、joyo＝常用漢字、None＝決まりなし）, 分かち書き, 文体
+    (1, '具体どうしを結ぶ', '目の前の物や絵を 1 つずつ結ぶ。数える、2 つを比べる、「〜すると〜になる」を言う', 15, (2, 3, 1), (1, 1), 1, True, 'です・ます（話しかけ）'),
+    (2, '具体の仕組みをとらえる', 'いくつもの具体の関係を同時に保つ。位とくり上がり、てんびん 2 回で重さの順、表に整理して比べる', 20, (2, 3, 1), (1, 2), 2, True, 'です・ます（話しかけ）'),
+    (3, '抽象をつかむ', '目に見えない 1 つのもの（分数、文字、密度、偶数と奇数、書かれた基準）を、1 つのものとして使う', 30, (2, 3, 1), (2, 2), 4, False, 'です・ます'),
+    (4, '抽象どうしを結ぶ', '2 つの抽象の関係を使う。比例、関数、1 つの法則で予想する、公式を順に使う', 45, (2, 2, 1), (2, 3), 6, False, 'です・ます'),
+    (5, '抽象の仕組みをとらえる', '互いに効き合う関係のまとまりを同時に扱う。平衡、衝突、需要と供給、いくつもの条件を同時に満たす', 60, (1, 2, 1), (3, 3), 'joyo', False, 'です・ます'),
+    (6, '原理をつかむ', '公理や理論のもとから組み立て、一般の結果を導く', 90, (1, 1, 1), (4, 4), None, False, 'である'),
+    (7, '原理どうしを結ぶ', '理論どうしの対応を使う。研究の最前線で新しい定義・問い・方法を立てる', 120, (0, 1, 1), (5, 5), None, False, 'である'),
+]
+
+
+def levels_block():
+    out = ['levels:']
+    for i, name, about, mins, (a, b, c), (r1, r2), kanji, sp, style in LEVEL_TABLE:
+        k = 'null' if kanji is None else kanji
+        out.append(f'  - {{id: {i}, name: {name}, about: {about}, minutes: {mins}, day: {{思い出す: {a}, 今日: {b}, 挑戦: {c}}}, '
+                   f'reason: [{r1}, {r2}], kanji: {k}, spacing: {"true" if sp else "false"}, style: {style}}}')
+    return '\n'.join(out)
+
+
+def apply(path, write=False):
+    """roadmap.yaml の段（stages、単元の stage）を水準（levels、単元の level）に置き換える（D-220）。
+    path は {記号: 水準} の json。すべての単元に水準が要る。write を付けなければ変化を数えるだけ。"""
+    rm, U, lanes = load_roadmap()
+    L = {k: int(v) for k, v in json.load(open(path, encoding='utf-8')).items()}
+    miss = [i for i in U if i not in L]
+    if miss:
+        raise SystemExit(f'水準のない単元が {len(miss)}：{miss[:20]}')
+    src = (ROOT / 'roadmap.yaml').read_text(encoding='utf-8')
+    lines = src.split('\n')
+    out, cur, n_flow, n_block, skip_stages = [], None, 0, 0, False
+    for ln in lines:
+        if ln.startswith('stages:'):
+            out.append(levels_block())
+            skip_stages = True
+            continue
+        if skip_stages:
+            if ln.startswith('  - {id:'):
+                continue
+            skip_stages = False
+        m = re.match(r'(\s*- \{id: )([A-Z]-\d{3})(, .*)$', ln)
+        if m:
+            uid = m.group(2)
+            body, k = re.subn(r', stage: \d+, level: \d+', f', level: {L[uid]}', m.group(3), count=1)
+            if not k:
+                body, k = re.subn(r', stage: \d+', f', level: {L[uid]}', m.group(3), count=1)
+            if not k:
+                raise SystemExit(f'{uid}：stage が見つからない')
+            out.append(m.group(1) + uid + body)
+            n_flow += 1
+            continue
+        m = re.match(r'\s*- id: ([A-Z]-\d{3})\s*$', ln)
+        if m:
+            cur = m.group(1)
+        if cur and re.match(r'\s+stage: \d+\s*$', ln):
+            out.append(re.sub(r'stage: \d+', f'level: {L[cur]}', ln))
+            n_block += 1
+            continue
+        if cur and re.match(r'\s+level: \d+\s*$', ln):
+            continue  # 前の水準（ブロックの書き方）は消す。水準は stage の行の位置に書いた
+        m = re.match(r'(\s*# ---- )段 (\d+) (.*) ----\s*$', ln)
+        if m:
+            out.append(f'{m.group(1)}前の段 {m.group(2)}（{m.group(3)}）の並び ----')
+            continue
+        out.append(ln)
+    print(f'流れの書き方 {n_flow}、ブロックの書き方 {n_block}、合わせて {n_flow + n_block} / {len(U)}')
+    head_fix = {
+        '段は stage に書く（D-016）。': '水準は level に書く（D-220、docs/thinking-levels.md。前の段 stage はやめた）。',
+        '目標には要らないが、段の物差しの大会': '目標には要らないが、物差しの大会',
+    }
+    for k2, v2 in head_fix.items():
+        out = [x.replace(k2, v2) if x.startswith('#') else x for x in out]
+    if n_flow + n_block != len(U):
+        raise SystemExit('書き換えた単元の数が合わない')
+    n_head = apply_headers(L, write)
+    print(f'単元のファイルの頭の注を直す：{n_head} ファイル')
+    if write:
+        (ROOT / 'roadmap.yaml').write_text('\n'.join(out), encoding='utf-8', newline='\n')
+        print('roadmap.yaml を書きかえた')
+
+
+def apply_headers(L, write=False):
+    """単元のファイルの頭の注（id: より前の # の行）の段を直す（D-220）。子には見せない書き方の記録なので、
+    決まった形「# 段 k・水準 m・d 日。」は新しい水準に、ほかの行の「段 k」は「前の段 k」、前の 5 段の「水準 m」は「前の水準 m」にする。"""
+    n = 0
+    for p in sorted((ROOT / 'units').glob('*.yaml')):
+        uid = p.stem
+        if uid not in L:
+            continue
+        lines = p.read_text(encoding='utf-8').split('\n')
+        changed = False
+        for k, ln in enumerate(lines):
+            if not ln.startswith('#'):
+                if ln.startswith('id:'):
+                    break
+                continue
+            new = re.sub(r'^# 段 \d+・水準 \d+・', f'# 水準 {L[uid]}・', ln)
+            if new == ln and ('段' in ln or '水準' in ln):
+                new = re.sub(r'(?<!前の)段 (\d+)', r'前の段 \1', ln)
+                new = re.sub(r'(?<!前の)段（stage）', '前の段（stage）', new)
+                new = re.sub(r'(?<!前の)水準 (\d)(?![\d|])', r'前の水準 \1', new)
+                new = re.sub(r'(?<!前の)水準は (\d)(?!\d)', r'前の水準は \1', new)
+            if new != ln:
+                lines[k] = new
+                changed = True
+        if changed:
+            n += 1
+            if write:
+                p.write_text('\n'.join(lines), encoding='utf-8', newline='\n')
+    return n
+
+
 def hubs(top=40):
     rm, U, lanes = load_roadmap()
     kids = defaultdict(set)
@@ -240,6 +354,8 @@ if __name__ == '__main__':
         stats(sys.argv[2], sys.argv[3])
     elif cmd == 'check':
         check(sys.argv[2])
+    elif cmd == 'apply':
+        apply(sys.argv[2], write='--write' in sys.argv)
     elif cmd == 'hubs':
         hubs(int(sys.argv[2]) if len(sys.argv) > 2 else 40)
     else:

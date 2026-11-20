@@ -40,23 +40,28 @@ def balanced_delims(text: str) -> bool:
     return not stack
 
 
-def kanji_warnings(units, problems, glossary):
-    """段の学年より上の漢字が残る単元を警告する（D-110）。誤りにはしない。"""
-    kpath = ROOT / "tools" / "kanji-grades.json"
+def kanji_warnings(units, problems, glossary, levels):
+    """水準の字の範囲より上の漢字が残る単元を警告する（D-110、D-220）。誤りにはしない。
+    字の範囲は roadmap.yaml の levels の kanji：教育漢字の学年（その学年まで）、joyo（常用漢字）、null（決まりなし）。"""
+    kpath, jpath = ROOT / "tools" / "kanji-grades.json", ROOT / "tools" / "kanji-joyo.json"
     if not kpath.exists():
         return
     grades = json.loads(kpath.read_text(encoding="utf-8"))
-    allowed_by_stage = {}
-    cum = set()
-    for g in range(1, 7):
-        cum |= set(grades.get(str(g), []))
-        allowed_by_stage[g] = set(cum)
+    joyo = set(json.loads(jpath.read_text(encoding="utf-8"))) if jpath.exists() else None
+    upto = lambda g: set().union(*[set(grades.get(str(k), [])) for k in range(1, g + 1)])
+    allowed_by_level = {}
+    for lv in levels:
+        k = lv.get("kanji")
+        if isinstance(k, int):
+            allowed_by_level[lv["id"]] = upto(k)
+        elif k == "joyo" and joyo is not None:
+            allowed_by_level[lv["id"]] = joyo
     term_chars = set()
     for t in glossary or []:
         term_chars |= {ch for ch in str(t.get("term", "")) if is_kanji(ch)}
     bad_units = []
-    for uid, (_, stage, _u) in units.items():
-        if not isinstance(stage, int) or stage > 6:
+    for uid, (_, level, _u) in units.items():
+        if level not in allowed_by_level:
             continue
         head_chars = set()
         upath = ROOT / "units" / f"{uid}.yaml"
@@ -65,7 +70,7 @@ def kanji_warnings(units, problems, glossary):
                 # 頭注の 1 行目は題（「必勝法」など）なので除き、2 行目からをことばの説明とみなす
                 if no and line.startswith("#"):
                     head_chars |= {ch for ch in line if is_kanji(ch)}
-        ok = allowed_by_stage[stage] | term_chars | head_chars
+        ok = allowed_by_level[level] | term_chars | head_chars
         bad = set()
 
         def walk(x, key=None):
@@ -90,7 +95,7 @@ def kanji_warnings(units, problems, glossary):
     if bad_units:
         sample = "、".join(f"{uid}（{'・'.join(chs[:3])}）" for uid, chs in bad_units[:8])
         more = "…" if len(bad_units) > 8 else ""
-        print(f"警告: 段の学年より上の漢字が残る単元が {len(bad_units)} 個：{sample}{more}")
+        print(f"警告: 水準の字の範囲より上の漢字が残る単元が {len(bad_units)} 個：{sample}{more}")
 
 
 def is_kanji(ch):
@@ -100,14 +105,7 @@ GOAL_KINDS = ("大会", "検定", "修了試験", "入試", "資格", "研究の
 # 研究の頂点と第一線の仕事の分野。どちらも分野ごとに 1〜2（研究の頂点はその分野の国際的な最高の賞、2.12、D-032）
 GOAL_FIELDS = ("数学", "物理", "化学", "生物", "医学", "地球科学", "天文学", "生態学", "神経科学", "材料", "計算機科学", "統計学", "工学", "農学と獣医学", "心理学", "経済学")
 PEAK_LIMIT = {"研究の頂点": 2, "第一線の仕事": 2}
-# 考え方の水準（D-028、docs/thinking-levels.md の第 2 節）。画面の水準のページと目盛りに使う
-THINKING_LEVELS = [
-    {"id": 1, "name": "体で分かる", "about": "目の前の物と動き、観察したこと。数や言葉は物に結びついたまま使う"},
-    {"id": 2, "name": "記号で扱う", "about": "物から切り離した数・量・式・単位・決まった手順。決まりを当てはめて答えを出す"},
-    {"id": 3, "name": "関係とモデルで考える", "about": "変化、関数、法則、モデル、具体的な構造。与えられた枠組みの中で、定義と定理を使って計算し、モデルを立て、個々の命題を示す"},
-    {"id": 4, "name": "定義や原理から体系として組み立てる", "about": "公理や第一原理で定めた対象と、理論の体系そのもの。枠組みを選び、そこから主な結果を導き、どの仮定が要るかを調べる"},
-    {"id": 5, "name": "研究の最前線で新しくつくる", "about": "ここ数十年の研究で形になり、いまも動いている理論。それを道具にして、新しい定義・問い・方法を立てる"},
-]
+# 水準（D-220、docs/thinking-levels.md）は roadmap.yaml の levels に書く（名前、中身、1 日の分、日の並び、わけの深さ、字の範囲、分かち書き、文体）
 
 
 def default_plan(n):
@@ -249,7 +247,7 @@ def run_check(item, fig):
 def check(data, problems):
     errors = []
     lanes = {l["id"] for l in data["lanes"]}
-    stages = {s["id"] for s in data["stages"]}
+    level_ids = {l["id"] for l in data["levels"]}
     kinds = set(data["kinds"])
     regions = {r["id"] for r in data.get("regions", [])}
     units = {}
@@ -261,11 +259,13 @@ def check(data, problems):
             continue
         if uid in units:
             errors.append(f"{uid}: 二重")
-        lane, stage = m.group(1), u.get("stage")
+        lane, level = m.group(1), u.get("level")
         if lane not in lanes:
             errors.append(f"{uid}: 流れ {lane} がない")
-        if stage not in stages:
-            errors.append(f"{uid}: 段 {stage} がない")
+        if "stage" in u:
+            errors.append(f"{uid}: 段（stage）は使わない。水準（level）だけを書く（D-220）")
+        if level not in level_ids:
+            errors.append(f"{uid}: 水準 {level} がない")
         if regions and u.get("region") not in regions:
             errors.append(f"{uid}: 領域 {u.get('region')} がない")
         if "plan" in u and "days" in u and len(u["plan"]) != u["days"]:
@@ -275,13 +275,14 @@ def check(data, problems):
         for d in expand(u):
             if d["kind"] not in kinds:
                 errors.append(f"{uid}: 日の種類 {d['kind']} がない")
-        units[uid] = (lane, stage, u)
-    for uid, (_, stage, u) in units.items():
+        units[uid] = (lane, level, u)
+    # 前提より低くしない（docs/thinking-levels.md の決まり 11）
+    for uid, (_, level, u) in units.items():
         for need in u.get("needs", []):
             if need not in units:
                 errors.append(f"{uid}: 前提 {need} がない")
-            elif units[need][1] > stage:
-                errors.append(f"{uid}: 前提 {need} が後の段にある")
+            elif isinstance(units[need][1], int) and isinstance(level, int) and units[need][1] > level:
+                errors.append(f"{uid}: 前提 {need} の水準 {units[need][1]} がこの単元の水準 {level} より高い（決まり 11）")
     # 代わりになる前提（alt、D-035）：{A: [B, ...]} は「前提 A の代わりに B を済ませていてもよい」。
     # 道のりは既定の前提（needs）でたどり、alt は「次にできる」の判定と関係図にだけ使う
     def ups(x, seen=None):
@@ -291,7 +292,7 @@ def check(data, problems):
                 seen.add(y)
                 ups(y, seen)
         return seen
-    for uid, (_, stage, u) in units.items():
+    for uid, (_, level, u) in units.items():
         for need, alts in (u.get("alt") or {}).items():
             if need not in u.get("needs", []):
                 errors.append(f"{uid}: alt の {need} が前提にない")
@@ -300,25 +301,18 @@ def check(data, problems):
                     errors.append(f"{uid}: alt の {b} がない")
                 elif b == need or b == uid:
                     errors.append(f"{uid}: alt の {b} が自分か元の前提と同じ")
-                elif units[b][1] > stage or (units[b][2].get("level") or 0) > (u.get("level") or 5):
-                    errors.append(f"{uid}: alt の {b} が後の段か高い水準にある")
+                elif isinstance(units[b][1], int) and isinstance(level, int) and units[b][1] > level:
+                    errors.append(f"{uid}: alt の {b} の水準が高い")
                 elif uid in ups(b):
                     errors.append(f"{uid}: alt の {b} が {uid} を前提にたどる（輪）")
-    # 考え方の水準（D-028、docs/thinking-levels.md）。付け直しの途中は、付いた単元だけを確かめる
-    low = []
-    for uid, (_, _, u) in units.items():
-        lv = u.get("level")
-        if lv is None:
-            continue
-        if lv not in (1, 2, 3, 4, 5):
-            errors.append(f"{uid}: 考え方の水準 {lv} は 1〜5 のどれでもない")
-            continue
-        hi = max([units[n][2].get("level") or 0 for n in u.get("needs", []) if n in units] or [0])
-        if lv < hi:
-            low.append(f"{uid}（{lv}）＜ 前提の {hi}")
-    if low:
-        # 前提が強すぎる（道のりの膨らみ）か、水準が低すぎるかのどちらか
-        print(f"警告: 前提より低い考え方の水準 {len(low)}：" + "、".join(low[:10]) + ("…" if len(low) > 10 else ""))
+    # 一度に上がるのは 1 つまで（決まり 12、警告）。前提の最大 + 1 を超える単元は、間の単元が抜けているか、付けすぎ
+    jump = []
+    for uid, (_, level, u) in units.items():
+        hi = max([units[n][1] for n in u.get("needs", []) if n in units and isinstance(units[n][1], int)] or [0])
+        if isinstance(level, int) and hi and level > hi + 1:
+            jump.append(f"{uid}（{level}）＞ 前提の {hi} + 1")
+    if jump:
+        print(f"警告: 前提から 2 つ以上上がる水準 {len(jump)}：" + "、".join(jump[:10]) + ("…" if len(jump) > 10 else ""))
     # 前提の輪
     state = {}
 
@@ -459,7 +453,7 @@ def check(data, problems):
                     if x not in units or x == uid:
                         errors.append(f"{where}: uses の {x} が地図にないか、この単元そのもの")
                     elif units[x][1] > units[uid][1]:
-                        errors.append(f"{where}: uses の {x} は段 {units[x][1]} で、この単元（段 {units[uid][1]}）より後ろ")
+                        errors.append(f"{where}: uses の {x} は水準 {units[x][1]} で、この単元（水準 {units[uid][1]}）より高い")
                 for tid in item.get("type") or []:
                     if tid not in units:
                         errors.append(f"{where}: 組み合わせの型の単元 {tid} が地図にない")
@@ -467,7 +461,7 @@ def check(data, problems):
                     if "explain" not in item:
                         errors.append(f"{where}: {item.get('part')}には explain が要る")
                     if item.get("part") == "わけ" and len(item.get("hints", [])) != 3:
-                        errors.append(f"{where}: ヒントは 3 段")
+                        errors.append(f"{where}: ヒントは 3 つ")
                     continue
                 if "answer" not in item:
                     errors.append(f"{where}: answer がない")
@@ -475,16 +469,19 @@ def check(data, problems):
                     if str(item["answer"]) not in [str(c) for c in item["choices"]]:
                         errors.append(f"{where}: 答え {item['answer']} が選択肢にない")
                 else:
-                    # 鍵盤で打てる形（D-039）：段 1〜2 は 3 けたまでの数字、段 3 から「.」「/」、段 4 から「−」、8 字まで
-                    # 単元の keys（例：段 2 の負の数の単元に [−]）で鍵を足せる
+                    # 鍵盤で打てる形（D-039、D-220）：水準 1 は 3 けたまでの数字、水準 2 から「.」「−」と 8 字まで、水準 3 から「/」
+                    # 単元の keys（例：水準 1 の負の数の単元に [−]）で鍵を足せる。site/app.js の padKeys と同じ決まり
                     st, extra = units[uid][1], set(units[uid][2].get("keys") or [])
-                    sign = "−?" if st >= 4 or "−" in extra else ""
-                    ok = (sign + r"\d{1,3}") if st <= 2 else (sign + r"\d+(\.\d+)?(/\d+)?")
+                    sign = "−?" if st >= 2 or "−" in extra else ""
+                    dec = r"(\.\d+)?" if st >= 2 or "." in extra else ""
+                    frac = r"(/\d+)?" if st >= 3 or "/" in extra else ""
+                    long = st >= 2 or bool(extra & {".", "/"})
+                    ok = sign + (r"\d+" if long else r"\d{1,3}") + dec + frac
                     for a in [item["answer"], *(item.get("accept") or [])]:
-                        if not re.fullmatch(ok, str(a)) or len(str(a)) > ((4 if sign else 3) if st <= 2 else 8):
-                            errors.append(f"{where}: 答え {a} は段 {st} の鍵盤で打てない（選ぶ問題にするか、形を直す）")
+                        if not re.fullmatch(ok, str(a)) or len(str(a)) > (8 if long else (4 if sign else 3)):
+                            errors.append(f"{where}: 答え {a} は水準 {st} の鍵盤で打てない（選ぶ問題にするか、形を直すか、単元の keys で鍵を足す）")
                 if len(item.get("hints", [])) != 3:
-                    errors.append(f"{where}: ヒントは 3 段")
+                    errors.append(f"{where}: ヒントは 3 つ")
                 # ヒントは文か、図の付いた {text, svg}（D-129）。図の決まりは問題の svg と同じ
                 for hint in item.get("hints") or []:
                     if isinstance(hint, dict):
@@ -536,7 +533,7 @@ def check(data, problems):
                 for pi, path in enumerate(item.get("paths") or [], 1):
                     for si, step in enumerate(path, 1):
                         if not balanced_delims(step):
-                            errors.append(f"{where}: paths の {pi} 本目 {si} 段目のかっこが合わない（{step}）")
+                            errors.append(f"{where}: paths の {pi} 本目 {si} 番目のかっこが合わない（{step}）")
         if not any(it.get("part") == "わけ" for d in days for it in d.get("items", [])):
             errors.append(f"{uid}: わけを示す問題（part: わけ）が 1 つもない（D-016）")
     seen_p = set()
@@ -550,8 +547,8 @@ def check(data, problems):
         if it.get("text") and not it.get("pd"):
             errors.append(f"問題 {it.get('id')}: 著作権のある問題の問題文は収録しない")
     for uid, (_, _, u) in units.items():
-        if u.get("stage", 1) > 2 and not u.get("needs"):
-            errors.append(f"単元 {uid}: 段 {u['stage']} なのに前提がない（地図にない分野なら代わりの前提を書く）")
+        if (u.get("level") or 1) >= 3 and not u.get("needs"):
+            print(f"警告: 単元 {uid}: 水準 {u['level']} なのに前提がない（決まり 12。入口の単元を置くか、前提を書く）")
     for g in data.get("goals", []):
         if g["id"] not in data["coverages"]:
             errors.append(f"目標 {g['id']}: 網羅表 {g['coverage']} がない")
@@ -577,7 +574,7 @@ def check(data, problems):
         now = {f"{m}>{u['id']}" for u in data["units"] for m in u.get("needs", [])}
         if typed != now:
             print(f"警告: relations/needs.yaml と地図の前提の線が合わない（種類のない線 {len(now - typed)}、地図にない線 {len(typed - now)}）")
-    # どの単元も、どれかの目標の道のりに入るか、段の物差しの大会のため（measure）であること
+    # どの単元も、どれかの目標の道のりに入るか、物差しの大会のため（measure）であること
     if data["coverages"]:
         on_path = set().union(*goal_units(data).values())
         # 外の物差し（yardsticks/、D-117）が受け持つとした単元と、その前提も、道のりに入っているとみなす（D-119）。
@@ -594,15 +591,15 @@ def check(data, problems):
         off = [uid for uid, (_, _, u) in units.items() if uid not in on_path and not u.get("measure")]
         if off:
             errors.append(f"どの目標の道のりにも入らない単元 {len(off)}：" + "、".join(off[:10]) + ("…" if len(off) > 10 else ""))
-    # 大学院の目標の論題が段 3 以下の単元だけを指すなら、記号の取り違えを疑う（語の部分一致の誤りがあった）
+    # 大学院の目標の論題が水準 2 以下の単元だけを指すなら、記号の取り違えを疑う（語の部分一致の誤りがあった）
     levels = {g["id"]: str(g.get("level", "")) for g in data.get("goals", [])}
     for gid, cov in data["coverages"].items():
         if not levels.get(gid, "").startswith("大学院"):
             continue
         for item in cov.get("items", []):
             us = [u for u in item.get("units") or [] if u in units]
-            if us and max(units[u][1] for u in us) <= 3:
-                print(f"警告: [{gid}] {item.get('id')} 「{item.get('topic', '')[:30]}」が段 3 以下の単元だけを指す（取り違えの疑い）")
+            if us and max(units[u][1] for u in us) <= 2:
+                print(f"警告: [{gid}] {item.get('id')} 「{item.get('topic', '')[:30]}」が水準 2 以下の単元だけを指す（取り違えの疑い）")
     # 2 本目の道筋がまだない問題を一覧にする（第 2 期の手がかり。いまは警告だけ）
     one_path = 0
     for uid, doc in problems.items():
@@ -637,7 +634,7 @@ def check(data, problems):
             rep[uid] = n
     if rep:
         print(f"警告: 同じ問題をくり返している単元が {len(rep)} 個（{sum(rep.values())} 問）：" + "、".join(sorted(rep, key=lambda u: -rep[u])[:10]))
-    kanji_warnings(units, problems, data.get("glossary", []))
+    kanji_warnings(units, problems, data.get("glossary", []), data["levels"])
     return errors
 
 
@@ -752,7 +749,7 @@ def build(data, problems):
             if it.get("choices"):
                 it["choices"] = show_choices(it["qid"], it)  # 正解が 1 番目にかたよらないよう混ぜる（D-134）
         out_units.append({"id": u["id"], "title": u["title"], "lane": m.group(1),
-                          "stage": u["stage"], **({"level": u["level"]} if u.get("level") else {}), "region": u.get("region"), "needs": u.get("needs", []), "days": days, **({"ver": ver} if ver else {}), **({"ri": ri} if ri else {}),
+                          "level": u["level"], "region": u.get("region"), "needs": u.get("needs", []), "days": days, **({"ver": ver} if ver else {}), **({"ri": ri} if ri else {}),
                           **({"measure": True} if u.get("measure") else {}),
                           **({"alt": u["alt"]} if u.get("alt") else {}),
                           **({"keys": u["keys"]} if u.get("keys") else {}),
@@ -773,9 +770,9 @@ def build(data, problems):
                       "units": sorted(gu.get(g["id"], [])), "items": items,
                       **({"choiceUnits": sorted(gc[g["id"]] - gu[g["id"]])} if gc.get(g["id"], set()) - gu.get(g["id"], set()) else {})})
     split_content(out_units)
-    payload = {"lanes": data["lanes"], "stages": data["stages"], "regions": data.get("regions", []), "kinds": data["kinds"], "fields": fields, "rows": rows,
+    payload = {"lanes": data["lanes"], "regions": data.get("regions", []), "kinds": data["kinds"], "fields": fields, "rows": rows,
                "glossary": data.get("glossary", []),
-               "goals": goals, "levels": THINKING_LEVELS,
+               "goals": goals, "levels": data["levels"],
                "combLayer": combination.layer(data["units"], data.get("catalog", []), comb), "goalKinds": list(GOAL_KINDS), "goalFields": list(GOAL_FIELDS), "units": out_units, "renamed": data["renamed"]}
     js = "// tools/roadmap.py build が roadmap.yaml と units/ から作る。手で直さない。\n"
     js += "window.ROADMAP = " + json.dumps(payload, ensure_ascii=False, indent=1) + ";\n"
@@ -792,9 +789,9 @@ def build(data, problems):
     lines = ["# 地図の一覧", "",
              "この頁は `tools/roadmap.py build` が `roadmap.yaml` から作ります。手で直さないでください。",
              "画面で見るときは `site/index.html` を開きます。", "",
-             "| 段 | 名前 | 主な内容 | 1 日 | 単元 | 日数 |", "|---|---|---|---|---|---|"]
-    for s in data["stages"]:
-        us = [u for u in out_units if u["stage"] == s["id"]]
+             "| 水準 | 名前 | 主な内容 | 1 日 | 単元 | 日数 |", "|---|---|---|---|---|---|"]
+    for s in data["levels"]:
+        us = [u for u in out_units if u["level"] == s["id"]]
         lines.append(f"| {s['id']} | {s['name']} | {s['about']} | {s['minutes']} 分 | "
                      f"{len(us)} | {sum(len(u['days']) for u in us)} |")
     total = sum(len(u["days"]) for u in out_units)
@@ -808,17 +805,17 @@ def build(data, problems):
     on_path = set().union(*[set(g["units"]) for g in goals]) if goals else set()
     measure = [u for u in out_units if u["id"] not in on_path and u.get("measure")]
     off = [u for u in out_units if u["id"] not in on_path and not u.get("measure")]
-    lines += ["", f"目標には要らないが、段の物差しの大会のために置く単元：{len(measure)}。", ""]
+    lines += ["", f"目標には要らないが、物差しの大会のために置く単元：{len(measure)}。", ""]
     lines += [f"- {u['id']} {u['title']}" for u in measure]
     lines += ["", f"どの目標の道のりにも入らず、大会のためでもない単元：{len(off)}。"
               "あれば、網羅表への当て漏れか、要らない単元かを見直します。", ""]
     lines += [f"- {u['id']} {u['title']}" for u in off]
     lines.append("")
-    for s in data["stages"]:
-        lines += [f"## 段 {s['id']} {s['name']}", "", "| 単元 | 流れ | 前提 | 日数 | 問題 |",
+    for s in data["levels"]:
+        lines += [f"## 水準 {s['id']} {s['name']}", "", "| 単元 | 流れ | 前提 | 日数 | 問題 |",
                   "|---|---|---|---|---|"]
         for u in out_units:
-            if u["stage"] != s["id"]:
+            if u["level"] != s["id"]:
                 continue
             # 問題の中身は split_content で単元ごとのファイルに移したので、残した数（m、x）で数える（D-190）
             ready = sum(1 for d in u["days"] if d.get("items") or d.get("m"))

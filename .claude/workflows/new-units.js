@@ -1,7 +1,7 @@
 export const meta = {
   name: 'new-units',
   description: 'まだ問題のない単元に、図とイラストの多い問題（docs/problem-figures.md）を作り、審査・直し・答えを見ない係 2 人の解き直しで確かめる（D-129〜D-131）',
-  whenToUse: 'みちすじの問題のない単元に、試しの 6 単元の水準で問題を作るとき。args は { units: ["B-017", ...], width: 4 }（width は同時に進める単元の数、省くと 4。止めたあと動かし直すときは done: [直すまで済んだ単元] を足すと、その単元は解くから始める）。1 回に 12 単元ほど。light: true で軽い形（D-202：節約の試し 3 の作り方、1 単元 2.5M ほど。段 1〜6 の単元に使う。root: 作業ツリーの根（/c/dev/... の形）を必ず渡す。line は腕試しの線で、省くと 1,500）',
+  whenToUse: 'みちすじの問題のない単元に、試しの 6 単元の水準で問題を作るとき。args は { units: ["B-017", ...], width: 4 }（width は同時に進める単元の数、省くと 4。止めたあと動かし直すときは done: [直すまで済んだ単元] を足すと、その単元は解くから始める）。1 回に 12 単元ほど。light: true で軽い形（D-202：節約の試し 3 の作り方、1 単元 2.5M ほど。水準 1〜4 の単元に使う。root: 作業ツリーの根（/c/dev/... の形）を必ず渡す。line は腕試しの線で、省くと 1,500）',
   phases: [
     { title: 'Write', detail: '単元ごとに問題とイラストを書く' },
     { title: 'Review', detail: '別の係が図を見て審査する' },
@@ -17,7 +17,7 @@ const REVIEW = {
   properties: {
     scores: { type: 'object', properties: {
       correctness: { type: 'integer', description: '中身の正しさ（事実、答えが 1 つに決まる）1〜5' },
-      grade_fit: { type: 'integer', description: '段に合うか（ことば、漢字、分かち書き、難しさ）1〜5' },
+      grade_fit: { type: 'integer', description: '水準に合うか（ことば、漢字、分かち書き、難しさ）1〜5' },
       figures: { type: 'integer', description: '図とイラストで見てわかるか（見本、問題、ヒントの図）1〜5' },
       hints: { type: 'integer', description: 'ヒントが答えを書かずに次の一歩を示すか 1〜5' },
       clarity: { type: 'integer', description: '問いと選択肢がまぎれなく、子が迷わないか 1〜5' },
@@ -51,7 +51,7 @@ const JUDGE = {
 }
 
 const writePrompt = id => `みちすじ（子どもが毎日少しずつ解く学びの地図）の単元 ${id} に、まだ問題がない。新しく units/${id}.yaml を作る。日本語で考え、答える。作業ツリーの根（いまの作業フォルダ）で動く。
-まず docs/problem-figures.md を全部読み、その決まり（ファイルの形、日の並び、図とイラストの描き方、試しの審査で多かった指摘、確かめ）で書く。手本は units/H-002.yaml（段 1、図の多い単元）と units/P-181.yaml（頭注と分かち書き）。roadmap.yaml で ${id} の行（題、段、日数、前提）と前提の単元の題を見る。
+まず docs/problem-figures.md を全部読み、その決まり（ファイルの形、日の並び、図とイラストの描き方、試しの審査で多かった指摘、確かめ）で書く。手本は units/H-002.yaml（水準 1、図の多い単元）と units/P-181.yaml（頭注と分かち書き）。roadmap.yaml で ${id} の行（題、水準、日数、前提）と前提の単元の題を見る。
 書くのは units/${id}.yaml だけ。git の操作、tools/roadmap.py の build と check はしない。下書きのスクリプトや控えは、自分の一時フォルダ（scratchpad）の中に ${id}/ を作ってそこだけに置き、終わったらその ${id}/ だけを消す。scratchpad のほかのファイルは主会話やほかの係のものなので、消さない・書きかえない。
 確かめは PYTHONIOENCODING=utf-8 python tools/unitqc.py ${id}（誤り 0、漢字 0 まで）。長くかかる道具（tools/unitqc.py、tools/blind.py render）は Bash の timeout を 600000（10 分）にして動かす（時間切れで止めると画面なしの Edge が残り、PC のメモリを食う。D-137）。PNG は全部 Read で見て直し、見たら --clean で消す。全部の問題を自分で解き、答えが 1 つに決まること、ヒントが答えを書いていないことを確かめる。
 最後に、docs/problem-figures.md の「戻すもの」を返す。`
@@ -68,7 +68,7 @@ const fixPrompt = (id, r) => `みちすじの単元 ${id} の問題（units/${id
 const solvePrompt = (id, t) => `あなたは、みちすじの単元 ${id} の問題を、答えを知らずに解く係。日本語で考え、答える。作業ツリーの根（いまの作業フォルダ）で動く。
 【守ること】長くかかる道具（tools/unitqc.py、tools/blind.py render）は Bash の timeout を 600000（10 分）にして動かす（時間切れで止めると画面なしの Edge が残り、PC のメモリを食う。D-137）。答えを見ない：units/、site/、docs/ のファイルは開かない・grep しない。tools/blind.py の key は使わない。ファイルを書き換えない。
 【手順】
-1. PYTHONIOENCODING=utf-8 python tools/blind.py build ${id} を実行し、表示された一時フォルダの ${id}.json（key、part、text、choices、svg、figure）を読む。roadmap.yaml の ${id} の行で段（stage）を見る（子の学年の目安）。
+1. PYTHONIOENCODING=utf-8 python tools/blind.py build ${id} を実行し、表示された一時フォルダの ${id}.json（key、part、text、choices、svg、figure）を読む。roadmap.yaml の ${id} の行で水準（level）を見る（docs/thinking-levels.md の第 5 節：字の範囲・分かち書き・文体）。
 2. PYTHONIOENCODING=utf-8 python tools/blind.py render ${id} ${t} を実行し、できた画像（${id}-${t}-1.png、-2.png …、同じ一時フォルダ）を全部 Read で見る。図が細かいときは json の svg の中身（座標と文字）も読んでよい。
 3. 子どもが画面で見るのと同じく、文と図と選択肢だけから、1 問ずつ答えを決める。図の中の文字（ア・イ・ウ、方角、数）の位置と、事実や計算をよく照らす。
 4. 答えが 2 つありうる、図と文が合わない、図だけでは決まらない、事実としておかしい、と思ったら issue に書き、sure を false にする。
@@ -113,7 +113,7 @@ const L_MATCH = { type: 'object', properties: { mismatch: { type: 'array', items
 
 const writeL = id => `${HOME}
 みちすじ（子どもが毎日少しずつ解く学びの地図）の単元 ${id} に、まだ問題がない。新しく作る。
-1. docs/problem-card.md を全部読む（これが決まり。とくに「子に見せる文と字」の段の決まり）。roadmap.yaml の ${id} の行と、前提の単元の題を grep で見る。ほかの単元のファイルは読まない。
+1. docs/problem-card.md を全部読む（これが決まり。とくに「子に見せる文と字」の水準の決まり）。roadmap.yaml の ${id} の行と、前提の単元の題を grep で見る。ほかの単元のファイルは読まない。
 2. PYTHONIOENCODING=utf-8 python tools/figparts/catalog.py で図の部品の一覧を 1 回だけ読む。図はすべて fig: の 1 行で部品を呼んで描く（svg を手で書かない。部品のファイルの中身は読まない。足りない部品は置き場の parts.py に書く）。
 3. ${WORK(id)}に head.yaml と day-1.yaml … を、1 日分ずつ 1 回の Write で書く。腕だめし（ri.yaml）は書かない（別の係）。
 4. PYTHONIOENCODING=utf-8 python tools/selfcheck.py ${id} で確かめ、誤り 0、漢字 0、図の直すところ 0 まで日のファイルを Edit で直す。ヒントの疑いと「…だけで通っている字」は 1 つずつ見て決める。
@@ -138,7 +138,7 @@ const riL = id => `${HOME}
 3. 見方を変える一手が 1 つ要る（構造の一覧から：不変量、極端な場合、対称、逆から考える、作ってみせる、場合分け、数え方の工夫 など）。
 4. 本当にちがう道筋が 2 本ある（paths 2 本）。
 5. 答えは 1 つに決まり、check の式（計算か総当たり）で確かめられる。
-6. 段の子が読める文と字で、図で場面を見せる。
+6. その水準の読み手が読める文と字（docs/thinking-levels.md の第 5 節：字の範囲・分かち書き・文体）で、図で場面を見せる。
 7. 過去の大会問題は構造と鍵だけ借り、場面と数を変える（問題文は写さない）。種がなければ構造の一覧から組み立てる。
 8. この単元の「挑戦」の問題より、はっきり難しい（答えもヒントも見ない弱い係が、1 問に考えのトークンを ${LINE} 以上使うくらい）。手順を当てれば済む、場合が少なく全部ためせる、図や文が答えを語る、は易しすぎる。
 【作業を絞る】3 問を考えたら、${WORK(id)}に ri.yaml として 1 回の Write で書く（1 行目が「  - part: 離」、kinds は 総動員・数・道筋・手数・読み取り から、text、fig、choices か数の answer、check、hints 3 段、paths 2 本、note に借りた構造 S..・種の記号・なぜむずかしいか。note も段の字で書く）。確かめの python は 1 本のスクリプトにまとめ、3 問の check と、自分の 2 本の道筋の答えが合うかだけを短く出す（総当たりの途中を出さない）。そのあと PYTHONIOENCODING=utf-8 python tools/selfcheck.py ${id}（腕だめしの分が 0）。${LEAN} ほかの係が同じ置き場の日のファイルを直しているので、日のファイルは書きかえない。
@@ -160,7 +160,7 @@ ${RUN}
 const solveL = id => `${HOME}
 あなたは、みちすじの単元 ${id} の問題を、答えを知らずに解く係。
 answer を見ない：units/、site/、docs/ と michisuji-work の置き場は開かない・grep しない。tools/blind.py の key は使わない。ファイルを書き換えない。画像は作らない。Bash の timeout は 600000。
-1. PYTHONIOENCODING=utf-8 python tools/blind.py build ${id} を実行し、表示された json（key、part、text、choices、svg）を読む。roadmap.yaml の ${id} の行で段を見る。
+1. PYTHONIOENCODING=utf-8 python tools/blind.py build ${id} を実行し、表示された json（key、part、text、choices、svg）を読む。roadmap.yaml の ${id} の行で水準を見る。
 2. 文と図（svg の中身の座標と文字）と選択肢だけから 1 問ずつ答えを決める。2 通りに読める・図と文が合わない・事実がおかしいと思ったら issue に書き、sure を false。
 3. 全部の key に答える。`
 const matchL = (id, list) => `${HOME}

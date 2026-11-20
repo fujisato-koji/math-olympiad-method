@@ -19,7 +19,7 @@ while todo:
         continue
     reach.add(x)
     todo += U[x].get('needs') or []
-print(f"== {uid} {u['title']}（段 {u['stage']}、水準 {u.get('level')}、{u.get('days') or len(u.get('plan') or [])} 日）")
+print(f"== {uid} {u['title']}（水準 {u.get('level')}、{u.get('days') or len(u.get('plan') or [])} 日）")
 print('前提（直接）：' + '、'.join(f"{n} {U[n]['title']}" for n in u.get('needs') or [] if n in U))
 print(f'たどれる前提の単元：{len(reach)}')
 ok = reach | {uid}

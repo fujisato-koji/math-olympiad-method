@@ -40,8 +40,8 @@ else:
     row('全部', ids)
     by = collections.defaultdict(list)
     for i in ids:
-        st = U.get(i, {}).get('stage')
-        by[f'段 {st}'].append(i)
+        st = U.get(i, {}).get('level')
+        by[f'水準 {st}'].append(i)
     for k in sorted(by, key=lambda k: (len(k), k)):
         row(k, by[k])
     by = collections.defaultdict(list)

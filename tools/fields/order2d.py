@@ -3,7 +3,7 @@
 #   python tools/fields/order2d.py           … 並びを作って relations/row-order.yaml に書き、relations/fields.yaml のままの並びとくらべる
 # 分野の並びと、分野の中の細かい分野の並びは、どちらも「線の数 × 縦の距離」の和（線形配置の費用）を小さくする順にする。
 # 初めはラプラシアンの第 2 固有ベクトル（スペクトルの並べ方）、そのあと 1 つずつ別の場所へ差しこむ動きで、費用が下がらなくなるまで直す。乱数は使わない。
-# 上下の向きは、段の平均が低い分野の端を上にする。行の高さは site/app.js の drawMap と同じ（同じ深さに並ぶ単元の数 × 18 + 26、行の間 8、分野の見出し 26）。
+# 上下の向きは、水準の平均が低い分野の端を上にする（D-220）。行の高さは site/app.js の drawMap と同じ（同じ深さに並ぶ単元の数 × 18 + 26、行の間 8、分野の見出し 26）。
 import os, sys, collections
 from pathlib import Path
 import numpy as np
@@ -104,8 +104,8 @@ def main():
                 inner[f] = inner[f][::-1]
         if not moved:
             break
-    mean_stage = lambda f: np.mean([U[u]['stage'] for u in fof if fof[u] == f])
-    if mean_stage(forder[-1]) < mean_stage(forder[0]):
+    mean_level = lambda f: np.mean([U[u]['level'] for u in fof if fof[u] == f])
+    if mean_level(forder[-1]) < mean_level(forder[0]):
         forder = forder[::-1]; inner = {f: o[::-1] for f, o in inner.items()}
     new = [s for f in forder for s in inner[f]]
     base = [s for f in F for s in groups.get(f['id'], [])]
