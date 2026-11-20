@@ -143,12 +143,13 @@
     }
     return out;
   }
-  // 1 文字の単位か（数と空白のすぐ後、単位の後の /、「単位は W」の W）
+  // 1 文字の単位か（数と空白のすぐ後、「何 N」「何 m」の何と空白のすぐ後、単位の後の /、「単位は W」の W）
   const UNIT_SYMS = /^(N|J|W|V|A|C|K|T|Pa|Hz|mol|Ω|S|F|H|Wb|℃)$/;
   function unitAt(x, i) {
     const w = x[i];
     if (!w || w.k !== 'w') return false;
     if (x[i - 1] && x[i - 1].v === ' ' && x[i - 2] && x[i - 2].k === 'n') return w.v.length <= 3;
+    if (x[i - 1] && x[i - 1].v === ' ' && x[i - 2] && x[i - 2].v === '何') return w.v.length <= 3;  // 何 N ですか（施主の指摘、2026-11-20）
     const before = x.slice(Math.max(0, i - 4), i).map(a => a.v || '').join('');
     if (UNIT_SYMS.test(w.v) && /(単位は|単位)\s*$/.test(before)) return true;
     return !!(x[i - 1] && x[i - 1].v === '/' && unitAt(x, i - 2));
