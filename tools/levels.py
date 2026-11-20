@@ -3,6 +3,7 @@
     python tools/levels.py packet <out.md> <記号> ...   付ける人に渡す単元の資料を書く（段と水準は書かない）
     python tools/levels.py stats <a.json> <b.json>      2 人の付け方の一致（完全一致、1 つ違い、重み付き κ、AC1、境ごとの κ、95% の区間）
     python tools/levels.py hubs [上位の数]               子孫の多い単元と、流れをまたぐ前提の一覧
+    python tools/levels.py check <levels.json>          付けた水準（{記号: 水準}）を前提と照らす（前提より低い、飛び越し、入口）
 
 付け方の json は [{"id": "N-009", "level": 2, ...}, ...]（ほかの項目は記録として残し、ここでは見ない）。
 """
@@ -170,6 +171,42 @@ def stats(pa, pb, boot=2000, seed=20261120):
     return s, ci
 
 
+def check(path):
+    """付けた水準（{記号: 水準} の json）を前提のつながりと照らす（決まり 11、12）。
+    低い：前提の最大より低い単元（上げるか、強すぎる前提として外すか、入口を置く）。
+    飛び：前提の最大 + 1 を超える単元（間の単元が抜けているか、付けすぎか）。
+    入口：前提のない単元で水準 3 以上。"""
+    rm, U, lanes = load_roadmap()
+    L = {k: int(v) for k, v in json.load(open(path, encoding='utf-8')).items()}
+    miss = [i for i in U if i not in L]
+    low, jump, entry = [], [], []
+    for i, u in U.items():
+        if i not in L:
+            continue
+        if not u.get('needs'):
+            if L[i] >= 3:
+                entry.append(i)
+            continue
+        ps = [(n, L[n]) for n in u['needs'] if n in L]
+        if not ps:
+            continue  # 前提にまだ水準がない
+        m = max(l for _, l in ps)
+        if L[i] < m:
+            low.append((i, L[i], [(n, l) for n, l in ps if l > L[i]]))
+        elif L[i] > m + 1:
+            jump.append((i, L[i], m))
+    print(f'水準のない単元 {len(miss)}' + (f'：{miss[:20]}' if miss else ''))
+    print(f'分布：{dict(sorted(Counter(L.values()).items()))}')
+    print(f'前提より低い {len(low)}、飛び越し {len(jump)}、前提のない入口で 3 以上 {len(entry)}')
+    for i, l, ps in low:
+        print(f"  低い {i} {U[i]['title'].split('（')[0][:20]} {l} ＜ " + '、'.join(f'{n}:{x}' for n, x in ps))
+    for i, l, m in jump:
+        print(f"  飛び {i} {U[i]['title'].split('（')[0][:20]} {l}（前提の最大 {m}）")
+    for i in entry:
+        print(f"  入口 {i} {U[i]['title'].split('（')[0][:20]} {L[i]}")
+    return low, jump, entry
+
+
 def hubs(top=40):
     rm, U, lanes = load_roadmap()
     kids = defaultdict(set)
@@ -201,6 +238,8 @@ if __name__ == '__main__':
         packet(sys.argv[2], sys.argv[3:])
     elif cmd == 'stats':
         stats(sys.argv[2], sys.argv[3])
+    elif cmd == 'check':
+        check(sys.argv[2])
     elif cmd == 'hubs':
         hubs(int(sys.argv[2]) if len(sys.argv) > 2 else 40)
     else:
