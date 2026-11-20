@@ -4,12 +4,14 @@ import glob, os, math, json
 from pathlib import Path
 import numpy as np
 import yaml
+# C 版（libyaml）で読む。Python 版は流れの書き方の中の「 ? 」（まさつの力を ? とおく）を読めない単元がある（D-132、D-225 のあと）
+_yload = lambda f: yaml.load(f, Loader=getattr(yaml, "CSafeLoader", yaml.SafeLoader))
 from scipy import sparse
 
 REPO = Path(__file__).resolve().parents[2]
 
 def load():
-    rm = yaml.safe_load(open(os.path.join(REPO, 'roadmap.yaml'), encoding='utf-8'))
+    rm = _yload(open(os.path.join(REPO, 'roadmap.yaml'), encoding='utf-8'))
     units = rm['units']
     ids = [u['id'] for u in units]
     idx = {u: i for i, u in enumerate(ids)}
@@ -18,7 +20,7 @@ def load():
 def topic_lists():
     out = []
     for p in sorted(glob.glob(os.path.join(REPO, 'coverage*.yaml'))):
-        d = yaml.safe_load(open(p, encoding='utf-8'))
+        d = _yload(open(p, encoding='utf-8'))
         for it in d.get('items') or []:
             us = it.get('units') or []
             if len(us) >= 2:

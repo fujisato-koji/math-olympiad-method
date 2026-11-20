@@ -8,11 +8,13 @@ import os, glob, math
 from pathlib import Path
 import numpy as np
 import yaml
+# C 版（libyaml）で読む。Python 版は流れの書き方の中の「 ? 」（まさつの力を ? とおく）を読めない単元がある（D-132、D-225 のあと）
+_yload = lambda f: yaml.load(f, Loader=getattr(yaml, "CSafeLoader", yaml.SafeLoader))
 from scipy import sparse
 REPO = Path(__file__).resolve().parents[2]
 
 def load_units():
-    rm = yaml.safe_load(open(os.path.join(REPO, 'roadmap.yaml'), encoding='utf-8'))
+    rm = _yload(open(os.path.join(REPO, 'roadmap.yaml'), encoding='utf-8'))
     units = rm['units']
     ids = [u['id'] for u in units]
     return rm, units, ids, {u: i for i, u in enumerate(ids)}
@@ -21,7 +23,7 @@ TYPED = None
 def typed_weight(a_id, b_id):
     global TYPED
     if TYPED is None:
-        TYPED = (yaml.safe_load(open(os.path.join(REPO, 'relations', 'needs.yaml'), encoding='utf-8')) or {}).get('lines') or {}
+        TYPED = (_yload(open(os.path.join(REPO, 'relations', 'needs.yaml'), encoding='utf-8')) or {}).get('lines') or {}
     r = TYPED.get(f'{a_id}>{b_id}')
     if not r:
         return 1.0
@@ -46,7 +48,7 @@ def layers(alpha=0.05, drop=None, rng=None, protect_deg=None, typed=False):
     # topic：分数で数えた共起
     C = np.zeros((n, n))
     for p in sorted(glob.glob(os.path.join(REPO, 'coverage*.yaml'))):
-        d = yaml.safe_load(open(p, encoding='utf-8'))
+        d = _yload(open(p, encoding='utf-8'))
         for it in d.get('items') or []:
             us = sorted({idx[x] for x in (it.get('units') or []) if x in idx})
             k = len(us)
@@ -80,7 +82,7 @@ def layers(alpha=0.05, drop=None, rng=None, protect_deg=None, typed=False):
         uid = os.path.basename(p)[:-5]
         if uid not in idx:
             continue
-        d = yaml.safe_load(open(p, encoding='utf-8'))
+        d = _yload(open(p, encoding='utf-8'))
         items = [it for day in (d.get('days') or []) for it in (day.get('items') or []) + (day.get('extra') or [])] + (d.get('ri') or [])
         for it in items:
             for v in it.get('uses') or []:
