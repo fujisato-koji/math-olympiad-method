@@ -5,6 +5,7 @@
     python tools/levels.py hubs [上位の数]               子孫の多い単元と、流れをまたぐ前提の一覧
     python tools/levels.py check <levels.json>          付けた水準（{記号: 水準}）を前提と照らす（前提より低い、飛び越し、入口）
     python tools/levels.py apply <levels.json> [--write] roadmap.yaml の段を水準に置き換える（水準の表と単元の level）
+    python tools/levels.py rewire <needs.json> [--write] roadmap.yaml の前提を組み替える（{記号: [前提]}。外した前提の alt も外す）
 
 付け方の json は [{"id": "N-009", "level": 2, ...}, ...]（ほかの項目は記録として残し、ここでは見ない）。
 """
@@ -290,6 +291,53 @@ def apply(path, write=False):
         print('roadmap.yaml を書きかえた')
 
 
+def rewire(path, write=False):
+    """前提の組み替え（{記号: [前提, ...]} の json）を roadmap.yaml に書く（D-220 の決まり 11 の照らし合わせ）。
+    外した前提を指す代わりの前提（alt）の項も外す。書いた前提にない単元は変えない。"""
+    rm, U, lanes = load_roadmap()
+    N = json.load(open(path, encoding='utf-8'))
+    bad = [i for i in N if i not in U] + [n for v in N.values() for n in v if n not in U]
+    if bad:
+        raise SystemExit(f'地図にない記号：{bad[:10]}')
+    fmt = lambda xs: '[' + ', '.join(xs) + ']'
+    def new_alt(uid):
+        alt = U[uid].get('alt') or {}
+        keep = {k: v for k, v in alt.items() if k in N[uid]}
+        return keep
+    def alt_text(d):
+        return '{' + ', '.join(f'{k}: {fmt(v)}' for k, v in d.items()) + '}'
+    lines = (ROOT / 'roadmap.yaml').read_text(encoding='utf-8').split('\n')
+    out, cur, n_changed, n_alt = [], None, 0, 0
+    for ln in lines:
+        m = re.match(r'(\s*- \{id: )([A-Z]-\d{3})(, .*)$', ln)
+        if m and m.group(2) in N:
+            uid, body = m.group(2), m.group(3)
+            new = re.sub(r'needs: \[[^\]]*\]', f'needs: {fmt(N[uid])}', body, count=1)
+            if 'needs: [' not in body:
+                raise SystemExit(f'{uid}：needs が見つからない')
+            if 'alt: {' in new:
+                a = new_alt(uid)
+                if a != (U[uid].get('alt') or {}):
+                    n_alt += 1
+                    new = re.sub(r', alt: \{[^{}]*\}', (f', alt: {alt_text(a)}' if a else ''), new, count=1)
+            n_changed += new != body
+            out.append(m.group(1) + uid + new)
+            continue
+        m = re.match(r'\s*- id: ([A-Z]-\d{3})\s*$', ln)
+        if m:
+            cur = m.group(1)
+        if cur in N and re.match(r'\s+needs: \[[^\]]*\]\s*$', ln):
+            new = re.sub(r'needs: \[[^\]]*\]', f'needs: {fmt(N[cur])}', ln)
+            n_changed += new != ln
+            out.append(new)
+            continue
+        out.append(ln)
+    print(f'前提を書きかえた単元 {n_changed}、代わりの前提（alt）を直した単元 {n_alt}')
+    if write:
+        (ROOT / 'roadmap.yaml').write_text('\n'.join(out), encoding='utf-8', newline='\n')
+        print('roadmap.yaml を書きかえた')
+
+
 def apply_headers(L, write=False):
     """単元のファイルの頭の注（id: より前の # の行）の段を直す（D-220）。子には見せない書き方の記録なので、
     決まった形「# 段 k・水準 m・d 日。」は新しい水準に、ほかの行の「段 k」は「前の段 k」、前の 5 段の「水準 m」は「前の水準 m」にする。"""
@@ -356,6 +404,8 @@ if __name__ == '__main__':
         check(sys.argv[2])
     elif cmd == 'apply':
         apply(sys.argv[2], write='--write' in sys.argv)
+    elif cmd == 'rewire':
+        rewire(sys.argv[2], write='--write' in sys.argv)
     elif cmd == 'hubs':
         hubs(int(sys.argv[2]) if len(sys.argv) > 2 else 40)
     else:
