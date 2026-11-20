@@ -1531,6 +1531,16 @@
   });
   document.addEventListener('fullscreenchange', () => { setBarH(); if (cosmos) cosmos.resize(); if (X.view === '2d' && parse().name === 'map') paint(); });
 
+  // 2D を横に送ったときだけ、左に貼り付けた名前の下に暗がりを敷く。縦に送ったときは、上に貼り付けた水準の帯の下に敷く
+  //（送っていないときは前と同じ見え方）
+  function labelShade() {
+    const f = $('#flat');
+    if (!f) return;
+    f.classList.toggle('shifted', f.scrollLeft > 4);
+    f.classList.toggle('lowered', f.scrollTop > 4);
+  }
+  document.addEventListener('scroll', e => { if (e.target && e.target.id === 'flat') labelShade(); }, true);
+
   // 平面の関係図（2D）：横は理解の深さ（前提の鎖の長さ）、縦は関係から見つけた分野と、その中の細かい分野（D-124、施主「分野と領域を統一できないのか」）。
   // 並びは build が relations/row-order.yaml から入れる（前提の線が縦に短くなる順）。分野がまだない単元（分野を作りなおす前に足した単元）は、最後に領域ごとに並べる
   function drawMap() {
@@ -1573,19 +1583,30 @@
       y += h + 8;
     });
     const H = y + 6;
-    // 考え方の水準：描いている単元の深さの中央値を、水準ごとにおよその位置として上に置く
+    // 考え方の水準の帯（D-199、施主「名前付きの区切りの帯」）：描いている単元の深さの中央値を水準ごとのおよその位置とし、
+    // となりの水準との中ほどで区切る。帯は上に貼り付け、縦に送っても残る。区切りは図に点線で引く
     const marks = (R.levels || []).map(s => {
       const ds = shownUnits.filter(u => u.level === s.id).map(u => DEPTH[u.id]).sort((a, b) => a - b);
       return ds.length ? { s, x: X0 + (ds[Math.floor(ds.length / 2)] - minD) * XS } : null;
-    }).filter(Boolean);
+    }).filter(Boolean).sort((a, b) => a.x - b.x);
+    const bands = marks.map((m, i) => ({ s: m.s, x1: i ? (marks[i - 1].x + m.x) / 2 : X0 - 20, x2: i < marks.length - 1 ? (m.x + marks[i + 1].x) / 2 : W - 8 }));
     let svg = `<svg viewBox="0 0 ${W} ${H}" width="${W}" height="${H}" role="img" aria-label="全体の関係図">`;
     // 選んだ単元の線の向きは、前提へ入る線と先へ出ていく線の色で見せる（D-116。矢じりは付けない）
-    svg += marks.map((m, i) => `<g class="level-mark"><line x1="${m.x}" y1="${TOP - 6}" x2="${m.x}" y2="${H}"/>
-      </g>`).join('');
-    svg += heads.map(h => `<g class="field-head" style="${h.f ? fc(h) : '--c: var(--muted)'}"><text x="8" y="${h.y}">${esc(h.f ? FIELDS[h.f].name : 'まだ分野のない単元')}</text><line x1="8" y1="${h.y + 6}" x2="${W - 8}" y2="${h.y + 6}"/></g>`).join('');
+    svg += bands.slice(1).map(b => `<g class="level-mark"><line x1="${b.x1}" y1="0" x2="${b.x1}" y2="${H}"/></g>`).join('');
+    // 帯の幅が狭いときは「水準 4」だけ、もっと狭いときは数だけにする（名前は指を置くと出る）
+    const band = `<div class="lv-band" style="width:${W}px">` + bands.map(b => {
+      const w = b.x2 - b.x1, head = w < 46 ? b.s.id : `水準 ${b.s.id}`;
+      return `<div class="lv lv-${b.s.id}" style="left:${b.x1}px;width:${w}px" title="水準 ${b.s.id} ${esc(b.s.name)}：${esc(b.s.about || '')}"><b>${head}</b>${w < 70 ? '' : `<span>${esc(b.s.name)}</span>`}</div>`;
+    }).join('') + '</div>';
+    // 分野と細かい分野の名前は、別の層（.map-labels）にして左に貼り付け、横に送っても見えるようにする（施主「横スクロールすると分野が消えてしまう」）
+    const hc = h => h.f ? fc(h) : '--c: var(--muted)', hname = h => esc(h.f ? FIELDS[h.f].name : 'まだ分野のない単元');
+    svg += heads.map(h => `<g class="field-head" style="${hc(h)}"><line x1="8" y1="${h.y + 6}" x2="${W - 8}" y2="${h.y + 6}"/></g>`).join('');
     svg += boxes.map(b => `<g class="region" style="${fc(b.r)}"><rect x="${b.x}" y="${b.y}" width="${b.x2 - b.x}" height="${b.h}" rx="14"/>
-      <line x1="${X0 - 26}" y1="${b.y + b.h / 2}" x2="${b.x}" y2="${b.y + b.h / 2}" class="leader"/>
-      <text x="8" y="${b.y + b.h / 2 + 4}">${esc(b.r.name)}</text></g>`).join('');
+      <line x1="${X0 - 26}" y1="${b.y + b.h / 2}" x2="${b.x}" y2="${b.y + b.h / 2}" class="leader"/></g>`).join('');
+    const LW = X0 - 22;
+    const labels = `<div class="map-labels" aria-hidden="true"><svg viewBox="0 0 ${LW} ${H}" width="${LW}" height="${H}">`
+      + heads.map(h => `<g class="field-head" style="${hc(h)}"><text x="8" y="${h.y}">${hname(h)}</text></g>`).join('')
+      + boxes.map(b => `<g class="region" style="${fc(b.r)}"><text x="8" y="${b.y + b.h / 2 + 4}">${esc(b.r.name)}</text></g>`).join('') + '</svg></div>';
     // 前提の線：同じ行（細かい分野）は「深める」、ほかの行は「組み合わせる」（x）。代わりになる前提（alt）は点線
     const rowOf = u => u.s || u.region;
     const edge = (n, u, cls) => {
@@ -1601,7 +1622,11 @@
       const p = pos[u.id];
       return p ? `<circle class="${stateOf(u.id)}${inGoal(u.id) ? '' : inChoice(u.id) ? ' choice' : ' off'}${BRIDGES.has(u.id) ? ' bridge' : ''}${hasProblems(u) ? '' : ' noq'}" data-u="${u.id}" cx="${p[0]}" cy="${p[1]}" r="6" style="${fc(u)}"><title>${esc(u.id + ' ' + u.title)}</title></circle>` : '';
     }).join('') + '</g><g class="decos">' + R.units.map(u => decoSvg(u, pos[u.id])).join('') + '</g></svg>';
-    host.innerHTML = svg;
+    // 図（最初の svg。apply2D が使う）のあとに名前の層を重ねる
+    // 中の箱は図の幅にする（貼り付けは箱の中でしか動かないので、画面幅の #map のままだと狭い画面で名前が左に切れる）
+    // 水準の帯は上に、左上の角には帯の名前（上にも左にも貼り付ける）
+    host.innerHTML = `<div class="map-in">${svg}${labels}${bands.length ? band + `<div class="lv-corner" style="width:calc(var(--fx) + ${LW}px)" aria-hidden="true">考え方の水準</div>` : ''}</div>`;
+    labelShade();
     POS2D = pos;
     apply2D();
   }

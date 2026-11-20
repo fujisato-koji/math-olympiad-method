@@ -755,6 +755,28 @@ body[data-page="map"] .icon[aria-pressed="true"] { color: #ffe2a8; background: r
 .flat { position: absolute; inset: 0; overflow: auto; padding: 92px 28px 150px; overscroll-behavior: contain; }
 .flat { scrollbar-color: rgba(160, 180, 255, .28) transparent; scrollbar-width: thin; }
 .flat .map { width: 100%; }
+/* 分野と細かい分野の名前は図に重ねた別の層で、左に貼り付ける（横に送っても残る）。点や線は下の図で押せる */
+/* 層は左の余白（--fx）の分だけ左へ広げ、画面の端に貼り付ける（余白に図が透けないように） */
+.flat { --fx: 28px; padding-left: var(--fx); padding-right: var(--fx); }
+.flat .map-in { display: grid; width: max-content; }
+.flat .map-in > svg, .flat .map-in > .map-labels { grid-area: 1 / 1; }
+.flat .map-in > .map-labels { position: sticky; left: calc(-1 * var(--fx)); z-index: 1; justify-self: start; margin-left: calc(-1 * var(--fx)); padding-left: var(--fx); pointer-events: none; transition: background .2s; }
+.flat .map-in > .map-labels svg { display: block; overflow: visible; }
+.flat.shifted .map-in > .map-labels { background: linear-gradient(to right, rgba(5, 6, 15, .92), rgba(5, 6, 15, .8) 80%, rgba(5, 6, 15, 0)); }
+/* 考え方の水準の帯（D-199）：上に貼り付け、縦に送っても残る。横は図といっしょに動く。左上の角に帯の名前 */
+.flat .map-in > .lv-band, .flat .map-in > .lv-corner { grid-area: 1 / 1; position: sticky; top: 0; align-self: start; justify-self: start; height: 36px; pointer-events: none; transition: background .2s, box-shadow .2s; }
+.flat .map-in > .lv-band { z-index: 2; }
+.flat.lowered .map-in > .lv-band { background: rgba(5, 6, 15, .86); box-shadow: 0 1px 0 var(--line); backdrop-filter: blur(6px); -webkit-backdrop-filter: blur(6px); }
+.lv-band .lv { position: absolute; top: 0; bottom: 0; box-sizing: border-box; padding: 4px 8px 0; border-left: 1px dashed var(--line); overflow: hidden; white-space: nowrap; line-height: 1.3; pointer-events: auto; }
+.lv-band .lv:first-child { border-left: 0; }
+.lv-band .lv b { display: block; font-size: 12px; font-weight: 700; color: var(--ink); letter-spacing: .04em; }
+.lv-band .lv span { display: block; font-size: 11px; color: var(--muted); overflow: hidden; text-overflow: ellipsis; }
+/* 水準が上がるほど、帯の上の縁を明るくして、右へ進むほど深くなることを見せる */
+.lv-band .lv::before { content: ""; position: absolute; left: 0; right: 0; top: 0; height: 2px; background: var(--solid); opacity: calc(var(--k) * .16); }
+.lv-band .lv-1 { --k: 1; } .lv-band .lv-2 { --k: 2; } .lv-band .lv-3 { --k: 3; } .lv-band .lv-4 { --k: 4; } .lv-band .lv-5 { --k: 5; }
+.flat .map-in > .lv-corner { z-index: 3; left: calc(-1 * var(--fx)); margin-left: calc(-1 * var(--fx)); padding: 6px 0 0 calc(var(--fx) + 8px); font-size: 11px; font-weight: 700; color: var(--muted); letter-spacing: .04em; }
+.flat.lowered .map-in > .lv-corner, .flat.shifted .map-in > .lv-corner { background: rgba(5, 6, 15, .92); }
+.flat .map-in > .map-labels text { paint-order: stroke; stroke: rgba(5, 6, 15, .85); stroke-width: 3px; stroke-linejoin: round; }
 /* 2D の関係図を夜空の色で描く */
 .cosmos .map { --ink: #e8ecff; --ink-2: #c9d0f0; --surface: #0d1330; --line: rgba(160, 180, 255, .22); --muted: #8f99c4; --solid: #ffe2a8; --glow: rgba(140, 170, 255, .45); }
 .cosmos .map .region rect { fill: color-mix(in srgb, var(--c) 12%, transparent); stroke: color-mix(in srgb, var(--c) 35%, transparent); }
@@ -858,7 +880,7 @@ body[data-page="map"] .icon[aria-pressed="true"] { color: #ffe2a8; background: r
   .explore .cosmos-card { top: 118px; }
 }
 @media (max-width: 720px) {
-  .flat { padding: 120px 12px 160px; }
+  .flat { padding: 120px 12px 160px; --fx: 12px; }
   .explore .cosmos-card { top: auto; bottom: calc(max(18px, env(safe-area-inset-bottom)) + 70px); left: 12px; right: 12px; width: auto; max-height: 46%; }
   .explore .cosmos-tip { bottom: calc(max(18px, env(safe-area-inset-bottom)) + 120px); }
 }

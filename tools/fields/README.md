@@ -13,9 +13,14 @@
     python tools/fields/place3d.py --check  # 3D の配置だけ作り、乱数の初めと関係を 1 割抜いた配置とくらべる
     python tools/fields/place3d.py --site   # サイトの 3D の地図の位置（tools/space-layout.json）を書く（D-124）。向きは、いま公開している配置に回転と裏返しだけで合わせる
     python tools/fields/order2d.py          # 2D の地図の縦の並び（relations/row-order.yaml）を書く（D-124。行は細かい分野。relations/fields.yaml のあとに）
+    python tools/fields/moves.py [--write]  # 手直し（relations/field-moves.yaml、D-198）をいまの relations/fields.yaml に当てる。付けなければ数えるだけ
+
+手直し（D-198）：関係だけで見つけた塊には、中身の違う単元が入ることがある（小学校の理科の網羅表で、振り子が生き物の単元とつながって生命科学に入っていた）。
+中身で見て明らかに違う単元と細かい分野を relations/field-moves.yaml に書き、save_fields.py が書く前に当てる（作りなおしても消えない）。
+名前で指すので、作りなおして名前が変わると当てられないものが出る。save_fields.py と moves.py が「当てられなかった」の一覧を出すので、そのときは表を直す。
 
 順番：(a) 3 設定（typed、typed_topic2、typed_use2。どれも前提の線を強さ×種類で重み付け、α=1.0）の合意の分け方 → (b) 3 設定の合意（cross.py、out/fields.json）→
-(c) 2 段目（level2.py）→ (d) 3D の配置（place3d.py、out/X_3d.npy）→ (e) out/fields.yaml を書く（save_fields.py。`--write` で relations/fields.yaml も）。
+(c) 2 段目（level2.py）→ (d) 3D の配置（place3d.py、out/X_3d.npy）→ (e) 手直し（moves.py）を当てて out/fields.yaml を書く（save_fields.py。`--write` で relations/fields.yaml も）。
 名前は、旧の relations/fields.yaml の分野・細かい分野と単元の集まりの Jaccard が最大で 0.5 以上なら引き継ぎ、
 そうでない塊は name を null にして「要命名」として一覧を出す。要命名の塊は、2 つの係が別々に名前の案を出し、3 つ目の係がくらべて決め、取りまとめが読んで直す。
 

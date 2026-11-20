@@ -62,6 +62,12 @@ for n, c in enumerate(sorted(big, key=lambda c: -(final == c).sum())):
         todo.append(f'F{n + 1:02d}（{len(mem)} 単元、重なり最大 {jf:.2f}）')
     out.append({'id': f'F{n + 1:02d}', 'name': of['name'] if of else None, 'name_en': of['name_en'] if of else None, 'about': of['about'] if of else None, 'note': of.get('note') if of else None,
                 'size': len(mem), 'boundary': [ids[i] for i in np.where((final == c) & ~sure)[0]], 'subs': subs})
+# 手直し（relations/field-moves.yaml、D-198）：中身で見て明らかに違う単元と細かい分野を移す。作りなおしても手直しが消えないように、書く前に当てる
+from moves import apply as apply_moves
+moved, missed = apply_moves(out)
+print('手直し：', '、'.join(f'{k} {v}' for k, v in moved.items()) or 'なし')
+for m in missed:
+    print('  当てられなかった手直し：', m)
 head = """# 関係から見つけた分野（D-117、D-118）。地図の流れ（lanes）とは独立に、単元どうしの関係だけから見つけた塊に名前を付けたもの。
 # 作り方（2026-11-12）：関係を 4 層（前提の線は relations/needs.yaml の強さと種類で重み、代わりの前提、網羅表の同じ論題、問題が使う単元）にし、
 #   同じ論題の重みを変えた 3 つの設定それぞれで Louvain を 30 回回した合意をとり、3 設定の合意をもう一度とった（1 段目）。
@@ -71,6 +77,7 @@ head = """# 関係から見つけた分野（D-117、D-118）。地図の流れ�
 # くわしくは docs/research/relation-structure.md。地図の画面にはまだ使っていない（施主の確認のあと）。
 """
 head += "# 再作成（tools/fields/run.py）：3 設定はどれも前提の線を強さ×種類で重み付けした。名前は旧の分野との単元の重なり（Jaccard 0.5 以上）で引き継ぎ、引き継げない塊は name が null（要命名）。\n"
+head += "# 手直し：relations/field-moves.yaml（中身で見て明らかに違う単元と細かい分野を移す、D-198）を当ててある。tools/fields/moves.py。\n"
 body = head + '\n' + yaml.safe_dump({'fields': out}, allow_unicode=True, sort_keys=False, width=10000, default_flow_style=None)
 open(os.path.join(H, 'fields.yaml'), 'w', encoding='utf-8', newline='\n').write(body)
 if WRITE:
