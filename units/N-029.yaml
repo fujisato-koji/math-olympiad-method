@@ -1,6 +1,6 @@
 # N-029 互除法と 1 次不定方程式
 #
-# 書き方は N-001 の頭の注、負の数の書き方と check は N-010 の頭の注、式を選ぶ問題の check は A-010 の頭の注のとおり。段 4 なので普通の文。
+# 書き方は N-001 の頭の注、負の数の書き方と check は N-010 の頭の注、式を選ぶ問題の check は A-010 の頭の注のとおり。前の段 4 なので普通の文。
 # 前提は N-018（公約数と公倍数）と A-011（1 次方程式）。A-011 の前提をたどると A-010（文字と式）、N-027（正負の数のかけ算）、N-014（わり算）が入る。
 # 数は 100 まで（N-009 は前提のたどりにない）。互除法の数は 2 けたにする。
 #   N-014 のわり算はわる数が 1 けたなので、1 日目は大きいほうから小さいほうをひくくり返し（ひき算の互除法）で始め、
@@ -1134,7 +1134,7 @@ ri:
   - part: 離
     id: "5323f15b2e"
     kinds: [総動員, 手数, 読み取り]
-    uses: [A-012]
+    uses: [A-011]
     text: ふくろの中に、赤玉（8 点）、青玉（5 点）、白玉（1 点）が入っています。ここから全部で 30 こ取り出したら、点数の合計は 130 点でした。どの色の玉も 1 こ以上ありました。赤玉の個数として考えられる数を、すべてたすといくつですか。
     svg: '<svg viewBox="0 0 320 180" xmlns="http://www.w3.org/2000/svg"><path d="M40 56 Q30 150 70 164 L170 164 Q210 150 200 56 Z" stroke="currentColor" stroke-width="2" fill="#c9a36b" fill-opacity=".3" stroke-linejoin="round"/><path d="M40 56 Q120 40 200 56" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="78" cy="96" r="15" stroke="currentColor" stroke-width="2" fill="#f08080" fill-opacity="0.55"/><text x="78" y="101" font-size="14" text-anchor="middle" fill="currentColor" font-weight="bold">8</text><circle cx="118" cy="86" r="15" stroke="currentColor" stroke-width="2" fill="#7fc8f8" fill-opacity="0.55"/><text x="118" y="91" font-size="14" text-anchor="middle" fill="currentColor" font-weight="bold">5</text><circle cx="160" cy="98" r="15" stroke="currentColor" stroke-width="2" fill="none"/><text x="160" y="103" font-size="14" text-anchor="middle" fill="currentColor" font-weight="bold">1</text><circle cx="96" cy="132" r="15" stroke="currentColor" stroke-width="2" fill="#7fc8f8" fill-opacity="0.55"/><text x="96" y="137" font-size="14" text-anchor="middle" fill="currentColor" font-weight="bold">5</text><circle cx="140" cy="132" r="15" stroke="currentColor" stroke-width="2" fill="#f08080" fill-opacity="0.55"/><text x="140" y="137" font-size="14" text-anchor="middle" fill="currentColor" font-weight="bold">8</text><circle cx="176" cy="136" r="15" stroke="currentColor" stroke-width="2" fill="none"/><text x="176" y="141" font-size="14" text-anchor="middle" fill="currentColor" font-weight="bold">1</text><text x="214" y="70" font-size="14" text-anchor="start" fill="currentColor">赤 8 点</text><text x="214" y="92" font-size="14" text-anchor="start" fill="currentColor">青 5 点</text><text x="214" y="114" font-size="14" text-anchor="start" fill="currentColor">白 1 点</text><text x="214" y="144" font-size="14" text-anchor="start" fill="currentColor">30 こで</text><text x="214" y="164" font-size="15" text-anchor="start" fill="currentColor" font-weight="bold">130 点</text></svg>'
     answer: 24

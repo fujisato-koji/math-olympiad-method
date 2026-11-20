@@ -26,7 +26,7 @@
 # check：角と長さと面積の式。外心と垂心の位置を選ぶ問題は、いちばん大きい角と 90 をくらべる式。
 #   五心の名前や性質を選ぶ問題は約束ごとなので check を付けない。
 # 前提の更新（2026-11-08）：作ったあとで地図の前提が増え、上の注で「前提にない」とした G-022 は、いまは前提のたどりに入っている。問題はそのときの前提の範囲で作ってあり、この道具を使う問題は足してよい。
-# ただし腕だめしの最難関（正方形をつけた三角形と交点の比）だけは例外で、uses に G-015、G-019、G-020、G-050、A-011、A-012 を挙げて、90° の回転、三平方の定理、相似、座標と、1 次方程式・連立方程式を使う。
+# ただし腕だめしの最難関（正方形をつけた三角形と交点の比）だけは例外で、uses に G-015、G-019、G-020、G-050、A-011 を挙げて、90° の回転、三平方の定理、相似、座標と、1 次方程式を使う（2 本目の道の連立は代入で 1 つの文字にできる。連立方程式の A-012 は水準 4 なので uses から外した、D-224）。
 # ことば（最難関）：x 軸。
 
 id: G-028
@@ -1391,13 +1391,7 @@ ri:
     - 最難関
     level: 10
     time: 1500
-    uses:
-    - G-015
-    - G-019
-    - G-020
-    - G-050
-    - A-011
-    - A-012
+    uses: [G-015, G-019, G-020, G-050, A-011]
     text: '三角形 ABC は AB = 14 cm、BC = 15 cm、CA = 13 cm で、角はすべて鋭角です。辺 CA、CB をそれぞれ 1 辺とする正方形 CAPQ、CBRS を、どちらも三角形 ABC の外がわに作ります（頂点は文字の順にならびます）。線分 BP と線分 AR が交わる点を X、直線 CX と直線 AB が交わる点を H とします。CX : XH を、できるだけ小さい整数の比で答えなさい。'
     svg: <svg viewBox="0 0 240 150" xmlns="http://www.w3.org/2000/svg"><polygon points="84.4,130.0 157.2,130.0 110.4,67.6" stroke="currentColor" stroke-width="2" fill="none"/><polygon points="110.4,67.6 84.4,130.0 22.0,104.0 48.0,41.6" stroke="currentColor" stroke-width="1.5" fill="none"/><polygon points="110.4,67.6 157.2,130.0 219.6,83.2 172.8,20.8" stroke="currentColor" stroke-width="1.5" fill="none"/><line x1="157.2" y1="130.0" x2="22.0" y2="104.0" stroke="currentColor" stroke-width="1.5" fill="none"/><line x1="84.4" y1="130.0" x2="219.6" y2="83.2" stroke="currentColor" stroke-width="1.5" fill="none"/><text x="75.4" y="144.0" font-size="12" text-anchor="middle">A</text><text x="166.2" y="144.0" font-size="12" text-anchor="middle">B</text><text x="110.4" y="60.6" font-size="12" text-anchor="middle">C</text><text x="12.0" y="108.0" font-size="12" text-anchor="middle">P</text><text x="39.0" y="38.6" font-size="12" text-anchor="middle">Q</text><text x="228.6" y="87.2" font-size="12" text-anchor="middle">R</text><text x="181.8" y="17.8" font-size="12" text-anchor="middle">S</text></svg>
     choices:

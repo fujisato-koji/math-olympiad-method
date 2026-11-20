@@ -1,6 +1,6 @@
 # P-005 平面内の運動と剛体のつり合い（曲線運動の速度と加速度、放物運動、力のモーメント、重心）
 #
-# 段 5・水準 3・8 日。前提は P-001、P-003、D-006、E-174。曲線運動の速度と加速度、水平投射、斜方投射、力のモーメント、重心、剛体のつり合い。
+# 水準 3・8 日。前提は P-001、P-003、D-006、E-174。曲線運動の速度と加速度、水平投射、斜方投射、力のモーメント、重心、剛体のつり合い。
 # 重力加速度は 10 m/s²（整数で計算できるように）。単位は m、s、N、N·m、m/s、m/s²。
 id: P-005
 days:
@@ -771,7 +771,7 @@ days:
 ri:
   - part: 離
     kinds: [総動員, 道筋]
-    uses: [E-174, P-001]
+    uses: [E-174]
     text: 長さ 24 cm で同じ重さの積み木が 3 つある。1 つずつ、下の積み木の上に、右へずらして重ねる。いちばん上の積み木の右のはしに、積み木 1 つと同じ重さのおもりをぶらさげる。いちばん下の積み木は台の上にあり、台の右のはしから右へ出してよい。くずれないようにして、できるだけ右へ出すとき、おもりは台の右のはしから右へ最大で何 cm のところにありますか。
     svg: '<svg viewBox="0 0 320 200" xmlns="http://www.w3.org/2000/svg"><rect x="10" y="150" width="110" height="24" fill="#c8ccd6" fill-opacity="0.5" stroke="currentColor" stroke-width="2"/><rect x="36" y="126" width="96" height="24" fill="#f3c969" fill-opacity="0.5" stroke="currentColor" stroke-width="2"/><rect x="52" y="102" width="96" height="24" fill="#f3c969" fill-opacity="0.5" stroke="currentColor" stroke-width="2"/><rect x="76" y="78" width="96" height="24" fill="#f3c969" fill-opacity="0.5" stroke="currentColor" stroke-width="2"/><line x1="172" y1="102" x2="172" y2="125" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="172" cy="133" r="8" fill="#7fc8f8" fill-opacity="0.5" stroke="currentColor" stroke-width="2"/><line x1="120" y1="46" x2="120" y2="150" fill="none" stroke="currentColor" stroke-width="1" stroke-dasharray="4 4"/><text x="120" y="36" font-size="14" text-anchor="middle" fill="currentColor">台のはし</text><line x1="127" y1="66" x2="165" y2="66" fill="none" stroke="currentColor" stroke-width="2"/><polygon points="172,66 165,69.5 165,62.5" fill="currentColor"/><polygon points="120,66 127,62.5 127,69.5" fill="currentColor"/><text x="146" y="60" font-size="13" text-anchor="middle" fill="currentColor">？ cm</text><line x1="43" y1="190" x2="125" y2="190" fill="none" stroke="currentColor" stroke-width="2"/><polygon points="132,190 125,193.5 125,186.5" fill="currentColor"/><polygon points="36,190 43,186.5 43,193.5" fill="currentColor"/><text x="84" y="184" font-size="13" text-anchor="middle" fill="currentColor">24 cm</text></svg>'
     choices: [11, 12, 13, 14]
@@ -788,7 +788,7 @@ ri:
     note: S16 後ろから考える、S03 重心のつり合い。種なし、構造の表から組み立てた。積み木の積み上げ（ずらし）の型に、おもりを足して重さの比を変え、ずれの長さを 6、4、3 と不ぞろいにした。ずれの長さが段ごとに変わることに気づき、上から順に重さをふやして考える 3 つの手順が要る。
   - part: 離
     kinds: [数, 総動員]
-    uses: [P-001, P-003]
+    uses: [G-027]
     text: 高さ 80 m のがけの上から、球 A を水平に右へ 20 m/s で投げた。A を投げた 1 秒後に、同じ場所から球 B を水平に左へ 30 m/s で投げた。2 つの球が地面に着く前に、2 つの速度の向きが直角になった。それは A を投げてから何秒後ですか。空気の ていこうは考えない。重力加速度は 10 m/s² とする。
     svg: '<svg viewBox="0 0 320 200" xmlns="http://www.w3.org/2000/svg"><rect x="130" y="70" width="40" height="110" fill="#c8ccd6" fill-opacity="0.5" stroke="currentColor" stroke-width="2"/><line x1="10" y1="180" x2="310" y2="180" fill="none" stroke="currentColor" stroke-width="2"/><line x1="170" y1="70" x2="225" y2="70" fill="none" stroke="currentColor" stroke-width="2"/><polygon points="235,70 225,75 225,65" fill="currentColor"/><text x="270" y="66" font-size="14" text-anchor="middle" fill="currentColor">A 20 m/s</text><line x1="130" y1="70" x2="75" y2="70" fill="none" stroke="currentColor" stroke-width="2"/><polygon points="65,70 75,65 75,75" fill="currentColor"/><text x="45" y="62" font-size="14" text-anchor="middle" fill="currentColor">B 30 m/s</text><text x="150" y="130" font-size="14" text-anchor="middle" fill="currentColor">80 m</text><text x="150" y="56" font-size="14" text-anchor="middle" fill="currentColor">B は 1 秒おくれ</text></svg>'
     choices: [2, 3, 4, 5]
@@ -805,7 +805,7 @@ ri:
     note: S25 ベクトルと直角、S23 相似。種なし。1 秒おくれの 2 球の速度が直角になる時間を求める。両方の下向きの速さの積が横の速さの積と等しいという関係を見つけるまでが山。A の着地は 4 秒後なので、3 秒後が答えに合う。
   - part: 離
     kinds: [総動員, 読み取り]
-    uses: [P-003, E-174]
+    uses: [E-174]
     text: 長さ 5 m のはしごを、つるつるのかべに立てかけた。はしごの上のはしは、ゆかから 4 m の高さでかべにふれている。はしごの重さは 100 N で、重さの力は真ん中にはたらく。重さ 500 N の人が、はしごを下から登る。ゆかがはしごを直角におす力の 0.5 倍までは、ゆかの まさつ力がはたらく。はしごがすべりださないで、人が登れる最高の位置は、ゆかから何 cm の高さですか。
     svg: '<svg viewBox="0 0 320 200" xmlns="http://www.w3.org/2000/svg"><line x1="10" y1="170" x2="310" y2="170" fill="none" stroke="currentColor" stroke-width="2"/><rect x="230" y="20" width="12" height="150" fill="#c8ccd6" fill-opacity="0.5" stroke="currentColor" stroke-width="2"/><line x1="140" y1="170" x2="230" y2="50" fill="none" stroke="currentColor" stroke-width="4"/><circle cx="171" cy="130" r="7" fill="currentColor"/><text x="150" y="118" font-size="14" text-anchor="middle" fill="currentColor">人</text><text x="185" y="160" font-size="14" text-anchor="middle" fill="currentColor">3 m</text><text x="255" y="120" font-size="14" text-anchor="middle" fill="currentColor">4 m</text><text x="110" y="60" font-size="14" text-anchor="middle" fill="currentColor">100 N</text><text x="110" y="78" font-size="14" text-anchor="middle" fill="currentColor">はしご</text><rect x="67" y="117" width="26" height="26" rx="6" fill="#c8ccd6" fill-opacity="0.5" stroke="currentColor" stroke-width="2"/><text x="80" y="135" font-size="16" text-anchor="middle" fill="currentColor">？</text><line x1="150" y1="110" x2="150" y2="170" fill="none" stroke="currentColor" stroke-width="1" stroke-dasharray="4 4"/></svg>'
     choices: [240, 260, 280, 300]

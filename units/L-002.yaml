@@ -1,6 +1,6 @@
 # L-002 推理パズル
 #
-# 段 1・水準 1・5 日。ヒントから 1 つに きめる（だれの ものか）、ひょうに まると ばつを かいて せいりする、じゅんばんの すいり（だれが まえか うしろか）、L-001 と まぜる、かくにん。
+# 水準 2・5 日。ヒントから 1 つに きめる（だれの ものか）、ひょうに まると ばつを かいて せいりする、じゅんばんの すいり（だれが まえか うしろか）、L-001 と まぜる、かくにん。
 # 書き方は N-001 の頭の注のとおり。子の画面には text、svg、choices、ヒントだけを出す。answer、check、paths、explain、note は保護者用。
 # ヒントは答えを書かず、見方・調べ方だけを示す。図の付いたヒントは、答えの手前までを絵で見せる。
 # 人の代わりに どうぶつ（🐶 いぬ、🐱 ねこ、🐰 うさぎ、🐻 くま、🐵 さる、🐷 ぶた、🐸 かえる、🐭 ねずみ）を使う。
@@ -18,6 +18,7 @@
 # 順番の check は、まえからの並びを permutations で作り、p.index(どうぶつ) で位置を比べる。
 # くり返しと かずの ならび（L-001）の check は、もとの 文字の図を lambda の fig に わたして 計算する（図は svg に した）。
 # 4 日目の「L-001 と混ぜる」は、ぼうしの色が くり返す列で、順番から だれの色かを決める問題にした。
+# 腕だめしの付け直し（D-224）：水準の付け直しで、G-001（形のならびの推理）、G-006（形のカードの推理）の腕だめしをこの単元に移した。元の単元を uses に挙げる。
 
 id: L-002
 days:
@@ -874,3 +875,49 @@ ri:
       - [いちばん まえは いぬで 📕, まんなかが ねこだと うしろの うさぎが ⚽ に なって あわない, まんなかは うさぎで 🎈、ねこは うしろ, ⚽]
       - [もちものの ヒントから、まえは 📕、まんなかは 🎈、うしろは ⚽, いぬが まえ。うさぎは ⚽ では ない ので うしろでは ない, ねこが うしろで ⚽]
     note: ヒントが 5 つ あり、ならぶ じゅんと もちものの 2 つの はなしが まざる。まず ヒントを「じゅんばん」と「もちもの」に わけて ひろいだす。ねこは まえで なく、うさぎは いぬより うしろ なので、いちばん まえは いぬ。のこりの 2 とおりを ためす。
+  - part: 離
+    id: "bbc7cbe7f2"
+    kinds: [総動員, 読み取り]
+    uses: [G-001]
+    text: |-
+      さんかく、あおい しかく、きいろい しかく、まるを、うえに 2 つ、したに 2 つ ならべます。
+      ① さんかくの すぐ みぎに まるが ある。
+      ② まるは したの ならびに ある。
+      ③ さんかくの うえに きいろい しかくは ない。
+      さんかくの うえに ある かたちは どれですか。
+    svg: '<svg viewBox="0 0 320 200" xmlns="http://www.w3.org/2000/svg"><polygon points="60,24.1 39.6,57.3 80.4,57.3" fill="#f08080" fill-opacity="0.6" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><polygon points="108,25 142,25 142,59 108,59" fill="#7fc8f8" fill-opacity="0.6" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><polygon points="173,25 207,25 207,59 173,59" fill="#f3c969" fill-opacity="0.6" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><circle cx="255" cy="42" r="18.4" fill="#f08080" fill-opacity="0.6" stroke="currentColor" stroke-width="2"/><text x="125" y="80" font-size="13" text-anchor="middle" fill="currentColor">あお</text><text x="190" y="80" font-size="13" text-anchor="middle" fill="currentColor">きいろ</text><rect x="120" y="96" width="50" height="50" rx="4" fill="none" stroke="currentColor" stroke-width="2"/><rect x="170" y="96" width="50" height="50" rx="4" fill="none" stroke="currentColor" stroke-width="2"/><rect x="120" y="146" width="50" height="50" rx="4" fill="none" stroke="currentColor" stroke-width="2"/><rect x="170" y="146" width="50" height="50" rx="4" fill="none" stroke="currentColor" stroke-width="2"/><text x="108" y="126" font-size="14" text-anchor="end" fill="currentColor">うえ</text><text x="108" y="176" font-size="14" text-anchor="end" fill="currentColor">した</text></svg>'
+    choices: [あおい しかく, きいろい しかく, まる]
+    answer: あおい しかく
+    check: "(lambda s: {'Sb': 'あおい しかく', 'Sy': 'きいろい しかく', 'Cr': 'まる'}[s.pop()] if len(s) == 1 else 'きまらない')({p[p.index('Tr') - 2] for p in itertools.permutations(['Tr', 'Sb', 'Cr', 'Sy']) if p.index('Tr') in (0, 2) and p.index('Cr') == p.index('Tr') + 1 and p.index('Cr') in (2, 3) and not (p.index('Tr') >= 2 and p[p.index('Tr') - 2] == 'Sy')})"
+    hints:
+      - ① と ② を いっしょに つかうと、さんかくと まるの ばしょが きまるよ。
+      - text: まるは したの ならびの みぎに きまるよ。さんかくは どこに おけるかな。
+        svg: '<svg viewBox="0 0 320 200" xmlns="http://www.w3.org/2000/svg"><polygon points="60,24.1 39.6,57.3 80.4,57.3" fill="#f08080" fill-opacity="0.6" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><polygon points="108,25 142,25 142,59 108,59" fill="#7fc8f8" fill-opacity="0.6" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><polygon points="173,25 207,25 207,59 173,59" fill="#f3c969" fill-opacity="0.6" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><circle cx="255" cy="42" r="18.4" fill="#f08080" fill-opacity="0.6" stroke="currentColor" stroke-width="2"/><text x="125" y="80" font-size="13" text-anchor="middle" fill="currentColor">あお</text><text x="190" y="80" font-size="13" text-anchor="middle" fill="currentColor">きいろ</text><rect x="120" y="96" width="50" height="50" rx="4" fill="none" stroke="currentColor" stroke-width="2"/><rect x="170" y="96" width="50" height="50" rx="4" fill="none" stroke="currentColor" stroke-width="2"/><rect x="120" y="146" width="50" height="50" rx="4" fill="none" stroke="currentColor" stroke-width="2"/><rect x="170" y="146" width="50" height="50" rx="4" fill="none" stroke="currentColor" stroke-width="2"/><text x="108" y="126" font-size="14" text-anchor="end" fill="currentColor">うえ</text><text x="108" y="176" font-size="14" text-anchor="end" fill="currentColor">した</text><circle cx="195" cy="171" r="17.3" fill="#f08080" fill-opacity="0.6" stroke="currentColor" stroke-width="2"/></svg>'
+      - のこりの 2 つの ばしょに、③ を つかおう。
+    paths:
+      - [① と ② で したの ならびは さんかく・まる, ③ で さんかくの うえは きいろい しかくでは ない, さんかくの うえは あおい しかく]
+      - [② で まるは したの ならび, ① で さんかくは まるの ひだり, うえに のこる 2 つの うち、③ で きいろでは ない ほう, あおい しかく]
+    note: ヒントを 1 つずつ よむ だけでは きまらず、① と ② を あわせて さきに ばしょを きめるのが だいじ（L-002 の すいり）。「すぐ みぎ」は おなじ ならびの となり。かみに かたちを かいて ならべて たしかめて よい。
+  - part: 離
+    id: "d25918fcdd"
+    kinds: [総動員, 読み取り]
+    uses: [G-006]
+    text: |-
+      🐶 🐱 🐰 が、直角三角形、長方形、正方形の カードを 1 まいずつ もって います。
+      ① 🐶 の かたちには、直角の かどが 2 つ いじょう ある。
+      ② 🐱 の かたちは、へんが 4 つ では ない。
+      ③ 🐰 の かたちは、4 つの へんの ながさが みんな おなじ では ない。
+      🐶 の カードの かたちは どれですか。
+    svg: '<svg viewBox="0 0 320 200" xmlns="http://www.w3.org/2000/svg"><rect x="16" y="26" width="88" height="120" rx="8" fill="#ffffff" fill-opacity="0.08" stroke="currentColor" stroke-width="2"/><rect x="116" y="26" width="88" height="120" rx="8" fill="#ffffff" fill-opacity="0.08" stroke="currentColor" stroke-width="2"/><rect x="216" y="26" width="88" height="120" rx="8" fill="#ffffff" fill-opacity="0.08" stroke="currentColor" stroke-width="2"/><polygon points="30,116 90,116 30,50" fill="#7fc8f8" fill-opacity="0.5" stroke="currentColor" stroke-width="2.5" stroke-linejoin="round"/><path d="M30,106 L40,106 L40,116" fill="none" stroke="#e8590c" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><rect x="124" y="64" width="72" height="46" fill="#7bc96f" fill-opacity="0.5" stroke="currentColor" stroke-width="2.5"/><rect x="230" y="56" width="60" height="60" fill="#f3c969" fill-opacity="0.6" stroke="currentColor" stroke-width="2.5"/><text x="60" y="172" font-size="14" text-anchor="middle" fill="currentColor">直角三角形</text><text x="160" y="172" font-size="14" text-anchor="middle" fill="currentColor">長方形</text><text x="260" y="172" font-size="14" text-anchor="middle" fill="currentColor">正方形</text></svg>'
+    choices: [直角三角形, 長方形, 正方形]
+    answer: 正方形
+    check: "(lambda R, S, E: (lambda s: s.pop() if len(s) == 1 else 'きまらない')({p[0] for p in itertools.permutations(('直角三角形', '長方形', '正方形')) if R[p[0]] >= 2 and S[p[1]] != 4 and S[p[2]] == 4 and not E[p[2]]}))({'直角三角形': 1, '長方形': 4, '正方形': 4}, {'直角三角形': 3, '長方形': 4, '正方形': 4}, {'直角三角形': False, '長方形': False, '正方形': True})"
+    hints:
+      - まず ② から、🐱 の カードが きまるよ。
+      - text: ひょうに かいて、あわない ところに ✕ を つけて いこう。② で わかる ところだけ つけたよ。
+        svg: '<svg viewBox="0 0 320 200" xmlns="http://www.w3.org/2000/svg"><polygon points="113,42 149,42 113,12" fill="#7fc8f8" fill-opacity="0.5" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><rect x="179" y="16" width="44" height="26" fill="#7bc96f" fill-opacity="0.5" stroke="currentColor" stroke-width="2"/><rect x="256" y="12" width="30" height="30" fill="#f3c969" fill-opacity="0.6" stroke="currentColor" stroke-width="2"/><text x="84" y="79" font-size="15" text-anchor="end" fill="currentColor">いぬ</text><text x="84" y="121" font-size="15" text-anchor="end" fill="currentColor">ねこ</text><text x="84" y="163" font-size="15" text-anchor="end" fill="currentColor">うさぎ</text><line x1="96" y1="52" x2="306" y2="52" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/><line x1="96" y1="94" x2="306" y2="94" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/><line x1="96" y1="136" x2="306" y2="136" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/><line x1="96" y1="178" x2="306" y2="178" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/><line x1="96" y1="52" x2="96" y2="178" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/><line x1="166" y1="52" x2="166" y2="178" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/><line x1="236" y1="52" x2="236" y2="178" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/><line x1="306" y1="52" x2="306" y2="178" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/><line x1="191" y1="105" x2="211" y2="125" stroke="#e8590c" stroke-width="3.5" stroke-linecap="round"/><line x1="191" y1="125" x2="211" y2="105" stroke="#e8590c" stroke-width="3.5" stroke-linecap="round"/><line x1="261" y1="105" x2="281" y2="125" stroke="#e8590c" stroke-width="3.5" stroke-linecap="round"/><line x1="261" y1="125" x2="281" y2="105" stroke="#e8590c" stroke-width="3.5" stroke-linecap="round"/></svg>'
+      - つぎは ③ で 🐰 を きめて、のこりの 1 まいが ① に あうか たしかめよう。
+    paths:
+      - [② で 🐱 は 直角三角形, ③ で 🐰 は 正方形 では ない, 🐰 は 長方形, 🐶 は 正方形]
+      - [① で 🐶 は 長方形 か 正方形, ② で 🐱 は 直角三角形, ③ で 🐰 は 正方形では ないので 長方形, のこる 🐶 は 正方形]
+    note: ① だけを 見て「長方形」と こたえやすい。正方形も かどが みんな 直角なので ① に あう（正方形は 長方形の なかま）。きまる ヒントから 先に つかうのが すいり（L-002）の こつ。

@@ -1,6 +1,6 @@
 # R-006 行列群、結晶群と空間群
 #
-# 段 8・水準 4・12 日。前提は R-001（群の定義と例）と M-004（行列式）。
+# 水準 3・12 日。前提は R-001（群の定義と例）と M-004（行列式）。
 # 行列群（GL、SL、O、SO、U、SU、ローレンツ群）、結晶群と点群、空間群、ビーベルバッハの定理、
 # 表現と指標の入口、群の作用と対称性を扱う。
 # 答えは子の画面に出さない（保護者の表示だけ）。ヒントは答えを書かず、手順だけを示す。
@@ -744,7 +744,7 @@ days:
 ri:
   - part: 離
     kinds: [数]
-    uses: [R-001, M-004]
+    uses: [M-004]
     text: 図の 2 本の直線（なす角 25°）を、それぞれ鏡とする鏡映を、s1、s2 とします。s1 のあとに s2 をかけてできる変換は、どれですか。
     svg: '<svg viewBox="0 0 320 200" xmlns="http://www.w3.org/2000/svg"><line x1="20" y1="110" x2="220" y2="110" fill="none" stroke="#f08080" stroke-width="3"/><line x1="29.4" y1="152.3" x2="210.6" y2="67.7" fill="none" stroke="#7bc96f" stroke-width="3"/><path d="M170 110 A50 50 0 0 0 165.3 88.9" fill="none" stroke="currentColor" stroke-width="1.5"/><text x="186" y="100" font-size="14" text-anchor="middle" fill="currentColor">25°</text><text x="224" y="128" font-size="14" text-anchor="start" fill="currentColor">鏡 1</text><text x="216.6" y="63.7" font-size="14" text-anchor="start" fill="currentColor">鏡 2</text><text x="262" y="150" font-size="13" text-anchor="middle" fill="currentColor">s1：鏡 1 の鏡映</text><text x="262" y="172" font-size="13" text-anchor="middle" fill="currentColor">s2：鏡 2 の鏡映</text></svg>'
     choices: ["50° の回転", "25° の回転", "鏡映", "何もしない変換"]
@@ -761,7 +761,7 @@ ri:
     note: 鏡映 2 つの積は、なす角の 2 倍の回転。O(2) の det=1 の部分が SO(2)。
   - part: 離
     kinds: [数]
-    uses: [R-001, M-004]
+    uses: [M-004]
     text: 立方体の回転群 O（24 個の回転）が、立方体の 8 つの頂点に作用します。図の赤い頂点を動かさない回転は、何個ありますか。
     svg: '<svg viewBox="0 0 320 200" xmlns="http://www.w3.org/2000/svg"><polygon points="71.8,168.4 71.8,88 30.5,56.4 30.5,136.8" fill="#c8ccd6" fill-opacity="0.3"/><polygon points="71.8,168.4 71.8,88 149.5,71.2 149.5,151.6" fill="#c8ccd6" fill-opacity="0.3"/><polygon points="71.8,88 30.5,56.4 108.2,39.6 149.5,71.2" fill="#c8ccd6" fill-opacity="0.3"/><line x1="71.8" y1="168.4" x2="71.8" y2="88" fill="none" stroke="currentColor" stroke-width="2"/><line x1="71.8" y1="88" x2="30.5" y2="56.4" fill="none" stroke="currentColor" stroke-width="2"/><line x1="30.5" y1="136.8" x2="30.5" y2="56.4" fill="none" stroke="currentColor" stroke-width="2"/><line x1="71.8" y1="168.4" x2="30.5" y2="136.8" fill="none" stroke="currentColor" stroke-width="2"/><line x1="149.5" y1="151.6" x2="149.5" y2="71.2" fill="none" stroke="currentColor" stroke-width="2"/><line x1="149.5" y1="71.2" x2="108.2" y2="39.6" fill="none" stroke="currentColor" stroke-width="2"/><line x1="108.2" y1="120" x2="108.2" y2="39.6" fill="none" stroke="#c8ccd6" stroke-width="1.5" stroke-dasharray="6 4"/><line x1="149.5" y1="151.6" x2="108.2" y2="120" fill="none" stroke="#c8ccd6" stroke-width="1.5" stroke-dasharray="6 4"/><line x1="71.8" y1="88" x2="149.5" y2="71.2" fill="none" stroke="currentColor" stroke-width="2"/><line x1="71.8" y1="168.4" x2="149.5" y2="151.6" fill="none" stroke="currentColor" stroke-width="2"/><line x1="30.5" y1="56.4" x2="108.2" y2="39.6" fill="none" stroke="currentColor" stroke-width="2"/><line x1="30.5" y1="136.8" x2="108.2" y2="120" fill="none" stroke="#c8ccd6" stroke-width="1.5" stroke-dasharray="6 4"/><circle cx="71.8" cy="88" r="6" fill="#f08080"/><text x="236" y="90" font-size="15" text-anchor="middle" fill="currentColor">赤い点を</text><text x="236" y="112" font-size="15" text-anchor="middle" fill="currentColor">動かさない回転は？</text></svg>'
     choices: [1, 2, 3, 4]
@@ -778,7 +778,7 @@ ri:
     note: 軌道の大きさ 8 × 安定化群の要素の数 3 = 24。安定化群は、頂点を通る 3 回軸のまわりの回転。
   - part: 離
     kinds: [数]
-    uses: [R-001, M-004]
+    uses: [M-004]
     text: ブーストの行列は (cosh φ sinh φ；sinh φ cosh φ) と書け、φ がブーストの大きさを表します。図のように、点 P0 を φ = 1 のブーストで P1 に、さらに φ = 1 のブーストで P2 に動かしました。P0 から P2 へ一度に動かす、1 つのブーストの φ は、いくつですか。
     svg: '<svg viewBox="0 0 320 200" xmlns="http://www.w3.org/2000/svg"><line x1="64" y1="184" x2="244.2" y2="184" fill="none" stroke="currentColor" stroke-width="1.5"/><polygon points="251.2,184 244.2,187.5 244.2,180.5" fill="currentColor"/><line x1="100" y1="184" x2="100" y2="39.8" fill="none" stroke="currentColor" stroke-width="1.5"/><polygon points="100,32.8 103.5,39.8 96.5,39.8" fill="currentColor"/><line x1="100" y1="184" x2="197.2" y2="86.8" fill="none" stroke="#c8ccd6" stroke-width="1.5" stroke-dasharray="6 4"/><line x1="100" y1="184" x2="2.8" y2="86.8" fill="none" stroke="#c8ccd6" stroke-width="1.5" stroke-dasharray="6 4"/><text x="261.2" y="189" font-size="15" text-anchor="middle" fill="currentColor">x</text><text x="114" y="38.8" font-size="15" text-anchor="start" fill="currentColor">ct</text><polyline points="85.2,145.1 89.3,146.4 93.2,147.4 97.1,147.9 100.9,148 104.7,147.7 108.6,147 112.6,145.9 116.8,144.3 121.1,142.3 125.6,139.8 130.5,136.8 135.7,133.3 141.3,129.2 147.3,124.5 153.9,119.2 161.1,113 169,106.1 177.7,98.3 187.3,89.6 197.8,79.8 209.5,68.8 222.4,56.5 236.6,42.7 252.4,27.4" fill="none" stroke="currentColor" stroke-width="1.5"/><polyline points="100,148 101.5,148 103,147.9 104.5,147.7 106,147.5 107.6,147.2 109.1,146.9 110.6,146.5 112.2,146 113.8,145.4 115.4,144.8 117.1,144.2 118.8,143.4 120.5,142.6 122.2,141.7 124,140.7 125.8,139.7 127.7,138.6 129.6,137.4 131.6,136.1 133.6,134.8 135.7,133.3 137.8,131.8 140,130.2 142.3,128.4" fill="none" stroke="#f08080" stroke-width="3"/><polygon points="142.3,128.4 137.3,138.4 131.3,130.4" fill="#f08080"/><polyline points="142.3,128.4 144.7,126.6 147.1,124.7 149.6,122.7 152.2,120.6 154.9,118.4 157.7,116 160.6,113.6 163.5,111 166.6,108.3 169.9,105.4 173.2,102.4 176.7,99.3 180.3,96 184,92.6 187.9,89 191.9,85.3 196.1,81.4 200.5,77.3 205,73 209.7,68.5 214.6,63.9 219.7,59 225,53.9 230.6,48.6" fill="none" stroke="#7bc96f" stroke-width="3"/><polygon points="230.6,48.6 226.8,59.1 219.9,51.9" fill="#7bc96f"/><circle cx="100" cy="148" r="5" fill="currentColor"/><text x="86" y="152" font-size="14" text-anchor="end" fill="currentColor">P0</text><circle cx="142.3" cy="128.4" r="5" fill="currentColor"/><text x="154.3" y="144.4" font-size="14" text-anchor="start" fill="currentColor">P1</text><circle cx="230.6" cy="48.6" r="5" fill="currentColor"/><text x="242.6" y="64.6" font-size="14" text-anchor="start" fill="currentColor">P2</text><rect x="214" y="119" width="13" height="13" fill="#f08080" fill-opacity="0.9" stroke="currentColor" stroke-width="1"/><text x="234" y="130" font-size="14" text-anchor="start" fill="currentColor">φ = 1</text><rect x="214" y="145" width="13" height="13" fill="#7bc96f" fill-opacity="0.9" stroke="currentColor" stroke-width="1"/><text x="234" y="156" font-size="14" text-anchor="start" fill="currentColor">φ = 1</text></svg>'
     choices: [1, 2, 3, 4]
