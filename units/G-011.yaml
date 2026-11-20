@@ -28,13 +28,13 @@ days:
       - part: 見本
         text: 1 辺が 1 cm の立方体を、すき間なく積んで直方体を作りました。この直方体の大きさを考えよう。
         svg: '<svg viewBox="0 0 240 140" xmlns="http://www.w3.org/2000/svg"><polygon points="54.1,115.3 156.1,115.3 156.1,47.3 54.1,47.3" stroke="currentColor" stroke-width="0" fill="#f3c969" fill-opacity=".35"/><polygon points="156.1,115.3 156.1,47.3 185.9,24.7 185.9,92.7" stroke="currentColor" stroke-width="0" fill="#f3c969" fill-opacity=".35"/><polygon points="156.1,47.3 54.1,47.3 83.9,24.7 185.9,24.7" stroke="currentColor" stroke-width="0" fill="#f3c969" fill-opacity=".35"/><line x1="88.1" y1="115.3" x2="88.1" y2="81.3" stroke="currentColor" stroke-width="0.8" fill="none"/><line x1="88.1" y1="81.3" x2="88.1" y2="47.3" stroke="currentColor" stroke-width="0.8" fill="none"/><line x1="122.1" y1="115.3" x2="122.1" y2="81.3" stroke="currentColor" stroke-width="0.8" fill="none"/><line x1="122.1" y1="81.3" x2="122.1" y2="47.3" stroke="currentColor" stroke-width="0.8" fill="none"/><line x1="54.1" y1="81.3" x2="88.1" y2="81.3" stroke="currentColor" stroke-width="0.8" fill="none"/><line x1="88.1" y1="81.3" x2="122.1" y2="81.3" stroke="currentColor" stroke-width="0.8" fill="none"/><line x1="122.1" y1="81.3" x2="156.1" y2="81.3" stroke="currentColor" stroke-width="0.8" fill="none"/><line x1="156.1" y1="81.3" x2="185.9" y2="58.7" stroke="currentColor" stroke-width="0.8" fill="none"/><line x1="171" y1="104" x2="171" y2="36" stroke="currentColor" stroke-width="0.8" fill="none"/><line x1="122.1" y1="47.3" x2="151.9" y2="24.7" stroke="currentColor" stroke-width="0.8" fill="none"/><line x1="88.1" y1="47.3" x2="117.9" y2="24.7" stroke="currentColor" stroke-width="0.8" fill="none"/><line x1="171" y1="36" x2="69" y2="36" stroke="currentColor" stroke-width="0.8" fill="none"/><line x1="54.1" y1="115.3" x2="156.1" y2="115.3" stroke="currentColor" stroke-width="2" fill="none"/><line x1="156.1" y1="115.3" x2="156.1" y2="47.3" stroke="currentColor" stroke-width="2" fill="none"/><line x1="185.9" y1="92.7" x2="185.9" y2="24.7" stroke="currentColor" stroke-width="2" fill="none"/><line x1="156.1" y1="115.3" x2="185.9" y2="92.7" stroke="currentColor" stroke-width="2" fill="none"/><line x1="156.1" y1="47.3" x2="54.1" y2="47.3" stroke="currentColor" stroke-width="2" fill="none"/><line x1="185.9" y1="24.7" x2="83.9" y2="24.7" stroke="currentColor" stroke-width="2" fill="none"/><line x1="156.1" y1="47.3" x2="185.9" y2="24.7" stroke="currentColor" stroke-width="2" fill="none"/><line x1="54.1" y1="47.3" x2="54.1" y2="115.3" stroke="currentColor" stroke-width="2" fill="none"/><line x1="54.1" y1="47.3" x2="83.9" y2="24.7" stroke="currentColor" stroke-width="2" fill="none"/></svg>'
-        explain: もののかさ（大きさ）を体積といいます。1 辺が 1 cm の立方体の体積を 1 cm³（1 立方センチメートル）といいます。この直方体は、1 だん目に横 3 こ、おくに 2 列で 3 × 2 = 6 こ。それが 2 だんあるので 6 × 2 = 12 こ。体積は 12 cm³ です。1 だんのこ数は たて × 横、だんの数は高さなので、直方体の体積 = たて × 横 × 高さ、立方体の体積 = 1 辺 × 1 辺 × 1 辺 で求められます（わけは 4 日目）。
+        explain: もののかさ（大きさ）を体積といいます。1 辺が 1 cm の立方体の体積を 1 cm³（1 立方センチメートル）といいます。この直方体は、1 だん目に横 3 こ、おくに 2 列で 3 × 2 = 6 こ。それが 2 だんあるので 6 × 2 = 12 こ。体積は 12 cm³ です。1 だんのこ数はたて × 横、だんの数は高さなので、直方体の体積 = たて × 横 × 高さ、立方体の体積 = 1 辺 × 1 辺 × 1 辺で求められます（わけは 4 日目）。
       - part: 思い出す
         text: たて 6 cm、横 8 cm の長方形の面積は何 cm² ですか。
         answer: 48
         check: "6 * 8"
         hints:
-          - 長方形の面積は、たて × 横 だね。
+          - 長方形の面積は、たて × 横だね。
           - 6 のだんの九九を思い出そう。
           - 単位は cm² だよ。
         paths:
@@ -67,9 +67,9 @@ days:
         answer: 30
         check: "3 * 5 * 2"
         hints:
-          - 直方体の体積は、たて × 横 × 高さ だね。
-          - たて × 横 を先に計算しよう。
-          - その答え × 高さ だよ。
+          - 直方体の体積は、たて × 横 × 高さだね。
+          - たて × 横を先に計算しよう。
+          - その答え × 高さだよ。
         paths:
           - [3 × 5 = 15, 15 × 2 = 30, 30 cm³]
           - [5 × 2 = 10, 10 × 3 = 30]
@@ -80,7 +80,7 @@ days:
         check: "3 * 3 * 3"
         hints:
           - 立方体は、たても横も高さも同じ長さだね。
-          - 1 辺 × 1 辺 × 1 辺 で求めよう。
+          - 1 辺 × 1 辺 × 1 辺で求めよう。
           - 3 × 3 を先に計算しよう。
         paths:
           - [3 × 3 = 9, 9 × 3 = 27, 27 cm³]
@@ -115,9 +115,9 @@ days:
         answer: 40
         check: "4 * 2 * 5"
         hints:
-          - 直方体の体積は、たて × 横 × 高さ だね。
-          - たて × 横 を先に計算しよう。
-          - その答え × 高さ だよ。
+          - 直方体の体積は、たて × 横 × 高さだね。
+          - たて × 横を先に計算しよう。
+          - その答え × 高さだよ。
         paths:
           - [4 × 2 = 8, 8 × 5 = 40, 40 cm³]
       - part: 今日
@@ -126,7 +126,7 @@ days:
         check: "2 * 2 * 2"
         hints:
           - 立方体は、たても横も高さも同じ長さだね。
-          - 1 辺 × 1 辺 × 1 辺 で求めよう。
+          - 1 辺 × 1 辺 × 1 辺で求めよう。
           - 2 × 2 を先に計算しよう。
         paths:
           - [2 × 2 = 4, 4 × 2 = 8, 8 cm³]
@@ -137,15 +137,15 @@ days:
       - part: 見本
         text: 三角柱の体積を求めよう。
         svg: '<svg viewBox="0 0 240 140" xmlns="http://www.w3.org/2000/svg"><polygon points="53.4,120 139.4,120 53.4,55.6" stroke="currentColor" stroke-width="0" fill="#f3c969" fill-opacity=".35"/><polygon points="139.4,120 53.4,55.6 100.6,20 186.6,84.4" stroke="currentColor" stroke-width="0" fill="#f3c969" fill-opacity=".35"/><line x1="53.4" y1="120" x2="139.4" y2="120" stroke="currentColor" stroke-width="2" fill="none"/><line x1="100.6" y1="84.4" x2="186.6" y2="84.4" stroke="currentColor" stroke-width="1.5" fill="none" stroke-dasharray="5 4"/><line x1="53.4" y1="120" x2="100.6" y2="84.4" stroke="currentColor" stroke-width="1.5" fill="none" stroke-dasharray="5 4"/><line x1="139.4" y1="120" x2="53.4" y2="55.6" stroke="currentColor" stroke-width="2" fill="none"/><line x1="186.6" y1="84.4" x2="100.6" y2="20" stroke="currentColor" stroke-width="2" fill="none"/><line x1="139.4" y1="120" x2="186.6" y2="84.4" stroke="currentColor" stroke-width="2" fill="none"/><line x1="53.4" y1="55.6" x2="53.4" y2="120" stroke="currentColor" stroke-width="2" fill="none"/><line x1="100.6" y1="20" x2="100.6" y2="84.4" stroke="currentColor" stroke-width="1.5" fill="none" stroke-dasharray="5 4"/><line x1="53.4" y1="55.6" x2="100.6" y2="20" stroke="currentColor" stroke-width="2" fill="none"/><text x="96.4" y="137.6" font-size="13" text-anchor="middle">4 cm</text><text x="47.4" y="92.3" font-size="13" text-anchor="end">3 cm</text><text x="170" y="113.8" font-size="13" text-anchor="start">5 cm</text><polyline points="61.4,120 61.4,112 53.4,112" stroke="currentColor" stroke-width="1.5" fill="none"/></svg>'
-        explain: 同じ形の 2 つの面が向かい合い、まわりが長方形の面でかこまれた立体を角柱といいます。向かい合う 2 つの面を底面、まわりの面を側面、底面の面積を底面積、2 つの底面の間の長さを高さといいます。底面が三角形なら三角柱、四角形なら四角柱です。角柱の体積 = 底面積 × 高さ。この三角柱は、手前の直角三角形が底面で、底面積は 4 × 3 ÷ 2 = 6 cm²、高さは 5 cm なので、体積は 6 × 5 = 30 cm³ です。底面は下にあるとはかぎりません。直方体も四角柱で、たて × 横 が底面積です。
+        explain: 同じ形の 2 つの面が向かい合い、まわりが長方形の面でかこまれた立体を角柱といいます。向かい合う 2 つの面を底面、まわりの面を側面、底面の面積を底面積、2 つの底面の間の長さを高さといいます。底面が三角形なら三角柱、四角形なら四角柱です。角柱の体積 = 底面積 × 高さ。この三角柱は、手前の直角三角形が底面で、底面積は 4 × 3 ÷ 2 = 6 cm²、高さは 5 cm なので、体積は 6 × 5 = 30 cm³ です。底面は下にあるとはかぎりません。直方体も四角柱で、たて × 横が底面積です。
       - part: 思い出す
         text: たて 2 cm、横 4 cm、高さ 3 cm の直方体の体積は何 cm³ ですか。
         answer: 24
         check: "2 * 4 * 3"
         hints:
-          - 直方体の体積は、たて × 横 × 高さ だね。
-          - たて × 横 を先に計算しよう。
-          - その答え × 高さ だよ。
+          - 直方体の体積は、たて × 横 × 高さだね。
+          - たて × 横を先に計算しよう。
+          - その答え × 高さだよ。
         paths:
           - [2 × 4 = 8, 8 × 3 = 24, 24 cm³]
       - part: 思い出す
@@ -153,7 +153,7 @@ days:
         answer: 16
         check: "4 * 4"
         hints:
-          - 円の面積 = 半径 × 半径 × 円周率 だね。
+          - 円の面積 = 半径 × 半径 × 円周率だね。
           - 半径は 4 cm だよ。
           - 4 × 4 を計算しよう。
         paths:
@@ -177,7 +177,7 @@ days:
         answer: 63
         check: "9 * 7"
         hints:
-          - 角柱の体積は、底面積 × 高さ だね。
+          - 角柱の体積は、底面積 × 高さだね。
           - 底面積はもうわかっているよ。
           - 9 のだんの九九を思い出そう。
         paths:
@@ -201,7 +201,7 @@ days:
         answer: 45
         check: "3 * 3 * 5"
         hints:
-          - 円柱の底面は円だね。円柱の体積も 底面積 × 高さ だよ。
+          - 円柱の底面は円だね。円柱の体積も底面積 × 高さだよ。
           - 底面積は（3 × 3 × 円周率）cm² だね。
           - 9 × 5 を計算しよう。
         paths:
@@ -214,8 +214,8 @@ days:
         check: "(6 * 4 - 3 * 2) * 3"
         hints:
           - 下の直方体と上の直方体に分けてみよう。
-          - 下は 横 6 cm、高さ 2 cm、上は 横 3 cm、高さ 2 cm だね。おくはどちらも 3 cm。
-          - 手前の面を底面とみて、底面積 × おくの長さ としてもよいよ。
+          - 下は横 6 cm、高さ 2 cm、上は横 3 cm、高さ 2 cm だね。おくはどちらも 3 cm。
+          - 手前の面を底面とみて、底面積 × おくの長さとしてもよいよ。
         paths:
           - [下 6 × 2 × 3 = 36, 上 3 × 2 × 3 = 18, 36 + 18 = 54, 54 cm³]
           - [手前の面の面積 6 × 4 − 3 × 2 = 18, 18 × 3 = 54]
@@ -237,7 +237,7 @@ days:
         answer: 28
         check: "2 * 2 * 7"
         hints:
-          - 円柱の体積も 底面積 × 高さ だよ。
+          - 円柱の体積も底面積 × 高さだよ。
           - 底面積は（2 × 2 × 円周率）cm² だね。
           - 4 × 7 を計算しよう。
         paths:
@@ -247,7 +247,7 @@ days:
         answer: 7
         check: "56 // 8"
         hints:
-          - 底面積 × 高さ = 体積 だね。
+          - 底面積 × 高さ = 体積だね。
           - 8 × □ = 56 になる □ をさがそう。
           - 8 のだんの九九を思い出そう。
         paths:
@@ -264,9 +264,9 @@ days:
         answer: 36
         check: "2 * 3 * 6"
         hints:
-          - 直方体の体積は、たて × 横 × 高さ だね。
-          - たて × 横 を先に計算しよう。
-          - その答え × 高さ だよ。
+          - 直方体の体積は、たて × 横 × 高さだね。
+          - たて × 横を先に計算しよう。
+          - その答え × 高さだよ。
         paths:
           - [2 × 3 = 6, 6 × 6 = 36, 36 cm³]
       - part: 思い出す
@@ -274,7 +274,7 @@ days:
         answer: 8
         check: "4 * 2"
         hints:
-          - 円周 = 直径 × 円周率 だね。
+          - 円周 = 直径 × 円周率だね。
           - 直径は、半径の 2 つ分だよ。
           - 4 × 2 を計算しよう。
         paths:
@@ -311,7 +311,7 @@ days:
         hints:
           - 側面の長方形のたては、円柱の高さだよ。
           - 横は円周で、（直径 × 円周率）cm だね。
-          - 長方形の面積は たて × 横 だよ。
+          - 長方形の面積はたて × 横だよ。
         paths:
           - [円周は 6 × 円周率, 側面は 4 × 6 × 円周率, 24 × 円周率, □ は 24]
         note: 半径 3 cm をそのまま横の長さに使って 12 としやすい。横は円周（直径 × 円周率）。
@@ -357,7 +357,7 @@ days:
         hints:
           - 表面積は、2 つの底面と側面の面積の和だよ。
           - 底面 1 つは（4 × 円周率）cm²、側面の横は円周（4 × 円周率）cm だね。
-          - 側面は たて 3 cm の長方形だよ。
+          - 側面はたて 3 cm の長方形だよ。
         paths:
           - [底面 2 つで 4 + 4 = 8, 側面は 3 × 4 = 12, 8 + 12 = 20, □ は 20]
         note: 底面を 1 つしか入れないと 16 になる。展開図で、円が 2 つあることを確かめる。
@@ -367,17 +367,17 @@ days:
       - part: わけ
         text: 直方体の体積が「たて × 横 × 高さ」で求められるのはなぜですか。図の直方体（たて 3 cm、横 4 cm、高さ 2 cm）を例にして、文で書きましょう。
         svg: '<svg viewBox="0 0 240 140" xmlns="http://www.w3.org/2000/svg"><polygon points="44,112.8 158.3,112.8 158.3,55.6 44,55.6" stroke="currentColor" stroke-width="0" fill="#f3c969" fill-opacity=".35"/><polygon points="158.3,112.8 158.3,55.6 196,27.2 196,84.4" stroke="currentColor" stroke-width="0" fill="#f3c969" fill-opacity=".35"/><polygon points="158.3,55.6 44,55.6 81.7,27.2 196,27.2" stroke="currentColor" stroke-width="0" fill="#f3c969" fill-opacity=".35"/><line x1="72.6" y1="112.8" x2="72.6" y2="84.2" stroke="currentColor" stroke-width="0.8" fill="none"/><line x1="72.6" y1="84.2" x2="72.6" y2="55.6" stroke="currentColor" stroke-width="0.8" fill="none"/><line x1="101.2" y1="112.8" x2="101.2" y2="84.2" stroke="currentColor" stroke-width="0.8" fill="none"/><line x1="101.2" y1="84.2" x2="101.2" y2="55.6" stroke="currentColor" stroke-width="0.8" fill="none"/><line x1="129.8" y1="112.8" x2="129.8" y2="84.2" stroke="currentColor" stroke-width="0.8" fill="none"/><line x1="129.8" y1="84.2" x2="129.8" y2="55.6" stroke="currentColor" stroke-width="0.8" fill="none"/><line x1="44" y1="84.2" x2="72.6" y2="84.2" stroke="currentColor" stroke-width="0.8" fill="none"/><line x1="72.6" y1="84.2" x2="101.2" y2="84.2" stroke="currentColor" stroke-width="0.8" fill="none"/><line x1="101.2" y1="84.2" x2="129.8" y2="84.2" stroke="currentColor" stroke-width="0.8" fill="none"/><line x1="129.8" y1="84.2" x2="158.3" y2="84.2" stroke="currentColor" stroke-width="0.8" fill="none"/><line x1="158.3" y1="84.2" x2="196" y2="55.8" stroke="currentColor" stroke-width="0.8" fill="none"/><line x1="170.9" y1="103.3" x2="170.9" y2="46.1" stroke="currentColor" stroke-width="0.8" fill="none"/><line x1="183.4" y1="93.9" x2="183.4" y2="36.7" stroke="currentColor" stroke-width="0.8" fill="none"/><line x1="129.8" y1="55.6" x2="167.4" y2="27.2" stroke="currentColor" stroke-width="0.8" fill="none"/><line x1="101.2" y1="55.6" x2="138.8" y2="27.2" stroke="currentColor" stroke-width="0.8" fill="none"/><line x1="72.6" y1="55.6" x2="110.2" y2="27.2" stroke="currentColor" stroke-width="0.8" fill="none"/><line x1="170.9" y1="46.1" x2="56.6" y2="46.1" stroke="currentColor" stroke-width="0.8" fill="none"/><line x1="183.4" y1="36.7" x2="69.1" y2="36.7" stroke="currentColor" stroke-width="0.8" fill="none"/><line x1="44" y1="112.8" x2="158.3" y2="112.8" stroke="currentColor" stroke-width="2" fill="none"/><line x1="158.3" y1="112.8" x2="158.3" y2="55.6" stroke="currentColor" stroke-width="2" fill="none"/><line x1="196" y1="84.4" x2="196" y2="27.2" stroke="currentColor" stroke-width="2" fill="none"/><line x1="158.3" y1="112.8" x2="196" y2="84.4" stroke="currentColor" stroke-width="2" fill="none"/><line x1="158.3" y1="55.6" x2="44" y2="55.6" stroke="currentColor" stroke-width="2" fill="none"/><line x1="196" y1="27.2" x2="81.7" y2="27.2" stroke="currentColor" stroke-width="2" fill="none"/><line x1="158.3" y1="55.6" x2="196" y2="27.2" stroke="currentColor" stroke-width="2" fill="none"/><line x1="44" y1="55.6" x2="44" y2="112.8" stroke="currentColor" stroke-width="2" fill="none"/><line x1="44" y1="55.6" x2="81.7" y2="27.2" stroke="currentColor" stroke-width="2" fill="none"/><text x="101.2" y="130.3" font-size="13" text-anchor="middle">4 cm</text><text x="184.2" y="110.1" font-size="13" text-anchor="start">3 cm</text><text x="38" y="88.7" font-size="13" text-anchor="end">2 cm</text></svg>'
-        explain: 例：「1 cm³ の立方体を 1 だん目にしきつめると、横に 4 こ、たてに 3 列で 4 × 3 = 12 こならぶ。このこ数は たて × 横 と同じ。高さが 2 cm なので、それが 2 だん重なって 12 × 2 = 24 こ。だから体積は たて × 横 × 高さ で 24 cm³ になる。」と書ければよい。① 1 だんのこ数が たて × 横 になる、② だんの数が高さになる、の 2 点を見る。数えて 24 になったことだけで終わったら、「高さが 5 cm になったら何だん？」と聞いて、長さとこ数・だんの数の結びつきを言わせる。
+        explain: 例：「1 cm³ の立方体を 1 だん目にしきつめると、横に 4 こ、たてに 3 列で 4 × 3 = 12 こならぶ。このこ数はたて × 横と同じ。高さが 2 cm なので、それが 2 だん重なって 12 × 2 = 24 こ。だから体積はたて × 横 × 高さで 24 cm³ になる。」と書ければよい。① 1 だんのこ数がたて × 横になる、② だんの数が高さになる、の 2 点を見る。数えて 24 になったことだけで終わったら、「高さが 5 cm になったら何だん？」と聞いて、長さとこ数・だんの数の結びつきを言わせる。
         hints:
           - 1 だん目には、1 cm³ の立方体が何こならぶかな。
           - それは何だん重なるかな。
           - 「1 だんのこ数は〜、だんの数は〜だから」と書こう。
         paths:
-          - [1 だんに 4 × 3 = 12 こ, 2 だん, 12 × 2 = 24 こ, 1 だんのこ数が たて × 横、だんの数が 高さ]
+          - [1 だんに 4 × 3 = 12 こ, 2 だん, 12 × 2 = 24 こ, 1 だんのこ数がたて × 横、だんの数が高さ]
       - part: わけ
         text: 角柱の体積が「底面積 × 高さ」で求められるのはなぜですか。図のように、底面積 6 cm²、高さ 4 cm の三角柱を、底面と同じ形の、厚さ 1 cm の板に切り分けた例を使って、文で書きましょう。
         svg: '<svg viewBox="0 0 240 140" xmlns="http://www.w3.org/2000/svg"><polygon points="53.4,120 145.9,120 53.4,50.6" stroke="currentColor" stroke-width="0" fill="#f3c969" fill-opacity=".35"/><polygon points="145.9,120 53.4,50.6 94.1,20 186.6,89.4" stroke="currentColor" stroke-width="0" fill="#f3c969" fill-opacity=".35"/><line x1="53.4" y1="120" x2="145.9" y2="120" stroke="currentColor" stroke-width="2" fill="none"/><line x1="145.9" y1="120" x2="53.4" y2="50.6" stroke="currentColor" stroke-width="2" fill="none"/><line x1="186.6" y1="89.4" x2="94.1" y2="20" stroke="currentColor" stroke-width="2" fill="none"/><line x1="145.9" y1="120" x2="186.6" y2="89.4" stroke="currentColor" stroke-width="2" fill="none"/><line x1="53.4" y1="50.6" x2="53.4" y2="120" stroke="currentColor" stroke-width="2" fill="none"/><line x1="53.4" y1="50.6" x2="94.1" y2="20" stroke="currentColor" stroke-width="2" fill="none"/><line x1="156.1" y1="112.3" x2="63.6" y2="43" stroke="currentColor" stroke-width="1" fill="none"/><line x1="166.3" y1="104.7" x2="73.7" y2="35.3" stroke="currentColor" stroke-width="1" fill="none"/><line x1="176.4" y1="97" x2="83.9" y2="27.7" stroke="currentColor" stroke-width="1" fill="none"/><text x="84.3" y="101.4" font-size="13" text-anchor="middle">底面</text><polyline points="61.4,120 61.4,112 53.4,112" stroke="currentColor" stroke-width="1.5" fill="none"/></svg>'
-        explain: 例：「三角柱を、底面と同じ形の、厚さ 1 cm の板に切り分ける。板 1 まいの体積は、底面の 1 cm² の 1 つ 1 つの上に、高さ 1 cm の分が乗っているので 6 cm³ で、底面積の数と同じ。板は高さの 4 cm の分だけ 4 まいあるので、6 × 4 = 24 cm³。だから体積は 底面積 × 高さ になる。」と書ければよい。① 厚さ 1 cm の板の体積が底面積の数と同じ、② 板の数が高さ、の 2 点を見る。直方体の「1 だんのこ数 × だんの数」と同じ考えで、1 cm³ の立方体にきちんと分けられない形（三角形や円）でも使えることに気づけばなお良い。
+        explain: 例：「三角柱を、底面と同じ形の、厚さ 1 cm の板に切り分ける。板 1 まいの体積は、底面の 1 cm² の 1 つ 1 つの上に、高さ 1 cm の分が乗っているので 6 cm³ で、底面積の数と同じ。板は高さの 4 cm の分だけ 4 まいあるので、6 × 4 = 24 cm³。だから体積は底面積 × 高さになる。」と書ければよい。① 厚さ 1 cm の板の体積が底面積の数と同じ、② 板の数が高さ、の 2 点を見る。直方体の「1 だんのこ数 × だんの数」と同じ考えで、1 cm³ の立方体にきちんと分けられない形（三角形や円）でも使えることに気づけばなお良い。
         hints:
           - 厚さ 1 cm の板は、何まいできるかな。
           - 板 1 まいの体積は、底面積とくらべてどうかな。
@@ -412,8 +412,8 @@ days:
         answer: 60
         check: "4 * 5 * 3"
         hints:
-          - 直方体の体積は、たて × 横 × 高さ だね。
-          - たて × 横 は 4 × 5 = 20 だよ。
+          - 直方体の体積は、たて × 横 × 高さだね。
+          - たて × 横は 4 × 5 = 20 だよ。
           - 20 × 3 は、2 × 3 の 10 こ分だね。
         paths:
           - [4 × 5 = 20, 20 × 3 = 60, 60 cm³]
@@ -423,7 +423,7 @@ days:
         answer: 32
         check: "2 * 2 * 8"
         hints:
-          - 円柱の体積も 底面積 × 高さ だよ。
+          - 円柱の体積も底面積 × 高さだよ。
           - 底面積は（2 × 2 × 円周率）cm² だね。
           - 4 × 8 を計算しよう。
         paths:
@@ -455,9 +455,9 @@ days:
         answer: 36
         check: "2 * 2 * 9"
         hints:
-          - 直方体の体積は、たて × 横 × 高さ だね。
-          - たて × 横 を先に計算しよう。
-          - その答え × 高さ だよ。
+          - 直方体の体積は、たて × 横 × 高さだね。
+          - たて × 横を先に計算しよう。
+          - その答え × 高さだよ。
         paths:
           - [2 × 2 = 4, 4 × 9 = 36, 36 cm³]
 
@@ -474,7 +474,7 @@ days:
           - あ は い の上がわのへんで折れるね。
           - となりの面は向かい合わないよ。あ と 1 つあいだをおいて、同じ列にある面はどれかな。
         paths:
-          - [い を底にする, あ・う・え は い のまわりを まわって立つ, あ と う が向かい合う]
+          - [い を底にする, あ・う・えは い のまわりをまわって立つ, あ と う が向かい合う]
         note: となり合う面（い、お、か）を選びやすい。紙に写して組み立てて確かめるとよい。
       - part: 思い出す
         text: 底辺 6 cm、高さ 5 cm の三角形の面積は何 cm² ですか。
@@ -505,7 +505,7 @@ days:
         check: "7 * 2 * 3"
         hints:
           - 展開図から、直方体のたて・横・高さを読みとろう。
-          - 上の面は 横 7 cm、たて 2 cm だね。
+          - 上の面は横 7 cm、たて 2 cm だね。
           - 前の面のたての長さが高さだよ。
         paths:
           - [横 7 cm、たて 2 cm、高さ 3 cm, 7 × 2 = 14, 14 × 3 = 42, 42 cm³]
@@ -516,7 +516,7 @@ days:
         answer: 9.42
         check: "314 * 1 * 1 * 3 / 100"
         hints:
-          - 円柱の体積は 底面積 × 高さ だね。
+          - 円柱の体積は底面積 × 高さだね。
           - 底面積は 1 × 1 × 3.14 = 3.14 cm² だよ。
           - 3.14 を 3 回たそう。
         paths:
@@ -530,22 +530,23 @@ days:
         hints:
           - 底面は、手前の台形だよ。高さ（おくへの長さ）は 4 cm。
           - 台形は、対角線で 2 つの三角形に分けると面積を出せるね。
-          - 台形の面積 × おくへの長さ を計算しよう。
+          - 台形の面積 × おくへの長さを計算しよう。
         paths:
           - [6 × 3 ÷ 2 = 9, 4 × 3 ÷ 2 = 6, 底面積は 9 + 6 = 15, 15 × 4 = 60, 60 cm³]
           - [三角柱 2 つに分ける, 9 × 4 = 36, 6 × 4 = 24, 36 + 24 = 60]
         note: 台形の 4 cm（上の辺）と、おくへの 4 cm をまちがえやすい。底面の形と、底面の間の長さを分けて見る。
       - part: 挑戦
-        text: 内がわが たて 4 cm、横 6 cm の直方体の水そうに、水が入っています。1 辺が 2 cm の立方体を水の中にしずめると、水の深さは何 cm ふえますか。《分数》で答えましょう。立方体は全部水にしずみ、水はあふれません。
+        id: "a98d82fd53"
+        text: 内がわがたて 4 cm、横 6 cm の直方体の水そうに、水が入っています。1 辺が 2 cm の立方体を水の中にしずめると、水の深さは何 cm ふえますか。《分数》で答えましょう。立方体は全部水にしずみ、水はあふれません。
         answer: 1/3
         check: "Fraction(2 * 2 * 2, 4 * 6)"
         hints:
           - 立方体が入った分だけ、水が上におしあげられるよ。
-          - ふえた水の部分は、底面が たて 4 cm、横 6 cm の直方体だね。
+          - ふえた水の部分は、底面がたて 4 cm、横 6 cm の直方体だね。
           - その直方体の体積が、立方体の体積と同じになるよ。
         paths:
           - [立方体は 2 × 2 × 2 = 8 cm³, 水そうの底面積は 4 × 6 = 24 cm², 24 × □ = 8, □ = 8 ÷ 24 = 1/3, 1/3 cm]
-          - ["底面積 24 cm² で 1 cm の 深さの 水は 24 cm³", "8 cm³ は 24 cm³ の 8/24 = 1/3", "1/3 cm"]
+          - ["底面積 24 cm² で 1 cm の深さの水は 24 cm³", "8 cm³ は 24 cm³ の 8/24 = 1/3", "1/3 cm"]
         note: 立方体の 1 辺（2 cm）だけ上がると考えやすい。ふえた部分の体積が立方体の体積と同じになることを、図をかいて確かめる。
     extra:
       - part: 今日
@@ -553,7 +554,7 @@ days:
         answer: 6.28
         check: "314 * 1 * 1 * 2 / 100"
         hints:
-          - 円柱の体積は 底面積 × 高さ だね。
+          - 円柱の体積は底面積 × 高さだね。
           - 底面積は 1 × 1 × 3.14 = 3.14 cm² だよ。
           - 3.14 を 2 回たそう。
         paths:
@@ -576,8 +577,8 @@ days:
         check: "5 * 4 // 2 * 7"
         hints:
           - 底面積を先に求めよう。
-          - 三角形の面積は 底辺 × 高さ ÷ 2 だね。
-          - 底面積 × 三角柱の高さ だよ。
+          - 三角形の面積は底辺 × 高さ ÷ 2 だね。
+          - 底面積 × 三角柱の高さだよ。
         paths:
           - [底面積は 5 × 4 ÷ 2 = 10, 10 × 7 = 70, 70 cm³]
         note: 三角形の高さ（4 cm）と三角柱の高さ（7 cm）を取りちがえやすい。
@@ -600,9 +601,9 @@ days:
         answer: 36
         check: "3 * 6 * 2"
         hints:
-          - 直方体の体積は、たて × 横 × 高さ だね。
-          - たて × 横 を先に計算しよう。
-          - その答え × 高さ だよ。
+          - 直方体の体積は、たて × 横 × 高さだね。
+          - たて × 横を先に計算しよう。
+          - その答え × 高さだよ。
         paths:
           - [3 × 6 = 18, 18 × 2 = 36, 36 cm³]
           - [6 × 2 = 12, 12 × 3 = 36]
@@ -611,7 +612,7 @@ days:
         answer: 3
         check: "[a for a in range(1, 10) if a * a * a == 27][0]"
         hints:
-          - 立方体の体積は 1 辺 × 1 辺 × 1 辺 だね。
+          - 立方体の体積は 1 辺 × 1 辺 × 1 辺だね。
           - 1 辺 × 1 辺 × 1 辺 = 27 になる長さをさがそう。
           - 1 から順にためしてみよう。
         paths:
@@ -633,7 +634,7 @@ days:
         answer: 16
         check: "2 * 2 * 4"
         hints:
-          - 円柱の体積も 底面積 × 高さ だよ。
+          - 円柱の体積も底面積 × 高さだよ。
           - 底面積は（2 × 2 × 円周率）cm² だね。
           - 4 × 4 を計算しよう。
         paths:
@@ -656,7 +657,7 @@ days:
         hints:
           - 側面を切り開くと長方形だね。たては高さだよ。
           - 横は円周で、（直径 × 円周率）cm だね。
-          - たて × 横 を計算しよう。
+          - たて × 横を計算しよう。
         paths:
           - [円周は 2 × 円周率, 5 × 2 = 10, □ は 10]
       - part: 挑戦
@@ -676,9 +677,9 @@ days:
         answer: 28
         check: "2 * 7 * 2"
         hints:
-          - 直方体の体積は、たて × 横 × 高さ だね。
-          - たて × 横 を先に計算しよう。
-          - その答え × 高さ だよ。
+          - 直方体の体積は、たて × 横 × 高さだね。
+          - たて × 横を先に計算しよう。
+          - その答え × 高さだよ。
         paths:
           - [2 × 7 = 14, 14 × 2 = 28, 28 cm³]
       - part: 今日
@@ -686,7 +687,7 @@ days:
         answer: 45
         check: "5 * 9"
         hints:
-          - 角柱の体積は、底面積 × 高さ だね。
+          - 角柱の体積は、底面積 × 高さだね。
           - 底面積はもうわかっているよ。
           - 5 のだんの九九を思い出そう。
         paths:
@@ -696,7 +697,7 @@ days:
         answer: 27
         check: "3 * 3 * 3"
         hints:
-          - 円柱の体積も 底面積 × 高さ だよ。
+          - 円柱の体積も底面積 × 高さだよ。
           - 底面積は（3 × 3 × 円周率）cm² だね。
           - 9 × 3 を計算しよう。
         paths:
@@ -719,15 +720,16 @@ ri:
       - [前から見ると 1 + 2 + 3 + 4 = 10 cm², 上から見ると 4 × 3 = 12 cm²・横から見ると 4 × 3 = 12 cm², 表面積は (10 + 12 + 12) × 2 = 68 cm², 68 cm²]
     note: 段の面を 1 つずつ数えるともれやすい。6 方向から見た図の面積の和として数えるのが道筋（この形のようにへこみのない立体なら、見えた面積の和が表面積になる）。左から見ると段の縦の面が、上から見ると段の上の面が、どちらも合わせて 12 cm² に見える。
   - part: 離
+    id: "c700b26c5f"
     kinds: [総動員, 数]
     uses: [N-077]
-    text: 内のりが たて 25 cm、横 32 cm の直方体の水そうに、水が入っています。石を 1 つ水の中にしずめると、水の深さが 8.5 cm から 10.75 cm になりました。石の体積は何 cm³ ですか。石は全部水にしずみ、水はあふれません。
+    text: 内のりがたて 25 cm、横 32 cm の直方体の水そうに、水が入っています。石を 1 つ水の中にしずめると、水の深さが 8.5 cm から 10.75 cm になりました。石の体積は何 cm³ ですか。石は全部水にしずみ、水はあふれません。
     answer: 1800
     check: "25 * 32 * (Fraction(1075, 100) - Fraction(85, 10))"
     hints:
       - ふえた水の深さは何 cm かな。
       - 石の体積は、ふえて見える分の水の体積と同じだよ。
-      - 底面積 × ふえた深さ で求めよう。
+      - 底面積 × ふえた深さで求めよう。
     paths:
       - [ふえた深さは 10.75 − 8.5 = 2.25 cm, 底面積は 25 × 32 = 800 cm², 800 × 2.25 = 1800, 1800 cm³]
     note: 小数のひき算で位をそろえる（10.75 − 8.50）のと、800 × 2.25 の小数のかけ算（N-077）が要点。8.5 cm と 10.75 cm の水の体積をそれぞれ出してからひいてもよいが、計算が重くなる。
@@ -743,5 +745,5 @@ ri:
       - 16 cm から 8 cm をひくと、どの辺の 2 つ分が残るかな。
       - 横の 22 cm には、どの辺が 2 つずつ並んでいるかな。
     paths:
-      - [16 − 8 = 8 は短い辺 2 つ分なので 短い辺は 4 cm, 22 は長い辺 2 つと短い辺 2 つなので 長い辺 + 短い辺 = 11 で 長い辺は 7 cm, 体積は 7 × 4 × 8 = 224, 224 cm³]
+      - [16 − 8 = 8 は短い辺 2 つ分なので短い辺は 4 cm, 22 は長い辺 2 つと短い辺 2 つなので長い辺 + 短い辺 = 11 で長い辺は 7 cm, 体積は 7 × 4 × 8 = 224, 224 cm³]
     note: 展開図のどの辺が、組み立てたときに同じ辺になるか（G-007）を読み取って、3 つの辺の長さを決める。図にない長さ（4 cm と 7 cm）を、合わせた長さから逆に出すのがこつ。

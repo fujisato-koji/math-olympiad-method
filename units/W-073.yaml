@@ -26,8 +26,8 @@ days:
         answer: 45
         check: "3 * 15"
         hints:
-          - "星は 1 時間に 何度動くのか、見本を思い出そう。"
-          - text: "1 時間で、星は 図の角の分だけ動く。"
+          - "星は 1 時間に何度動くのか、見本を思い出そう。"
+          - text: "1 時間で、星は図の角の分だけ動く。"
             svg: '<svg viewBox="0 0 320 200" xmlns="http://www.w3.org/2000/svg"><text x="8" y="16" font-size="12" text-anchor="start" fill="currentColor">北の空（北を向いて見る）</text><text x="18" y="109" font-size="14" text-anchor="middle" fill="currentColor">西</text><text x="302" y="109" font-size="14" text-anchor="middle" fill="currentColor">東</text><circle cx="160" cy="104" r="4" fill="#f3c969" fill-opacity="0.9" stroke="currentColor" stroke-width="1.5"/><text x="160" y="124" font-size="12" text-anchor="middle" fill="currentColor">北極星</text><circle cx="160" cy="104" r="66" fill="none" stroke="currentColor" stroke-width="1.5" stroke-dasharray="5 4"/><line x1="160" y1="104" x2="137.4" y2="42" stroke="currentColor" stroke-width="1.5" stroke-dasharray="3 3"/><line x1="160" y1="104" x2="122.1" y2="49.9" stroke="currentColor" stroke-width="1.5" stroke-dasharray="3 3"/><circle cx="137.4" cy="42" r="6" fill="#f3c969" fill-opacity="0.9" stroke="currentColor" stroke-width="1.5"/><circle cx="122.1" cy="49.9" r="6" fill="none" stroke="currentColor" stroke-width="1.5" stroke-dasharray="2 2"/><path d="M149.7 75.8 A30 30 0 0 0 142.8 79.4" fill="none" stroke="currentColor" stroke-width="1.5"/><text x="122" y="80" font-size="12" text-anchor="middle" fill="currentColor">15°</text><text x="112.1" y="39.9" font-size="12" text-anchor="end" fill="currentColor">1 時間後</text></svg>'
           - "1 時間分の角が、3 回分たまる。"
       - part: "今日"
@@ -59,9 +59,9 @@ days:
         check: "'ウ'"
         hints:
           - "太陽は 1 時間に 15° ずつ進む。午前 6 時から午前 9 時まで、何時間か。"
-          - text: "東のはしから 1 時間で 進む角は、これだけだ。"
+          - text: "東のはしから 1 時間で進む角は、これだけだ。"
             svg: '<svg viewBox="0 0 320 200" xmlns="http://www.w3.org/2000/svg"><path d="M30 165 A130 130 0 0 1 290 165 Z" fill="#7fc8f8" fill-opacity="0.18" stroke="currentColor" stroke-width="2"/><line x1="20" y1="165" x2="300" y2="165" stroke="currentColor" stroke-width="2"/><text x="30" y="187" font-size="14" text-anchor="middle" fill="currentColor">東</text><text x="160" y="187" font-size="14" text-anchor="middle" fill="currentColor">南</text><text x="290" y="187" font-size="14" text-anchor="middle" fill="currentColor">西</text><path d="M30 165 A130 130 0 0 1 290 165" fill="none" stroke="currentColor" stroke-width="1.5" stroke-dasharray="5 4"/><line x1="160" y1="165" x2="30" y2="165" stroke="currentColor" stroke-width="1.5" stroke-dasharray="3 3"/><line x1="160" y1="165" x2="34.4" y2="131.4" stroke="currentColor" stroke-width="1.5" stroke-dasharray="3 3"/><circle cx="30" cy="165" r="5" fill="#f3c969" fill-opacity="0.9" stroke="currentColor" stroke-width="1.5"/><text x="78" y="130" font-size="12" text-anchor="middle" fill="currentColor">15°</text><text x="160" y="120" font-size="13" text-anchor="middle" fill="currentColor">6 時から 1 時間</text></svg>'
-          - "東のはしから、1 時間分の角を 3 つ分 進んだ位置をさがそう。"
+          - "東のはしから、1 時間分の角を 3 つ分進んだ位置をさがそう。"
       - part: "挑戦"
         text: "北の空で、星 ● が北極星の真上にある。星は北極星のまわりを 1 時間に 15° ずつ回る。9 時間後の星は、ア〜エ のどこにあるか。"
         svg: '<svg viewBox="0 0 320 200" xmlns="http://www.w3.org/2000/svg"><text x="8" y="16" font-size="12" text-anchor="start" fill="currentColor">北の空（北を向いて見る）</text><text x="18" y="109" font-size="14" text-anchor="middle" fill="currentColor">西</text><text x="302" y="109" font-size="14" text-anchor="middle" fill="currentColor">東</text><circle cx="160" cy="104" r="4" fill="#f3c969" fill-opacity="0.9" stroke="currentColor" stroke-width="1.5"/><text x="160" y="124" font-size="12" text-anchor="middle" fill="currentColor">北極星</text><circle cx="160" cy="104" r="66" fill="none" stroke="currentColor" stroke-width="1.5" stroke-dasharray="5 4"/><circle cx="160" cy="38" r="6" fill="#f3c969" fill-opacity="0.9" stroke="currentColor" stroke-width="1.5"/><circle cx="113.3" cy="57.3" r="5" fill="none" stroke="currentColor" stroke-width="1.5"/><text x="100.6" y="49.6" font-size="15" text-anchor="middle" fill="currentColor">ア</text><circle cx="113.3" cy="150.7" r="5" fill="none" stroke="currentColor" stroke-width="1.5"/><text x="100.6" y="168.4" font-size="15" text-anchor="middle" fill="currentColor">イ</text><circle cx="206.7" cy="150.7" r="5" fill="none" stroke="currentColor" stroke-width="1.5"/><text x="219.4" y="168.4" font-size="15" text-anchor="middle" fill="currentColor">ウ</text><circle cx="206.7" cy="57.3" r="5" fill="none" stroke="currentColor" stroke-width="1.5"/><text x="219.4" y="49.6" font-size="15" text-anchor="middle" fill="currentColor">エ</text></svg>'
@@ -75,7 +75,7 @@ days:
           - "9 時間後は、6 時間後と 12 時間後の、どのあたりか。"
         paths:
           - ["9 × 15 = 135°。星は北極星のまわりを、上から反時計回りに回る（東がわの星はのぼる）", "真上から反時計回りに 135° 進むと、左下になる", "左下の点を選ぶ"]
-          - ["6 時間で 90°（真横の左）、12 時間で 180°（真下）まで回る", "9 時間後は、その まん中の、左下", "左下の点を選ぶ"]
+          - ["6 時間で 90°（真横の左）、12 時間で 180°（真下）まで回る", "9 時間後は、そのまん中の、左下", "左下の点を選ぶ"]
     extra:
       - part: "今日"
         text: "北の空の星 ● は、5 時間で何度動くか。"
@@ -83,7 +83,7 @@ days:
         answer: 75
         check: "5 * 15"
         hints:
-          - "星は 1 時間に 何度動くか。"
+          - "星は 1 時間に何度動くか。"
           - "5 時間分を、かけ算で出そう。"
           - "1 時間分の角が 5 回分たまる。"
       - part: "今日"
@@ -99,7 +99,8 @@ days:
   - day: 2
     items:
       - part: "見本"
-        text: "地球の上の場所は、いどとけいどで表す。いどは、赤道から北か南へ何度か（北極は きたいど 90°）、けいどは、グリニッジ（イギリス）を 0° として東か西へ何度かで表す。北極星の高度（地平線からの角）は、その場所の きたいど と同じになる。けいどが 15° ちがうと、太陽が真南にくる（南中する）時こくが 1 時間ちがい、東の場所ほど早い（図は B が A より 1 時間早い）。"
+        id: "3b79d96378"
+        text: "地球の上の場所は、いどとけいどで表す。いどは、赤道から北か南へ何度か（北極はきたいど 90°）、けいどは、グリニッジ（イギリス）を 0° として東か西へ何度かで表す。北極星の高度（地平線からの角）は、その場所のきたいどと同じになる。けいどが 15° ちがうと、太陽が真南にくる（南中する）時こくが 1 時間ちがい、東の場所ほど早い（図は B が A より 1 時間早い）。"
         svg: '<svg viewBox="0 0 320 200" xmlns="http://www.w3.org/2000/svg"><circle cx="110" cy="112" r="62" fill="#7fc8f8" fill-opacity="0.5" stroke="currentColor" stroke-width="2"/><line x1="110" y1="40" x2="110" y2="184" stroke="currentColor" stroke-width="2"/><line x1="38" y1="112" x2="182" y2="112" stroke="currentColor" stroke-width="1.5" stroke-dasharray="5 4"/><circle cx="160.8" cy="76.4" r="4.5" fill="#f08080" fill-opacity="0.9" stroke="currentColor" stroke-width="1.5"/><line x1="140.1" y1="46.9" x2="181.4" y2="105.9" stroke="currentColor" stroke-width="2"/><line x1="160.8" y1="76.4" x2="160.8" y2="40.4" stroke="currentColor" stroke-width="2"/><polygon points="160.8,30.4 165.8,40.4 155.8,40.4" fill="currentColor" stroke="currentColor" stroke-width="1"/><circle cx="160.8" cy="24.4" r="6" fill="#f3c969" fill-opacity="0.9" stroke="currentColor" stroke-width="1.5"/><text x="171.8" y="28.4" font-size="13" text-anchor="start" fill="currentColor">北極星</text><path d="M160.8 50.4 A26 26 0 0 0 145.9 55.1" fill="none" stroke="currentColor" stroke-width="1.5"/><text x="140.8" y="40.4" font-size="13" text-anchor="end" fill="currentColor">35°</text><text x="110" y="34" font-size="12" text-anchor="middle" fill="currentColor">北極</text><text x="254" y="62" font-size="13" text-anchor="middle" fill="currentColor">北極星の高度</text><text x="254" y="82" font-size="13" text-anchor="middle" fill="currentColor">＝ きたいど</text><rect x="196" y="112" width="114" height="24" fill="#7fc8f8" fill-opacity="0.3" stroke="currentColor" stroke-width="2"/><line x1="222" y1="106" x2="222" y2="142" stroke="currentColor" stroke-width="2"/><line x1="284" y1="106" x2="284" y2="142" stroke="currentColor" stroke-width="2"/><text x="222" y="102" font-size="14" text-anchor="middle" fill="currentColor">A</text><text x="284" y="102" font-size="14" text-anchor="middle" fill="currentColor">B</text><text x="207" y="128" font-size="12" text-anchor="middle" fill="currentColor">西</text><text x="299" y="128" font-size="12" text-anchor="middle" fill="currentColor">東</text><text x="253" y="160" font-size="12" text-anchor="middle" fill="currentColor">15° ちがうと</text><text x="253" y="178" font-size="12" text-anchor="middle" fill="currentColor">B が 1 時間早い</text></svg>'
         explain: "北極星はとても遠いので、地球のどこから見ても地じくと同じ向きに見える。きたいど φ の場所では、地平線が地じくの向きと φ の角をつくるので、北極星の高度は φ になる（図の角）。けいどは、地球が 24 時間で 360° 自転するので、360 ÷ 24 = 15° で 1 時間。太陽は東から西へ動くので、東の場所のほうが先に南中する。"
       - part: "今日"
@@ -108,10 +109,10 @@ days:
         answer: 45
         check: "35 + 10"
         hints:
-          - "北極星の高度は、その場所の きたいど と同じだった。"
-          - text: "北へ進むと、きたいどは どうなるか。図の B の位置を見よう。"
+          - "北極星の高度は、その場所のきたいどと同じだった。"
+          - text: "北へ進むと、きたいどはどうなるか。図の B の位置を見よう。"
             svg: '<svg viewBox="0 0 320 200" xmlns="http://www.w3.org/2000/svg"><circle cx="110" cy="112" r="62" fill="#7fc8f8" fill-opacity="0.5" stroke="currentColor" stroke-width="2"/><line x1="110" y1="40" x2="110" y2="184" stroke="currentColor" stroke-width="2"/><line x1="38" y1="112" x2="182" y2="112" stroke="currentColor" stroke-width="1.5" stroke-dasharray="5 4"/><circle cx="160.8" cy="76.4" r="4.5" fill="#f08080" fill-opacity="0.9" stroke="currentColor" stroke-width="1.5"/><text x="179.9" y="71.3" font-size="14" text-anchor="middle" fill="currentColor">A</text><circle cx="153.8" cy="68.2" r="4.5" fill="#f08080" fill-opacity="0.9" stroke="currentColor" stroke-width="1.5"/><text x="171.2" y="60.8" font-size="14" text-anchor="middle" fill="currentColor">B</text><path d="M169 70.7 A72 72 0 0 0 160.9 61.1" fill="none" stroke="currentColor" stroke-width="2"/><text x="180.5" y="52.9" font-size="13" text-anchor="start" fill="currentColor">10°</text></svg>'
-          - "B の きたいどを出して、それが B の北極星の高度になる。"
+          - "B のきたいどを出して、それが B の北極星の高度になる。"
       - part: "今日"
         text: "場所 A では北極星の高度が 52°、場所 B では 34° だった。A は B より、地球の上で何度北にあるか。"
         svg: '<svg viewBox="0 0 320 200" xmlns="http://www.w3.org/2000/svg"><circle cx="110" cy="112" r="62" fill="#7fc8f8" fill-opacity="0.5" stroke="currentColor" stroke-width="2"/><line x1="110" y1="40" x2="110" y2="184" stroke="currentColor" stroke-width="2"/><line x1="38" y1="112" x2="182" y2="112" stroke="currentColor" stroke-width="1.5" stroke-dasharray="5 4"/><circle cx="148.2" cy="63.1" r="4.5" fill="#f08080" fill-opacity="0.9" stroke="currentColor" stroke-width="1.5"/><text x="164" y="54.5" font-size="14" text-anchor="middle" fill="currentColor">A</text><circle cx="161.4" cy="77.3" r="4.5" fill="#f08080" fill-opacity="0.9" stroke="currentColor" stroke-width="1.5"/><text x="180.7" y="72.4" font-size="14" text-anchor="middle" fill="currentColor">B</text></svg>'
@@ -141,7 +142,7 @@ days:
           - "グリニッジは、日本の東にあるか、西にあるか。西の場所ほど、時こくは早いか、おそいか。"
           - text: "2 つの場所のけいどのちがいを、時間にかえよう。"
             svg: '<svg viewBox="0 0 320 200" xmlns="http://www.w3.org/2000/svg"><rect x="20" y="88" width="280" height="36" fill="#7fc8f8" fill-opacity="0.3" stroke="currentColor" stroke-width="2"/><line x1="60.6" y1="80" x2="60.6" y2="132" stroke="currentColor" stroke-width="2"/><text x="64.6" y="150" font-size="12" text-anchor="start" fill="currentColor">グリニッジ（けいど 0°）</text><line x1="267.1" y1="80" x2="267.1" y2="132" stroke="currentColor" stroke-width="2"/><text x="263.1" y="172" font-size="12" text-anchor="end" fill="currentColor">日本（ひがしけいど 135°）</text><line x1="60.6" y1="112" x2="267.1" y2="112" stroke="currentColor" stroke-width="1.5"/><text x="163.8" y="104" font-size="13" text-anchor="middle" fill="currentColor">135° ÷ 15° ＝ ？ 時間</text><line x1="300" y1="26" x2="210" y2="26" stroke="currentColor" stroke-width="2"/><polygon points="200,26 210,21 210,31" fill="currentColor" stroke="currentColor" stroke-width="1"/><text x="250" y="18" font-size="12" text-anchor="middle" fill="currentColor">太陽の動き</text></svg>'
-          - "日本の 15 時から、その時間ぶんだけ ひく。"
+          - "日本の 15 時から、その時間ぶんだけひく。"
       - part: "今日"
         text: "きたいど 35° の場所では、北極星の高度は 35° だ。北極星から 20° はなれた星は、北極星のまわりを円をえがいて回る。図は、この星がいちばん高くなったところだ。この星がいちばん低くなったときの高度は何度か。ただし、地平線の下にはしずまない。"
         svg: '<svg viewBox="0 0 320 200" xmlns="http://www.w3.org/2000/svg"><line x1="20" y1="160" x2="300" y2="160" stroke="currentColor" stroke-width="2"/><text x="290" y="182" font-size="14" text-anchor="middle" fill="currentColor">北</text><text x="60" y="182" font-size="14" text-anchor="middle" fill="currentColor">南</text><line x1="40" y1="160" x2="179.3" y2="62.5" stroke="currentColor" stroke-width="2"/><line x1="40" y1="160" x2="137.5" y2="20.7" stroke="currentColor" stroke-width="2"/><circle cx="179.3" cy="62.5" r="6" fill="#f3c969" fill-opacity="0.9" stroke="currentColor" stroke-width="1.5"/><circle cx="137.5" cy="20.7" r="6" fill="#f3c969" fill-opacity="0.9" stroke="currentColor" stroke-width="1.5"/><path d="M86 160 A46 46 0 0 0 77.7 133.6" fill="none" stroke="currentColor" stroke-width="1.5"/><text x="100" y="150" font-size="13" text-anchor="middle" fill="currentColor">35°</text><path d="M99 118.7 A72 72 0 0 0 81.3 101" fill="none" stroke="currentColor" stroke-width="1.5"/><text x="105.1" y="94.9" font-size="13" text-anchor="middle" fill="currentColor">20°</text><text x="189.3" y="58.5" font-size="13" text-anchor="start" fill="currentColor">北極星</text><text x="147.5" y="24.7" font-size="13" text-anchor="start" fill="currentColor">星</text></svg>'
@@ -159,12 +160,12 @@ days:
         answer: "北極星の高度 45°、南中は 9 時"
         check: "'北極星の高度 45°、南中は 9 時'"
         hints:
-          - "北極星の高度と、南中の時こくは、べつべつに考えよう。北へ進むと、北極星の高度は どうなるか。"
-          - text: "東へ進んだ角を、時間にかえよう。東の場所の南中は、早いか おそいか。"
+          - "北極星の高度と、南中の時こくは、べつべつに考えよう。北へ進むと、北極星の高度はどうなるか。"
+          - text: "東へ進んだ角を、時間にかえよう。東の場所の南中は、早いかおそいか。"
             svg: '<svg viewBox="0 0 320 200" xmlns="http://www.w3.org/2000/svg"><rect x="20" y="88" width="280" height="36" fill="#7fc8f8" fill-opacity="0.3" stroke="currentColor" stroke-width="2"/><line x1="82" y1="80" x2="82" y2="132" stroke="currentColor" stroke-width="2"/><text x="82" y="150" font-size="12" text-anchor="middle" fill="currentColor">A</text><line x1="238" y1="80" x2="238" y2="132" stroke="currentColor" stroke-width="2"/><text x="238" y="172" font-size="12" text-anchor="middle" fill="currentColor">B（A の 45° 東）</text><line x1="82" y1="112" x2="238" y2="112" stroke="currentColor" stroke-width="1.5"/><text x="160" y="104" font-size="13" text-anchor="middle" fill="currentColor">45°</text><line x1="300" y1="26" x2="210" y2="26" stroke="currentColor" stroke-width="2"/><polygon points="200,26 210,21 210,31" fill="currentColor" stroke="currentColor" stroke-width="1"/><text x="250" y="18" font-size="12" text-anchor="middle" fill="currentColor">太陽の動き</text></svg>'
           - "高度の組は 2 つ、時こくの組も 2 つにしぼれる。両方に合う組を選ぼう。"
         paths:
-          - ["きたいどは 35° + 10° = 45°。北極星の高度は きたいどと同じなので 45°", "けいどは 45° 東。45° ÷ 15° = 3 時間。東は南中が早いので、12 時の 3 時間前の 9 時", "北極星の高度 45°、南中は 9 時を選ぶ"]
+          - ["きたいどは 35° + 10° = 45°。北極星の高度はきたいどと同じなので 45°", "けいどは 45° 東。45° ÷ 15° = 3 時間。東は南中が早いので、12 時の 3 時間前の 9 時", "北極星の高度 45°、南中は 9 時を選ぶ"]
           - ["北へ進むと北極星は高く見えるので、35° より高い。45° と 25° のうち 45°", "東へ進むと、太陽が先に来るので、南中は 12 時より前。9 時と 15 時のうち 9 時", "北極星の高度 45°、南中は 9 時を選ぶ"]
       - part: "思い出す"
         text: "1 日目に学んだこと。北の空をとり続けたら、星の光の線が、北極星を中心に 120° のこった。さつえいした時間は何時間か。"
@@ -172,7 +173,7 @@ days:
         answer: 8
         check: "120 // 15"
         hints:
-          - "星は 1 時間に 何度 動くか。"
+          - "星は 1 時間に何度動くか。"
           - "光の線の角を、1 時間分の角でわる。"
           - "15° が何こ分かを数えよう。"
       - part: "思い出す"
@@ -194,16 +195,16 @@ days:
         hints:
           - "B は A の東にあるか、西にあるか。"
           - "2 つの場所のけいどのちがいを、時間にかえよう。"
-          - "西の場所ほど 太陽が来るのがおそいので、時こくは早い。"
+          - "西の場所ほど太陽が来るのがおそいので、時こくは早い。"
       - part: "今日"
         text: "きたいど 35° の場所 A から、真南へ地球の上を 15° 進んだ。そこでの北極星の高度は何度か。"
         svg: '<svg viewBox="0 0 320 200" xmlns="http://www.w3.org/2000/svg"><circle cx="110" cy="112" r="62" fill="#7fc8f8" fill-opacity="0.5" stroke="currentColor" stroke-width="2"/><line x1="110" y1="40" x2="110" y2="184" stroke="currentColor" stroke-width="2"/><line x1="38" y1="112" x2="182" y2="112" stroke="currentColor" stroke-width="1.5" stroke-dasharray="5 4"/><circle cx="160.8" cy="76.4" r="4.5" fill="#f08080" fill-opacity="0.9" stroke="currentColor" stroke-width="1.5"/><text x="179.9" y="71.3" font-size="14" text-anchor="middle" fill="currentColor">A</text><line x1="170.4" y1="72.8" x2="172.7" y2="77.3" stroke="currentColor" stroke-width="2"/><polygon points="177.2,86.2 168.2,79.6 177.1,75" fill="currentColor" stroke="currentColor" stroke-width="1"/><text x="186.6" y="73" font-size="13" text-anchor="start" fill="currentColor">南へ 15°</text></svg>'
         answer: 20
         check: "35 - 15"
         hints:
-          - "北極星の高度は、その場所の きたいど と同じだ。"
-          - "南へ進むと、きたいどは ふえるか、へるか。"
-          - "35° から 15° ぶん動かした きたいどを出す。"
+          - "北極星の高度は、その場所のきたいどと同じだ。"
+          - "南へ進むと、きたいどはふえるか、へるか。"
+          - "35° から 15° ぶん動かしたきたいどを出す。"
   - day: 3
     items:
       - part: "見本"
@@ -283,7 +284,7 @@ days:
             svg: '<svg viewBox="0 0 320 200" xmlns="http://www.w3.org/2000/svg"><circle cx="110" cy="112" r="62" fill="#7fc8f8" fill-opacity="0.5" stroke="currentColor" stroke-width="2"/><line x1="110" y1="40" x2="110" y2="184" stroke="currentColor" stroke-width="2"/><line x1="38" y1="112" x2="182" y2="112" stroke="currentColor" stroke-width="1.5" stroke-dasharray="5 4"/><circle cx="153.8" cy="68.2" r="4.5" fill="#f08080" fill-opacity="0.9" stroke="currentColor" stroke-width="1.5"/><line x1="128.4" y1="42.7" x2="179.3" y2="93.6" stroke="currentColor" stroke-width="2"/><text x="113.1" y="31.4" font-size="13" text-anchor="middle" fill="currentColor">北</text><text x="198.6" y="132" font-size="13" text-anchor="middle" fill="currentColor">南</text><line x1="283.8" y1="68.2" x2="171.8" y2="68.2" stroke="currentColor" stroke-width="2"/><polygon points="161.8,68.2 171.8,63.2 171.8,73.2" fill="currentColor" stroke="currentColor" stroke-width="1"/><line x1="273.1" y1="119.8" x2="170.4" y2="75.3" stroke="currentColor" stroke-width="2" stroke-dasharray="3 3"/><polygon points="161.2,71.3 172.3,70.7 168.4,79.9" fill="currentColor" stroke="currentColor" stroke-width="1"/><path d="M208.9 92 A60 60 0 0 0 213.8 68.2" fill="none" stroke="currentColor" stroke-width="1.5"/><text x="222.3" y="82.7" font-size="12" text-anchor="start" fill="currentColor">23.4°</text><text x="262" y="58.2" font-size="13" text-anchor="middle" fill="currentColor">春分の日</text><text x="300" y="142" font-size="13" text-anchor="end" fill="currentColor">とうじ</text></svg>'
           - "とうじの太陽は、春分の太陽より、高いか低いか。そのちがいは何度か。"
         paths:
-          - ["春分の南中高度は 90° − きたいど なので、きたいどは 90° − 45° = 45°", "とうじの南中高度は 90° − きたいど − 23.4° = 90° − 45° − 23.4°", "21.6°"]
+          - ["春分の南中高度は 90° − きたいどなので、きたいどは 90° − 45° = 45°", "とうじの南中高度は 90° − きたいど − 23.4° = 90° − 45° − 23.4°", "21.6°"]
           - ["とうじの日は、春分の日より太陽の光の向きが 23.4° 下になる", "南中高度も、そのぶん 23.4° 低くなる", "45° − 23.4° = 21.6°"]
       - part: "思い出す"
         text: "2 日目に学んだこと。場所 A では、北極星の高度が 41° だった。A から真北へ地球の上を 5° 進んだ場所では、北極星の高度は何度か。"
@@ -291,8 +292,8 @@ days:
         answer: 46
         check: "41 + 5"
         hints:
-          - "北極星の高度は、その場所の きたいど と同じだ。"
-          - "北へ進むと、きたいどは ふえる。"
+          - "北極星の高度は、その場所のきたいどと同じだ。"
+          - "北へ進むと、きたいどはふえる。"
           - "41° に、進んだ角をたそう。"
       - part: "思い出す"
         text: "2 日目に学んだこと。ひがしけいど 135° の場所 A より、ひがしけいど 120° の場所 C のほうが、太陽が南中する時こくは、何時間おそいか。"
@@ -301,7 +302,7 @@ days:
         check: "(135 - 120) // 15"
         hints:
           - "太陽は東から西へ動く。C は A の東と西の、どちらか。"
-          - "けいどのちがいは 15°。15° で 何時間ちがうか。"
+          - "けいどのちがいは 15°。15° で何時間ちがうか。"
           - "西の場所ほど、太陽が来るのはおそい。"
     extra:
       - part: "今日"
@@ -319,9 +320,9 @@ days:
         answer: "36.6"
         check: "90 - 30 - 23.4"
         hints:
-          - "春分の日の南中高度は、90° − きたいど だった。"
+          - "春分の日の南中高度は、90° − きたいどだった。"
           - "とうじの日は、春分の日より、光の向きが 23.4° 下になる。"
-          - "そのぶん、南中高度は 低くなる。"
+          - "そのぶん、南中高度は低くなる。"
   - day: 4
     items:
       - part: "わけ"
@@ -345,7 +346,7 @@ days:
         answer: "真夜中ごろ"
         check: "'真夜中ごろ'"
         hints:
-          - "南の空の いちばん高い所から、西の地平線まで、何度あるか。"
+          - "南の空のいちばん高い所から、西の地平線まで、何度あるか。"
           - text: "半円のまん中（南）から西のはしまでの角を見よう。"
             svg: '<svg viewBox="0 0 320 200" xmlns="http://www.w3.org/2000/svg"><path d="M30 165 A130 130 0 0 1 290 165 Z" fill="#7fc8f8" fill-opacity="0.18" stroke="currentColor" stroke-width="2"/><line x1="20" y1="165" x2="300" y2="165" stroke="currentColor" stroke-width="2"/><text x="30" y="187" font-size="14" text-anchor="middle" fill="currentColor">東</text><text x="160" y="187" font-size="14" text-anchor="middle" fill="currentColor">南</text><text x="290" y="187" font-size="14" text-anchor="middle" fill="currentColor">西</text><circle cx="160" cy="35" r="10" fill="#c8ccd6" fill-opacity="0.6" stroke="currentColor" stroke-width="1.5"/><path d="M160 25 A10 10 0 0 1 160 45 Z" fill="#f3c969" fill-opacity="0.9" stroke="currentColor" stroke-width="1.5"/><line x1="160" y1="165" x2="160" y2="40" stroke="currentColor" stroke-width="1.5" stroke-dasharray="3 3"/><line x1="160" y1="165" x2="290" y2="165" stroke="currentColor" stroke-width="1.5" stroke-dasharray="3 3"/><path d="M160 135 A30 30 0 0 1 190 165" fill="none" stroke="currentColor" stroke-width="1.5"/><text x="196" y="140" font-size="13" text-anchor="start" fill="currentColor">？°</text></svg>'
           - "1 時間に 15° ずつ動くなら、その角を動くのに何時間かかるか。日の入りは午後 6 時ごろだ。"
@@ -420,7 +421,7 @@ days:
         check: "len([y for y in range(2001, 2101) if y % 4 == 0 and (y % 100 != 0 or y % 400 == 0)])"
         hints:
           - "2001 年から 2100 年のうち、4 でわりきれる年は、2004 年から何年おきにあるか。"
-          - text: "4 でわりきれる年の数を出したら、そのうち 100 でわりきれる年を ひく。"
+          - text: "4 でわりきれる年の数を出したら、そのうち 100 でわりきれる年をひく。"
             svg: '<svg viewBox="0 0 320 200" xmlns="http://www.w3.org/2000/svg"><rect x="10" y="8" width="120" height="40" rx="6" fill="#f3c969" fill-opacity="0.35" stroke="currentColor" stroke-width="2"/><text x="70" y="33" font-size="12" text-anchor="middle" fill="currentColor">4 で わりきれる？</text><rect x="10" y="76" width="120" height="40" rx="6" fill="#f3c969" fill-opacity="0.35" stroke="currentColor" stroke-width="2"/><text x="70" y="101" font-size="12" text-anchor="middle" fill="currentColor">100 で わりきれる？</text><rect x="10" y="144" width="120" height="40" rx="6" fill="#f3c969" fill-opacity="0.35" stroke="currentColor" stroke-width="2"/><text x="70" y="169" font-size="12" text-anchor="middle" fill="currentColor">400 で わりきれる？</text><line x1="70" y1="48" x2="70" y2="68" stroke="currentColor" stroke-width="1.5"/><polygon points="70,76 66,68 74,68" fill="currentColor" stroke="currentColor" stroke-width="1"/><text x="78" y="67" font-size="12" text-anchor="start" fill="currentColor">はい</text><line x1="70" y1="116" x2="70" y2="136" stroke="currentColor" stroke-width="1.5"/><polygon points="70,144 66,136 74,136" fill="currentColor" stroke="currentColor" stroke-width="1"/><text x="78" y="135" font-size="12" text-anchor="start" fill="currentColor">はい</text><line x1="130" y1="28" x2="162" y2="28" stroke="currentColor" stroke-width="1.5"/><polygon points="170,28 162,32 162,24" fill="currentColor" stroke="currentColor" stroke-width="1"/><text x="150" y="20" font-size="12" text-anchor="middle" fill="currentColor">いいえ</text><text x="176" y="32" font-size="13" text-anchor="start" fill="currentColor">ふつうの年</text><line x1="130" y1="96" x2="162" y2="96" stroke="currentColor" stroke-width="1.5"/><polygon points="170,96 162,100 162,92" fill="currentColor" stroke="currentColor" stroke-width="1"/><text x="150" y="88" font-size="12" text-anchor="middle" fill="currentColor">いいえ</text><text x="176" y="100" font-size="13" text-anchor="start" fill="currentColor">うるう年</text><line x1="130" y1="152" x2="162" y2="152" stroke="currentColor" stroke-width="1.5"/><polygon points="170,152 162,156 162,148" fill="currentColor" stroke="currentColor" stroke-width="1"/><text x="150" y="144" font-size="12" text-anchor="middle" fill="currentColor">はい</text><text x="176" y="156" font-size="13" text-anchor="start" fill="currentColor">うるう年</text><line x1="130" y1="180" x2="162" y2="180" stroke="currentColor" stroke-width="1.5"/><polygon points="170,180 162,184 162,176" fill="currentColor" stroke="currentColor" stroke-width="1"/><text x="150" y="172" font-size="12" text-anchor="middle" fill="currentColor">いいえ</text><text x="176" y="184" font-size="13" text-anchor="start" fill="currentColor">ふつうの年</text></svg>'
           - "最後の 2100 年は、100 でわりきれるが、400 ではわりきれない。"
     extra:
@@ -552,9 +553,10 @@ ri:
         - "23.4 − 53.2 = −29.8 なので、R は赤道から南へ 29.8°"
     note: "工夫は 4 段：①きたいど 90° の北極を考え、げしの日の太陽が 1 日中 23.4° の高さを回ることを出す（いちばんはしの場合を考える、docs/hardest-structures.md の S07）、②南へ進むと空全体が北極星を中心にかたむくので、輪の南のはしと北のはしの高さの和 46.8° はかわらないと見て（不変量 S01、対称 S03）、Q の南中高度 36.8° を出す、③いちばん高い高度は、太陽が真上に来る場所からのはなれ方 53.2° だけで決まると見なおし、真上に来る場所（きたいど 23.4°）について Q と対称な、もう 1 つの場所をさがす（対称 S03、場合分け）、④23.4 − 53.2 = −29.8 で赤道から南へ 29.8°（R では太陽は北の空でいちばん高くなる）。2 本目は、北極星から太陽までの角 66.6° からきたいど 76.6° を出し、真上に来る場所との差 53.2° を南へうつす道（G-021 の空間図形：天球の上の輪のかたむき）。種：なし（docs/hardest-structures.md の S から組み立てた）。むずかしいわけ（2026-11-19 に一段上げた）：前の版は南中高度 36.8° を問い、教わった南中高度の式を 2 回当てれば解けた。いまは「同じ高さになるもう 1 つの町」を問うので、南中高度の式（90 − きたいど + 23.4）だけでは見つからず、真上に来る場所の南がわでは太陽が北の空でいちばん高くなる、と場合を広げる一手が要る。赤道について Q と対称な なんいど 76.6°（げしの日は太陽がのぼらない）や、Q そのものの 76.6° と答えやすい。"
   - part: 離
+    id: "81e5a95f52"
     kinds: [総動員, 手数]
     uses: [N-059]
-    text: "東京（ひがしけいど 135°）から町 P まで、飛行機で西へ飛んで行った。帰りは P からさらに西へ飛び、地球を 1 周して東京にもどった。行きも帰りも、飛行機が 1 時間に進むけいどは同じだった。図の時こくは、東京では東京の時計、P では P の時計で見たものだ。どちらの時計も、その場所のけいどの太陽に合わせてあり、けいどが 15° ちがうと 1 時間ちがう。日づけは、けいど 180° の線を西へこえると 1 日進む。P のけいどは何度か。ひがしけいどなら そのままの数で、にしけいど（グリニッジから西へはかったけいど）なら − をつけて答える。"
+    text: "東京（ひがしけいど 135°）から町 P まで、飛行機で西へ飛んで行った。帰りは P からさらに西へ飛び、地球を 1 周して東京にもどった。行きも帰りも、飛行機が 1 時間に進むけいどは同じだった。図の時こくは、東京では東京の時計、P では P の時計で見たものだ。どちらの時計も、その場所のけいどの太陽に合わせてあり、けいどが 15° ちがうと 1 時間ちがう。日づけは、けいど 180° の線を西へこえると 1 日進む。P のけいどは何度か。ひがしけいどならそのままの数で、にしけいど（グリニッジから西へはかったけいど）なら − をつけて答える。"
     svg: '<svg viewBox="0 0 320 200" xmlns="http://www.w3.org/2000/svg"><text x="160" y="18" font-size="13" text-anchor="middle" fill="currentColor">時こくは、その町の時計で見たもの</text><circle cx="100" cy="100" r="16" fill="#7bc96f" fill-opacity=".5" stroke="currentColor" stroke-width="2"/><text x="100" y="105" font-size="14" text-anchor="middle" fill="currentColor">P</text><circle cx="240" cy="100" r="16" fill="#7fc8f8" fill-opacity=".5" stroke="currentColor" stroke-width="2"/><text x="240" y="105" font-size="13" text-anchor="middle" fill="currentColor">東京</text><path d="M224 89 Q170 40 116 89" fill="none" stroke="currentColor" stroke-width="2"/><polygon points="115,90 125.4,86.6 119.4,80" fill="currentColor" stroke="currentColor" stroke-width="1"/><text x="170" y="56" font-size="14" text-anchor="middle" fill="currentColor">行き（西へ）</text><path d="M86 111 Q50 136 16 136" fill="none" stroke="currentColor" stroke-width="2"/><polygon points="6,136 16,131.5 16,140.5" fill="currentColor" stroke="currentColor" stroke-width="1"/><path d="M314 136 Q282 136 258 112" fill="none" stroke="currentColor" stroke-width="2"/><polygon points="255,109 265.3,112.9 258.9,119.3" fill="currentColor" stroke="currentColor" stroke-width="1"/><text x="170" y="140" font-size="13" text-anchor="middle" fill="currentColor">帰り（西へ、地球を 1 周）</text><text x="314" y="62" font-size="13" text-anchor="end" fill="currentColor">1 日 10 時 発</text><text x="6" y="62" font-size="13" text-anchor="start" fill="currentColor">1 日 15 時 着</text><text x="6" y="166" font-size="13" text-anchor="start" fill="currentColor">3 日 9 時 発</text><text x="314" y="166" font-size="13" text-anchor="end" fill="currentColor">4 日 16 時 着</text><text x="6" y="190" font-size="13" text-anchor="start" fill="currentColor">P：けいどは？</text><text x="314" y="190" font-size="13" text-anchor="end" fill="currentColor">東京：ひがしけいど 135°</text></svg>'
     answer: "−15"
     check: "(lambda L: f'−{-L}' if L < 0 else f'{L}')(135 - Fraction((24 + 15) - (24 + 10)) / (Fraction(((96 + 16) - (24 + 10)) - ((72 + 9) - (24 + 15)), 360) - Fraction(1, 15)))"
@@ -577,9 +579,10 @@ ri:
         - "けいどは 135 − 150 = −15、にしけいど 15°"
     note: "工夫は 4 段：①東京の時計で見た旅の全部 78 時間から、P の時計で見た P にいた 42 時間を引くと、時計のずれが消えて飛んだ時間の合計 36 時間が出る（不変量、docs/hardest-structures.md の S01）、②1 周 360° を 36 時間で飛んだので 1 時間に 10°、③行きでは 1 時間ごとに 10° 西へ進み、真下の時計は 40 分おくれた場所になるので、真下の時計は 1 時間に 20 分しか進まないと見る（見る場所を変える S04）。時計の上の 5 時間から、本当に 15 時間飛んで 150° 進んだと出す、④135 − 150 = −15 で、にしけいど 15°。帰りは 180° の線をこえて日づけが 1 日進むことでたしかめる（N-059 の日をまたぐ時間の計算）。2 本目は、進んだけいどを △ として △ ÷ 10 − △ ÷ 15 = 5 を解く道（置きかえ S19）。種：なし（docs/hardest-structures.md の S から組み立てた）。むずかしいわけ（2026-11-19 に一段上げた）：前の版は「行きと帰りの飛んだ時間が同じ」で、時計の上の時間の和と差の 2 つの式ですんだ。いまは行きと帰りの時間がちがい、旅の全部がわかると帰りの式は行きの式と同じことしか言わない（時計の上の 5 時間と 31 時間の和はいつも 36 時間）。1 周の時間から飛行機の速さを出し、飛んだ時間も時計のおくれも進んだけいどで表す一手が要る。前の版の和差算をそのまま当てると、飛んだ時間 18 時間・おくれ 13 時間で −60 になる。5 時間をそのまま飛んだ時間と見て 85、時計のおくれと見て 60 ともまちがえやすい。"
   - part: 離
+    id: "2981aa6936"
     kinds: [総動員, 読み取り]
     uses: [W-045]
-    text: "月は、いつも同じ面を地球に向けたまま、地球のまわりを回っている。図は、北極の上から見たようすで、月は満月の位置にある。月の赤道の上にある きち B では、太陽は空の真上を通る。この満月のとき、B では、のぼってきた太陽が、地平線から 30° の高さにあった。満月のあと、B で初めて太陽がしずむころ、日本で月が南中するのは何時ごろか。満月は、午前 0 時ごろに南中する。時こくは 0 時から 23 時で答える。"
+    text: "月は、いつも同じ面を地球に向けたまま、地球のまわりを回っている。図は、北極の上から見たようすで、月は満月の位置にある。月の赤道の上にあるきち B では、太陽は空の真上を通る。この満月のとき、B では、のぼってきた太陽が、地平線から 30° の高さにあった。満月のあと、B で初めて太陽がしずむころ、日本で月が南中するのは何時ごろか。満月は、午前 0 時ごろに南中する。時こくは 0 時から 23 時で答える。"
     svg: '<svg viewBox="0 0 320 200" xmlns="http://www.w3.org/2000/svg"><circle cx="30" cy="100" r="20" fill="#f3c969" fill-opacity="0.7" stroke="currentColor" stroke-width="2"/><text x="30" y="104" font-size="13" text-anchor="middle" fill="currentColor">太陽</text><line x1="58" y1="70" x2="85" y2="70" stroke="currentColor" stroke-width="1.5"/><polygon points="94,70 85,74.5 85,65.5" fill="currentColor" stroke="currentColor" stroke-width="1"/><line x1="58" y1="130" x2="85" y2="130" stroke="currentColor" stroke-width="1.5"/><polygon points="94,130 85,134.5 85,125.5" fill="currentColor" stroke="currentColor" stroke-width="1"/><circle cx="170" cy="100" r="66" fill="none" stroke="currentColor" stroke-width="1.5" stroke-dasharray="5 4"/><polygon points="152,34 162,29 162,39" fill="currentColor" stroke="currentColor" stroke-width="1"/><text x="170" y="20" font-size="13" text-anchor="middle" fill="currentColor">月の回る向き</text><circle cx="170" cy="100" r="22" fill="#7fc8f8" fill-opacity="0.6" stroke="currentColor" stroke-width="2"/><text x="170" y="104" font-size="13" text-anchor="middle" fill="currentColor">地球</text><circle cx="236" cy="100" r="9" fill="#c8ccd6" fill-opacity="0.9" stroke="currentColor" stroke-width="2"/><text x="250" y="105" font-size="13" text-anchor="start" fill="currentColor">満月</text><text x="8" y="190" font-size="13" text-anchor="start" fill="currentColor">北極の上から見た図</text></svg>'
     answer: 10
     check: "(0 + 24 * ((90 - 30) + 90) // 360) % 24"

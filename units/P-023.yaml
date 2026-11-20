@@ -794,7 +794,7 @@ days:
         answer: '同じ時間'
         check: "'同じ時間'"
         hints:
-          - 時間は、光路長 n × 道の長さ に比例する。
+          - 時間は、光路長 n × 道の長さに比例する。
           - text: 空気の光路長は 1 × 6 。ガラスの光路長は 1.5 × 4 。
             svg: '<svg viewBox="0 0 320 200" xmlns="http://www.w3.org/2000/svg"><rect x="170" y="60" width="120" height="80" fill="#7fc8f8" fill-opacity="0.35" stroke="currentColor" stroke-width="2"/><line x1="20" y1="100" x2="150" y2="100" fill="none" stroke="currentColor" stroke-width="2"/><polygon points="160,100 150,105 150,95" fill="currentColor"/><text x="90" y="90" font-size="14" text-anchor="middle" fill="currentColor">空気 6 m</text><line x1="172" y1="100" x2="278" y2="100" fill="none" stroke="currentColor" stroke-width="2"/><polygon points="288,100 278,105 278,95" fill="currentColor"/><text x="230" y="90" font-size="14" text-anchor="middle" fill="currentColor">ガラス 4 m</text><circle cx="90" cy="90" r="36" fill="none" stroke="#f08080" stroke-width="3" stroke-dasharray="6 4"/></svg>'
           - 2 つの光路長をくらべる。
@@ -1143,7 +1143,7 @@ days:
         check: "math.floor(500 * (3 / 5) / 5 ** 2 + 0.5)"
         hints:
           - 電球からゆかの点までの長さ r を求める。たて 3 、よこ 4 の直角三角形で、3：4：5 の三角形を思い出そう。
-          - text: たて 3 、よこ 4 の直角三角形。r が決まると、cosθ は たて ÷ r 。
+          - text: たて 3 、よこ 4 の直角三角形。r が決まると、cosθ はたて ÷ r 。
             svg: '<svg viewBox="0 0 320 200" xmlns="http://www.w3.org/2000/svg"><line x1="20" y1="160" x2="300" y2="160" fill="none" stroke="currentColor" stroke-width="3"/><circle cx="60" cy="40" r="6" fill="currentColor"/><line x1="60" y1="40" x2="60" y2="160" fill="none" stroke="currentColor" stroke-width="1" stroke-dasharray="4 4"/><line x1="60" y1="40" x2="220" y2="160" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="220" cy="160" r="4" fill="currentColor"/><circle cx="60" cy="100" r="20" fill="none" stroke="#f08080" stroke-width="3" stroke-dasharray="6 4"/><text x="50" y="106" font-size="14" text-anchor="end" fill="currentColor">3 m</text></svg>'
           - cosθ が決まったら、500 × cosθ ÷ r² を計算する。
         paths:

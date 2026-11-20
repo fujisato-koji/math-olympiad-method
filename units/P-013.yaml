@@ -33,7 +33,7 @@ days:
           - 箱の重さは、どちらでも同じです。
           - text: ゆかにふれている面の広さをくらべます。
             svg: '<svg viewBox="0 0 320 200" xmlns="http://www.w3.org/2000/svg"><g transform="translate(10 4) scale(0.453)"><line x1="60" y1="180" x2="260" y2="180" fill="none" stroke="currentColor" stroke-width="2"/><rect x="125" y="60" width="70" height="120" fill="#c9a36b" fill-opacity="0.55" stroke="currentColor" stroke-width="2"/><line x1="125" y1="180" x2="195" y2="180" fill="none" stroke="#f08080" stroke-width="5"/></g><text x="82.5" y="194" font-size="14" text-anchor="middle" fill="currentColor">ア</text><g transform="translate(165 4) scale(0.453)"><line x1="60" y1="180" x2="260" y2="180" fill="none" stroke="currentColor" stroke-width="2"/><rect x="100" y="110" width="120" height="70" fill="#c9a36b" fill-opacity="0.55" stroke="currentColor" stroke-width="2"/><line x1="100" y1="180" x2="220" y2="180" fill="none" stroke="#f08080" stroke-width="5"/></g><text x="237.5" y="194" font-size="14" text-anchor="middle" fill="currentColor">イ</text></svg>'
-          - 圧力 = 力 ÷ 面の広さ です。力が同じとき、わる数の面が小さいと、答えはどうなるでしょう。
+          - 圧力 = 力 ÷ 面の広さです。力が同じとき、わる数の面が小さいと、答えはどうなるでしょう。
         paths:
           - [力は同じ, 面の広さを見る, 小さい方が圧力が大きい]
           - [ア の面は小さく イ の面は大きい, 圧力 = 力 ÷ 面の広さ, 面の広さが小さい ア が大きい]
@@ -73,7 +73,7 @@ days:
           - 水圧は、水の中のどんな量で決まるかを考えます。
           - text: 3 つとも、水面から底までの深さをくらべます。
             svg: '<svg viewBox="0 0 320 200" xmlns="http://www.w3.org/2000/svg"><g transform="translate(10 4) scale(0.292)"><rect x="135" y="70" width="50" height="100" fill="#7fc8f8" fill-opacity="0.45"/><path d="M135.0 40 L135.0 170 L185.0 170 L185.0 40" fill="none" stroke="currentColor" stroke-width="2"/><line x1="100" y1="80" x2="100" y2="160" fill="none" stroke="currentColor" stroke-width="2"/><polygon points="100,170 95,160 105,160" fill="currentColor"/><polygon points="100,70 105,80 95,80" fill="currentColor"/><text x="108" y="125" font-size="14" text-anchor="start" fill="currentColor"></text></g><text x="56.7" y="194" font-size="14" text-anchor="middle" fill="currentColor">ア</text><g transform="translate(113.3 4) scale(0.292)"><rect x="90" y="70" width="140" height="100" fill="#7fc8f8" fill-opacity="0.45"/><path d="M90.0 40 L90.0 170 L230.0 170 L230.0 40" fill="none" stroke="currentColor" stroke-width="2"/><line x1="70" y1="80" x2="70" y2="160" fill="none" stroke="currentColor" stroke-width="2"/><polygon points="70,170 65,160 75,160" fill="currentColor"/><polygon points="70,70 75,80 65,80" fill="currentColor"/><text x="78" y="125" font-size="14" text-anchor="start" fill="currentColor"></text></g><text x="160" y="194" font-size="14" text-anchor="middle" fill="currentColor">イ</text><g transform="translate(216.7 4) scale(0.292)"><polygon points="95,70 225,70 195,170 125,170" fill="#7fc8f8" fill-opacity="0.45" stroke="currentColor" stroke-width="2"/><line x1="80" y1="80" x2="80" y2="160" fill="none" stroke="currentColor" stroke-width="2"/><polygon points="80,170 75,160 85,160" fill="currentColor"/><polygon points="80,70 85,80 75,80" fill="currentColor"/><text x="88" y="125" font-size="14" text-anchor="start" fill="currentColor"></text></g><text x="263.3" y="194" font-size="14" text-anchor="middle" fill="currentColor">ウ</text></svg>'
-          - 10000 × 深さ の式で、3 つの水圧を出してくらべます。
+          - 10000 × 深さの式で、3 つの水圧を出してくらべます。
         paths:
           - [底の水圧は深さで決まる, 3 つとも深さが同じ, どれも同じ]
           - [水圧 = 10000 × 深さ（Pa）, 容器の形は式に出てこない, どれも同じ]
@@ -89,7 +89,7 @@ days:
           - 水圧 20000 Pa に 0.5 m² をかけます。
         paths:
           - [水圧 2 × 10000 = 20000 Pa, 力 = 圧力 × 広さ, 20000 × 0.5 = 10000 N]
-          - [水の体積 0.5 × 2 = 1 m³, 水の重さ 10000 N, まっすぐなかべなので 底が受ける力 = 水の重さ]
+          - [水の体積 0.5 × 2 = 1 m³, 水の重さ 10000 N, まっすぐなかべなので底が受ける力 = 水の重さ]
     extra:
       - part: 今日
         text: 重さ 90 N の箱が、広さ 0.6 m² の面でゆかをおしています。ゆかが受ける圧力は何 Pa ですか。
@@ -127,7 +127,7 @@ days:
           - 水 1 m³ の重さ 10000 N に、体積をかけます。
         paths:
           - [おしのけた水は 0.2 m³, 水の重さ 0.2 × 10000, 2000 N]
-          - [水 1 m³ なら ふ力 10000 N, 0.2 m³ はその 0.2 倍, 2000 N]
+          - [水 1 m³ ならふ力 10000 N, 0.2 m³ はその 0.2 倍, 2000 N]
       - part: 今日
         text: おもりを、ばねばかりでつるしました。空気中では 50 N、水の中では 30 N をさしました。水の中で、おもりが受けるふ力は何 N ですか。
         svg: '<svg viewBox="0 0 320 200" xmlns="http://www.w3.org/2000/svg"><line x1="90" y1="10" x2="90" y2="26" fill="none" stroke="currentColor" stroke-width="2"/><rect x="70" y="26" width="40" height="46" fill="#c8ccd6" fill-opacity="0.4" stroke="currentColor" stroke-width="2"/><text x="90" y="55" font-size="14" text-anchor="middle" fill="currentColor">50 N</text><line x1="90" y1="72" x2="90" y2="88" fill="none" stroke="currentColor" stroke-width="2"/><rect x="70" y="88" width="40" height="40" fill="#c9a36b" fill-opacity="0.55" stroke="currentColor" stroke-width="2"/><text x="90" y="113" font-size="14" text-anchor="middle" fill="currentColor">おもり</text><text x="90" y="150" font-size="14" text-anchor="middle" fill="currentColor">空気中</text><rect x="175" y="90" width="110" height="70" fill="#7fc8f8" fill-opacity="0.45"/><path d="M175.0 60 L175.0 160 L285.0 160 L285.0 60" fill="none" stroke="currentColor" stroke-width="2"/><line x1="230" y1="2" x2="230" y2="18" fill="none" stroke="currentColor" stroke-width="2"/><rect x="210" y="18" width="40" height="46" fill="#c8ccd6" fill-opacity="0.4" stroke="currentColor" stroke-width="2"/><text x="230" y="47" font-size="14" text-anchor="middle" fill="currentColor">30 N</text><line x1="230" y1="64" x2="230" y2="100" fill="none" stroke="currentColor" stroke-width="2"/><rect x="210" y="100" width="40" height="40" fill="#c9a36b" fill-opacity="0.55" stroke="currentColor" stroke-width="2"/><text x="230" y="190" font-size="14" text-anchor="middle" fill="currentColor">水の中</text></svg>'
@@ -139,8 +139,8 @@ days:
             svg: '<svg viewBox="0 0 320 200" xmlns="http://www.w3.org/2000/svg"><line x1="230" y1="2" x2="230" y2="18" fill="none" stroke="currentColor" stroke-width="2"/><rect x="210" y="18" width="40" height="46" fill="#c8ccd6" fill-opacity="0.4" stroke="currentColor" stroke-width="2"/><text x="230" y="47" font-size="14" text-anchor="middle" fill="currentColor">30 N</text><line x1="230" y1="64" x2="230" y2="100" fill="none" stroke="currentColor" stroke-width="2"/><rect x="210" y="100" width="40" height="40" fill="#c9a36b" fill-opacity="0.55" stroke="currentColor" stroke-width="2"/><line x1="230" y1="150" x2="230" y2="154" fill="none" stroke="currentColor" stroke-width="3"/><polygon points="230,164 225,154 235,154" fill="currentColor"/><text x="230" y="186" font-size="14" text-anchor="middle" fill="currentColor">ふ力は上向き</text></svg>'
           - 数の変わったぶんが、ふ力です。
         paths:
-          - [おもりの重さ 50 N, ばねばかりは 重さ - ふ力 = 30 N, ふ力 = 20 N]
-          - [数が 50 N から 30 N に へった, へったぶんが ふ力, 20 N]
+          - [おもりの重さ 50 N, ばねばかりは重さ - ふ力 = 30 N, ふ力 = 20 N]
+          - [数が 50 N から 30 N にへった, へったぶんがふ力, 20 N]
       - part: 今日
         text: 重さ 30 N の木が、水の上にうかんで止まっています。木が受けるふ力は何 N ですか。
         svg: '<svg viewBox="0 0 320 200" xmlns="http://www.w3.org/2000/svg"><rect x="50" y="90" width="220" height="80" fill="#7fc8f8" fill-opacity="0.45"/><path d="M50.0 50 L50.0 170 L270.0 170 L270.0 50" fill="none" stroke="currentColor" stroke-width="2"/><rect x="130" y="70" width="60" height="50" fill="#c9a36b" fill-opacity="0.55" stroke="currentColor" stroke-width="2"/><text x="160" y="100" font-size="14" text-anchor="middle" fill="currentColor">木</text><line x1="160" y1="120" x2="160" y2="94" fill="none" stroke="currentColor" stroke-width="3"/><polygon points="160,84 165,94 155,94" fill="currentColor"/><line x1="215" y1="64" x2="215" y2="90" fill="none" stroke="currentColor" stroke-width="2"/><polygon points="215,100 210,90 220,90" fill="currentColor"/><text x="250" y="86" font-size="14" text-anchor="middle" fill="currentColor">重さ 30 N</text><text x="160" y="190" font-size="14" text-anchor="middle" fill="currentColor">うかんで止まっている</text></svg>'
@@ -166,7 +166,7 @@ days:
           - 水の中の体積は 0.01 m³ の 5 分の 3 です。
         paths:
           - [水の中の体積 0.006 m³, ふ力 0.006 × 10000 = 60 N, 木の重さ = ふ力 = 60 N]
-          - [0.01 m³ 全部なら ふ力 100 N, 5 分の 3 なので 60 N, 重さ = 60 N]
+          - [0.01 m³ 全部ならふ力 100 N, 5 分の 3 なので 60 N, 重さ = 60 N]
       - part: 今日
         text: 重さ 40 N、体積 0.005 m³ の物を、全部水の中に入れて手をはなしました。物はどうなりますか。
         svg: '<svg viewBox="0 0 320 200" xmlns="http://www.w3.org/2000/svg"><rect x="60" y="60" width="200" height="120" fill="#7fc8f8" fill-opacity="0.45"/><path d="M60.0 20 L60.0 180 L260.0 180 L260.0 20" fill="none" stroke="currentColor" stroke-width="2"/><rect x="130" y="95" width="60" height="50" fill="#c9a36b" fill-opacity="0.55" stroke="currentColor" stroke-width="2"/><text x="160" y="125" font-size="14" text-anchor="middle" fill="currentColor">40 N</text><line x1="160" y1="90" x2="160" y2="70" fill="none" stroke="currentColor" stroke-width="2"/><polygon points="160,60 165,70 155,70" fill="currentColor"/><line x1="160" y1="145" x2="160" y2="160" fill="none" stroke="currentColor" stroke-width="2"/><polygon points="160,170 155,160 165,160" fill="currentColor"/><text x="215" y="70" font-size="14" text-anchor="middle" fill="currentColor">ふ力は？</text></svg>'
@@ -177,7 +177,7 @@ days:
           - 全部水の中でのふ力と、物の重さをくらべます。
           - text: 全部水の中でのふ力は、体積 0.005 m³ の水の重さです。
             svg: '<svg viewBox="0 0 320 200" xmlns="http://www.w3.org/2000/svg"><rect x="60" y="60" width="200" height="120" fill="#7fc8f8" fill-opacity="0.45"/><path d="M60.0 20 L60.0 180 L260.0 180 L260.0 20" fill="none" stroke="currentColor" stroke-width="2"/><rect x="130" y="95" width="60" height="50" fill="#c9a36b" fill-opacity="0.55" stroke="currentColor" stroke-width="2"/><text x="160" y="125" font-size="14" text-anchor="middle" fill="currentColor">40 N</text><rect x="126" y="91" width="68" height="58" rx="6" fill="none" stroke="#7fc8f8" stroke-width="3" stroke-dasharray="6 4"/><text x="160" y="192" font-size="14" text-anchor="middle" fill="currentColor">0.005 m³ の水の重さ</text></svg>'
-          - ふ力が 重さより大きければ上へ、小さければ下へ動きます。
+          - ふ力が重さより大きければ上へ、小さければ下へ動きます。
         paths:
           - [ふ力 0.005 × 10000 = 50 N, 重さ 40 N, ふ力の方が大きい]
           - [上向き 50 N と下向き 40 N, 力の差は上向きに 10 N, 上へ動く]
@@ -250,7 +250,7 @@ days:
       - part: 見本
         text: 管を流れる水は、1 秒に通る体積がどこでも同じです。そのため、管の切り口の広さ（断面積）が小さい所ほど速く流れます（断面積 × 速さが一定）。水が速い所は圧力が小さく、水平な管では、圧力 + 500 × 速さ² が一定です。
         svg: '<svg viewBox="0 0 320 200" xmlns="http://www.w3.org/2000/svg"><polyline points="30,60 110,60 170,80 290,80" fill="none" stroke="currentColor" stroke-width="2"/><polyline points="30,140 110,140 170,120 290,120" fill="none" stroke="currentColor" stroke-width="2"/><line x1="45" y1="100" x2="75" y2="100" fill="none" stroke="currentColor" stroke-width="3"/><polygon points="85,100 75,105 75,95" fill="currentColor"/><text x="65" y="92" font-size="14" text-anchor="middle" fill="currentColor">おそい</text><line x1="195" y1="100" x2="265" y2="100" fill="none" stroke="currentColor" stroke-width="3"/><polygon points="275,100 265,105 265,95" fill="currentColor"/><text x="235" y="92" font-size="14" text-anchor="middle" fill="currentColor">速い</text></svg>'
-        explain: 流れが定常なら、管の各断面を 1 秒間に通る体積（流量）は等しく、断面積 A × 速さ v = 一定です（連続の式）。水平な流れでは、ベルヌーイの定理 p + ½ρv² = 一定 が成り立ち、水の密度 1000 kg/m³ では ½ρ = 500 になります。速い所では圧力が下がります。
+        explain: 流れが定常なら、管の各断面を 1 秒間に通る体積（流量）は等しく、断面積 A × 速さ v = 一定です（連続の式）。水平な流れでは、ベルヌーイの定理 p + ½ρv² = 一定が成り立ち、水の密度 1000 kg/m³ では ½ρ = 500 になります。速い所では圧力が下がります。
       - part: 今日
         text: 太い所の断面積が 0.4 m²、細い所の断面積が 0.1 m² の管を、水が流れています。太い所の速さが 2 m/s のとき、細い所の速さは何 m/s ですか。
         svg: '<svg viewBox="0 0 320 200" xmlns="http://www.w3.org/2000/svg"><polyline points="30,60 110,60 170,80 290,80" fill="none" stroke="currentColor" stroke-width="2"/><polyline points="30,140 110,140 170,120 290,120" fill="none" stroke="currentColor" stroke-width="2"/><text x="65" y="56" font-size="14" text-anchor="middle" fill="currentColor">0.4 m²</text><text x="235" y="76" font-size="14" text-anchor="middle" fill="currentColor">0.1 m²</text><line x1="45" y1="100" x2="75" y2="100" fill="none" stroke="currentColor" stroke-width="3"/><polygon points="85,100 75,105 75,95" fill="currentColor"/><text x="65" y="92" font-size="14" text-anchor="middle" fill="currentColor">2 m/s</text><text x="235" y="126" font-size="14" text-anchor="middle" fill="currentColor">？</text></svg>'
@@ -285,7 +285,7 @@ days:
         check: "'4 倍'"
         hints:
           - 半径が半分になると、断面積がどうなるかを考えます。
-          - text: 円の面積は 半径 × 半径 × 3.14 です。
+          - text: 円の面積は半径 × 半径 × 3.14 です。
             svg: '<svg viewBox="0 0 320 200" xmlns="http://www.w3.org/2000/svg"><circle cx="90" cy="100" r="50" fill="#7fc8f8" fill-opacity="0.4" stroke="currentColor" stroke-width="2"/><circle cx="230" cy="100" r="25" fill="#7fc8f8" fill-opacity="0.4" stroke="currentColor" stroke-width="2"/><text x="90" y="170" font-size="14" text-anchor="middle" fill="currentColor">半径 r</text><text x="230" y="170" font-size="14" text-anchor="middle" fill="currentColor">半分</text></svg>'
           - 断面積が何分の 1 になるかが、速さの何倍かになります。
         paths:
@@ -302,7 +302,7 @@ days:
             svg: '<svg viewBox="0 0 320 200" xmlns="http://www.w3.org/2000/svg"><polyline points="30,60 110,60 170,80 290,80" fill="none" stroke="currentColor" stroke-width="2"/><polyline points="30,140 110,140 170,120 290,120" fill="none" stroke="currentColor" stroke-width="2"/><rect x="30" y="60" width="80" height="80" rx="6" fill="none" stroke="#f08080" stroke-width="3" stroke-dasharray="6 4"/><text x="70" y="104" font-size="14" text-anchor="middle" fill="currentColor">110000 + 500 × 2²</text></svg>'
           - その数から、細い所の 500 × 速さ² をひきます。
         paths:
-          - [太い所 110000 + 500 × 4 = 112000, 細い所 圧力 + 500 × 16 = 112000, 圧力 104000 Pa]
+          - [太い所 110000 + 500 × 4 = 112000, 細い所圧力 + 500 × 16 = 112000, 圧力 104000 Pa]
           - [速さ² の差 16 - 4 = 12, 圧力は 500 × 12 = 6000 Pa 下がる, 110000 - 6000 = 104000 Pa]
       - part: 今日
         text: 断面積 0.3 m² の太い管を、水が 2 m/s で流れてきて、断面積 0.05 m² の同じ細い管 3 本に等しく分かれます。細い管の 1 本での水の速さは何 m/s ですか。
@@ -318,18 +318,19 @@ days:
           - [流れてくる水 0.3 × 2 = 0.6 m³ 毎秒, 1 本に 0.2 m³ 毎秒, 0.2 ÷ 0.05 = 4 m/s]
           - [細い管 3 本の断面積の合計 0.15 m², 太い管の半分, 速さは 2 倍の 4 m/s]
       - part: 今日
-        text: 水が左から右へ流れる水平な管に、太い所ア と 細い所イ があります。圧力が大きいのはどちらですか。
+        id: "6cf83bd758"
+        text: 水が左から右へ流れる水平な管に、太い所アと細い所イがあります。圧力が大きいのはどちらですか。
         svg: '<svg viewBox="0 0 320 200" xmlns="http://www.w3.org/2000/svg"><polyline points="30,60 110,60 170,80 290,80" fill="none" stroke="currentColor" stroke-width="2"/><polyline points="30,140 110,140 170,120 290,120" fill="none" stroke="currentColor" stroke-width="2"/><text x="65" y="106" font-size="14" text-anchor="middle" fill="currentColor">ア</text><text x="235" y="106" font-size="14" text-anchor="middle" fill="currentColor">イ</text><line x1="30" y1="184" x2="70" y2="184" fill="none" stroke="currentColor" stroke-width="2"/><polygon points="80,184 70,189 70,179" fill="currentColor"/></svg>'
         choices: [ア, イ]
         answer: ア
         check: "'ア'"
         hints:
-          - 水の速さが どちらで大きいかを、先に考えます。
+          - 水の速さがどちらで大きいかを、先に考えます。
           - text: 管が細い イ では、水が速く流れます。
             svg: '<svg viewBox="0 0 320 200" xmlns="http://www.w3.org/2000/svg"><polyline points="30,60 110,60 170,80 290,80" fill="none" stroke="currentColor" stroke-width="2"/><polyline points="30,140 110,140 170,120 290,120" fill="none" stroke="currentColor" stroke-width="2"/><line x1="45" y1="100" x2="75" y2="100" fill="none" stroke="currentColor" stroke-width="3"/><polygon points="85,100 75,105 75,95" fill="currentColor"/><line x1="195" y1="100" x2="265" y2="100" fill="none" stroke="currentColor" stroke-width="3"/><polygon points="275,100 265,105 265,95" fill="currentColor"/><circle cx="235" cy="100" r="26" fill="none" stroke="#f08080" stroke-width="3" stroke-dasharray="6 4"/><text x="235" y="106" font-size="14" text-anchor="middle" fill="currentColor">イ</text></svg>'
           - 速く流れる所ほど、圧力は小さくなります。
         paths:
-          - [太い所はおそい, 速い所ほど圧力は小さい, 圧力が大きいのは おそい ア]
+          - [太い所はおそい, 速い所ほど圧力は小さい, 圧力が大きいのはおそい ア]
           - [圧力 + 500 × 速さ² が一定, 速さ² が大きい イ は圧力が小さい, ア]
       - part: 挑戦
         text: 水平な管の太い所の断面積は 0.3 m²、細い所は 0.1 m² です。太い所を水が 2 m/s で流れているとき、太い所の圧力は、細い所の圧力より何 Pa 大きいですか。
@@ -399,7 +400,7 @@ days:
           - 70 mN に、その倍をかけます。
         paths:
           - [1 m で 70 mN, 0.2 m は 0.2 倍, 70 × 0.2 = 14 mN]
-          - [0.1 m で 7 mN, 0.2 m は その 2 倍, 14 mN]
+          - [0.1 m で 7 mN, 0.2 m はその 2 倍, 14 mN]
       - part: 今日
         text: 大きさのちがう水のしずくがあります。しずくの中の圧力が、まわりの大気より大きいのはどちらですか。
         svg: '<svg viewBox="0 0 320 200" xmlns="http://www.w3.org/2000/svg"><circle cx="90" cy="100" r="28" fill="#7fc8f8" fill-opacity="0.5" stroke="currentColor" stroke-width="2"/><circle cx="220" cy="100" r="64" fill="#7fc8f8" fill-opacity="0.5" stroke="currentColor" stroke-width="2"/><text x="90" y="160" font-size="14" text-anchor="middle" fill="currentColor">ア 小さい</text><text x="220" y="186" font-size="14" text-anchor="middle" fill="currentColor">イ 大きい</text></svg>'
@@ -410,7 +411,7 @@ days:
           - しずくの表面は、中へちぢもうとしています。
           - text: 表面が曲がっているほど、中へおす力がよく出ます。曲がり方の強いのはどちらかをくらべます。
             svg: '<svg viewBox="0 0 320 200" xmlns="http://www.w3.org/2000/svg"><circle cx="90" cy="100" r="28" fill="#7fc8f8" fill-opacity="0.5" stroke="currentColor" stroke-width="2"/><circle cx="220" cy="100" r="64" fill="#7fc8f8" fill-opacity="0.5" stroke="currentColor" stroke-width="2"/><circle cx="90" cy="100" r="40" fill="none" stroke="#f08080" stroke-width="3" stroke-dasharray="6 4"/><circle cx="220" cy="100" r="76" fill="none" stroke="#f08080" stroke-width="3" stroke-dasharray="6 4"/><text x="220" y="186" font-size="14" text-anchor="middle" fill="currentColor">イ 大きい</text></svg>'
-          - 大気との圧力の差は 2 × 0.07 ÷ 半径 です。わる数の半径が小さいと、答えはどうなるでしょう。
+          - 大気との圧力の差は 2 × 0.07 ÷ 半径です。わる数の半径が小さいと、答えはどうなるでしょう。
         paths:
           - [表面が中へちぢもうとする, 小さいしずくほど曲がり方が強い, 圧力の差が大きいのは ア]
           - [圧力の差 = 2 × 0.07 ÷ 半径, 半径が小さいと大きくなる, ア]
@@ -420,7 +421,7 @@ days:
         answer: 1400
         check: "2*7*10000//100"
         hints:
-          - 式の ÷ 半径 の所に、半径の数を入れます。
+          - 式の ÷ 半径の所に、半径の数を入れます。
           - text: 先に、分子の 2 × 0.07 を求めます。
             svg: '<svg viewBox="0 0 320 200" xmlns="http://www.w3.org/2000/svg"><circle cx="160" cy="100" r="56" fill="#7fc8f8" fill-opacity="0.5" stroke="currentColor" stroke-width="2"/><text x="160" y="106" font-size="14" text-anchor="middle" fill="currentColor">2 × 0.07 = 0.14</text></svg>'
           - 0.14 を 0.0001 でわります。
@@ -434,7 +435,7 @@ days:
         check: "2*7*100*10000//(100*10000*7)"
         hints:
           - 式の半径に 0.0007 を入れて、高さを m で求めます。
-          - text: 先に、下の 10000 × 半径 を求めます。
+          - text: 先に、下の 10000 × 半径を求めます。
             svg: '<svg viewBox="0 0 320 200" xmlns="http://www.w3.org/2000/svg"><rect x="45" y="140" width="230" height="40" fill="#7fc8f8" fill-opacity="0.45"/><path d="M45.0 120 L45.0 180 L275.0 180 L275.0 120" fill="none" stroke="currentColor" stroke-width="2"/><line x1="148" y1="40" x2="148" y2="160" fill="none" stroke="currentColor" stroke-width="2"/><line x1="172" y1="40" x2="172" y2="160" fill="none" stroke="currentColor" stroke-width="2"/><rect x="148" y="110" width="24" height="50" fill="#7fc8f8" fill-opacity="0.5"/><text x="160" y="28" font-size="14" text-anchor="middle" fill="currentColor">10000 × 0.0007</text><rect x="140" y="100" width="40" height="60" rx="6" fill="none" stroke="#f08080" stroke-width="3" stroke-dasharray="6 4"/></svg>'
           - 0.14 をその数でわった m の数を、100 倍して cm にします。
         paths:
@@ -461,12 +462,12 @@ days:
         answer: 低くなる
         check: "'低くなる'"
         hints:
-          - 水は管をぬらすと 上がりました。水銀は ぬらしません。
+          - 水は管をぬらすと上がりました。水銀はぬらしません。
           - text: ぬらすかどうかで、表面ちょう力が引く向きがかわります。
             svg: '<svg viewBox="0 0 320 200" xmlns="http://www.w3.org/2000/svg"><circle cx="80" cy="100" r="40" fill="#7fc8f8" fill-opacity="0.5" stroke="currentColor" stroke-width="2"/><text x="80" y="160" font-size="14" text-anchor="middle" fill="currentColor">ぬらす 上へ</text><circle cx="240" cy="100" r="40" fill="#c8ccd6" fill-opacity="0.6" stroke="currentColor" stroke-width="2"/><text x="240" y="160" font-size="14" text-anchor="middle" fill="currentColor">ぬらさない 下へ</text></svg>'
           - 水は管の中で上がりました。水銀は、水と同じ向きか反対の向きか、考えます。
         paths:
-          - [水はぬらすので管の中で上がる, 水銀はぬらさない, 管の中の面は 低くなる]
+          - [水はぬらすので管の中で上がる, 水銀はぬらさない, 管の中の面は低くなる]
           - [ぬらすかどうかで向きが反対, 水銀は反対の向き, 低くなる]
       - part: 挑戦
         text: 半径 0.0001 m と 0.0002 m の 2 本の細い管を、水に立てました。水の上がる高さは、2 × 0.07 ÷（10000 × 半径）m です。2 本の管の水面の高さの差は何 cm ですか。
@@ -515,7 +516,7 @@ days:
         answer: 700
         check: "2*7*5000//100"
         hints:
-          - 式の ÷ 半径 の所に、半径の数を入れます。
+          - 式の ÷ 半径の所に、半径の数を入れます。
           - 先に、分子の 2 × 0.07 を求めます。
           - 0.14 を 0.0002 でわります。
   - day: 5
@@ -531,12 +532,12 @@ days:
         check: "2"
         hints:
           - 一定の速さで落ちているとき、速さは変わっていません。
-          - text: 速さが変わらないので、しずくにはたらく力は つり合っています。
+          - text: 速さが変わらないので、しずくにはたらく力はつり合っています。
             svg: '<svg viewBox="0 0 320 200" xmlns="http://www.w3.org/2000/svg"><circle cx="160" cy="100" r="22" fill="#7fc8f8" fill-opacity="0.6" stroke="currentColor" stroke-width="2"/><line x1="160" y1="126" x2="160" y2="166" fill="none" stroke="currentColor" stroke-width="3"/><polygon points="160,176 155,166 165,166" fill="currentColor"/><line x1="160" y1="74" x2="160" y2="44" fill="none" stroke="currentColor" stroke-width="3"/><polygon points="160,34 165,44 155,44" fill="currentColor"/><rect x="120" y="30" width="80" height="150" rx="6" fill="none" stroke="#f08080" stroke-width="3" stroke-dasharray="6 4"/></svg>'
-          - 下向きの重さと、上向きのていこう力の大きさを くらべます。
+          - 下向きの重さと、上向きのていこう力の大きさをくらべます。
         paths:
           - [速さが一定, 力がつり合う, ていこう力 = 重さ = 2 mN]
-          - [速さが変わるなら 力の差がある, 変わらないので 差が 0, ていこう力 2 mN]
+          - [速さが変わるなら力の差がある, 変わらないので差が 0, ていこう力 2 mN]
       - part: 今日
         text: 自動車が 10 m/s で走るとき、空気から 3 N のていこう力を受けます。速さが 2 倍の 20 m/s になると、ていこう力は何 N になりますか。ていこう力は、速さの 2 乗に比例します。
         svg: '<svg viewBox="0 0 320 200" xmlns="http://www.w3.org/2000/svg"><rect x="30" y="90" width="60" height="30" fill="#f08080" fill-opacity="0.55" stroke="currentColor" stroke-width="2"/><text x="60" y="110" font-size="14" text-anchor="middle" fill="currentColor">10 m/s</text><line x1="30" y1="105" x2="20" y2="105" fill="none" stroke="currentColor" stroke-width="3"/><polygon points="10,105 20,100 20,110" fill="currentColor"/><rect x="190" y="90" width="60" height="30" fill="#f08080" fill-opacity="0.55" stroke="currentColor" stroke-width="2"/><text x="220" y="110" font-size="14" text-anchor="middle" fill="currentColor">20 m/s</text><line x1="190" y1="105" x2="180" y2="105" fill="none" stroke="currentColor" stroke-width="3"/><polygon points="170,105 180,100 180,110" fill="currentColor"/><text x="40" y="150" font-size="14" text-anchor="middle" fill="currentColor">3 N</text><text x="210" y="150" font-size="14" text-anchor="middle" fill="currentColor">？ N</text></svg>'
@@ -571,12 +572,12 @@ days:
         check: "'上向き'"
         hints:
           - ボールから見ると、空気は左へ流れています。
-          - text: 空気の流れと、ボールの面の動きが同じ向きになる側を さがします。
+          - text: 空気の流れと、ボールの面の動きが同じ向きになる側をさがします。
             svg: '<svg viewBox="0 0 320 200" xmlns="http://www.w3.org/2000/svg"><circle cx="160" cy="100" r="34" fill="#f3c969" fill-opacity="0.6" stroke="currentColor" stroke-width="2"/><line x1="180" y1="54" x2="150" y2="54" fill="none" stroke="currentColor" stroke-width="2"/><polygon points="140,54 150,49 150,59" fill="currentColor"/><line x1="140" y1="146" x2="170" y2="146" fill="none" stroke="currentColor" stroke-width="2"/><polygon points="180,146 170,151 170,141" fill="currentColor"/><line x1="260" y1="36" x2="210" y2="36" fill="none" stroke="currentColor" stroke-width="3"/><polygon points="200,36 210,31 210,41" fill="currentColor"/><line x1="260" y1="172" x2="210" y2="172" fill="none" stroke="currentColor" stroke-width="3"/><polygon points="200,172 210,167 210,177" fill="currentColor"/><rect x="110" y="40" width="100" height="24" rx="6" fill="none" stroke="#f08080" stroke-width="3" stroke-dasharray="6 4"/><rect x="110" y="134" width="100" height="24" rx="6" fill="none" stroke="#f08080" stroke-width="3" stroke-dasharray="6 4"/></svg>'
           - その側で空気が速くなり、圧力が小さくなります。ボールは圧力の小さい側へ動きます。
         paths:
-          - [空気は左へ, 上の面も左へ動く, 上で空気が速く 圧力が小さい 上向き]
-          - [下の面は右へ動き 空気とぶつかる, 下は空気がおそく圧力が大きい, 上向き]
+          - [空気は左へ, 上の面も左へ動く, 上で空気が速く圧力が小さい上向き]
+          - [下の面は右へ動き空気とぶつかる, 下は空気がおそく圧力が大きい, 上向き]
       - part: 今日
         text: ボールが右へ進みながら、上の面が右へ、下の面が左へ動くように回っています。ボールが受けるマグヌス効果の力は、どちら向きですか。
         svg: '<svg viewBox="0 0 320 200" xmlns="http://www.w3.org/2000/svg"><circle cx="160" cy="100" r="34" fill="#f3c969" fill-opacity="0.6" stroke="currentColor" stroke-width="2"/><line x1="140" y1="54" x2="170" y2="54" fill="none" stroke="currentColor" stroke-width="2"/><polygon points="180,54 170,59 170,49" fill="currentColor"/><line x1="180" y1="146" x2="150" y2="146" fill="none" stroke="currentColor" stroke-width="2"/><polygon points="140,146 150,141 150,151" fill="currentColor"/><line x1="250" y1="100" x2="290" y2="100" fill="none" stroke="currentColor" stroke-width="3"/><polygon points="300,100 290,105 290,95" fill="currentColor"/><text x="275" y="90" font-size="14" text-anchor="middle" fill="currentColor">進む</text></svg>'
@@ -585,12 +586,12 @@ days:
         check: "'下向き'"
         hints:
           - ボールから見ると、空気は左へ流れています。
-          - text: 空気の流れと、ボールの面の動きが同じ向きになる側を さがします。
+          - text: 空気の流れと、ボールの面の動きが同じ向きになる側をさがします。
             svg: '<svg viewBox="0 0 320 200" xmlns="http://www.w3.org/2000/svg"><circle cx="160" cy="100" r="34" fill="#f3c969" fill-opacity="0.6" stroke="currentColor" stroke-width="2"/><line x1="140" y1="54" x2="170" y2="54" fill="none" stroke="currentColor" stroke-width="2"/><polygon points="180,54 170,59 170,49" fill="currentColor"/><line x1="180" y1="146" x2="150" y2="146" fill="none" stroke="currentColor" stroke-width="2"/><polygon points="140,146 150,141 150,151" fill="currentColor"/><line x1="260" y1="36" x2="210" y2="36" fill="none" stroke="currentColor" stroke-width="3"/><polygon points="200,36 210,31 210,41" fill="currentColor"/><line x1="260" y1="172" x2="210" y2="172" fill="none" stroke="currentColor" stroke-width="3"/><polygon points="200,172 210,167 210,177" fill="currentColor"/><rect x="110" y="40" width="100" height="24" rx="6" fill="none" stroke="#f08080" stroke-width="3" stroke-dasharray="6 4"/><rect x="110" y="134" width="100" height="24" rx="6" fill="none" stroke="#f08080" stroke-width="3" stroke-dasharray="6 4"/></svg>'
           - その側で空気が速くなり、圧力が小さくなります。ボールは圧力の小さい側へ動きます。
         paths:
-          - [空気は左へ, 下の面が左へ動く, 下で空気が速く 圧力が小さい 下向き]
-          - [上の面は右へ動き 空気とぶつかる, 上は空気がおそく圧力が大きい, 下向き]
+          - [空気は左へ, 下の面が左へ動く, 下で空気が速く圧力が小さい下向き]
+          - [上の面は右へ動き空気とぶつかる, 上は空気がおそく圧力が大きい, 下向き]
       - part: 今日
         text: パラシュートを開いて落ちると、開く前にくらべて、落ちる速さが一定になったときの速さは、どうなりますか。
         svg: '<svg viewBox="0 0 320 200" xmlns="http://www.w3.org/2000/svg"><g transform="translate(10 4) scale(0.453)"><circle cx="160" cy="150" r="10" fill="#c9a36b" fill-opacity="0.5" stroke="currentColor" stroke-width="2"/><line x1="160" y1="140" x2="160" y2="100" fill="none" stroke="currentColor" stroke-width="2"/></g><text x="82.5" y="194" font-size="14" text-anchor="middle" fill="currentColor">前</text><g transform="translate(165 4) scale(0.453)"><path d="M90 90 Q160 10 230 90 Z" fill="#f08080" fill-opacity="0.5" stroke="currentColor" stroke-width="2"/><line x1="100" y1="90" x2="160" y2="140" fill="none" stroke="currentColor" stroke-width="2"/><line x1="220" y1="90" x2="160" y2="140" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="160" cy="150" r="10" fill="#c9a36b" fill-opacity="0.5" stroke="currentColor" stroke-width="2"/></g><text x="237.5" y="194" font-size="14" text-anchor="middle" fill="currentColor">後</text></svg>'
@@ -604,7 +605,7 @@ days:
           - 面が広いほど、同じ速さでのていこう力は大きくなります。
         paths:
           - [開くと面が広くなる, 同じ速さでていこう力が大きくなる, 重さとつり合う速さは小さくなる]
-          - [重さは変わらない, ていこう力は速さの 2 乗に比例し面が広いと大きい, 小さい速さで つり合う]
+          - [重さは変わらない, ていこう力は速さの 2 乗に比例し面が広いと大きい, 小さい速さでつり合う]
       - part: 挑戦
         text: 重さ 0.01 N の雨のしずくが、一定の速さ v（m/s）で落ちています。しずくが受けるていこう力は、0.0001 × v × v（N）です。v は何 m/s ですか。
         svg: '<svg viewBox="0 0 320 200" xmlns="http://www.w3.org/2000/svg"><circle cx="160" cy="100" r="22" fill="#7fc8f8" fill-opacity="0.6" stroke="currentColor" stroke-width="2"/><line x1="160" y1="126" x2="160" y2="166" fill="none" stroke="currentColor" stroke-width="3"/><polygon points="160,176 155,166 165,166" fill="currentColor"/><text x="230" y="152" font-size="14" text-anchor="middle" fill="currentColor">重さ 0.01 N</text><line x1="160" y1="74" x2="160" y2="44" fill="none" stroke="currentColor" stroke-width="3"/><polygon points="160,34 165,44 155,44" fill="currentColor"/><text x="235" y="50" font-size="14" text-anchor="middle" fill="currentColor">0.0001 × v × v</text></svg>'
@@ -612,12 +613,12 @@ days:
         check: "min(v for v in range(1000) if 100*v*v==10000)"
         hints:
           - 一定の速さで落ちているので、ていこう力と重さがつり合っています。
-          - text: ていこう力 = 重さ の式を立てます。
+          - text: ていこう力 = 重さの式を立てます。
             svg: '<svg viewBox="0 0 320 200" xmlns="http://www.w3.org/2000/svg"><text x="160" y="100" font-size="16" text-anchor="middle" fill="currentColor">0.0001 × v × v = 0.01</text><rect x="40" y="70" width="240" height="50" rx="6" fill="none" stroke="#f08080" stroke-width="3" stroke-dasharray="6 4"/></svg>'
-          - v × v がいくつになるかを求めてから、2 乗してその数になる数を さがします。
+          - v × v がいくつになるかを求めてから、2 乗してその数になる数をさがします。
         paths:
           - [0.0001 × v × v = 0.01, v × v = 100, v = 10 m/s]
-          - [重さは ていこう力の 100 倍, v × v が 100, v = 10 m/s]
+          - [重さはていこう力の 100 倍, v × v が 100, v = 10 m/s]
       - part: 思い出す
         text: 水の表面ちょう力は、長さ 1 m の線に 70 mN の力がはたらく大きさです。水の表面に引いた長さ 0.4 m の線にはたらく表面ちょう力は何 mN ですか。
         svg: '<svg viewBox="0 0 320 200" xmlns="http://www.w3.org/2000/svg"><rect x="30" y="40" width="260" height="120" fill="#7fc8f8" fill-opacity="0.4" stroke="currentColor" stroke-width="2"/><line x1="100" y1="60" x2="100" y2="140" fill="none" stroke="currentColor" stroke-width="4"/><line x1="100" y1="100" x2="160" y2="100" fill="none" stroke="currentColor" stroke-width="3"/><polygon points="170,100 160,105 160,95" fill="currentColor"/><text x="135" y="90" font-size="14" text-anchor="middle" fill="currentColor">表面ちょう力</text><text x="60" y="100" font-size="14" text-anchor="middle" fill="currentColor">0.4 m</text><text x="160" y="186" font-size="14" text-anchor="middle" fill="currentColor">水の表面</text></svg>'
@@ -663,14 +664,14 @@ days:
         choices: [水を速くするには前へおす力がいるので、前の圧力が後ろの圧力より小さくなる, 細い所は管のかべが水をおさえつけるので、圧力が小さくなる, 細い所は水の量が少ないので、圧力が小さくなる]
         answer: 水を速くするには前へおす力がいるので、前の圧力が後ろの圧力より小さくなる
         check: "'水を速くするには前へおす力がいるので、前の圧力が後ろの圧力より小さくなる'"
-        explain: 流れる水の一部が太い所から細い所へ進むと、速さが増えます。速さが増えるには前向きの差し引きの力（加速する力）が要り、これは後ろからおす圧力が前からおす圧力より大きいことで生まれます。つまり細い所（前）の圧力は太い所（後ろ）より小さく、これがベルヌーイの定理 p + ½ρv² = 一定 の力学的な意味です。管のかべや水の量は理由ではありません。
+        explain: 流れる水の一部が太い所から細い所へ進むと、速さが増えます。速さが増えるには前向きの差し引きの力（加速する力）が要り、これは後ろからおす圧力が前からおす圧力より大きいことで生まれます。つまり細い所（前）の圧力は太い所（後ろ）より小さく、これがベルヌーイの定理 p + ½ρv² = 一定の力学的な意味です。管のかべや水の量は理由ではありません。
         hints:
-          - 水が太い所から細い所へ進むと、速さが どうなるかを考えます。
+          - 水が太い所から細い所へ進むと、速さがどうなるかを考えます。
           - text: 速さが変わる水には、力がはたらいています。この力は、前と後ろからおす圧力のちがいで生まれます。
             svg: '<svg viewBox="0 0 320 200" xmlns="http://www.w3.org/2000/svg"><polyline points="30,60 110,60 170,80 290,80" fill="none" stroke="currentColor" stroke-width="2"/><polyline points="30,140 110,140 170,120 290,120" fill="none" stroke="currentColor" stroke-width="2"/><rect x="100" y="72" width="50" height="56" fill="#7fc8f8" fill-opacity="0.5" stroke="currentColor" stroke-width="2"/><line x1="60" y1="100" x2="88" y2="100" fill="none" stroke="currentColor" stroke-width="3"/><polygon points="98,100 88,105 88,95" fill="currentColor"/><line x1="190" y1="100" x2="162" y2="100" fill="none" stroke="currentColor" stroke-width="3"/><polygon points="152,100 162,95 162,105" fill="currentColor"/><text x="75" y="88" font-size="14" text-anchor="middle" fill="currentColor">後ろ</text><text x="190" y="88" font-size="14" text-anchor="middle" fill="currentColor">前</text></svg>'
           - 水の一部を前へ進めるには、前からと後ろからのおす力の、どちらが大きくなければならないかを考えます。
         paths:
-          - [水が細い所へ入ると速くなる, 速くなるには前向きの力が要る, 後ろの圧力 が 前の圧力 より大きく 細い所の圧力が小さい]
+          - [水が細い所へ入ると速くなる, 速くなるには前向きの力が要る, 後ろの圧力が前の圧力より大きく細い所の圧力が小さい]
           - [圧力 + 500 × 速さ² が一定, 速さ² が大きい細い所は, 圧力が小さい]
     extra:
       - part: わけ
@@ -747,7 +748,7 @@ days:
         check: "2*7*100*10000//(100*10000*14)"
         hints:
           - 式の半径に 0.0014 を入れて、高さを m で求めます。
-          - 先に、下の 10000 × 半径 を求めます。
+          - 先に、下の 10000 × 半径を求めます。
           - 0.14 をその数でわった m の数を、100 倍して cm にします。
       - part: 今日
         text: ボールが右へ進みながら回っています。上向きのマグヌス効果の力を受けるのは、ア と イ のどちらですか。矢印は、ボールの面が動く向きです。
@@ -823,7 +824,7 @@ days:
         answer: 280
         check: "2*7*2000//100"
         hints:
-          - 式の ÷ 半径 の所に、半径の数を入れます。
+          - 式の ÷ 半径の所に、半径の数を入れます。
           - 先に、分子の 2 × 0.07 を求めます。
           - 0.14 を 0.0005 でわります。
       - part: 今日
@@ -872,18 +873,19 @@ ri:
       - [底が受ける力で考える, のせた物の重さの合計は水の面が 3 cm 上がった分の水の重さで 0.03 × 0.5 × 10000 = 150 N, 落としたあと、うく球は水がささえるので底が水から受ける力は変わらない, しずんだ石は 1 m³ あたり水の 2 倍の重さなので、重さの半分を水のふ力が、のこりの半分を底がじかにささえ、そのぶん底が水から受ける力がへる, 底が水から受ける力のへりは 0.006 × 0.5 × 10000 = 30 N で石の重さの半分なので石は 60 N, 木の球は 150 − 60 = 90 N]
     note: S04 言いかえ（水面の変化を、おしのけた体積の変化か、底が受ける力の変化に言いかえる）、S01 不変量（水と木と石と球の重さは変わらない）。種なし。水面の上がり下がりから重さを出す逆向きの 3 段（上がった 3 cm→のせた重さの合計、うく球は水面を変えない、下がった 0.6 cm→石の重さ）。石の重さを答える 2 段（1120 トークンで解けた）から、うく木の球を足し、逆向きに問う形に直した。球の 1 m³ あたりの重さはうくかしずむかを決めるためだけに使い、うく物は落としても水面を変えないと見ぬく一手が要る。
   - part: 離
+    id: "d744a34656"
     kinds: [総動員, 数]
     uses: [P-005]
-    text: 水がいっぱいの大きな水そうが、高さ 0.4 m の台の上にあります。水の面は水そうの底より 1.5 m 上にあり、水を入れ足して面の高さは変わらないようにします。水そうのよこのかべの、面から深さ 0.4 m の所と深さ 0.9 m の所に、小さな あな を 1 つずつあけると、2 本の水のすじはよこにとび出し、台のよこの地面に落ちる前に、空中で交わりました。交わる点は、地面から何 m の高さですか。水そうの外へ出る水の速さは、深さ h m で √(20 × h) m/s です。
+    text: 水がいっぱいの大きな水そうが、高さ 0.4 m の台の上にあります。水の面は水そうの底より 1.5 m 上にあり、水を入れ足して面の高さは変わらないようにします。水そうのよこのかべの、面から深さ 0.4 m の所と深さ 0.9 m の所に、小さなあなを 1 つずつあけると、2 本の水のすじはよこにとび出し、台のよこの地面に落ちる前に、空中で交わりました。交わる点は、地面から何 m の高さですか。水そうの外へ出る水の速さは、深さ h m で √(20 × h) m/s です。
     svg: '<svg viewBox="0 0 320 200" xmlns="http://www.w3.org/2000/svg"><line x1="10" y1="185" x2="310" y2="185" fill="none" stroke="currentColor" stroke-width="3"/><rect x="60" y="153" width="100" height="32" fill="#c9a36b" fill-opacity="0.5" stroke="currentColor" stroke-width="2"/><rect x="65" y="33" width="90" height="120" fill="#7fc8f8" fill-opacity="0.45"/><path d="M65.0 33 L65.0 153 L155.0 153 L155.0 33" fill="none" stroke="currentColor" stroke-width="2"/><line x1="48" y1="43" x2="48" y2="143" fill="none" stroke="currentColor" stroke-width="2"/><polygon points="48,153 43,143 53,143" fill="currentColor"/><polygon points="48,33 53,43 43,43" fill="currentColor"/><text x="44" y="98" font-size="13" text-anchor="end" fill="currentColor">1.5 m</text><line x1="48" y1="163" x2="48" y2="175" fill="none" stroke="currentColor" stroke-width="2"/><polygon points="48,185 43,175 53,175" fill="currentColor"/><polygon points="48,153 53,163 43,163" fill="currentColor"/><text x="44" y="174" font-size="13" text-anchor="end" fill="currentColor">0.4 m</text><circle cx="155" cy="65" r="3" fill="currentColor"/><circle cx="155" cy="105" r="3" fill="currentColor"/><text x="150" y="69" font-size="13" text-anchor="end" fill="currentColor">深さ 0.4 m</text><text x="150" y="109" font-size="13" text-anchor="end" fill="currentColor">深さ 0.9 m</text><path d="M155 65 Q 217 65 279 185" fill="none" stroke="currentColor" stroke-width="2" stroke-dasharray="4 4"/><path d="M155 105 Q 231 105 307 185" fill="none" stroke="currentColor" stroke-width="2" stroke-dasharray="4 4"/><circle cx="251" cy="137" r="4" fill="currentColor"/><line x1="251" y1="147" x2="251" y2="175" fill="none" stroke="currentColor" stroke-width="2"/><polygon points="251,185 246,175 256,175" fill="currentColor"/><polygon points="251,137 256,147 246,147" fill="currentColor"/><text x="243" y="166" font-size="16" text-anchor="end" fill="currentColor">？</text></svg>'
     answer: 0.6
     check: "(Fraction(19, 10) - Fraction(2, 5) - (Fraction(9, 10) - Fraction(2, 5)) / (1 / (4 * Fraction(2, 5)) - 1 / (4 * Fraction(9, 10))) / (4 * Fraction(2, 5))) * 1.0"
     hints:
-      - 2 本の水のすじが交わる点では、かべからよこに進んだ長さも、地面からの高さも、2 本で同じです。どちらのすじについても、よこに進んだ長さと、あな から下がった高さの関係を書きます。
-      - text: 深さ h の あな から出た水は、よこに x m 進むまでに x ÷ √(20 × h) 秒かかり、その間に 5 × 時間 × 時間 だけ下がります。下がる高さを、x と h だけの式にします。
+      - 2 本の水のすじが交わる点では、かべからよこに進んだ長さも、地面からの高さも、2 本で同じです。どちらのすじについても、よこに進んだ長さと、あなから下がった高さの関係を書きます。
+      - text: 深さ h のあなから出た水は、よこに x m 進むまでに x ÷ √(20 × h) 秒かかり、その間に 5 × 時間 × 時間だけ下がります。下がる高さを、x と h だけの式にします。
         svg: '<svg viewBox="0 0 320 200" xmlns="http://www.w3.org/2000/svg"><line x1="40" y1="30" x2="40" y2="180" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="40" cy="60" r="4" fill="currentColor"/><text x="34" y="64" font-size="13" text-anchor="end" fill="currentColor">あな</text><path d="M42 60 Q 141 60 240 170" fill="none" stroke="currentColor" stroke-width="2" stroke-dasharray="4 4"/><line x1="40" y1="60" x2="200" y2="60" fill="none" stroke="currentColor" stroke-width="1" stroke-dasharray="3 3"/><circle cx="181" cy="114" r="4" fill="currentColor"/><line x1="181" y1="44" x2="181" y2="114" fill="none" stroke="currentColor" stroke-width="1" stroke-dasharray="3 3"/><line x1="52" y1="44" x2="171" y2="44" fill="none" stroke="currentColor" stroke-width="2"/><polygon points="181,44 171,49 171,39" fill="currentColor"/><polygon points="42,44 52,39 52,49" fill="currentColor"/><text x="111" y="38" font-size="13" text-anchor="middle" fill="currentColor">よこに x m</text><line x1="196" y1="70" x2="196" y2="104" fill="none" stroke="currentColor" stroke-width="2"/><polygon points="196,114 191,104 201,104" fill="currentColor"/><polygon points="196,60 201,70 191,70" fill="currentColor"/><text x="202" y="92" font-size="13" text-anchor="start" fill="currentColor">下がる ？</text><text x="60" y="160" font-size="13" text-anchor="start" fill="currentColor">深さ h の あな</text></svg>'
-      - 交わる点の高さに地面があると考えると、2 本のすじは同じ所に落ちます。面から地面までの深さが決まっているとき、あな の深さと、あな の地面からの高さを入れかえても、水は同じ所に落ちることを使ってもかまいません。
+      - 交わる点の高さに地面があると考えると、2 本のすじは同じ所に落ちます。面から地面までの深さが決まっているとき、あなの深さと、あなの地面からの高さを入れかえても、水は同じ所に落ちることを使ってもかまいません。
     paths:
-      - [深さ h の あな から出た水がよこに x m 進むまでの時間は x ÷ √(20 × h) 秒なので下がる高さは 5 × x × x ÷ (20 × h) = x × x ÷ (4 × h) m, 交わる点では面からの深さが同じなので 0.4 + x × x ÷ 1.6 = 0.9 + x × x ÷ 3.6, これをとくと x × x = 1.44 で x = 1.2 m, 交わる点の面からの深さは 0.4 + 1.44 ÷ 1.6 = 1.3 m, 面は地面から 1.5 + 0.4 = 1.9 m の高さなので交わる点の高さは 1.9 − 1.3 = 0.6 m]
-      - [交わる点の高さに地面があると考える, 地面が面から深さ D m の所にあると深さ h の あな の水がとぶ長さは 2 × √(h × (D − h)) で h と D − h を入れかえても同じ, 深さ 0.4 m と 0.9 m の あな の水が同じ所に落ちるのは 0.4 と 0.9 が入れかえの組になるときで D = 0.4 + 0.9 = 1.3 m, 2 本のすじは面から 1.3 m 下で同じ所を通るのでそこが交わる点, 地面からの高さは 1.9 − 1.3 = 0.6 m]
+      - [深さ h のあなから出た水がよこに x m 進むまでの時間は x ÷ √(20 × h) 秒なので下がる高さは 5 × x × x ÷ (20 × h) = x × x ÷ (4 × h) m, 交わる点では面からの深さが同じなので 0.4 + x × x ÷ 1.6 = 0.9 + x × x ÷ 3.6, これをとくと x × x = 1.44 で x = 1.2 m, 交わる点の面からの深さは 0.4 + 1.44 ÷ 1.6 = 1.3 m, 面は地面から 1.5 + 0.4 = 1.9 m の高さなので交わる点の高さは 1.9 − 1.3 = 0.6 m]
+      - [交わる点の高さに地面があると考える, 地面が面から深さ D m の所にあると深さ h のあなの水がとぶ長さは 2 × √(h × (D − h)) で h と D − h を入れかえても同じ, 深さ 0.4 m と 0.9 m のあなの水が同じ所に落ちるのは 0.4 と 0.9 が入れかえの組になるときで D = 0.4 + 0.9 = 1.3 m, 2 本のすじは面から 1.3 m 下で同じ所を通るのでそこが交わる点, 地面からの高さは 1.9 − 1.3 = 0.6 m]
     note: S03 対称性（深さと地面からの高さを入れかえても、とぶ長さは同じ）、S19 置きかえ（交わる点の高さに地面を置きかえる）。種なし。ベルヌーイの式（出る速さ）と P-001 の落下を組み合わせる 3 段（すじの式、交わる所の深さ、地面からの高さ）。同じ所に落ちる あな の深さを答える形（1487 トークンで解けた）から、2 本のすじが空中で交わる点の高さを問う形に直した。交わる点に地面があると見れば、2 つの あな の深さの和が地面までの深さになる、という入れかえの見方が要る。台の高さは、面から地面までの 1.9 m を出すのに使う。

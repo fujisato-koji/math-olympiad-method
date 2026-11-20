@@ -722,7 +722,7 @@ days:
         hints:
           - text: 固有値の和はトレース（黄の丸の和）です。
             svg: '<svg viewBox="0 0 320 96" xmlns="http://www.w3.org/2000/svg"><text x="118" y="43.8" font-size="16" text-anchor="middle" fill="currentColor">A =</text><circle cx="165" cy="26" r="12.5" fill="#f3c969" fill-opacity="0.55" stroke="currentColor" stroke-width="1.2"/><circle cx="195" cy="50" r="12.5" fill="#f3c969" fill-opacity="0.55" stroke="currentColor" stroke-width="1.2"/><path d="M148 10 Q140 38 148 66" stroke="currentColor" stroke-width="1.8" fill="none" stroke-linecap="round"/><path d="M212 10 Q220 38 212 66" stroke="currentColor" stroke-width="1.8" fill="none" stroke-linecap="round"/><text x="165" y="31.8" font-size="16" text-anchor="middle" fill="currentColor">5</text><text x="195" y="31.8" font-size="16" text-anchor="middle" fill="currentColor">2</text><text x="165" y="55.8" font-size="16" text-anchor="middle" fill="currentColor">1</text><text x="195" y="55.8" font-size="16" text-anchor="middle" fill="currentColor">4</text><text x="160" y="86" font-size="13" text-anchor="middle" fill="currentColor">黄の丸の和 = 2 つの固有値の和</text></svg>'
-          - 6 + □ = トレース から □ を求めましょう。
+          - 6 + □ = トレースから □ を求めましょう。
           - 求めた数と 6 の積が、行列式 5×4 − 2×1 になっているかで確かめましょう。
         paths:
           - [和 = トレース 9, 9 − 6 = 3]

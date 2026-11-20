@@ -529,7 +529,7 @@ days:
         answer: 2
         check: "6 // 3"
         hints:
-          - 軌道の大きさ × 安定化群の要素の数 = 群の要素の数 です。今の D3 は、要素が 6 個です。
+          - 軌道の大きさ × 安定化群の要素の数 = 群の要素の数です。今の D3 は、要素が 6 個です。
           - text: 鏡の線の上にある点は、その鏡映では動きません。x の上を通る鏡の線を、さがしましょう（図の赤い線）。
             svg: '<svg viewBox="0 0 320 200" xmlns="http://www.w3.org/2000/svg"><polygon points="110,50 56.3,143 163.7,143" fill="#c8ccd6" fill-opacity="0.3" stroke="currentColor" stroke-width="2"/><line x1="42.9" y1="150.8" x2="177.1" y2="73.2" fill="none" stroke="#c8ccd6" stroke-width="1.5" stroke-dasharray="6 4"/><line x1="177.1" y1="150.8" x2="42.9" y2="73.2" fill="none" stroke="#c8ccd6" stroke-width="1.5" stroke-dasharray="6 4"/><line x1="110" y1="189.5" x2="110" y2="34.5" fill="none" stroke="#f08080" stroke-width="3" stroke-dasharray="6 4"/><circle cx="110" cy="50" r="6" fill="#f08080"/><text x="124" y="48" font-size="15" text-anchor="middle" fill="currentColor">x</text><text x="262" y="70" font-size="15" text-anchor="middle" fill="currentColor">D3 の 6 個：</text><text x="262" y="94" font-size="15" text-anchor="middle" fill="currentColor">回転 3 つ</text><text x="262" y="116" font-size="15" text-anchor="middle" fill="currentColor">鏡映 3 つ</text><text x="262" y="142" font-size="13" text-anchor="middle" fill="currentColor">（点線が</text><text x="262" y="160" font-size="13" text-anchor="middle" fill="currentColor">鏡の線）</text></svg>'
           - 回転のうち、x を動かさないものは、どれでしょう。
@@ -546,7 +546,7 @@ days:
           - text: 1 つの鏡映で、y は y′ に動きます。y′ は y と同じ点でしょうか。
             svg: '<svg viewBox="0 0 320 200" xmlns="http://www.w3.org/2000/svg"><polygon points="110,50 56.3,143 163.7,143" fill="#c8ccd6" fill-opacity="0.3" stroke="currentColor" stroke-width="2"/><line x1="42.9" y1="150.8" x2="177.1" y2="73.2" fill="none" stroke="#c8ccd6" stroke-width="1.5" stroke-dasharray="6 4"/><line x1="177.1" y1="150.8" x2="42.9" y2="73.2" fill="none" stroke="#c8ccd6" stroke-width="1.5" stroke-dasharray="6 4"/><line x1="110" y1="189.5" x2="110" y2="34.5" fill="none" stroke="#c8ccd6" stroke-width="1.5" stroke-dasharray="6 4"/><circle cx="125" cy="86" r="5" fill="#7bc96f"/><text x="138" y="84" font-size="15" text-anchor="middle" fill="currentColor">y</text><circle cx="95" cy="86" r="5" fill="#f08080"/><text x="80" y="84" font-size="15" text-anchor="middle" fill="currentColor">y′</text><text x="262" y="70" font-size="15" text-anchor="middle" fill="currentColor">D3 の 6 個：</text><text x="262" y="94" font-size="15" text-anchor="middle" fill="currentColor">回転 3 つ</text><text x="262" y="116" font-size="15" text-anchor="middle" fill="currentColor">鏡映 3 つ</text><text x="262" y="142" font-size="13" text-anchor="middle" fill="currentColor">（点線が</text><text x="262" y="160" font-size="13" text-anchor="middle" fill="currentColor">鏡の線）</text></svg>'
           - y を動かさない動かし方は、どれでしょう。
-          - 軌道の大きさ × 安定化群の要素の数 が、群の要素の数 6 に等しくなることを使いましょう。
+          - 軌道の大きさ × 安定化群の要素の数が、群の要素の数 6 に等しくなることを使いましょう。
         paths:
           - [y を動かさない要素は何もしないだけ, 6 ÷ 1, 6]
           - [6 個の動かし方, 行き先がすべてちがう, 6]

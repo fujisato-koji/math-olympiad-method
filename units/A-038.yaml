@@ -355,7 +355,7 @@ days:
           - text: かけて 6、足して −5 になる 2 つの数で、因数分解しましょう。
             svg: '<svg viewBox="0 0 320 166" xmlns="http://www.w3.org/2000/svg"><text x="160" y="24" font-size="15" text-anchor="middle" fill="currentColor">かけて 6</text><text x="160" y="156" font-size="15" text-anchor="middle" fill="currentColor">足して −5</text><line x1="160" y1="31" x2="120" y2="60" stroke="currentColor" stroke-width="2"/><line x1="120" y1="102" x2="160" y2="138" stroke="currentColor" stroke-width="2"/><rect x="95" y="60" width="50" height="42" rx="5" fill="#7fc8f8" fill-opacity=".3" stroke="currentColor" stroke-width="2"/><line x1="160" y1="31" x2="200" y2="60" stroke="currentColor" stroke-width="2"/><line x1="200" y1="102" x2="160" y2="138" stroke="currentColor" stroke-width="2"/><rect x="175" y="60" width="50" height="42" rx="5" fill="#7fc8f8" fill-opacity=".3" stroke="currentColor" stroke-width="2"/><text x="160" y="87" font-size="15" text-anchor="middle" fill="currentColor">と</text></svg>'
         paths:
-          - [6 = −x² + 5x, x² − 5x + 6 = 0, (x − 2)(x − 3) = 0 で 大きいほうは 3]
+          - [6 = −x² + 5x, x² − 5x + 6 = 0, (x − 2)(x − 3) = 0 で大きいほうは 3]
       - part: 今日
         id: "1eee5b3135"
         text: 方程式 √(2x + 7) = x + 2 の解はいくつですか。図は y = √(2x + 7) と y = x + 2 のグラフです。
@@ -774,7 +774,7 @@ ri:
       - 2 辺の長さは a と 6/a だよ。面積はいつも同じだね。周の長さは 2(a + 6/a)。
       - a + 6/a を、(√a − √(6/a))² + □ の形に変えてみよう。2 乗は 0 以上だね。
     paths:
-      - [漸近線は x = 2 と y = 1, P の x 座標を 2 + a とすると PA = a、PB = 6/a, a + 6/a = (√a − √(6/a))² + 2√6, √a = √(6/a) つまり a = √6 のとき最小で 周の長さは 2 × 2√6 = 4√6]
+      - [漸近線は x = 2 と y = 1, P の x 座標を 2 + a とすると PA = a、PB = 6/a, a + 6/a = (√a − √(6/a))² + 2√6, √a = √(6/a) つまり a = √6 のとき最小で周の長さは 2 × 2√6 = 4√6]
       - ["PB = 6/a で、(a + 6/a)² = (a − 6/a)² + 24", "(a − 6/a)² は 0 以上なので (a + 6/a)² ≧ 24", "a = √6 のとき a + 6/a = 2√6 で最小、周の長さは 4√6"]
     note: 長方形の面積は P によらず 6 で一定、周の長さは a + 6/a の最小になる。平方完成（A-020）の考えを √ の式に使うのが道すじのかなめ（相加平均と相乗平均の不等式 A-025 の入口）。12 は a = 2 や a = 3 のときの値で、最小ではない。
   - part: 離

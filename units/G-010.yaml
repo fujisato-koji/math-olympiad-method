@@ -83,7 +83,7 @@ days:
         answer: 10
         check: "5 * 2"
         hints:
-          - 円周 = 直径 × 円周率 だね。
+          - 円周 = 直径 × 円周率だね。
           - まず、直径を求めよう。
           - 直径は、半径の 2 つ分だよ。
         paths:
@@ -94,7 +94,7 @@ days:
         answer: 6
         check: "12 // 2"
         hints:
-          - 円周 = 直径 × 円周率 だね。
+          - 円周 = 直径 × 円周率だね。
           - 円周の式から、直径は何 cm かわかるかな。
           - 半径は、直径の半分だよ。
         paths:
@@ -116,7 +116,7 @@ days:
         answer: 6.28
         check: "(lambda c: f'{c // 100}.{c % 100:02d}')(314 + 314)"
         hints:
-          - 円周 = 直径 × 円周率 だね。
+          - 円周 = 直径 × 円周率だね。
           - 2 × 3.14 は、3.14 を 2 回たした数だよ。
           - 3.14 + 3.14 を計算しよう。
         paths:
@@ -138,13 +138,13 @@ days:
       - part: 見本
         text: 円の面積を求めよう。
         svg: '<svg viewBox="0 0 240 140" xmlns="http://www.w3.org/2000/svg"><circle cx="120" cy="70" r="56" stroke="currentColor" stroke-width="2" fill="#f3c969" fill-opacity=".35"/><circle cx="120" cy="70" r="3" fill="currentColor"/><line x1="120" y1="70" x2="168.5" y2="42" stroke="currentColor" stroke-width="2" fill="none"/><text x="137.4" y="44.5" font-size="13" text-anchor="middle">3 cm</text></svg>'
-        explain: 円の面積 = 半径 × 半径 × 円周率 で求められます（わけは 4 日目）。半径 3 cm の円の面積は 3 × 3 × 円周率 = （9 × 円周率）cm² です。円周率を 3.14 とすると、約 28.26 cm² になります。
+        explain: 円の面積 = 半径 × 半径 × 円周率で求められます（わけは 4 日目）。半径 3 cm の円の面積は 3 × 3 × 円周率 = （9 × 円周率）cm² です。円周率を 3.14 とすると、約 28.26 cm² になります。
       - part: 思い出す
         text: 半径が 7 cm の円の円周は、（□ × 円周率）cm です。□ に入る数はいくつですか。
         answer: 14
         check: "7 * 2"
         hints:
-          - 円周 = 直径 × 円周率 だね。
+          - 円周 = 直径 × 円周率だね。
           - まず、直径を求めよう。
           - 直径は、半径の 2 つ分だよ。
         paths:
@@ -154,7 +154,7 @@ days:
         answer: 36
         check: "6 * 6"
         hints:
-          - 正方形の面積は、1 辺 × 1 辺 だね。
+          - 正方形の面積は、1 辺 × 1 辺だね。
           - 6 × 6 を計算しよう。
           - 単位は cm² だよ。
         paths:
@@ -165,8 +165,8 @@ days:
         answer: 36
         check: "6 * 6"
         hints:
-          - 円の面積 = 半径 × 半径 × 円周率 だね。
-          - 半径 × 半径 を先に計算しよう。
+          - 円の面積 = 半径 × 半径 × 円周率だね。
+          - 半径 × 半径を先に計算しよう。
           - 6 × 6 はいくつかな。
         paths:
           - [6 × 6 × 円周率, 36 × 円周率, □ は 36]
@@ -179,7 +179,7 @@ days:
         hints:
           - 面積の式には、直径ではなく半径を使うよ。
           - 半径は何 cm かな。
-          - 半径 × 半径 を計算しよう。
+          - 半径 × 半径を計算しよう。
         paths:
           - [半径は 10 ÷ 2 = 5, 5 × 5 = 25, □ は 25]
         note: 直径のまま 10 × 10 = 100 としやすい。
@@ -212,7 +212,7 @@ days:
         answer: 3.14
         check: "(lambda c: f'{c // 100}.{c % 100:02d}')(1 * 1 * 314)"
         hints:
-          - 円の面積 = 半径 × 半径 × 円周率 だね。
+          - 円の面積 = 半径 × 半径 × 円周率だね。
           - 1 × 1 はいくつかな。
           - その数に 3.14 をかけよう。
         paths:
@@ -222,7 +222,7 @@ days:
         answer: 49
         check: "7 * 7"
         hints:
-          - 円の面積 = 半径 × 半径 × 円周率 だね。
+          - 円の面積 = 半径 × 半径 × 円周率だね。
           - 7 × 7 を計算しよう。
           - その数が □ だよ。
         paths:
@@ -232,7 +232,7 @@ days:
         answer: 12.56
         check: "(lambda c: f'{c // 100}.{c % 100:02d}')(314 + 314 + 314 + 314)"
         hints:
-          - まず、半径 × 半径 を計算しよう。
+          - まず、半径 × 半径を計算しよう。
           - 4 × 3.14 は、3.14 を 4 回たした数だね。
           - 3.14 + 3.14 = 6.28 を 2 つたしてもよいよ。
         paths:
@@ -249,7 +249,7 @@ days:
         answer: 25
         check: "5 * 5"
         hints:
-          - 円の面積 = 半径 × 半径 × 円周率 だね。
+          - 円の面積 = 半径 × 半径 × 円周率だね。
           - 5 × 5 を計算しよう。
           - その数が □ だよ。
         paths:
@@ -382,7 +382,7 @@ days:
       - part: わけ
         text: 円の面積が「半径 × 半径 × 円周率」で求められるわけを、図のように円を細かく切ってならべかえた例を使って、文で書きましょう。
         svg: '<svg viewBox="0 0 240 140" xmlns="http://www.w3.org/2000/svg"><circle cx="40" cy="70" r="34" stroke="currentColor" stroke-width="2" fill="#f3c969" fill-opacity=".35"/><line x1="40" y1="70" x2="74" y2="70" stroke="currentColor" stroke-width="0.8" fill="none"/><line x1="40" y1="70" x2="71.4" y2="57" stroke="currentColor" stroke-width="0.8" fill="none"/><line x1="40" y1="70" x2="64" y2="46" stroke="currentColor" stroke-width="0.8" fill="none"/><line x1="40" y1="70" x2="53" y2="38.6" stroke="currentColor" stroke-width="0.8" fill="none"/><line x1="40" y1="70" x2="40" y2="36" stroke="currentColor" stroke-width="0.8" fill="none"/><line x1="40" y1="70" x2="27" y2="38.6" stroke="currentColor" stroke-width="0.8" fill="none"/><line x1="40" y1="70" x2="16" y2="46" stroke="currentColor" stroke-width="0.8" fill="none"/><line x1="40" y1="70" x2="8.6" y2="57" stroke="currentColor" stroke-width="0.8" fill="none"/><line x1="40" y1="70" x2="6" y2="70" stroke="currentColor" stroke-width="0.8" fill="none"/><line x1="40" y1="70" x2="8.6" y2="83" stroke="currentColor" stroke-width="0.8" fill="none"/><line x1="40" y1="70" x2="16" y2="94" stroke="currentColor" stroke-width="0.8" fill="none"/><line x1="40" y1="70" x2="27" y2="101.4" stroke="currentColor" stroke-width="0.8" fill="none"/><line x1="40" y1="70" x2="40" y2="104" stroke="currentColor" stroke-width="0.8" fill="none"/><line x1="40" y1="70" x2="53" y2="101.4" stroke="currentColor" stroke-width="0.8" fill="none"/><line x1="40" y1="70" x2="64" y2="94" stroke="currentColor" stroke-width="0.8" fill="none"/><line x1="40" y1="70" x2="71.4" y2="83" stroke="currentColor" stroke-width="0.8" fill="none"/><polygon points="112,92 118.7,58.7 125.4,92" stroke="currentColor" stroke-width="0.8" fill="#f3c969" fill-opacity=".35"/><polygon points="118.7,58.7 125.4,92 132,58.7" stroke="currentColor" stroke-width="0.8" fill="#f3c969" fill-opacity=".35"/><polygon points="125.4,92 132,58.7 138.7,92" stroke="currentColor" stroke-width="0.8" fill="#f3c969" fill-opacity=".35"/><polygon points="132,58.7 138.7,92 145.4,58.7" stroke="currentColor" stroke-width="0.8" fill="#f3c969" fill-opacity=".35"/><polygon points="138.7,92 145.4,58.7 152.1,92" stroke="currentColor" stroke-width="0.8" fill="#f3c969" fill-opacity=".35"/><polygon points="145.4,58.7 152.1,92 158.7,58.7" stroke="currentColor" stroke-width="0.8" fill="#f3c969" fill-opacity=".35"/><polygon points="152.1,92 158.7,58.7 165.4,92" stroke="currentColor" stroke-width="0.8" fill="#f3c969" fill-opacity=".35"/><polygon points="158.7,58.7 165.4,92 172.1,58.7" stroke="currentColor" stroke-width="0.8" fill="#f3c969" fill-opacity=".35"/><polygon points="165.4,92 172.1,58.7 178.8,92" stroke="currentColor" stroke-width="0.8" fill="#f3c969" fill-opacity=".35"/><polygon points="172.1,58.7 178.8,92 185.4,58.7" stroke="currentColor" stroke-width="0.8" fill="#f3c969" fill-opacity=".35"/><polygon points="178.8,92 185.4,58.7 192.1,92" stroke="currentColor" stroke-width="0.8" fill="#f3c969" fill-opacity=".35"/><polygon points="185.4,58.7 192.1,92 198.8,58.7" stroke="currentColor" stroke-width="0.8" fill="#f3c969" fill-opacity=".35"/><polygon points="192.1,92 198.8,58.7 205.5,92" stroke="currentColor" stroke-width="0.8" fill="#f3c969" fill-opacity=".35"/><polygon points="198.8,58.7 205.5,92 212.1,58.7" stroke="currentColor" stroke-width="0.8" fill="#f3c969" fill-opacity=".35"/><polygon points="205.5,92 212.1,58.7 218.8,92" stroke="currentColor" stroke-width="0.8" fill="#f3c969" fill-opacity=".35"/><polygon points="212.1,58.7 218.8,92 225.5,58.7" stroke="currentColor" stroke-width="0.8" fill="#f3c969" fill-opacity=".35"/><text x="168.7" y="109.8" font-size="11" text-anchor="middle">円周の半分</text><text x="106" y="79.2" font-size="11" text-anchor="end">半径</text></svg>'
-        explain: 例：「円を中心から細かいおうぎ形に切り、上向きと下向きをたがいちがいにならべると、長方形に近い形になる。細かく切るほど長方形に近づく。この長方形のたては半径、横は円周の半分。円周の半分は 直径 × 円周率 ÷ 2 = 半径 × 円周率。だから面積は 半径 × 半径 × 円周率。」と書ければよい。① ならべかえると長方形に近い、② たてが半径、③ 横が円周の半分（= 半径 × 円周率）、の 3 点を見る。③ が書けないときは、上の弧と下の弧に円周が半分ずつ分かれていることを図で確かめる。
+        explain: 例：「円を中心から細かいおうぎ形に切り、上向きと下向きをたがいちがいにならべると、長方形に近い形になる。細かく切るほど長方形に近づく。この長方形のたては半径、横は円周の半分。円周の半分は直径 × 円周率 ÷ 2 = 半径 × 円周率。だから面積は半径 × 半径 × 円周率。」と書ければよい。① ならべかえると長方形に近い、② たてが半径、③ 横が円周の半分（= 半径 × 円周率）、の 3 点を見る。③ が書けないときは、上の弧と下の弧に円周が半分ずつ分かれていることを図で確かめる。
         hints:
           - ならべかえた形は、何という形に近いかな。
           - その形のたては、円のどの長さかな。
@@ -418,7 +418,7 @@ days:
         answer: 81
         check: "9 * 9"
         hints:
-          - 円の面積 = 半径 × 半径 × 円周率 だね。
+          - 円の面積 = 半径 × 半径 × 円周率だね。
           - 9 × 9 を計算しよう。
           - その数が □ だよ。
         paths:
@@ -439,7 +439,7 @@ days:
         answer: 9.42
         check: "(lambda c: f'{c // 100}.{c % 100:02d}')(314 + 314 + 314)"
         hints:
-          - 円周 = 直径 × 円周率 だね。
+          - 円周 = 直径 × 円周率だね。
           - 3 × 3.14 は、3.14 を 3 回たした数だよ。
           - 小数点の位置をそろえてたそう。
         paths:
@@ -555,7 +555,7 @@ days:
         answer: 12.56
         check: "(lambda c: f'{c // 100}.{c % 100:02d}')(314 + 314 + 314 + 314)"
         hints:
-          - 円周 = 直径 × 円周率 だね。
+          - 円周 = 直径 × 円周率だね。
           - 4 × 3.14 は、3.14 を 4 回たした数だよ。
           - 3.14 + 3.14 = 6.28 を 2 つたしてもよいよ。
         paths:
@@ -578,7 +578,7 @@ days:
         answer: 16
         check: "8 * 2"
         hints:
-          - 円周 = 直径 × 円周率 だね。
+          - 円周 = 直径 × 円周率だね。
           - まず直径を求めよう。
           - 直径は半径の 2 つ分だよ。
         paths:
@@ -588,7 +588,7 @@ days:
         answer: 9.42
         check: "(lambda c: f'{c // 100}.{c % 100:02d}')(314 + 314 + 314)"
         hints:
-          - 円周 = 直径 × 円周率 だね。
+          - 円周 = 直径 × 円周率だね。
           - 3.14 を 3 回たそう。
           - 小数点の位置をそろえよう。
         paths:
@@ -598,7 +598,7 @@ days:
         answer: 64
         check: "8 * 8"
         hints:
-          - 円の面積 = 半径 × 半径 × 円周率 だね。
+          - 円の面積 = 半径 × 半径 × 円周率だね。
           - 8 × 8 を計算しよう。
           - その数が □ だよ。
         paths:
@@ -610,7 +610,7 @@ days:
         hints:
           - 面積の式には半径を使うよ。
           - 半径は何 cm かな。
-          - 半径 × 半径 を計算しよう。
+          - 半径 × 半径を計算しよう。
         paths:
           - [半径 3 cm, 3 × 3 = 9, □ は 9]
       - part: 今日
@@ -707,7 +707,7 @@ ri:
       - 長いはりは 60 分で 1 回転するよ。その時間で、円の何分の何だけ回るかな。
       - 半径 9 cm の円の面積の、何分の何になるかな。
     paths:
-      - [1 時 25 分から 2 時 5 分までは 40 分, 40 分は 60 分の 2/3 なので 円の 2/3, 9 × 9 × 円周率 × 2/3 = 54 × 円周率, 54]
+      - [1 時 25 分から 2 時 5 分までは 40 分, 40 分は 60 分の 2/3 なので円の 2/3, 9 × 9 × 円周率 × 2/3 = 54 × 円周率, 54]
     note: 時刻をまたぐ時間（N-059）を正しく出すのが最初の関門（2 時をまたぐ）。40 分を 240° としてから 240/360 = 2/3 にしてもよい。長いはりの先が動いた長さ（弧）と面積を取りちがえやすい。
   - part: 離
     kinds: [数]

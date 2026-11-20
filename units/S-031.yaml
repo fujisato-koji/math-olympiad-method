@@ -699,8 +699,8 @@ days:
         id: "d1bde43656"
         text: ある調査で、運動をよくするお年よりほど、物をおぼえる力のテストの点数が高いことが分かりました。この調査から言えることとして、最も適切なものはどれですか。
         svg: '<svg viewBox="0 0 320 186" xmlns="http://www.w3.org/2000/svg"><text x="160" y="18" font-size="13" text-anchor="middle" fill="currentColor" font-weight="bold">おぼえる力のテストの点（平均）</text><line x1="78" y1="150" x2="298" y2="150" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><rect x="86" y="53.8" width="56" height="96.2" rx="2" fill="#7bc96f" fill-opacity="0.7" stroke="currentColor" stroke-width="2"/><text x="114" y="168" font-size="12" text-anchor="middle" fill="currentColor">運動をよくする</text><rect x="234" y="70.2" width="56" height="79.8" rx="2" fill="#c8ccd6" fill-opacity="0.7" stroke="currentColor" stroke-width="2"/><text x="262" y="168" font-size="12" text-anchor="middle" fill="currentColor">あまりしない</text></svg>'
-        choices: [運動をすると、必ずおぼえる力が上がる, ほかの要因（もともと元気かどうか など）があるかもしれず、運動が原因とは言い切れない, おぼえる力のよい人ほど運動をしない]
-        answer: ほかの要因（もともと元気かどうか など）があるかもしれず、運動が原因とは言い切れない
+        choices: [運動をすると、必ずおぼえる力が上がる, ほかの要因（もともと元気かどうかなど）があるかもしれず、運動が原因とは言い切れない, おぼえる力のよい人ほど運動をしない]
+        answer: ほかの要因（もともと元気かどうかなど）があるかもしれず、運動が原因とは言い切れない
         hints:
           - これは観察研究でしょうか、実験でしょうか。
           - text: 3 つのことのつながりを矢印でかきました。「?」の矢印は、本当にあるかどうか分からないつながりです。

@@ -6,7 +6,8 @@ days:
   - day: 1
     items:
       - part: 見本
-        text: ぼうのはしを支点にして、はなれた所をおすと、ぼうはまわります。まわす働きをトルクといいます。ぼうに直角におすとき、トルク = 支点からのきょり × 力 です。同じ力でも、支点から遠いほど、よくまわります。
+        id: "0e63d5f828"
+        text: ぼうのはしを支点にして、はなれた所をおすと、ぼうはまわります。まわす働きをトルクといいます。ぼうに直角におすとき、トルク = 支点からのきょり × 力です。同じ力でも、支点から遠いほど、よくまわります。
         svg: '<svg viewBox="0 0 320 200" xmlns="http://www.w3.org/2000/svg"><rect x="50" y="90" width="230" height="12" fill="#c8ccd6" fill-opacity="0.5" stroke="currentColor" stroke-width="2"/><polygon points="50,100 38,124 62,124" fill="#f3c969" fill-opacity="0.5" stroke="currentColor" stroke-width="2"/><circle cx="50" cy="96" r="5" fill="currentColor"/><line x1="220" y1="34" x2="220" y2="78" fill="none" stroke="currentColor" stroke-width="2"/><polygon points="220,88 215,78 225,78" fill="currentColor"/><text x="220" y="26" font-size="14" text-anchor="middle" fill="currentColor">力 F = 9 N</text><line x1="58" y1="146" x2="212" y2="146" fill="none" stroke="currentColor" stroke-width="2"/><polygon points="220,146 212,150 212,142" fill="currentColor"/><polygon points="50,146 58,142 58,150" fill="currentColor"/><text x="135" y="140" font-size="14" text-anchor="middle" fill="currentColor">きょり r = 2 m</text></svg>'
         explain: トルク（力のモーメント）は τ = r F sinθ。直角におすなら sinθ = 1 なので τ = r F。この図では 2 × 9 = 18 N·m。
       - part: 今日
@@ -19,7 +20,7 @@ days:
           - 絵の長さと力を、かけ算にします。
           - text: 支点から力までの長さと、力の大きさを見ます。
             svg: '<svg viewBox="0 0 320 200" xmlns="http://www.w3.org/2000/svg"><rect x="50" y="90" width="230" height="12" fill="#c8ccd6" fill-opacity="0.5" stroke="currentColor" stroke-width="2"/><polygon points="50,100 38,124 62,124" fill="#f3c969" fill-opacity="0.5" stroke="currentColor" stroke-width="2"/><circle cx="50" cy="96" r="5" fill="currentColor"/><line x1="230" y1="34" x2="230" y2="78" fill="none" stroke="currentColor" stroke-width="2"/><polygon points="230,88 225,78 235,78" fill="currentColor"/><text x="230" y="26" font-size="14" text-anchor="middle" fill="currentColor">4 N</text><line x1="58" y1="146" x2="222" y2="146" fill="none" stroke="currentColor" stroke-width="2"/><polygon points="230,146 222,150 222,142" fill="currentColor"/><polygon points="50,146 58,142 58,150" fill="currentColor"/><text x="140" y="140" font-size="14" text-anchor="middle" fill="currentColor">3 m</text><circle cx="140" cy="146" r="26" fill="none" stroke="#f08080" stroke-width="3" stroke-dasharray="6 4"/><circle cx="230" cy="34" r="22" fill="none" stroke="#f08080" stroke-width="3" stroke-dasharray="6 4"/></svg>'
-          - トルクは、長さ × 力 でした。
+          - トルクは、長さ × 力でした。
       - part: 今日
         text: 同じぼうの ア、イ、ウ の点を、同じ力で下へおします。いちばんよくまわる点はどれですか。
         svg: '<svg viewBox="0 0 320 200" xmlns="http://www.w3.org/2000/svg"><rect x="50" y="90" width="230" height="12" fill="#c8ccd6" fill-opacity="0.5" stroke="currentColor" stroke-width="2"/><polygon points="50,100 38,124 62,124" fill="#f3c969" fill-opacity="0.5" stroke="currentColor" stroke-width="2"/><circle cx="50" cy="96" r="5" fill="currentColor"/><circle cx="110" cy="96" r="6" fill="currentColor"/><circle cx="180" cy="96" r="6" fill="currentColor"/><circle cx="250" cy="96" r="6" fill="currentColor"/><text x="110" y="82" font-size="14" text-anchor="middle" fill="currentColor">ア</text><text x="180" y="82" font-size="14" text-anchor="middle" fill="currentColor">イ</text><text x="250" y="82" font-size="14" text-anchor="middle" fill="currentColor">ウ</text></svg>'
@@ -28,9 +29,9 @@ days:
         check: "'ウ'"
         hints:
           - 力の大きさは同じなので、ちがうのは支点からの長さです。
-          - text: 支点から それぞれの点までの長さを比べます。
+          - text: 支点からそれぞれの点までの長さを比べます。
             svg: '<svg viewBox="0 0 320 200" xmlns="http://www.w3.org/2000/svg"><rect x="50" y="90" width="230" height="12" fill="#c8ccd6" fill-opacity="0.5" stroke="currentColor" stroke-width="2"/><polygon points="50,100 38,124 62,124" fill="#f3c969" fill-opacity="0.5" stroke="currentColor" stroke-width="2"/><circle cx="50" cy="96" r="5" fill="currentColor"/><circle cx="110" cy="96" r="6" fill="currentColor"/><circle cx="180" cy="96" r="6" fill="currentColor"/><circle cx="250" cy="96" r="6" fill="currentColor"/><line x1="50" y1="140" x2="102" y2="140" fill="none" stroke="currentColor" stroke-width="2"/><polygon points="110,140 102,144 102,136" fill="currentColor"/><line x1="50" y1="156" x2="172" y2="156" fill="none" stroke="currentColor" stroke-width="2"/><polygon points="180,156 172,160 172,152" fill="currentColor"/><line x1="50" y1="172" x2="242" y2="172" fill="none" stroke="currentColor" stroke-width="2"/><polygon points="250,172 242,176 242,168" fill="currentColor"/></svg>'
-          - トルク = 長さ × 力 なので、長さが大きいほどトルクも大きくなります。
+          - トルク = 長さ × 力なので、長さが大きいほどトルクも大きくなります。
       - part: 今日
         text: 支点の左 2 m で 6 N の力が下向き、右 3 m で力が下向きにはたらいて、ぼうはつり合っています。右の力は何 N ですか。
         svg: '<svg viewBox="0 0 320 200" xmlns="http://www.w3.org/2000/svg"><rect x="170" y="90" width="90" height="12" fill="#c8ccd6" fill-opacity="0.5" stroke="currentColor" stroke-width="2"/><polygon points="170,100 158,124 182,124" fill="#f3c969" fill-opacity="0.5" stroke="currentColor" stroke-width="2"/><circle cx="170" cy="96" r="5" fill="currentColor"/><line x1="130" y1="34" x2="130" y2="78" fill="none" stroke="currentColor" stroke-width="2"/><polygon points="130,88 125,78 135,78" fill="currentColor"/><text x="130" y="26" font-size="14" text-anchor="middle" fill="currentColor">6 N</text><line x1="162" y1="140" x2="138" y2="140" fill="none" stroke="currentColor" stroke-width="2"/><polygon points="130,140 138,136 138,144" fill="currentColor"/><polygon points="170,140 162,144 162,136" fill="currentColor"/><text x="150" y="162" font-size="14" text-anchor="middle" fill="currentColor">2 m</text><rect x="80" y="90" width="100" height="12" fill="#c8ccd6" fill-opacity="0.5" stroke="currentColor" stroke-width="2"/><line x1="230" y1="34" x2="230" y2="78" fill="none" stroke="currentColor" stroke-width="2"/><polygon points="230,88 225,78 235,78" fill="currentColor"/><text x="230" y="26" font-size="14" text-anchor="middle" fill="currentColor">？ N</text><text x="200" y="162" font-size="14" text-anchor="middle" fill="currentColor">3 m</text><line x1="178" y1="140" x2="222" y2="140" fill="none" stroke="currentColor" stroke-width="2"/><polygon points="230,140 222,144 222,136" fill="currentColor"/><polygon points="170,140 178,136 178,144" fill="currentColor"/></svg>'
@@ -41,7 +42,7 @@ days:
           - つり合うとき、左まわりのトルクと右まわりのトルクは同じ大きさです。
           - text: 左のトルクは 2 × 6 です。右も同じ大きさです。
             svg: '<svg viewBox="0 0 320 200" xmlns="http://www.w3.org/2000/svg"><rect x="170" y="90" width="90" height="12" fill="#c8ccd6" fill-opacity="0.5" stroke="currentColor" stroke-width="2"/><polygon points="170,100 158,124 182,124" fill="#f3c969" fill-opacity="0.5" stroke="currentColor" stroke-width="2"/><circle cx="170" cy="96" r="5" fill="currentColor"/><line x1="130" y1="34" x2="130" y2="78" fill="none" stroke="currentColor" stroke-width="2"/><polygon points="130,88 125,78 135,78" fill="currentColor"/><text x="130" y="26" font-size="14" text-anchor="middle" fill="currentColor">6 N</text><line x1="162" y1="140" x2="138" y2="140" fill="none" stroke="currentColor" stroke-width="2"/><polygon points="130,140 138,136 138,144" fill="currentColor"/><polygon points="170,140 162,144 162,136" fill="currentColor"/><text x="150" y="162" font-size="14" text-anchor="middle" fill="currentColor">2 m</text><rect x="80" y="90" width="100" height="12" fill="#c8ccd6" fill-opacity="0.5" stroke="currentColor" stroke-width="2"/><rect x="110" y="8" width="40" height="88" rx="6" fill="none" stroke="#f08080" stroke-width="3" stroke-dasharray="6 4"/></svg>'
-          - 右のトルク = 3 × 右の力 が、左のトルクと等しくなります。
+          - 右のトルク = 3 × 右の力が、左のトルクと等しくなります。
       - part: 今日
         text: 長さ 5 m のぼうのはしを支点にして、もう一方のはしを、ぼうにななめに 10 N でおします。力のぼうに直角な分は 6 N です。トルクはいくつですか。
         svg: '<svg viewBox="0 0 320 200" xmlns="http://www.w3.org/2000/svg"><rect x="50" y="90" width="230" height="12" fill="#c8ccd6" fill-opacity="0.5" stroke="currentColor" stroke-width="2"/><polygon points="50,100 38,124 62,124" fill="#f3c969" fill-opacity="0.5" stroke="currentColor" stroke-width="2"/><circle cx="50" cy="96" r="5" fill="currentColor"/><line x1="230" y1="34" x2="230" y2="78" fill="none" stroke="currentColor" stroke-width="2"/><polygon points="230,88 225,78 235,78" fill="currentColor"/><text x="230" y="26" font-size="14" text-anchor="middle" fill="currentColor">F</text><line x1="58" y1="146" x2="222" y2="146" fill="none" stroke="currentColor" stroke-width="2"/><polygon points="230,146 222,150 222,142" fill="currentColor"/><polygon points="50,146 58,142 58,150" fill="currentColor"/><text x="140" y="140" font-size="14" text-anchor="middle" fill="currentColor">5 m</text><line x1="230" y1="40" x2="230" y2="78" fill="none" stroke="currentColor" stroke-width="2"/><polygon points="230,88 225,78 235,78" fill="currentColor"/><line x1="230" y1="40" x2="203" y2="40" fill="none" stroke="currentColor" stroke-width="2"/><polygon points="195,40 203,36 203,44" fill="currentColor"/><text x="252" y="60" font-size="13" text-anchor="middle" fill="currentColor">6 N 分</text></svg>'
@@ -66,7 +67,7 @@ days:
           - 20 × 2 = T × 4 の形に書けます。
         paths:
           - [支点を軸にトルクのつり合い, 20 N × 2 m, T × 4 m, 向きがちがうので等しいとおく]
-          - [力のつり合い、上の力は 重さ ＋ 支点の力、はたらく力の合計を 0 にする, 支点の力を U とおく, U と T で 2 本の式]
+          - [力のつり合い、上の力は重さ ＋ 支点の力、はたらく力の合計を 0 にする, 支点の力を U とおく, U と T で 2 本の式]
     extra:
       - part: 今日
         text: 支点から 5 m の所を、ぼうに直角に 3 N の力でおします。トルクはいくつですか。
@@ -78,7 +79,7 @@ days:
           - 絵の長さと力を使います。
           - text: 長さと力を見つけます。
             svg: '<svg viewBox="0 0 320 200" xmlns="http://www.w3.org/2000/svg"><rect x="50" y="90" width="230" height="12" fill="#c8ccd6" fill-opacity="0.5" stroke="currentColor" stroke-width="2"/><polygon points="50,100 38,124 62,124" fill="#f3c969" fill-opacity="0.5" stroke="currentColor" stroke-width="2"/><circle cx="50" cy="96" r="5" fill="currentColor"/><line x1="240" y1="34" x2="240" y2="78" fill="none" stroke="currentColor" stroke-width="2"/><polygon points="240,88 235,78 245,78" fill="currentColor"/><text x="240" y="26" font-size="14" text-anchor="middle" fill="currentColor">3 N</text><line x1="58" y1="146" x2="232" y2="146" fill="none" stroke="currentColor" stroke-width="2"/><polygon points="240,146 232,150 232,142" fill="currentColor"/><polygon points="50,146 58,142 58,150" fill="currentColor"/><text x="145" y="140" font-size="14" text-anchor="middle" fill="currentColor">5 m</text><circle cx="145" cy="146" r="26" fill="none" stroke="#f08080" stroke-width="3" stroke-dasharray="6 4"/><circle cx="240" cy="34" r="22" fill="none" stroke="#f08080" stroke-width="3" stroke-dasharray="6 4"/></svg>'
-          - 長さ × 力 です。
+          - 長さ × 力です。
       - part: 今日
         text: 支点から 4 m の所を 3 N でおすのと、2 m の所を 7 N でおすのと、トルクはどうちがいますか。
         svg: '<svg viewBox="0 0 320 200" xmlns="http://www.w3.org/2000/svg"><rect x="50" y="90" width="230" height="12" fill="#c8ccd6" fill-opacity="0.5" stroke="currentColor" stroke-width="2"/><polygon points="50,100 38,124 62,124" fill="#f3c969" fill-opacity="0.5" stroke="currentColor" stroke-width="2"/><circle cx="50" cy="96" r="5" fill="currentColor"/><line x1="250" y1="34" x2="250" y2="78" fill="none" stroke="currentColor" stroke-width="2"/><polygon points="250,88 245,78 255,78" fill="currentColor"/><text x="250" y="26" font-size="14" text-anchor="middle" fill="currentColor">3 N</text><line x1="58" y1="146" x2="242" y2="146" fill="none" stroke="currentColor" stroke-width="2"/><polygon points="250,146 242,150 242,142" fill="currentColor"/><polygon points="50,146 58,142 58,150" fill="currentColor"/><text x="150" y="140" font-size="14" text-anchor="middle" fill="currentColor">4 m</text></svg>'
@@ -86,7 +87,7 @@ days:
         answer: "2 つ目のほうが大きい"
         check: "'2 つ目のほうが大きい'"
         hints:
-          - どちらも、長さ × 力 を出して比べます。
+          - どちらも、長さ × 力を出して比べます。
           - text: 1 つ目のトルクは 4 × 3 です。
             svg: '<svg viewBox="0 0 320 200" xmlns="http://www.w3.org/2000/svg"><rect x="50" y="90" width="230" height="12" fill="#c8ccd6" fill-opacity="0.5" stroke="currentColor" stroke-width="2"/><polygon points="50,100 38,124 62,124" fill="#f3c969" fill-opacity="0.5" stroke="currentColor" stroke-width="2"/><circle cx="50" cy="96" r="5" fill="currentColor"/><line x1="250" y1="34" x2="250" y2="78" fill="none" stroke="currentColor" stroke-width="2"/><polygon points="250,88 245,78 255,78" fill="currentColor"/><text x="250" y="26" font-size="14" text-anchor="middle" fill="currentColor">3 N</text><line x1="58" y1="146" x2="242" y2="146" fill="none" stroke="currentColor" stroke-width="2"/><polygon points="250,146 242,150 242,142" fill="currentColor"/><polygon points="50,146 58,142 58,150" fill="currentColor"/><text x="150" y="140" font-size="14" text-anchor="middle" fill="currentColor">4 m</text><circle cx="150" cy="146" r="26" fill="none" stroke="#f08080" stroke-width="3" stroke-dasharray="6 4"/></svg>'
           - 2 つ目は 2 × 7 です。大きさを比べます。
@@ -204,7 +205,7 @@ days:
           - 軸を重心からずらしています。平行軸の定理を使います。
           - text: 重心から軸までのずれ d を見ます。
             svg: '<svg viewBox="0 0 320 200" xmlns="http://www.w3.org/2000/svg"><rect x="50" y="94" width="220" height="12" fill="#c8ccd6" fill-opacity="0.5" stroke="currentColor" stroke-width="2"/><circle cx="160" cy="100" r="4" fill="currentColor"/><circle cx="50" cy="100" r="9" fill="#f08080" fill-opacity="0.5" stroke="currentColor" stroke-width="2"/><circle cx="50" cy="100" r="3" fill="currentColor"/><text x="50" y="130" font-size="14" text-anchor="middle" fill="currentColor">軸</text><line x1="58" y1="150" x2="152" y2="150" fill="none" stroke="currentColor" stroke-width="2"/><polygon points="160,150 152,154 152,146" fill="currentColor"/><polygon points="50,150 58,146 58,154" fill="currentColor"/><text x="105" y="144" font-size="13" text-anchor="middle" fill="currentColor">1 m</text><circle cx="105" cy="134" r="30" fill="none" stroke="#f08080" stroke-width="3" stroke-dasharray="6 4"/></svg>'
-          - 重心の I に、質量 × ずれ × ずれ をたします。
+          - 重心の I に、質量 × ずれ × ずれをたします。
       - part: 今日
         text: 質量 2 kg、半径 1 m の円板の、中心の軸のまわりの I は 1 kg·m² です。ふちを通る軸（円板に直角）のまわりの I はいくつですか。
         svg: '<svg viewBox="0 0 320 200" xmlns="http://www.w3.org/2000/svg"><circle cx="140" cy="105" r="64" fill="#7bc96f" fill-opacity="0.5" stroke="currentColor" stroke-width="2"/><circle cx="140" cy="105" r="4" fill="currentColor"/><circle cx="140" cy="105" r="4" fill="currentColor"/><circle cx="204" cy="105" r="9" fill="#f08080" fill-opacity="0.5" stroke="currentColor" stroke-width="2"/><circle cx="204" cy="105" r="3" fill="currentColor"/><text x="204" y="135" font-size="14" text-anchor="middle" fill="currentColor">軸</text><line x1="148" y1="40" x2="196" y2="40" fill="none" stroke="currentColor" stroke-width="2"/><polygon points="204,40 196,44 196,36" fill="currentColor"/><polygon points="140,40 148,36 148,44" fill="currentColor"/><text x="172" y="34" font-size="13" text-anchor="middle" fill="currentColor">1 m</text></svg>'
@@ -248,7 +249,7 @@ days:
           - I と I₀ のちがいが、M × d × d にあたります。
           - text: ちがいの 18 − 2 を M でわると、d × d になります。
             svg: '<svg viewBox="0 0 320 200" xmlns="http://www.w3.org/2000/svg"><ellipse cx="110" cy="100" rx="50" ry="36" fill="#f3c969" fill-opacity="0.5" stroke="currentColor" stroke-width="2"/><circle cx="110" cy="100" r="4" fill="currentColor"/><circle cx="230" cy="100" r="9" fill="#f08080" fill-opacity="0.5" stroke="currentColor" stroke-width="2"/><circle cx="230" cy="100" r="3" fill="currentColor"/><text x="230" y="130" font-size="14" text-anchor="middle" fill="currentColor">軸</text><rect x="204" y="44" width="52" height="24" rx="6" fill="none" stroke="#f08080" stroke-width="3" stroke-dasharray="6 4"/><text x="230" y="60" font-size="14" text-anchor="middle" fill="currentColor">I = 18</text></svg>'
-          - d × d が決まったら、2 回かけて それになる数を考えます。
+          - d × d が決まったら、2 回かけてそれになる数を考えます。
       - part: 挑戦
         text: 長さ 2 m、質量 3 kg の一様なぼうの、真ん中の軸のまわりの I は 1 kg·m² です。はしから 0.5 m の所を通る軸（ぼうに直角）のまわりの I はいくつですか。
         svg: '<svg viewBox="0 0 320 200" xmlns="http://www.w3.org/2000/svg"><rect x="50" y="94" width="220" height="12" fill="#c8ccd6" fill-opacity="0.5" stroke="currentColor" stroke-width="2"/><circle cx="160" cy="100" r="4" fill="currentColor"/><text x="160" y="84" font-size="13" text-anchor="middle" fill="currentColor">重心</text><circle cx="105" cy="100" r="9" fill="#f08080" fill-opacity="0.5" stroke="currentColor" stroke-width="2"/><circle cx="105" cy="100" r="3" fill="currentColor"/><text x="105" y="130" font-size="14" text-anchor="middle" fill="currentColor">軸</text><line x1="58" y1="150" x2="97" y2="150" fill="none" stroke="currentColor" stroke-width="2"/><polygon points="105,150 97,154 97,146" fill="currentColor"/><polygon points="50,150 58,146 58,154" fill="currentColor"/><text x="77.5" y="144" font-size="13" text-anchor="middle" fill="currentColor">0.5 m</text><line x1="58" y1="175" x2="152" y2="175" fill="none" stroke="currentColor" stroke-width="2"/><polygon points="160,175 152,179 152,171" fill="currentColor"/><polygon points="50,175 58,171 58,179" fill="currentColor"/><text x="105" y="169" font-size="13" text-anchor="middle" fill="currentColor">1 m</text></svg>'
@@ -333,7 +334,7 @@ days:
         check: "3*2//3"
         hints:
           - まずトルクを出します。
-          - text: トルク = 軸からの長さ × 力 です。
+          - text: トルク = 軸からの長さ × 力です。
             svg: '<svg viewBox="0 0 320 200" xmlns="http://www.w3.org/2000/svg"><circle cx="140" cy="100" r="52" fill="#b39ddb" fill-opacity="0.5" stroke="currentColor" stroke-width="2"/><circle cx="140" cy="100" r="4" fill="currentColor"/><line x1="140" y1="100" x2="192" y2="100" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="140" cy="100" r="4" fill="currentColor"/><line x1="192" y1="100" x2="192" y2="150" fill="none" stroke="currentColor" stroke-width="2"/><polygon points="192,160 187,150 197,150" fill="currentColor"/><text x="214" y="140" font-size="15" text-anchor="middle" fill="currentColor">3 N</text><line x1="148" y1="40" x2="184" y2="40" fill="none" stroke="currentColor" stroke-width="2"/><polygon points="192,40 184,44 184,36" fill="currentColor"/><polygon points="140,40 148,36 148,44" fill="currentColor"/><text x="166" y="34" font-size="13" text-anchor="middle" fill="currentColor">2 m</text><circle cx="166" cy="100" r="20" fill="none" stroke="#f08080" stroke-width="3" stroke-dasharray="6 4"/></svg>'
           - トルクが出たら、I × α = τ で α を出します。
       - part: 今日
@@ -464,7 +465,7 @@ days:
         check: "min(v for v in range(1, 10) if 3*v*v == 4*10*3//10)"
         hints:
           - 位置エネルギーが運動エネルギーに変わります。
-          - text: 位置エネルギーは M × g × 高さ です。M は両側で同じなので消えます。
+          - text: 位置エネルギーは M × g × 高さです。M は両側で同じなので消えます。
             svg: '<svg viewBox="0 0 320 200" xmlns="http://www.w3.org/2000/svg"><polygon points="40,170 260,170 260,90" fill="#c9a36b" fill-opacity="0.4" stroke="currentColor" stroke-width="2"/><line x1="260" y1="170" x2="260" y2="90" fill="none" stroke="currentColor" stroke-width="2" stroke-dasharray="4 4"/><circle cx="226" cy="84" r="18" fill="#7fc8f8" fill-opacity="0.5" stroke="currentColor" stroke-width="2"/><text x="288" y="135" font-size="13" text-anchor="middle" fill="currentColor">0.3 m</text></svg>'
           - 10 × 0.3 = 3/4 × v × v、という式になります。
       - part: 挑戦
@@ -587,7 +588,7 @@ days:
         check: "3*10*1/4"
         hints:
           - I と τ の両方を、はしの軸のまわりで出します。
-          - text: I は平行軸の定理、τ は重さ × 軸からの長さ です。
+          - text: I は平行軸の定理、τ は重さ × 軸からの長さです。
             svg: '<svg viewBox="0 0 320 200" xmlns="http://www.w3.org/2000/svg"><rect x="50" y="94" width="220" height="12" fill="#c8ccd6" fill-opacity="0.5" stroke="currentColor" stroke-width="2"/><circle cx="50" cy="100" r="9" fill="#f08080" fill-opacity="0.5" stroke="currentColor" stroke-width="2"/><circle cx="50" cy="100" r="3" fill="currentColor"/><text x="50" y="130" font-size="14" text-anchor="middle" fill="currentColor">軸</text><circle cx="160" cy="100" r="4" fill="currentColor"/><line x1="160" y1="108" x2="160" y2="150" fill="none" stroke="currentColor" stroke-width="2"/><polygon points="160,160 155,150 165,150" fill="currentColor"/><line x1="58" y1="70" x2="152" y2="70" fill="none" stroke="currentColor" stroke-width="2"/><polygon points="160,70 152,74 152,66" fill="currentColor"/><polygon points="50,70 58,66 58,74" fill="currentColor"/><text x="105" y="64" font-size="13" text-anchor="middle" fill="currentColor">1 m</text><circle cx="105" cy="100" r="24" fill="none" stroke="#f08080" stroke-width="3" stroke-dasharray="6 4"/></svg>'
           - I × α = τ から α を出します。
       - part: 今日
@@ -665,7 +666,7 @@ days:
         check: "3*2//6"
         hints:
           - まず、トルクを出します。
-          - text: トルク = 軸からの長さ × 力 です。
+          - text: トルク = 軸からの長さ × 力です。
             svg: '<svg viewBox="0 0 320 200" xmlns="http://www.w3.org/2000/svg"><circle cx="140" cy="100" r="52" fill="#b39ddb" fill-opacity="0.5" stroke="currentColor" stroke-width="2"/><circle cx="140" cy="100" r="4" fill="currentColor"/><line x1="140" y1="100" x2="192" y2="100" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="140" cy="100" r="4" fill="currentColor"/><line x1="192" y1="100" x2="192" y2="150" fill="none" stroke="currentColor" stroke-width="2"/><polygon points="192,160 187,150 197,150" fill="currentColor"/><text x="214" y="140" font-size="15" text-anchor="middle" fill="currentColor">3 N</text><line x1="148" y1="40" x2="184" y2="40" fill="none" stroke="currentColor" stroke-width="2"/><polygon points="192,40 184,44 184,36" fill="currentColor"/><polygon points="140,40 148,36 148,44" fill="currentColor"/><text x="166" y="34" font-size="13" text-anchor="middle" fill="currentColor">2 m</text><circle cx="166" cy="100" r="20" fill="none" stroke="#f08080" stroke-width="3" stroke-dasharray="6 4"/></svg>'
           - I × α = τ で α を出します。
   - day: 8
@@ -711,7 +712,7 @@ days:
         check: "8*5//10//2"
         hints:
           - まずトルクを出します。
-          - text: トルク = 軸からの長さ × 力 です。
+          - text: トルク = 軸からの長さ × 力です。
             svg: '<svg viewBox="0 0 320 200" xmlns="http://www.w3.org/2000/svg"><circle cx="140" cy="100" r="52" fill="#b39ddb" fill-opacity="0.5" stroke="currentColor" stroke-width="2"/><circle cx="140" cy="100" r="4" fill="currentColor"/><line x1="140" y1="100" x2="192" y2="100" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="140" cy="100" r="4" fill="currentColor"/><line x1="192" y1="100" x2="192" y2="150" fill="none" stroke="currentColor" stroke-width="2"/><polygon points="192,160 187,150 197,150" fill="currentColor"/><text x="214" y="140" font-size="15" text-anchor="middle" fill="currentColor">8 N</text><line x1="148" y1="40" x2="184" y2="40" fill="none" stroke="currentColor" stroke-width="2"/><polygon points="192,40 184,44 184,36" fill="currentColor"/><polygon points="140,40 148,36 148,44" fill="currentColor"/><text x="166" y="34" font-size="13" text-anchor="middle" fill="currentColor">0.5 m</text><circle cx="166" cy="100" r="20" fill="none" stroke="#f08080" stroke-width="3" stroke-dasharray="6 4"/></svg>'
           - I × α = τ で α を出します。
       - part: 今日
@@ -747,7 +748,7 @@ days:
           - 絵の長さと力を使います。
           - text: 長さと力を見つけます。
             svg: '<svg viewBox="0 0 320 200" xmlns="http://www.w3.org/2000/svg"><rect x="50" y="90" width="230" height="12" fill="#c8ccd6" fill-opacity="0.5" stroke="currentColor" stroke-width="2"/><polygon points="50,100 38,124 62,124" fill="#f3c969" fill-opacity="0.5" stroke="currentColor" stroke-width="2"/><circle cx="50" cy="96" r="5" fill="currentColor"/><line x1="250" y1="34" x2="250" y2="78" fill="none" stroke="currentColor" stroke-width="2"/><polygon points="250,88 245,78 255,78" fill="currentColor"/><text x="250" y="26" font-size="14" text-anchor="middle" fill="currentColor">2 N</text><line x1="58" y1="146" x2="242" y2="146" fill="none" stroke="currentColor" stroke-width="2"/><polygon points="250,146 242,150 242,142" fill="currentColor"/><polygon points="50,146 58,142 58,150" fill="currentColor"/><text x="150" y="140" font-size="14" text-anchor="middle" fill="currentColor">4 m</text><circle cx="150" cy="146" r="26" fill="none" stroke="#f08080" stroke-width="3" stroke-dasharray="6 4"/><circle cx="250" cy="34" r="22" fill="none" stroke="#f08080" stroke-width="3" stroke-dasharray="6 4"/></svg>'
-          - 長さ × 力 です。
+          - 長さ × 力です。
       - part: 今日
         text: 質量 4 kg の物体の、重心を通る軸のまわりの I は 3 kg·m² です。重心から 3 m はなれた平行な軸のまわりの I はいくつですか。
         svg: '<svg viewBox="0 0 320 200" xmlns="http://www.w3.org/2000/svg"><ellipse cx="120" cy="100" rx="56" ry="40" fill="#f3c969" fill-opacity="0.5" stroke="currentColor" stroke-width="2"/><circle cx="120" cy="100" r="4" fill="currentColor"/><circle cx="230" cy="100" r="9" fill="#f08080" fill-opacity="0.5" stroke="currentColor" stroke-width="2"/><circle cx="230" cy="100" r="3" fill="currentColor"/><text x="230" y="130" font-size="14" text-anchor="middle" fill="currentColor">軸</text><line x1="128" y1="50" x2="222" y2="50" fill="none" stroke="currentColor" stroke-width="2"/><polygon points="230,50 222,54 222,46" fill="currentColor"/><polygon points="120,50 128,46 128,54" fill="currentColor"/><text x="175" y="44" font-size="13" text-anchor="middle" fill="currentColor">3 m</text></svg>'
@@ -788,7 +789,7 @@ ri:
       - 円柱の中心の加速度が板の何分の 1 になるかが決まれば、中心が板に対してずれる量は、板の進んだ道のりの何倍かが決まります。
     paths:
       - [板 F − f = M A、円柱 f = m a、まわる式 f R = 1/2 m R² α、すべらない A = a + R α, a = A / 3 と A = 5 m/s², ずれる加速度 A − a = 10/3 m/s², 2.4 = 1/2 × 10/3 × t² から t² = 1.44, 板の道のり 1/2 × 5 × 1.44 = 3.6 m]
-      - [板の速さ V のとき円柱の中心は V/3、まわる速さは R ω = 2V/3 × 3 に注意して運動エネルギーの合計を出す, F × 道のり = 運動エネルギーの合計 から A = 5 m/s², ずれは板の道のりの 2/3 倍だと分かる, 板の道のり 2.4 × 3/2 = 3.6 m]
+      - [板の速さ V のとき円柱の中心は V/3、まわる速さは R ω = 2V/3 × 3 に注意して運動エネルギーの合計を出す, F × 道のり = 運動エネルギーの合計から A = 5 m/s², ずれは板の道のりの 2/3 倍だと分かる, 板の道のり 2.4 × 3/2 = 3.6 m]
     note: 構造 S19 置きかえ（ずれは板の進みの 2/3 で、力や質量によらない）、S25 式を立てる。種なし。力・質量の数は答えに効かない。力、まわる式、すべらない条件の 3 本をつなぐ手数が要る。
   - part: 離
     kinds: [数, 道筋]
