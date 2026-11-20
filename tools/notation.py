@@ -121,7 +121,9 @@ def despace(s):
     out = []
     for i, ch in enumerate(body):
         if ch == " " and isjp(i - 1) and isjp(i + 1):
-            keep = name(i - 1) or name(i + 1) or (lone(i - 1) and body[i - 1] == "こ" and re.match(r"[ぁ-ん]", body[i + 1]))
+            # 助数詞の「こ」は、前が数・文字（日本語の字でない）か「何」（何こ でしょう、何こ の）
+            ctr = body[i - 1] == "こ" and (not isjp(i - 2) or body[i - 2] == "何")
+            keep = name(i - 1) or name(i + 1) or (ctr and re.match(r"[ぁ-ん]", body[i + 1]))
             if not keep:
                 continue
         out.append(ch)
@@ -457,10 +459,13 @@ def cmd_apply(ans_path, write, packdir=None):
     packdir = Path(packdir or Path(ans_path).parent)
     if isinstance(ans, dict):
         ans = [{"file": k, "rows": v} for k, v in ans.items()]
-    by_unit, rejected, review = {}, [], []
+    by_unit, rejected, review, missing = {}, [], [], []
     for a in ans:
         pk = json.loads((packdir / a["file"]).read_text(encoding="utf-8"))
         rows = {r["i"]: r for r in pk["rows"]}
+        # 係が束の途中までしか返さないと、残りの行はもとのまま残る（D-225 で P-022 の 53 行）。数えて知らせる
+        got = {x["i"] for x in a["rows"]}
+        missing += [(a["file"], i) for i in rows if i not in got]
         L = pk["level"]
         m = by_unit.setdefault(pk["unit"], {"t": {}, "svg": {}})
         for x in a["rows"]:
@@ -507,6 +512,9 @@ def cmd_apply(ans_path, write, packdir=None):
         if write and ne:
             p.write_text(new, encoding="utf-8", newline="\n")
     print(f"単元 {len(by_unit)}、書きかえた節点 {tot_e}、id を足した問題 {tot_i}、当てなかった書きかえ {len(rejected)}" + ("（書いた）" if write else "（試し）"))
+    if missing:
+        files = Counter(f for f, _ in missing)
+        print(f"答えのない行 {len(missing)}（もとのまま残る）：" + "、".join(f"{f} {n}" for f, n in files.most_common(8)))
     out = Path(ans_path).with_suffix(".rejected.json")
     out.write_text(json.dumps(rejected, ensure_ascii=False, indent=1), encoding="utf-8")
     Path(ans_path).with_suffix(".review.json").write_text(json.dumps(review, ensure_ascii=False, indent=1), encoding="utf-8")

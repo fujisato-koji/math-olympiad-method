@@ -7,9 +7,10 @@ days:
   - day: 1
     items:
       - part: 見本
-        text: 光が空気からガラスにななめに入ると、境目で《屈折》して曲がる。境目に直角な線を法線といい、光と法線がつくる角を、入しゃ角、屈折角という。ガラスの中では光がおそくなるので、光は法線に近づく。
+        id: "c7dd3a84f7"
+        text: 光が空気からガラスにななめに入ると、さかい目で《屈折》して曲がる。さかい目に直角な線を法線といい、光と法線がつくる角を、入しゃ角、屈折角という。ガラスの中では光がおそくなるので、光は法線に近づく。
         svg: '<svg viewBox="0 0 320 200" xmlns="http://www.w3.org/2000/svg"><rect x="0" y="100" width="320" height="100" fill="#7fc8f8" fill-opacity="0.35" stroke="currentColor" stroke-width="2"/><line x1="0" y1="100" x2="320" y2="100" fill="none" stroke="currentColor" stroke-width="2"/><text x="46" y="22" font-size="14" text-anchor="middle" fill="currentColor">空気</text><text x="46" y="192" font-size="14" text-anchor="middle" fill="currentColor">ガラス</text><line x1="160" y1="15" x2="160" y2="185" fill="none" stroke="currentColor" stroke-width="1" stroke-dasharray="4 4"/><line x1="108.6" y1="38.7" x2="154.2" y2="93.1" fill="none" stroke="currentColor" stroke-width="2"/><polygon points="160,100 150.8,96 157.7,90.2" fill="currentColor"/><text x="106.7" y="59.6" font-size="14" text-anchor="middle" fill="currentColor">入しゃ角</text><line x1="160" y1="100" x2="190" y2="164.3" fill="none" stroke="currentColor" stroke-width="2"/><polygon points="193.8,172.5 185.9,166.2 194.1,162.4" fill="currentColor"/><text x="200.5" y="156.6" font-size="14" text-anchor="middle" fill="currentColor">屈折角</text><text x="250" y="42" font-size="14" text-anchor="middle" fill="currentColor">n₁ sinθ₁ = n₂ sinθ₂</text></svg>'
-        explain: スネルの法則。境目を通るとき、n sinθ（n は《屈折率》）が変わらない。屈折率の大きいほう（光がおそいほう）で、法線からの角が小さくなる。空気は n = 1.0 とみなす。
+        explain: スネルの法則。さかい目を通るとき、n sinθ（n は《屈折率》）が変わらない。屈折率の大きいほう（光がおそいほう）で、法線からの角が小さくなる。空気は n = 1.0 とみなす。
       - part: 今日
         text: 空気から屈折率 √2 のガラスに、入しゃ角 45° で光が入る。屈折角は何度か。
         svg: '<svg viewBox="0 0 320 200" xmlns="http://www.w3.org/2000/svg"><rect x="0" y="100" width="320" height="100" fill="#7fc8f8" fill-opacity="0.35" stroke="currentColor" stroke-width="2"/><line x1="0" y1="100" x2="320" y2="100" fill="none" stroke="currentColor" stroke-width="2"/><text x="46" y="22" font-size="14" text-anchor="middle" fill="currentColor">空気 n=1</text><text x="46" y="192" font-size="14" text-anchor="middle" fill="currentColor">ガラス n=√2</text><line x1="160" y1="15" x2="160" y2="185" fill="none" stroke="currentColor" stroke-width="1" stroke-dasharray="4 4"/><line x1="103.4" y1="43.4" x2="153.6" y2="93.6" fill="none" stroke="currentColor" stroke-width="2"/><polygon points="160,100 150.5,96.8 156.8,90.5" fill="currentColor"/><text x="103" y="63" font-size="14" text-anchor="middle" fill="currentColor">45°</text></svg>'
@@ -17,7 +18,7 @@ days:
         answer: '30'
         check: "math.floor(math.degrees(math.asin(math.sin(math.radians(45)) / math.sqrt(2))) + 0.5)"
         hints:
-          - 境目で変わらないのは n sinθ。空気側とガラス側で、それぞれ書いてみよう。
+          - さかい目で変わらないのは n sinθ。空気側とガラス側で、それぞれ書いてみよう。
           - text: 空気側の n sinθ は 1 × sin45° 。これがガラス側の √2 × sinθ₂ に等しい。
             svg: '<svg viewBox="0 0 320 200" xmlns="http://www.w3.org/2000/svg"><rect x="0" y="100" width="320" height="100" fill="#7fc8f8" fill-opacity="0.35" stroke="currentColor" stroke-width="2"/><line x1="0" y1="100" x2="320" y2="100" fill="none" stroke="currentColor" stroke-width="2"/><text x="46" y="22" font-size="14" text-anchor="middle" fill="currentColor">空気 n=1</text><text x="46" y="192" font-size="14" text-anchor="middle" fill="currentColor">ガラス n=√2</text><line x1="160" y1="15" x2="160" y2="185" fill="none" stroke="currentColor" stroke-width="1" stroke-dasharray="4 4"/><line x1="103.4" y1="43.4" x2="153.6" y2="93.6" fill="none" stroke="currentColor" stroke-width="2"/><polygon points="160,100 150.5,96.8 156.8,90.5" fill="currentColor"/><text x="103" y="63" font-size="14" text-anchor="middle" fill="currentColor">45°</text><circle cx="112" cy="72" r="24" fill="none" stroke="#f08080" stroke-width="3" stroke-dasharray="6 4"/></svg>'
           - sin45° は √2/2 。√2 でわると、sinθ₂ がきれいな数になる。
@@ -53,7 +54,8 @@ days:
           - [v = c/n, 3.0 × 10⁸ ÷ 1.5, 2.0 × 10⁸ m/s]
           - [ガラスの中は c より小さい, c を 1.5 でわった速さ]
       - part: 今日
-        text: 光が物質 A から物質 B に入ると、法線から遠ざかる向きに曲がった。屈折率が大きいのはどちらか。
+        id: "69df120133"
+        text: 光がぶっしつ A からぶっしつ B に入ると、法線から遠ざかる向きに曲がった。屈折率が大きいのはどちらか。
         svg: '<svg viewBox="0 0 320 200" xmlns="http://www.w3.org/2000/svg"><rect x="0" y="100" width="320" height="100" fill="#7fc8f8" fill-opacity="0.35" stroke="currentColor" stroke-width="2"/><line x1="0" y1="100" x2="320" y2="100" fill="none" stroke="currentColor" stroke-width="2"/><text x="46" y="22" font-size="14" text-anchor="middle" fill="currentColor">A</text><text x="46" y="192" font-size="14" text-anchor="middle" fill="currentColor">B</text><line x1="160" y1="15" x2="160" y2="185" fill="none" stroke="currentColor" stroke-width="1" stroke-dasharray="4 4"/><line x1="120" y1="30.7" x2="155.5" y2="92.2" fill="none" stroke="currentColor" stroke-width="2"/><polygon points="160,100 151.6,94.5 159.4,90" fill="currentColor"/><text x="115" y="53.8" font-size="14" text-anchor="middle" fill="currentColor">A</text><line x1="160" y1="100" x2="214.4" y2="145.6" fill="none" stroke="currentColor" stroke-width="2"/><polygon points="221.3,151.4 211.5,149.1 217.3,142.2" fill="currentColor"/><text x="220.4" y="141.3" font-size="14" text-anchor="middle" fill="currentColor">B</text></svg>'
         choices: ['A のほう', 'B のほう', '同じ']
         answer: 'A のほう'
@@ -67,33 +69,35 @@ days:
           - [n sinθ が等しい, 角が小さいほうが n が大きい, 図では A 側の角のほうが小さいので A]
           - [法線に近づくとき、おそいほうに入る, 遠ざかるので、おそいほうから速いほうへ出る, A のほうがおそい]
       - part: 今日
-        text: 空気から物質に、入しゃ角 60° で入ると、屈折角は 30° になった。この物質の屈折率はいくつか（小数第 1 位まで）。
-        svg: '<svg viewBox="0 0 320 200" xmlns="http://www.w3.org/2000/svg"><rect x="0" y="100" width="320" height="100" fill="#7fc8f8" fill-opacity="0.35" stroke="currentColor" stroke-width="2"/><line x1="0" y1="100" x2="320" y2="100" fill="none" stroke="currentColor" stroke-width="2"/><text x="46" y="22" font-size="14" text-anchor="middle" fill="currentColor">空気 n=1</text><text x="46" y="192" font-size="14" text-anchor="middle" fill="currentColor">物質 n=？</text><line x1="160" y1="15" x2="160" y2="185" fill="none" stroke="currentColor" stroke-width="1" stroke-dasharray="4 4"/><line x1="90.7" y1="60" x2="152.2" y2="95.5" fill="none" stroke="currentColor" stroke-width="2"/><polygon points="160,100 150,99.4 154.5,91.6" fill="currentColor"/><text x="93.8" y="75" font-size="14" text-anchor="middle" fill="currentColor">60°</text><line x1="160" y1="100" x2="195.5" y2="161.5" fill="none" stroke="currentColor" stroke-width="2"/><polygon points="200,169.3 191.6,163.7 199.4,159.2" fill="currentColor"/><text x="205" y="154.2" font-size="14" text-anchor="middle" fill="currentColor">30°</text></svg>'
+        id: "59958d157b"
+        text: 空気からぶっしつに、入しゃ角 60° で入ると、屈折角は 30° になった。このぶっしつの屈折率はいくつか（小数第 1 位まで）。
+        svg: '<svg viewBox="0 0 320 200" xmlns="http://www.w3.org/2000/svg"><rect x="0" y="100" width="320" height="100" fill="#7fc8f8" fill-opacity="0.35" stroke="currentColor" stroke-width="2"/><line x1="0" y1="100" x2="320" y2="100" fill="none" stroke="currentColor" stroke-width="2"/><text x="46" y="22" font-size="14" text-anchor="middle" fill="currentColor">空気 n=1</text><text x="46" y="192" font-size="14" text-anchor="middle" fill="currentColor">ぶっしつ n=？</text><line x1="160" y1="15" x2="160" y2="185" fill="none" stroke="currentColor" stroke-width="1" stroke-dasharray="4 4"/><line x1="90.7" y1="60" x2="152.2" y2="95.5" fill="none" stroke="currentColor" stroke-width="2"/><polygon points="160,100 150,99.4 154.5,91.6" fill="currentColor"/><text x="93.8" y="75" font-size="14" text-anchor="middle" fill="currentColor">60°</text><line x1="160" y1="100" x2="195.5" y2="161.5" fill="none" stroke="currentColor" stroke-width="2"/><polygon points="200,169.3 191.6,163.7 199.4,159.2" fill="currentColor"/><text x="205" y="154.2" font-size="14" text-anchor="middle" fill="currentColor">30°</text></svg>'
         choices: ['1.4', '1.7', '2.0']
         answer: '1.7'
         check: "math.floor(math.sin(math.radians(60)) / math.sin(math.radians(30)) * 10 + 0.5) / 10"
         hints:
-          - 空気側は 1 × sin60° 、物質側は n × sin30° 。
-          - text: 等しいとおくと、n は sin の比になる。
-            svg: '<svg viewBox="0 0 320 200" xmlns="http://www.w3.org/2000/svg"><rect x="0" y="100" width="320" height="100" fill="#7fc8f8" fill-opacity="0.35" stroke="currentColor" stroke-width="2"/><line x1="0" y1="100" x2="320" y2="100" fill="none" stroke="currentColor" stroke-width="2"/><text x="46" y="22" font-size="14" text-anchor="middle" fill="currentColor">空気 n=1</text><text x="46" y="192" font-size="14" text-anchor="middle" fill="currentColor">物質 n=？</text><line x1="160" y1="15" x2="160" y2="185" fill="none" stroke="currentColor" stroke-width="1" stroke-dasharray="4 4"/><line x1="90.7" y1="60" x2="152.2" y2="95.5" fill="none" stroke="currentColor" stroke-width="2"/><polygon points="160,100 150,99.4 154.5,91.6" fill="currentColor"/><text x="93.8" y="75" font-size="14" text-anchor="middle" fill="currentColor">60°</text><line x1="160" y1="100" x2="195.5" y2="161.5" fill="none" stroke="currentColor" stroke-width="2"/><polygon points="200,169.3 191.6,163.7 199.4,159.2" fill="currentColor"/><text x="205" y="154.2" font-size="14" text-anchor="middle" fill="currentColor">30°</text><circle cx="112" cy="70" r="22" fill="none" stroke="#f08080" stroke-width="3" stroke-dasharray="6 4"/><circle cx="206" cy="130" r="22" fill="none" stroke="#f08080" stroke-width="3" stroke-dasharray="6 4"/></svg>'
+          - 空気側は 1 × sin60° 、ぶっしつ側は n × sin30° 。
+          - text: 等しいとおくと、n は sin のひになる。
+            svg: '<svg viewBox="0 0 320 200" xmlns="http://www.w3.org/2000/svg"><rect x="0" y="100" width="320" height="100" fill="#7fc8f8" fill-opacity="0.35" stroke="currentColor" stroke-width="2"/><line x1="0" y1="100" x2="320" y2="100" fill="none" stroke="currentColor" stroke-width="2"/><text x="46" y="22" font-size="14" text-anchor="middle" fill="currentColor">空気 n=1</text><text x="46" y="192" font-size="14" text-anchor="middle" fill="currentColor">ぶっしつ n=？</text><line x1="160" y1="15" x2="160" y2="185" fill="none" stroke="currentColor" stroke-width="1" stroke-dasharray="4 4"/><line x1="90.7" y1="60" x2="152.2" y2="95.5" fill="none" stroke="currentColor" stroke-width="2"/><polygon points="160,100 150,99.4 154.5,91.6" fill="currentColor"/><text x="93.8" y="75" font-size="14" text-anchor="middle" fill="currentColor">60°</text><line x1="160" y1="100" x2="195.5" y2="161.5" fill="none" stroke="currentColor" stroke-width="2"/><polygon points="200,169.3 191.6,163.7 199.4,159.2" fill="currentColor"/><text x="205" y="154.2" font-size="14" text-anchor="middle" fill="currentColor">30°</text><circle cx="112" cy="70" r="22" fill="none" stroke="#f08080" stroke-width="3" stroke-dasharray="6 4"/><circle cx="206" cy="130" r="22" fill="none" stroke="#f08080" stroke-width="3" stroke-dasharray="6 4"/></svg>'
           - sin60° は √3/2 、sin30° は 1/2 。
         paths:
           - [1 × sin60° = n × sin30°, n = (√3/2) ÷ (1/2) = √3, 約 1.7]
-          - [sin の比 sin60°/sin30°, 0.87 ÷ 0.5, 約 1.7]
+          - [sin のひ sin60°/sin30°, 0.87 ÷ 0.5, 約 1.7]
       - part: 挑戦
-        text: 屈折率 1.2 の液から屈折率 1.5 のガラスに光が入る。液の中の角が 30° のとき、ガラスの中の角を θ とすると、sinθ はいくつか。
-        svg: '<svg viewBox="0 0 320 200" xmlns="http://www.w3.org/2000/svg"><rect x="0" y="100" width="320" height="100" fill="#7fc8f8" fill-opacity="0.35" stroke="currentColor" stroke-width="2"/><line x1="0" y1="100" x2="320" y2="100" fill="none" stroke="currentColor" stroke-width="2"/><text x="46" y="22" font-size="14" text-anchor="middle" fill="currentColor">液 n=1.2</text><text x="46" y="192" font-size="14" text-anchor="middle" fill="currentColor">ガラス n=1.5</text><line x1="160" y1="15" x2="160" y2="185" fill="none" stroke="currentColor" stroke-width="1" stroke-dasharray="4 4"/><line x1="120" y1="30.7" x2="155.5" y2="92.2" fill="none" stroke="currentColor" stroke-width="2"/><polygon points="160,100 151.6,94.5 159.4,90" fill="currentColor"/><text x="115" y="53.8" font-size="14" text-anchor="middle" fill="currentColor">30°</text></svg>'
+        id: "228950822d"
+        text: 屈折率 1.2 のえきから屈折率 1.5 のガラスに光が入る。えきの中の角が 30° のとき、ガラスの中の角を θ とすると、sinθ はいくつか。
+        svg: '<svg viewBox="0 0 320 200" xmlns="http://www.w3.org/2000/svg"><rect x="0" y="100" width="320" height="100" fill="#7fc8f8" fill-opacity="0.35" stroke="currentColor" stroke-width="2"/><line x1="0" y1="100" x2="320" y2="100" fill="none" stroke="currentColor" stroke-width="2"/><text x="46" y="22" font-size="14" text-anchor="middle" fill="currentColor">えき n=1.2</text><text x="46" y="192" font-size="14" text-anchor="middle" fill="currentColor">ガラス n=1.5</text><line x1="160" y1="15" x2="160" y2="185" fill="none" stroke="currentColor" stroke-width="1" stroke-dasharray="4 4"/><line x1="120" y1="30.7" x2="155.5" y2="92.2" fill="none" stroke="currentColor" stroke-width="2"/><polygon points="160,100 151.6,94.5 159.4,90" fill="currentColor"/><text x="115" y="53.8" font-size="14" text-anchor="middle" fill="currentColor">30°</text></svg>'
         choices: ['0.4', '0.5', '0.625']
         answer: '0.4'
         check: "math.floor(1.2 * math.sin(math.radians(30)) / 1.5 * 100 + 0.5) / 100"
         hints:
-          - 液の側も、ガラスの側も n sinθ を書く。
-          - text: 液側は 1.2 × sin30° 、ガラス側は 1.5 × sinθ 。
-            svg: '<svg viewBox="0 0 320 200" xmlns="http://www.w3.org/2000/svg"><rect x="0" y="100" width="320" height="100" fill="#7fc8f8" fill-opacity="0.35" stroke="currentColor" stroke-width="2"/><line x1="0" y1="100" x2="320" y2="100" fill="none" stroke="currentColor" stroke-width="2"/><text x="46" y="22" font-size="14" text-anchor="middle" fill="currentColor">液 n=1.2</text><text x="46" y="192" font-size="14" text-anchor="middle" fill="currentColor">ガラス n=1.5</text><line x1="160" y1="15" x2="160" y2="185" fill="none" stroke="currentColor" stroke-width="1" stroke-dasharray="4 4"/><line x1="120" y1="30.7" x2="155.5" y2="92.2" fill="none" stroke="currentColor" stroke-width="2"/><polygon points="160,100 151.6,94.5 159.4,90" fill="currentColor"/><text x="115" y="53.8" font-size="14" text-anchor="middle" fill="currentColor">30°</text><circle cx="112" cy="72" r="24" fill="none" stroke="#f08080" stroke-width="3" stroke-dasharray="6 4"/></svg>'
+          - えきの側も、ガラスの側も n sinθ を書く。
+          - text: えき側は 1.2 × sin30° 、ガラス側は 1.5 × sinθ 。
+            svg: '<svg viewBox="0 0 320 200" xmlns="http://www.w3.org/2000/svg"><rect x="0" y="100" width="320" height="100" fill="#7fc8f8" fill-opacity="0.35" stroke="currentColor" stroke-width="2"/><line x1="0" y1="100" x2="320" y2="100" fill="none" stroke="currentColor" stroke-width="2"/><text x="46" y="22" font-size="14" text-anchor="middle" fill="currentColor">えき n=1.2</text><text x="46" y="192" font-size="14" text-anchor="middle" fill="currentColor">ガラス n=1.5</text><line x1="160" y1="15" x2="160" y2="185" fill="none" stroke="currentColor" stroke-width="1" stroke-dasharray="4 4"/><line x1="120" y1="30.7" x2="155.5" y2="92.2" fill="none" stroke="currentColor" stroke-width="2"/><polygon points="160,100 151.6,94.5 159.4,90" fill="currentColor"/><text x="115" y="53.8" font-size="14" text-anchor="middle" fill="currentColor">30°</text><circle cx="112" cy="72" r="24" fill="none" stroke="#f08080" stroke-width="3" stroke-dasharray="6 4"/></svg>'
           - 1.2 × 0.5 = 0.6 を 1.5 でわる。
         paths:
           - [1.2 sin30° = 1.5 sinθ, sinθ = 0.6 ÷ 1.5 = 0.4]
-          - [30° より小さいので sin が 0.5 より小さい, 比 1.2/1.5 = 0.8 をかけて 0.5 × 0.8 = 0.4]
+          - [30° より小さいので sin が 0.5 より小さい, ひ 1.2/1.5 = 0.8 をかけて 0.5 × 0.8 = 0.4]
     extra:
       - part: 今日
         text: 空気から屈折率 √3 のガラスに、入しゃ角 60° で入る。屈折角は何度か。
@@ -126,7 +130,8 @@ days:
   - day: 2
     items:
       - part: 見本
-        text: ガラスや水から空気に光が出るとき、入しゃ角を大きくしていくと、屈折した光がやがて境目すれすれになる。この角をりんかい角という。りんかい角より大きいと、光は空気に出られず、全部はね返る。これを全《反射》という。
+        id: "a805f68612"
+        text: ガラスや水から空気に光が出るとき、入しゃ角を大きくしていくと、屈折した光がやがてさかい目すれすれになる。この角をりんかい角という。りんかい角より大きいと、光は空気に出られず、全部はね返る。これを全《反射》という。
         svg: '<svg viewBox="0 0 320 200" xmlns="http://www.w3.org/2000/svg"><rect x="0" y="100" width="320" height="100" fill="#7fc8f8" fill-opacity="0.35" stroke="currentColor" stroke-width="2"/><line x1="0" y1="100" x2="320" y2="100" fill="none" stroke="currentColor" stroke-width="2"/><text x="46" y="22" font-size="14" text-anchor="middle" fill="currentColor">空気</text><text x="46" y="192" font-size="14" text-anchor="middle" fill="currentColor">ガラス</text><line x1="160" y1="15" x2="160" y2="185" fill="none" stroke="currentColor" stroke-width="1" stroke-dasharray="4 4"/><line x1="94.5" y1="145.9" x2="152.6" y2="105.2" fill="none" stroke="currentColor" stroke-width="2"/><polygon points="160,100 155.2,108.8 150,101.5" fill="currentColor"/><text x="96.5" y="137.3" font-size="14" text-anchor="middle" fill="currentColor">入しゃ角</text><line x1="160" y1="100" x2="218.2" y2="140.7" fill="none" stroke="currentColor" stroke-width="2"/><polygon points="225.5,145.9 215.6,144.4 220.7,137" fill="currentColor"/><text x="223.5" y="137.3" font-size="14" text-anchor="middle" fill="currentColor">同じ角</text></svg>'
         explain: 全反射。n₁ sinθ₁ = n₂ sin90° から、りんかい角 θc は sinθc = n₂/n₁（n₁ > n₂）。屈折率の大きいほうから小さいほうへ向かうときだけ起こる。
       - part: 今日
@@ -139,10 +144,10 @@ days:
           - りんかい角では、空気側の屈折角が 90° になる。
           - text: 水側は n₁ sinθc 、空気側は 1 × sin90° 。
             svg: '<svg viewBox="0 0 320 200" xmlns="http://www.w3.org/2000/svg"><rect x="0" y="100" width="320" height="100" fill="#7fc8f8" fill-opacity="0.35" stroke="currentColor" stroke-width="2"/><line x1="0" y1="100" x2="320" y2="100" fill="none" stroke="currentColor" stroke-width="2"/><text x="46" y="22" font-size="14" text-anchor="middle" fill="currentColor">空気 n=1</text><text x="46" y="192" font-size="14" text-anchor="middle" fill="currentColor">水 n=4/3</text><line x1="160" y1="15" x2="160" y2="185" fill="none" stroke="currentColor" stroke-width="1" stroke-dasharray="4 4"/><line x1="107.2" y1="145.9" x2="153.2" y2="105.9" fill="none" stroke="currentColor" stroke-width="2"/><polygon points="160,100 156.2,109.3 150.3,102.5" fill="currentColor"/><text x="100.2" y="142.1" font-size="14" text-anchor="middle" fill="currentColor">θc</text><line x1="160" y1="100" x2="221" y2="100" fill="none" stroke="currentColor" stroke-width="2"/><polygon points="230,100 221,104.5 221,95.5" fill="currentColor"/><text x="234" y="104" font-size="14" text-anchor="middle" fill="currentColor">90°</text></svg>'
-          - sin90° は 1 。4/3 × sinθc = 1 を解く。sin は 1 をこえない。
+          - sin90° は 1 。4/3 × sinθc = 1 をとく。sin は 1 をこえない。
         paths:
           - [n₁ sinθc = 1 × sin90°, sinθc = 1 ÷ (4/3) = 3/4]
-          - [sin は 1 より大きくならない, 1.33 は不可能, 0.75 と 0.5 のうち 4/3 倍して 1 になるほう]
+          - [sin は 1 より大きくならない, 1.33 はふかのう, 0.75 と 0.5 のうち 4/3 倍して 1 になるほう]
       - part: 今日
         text: 屈折率 2 のガラスから空気に光が出るとき、りんかい角は何度か。
         svg: '<svg viewBox="0 0 320 200" xmlns="http://www.w3.org/2000/svg"><rect x="0" y="100" width="320" height="100" fill="#7fc8f8" fill-opacity="0.35" stroke="currentColor" stroke-width="2"/><line x1="0" y1="100" x2="320" y2="100" fill="none" stroke="currentColor" stroke-width="2"/><text x="46" y="22" font-size="14" text-anchor="middle" fill="currentColor">空気 n=1</text><text x="46" y="192" font-size="14" text-anchor="middle" fill="currentColor">ガラス n=2</text><line x1="160" y1="15" x2="160" y2="185" fill="none" stroke="currentColor" stroke-width="1" stroke-dasharray="4 4"/><line x1="108.6" y1="161.3" x2="154.2" y2="106.9" fill="none" stroke="currentColor" stroke-width="2"/><polygon points="160,100 157.7,109.8 150.8,104" fill="currentColor"/><text x="106.7" y="148.4" font-size="14" text-anchor="middle" fill="currentColor">θc</text></svg>'
@@ -181,7 +186,7 @@ days:
           - 全反射が起こるのは、光が屈折率の大きいほうから小さいほうに向かうときだけ。
           - text: 空気と水で、屈折率が大きいのはどちらか。光が進む向きもたしかめよう。
             svg: '<svg viewBox="0 0 320 200" xmlns="http://www.w3.org/2000/svg"><rect x="0" y="100" width="320" height="100" fill="#7fc8f8" fill-opacity="0.35" stroke="currentColor" stroke-width="2"/><line x1="0" y1="100" x2="320" y2="100" fill="none" stroke="currentColor" stroke-width="2"/><text x="46" y="22" font-size="14" text-anchor="middle" fill="currentColor">空気 n=1</text><text x="46" y="192" font-size="14" text-anchor="middle" fill="currentColor">水 n=4/3</text><line x1="160" y1="15" x2="160" y2="185" fill="none" stroke="currentColor" stroke-width="1" stroke-dasharray="4 4"/><line x1="81.2" y1="86.1" x2="151.1" y2="98.4" fill="none" stroke="currentColor" stroke-width="2"/><polygon points="160,100 150.4,102.9 151.9,94" fill="currentColor"/><text x="86.9" y="93.9" font-size="14" text-anchor="middle" fill="currentColor">80°</text><rect x="18" y="6" width="56" height="22" rx="6" fill="none" stroke="#f08080" stroke-width="3" stroke-dasharray="6 4"/><rect x="18" y="174" width="56" height="22" rx="6" fill="none" stroke="#f08080" stroke-width="3" stroke-dasharray="6 4"/></svg>'
-          - 光が進む向きと、全反射が起こる条件をくらべよう。
+          - 光が進む向きと、全反射が起こるじょうけんをくらべよう。
         paths:
           - [屈折率は空気 1 、水 4/3, 小さいほうから大きいほうへ進むので全反射しない]
           - [sinθ₂ = sin80° ÷ (4/3) は約 0.74, 1 より小さいので屈折する光がある]
@@ -200,14 +205,15 @@ days:
           - [sinθc = n₂/n₁, 1.2 ÷ 1.5 = 0.8]
           - [小さいほうの n を大きいほうの n でわる, 1 より小さい数になる]
       - part: 挑戦
-        text: 液面から 4 m の深さに、小さな光を出すものがある（屈折率 5/3 の液体の中）。光が液面から空気に出られるのは、光を出すものの真上の点を中心とする、ある円の中だけである。この円の半径は何 m か。
-        svg: '<svg viewBox="0 0 320 200" xmlns="http://www.w3.org/2000/svg"><rect x="30" y="60" width="260" height="110" fill="#7fc8f8" fill-opacity="0.35" stroke="currentColor" stroke-width="2"/><line x1="30" y1="60" x2="290" y2="60" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="160" cy="150" r="5" fill="currentColor"/><line x1="160" y1="150" x2="160" y2="62" fill="none" stroke="currentColor" stroke-width="1" stroke-dasharray="4 4"/><text x="172" y="112" font-size="14" text-anchor="middle" fill="currentColor">4 m</text><text x="160" y="52" font-size="14" text-anchor="middle" fill="currentColor">半径 ＝ ？</text><text x="60" y="190" font-size="14" text-anchor="middle" fill="currentColor">液体 n=5/3</text></svg>'
+        id: "71a31dd740"
+        text: えきめんから 4 m の深さに、小さな光を出すものがある（屈折率 5/3 のえきたいの中）。光がえきめんから空気に出られるのは、光を出すものの真上の点を中心とする、ある円の中だけである。この円の半径は何 m か。
+        svg: '<svg viewBox="0 0 320 200" xmlns="http://www.w3.org/2000/svg"><rect x="30" y="60" width="260" height="110" fill="#7fc8f8" fill-opacity="0.35" stroke="currentColor" stroke-width="2"/><line x1="30" y1="60" x2="290" y2="60" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="160" cy="150" r="5" fill="currentColor"/><line x1="160" y1="150" x2="160" y2="62" fill="none" stroke="currentColor" stroke-width="1" stroke-dasharray="4 4"/><text x="172" y="112" font-size="14" text-anchor="middle" fill="currentColor">4 m</text><text x="160" y="52" font-size="14" text-anchor="middle" fill="currentColor">半径 ＝ ？</text><text x="60" y="190" font-size="14" text-anchor="middle" fill="currentColor">えきたい n=5/3</text></svg>'
         choices: ['2.4', '3', '5']
         answer: '3'
         check: "math.floor(4 * (3 / 5) / (4 / 5) + 0.5)"
         hints:
-          - 液面のはしでは、光の入しゃ角がりんかい角になる。
-          - text: 光を出すものから液面のはしに向かう線と、真上の線がつくる角が θc 。半径は 4 m × tanθc 。
+          - えきめんのはしでは、光の入しゃ角がりんかい角になる。
+          - text: 光を出すものからえきめんのはしに向かう線と、真上の線がつくる角が θc 。半径は 4 m × tanθc 。
             svg: '<svg viewBox="0 0 320 200" xmlns="http://www.w3.org/2000/svg"><rect x="30" y="60" width="260" height="110" fill="#7fc8f8" fill-opacity="0.35" stroke="currentColor" stroke-width="2"/><line x1="30" y1="60" x2="290" y2="60" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="160" cy="150" r="5" fill="currentColor"/><line x1="160" y1="150" x2="160" y2="62" fill="none" stroke="currentColor" stroke-width="1" stroke-dasharray="4 4"/><line x1="160" y1="150" x2="230" y2="62" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="230" cy="62" r="14" fill="none" stroke="#f08080" stroke-width="3" stroke-dasharray="6 4"/></svg>'
           - sinθc = 3/5 のとき、直角三角形の辺は 3 、4 、5 。
         paths:
@@ -228,14 +234,15 @@ days:
           - [1 × 0.9 = 1.5 × sinθ₂, sinθ₂ = 0.6]
           - [ガラスに入ると法線に近づく, sin は 0.9 より小さい]
       - part: 思い出す
-        text: 屈折率 2 の物質の中での光の速さは、真空中の速さ 3.0 × 10⁸ m/s のとき何 m/s か。
-        svg: '<svg viewBox="0 0 320 200" xmlns="http://www.w3.org/2000/svg"><rect x="30" y="60" width="260" height="80" fill="#7fc8f8" fill-opacity="0.35" stroke="currentColor" stroke-width="2"/><line x1="40" y1="80" x2="110" y2="80" fill="none" stroke="currentColor" stroke-width="2"/><polygon points="120,80 110,85 110,75" fill="currentColor"/><text x="80" y="70" font-size="14" text-anchor="middle" fill="currentColor">c</text><line x1="190" y1="120" x2="240" y2="120" fill="none" stroke="currentColor" stroke-width="2"/><polygon points="250,120 240,125 240,115" fill="currentColor"/><text x="220" y="110" font-size="14" text-anchor="middle" fill="currentColor">v</text><text x="160" y="168" font-size="14" text-anchor="middle" fill="currentColor">物質 n=2</text></svg>'
+        id: "dfc023e4af"
+        text: 屈折率 2 のぶっしつの中での光の速さは、真空中の速さ 3.0 × 10⁸ m/s のとき何 m/s か。
+        svg: '<svg viewBox="0 0 320 200" xmlns="http://www.w3.org/2000/svg"><rect x="30" y="60" width="260" height="80" fill="#7fc8f8" fill-opacity="0.35" stroke="currentColor" stroke-width="2"/><line x1="40" y1="80" x2="110" y2="80" fill="none" stroke="currentColor" stroke-width="2"/><polygon points="120,80 110,85 110,75" fill="currentColor"/><text x="80" y="70" font-size="14" text-anchor="middle" fill="currentColor">c</text><line x1="190" y1="120" x2="240" y2="120" fill="none" stroke="currentColor" stroke-width="2"/><polygon points="250,120 240,125 240,115" fill="currentColor"/><text x="220" y="110" font-size="14" text-anchor="middle" fill="currentColor">v</text><text x="160" y="168" font-size="14" text-anchor="middle" fill="currentColor">ぶっしつ n=2</text></svg>'
         choices: ['1.5 × 10⁸', '0.75 × 10⁸', '6.0 × 10⁸']
         answer: '1.5 × 10⁸'
         check: "'1.5 × 10⁸'"
         hints:
           - 屈折率が大きいほど、光はおそい。
-          - text: 物質の中の矢印は、真空中より短い。
+          - text: ぶっしつの中の矢印は、真空中より短い。
             svg: '<svg viewBox="0 0 320 200" xmlns="http://www.w3.org/2000/svg"><rect x="30" y="60" width="260" height="80" fill="#7fc8f8" fill-opacity="0.35" stroke="currentColor" stroke-width="2"/><line x1="40" y1="80" x2="110" y2="80" fill="none" stroke="currentColor" stroke-width="2"/><polygon points="120,80 110,85 110,75" fill="currentColor"/><text x="80" y="70" font-size="14" text-anchor="middle" fill="currentColor">c</text><line x1="190" y1="120" x2="240" y2="120" fill="none" stroke="currentColor" stroke-width="2"/><polygon points="250,120 240,125 240,115" fill="currentColor"/><text x="220" y="110" font-size="14" text-anchor="middle" fill="currentColor">v</text><circle cx="220" cy="120" r="30" fill="none" stroke="#f08080" stroke-width="3" stroke-dasharray="6 4"/></svg>'
           - v = c/n 。c を 2 でわる。
         paths:
@@ -275,9 +282,10 @@ days:
       - part: 見本
         text: まん中がふくらんだとつレンズは、光を集める。光じくに平行に入った光は、しょうてん F を通る。レンズの中心を通る光は、まっすぐ進む。この 2 本の光が出会う所に、物の像ができる。スクリーンにうつる像を実像、うつらずレンズをのぞくと見える像をきょ像という。
         svg: '<svg viewBox="0 0 320 200" xmlns="http://www.w3.org/2000/svg"><line x1="10" y1="100" x2="312" y2="100" fill="none" stroke="currentColor" stroke-width="1"/><ellipse cx="130" cy="100" rx="9" ry="66" fill="#7fc8f8" fill-opacity="0.45" stroke="currentColor" stroke-width="2"/><circle cx="90" cy="100" r="3" fill="currentColor"/><circle cx="170" cy="100" r="3" fill="currentColor"/><text x="90" y="118" font-size="14" text-anchor="middle" fill="currentColor">F</text><text x="170" y="118" font-size="14" text-anchor="middle" fill="currentColor">F</text><line x1="66" y1="100" x2="66" y2="85" fill="none" stroke="currentColor" stroke-width="3"/><polygon points="66,76 70.5,85 61.5,85" fill="currentColor"/><line x1="66" y1="76" x2="130" y2="76" fill="none" stroke="currentColor" stroke-width="1"/><line x1="130" y1="76" x2="236.7" y2="140" fill="none" stroke="currentColor" stroke-width="1"/><line x1="66" y1="76" x2="236.7" y2="140" fill="none" stroke="currentColor" stroke-width="1"/><line x1="236.7" y1="100" x2="236.7" y2="131" fill="none" stroke="#d05050" stroke-width="3"/><polygon points="236.7,140 232.2,131 241.2,131" fill="#d05050"/></svg>'
-        explain: 凸レンズの作図。物が焦点の外にあれば実像（さかさま）、内側にあれば虚像（正立で大きい）。焦点は光軸に平行な光が集まる点で、レンズの両側にある。
+        explain: とつレンズの作図。物がしょうてんの外にあれば実像（さかさま）、内側にあればきょ像（正立で大きい）。しょうてんはこうじくに平行な光が集まる点で、レンズの両側にある。
       - part: 今日
-        text: 物をレンズから焦点距離のちょうど 2 倍の所に置いた。できる像はどれか。
+        id: "d0a816deb6"
+        text: 物をレンズからしょうてんきょりのちょうど 2 倍の所に置いた。できる像はどれか。
         svg: '<svg viewBox="0 0 320 200" xmlns="http://www.w3.org/2000/svg"><line x1="10" y1="100" x2="312" y2="100" fill="none" stroke="currentColor" stroke-width="1"/><ellipse cx="130" cy="100" rx="9" ry="66" fill="#7fc8f8" fill-opacity="0.45" stroke="currentColor" stroke-width="2"/><circle cx="90" cy="100" r="3" fill="currentColor"/><circle cx="170" cy="100" r="3" fill="currentColor"/><text x="90" y="118" font-size="14" text-anchor="middle" fill="currentColor">F</text><text x="170" y="118" font-size="14" text-anchor="middle" fill="currentColor">F</text><line x1="50" y1="100" x2="50" y2="77" fill="none" stroke="currentColor" stroke-width="3"/><polygon points="50,68 54.5,77 45.5,77" fill="currentColor"/></svg>'
         choices: ['同じ大きさでさかさま', '小さくてさかさま', '大きくて同じ向き']
         answer: '同じ大きさでさかさま'
@@ -291,7 +299,8 @@ days:
           - [平行な光はしょうてんを通る, 中心を通る光はまっすぐ, 出会う所は光じくの下で、物と同じ高さ]
           - [物がしょうてんの外にあるので実像, 2 倍の位置では同じ大きさ]
       - part: 今日
-        text: 物をレンズから焦点距離の 3 倍の所に置いた。できる像はどれか。
+        id: "36262ab15d"
+        text: 物をレンズからしょうてんきょりの 3 倍の所に置いた。できる像はどれか。
         svg: '<svg viewBox="0 0 320 200" xmlns="http://www.w3.org/2000/svg"><line x1="10" y1="100" x2="312" y2="100" fill="none" stroke="currentColor" stroke-width="1"/><ellipse cx="130" cy="100" rx="9" ry="66" fill="#7fc8f8" fill-opacity="0.45" stroke="currentColor" stroke-width="2"/><circle cx="100" cy="100" r="3" fill="currentColor"/><circle cx="160" cy="100" r="3" fill="currentColor"/><text x="100" y="118" font-size="14" text-anchor="middle" fill="currentColor">F</text><text x="160" y="118" font-size="14" text-anchor="middle" fill="currentColor">F</text><line x1="40" y1="100" x2="40" y2="85" fill="none" stroke="currentColor" stroke-width="3"/><polygon points="40,76 44.5,85 35.5,85" fill="currentColor"/></svg>'
         choices: ['物より小さい実像', '物より大きい実像', '物より大きいきょ像']
         answer: '物より小さい実像'
@@ -305,7 +314,8 @@ days:
           - [物はしょうてんの外にあるので実像, 作図で像は物より低い]
           - [きょ像は物がしょうてんの内側のときだけ, 実像のうち小さいほう]
       - part: 今日
-        text: 物をレンズから 5 cm の所に置いた。焦点距離は 10 cm である。像をスクリーンにうつせるか。
+        id: "dc26971db7"
+        text: 物をレンズから 5 cm の所に置いた。しょうてんきょりは 10 cm である。像をスクリーンにうつせるか。
         svg: '<svg viewBox="0 0 320 200" xmlns="http://www.w3.org/2000/svg"><line x1="10" y1="100" x2="312" y2="100" fill="none" stroke="currentColor" stroke-width="1"/><ellipse cx="130" cy="100" rx="9" ry="66" fill="#7fc8f8" fill-opacity="0.45" stroke="currentColor" stroke-width="2"/><circle cx="90" cy="100" r="3" fill="currentColor"/><circle cx="170" cy="100" r="3" fill="currentColor"/><text x="90" y="118" font-size="14" text-anchor="middle" fill="currentColor">F</text><text x="170" y="118" font-size="14" text-anchor="middle" fill="currentColor">F</text><line x1="110" y1="100" x2="110" y2="77" fill="none" stroke="currentColor" stroke-width="3"/><polygon points="110,68 114.5,77 105.5,77" fill="currentColor"/></svg>'
         choices: ['うつせる', 'うつせない']
         answer: 'うつせない'
@@ -333,7 +343,8 @@ days:
           - [とつレンズは光を集める, 平行な光が集まる点をしょうてんという]
           - [レンズの中心を通る光は曲がらない, 平行な光は中心を通らない]
       - part: 今日
-        text: 焦点距離 10 cm のレンズで、物をレンズから 30 cm の所から 15 cm の所まで近づけた。スクリーンにうつる像は、レンズに対してどう動き、どうなるか。
+        id: "43eb2fb409"
+        text: しょうてんきょり 10 cm のレンズで、物をレンズから 30 cm の所から 15 cm の所まで近づけた。スクリーンにうつる像は、レンズに対してどう動き、どうなるか。
         svg: '<svg viewBox="0 0 320 200" xmlns="http://www.w3.org/2000/svg"><line x1="10" y1="100" x2="312" y2="100" fill="none" stroke="currentColor" stroke-width="1"/><ellipse cx="130" cy="100" rx="9" ry="66" fill="#7fc8f8" fill-opacity="0.45" stroke="currentColor" stroke-width="2"/><circle cx="100" cy="100" r="3" fill="currentColor"/><circle cx="160" cy="100" r="3" fill="currentColor"/><text x="100" y="118" font-size="14" text-anchor="middle" fill="currentColor">F</text><text x="160" y="118" font-size="14" text-anchor="middle" fill="currentColor">F</text><line x1="40" y1="100" x2="40" y2="85" fill="none" stroke="currentColor" stroke-width="3"/><polygon points="40,76 44.5,85 35.5,85" fill="currentColor"/><line x1="34" y1="168" x2="70" y2="168" fill="none" stroke="currentColor" stroke-width="2"/><polygon points="80,168 70,173 70,163" fill="currentColor"/><text x="60" y="188" font-size="14" text-anchor="middle" fill="currentColor">近づける</text></svg>'
         choices: ['レンズから遠ざかり、大きくなる', 'レンズに近づき、小さくなる', '位置も大きさも変わらない']
         answer: 'レンズから遠ざかり、大きくなる'
@@ -359,7 +370,7 @@ days:
           - 像ができる場所のほかに、集まる光の量も考えてみよう。
         paths:
           - [物の 1 点から出た光は、レンズの下半分を通っても、同じ点に集まる, 像は全体がうつる, 光の量が半分になるので暗い]
-          - [作図に使う光はおおわれた所を通るものだけではない, 像の位置と大きさは変わらない, 光の量だけ減る]
+          - [作図に使う光はおおわれた所を通るものだけではない, 像の位置と大きさは変わらない, 光の量だけへる]
       - part: 思い出す
         text: 空気から屈折率 1.5 のガラスに、sinθ₁ = 0.75 で光が入る。屈折角を θ₂ とすると、sinθ₂ はいくつか。
         svg: '<svg viewBox="0 0 320 200" xmlns="http://www.w3.org/2000/svg"><rect x="0" y="100" width="320" height="100" fill="#7fc8f8" fill-opacity="0.35" stroke="currentColor" stroke-width="2"/><line x1="0" y1="100" x2="320" y2="100" fill="none" stroke="currentColor" stroke-width="2"/><text x="46" y="22" font-size="14" text-anchor="middle" fill="currentColor">空気 n=1</text><text x="46" y="192" font-size="14" text-anchor="middle" fill="currentColor">ガラス n=1.5</text><line x1="160" y1="15" x2="160" y2="185" fill="none" stroke="currentColor" stroke-width="1" stroke-dasharray="4 4"/><line x1="99.6" y1="47.5" x2="153.2" y2="94.1" fill="none" stroke="currentColor" stroke-width="2"/><polygon points="160,100 150.3,97.5 156.2,90.7" fill="currentColor"/><text x="100.2" y="65.9" font-size="14" text-anchor="middle" fill="currentColor">θ₁</text></svg>'
@@ -390,7 +401,8 @@ days:
           - [小さいほうの n ÷ 大きいほうの n, 1 ÷ 1.6]
     extra:
       - part: 今日
-        text: 焦点距離 10 cm のレンズで、物をレンズから 15 cm の所に置いた。できる像はどれか。
+        id: "38059190f0"
+        text: しょうてんきょり 10 cm のレンズで、物をレンズから 15 cm の所に置いた。できる像はどれか。
         svg: '<svg viewBox="0 0 320 200" xmlns="http://www.w3.org/2000/svg"><line x1="10" y1="100" x2="312" y2="100" fill="none" stroke="currentColor" stroke-width="1"/><ellipse cx="130" cy="100" rx="9" ry="66" fill="#7fc8f8" fill-opacity="0.45" stroke="currentColor" stroke-width="2"/><circle cx="90" cy="100" r="3" fill="currentColor"/><circle cx="170" cy="100" r="3" fill="currentColor"/><text x="90" y="118" font-size="14" text-anchor="middle" fill="currentColor">F</text><text x="170" y="118" font-size="14" text-anchor="middle" fill="currentColor">F</text><line x1="70" y1="100" x2="70" y2="77" fill="none" stroke="currentColor" stroke-width="3"/><polygon points="70,68 74.5,77 65.5,77" fill="currentColor"/></svg>'
         choices: ['物より大きい実像', '物より小さい実像', '物より大きいきょ像']
         answer: '物より大きい実像'
@@ -404,7 +416,8 @@ days:
           - [物はしょうてんの外にあるので実像, 作図で像は物より高い]
           - [しょうてんと 2 倍の位置のあいだに物があると、像は大きい]
       - part: 今日
-        text: 焦点距離 10 cm のレンズを、物から 6 cm の所に置き、レンズをのぞいた。見える像はどれか。
+        id: "9894620332"
+        text: しょうてんきょり 10 cm のレンズを、物から 6 cm の所に置き、レンズをのぞいた。見える像はどれか。
         svg: '<svg viewBox="0 0 320 200" xmlns="http://www.w3.org/2000/svg"><line x1="10" y1="100" x2="312" y2="100" fill="none" stroke="currentColor" stroke-width="1"/><ellipse cx="130" cy="100" rx="9" ry="66" fill="#7fc8f8" fill-opacity="0.45" stroke="currentColor" stroke-width="2"/><circle cx="90" cy="100" r="3" fill="currentColor"/><circle cx="170" cy="100" r="3" fill="currentColor"/><text x="90" y="118" font-size="14" text-anchor="middle" fill="currentColor">F</text><text x="170" y="118" font-size="14" text-anchor="middle" fill="currentColor">F</text><line x1="106" y1="100" x2="106" y2="77" fill="none" stroke="currentColor" stroke-width="3"/><polygon points="106,68 110.5,77 101.5,77" fill="currentColor"/></svg>'
         choices: ['物より大きいきょ像', '物より小さいきょ像', '物より大きい実像']
         answer: '物より大きいきょ像'
@@ -420,11 +433,13 @@ days:
   - day: 4
     items:
       - part: 見本
-        text: 物からレンズまでを a 、レンズから像までを b 、焦点距離を f とすると、1/a + 1/b = 1/f が成り立つ。像の大きさは物の何倍かを表す倍率は m = b/a 。図は a = 30 cm 、f = 10 cm の例で、b は 15 cm 、m は 1/2 になる。
+        id: "0a64034d7e"
+        text: 物からレンズまでを a 、レンズから像までを b 、しょうてんきょりを f とすると、1/a + 1/b = 1/f が成り立つ。像の大きさは物の何倍かを表すばいりつは m = b/a 。図は a = 30 cm 、f = 10 cm の例で、b は 15 cm 、m は 1/2 になる。
         svg: '<svg viewBox="0 0 320 200" xmlns="http://www.w3.org/2000/svg"><line x1="10" y1="100" x2="312" y2="100" fill="none" stroke="currentColor" stroke-width="1"/><ellipse cx="130" cy="100" rx="9" ry="66" fill="#7fc8f8" fill-opacity="0.45" stroke="currentColor" stroke-width="2"/><circle cx="100" cy="100" r="3" fill="currentColor"/><circle cx="160" cy="100" r="3" fill="currentColor"/><text x="100" y="118" font-size="14" text-anchor="middle" fill="currentColor">F</text><text x="160" y="118" font-size="14" text-anchor="middle" fill="currentColor">F</text><line x1="40" y1="100" x2="40" y2="85" fill="none" stroke="currentColor" stroke-width="3"/><polygon points="40,76 44.5,85 35.5,85" fill="currentColor"/><line x1="40" y1="76" x2="130" y2="76" fill="none" stroke="currentColor" stroke-width="1"/><line x1="130" y1="76" x2="175" y2="112" fill="none" stroke="currentColor" stroke-width="1"/><line x1="40" y1="76" x2="175" y2="112" fill="none" stroke="currentColor" stroke-width="1"/><line x1="175" y1="100" x2="175" y2="103" fill="none" stroke="#d05050" stroke-width="3"/><polygon points="175,112 170.5,103 179.5,103" fill="#d05050"/><text x="45" y="190" font-size="14" text-anchor="middle" fill="currentColor">a</text><text x="176" y="190" font-size="14" text-anchor="middle" fill="currentColor">b</text><line x1="50" y1="176" x2="116" y2="176" fill="none" stroke="currentColor" stroke-width="1"/><polygon points="126,176 116,181 116,171" fill="currentColor"/><polygon points="40,176 50,171 50,181" fill="currentColor"/><line x1="144" y1="176" x2="166" y2="176" fill="none" stroke="currentColor" stroke-width="1"/><polygon points="176,176 166,181 166,171" fill="currentColor"/><polygon points="134,176 144,171 144,181" fill="currentColor"/></svg>'
-        explain: レンズの式 1/a + 1/b = 1/f 。b が負なら像は物と同じ側のきょ像。倍率は |b|/a 。像はスクリーン上に実像としてできるとき b > 0 。
+        explain: レンズの式 1/a + 1/b = 1/f 。b が負なら像は物と同じ側のきょ像。ばいりつは |b|/a 。像はスクリーン上に実像としてできるとき b > 0 。
       - part: 今日
-        text: 焦点距離 10 cm のレンズから 15 cm の所に物を置いた。像はレンズから何 cm の所にできるか。
+        id: "a76dc97679"
+        text: しょうてんきょり 10 cm のレンズから 15 cm の所に物を置いた。像はレンズから何 cm の所にできるか。
         svg: '<svg viewBox="0 0 320 200" xmlns="http://www.w3.org/2000/svg"><line x1="10" y1="100" x2="312" y2="100" fill="none" stroke="currentColor" stroke-width="1"/><ellipse cx="130" cy="100" rx="9" ry="66" fill="#7fc8f8" fill-opacity="0.45" stroke="currentColor" stroke-width="2"/><circle cx="90" cy="100" r="3" fill="currentColor"/><circle cx="170" cy="100" r="3" fill="currentColor"/><text x="90" y="118" font-size="14" text-anchor="middle" fill="currentColor">F</text><text x="170" y="118" font-size="14" text-anchor="middle" fill="currentColor">F</text><line x1="70" y1="100" x2="70" y2="77" fill="none" stroke="currentColor" stroke-width="3"/><polygon points="70,68 74.5,77 65.5,77" fill="currentColor"/></svg>'
         choices: ['20', '30', '45']
         answer: '30'
@@ -436,23 +451,25 @@ days:
           - 1/10 − 1/15 を通分すると、分子が 1 の分数になる。b はその逆数。
         paths:
           - [1/b = 1/10 − 1/15 = 1/30, b = 30 cm]
-          - [物が焦点の外にあるので実像, 作図では f の 2 倍より遠くにできるので 20 では足りない]
+          - [物がしょうてんの外にあるので実像, 作図では f の 2 倍より遠くにできるので 20 では足りない]
       - part: 今日
-        text: 焦点距離 8 cm のレンズから 12 cm の所に物を置くと、できる像の倍率は何倍か。
+        id: "828cb61d87"
+        text: しょうてんきょり 8 cm のレンズから 12 cm の所に物を置くと、できる像のばいりつは何倍か。
         svg: '<svg viewBox="0 0 320 200" xmlns="http://www.w3.org/2000/svg"><line x1="10" y1="100" x2="312" y2="100" fill="none" stroke="currentColor" stroke-width="1"/><ellipse cx="130" cy="100" rx="9" ry="66" fill="#7fc8f8" fill-opacity="0.45" stroke="currentColor" stroke-width="2"/><circle cx="98" cy="100" r="3" fill="currentColor"/><circle cx="162" cy="100" r="3" fill="currentColor"/><text x="98" y="118" font-size="14" text-anchor="middle" fill="currentColor">F</text><text x="162" y="118" font-size="14" text-anchor="middle" fill="currentColor">F</text><line x1="82" y1="100" x2="82" y2="85" fill="none" stroke="currentColor" stroke-width="3"/><polygon points="82,76 86.5,85 77.5,85" fill="currentColor"/></svg>'
         choices: ['1', '2', '3']
         answer: '2'
         check: "math.floor((1 / (1 / 8 - 1 / 12)) / 12 + 0.5)"
         hints:
-          - まず b を求め、倍率 m = b/a を計算する。
+          - まず b を求め、ばいりつ m = b/a を計算する。
           - text: 1/b = 1/8 − 1/12 。通分すると、分母が 24 になる。
             svg: '<svg viewBox="0 0 320 200" xmlns="http://www.w3.org/2000/svg"><line x1="10" y1="100" x2="312" y2="100" fill="none" stroke="currentColor" stroke-width="1"/><ellipse cx="130" cy="100" rx="9" ry="66" fill="#7fc8f8" fill-opacity="0.45" stroke="currentColor" stroke-width="2"/><circle cx="98" cy="100" r="3" fill="currentColor"/><circle cx="162" cy="100" r="3" fill="currentColor"/><text x="98" y="118" font-size="14" text-anchor="middle" fill="currentColor">F</text><text x="162" y="118" font-size="14" text-anchor="middle" fill="currentColor">F</text><line x1="82" y1="100" x2="82" y2="85" fill="none" stroke="currentColor" stroke-width="3"/><polygon points="82,76 86.5,85 77.5,85" fill="currentColor"/><line x1="82" y1="76" x2="130" y2="76" fill="none" stroke="currentColor" stroke-width="1"/><line x1="130" y1="76" x2="226" y2="148" fill="none" stroke="currentColor" stroke-width="1"/><line x1="82" y1="76" x2="226" y2="148" fill="none" stroke="currentColor" stroke-width="1"/></svg>'
           - b がわかったら、a = 12 でわる。
         paths:
           - [1/b = 1/8 − 1/12 = 1/24, b = 24 cm, m = 24/12]
-          - [作図で、像は物より高くなる, 1 倍より大きいものから、式で確かめる]
+          - [作図で、像は物より高くなる, 1 倍より大きいものから、式でたしかめる]
       - part: 今日
-        text: 焦点距離 15 cm のレンズから 60 cm の所に物を置いた。像はレンズから何 cm の所にできるか。
+        id: "15b2f9a1ae"
+        text: しょうてんきょり 15 cm のレンズから 60 cm の所に物を置いた。像はレンズから何 cm の所にできるか。
         svg: '<svg viewBox="0 0 320 200" xmlns="http://www.w3.org/2000/svg"><line x1="10" y1="100" x2="312" y2="100" fill="none" stroke="currentColor" stroke-width="1"/><ellipse cx="130" cy="100" rx="9" ry="66" fill="#7fc8f8" fill-opacity="0.45" stroke="currentColor" stroke-width="2"/><circle cx="100" cy="100" r="3" fill="currentColor"/><circle cx="160" cy="100" r="3" fill="currentColor"/><text x="100" y="118" font-size="14" text-anchor="middle" fill="currentColor">F</text><text x="160" y="118" font-size="14" text-anchor="middle" fill="currentColor">F</text><line x1="10" y1="100" x2="10" y2="93" fill="none" stroke="currentColor" stroke-width="3"/><polygon points="10,84 14.5,93 5.5,93" fill="currentColor"/><text x="160" y="24" font-size="14" text-anchor="middle" fill="currentColor">a = 60 cm  f = 15 cm</text></svg>'
         choices: ['20', '45', '75']
         answer: '20'
@@ -466,35 +483,38 @@ days:
           - [1/b = 4/60 − 1/60 = 3/60 = 1/20, b = 20 cm]
           - [物が 4f の位置にあるとき、像は f の 4/3 倍の所にできる, 15 × 4/3 = 20]
       - part: 今日
-        text: 焦点距離 12 cm のレンズで、物と同じ大きさの像をつくる。物はレンズから何 cm の所に置けばよいか。
+        id: "919e08e233"
+        text: しょうてんきょり 12 cm のレンズで、物と同じ大きさの像をつくる。物はレンズから何 cm の所に置けばよいか。
         svg: '<svg viewBox="0 0 320 200" xmlns="http://www.w3.org/2000/svg"><line x1="10" y1="100" x2="312" y2="100" fill="none" stroke="currentColor" stroke-width="1"/><ellipse cx="130" cy="100" rx="9" ry="66" fill="#7fc8f8" fill-opacity="0.45" stroke="currentColor" stroke-width="2"/><circle cx="94" cy="100" r="3" fill="currentColor"/><circle cx="166" cy="100" r="3" fill="currentColor"/><text x="94" y="120" font-size="14" text-anchor="middle" fill="currentColor">F</text><text x="166" y="120" font-size="14" text-anchor="middle" fill="currentColor">F</text><line x1="36" y1="100" x2="36" y2="69" fill="none" stroke="currentColor" stroke-width="3"/><polygon points="36,60 40.5,69 31.5,69" fill="currentColor"/><text x="36" y="80" font-size="14" text-anchor="middle" fill="currentColor">物</text><line x1="240" y1="100" x2="240" y2="131" fill="none" stroke="#d05050" stroke-width="3"/><polygon points="240,140 235.5,131 244.5,131" fill="#d05050"/><text x="262" y="130" font-size="14" text-anchor="middle" fill="currentColor">像</text><text x="160" y="24" font-size="14" text-anchor="middle" fill="currentColor">f = 12 cm  物と像は同じ大きさ</text><text x="160" y="190" font-size="13" text-anchor="middle" fill="currentColor">（図の長さは正しくない）</text></svg>'
         choices: ['12', '24', '36']
         answer: '24'
         check: "2 * 12"
         hints:
-          - 同じ大きさなら倍率は 1 。つまり b = a 。
+          - 同じ大きさならばいりつは 1 。つまり b = a 。
           - text: b = a を 1/a + 1/b = 1/f に入れると、2/a = 1/f 。
             svg: '<svg viewBox="0 0 320 200" xmlns="http://www.w3.org/2000/svg"><text x="160" y="90" font-size="16" text-anchor="middle" fill="currentColor">1/a + 1/a = 1/f</text><text x="160" y="130" font-size="16" text-anchor="middle" fill="currentColor">2/a = 1/f</text></svg>'
           - この式から a を f で表す。
         paths:
           - [b = a, 2/a = 1/12, a = 24 cm]
-          - [同じ大きさの像は、物が焦点距離の 2 倍の位置にあるとき, 12 × 2 = 24]
+          - [同じ大きさの像は、物がしょうてんきょりの 2 倍の位置にあるとき, 12 × 2 = 24]
       - part: 今日
-        text: 焦点距離 12 cm のレンズから 6 cm の所に物を置いた。像はどうできるか。
+        id: "4d8a61da63"
+        text: しょうてんきょり 12 cm のレンズから 6 cm の所に物を置いた。像はどうできるか。
         svg: '<svg viewBox="0 0 320 200" xmlns="http://www.w3.org/2000/svg"><line x1="10" y1="100" x2="312" y2="100" fill="none" stroke="currentColor" stroke-width="1"/><ellipse cx="130" cy="100" rx="9" ry="66" fill="#7fc8f8" fill-opacity="0.45" stroke="currentColor" stroke-width="2"/><circle cx="94" cy="100" r="3" fill="currentColor"/><circle cx="166" cy="100" r="3" fill="currentColor"/><text x="94" y="118" font-size="14" text-anchor="middle" fill="currentColor">F</text><text x="166" y="118" font-size="14" text-anchor="middle" fill="currentColor">F</text><line x1="112" y1="100" x2="112" y2="85" fill="none" stroke="currentColor" stroke-width="3"/><polygon points="112,76 116.5,85 107.5,85" fill="currentColor"/></svg>'
         choices: ['レンズの手前 12 cm にできるきょ像', 'レンズの後ろ 12 cm にできる実像', 'レンズの後ろ 4 cm にできる実像']
         answer: 'レンズの手前 12 cm にできるきょ像'
         check: "'レンズの手前 12 cm にできるきょ像'"
         hints:
-          - 物が焦点の内側にあるかどうかを見る。
+          - 物がしょうてんの内側にあるかどうかを見る。
           - text: 1/b = 1/12 − 1/6 。引き算の答えが、プラスかマイナスかに注目。
             svg: '<svg viewBox="0 0 320 200" xmlns="http://www.w3.org/2000/svg"><line x1="10" y1="100" x2="312" y2="100" fill="none" stroke="currentColor" stroke-width="1"/><ellipse cx="130" cy="100" rx="9" ry="66" fill="#7fc8f8" fill-opacity="0.45" stroke="currentColor" stroke-width="2"/><circle cx="94" cy="100" r="3" fill="currentColor"/><circle cx="166" cy="100" r="3" fill="currentColor"/><text x="94" y="118" font-size="14" text-anchor="middle" fill="currentColor">F</text><text x="166" y="118" font-size="14" text-anchor="middle" fill="currentColor">F</text><line x1="112" y1="100" x2="112" y2="85" fill="none" stroke="currentColor" stroke-width="3"/><polygon points="112,76 116.5,85 107.5,85" fill="currentColor"/><line x1="112" y1="76" x2="130" y2="76" fill="none" stroke="currentColor" stroke-width="1"/><line x1="130" y1="76" x2="257.5" y2="161" fill="none" stroke="currentColor" stroke-width="1"/><line x1="130" y1="76" x2="94" y2="52" fill="none" stroke="currentColor" stroke-width="1" stroke-dasharray="4 4"/><line x1="112" y1="76" x2="198.2" y2="191" fill="none" stroke="currentColor" stroke-width="1"/><line x1="130" y1="100" x2="94" y2="52" fill="none" stroke="currentColor" stroke-width="1" stroke-dasharray="4 4"/></svg>'
           - 1/b が負になると、b も負。負の b は、物と同じ側にできるきょ像を表す。
         paths:
           - [1/b = 1/12 − 1/6 = −1/12, b = −12 cm なので手前のきょ像]
-          - [物が焦点の内側にあるので、きょ像, 物と同じ側にできる]
+          - [物がしょうてんの内側にあるので、きょ像, 物と同じ側にできる]
       - part: 挑戦
-        text: 物とスクリーンを 90 cm はなして置き、そのあいだで、焦点距離 20 cm のレンズを動かした。スクリーンにくっきりした像がうつるレンズの位置が 2 つある。物からレンズまでの長さが大きいほうは何 cm か。
+        id: "2f63a4377d"
+        text: 物とスクリーンを 90 cm はなして置き、そのあいだで、しょうてんきょり 20 cm のレンズを動かした。スクリーンにくっきりした像がうつるレンズの位置が 2 つある。物からレンズまでの長さが大きいほうは何 cm か。
         svg: '<svg viewBox="0 0 320 200" xmlns="http://www.w3.org/2000/svg"><line x1="30" y1="100" x2="290" y2="100" fill="none" stroke="currentColor" stroke-width="1"/><rect x="26" y="70" width="8" height="60" fill="#c8ccd6" fill-opacity="0.7" stroke="currentColor" stroke-width="2"/><line x1="30" y1="70" x2="30" y2="130" fill="none" stroke="currentColor" stroke-width="3"/><ellipse cx="120" cy="100" rx="8" ry="40" fill="#7fc8f8" fill-opacity="0.45" stroke="currentColor" stroke-width="2"/><rect x="286" y="70" width="8" height="60" fill="#c8ccd6" fill-opacity="0.7" stroke="currentColor" stroke-width="2"/><line x1="44" y1="160" x2="276" y2="160" fill="none" stroke="currentColor" stroke-width="1"/><polygon points="286,160 276,165 276,155" fill="currentColor"/><polygon points="34,160 44,155 44,165" fill="currentColor"/><text x="160" y="184" font-size="14" text-anchor="middle" fill="currentColor">90 cm</text><text x="120" y="56" font-size="14" text-anchor="middle" fill="currentColor">レンズを動かす</text></svg>'
         choices: ['30', '45', '60']
         answer: '60'
@@ -522,22 +542,24 @@ days:
           - [1.25 sinθc = 1, sinθc = 0.8]
           - [小さいほうの n ÷ 大きいほうの n, 1 ÷ 1.25]
       - part: 思い出す
-        text: 焦点距離 10 cm のレンズから 40 cm の所に物を置いた。できる像はどれか。
+        id: "ce89ca1d23"
+        text: しょうてんきょり 10 cm のレンズから 40 cm の所に物を置いた。できる像はどれか。
         svg: '<svg viewBox="0 0 320 200" xmlns="http://www.w3.org/2000/svg"><line x1="10" y1="100" x2="312" y2="100" fill="none" stroke="currentColor" stroke-width="1"/><ellipse cx="130" cy="100" rx="9" ry="66" fill="#7fc8f8" fill-opacity="0.45" stroke="currentColor" stroke-width="2"/><circle cx="110" cy="100" r="3" fill="currentColor"/><circle cx="150" cy="100" r="3" fill="currentColor"/><text x="110" y="118" font-size="14" text-anchor="middle" fill="currentColor">F</text><text x="150" y="118" font-size="14" text-anchor="middle" fill="currentColor">F</text><line x1="50" y1="100" x2="50" y2="93" fill="none" stroke="currentColor" stroke-width="3"/><polygon points="50,84 54.5,93 45.5,93" fill="currentColor"/></svg>'
         choices: ['物より小さい実像', '物より大きい実像', '物より大きいきょ像']
         answer: '物より小さい実像'
         check: "'物より小さい実像'"
         hints:
-          - 物が焦点の外か内かを見る。
+          - 物がしょうてんの外か内かを見る。
           - text: 2 本の光を引くと、レンズの右で出会う。出会う点の高さを、物とくらべる。
             svg: '<svg viewBox="0 0 320 200" xmlns="http://www.w3.org/2000/svg"><line x1="10" y1="100" x2="312" y2="100" fill="none" stroke="currentColor" stroke-width="1"/><ellipse cx="130" cy="100" rx="9" ry="66" fill="#7fc8f8" fill-opacity="0.45" stroke="currentColor" stroke-width="2"/><circle cx="110" cy="100" r="3" fill="currentColor"/><circle cx="150" cy="100" r="3" fill="currentColor"/><text x="110" y="118" font-size="14" text-anchor="middle" fill="currentColor">F</text><text x="150" y="118" font-size="14" text-anchor="middle" fill="currentColor">F</text><line x1="50" y1="100" x2="50" y2="93" fill="none" stroke="currentColor" stroke-width="3"/><polygon points="50,84 54.5,93 45.5,93" fill="currentColor"/><line x1="50" y1="84" x2="130" y2="84" fill="none" stroke="currentColor" stroke-width="1"/><line x1="130" y1="84" x2="156.7" y2="105.3" fill="none" stroke="currentColor" stroke-width="1"/><line x1="50" y1="84" x2="156.7" y2="105.3" fill="none" stroke="currentColor" stroke-width="1"/></svg>'
           - 物の先の高さと、出会う点の高さを、図で見くらべる。
         paths:
-          - [物が焦点の外にあるので実像, 作図で像は物より低い]
-          - [物が焦点距離の 2 倍より遠いと、像は小さい実像]
+          - [物がしょうてんの外にあるので実像, 作図で像は物より低い]
+          - [物がしょうてんきょりの 2 倍より遠いと、像は小さい実像]
     extra:
       - part: 今日
-        text: 焦点距離 15 cm のレンズから 20 cm の所に物を置いた。像はレンズから何 cm の所にできるか。
+        id: "6b65d3570d"
+        text: しょうてんきょり 15 cm のレンズから 20 cm の所に物を置いた。像はレンズから何 cm の所にできるか。
         svg: '<svg viewBox="0 0 320 200" xmlns="http://www.w3.org/2000/svg"><line x1="10" y1="100" x2="312" y2="100" fill="none" stroke="currentColor" stroke-width="1"/><ellipse cx="130" cy="100" rx="9" ry="66" fill="#7fc8f8" fill-opacity="0.45" stroke="currentColor" stroke-width="2"/><circle cx="100" cy="100" r="3" fill="currentColor"/><circle cx="160" cy="100" r="3" fill="currentColor"/><text x="100" y="118" font-size="14" text-anchor="middle" fill="currentColor">F</text><text x="160" y="118" font-size="14" text-anchor="middle" fill="currentColor">F</text><line x1="90" y1="100" x2="90" y2="93" fill="none" stroke="currentColor" stroke-width="3"/><polygon points="90,84 94.5,93 85.5,93" fill="currentColor"/></svg>'
         choices: ['40', '60', '35']
         answer: '60'
@@ -549,9 +571,10 @@ days:
           - 引いた結果の分数の、分母と分子を入れかえたものが b 。
         paths:
           - [1/b = 4/60 − 3/60 = 1/60, b = 60 cm]
-          - [物が焦点に近いほど像は遠くなる, 焦点の近くなので 60 cm]
+          - [物がしょうてんに近いほど像は遠くなる, しょうてんの近くなので 60 cm]
       - part: 今日
-        text: 物をレンズから 24 cm の所に置くと、像がレンズの後ろ 8 cm の所にできた。レンズの焦点距離は何 cm か。
+        id: "bfb342b8eb"
+        text: 物をレンズから 24 cm の所に置くと、像がレンズの後ろ 8 cm の所にできた。レンズのしょうてんきょりは何 cm か。
         svg: '<svg viewBox="0 0 320 200" xmlns="http://www.w3.org/2000/svg"><line x1="10" y1="100" x2="312" y2="100" fill="none" stroke="currentColor" stroke-width="1"/><ellipse cx="130" cy="100" rx="9" ry="66" fill="#7fc8f8" fill-opacity="0.45" stroke="currentColor" stroke-width="2"/><circle cx="112" cy="100" r="3" fill="currentColor"/><circle cx="148" cy="100" r="3" fill="currentColor"/><line x1="58" y1="100" x2="58" y2="85" fill="none" stroke="currentColor" stroke-width="3"/><polygon points="58,76 62.5,85 53.5,85" fill="currentColor"/><line x1="154" y1="100" x2="154" y2="99" fill="none" stroke="#d05050" stroke-width="3"/><polygon points="154,108 149.5,99 158.5,99" fill="#d05050"/><text x="160" y="24" font-size="14" text-anchor="middle" fill="currentColor">a = 24 cm  b = 8 cm</text></svg>'
         choices: ['6', '12', '16']
         answer: '6'
@@ -567,64 +590,69 @@ days:
   - day: 5
     items:
       - part: 見本
-        text: 望遠鏡は、焦点距離 f₁ の大きな対物レンズと、焦点距離 f₂ の小さな接眼レンズを、しょうてんが重なるように置く。遠くの物を見る角の倍率は M = f₁/f₂ で、2 つのレンズの間の長さは f₁ + f₂ になる。けんび鏡の全体の倍率は、対物レンズの倍率と接眼レンズの倍率をかけたものになる。
-        svg: '<svg viewBox="0 0 320 200" xmlns="http://www.w3.org/2000/svg"><line x1="10" y1="100" x2="310" y2="100" fill="none" stroke="currentColor" stroke-width="1"/><ellipse cx="60" cy="100" rx="8" ry="70" fill="#7fc8f8" fill-opacity="0.45" stroke="currentColor" stroke-width="2"/><ellipse cx="240" cy="100" rx="6" ry="30" fill="#7fc8f8" fill-opacity="0.45" stroke="currentColor" stroke-width="2"/><circle cx="200" cy="100" r="4" fill="currentColor"/><polyline points="10,80 60,80 200,100 240,105.7 305,105.7" fill="none" stroke="currentColor" stroke-width="1"/><polyline points="10,120 60,120 200,100 240,94.3 305,94.3" fill="none" stroke="currentColor" stroke-width="1"/><text x="60" y="28" font-size="14" text-anchor="middle" fill="currentColor">対物レンズ</text><text x="240" y="56" font-size="14" text-anchor="middle" fill="currentColor">接眼レンズ</text><line x1="74" y1="150" x2="186" y2="150" fill="none" stroke="currentColor" stroke-width="1"/><polygon points="196,150 186,155 186,145" fill="currentColor"/><polygon points="64,150 74,145 74,155" fill="currentColor"/><text x="130" y="168" font-size="14" text-anchor="middle" fill="currentColor">f₁</text><line x1="214" y1="150" x2="226" y2="150" fill="none" stroke="currentColor" stroke-width="1"/><polygon points="236,150 226,155 226,145" fill="currentColor"/><polygon points="204,150 214,145 214,155" fill="currentColor"/><text x="220" y="168" font-size="14" text-anchor="middle" fill="currentColor">f₂</text></svg>'
-        explain: 望遠鏡の角倍率 M = f₁/f₂ （対物の焦点距離 ÷ 接眼の焦点距離）。2 つのレンズの間の長さは f₁ + f₂ 。ルーペの角倍率は M ≈ 25/f （25 cm は、ものがはっきり見える最短の距離）。けんび鏡の倍率は対物と接眼の倍率の積。
+        id: "b7d14c6037"
+        text: 望遠鏡は、しょうてんきょり f₁ の大きな対物レンズと、しょうてんきょり f₂ の小さなせつがんレンズを、しょうてんが重なるように置く。遠くの物を見る角のばいりつは M = f₁/f₂ で、2 つのレンズの間の長さは f₁ + f₂ になる。けんび鏡の全体のばいりつは、対物レンズのばいりつとせつがんレンズのばいりつをかけたものになる。
+        svg: '<svg viewBox="0 0 320 200" xmlns="http://www.w3.org/2000/svg"><line x1="10" y1="100" x2="310" y2="100" fill="none" stroke="currentColor" stroke-width="1"/><ellipse cx="60" cy="100" rx="8" ry="70" fill="#7fc8f8" fill-opacity="0.45" stroke="currentColor" stroke-width="2"/><ellipse cx="240" cy="100" rx="6" ry="30" fill="#7fc8f8" fill-opacity="0.45" stroke="currentColor" stroke-width="2"/><circle cx="200" cy="100" r="4" fill="currentColor"/><polyline points="10,80 60,80 200,100 240,105.7 305,105.7" fill="none" stroke="currentColor" stroke-width="1"/><polyline points="10,120 60,120 200,100 240,94.3 305,94.3" fill="none" stroke="currentColor" stroke-width="1"/><text x="60" y="28" font-size="14" text-anchor="middle" fill="currentColor">対物レンズ</text><text x="240" y="56" font-size="14" text-anchor="middle" fill="currentColor">せつがんレンズ</text><line x1="74" y1="150" x2="186" y2="150" fill="none" stroke="currentColor" stroke-width="1"/><polygon points="196,150 186,155 186,145" fill="currentColor"/><polygon points="64,150 74,145 74,155" fill="currentColor"/><text x="130" y="168" font-size="14" text-anchor="middle" fill="currentColor">f₁</text><line x1="214" y1="150" x2="226" y2="150" fill="none" stroke="currentColor" stroke-width="1"/><polygon points="236,150 226,155 226,145" fill="currentColor"/><polygon points="204,150 214,145 214,155" fill="currentColor"/><text x="220" y="168" font-size="14" text-anchor="middle" fill="currentColor">f₂</text></svg>'
+        explain: 望遠鏡のかくばいりつ M = f₁/f₂ （対物のしょうてんきょり ÷ せつがんのしょうてんきょり）。2 つのレンズの間の長さは f₁ + f₂ 。ルーペのかくばいりつは M ≈ 25/f （25 cm は、ものがはっきり見える最短のきょり）。けんび鏡のばいりつは対物とせつがんのばいりつの積。
       - part: 今日
-        text: ルーペ（焦点距離 f）で物を見ると、角の倍率は、ものがはっきり見えるいちばん近いきょり 25 cm を f でわった数になる。f = 5 cm のルーペの倍率は何倍か。
+        id: "801cbb6d67"
+        text: ルーペ（しょうてんきょり f）で物を見ると、角のばいりつは、ものがはっきり見えるいちばん近いきょり 25 cm を f でわった数になる。f = 5 cm のルーペのばいりつは何倍か。
         svg: '<svg viewBox="0 0 320 200" xmlns="http://www.w3.org/2000/svg"><line x1="10" y1="100" x2="312" y2="100" fill="none" stroke="currentColor" stroke-width="1"/><ellipse cx="130" cy="100" rx="9" ry="66" fill="#7fc8f8" fill-opacity="0.45" stroke="currentColor" stroke-width="2"/><circle cx="110" cy="100" r="3" fill="currentColor"/><circle cx="150" cy="100" r="3" fill="currentColor"/><text x="110" y="118" font-size="14" text-anchor="middle" fill="currentColor">F</text><text x="150" y="118" font-size="14" text-anchor="middle" fill="currentColor">F</text><line x1="114" y1="100" x2="114" y2="89" fill="none" stroke="currentColor" stroke-width="3"/><polygon points="114,80 118.5,89 109.5,89" fill="currentColor"/><text x="160" y="24" font-size="14" text-anchor="middle" fill="currentColor">f = 5 cm</text></svg>'
         choices: ['5', '10', '25']
         answer: '5'
         check: "25 // 5"
         hints:
-          - 倍率 = 25 ÷ f 。
+          - ばいりつ = 25 ÷ f 。
           - text: f に 5 を入れる。
             svg: '<svg viewBox="0 0 320 200" xmlns="http://www.w3.org/2000/svg"><text x="160" y="90" font-size="16" text-anchor="middle" fill="currentColor">25 ÷ f</text><text x="160" y="130" font-size="16" text-anchor="middle" fill="currentColor">f = 5</text><circle cx="160" cy="86" r="4" fill="none" stroke="#f08080" stroke-width="3" stroke-dasharray="6 4"/></svg>'
-          - 25 ÷ 5 を計算する。焦点距離が短いほど倍率は大きい。
+          - 25 ÷ 5 を計算する。しょうてんきょりが短いほどばいりつは大きい。
         paths:
-          - [倍率 = 25/f, 25 ÷ 5 = 5 倍]
+          - [ばいりつ = 25/f, 25 ÷ 5 = 5 倍]
           - [f が 25 のとき 1 倍, f が 5 なら 5 倍大きい]
       - part: 今日
-        text: 対物レンズの焦点距離が 100 cm 、接眼レンズの焦点距離が 4 cm の望遠鏡がある。倍率は何倍か。
+        id: "ac13665f7a"
+        text: 対物レンズのしょうてんきょりが 100 cm 、せつがんレンズのしょうてんきょりが 4 cm の望遠鏡がある。ばいりつは何倍か。
         svg: '<svg viewBox="0 0 320 200" xmlns="http://www.w3.org/2000/svg"><line x1="10" y1="100" x2="310" y2="100" fill="none" stroke="currentColor" stroke-width="1"/><ellipse cx="60" cy="100" rx="8" ry="70" fill="#7fc8f8" fill-opacity="0.45" stroke="currentColor" stroke-width="2"/><ellipse cx="240" cy="100" rx="6" ry="30" fill="#7fc8f8" fill-opacity="0.45" stroke="currentColor" stroke-width="2"/><circle cx="200" cy="100" r="4" fill="currentColor"/><polyline points="10,80 60,80 200,100 240,105.7 305,105.7" fill="none" stroke="currentColor" stroke-width="1"/><polyline points="10,120 60,120 200,100 240,94.3 305,94.3" fill="none" stroke="currentColor" stroke-width="1"/><text x="60" y="28" font-size="14" text-anchor="middle" fill="currentColor">f₁ = 100 cm</text><text x="240" y="56" font-size="14" text-anchor="middle" fill="currentColor">f₂ = 4 cm</text></svg>'
         choices: ['25', '96', '104']
         answer: '25'
         check: "100 // 4"
         hints:
-          - 望遠鏡の倍率は、2 つの焦点距離の比。
-          - text: 倍率 M = f₁/f₂ 。大きいほうを小さいほうでわる。
+          - 望遠鏡のばいりつは、2 つのしょうてんきょりのひ。
+          - text: ばいりつ M = f₁/f₂ 。大きいほうを小さいほうでわる。
             svg: '<svg viewBox="0 0 320 200" xmlns="http://www.w3.org/2000/svg"><text x="160" y="90" font-size="16" text-anchor="middle" fill="currentColor">M = f₁ ÷ f₂</text><text x="160" y="130" font-size="16" text-anchor="middle" fill="currentColor">＝ 100 ÷ 4</text></svg>'
           - 100 ÷ 4 を計算する。
         paths:
           - [M = f₁/f₂, 100 ÷ 4 = 25]
-          - [倍率は比なので、わり算, 25 倍]
+          - [ばいりつはひなので、わり算, 25 倍]
       - part: 今日
-        text: 対物レンズの焦点距離が 60 cm 、接眼レンズの焦点距離が 3 cm の望遠鏡で、2 つのレンズの間の長さは何 cm か。
+        id: "31712f5b7c"
+        text: 対物レンズのしょうてんきょりが 60 cm 、せつがんレンズのしょうてんきょりが 3 cm の望遠鏡で、2 つのレンズの間の長さは何 cm か。
         svg: '<svg viewBox="0 0 320 200" xmlns="http://www.w3.org/2000/svg"><line x1="10" y1="100" x2="310" y2="100" fill="none" stroke="currentColor" stroke-width="1"/><ellipse cx="60" cy="100" rx="8" ry="70" fill="#7fc8f8" fill-opacity="0.45" stroke="currentColor" stroke-width="2"/><ellipse cx="240" cy="100" rx="6" ry="30" fill="#7fc8f8" fill-opacity="0.45" stroke="currentColor" stroke-width="2"/><circle cx="200" cy="100" r="4" fill="currentColor"/><polyline points="10,80 60,80 200,100 240,105.7 305,105.7" fill="none" stroke="currentColor" stroke-width="1"/><polyline points="10,120 60,120 200,100 240,94.3 305,94.3" fill="none" stroke="currentColor" stroke-width="1"/><text x="60" y="28" font-size="14" text-anchor="middle" fill="currentColor">f₁ = 60 cm</text><text x="240" y="56" font-size="14" text-anchor="middle" fill="currentColor">f₂ = 3 cm</text><line x1="74" y1="150" x2="226" y2="150" fill="none" stroke="currentColor" stroke-width="1"/><polygon points="236,150 226,155 226,145" fill="currentColor"/><polygon points="64,150 74,145 74,155" fill="currentColor"/><text x="150" y="172" font-size="16" text-anchor="middle" fill="currentColor">？</text></svg>'
         choices: ['57', '63', '180']
         answer: '63'
         check: "60 + 3"
         hints:
           - 見本の図で、しょうてんは 2 つのレンズの間にある。
-          - text: 対物からしょうてんまでが f₁ 、しょうてんから接眼までが f₂ 。
-            svg: '<svg viewBox="0 0 320 200" xmlns="http://www.w3.org/2000/svg"><line x1="10" y1="100" x2="310" y2="100" fill="none" stroke="currentColor" stroke-width="1"/><ellipse cx="60" cy="100" rx="8" ry="70" fill="#7fc8f8" fill-opacity="0.45" stroke="currentColor" stroke-width="2"/><ellipse cx="240" cy="100" rx="6" ry="30" fill="#7fc8f8" fill-opacity="0.45" stroke="currentColor" stroke-width="2"/><circle cx="200" cy="100" r="4" fill="currentColor"/><polyline points="10,80 60,80 200,100 240,105.7 305,105.7" fill="none" stroke="currentColor" stroke-width="1"/><polyline points="10,120 60,120 200,100 240,94.3 305,94.3" fill="none" stroke="currentColor" stroke-width="1"/><text x="60" y="28" font-size="14" text-anchor="middle" fill="currentColor">対物レンズ</text><text x="240" y="56" font-size="14" text-anchor="middle" fill="currentColor">接眼レンズ</text><line x1="74" y1="150" x2="186" y2="150" fill="none" stroke="currentColor" stroke-width="1"/><polygon points="196,150 186,155 186,145" fill="currentColor"/><polygon points="64,150 74,145 74,155" fill="currentColor"/><text x="130" y="168" font-size="14" text-anchor="middle" fill="currentColor">f₁</text><line x1="214" y1="150" x2="226" y2="150" fill="none" stroke="currentColor" stroke-width="1"/><polygon points="236,150 226,155 226,145" fill="currentColor"/><polygon points="204,150 214,145 214,155" fill="currentColor"/><text x="220" y="168" font-size="14" text-anchor="middle" fill="currentColor">f₂</text></svg>'
+          - text: 対物からしょうてんまでが f₁ 、しょうてんからせつがんまでが f₂ 。
+            svg: '<svg viewBox="0 0 320 200" xmlns="http://www.w3.org/2000/svg"><line x1="10" y1="100" x2="310" y2="100" fill="none" stroke="currentColor" stroke-width="1"/><ellipse cx="60" cy="100" rx="8" ry="70" fill="#7fc8f8" fill-opacity="0.45" stroke="currentColor" stroke-width="2"/><ellipse cx="240" cy="100" rx="6" ry="30" fill="#7fc8f8" fill-opacity="0.45" stroke="currentColor" stroke-width="2"/><circle cx="200" cy="100" r="4" fill="currentColor"/><polyline points="10,80 60,80 200,100 240,105.7 305,105.7" fill="none" stroke="currentColor" stroke-width="1"/><polyline points="10,120 60,120 200,100 240,94.3 305,94.3" fill="none" stroke="currentColor" stroke-width="1"/><text x="60" y="28" font-size="14" text-anchor="middle" fill="currentColor">対物レンズ</text><text x="240" y="56" font-size="14" text-anchor="middle" fill="currentColor">せつがんレンズ</text><line x1="74" y1="150" x2="186" y2="150" fill="none" stroke="currentColor" stroke-width="1"/><polygon points="196,150 186,155 186,145" fill="currentColor"/><polygon points="64,150 74,145 74,155" fill="currentColor"/><text x="130" y="168" font-size="14" text-anchor="middle" fill="currentColor">f₁</text><line x1="214" y1="150" x2="226" y2="150" fill="none" stroke="currentColor" stroke-width="1"/><polygon points="236,150 226,155 226,145" fill="currentColor"/><polygon points="204,150 214,145 214,155" fill="currentColor"/><text x="220" y="168" font-size="14" text-anchor="middle" fill="currentColor">f₂</text></svg>'
           - 2 つの長さをつなげると、レンズの間の長さになる。
         paths:
           - [f₁ + f₂ = 60 + 3, 63 cm]
-          - [しょうてんが重なるので、間の長さは 2 つの焦点距離の和, 63 cm]
+          - [しょうてんが重なるので、間の長さは 2 つのしょうてんきょりの和, 63 cm]
       - part: 今日
-        text: けんび鏡で、対物レンズの倍率が 10 倍、接眼レンズの倍率が 15 倍のとき、けんび鏡全体の倍率は何倍か。
-        svg: '<svg viewBox="0 0 320 200" xmlns="http://www.w3.org/2000/svg"><rect x="60" y="60" width="64" height="36" fill="#c8ccd6" fill-opacity="0.4" stroke="currentColor" stroke-width="1.5"/><text x="92" y="82.9" font-size="14" text-anchor="middle" fill="currentColor">対物</text><rect x="124" y="60" width="64" height="36" fill="#c8ccd6" fill-opacity="0.4" stroke="currentColor" stroke-width="1.5"/><text x="156" y="82.9" font-size="14" text-anchor="middle" fill="currentColor">接眼</text><rect x="188" y="60" width="64" height="36" fill="#c8ccd6" fill-opacity="0.4" stroke="currentColor" stroke-width="1.5"/><text x="220" y="82.9" font-size="14" text-anchor="middle" fill="currentColor">全体</text><rect x="60" y="96" width="64" height="36" fill="none" stroke="currentColor" stroke-width="1.5"/><text x="92" y="118.9" font-size="14" text-anchor="middle" fill="currentColor">10 倍</text><rect x="124" y="96" width="64" height="36" fill="none" stroke="currentColor" stroke-width="1.5"/><text x="156" y="118.9" font-size="14" text-anchor="middle" fill="currentColor">15 倍</text><rect x="188" y="96" width="64" height="36" fill="none" stroke="currentColor" stroke-width="1.5"/><text x="220" y="118.9" font-size="14" text-anchor="middle" fill="currentColor">？</text></svg>'
+        id: "8783db1308"
+        text: けんび鏡で、対物レンズのばいりつが 10 倍、せつがんレンズのばいりつが 15 倍のとき、けんび鏡全体のばいりつは何倍か。
+        svg: '<svg viewBox="0 0 320 200" xmlns="http://www.w3.org/2000/svg"><rect x="60" y="60" width="64" height="36" fill="#c8ccd6" fill-opacity="0.4" stroke="currentColor" stroke-width="1.5"/><text x="92" y="82.9" font-size="14" text-anchor="middle" fill="currentColor">対物</text><rect x="124" y="60" width="64" height="36" fill="#c8ccd6" fill-opacity="0.4" stroke="currentColor" stroke-width="1.5"/><text x="156" y="82.9" font-size="14" text-anchor="middle" fill="currentColor">せつがん</text><rect x="188" y="60" width="64" height="36" fill="#c8ccd6" fill-opacity="0.4" stroke="currentColor" stroke-width="1.5"/><text x="220" y="82.9" font-size="14" text-anchor="middle" fill="currentColor">全体</text><rect x="60" y="96" width="64" height="36" fill="none" stroke="currentColor" stroke-width="1.5"/><text x="92" y="118.9" font-size="14" text-anchor="middle" fill="currentColor">10 倍</text><rect x="124" y="96" width="64" height="36" fill="none" stroke="currentColor" stroke-width="1.5"/><text x="156" y="118.9" font-size="14" text-anchor="middle" fill="currentColor">15 倍</text><rect x="188" y="96" width="64" height="36" fill="none" stroke="currentColor" stroke-width="1.5"/><text x="220" y="118.9" font-size="14" text-anchor="middle" fill="currentColor">？</text></svg>'
         choices: ['25', '150', '1500']
         answer: '150'
         check: "10 * 15"
         hints:
-          - 対物レンズで大きくした像を、接眼レンズでさらに大きくする。
-          - text: 倍率はかけ算でつながる。表の 2 つの数をかける。
-            svg: '<svg viewBox="0 0 320 200" xmlns="http://www.w3.org/2000/svg"><rect x="60" y="60" width="64" height="36" fill="#c8ccd6" fill-opacity="0.4" stroke="currentColor" stroke-width="1.5"/><text x="92" y="82.9" font-size="14" text-anchor="middle" fill="currentColor">対物</text><rect x="124" y="60" width="64" height="36" fill="#c8ccd6" fill-opacity="0.4" stroke="currentColor" stroke-width="1.5"/><text x="156" y="82.9" font-size="14" text-anchor="middle" fill="currentColor">接眼</text><rect x="188" y="60" width="64" height="36" fill="#c8ccd6" fill-opacity="0.4" stroke="currentColor" stroke-width="1.5"/><text x="220" y="82.9" font-size="14" text-anchor="middle" fill="currentColor">全体</text><rect x="60" y="96" width="64" height="36" fill="#f3c969" fill-opacity="0.4" stroke="currentColor" stroke-width="1.5"/><text x="92" y="118.9" font-size="14" text-anchor="middle" fill="currentColor">10 倍</text><rect x="124" y="96" width="64" height="36" fill="#f3c969" fill-opacity="0.4" stroke="currentColor" stroke-width="1.5"/><text x="156" y="118.9" font-size="14" text-anchor="middle" fill="currentColor">15 倍</text><rect x="188" y="96" width="64" height="36" fill="none" stroke="currentColor" stroke-width="1.5"/><text x="220" y="118.9" font-size="14" text-anchor="middle" fill="currentColor">？</text></svg>'
+          - 対物レンズで大きくした像を、せつがんレンズでさらに大きくする。
+          - text: ばいりつはかけ算でつながる。表の 2 つの数をかける。
+            svg: '<svg viewBox="0 0 320 200" xmlns="http://www.w3.org/2000/svg"><rect x="60" y="60" width="64" height="36" fill="#c8ccd6" fill-opacity="0.4" stroke="currentColor" stroke-width="1.5"/><text x="92" y="82.9" font-size="14" text-anchor="middle" fill="currentColor">対物</text><rect x="124" y="60" width="64" height="36" fill="#c8ccd6" fill-opacity="0.4" stroke="currentColor" stroke-width="1.5"/><text x="156" y="82.9" font-size="14" text-anchor="middle" fill="currentColor">せつがん</text><rect x="188" y="60" width="64" height="36" fill="#c8ccd6" fill-opacity="0.4" stroke="currentColor" stroke-width="1.5"/><text x="220" y="82.9" font-size="14" text-anchor="middle" fill="currentColor">全体</text><rect x="60" y="96" width="64" height="36" fill="#f3c969" fill-opacity="0.4" stroke="currentColor" stroke-width="1.5"/><text x="92" y="118.9" font-size="14" text-anchor="middle" fill="currentColor">10 倍</text><rect x="124" y="96" width="64" height="36" fill="#f3c969" fill-opacity="0.4" stroke="currentColor" stroke-width="1.5"/><text x="156" y="118.9" font-size="14" text-anchor="middle" fill="currentColor">15 倍</text><rect x="188" y="96" width="64" height="36" fill="none" stroke="currentColor" stroke-width="1.5"/><text x="220" y="118.9" font-size="14" text-anchor="middle" fill="currentColor">？</text></svg>'
           - 10 × 15 を計算する。足し算ではない。
         paths:
-          - [倍率は積, 10 × 15 = 150]
+          - [ばいりつは積, 10 × 15 = 150]
           - [10 倍にしたものを、さらに 15 倍する, 150 倍]
       - part: 今日
         text: 口径 D = 0.61 m の望遠鏡で、波長 λ = 500 nm（1 nm は 10⁻⁹ m）の光を見る。光が広がる回折のため、2 つの星を見分けられる最小の角は θ = 1.22 λ/D で決まる。θ は何 rad（角の大きさの単位）か。
@@ -669,7 +697,8 @@ days:
           - [θ = 1.22 × 500 × 10⁻⁹ ÷ 0.61 = 1.0 × 10⁻⁶, 長さ = 1.0 × 10⁻⁶ × 3.8 × 10⁸ = 380 m]
           - [10⁻⁶ × 10⁸ = 10², 3.8 × 100 = 380]
       - part: 思い出す
-        text: 焦点距離 6 cm のレンズから 10 cm の所に物を置いた。像はレンズから何 cm の所にできるか。
+        id: "87325aae40"
+        text: しょうてんきょり 6 cm のレンズから 10 cm の所に物を置いた。像はレンズから何 cm の所にできるか。
         svg: '<svg viewBox="0 0 320 200" xmlns="http://www.w3.org/2000/svg"><line x1="10" y1="100" x2="312" y2="100" fill="none" stroke="currentColor" stroke-width="1"/><ellipse cx="130" cy="100" rx="9" ry="66" fill="#7fc8f8" fill-opacity="0.45" stroke="currentColor" stroke-width="2"/><circle cx="106" cy="100" r="3" fill="currentColor"/><circle cx="154" cy="100" r="3" fill="currentColor"/><text x="106" y="118" font-size="14" text-anchor="middle" fill="currentColor">F</text><text x="154" y="118" font-size="14" text-anchor="middle" fill="currentColor">F</text><line x1="90" y1="100" x2="90" y2="85" fill="none" stroke="currentColor" stroke-width="3"/><polygon points="90,76 94.5,85 85.5,85" fill="currentColor"/></svg>'
         choices: ['12', '15', '30']
         answer: '15'
@@ -681,7 +710,7 @@ days:
           - 引いた結果の分数の、分母と分子を入れかえたものが b 。
         paths:
           - [1/b = 1/6 − 1/10 = 1/15, b = 15 cm]
-          - [物は焦点の外にあるので実像, 像は f の 2 倍より遠くにできるので 12 では足りない]
+          - [物はしょうてんの外にあるので実像, 像は f の 2 倍より遠くにできるので 12 では足りない]
       - part: 思い出す
         text: 屈折率 1.5 のガラスから屈折率 4/3 の水に光が出るとき、りんかい角を θc とする。sinθc はいくつか。
         svg: '<svg viewBox="0 0 320 200" xmlns="http://www.w3.org/2000/svg"><rect x="0" y="100" width="320" height="100" fill="#7fc8f8" fill-opacity="0.35" stroke="currentColor" stroke-width="2"/><line x1="0" y1="100" x2="320" y2="100" fill="none" stroke="currentColor" stroke-width="2"/><text x="46" y="22" font-size="14" text-anchor="middle" fill="currentColor">水 n=4/3</text><text x="46" y="192" font-size="14" text-anchor="middle" fill="currentColor">ガラス n=1.5</text><line x1="160" y1="15" x2="160" y2="185" fill="none" stroke="currentColor" stroke-width="1" stroke-dasharray="4 4"/><line x1="90.7" y1="140" x2="152.2" y2="104.5" fill="none" stroke="currentColor" stroke-width="2"/><polygon points="160,100 154.5,108.4 150,100.6" fill="currentColor"/><text x="93.8" y="133" font-size="14" text-anchor="middle" fill="currentColor">θc</text></svg>'
@@ -698,39 +727,41 @@ days:
           - [小さいほうの n ÷ 大きいほうの n, (4/3) ÷ 1.5]
     extra:
       - part: 今日
-        text: 焦点距離 10 cm のルーペで物を見る。ものがはっきり見えるいちばん近いきょり 25 cm を f でわると、倍率は何倍か。
+        id: "90ca7d17d6"
+        text: しょうてんきょり 10 cm のルーペで物を見る。ものがはっきり見えるいちばん近いきょり 25 cm を f でわると、ばいりつは何倍か。
         svg: '<svg viewBox="0 0 320 200" xmlns="http://www.w3.org/2000/svg"><line x1="10" y1="100" x2="312" y2="100" fill="none" stroke="currentColor" stroke-width="1"/><ellipse cx="130" cy="100" rx="9" ry="66" fill="#7fc8f8" fill-opacity="0.45" stroke="currentColor" stroke-width="2"/><circle cx="90" cy="100" r="3" fill="currentColor"/><circle cx="170" cy="100" r="3" fill="currentColor"/><text x="90" y="118" font-size="14" text-anchor="middle" fill="currentColor">F</text><text x="170" y="118" font-size="14" text-anchor="middle" fill="currentColor">F</text><line x1="98" y1="100" x2="98" y2="89" fill="none" stroke="currentColor" stroke-width="3"/><polygon points="98,80 102.5,89 93.5,89" fill="currentColor"/><text x="160" y="24" font-size="14" text-anchor="middle" fill="currentColor">f = 10 cm</text></svg>'
         choices: ['2.5', '10', '35']
         answer: '2.5'
         check: "25 / 10"
         hints:
-          - 倍率 = 25 ÷ f 。
+          - ばいりつ = 25 ÷ f 。
           - text: f に 10 を入れる。
             svg: '<svg viewBox="0 0 320 200" xmlns="http://www.w3.org/2000/svg"><text x="160" y="90" font-size="16" text-anchor="middle" fill="currentColor">25 ÷ f</text><text x="160" y="130" font-size="16" text-anchor="middle" fill="currentColor">f = 10</text><circle cx="160" cy="86" r="4" fill="none" stroke="#f08080" stroke-width="3" stroke-dasharray="6 4"/></svg>'
           - 25 ÷ 10 を計算する。
         paths:
-          - [倍率 = 25/f, 25 ÷ 10 = 2.5 倍]
+          - [ばいりつ = 25/f, 25 ÷ 10 = 2.5 倍]
           - [f が 25 のとき 1 倍, f が 10 なら 2.5 倍]
       - part: 今日
-        text: 接眼レンズの焦点距離が 2 cm の望遠鏡で、倍率を 30 倍にしたい。対物レンズの焦点距離は何 cm にすればよいか。
+        id: "dae947da46"
+        text: せつがんレンズのしょうてんきょりが 2 cm の望遠鏡で、ばいりつを 30 倍にしたい。対物レンズのしょうてんきょりは何 cm にすればよいか。
         svg: '<svg viewBox="0 0 320 200" xmlns="http://www.w3.org/2000/svg"><line x1="10" y1="100" x2="310" y2="100" fill="none" stroke="currentColor" stroke-width="1"/><ellipse cx="60" cy="100" rx="8" ry="70" fill="#7fc8f8" fill-opacity="0.45" stroke="currentColor" stroke-width="2"/><ellipse cx="240" cy="100" rx="6" ry="30" fill="#7fc8f8" fill-opacity="0.45" stroke="currentColor" stroke-width="2"/><circle cx="200" cy="100" r="4" fill="currentColor"/><polyline points="10,80 60,80 200,100 240,105.7 305,105.7" fill="none" stroke="currentColor" stroke-width="1"/><polyline points="10,120 60,120 200,100 240,94.3 305,94.3" fill="none" stroke="currentColor" stroke-width="1"/><text x="60" y="28" font-size="14" text-anchor="middle" fill="currentColor">f₁ = ？</text><text x="240" y="56" font-size="14" text-anchor="middle" fill="currentColor">f₂ = 2 cm</text></svg>'
         choices: ['15', '60', '62']
         answer: '60'
         check: "30 * 2"
         hints:
-          - 望遠鏡の倍率は M = f₁/f₂ 。
+          - 望遠鏡のばいりつは M = f₁/f₂ 。
           - text: 30 = f₁ ÷ 2 。f₁ を求める。
             svg: '<svg viewBox="0 0 320 200" xmlns="http://www.w3.org/2000/svg"><text x="160" y="90" font-size="16" text-anchor="middle" fill="currentColor">30 = f₁ ÷ 2</text></svg>'
           - 両方に 2 をかけると f₁ が出る。
         paths:
           - [f₁ = 30 × 2, 60 cm]
-          - [倍率は比, 対物は接眼の 30 倍]
+          - [ばいりつはひ, 対物はせつがんの 30 倍]
   - day: 6
     items:
       - part: 見本
         text: 光は、2 点のあいだを、かかる時間がいちばん短くなる道を通る。これをフェルマーの原理という。光が進む時間は、道の長さを速さでわったもの。鏡ではね返る光も、入しゃ角と反しゃ角が等しくなる道が、いちばん短い道になる。
         svg: '<svg viewBox="0 0 320 200" xmlns="http://www.w3.org/2000/svg"><line x1="20" y1="150" x2="300" y2="150" fill="none" stroke="currentColor" stroke-width="3"/><circle cx="70" cy="70" r="5" fill="currentColor"/><circle cx="250" cy="70" r="5" fill="currentColor"/><text x="70" y="58" font-size="16" text-anchor="middle" fill="currentColor">A</text><text x="250" y="58" font-size="16" text-anchor="middle" fill="currentColor">B</text><polyline points="70,70 160,150 250,70" fill="none" stroke="currentColor" stroke-width="2"/><polyline points="70,70 110,150 250,70" fill="none" stroke="currentColor" stroke-width="1" stroke-dasharray="4 4"/><polyline points="70,70 210,150 250,70" fill="none" stroke="currentColor" stroke-width="1" stroke-dasharray="4 4"/><text x="160" y="176" font-size="14" text-anchor="middle" fill="currentColor">鏡</text></svg>'
-        explain: フェルマーの原理（光は所要時間が最小（または最大）になる経路を通る）。真空中の速さ c と、屈折率 n の物質中の速さ c/n から、時間 = n × 距離 ÷ c 。n × 距離を光路長といい、光路長が最短の経路を光は通る。そこからスネルの法則も導かれる。
+        explain: フェルマーの原理（光は所要時間が最小（または最大）になるけいろを通る）。真空中の速さ c と、屈折率 n のぶっしつ中の速さ c/n から、時間 = n × きょり ÷ c 。n × きょりを光路長といい、光路長が最短のけいろを光は通る。そこからスネルの法則もみちびかれる。
       - part: 今日
         text: 光が屈折率 1.5 のガラスを、2 m 進んだ。n × 道の長さを光路長という。光路長は何 m か。
         svg: '<svg viewBox="0 0 320 200" xmlns="http://www.w3.org/2000/svg"><rect x="60" y="70" width="200" height="60" fill="#7fc8f8" fill-opacity="0.35" stroke="currentColor" stroke-width="2"/><line x1="30" y1="100" x2="280" y2="100" fill="none" stroke="currentColor" stroke-width="2"/><polygon points="290,100 280,105 280,95" fill="currentColor"/><line x1="70" y1="156" x2="250" y2="156" fill="none" stroke="currentColor" stroke-width="1"/><polygon points="260,156 250,161 250,151" fill="currentColor"/><polygon points="60,156 70,151 70,161" fill="currentColor"/><text x="160" y="180" font-size="14" text-anchor="middle" fill="currentColor">2 m</text><text x="160" y="60" font-size="14" text-anchor="middle" fill="currentColor">n = 1.5</text></svg>'
@@ -755,7 +786,7 @@ days:
           - 鏡の下に A のうつった点 A′ （鏡の下 3 m）をとると、反射の道を、A′ から B への直線に置きかえられる。
           - text: A′ と B の高さの差は 3 + 3 = 6 m 、横は 8 m 。直角三角形の長い辺が、道の長さ。
             svg: '<svg viewBox="0 0 320 200" xmlns="http://www.w3.org/2000/svg"><line x1="20" y1="100" x2="300" y2="100" fill="none" stroke="currentColor" stroke-width="3"/><circle cx="40" cy="60" r="5" fill="currentColor"/><circle cx="200" cy="60" r="5" fill="currentColor"/><circle cx="40" cy="140" r="5" fill="currentColor"/><text x="40" y="48" font-size="16" text-anchor="middle" fill="currentColor">A</text><text x="200" y="48" font-size="16" text-anchor="middle" fill="currentColor">B</text><text x="56" y="156" font-size="14" text-anchor="middle" fill="currentColor">A′</text><line x1="40" y1="140" x2="200" y2="60" fill="none" stroke="currentColor" stroke-width="1" stroke-dasharray="4 4"/></svg>'
-          - 横 8 、たて 6 の直角三角形。3 辺の長さの比が 3：4：5 の三角形を思い出そう。
+          - 横 8 、たて 6 の直角三角形。3 辺の長さのひが 3：4：5 の三角形を思い出そう。
         paths:
           - [A′ から B までの直線の長さ, 横 8 、たて 6 の三角形は 3：4：5 の 2 倍で、10 m]
           - [鏡の点を決める前に、8 m より長いことはわかる, 3 辺が 6、8、10 の直角三角形（3：4：5 の 2 倍）]
@@ -769,10 +800,10 @@ days:
           - 鏡の下に A のうつった点 A′ をとって、A′ と B を直線でつなぐ。
           - text: A′ は鏡の下 2 m 。直線が鏡と交わる点が、はね返る場所。
             svg: '<svg viewBox="0 0 320 200" xmlns="http://www.w3.org/2000/svg"><line x1="20" y1="120" x2="300" y2="120" fill="none" stroke="currentColor" stroke-width="3"/><circle cx="30" cy="90" r="5" fill="currentColor"/><circle cx="165" cy="60" r="5" fill="currentColor"/><circle cx="30" cy="150" r="5" fill="currentColor"/><line x1="30" y1="150" x2="165" y2="60" fill="none" stroke="currentColor" stroke-width="1" stroke-dasharray="4 4"/><circle cx="30" cy="150" r="12" fill="none" stroke="#f08080" stroke-width="3" stroke-dasharray="6 4"/></svg>'
-          - 2 つの相似な三角形の、高さの比 2 対 4 は、横の長さの比と同じ。
+          - 2 つのそうじな三角形の、高さのひ 2 対 4 は、横の長さのひと同じ。
         paths:
-          - [A′ から B への直線で、高さの比が 2 対 4, 横 9 m を 1 対 2 に分ける, 3 m]
-          - [入しゃ角と反しゃ角が等しい, 2 つの直角三角形が相似で、横の比も 1 対 2]
+          - [A′ から B への直線で、高さのひが 2 対 4, 横 9 m を 1 対 2 に分ける, 3 m]
+          - [入しゃ角と反しゃ角が等しい, 2 つの直角三角形がそうじで、横のひも 1 対 2]
       - part: 今日
         text: すなはまを走る速さは 5 m/s 、水中を泳ぐ速さは 1 m/s 。道 A はすなはま 50 m と水中 30 m 、道 B はすなはま 70 m と水中 20 m 。かかる時間が短いのはどちらか。
         svg: '<svg viewBox="0 0 320 200" xmlns="http://www.w3.org/2000/svg"><rect x="40" y="50" width="80" height="32" fill="#c8ccd6" fill-opacity="0.4" stroke="currentColor" stroke-width="1.5"/><rect x="120" y="50" width="80" height="32" fill="#c8ccd6" fill-opacity="0.4" stroke="currentColor" stroke-width="1.5"/><text x="160" y="70.9" font-size="14" text-anchor="middle" fill="currentColor">すなはま</text><rect x="200" y="50" width="80" height="32" fill="#c8ccd6" fill-opacity="0.4" stroke="currentColor" stroke-width="1.5"/><text x="240" y="70.9" font-size="14" text-anchor="middle" fill="currentColor">水中</text><rect x="40" y="82" width="80" height="32" fill="none" stroke="currentColor" stroke-width="1.5"/><text x="80" y="102.9" font-size="14" text-anchor="middle" fill="currentColor">道 A</text><rect x="120" y="82" width="80" height="32" fill="none" stroke="currentColor" stroke-width="1.5"/><text x="160" y="102.9" font-size="14" text-anchor="middle" fill="currentColor">50 m</text><rect x="200" y="82" width="80" height="32" fill="none" stroke="currentColor" stroke-width="1.5"/><text x="240" y="102.9" font-size="14" text-anchor="middle" fill="currentColor">30 m</text><rect x="40" y="114" width="80" height="32" fill="none" stroke="currentColor" stroke-width="1.5"/><text x="80" y="134.9" font-size="14" text-anchor="middle" fill="currentColor">道 B</text><rect x="120" y="114" width="80" height="32" fill="none" stroke="currentColor" stroke-width="1.5"/><text x="160" y="134.9" font-size="14" text-anchor="middle" fill="currentColor">70 m</text><rect x="200" y="114" width="80" height="32" fill="none" stroke="currentColor" stroke-width="1.5"/><text x="240" y="134.9" font-size="14" text-anchor="middle" fill="currentColor">20 m</text></svg>'
@@ -794,7 +825,7 @@ days:
         answer: '同じ時間'
         check: "'同じ時間'"
         hints:
-          - 時間は、光路長 n × 道の長さに比例する。
+          - 時間は、光路長 n × 道の長さにひれいする。
           - text: 空気の光路長は 1 × 6 。ガラスの光路長は 1.5 × 4 。
             svg: '<svg viewBox="0 0 320 200" xmlns="http://www.w3.org/2000/svg"><rect x="170" y="60" width="120" height="80" fill="#7fc8f8" fill-opacity="0.35" stroke="currentColor" stroke-width="2"/><line x1="20" y1="100" x2="150" y2="100" fill="none" stroke="currentColor" stroke-width="2"/><polygon points="160,100 150,105 150,95" fill="currentColor"/><text x="90" y="90" font-size="14" text-anchor="middle" fill="currentColor">空気 6 m</text><line x1="172" y1="100" x2="278" y2="100" fill="none" stroke="currentColor" stroke-width="2"/><polygon points="288,100 278,105 278,95" fill="currentColor"/><text x="230" y="90" font-size="14" text-anchor="middle" fill="currentColor">ガラス 4 m</text><circle cx="90" cy="90" r="36" fill="none" stroke="#f08080" stroke-width="3" stroke-dasharray="6 4"/></svg>'
           - 2 つの光路長をくらべる。
@@ -818,7 +849,8 @@ days:
           - [x = 4 は 5.00 ÷ 2 + 3.61 = 6.11, x = 5 は 5.83 ÷ 2 + 3.16 = 6.08, x = 5 が最短]
           - [x = 3 の直線は約 6.36, 速いほうの空気中で長く進んで、おそい水中を短くしたほうが時間が短くなる, 水中の道が短い x = 5 が最短]
       - part: 挑戦
-        text: 厚さ 3 cm 、屈折率 1.5 のガラス板を、光が直角に通りぬける。ガラスがなく空気だけのときとくらべて、光路長は何 cm 増えるか。
+        id: "73f6f07dc6"
+        text: あつさ 3 cm 、屈折率 1.5 のガラス板を、光が直角に通りぬける。ガラスがなく空気だけのときとくらべて、光路長は何 cm ふえるか。
         svg: '<svg viewBox="0 0 320 200" xmlns="http://www.w3.org/2000/svg"><rect x="120" y="50" width="80" height="100" fill="#7fc8f8" fill-opacity="0.35" stroke="currentColor" stroke-width="2"/><line x1="30" y1="100" x2="280" y2="100" fill="none" stroke="currentColor" stroke-width="2"/><polygon points="290,100 280,105 280,95" fill="currentColor"/><line x1="130" y1="168" x2="190" y2="168" fill="none" stroke="currentColor" stroke-width="1"/><polygon points="200,168 190,173 190,163" fill="currentColor"/><polygon points="120,168 130,163 130,173" fill="currentColor"/><text x="160" y="190" font-size="14" text-anchor="middle" fill="currentColor">3 cm</text><text x="160" y="40" font-size="14" text-anchor="middle" fill="currentColor">n = 1.5</text></svg>'
         choices: ['1.5', '3', '4.5']
         answer: '1.5'
@@ -832,21 +864,23 @@ days:
           - [板があると 1.5 × 3 = 4.5 cm, 板がないと 3 cm, 差は 1.5 cm]
           - [(n − 1) × 3 = 0.5 × 3, 1.5 cm]
       - part: 思い出す
-        text: 対物レンズの焦点距離が 80 cm 、接眼レンズの焦点距離が 5 cm の望遠鏡の倍率は何倍か。
+        id: "15283c6666"
+        text: 対物レンズのしょうてんきょりが 80 cm 、せつがんレンズのしょうてんきょりが 5 cm の望遠鏡のばいりつは何倍か。
         svg: '<svg viewBox="0 0 320 200" xmlns="http://www.w3.org/2000/svg"><line x1="10" y1="100" x2="310" y2="100" fill="none" stroke="currentColor" stroke-width="1"/><ellipse cx="60" cy="100" rx="8" ry="70" fill="#7fc8f8" fill-opacity="0.45" stroke="currentColor" stroke-width="2"/><ellipse cx="240" cy="100" rx="6" ry="30" fill="#7fc8f8" fill-opacity="0.45" stroke="currentColor" stroke-width="2"/><circle cx="200" cy="100" r="4" fill="currentColor"/><polyline points="10,80 60,80 200,100 240,105.7 305,105.7" fill="none" stroke="currentColor" stroke-width="1"/><polyline points="10,120 60,120 200,100 240,94.3 305,94.3" fill="none" stroke="currentColor" stroke-width="1"/><text x="60" y="28" font-size="14" text-anchor="middle" fill="currentColor">f₁ = 80 cm</text><text x="240" y="56" font-size="14" text-anchor="middle" fill="currentColor">f₂ = 5 cm</text></svg>'
         choices: ['16', '75', '85']
         answer: '16'
         check: "80 // 5"
         hints:
-          - 望遠鏡の倍率は、2 つの焦点距離の比。
-          - text: 倍率 M = f₁/f₂ 。大きいほうを小さいほうでわる。
+          - 望遠鏡のばいりつは、2 つのしょうてんきょりのひ。
+          - text: ばいりつ M = f₁/f₂ 。大きいほうを小さいほうでわる。
             svg: '<svg viewBox="0 0 320 200" xmlns="http://www.w3.org/2000/svg"><text x="160" y="90" font-size="16" text-anchor="middle" fill="currentColor">M = f₁ ÷ f₂</text><text x="160" y="130" font-size="16" text-anchor="middle" fill="currentColor">＝ 80 ÷ 5</text></svg>'
           - 80 ÷ 5 を計算する。
         paths:
           - [M = f₁/f₂, 80 ÷ 5 = 16]
-          - [倍率は比なので、わり算, 16 倍]
+          - [ばいりつはひなので、わり算, 16 倍]
       - part: 思い出す
-        text: 焦点距離 12 cm のレンズから 36 cm の所に物を置いた。像はレンズから何 cm の所にできるか。
+        id: "7ce566fb56"
+        text: しょうてんきょり 12 cm のレンズから 36 cm の所に物を置いた。像はレンズから何 cm の所にできるか。
         svg: '<svg viewBox="0 0 320 200" xmlns="http://www.w3.org/2000/svg"><line x1="10" y1="100" x2="312" y2="100" fill="none" stroke="currentColor" stroke-width="1"/><ellipse cx="130" cy="100" rx="9" ry="66" fill="#7fc8f8" fill-opacity="0.45" stroke="currentColor" stroke-width="2"/><circle cx="106" cy="100" r="3" fill="currentColor"/><circle cx="154" cy="100" r="3" fill="currentColor"/><text x="106" y="118" font-size="14" text-anchor="middle" fill="currentColor">F</text><text x="154" y="118" font-size="14" text-anchor="middle" fill="currentColor">F</text><line x1="58" y1="100" x2="58" y2="93" fill="none" stroke="currentColor" stroke-width="3"/><polygon points="58,84 62.5,93 53.5,93" fill="currentColor"/></svg>'
         choices: ['18', '24', '48']
         answer: '18'
@@ -870,10 +904,10 @@ days:
           - 鏡の下に A のうつった点 A′ （鏡の下 6 m）をとる。
           - text: A′ と B の高さの差は 6 + 6 = 12 m 、横は 16 m 。直角三角形の長い辺が道の長さ。
             svg: '<svg viewBox="0 0 320 200" xmlns="http://www.w3.org/2000/svg"><line x1="20" y1="100" x2="300" y2="100" fill="none" stroke="currentColor" stroke-width="3"/><circle cx="40" cy="60" r="5" fill="currentColor"/><circle cx="240" cy="60" r="5" fill="currentColor"/><circle cx="40" cy="140" r="5" fill="currentColor"/><line x1="40" y1="140" x2="240" y2="60" fill="none" stroke="currentColor" stroke-width="1" stroke-dasharray="4 4"/></svg>'
-          - 横 16 、たて 12 の直角三角形。3 辺の長さの比が 3：4：5 の三角形を思い出そう。
+          - 横 16 、たて 12 の直角三角形。3 辺の長さのひが 3：4：5 の三角形を思い出そう。
         paths:
           - [A′ から B までの直線の長さ, 横 16 、たて 12 の三角形は 3：4：5 の 4 倍で、20 m]
-          - [16 m より長いことは確か, 3 辺が 12、16、20 の直角三角形（3：4：5 の 4 倍）]
+          - [16 m より長いことはたしか, 3 辺が 12、16、20 の直角三角形（3：4：5 の 4 倍）]
       - part: 今日
         text: 屈折率 2 のガラスの中を 3 m 進む光と、同じ時間で空気中を進む光は、何 m 進むか。
         svg: '<svg viewBox="0 0 320 200" xmlns="http://www.w3.org/2000/svg"><rect x="170" y="60" width="120" height="80" fill="#7fc8f8" fill-opacity="0.35" stroke="currentColor" stroke-width="2"/><line x1="20" y1="100" x2="150" y2="100" fill="none" stroke="currentColor" stroke-width="2"/><polygon points="160,100 150,105 150,95" fill="currentColor"/><text x="90" y="90" font-size="14" text-anchor="middle" fill="currentColor">空気 ？ m</text><line x1="172" y1="100" x2="278" y2="100" fill="none" stroke="currentColor" stroke-width="2"/><polygon points="288,100 278,105 278,95" fill="currentColor"/><text x="230" y="90" font-size="14" text-anchor="middle" fill="currentColor">ガラス 3 m</text><text x="230" y="156" font-size="14" text-anchor="middle" fill="currentColor">n = 2</text></svg>'
@@ -891,11 +925,13 @@ days:
   - day: 7
     items:
       - part: 見本
-        text: 光源の明るさを表すのが光度 I （単位は cd ）。光が当たった面の明るさを表すのが照度 E （単位は lx ）。点光源から r はなれた、光に直角な面の照度は E = I/r² 。はなれるほど光が広がるので、2 倍はなれると、同じ面積にとどく光は 1/4 になる。
+        id: "d29267df06"
+        text: こうげんの明るさを表すのが光度 I （単位は cd ）。光が当たった面の明るさを表すのが照度 E （単位は lx ）。てんこうげんから r はなれた、光に直角な面の照度は E = I/r² 。はなれるほど光が広がるので、2 倍はなれると、同じ面積にとどく光は 1/4 になる。
         svg: '<svg viewBox="0 0 320 200" xmlns="http://www.w3.org/2000/svg"><circle cx="50" cy="100" r="6" fill="currentColor"/><line x1="50" y1="100" x2="130" y2="80" fill="none" stroke="currentColor" stroke-width="1"/><line x1="50" y1="100" x2="130" y2="120" fill="none" stroke="currentColor" stroke-width="1"/><line x1="130" y1="80" x2="130" y2="120" fill="none" stroke="currentColor" stroke-width="3"/><line x1="50" y1="100" x2="210" y2="60" fill="none" stroke="currentColor" stroke-width="1" stroke-dasharray="4 4"/><line x1="50" y1="100" x2="210" y2="140" fill="none" stroke="currentColor" stroke-width="1" stroke-dasharray="4 4"/><line x1="210" y1="60" x2="210" y2="140" fill="none" stroke="currentColor" stroke-width="3"/><text x="90" y="70" font-size="14" text-anchor="middle" fill="currentColor">r</text><text x="170" y="50" font-size="14" text-anchor="middle" fill="currentColor">2r</text><text x="130" y="150" font-size="14" text-anchor="middle" fill="currentColor">1 つ分</text><text x="230" y="170" font-size="14" text-anchor="middle" fill="currentColor">4 つ分</text></svg>'
-        explain: 点光源の照度 E = I/r² （逆 2 乗の法則）。光束 Φ [lm] は光源が出す光の量で、点光源の全光束は 4πI 。面が光に対してななめなら E = I cosθ / r² （θ は面の法線と光のなす角）。
+        explain: てんこうげんの照度 E = I/r² （ぎゃく 2 乗の法則）。光束 Φ [lm] はこうげんが出す光の量で、てんこうげんの全光束は 4πI 。面が光に対してななめなら E = I cosθ / r² （θ は面の法線と光のなす角）。
       - part: 今日
-        text: 光度 100 cd の点光源から 2 m はなれた、光に直角な面の照度は何 lx か。
+        id: "53e45d056c"
+        text: 光度 100 cd のてんこうげんから 2 m はなれた、光に直角な面の照度は何 lx か。
         svg: '<svg viewBox="0 0 320 200" xmlns="http://www.w3.org/2000/svg"><circle cx="50" cy="100" r="6" fill="currentColor"/><text x="50" y="126" font-size="14" text-anchor="middle" fill="currentColor">100 cd</text><line x1="50" y1="100" x2="220" y2="100" fill="none" stroke="currentColor" stroke-width="1"/><line x1="220" y1="60" x2="220" y2="140" fill="none" stroke="currentColor" stroke-width="3"/><line x1="64" y1="80" x2="206" y2="80" fill="none" stroke="currentColor" stroke-width="1"/><polygon points="216,80 206,85 206,75" fill="currentColor"/><polygon points="54,80 64,75 64,85" fill="currentColor"/><text x="135" y="70" font-size="14" text-anchor="middle" fill="currentColor">2 m</text></svg>'
         choices: ['12.5', '25', '50']
         answer: '25'
@@ -909,19 +945,20 @@ days:
           - [E = I/r², 100 ÷ 4 = 25 lx]
           - [1 m のとき 100 lx, 2 m で 1/4 になる]
       - part: 今日
-        text: 点光源から面までの長さを 3 倍にすると、面の照度は何倍になるか。
+        id: "504b27ea90"
+        text: てんこうげんから面までの長さを 3 倍にすると、面の照度は何倍になるか。
         svg: '<svg viewBox="0 0 320 200" xmlns="http://www.w3.org/2000/svg"><circle cx="40" cy="100" r="6" fill="currentColor"/><line x1="40" y1="100" x2="120" y2="80" fill="none" stroke="currentColor" stroke-width="1"/><line x1="40" y1="100" x2="120" y2="120" fill="none" stroke="currentColor" stroke-width="1"/><line x1="120" y1="80" x2="120" y2="120" fill="none" stroke="currentColor" stroke-width="3"/><line x1="40" y1="100" x2="280" y2="40" fill="none" stroke="currentColor" stroke-width="1" stroke-dasharray="4 4"/><line x1="40" y1="100" x2="280" y2="160" fill="none" stroke="currentColor" stroke-width="1" stroke-dasharray="4 4"/><line x1="280" y1="40" x2="280" y2="160" fill="none" stroke="currentColor" stroke-width="3"/><text x="80" y="70" font-size="14" text-anchor="middle" fill="currentColor">r</text><text x="220" y="30" font-size="14" text-anchor="middle" fill="currentColor">3r</text></svg>'
         choices: ['1/3 倍', '1/6 倍', '1/9 倍']
         answer: '1/9 倍'
         check: "'1/9 倍'"
         hints:
-          - 照度は、長さの 2 乗に反比例する。
+          - 照度は、長さの 2 乗にはんぴれいする。
           - text: 3r のとき、E = I/(3r)² 。分母を計算する。
             svg: '<svg viewBox="0 0 320 200" xmlns="http://www.w3.org/2000/svg"><circle cx="40" cy="100" r="6" fill="currentColor"/><line x1="40" y1="100" x2="120" y2="80" fill="none" stroke="currentColor" stroke-width="1"/><line x1="40" y1="100" x2="120" y2="120" fill="none" stroke="currentColor" stroke-width="1"/><line x1="120" y1="80" x2="120" y2="120" fill="none" stroke="currentColor" stroke-width="3"/><line x1="40" y1="100" x2="280" y2="40" fill="none" stroke="currentColor" stroke-width="1" stroke-dasharray="4 4"/><line x1="40" y1="100" x2="280" y2="160" fill="none" stroke="currentColor" stroke-width="1" stroke-dasharray="4 4"/><line x1="280" y1="40" x2="280" y2="160" fill="none" stroke="currentColor" stroke-width="3"/><circle cx="280" cy="100" r="20" fill="none" stroke="#f08080" stroke-width="3" stroke-dasharray="6 4"/></svg>'
           - (3r)² = 9r² 。
         paths:
           - [E = I/r² で r を 3 倍, E = I/(9r²) なので 1/9 倍]
-          - [光が広がる面積は、長さの 2 乗に比例, 3 倍はなれると面積が 9 倍]
+          - [光が広がる面積は、長さの 2 乗にひれい, 3 倍はなれると面積が 9 倍]
       - part: 今日
         text: 光度 100 cd の電球を 1 m の所に置いたときと同じ照度を、光度 400 cd の電球で出したい。電球を何 m の所に置けばよいか。
         svg: '<svg viewBox="0 0 320 200" xmlns="http://www.w3.org/2000/svg"><circle cx="40" cy="100" r="6" fill="currentColor"/><text x="40" y="126" font-size="14" text-anchor="middle" fill="currentColor">400 cd</text><line x1="40" y1="100" x2="250" y2="100" fill="none" stroke="currentColor" stroke-width="1"/><line x1="250" y1="60" x2="250" y2="140" fill="none" stroke="currentColor" stroke-width="3"/><text x="150" y="90" font-size="14" text-anchor="middle" fill="currentColor">？ m</text></svg>'
@@ -932,12 +969,13 @@ days:
           - 100 cd のときの照度を、まず計算する。
           - text: 100 cd 、1 m では E = 100 lx 。400 cd 、r m では E = 400/r² 。
             svg: '<svg viewBox="0 0 320 200" xmlns="http://www.w3.org/2000/svg"><circle cx="40" cy="100" r="6" fill="currentColor"/><text x="40" y="126" font-size="14" text-anchor="middle" fill="currentColor">400 cd</text><line x1="40" y1="100" x2="250" y2="100" fill="none" stroke="currentColor" stroke-width="1"/><line x1="250" y1="60" x2="250" y2="140" fill="none" stroke="currentColor" stroke-width="3"/><circle cx="150" cy="88" r="20" fill="none" stroke="#f08080" stroke-width="3" stroke-dasharray="6 4"/><text x="150" y="90" font-size="14" text-anchor="middle" fill="currentColor">？ m</text></svg>'
-          - 400/r² = 100 を解く。r² が先に求まる。
+          - 400/r² = 100 をとく。r² が先に求まる。
         paths:
           - [400/r² = 100, r² = 4, r = 2 m]
           - [光度が 4 倍なので、長さを 2 倍にすると 1/4 になって同じ照度]
       - part: 今日
-        text: 光度 200 cd の点光源から 2 m はなれた面に、面の法線と 60° の角をなして光が当たる。E = I cosθ / r² で、照度は何 lx か。
+        id: "20c1b1670a"
+        text: 光度 200 cd のてんこうげんから 2 m はなれた面に、面の法線と 60° の角をなして光が当たる。E = I cosθ / r² で、照度は何 lx か。
         svg: '<svg viewBox="0 0 320 200" xmlns="http://www.w3.org/2000/svg"><circle cx="75" cy="115" r="6" fill="currentColor"/><line x1="170" y1="60" x2="170" y2="150" fill="none" stroke="currentColor" stroke-width="1" stroke-dasharray="4 4"/><line x1="110" y1="60" x2="230" y2="60" fill="none" stroke="#c8ccd6" stroke-width="3"/><line x1="81" y1="112" x2="157.3" y2="68" fill="none" stroke="currentColor" stroke-width="2"/><polygon points="166,63 159.8,72.3 154.8,63.7" fill="currentColor"/><text x="152" y="102" font-size="14" text-anchor="middle" fill="currentColor">60°</text><text x="75" y="140" font-size="14" text-anchor="middle" fill="currentColor">200 cd</text></svg>'
         choices: ['25', '50', '43']
         answer: '25'
@@ -951,19 +989,20 @@ days:
           - [E = 200 × cos60° ÷ 2², 200 × 0.5 ÷ 4 = 25 lx]
           - [直角のとき 200/4 = 50 lx, ななめなので cos60° = 1/2 をかけて 25 lx]
       - part: 今日
-        text: 焦点距離 8 cm のレンズから 10 cm の所に物を置いた。像の倍率は何倍か。
+        id: "2ad1915ed1"
+        text: しょうてんきょり 8 cm のレンズから 10 cm の所に物を置いた。像のばいりつは何倍か。
         svg: '<svg viewBox="0 0 320 200" xmlns="http://www.w3.org/2000/svg"><line x1="10" y1="100" x2="312" y2="100" fill="none" stroke="currentColor" stroke-width="1"/><ellipse cx="130" cy="100" rx="9" ry="66" fill="#7fc8f8" fill-opacity="0.45" stroke="currentColor" stroke-width="2"/><circle cx="106" cy="100" r="3" fill="currentColor"/><circle cx="154" cy="100" r="3" fill="currentColor"/><text x="106" y="118" font-size="14" text-anchor="middle" fill="currentColor">F</text><text x="154" y="118" font-size="14" text-anchor="middle" fill="currentColor">F</text><line x1="100" y1="100" x2="100" y2="97" fill="none" stroke="currentColor" stroke-width="3"/><polygon points="100,88 104.5,97 95.5,97" fill="currentColor"/></svg>'
         choices: ['2', '4', '5']
         answer: '4'
         check: "math.floor((1 / (1 / 8 - 1 / 10)) / 10 + 0.5)"
         hints:
-          - まず b を求めて、倍率 m = b/a を計算する。
+          - まず b を求めて、ばいりつ m = b/a を計算する。
           - text: 1/b = 1/8 − 1/10 。通分して引く。
             svg: '<svg viewBox="0 0 320 200" xmlns="http://www.w3.org/2000/svg"><line x1="10" y1="100" x2="312" y2="100" fill="none" stroke="currentColor" stroke-width="1"/><ellipse cx="130" cy="100" rx="9" ry="66" fill="#7fc8f8" fill-opacity="0.45" stroke="currentColor" stroke-width="2"/><circle cx="106" cy="100" r="3" fill="currentColor"/><circle cx="154" cy="100" r="3" fill="currentColor"/><text x="106" y="118" font-size="14" text-anchor="middle" fill="currentColor">F</text><text x="154" y="118" font-size="14" text-anchor="middle" fill="currentColor">F</text><line x1="100" y1="100" x2="100" y2="97" fill="none" stroke="currentColor" stroke-width="3"/><polygon points="100,88 104.5,97 95.5,97" fill="currentColor"/><line x1="100" y1="88" x2="130" y2="88" fill="none" stroke="currentColor" stroke-width="1"/><line x1="130" y1="88" x2="250" y2="148" fill="none" stroke="currentColor" stroke-width="1"/><line x1="100" y1="88" x2="250" y2="148" fill="none" stroke="currentColor" stroke-width="1"/></svg>'
           - b がわかったら、a = 10 でわる。
         paths:
           - [1/b = 1/8 − 1/10 = 1/40, b = 40 cm, m = 40/10 = 4]
-          - [物が焦点にとても近いので、像はとても大きい, 式で確かめると 4 倍]
+          - [物がしょうてんにとても近いので、像はとても大きい, 式でたしかめると 4 倍]
       - part: 今日
         text: 水（屈折率 4/3）の中から空気に光が出る。水の中の角を θ₁ として、sinθ₁ = 0.6 のとき、空気中の角を θ₂ とすると、sinθ₂ はいくつか。
         svg: '<svg viewBox="0 0 320 200" xmlns="http://www.w3.org/2000/svg"><rect x="0" y="100" width="320" height="100" fill="#7fc8f8" fill-opacity="0.35" stroke="currentColor" stroke-width="2"/><line x1="0" y1="100" x2="320" y2="100" fill="none" stroke="currentColor" stroke-width="2"/><text x="46" y="22" font-size="14" text-anchor="middle" fill="currentColor">空気 n=1</text><text x="46" y="192" font-size="14" text-anchor="middle" fill="currentColor">水 n=4/3</text><line x1="160" y1="15" x2="160" y2="185" fill="none" stroke="currentColor" stroke-width="1" stroke-dasharray="4 4"/><line x1="111.9" y1="163.9" x2="154.6" y2="107.2" fill="none" stroke="currentColor" stroke-width="2"/><polygon points="160,100 158.2,109.9 151,104.5" fill="currentColor"/><text x="109.1" y="150.3" font-size="14" text-anchor="middle" fill="currentColor">θ₁</text></svg>'
@@ -1018,11 +1057,12 @@ days:
             svg: '<svg viewBox="0 0 320 200" xmlns="http://www.w3.org/2000/svg"><text x="160" y="70" font-size="16" text-anchor="middle" fill="currentColor">θ = 1.22 λ / D</text><circle cx="202" cy="65" r="12" fill="none" stroke="#f08080" stroke-width="3" stroke-dasharray="6 4"/></svg>'
           - 分母が大きくなると、分数は小さくなる。何倍になるかを考える。
         paths:
-          - [θ は D に反比例, D を 3 倍にすると θ は 1/3 倍]
+          - [θ は D にはんぴれい, D を 3 倍にすると θ は 1/3 倍]
           - [1.22 λ/(3D) = (1/3) × 1.22 λ/D, 1/3 倍]
     extra:
       - part: 今日
-        text: 光度 450 cd の点光源から 3 m はなれた、光に直角な面の照度は何 lx か。
+        id: "a2ffccbdfe"
+        text: 光度 450 cd のてんこうげんから 3 m はなれた、光に直角な面の照度は何 lx か。
         svg: '<svg viewBox="0 0 320 200" xmlns="http://www.w3.org/2000/svg"><circle cx="50" cy="100" r="6" fill="currentColor"/><text x="50" y="126" font-size="14" text-anchor="middle" fill="currentColor">450 cd</text><line x1="50" y1="100" x2="220" y2="100" fill="none" stroke="currentColor" stroke-width="1"/><line x1="220" y1="60" x2="220" y2="140" fill="none" stroke="currentColor" stroke-width="3"/><line x1="64" y1="80" x2="206" y2="80" fill="none" stroke="currentColor" stroke-width="1"/><polygon points="216,80 206,85 206,75" fill="currentColor"/><polygon points="54,80 64,75 64,85" fill="currentColor"/><text x="135" y="70" font-size="14" text-anchor="middle" fill="currentColor">3 m</text></svg>'
         choices: ['50', '150', '1350']
         answer: '50'
@@ -1036,13 +1076,14 @@ days:
           - [E = I/r², 450 ÷ 9 = 50 lx]
           - [1 m のとき 450 lx, 3 m で 1/9 になる]
       - part: 今日
-        text: 面の上で、点光源から 5 m はなれた所の照度が 36 lx である。光に直角な面とすると、この光源の光度は何 cd か。
+        id: "9e490feec9"
+        text: 面の上で、てんこうげんから 5 m はなれた所の照度が 36 lx である。光に直角な面とすると、このこうげんの光度は何 cd か。
         svg: '<svg viewBox="0 0 320 200" xmlns="http://www.w3.org/2000/svg"><circle cx="50" cy="100" r="6" fill="currentColor"/><text x="50" y="126" font-size="14" text-anchor="middle" fill="currentColor">？ cd</text><line x1="50" y1="100" x2="220" y2="100" fill="none" stroke="currentColor" stroke-width="1"/><line x1="220" y1="60" x2="220" y2="140" fill="none" stroke="currentColor" stroke-width="3"/><line x1="64" y1="80" x2="206" y2="80" fill="none" stroke="currentColor" stroke-width="1"/><polygon points="216,80 206,85 206,75" fill="currentColor"/><polygon points="54,80 64,75 64,85" fill="currentColor"/><text x="135" y="70" font-size="14" text-anchor="middle" fill="currentColor">5 m</text><text x="250" y="104" font-size="14" text-anchor="middle" fill="currentColor">36 lx</text></svg>'
         choices: ['900', '180', '7.2']
         answer: '900'
         check: "36 * 5 ** 2"
         hints:
-          - E = I/r² を、I について解く。
+          - E = I/r² を、I についてとく。
           - text: I = E × r² 。E = 36 、r = 5 。
             svg: '<svg viewBox="0 0 320 200" xmlns="http://www.w3.org/2000/svg"><circle cx="50" cy="100" r="6" fill="currentColor"/><text x="50" y="126" font-size="14" text-anchor="middle" fill="currentColor">？ cd</text><line x1="50" y1="100" x2="220" y2="100" fill="none" stroke="currentColor" stroke-width="1"/><line x1="220" y1="60" x2="220" y2="140" fill="none" stroke="currentColor" stroke-width="3"/><circle cx="135" cy="70" r="22" fill="none" stroke="#f08080" stroke-width="3" stroke-dasharray="6 4"/><circle cx="250" cy="98" r="24" fill="none" stroke="#f08080" stroke-width="3" stroke-dasharray="6 4"/><text x="135" y="70" font-size="14" text-anchor="middle" fill="currentColor">5 m</text><text x="250" y="104" font-size="14" text-anchor="middle" fill="currentColor">36 lx</text></svg>'
           - 36 × 25 を計算する。
@@ -1052,35 +1093,38 @@ days:
   - day: 8
     items:
       - part: 今日
-        text: 空気から屈折率 1.2 の液体に、sinθ₁ = 0.6 で光が入る。屈折角を θ₂ とすると、sinθ₂ はいくつか。
-        svg: '<svg viewBox="0 0 320 200" xmlns="http://www.w3.org/2000/svg"><rect x="0" y="100" width="320" height="100" fill="#7fc8f8" fill-opacity="0.35" stroke="currentColor" stroke-width="2"/><line x1="0" y1="100" x2="320" y2="100" fill="none" stroke="currentColor" stroke-width="2"/><text x="46" y="22" font-size="14" text-anchor="middle" fill="currentColor">空気 n=1</text><text x="46" y="192" font-size="14" text-anchor="middle" fill="currentColor">液体 n=1.2</text><line x1="160" y1="15" x2="160" y2="185" fill="none" stroke="currentColor" stroke-width="1" stroke-dasharray="4 4"/><line x1="111.9" y1="36.1" x2="154.6" y2="92.8" fill="none" stroke="currentColor" stroke-width="2"/><polygon points="160,100 151,95.5 158.2,90.1" fill="currentColor"/><text x="109.1" y="57.7" font-size="14" text-anchor="middle" fill="currentColor">θ₁</text></svg>'
+        id: "127a06dab1"
+        text: 空気から屈折率 1.2 のえきたいに、sinθ₁ = 0.6 で光が入る。屈折角を θ₂ とすると、sinθ₂ はいくつか。
+        svg: '<svg viewBox="0 0 320 200" xmlns="http://www.w3.org/2000/svg"><rect x="0" y="100" width="320" height="100" fill="#7fc8f8" fill-opacity="0.35" stroke="currentColor" stroke-width="2"/><line x1="0" y1="100" x2="320" y2="100" fill="none" stroke="currentColor" stroke-width="2"/><text x="46" y="22" font-size="14" text-anchor="middle" fill="currentColor">空気 n=1</text><text x="46" y="192" font-size="14" text-anchor="middle" fill="currentColor">えきたい n=1.2</text><line x1="160" y1="15" x2="160" y2="185" fill="none" stroke="currentColor" stroke-width="1" stroke-dasharray="4 4"/><line x1="111.9" y1="36.1" x2="154.6" y2="92.8" fill="none" stroke="currentColor" stroke-width="2"/><polygon points="160,100 151,95.5 158.2,90.1" fill="currentColor"/><text x="109.1" y="57.7" font-size="14" text-anchor="middle" fill="currentColor">θ₁</text></svg>'
         choices: ['0.5', '0.72', '0.6']
         answer: '0.5'
         check: "math.floor(0.6 / 1.2 * 100 + 0.5) / 100"
         hints:
-          - 空気側と液体側の n sinθ を等しくおく。
-          - text: 空気側は 1 × 0.6 、液体側は 1.2 × sinθ₂ 。
-            svg: '<svg viewBox="0 0 320 200" xmlns="http://www.w3.org/2000/svg"><rect x="0" y="100" width="320" height="100" fill="#7fc8f8" fill-opacity="0.35" stroke="currentColor" stroke-width="2"/><line x1="0" y1="100" x2="320" y2="100" fill="none" stroke="currentColor" stroke-width="2"/><text x="46" y="22" font-size="14" text-anchor="middle" fill="currentColor">空気 n=1</text><text x="46" y="192" font-size="14" text-anchor="middle" fill="currentColor">液体 n=1.2</text><line x1="160" y1="15" x2="160" y2="185" fill="none" stroke="currentColor" stroke-width="1" stroke-dasharray="4 4"/><line x1="111.9" y1="36.1" x2="154.6" y2="92.8" fill="none" stroke="currentColor" stroke-width="2"/><polygon points="160,100 151,95.5 158.2,90.1" fill="currentColor"/><text x="109.1" y="57.7" font-size="14" text-anchor="middle" fill="currentColor">θ₁</text><circle cx="112" cy="70" r="24" fill="none" stroke="#f08080" stroke-width="3" stroke-dasharray="6 4"/></svg>'
+          - 空気側とえきたい側の n sinθ を等しくおく。
+          - text: 空気側は 1 × 0.6 、えきたい側は 1.2 × sinθ₂ 。
+            svg: '<svg viewBox="0 0 320 200" xmlns="http://www.w3.org/2000/svg"><rect x="0" y="100" width="320" height="100" fill="#7fc8f8" fill-opacity="0.35" stroke="currentColor" stroke-width="2"/><line x1="0" y1="100" x2="320" y2="100" fill="none" stroke="currentColor" stroke-width="2"/><text x="46" y="22" font-size="14" text-anchor="middle" fill="currentColor">空気 n=1</text><text x="46" y="192" font-size="14" text-anchor="middle" fill="currentColor">えきたい n=1.2</text><line x1="160" y1="15" x2="160" y2="185" fill="none" stroke="currentColor" stroke-width="1" stroke-dasharray="4 4"/><line x1="111.9" y1="36.1" x2="154.6" y2="92.8" fill="none" stroke="currentColor" stroke-width="2"/><polygon points="160,100 151,95.5 158.2,90.1" fill="currentColor"/><text x="109.1" y="57.7" font-size="14" text-anchor="middle" fill="currentColor">θ₁</text><circle cx="112" cy="70" r="24" fill="none" stroke="#f08080" stroke-width="3" stroke-dasharray="6 4"/></svg>'
           - 0.6 を 1.2 でわる。
         paths:
           - [1 × 0.6 = 1.2 × sinθ₂, sinθ₂ = 0.5]
           - [法線に近づくので sin は 0.6 より小さい, 0.6 ÷ 1.2]
       - part: 今日
-        text: 屈折率 2 の物質から、屈折率 4/3 の水に光が出るとき、りんかい角を θc とする。sinθc はいくつか（小数第 2 位まで）。
-        svg: '<svg viewBox="0 0 320 200" xmlns="http://www.w3.org/2000/svg"><rect x="0" y="100" width="320" height="100" fill="#7fc8f8" fill-opacity="0.35" stroke="currentColor" stroke-width="2"/><line x1="0" y1="100" x2="320" y2="100" fill="none" stroke="currentColor" stroke-width="2"/><text x="46" y="22" font-size="14" text-anchor="middle" fill="currentColor">水 n=4/3</text><text x="46" y="192" font-size="14" text-anchor="middle" fill="currentColor">物質 n=2</text><line x1="160" y1="15" x2="160" y2="185" fill="none" stroke="currentColor" stroke-width="1" stroke-dasharray="4 4"/><line x1="106.5" y1="159.5" x2="154" y2="106.7" fill="none" stroke="currentColor" stroke-width="2"/><polygon points="160,100 157.3,109.7 150.6,103.7" fill="currentColor"/><text x="105.2" y="147.1" font-size="14" text-anchor="middle" fill="currentColor">θc</text></svg>'
+        id: "ac6e9b8b9e"
+        text: 屈折率 2 のぶっしつから、屈折率 4/3 の水に光が出るとき、りんかい角を θc とする。sinθc はいくつか（小数第 2 位まで）。
+        svg: '<svg viewBox="0 0 320 200" xmlns="http://www.w3.org/2000/svg"><rect x="0" y="100" width="320" height="100" fill="#7fc8f8" fill-opacity="0.35" stroke="currentColor" stroke-width="2"/><line x1="0" y1="100" x2="320" y2="100" fill="none" stroke="currentColor" stroke-width="2"/><text x="46" y="22" font-size="14" text-anchor="middle" fill="currentColor">水 n=4/3</text><text x="46" y="192" font-size="14" text-anchor="middle" fill="currentColor">ぶっしつ n=2</text><line x1="160" y1="15" x2="160" y2="185" fill="none" stroke="currentColor" stroke-width="1" stroke-dasharray="4 4"/><line x1="106.5" y1="159.5" x2="154" y2="106.7" fill="none" stroke="currentColor" stroke-width="2"/><polygon points="160,100 157.3,109.7 150.6,103.7" fill="currentColor"/><text x="105.2" y="147.1" font-size="14" text-anchor="middle" fill="currentColor">θc</text></svg>'
         choices: ['0.67', '1.5', '0.5']
         answer: '0.67'
         check: "math.floor((4 / 3) / 2 * 100 + 0.5) / 100"
         hints:
           - 屈折率の大きいほうから小さいほうに出るときのりんかい角。
-          - text: 物質側は 2 × sinθc 、水側は 4/3 × sin90° 。
-            svg: '<svg viewBox="0 0 320 200" xmlns="http://www.w3.org/2000/svg"><rect x="0" y="100" width="320" height="100" fill="#7fc8f8" fill-opacity="0.35" stroke="currentColor" stroke-width="2"/><line x1="0" y1="100" x2="320" y2="100" fill="none" stroke="currentColor" stroke-width="2"/><text x="46" y="22" font-size="14" text-anchor="middle" fill="currentColor">水 n=4/3</text><text x="46" y="192" font-size="14" text-anchor="middle" fill="currentColor">物質 n=2</text><line x1="160" y1="15" x2="160" y2="185" fill="none" stroke="currentColor" stroke-width="1" stroke-dasharray="4 4"/><line x1="113.2" y1="152" x2="154" y2="106.7" fill="none" stroke="currentColor" stroke-width="2"/><polygon points="160,100 157.3,109.7 150.6,103.7" fill="currentColor"/><text x="105.2" y="147.1" font-size="14" text-anchor="middle" fill="currentColor">θc</text><line x1="160" y1="100" x2="221" y2="100" fill="none" stroke="currentColor" stroke-width="2"/><polygon points="230,100 221,104.5 221,95.5" fill="currentColor"/><text x="234" y="104" font-size="14" text-anchor="middle" fill="currentColor">90°</text></svg>'
+          - text: ぶっしつ側は 2 × sinθc 、水側は 4/3 × sin90° 。
+            svg: '<svg viewBox="0 0 320 200" xmlns="http://www.w3.org/2000/svg"><rect x="0" y="100" width="320" height="100" fill="#7fc8f8" fill-opacity="0.35" stroke="currentColor" stroke-width="2"/><line x1="0" y1="100" x2="320" y2="100" fill="none" stroke="currentColor" stroke-width="2"/><text x="46" y="22" font-size="14" text-anchor="middle" fill="currentColor">水 n=4/3</text><text x="46" y="192" font-size="14" text-anchor="middle" fill="currentColor">ぶっしつ n=2</text><line x1="160" y1="15" x2="160" y2="185" fill="none" stroke="currentColor" stroke-width="1" stroke-dasharray="4 4"/><line x1="113.2" y1="152" x2="154" y2="106.7" fill="none" stroke="currentColor" stroke-width="2"/><polygon points="160,100 157.3,109.7 150.6,103.7" fill="currentColor"/><text x="105.2" y="147.1" font-size="14" text-anchor="middle" fill="currentColor">θc</text><line x1="160" y1="100" x2="221" y2="100" fill="none" stroke="currentColor" stroke-width="2"/><polygon points="230,100 221,104.5 221,95.5" fill="currentColor"/><text x="234" y="104" font-size="14" text-anchor="middle" fill="currentColor">90°</text></svg>'
           - 4/3 を 2 でわる。sin は 1 をこえない。
         paths:
           - [2 sinθc = 4/3, sinθc = 2/3 で約 0.67]
           - [小さいほうの n ÷ 大きいほうの n, (4/3) ÷ 2]
       - part: 今日
-        text: 焦点距離 12 cm のレンズから 20 cm の所に物を置いた。像はレンズから何 cm の所にできるか。
+        id: "3feae74a37"
+        text: しょうてんきょり 12 cm のレンズから 20 cm の所に物を置いた。像はレンズから何 cm の所にできるか。
         svg: '<svg viewBox="0 0 320 200" xmlns="http://www.w3.org/2000/svg"><line x1="10" y1="100" x2="312" y2="100" fill="none" stroke="currentColor" stroke-width="1"/><ellipse cx="130" cy="100" rx="9" ry="66" fill="#7fc8f8" fill-opacity="0.45" stroke="currentColor" stroke-width="2"/><circle cx="94" cy="100" r="3" fill="currentColor"/><circle cx="166" cy="100" r="3" fill="currentColor"/><text x="94" y="118" font-size="14" text-anchor="middle" fill="currentColor">F</text><text x="166" y="118" font-size="14" text-anchor="middle" fill="currentColor">F</text><line x1="70" y1="100" x2="70" y2="85" fill="none" stroke="currentColor" stroke-width="3"/><polygon points="70,76 74.5,85 65.5,85" fill="currentColor"/></svg>'
         choices: ['24', '30', '32']
         answer: '30'
@@ -1092,23 +1136,25 @@ days:
           - 12 と 20 の最小公倍数は 60 。引いた結果の分母と分子を入れかえたものが b 。
         paths:
           - [1/b = 5/60 − 3/60 = 1/30, b = 30 cm]
-          - [物が焦点と 2f のあいだにあるので、像は 2f より遠い, 24 cm より遠い]
+          - [物がしょうてんと 2f のあいだにあるので、像は 2f より遠い, 24 cm より遠い]
       - part: 今日
-        text: 対物レンズの焦点距離が 90 cm 、接眼レンズの焦点距離が 3 cm の望遠鏡がある。倍率は何倍か。
+        id: "b0a3201bef"
+        text: 対物レンズのしょうてんきょりが 90 cm 、せつがんレンズのしょうてんきょりが 3 cm の望遠鏡がある。ばいりつは何倍か。
         svg: '<svg viewBox="0 0 320 200" xmlns="http://www.w3.org/2000/svg"><line x1="10" y1="100" x2="310" y2="100" fill="none" stroke="currentColor" stroke-width="1"/><ellipse cx="60" cy="100" rx="8" ry="70" fill="#7fc8f8" fill-opacity="0.45" stroke="currentColor" stroke-width="2"/><ellipse cx="240" cy="100" rx="6" ry="30" fill="#7fc8f8" fill-opacity="0.45" stroke="currentColor" stroke-width="2"/><circle cx="200" cy="100" r="4" fill="currentColor"/><polyline points="10,80 60,80 200,100 240,105.7 305,105.7" fill="none" stroke="currentColor" stroke-width="1"/><polyline points="10,120 60,120 200,100 240,94.3 305,94.3" fill="none" stroke="currentColor" stroke-width="1"/><text x="60" y="28" font-size="14" text-anchor="middle" fill="currentColor">f₁ = 90 cm</text><text x="240" y="56" font-size="14" text-anchor="middle" fill="currentColor">f₂ = 3 cm</text></svg>'
         choices: ['30', '87', '93']
         answer: '30'
         check: "90 // 3"
         hints:
-          - 望遠鏡の倍率は、2 つの焦点距離の比。
-          - text: 倍率 M = f₁/f₂ 。大きいほうを小さいほうでわる。
+          - 望遠鏡のばいりつは、2 つのしょうてんきょりのひ。
+          - text: ばいりつ M = f₁/f₂ 。大きいほうを小さいほうでわる。
             svg: '<svg viewBox="0 0 320 200" xmlns="http://www.w3.org/2000/svg"><text x="160" y="90" font-size="16" text-anchor="middle" fill="currentColor">M = f₁ ÷ f₂</text><text x="160" y="130" font-size="16" text-anchor="middle" fill="currentColor">＝ 90 ÷ 3</text></svg>'
           - 90 ÷ 3 を計算する。
         paths:
           - [M = f₁/f₂, 90 ÷ 3 = 30]
-          - [倍率は比, 対物は接眼の 30 倍の焦点距離]
+          - [ばいりつはひ, 対物はせつがんの 30 倍のしょうてんきょり]
       - part: 今日
-        text: 光度 500 cd の点光源から 5 m はなれた、光に直角な面の照度は何 lx か。
+        id: "2e266e6086"
+        text: 光度 500 cd のてんこうげんから 5 m はなれた、光に直角な面の照度は何 lx か。
         svg: '<svg viewBox="0 0 320 200" xmlns="http://www.w3.org/2000/svg"><circle cx="50" cy="100" r="6" fill="currentColor"/><text x="50" y="126" font-size="14" text-anchor="middle" fill="currentColor">500 cd</text><line x1="50" y1="100" x2="220" y2="100" fill="none" stroke="currentColor" stroke-width="1"/><line x1="220" y1="60" x2="220" y2="140" fill="none" stroke="currentColor" stroke-width="3"/><line x1="64" y1="80" x2="206" y2="80" fill="none" stroke="currentColor" stroke-width="1"/><polygon points="216,80 206,85 206,75" fill="currentColor"/><polygon points="54,80 64,75 64,85" fill="currentColor"/><text x="135" y="70" font-size="14" text-anchor="middle" fill="currentColor">5 m</text></svg>'
         choices: ['20', '100', '2500']
         answer: '20'
@@ -1150,19 +1196,20 @@ days:
           - [r = 5 m, cosθ = 3/5, E = 500 × 0.6 ÷ 25 = 12 lx]
           - [真下の点の照度は 500 ÷ 9 で約 56 lx, 横にずれると、遠く、しかもななめになるので、それより小さい 12 lx]
       - part: 思い出す
-        text: ルーペ（焦点距離 f）で見る角の倍率は、25 ÷ f 。f = 2.5 cm のルーペの倍率は何倍か。
+        id: "1f5d52bc53"
+        text: ルーペ（しょうてんきょり f）で見る角のばいりつは、25 ÷ f 。f = 2.5 cm のルーペのばいりつは何倍か。
         svg: '<svg viewBox="0 0 320 200" xmlns="http://www.w3.org/2000/svg"><line x1="10" y1="100" x2="312" y2="100" fill="none" stroke="currentColor" stroke-width="1"/><ellipse cx="130" cy="100" rx="9" ry="66" fill="#7fc8f8" fill-opacity="0.45" stroke="currentColor" stroke-width="2"/><circle cx="110" cy="100" r="3" fill="currentColor"/><circle cx="150" cy="100" r="3" fill="currentColor"/><text x="110" y="118" font-size="14" text-anchor="middle" fill="currentColor">F</text><text x="150" y="118" font-size="14" text-anchor="middle" fill="currentColor">F</text><line x1="114" y1="100" x2="114" y2="93" fill="none" stroke="currentColor" stroke-width="3"/><polygon points="114,84 118.5,93 109.5,93" fill="currentColor"/><text x="160" y="24" font-size="14" text-anchor="middle" fill="currentColor">f = 2.5 cm</text></svg>'
         choices: ['10', '25', '62.5']
         answer: '10'
         check: "math.floor(25 / 2.5 + 0.5)"
         hints:
-          - 倍率 = 25 ÷ f 。
+          - ばいりつ = 25 ÷ f 。
           - text: f に 2.5 を入れる。
             svg: '<svg viewBox="0 0 320 200" xmlns="http://www.w3.org/2000/svg"><text x="160" y="90" font-size="16" text-anchor="middle" fill="currentColor">25 ÷ f</text><text x="160" y="130" font-size="16" text-anchor="middle" fill="currentColor">f = 2.5</text><circle cx="160" cy="86" r="4" fill="none" stroke="#f08080" stroke-width="3" stroke-dasharray="6 4"/></svg>'
           - 25 ÷ 2.5 を計算する。
         paths:
-          - [倍率 = 25/f, 25 ÷ 2.5 = 10 倍]
-          - [f が 5 cm なら 5 倍, f が半分なら倍率は 2 倍で 10 倍]
+          - [ばいりつ = 25/f, 25 ÷ 2.5 = 10 倍]
+          - [f が 5 cm なら 5 倍, f が半分ならばいりつは 2 倍で 10 倍]
       - part: 思い出す
         text: 屈折率 1.2 のガラスの中を 2.5 m 進む光の光路長は何 m か。
         svg: '<svg viewBox="0 0 320 200" xmlns="http://www.w3.org/2000/svg"><rect x="60" y="70" width="200" height="60" fill="#7fc8f8" fill-opacity="0.35" stroke="currentColor" stroke-width="2"/><line x1="30" y1="100" x2="280" y2="100" fill="none" stroke="currentColor" stroke-width="2"/><polygon points="290,100 280,105 280,95" fill="currentColor"/><line x1="70" y1="156" x2="250" y2="156" fill="none" stroke="currentColor" stroke-width="1"/><polygon points="260,156 250,161 250,151" fill="currentColor"/><polygon points="60,156 70,151 70,161" fill="currentColor"/><text x="160" y="180" font-size="14" text-anchor="middle" fill="currentColor">2.5 m</text><text x="160" y="60" font-size="14" text-anchor="middle" fill="currentColor">n = 1.2</text></svg>'
@@ -1179,19 +1226,20 @@ days:
           - [2.5 m の 1.2 倍, 3 m]
     extra:
       - part: 今日
-        text: 焦点距離 9 cm のレンズから 6 cm の所に物を置いた。像はどうできるか。
+        id: "e55848bf26"
+        text: しょうてんきょり 9 cm のレンズから 6 cm の所に物を置いた。像はどうできるか。
         svg: '<svg viewBox="0 0 320 200" xmlns="http://www.w3.org/2000/svg"><line x1="10" y1="100" x2="312" y2="100" fill="none" stroke="currentColor" stroke-width="1"/><ellipse cx="130" cy="100" rx="9" ry="66" fill="#7fc8f8" fill-opacity="0.45" stroke="currentColor" stroke-width="2"/><circle cx="94" cy="100" r="3" fill="currentColor"/><circle cx="166" cy="100" r="3" fill="currentColor"/><text x="94" y="118" font-size="14" text-anchor="middle" fill="currentColor">F</text><text x="166" y="118" font-size="14" text-anchor="middle" fill="currentColor">F</text><line x1="106" y1="100" x2="106" y2="85" fill="none" stroke="currentColor" stroke-width="3"/><polygon points="106,76 110.5,85 101.5,85" fill="currentColor"/></svg>'
         choices: ['レンズの手前 18 cm にできるきょ像', 'レンズの後ろ 18 cm にできる実像', 'レンズの後ろ 3.6 cm にできる実像']
         answer: 'レンズの手前 18 cm にできるきょ像'
         check: "'レンズの手前 18 cm にできるきょ像'"
         hints:
-          - 物が焦点の内側にあるかどうかを見る。
+          - 物がしょうてんの内側にあるかどうかを見る。
           - text: 1/b = 1/9 − 1/6 。引き算の答えが、プラスかマイナスかに注目。
             svg: '<svg viewBox="0 0 320 200" xmlns="http://www.w3.org/2000/svg"><line x1="10" y1="100" x2="312" y2="100" fill="none" stroke="currentColor" stroke-width="1"/><ellipse cx="130" cy="100" rx="9" ry="66" fill="#7fc8f8" fill-opacity="0.45" stroke="currentColor" stroke-width="2"/><circle cx="94" cy="100" r="3" fill="currentColor"/><circle cx="166" cy="100" r="3" fill="currentColor"/><text x="94" y="118" font-size="14" text-anchor="middle" fill="currentColor">F</text><text x="166" y="118" font-size="14" text-anchor="middle" fill="currentColor">F</text><line x1="106" y1="100" x2="106" y2="85" fill="none" stroke="currentColor" stroke-width="3"/><polygon points="106,76 110.5,85 101.5,85" fill="currentColor"/><line x1="106" y1="76" x2="130" y2="76" fill="none" stroke="currentColor" stroke-width="1"/><line x1="130" y1="76" x2="257.5" y2="161" fill="none" stroke="currentColor" stroke-width="1"/><line x1="130" y1="76" x2="58" y2="28" fill="none" stroke="currentColor" stroke-width="1" stroke-dasharray="4 4"/><line x1="106" y1="76" x2="221" y2="191" fill="none" stroke="currentColor" stroke-width="1"/><line x1="130" y1="100" x2="58" y2="28" fill="none" stroke="currentColor" stroke-width="1" stroke-dasharray="4 4"/></svg>'
           - 1/b が負になると、b も負。負の b は、物と同じ側にできるきょ像を表す。
         paths:
           - [1/b = 1/9 − 1/6 = −1/18, b = −18 cm なので手前のきょ像]
-          - [物が焦点の内側にあるので、きょ像, 物と同じ側にできる]
+          - [物がしょうてんの内側にあるので、きょ像, 物と同じ側にできる]
       - part: 今日
         text: 屈折率 1.5 のガラスから空気に、入しゃ角 40° で光を当てる。りんかい角は約 42° である。全反射は起こるか。
         svg: '<svg viewBox="0 0 320 200" xmlns="http://www.w3.org/2000/svg"><rect x="0" y="100" width="320" height="100" fill="#7fc8f8" fill-opacity="0.35" stroke="currentColor" stroke-width="2"/><line x1="0" y1="100" x2="320" y2="100" fill="none" stroke="currentColor" stroke-width="2"/><text x="46" y="22" font-size="14" text-anchor="middle" fill="currentColor">空気 n=1</text><text x="46" y="192" font-size="14" text-anchor="middle" fill="currentColor">ガラス n=1.5</text><line x1="160" y1="15" x2="160" y2="185" fill="none" stroke="currentColor" stroke-width="1" stroke-dasharray="4 4"/><line x1="108.6" y1="161.3" x2="154.2" y2="106.9" fill="none" stroke="currentColor" stroke-width="2"/><polygon points="160,100 157.7,109.8 150.8,104" fill="currentColor"/><text x="106.7" y="148.4" font-size="14" text-anchor="middle" fill="currentColor">40°</text></svg>'
@@ -1208,36 +1256,38 @@ days:
           - [sin40° は約 0.64, sinθc = 1/1.5 は約 0.67, 0.64 のほうが小さい]
 ri:
   - part: 離
+    id: "78902cb7a3"
     kinds: [総動員, 数]
     uses: [G-025]
-    text: すきまなく重ねた 3 つのすきとおった液体があります。下から、屈折率 5/3 で厚さ 8 cm、屈折率 5/4 で厚さ 9 cm、屈折率 13/12 で厚さ 10 cm で、いちばん上は空気にふれています。いちばん下の底の中心に小さな光を出すものがあり、あらゆる向きに光を出します。液面の上に、光を出すものの真上を中心にした円板をのせて、空気中に光が出ないようにします。円板の半径は、いちばん小さくて何 cm ですか。
-    svg: '<svg viewBox="0 0 320 200" xmlns="http://www.w3.org/2000/svg"><rect x="40" y="40" width="200" height="50" fill="#c8ccd6" fill-opacity="0.35" stroke="currentColor" stroke-width="2"/><rect x="40" y="90" width="200" height="45" fill="#7fc8f8" fill-opacity="0.35" stroke="currentColor" stroke-width="2"/><rect x="40" y="135" width="200" height="40" fill="#7bc96f" fill-opacity="0.35" stroke="currentColor" stroke-width="2"/><text x="46" y="68" font-size="13" text-anchor="start" fill="currentColor">屈折率 13/12　厚さ 10 cm</text><text x="46" y="117" font-size="13" text-anchor="start" fill="currentColor">屈折率 5/4　厚さ 9 cm</text><text x="46" y="160" font-size="13" text-anchor="start" fill="currentColor">屈折率 5/3　厚さ 8 cm</text><rect x="110" y="31" width="100" height="8" fill="#f3c969" fill-opacity="0.8" stroke="currentColor" stroke-width="2"/><text x="160" y="22" font-size="14" text-anchor="middle" fill="currentColor">円板</text><circle cx="160" cy="175" r="5" fill="currentColor"/><text x="160" y="192" font-size="13" text-anchor="middle" fill="currentColor">光を出すもの</text><text x="275" y="36" font-size="14" text-anchor="middle" fill="currentColor">空気</text><line x1="212" y1="35" x2="240" y2="35" fill="none" stroke="currentColor" stroke-width="2"/><polygon points="250,35 240,40 240,30" fill="currentColor"/><rect x="255" y="47" width="26" height="26" rx="6" fill="#c8ccd6" fill-opacity="0.5" stroke="currentColor" stroke-width="2"/><text x="268" y="65" font-size="16" text-anchor="middle" fill="currentColor">？</text><text x="268" y="82" font-size="13" text-anchor="middle" fill="currentColor">半径</text></svg>'
+    text: すきまなく重ねた 3 つのすきとおったえきたいがあります。下から、屈折率 5/3 であつさ 8 cm、屈折率 5/4 であつさ 9 cm、屈折率 13/12 であつさ 10 cm で、いちばん上は空気にふれています。いちばん下の底の中心に小さな光を出すものがあり、あらゆる向きに光を出します。えきめんの上に、光を出すものの真上を中心にした円板をのせて、空気中に光が出ないようにします。円板の半径は、いちばん小さくて何 cm ですか。
+    svg: '<svg viewBox="0 0 320 200" xmlns="http://www.w3.org/2000/svg"><rect x="40" y="40" width="200" height="50" fill="#c8ccd6" fill-opacity="0.35" stroke="currentColor" stroke-width="2"/><rect x="40" y="90" width="200" height="45" fill="#7fc8f8" fill-opacity="0.35" stroke="currentColor" stroke-width="2"/><rect x="40" y="135" width="200" height="40" fill="#7bc96f" fill-opacity="0.35" stroke="currentColor" stroke-width="2"/><text x="46" y="68" font-size="13" text-anchor="start" fill="currentColor">屈折率 13/12　あつさ 10 cm</text><text x="46" y="117" font-size="13" text-anchor="start" fill="currentColor">屈折率 5/4　あつさ 9 cm</text><text x="46" y="160" font-size="13" text-anchor="start" fill="currentColor">屈折率 5/3　あつさ 8 cm</text><rect x="110" y="31" width="100" height="8" fill="#f3c969" fill-opacity="0.8" stroke="currentColor" stroke-width="2"/><text x="160" y="22" font-size="14" text-anchor="middle" fill="currentColor">円板</text><circle cx="160" cy="175" r="5" fill="currentColor"/><text x="160" y="192" font-size="13" text-anchor="middle" fill="currentColor">光を出すもの</text><text x="275" y="36" font-size="14" text-anchor="middle" fill="currentColor">空気</text><line x1="212" y1="35" x2="240" y2="35" fill="none" stroke="currentColor" stroke-width="2"/><polygon points="250,35 240,40 240,30" fill="currentColor"/><rect x="255" y="47" width="26" height="26" rx="6" fill="#c8ccd6" fill-opacity="0.5" stroke="currentColor" stroke-width="2"/><text x="268" y="65" font-size="16" text-anchor="middle" fill="currentColor">？</text><text x="268" y="82" font-size="13" text-anchor="middle" fill="currentColor">半径</text></svg>'
     answer: 42
     check: "math.floor(sum(d / math.sqrt(n * n - 1) for d, n in [(8, 5 / 3), (9, 5 / 4), (10, 13 / 12)]) + 0.5)"
     hints:
-      - 円板のふちにとどく光は、空気に出られるか出られないかのぎりぎりの光です。いちばん上の液から空気に出るぎりぎりの角は、どんな角でしょう。
-      - text: 3 つの液のどこでも、屈折率 × 角の sin は同じ数です。その数は、空気に出るぎりぎりでは 1 です。いちばん下の液でその光は、たて 4、横 3 の直角三角形の向きに進みます。
+      - 円板のふちにとどく光は、空気に出られるか出られないかのぎりぎりの光です。いちばん上のえきから空気に出るぎりぎりの角は、どんな角でしょう。
+      - text: 3 つのえきのどこでも、屈折率 × 角の sin は同じ数です。その数は、空気に出るぎりぎりでは 1 です。いちばん下のえきでその光は、たて 4、横 3 の直角三角形の向きに進みます。
         svg: '<svg viewBox="0 0 320 200" xmlns="http://www.w3.org/2000/svg"><rect x="40" y="135" width="200" height="40" fill="#7bc96f" fill-opacity="0.35" stroke="currentColor" stroke-width="2"/><circle cx="160" cy="175" r="5" fill="currentColor"/><line x1="160" y1="175" x2="190" y2="135" fill="none" stroke="#d9534f" stroke-width="3"/><line x1="160" y1="135" x2="190" y2="135" fill="none" stroke="currentColor" stroke-width="1" stroke-dasharray="4 4"/><line x1="160" y1="135" x2="160" y2="175" fill="none" stroke="currentColor" stroke-width="1" stroke-dasharray="4 4"/><text x="148" y="160" font-size="13" text-anchor="middle" fill="currentColor">たて</text><text x="176" y="128" font-size="13" text-anchor="middle" fill="currentColor">横</text><circle cx="175" cy="155" r="28" fill="none" stroke="#f08080" stroke-width="3" stroke-dasharray="6 4"/></svg>'
-      - 2 つめと 3 つめの液でも、屈折率 × 角の sin = 1 から、角の sin を出します。たてと横の比が出れば、液ごとの横のずれを足せます。
+      - 2 つめと 3 つめのえきでも、屈折率 × 角の sin = 1 から、角の sin を出します。たてと横のひが出れば、えきごとの横のずれを足せます。
     paths:
-      - [空気に出るぎりぎりでは、空気の屈折率 1 × sin 90° = 1 なので、どの液でも屈折率 × 角の sin = 1, 3 つの液で sin は 3/5、4/5、12/13 で、たてと横の比は 4 対 3、3 対 4、5 対 12, 横のずれは 8 × 3/4 = 6、9 × 4/3 = 12、10 × 12/5 = 24, 円板の半径は 6 + 12 + 24 = 42 cm]
-      - [円板のふちから光を逆にたどる。空気中を水平にすれすれに来て、液面で曲がって入る, 液ごとの屈折率 n で、角の sin は 1 ÷ n で、三平方の定理からたて：横 = √(n × n − 1)：1, 横のずれ = 厚さ ÷ √(n × n − 1) なので、8 ÷ 4/3 = 6、9 ÷ 3/4 = 12、10 ÷ 5/12 = 24, 合わせて 42 cm]
+      - [空気に出るぎりぎりでは、空気の屈折率 1 × sin 90° = 1 なので、どのえきでも屈折率 × 角の sin = 1, 3 つのえきで sin は 3/5、4/5、12/13 で、たてと横のひは 4 対 3、3 対 4、5 対 12, 横のずれは 8 × 3/4 = 6、9 × 4/3 = 12、10 × 12/5 = 24, 円板の半径は 6 + 12 + 24 = 42 cm]
+      - [円板のふちから光をぎゃくにたどる。空気中を水平にすれすれに来て、えきめんで曲がって入る, えきごとの屈折率 n で、角の sin は 1 ÷ n で、三平方の定理からたて：横 = √(n × n − 1)：1, 横のずれ = あつさ ÷ √(n × n − 1) なので、8 ÷ 4/3 = 6、9 ÷ 3/4 = 12、10 ÷ 5/12 = 24, 合わせて 42 cm]
     note: S01 不変量（どの液でも屈折率 × 角の sin が同じ）、S07 極端な場合（空気に出るぎりぎりの光）、S25 三角比（P-023 の全反射と臨界角、G-025）。種なし。1 つの液なら臨界角の 1 回の手順で終わるが、3 つの液で液のさかい目の曲がり方を 1 つずつ追うと、角がつながらず手数が多くなる。境で変わらない値（屈折率 × sin）を見つけ、空気の側の 1 を全部の層にあてる一手が要る。どの液も空気に出るぎりぎりの角の sin が 3/5、4/5、12/13 で、3-4-5 と 5-12-13 の直角三角形になるように屈折率を選んだ。まん中の液の屈折率が小さくても、まわりの液のさかい目で全反射はおきない。
   - part: 離
+    id: "5ff2c0cf9e"
     kinds: [総動員, 読み取り]
     uses: [G-025]
-    text: 物とスクリーンを置き、そのあいだで 1 まいの凸レンズを動かすと、スクリーンにくっきりした像がうつるレンズの位置が 2 か所あります。物の高さは分かりませんが、像の高さは、一方の位置では 32 cm、もう一方の位置では 2 cm でした。次に、物は動かさずにスクリーンだけを 27 cm 動かして、またレンズを動かしてさがすと、くっきりした像がうつるレンズの位置は 1 か所だけになりました。図の長さは正確ではありません。このレンズの焦点距離は何 cm ですか。
+    text: 物とスクリーンを置き、そのあいだで 1 まいのとつレンズを動かすと、スクリーンにくっきりした像がうつるレンズの位置が 2 か所あります。物の高さは分かりませんが、像の高さは、一方の位置では 32 cm、もう一方の位置では 2 cm でした。次に、物は動かさずにスクリーンだけを 27 cm 動かして、またレンズを動かしてさがすと、くっきりした像がうつるレンズの位置は 1 か所だけになりました。図の長さはせいかくではありません。このレンズのしょうてんきょりは何 cm ですか。
     svg: '<svg viewBox="0 0 320 200" xmlns="http://www.w3.org/2000/svg"><line x1="30" y1="150" x2="290" y2="150" fill="none" stroke="currentColor" stroke-width="1"/><line x1="40" y1="150" x2="40" y2="110" fill="none" stroke="currentColor" stroke-width="3"/><polygon points="40,100 45,110 35,110" fill="currentColor"/><text x="40" y="172" font-size="14" text-anchor="middle" fill="currentColor">物</text><rect x="250" y="80" width="8" height="70" fill="#c8ccd6" fill-opacity="0.8" stroke="currentColor" stroke-width="2"/><text x="254" y="172" font-size="13" text-anchor="middle" fill="currentColor">スクリーン</text><ellipse cx="100" cy="120" rx="8" ry="40" fill="#7fc8f8" fill-opacity="0.6" stroke="currentColor" stroke-width="2"/><ellipse cx="185" cy="120" rx="8" ry="40" fill="#7fc8f8" fill-opacity="0.3" stroke="currentColor" stroke-width="2" stroke-dasharray="5 4"/><text x="100" y="66" font-size="13" text-anchor="middle" fill="currentColor">位置 1</text><text x="185" y="66" font-size="13" text-anchor="middle" fill="currentColor">位置 2</text><line x1="228" y1="52" x2="280" y2="52" fill="none" stroke="currentColor" stroke-width="2"/><polygon points="290,52 280,57 280,47" fill="currentColor"/><polygon points="218,52 228,47 228,57" fill="currentColor"/><text x="254" y="40" font-size="13" text-anchor="middle" fill="currentColor">27 cm 動かす</text><text x="160" y="192" font-size="13" text-anchor="middle" fill="currentColor">像の高さ 32 cm と 2 cm</text><rect x="129" y="99" width="26" height="26" rx="6" fill="#c8ccd6" fill-opacity="0.5" stroke="currentColor" stroke-width="2"/><text x="142" y="117" font-size="16" text-anchor="middle" fill="currentColor">？</text></svg>'
     answer: 12
     check: "math.floor(sum(a * b / (a + b) for a in range(1, 500) for b in [a * math.sqrt(32 / 2)] for s in [27, -27] if abs(a + b - s - 4 * a * b / (a + b)) < 1e-9) + 0.5)"
     hints:
-      - 物の高さが分からないので、そのままでは倍率が出ません。くっきりうつる 2 つの位置で、物からレンズまでの長さと、レンズからスクリーンまでの長さに、どんな関係があるでしょう。
-      - text: 1 つめの位置で、物からレンズまでを a、レンズからスクリーンまでを b とすると、2 つめの位置では a と b がいれかわります。ですから 2 つの倍率をかけると 1 になり、物の高さと、b が a の何倍かが分かります。
+      - 物の高さが分からないので、そのままではばいりつが出ません。くっきりうつる 2 つの位置で、物からレンズまでの長さと、レンズからスクリーンまでの長さに、どんな関係があるでしょう。
+      - text: 1 つめの位置で、物からレンズまでを a、レンズからスクリーンまでを b とすると、2 つめの位置では a と b がいれかわります。ですから 2 つのばいりつをかけると 1 になり、物の高さと、b が a の何倍かが分かります。
         svg: '<svg viewBox="0 0 320 200" xmlns="http://www.w3.org/2000/svg"><line x1="30" y1="150" x2="290" y2="150" fill="none" stroke="currentColor" stroke-width="1"/><line x1="40" y1="150" x2="40" y2="110" fill="none" stroke="currentColor" stroke-width="3"/><polygon points="40,100 45,110 35,110" fill="currentColor"/><rect x="250" y="80" width="8" height="70" fill="#c8ccd6" fill-opacity="0.8" stroke="currentColor" stroke-width="2"/><ellipse cx="100" cy="120" rx="8" ry="40" fill="#7fc8f8" fill-opacity="0.6" stroke="currentColor" stroke-width="2"/><ellipse cx="185" cy="120" rx="8" ry="40" fill="#7fc8f8" fill-opacity="0.3" stroke="currentColor" stroke-width="2" stroke-dasharray="5 4"/><line x1="50" y1="176" x2="90" y2="176" fill="none" stroke="currentColor" stroke-width="2"/><polygon points="100,176 90,181 90,171" fill="currentColor"/><polygon points="40,176 50,171 50,181" fill="currentColor"/><text x="70" y="170" font-size="14" text-anchor="middle" fill="currentColor">a</text><line x1="110" y1="188" x2="240" y2="188" fill="none" stroke="currentColor" stroke-width="2"/><polygon points="250,188 240,193 240,183" fill="currentColor"/><polygon points="100,188 110,183 110,193" fill="currentColor"/><text x="175" y="182" font-size="14" text-anchor="middle" fill="currentColor">b</text><line x1="50" y1="76" x2="175" y2="76" fill="none" stroke="currentColor" stroke-width="2"/><polygon points="185,76 175,81 175,71" fill="currentColor"/><polygon points="40,76 50,71 50,81" fill="currentColor"/><text x="112" y="70" font-size="14" text-anchor="middle" fill="currentColor">b</text><line x1="195" y1="90" x2="240" y2="90" fill="none" stroke="currentColor" stroke-width="2"/><polygon points="250,90 240,95 240,85" fill="currentColor"/><polygon points="185,90 195,85 195,95" fill="currentColor"/><text x="218" y="84" font-size="14" text-anchor="middle" fill="currentColor">a</text></svg>'
-      - くっきりうつる位置が 1 か所だけになるのは、2 つの位置が重なって a と b が等しくなるときです。そのときの物からスクリーンまでの長さは、焦点距離の何倍でしょう。スクリーンを遠ざけたのか近づけたのかも考えます。
+      - くっきりうつる位置が 1 か所だけになるのは、2 つの位置が重なって a と b が等しくなるときです。そのときの物からスクリーンまでの長さは、しょうてんきょりの何倍でしょう。スクリーンを遠ざけたのか近づけたのかも考えます。
     paths:
-      - [2 つの位置で、物からレンズまでの長さ a とレンズからスクリーンまでの長さ b がいれかわる（レンズの式が a と b で同じ形なので）, 倍率は b ÷ a と a ÷ b でかけると 1。物の高さを h とすると (32 ÷ h) × (2 ÷ h) = 1 なので h × h = 64 で h = 8 cm。大きい像の倍率は 32 ÷ 8 = 4 なので b = 4 × a, 物からスクリーンまでは a + b = 5 × a で、焦点距離 = a × b ÷ (a + b) = 4 × a ÷ 5, 1 か所だけになるのは 2 つの位置が重なり a = b のときで、レンズの式から a = b = 焦点距離の 2 倍、物からスクリーンまでは焦点距離の 4 倍 = 16 × a ÷ 5。5 × a より短いので、スクリーンは物に近づけた（遠ざけると 2 か所のまま）, 5 × a − 27 = 16 × a ÷ 5 から 9 × a ÷ 5 = 27 で a = 15 cm、b = 60 cm, 焦点距離 = 15 × 60 ÷ 75 = 12 cm]
-      - [焦点距離を f とする。像の高さの比 32 ÷ 2 = 16 は、倍率の比 (b ÷ a) ÷ (a ÷ b) = (b ÷ a) × (b ÷ a) に等しいので b ÷ a = 4, レンズの式 1 ÷ a + 1 ÷ b = 1 ÷ f に b = 4 × a を入れると 5 ÷ (4 × a) = 1 ÷ f で a = 5 × f ÷ 4、b = 5 × f、物からスクリーンまで 25 × f ÷ 4, 物からスクリーンまでが 4 × f より短いと像はうつらず、長いと 2 か所、ちょうど 4 × f で 1 か所（a = b = 2 × f）, 25 × f ÷ 4 は 4 × f より 9 × f ÷ 4 長いので、近づけた 27 cm がこれに等しく 9 × f ÷ 4 = 27 で f = 12 cm]
+      - [2 つの位置で、物からレンズまでの長さ a とレンズからスクリーンまでの長さ b がいれかわる（レンズの式が a と b で同じ形なので）, ばいりつは b ÷ a と a ÷ b でかけると 1。物の高さを h とすると (32 ÷ h) × (2 ÷ h) = 1 なので h × h = 64 で h = 8 cm。大きい像のばいりつは 32 ÷ 8 = 4 なので b = 4 × a, 物からスクリーンまでは a + b = 5 × a で、しょうてんきょり = a × b ÷ (a + b) = 4 × a ÷ 5, 1 か所だけになるのは 2 つの位置が重なり a = b のときで、レンズの式から a = b = しょうてんきょりの 2 倍、物からスクリーンまではしょうてんきょりの 4 倍 = 16 × a ÷ 5。5 × a より短いので、スクリーンは物に近づけた（遠ざけると 2 か所のまま）, 5 × a − 27 = 16 × a ÷ 5 から 9 × a ÷ 5 = 27 で a = 15 cm、b = 60 cm, しょうてんきょり = 15 × 60 ÷ 75 = 12 cm]
+      - [しょうてんきょりを f とする。像の高さのひ 32 ÷ 2 = 16 は、ばいりつのひ (b ÷ a) ÷ (a ÷ b) = (b ÷ a) × (b ÷ a) に等しいので b ÷ a = 4, レンズの式 1 ÷ a + 1 ÷ b = 1 ÷ f に b = 4 × a を入れると 5 ÷ (4 × a) = 1 ÷ f で a = 5 × f ÷ 4、b = 5 × f、物からスクリーンまで 25 × f ÷ 4, 物からスクリーンまでが 4 × f より短いと像はうつらず、長いと 2 か所、ちょうど 4 × f で 1 か所（a = b = 2 × f）, 25 × f ÷ 4 は 4 × f より 9 × f ÷ 4 長いので、近づけた 27 cm がこれに等しく 9 × f ÷ 4 = 27 で f = 12 cm]
     note: S03 対称性（レンズの 2 つの位置で、物からレンズまでとレンズからスクリーンまでがいれかわる）、S04 言いかえ（高さの比を倍率の比に）、S07 極端な場合（2 つの位置が重なって 1 か所になる）。種なし（P-023 の「レンズの式と倍率」の 2 つの位置の考え方）。D-201 で一段上げた：はじめの形は 2 つの位置のあいだの長さ（30 cm）を文に書いていて、高さの比から b ÷ a を出して引き算するだけの手順で解けた。ここでは 2 つの位置のあいだの長さを書かず、スクリーンを 27 cm 動かすと 1 か所だけになる、とした。a と b がいれかわる対称の重なる所（a = b、物からスクリーンまでが焦点距離の 4 倍）を見る一手と、動かした向き（遠ざけると 2 か所のまま、近づけたときだけ合う）を決める一手が要る。高さの比 16 から b ÷ a = 4、物からスクリーンまで 5a、焦点距離 4a ÷ 5 で、5a − 27 = 16a ÷ 5 から a = 15、b = 60、焦点距離 12 cm（はじめ 75 cm、動かしたあと 48 cm = 4 × 12）。
   - part: 離
     kinds: [道筋, 数]
@@ -1248,7 +1298,7 @@ ri:
     check: "math.floor(2 * min([math.hypot(27 + x, 30) / 4 + math.hypot(40 - x, 36) / 3 for x in [i / 100 for i in range(0, 4001)]] + [math.hypot(27, 30 + y) / 4 + math.hypot(40, 36 - y) / 3 for y in [i / 100 for i in range(0, 3601)]]) + 0.5) / 2"
     hints:
       - 水に入る P は、O から右へのびる水ぎわにも、O から下へのびる水ぎわにもとれます。2 つに分けて、それぞれでいちばん短い時間を考えます。
-      - text: どちらの水ぎわでも、いちばん短い時間になる P では、光が曲がるときと同じように、水ぎわに直角に立てた線との角の sin の比が、速さの比 4 対 3 になります。3、4、5 の直角三角形の仲間で、sin が 4/5 と 3/5 になる向きをさがします。
+      - text: どちらの水ぎわでも、いちばん短い時間になる P では、光が曲がるときと同じように、水ぎわに直角に立てた線との角の sin のひが、速さのひ 4 対 3 になります。3、4、5 の直角三角形の仲間で、sin が 4/5 と 3/5 になる向きをさがします。
         svg: '<svg viewBox="0 0 320 200" xmlns="http://www.w3.org/2000/svg"><rect x="10" y="5" width="300" height="190" fill="#f3c969" fill-opacity="0.4" stroke="currentColor" stroke-width="2"/><rect x="120" y="92" width="190" height="103" fill="#7fc8f8" fill-opacity="0.5" stroke="currentColor" stroke-width="2"/><line x1="120" y1="92" x2="310" y2="92" fill="none" stroke="currentColor" stroke-width="3"/><line x1="120" y1="92" x2="120" y2="195" fill="none" stroke="currentColor" stroke-width="3"/><circle cx="120" cy="92" r="4" fill="currentColor"/><text x="108" y="108" font-size="15" text-anchor="middle" fill="currentColor">O</text><circle cx="58" cy="23" r="5" fill="currentColor"/><text x="46" y="27" font-size="15" text-anchor="middle" fill="currentColor">A</text><circle cx="212" cy="175" r="5" fill="currentColor"/><text x="226" y="180" font-size="15" text-anchor="middle" fill="currentColor">B</text><line x1="58" y1="23" x2="160" y2="92" fill="none" stroke="#d9534f" stroke-width="3"/><line x1="160" y1="92" x2="212" y2="175" fill="none" stroke="#d9534f" stroke-width="3"/><line x1="160" y1="50" x2="160" y2="140" fill="none" stroke="currentColor" stroke-width="1" stroke-dasharray="4 4"/><line x1="58" y1="23" x2="120" y2="112" fill="none" stroke="#d9534f" stroke-width="3" stroke-dasharray="6 4"/><line x1="120" y1="112" x2="212" y2="175" fill="none" stroke="#d9534f" stroke-width="3" stroke-dasharray="6 4"/><line x1="80" y1="112" x2="170" y2="112" fill="none" stroke="currentColor" stroke-width="1" stroke-dasharray="4 4"/><circle cx="160" cy="92" r="18" fill="none" stroke="#f08080" stroke-width="3" stroke-dasharray="6 4"/><circle cx="120" cy="112" r="18" fill="none" stroke="#f08080" stroke-width="3" stroke-dasharray="6 4"/></svg>'
       - 2 つの道で、走る長さと泳ぐ長さをそれぞれ出してくらべます。同じ 2 つの長さなら、速く進める陸で長いほうを行くと、時間が短くなります。
     paths:

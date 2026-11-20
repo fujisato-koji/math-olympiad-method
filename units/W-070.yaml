@@ -6,33 +6,37 @@ days:
   - day: 1
     items:
       - part: 見本
-        text: "岩は、温度の変化やこおった水、木の根のはたらきでひびが入り、少しずつくだけます。これを風化といいます。風化でできたつぶに、落ち葉や虫のあとがまざって、土壌（どじょう）になります。土をたてにきると、色やつぶのちがいで層（そう）に分かれています。"
-        svg: '<svg viewBox="0 0 320 200" xmlns="http://www.w3.org/2000/svg" font-size="14"><g stroke="currentColor" stroke-width="2"><ellipse cx="34" cy="31" rx="13" ry="5" fill="#7bc96f" fill-opacity=".6"/><ellipse cx="70" cy="33" rx="13" ry="5" fill="#f3c969" fill-opacity=".6"/><ellipse cx="106" cy="31" rx="13" ry="5" fill="#7bc96f" fill-opacity=".6"/><rect x="16" y="40" width="134" height="40" fill="#6b5344" fill-opacity=".75"/><rect x="16" y="80" width="134" height="35" fill="#c9a36b" fill-opacity=".7"/><rect x="16" y="115" width="134" height="35" fill="#c8ccd6" fill-opacity=".6"/><rect x="16" y="150" width="134" height="36" fill="#8f96a6" fill-opacity=".8"/><polygon points="28,128 40,119 50,131 38,142" fill="#8f96a6" fill-opacity=".8"/><polygon points="66,126 82,120 90,134 74,142" fill="#8f96a6" fill-opacity=".8"/><polygon points="108,124 124,119 134,132 118,142" fill="#8f96a6" fill-opacity=".8"/><path d="M50 150 L60 166 L52 186 M100 150 L92 168 L104 186" fill="none"/><path d="M292 160 V60" fill="none"/><polygon points="292,44 282,62 302,62" fill="currentColor"/></g><g fill="currentColor"><text x="160" y="36">落ち葉</text><text x="160" y="64">黒い土</text><text x="160" y="102">茶色い土</text><text x="160" y="138">岩のかけら</text><text x="160" y="172">もとの岩</text><text x="292" y="178" text-anchor="middle">風化が</text><text x="292" y="194" text-anchor="middle">すすむ</text></g></svg>'
-        explain: "風化は、岩がその場所でひびが入り、小さくくだけることです。川や雨がけずってはこぶはたらきとはちがいます。くだけたつぶに、落ち葉や虫や根のあとがくさってまざり、水と空気もふくんで土になります。上のほうは生き物のあとが多くて黒っぽく、下にいくほどもとの岩に近くなります。層の名前は、上から落ち葉の層、黒い土の層、茶色い土の層、岩のかけらの層、もとの岩です。"
+        id: "07286a4f4d"
+        text: "岩は、おんどの へんかや こおった 水、木の ねの はたらきで ひびが 入り、少しずつ くだけます。これを ふうかと いいます。ふうかで できた つぶに、おちばや 虫の あとが まざって、どじょうに なります。土を たてに きると、色や つぶの ちがいで そうに 分かれています。"
+        svg: '<svg viewBox="0 0 320 200" xmlns="http://www.w3.org/2000/svg" font-size="14"><g stroke="currentColor" stroke-width="2"><ellipse cx="34" cy="31" rx="13" ry="5" fill="#7bc96f" fill-opacity=".6"/><ellipse cx="70" cy="33" rx="13" ry="5" fill="#f3c969" fill-opacity=".6"/><ellipse cx="106" cy="31" rx="13" ry="5" fill="#7bc96f" fill-opacity=".6"/><rect x="16" y="40" width="134" height="40" fill="#6b5344" fill-opacity=".75"/><rect x="16" y="80" width="134" height="35" fill="#c9a36b" fill-opacity=".7"/><rect x="16" y="115" width="134" height="35" fill="#c8ccd6" fill-opacity=".6"/><rect x="16" y="150" width="134" height="36" fill="#8f96a6" fill-opacity=".8"/><polygon points="28,128 40,119 50,131 38,142" fill="#8f96a6" fill-opacity=".8"/><polygon points="66,126 82,120 90,134 74,142" fill="#8f96a6" fill-opacity=".8"/><polygon points="108,124 124,119 134,132 118,142" fill="#8f96a6" fill-opacity=".8"/><path d="M50 150 L60 166 L52 186 M100 150 L92 168 L104 186" fill="none"/><path d="M292 160 V60" fill="none"/><polygon points="292,44 282,62 302,62" fill="currentColor"/></g><g fill="currentColor"><text x="160" y="36">おちば</text><text x="160" y="64">黒い土</text><text x="160" y="102">茶色い土</text><text x="160" y="138">岩のかけら</text><text x="160" y="172">もとの岩</text><text x="292" y="178" text-anchor="middle">ふうかが</text><text x="292" y="194" text-anchor="middle">すすむ</text></g></svg>'
+        explain: "ふうかは、岩が その ばしょで ひびが 入り、小さく くだける ことです。川や 雨が けずって はこぶ はたらきとは ちがいます。くだけた つぶに、おちばや 虫や ねの あとが くさって まざり、水と 空気も ふくんで 土に なります。上の ほうは 生きものの あとが 多くて 黒っぽく、下に いくほど もとの 岩に 近くなります。そうの 名前は、上から おちばの そう、黒い 土の そう、茶色い 土の そう、岩の かけらの そう、もとの 岩です。"
       - part: 今日
-        text: "岩が風化しているようすはどれでしょう。"
-        svg: '<svg viewBox="0 0 320 200" xmlns="http://www.w3.org/2000/svg" font-size="13"><g stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="154" height="94" rx="8" fill="none" stroke-opacity=".35"/><rect x="163" y="3" width="154" height="94" rx="8" fill="none" stroke-opacity=".35"/><rect x="3" y="103" width="154" height="94" rx="8" fill="none" stroke-opacity=".35"/><rect x="163" y="103" width="154" height="94" rx="8" fill="none" stroke-opacity=".35"/><polygon points="40,66 46,32 78,24 108,38 112,66" fill="#c8ccd6" fill-opacity=".7"/><path d="M76 25 L70 40 L82 48 L74 66" fill="none"/><ellipse cx="76" cy="46" rx="4" ry="3" fill="#7fc8f8" fill-opacity=".8"/><path d="M180 62 q10 -8 20 0 t20 0 t20 0 t20 0" fill="none" stroke="#7fc8f8" stroke-width="3"/><circle cx="205" cy="48" r="7" fill="#c8ccd6" fill-opacity=".8"/><circle cx="228" cy="52" r="5" fill="#c8ccd6" fill-opacity=".8"/><polygon points="256,40 272,48 256,56" fill="currentColor"/><polygon points="24,172 124,134 124,172" fill="#c9a36b" fill-opacity=".6"/><path d="M44 112 l-6 12 M68 112 l-6 12 M92 112 l-6 12" stroke="#7fc8f8" stroke-width="3" fill="none"/><polygon points="190,176 232,130 274,176" fill="#f08080" fill-opacity=".5"/><path d="M232 130 l-8 -14 M232 130 l0 -18 M232 130 l8 -14" fill="none"/><circle cx="222" cy="112" r="4" fill="#c8ccd6"/><circle cx="244" cy="110" r="4" fill="#c8ccd6"/></g><g fill="currentColor"><text x="10" y="90">ア われ目の水がこおる</text><text x="170" y="90">イ 川が石をはこぶ</text><text x="10" y="190">ウ 雨が土を流す</text><text x="170" y="190">エ 火山から岩が出る</text></g></svg>'
+        id: "c7e5d38eda"
+        text: "岩が ふうかして いる ようすは どれでしょう。"
+        svg: '<svg viewBox="0 0 320 200" xmlns="http://www.w3.org/2000/svg" font-size="13"><g stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="154" height="94" rx="8" fill="none" stroke-opacity=".35"/><rect x="163" y="3" width="154" height="94" rx="8" fill="none" stroke-opacity=".35"/><rect x="3" y="103" width="154" height="94" rx="8" fill="none" stroke-opacity=".35"/><rect x="163" y="103" width="154" height="94" rx="8" fill="none" stroke-opacity=".35"/><polygon points="40,66 46,32 78,24 108,38 112,66" fill="#c8ccd6" fill-opacity=".7"/><path d="M76 25 L70 40 L82 48 L74 66" fill="none"/><ellipse cx="76" cy="46" rx="4" ry="3" fill="#7fc8f8" fill-opacity=".8"/><path d="M180 62 q10 -8 20 0 t20 0 t20 0 t20 0" fill="none" stroke="#7fc8f8" stroke-width="3"/><circle cx="205" cy="48" r="7" fill="#c8ccd6" fill-opacity=".8"/><circle cx="228" cy="52" r="5" fill="#c8ccd6" fill-opacity=".8"/><polygon points="256,40 272,48 256,56" fill="currentColor"/><polygon points="24,172 124,134 124,172" fill="#c9a36b" fill-opacity=".6"/><path d="M44 112 l-6 12 M68 112 l-6 12 M92 112 l-6 12" stroke="#7fc8f8" stroke-width="3" fill="none"/><polygon points="190,176 232,130 274,176" fill="#f08080" fill-opacity=".5"/><path d="M232 130 l-8 -14 M232 130 l0 -18 M232 130 l8 -14" fill="none"/><circle cx="222" cy="112" r="4" fill="#c8ccd6"/><circle cx="244" cy="110" r="4" fill="#c8ccd6"/></g><g fill="currentColor"><text x="10" y="90">ア われ目の水がこおる</text><text x="170" y="90">イ 川が石をはこぶ</text><text x="10" y="190">ウ 雨が土をながす</text><text x="170" y="190">エ 火山から岩が出る</text></g></svg>'
         choices: [ア, イ, ウ, エ]
         answer: ア
         check: "'ア'"
         hints:
-          - "風化は、岩に何がおきることだったかな。見本を思い出そう。"
-          - text: "見本にあった、岩をくだくもとを思い出そう。"
+          - "ふうかは、岩に 何が おきる ことだったかな。見本を 思い出そう。"
+          - text: "見本に あった、岩を くだく もとを 思い出そう。"
             svg: '<svg viewBox="0 0 320 200" xmlns="http://www.w3.org/2000/svg" font-size="14"><g stroke="currentColor" stroke-width="2"><circle cx="38" cy="66" r="14" fill="#f3c969" fill-opacity=".7"/><circle cx="78" cy="66" r="14" fill="#b39ddb" fill-opacity=".6"/><polygon points="160,40 180,52 180,78 160,90 140,78 140,52" fill="#7fc8f8" fill-opacity=".6"/><polygon points="228,94 232,56 258,46 290,58 292,94" fill="#c8ccd6" fill-opacity=".7"/><path d="M262 20 V48 L256 66 M262 48 L274 68" fill="none" stroke="#c9a36b" stroke-width="4"/></g><g fill="currentColor"><text x="160" y="150" text-anchor="middle">岩をくだくもと</text></g></svg>'
-          - "火山のふんかは、岩をくだくはなしではなく、岩ができるほうのはなし。"
+          - "火山の ふんかは、岩を くだく はなしではなく、岩が できる ほうの はなし。"
       - part: 今日
-        text: "土をたてにきりました。自然の土の層のならびをあらわしているのはどれでしょう。"
+        id: "bd8d3bdf85"
+        text: "土を たてに きりました。しぜんの 土の そうの ならびを あらわしているのは どれでしょう。"
         svg: '<svg viewBox="0 0 320 200" xmlns="http://www.w3.org/2000/svg" font-size="14"><g stroke="currentColor" stroke-width="2"><rect x="18" y="26" width="84" height="30" fill="#c9a36b" fill-opacity=".7"/><rect x="18" y="56" width="84" height="30" fill="#6b5344" fill-opacity=".75"/><rect x="18" y="86" width="84" height="30" fill="#c8ccd6" fill-opacity=".6"/><rect x="18" y="116" width="84" height="30" fill="#8f96a6" fill-opacity=".8"/><rect x="118" y="26" width="84" height="30" fill="#6b5344" fill-opacity=".75"/><rect x="118" y="56" width="84" height="30" fill="#c9a36b" fill-opacity=".7"/><rect x="118" y="86" width="84" height="30" fill="#c8ccd6" fill-opacity=".6"/><rect x="118" y="116" width="84" height="30" fill="#8f96a6" fill-opacity=".8"/><rect x="218" y="26" width="84" height="30" fill="#8f96a6" fill-opacity=".8"/><rect x="218" y="56" width="84" height="30" fill="#c8ccd6" fill-opacity=".6"/><rect x="218" y="86" width="84" height="30" fill="#c9a36b" fill-opacity=".7"/><rect x="218" y="116" width="84" height="30" fill="#6b5344" fill-opacity=".75"/><rect x="18" y="156" width="12" height="12" fill="#6b5344" fill-opacity=".75"/><rect x="150" y="156" width="12" height="12" fill="#c9a36b" fill-opacity=".7"/><rect x="18" y="178" width="12" height="12" fill="#c8ccd6" fill-opacity=".6"/><rect x="150" y="178" width="12" height="12" fill="#8f96a6" fill-opacity=".8"/></g><g fill="currentColor"><text x="60" y="18" text-anchor="middle">ア</text><text x="160" y="18" text-anchor="middle">イ</text><text x="260" y="18" text-anchor="middle">ウ</text><text x="36" y="167">黒い土</text><text x="168" y="167">茶色い土</text><text x="36" y="189">岩のかけら</text><text x="168" y="189">もとの岩</text></g></svg>'
         choices: [ア, イ, ウ]
         answer: イ
         check: "'イ'"
         hints:
-          - "上から下へすすむと、何が多いかが少しずつかわっていく。"
-          - text: "地面にちかいところと、もとの岩にちかいところをくらべよう。"
-            svg: '<svg viewBox="0 0 320 200" xmlns="http://www.w3.org/2000/svg" font-size="14"><g stroke="currentColor" stroke-width="2"><rect x="50" y="14" width="220" height="52" rx="8" fill="#6b5344" fill-opacity=".2"/><rect x="50" y="134" width="220" height="52" rx="8" fill="#8f96a6" fill-opacity=".25"/><path d="M160 70 V114" fill="none"/><polygon points="160,130 150,112 170,112" fill="currentColor"/></g><g fill="currentColor"><text x="160" y="36" text-anchor="middle">地面にちかいところ</text><text x="160" y="56" text-anchor="middle">生き物のあとが多い</text><text x="160" y="156" text-anchor="middle">もとの岩にちかいところ</text><text x="160" y="176" text-anchor="middle">岩のつぶが多い</text></g></svg>'
-          - "もとの岩はいちばん下。その上は、岩のかけらが多い層。"
+          - "上から 下へ すすむと、何が 多いかが 少しずつ かわっていく。"
+          - text: "じめんに ちかい ところと、もとの 岩に ちかい ところを くらべよう。"
+            svg: '<svg viewBox="0 0 320 200" xmlns="http://www.w3.org/2000/svg" font-size="14"><g stroke="currentColor" stroke-width="2"><rect x="50" y="14" width="220" height="52" rx="8" fill="#6b5344" fill-opacity=".2"/><rect x="50" y="134" width="220" height="52" rx="8" fill="#8f96a6" fill-opacity=".25"/><path d="M160 70 V114" fill="none"/><polygon points="160,130 150,112 170,112" fill="currentColor"/></g><g fill="currentColor"><text x="160" y="36" text-anchor="middle">じめんにちかいところ</text><text x="160" y="56" text-anchor="middle">生きもののあとが多い</text><text x="160" y="156" text-anchor="middle">もとの岩にちかいところ</text><text x="160" y="176" text-anchor="middle">岩のつぶが多い</text></g></svg>'
+          - "もとの 岩は いちばん 下。その 上は、岩の かけらが 多い そう。"
       - part: 今日
-        text: "土は、1 cm のあつさになるのに、およそ 100 年かかります。あつさ 30 cm の土ができるまでには、およそ何年かかるでしょう。"
+        id: "6b43f54710"
+        text: "土は、1 cm の あつさに なるのに、およそ 100 年 かかります。あつさ 30 cm の 土が できるまでには、およそ 何年 かかるでしょう。"
         svg: '<svg viewBox="0 0 320 200" xmlns="http://www.w3.org/2000/svg" font-size="14"><g stroke="currentColor" stroke-width="2"><rect x="80" y="20" width="70" height="24" fill="#c9a36b" fill-opacity=".6"/><rect x="80" y="44" width="70" height="24" fill="#c9a36b" fill-opacity=".6"/><rect x="80" y="68" width="70" height="24" fill="#c9a36b" fill-opacity=".6"/><rect x="80" y="92" width="70" height="24" fill="#c9a36b" fill-opacity=".6"/><path d="M80 116 V172 M150 116 V172" fill="none" stroke-dasharray="5 5"/><path d="M162 20 H170 V172 H162" fill="none"/><path d="M72 20 H66 V44 H72" fill="none"/></g><g fill="currentColor"><text x="178" y="100">30 cm</text><text x="60" y="28" text-anchor="end">1 cm で</text><text x="60" y="44" text-anchor="end">100 年</text><text x="115" y="146" text-anchor="middle">・・・</text></g></svg>'
         answer: 3000
         check: "30*100"
@@ -41,20 +45,22 @@ days:
           - "1 cm ごとに 100 年かかる。"
           - text: "30 cm は、1 cm が何こ分かな。"
             svg: '<svg viewBox="0 0 320 200" xmlns="http://www.w3.org/2000/svg" font-size="14"><g stroke="currentColor" stroke-width="2"><rect x="50" y="20" width="100" height="26" fill="#c9a36b" fill-opacity=".6"/><rect x="50" y="50" width="100" height="26" fill="#c9a36b" fill-opacity=".6"/><rect x="50" y="80" width="100" height="26" fill="#c9a36b" fill-opacity=".6"/></g><g fill="currentColor"><text x="162" y="38">1 cm … 100 年</text><text x="162" y="68">1 cm … 100 年</text><text x="162" y="98">1 cm … 100 年</text><text x="100" y="134" text-anchor="middle">・・・</text><text x="160" y="176" text-anchor="middle">30 cm は 1 cm の何こ分かな</text></g></svg>'
-          - "100 年が 30 こ分あることになる。"
+          - "100 年が 30 こ分ある ことになる。"
       - part: 今日
-        text: "同じ種類の岩を、3 つの場所に長い間おきました。温度の変化と、こおる水のはたらきで考えると、いちばんはやく風化が進むのはどこでしょう。"
-        svg: '<svg viewBox="0 0 320 200" xmlns="http://www.w3.org/2000/svg" font-size="14"><g stroke="currentColor" stroke-width="2"><path d="M24 112 V84 Q54 44 84 84 V112 Z" fill="#8f96a6" fill-opacity=".5"/><ellipse cx="54" cy="100" rx="12" ry="8" fill="#c8ccd6" fill-opacity=".8"/><polygon points="126,112 160,52 194,112" fill="#c8ccd6" fill-opacity=".7"/><circle cx="128" cy="38" r="10" fill="#f3c969" fill-opacity=".7"/><polygon points="188,38 196,44 196,54 188,60 180,54 180,44" fill="#7fc8f8" fill-opacity=".6"/><rect x="232" y="64" width="68" height="48" fill="#7fc8f8" fill-opacity=".15"/><polygon points="248,104 252,84 268,78 286,88 286,104" fill="#c8ccd6" fill-opacity=".8"/></g><g fill="currentColor" font-size="13"><text x="54" y="136" text-anchor="middle">ア ほらあな</text><text x="54" y="154" text-anchor="middle">いつも</text><text x="54" y="172" text-anchor="middle">同じ温度</text><text x="160" y="136" text-anchor="middle">イ 山の上</text><text x="160" y="154" text-anchor="middle">昼はあつく</text><text x="160" y="172" text-anchor="middle">夜はこおる</text><text x="266" y="136" text-anchor="middle">ウ ケースの中</text><text x="266" y="154" text-anchor="middle">雨も風も</text><text x="266" y="172" text-anchor="middle">当たらない</text></g></svg>'
+        id: "71a92e44b6"
+        text: "同じ しゅるいの 岩を、3 つの ばしょに 長い 間 おきました。おんどの へんかと、こおる 水の はたらきで 考えると、いちばん はやく ふうかが すすむのは どこでしょう。"
+        svg: '<svg viewBox="0 0 320 200" xmlns="http://www.w3.org/2000/svg" font-size="14"><g stroke="currentColor" stroke-width="2"><path d="M24 112 V84 Q54 44 84 84 V112 Z" fill="#8f96a6" fill-opacity=".5"/><ellipse cx="54" cy="100" rx="12" ry="8" fill="#c8ccd6" fill-opacity=".8"/><polygon points="126,112 160,52 194,112" fill="#c8ccd6" fill-opacity=".7"/><circle cx="128" cy="38" r="10" fill="#f3c969" fill-opacity=".7"/><polygon points="188,38 196,44 196,54 188,60 180,54 180,44" fill="#7fc8f8" fill-opacity=".6"/><rect x="232" y="64" width="68" height="48" fill="#7fc8f8" fill-opacity=".15"/><polygon points="248,104 252,84 268,78 286,88 286,104" fill="#c8ccd6" fill-opacity=".8"/></g><g fill="currentColor" font-size="13"><text x="54" y="136" text-anchor="middle">ア ほらあな</text><text x="54" y="154" text-anchor="middle">いつも</text><text x="54" y="172" text-anchor="middle">同じおんど</text><text x="160" y="136" text-anchor="middle">イ 山の上</text><text x="160" y="154" text-anchor="middle">昼はあつく</text><text x="160" y="172" text-anchor="middle">夜はこおる</text><text x="266" y="136" text-anchor="middle">ウ ケースの中</text><text x="266" y="154" text-anchor="middle">雨も風も</text><text x="266" y="172" text-anchor="middle">当たらない</text></g></svg>'
         choices: [ア, イ, ウ]
         answer: イ
         check: "'イ'"
         hints:
-          - "温度が大きくかわるほど、また水がこおったりとけたりするほど、岩はいたむ。"
-          - text: "岩のわれ目で何がおきるかを見よう。"
+          - "おんどが 大きく かわるほど、また 水が こおったり とけたり するほど、岩は いたむ。"
+          - text: "岩の われ目で 何が おきるかを 見よう。"
             svg: '<svg viewBox="0 0 320 200" xmlns="http://www.w3.org/2000/svg" font-size="14"><g stroke="currentColor" stroke-width="2"><polygon points="12,100 16,52 46,42 88,54 92,100" fill="#c8ccd6" fill-opacity=".7"/><path d="M48 43 L44 62 L52 74" fill="none"/><ellipse cx="49" cy="64" rx="3" ry="6" fill="#7fc8f8" fill-opacity=".8"/><polygon points="118,100 122,52 152,42 194,54 198,100" fill="#c8ccd6" fill-opacity=".7"/><path d="M154 43 L150 62 L158 74" fill="none"/><polygon points="155,56 162,62 162,72 155,80 148,72 148,62" fill="#7fc8f8" fill-opacity=".6"/><polygon points="224,100 228,52 258,42 300,54 304,100" fill="#c8ccd6" fill-opacity=".7"/><path d="M258 43 L248 62 L258 76 M266 43 L274 62 L264 76" fill="none"/><polygon points="98,70 108,76 98,82" fill="currentColor"/><polygon points="204,70 214,76 204,82" fill="currentColor"/></g><g fill="currentColor" font-size="13"><text x="52" y="124" text-anchor="middle">水がしみこむ</text><text x="158" y="124" text-anchor="middle">こおってふくらむ</text><text x="264" y="124" text-anchor="middle">ひびが広がる</text><text x="160" y="170" text-anchor="middle">これがくりかえされる</text></g></svg>'
           - "ガラスのケースの中は、雨も風も当たらない。"
       - part: 今日
-        text: "①から ④を、土ができるじゅんにならべましょう。"
+        id: "669ef6f626"
+        text: "①から ④を、土が できる じゅんに ならべましょう。"
         svg: '<svg viewBox="0 0 320 200" xmlns="http://www.w3.org/2000/svg" font-size="13"><g stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="154" height="94" rx="8" fill="none" stroke-opacity=".35"/><rect x="163" y="3" width="154" height="94" rx="8" fill="none" stroke-opacity=".35"/><rect x="3" y="103" width="154" height="94" rx="8" fill="none" stroke-opacity=".35"/><rect x="163" y="103" width="154" height="94" rx="8" fill="none" stroke-opacity=".35"/><path d="M52 36 H108 M60 50 H116 M52 64 H108" fill="none" stroke="#8f96a6" stroke-width="6" stroke-linecap="round" stroke-dasharray="0 9"/><polygon points="200,74 208,30 244,20 280,34 284,74" fill="#c8ccd6" fill-opacity=".7"/><rect x="44" y="128" width="72" height="38" fill="#6b5344" fill-opacity=".75"/><ellipse cx="64" cy="122" rx="10" ry="4" fill="#7bc96f" fill-opacity=".6"/><ellipse cx="94" cy="124" rx="10" ry="4" fill="#f3c969" fill-opacity=".6"/><polygon points="200,172 208,128 244,118 280,132 284,172" fill="#c8ccd6" fill-opacity=".7"/><path d="M244 119 L238 140 L250 152 L242 172" fill="none"/></g><g fill="currentColor"><text x="10" y="90">① 小さなつぶ</text><text x="170" y="90">② 大きな岩</text><text x="10" y="190">③ 黒い土</text><text x="170" y="190">④ ひびが入った岩</text></g></svg>'
         choices:
           - "② → ④ → ① → ③"
@@ -63,18 +69,19 @@ days:
         answer: "② → ④ → ① → ③"
         check: "'② → ④ → ① → ③'"
         hints:
-          - "4 つの絵がそれぞれ何かをたしかめよう。"
-          - text: "風化は、岩がくだけて小さなつぶになるまで。"
+          - "4 つの 絵が それぞれ 何かを たしかめよう。"
+          - text: "ふうかは、岩が くだけて 小さな つぶに なるまで。"
             svg: '<svg viewBox="0 0 320 200" xmlns="http://www.w3.org/2000/svg" font-size="14"><g stroke="currentColor" stroke-width="2"><rect x="70" y="6" width="180" height="34" rx="8" fill="#c8ccd6" fill-opacity=".5"/><rect x="70" y="54" width="180" height="34" rx="8" fill="none" stroke-dasharray="6 5"/><rect x="70" y="102" width="180" height="34" rx="8" fill="none" stroke-dasharray="6 5"/><rect x="70" y="150" width="180" height="34" rx="8" fill="none" stroke-dasharray="6 5"/><polygon points="160,52 150,42 170,42" fill="currentColor"/><polygon points="160,100 150,90 170,90" fill="currentColor"/><polygon points="160,148 150,138 170,138" fill="currentColor"/></g><g fill="currentColor" text-anchor="middle"><text x="160" y="29">大きな岩</text><text x="160" y="77">？</text><text x="160" y="125">？</text><text x="160" y="173">？</text></g></svg>'
-          - "さいごは、生き物のあとがまざった黒い土になる。"
+          - "さいごは、生きものの あとが まざった 黒い 土に なる。"
       - part: 挑戦
-        text: "A の森では土が 1 cm できるのに 100 年、B の森では 250 年かかります。どちらも 20 cm の土になるまでの年のちがいは何年でしょう。"
+        id: "c8ce329c8b"
+        text: "A の 森では 土が 1 cm できるのに 100 年、B の 森では 250 年 かかります。どちらも 20 cm の 土に なるまでの 年の ちがいは 何年でしょう。"
         svg: '<svg viewBox="0 0 320 200" xmlns="http://www.w3.org/2000/svg" font-size="14"><g stroke="currentColor" stroke-width="2"><rect x="70" y="36" width="70" height="100" fill="#c9a36b" fill-opacity=".7"/><rect x="180" y="36" width="70" height="100" fill="#c9a36b" fill-opacity=".7"/><path d="M64 36 H58 V136 H64" fill="none"/><path d="M256 36 H262 V136 H256" fill="none"/></g><g fill="currentColor"><text x="105" y="24" text-anchor="middle">A の森</text><text x="215" y="24" text-anchor="middle">B の森</text><text x="50" y="90" text-anchor="end">20 cm</text><text x="270" y="90">20 cm</text><text x="105" y="160" text-anchor="middle">1 cm に 100 年</text><text x="215" y="160" text-anchor="middle">1 cm に 250 年</text></g></svg>'
         answer: 3000
         check: "20*250-20*100"
         hints:
-          - "A と B が 20 cm になるまでの年を、それぞれ考えてくらべよう。"
-          - text: "年のながさを絵でくらべると、ちがいはどのぶぶんかな。"
+          - "A と B が 20 cm に なるまでの 年を、それぞれ 考えて くらべよう。"
+          - text: "年の ながさを 絵で くらべると、ちがいは どの ぶぶんかな。"
             svg: '<svg viewBox="0 0 320 200" xmlns="http://www.w3.org/2000/svg" font-size="14"><g stroke="currentColor" stroke-width="2"><rect x="20" y="40" width="80" height="26" fill="#7bc96f" fill-opacity=".6"/><rect x="20" y="96" width="200" height="26" fill="#f3c969" fill-opacity=".6"/><path d="M100 53 H220" fill="none" stroke-dasharray="5 4"/><path d="M220 36 V70" fill="none"/></g><g fill="currentColor"><text x="20" y="32">A：100 年の 20 こ分</text><text x="20" y="88">B：250 年の 20 こ分</text><text x="226" y="58">ちがい</text><text x="160" y="172" text-anchor="middle">ちがいは何年分かな</text></g></svg>'
           - "A は 100 年の 20 こ分、B は 250 年の 20 こ分。"
         paths:
@@ -82,52 +89,58 @@ days:
           - ["1 cm あたりのちがいは 250 − 100 = 150 年", "それが 20 cm 分あるので 20 × 150", "= 3000 年"]
     extra:
       - part: 今日
-        text: "風化のせつめいとして正しいものはどれでしょう。"
+        id: "6690657c63"
+        text: "ふうかの せつめいとして 正しい ものは どれでしょう。"
         svg: '<svg viewBox="0 0 320 200" xmlns="http://www.w3.org/2000/svg" font-size="14"><g stroke="currentColor" stroke-width="2"><polygon points="70,150 76,80 120,56 166,78 172,150" fill="#c8ccd6" fill-opacity=".7"/><path d="M118 57 L108 90 L124 110 L112 150" fill="none"/><polygon points="196,150 206,134 222,140 214,152" fill="#c8ccd6" fill-opacity=".8"/><polygon points="230,152 242,140 256,146 250,154" fill="#c8ccd6" fill-opacity=".8"/><polygon points="262,152 272,144 284,150 278,156" fill="#c8ccd6" fill-opacity=".8"/></g></svg>'
         choices:
-          - "岩がその場所でひびが入り、小さくくだけること"
-          - "川の水が石を下流へはこぶこと"
-          - "小さなつぶが海の底につもること"
-        answer: "岩がその場所でひびが入り、小さくくだけること"
-        check: "'岩がその場所でひびが入り、小さくくだけること'"
+          - "岩が その ばしょで ひびが 入り、小さく くだける こと"
+          - "川の 水が 石を かりゅうへ はこぶ こと"
+          - "小さな つぶが 海の そこに つもる こと"
+        answer: "岩が その ばしょで ひびが 入り、小さく くだける こと"
+        check: "'岩が その ばしょで ひびが 入り、小さく くだける こと'"
         hints:
-          - "岩に何がおきているかをたしかめよう。"
-          - text: "岩のわれ目で何がおきるかを見よう。"
+          - "岩に 何が おきて いるかを たしかめよう。"
+          - text: "岩の われ目で 何が おきるかを 見よう。"
             svg: '<svg viewBox="0 0 320 200" xmlns="http://www.w3.org/2000/svg" font-size="14"><g stroke="currentColor" stroke-width="2"><polygon points="12,100 16,52 46,42 88,54 92,100" fill="#c8ccd6" fill-opacity=".7"/><path d="M48 43 L44 62 L52 74" fill="none"/><ellipse cx="49" cy="64" rx="3" ry="6" fill="#7fc8f8" fill-opacity=".8"/><polygon points="118,100 122,52 152,42 194,54 198,100" fill="#c8ccd6" fill-opacity=".7"/><path d="M154 43 L150 62 L158 74" fill="none"/><polygon points="155,56 162,62 162,72 155,80 148,72 148,62" fill="#7fc8f8" fill-opacity=".6"/><polygon points="224,100 228,52 258,42 300,54 304,100" fill="#c8ccd6" fill-opacity=".7"/><path d="M258 43 L248 62 L258 76 M266 43 L274 62 L264 76" fill="none"/><polygon points="98,70 108,76 98,82" fill="currentColor"/><polygon points="204,70 214,76 204,82" fill="currentColor"/></g><g fill="currentColor" font-size="13"><text x="52" y="124" text-anchor="middle">水がしみこむ</text><text x="158" y="124" text-anchor="middle">こおってふくらむ</text><text x="264" y="124" text-anchor="middle">ひびが広がる</text><text x="160" y="170" text-anchor="middle">これがくりかえされる</text></g></svg>'
-          - "川が石をはこぶのは、風化ではなくはこぶはたらき。"
+          - "川が 石を はこぶのは、ふうかではなく はこぶ はたらき。"
       - part: 今日
-        text: "もとの岩の上にある、黒い土、茶色い土、岩のかけらの層を全部たすと、何 cm でしょう。（もとの岩は入れません）"
+        id: "a5e32b1ba0"
+        text: "もとの 岩の 上に ある、黒い 土、茶色い 土、岩の かけらの そうを ぜんぶ たすと、何 cm でしょう。（もとの 岩は 入れません）"
         svg: '<svg viewBox="0 0 320 200" xmlns="http://www.w3.org/2000/svg" font-size="14"><g stroke="currentColor" stroke-width="2"><rect x="40" y="20" width="100" height="16" fill="#6b5344" fill-opacity=".75"/><rect x="40" y="36" width="100" height="44" fill="#c9a36b" fill-opacity=".7"/><rect x="40" y="80" width="100" height="60" fill="#c8ccd6" fill-opacity=".6"/><rect x="40" y="140" width="100" height="30" fill="#8f96a6" fill-opacity=".8"/></g><g fill="currentColor"><text x="150" y="34">黒い土 8 cm</text><text x="150" y="62">茶色い土 22 cm</text><text x="150" y="114">岩のかけら 30 cm</text><text x="150" y="160">もとの岩</text></g></svg>'
         answer: 60
         check: "8+22+30"
         hints:
           - "たす数は 3 つ。もとの岩は入れない。"
-          - text: "3 つの層のあつさを、ひとまとめにして考えよう。"
+          - text: "3 つの そうの あつさを、ひとまとめにして 考えよう。"
             svg: '<svg viewBox="0 0 320 200" xmlns="http://www.w3.org/2000/svg" font-size="14"><g stroke="currentColor" stroke-width="2"><rect x="40" y="30" width="100" height="16" fill="#6b5344" fill-opacity=".75"/><rect x="40" y="46" width="100" height="44" fill="#c9a36b" fill-opacity=".7"/><rect x="40" y="90" width="100" height="60" fill="#c8ccd6" fill-opacity=".6"/><path d="M152 30 H162 V150 H152" fill="none"/></g><g fill="currentColor"><text x="172" y="96">ぜんぶで ？ cm</text></g></svg>'
           - "8 + 22 を先に計算してから、30 をたそう。"
   - day: 2
     items:
       - part: 見本
-        text: "土のつぶは、大きさで 4 つに分けます。大きいじゅんに、れき、すな、シルト、ねんどです（シルトはすなとねんどの間の大きさです）。つぶがどれだけまざっているかを土性（どせい）といいます。この単元のやくそく：すなが 70% 以上ならすなタイプ、ねんどが 35% 以上ならねんどタイプ、どちらでもなければ壌土（じょうど）です。"
+        id: "7582aaff89"
+        text: "土の つぶは、大きさで 4 つに 分けます。大きい じゅんに、れき、すな、シルト、ねんどです（シルトは すなと ねんどの 間の 大きさです）。つぶが どれだけ まざっているかを どせいと いいます。この たんげんの やくそく：すなが 70% いじょうなら すなタイプ、ねんどが 35% いじょうなら ねんどタイプ、どちらでも なければ じょうどです。"
         svg: '<svg viewBox="0 0 320 200" xmlns="http://www.w3.org/2000/svg" font-size="14"><g stroke="currentColor" stroke-width="2"><circle cx="34" cy="30" r="18" fill="#c8ccd6" fill-opacity=".7"/><circle cx="34" cy="76" r="12" fill="#f3c969" fill-opacity=".7"/><circle cx="34" cy="122" r="7" fill="#b39ddb" fill-opacity=".7"/><circle cx="34" cy="168" r="3" fill="#c9a36b" fill-opacity=".8"/><path d="M294 30 V158" fill="none"/><polygon points="294,172 284,154 304,154" fill="currentColor"/></g><g fill="currentColor"><text x="66" y="27" font-size="15">れき</text><text x="66" y="45" font-size="13">2 mm より大きい</text><text x="66" y="73" font-size="15">すな</text><text x="66" y="91" font-size="13">2 mm 〜 0.02 mm</text><text x="66" y="119" font-size="15">シルト</text><text x="66" y="137" font-size="13">0.02 mm 〜 0.002 mm</text><text x="66" y="165" font-size="15">ねんど</text><text x="66" y="183" font-size="13">0.002 mm より小さい</text><text x="294" y="20" text-anchor="middle">大きい</text><text x="294" y="194" text-anchor="middle">小さい</text></g></svg>'
-        explain: "土のつぶの分け方は、世界でよく使われるきまりにあわせています。絵の円の大きさは、ほんとうの大きさのくらべではありません（ねんどのつぶは、すなのつぶより 10 倍から 1000 倍ほど小さい）。土性はふつう三角形の図で 12 種類ほどに分けますが、ここでは考えやすいように 3 つにしました。"
+        explain: "土の つぶの 分け方は、せかいで よく つかわれる きまりに あわせています。絵の 円の 大きさは、ほんとうの 大きさの くらべでは ありません（ねんどの つぶは、すなの つぶより 10 ばいから 1000 ばいほど 小さい）。どせいは ふつう 三角形の 図で 12 しゅるいほどに 分けますが、ここでは 考えやすいように 3 つに しました。"
       - part: 見本
-        text: "つぶが大きい土は、すきまも大きいので、水がはやくぬけます。これを透水性（とうすいせい）が高いといいます。つぶが小さい土は、すきまがせまくて水がぬけにくく、水をためやすいです。これを保水性（ほすいせい）が高いといいます。"
+        id: "c3ae27d340"
+        text: "つぶが 大きい 土は、すきまも 大きいので、水が はやく ぬけます。これを とうすいせいが 高いと いいます。つぶが 小さい 土は、すきまが せまくて 水が ぬけにくく、水を ためやすいです。これを ほすいせいが 高いと いいます。"
         svg: '<svg viewBox="0 0 320 200" xmlns="http://www.w3.org/2000/svg" font-size="14"><g stroke="currentColor" stroke-width="2"><rect x="28" y="36" width="96" height="100" rx="4" fill="none"/><rect x="196" y="36" width="96" height="100" rx="4" fill="none"/></g><rect x="198" y="38" width="92" height="28" fill="#7fc8f8" fill-opacity=".5"/><path d="M42 70 H116 M50 88 H116 M42 106 H116 M50 124 H116" fill="none" stroke="#f3c969" stroke-width="14" stroke-linecap="round" stroke-dasharray="0 17"/><path d="M202 74 H286 M202 82 H286 M202 90 H286 M202 98 H286 M202 106 H286 M202 114 H286 M202 122 H286 M202 130 H286" fill="none" stroke="#c9a36b" stroke-width="6" stroke-linecap="round" stroke-dasharray="0 8"/><path d="M60 142 V170 M92 142 V170" fill="none" stroke="#7fc8f8" stroke-width="4" stroke-dasharray="6 8"/><path d="M244 142 V152" fill="none" stroke="#7fc8f8" stroke-width="4"/><g fill="currentColor"><text x="76" y="24" text-anchor="middle" font-size="15">すな</text><text x="244" y="24" text-anchor="middle" font-size="15">ねんど</text><text x="76" y="192" text-anchor="middle">水がはやくぬける</text><text x="244" y="192" text-anchor="middle">水がたまる</text></g></svg>'
-        explain: "水は、つぶとつぶのすきまをとおります。すきまが大きいほど水ははやく通り、せまいほどゆっくり通って、そのぶんつぶの間にのこります。ねんどの土は水をためる力が強い反面、水が通りにくく、雨のあとに水たまりができやすくなります。すなの土は水がすぐぬけるので、かわきやすい土です。"
+        explain: "水は、つぶと つぶの すきまを とおります。すきまが 大きいほど 水は はやく 通り、せまいほど ゆっくり 通って、そのぶん つぶの 間に のこります。ねんどの 土は 水を ためる 力が 強い はんめん、水が 通りにくく、雨の あとに 水たまりが できやすく なります。すなの 土は 水が すぐ ぬけるので、かわきやすい 土です。"
       - part: 思い出す
-        text: "生き物のあとがいちばん多い層はどれでしょう。"
+        id: "2f6a2122cf"
+        text: "生きものの あとが いちばん 多い そうは どれでしょう。"
         svg: '<svg viewBox="0 0 320 200" xmlns="http://www.w3.org/2000/svg" font-size="14"><g stroke="currentColor" stroke-width="2"><rect x="60" y="24" width="120" height="36" fill="#6b5344" fill-opacity=".75"/><rect x="60" y="60" width="120" height="36" fill="#c9a36b" fill-opacity=".7"/><rect x="60" y="96" width="120" height="36" fill="#c8ccd6" fill-opacity=".6"/><rect x="60" y="132" width="120" height="36" fill="#8f96a6" fill-opacity=".8"/></g><g fill="currentColor"><text x="196" y="48">ウ</text><text x="196" y="84">ア</text><text x="196" y="120">エ</text><text x="196" y="156">イ</text></g></svg>'
         choices: [ア, イ, ウ, エ]
         answer: ウ
         check: "'ウ'"
         hints:
-          - "生き物のあとが多い層は、色がどうなっていたかな。"
-          - text: "落ち葉や虫のあとがまざると、土はどうなるかな。"
-            svg: '<svg viewBox="0 0 320 200" xmlns="http://www.w3.org/2000/svg" font-size="14"><g stroke="currentColor" stroke-width="2"><ellipse cx="60" cy="86" rx="22" ry="9" fill="#7bc96f" fill-opacity=".6"/><ellipse cx="92" cy="100" rx="16" ry="7" fill="#f3c969" fill-opacity=".6"/><path d="M130 94 H178" fill="none"/><polygon points="196,94 178,84 178,104" fill="currentColor"/><rect x="208" y="64" width="90" height="60" fill="none" stroke-dasharray="6 5"/></g><g fill="currentColor"><text x="76" y="140" text-anchor="middle">落ち葉や虫のあと</text><text x="253" y="102" text-anchor="middle" font-size="22">？</text><text x="160" y="40" text-anchor="middle">生き物のあとがまざると</text></g></svg>'
-          - "生き物のあとは、地面の上からおちてくる。まざった土は、黒っぽくなる。"
+          - "生きものの あとが 多い そうは、色が どうなっていたかな。"
+          - text: "おちばや 虫の あとが まざると、土は どうなるかな。"
+            svg: '<svg viewBox="0 0 320 200" xmlns="http://www.w3.org/2000/svg" font-size="14"><g stroke="currentColor" stroke-width="2"><ellipse cx="60" cy="86" rx="22" ry="9" fill="#7bc96f" fill-opacity=".6"/><ellipse cx="92" cy="100" rx="16" ry="7" fill="#f3c969" fill-opacity=".6"/><path d="M130 94 H178" fill="none"/><polygon points="196,94 178,84 178,104" fill="currentColor"/><rect x="208" y="64" width="90" height="60" fill="none" stroke-dasharray="6 5"/></g><g fill="currentColor"><text x="76" y="140" text-anchor="middle">おちばや虫のあと</text><text x="253" y="102" text-anchor="middle" font-size="22">？</text><text x="160" y="40" text-anchor="middle">生きもののあとがまざると</text></g></svg>'
+          - "生きものの あとは、じめんの 上から おちてくる。まざった 土は、黒っぽく なる。"
       - part: 思い出す
-        text: "土は、1 cm のあつさになるのに、およそ 100 年かかります。5 cm の土ができるまでには、およそ何年かかるでしょう。"
+        id: "cd247551c7"
+        text: "土は、1 cm の あつさに なるのに、およそ 100 年 かかります。5 cm の 土が できるまでには、およそ 何年 かかるでしょう。"
         svg: '<svg viewBox="0 0 320 200" xmlns="http://www.w3.org/2000/svg" font-size="14"><g stroke="currentColor" stroke-width="2"><rect x="70" y="30" width="80" height="24" fill="#c9a36b" fill-opacity=".6"/><rect x="70" y="54" width="80" height="24" fill="#c9a36b" fill-opacity=".6"/><rect x="70" y="78" width="80" height="24" fill="#c9a36b" fill-opacity=".6"/><rect x="70" y="102" width="80" height="24" fill="#c9a36b" fill-opacity=".6"/><rect x="70" y="126" width="80" height="24" fill="#c9a36b" fill-opacity=".6"/><path d="M162 30 H170 V150 H162" fill="none"/></g><g fill="currentColor"><text x="178" y="94">5 cm</text><text x="160" y="180" text-anchor="middle">1 cm あたり 100 年</text></g></svg>'
         answer: 500
         check: "5*100"
@@ -135,7 +148,7 @@ days:
           - "1 cm ごとに 100 年かかる。"
           - text: "5 cm は、1 cm が何こ分かな。"
             svg: '<svg viewBox="0 0 320 200" xmlns="http://www.w3.org/2000/svg" font-size="14"><g stroke="currentColor" stroke-width="2"><rect x="10" y="60" width="54" height="40" rx="6" fill="#c9a36b" fill-opacity=".35"/><rect x="70" y="60" width="54" height="40" rx="6" fill="#c9a36b" fill-opacity=".35"/><rect x="130" y="60" width="54" height="40" rx="6" fill="#c9a36b" fill-opacity=".35"/><rect x="190" y="60" width="54" height="40" rx="6" fill="#c9a36b" fill-opacity=".35"/><rect x="250" y="60" width="54" height="40" rx="6" fill="#c9a36b" fill-opacity=".35"/></g><g fill="currentColor" text-anchor="middle"><text x="37" y="85">100 年</text><text x="97" y="85">100 年</text><text x="157" y="85">100 年</text><text x="217" y="85">100 年</text><text x="277" y="85">100 年</text><text x="160" y="150">ぜんぶで ？ 年</text></g></svg>'
-          - "100 年が 5 こ分あることになる。"
+          - "100 年が 5 こ分ある ことになる。"
       - part: 今日
         text: "つぶの大きさが 0.5 mm でした。このつぶは、何とよびますか。"
         svg: '<svg viewBox="0 0 320 200" xmlns="http://www.w3.org/2000/svg" font-size="14"><g stroke="currentColor" stroke-width="2"><path d="M20 120 H300 M80 108 V132 M160 108 V132 M240 108 V132" fill="none"/><circle cx="205" cy="88" r="8" fill="#f3c969" fill-opacity=".8"/><path d="M205 96 V120" fill="none"/></g><g fill="currentColor"><text x="20" y="36">← 小さい</text><text x="300" y="36" text-anchor="end">大きい →</text><text x="205" y="66" text-anchor="middle">0.5 mm</text><text x="80" y="152" text-anchor="middle">0.002</text><text x="160" y="152" text-anchor="middle">0.02</text><text x="240" y="152" text-anchor="middle">2</text><text x="300" y="152" text-anchor="end">mm</text><text x="160" y="190" font-size="13" text-anchor="middle">目もりのはばはそろえていません</text></g></svg>'
@@ -144,7 +157,7 @@ days:
         check: "'すな'"
         hints:
           - "目もりの 3 つの数は、よび名のさかい目。"
-          - text: "さかい目で区切ると、4 つのよび名がならぶ。"
+          - text: "さかい目で くぎると、4 つの よび名が ならぶ。"
             svg: '<svg viewBox="0 0 320 200" xmlns="http://www.w3.org/2000/svg" font-size="14"><g stroke="none"><rect x="20" y="86" width="60" height="16" fill="#c9a36b" fill-opacity=".7"/><rect x="80" y="86" width="80" height="16" fill="#b39ddb" fill-opacity=".7"/><rect x="160" y="86" width="80" height="16" fill="#f3c969" fill-opacity=".7"/><rect x="240" y="86" width="60" height="16" fill="#c8ccd6" fill-opacity=".7"/></g><path d="M80 78 V110 M160 78 V110 M240 78 V110" stroke="currentColor" stroke-width="2"/><g fill="currentColor"><text x="80" y="70" text-anchor="middle">0.002</text><text x="160" y="70" text-anchor="middle">0.02</text><text x="240" y="70" text-anchor="middle">2</text><text x="50" y="130" text-anchor="middle">ねんど</text><text x="120" y="130" text-anchor="middle">シルト</text><text x="200" y="130" text-anchor="middle">すな</text><text x="270" y="130" text-anchor="middle">れき</text><text x="160" y="180" text-anchor="middle">0.5 mm はどこに入るかな</text></g></svg>'
           - "0.5 と、さかいの 3 つの数を見くらべよう。"
       - part: 今日
@@ -154,33 +167,36 @@ days:
         check: "100-55-30"
         hints:
           - "ぜんぶたすと 100% になる。"
-          - text: "すなとシルトをひとまとめにして考えよう。"
+          - text: "すなと シルトを ひとまとめにして 考えよう。"
             svg: '<svg viewBox="0 0 320 200" xmlns="http://www.w3.org/2000/svg" font-size="14"><g stroke="currentColor" stroke-width="2"><rect x="20" y="40" width="154" height="30" fill="#f3c969" fill-opacity=".6"/><rect x="174" y="40" width="84" height="30" fill="#b39ddb" fill-opacity=".6"/><rect x="258" y="40" width="42" height="30" fill="none" stroke-dasharray="5 4"/><path d="M20 82 V92 H258 V82" fill="none"/><path d="M258 82 V92 H300 V82" fill="none" stroke-dasharray="5 4"/></g><g fill="currentColor"><text x="139" y="114" text-anchor="middle">すな ＋ シルト ＝ ？%</text><text x="279" y="138" text-anchor="middle">のこり</text><text x="160" y="180" text-anchor="middle">100% からひくとのこりがわかる</text></g></svg>'
           - "55 と 30 をたした数を、100 からひこう。"
       - part: 今日
-        text: "この土は、やくそくによるとどのタイプでしょう。"
-        svg: '<svg viewBox="0 0 320 200" xmlns="http://www.w3.org/2000/svg" font-size="14"><g stroke="currentColor" stroke-width="2"><rect x="20" y="28" width="70" height="34" fill="#f3c969" fill-opacity=".6"/><rect x="90" y="28" width="84" height="34" fill="#b39ddb" fill-opacity=".6"/><rect x="174" y="28" width="126" height="34" fill="#c9a36b" fill-opacity=".7"/></g><g fill="currentColor" font-size="13"><text x="55" y="20" text-anchor="middle">すな 25%</text><text x="132" y="20" text-anchor="middle">シルト 30%</text><text x="237" y="20" text-anchor="middle">ねんど 45%</text><text x="20" y="104">やくそく</text><text x="20" y="126">すなが 70% 以上 → すなタイプ</text><text x="20" y="148">ねんどが 35% 以上 → ねんどタイプ</text><text x="20" y="170">どちらでもない → 壌土</text></g></svg>'
-        choices: [すなタイプ, ねんどタイプ, 壌土]
+        id: "07ce4ed9a2"
+        text: "この 土は、やくそくに よると どの タイプでしょう。"
+        svg: '<svg viewBox="0 0 320 200" xmlns="http://www.w3.org/2000/svg" font-size="14"><g stroke="currentColor" stroke-width="2"><rect x="20" y="28" width="70" height="34" fill="#f3c969" fill-opacity=".6"/><rect x="90" y="28" width="84" height="34" fill="#b39ddb" fill-opacity=".6"/><rect x="174" y="28" width="126" height="34" fill="#c9a36b" fill-opacity=".7"/></g><g fill="currentColor" font-size="13"><text x="55" y="20" text-anchor="middle">すな 25%</text><text x="132" y="20" text-anchor="middle">シルト 30%</text><text x="237" y="20" text-anchor="middle">ねんど 45%</text><text x="20" y="104">やくそく</text><text x="20" y="126">すなが 70% いじょう → すなタイプ</text><text x="20" y="148">ねんどが 35% いじょう → ねんどタイプ</text><text x="20" y="170">どちらでもない → じょうど</text></g></svg>'
+        choices: [すなタイプ, ねんどタイプ, じょうど]
         answer: ねんどタイプ
         check: "'ねんどタイプ'"
         hints:
           - "やくそくの 2 つの数を、土の数と見くらべよう。"
           - text: "さかいの数を、0% から 100% のものさしで見よう。"
             svg: '<svg viewBox="0 0 320 200" xmlns="http://www.w3.org/2000/svg" font-size="13"><g stroke="currentColor" stroke-width="2"><rect x="70" y="40" width="200" height="22" fill="none"/><rect x="70" y="100" width="200" height="22" fill="none"/><path d="M210 30 V72 M140 90 V132" fill="none" stroke-dasharray="5 4"/></g><g fill="currentColor"><text x="8" y="56">すな</text><text x="8" y="116">ねんど</text><text x="210" y="24" text-anchor="middle">70%</text><text x="70" y="150">0%</text><text x="140" y="150" text-anchor="middle">35%</text><text x="270" y="150" text-anchor="end">100%</text></g></svg>'
-          - "どちらの数にもとどいていないときだけ、壌土。"
+          - "どちらの 数にも とどいていない ときだけ、じょうど。"
       - part: 今日
-        text: "同じ量の水をいっしょにそそぎます。水がいちばんはやくぬけきるのはどれでしょう。"
-        svg: '<svg viewBox="0 0 320 200" xmlns="http://www.w3.org/2000/svg" font-size="14"><g stroke="currentColor" stroke-width="2"><rect x="24" y="30" width="80" height="108" rx="4" fill="none"/><rect x="120" y="30" width="80" height="108" rx="4" fill="none"/><rect x="216" y="30" width="80" height="108" rx="4" fill="none"/></g><g fill="none" stroke="#f3c969" stroke-linecap="round"><path d="M32 46 H96 M32 58 H96 M32 70 H96 M32 82 H96 M32 94 H96 M32 106 H96 M32 118 H96" stroke-width="10" stroke-dasharray="0 12"/><path d="M128 40 H192 M128 49 H192 M128 58 H192 M128 67 H192 M128 76 H192 M128 85 H192 M128 94 H192 M128 103 H192 M128 112 H192 M128 121 H192 M128 130 H192" stroke-width="6" stroke-dasharray="0 8"/><path d="M232 48 H288 M242 70 H288 M232 92 H288 M242 114 H288" stroke-width="16" stroke-dasharray="0 21"/></g><g fill="currentColor"><text x="64" y="20" text-anchor="middle">ア</text><text x="160" y="20" text-anchor="middle">イ</text><text x="256" y="20" text-anchor="middle">ウ</text><text x="160" y="170" text-anchor="middle">同じ量の水をそそぐ</text></g></svg>'
+        id: "1fb4903cfa"
+        text: "同じ りょうの 水を いっしょに そそぎます。水が いちばん はやく ぬけきるのは どれでしょう。"
+        svg: '<svg viewBox="0 0 320 200" xmlns="http://www.w3.org/2000/svg" font-size="14"><g stroke="currentColor" stroke-width="2"><rect x="24" y="30" width="80" height="108" rx="4" fill="none"/><rect x="120" y="30" width="80" height="108" rx="4" fill="none"/><rect x="216" y="30" width="80" height="108" rx="4" fill="none"/></g><g fill="none" stroke="#f3c969" stroke-linecap="round"><path d="M32 46 H96 M32 58 H96 M32 70 H96 M32 82 H96 M32 94 H96 M32 106 H96 M32 118 H96" stroke-width="10" stroke-dasharray="0 12"/><path d="M128 40 H192 M128 49 H192 M128 58 H192 M128 67 H192 M128 76 H192 M128 85 H192 M128 94 H192 M128 103 H192 M128 112 H192 M128 121 H192 M128 130 H192" stroke-width="6" stroke-dasharray="0 8"/><path d="M232 48 H288 M242 70 H288 M232 92 H288 M242 114 H288" stroke-width="16" stroke-dasharray="0 21"/></g><g fill="currentColor"><text x="64" y="20" text-anchor="middle">ア</text><text x="160" y="20" text-anchor="middle">イ</text><text x="256" y="20" text-anchor="middle">ウ</text><text x="160" y="170" text-anchor="middle">同じりょうの水をそそぐ</text></g></svg>'
         choices: [ア, イ, ウ]
         answer: ウ
         check: "'ウ'"
         hints:
           - "水がとおる道は、つぶとつぶのすきま。"
-          - text: "つぶの大きさで、すきまはどうかわるかな。"
+          - text: "つぶの 大きさで、すきまは どう かわるかな。"
             svg: '<svg viewBox="0 0 320 200" xmlns="http://www.w3.org/2000/svg" font-size="14"><g stroke="currentColor" stroke-width="2"><circle cx="46" cy="80" r="30" fill="#f3c969" fill-opacity=".7"/><circle cx="118" cy="80" r="30" fill="#f3c969" fill-opacity=".7"/><circle cx="214" cy="80" r="12" fill="#f3c969" fill-opacity=".7"/><circle cx="240" cy="80" r="12" fill="#f3c969" fill-opacity=".7"/><circle cx="266" cy="80" r="12" fill="#f3c969" fill-opacity=".7"/></g><path d="M82 30 V114" stroke="#7fc8f8" stroke-width="6"/><polygon points="82,132 72,112 92,112" fill="#7fc8f8"/><path d="M227 40 V104" stroke="#7fc8f8" stroke-width="2"/><polygon points="227,114 222,102 232,102" fill="#7fc8f8"/><g fill="currentColor"><text x="82" y="160" text-anchor="middle">つぶが大きい</text><text x="240" y="160" text-anchor="middle">つぶが小さい</text></g></svg>'
-          - "3 つのつぶの大きさをくらべて、すきまの広さを考えよう。"
+          - "3 つの つぶの 大きさを くらべて、すきまの 広さを 考えよう。"
       - part: 今日
-        text: "すなとねんどの土に、どちらも 100 mL の水をそそぎました。下に出た水は図のとおりです。土がためた水（そそいだ水 − 出た水）は、ねんどのほうがすなより何 mL 多いでしょう。"
+        id: "8e6de2cf28"
+        text: "すなと ねんどの 土に、どちらも 100 mL の 水を そそぎました。下に 出た 水は 図の とおりです。土が ためた 水（そそいだ 水 − 出た 水）は、ねんどの ほうが すなより 何 mL 多いでしょう。"
         svg: '<svg viewBox="0 0 320 200" xmlns="http://www.w3.org/2000/svg" font-size="14"><g stroke="currentColor" stroke-width="2"><rect x="36" y="70" width="50" height="100" fill="none"/><rect x="170" y="70" width="50" height="100" fill="none"/></g><rect x="37" y="85" width="48" height="84" fill="#7fc8f8" fill-opacity=".6"/><rect x="171" y="155" width="48" height="14" fill="#7fc8f8" fill-opacity=".6"/><g fill="currentColor"><text x="160" y="24" text-anchor="middle">どちらにも 100 mL の水をそそぐ</text><text x="160" y="46" font-size="13" text-anchor="middle">下のビーカーに出た水</text><text x="61" y="192" text-anchor="middle">すな</text><text x="195" y="192" text-anchor="middle">ねんど</text><text x="94" y="126">出た水</text><text x="94" y="144">85 mL</text><text x="228" y="146">出た水</text><text x="228" y="164">15 mL</text></g></svg>'
         answer: 70
         check: "(100-15)-(100-85)"
@@ -188,171 +204,185 @@ days:
           - "ためた水 ＝ そそいだ水 − 出た水。"
           - text: "あいているところが、土がためた水。"
             svg: '<svg viewBox="0 0 320 200" xmlns="http://www.w3.org/2000/svg" font-size="13"><g stroke="currentColor" stroke-width="2"><rect x="60" y="30" width="200" height="26" fill="none"/><rect x="60" y="100" width="200" height="26" fill="none"/></g><rect x="61" y="31" width="170" height="24" fill="#7fc8f8" fill-opacity=".6"/><rect x="61" y="101" width="30" height="24" fill="#7fc8f8" fill-opacity=".6"/><g fill="currentColor"><text x="8" y="48">すな</text><text x="8" y="118">ねんど</text><text x="245" y="78" text-anchor="middle">ためた ？</text><text x="175" y="148" text-anchor="middle">ためた ？</text><text x="160" y="186" text-anchor="middle">あいているぶぶんがためた水</text></g></svg>'
-          - "すなとねんどそれぞれのためた水を出してから、ちがいを見よう。"
+          - "すなと ねんど それぞれの ためた 水を 出してから、ちがいを 見よう。"
       - part: 挑戦
+        id: "bdc9668331"
         text: "すなタイプの土を 300 g あつめました。この土に、すなは少なくとも何 g 入っているでしょう。"
-        svg: '<svg viewBox="0 0 320 200" xmlns="http://www.w3.org/2000/svg" font-size="14"><g stroke="currentColor" stroke-width="2"><rect x="20" y="64" width="196" height="40" fill="#f3c969" fill-opacity=".6"/><rect x="216" y="64" width="84" height="40" fill="#c8ccd6" fill-opacity=".5"/><path d="M216 56 V112" fill="none"/></g><g fill="currentColor"><text x="160" y="44" text-anchor="middle">土ぜんぶで 300 g</text><text x="118" y="134" text-anchor="middle">すな（70% 以上）</text><text x="258" y="134" text-anchor="middle">ほか</text><text x="216" y="170" font-size="13" text-anchor="middle">ここが 70%</text></g></svg>'
+        svg: '<svg viewBox="0 0 320 200" xmlns="http://www.w3.org/2000/svg" font-size="14"><g stroke="currentColor" stroke-width="2"><rect x="20" y="64" width="196" height="40" fill="#f3c969" fill-opacity=".6"/><rect x="216" y="64" width="84" height="40" fill="#c8ccd6" fill-opacity=".5"/><path d="M216 56 V112" fill="none"/></g><g fill="currentColor"><text x="160" y="44" text-anchor="middle">土ぜんぶで 300 g</text><text x="118" y="134" text-anchor="middle">すな（70% いじょう）</text><text x="258" y="134" text-anchor="middle">ほか</text><text x="216" y="170" font-size="13" text-anchor="middle">ここが 70%</text></g></svg>'
         answer: 210
         check: "300*70//100"
         hints:
-          - "すなタイプは、すなが 70% 以上の土。"
-          - text: "300 g を同じ大きさに分けて考えよう。"
+          - "すなタイプは、すなが 70% いじょうの 土。"
+          - text: "300 g を 同じ 大きさに 分けて 考えよう。"
             svg: '<svg viewBox="0 0 320 200" xmlns="http://www.w3.org/2000/svg" font-size="14"><g stroke="currentColor" stroke-width="2"><rect x="20" y="70" width="280" height="40" fill="#f3c969" fill-opacity=".35"/><path d="M48 70 V110 M76 70 V110 M104 70 V110 M132 70 V110 M160 70 V110 M188 70 V110 M216 70 V110 M244 70 V110 M272 70 V110" fill="none"/></g><g fill="currentColor"><text x="160" y="52" text-anchor="middle">300 g を同じ 10 こに分ける</text><text x="160" y="140" text-anchor="middle">1 こぶんは 10%</text><text x="160" y="176" text-anchor="middle">70% は何こ分かな</text></g></svg>'
           - "10% ぶんが何 g かを先に考えるといい。"
         paths:
-          - ["すなが 70% 以上だから、300 g の 70% を出す", "300 × 70 ÷ 100", "= 210 g"]
+          - ["すなが 70% いじょうだから、300 g の 70% を 出す", "300 × 70 ÷ 100", "= 210 g"]
           - ["300 g の 10% は 30 g", "70% は 10% の 7 こ分", "30 × 7 = 210 g"]
     extra:
       - part: 今日
-        text: "シルトにあたるつぶはどれでしょう。"
+        id: "d22a4af566"
+        text: "シルトに あたる つぶは どれでしょう。"
         svg: '<svg viewBox="0 0 320 200" xmlns="http://www.w3.org/2000/svg" font-size="14"><g stroke="currentColor" stroke-width="2"><circle cx="60" cy="86" r="3" fill="#c9a36b" fill-opacity=".8"/><circle cx="160" cy="86" r="12" fill="#f3c969" fill-opacity=".7"/><circle cx="260" cy="86" r="7" fill="#b39ddb" fill-opacity=".7"/></g><g fill="currentColor"><text x="60" y="40" text-anchor="middle">ア</text><text x="160" y="40" text-anchor="middle">イ</text><text x="260" y="40" text-anchor="middle">ウ</text><text x="60" y="140" text-anchor="middle">0.0008 mm</text><text x="160" y="140" text-anchor="middle">0.3 mm</text><text x="260" y="140" text-anchor="middle">0.01 mm</text></g></svg>'
         choices: [ア, イ, ウ]
         answer: ウ
         check: "'ウ'"
         hints:
           - "シルトのはんいは、0.02 mm から 0.002 mm の間。"
-          - text: "シルトのさかいの数を、ものさしでたしかめよう。"
+          - text: "シルトの さかいの 数を、ものさしで たしかめよう。"
             svg: '<svg viewBox="0 0 320 200" xmlns="http://www.w3.org/2000/svg" font-size="14"><g stroke="none"><rect x="80" y="86" width="80" height="16" fill="#b39ddb" fill-opacity=".7"/></g><path d="M20 94 H300 M80 78 V110 M160 78 V110" stroke="currentColor" stroke-width="2"/><g fill="currentColor"><text x="80" y="70" text-anchor="middle">0.002</text><text x="160" y="70" text-anchor="middle">0.02</text><text x="120" y="130" text-anchor="middle">シルト</text><text x="160" y="180" text-anchor="middle">この間に入る数はどれ</text></g></svg>'
-          - "3 つの数が、0.02 と 0.002 の間に入るか見くらべよう。"
+          - "3 つの 数が、0.02 と 0.002 の 間に 入るか 見くらべよう。"
       - part: 今日
-        text: "しらべた土は全部で 250 g で、すなが 150 g、シルトが 75 g、ねんどが 25 g でした。ねんどは全体の何% でしょう。"
+        id: "0b65f7475b"
+        text: "しらべた 土は ぜんぶで 250 g で、すなが 150 g、シルトが 75 g、ねんどが 25 g でした。ねんどは ぜんたいの 何% でしょう。"
         svg: '<svg viewBox="0 0 320 200" xmlns="http://www.w3.org/2000/svg" font-size="13"><g stroke="currentColor" stroke-width="2"><rect x="20" y="60" width="168" height="36" fill="#f3c969" fill-opacity=".6"/><rect x="188" y="60" width="84" height="36" fill="#b39ddb" fill-opacity=".6"/><rect x="272" y="60" width="28" height="36" fill="#c9a36b" fill-opacity=".7"/><path d="M286 98 V130" fill="none"/></g><g fill="currentColor"><text x="104" y="118" text-anchor="middle">すな 150 g</text><text x="230" y="118" text-anchor="middle">シルト 75 g</text><text x="300" y="146" text-anchor="end">ねんど 25 g</text><text x="160" y="46" text-anchor="middle">土ぜんぶで 250 g</text></g></svg>'
         answer: 10
         check: "25*100//250"
         hints:
-          - "全体の 250 g を 100% と考える。"
+          - "ぜんたいの 250 g を 100% と 考える。"
           - text: "250 g を 10 こに分けると、1 こは何% かな。"
             svg: '<svg viewBox="0 0 320 200" xmlns="http://www.w3.org/2000/svg" font-size="14"><g stroke="currentColor" stroke-width="2"><rect x="20" y="70" width="280" height="40" fill="#c9a36b" fill-opacity=".25"/><path d="M48 70 V110 M76 70 V110 M104 70 V110 M132 70 V110 M160 70 V110 M188 70 V110 M216 70 V110 M244 70 V110 M272 70 V110" fill="none"/></g><g fill="currentColor"><text x="160" y="52" text-anchor="middle">250 g を同じ 10 こに分ける</text><text x="160" y="140" text-anchor="middle">1 こぶんは何 g で何% かな</text></g></svg>'
-          - "ねんどの 25 g は、1 こぶんの何こ分かを考えよう。"
+          - "ねんどの 25 g は、1 こぶんの 何こ分かを 考えよう。"
   - day: 3
     items:
       - part: 見本
-        text: "雨や風が土のつぶをけずってはこぶことを、侵食（しんしょく）といいます。草や木の根は土をつかまえ、葉や草は雨をうけとめて、侵食をおさえます。土をまもるくふうには、だんだん畑、風よけの林、わらをしくことなどがあります。"
-        svg: '<svg viewBox="0 0 320 200" xmlns="http://www.w3.org/2000/svg" font-size="14"><g stroke="currentColor" stroke-width="2"><polygon points="10,100 150,160 150,176 10,176" fill="#c9a36b" fill-opacity=".6"/><polygon points="170,100 310,160 310,176 170,176" fill="#c9a36b" fill-opacity=".6"/><path d="M30 24 l-6 12 M60 24 l-6 12 M90 24 l-6 12 M120 24 l-6 12 M45 46 l-6 12 M75 46 l-6 12 M105 46 l-6 12 M190 24 l-6 12 M220 24 l-6 12 M250 24 l-6 12 M280 24 l-6 12 M205 46 l-6 12 M235 46 l-6 12 M265 46 l-6 12" fill="none" stroke="#7fc8f8" stroke-width="3"/><path d="M40 104 L108 133" fill="none" stroke="#8b5e34" stroke-width="6"/><polygon points="122,139 106,140 112,127" fill="#8b5e34"/><path d="M200 99 L226 110" fill="none" stroke="#7fc8f8" stroke-width="2"/><polygon points="236,114 225,115 229,105" fill="#7fc8f8"/><path d="M190 108 l-4 -10 M190 108 v-12 M190 108 l4 -10 M230 126 l-4 -10 M230 126 v-12 M230 126 l4 -10 M270 143 l-4 -10 M270 143 v-12 M270 143 l4 -10" fill="none" stroke="#7bc96f" stroke-width="3"/><path d="M190 110 v18 M184 112 l-4 12 M196 112 l4 12 M230 128 v18 M224 130 l-4 12 M236 130 l4 12 M270 145 v18 M264 147 l-4 12 M276 147 l4 12" fill="none" stroke="#8b5e34" stroke-width="1.5"/></g><g fill="currentColor"><text x="80" y="88" text-anchor="middle">土が流れる</text><text x="240" y="88" text-anchor="middle">あまり流れない</text><text x="80" y="196" text-anchor="middle">草がない坂</text><text x="240" y="196" text-anchor="middle">草がある坂</text></g></svg>'
-        explain: "雨は、地面に当たるときのいきおいで土のつぶをはね飛ばし、そのあと流れる水がつぶをはこびます。坂がきゅうなほど水ははやく流れ、はこぶ力が強くなります。草や木の根は、土をあみのようにつなぎとめ、葉は雨つぶのいきおいを弱めます。だんだん畑は坂を平らな面に分けて水の流れをゆるめ、風よけの林は風の強さを弱めて土がとばされるのをふせぎます。"
+        id: "faea15dd07"
+        text: "雨や 風が 土の つぶを けずって はこぶ ことを、しんしょくと いいます。草や 木の ねは 土を つかまえ、はや 草は 雨を うけとめて、しんしょくを おさえます。土を まもる くふうには、だんだんばたけ、風よけの 林、わらを しく ことなどが あります。"
+        svg: '<svg viewBox="0 0 320 200" xmlns="http://www.w3.org/2000/svg" font-size="14"><g stroke="currentColor" stroke-width="2"><polygon points="10,100 150,160 150,176 10,176" fill="#c9a36b" fill-opacity=".6"/><polygon points="170,100 310,160 310,176 170,176" fill="#c9a36b" fill-opacity=".6"/><path d="M30 24 l-6 12 M60 24 l-6 12 M90 24 l-6 12 M120 24 l-6 12 M45 46 l-6 12 M75 46 l-6 12 M105 46 l-6 12 M190 24 l-6 12 M220 24 l-6 12 M250 24 l-6 12 M280 24 l-6 12 M205 46 l-6 12 M235 46 l-6 12 M265 46 l-6 12" fill="none" stroke="#7fc8f8" stroke-width="3"/><path d="M40 104 L108 133" fill="none" stroke="#8b5e34" stroke-width="6"/><polygon points="122,139 106,140 112,127" fill="#8b5e34"/><path d="M200 99 L226 110" fill="none" stroke="#7fc8f8" stroke-width="2"/><polygon points="236,114 225,115 229,105" fill="#7fc8f8"/><path d="M190 108 l-4 -10 M190 108 v-12 M190 108 l4 -10 M230 126 l-4 -10 M230 126 v-12 M230 126 l4 -10 M270 143 l-4 -10 M270 143 v-12 M270 143 l4 -10" fill="none" stroke="#7bc96f" stroke-width="3"/><path d="M190 110 v18 M184 112 l-4 12 M196 112 l4 12 M230 128 v18 M224 130 l-4 12 M236 130 l4 12 M270 145 v18 M264 147 l-4 12 M276 147 l4 12" fill="none" stroke="#8b5e34" stroke-width="1.5"/></g><g fill="currentColor"><text x="80" y="88" text-anchor="middle">土がながれる</text><text x="240" y="88" text-anchor="middle">あまりながれない</text><text x="80" y="196" text-anchor="middle">草がないさか</text><text x="240" y="196" text-anchor="middle">草があるさか</text></g></svg>'
+        explain: "雨は、じめんに 当たる ときの いきおいで 土の つぶを はねとばし、その あと ながれる 水が つぶを はこびます。さかが きゅうなほど 水は はやく ながれ、はこぶ 力が 強くなります。草や 木の ねは、土を あみのように つなぎとめ、はは 雨つぶの いきおいを 弱めます。だんだんばたけは さかを たいらな めんに 分けて 水の ながれを ゆるめ、風よけの 林は 風の 強さを 弱めて 土が とばされるのを ふせぎます。"
       - part: 思い出す
-        text: "すな、シルト、ねんどのうち、透水性がいちばん高い（水がいちばんはやくぬける）土はどれでしょう。"
+        id: "99cbf8e4da"
+        text: "すな、シルト、ねんどの うち、とうすいせいが いちばん 高い（水が いちばん はやく ぬける）土は どれでしょう。"
         svg: '<svg viewBox="0 0 320 200" xmlns="http://www.w3.org/2000/svg" font-size="14"><g stroke="currentColor" stroke-width="2"><circle cx="60" cy="90" r="14" fill="#f3c969" fill-opacity=".7"/><circle cx="160" cy="90" r="8" fill="#b39ddb" fill-opacity=".7"/><circle cx="260" cy="90" r="3" fill="#c9a36b" fill-opacity=".8"/></g><g fill="currentColor"><text x="60" y="140" text-anchor="middle">すな</text><text x="160" y="140" text-anchor="middle">シルト</text><text x="260" y="140" text-anchor="middle">ねんど</text></g></svg>'
         choices: [すな, シルト, ねんど]
         answer: すな
         check: "'すな'"
         hints:
           - "水がとおる道は、つぶとつぶのすきま。"
-          - text: "つぶの大きさで、すきまはどうかわるかな。"
+          - text: "つぶの 大きさで、すきまは どう かわるかな。"
             svg: '<svg viewBox="0 0 320 200" xmlns="http://www.w3.org/2000/svg" font-size="14"><g stroke="currentColor" stroke-width="2"><circle cx="46" cy="80" r="30" fill="#f3c969" fill-opacity=".7"/><circle cx="118" cy="80" r="30" fill="#f3c969" fill-opacity=".7"/><circle cx="214" cy="80" r="12" fill="#f3c969" fill-opacity=".7"/><circle cx="240" cy="80" r="12" fill="#f3c969" fill-opacity=".7"/><circle cx="266" cy="80" r="12" fill="#f3c969" fill-opacity=".7"/></g><path d="M82 30 V114" stroke="#7fc8f8" stroke-width="6"/><polygon points="82,132 72,112 92,112" fill="#7fc8f8"/><path d="M227 40 V104" stroke="#7fc8f8" stroke-width="2"/><polygon points="227,114 222,102 232,102" fill="#7fc8f8"/><g fill="currentColor"><text x="82" y="160" text-anchor="middle">つぶが大きい</text><text x="240" y="160" text-anchor="middle">つぶが小さい</text></g></svg>'
           - "つぶの大きいじゅんに 3 つをならべて考えよう。"
       - part: 思い出す
-        text: "つぎのうち、風化ではないものはどれでしょう。"
-        svg: '<svg viewBox="0 0 320 200" xmlns="http://www.w3.org/2000/svg" font-size="13"><g stroke="currentColor" stroke-width="2"><path d="M8 80 q10 -8 20 0 t20 0 t20 0" fill="none" stroke="#7fc8f8" stroke-width="3"/><circle cx="30" cy="64" r="9" fill="#c8ccd6" fill-opacity=".8"/><polygon points="76,48 92,58 76,68" fill="currentColor"/><polygon points="120,100 124,60 150,50 188,62 192,100" fill="#c8ccd6" fill-opacity=".7"/><path d="M154 20 V52 L148 74 M154 52 L168 76" fill="none" stroke="#c9a36b" stroke-width="4"/><polygon points="224,100 228,60 254,50 292,62 296,100" fill="#c8ccd6" fill-opacity=".7"/><path d="M256 51 L250 70 L260 80" fill="none"/><polygon points="258,66 264,70 264,78 258,82 252,78 252,70" fill="#7fc8f8" fill-opacity=".6"/></g><g fill="currentColor"><text x="54" y="126" text-anchor="middle">ア 川が岩を</text><text x="54" y="144" text-anchor="middle">けずって</text><text x="54" y="162" text-anchor="middle">はこぶ</text><text x="156" y="126" text-anchor="middle">イ 木の根が</text><text x="156" y="144" text-anchor="middle">われ目を</text><text x="156" y="162" text-anchor="middle">広げる</text><text x="260" y="126" text-anchor="middle">ウ 水がこおって</text><text x="260" y="144" text-anchor="middle">ひびが</text><text x="260" y="162" text-anchor="middle">入る</text></g></svg>'
+        id: "704a1b648d"
+        text: "つぎの うち、ふうかではない ものは どれでしょう。"
+        svg: '<svg viewBox="0 0 320 200" xmlns="http://www.w3.org/2000/svg" font-size="13"><g stroke="currentColor" stroke-width="2"><path d="M8 80 q10 -8 20 0 t20 0 t20 0" fill="none" stroke="#7fc8f8" stroke-width="3"/><circle cx="30" cy="64" r="9" fill="#c8ccd6" fill-opacity=".8"/><polygon points="76,48 92,58 76,68" fill="currentColor"/><polygon points="120,100 124,60 150,50 188,62 192,100" fill="#c8ccd6" fill-opacity=".7"/><path d="M154 20 V52 L148 74 M154 52 L168 76" fill="none" stroke="#c9a36b" stroke-width="4"/><polygon points="224,100 228,60 254,50 292,62 296,100" fill="#c8ccd6" fill-opacity=".7"/><path d="M256 51 L250 70 L260 80" fill="none"/><polygon points="258,66 264,70 264,78 258,82 252,78 252,70" fill="#7fc8f8" fill-opacity=".6"/></g><g fill="currentColor"><text x="54" y="126" text-anchor="middle">ア 川が岩を</text><text x="54" y="144" text-anchor="middle">けずって</text><text x="54" y="162" text-anchor="middle">はこぶ</text><text x="156" y="126" text-anchor="middle">イ 木のねが</text><text x="156" y="144" text-anchor="middle">われ目を</text><text x="156" y="162" text-anchor="middle">広げる</text><text x="260" y="126" text-anchor="middle">ウ 水がこおって</text><text x="260" y="144" text-anchor="middle">ひびが</text><text x="260" y="162" text-anchor="middle">入る</text></g></svg>'
         choices: [ア, イ, ウ]
         answer: ア
         check: "'ア'"
         hints:
-          - "風化は、岩がその場所でくだけること。"
-          - text: "風化のれいを思い出そう。"
+          - "ふうかは、岩が その ばしょで くだける こと。"
+          - text: "ふうかの れいを 思い出そう。"
             svg: '<svg viewBox="0 0 320 200" xmlns="http://www.w3.org/2000/svg" font-size="14"><g stroke="currentColor" stroke-width="2"><polygon points="12,100 16,52 46,42 88,54 92,100" fill="#c8ccd6" fill-opacity=".7"/><path d="M48 43 L44 62 L52 74" fill="none"/><ellipse cx="49" cy="64" rx="3" ry="6" fill="#7fc8f8" fill-opacity=".8"/><polygon points="118,100 122,52 152,42 194,54 198,100" fill="#c8ccd6" fill-opacity=".7"/><path d="M154 43 L150 62 L158 74" fill="none"/><polygon points="155,56 162,62 162,72 155,80 148,72 148,62" fill="#7fc8f8" fill-opacity=".6"/><polygon points="224,100 228,52 258,42 300,54 304,100" fill="#c8ccd6" fill-opacity=".7"/><path d="M258 43 L248 62 L258 76 M266 43 L274 62 L264 76" fill="none"/><polygon points="98,70 108,76 98,82" fill="currentColor"/><polygon points="204,70 214,76 204,82" fill="currentColor"/></g><g fill="currentColor" font-size="13"><text x="52" y="124" text-anchor="middle">水がしみこむ</text><text x="158" y="124" text-anchor="middle">こおってふくらむ</text><text x="264" y="124" text-anchor="middle">ひびが広がる</text><text x="160" y="170" text-anchor="middle">これがくりかえされる</text></g></svg>'
-          - "「その場所で」ということばに合わないものをさがそう。"
+          - "「その ばしょで」という ことばに 合わない ものを さがそう。"
       - part: 今日
-        text: "同じ土で、草のない 3 つの坂に、同じ雨がふりました。いちばん土が流されやすい坂はどれでしょう。"
+        id: "bd3b6ebad3"
+        text: "同じ 土で、草の ない 3 つの さかに、同じ 雨が ふりました。いちばん 土が ながされやすい さかは どれでしょう。"
         svg: '<svg viewBox="0 0 320 200" xmlns="http://www.w3.org/2000/svg" font-size="14"><g stroke="currentColor" stroke-width="2"><polygon points="16,130 106,150 16,150" fill="#c9a36b" fill-opacity=".6"/><polygon points="118,105 208,150 118,150" fill="#c9a36b" fill-opacity=".6"/><polygon points="220,75 310,150 220,150" fill="#c9a36b" fill-opacity=".6"/><path d="M30 28 l-6 12 M60 28 l-6 12 M90 28 l-6 12 M132 28 l-6 12 M162 28 l-6 12 M192 28 l-6 12 M234 28 l-6 12 M264 28 l-6 12 M294 28 l-6 12" fill="none" stroke="#7fc8f8" stroke-width="3"/></g><g fill="currentColor"><text x="61" y="172" text-anchor="middle">ア</text><text x="163" y="172" text-anchor="middle">イ</text><text x="265" y="172" text-anchor="middle">ウ</text><text x="160" y="194" font-size="13" text-anchor="middle">同じ土、同じ雨、草はなし</text></g></svg>'
         choices: [ア, イ, ウ]
         answer: ウ
         check: "'ウ'"
         hints:
-          - "坂のきゅうさと、水の流れるはやさを考えよう。"
-          - text: "ゆるやかな坂ときゅうな坂で、水の流れ方をくらべよう。"
-            svg: '<svg viewBox="0 0 320 200" xmlns="http://www.w3.org/2000/svg" font-size="14"><g stroke="currentColor" stroke-width="2"><polygon points="16,120 136,150 16,150" fill="#c9a36b" fill-opacity=".6"/><polygon points="176,70 296,150 176,150" fill="#c9a36b" fill-opacity=".6"/><path d="M22 108 L60 118" fill="none" stroke="#7fc8f8" stroke-width="5"/><polygon points="70,119 57,122 60,111" fill="#7fc8f8"/><path d="M182 58 L262 112" fill="none" stroke="#7fc8f8" stroke-width="5"/><polygon points="274,119 261,117 267,107" fill="#7fc8f8"/></g><g fill="currentColor"><text x="76" y="176" text-anchor="middle">ゆるやかな坂</text><text x="236" y="176" text-anchor="middle">きゅうな坂</text></g></svg>'
-          - "水がはやく流れるほど、土をはこぶ力が大きい。"
+          - "さかの きゅうさと、水の ながれる はやさを 考えよう。"
+          - text: "ゆるやかな さかと きゅうな さかで、水の ながれ方を くらべよう。"
+            svg: '<svg viewBox="0 0 320 200" xmlns="http://www.w3.org/2000/svg" font-size="14"><g stroke="currentColor" stroke-width="2"><polygon points="16,120 136,150 16,150" fill="#c9a36b" fill-opacity=".6"/><polygon points="176,70 296,150 176,150" fill="#c9a36b" fill-opacity=".6"/><path d="M22 108 L60 118" fill="none" stroke="#7fc8f8" stroke-width="5"/><polygon points="70,119 57,122 60,111" fill="#7fc8f8"/><path d="M182 58 L262 112" fill="none" stroke="#7fc8f8" stroke-width="5"/><polygon points="274,119 261,117 267,107" fill="#7fc8f8"/></g><g fill="currentColor"><text x="76" y="176" text-anchor="middle">ゆるやかなさか</text><text x="236" y="176" text-anchor="middle">きゅうなさか</text></g></svg>'
+          - "水が はやく ながれるほど、土を はこぶ 力が 大きい。"
       - part: 今日
-        text: "同じ雨がふったあと、3 つの坂から流れ出た土の重さをはかりました。何もない坂は、草がびっしりの坂の何倍の土が流れましたか。"
-        svg: '<svg viewBox="0 0 320 200" xmlns="http://www.w3.org/2000/svg" font-size="14"><g stroke="currentColor" stroke-width="2"><path d="M20 160 H300" fill="none"/><rect x="50" y="155" width="40" height="5" fill="#c9a36b" fill-opacity=".7"/><rect x="140" y="138" width="40" height="22" fill="#c9a36b" fill-opacity=".7"/><rect x="230" y="60" width="40" height="100" fill="#c9a36b" fill-opacity=".7"/></g><g fill="currentColor"><text x="160" y="24" text-anchor="middle">流れ出た土の重さ</text><text x="70" y="146" text-anchor="middle">2 kg</text><text x="160" y="128" text-anchor="middle">9 kg</text><text x="250" y="50" text-anchor="middle">40 kg</text><text x="70" y="184" text-anchor="middle">びっしり</text><text x="160" y="184" text-anchor="middle">ところどころ</text><text x="250" y="184" text-anchor="middle">何もない</text></g></svg>'
+        id: "192694e541"
+        text: "同じ 雨が ふった あと、3 つの さかから ながれ出た 土の おもさを はかりました。何も ない さかは、草が びっしりの さかの なんばいの 土が ながれましたか。"
+        svg: '<svg viewBox="0 0 320 200" xmlns="http://www.w3.org/2000/svg" font-size="14"><g stroke="currentColor" stroke-width="2"><path d="M20 160 H300" fill="none"/><rect x="50" y="155" width="40" height="5" fill="#c9a36b" fill-opacity=".7"/><rect x="140" y="138" width="40" height="22" fill="#c9a36b" fill-opacity=".7"/><rect x="230" y="60" width="40" height="100" fill="#c9a36b" fill-opacity=".7"/></g><g fill="currentColor"><text x="160" y="24" text-anchor="middle">ながれ出た土のおもさ</text><text x="70" y="146" text-anchor="middle">2 kg</text><text x="160" y="128" text-anchor="middle">9 kg</text><text x="250" y="50" text-anchor="middle">40 kg</text><text x="70" y="184" text-anchor="middle">びっしり</text><text x="160" y="184" text-anchor="middle">ところどころ</text><text x="250" y="184" text-anchor="middle">何もない</text></g></svg>'
         answer: 20
         check: "40//2"
         hints:
-          - "「何倍」かは、わり算でくらべる。"
-          - text: "40 kg を、2 kg ずつのだんに分けてみよう。"
+          - "「なんばい」かは、わり算で くらべる。"
+          - text: "40 kg を、2 kg ずつの だんに 分けてみよう。"
             svg: '<svg viewBox="0 0 320 200" xmlns="http://www.w3.org/2000/svg" font-size="14"><g stroke="currentColor" stroke-width="2"><rect x="50" y="20" width="80" height="24" fill="#c9a36b" fill-opacity=".6"/><rect x="50" y="44" width="80" height="24" fill="#c9a36b" fill-opacity=".6"/><rect x="50" y="68" width="80" height="24" fill="#c9a36b" fill-opacity=".6"/><path d="M142 20 H150 V150 H142" fill="none"/></g><g fill="currentColor"><text x="90" y="37" text-anchor="middle">2 kg</text><text x="90" y="61" text-anchor="middle">2 kg</text><text x="90" y="85" text-anchor="middle">2 kg</text><text x="90" y="124" text-anchor="middle">・・・</text><text x="160" y="90">？ こ</text><text x="160" y="184" text-anchor="middle">40 kg を 2 kg ずつのだんに分ける</text></g></svg>'
           - "2 kg が何こ分かを考えよう。わり算だよ。"
       - part: 今日
-        text: "雨で土が流れやすい坂の畑をまもるくふうはどれでしょう。"
-        svg: '<svg viewBox="0 0 320 200" xmlns="http://www.w3.org/2000/svg" font-size="13"><g stroke="currentColor" stroke-width="2"><polygon points="10,80 36,80 36,98 62,98 62,116 88,116 88,134 10,134" fill="#c9a36b" fill-opacity=".6"/><path d="M14 76 V70 M24 76 V70 M40 94 V88 M50 94 V88 M66 112 V106 M76 112 V106" fill="none" stroke="#7bc96f" stroke-width="3"/><polygon points="114,80 190,134 114,134" fill="#c9a36b" fill-opacity=".6"/><polygon points="218,80 226,82 230,90 238,92 244,100 252,100 258,110 268,112 274,122 284,124 294,134 218,134" fill="#c9a36b" fill-opacity=".6"/><circle cx="236" cy="82" r="4" fill="#c9a36b" fill-opacity=".8"/><circle cx="256" cy="98" r="4" fill="#c9a36b" fill-opacity=".8"/><circle cx="276" cy="113" r="4" fill="#c9a36b" fill-opacity=".8"/></g><g fill="currentColor"><text x="52" y="30" text-anchor="middle" font-size="14">ア</text><text x="156" y="30" text-anchor="middle" font-size="14">イ</text><text x="260" y="30" text-anchor="middle" font-size="14">ウ</text><text x="52" y="160" text-anchor="middle">だんだんに</text><text x="52" y="178" text-anchor="middle">平らにする</text><text x="156" y="160" text-anchor="middle">草を</text><text x="156" y="178" text-anchor="middle">ぜんぶぬく</text><text x="260" y="160" text-anchor="middle">土をふかくほって</text><text x="260" y="178" text-anchor="middle">やわらかくする</text></g></svg>'
+        id: "aa60d79e2c"
+        text: "雨で 土が ながれやすい さかの はたけを まもる くふうは どれでしょう。"
+        svg: '<svg viewBox="0 0 320 200" xmlns="http://www.w3.org/2000/svg" font-size="13"><g stroke="currentColor" stroke-width="2"><polygon points="10,80 36,80 36,98 62,98 62,116 88,116 88,134 10,134" fill="#c9a36b" fill-opacity=".6"/><path d="M14 76 V70 M24 76 V70 M40 94 V88 M50 94 V88 M66 112 V106 M76 112 V106" fill="none" stroke="#7bc96f" stroke-width="3"/><polygon points="114,80 190,134 114,134" fill="#c9a36b" fill-opacity=".6"/><polygon points="218,80 226,82 230,90 238,92 244,100 252,100 258,110 268,112 274,122 284,124 294,134 218,134" fill="#c9a36b" fill-opacity=".6"/><circle cx="236" cy="82" r="4" fill="#c9a36b" fill-opacity=".8"/><circle cx="256" cy="98" r="4" fill="#c9a36b" fill-opacity=".8"/><circle cx="276" cy="113" r="4" fill="#c9a36b" fill-opacity=".8"/></g><g fill="currentColor"><text x="52" y="30" text-anchor="middle" font-size="14">ア</text><text x="156" y="30" text-anchor="middle" font-size="14">イ</text><text x="260" y="30" text-anchor="middle" font-size="14">ウ</text><text x="52" y="160" text-anchor="middle">だんだんに</text><text x="52" y="178" text-anchor="middle">たいらにする</text><text x="156" y="160" text-anchor="middle">草を</text><text x="156" y="178" text-anchor="middle">ぜんぶぬく</text><text x="260" y="160" text-anchor="middle">土をふかくほって</text><text x="260" y="178" text-anchor="middle">やわらかくする</text></g></svg>'
         choices: [ア, イ, ウ]
         answer: ア
         check: "'ア'"
         hints:
-          - "水が坂を下るはやさを小さくできるかどうかで考えよう。"
-          - text: "水の流れを、坂とだんだんの面でくらべよう。"
-            svg: '<svg viewBox="0 0 320 200" xmlns="http://www.w3.org/2000/svg" font-size="14"><g stroke="currentColor" stroke-width="2"><polygon points="20,70 140,150 20,150" fill="#c9a36b" fill-opacity=".6"/><path d="M30 64 L112 118" fill="none" stroke="#7fc8f8" stroke-width="5"/><polygon points="180,70 210,70 210,90 240,90 240,110 270,110 270,130 300,130 300,150 180,150" fill="#c9a36b" fill-opacity=".6"/><path d="M186 64 H206 M216 84 H236 M246 104 H266 M276 124 H296" fill="none" stroke="#7fc8f8" stroke-width="5"/></g><g fill="currentColor"><text x="80" y="176" text-anchor="middle">ずっとつづく坂</text><text x="240" y="176" text-anchor="middle">平らなところで止まる</text></g></svg>'
-          - "草や作物をとりのぞいて土をむき出しにすることは、まもることになるかな。"
+          - "水が さかを 下る はやさを 小さく できるかどうかで 考えよう。"
+          - text: "水の ながれを、さかと だんだんの めんで くらべよう。"
+            svg: '<svg viewBox="0 0 320 200" xmlns="http://www.w3.org/2000/svg" font-size="14"><g stroke="currentColor" stroke-width="2"><polygon points="20,70 140,150 20,150" fill="#c9a36b" fill-opacity=".6"/><path d="M30 64 L112 118" fill="none" stroke="#7fc8f8" stroke-width="5"/><polygon points="180,70 210,70 210,90 240,90 240,110 270,110 270,130 300,130 300,150 180,150" fill="#c9a36b" fill-opacity=".6"/><path d="M186 64 H206 M216 84 H236 M246 104 H266 M276 124 H296" fill="none" stroke="#7fc8f8" stroke-width="5"/></g><g fill="currentColor"><text x="80" y="176" text-anchor="middle">ずっとつづくさか</text><text x="240" y="176" text-anchor="middle">たいらなところで止まる</text></g></svg>'
+          - "草や さくもつを とりのぞいて 土を むき出しに する ことは、まもる ことに なるかな。"
       - part: わけ
-        text: "草がはえている坂では、雨がふっても土が流されにくいのはなぜでしょう。"
-        svg: '<svg viewBox="0 0 320 200" xmlns="http://www.w3.org/2000/svg" font-size="14"><g stroke="currentColor" stroke-width="2"><polygon points="20,110 300,150 300,180 20,180" fill="#c9a36b" fill-opacity=".6"/><path d="M50 30 l-6 12 M100 30 l-6 12 M150 30 l-6 12 M200 30 l-6 12 M250 30 l-6 12 M75 52 l-6 12 M125 52 l-6 12 M175 52 l-6 12 M225 52 l-6 12 M275 52 l-6 12" fill="none" stroke="#7fc8f8" stroke-width="3"/><path d="M60 116 l-5 -14 M60 116 v-16 M60 116 l5 -14 M130 126 l-5 -14 M130 126 v-16 M130 126 l5 -14 M200 136 l-5 -14 M200 136 v-16 M200 136 l5 -14 M270 146 l-5 -14 M270 146 v-16 M270 146 l5 -14" fill="none" stroke="#7bc96f" stroke-width="3"/><path d="M60 118 v22 M54 120 l-5 14 M66 120 l5 14 M130 128 v22 M124 130 l-5 14 M136 130 l5 14 M200 138 v22 M194 140 l-5 14 M206 140 l5 14" fill="none" stroke="#8b5e34" stroke-width="1.5"/><path d="M222 122 L252 126" fill="none" stroke="#7fc8f8" stroke-width="3"/><polygon points="262,127 250,131 250,121" fill="#7fc8f8"/></g><g fill="currentColor"><text x="160" y="18" text-anchor="middle" font-size="13">① 葉と草　② 根　③ 地面を流れる水</text><text x="84" y="96">①</text><text x="92" y="164">②</text><text x="232" y="114">③</text></g></svg>'
+        id: "b3614269e0"
+        text: "草が はえている さかでは、雨が ふっても 土が ながされにくいのは なぜでしょう。"
+        svg: '<svg viewBox="0 0 320 200" xmlns="http://www.w3.org/2000/svg" font-size="14"><g stroke="currentColor" stroke-width="2"><polygon points="20,110 300,150 300,180 20,180" fill="#c9a36b" fill-opacity=".6"/><path d="M50 30 l-6 12 M100 30 l-6 12 M150 30 l-6 12 M200 30 l-6 12 M250 30 l-6 12 M75 52 l-6 12 M125 52 l-6 12 M175 52 l-6 12 M225 52 l-6 12 M275 52 l-6 12" fill="none" stroke="#7fc8f8" stroke-width="3"/><path d="M60 116 l-5 -14 M60 116 v-16 M60 116 l5 -14 M130 126 l-5 -14 M130 126 v-16 M130 126 l5 -14 M200 136 l-5 -14 M200 136 v-16 M200 136 l5 -14 M270 146 l-5 -14 M270 146 v-16 M270 146 l5 -14" fill="none" stroke="#7bc96f" stroke-width="3"/><path d="M60 118 v22 M54 120 l-5 14 M66 120 l5 14 M130 128 v22 M124 130 l-5 14 M136 130 l5 14 M200 138 v22 M194 140 l-5 14 M206 140 l5 14" fill="none" stroke="#8b5e34" stroke-width="1.5"/><path d="M222 122 L252 126" fill="none" stroke="#7fc8f8" stroke-width="3"/><polygon points="262,127 250,131 250,121" fill="#7fc8f8"/></g><g fill="currentColor"><text x="160" y="18" text-anchor="middle" font-size="13">① はと草　② ね　③ じめんをながれる水</text><text x="84" y="96">①</text><text x="92" y="164">②</text><text x="232" y="114">③</text></g></svg>'
         choices:
-          - "根が土をつかまえ、葉や草が雨のいきおいと水の流れをやわらげるから"
-          - "葉や草が雨をぜんぶはじいて、雨つぶが地面にとどかなくなるから"
-          - "根が土の中の水をぜんぶすいとって、土をかちかちにかためてしまうから"
-        answer: "根が土をつかまえ、葉や草が雨のいきおいと水の流れをやわらげるから"
-        check: "'根が土をつかまえ、葉や草が雨のいきおいと水の流れをやわらげるから'"
-        explain: "草がある坂で土が流されにくいのには、2 つのわけがあります。1 つめは、草の葉やくきが雨つぶをうけとめて、地面に当たる強さと水の流れるはやさを弱めること。2 つめは、根が土のつぶをあみのようにつなぎとめて、はなれにくくすること。どちらも侵食をおさえるはたらきです。"
+          - "ねが 土を つかまえ、はや 草が 雨の いきおいと 水の ながれを やわらげるから"
+          - "はや 草が 雨を ぜんぶ はじいて、雨つぶが じめんに とどかなく なるから"
+          - "ねが 土の 中の 水を ぜんぶ すいとって、土を かちかちに かためてしまうから"
+        answer: "ねが 土を つかまえ、はや 草が 雨の いきおいと 水の ながれを やわらげるから"
+        check: "'ねが 土を つかまえ、はや 草が 雨の いきおいと 水の ながれを やわらげるから'"
+        explain: "草が ある さかで 土が ながされにくいのには、2 つの わけが あります。1 つめは、草の はや くきが 雨つぶを うけとめて、じめんに 当たる 強さと 水の ながれる はやさを 弱める こと。2 つめは、ねが 土の つぶを あみのように つなぎとめて、はなれにくく する こと。どちらも しんしょくを おさえる はたらきです。"
         hints:
-          - "草の葉、根、地面を流れる水。3 つのぶぶんで何がおきているか考えよう。"
-          - text: "草がないときとあるときで、雨つぶが地面に当たるようすをくらべよう。"
+          - "草の は、ね、じめんを ながれる 水。3 つの ぶぶんで 何が おきて いるか 考えよう。"
+          - text: "草が ない ときと ある ときで、雨つぶが じめんに 当たる ようすを くらべよう。"
             svg: '<svg viewBox="0 0 320 200" xmlns="http://www.w3.org/2000/svg" font-size="13"><g stroke="currentColor" stroke-width="2"><rect x="16" y="130" width="120" height="40" fill="#c9a36b" fill-opacity=".6"/><path d="M76 60 V114" stroke="#7fc8f8" stroke-width="4" fill="none"/><polygon points="76,126 68,110 84,110" fill="#7fc8f8"/><path d="M46 124 l-8 -10 M106 124 l8 -10 M58 122 l-4 -12 M94 122 l4 -12" fill="none" stroke="#8b5e34" stroke-width="3"/><rect x="184" y="150" width="120" height="20" fill="#c9a36b" fill-opacity=".6"/><path d="M200 112 Q244 80 288 112 Z" fill="#7bc96f" fill-opacity=".6"/><path d="M244 40 V76" stroke="#7fc8f8" stroke-width="4" fill="none"/><polygon points="244,88 236,72 252,72" fill="#7fc8f8"/></g><g fill="currentColor"><text x="76" y="192" text-anchor="middle">草がないとき</text><text x="244" y="192" text-anchor="middle">草があるとき</text></g></svg>'
-          - "根は土の中でどうなっているか思い出そう。"
+          - "ねは 土の 中で どうなっているか 思い出そう。"
         paths:
-          - ["草の葉や草が雨つぶをうけとめる", "雨が地面に強く当たらず、水の流れもゆっくりになる", "土をはこぶ力が小さい"]
-          - ["根が土の中であみのようにひろがり、土のつぶをつなぎとめる", "つぶがはなれにくくなる", "だから流されにくい"]
+          - ["草の はや 草が 雨つぶを うけとめる", "雨が じめんに 強く 当たらず、水の ながれも ゆっくりに なる", "土をはこぶ力が小さい"]
+          - ["ねが 土の 中で あみのように ひろがり、土の つぶを つなぎとめる", "つぶが はなれにくく なる", "だから ながされにくい"]
       - part: 挑戦
-        text: "ある畑では、土が 1 年に 1 mm ずつ流されています。いっぽう、新しい土は 100 年で 1 cm、つまり 1 年に 0.1 mm できます。いまの土のあつさは 18 cm です。このままだと、何年で土がなくなるでしょう。"
-        svg: '<svg viewBox="0 0 320 200" xmlns="http://www.w3.org/2000/svg" font-size="14"><g stroke="currentColor" stroke-width="2"><rect x="40" y="40" width="70" height="120" fill="#c9a36b" fill-opacity=".6"/><path d="M136 50 V82" fill="none" stroke="#f08080" stroke-width="5"/><polygon points="136,94 126,78 146,78" fill="#f08080"/><path d="M136 146 V122" fill="none" stroke="#7bc96f" stroke-width="5"/><polygon points="136,108 126,124 146,124" fill="#7bc96f"/></g><g fill="currentColor"><text x="75" y="30" text-anchor="middle">18 cm</text><text x="158" y="66">1 年に 1 mm</text><text x="158" y="84">流される</text><text x="158" y="130">1 年に 0.1 mm</text><text x="158" y="148">できる</text></g></svg>'
+        id: "d15b7dff7e"
+        text: "ある はたけでは、土が 1 年に 1 mm ずつ ながされています。いっぽう、新しい 土は 100 年で 1 cm、つまり 1 年に 0.1 mm できます。いまの 土の あつさは 18 cm です。このままだと、何年で 土が なくなるでしょう。"
+        svg: '<svg viewBox="0 0 320 200" xmlns="http://www.w3.org/2000/svg" font-size="14"><g stroke="currentColor" stroke-width="2"><rect x="40" y="40" width="70" height="120" fill="#c9a36b" fill-opacity=".6"/><path d="M136 50 V82" fill="none" stroke="#f08080" stroke-width="5"/><polygon points="136,94 126,78 146,78" fill="#f08080"/><path d="M136 146 V122" fill="none" stroke="#7bc96f" stroke-width="5"/><polygon points="136,108 126,124 146,124" fill="#7bc96f"/></g><g fill="currentColor"><text x="75" y="30" text-anchor="middle">18 cm</text><text x="158" y="66">1 年に 1 mm</text><text x="158" y="84">ながされる</text><text x="158" y="130">1 年に 0.1 mm</text><text x="158" y="148">できる</text></g></svg>'
         answer: 200
         check: "1800//(10-1)"
         note: "新しい土ができる年数は場所でちがう。ここでは 100 年で 1 cm として計算した。"
         hints:
-          - "へるはやさと、できるはやさを、両方見よう。"
-          - text: "100 年たつと、流される土とできる土はどれだけちがうかな。"
-            svg: '<svg viewBox="0 0 320 200" xmlns="http://www.w3.org/2000/svg" font-size="14"><g stroke="currentColor" stroke-width="2"><rect x="20" y="50" width="200" height="22" fill="#f08080" fill-opacity=".6"/><rect x="20" y="110" width="20" height="22" fill="#7bc96f" fill-opacity=".6"/></g><g fill="currentColor"><text x="20" y="40">100 年で流される土：100 mm</text><text x="20" y="100">100 年でできる土：10 mm</text><text x="160" y="172" text-anchor="middle">ほんとうにへるのは何 mm かな</text></g></svg>'
-          - "18 cm は何 mm か、先に単位をそろえて考えよう。"
+          - "へる はやさと、できる はやさを、りょうほう 見よう。"
+          - text: "100 年 たつと、ながされる 土と できる 土は どれだけ ちがうかな。"
+            svg: '<svg viewBox="0 0 320 200" xmlns="http://www.w3.org/2000/svg" font-size="14"><g stroke="currentColor" stroke-width="2"><rect x="20" y="50" width="200" height="22" fill="#f08080" fill-opacity=".6"/><rect x="20" y="110" width="20" height="22" fill="#7bc96f" fill-opacity=".6"/></g><g fill="currentColor"><text x="20" y="40">100 年でながされる土：100 mm</text><text x="20" y="100">100 年でできる土：10 mm</text><text x="160" y="172" text-anchor="middle">ほんとうにへるのは何 mm かな</text></g></svg>'
+          - "18 cm は 何 mm か、先に たんいを そろえて 考えよう。"
         paths:
           - ["18 cm ＝ 180 mm", "1 年にへるぶんは 1 − 0.1 ＝ 0.9 mm", "180 ÷ 0.9 ＝ 200 年"]
-          - ["100 年では 100 mm 流され、10 mm できるので、へるのは 90 mm", "180 mm は 90 mm の 2 つ分", "100 年 × 2 ＝ 200 年"]
+          - ["100 年では 100 mm ながされ、10 mm できるので、へるのは 90 mm", "180 mm は 90 mm の 2 つ分", "100 年 × 2 ＝ 200 年"]
     extra:
       - part: 今日
-        text: "風がつよい土地で、畑の土が風でとばされます。土をまもるくふうはどれでしょう。"
+        id: "99c352305e"
+        text: "風が つよい 土地で、はたけの 土が 風で とばされます。土を まもる くふうは どれでしょう。"
         svg: '<svg viewBox="0 0 320 200" xmlns="http://www.w3.org/2000/svg" font-size="14"><g stroke="currentColor" stroke-width="2"><rect x="10" y="150" width="300" height="30" fill="#c9a36b" fill-opacity=".6"/><path d="M20 70 H200 M30 100 H220 M20 128 H190" fill="none" stroke="#7fc8f8" stroke-width="3"/><polygon points="200,64 212,70 200,76" fill="#7fc8f8"/><polygon points="220,94 232,100 220,106" fill="#7fc8f8"/><polygon points="190,122 202,128 190,134" fill="#7fc8f8"/><circle cx="244" cy="76" r="3" fill="#c9a36b"/><circle cx="262" cy="96" r="3" fill="#c9a36b"/><circle cx="282" cy="82" r="3" fill="#c9a36b"/><circle cx="252" cy="118" r="3" fill="#c9a36b"/><circle cx="276" cy="130" r="3" fill="#c9a36b"/><circle cx="298" cy="108" r="3" fill="#c9a36b"/><circle cx="224" cy="132" r="3" fill="#c9a36b"/></g><path d="M60 146 H84 M44 140 H52" stroke="#8b5e34" stroke-width="4" stroke-dasharray="0 8" stroke-linecap="round" fill="none"/></svg>'
         choices:
-          - "畑のまわりに木を植えて風よけにする"
-          - "畑の土をふかくほって細かくする"
-          - "畑の草や作物をぜんぶとりのぞく"
-        answer: "畑のまわりに木を植えて風よけにする"
-        check: "'畑のまわりに木を植えて風よけにする'"
+          - "はたけの まわりに 木を うえて 風よけに する"
+          - "はたけの 土を ふかく ほって 細かく する"
+          - "はたけの 草や さくもつを ぜんぶ とりのぞく"
+        answer: "はたけの まわりに 木を うえて 風よけに する"
+        check: "'はたけの まわりに 木を うえて 風よけに する'"
         hints:
-          - "風が土をはこぶのを、どうしたら弱められるかな。"
-          - text: "風の通り道に何があると、風はどうなるかな。"
+          - "風が 土を はこぶのを、どう したら 弱められるかな。"
+          - text: "風の 通り道に 何が あると、風は どうなるかな。"
             svg: '<svg viewBox="0 0 320 200" xmlns="http://www.w3.org/2000/svg" font-size="14"><g stroke="currentColor" stroke-width="2"><path d="M10 60 H120 M10 90 H120 M10 120 H120" fill="none" stroke="#7fc8f8" stroke-width="5"/><rect x="146" y="84" width="8" height="66" fill="#c9a36b"/><circle cx="150" cy="70" r="28" fill="#7bc96f" fill-opacity=".6"/><path d="M180 90 H230 M180 120 H230" fill="none" stroke="#7fc8f8" stroke-width="2"/></g><g fill="currentColor"><text x="64" y="176" text-anchor="middle">木の前</text><text x="210" y="176" text-anchor="middle">木の後ろ</text></g></svg>'
-          - "作物や草をとりのぞくと、土はむき出しになる。"
+          - "さくもつや 草を とりのぞくと、土は むき出しに なる。"
       - part: 今日
-        text: "同じ雨で、草がある坂から 3 kg、草がない坂から 24 kg の土が流れました。草がない坂は、草がある坂の何倍の土が流れましたか。"
+        id: "57ef6a86bb"
+        text: "同じ 雨で、草が ある さかから 3 kg、草が ない さかから 24 kg の 土が ながれました。草が ない さかは、草が ある さかの なんばいの 土が ながれましたか。"
         svg: '<svg viewBox="0 0 320 200" xmlns="http://www.w3.org/2000/svg" font-size="14"><g stroke="currentColor" stroke-width="2"><path d="M20 160 H300" fill="none"/><rect x="80" y="148" width="50" height="12" fill="#c9a36b" fill-opacity=".7"/><rect x="200" y="64" width="50" height="96" fill="#c9a36b" fill-opacity=".7"/></g><g fill="currentColor"><text x="105" y="138" text-anchor="middle">3 kg</text><text x="225" y="54" text-anchor="middle">24 kg</text><text x="105" y="184" text-anchor="middle">草がある</text><text x="225" y="184" text-anchor="middle">草がない</text></g></svg>'
         answer: 8
         check: "24//3"
         hints:
-          - "「何倍」かは、わり算でくらべる。"
-          - text: "24 kg を、3 kg ずつのだんに分けてみよう。"
+          - "「なんばい」かは、わり算で くらべる。"
+          - text: "24 kg を、3 kg ずつの だんに 分けてみよう。"
             svg: '<svg viewBox="0 0 320 200" xmlns="http://www.w3.org/2000/svg" font-size="14"><g stroke="currentColor" stroke-width="2"><rect x="50" y="20" width="80" height="24" fill="#c9a36b" fill-opacity=".6"/><rect x="50" y="44" width="80" height="24" fill="#c9a36b" fill-opacity=".6"/><rect x="50" y="68" width="80" height="24" fill="#c9a36b" fill-opacity=".6"/><path d="M142 20 H150 V150 H142" fill="none"/></g><g fill="currentColor"><text x="90" y="37" text-anchor="middle">3 kg</text><text x="90" y="61" text-anchor="middle">3 kg</text><text x="90" y="85" text-anchor="middle">3 kg</text><text x="90" y="124" text-anchor="middle">・・・</text><text x="160" y="90">？ こ</text><text x="160" y="184" text-anchor="middle">24 kg を 3 kg ずつのだんに分ける</text></g></svg>'
           - "3 kg が何こ分かを考えよう。"
   - day: 4
     items:
       - part: 今日
-        text: "茶色い土の層のすぐ下にある層はどれでしょう。"
+        id: "b6c892bdcd"
+        text: "茶色い 土の そうの すぐ 下に ある そうは どれでしょう。"
         svg: '<svg viewBox="0 0 320 200" xmlns="http://www.w3.org/2000/svg" font-size="14"><g stroke="currentColor" stroke-width="2"><rect x="60" y="20" width="90" height="30" fill="#6b5344" fill-opacity=".75"/><rect x="60" y="50" width="90" height="30" fill="#c9a36b" fill-opacity=".7"/><rect x="60" y="80" width="90" height="30" fill="#c8ccd6" fill-opacity=".6"/><rect x="60" y="110" width="90" height="30" fill="#8f96a6" fill-opacity=".8"/><rect x="18" y="156" width="12" height="12" fill="#6b5344" fill-opacity=".75"/><rect x="150" y="156" width="12" height="12" fill="#c9a36b" fill-opacity=".7"/><rect x="18" y="178" width="12" height="12" fill="#c8ccd6" fill-opacity=".6"/><rect x="150" y="178" width="12" height="12" fill="#8f96a6" fill-opacity=".8"/></g><g fill="currentColor"><text x="166" y="40">エ</text><text x="166" y="70">イ</text><text x="166" y="100">ア</text><text x="166" y="130">ウ</text><text x="36" y="167">黒い土</text><text x="168" y="167">茶色い土</text><text x="36" y="189">岩のかけら</text><text x="168" y="189">もとの岩</text></g></svg>'
         choices: [ア, イ, ウ, エ]
         answer: ア
         check: "'ア'"
         hints:
-          - "まず、色と名前を見くらべて、茶色い土の層を見つけよう。"
-          - text: "見つけた層から、ひとつ下を見よう。"
-            svg: '<svg viewBox="0 0 320 200" xmlns="http://www.w3.org/2000/svg" font-size="14"><g stroke="currentColor" stroke-width="2"><rect x="80" y="14" width="160" height="40" rx="8" fill="#c9a36b" fill-opacity=".5"/><path d="M160 58 V84" fill="none"/><polygon points="160,100 150,82 170,82" fill="currentColor"/><rect x="80" y="104" width="160" height="40" rx="8" fill="none" stroke-dasharray="6 5"/></g><g fill="currentColor" text-anchor="middle"><text x="160" y="39">茶色い土の層</text><text x="160" y="129">？</text><text x="160" y="180">すぐ下にある層</text></g></svg>'
+          - "まず、色と 名前を 見くらべて、茶色い 土の そうを 見つけよう。"
+          - text: "見つけた そうから、ひとつ 下を 見よう。"
+            svg: '<svg viewBox="0 0 320 200" xmlns="http://www.w3.org/2000/svg" font-size="14"><g stroke="currentColor" stroke-width="2"><rect x="80" y="14" width="160" height="40" rx="8" fill="#c9a36b" fill-opacity=".5"/><path d="M160 58 V84" fill="none"/><polygon points="160,100 150,82 170,82" fill="currentColor"/><rect x="80" y="104" width="160" height="40" rx="8" fill="none" stroke-dasharray="6 5"/></g><g fill="currentColor" text-anchor="middle"><text x="160" y="39">茶色い土のそう</text><text x="160" y="129">？</text><text x="160" y="180">すぐ下にあるそう</text></g></svg>'
           - "下にすすむほど、もとの岩に近づく。"
       - part: 今日
         text: "ある森の土は、3000 年かけてできました。土は 1 cm できるのに 100 年かかるとすると、この土のあつさは何 cm でしょう。"
@@ -361,22 +391,24 @@ days:
         check: "3000//100"
         hints:
           - "100 年で 1 cm。3000 年は、100 年の何こ分かな。"
-          - text: "年がふえると、あつさも同じぶんだけふえていく。"
+          - text: "年が ふえると、あつさも 同じぶんだけ ふえていく。"
             svg: '<svg viewBox="0 0 320 200" xmlns="http://www.w3.org/2000/svg" font-size="14"><g stroke="currentColor" stroke-width="2"><rect x="60" y="12" width="200" height="28" rx="6" fill="#c9a36b" fill-opacity=".25"/><rect x="60" y="44" width="200" height="28" rx="6" fill="#c9a36b" fill-opacity=".25"/><rect x="60" y="76" width="200" height="28" rx="6" fill="#c9a36b" fill-opacity=".25"/><rect x="60" y="152" width="200" height="28" rx="6" fill="none" stroke-dasharray="6 5"/></g><g fill="currentColor" text-anchor="middle"><text x="160" y="32">100 年 → 1 cm</text><text x="160" y="64">200 年 → 2 cm</text><text x="160" y="96">300 年 → 3 cm</text><text x="160" y="132">・・・</text><text x="160" y="172">3000 年 → ？ cm</text></g></svg>'
           - "3000 は 100 の何こ分か、わり算で出そう。"
       - part: 今日
-        text: "土 200 g をしらべたら、すなが 130 g、シルトが 50 g、ねんどが 20 g でした。やくそくによると、この土はどのタイプでしょう。"
-        svg: '<svg viewBox="0 0 320 200" xmlns="http://www.w3.org/2000/svg" font-size="13"><g stroke="currentColor" stroke-width="2"><rect x="20" y="36" width="182" height="30" fill="#f3c969" fill-opacity=".6"/><rect x="202" y="36" width="70" height="30" fill="#b39ddb" fill-opacity=".6"/><rect x="272" y="36" width="28" height="30" fill="#c9a36b" fill-opacity=".7"/><path d="M286 68 V94" fill="none"/></g><g fill="currentColor"><text x="160" y="24" text-anchor="middle" font-size="14">土ぜんぶで 200 g</text><text x="111" y="86" text-anchor="middle">すな 130 g</text><text x="237" y="86" text-anchor="middle">シルト 50 g</text><text x="300" y="108" text-anchor="end">ねんど 20 g</text><text x="20" y="138">すなが 70% 以上 → すなタイプ</text><text x="20" y="158">ねんどが 35% 以上 → ねんどタイプ</text><text x="20" y="178">どちらでもない → 壌土</text></g></svg>'
-        choices: [すなタイプ, ねんどタイプ, 壌土]
-        answer: 壌土
-        check: "'壌土'"
+        id: "600f5b8240"
+        text: "土 200 g を しらべたら、すなが 130 g、シルトが 50 g、ねんどが 20 g でした。やくそくによると、この 土は どの タイプでしょう。"
+        svg: '<svg viewBox="0 0 320 200" xmlns="http://www.w3.org/2000/svg" font-size="13"><g stroke="currentColor" stroke-width="2"><rect x="20" y="36" width="182" height="30" fill="#f3c969" fill-opacity=".6"/><rect x="202" y="36" width="70" height="30" fill="#b39ddb" fill-opacity=".6"/><rect x="272" y="36" width="28" height="30" fill="#c9a36b" fill-opacity=".7"/><path d="M286 68 V94" fill="none"/></g><g fill="currentColor"><text x="160" y="24" text-anchor="middle" font-size="14">土ぜんぶで 200 g</text><text x="111" y="86" text-anchor="middle">すな 130 g</text><text x="237" y="86" text-anchor="middle">シルト 50 g</text><text x="300" y="108" text-anchor="end">ねんど 20 g</text><text x="20" y="138">すなが 70% いじょう → すなタイプ</text><text x="20" y="158">ねんどが 35% いじょう → ねんどタイプ</text><text x="20" y="178">どちらでもない → じょうど</text></g></svg>'
+        choices: [すなタイプ, ねんどタイプ, じょうど]
+        answer: じょうど
+        check: "'じょうど'"
         hints:
-          - "g を % に直して、やくそくとくらべよう。（全体は 200 g）"
+          - "g を % に 直して、やくそくと くらべよう。（ぜんたいは 200 g）"
           - text: "200 g を 10 こに分けると、1 こは何 g で何% かな。"
             svg: '<svg viewBox="0 0 320 200" xmlns="http://www.w3.org/2000/svg" font-size="14"><g stroke="currentColor" stroke-width="2"><rect x="20" y="70" width="280" height="40" fill="#c9a36b" fill-opacity=".25"/><path d="M48 70 V110 M76 70 V110 M104 70 V110 M132 70 V110 M160 70 V110 M188 70 V110 M216 70 V110 M244 70 V110 M272 70 V110" fill="none"/></g><g fill="currentColor"><text x="160" y="52" text-anchor="middle">200 g を同じ 10 こに分ける</text><text x="160" y="140" text-anchor="middle">1 こぶんは何 g で何% かな</text></g></svg>'
-          - "すなのわりあいが 70% にとどくか、ねんどのわりあいが 35% にとどくかを調べよう。"
+          - "すなの わりあいが 70% にとどくか、ねんどの わりあいが 35% にとどくかを しらべよう。"
       - part: 今日
-        text: "A の土と B の土に、どちらも 120 mL の水をそそぎました。下に出た水は図のとおりです。保水性が高い（水をたくさんためる）のはどちらでしょう。"
+        id: "a7773ae98f"
+        text: "A の 土と B の 土に、どちらも 120 mL の 水を そそぎました。下に 出た 水は 図の とおりです。ほすいせいが 高い（水を たくさん ためる）のは どちらでしょう。"
         svg: '<svg viewBox="0 0 320 200" xmlns="http://www.w3.org/2000/svg" font-size="14"><g stroke="currentColor" stroke-width="2"><rect x="46" y="60" width="50" height="120" fill="none"/><rect x="190" y="60" width="50" height="120" fill="none"/></g><rect x="47" y="90" width="48" height="89" fill="#7fc8f8" fill-opacity=".6"/><rect x="191" y="150" width="48" height="29" fill="#7fc8f8" fill-opacity=".6"/><g fill="currentColor"><text x="160" y="24" text-anchor="middle">どちらにも 120 mL の水をそそぐ</text><text x="160" y="44" font-size="13" text-anchor="middle">下のビーカーに出た水</text><text x="71" y="196" text-anchor="middle">A の土</text><text x="215" y="196" text-anchor="middle">B の土</text><text x="104" y="130">出た水</text><text x="104" y="148">90 mL</text><text x="248" y="170">出た水</text><text x="248" y="188">30 mL</text></g></svg>'
         choices:
           - "A の土"
@@ -388,35 +420,38 @@ days:
           - "ためた水 ＝ そそいだ水 − 出た水。"
           - text: "あいているところが、土がためた水。"
             svg: '<svg viewBox="0 0 320 200" xmlns="http://www.w3.org/2000/svg" font-size="13"><g stroke="currentColor" stroke-width="2"><rect x="60" y="30" width="240" height="26" fill="none"/><rect x="60" y="100" width="240" height="26" fill="none"/></g><rect x="61" y="31" width="180" height="24" fill="#7fc8f8" fill-opacity=".6"/><rect x="61" y="101" width="60" height="24" fill="#7fc8f8" fill-opacity=".6"/><g fill="currentColor"><text x="8" y="48">A</text><text x="8" y="118">B</text><text x="270" y="78" text-anchor="middle">ためた ？</text><text x="210" y="148" text-anchor="middle">ためた ？</text><text x="160" y="186" text-anchor="middle">あいているぶぶんがためた水</text></g></svg>'
-          - "A と B のためた水をそれぞれ出してからくらべよう。"
+          - "A と B の ためた 水を それぞれ 出してから くらべよう。"
       - part: 今日
-        text: "山の坂の畑で、雨で土が流れ、強い風で土がとばされてこまっています。両方をふせぐ組み合わせはどれでしょう。"
-        svg: '<svg viewBox="0 0 320 200" xmlns="http://www.w3.org/2000/svg" font-size="14"><g stroke="currentColor" stroke-width="2"><polygon points="20,110 200,170 200,184 20,184" fill="#c9a36b" fill-opacity=".6"/><path d="M40 24 l-6 12 M80 24 l-6 12 M120 24 l-6 12 M160 24 l-6 12 M60 48 l-6 12 M100 48 l-6 12 M140 48 l-6 12" fill="none" stroke="#7fc8f8" stroke-width="3"/><path d="M40 106 L150 144" fill="none" stroke="#8b5e34" stroke-width="5"/><polygon points="162,149 149,151 153,139" fill="#8b5e34"/><path d="M216 70 H294 M216 100 H294 M216 130 H294" fill="none" stroke="#7fc8f8" stroke-width="3"/><polygon points="306,70 292,63 292,77" fill="#7fc8f8"/><polygon points="306,100 292,93 292,107" fill="#7fc8f8"/><polygon points="306,130 292,123 292,137" fill="#7fc8f8"/><path d="M236 154 H292" fill="none" stroke="#8b5e34" stroke-width="5" stroke-linecap="round" stroke-dasharray="0 9"/></g><g fill="currentColor"><text x="105" y="96" text-anchor="middle">雨で流れる</text><text x="262" y="186" text-anchor="middle">風でとばされる</text></g></svg>'
+        id: "ebb53f2e7d"
+        text: "山の さかの はたけで、雨で 土が ながれ、強い 風で 土が とばされて こまっています。りょうほうを ふせぐ 組みあわせは どれでしょう。"
+        svg: '<svg viewBox="0 0 320 200" xmlns="http://www.w3.org/2000/svg" font-size="14"><g stroke="currentColor" stroke-width="2"><polygon points="20,110 200,170 200,184 20,184" fill="#c9a36b" fill-opacity=".6"/><path d="M40 24 l-6 12 M80 24 l-6 12 M120 24 l-6 12 M160 24 l-6 12 M60 48 l-6 12 M100 48 l-6 12 M140 48 l-6 12" fill="none" stroke="#7fc8f8" stroke-width="3"/><path d="M40 106 L150 144" fill="none" stroke="#8b5e34" stroke-width="5"/><polygon points="162,149 149,151 153,139" fill="#8b5e34"/><path d="M216 70 H294 M216 100 H294 M216 130 H294" fill="none" stroke="#7fc8f8" stroke-width="3"/><polygon points="306,70 292,63 292,77" fill="#7fc8f8"/><polygon points="306,100 292,93 292,107" fill="#7fc8f8"/><polygon points="306,130 292,123 292,137" fill="#7fc8f8"/><path d="M236 154 H292" fill="none" stroke="#8b5e34" stroke-width="5" stroke-linecap="round" stroke-dasharray="0 9"/></g><g fill="currentColor"><text x="105" y="96" text-anchor="middle">雨でながれる</text><text x="262" y="186" text-anchor="middle">風でとばされる</text></g></svg>'
         choices:
-          - "だんだん畑にして、畑のまわりに風よけの木を植える"
+          - "だんだんはたけに して、はたけの まわりに 風よけの 木を うえる"
           - "草をぜんぶぬいて、土をむき出しにする"
-          - "だんだん畑にするだけで、風よけは作らない"
-        answer: "だんだん畑にして、畑のまわりに風よけの木を植える"
-        check: "'だんだん畑にして、畑のまわりに風よけの木を植える'"
+          - "だんだんはたけに するだけで、風よけは 作らない"
+        answer: "だんだんはたけに して、はたけの まわりに 風よけの 木を うえる"
+        check: "'だんだんはたけに して、はたけの まわりに 風よけの 木を うえる'"
         hints:
-          - "雨で土が流れるもんだいと、風で土がとばされるもんだいは、べつのもんだい。"
-          - text: "雨と風、それぞれにくふうが要る。"
-            svg: '<svg viewBox="0 0 320 200" xmlns="http://www.w3.org/2000/svg" font-size="14"><g stroke="currentColor" stroke-width="2"><rect x="10" y="36" width="50" height="34" rx="8" fill="#7fc8f8" fill-opacity=".4"/><rect x="76" y="36" width="116" height="34" rx="8" fill="#c9a36b" fill-opacity=".4"/><rect x="224" y="36" width="82" height="34" rx="8" fill="none" stroke-dasharray="6 5"/><rect x="10" y="110" width="50" height="34" rx="8" fill="#7fc8f8" fill-opacity=".4"/><rect x="76" y="110" width="116" height="34" rx="8" fill="#c9a36b" fill-opacity=".4"/><rect x="224" y="110" width="82" height="34" rx="8" fill="none" stroke-dasharray="6 5"/><polygon points="72,53 62,45 62,61" fill="currentColor"/><polygon points="220,53 210,45 210,61" fill="currentColor"/><polygon points="72,127 62,119 62,135" fill="currentColor"/><polygon points="220,127 210,119 210,135" fill="currentColor"/></g><g fill="currentColor" text-anchor="middle"><text x="35" y="59">雨</text><text x="134" y="59">土が流れる</text><text x="265" y="59">？</text><text x="35" y="133">風</text><text x="134" y="133">土がとばされる</text><text x="265" y="133">？</text><text x="160" y="180">それぞれにくふうが要る</text></g></svg>'
-          - "雨と風のどちらにもきくくふうがそろっているかを見よう。"
+          - "雨で 土が ながれる もんだいと、風で 土が とばされる もんだいは、べつの もんだい。"
+          - text: "雨と 風、それぞれに くふうが いる。"
+            svg: '<svg viewBox="0 0 320 200" xmlns="http://www.w3.org/2000/svg" font-size="14"><g stroke="currentColor" stroke-width="2"><rect x="10" y="36" width="50" height="34" rx="8" fill="#7fc8f8" fill-opacity=".4"/><rect x="76" y="36" width="116" height="34" rx="8" fill="#c9a36b" fill-opacity=".4"/><rect x="224" y="36" width="82" height="34" rx="8" fill="none" stroke-dasharray="6 5"/><rect x="10" y="110" width="50" height="34" rx="8" fill="#7fc8f8" fill-opacity=".4"/><rect x="76" y="110" width="116" height="34" rx="8" fill="#c9a36b" fill-opacity=".4"/><rect x="224" y="110" width="82" height="34" rx="8" fill="none" stroke-dasharray="6 5"/><polygon points="72,53 62,45 62,61" fill="currentColor"/><polygon points="220,53 210,45 210,61" fill="currentColor"/><polygon points="72,127 62,119 62,135" fill="currentColor"/><polygon points="220,127 210,119 210,135" fill="currentColor"/></g><g fill="currentColor" text-anchor="middle"><text x="35" y="59">雨</text><text x="134" y="59">土がながれる</text><text x="265" y="59">？</text><text x="35" y="133">風</text><text x="134" y="133">土がとばされる</text><text x="265" y="133">？</text><text x="160" y="180">それぞれにくふうがいる</text></g></svg>'
+          - "雨と 風の どちらにも きく くふうが そろっているかを 見よう。"
       - part: 今日
-        text: "土のつぶの大きさと、水がぬけるはやさのかんけいをあらわしているのはどれでしょう。（よこはつぶの大きさ、たては水がぬけるはやさ）"
+        id: "1f5e6304a8"
+        text: "土の つぶの 大きさと、水が ぬける はやさの かんけいを あらわしているのは どれでしょう。（よこは つぶの 大きさ、たては 水が ぬける はやさ）"
         svg: '<svg viewBox="0 0 320 200" xmlns="http://www.w3.org/2000/svg" font-size="14"><g stroke="currentColor" stroke-width="2" fill="none"><path d="M16 50 V150 H96 M118 50 V150 H198 M220 50 V150 H300"/><path d="M24 62 L90 140" stroke="#f08080" stroke-width="3"/><path d="M126 100 H192" stroke="#b39ddb" stroke-width="3"/><path d="M228 140 L294 62" stroke="#7bc96f" stroke-width="3"/></g><g fill="currentColor"><text x="160" y="24" text-anchor="middle" font-size="13">よこ：つぶの大きさ　たて：ぬけるはやさ</text><text x="56" y="176" text-anchor="middle">ア</text><text x="158" y="176" text-anchor="middle">イ</text><text x="260" y="176" text-anchor="middle">ウ</text></g></svg>'
         choices: [ア, イ, ウ]
         answer: ウ
         check: "'ウ'"
         hints:
           - "つぶが大きくなると、すきまはどうなるかな。"
-          - text: "つぶが大きいときと小さいときの水のとおり方をくらべよう。"
+          - text: "つぶが 大きい ときと 小さい ときの 水の とおり方を くらべよう。"
             svg: '<svg viewBox="0 0 320 200" xmlns="http://www.w3.org/2000/svg" font-size="14"><g stroke="currentColor" stroke-width="2"><circle cx="46" cy="80" r="30" fill="#f3c969" fill-opacity=".7"/><circle cx="118" cy="80" r="30" fill="#f3c969" fill-opacity=".7"/><circle cx="214" cy="80" r="12" fill="#f3c969" fill-opacity=".7"/><circle cx="240" cy="80" r="12" fill="#f3c969" fill-opacity=".7"/><circle cx="266" cy="80" r="12" fill="#f3c969" fill-opacity=".7"/></g><path d="M82 30 V114" stroke="#7fc8f8" stroke-width="6"/><polygon points="82,132 72,112 92,112" fill="#7fc8f8"/><path d="M227 40 V104" stroke="#7fc8f8" stroke-width="2"/><polygon points="227,114 222,102 232,102" fill="#7fc8f8"/><g fill="currentColor"><text x="82" y="160" text-anchor="middle">つぶが大きい</text><text x="240" y="160" text-anchor="middle">つぶが小さい</text></g></svg>'
-          - "よこの数がふえると、たての数はふえるかへるかを見よう。"
+          - "よこの 数が ふえると、たての 数は ふえるか へるかを 見よう。"
     extra:
       - part: 今日
-        text: "つぎの 4 つの層を、地面にちかいじゅんにならべたものはどれでしょう。"
+        id: "a01c9e4e3d"
+        text: "つぎの 4 つの そうを、じめんに ちかい じゅんに ならべた ものは どれでしょう。"
         svg: '<svg viewBox="0 0 320 200" xmlns="http://www.w3.org/2000/svg" font-size="12"><g stroke="currentColor" stroke-width="2"><rect x="20" y="50" width="56" height="70" fill="#8f96a6" fill-opacity=".8"/><rect x="96" y="50" width="56" height="70" fill="#6b5344" fill-opacity=".75"/><rect x="172" y="50" width="56" height="70" fill="#c8ccd6" fill-opacity=".6"/><rect x="248" y="50" width="56" height="70" fill="#c9a36b" fill-opacity=".7"/></g><g fill="currentColor" text-anchor="middle"><text x="48" y="142">もとの岩</text><text x="124" y="142">黒い土</text><text x="200" y="142">岩のかけら</text><text x="276" y="142">茶色い土</text></g></svg>'
         choices:
           - "黒い土 → 茶色い土 → 岩のかけら → もとの岩"
@@ -425,35 +460,37 @@ days:
         answer: "黒い土 → 茶色い土 → 岩のかけら → もとの岩"
         check: "'黒い土 → 茶色い土 → 岩のかけら → もとの岩'"
         hints:
-          - "地面にちかいほど、生き物のあとが多い。"
-          - text: "地面にちかいところと、もとの岩にちかいところをくらべよう。"
-            svg: '<svg viewBox="0 0 320 200" xmlns="http://www.w3.org/2000/svg" font-size="14"><g stroke="currentColor" stroke-width="2"><rect x="50" y="14" width="220" height="52" rx="8" fill="#6b5344" fill-opacity=".2"/><rect x="50" y="134" width="220" height="52" rx="8" fill="#8f96a6" fill-opacity=".25"/><path d="M160 70 V114" fill="none"/><polygon points="160,130 150,112 170,112" fill="currentColor"/></g><g fill="currentColor"><text x="160" y="36" text-anchor="middle">地面にちかいところ</text><text x="160" y="56" text-anchor="middle">生き物のあとが多い</text><text x="160" y="156" text-anchor="middle">もとの岩にちかいところ</text><text x="160" y="176" text-anchor="middle">岩のつぶが多い</text></g></svg>'
+          - "じめんに ちかいほど、生きものの あとが 多い。"
+          - text: "じめんに ちかい ところと、もとの 岩に ちかい ところを くらべよう。"
+            svg: '<svg viewBox="0 0 320 200" xmlns="http://www.w3.org/2000/svg" font-size="14"><g stroke="currentColor" stroke-width="2"><rect x="50" y="14" width="220" height="52" rx="8" fill="#6b5344" fill-opacity=".2"/><rect x="50" y="134" width="220" height="52" rx="8" fill="#8f96a6" fill-opacity=".25"/><path d="M160 70 V114" fill="none"/><polygon points="160,130 150,112 170,112" fill="currentColor"/></g><g fill="currentColor"><text x="160" y="36" text-anchor="middle">じめんにちかいところ</text><text x="160" y="56" text-anchor="middle">生きもののあとが多い</text><text x="160" y="156" text-anchor="middle">もとの岩にちかいところ</text><text x="160" y="176" text-anchor="middle">岩のつぶが多い</text></g></svg>'
           - "もとの岩はいちばん下。"
       - part: 今日
-        text: "土のつぶをはかったら、すなが 80%、シルトが 12%、ねんどが 8% でした。やくそくによると、この土はどのタイプでしょう。"
-        svg: '<svg viewBox="0 0 320 200" xmlns="http://www.w3.org/2000/svg" font-size="14"><g stroke="currentColor" stroke-width="2"><rect x="20" y="28" width="224" height="34" fill="#f3c969" fill-opacity=".6"/><rect x="244" y="28" width="34" height="34" fill="#b39ddb" fill-opacity=".6"/><rect x="278" y="28" width="22" height="34" fill="#c9a36b" fill-opacity=".7"/><path d="M261 64 V84 M289 64 V100" fill="none"/></g><g fill="currentColor" font-size="13"><text x="132" y="20" text-anchor="middle">すな 80%</text><text x="250" y="84" text-anchor="end">シルト 12%</text><text x="300" y="116" text-anchor="end">ねんど 8%</text><text x="20" y="144">すなが 70% 以上 → すなタイプ</text><text x="20" y="162">ねんどが 35% 以上 → ねんどタイプ</text><text x="20" y="180">どちらでもない → 壌土</text></g></svg>'
-        choices: [すなタイプ, ねんどタイプ, 壌土]
+        id: "13bd4fe513"
+        text: "土の つぶを はかったら、すなが 80%、シルトが 12%、ねんどが 8% でした。やくそくによると、この 土は どの タイプでしょう。"
+        svg: '<svg viewBox="0 0 320 200" xmlns="http://www.w3.org/2000/svg" font-size="14"><g stroke="currentColor" stroke-width="2"><rect x="20" y="28" width="224" height="34" fill="#f3c969" fill-opacity=".6"/><rect x="244" y="28" width="34" height="34" fill="#b39ddb" fill-opacity=".6"/><rect x="278" y="28" width="22" height="34" fill="#c9a36b" fill-opacity=".7"/><path d="M261 64 V84 M289 64 V100" fill="none"/></g><g fill="currentColor" font-size="13"><text x="132" y="20" text-anchor="middle">すな 80%</text><text x="250" y="84" text-anchor="end">シルト 12%</text><text x="300" y="116" text-anchor="end">ねんど 8%</text><text x="20" y="144">すなが 70% いじょう → すなタイプ</text><text x="20" y="162">ねんどが 35% いじょう → ねんどタイプ</text><text x="20" y="180">どちらでもない → じょうど</text></g></svg>'
+        choices: [すなタイプ, ねんどタイプ, じょうど]
         answer: すなタイプ
         check: "'すなタイプ'"
         hints:
           - "やくそくの 2 つの数と、土の数をくらべよう。"
           - text: "さかいの数を、0% から 100% のものさしで見よう。"
             svg: '<svg viewBox="0 0 320 200" xmlns="http://www.w3.org/2000/svg" font-size="13"><g stroke="currentColor" stroke-width="2"><rect x="70" y="40" width="200" height="22" fill="none"/><rect x="70" y="100" width="200" height="22" fill="none"/><path d="M210 30 V72 M140 90 V132" fill="none" stroke-dasharray="5 4"/></g><g fill="currentColor"><text x="8" y="56">すな</text><text x="8" y="116">ねんど</text><text x="210" y="24" text-anchor="middle">70%</text><text x="70" y="150">0%</text><text x="140" y="150" text-anchor="middle">35%</text><text x="270" y="150" text-anchor="end">100%</text></g></svg>'
-          - "すなの数が 70% にとどいているかを見よう。"
+          - "すなの 数が 70% に とどいているかを 見よう。"
 ri:
   - part: 離
+    id: "7bcc2dc05c"
     kinds: [総動員, 手数]
     uses: [W-002]
-    text: "坂の 畑が、図の ように 区切られて います。どの 畑にも 同じ 雨が ふり、1 まいの 畑に ふる 雨水を バケツ 1 ぱい分と します。雨水は 矢印の とおりに 次の 畑へ 流れ、右下の 畑から 川へ 出ます。バケツ 1 ぱい分の 雨水が 通るたびに、通った 畑の 土が 1 kg 流されます（自分の 畑に ふった 雨水も 通ったと 数えます）。この うち 2 まいを 草地に します。草地に 入った 雨水は、ほかの 畑から 来た 分も すべて しみこんで 先へは 流れず、草地の 土は 流されません。流される 土の 合計を いちばん 少なく すると、何 kg に なるでしょう。"
+    text: "さかの はたけが、図の ように くぎられて います。どの はたけにも 同じ 雨が ふり、1 まいの はたけに ふる 雨水を バケツ 1 ぱい分と します。雨水は やじるしの とおりに つぎの はたけへ ながれ、右下の はたけから 川へ 出ます。バケツ 1 ぱい分の 雨水が 通るたびに、通った はたけの 土が 1 kg ながされます（自分の はたけに ふった 雨水も 通ったと 数えます）。この うち 2 まいを 草地に します。草地に 入った 雨水は、ほかの はたけから 来た 分も すべて しみこんで 先へは ながれず、草地の 土は ながされません。ながされる 土の 合計を いちばん 少なく すると、何 kg に なるでしょう。"
     svg: '<svg viewBox="0 0 320 200" xmlns="http://www.w3.org/2000/svg" font-size="14"><g stroke="currentColor" stroke-width="2"><rect x="14" y="30" width="60" height="46" fill="#c9a36b" fill-opacity=".35"/><rect x="74" y="30" width="60" height="46" fill="#c9a36b" fill-opacity=".35"/><rect x="134" y="30" width="60" height="46" fill="#c9a36b" fill-opacity=".35"/><rect x="194" y="30" width="60" height="46" fill="#c9a36b" fill-opacity=".35"/><rect x="14" y="76" width="60" height="46" fill="#c9a36b" fill-opacity=".35"/><rect x="74" y="76" width="60" height="46" fill="#c9a36b" fill-opacity=".35"/><rect x="134" y="76" width="60" height="46" fill="#c9a36b" fill-opacity=".35"/><rect x="194" y="76" width="60" height="46" fill="#c9a36b" fill-opacity=".35"/><rect x="14" y="122" width="60" height="46" fill="#c9a36b" fill-opacity=".35"/><rect x="74" y="122" width="60" height="46" fill="#c9a36b" fill-opacity=".35"/><rect x="134" y="122" width="60" height="46" fill="#c9a36b" fill-opacity=".35"/><rect x="194" y="122" width="60" height="46" fill="#c9a36b" fill-opacity=".35"/><path d="M264 116 Q280 142 274 196 H306 Q312 142 298 116 Z" fill="#7fc8f8" fill-opacity=".6"/><path d="M30 8 l-4 12" fill="none" stroke="#7fc8f8" stroke-width="2.5"/><path d="M60 8 l-4 12" fill="none" stroke="#7fc8f8" stroke-width="2.5"/><path d="M90 8 l-4 12" fill="none" stroke="#7fc8f8" stroke-width="2.5"/><path d="M120 8 l-4 12" fill="none" stroke="#7fc8f8" stroke-width="2.5"/><path d="M150 8 l-4 12" fill="none" stroke="#7fc8f8" stroke-width="2.5"/><path d="M180 8 l-4 12" fill="none" stroke="#7fc8f8" stroke-width="2.5"/><path d="M210 8 l-4 12" fill="none" stroke="#7fc8f8" stroke-width="2.5"/><path d="M240 8 l-4 12" fill="none" stroke="#7fc8f8" stroke-width="2.5"/></g><g stroke="currentColor" stroke-width="2.5" fill="currentColor"><path d="M54 43 V60" fill="none"/><polygon points="48,60 60,60 54,69" stroke="none"/><path d="M114 43 V60" fill="none"/><polygon points="108,60 120,60 114,69" stroke="none"/><path d="M174 43 V60" fill="none"/><polygon points="168,60 180,60 174,69" stroke="none"/><path d="M234 43 V60" fill="none"/><polygon points="228,60 240,60 234,69" stroke="none"/><path d="M40 103 H58" fill="none"/><polygon points="58,97 58,109 67,103" stroke="none"/><path d="M100 103 H118" fill="none"/><polygon points="118,97 118,109 127,103" stroke="none"/><path d="M174 89 V106" fill="none"/><polygon points="168,106 180,106 174,115" stroke="none"/><path d="M234 89 V106" fill="none"/><polygon points="228,106 240,106 234,115" stroke="none"/><path d="M40 149 H58" fill="none"/><polygon points="58,143 58,155 67,149" stroke="none"/><path d="M100 149 H118" fill="none"/><polygon points="118,143 118,155 127,149" stroke="none"/><path d="M160 149 H178" fill="none"/><polygon points="178,143 178,155 187,149" stroke="none"/><path d="M220 149 H256" fill="none"/><polygon points="256,143 256,155 265,149" stroke="none"/></g><g fill="currentColor"><text x="286" y="190" text-anchor="middle">川</text></g></svg>'
     answer: 16
     check: "(lambda P: min((lambda f: sum(f(f, u, G) for u in range(12)))(lambda f, u, G: 0 if u < 0 or u in G else 1 + f(f, P[u], G)) for G in itertools.combinations(range(12), 2)))([4, 5, 6, 7, 5, 6, 10, 11, 9, 10, 11, -1])"
     hints:
-      - "まず 草地が ない とき、それぞれの 畑を バケツ 何ばい分の 雨水が 通るかを 書きこもう。いちばん 上の 畑は 1 ぱい分。"
-      - text: "上から じゅんに 足して いく。下の 畑ほど、通る 雨水が ふえる。"
+      - "まず 草地が ない とき、それぞれの はたけを バケツ 何ばい分の 雨水が 通るかを 書きこもう。いちばん 上の はたけは 1 ぱい分。"
+      - text: "上から じゅんに 足して いく。下の はたけほど、通る 雨水が ふえる。"
         svg: '<svg viewBox="0 0 320 200" xmlns="http://www.w3.org/2000/svg" font-size="14"><g stroke="currentColor" stroke-width="2"><rect x="14" y="30" width="60" height="46" fill="#c9a36b" fill-opacity=".35"/><rect x="74" y="30" width="60" height="46" fill="#c9a36b" fill-opacity=".35"/><rect x="134" y="30" width="60" height="46" fill="#c9a36b" fill-opacity=".35"/><rect x="194" y="30" width="60" height="46" fill="#c9a36b" fill-opacity=".35"/><rect x="14" y="76" width="60" height="46" fill="#c9a36b" fill-opacity=".35"/><rect x="74" y="76" width="60" height="46" fill="#c9a36b" fill-opacity=".35"/><rect x="134" y="76" width="60" height="46" fill="#c9a36b" fill-opacity=".35"/><rect x="194" y="76" width="60" height="46" fill="#c9a36b" fill-opacity=".35"/><rect x="14" y="122" width="60" height="46" fill="#c9a36b" fill-opacity=".35"/><rect x="74" y="122" width="60" height="46" fill="#c9a36b" fill-opacity=".35"/><rect x="134" y="122" width="60" height="46" fill="#c9a36b" fill-opacity=".35"/><rect x="194" y="122" width="60" height="46" fill="#c9a36b" fill-opacity=".35"/><path d="M264 116 Q280 142 274 196 H306 Q312 142 298 116 Z" fill="#7fc8f8" fill-opacity=".6"/><path d="M30 8 l-4 12" fill="none" stroke="#7fc8f8" stroke-width="2.5"/><path d="M60 8 l-4 12" fill="none" stroke="#7fc8f8" stroke-width="2.5"/><path d="M90 8 l-4 12" fill="none" stroke="#7fc8f8" stroke-width="2.5"/><path d="M120 8 l-4 12" fill="none" stroke="#7fc8f8" stroke-width="2.5"/><path d="M150 8 l-4 12" fill="none" stroke="#7fc8f8" stroke-width="2.5"/><path d="M180 8 l-4 12" fill="none" stroke="#7fc8f8" stroke-width="2.5"/><path d="M210 8 l-4 12" fill="none" stroke="#7fc8f8" stroke-width="2.5"/><path d="M240 8 l-4 12" fill="none" stroke="#7fc8f8" stroke-width="2.5"/></g><g stroke="currentColor" stroke-width="2.5" fill="currentColor"><path d="M54 43 V60" fill="none"/><polygon points="48,60 60,60 54,69" stroke="none"/><path d="M114 43 V60" fill="none"/><polygon points="108,60 120,60 114,69" stroke="none"/><path d="M174 43 V60" fill="none"/><polygon points="168,60 180,60 174,69" stroke="none"/><path d="M234 43 V60" fill="none"/><polygon points="228,60 240,60 234,69" stroke="none"/><path d="M40 103 H58" fill="none"/><polygon points="58,97 58,109 67,103" stroke="none"/><path d="M100 103 H118" fill="none"/><polygon points="118,97 118,109 127,103" stroke="none"/><path d="M174 89 V106" fill="none"/><polygon points="168,106 180,106 174,115" stroke="none"/><path d="M234 89 V106" fill="none"/><polygon points="228,106 240,106 234,115" stroke="none"/><path d="M40 149 H58" fill="none"/><polygon points="58,143 58,155 67,149" stroke="none"/><path d="M100 149 H118" fill="none"/><polygon points="118,143 118,155 127,149" stroke="none"/><path d="M160 149 H178" fill="none"/><polygon points="178,143 178,155 187,149" stroke="none"/><path d="M220 149 H256" fill="none"/><polygon points="256,143 256,155 265,149" stroke="none"/></g><g fill="currentColor"><text x="286" y="190" text-anchor="middle">川</text><text x="21" y="49" font-size="15">1</text><text x="81" y="49" font-size="15">1</text><text x="141" y="49" font-size="15">1</text><text x="201" y="49" font-size="15">1</text><text x="21" y="95" font-size="15">2</text><text x="81" y="95" font-size="15">4</text><text x="141" y="95" font-size="15">6</text><text x="201" y="95" font-size="15">2</text><text x="21" y="141" font-size="15">?</text><text x="81" y="141" font-size="15">?</text><text x="141" y="141" font-size="15">?</text><text x="201" y="141" font-size="15">?</text></g></svg>'
-      - "草地 1 まいで へる 土は（その 畑を 通る 雨水）×（その 畑から 川までの 畑の まい数）。2 まいが 1 つの 流れの 上と 下に あると、上の 草地で へるのは、下の 草地の 手前までの 分だけ。へる 分を 組ごとに くらべよう。"
+      - "草地 1 まいで へる 土は（その はたけを 通る 雨水）×（その はたけから 川までの はたけの まい数）。2 まいが 1 つの ながれの 上と 下に あると、上の 草地で へるのは、下の 草地の 手前までの 分だけ。へる 分を 組ごとに くらべよう。"
     paths:
-      - ["畑ごとに 通る 雨水を 書く（上の 列は 1、1、1、1、中の 列は 2、4、6、2、下の 列は 1、2、9、12）", "草地が ない ときの 合計は 42 kg", "1 まいで へる 土は（通る 雨水）×（川までの 畑の まい数）で、大きいのは 下の 列 右から 2 つ目と 中の 列 右から 2 つ目の 18、中の 列 左から 2 つ目の 16、右下の 12", "18 の 2 まいは 1 つの 流れの 上と 下なので、組むと 18 + 6 × 1 ＝ 24 しか へらない。下の 列 右から 2 つ目と 中の 列 左から 2 つ目を 組むと、18 + 4 × 2 ＝ 26", "ほかの 組は どれも 26 より へらないので、42 − 26 ＝ 16 kg"]
-      - ["雨水 1 ぱい分ずつ、川までに 通る 畑の まい数を 足すと 42 kg", "2 まいの 草地で へる 土は、1 まいずつで へる 土を 足した 数より 多く ならない（同じ 流れに あると、へる 分が 重なる）", "1 まいずつで へる 土は 18、18、16、12、10、6、6、5、4、4、4、3 なので、足して 27 以上に なる 組は、18・18・16・12・10 の 5 まいから 2 まいを えらぶ 組だけ", "その 組を 1 つずつ しらべると、へる 土は 24、26、22、21、24、24、24、22 で、いちばん 大きいのは 26", "42 − 26 ＝ 16 kg"]
+      - ["はたけごとに 通る 雨水を 書く（上の れつは 1、1、1、1、中の れつは 2、4、6、2、下の れつは 1、2、9、12）", "草地が ない ときの 合計は 42 kg", "1 まいで へる 土は（通る 雨水）×（川までの はたけの まい数）で、大きいのは 下の れつ 右から 2 つ目と 中の れつ 右から 2 つ目の 18、中の れつ 左から 2 つ目の 16、右下の 12", "18 の 2 まいは 1 つの ながれの 上と 下なので、組むと 18 + 6 × 1 ＝ 24 しか へらない。下の れつ 右から 2 つ目と 中の れつ 左から 2 つ目を 組むと、18 + 4 × 2 ＝ 26", "ほかの 組は どれも 26 より へらないので、42 − 26 ＝ 16 kg"]
+      - ["雨水 1 ぱい分ずつ、川までに 通る はたけの まい数を 足すと 42 kg", "2 まいの 草地で へる 土は、1 まいずつで へる 土を 足した 数より 多く ならない（同じ ながれに あると、へる 分が かさなる）", "1 まいずつで へる 土は 18、18、16、12、10、6、6、5、4、4、4、3 なので、足して 27 いじょうに なる 組は、18・18・16・12・10 の 5 まいから 2 まいを えらぶ 組だけ", "その 組を 1 つずつ しらべると、へる 土は 24、26、22、21、24、24、24、22 で、いちばん 大きいのは 26", "42 − 26 ＝ 16 kg"]
     note: "S05 二重に数える（畑ごとに通る雨水を数えて足す見方と、雨水ごとに通る畑の数を数えて足す見方が、同じ合計 42 になる）と S07 いちばんはしを考える（いちばんへる 1 まいを 2 まいならべても、いちばんよい組にならない）。種なし（S の表から組み立てた。坂の水が集まる数え方）。やさしすぎた（Haiku が一度でといた）ので、草地を 2 まいにし、中の列の左はしの矢印を右向きにかえた。なぜむずかしいか：1 まいでへる土は（集まる雨水）×（川までの道のり）だが、2 まいが同じ流れの上と下にあると、へる分が重なって足し算にならない。1 まいずつの上位 2 つ（18 と 18）を足すと 42 − 36 ＝ 6 とまちがえ、その 2 まいは同じ流れにあるので本当は 24 しかへらない。いちばんよい組は、同じ流れの上と下にあるのに 26 へる組（下で 18、上で 4 × 2）。1 まいずつの和が 27 以上の組だけを調べればよいと見ぬく一手が要る。手順は「通る雨水を書きこむ → 1 まいずつのへる量を積で出す → 重なりを引いて組をくらべる」の 3 段。"
