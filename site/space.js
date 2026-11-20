@@ -161,7 +161,7 @@ export function mount(api) {
   units.forEach((u, i) => {
     pos.set(u.p, i * 3);
     const c = color(u); col.set([c.r, c.g, c.b], i * 3);
-    size[i] = 330 + 110 * (u.level || 3) + (api.bridges.has(u.id) ? 320 : 0);
+    size[i] = 330 + 80 * (u.level || 4) + (api.bridges.has(u.id) ? 320 : 0);  // 水準 1〜7（D-220）で 410〜890
     phase[i] = (Math.sin(i * 12.9898) * 43758.5453) % 1;
     alpha[i] = 1;
   });

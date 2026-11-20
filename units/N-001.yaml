@@ -1,6 +1,6 @@
 # N-001 10 までの数
 #
-# 段 1・水準 1・5 日。10 までの数を数える、どちらが多いか少ないか、いくつといくつ（10 までの合成と分解）、1〜3 日目の型を混ぜる、確認。
+# 水準 1・5 日。10 までの数を数える、どちらが多いか少ないか、いくつといくつ（10 までの合成と分解）、1〜3 日目の型を混ぜる、確認。
 # 子の画面には text、figure、svg、choices、ヒントだけを出す。answer、check、paths、note は保護者用。
 # part: わけ は、わけを口で言う問題（保護者が聞いて「言えた」を押す）。explain は保護者が見る手本（D-016）。
 # paths は解答のみちすじ。1 本目が基本、2 本目からは別の道。
@@ -10,7 +10,7 @@
 # 図（svg）：物は文字の図（figure）と同じ絵文字・同じ並び（行ごとに中よせ）でかく。きいろのまるの 1、2、3 は数えたじゅんで、とちゅうまでにする。
 #   うすい絵は「数えない物」。1〜10 のますは「かぞえるじゅん」、むらさきのわは「見るところ」。せんでむすぶのは、はじめの 2 くみまで。
 #   いくつといくつは、3 日目の見本の「さくらんぼの図」（上にぜんぶの数、下にわけた 2 つの数。？ がたずねる数）でかく。ヒントのまるの図は、ぬったまるが「わけた 1 つめ」。
-#   腕だめしのてんびんは A-001 と同じ上皿てんびんの svg にした（balance は答えを見ない解き直しと図の PNG に出ないため）。check は問題の数から計算する式（bal は使わない）。
+#   腕だめしのてんびん（2 つのてんびんから 🟥 と 🟦 の重さを出す）は A-001（水準 2）のつり合いの考えを使うので、水準の付け直しで A-001 に移した（D-224）。
 
 id: N-001
 days:
@@ -828,20 +828,3 @@ ri:
       - [4、5、6、7、8、9 に しぼる, ふたりで わけられるのは 4、6、8, 6 と 8 は となりが 7, 4]
       - [6 と 8 を けす（となりが 7）, のこりの 4、5、7、9 で、のこさず わけられるのは 4, "4"]
     note: じょうけんを 1 つずつ つかって、こうほを けして いく。「1 おおきい かずも 1 ちいさい かずも 7 では ない」は、7 の りょうどなりの 6 と 8 を けす と いう いみで、ここで まよいやすい。こうほを かみに かいて、じょうけんごとに けさせると よい。
-  - part: 離
-    id: "d9357c0af0"
-    kinds: [総動員, 手数]
-    uses: [A-001]
-    text: てんびんが 2 つ、どちらも つりあって います。🟥 1 こと 🟦 1 こを いっしょに のせると、🟨 なんこと つりあいますか。
-    svg: '<svg viewBox="0 16 440 164" xmlns="http://www.w3.org/2000/svg"><line x1="220" y1="24" x2="220" y2="172" stroke="#c8ccd6" stroke-width="1.5" stroke-linecap="round" stroke-dasharray="4 5"/><path d="M81.2,168 h57.6 l-7.2,-12 h-43.2 Z" fill="#c8ccd6" fill-opacity=".5" stroke="currentColor" stroke-width="2"/><line x1="110" y1="156" x2="110" y2="104" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><line x1="50" y1="104" x2="170" y2="104" stroke="currentColor" stroke-width="4" stroke-linecap="round"/><circle cx="110" cy="104" r="5" fill="currentColor"/><line x1="50" y1="104" x2="50" y2="99.5" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><path d="M14,94 Q50,105 86,94 Z" fill="#c8ccd6" fill-opacity=".6" stroke="currentColor" stroke-width="2"/><text x="50" y="91" font-size="32" text-anchor="middle">🟥</text><line x1="170" y1="104" x2="170" y2="99.5" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><path d="M134,94 Q170,105 206,94 Z" fill="#c8ccd6" fill-opacity=".6" stroke="currentColor" stroke-width="2"/><text x="153" y="91" font-size="32" text-anchor="middle">🟦</text><text x="187" y="91" font-size="32" text-anchor="middle">🟦</text><path d="M301.2,168 h57.6 l-7.2,-12 h-43.2 Z" fill="#c8ccd6" fill-opacity=".5" stroke="currentColor" stroke-width="2"/><line x1="330" y1="156" x2="330" y2="104" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><line x1="270" y1="104" x2="390" y2="104" stroke="currentColor" stroke-width="4" stroke-linecap="round"/><circle cx="330" cy="104" r="5" fill="currentColor"/><line x1="270" y1="104" x2="270" y2="99.5" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><path d="M234,94 Q270,105 306,94 Z" fill="#c8ccd6" fill-opacity=".6" stroke="currentColor" stroke-width="2"/><text x="270" y="91" font-size="32" text-anchor="middle">🟦</text><line x1="390" y1="104" x2="390" y2="99.5" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><path d="M354,94 Q390,105 426,94 Z" fill="#c8ccd6" fill-opacity=".6" stroke="currentColor" stroke-width="2"/><text x="373" y="91" font-size="32" text-anchor="middle">🟨</text><text x="407" y="91" font-size="32" text-anchor="middle">🟨</text></svg>'
-    answer: 6
-    check: 2 * 2 + 2
-    hints:
-      - 🟦 1 こは、🟨 なんこと おなじ おもさかな。
-      - text: 🟥 は 🟦 2 こと おなじ おもさ。その 🟦 を 1 こずつ 🟨 2 こに とりかえて いこう。
-        svg: '<svg viewBox="0 16 440 164" xmlns="http://www.w3.org/2000/svg"><line x1="220" y1="24" x2="220" y2="172" stroke="#c8ccd6" stroke-width="1.5" stroke-linecap="round" stroke-dasharray="4 5"/><path d="M81.2,168 h57.6 l-7.2,-12 h-43.2 Z" fill="#c8ccd6" fill-opacity=".5" stroke="currentColor" stroke-width="2"/><line x1="110" y1="156" x2="110" y2="104" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><line x1="50" y1="104" x2="170" y2="104" stroke="currentColor" stroke-width="4" stroke-linecap="round"/><circle cx="110" cy="104" r="5" fill="currentColor"/><line x1="50" y1="104" x2="50" y2="99.5" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><path d="M14,94 Q50,105 86,94 Z" fill="#c8ccd6" fill-opacity=".6" stroke="currentColor" stroke-width="2"/><text x="50" y="91" font-size="32" text-anchor="middle">🟥</text><line x1="170" y1="104" x2="170" y2="99.5" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><path d="M134,94 Q170,105 206,94 Z" fill="#c8ccd6" fill-opacity=".6" stroke="currentColor" stroke-width="2"/><text x="153" y="91" font-size="32" text-anchor="middle">🟦</text><text x="187" y="91" font-size="32" text-anchor="middle">🟦</text><text x="262" y="66" font-size="30" text-anchor="middle" dominant-baseline="central">🟦</text><line x1="284" y1="66" x2="320" y2="66" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/><polygon points="330,66 320,60.5 320,71.5" fill="currentColor"/><text x="358" y="66" font-size="30" text-anchor="middle" dominant-baseline="central">🟨</text><text x="392" y="66" font-size="30" text-anchor="middle" dominant-baseline="central">🟨</text><text x="262" y="136" font-size="30" text-anchor="middle" dominant-baseline="central">🟦</text><line x1="284" y1="136" x2="320" y2="136" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/><polygon points="330,136 320,130.5 320,141.5" fill="currentColor"/><rect x="356" y="119" width="34" height="34" rx="5" fill="none" stroke="currentColor" stroke-width="2" stroke-dasharray="5 4"/><text x="373" y="143" font-size="20" text-anchor="middle" fill="currentColor" font-weight="bold">？</text></svg>'
-      - 🟥 の ぶんの 🟨 と、🟦 の ぶんの 🟨 を ならべて かぞえよう。
-    paths:
-      - [🟦 1 こは 🟨 2 こ, 🟥 は 🟦 2 こなので 🟨 4 こ, 🟦 の ぶんの 🟨 2 こも ならべる, 🟨 6 こ]
-      - [🟥 を 🟦 2 こに とりかえる, 🟦 が ぜんぶで 3 こ, 🟦 を 1 こずつ 🟨 2 こに とりかえる：2、4、6, 🟨 6 こ]
-    note: A-001 の「1 こずつ とりかえて かぞえる」を 2 かい つづける。🟥 を 🟨 2 こと よんで しまう（🟦 を とおらずに よむ）まちがいが おおい。🟨 を じっさいに ならべて かぞえさせる（たしざんの しきは つかわない）。

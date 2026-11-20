@@ -1,6 +1,6 @@
 # P-022 音（音の性質、弦の振動と気柱の共鳴、うなり、ドップラー効果、音速、マッハ円錐）
 #
-# 段 5・水準 3・8 日。扱うこと：音は空気のふるえが伝わる波（音速 v = fλ、気温でかわる）、弦の振動（腹と節、n 倍振動）、気柱の共鳴（開管と閉管、開口端）、うなり、ドップラー効果、マッハ円錐。音源、閉管、開口端、超音速、基本振動。
+# 水準 3・8 日。扱うこと：音は空気のふるえが伝わる波（音速 v = fλ、気温でかわる）、弦の振動（腹と節、n 倍振動）、気柱の共鳴（開管と閉管、開口端）、うなり、ドップラー効果、マッハ円錐。音源、閉管、開口端、超音速、基本振動。
 id: P-022
 days:
   - day: 1
@@ -932,8 +932,7 @@ days:
           - [0 ℃ のときは 331.5 m/s で、30 ℃ 分は 0.6 × 30 = 18 m/s, 速さは 349.5 m/s, 349.5 × 2 = 699 m]
 ri:
   - part: 離
-    kinds: [総動員, 数]
-    uses: [P-021]
+    kinds: [数]
     text: まっすぐな道に、聞く人が止まって立っています。そこから先の道の行き止まりに、かたいかべがあります。聞く人とかべのあいだを、音源がかべにむかって一定の速さ u m/s で進んでいます。音源は 399 Hz の音を出しつづけています。聞く人には、音源から直接とどく音と、かべではね返ってとどく音が同時に聞こえ、うなりが 1 秒に 40 回ありました。音の速さを 340 m/s として、u は何 m/s ですか。
     svg: '<svg viewBox="0 0 320 200" xmlns="http://www.w3.org/2000/svg"><rect x="272" y="30" width="16" height="140" fill="#c8ccd6" fill-opacity="0.7" stroke="currentColor" stroke-width="2"/><text x="280" y="190" font-size="14" text-anchor="middle" fill="currentColor">かべ</text><circle cx="40" cy="110" r="6" fill="currentColor"/><text x="40" y="140" font-size="14" text-anchor="middle" fill="currentColor">聞く人</text><circle cx="140" cy="110" r="10" fill="#f3c969" fill-opacity="0.7" stroke="currentColor" stroke-width="2"/><text x="140" y="84" font-size="14" text-anchor="middle" fill="currentColor">音源</text><line x1="156" y1="110" x2="222" y2="110" fill="none" stroke="currentColor" stroke-width="3"/><polygon points="232,110 222,115 222,105" fill="currentColor"/><text x="196" y="134" font-size="14" text-anchor="middle" fill="currentColor">速さ u</text><rect x="213" y="77" width="26" height="26" rx="6" fill="#c8ccd6" fill-opacity="0.5" stroke="currentColor" stroke-width="2"/><text x="226" y="95" font-size="16" text-anchor="middle" fill="currentColor">？</text></svg>'
     answer: 17
@@ -949,7 +948,6 @@ ri:
     note: S03 対称性（かべを鏡と見て、はね返りを音源のうつりに言いかえる、S04）、S19 置きかえ。種なし。ドップラー効果の二つの式とうなりをつなぐので、式を当てるだけでは u が出ません。u を式から取り出すのに二次式をとくか 1 ÷ f の和が一定になる性質に気づく必要があり、ここがむずかしい。
   - part: 離
     kinds: [数, 道筋]
-    uses: [P-021]
     text: 長さ 0.5 m の弦の両はしを固定し、弦を伝わる波の速さは 60 m/s です。弦のはしから 1/6 m の所を指で軽くおさえたまま、弦をはじきます。このとき弦は、おさえた点が節になる振動のうち、いろいろな高さの音を出します。いっぽう、長さ 1.0 m の閉管（かたほうがとじた管）があり、音の速さは 336 m/s です。人に聞こえるのは 20 Hz から 20000 Hz までとします。弦の出す音と閉管が共鳴できる音とで、同じ振動数になるものは、聞こえるはんいに何個ありますか。管の口の外のずれは考えません。
     svg: '<svg viewBox="0 0 320 200" xmlns="http://www.w3.org/2000/svg"><line x1="30" y1="50" x2="290" y2="50" fill="none" stroke="currentColor" stroke-width="3"/><circle cx="30" cy="50" r="5" fill="currentColor"/><circle cx="290" cy="50" r="5" fill="currentColor"/><line x1="117" y1="24" x2="117" y2="34" fill="none" stroke="currentColor" stroke-width="3"/><polygon points="117,44 112,34 122,34" fill="currentColor"/><text x="117" y="18" font-size="14" text-anchor="middle" fill="currentColor">指</text><text x="160" y="76" font-size="14" text-anchor="middle" fill="currentColor">弦 0.5 m 波 60 m/s</text><rect x="60" y="110" width="230" height="40" fill="#7fc8f8" fill-opacity="0.35" stroke="currentColor" stroke-width="2"/><line x1="290" y1="108" x2="290" y2="152" fill="none" stroke="currentColor" stroke-width="6"/><text x="160" y="176" font-size="14" text-anchor="middle" fill="currentColor">閉管 1.0 m 音 336 m/s</text></svg>'
     answer: 8

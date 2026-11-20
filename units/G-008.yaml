@@ -15,6 +15,7 @@
 #   5 日目 三角形　6 日目 わけ（長方形、平行四辺形、三角形の公式）　7 日目 G-005（まわりの長さ）・G-006（形）・N-014 と混ぜる　8 日目 確認
 # check：マス目の図は n('🟦')、半分のマスは「全部入るマス + 半分のマスの数 ÷ 2」、svg の図は面積の式。方眼の上の斜めの形は、頂点の座標から面積を出す式（座標の公式）。
 # 前提の更新（2026-11-08）：作ったあとで地図の前提が増え、上の注で「前提にない」とした G-046 は、いまは前提のたどりに入っている。問題はそのときの前提の範囲で作ってあり、この道具を使う問題は足してよい。
+# 腕だめしの付け直し（D-224）：水準の付け直しで、G-053（面積を 2 等分する直線）、N-074（道をのぞいた土地）、N-077（花だんにまく水）の腕だめしをこの単元に移した。元の単元を uses に挙げる。
 
 id: G-008
 days:
@@ -956,3 +957,56 @@ ri:
     paths:
       - [ABE/ABD = AE/AD = 1/3, ABD/ABC = BD/BC = 2/5, ABE/ABC = 2/15, ABC = 4 × 15/2 = 30]
     note: 高さが同じ三角形の面積比は、底辺の比。2 つの比をかけ合わせると、ABE と ABC の比になる。
+  - part: 離
+    kinds: [総動員, 道筋]
+    uses: [G-053]
+    text: 方眼の 1 目は 1 cm です。2 つの長方形を組み合わせた形（色のついた部分）を、1 本の直線で切ります。その直線が、下の長方形も上の長方形も、それぞれ面積の等しい 2 つの部分に分けるようにすると、直線が形の下の辺と交わる点は、左はしから何 cm の所ですか。
+    svg: |
+      <svg viewBox="0 0 240 140" xmlns="http://www.w3.org/2000/svg"><polygon points="64,124 176,124 176,68 120,68 120,12 64,12" stroke="currentColor" stroke-width="0" fill="#f3c969" fill-opacity=".35"/><line x1="78" y1="124" x2="78" y2="12" stroke="currentColor" stroke-width=".5" stroke-opacity=".5"/><line x1="64" y1="110" x2="176" y2="110" stroke="currentColor" stroke-width=".5" stroke-opacity=".5"/><line x1="92" y1="124" x2="92" y2="12" stroke="currentColor" stroke-width=".5" stroke-opacity=".5"/><line x1="64" y1="96" x2="176" y2="96" stroke="currentColor" stroke-width=".5" stroke-opacity=".5"/><line x1="106" y1="124" x2="106" y2="12" stroke="currentColor" stroke-width=".5" stroke-opacity=".5"/><line x1="64" y1="82" x2="176" y2="82" stroke="currentColor" stroke-width=".5" stroke-opacity=".5"/><line x1="120" y1="124" x2="120" y2="12" stroke="currentColor" stroke-width=".5" stroke-opacity=".5"/><line x1="64" y1="68" x2="176" y2="68" stroke="currentColor" stroke-width=".5" stroke-opacity=".5"/><line x1="134" y1="124" x2="134" y2="12" stroke="currentColor" stroke-width=".5" stroke-opacity=".5"/><line x1="64" y1="54" x2="176" y2="54" stroke="currentColor" stroke-width=".5" stroke-opacity=".5"/><line x1="148" y1="124" x2="148" y2="12" stroke="currentColor" stroke-width=".5" stroke-opacity=".5"/><line x1="64" y1="40" x2="176" y2="40" stroke="currentColor" stroke-width=".5" stroke-opacity=".5"/><line x1="162" y1="124" x2="162" y2="12" stroke="currentColor" stroke-width=".5" stroke-opacity=".5"/><line x1="64" y1="26" x2="176" y2="26" stroke="currentColor" stroke-width=".5" stroke-opacity=".5"/><polygon points="64,124 176,124 176,68 120,68 120,12 64,12" stroke="currentColor" stroke-width="2" fill="none"/></svg>
+    answer: 5
+    check: "(lambda x1, y1, x2, y2: x1 - y1 * Fraction(x2 - x1, y2 - y1))(4, 2, 2, 6)"
+    hints:
+      - 長方形は点対称な形だね。対称の中心を通る直線で切ると、どうなるかな。
+      - 2 つの長方形の、それぞれの対称の中心（対角線の交わる点）はどこかな。
+      - 2 つの中心を通る直線を方眼の上にかいて、下の辺と交わる点を読もう。
+    paths:
+      - [長方形は対称の中心を通るどの直線でも 面積の等しい 2 つに分かれる, 下の長方形の中心は 左から 4・下から 2 の点, 上の長方形の中心は 左から 2・下から 6 の点, 2 つの中心を通る直線は 下の辺と左から 5 cm の所で交わる]
+    note: 点対称な形は、対称の中心を通るどの直線でも合同な 2 つに分かれる（3 日目のわけ）。これを面積の 2 等分（G-008）に使う。2 つの中心を通る直線は、左へ 2 進むと上へ 4 上がるので、下の長方形の中心から右へ 1 進むと下の辺に着く。全体の面積も 2 等分される。
+  - part: 離
+    kinds: [総動員, 道筋, 読み取り]
+    uses: [N-074]
+    text: たて 36 m、よこ 48 m の長方形の土地に、図のように、はば 2 m の道を、たてとよこに 1 本ずつ通しました。道をのぞいた土地（色をぬっていないところ）の面積は何 m² ですか。
+    svg: |
+      <svg viewBox="0 0 240 170" xmlns="http://www.w3.org/2000/svg">
+        <rect x="40" y="24" width="176" height="132" stroke="currentColor" fill="none" stroke-width="2"/>
+        <rect x="112" y="24" width="7" height="132" fill="#f3c969" fill-opacity=".6" stroke="currentColor" stroke-width="1"/>
+        <rect x="40" y="82" width="176" height="7" fill="#f3c969" fill-opacity=".6" stroke="currentColor" stroke-width="1"/>
+        <text x="128" y="16" font-size="14" text-anchor="middle">48 m</text>
+        <text x="20" y="94" font-size="14" text-anchor="middle">36 m</text>
+        <text x="123" y="42" font-size="11">2 m</text>
+        <text x="186" y="77" font-size="11">2 m</text>
+      </svg>
+    answer: 1564
+    check: "(36 - 2) * (48 - 2)"
+    hints:
+      - 道の面積を 1 本ずつ出してひくと、道が交わっているところを 2 回ひいてしまうね。
+      - 道を土地のはしによせて考えてみよう。のこりの土地は、どんな形になるかな。
+      - よせたあとの長方形の、たてとよこの長さは何 m かな。
+    paths:
+      - [道をはしによせても、のこりの面積は変わらない, のこりは たて 36 − 2 = 34 m、よこ 48 − 2 = 46 m の長方形, 34 × 46 を筆算して 1564 m²]
+      - [土地は 36 × 48 = 1728 m², 道は 2 × 48 = 96 と 2 × 36 = 72、交わる 2 × 2 = 4 は 2 回ひいたので 1 回もどす, 1728 − 96 − 72 + 4 = 1564 m²]
+    note: 長方形の面積（G-008）と 2 けた × 2 けたの筆算を合わせる。道をはしに寄せて 1 つの長方形にする見方が道筋の要点。2 本目で、道が交わる 4 m² を 2 回ひいたままにするまちがいが多い。
+  - part: 離
+    kinds: [総動員, 手数, 読み取り]
+    uses: [N-077]
+    text: たて 2.4 m、よこ 3.5 m の長方形の花だんがあります。この花だんの 1 m² ごとに 0.6 L ずつ水をまきます。水は全部で何 L いりますか。
+    answer: 5.04
+    check: "24 * 35 * 6 / 1000"
+    hints:
+      - はじめに、花だんの面積を求めよう。長方形の面積はたて × よこだね。
+      - 2.4 × 3.5 を計算しよう。答えの小数点の位置に気をつけよう。
+      - 面積が何 m² かわかったら、0.6 L のいくつ分かを考えて、かけ算をしよう。
+    paths:
+      - [面積は 2.4 × 3.5 = 8.4 m², 水は 0.6 × 8.4 = 5.04 L, 5.04]
+      - [3.5 × 0.6 を先に計算すると 2.1, 2.4 × 2.1 = 5.04]
+    note: 長方形の面積（G-008、たて × よこ）に小数をあてはめ、さらに小数 × 小数をもう 1 回する。小数点の位置を 2 回決めるので、とちゅうの 8.4 を 84 や 0.84 とするまちがいに気をつける。

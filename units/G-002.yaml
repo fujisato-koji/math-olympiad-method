@@ -1,6 +1,6 @@
 # G-002 形を分ける、組み合わせる
 #
-# 段 1・水準 1・5 日。色板を並べて形をつくる、形を線で分ける、影の形を色板でうめる（タングラム）、G-001 と混ぜる、確かめ。
+# 水準 1・5 日。色板を並べて形をつくる、形を線で分ける、影の形を色板でうめる（タングラム）、G-001 と混ぜる、確かめ。
 # 子の画面には text、svg、choices、ヒントだけを出す。answer、check、paths、explain、note は保護者用。
 # ヒントは答えを書かず、見方・調べ方だけを示す。図の付いたヒントは、答えの手前までを絵で見せる。
 # 図は svg（D-129）。色板は角の丸い四角、影は灰色のます、色板のない所はてんせんのます。三角の色板（直角二等辺三角形）も svg で描く。
@@ -803,23 +803,6 @@ ri:
       - [1 ぽんで 2 つ, 2 ほんめが 1 ぽんめと まじわって 4 つ, 3 ぼんめが 2 ほんと べつべつの ところで まじわって 7 つ, 7]
       - [3 ぼんを 1 つの ところで まじわらせると 6 つ, 1 ぽんを すこし ずらすと まんなかに ちいさい さんかくが できる, 7]
     note: 3 ぼんを 1 つの ところで まじわらせると 6 つ、ならべて ひくと 4 つに なる。3 ぼんめが まえの 2 ほんと べつべつの ところで まじわると、3 ぼんめは 3 つの ぶぶんを とおり、それぞれを 2 つに わけるので 3 つ ふえる。かみに かいて、わかれた ぶぶんを 1 つずつ かぞえさせる。
-  - part: 離
-    id: "d6c7d695a6"
-    kinds: [総動員, 手数]
-    uses: [C-002]
-    text: あかい いろいた（1 ます）と みどりの いろいた（2 ます つながった もの）が、どちらも たくさん あります。これで かげの ますを すきまなく うめます。1 つの いろだけで うめても よい です。いろいたの むきは かえません。うめかたは なんとおり ありますか。
-    svg: '<svg viewBox="0 0 320 200" xmlns="http://www.w3.org/2000/svg"><rect x="72" y="28" width="44" height="44" fill="#8a8f9c" fill-opacity="0.6" stroke="currentColor" stroke-width="1" stroke-opacity="0.55"/><rect x="116" y="28" width="44" height="44" fill="#8a8f9c" fill-opacity="0.6" stroke="currentColor" stroke-width="1" stroke-opacity="0.55"/><rect x="160" y="28" width="44" height="44" fill="#8a8f9c" fill-opacity="0.6" stroke="currentColor" stroke-width="1" stroke-opacity="0.55"/><rect x="204" y="28" width="44" height="44" fill="#8a8f9c" fill-opacity="0.6" stroke="currentColor" stroke-width="1" stroke-opacity="0.55"/><rect x="70" y="110" width="44" height="44" rx="3" fill="#f08080" fill-opacity="0.75" stroke="currentColor" stroke-width="2"/><rect x="180" y="110" width="88" height="44" rx="3" fill="#7bc96f" fill-opacity="0.75" stroke="currentColor" stroke-width="2"/><line x1="224" y1="114" x2="224" y2="150" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-dasharray="3 3"/><text x="92" y="180" font-size="15" text-anchor="middle" fill="currentColor">1 ます</text><text x="224" y="180" font-size="15" text-anchor="middle" fill="currentColor">2 ます</text></svg>'
-    answer: 5
-    check: "sum(1 for k in range(5) for c in itertools.product((1, 2), repeat=k) if sum(c) == 4)"
-    hints:
-      - ひだりから じゅんに、あかを おくか みどりを おくか きめて いこう。
-      - text: みどりを つかわないと 1 とおり、2 こ つかうと 1 とおり。みどりを 1 こ だけ つかう ときは どうかな。
-        svg: '<svg viewBox="0 0 320 200" xmlns="http://www.w3.org/2000/svg"><rect x="60" y="30" width="40" height="40" rx="3" fill="#f08080" fill-opacity="0.75" stroke="currentColor" stroke-width="2"/><rect x="100" y="30" width="40" height="40" rx="3" fill="#f08080" fill-opacity="0.75" stroke="currentColor" stroke-width="2"/><rect x="140" y="30" width="40" height="40" rx="3" fill="#f08080" fill-opacity="0.75" stroke="currentColor" stroke-width="2"/><rect x="180" y="30" width="40" height="40" rx="3" fill="#f08080" fill-opacity="0.75" stroke="currentColor" stroke-width="2"/><rect x="60" y="110" width="80" height="40" rx="3" fill="#7bc96f" fill-opacity="0.75" stroke="currentColor" stroke-width="2.5"/><line x1="100" y1="114" x2="100" y2="146" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-dasharray="3 3"/><rect x="140" y="110" width="80" height="40" rx="3" fill="#7bc96f" fill-opacity="0.75" stroke="currentColor" stroke-width="2.5"/><line x1="180" y1="114" x2="180" y2="146" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-dasharray="3 3"/><text x="232" y="56" font-size="14" text-anchor="start" fill="currentColor">みどり 0 こ</text><text x="232" y="136" font-size="14" text-anchor="start" fill="currentColor">みどり 2 こ</text></svg>'
-      - かいた うめかたが、おなじに なって いないか たしかめよう。
-    paths:
-      - [みどり なしは あか 4 まいの 1 とおり, みどり 1 こは ひだり・まんなか・みぎ に おいて 3 とおり, みどり 2 こは 1 とおり, ぜんぶで 5 とおり]
-      - [ひだりはしに あかを おくと のこり 3 ますで 3 とおり, ひだりはしに みどりを おくと のこり 2 ますで 2 とおり, つづけて かぞえて 5 とおり]
-    note: かきだして かぞえる（C-002）を かたちに つかう。みどりの かずで わけると、もれと かさなりが ふせげる。みどりが 1 この ときの おきばしょは「ひだり 2 ます」「まんなか 2 ます」「みぎ 2 ます」の 3 とおり。この かぞえかたは、まえの けっかから かぞえる（C-009）に つながる。
   - part: 離
     id: "ce4cfa4784"
     kinds: [読み取り]

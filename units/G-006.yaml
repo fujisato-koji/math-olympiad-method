@@ -1,6 +1,6 @@
 # G-006 直角と平行、三角形と四角形
 #
-# 段 2・水準 2・5 日。三角形と四角形（辺と頂点）、直角と長方形・正方形・直角三角形、平行、G-002 と混ぜる、確かめ。
+# 水準 1・5 日。三角形と四角形（辺と頂点）、直角と長方形・正方形・直角三角形、平行、G-002 と混ぜる、確かめ。
 # 子の画面には text、svg、choices、ヒントだけを出す。answer、check、paths、explain、note は保護者用。
 # ヒントは答えを書かず、見方・調べ方だけを示す。図の付いたヒントは、答えの手前までを絵で見せる。
 # 図は svg（D-129）。方眼紙の点はうすい小さな点、むすぶ点は赤い点、むすんだ辺は青い線。直角のしるしはだいだいの小さなかぎ。
@@ -781,7 +781,7 @@ ri:
   - part: 離
     id: "c430aa8694"
     kinds: [総動員, 手数]
-    uses: [G-005]
+    uses: [N-003]
     text: たて 15 マス、よこ 21 マスの 長方形の 紙が あります。いちばん 大きな 正方形を 1 つ 切りとり、のこりの かたちからも、また いちばん 大きな 正方形を 切りとります。これを くりかえすと、さいごに 正方形だけが のこりました。さいごの 正方形の 1 つの へんは 何マス ですか。
     svg: '<svg viewBox="0 0 320 200" xmlns="http://www.w3.org/2000/svg"><rect x="96" y="34" width="210" height="150" fill="#7fc8f8" fill-opacity="0.4" stroke="currentColor" stroke-width="2.5"/><text x="201" y="24" font-size="14" text-anchor="middle" fill="currentColor">よこ 21 マス</text><text x="88" y="105" font-size="14" text-anchor="end" fill="currentColor">たて</text><text x="88" y="123" font-size="14" text-anchor="end" fill="currentColor">15 マス</text></svg>'
     answer: 3
@@ -795,26 +795,3 @@ ri:
       - [15 マスの 正方形を 切ると のこりは たて 15・よこ 6, 6 マスの 正方形を 2 回 切ると のこりは たて 3・よこ 6, 3 マスの 正方形を 切ると 3 マスの 正方形が のこる, 3 マス]
       - [21 − 15 = 6, 15 − 6 = 9、9 − 6 = 3, 6 − 3 = 3 で たても よこも 3, 3 マス]
     note: G-005 の ながさ（マス）と、2 けたの ひき算（21 − 15、15 − 6）を 何回も つかう。とちゅうの 長方形の たてと よこを 図に かき のこすのが こつ。この てじゅんは、あとで 2 つの 数の いちばん 大きい 公《約数》を もとめる やり方（ごじょほう、N-029）に なる。
-  - part: 離
-    id: "d25918fcdd"
-    kinds: [総動員, 読み取り]
-    uses: [L-002]
-    text: |-
-      🐶 🐱 🐰 が、直角三角形、長方形、正方形の カードを 1 まいずつ もって います。
-      ① 🐶 の かたちには、直角の かどが 2 つ いじょう ある。
-      ② 🐱 の かたちは、へんが 4 つ では ない。
-      ③ 🐰 の かたちは、4 つの へんの ながさが みんな おなじ では ない。
-      🐶 の カードの かたちは どれですか。
-    svg: '<svg viewBox="0 0 320 200" xmlns="http://www.w3.org/2000/svg"><rect x="16" y="26" width="88" height="120" rx="8" fill="#ffffff" fill-opacity="0.08" stroke="currentColor" stroke-width="2"/><rect x="116" y="26" width="88" height="120" rx="8" fill="#ffffff" fill-opacity="0.08" stroke="currentColor" stroke-width="2"/><rect x="216" y="26" width="88" height="120" rx="8" fill="#ffffff" fill-opacity="0.08" stroke="currentColor" stroke-width="2"/><polygon points="30,116 90,116 30,50" fill="#7fc8f8" fill-opacity="0.5" stroke="currentColor" stroke-width="2.5" stroke-linejoin="round"/><path d="M30,106 L40,106 L40,116" fill="none" stroke="#e8590c" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><rect x="124" y="64" width="72" height="46" fill="#7bc96f" fill-opacity="0.5" stroke="currentColor" stroke-width="2.5"/><rect x="230" y="56" width="60" height="60" fill="#f3c969" fill-opacity="0.6" stroke="currentColor" stroke-width="2.5"/><text x="60" y="172" font-size="14" text-anchor="middle" fill="currentColor">直角三角形</text><text x="160" y="172" font-size="14" text-anchor="middle" fill="currentColor">長方形</text><text x="260" y="172" font-size="14" text-anchor="middle" fill="currentColor">正方形</text></svg>'
-    choices: [直角三角形, 長方形, 正方形]
-    answer: 正方形
-    check: "(lambda R, S, E: (lambda s: s.pop() if len(s) == 1 else 'きまらない')({p[0] for p in itertools.permutations(('直角三角形', '長方形', '正方形')) if R[p[0]] >= 2 and S[p[1]] != 4 and S[p[2]] == 4 and not E[p[2]]}))({'直角三角形': 1, '長方形': 4, '正方形': 4}, {'直角三角形': 3, '長方形': 4, '正方形': 4}, {'直角三角形': False, '長方形': False, '正方形': True})"
-    hints:
-      - まず ② から、🐱 の カードが きまるよ。
-      - text: ひょうに かいて、あわない ところに ✕ を つけて いこう。② で わかる ところだけ つけたよ。
-        svg: '<svg viewBox="0 0 320 200" xmlns="http://www.w3.org/2000/svg"><polygon points="113,42 149,42 113,12" fill="#7fc8f8" fill-opacity="0.5" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><rect x="179" y="16" width="44" height="26" fill="#7bc96f" fill-opacity="0.5" stroke="currentColor" stroke-width="2"/><rect x="256" y="12" width="30" height="30" fill="#f3c969" fill-opacity="0.6" stroke="currentColor" stroke-width="2"/><text x="84" y="79" font-size="15" text-anchor="end" fill="currentColor">いぬ</text><text x="84" y="121" font-size="15" text-anchor="end" fill="currentColor">ねこ</text><text x="84" y="163" font-size="15" text-anchor="end" fill="currentColor">うさぎ</text><line x1="96" y1="52" x2="306" y2="52" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/><line x1="96" y1="94" x2="306" y2="94" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/><line x1="96" y1="136" x2="306" y2="136" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/><line x1="96" y1="178" x2="306" y2="178" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/><line x1="96" y1="52" x2="96" y2="178" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/><line x1="166" y1="52" x2="166" y2="178" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/><line x1="236" y1="52" x2="236" y2="178" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/><line x1="306" y1="52" x2="306" y2="178" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/><line x1="191" y1="105" x2="211" y2="125" stroke="#e8590c" stroke-width="3.5" stroke-linecap="round"/><line x1="191" y1="125" x2="211" y2="105" stroke="#e8590c" stroke-width="3.5" stroke-linecap="round"/><line x1="261" y1="105" x2="281" y2="125" stroke="#e8590c" stroke-width="3.5" stroke-linecap="round"/><line x1="261" y1="125" x2="281" y2="105" stroke="#e8590c" stroke-width="3.5" stroke-linecap="round"/></svg>'
-      - つぎは ③ で 🐰 を きめて、のこりの 1 まいが ① に あうか たしかめよう。
-    paths:
-      - [② で 🐱 は 直角三角形, ③ で 🐰 は 正方形 では ない, 🐰 は 長方形, 🐶 は 正方形]
-      - [① で 🐶 は 長方形 か 正方形, ② で 🐱 は 直角三角形, ③ で 🐰 は 正方形では ないので 長方形, のこる 🐶 は 正方形]
-    note: ① だけを 見て「長方形」と こたえやすい。正方形も かどが みんな 直角なので ① に あう（正方形は 長方形の なかま）。きまる ヒントから 先に つかうのが すいり（L-002）の こつ。

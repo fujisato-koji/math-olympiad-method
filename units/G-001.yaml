@@ -1,6 +1,6 @@
 # G-001 形を見分ける、位置の言葉（前後、左右、上下、内外）
 #
-# 段 1・水準 1・5 日。さんかく・しかく・まるを、かどの数で見分ける。かどとへんを数える。いろやむきがちがっても、同じ形の仲間に分ける。
+# 水準 1・5 日。さんかく・しかく・まるを、かどの数で見分ける。かどとへんを数える。いろやむきがちがっても、同じ形の仲間に分ける。
 # 地図の plan に位置の言葉の日がないので、位置の言葉（まえ・うしろ、みぎ・ひだり、うえ・した、なか・そと）は、形をたずねる言い方として 4・5 日目に混ぜる。
 # 書き方は N-001 の頭の注のとおり。子の画面には text、svg、choices、ヒントだけを出す。answer、check、paths、note、explain は保護者用。
 # ヒントは答えを書かず、見方・調べ方だけを示す。図の付いたヒントは、答えの手前までを絵で見せる。
@@ -780,29 +780,6 @@ ri:
       - [ちいさい さんかくを 1、2、3 と かぞえる, 2 つ あわせた さんかくを 4、5 と かぞえる, 3 つ ぜんぶの おおきな さんかくで 6, 6 こ]
       - [どの さんかくも てっぺんと したの へんの 2 つの てんで できる, したの へんの てんは 4 つ, 2 つの えらびかたは 3 + 2 + 1 = 6, 6 こ]
     note: みえて いる ちいさい さんかく 3 つだけを かぞえて 3 と こたえやすい。おおきさごとに わけて かぞえる（1 つ、2 つ あわせ、3 つ あわせ）のが みちすじ。ひだりはしと みぎはしを あわせても、まんなかを とばすので さんかくに ならない（あわせるのは となりどうしだけ）。
-  - part: 離
-    id: "bbc7cbe7f2"
-    kinds: [総動員, 読み取り]
-    uses: [L-002]
-    text: |-
-      さんかく、あおい しかく、きいろい しかく、まるを、うえに 2 つ、したに 2 つ ならべます。
-      ① さんかくの すぐ みぎに まるが ある。
-      ② まるは したの ならびに ある。
-      ③ さんかくの うえに きいろい しかくは ない。
-      さんかくの うえに ある かたちは どれですか。
-    svg: '<svg viewBox="0 0 320 200" xmlns="http://www.w3.org/2000/svg"><polygon points="60,24.1 39.6,57.3 80.4,57.3" fill="#f08080" fill-opacity="0.6" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><polygon points="108,25 142,25 142,59 108,59" fill="#7fc8f8" fill-opacity="0.6" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><polygon points="173,25 207,25 207,59 173,59" fill="#f3c969" fill-opacity="0.6" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><circle cx="255" cy="42" r="18.4" fill="#f08080" fill-opacity="0.6" stroke="currentColor" stroke-width="2"/><text x="125" y="80" font-size="13" text-anchor="middle" fill="currentColor">あお</text><text x="190" y="80" font-size="13" text-anchor="middle" fill="currentColor">きいろ</text><rect x="120" y="96" width="50" height="50" rx="4" fill="none" stroke="currentColor" stroke-width="2"/><rect x="170" y="96" width="50" height="50" rx="4" fill="none" stroke="currentColor" stroke-width="2"/><rect x="120" y="146" width="50" height="50" rx="4" fill="none" stroke="currentColor" stroke-width="2"/><rect x="170" y="146" width="50" height="50" rx="4" fill="none" stroke="currentColor" stroke-width="2"/><text x="108" y="126" font-size="14" text-anchor="end" fill="currentColor">うえ</text><text x="108" y="176" font-size="14" text-anchor="end" fill="currentColor">した</text></svg>'
-    choices: [あおい しかく, きいろい しかく, まる]
-    answer: あおい しかく
-    check: "(lambda s: {'Sb': 'あおい しかく', 'Sy': 'きいろい しかく', 'Cr': 'まる'}[s.pop()] if len(s) == 1 else 'きまらない')({p[p.index('Tr') - 2] for p in itertools.permutations(['Tr', 'Sb', 'Cr', 'Sy']) if p.index('Tr') in (0, 2) and p.index('Cr') == p.index('Tr') + 1 and p.index('Cr') in (2, 3) and not (p.index('Tr') >= 2 and p[p.index('Tr') - 2] == 'Sy')})"
-    hints:
-      - ① と ② を いっしょに つかうと、さんかくと まるの ばしょが きまるよ。
-      - text: まるは したの ならびの みぎに きまるよ。さんかくは どこに おけるかな。
-        svg: '<svg viewBox="0 0 320 200" xmlns="http://www.w3.org/2000/svg"><polygon points="60,24.1 39.6,57.3 80.4,57.3" fill="#f08080" fill-opacity="0.6" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><polygon points="108,25 142,25 142,59 108,59" fill="#7fc8f8" fill-opacity="0.6" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><polygon points="173,25 207,25 207,59 173,59" fill="#f3c969" fill-opacity="0.6" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><circle cx="255" cy="42" r="18.4" fill="#f08080" fill-opacity="0.6" stroke="currentColor" stroke-width="2"/><text x="125" y="80" font-size="13" text-anchor="middle" fill="currentColor">あお</text><text x="190" y="80" font-size="13" text-anchor="middle" fill="currentColor">きいろ</text><rect x="120" y="96" width="50" height="50" rx="4" fill="none" stroke="currentColor" stroke-width="2"/><rect x="170" y="96" width="50" height="50" rx="4" fill="none" stroke="currentColor" stroke-width="2"/><rect x="120" y="146" width="50" height="50" rx="4" fill="none" stroke="currentColor" stroke-width="2"/><rect x="170" y="146" width="50" height="50" rx="4" fill="none" stroke="currentColor" stroke-width="2"/><text x="108" y="126" font-size="14" text-anchor="end" fill="currentColor">うえ</text><text x="108" y="176" font-size="14" text-anchor="end" fill="currentColor">した</text><circle cx="195" cy="171" r="17.3" fill="#f08080" fill-opacity="0.6" stroke="currentColor" stroke-width="2"/></svg>'
-      - のこりの 2 つの ばしょに、③ を つかおう。
-    paths:
-      - [① と ② で したの ならびは さんかく・まる, ③ で さんかくの うえは きいろい しかくでは ない, さんかくの うえは あおい しかく]
-      - [② で まるは したの ならび, ① で さんかくは まるの ひだり, うえに のこる 2 つの うち、③ で きいろでは ない ほう, あおい しかく]
-    note: ヒントを 1 つずつ よむ だけでは きまらず、① と ② を あわせて さきに ばしょを きめるのが だいじ（L-002 の すいり）。「すぐ みぎ」は おなじ ならびの となり。かみに かたちを かいて ならべて たしかめて よい。
   - part: 離
     id: "8f15af8517"
     kinds: [総動員, 数, 手数]

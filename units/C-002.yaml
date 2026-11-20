@@ -1,6 +1,6 @@
 # C-002 書き出して数える
 #
-# 段 1・水準 1・5 日。並べ方を全部書き出す（2〜3 個）、決まった順で書き出す（もれと重なりを防ぐ）、選び方を書き出す、C-001 と混ぜる、確認。
+# 水準 2・5 日。並べ方を全部書き出す（2〜3 個）、決まった順で書き出す（もれと重なりを防ぐ）、選び方を書き出す、C-001 と混ぜる、確認。
 # 子の画面には text、svg、choices、ヒントだけを出す。answer、check、paths、note、explain は保護者用。
 # ヒントは答えを書かず、見方・調べ方だけを示す。図の付いたヒントは、答えの手前までを絵で見せる。
 # 前提は C-001 と N-001 だけなので、数は 10 まで。かけ算や公式（順列 C-006、組合せ C-007）は使わない。
@@ -9,6 +9,7 @@
 # 黄色のマスは先に決めたところ、かごは「えらぶ」（中の順は考えない）。
 # check は itertools で全部の並び（permutations）や選び方（combinations）を作って数える。書き出した並びは、図と同じものを check の中に書く。
 # てんびんの図は A-001 と同じ svg（上皿てんびん、おもい ほうの さらが さがる）。balance は tools/blind.py と tools/unitqc.py に見えないので使わない（2026-11-13）。
+# 腕だめしの付け直し（D-224）：水準の付け直しで、G-002（いろいたのうめかた）、G-004（かがみに うつしても かわらない ならべかた）の腕だめしをこの単元に移した。元の単元を uses に挙げる。
 
 id: C-002
 days:
@@ -839,3 +840,37 @@ ri:
       - [🍎 を えらぶ ときは 🍇🍓🍑 から 2 つで 3 とおり, 🍌 を えらぶ ときも 3 とおり, どちらも えらばない ときは 🍇🍓🍑 の 1 とおり, かきだした ものを かぞえて 7 とおり]
       - [5 つから 3 つの えらびかたを ぜんぶ かきだす, 🍎 と 🍌 が どちらも はいって いる ものに しるしを つける, しるしの ない ものを かぞえて 7 とおり]
     note: 3 つ えらぶ かきだしは 2 つ えらぶより ながく、おなじ くみを 2 かい かきやすい。🍎 を いれるか、🍌 を いれるか、どちらも いれないかで わけると、もれも かさなりも ふせげる。
+  - part: 離
+    id: "d6c7d695a6"
+    kinds: [総動員, 手数]
+    uses: [G-002]
+    text: あかい いろいた（1 ます）と みどりの いろいた（2 ます つながった もの）が、どちらも たくさん あります。これで かげの ますを すきまなく うめます。1 つの いろだけで うめても よい です。いろいたの むきは かえません。うめかたは なんとおり ありますか。
+    svg: '<svg viewBox="0 0 320 200" xmlns="http://www.w3.org/2000/svg"><rect x="72" y="28" width="44" height="44" fill="#8a8f9c" fill-opacity="0.6" stroke="currentColor" stroke-width="1" stroke-opacity="0.55"/><rect x="116" y="28" width="44" height="44" fill="#8a8f9c" fill-opacity="0.6" stroke="currentColor" stroke-width="1" stroke-opacity="0.55"/><rect x="160" y="28" width="44" height="44" fill="#8a8f9c" fill-opacity="0.6" stroke="currentColor" stroke-width="1" stroke-opacity="0.55"/><rect x="204" y="28" width="44" height="44" fill="#8a8f9c" fill-opacity="0.6" stroke="currentColor" stroke-width="1" stroke-opacity="0.55"/><rect x="70" y="110" width="44" height="44" rx="3" fill="#f08080" fill-opacity="0.75" stroke="currentColor" stroke-width="2"/><rect x="180" y="110" width="88" height="44" rx="3" fill="#7bc96f" fill-opacity="0.75" stroke="currentColor" stroke-width="2"/><line x1="224" y1="114" x2="224" y2="150" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-dasharray="3 3"/><text x="92" y="180" font-size="15" text-anchor="middle" fill="currentColor">1 ます</text><text x="224" y="180" font-size="15" text-anchor="middle" fill="currentColor">2 ます</text></svg>'
+    answer: 5
+    check: "sum(1 for k in range(5) for c in itertools.product((1, 2), repeat=k) if sum(c) == 4)"
+    hints:
+      - ひだりから じゅんに、あかを おくか みどりを おくか きめて いこう。
+      - text: みどりを つかわないと 1 とおり、2 こ つかうと 1 とおり。みどりを 1 こ だけ つかう ときは どうかな。
+        svg: '<svg viewBox="0 0 320 200" xmlns="http://www.w3.org/2000/svg"><rect x="60" y="30" width="40" height="40" rx="3" fill="#f08080" fill-opacity="0.75" stroke="currentColor" stroke-width="2"/><rect x="100" y="30" width="40" height="40" rx="3" fill="#f08080" fill-opacity="0.75" stroke="currentColor" stroke-width="2"/><rect x="140" y="30" width="40" height="40" rx="3" fill="#f08080" fill-opacity="0.75" stroke="currentColor" stroke-width="2"/><rect x="180" y="30" width="40" height="40" rx="3" fill="#f08080" fill-opacity="0.75" stroke="currentColor" stroke-width="2"/><rect x="60" y="110" width="80" height="40" rx="3" fill="#7bc96f" fill-opacity="0.75" stroke="currentColor" stroke-width="2.5"/><line x1="100" y1="114" x2="100" y2="146" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-dasharray="3 3"/><rect x="140" y="110" width="80" height="40" rx="3" fill="#7bc96f" fill-opacity="0.75" stroke="currentColor" stroke-width="2.5"/><line x1="180" y1="114" x2="180" y2="146" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-dasharray="3 3"/><text x="232" y="56" font-size="14" text-anchor="start" fill="currentColor">みどり 0 こ</text><text x="232" y="136" font-size="14" text-anchor="start" fill="currentColor">みどり 2 こ</text></svg>'
+      - かいた うめかたが、おなじに なって いないか たしかめよう。
+    paths:
+      - [みどり なしは あか 4 まいの 1 とおり, みどり 1 こは ひだり・まんなか・みぎ に おいて 3 とおり, みどり 2 こは 1 とおり, ぜんぶで 5 とおり]
+      - [ひだりはしに あかを おくと のこり 3 ますで 3 とおり, ひだりはしに みどりを おくと のこり 2 ますで 2 とおり, つづけて かぞえて 5 とおり]
+    note: かきだして かぞえる（C-002）を かたちに つかう。みどりの かずで わけると、もれと かさなりが ふせげる。みどりが 1 この ときの おきばしょは「ひだり 2 ます」「まんなか 2 ます」「みぎ 2 ます」の 3 とおり。この かぞえかたは、まえの けっかから かぞえる（C-009）に つながる。
+  - part: 離
+    id: "c414ab38fb"
+    kinds: [総動員, 数, 道筋]
+    uses: [G-004]
+    text: あかと あおの いろいたを、よこに 1 れつに 5 まい ならべます。おなじ いろを なんまい つかっても よく、ぜんぶ おなじ いろでも よい です。かがみに うつしても ならびが かわらない ならべかたは、なんとおり ありますか。
+    svg: '<svg viewBox="0 0 320 200" xmlns="http://www.w3.org/2000/svg"><rect x="104" y="22" width="34" height="34" rx="3" fill="#f08080" fill-opacity="0.75" stroke="currentColor" stroke-width="2"/><rect x="164" y="22" width="34" height="34" rx="3" fill="#6fa8f0" fill-opacity="0.75" stroke="currentColor" stroke-width="2"/><text x="121" y="74" font-size="13" text-anchor="middle" fill="currentColor">あか</text><text x="181" y="74" font-size="13" text-anchor="middle" fill="currentColor">あお</text><rect x="50" y="100" width="38" height="38" rx="4" fill="none" stroke="currentColor" stroke-width="2" stroke-dasharray="5 4"/><rect x="92" y="100" width="38" height="38" rx="4" fill="none" stroke="currentColor" stroke-width="2" stroke-dasharray="5 4"/><rect x="134" y="100" width="38" height="38" rx="4" fill="none" stroke="currentColor" stroke-width="2" stroke-dasharray="5 4"/><rect x="176" y="100" width="38" height="38" rx="4" fill="none" stroke="currentColor" stroke-width="2" stroke-dasharray="5 4"/><rect x="218" y="100" width="38" height="38" rx="4" fill="none" stroke="currentColor" stroke-width="2" stroke-dasharray="5 4"/><rect x="277" y="80" width="10" height="78" rx="2" fill="#bfe3f5" fill-opacity="0.9" stroke="currentColor" stroke-width="2"/><line x1="279" y1="96" x2="285" y2="88" stroke="#ffffff" stroke-width="1.5" stroke-linecap="round"/><line x1="279" y1="108" x2="285" y2="100" stroke="#ffffff" stroke-width="1.5" stroke-linecap="round"/><text x="282" y="175" font-size="13" text-anchor="middle" fill="currentColor">かがみ</text></svg>'
+    answer: 8
+    check: "sum(1 for p in itertools.product('RB', repeat=5) if p == p[::-1])"
+    hints:
+      - かがみに うつすと、ならびの じゅんばんが ぎゃくに なるね。
+      - text: おなじ いろに しないと いけない ところを むすんだよ。まんなかは どうかな。
+        svg: '<svg viewBox="0 0 320 200" xmlns="http://www.w3.org/2000/svg"><rect x="104" y="22" width="34" height="34" rx="3" fill="#f08080" fill-opacity="0.75" stroke="currentColor" stroke-width="2"/><rect x="164" y="22" width="34" height="34" rx="3" fill="#6fa8f0" fill-opacity="0.75" stroke="currentColor" stroke-width="2"/><text x="121" y="74" font-size="13" text-anchor="middle" fill="currentColor">あか</text><text x="181" y="74" font-size="13" text-anchor="middle" fill="currentColor">あお</text><rect x="50" y="100" width="38" height="38" rx="4" fill="none" stroke="currentColor" stroke-width="2" stroke-dasharray="5 4"/><rect x="92" y="100" width="38" height="38" rx="4" fill="none" stroke="currentColor" stroke-width="2" stroke-dasharray="5 4"/><rect x="134" y="100" width="38" height="38" rx="4" fill="none" stroke="currentColor" stroke-width="2" stroke-dasharray="5 4"/><rect x="176" y="100" width="38" height="38" rx="4" fill="none" stroke="currentColor" stroke-width="2" stroke-dasharray="5 4"/><rect x="218" y="100" width="38" height="38" rx="4" fill="none" stroke="currentColor" stroke-width="2" stroke-dasharray="5 4"/><rect x="277" y="80" width="10" height="78" rx="2" fill="#bfe3f5" fill-opacity="0.9" stroke="currentColor" stroke-width="2"/><line x1="279" y1="96" x2="285" y2="88" stroke="#ffffff" stroke-width="1.5" stroke-linecap="round"/><line x1="279" y1="108" x2="285" y2="100" stroke="#ffffff" stroke-width="1.5" stroke-linecap="round"/><text x="282" y="175" font-size="13" text-anchor="middle" fill="currentColor">かがみ</text><path d="M 75.7 94.9 Q 153 71 230.3 94.9" fill="none" stroke="#e8590c" stroke-width="2.5" stroke-linecap="round"/><polygon points="237,97 227.1,98.6 229.7,90" fill="#e8590c"/><polygon points="69,97 76.3,90 78.9,98.6" fill="#e8590c"/><path d="M 117.6 94.8 Q 153 83 188.4 94.8" fill="none" stroke="#e8590c" stroke-width="2.5" stroke-linecap="round"/><polygon points="195,97 185,98.4 187.9,89.9" fill="#e8590c"/><polygon points="111,97 118.1,89.9 121,98.4" fill="#e8590c"/><circle cx="153" cy="119" r="23" fill="none" stroke="#e8590c" stroke-width="3"/></svg>'
+      - ひだりから 3 まいを きめると、のこりの 2 まいは どう なるかな。
+    paths:
+      - [ひだりから 3 まいを きめれば みぎの 2 まいは きまる, 3 まいの ならべかたを ぜんぶ かく, 8 とおり]
+      - [1 まいめと 5 まいめ、2 まいめと 4 まいめは おなじ いろ, のこりの きめかたを きの ずに かいて かぞえる, 8 とおり]
+    note: かがみに うつしても かわらない ならび（ひだりと みぎが おなじ）を かきだして かぞえる（C-002）。ぜんぶの ならび（32 とおり）を かいてから えらぶより、ひだりから 3 まい（まんなかまで）を きめれば のこりが きまると きづくのが ちかみち。まんなかの 1 まいは なにいろでも よい。

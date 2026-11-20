@@ -1,18 +1,18 @@
 # N-070 標準形（10 の累乗の表し方）と有効数字、誤差の区間
 #
-# 書き方は N-001 の頭の注、負の数の答えの書き方と check は N-010 の頭の注のとおり。段 4 なので普通の文。
+# 書き方は N-001 の頭の注、負の数の答えの書き方と check は N-010 の頭の注のとおり。前の段 4 なので普通の文。
 # 前提は A-009（累乗と指数法則）、N-061（がい数と四捨五入、以上・未満）、N-020（小数）。たどると N-016（分数の意味）、
 #   N-009（1000 までの数と位）、N-013・N-014（九九、わり算）、N-074（かけ算の筆算）までなので、これらを道具にする。
 # 前提にないものの扱い（地図の点として報告した）：
 #   10 倍・10 分の 1 で位が動くきまり（N-073）は前提にないので、1 日目の見本で N-020 の「0.1 のいくつ分」から導く
 #   （3.4 は 0.1 が 34 こ、10 倍すると 0.1 が 340 こで 34）。万・億の位の名前は使わず、数字の並びと 10 の累乗で表す。
-#   0 乗と負の指数は A-009 で「段 4 から」とされ、網羅表でもこの単元が受け持つので、2 日目の見本で決める。
+#   0 乗と負の指数は A-009 で「前の段 4 から」とされ、網羅表でもこの単元が受け持つので、2 日目の見本で決める。
 #   負の数（N-004、N-010）は前提にないので、10⁻³ は「1 を 10 で 3 回わった数」と読む記号として扱い、負の数の計算はしない
-#   （10⁸ × 10⁻³ は「10 を 8 回かけて 3 回わる」で 10⁵）。答えの指数は段 4 の鍵盤で「−3」と打つ。
+#   （10⁸ × 10⁻³ は「10 を 8 回かけて 3 回わる」で 10⁵）。答えの指数は前の段 4 の鍵盤で「−3」と打つ。
 #   文字の式（A-010）は前提にないので、標準形は「1 以上 10 未満の数 × 10 の累乗」と言葉で言い、問いは「10 の □ 乗」の □ で書く。
 #   小数のかけ算とわり算（N-077）は前提にないので、標準形どうしのかけ算は、前の数が整数か、「0.1 のいくつ分」で整数にもどせるもの
 #   （2.5 × 4 は 0.1 が 100 こで 10）だけにした。わり算はしない。
-# わけは水準 2 なので、代表の例で文に書く（②）。文字を使った ③ は前提にないので求めない。
+# わけは前の水準 2 なので、代表の例で文に書く（②）。文字を使った ③ は前提にないので求めない。
 # 有効数字は「測った値で、意味のある（本当の値のはんいを決める）数字」。0.0052 のはじめの 0 は数えない。
 #   有効数字 2 けたにするのは上から 3 けた目を四捨五入すること（N-061 の「上から 1 けたのがい数」と同じ考え）。
 #   1 日目と 2 日目は「上から 2 けたのがい数」と言い、有効数字という名前は 3 日目のわけ（1.2 m と 1.20 m）の文で出す。
@@ -765,7 +765,7 @@ ri:
   - part: 離
     id: "dff6b78660"
     kinds: [総動員, 数]
-    uses: [A-007]
+    uses: [A-009]
     text: 光は 1 秒間に約 3.0 × 10⁸ m 進みます。太陽から地球までのきょりを約 1.5 × 10¹¹ m とすると、太陽を出た光が地球にとどくまでに、約何秒かかりますか。
     svg: '<svg viewBox="0 0 320 200" xmlns="http://www.w3.org/2000/svg"><circle cx="52" cy="96" r="30" fill="#f3c969" fill-opacity="0.8" stroke="currentColor" stroke-width="2"/><line x1="89" y1="96" x2="98" y2="96" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/><line x1="78.16" y1="122.16" x2="84.53" y2="128.53" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/><line x1="52" y1="133" x2="52" y2="142" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/><line x1="25.84" y1="122.16" x2="19.47" y2="128.53" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/><line x1="15" y1="96" x2="6" y2="96" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/><line x1="25.84" y1="69.84" x2="19.47" y2="63.47" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/><line x1="52" y1="59" x2="52" y2="50" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/><line x1="78.16" y1="69.84" x2="84.53" y2="63.47" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/><circle cx="282" cy="96" r="16" fill="#7fc8f8" fill-opacity="0.6" stroke="currentColor" stroke-width="2"/><path d="M272 88 q6 -4 10 2 q-2 6 -8 6 z" fill="#7bc96f" fill-opacity="0.9" stroke="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M284 100 q6 -2 8 4 q-4 6 -10 2 z" fill="#7bc96f" fill-opacity="0.9" stroke="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><line x1="112" y1="96" x2="254" y2="96" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><polygon points="262,96 254,100.8 254,91.2" fill="currentColor"/><polygon points="104,96 112,91.2 112,100.8" fill="currentColor"/><text x="183" y="82" font-size="15" text-anchor="middle" fill="currentColor">約 1.5 × 10¹¹ m</text><text x="52" y="162" font-size="14" text-anchor="middle" fill="currentColor">太陽</text><text x="282" y="136" font-size="14" text-anchor="middle" fill="currentColor">地球</text><text x="183" y="186" font-size="14" text-anchor="middle" fill="currentColor">光は 1 秒間に約 3.0 × 10⁸ m 進む</text></svg>'
     answer: 500

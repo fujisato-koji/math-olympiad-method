@@ -1,6 +1,7 @@
 # P-003 運動の法則（ニュートンの 3 法則、運動方程式、落下運動）
 #
-# 段 5・水準 3・8 日。かんせいの法則、作用と反作用、運動方程式 ma = F（合力・連結した物体）、重力と落下運動（g = 10 m/s²）。
+# 水準 4・8 日。かんせいの法則、作用と反作用、運動方程式 ma = F（合力・連結した物体）、重力と落下運動（g = 10 m/s²）。
+# 腕だめしの付け直し（D-224）：水準の付け直しで、P-013（加速する水そうの球と糸）の腕だめしをこの単元に移した。元の単元を uses に挙げる。
 id: P-003
 days:
   - day: 1
@@ -862,3 +863,19 @@ ri:
       - [6 kg が a で下へ、1 kg が 2a で上へ, 6 × 10 − 2T = 6a と T − 1 × 10 = 1 × 2a, 2 つから T を消して a = 4 m/s², T = 10 + 8 = 18 N, 天じょうが受ける力は T + 2T = 3T = 54 N]
       - [糸がのびない条件から 6 kg が x 下がると 1 kg は 2x 上がる、この動きの向きに力をくらべると下げる力 60 N、上げる力 2 × 10 = 20 N、動きの比で重さを数えなおすと 6 + 4 × 1 = 10 kg ぶんのものを 40 N で動かすので a = 4 m/s², 全体の重さは 70 N、6 kg のぶんは下へ 6 × 4 = 24 N、1 kg のぶんは上へ 1 × 8 = 8 N の向きぶん、天じょうが受ける力は 70 − 24 + 8 = 54 N]
     note: 借りた構造は S19（置きかえ：2 つの動きを 1 つの数に合わせる）。種はなし。糸の長さが一定という条件で加速度の比が 1 対 2 になる一手と、天じょうの力を 3 T と数える数え方がむずかしい。1 kg と 6 kg を同じ加速度とするまちがいがおおい。
+  - part: 離
+    kinds: [総動員, 手数]
+    uses: [P-013]
+    text: ふたをした水そうが水でいっぱいで、底に糸でつないだ球が水の中にうかんでいます。球は体積 1 L（0.001 m³）、重さ 2 N です。水そうを水平な向きに、一定の加速度 7.5 m/s² で動かしはじめ、しばらくすると、水は水そうの中で止まったように見え、球も止まって見えます。このとき糸が球を引く力は何 N ですか。重力加速度は 10 m/s²、水 1 m³ は 10000 N です。
+    svg: '<svg viewBox="0 0 320 200" xmlns="http://www.w3.org/2000/svg"><rect x="40" y="50" width="220" height="100" fill="#7fc8f8" fill-opacity="0.3" stroke="currentColor" stroke-width="2"/><line x1="40" y1="150" x2="260" y2="150" fill="none" stroke="currentColor" stroke-width="3"/><line x1="110" y1="150" x2="170" y2="80" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="170" cy="74" r="14" fill="#f3c969" fill-opacity="0.7" stroke="currentColor" stroke-width="2"/><circle cx="110" cy="150" r="4" fill="currentColor"/><line x1="60" y1="170" x2="110" y2="170" fill="none" stroke="currentColor" stroke-width="2"/><polygon points="120,170 110,175 110,165" fill="currentColor"/><text x="150" y="182" font-size="14" text-anchor="start" fill="currentColor">加速度 7.5 m/s²</text><text x="200" y="40" font-size="13" text-anchor="start" fill="currentColor">球は止まって見える</text></svg>'
+    answer: 10
+    check: "math.isqrt((Fraction(4, 5) ** 2 * (Fraction(15, 2) ** 2 + 10 ** 2)).numerator // (Fraction(4, 5) ** 2 * (Fraction(15, 2) ** 2 + 10 ** 2)).denominator)"
+    hints:
+      - 水そうが加速するとき、水の圧力は、進む向きに高くなり、水の中の球は、水からおされる力を、上向きだけでなく進む向きにも受けます。球の重さと、水が球におす力を、たてとよこに分けます。
+      - text: 地面から見ると、球も水そうといっしょに 7.5 m/s² で進みつづけます。よこ向きの力のつり合い（といっても加速）と、たて向きのつり合いを、分けて書きます。
+        svg: '<svg viewBox="0 0 320 200" xmlns="http://www.w3.org/2000/svg"><circle cx="160" cy="80" r="16" fill="#f3c969" fill-opacity="0.7" stroke="currentColor" stroke-width="2"/><line x1="160" y1="80" x2="160" y2="40" fill="none" stroke="currentColor" stroke-width="2"/><polygon points="160,30 165,40 155,40" fill="currentColor"/><line x1="160" y1="80" x2="160" y2="120" fill="none" stroke="currentColor" stroke-width="2"/><polygon points="160,130 155,120 165,120" fill="currentColor"/><line x1="160" y1="80" x2="210" y2="80" fill="none" stroke="currentColor" stroke-width="2"/><polygon points="220,80 210,85 210,75" fill="currentColor"/><line x1="160" y1="80" x2="117.1" y2="122.9" fill="none" stroke="currentColor" stroke-width="2"/><polygon points="110,130 113.5,119.4 120.6,126.5" fill="currentColor"/><text x="168" y="30" font-size="13" text-anchor="start" fill="currentColor">上のふ力</text><text x="168" y="130" font-size="13" text-anchor="start" fill="currentColor">重さ</text><text x="225" y="84" font-size="13" text-anchor="start" fill="currentColor">水の圧力のさ</text><text x="60" y="142" font-size="13" text-anchor="start" fill="currentColor">糸</text></svg>'
+      - 水が球をよこにおす力は、球と同じ体積の水が 7.5 m/s² で進むのに必要な力で、水 0.001 m³ は 1 kg なので、1 × 7.5 = 7.5 N です。球の重さ 2 N は質量 0.2 kg。糸の力のよこ成分とたて成分から、三平方の定理で糸の力を出します。
+    paths:
+      - [見かけの重力で考える, 水そうの中では下向きの重力 10 に後ろ向きの 7.5 が足されて大きさ √(10² + 7.5²) = 12.5 m/s² の向きがかたむいた重力になる, 水がおす力は水と同じ体積の水の重さ分で 0.001 × 1000 × 12.5 = 12.5 N 球の重さは 0.2 × 12.5 = 2.5 N, 糸の力は 12.5 − 2.5 = 10 N]
+      - [地面から見て力を分ける, 水が球におす力は上向きに 0.001 × 1000 × 10 = 10 N と前向きに 0.001 × 1000 × 7.5 = 7.5 N, 球の重さ 2 N は下向きで質量 0.2 kg は前向きに 7.5 m/s² で進むので前向きの力 1.5 N が必要, 糸の力は前向きに 7.5 − 1.5 = 6 N の反対と下向きに 10 − 2 = 8 N の合わせ, √(6² + 8²) = 10 N]
+    note: S19 置きかえ（加速する水そうの中を、かたむいた重力の世界に置きかえる）、S25 ベクトル（たてとよこの成分に分けて三平方）。種なし。P-003 の運動方程式と圧力、ふ力を組み合わせる 3 段（圧力のさ→ふ力、球の運動、成分の合成）。水の圧力が加速の向きにも高くなる、が見えにくい。
