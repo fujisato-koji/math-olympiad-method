@@ -227,10 +227,10 @@ days:
         answer: "時空全体を 2 倍に広げるかくだい"
         check: "'時空全体を 2 倍に広げるかくだい'"
         hints:
-          - text: ブーストは、P を同じ曲線の上の点（図の緑の点）に動かします。(ct)² − x² は変わりません。
+          - text: ブーストは、P を同じ曲線の上の点（図の緑の点）に動かします。図は y = z = 0 の点を x 方向にブーストしたもので、(ct)² − x² は変わりません。
             svg: '<svg viewBox="0 0 320 200" xmlns="http://www.w3.org/2000/svg"><line x1="19.8" y1="172" x2="256.4" y2="172" fill="none" stroke="currentColor" stroke-width="1.5"/><polygon points="263.4,172 256.4,175.5 256.4,168.5" fill="currentColor"/><line x1="130" y1="172" x2="130" y2="34" fill="none" stroke="currentColor" stroke-width="1.5"/><polygon points="130,27 133.5,34 126.5,34" fill="currentColor"/><line x1="130" y1="172" x2="240.2" y2="61.8" fill="none" stroke="#c8ccd6" stroke-width="1.5" stroke-dasharray="6 4"/><line x1="130" y1="172" x2="19.8" y2="61.8" fill="none" stroke="#c8ccd6" stroke-width="1.5" stroke-dasharray="6 4"/><text x="273.4" y="177" font-size="15" text-anchor="middle" fill="currentColor">x</text><text x="144" y="33" font-size="15" text-anchor="start" fill="currentColor">ct</text><polyline points="31.5,57.7 43.3,67.7 54.1,76.5 64.1,84.2 73.2,90.8 81.7,96.5 89.6,101.3 97,105.3 104.1,108.5 110.8,110.9 117.3,112.6 123.7,113.7 130,114 136.3,113.7 142.7,112.6 149.2,110.9 155.9,108.5 163,105.3 170.4,101.3 178.3,96.5 186.8,90.8 195.9,84.2 205.9,76.5 216.7,67.7 228.5,57.7" fill="none" stroke="currentColor" stroke-width="1.5"/><circle cx="106.2" cy="109.3" r="5" fill="#f08080"/><text x="92.2" y="105.3" font-size="15" text-anchor="middle" fill="currentColor">P</text><circle cx="174" cy="99.2" r="5" fill="#7bc96f"/><text x="190" y="109.2" font-size="14" text-anchor="start" fill="currentColor">ブーストの先</text></svg>'
-          - ローレンツへんかんは、どれも (ct)² − x² をたもちます。せんたくしのへんかんのあとのあたいを、P のもとのあたいとくらべましょう。
-          - せんたくしのへんかんを 1 つずつ、(ct)² − x² が変わるかどうかで調べましょう。
+          - ローレンツへんかんは、どれも (ct)² − x² − y² − z² をたもちます。せんたくしのへんかんのあとのあたいを、P のもとのあたいとくらべましょう。
+          - せんたくしのへんかんを 1 つずつ、(ct)² − x² − y² − z² が変わるかどうかで調べましょう。
         paths:
           - [ローレンツへんかんはかんかくをたもつ, かくだいはかんかくを 4 倍にする, ふくまれない]
           - [ブーストと回転は群, 続けても群の中, かくだいだけが外]
@@ -277,20 +277,20 @@ days:
           - [けっしょうけい 7, ぼうの数を足す, 32]
           - [左 3 つの和, 右 4 つの和, 合わせる, 32]
       - part: 挑戦
-        id: "b846d6895f"
-        text: 結晶では、5 回回転たいしょうはゆるされません。その理由として正しいものはどれですか。図は、5 回たいしょうな正五角形を、1 点のまわりにならべたものです。
-        svg: '<svg viewBox="0 0 320 200" xmlns="http://www.w3.org/2000/svg"><polygon points="130,104 130,58 86.3,43.8 59.2,81 86.3,118.2" fill="#f3c969" fill-opacity="0.5" stroke="currentColor" stroke-width="2"/><polygon points="130,104 86.3,118.2 86.3,164.2 130,178.4 157,141.2" fill="#7fc8f8" fill-opacity="0.5" stroke="currentColor" stroke-width="2"/><polygon points="130,104 157,141.2 200.8,127 200.8,81 157,66.8" fill="#7bc96f" fill-opacity="0.5" stroke="currentColor" stroke-width="2"/><circle cx="130" cy="104" r="4" fill="currentColor"/><text x="268" y="70" font-size="15" text-anchor="middle" fill="currentColor">正五角形を</text><text x="268" y="92" font-size="15" text-anchor="middle" fill="currentColor">1 点に</text><text x="268" y="114" font-size="15" text-anchor="middle" fill="currentColor">3 つ集めた図</text></svg>'
-        choices: ["同じ形を、すき間なく平面にしきつめられないから", "5 回回転は、回転の行列で表せないから", "5 回回転は、鏡映と同時には必ず成り立たないから", "結晶は、ゆうげんの大きさのかたまりしかないから"]
-        answer: "同じ形を、すき間なく平面にしきつめられないから"
-        check: "'同じ形を、すき間なく平面にしきつめられないから'"
+        id: "a7072806e4"
+        text: "結晶の格子（同じならび方がくり返す点の集まり）は、5 回回転たいしょう（72° 回すと自分に重なること）をもてません。その理由として正しいものはどれですか。図は、格子の点 O と、O にいちばん近い格子の点 A を、O のまわりに 72° ずつ回した点です。"
+        svg: '<svg viewBox="0 0 320 200" xmlns="http://www.w3.org/2000/svg"><circle cx="160" cy="100" r="55" fill="none" stroke="#c8ccd6" stroke-width="1.5" stroke-dasharray="5 4"/><line x1="160" y1="100" x2="160" y2="61" fill="none" stroke="#f08080" stroke-width="3"/><polygon points="160,52 164.5,61 155.5,61" fill="#f08080"/><circle cx="160" cy="45" r="6" fill="#7fc8f8" stroke="currentColor" stroke-width="2"/><circle cx="107.7" cy="83" r="6" fill="#7fc8f8" stroke="currentColor" stroke-width="2"/><circle cx="127.7" cy="144.5" r="6" fill="#7fc8f8" stroke="currentColor" stroke-width="2"/><circle cx="192.3" cy="144.5" r="6" fill="#7fc8f8" stroke="currentColor" stroke-width="2"/><circle cx="212.3" cy="83" r="6" fill="#7fc8f8" stroke="currentColor" stroke-width="2"/><circle cx="160" cy="100" r="4.5" fill="currentColor"/><text x="172" y="118" font-size="14" text-anchor="middle" fill="currentColor">O</text><text x="176" y="43" font-size="14" text-anchor="middle" fill="currentColor">A</text><text x="160" y="190" font-size="14" text-anchor="middle" fill="currentColor">A を O のまわりに 72° ずつ回した 5 つの点</text></svg>'
+        choices: ["O から A への矢印より短い、格子の点どうしの矢印ができてしまうから", "正五角形を 1 点のまわりに集めても、すき間なく平面にしきつめられないから", "5 回回転は、回転の行列で表せないから", "結晶は、ゆうげんの大きさのかたまりしかないから"]
+        answer: "O から A への矢印より短い、格子の点どうしの矢印ができてしまうから"
+        check: "'O から A への矢印より短い、格子の点どうしの矢印ができてしまうから'"
         hints:
-          - text: 正五角形の 1 つの角は 108° です。1 点のまわり 1 周は 360° です。
-            svg: '<svg viewBox="0 0 320 200" xmlns="http://www.w3.org/2000/svg"><polygon points="110,130 110,68 51,48.8 14.6,99 51,149.2" fill="#f3c969" fill-opacity="0.5" stroke="currentColor" stroke-width="2"/><path d="M110 104 A26 26 0 0 0 85.3 138" fill="none" stroke="#f08080" stroke-width="2.5"/><text x="64" y="90" font-size="15" text-anchor="middle" fill="currentColor">108°</text><text x="262" y="80" font-size="15" text-anchor="middle" fill="currentColor">正五角形の</text><text x="262" y="102" font-size="15" text-anchor="middle" fill="currentColor">1 つの角</text></svg>'
-          - 同じ形を 1 点のまわりに集めて、ちょうど 360° になるかを調べましょう。
-          - 3 つ集めると何度、4 つ集めると何度になるでしょう。
+          - "5 回回転たいしょうがあれば、図の 5 つの点は、どれも格子の点です。格子では、格子の点を結ぶ矢印 2 本を、つないだ先も格子の点です。"
+          - text: "OA と、OA を 144° 回した OC をつなぐと、O から S への矢印になります（図）。S も格子の点です。"
+            svg: '<svg viewBox="0 0 320 200" xmlns="http://www.w3.org/2000/svg"><line x1="150" y1="118" x2="150" y2="65" fill="none" stroke="#f08080" stroke-width="3"/><polygon points="150,56 154.5,65 145.5,65" fill="#f08080"/><line x1="150" y1="118" x2="118.9" y2="160.9" fill="none" stroke="#7bc96f" stroke-width="3"/><polygon points="113.6,168.2 115.2,158.3 122.5,163.6" fill="#7bc96f"/><line x1="150" y1="56" x2="118.9" y2="98.9" fill="none" stroke="#7bc96f" stroke-width="2" stroke-dasharray="5 4"/><polygon points="113.6,106.2 115.2,96.3 122.5,101.6" fill="#7bc96f"/><line x1="150" y1="118" x2="122.2" y2="109" fill="none" stroke="#3466f0" stroke-width="3"/><polygon points="113.6,106.2 123.5,104.7 120.8,113.3" fill="#3466f0"/><circle cx="150" cy="118" r="4.5" fill="currentColor"/><text x="162" y="134" font-size="14" text-anchor="middle" fill="currentColor">O</text><circle cx="150" cy="56" r="4.5" fill="currentColor"/><text x="164" y="60" font-size="14" text-anchor="middle" fill="currentColor">A</text><circle cx="113.6" cy="168.2" r="4.5" fill="currentColor"/><text x="99.6" y="174.2" font-size="14" text-anchor="middle" fill="currentColor">C</text><circle cx="113.6" cy="106.2" r="4.5" fill="currentColor"/><text x="99.6" y="100.2" font-size="14" text-anchor="middle" fill="currentColor">S</text><text x="250" y="70" font-size="14" text-anchor="middle" fill="currentColor">OC は OA を</text><text x="250" y="90" font-size="14" text-anchor="middle" fill="currentColor">144° 回したもの</text><text x="250" y="130" font-size="14" text-anchor="middle" fill="currentColor">点線は、OC と</text><text x="250" y="150" font-size="14" text-anchor="middle" fill="currentColor">同じ向きと長さ</text></svg>'
+          - "OS と OA の長さをくらべて、A が O にいちばん近い格子の点だったことと合うかを、考えましょう。"
         paths:
-          - [しゅうきこうし, 5 回たいしょう, すき間なくしきつめられない]
-          - [108° を集める, 360° にならない, すき間か重なり]
+          - ["5 回たいしょうなら、A を 72° ずつ回した点も格子の点", "OA と 144° 回した OC をつなぐと OS", "OS は OA の 2cos 72° 倍（約 0.62 倍）", "いちばん近い点より近い格子の点ができて、むじゅん"]
+          - ["正五角形のしきつめとは関係がない", "格子の点どうしのきょりが、いくらでも小さくなってしまう", "5 回たいしょうな格子はない"]
     extra: []
 
   - day: 6
@@ -532,15 +532,15 @@ days:
         id: "1b872809af"
         text: SU(n) が SL(n, C) の部分群になるわけを説明しましょう。図は、U(n) と SL(n, C) を、集合として重ねたものです。
         svg: '<svg viewBox="0 0 320 200" xmlns="http://www.w3.org/2000/svg"><circle cx="125" cy="100" r="62" fill="#7fc8f8" fill-opacity="0.35" stroke="currentColor" stroke-width="2"/><circle cx="195" cy="100" r="62" fill="#7bc96f" fill-opacity="0.35" stroke="currentColor" stroke-width="2"/><text x="92" y="105" font-size="15" text-anchor="middle" fill="currentColor">U(n)</text><text x="224" y="105" font-size="14" text-anchor="middle" fill="currentColor">SL(n, C)</text><text x="160" y="105" font-size="14" text-anchor="middle" fill="currentColor" font-weight="bold">SU(n)</text><text x="160" y="190" font-size="13" text-anchor="middle" fill="currentColor">重なった部分は、何を表すでしょう</text></svg>'
-        explain: 「SU(n) のようそは U†U=I を満たす。両辺の行列式をとると、det(U†)det(U)=1。det(U†) は det(U) のふくそきょうやくなので、|det U|²=1。SU(n) ではさらに det U=1 と定めている。行列式 1 の行列は SL(n,C) に入る。だから SU(n) は SL(n,C) の部分群。」と書ければよい。① U†U=I、② |det U|=1、③ det U=1 にかぎる。子どもには、U(1) でたしかめさせます。
+        explain: "「次の 3 つを確かめる。\n① 単位元：I†I = I、det I = 1 なので、I は SU(n) に入る。\n② 積：U、V が SU(n) に入れば、(UV)†(UV) = V†U†UV = V†V = I、det(UV) = det U · det V = 1 なので、UV も入る。\n③ 逆元：U⁻¹ = U† で、(U†)†U† = UU† = I、det(U⁻¹) = 1/det U = 1 なので、U⁻¹ も入る。\nだから SU(n) は、SL(n, C) の中で単位元をふくみ、積と逆元でとじていて、SL(n, C) の部分群である。」と書ければよい。\nSU(n) = U(n) ∩ SL(n, C) で、どちらも GL(n, C) の部分群なので、部分群どうしの共通部分は部分群である、と言ってもよい。\nU†U = I の両辺の行列式から |det U| = 1 が出るが、これは U(n) の行列の行列式が円の上にあることを言うだけで、部分群であることのわけにはならない。子どもには、U(1) でたしかめさせます。"
         hints:
           - U†U=I の両辺の行列式をとります。det(U†) は det U のふくそきょうやくです。
           - text: det U は、ふくそすうの平面で、原点からきょり 1 の円の上にあります（図）。
             svg: '<svg viewBox="0 0 320 200" xmlns="http://www.w3.org/2000/svg"><line x1="26.3" y1="108" x2="186.7" y2="108" fill="none" stroke="currentColor" stroke-width="1.5"/><polygon points="193.7,108 186.7,111.5 186.7,104.5" fill="currentColor"/><line x1="110" y1="185.5" x2="110" y2="37.5" fill="none" stroke="currentColor" stroke-width="1.5"/><polygon points="110,30.5 113.5,37.5 106.5,37.5" fill="currentColor"/><circle cx="110" cy="108" r="62" fill="none" stroke="currentColor" stroke-width="1.5" stroke-dasharray="6 4"/><circle cx="160.8" cy="72.4" r="5" fill="#f08080"/><circle cx="62.5" cy="68.1" r="5" fill="#f08080"/><circle cx="88.8" cy="166.3" r="5" fill="#f08080"/><circle cx="141" cy="161.7" r="5" fill="#f08080"/><text x="262" y="96" font-size="15" text-anchor="middle" fill="currentColor">det U は</text><text x="262" y="118" font-size="15" text-anchor="middle" fill="currentColor">円の上の数</text></svg>'
-          - SU(n) は、さらに det U = 1 にかぎります。行列式が 1 の行列は、どの群に入るでしょう。
+          - SU(n) は、さらに det U = 1 にかぎります。部分群と言うには、単位元 I が入ることと、かけ算とぎゃくぎょうれつでとじていることも、たしかめます（R-001）。
         paths:
-          - [U†U=I, "|det U|=1", det U=1, SL の部分群]
-          - [SU(n) は U(n) と SL(n,C) の共通部分, 共通部分は部分群]
+          - ["I が入る", "UV も入る：(UV)†(UV) = I、det(UV) = 1", "U⁻¹ = U† も入る", "SL(n, C) の部分群"]
+          - ["SU(n) = U(n) ∩ SL(n, C)", "どちらも GL(n, C) の部分群", "部分群どうしの共通部分は部分群"]
       - part: わけ
         id: "4287b6ce53"
         text: ビーベルバッハの定理が、空間群の分類の土台になるわけを説明しましょう。図の？に入るものを考えましょう。
