@@ -40,4 +40,4 @@ AI と人（保護者や指導者）が組んで回すことを前提にして�
 
 ## ライセンス
 
-未定です。
+中身（地図・単元・概念の目録・図・文書）は [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/)、道具と画面のコードは MIT です。くわしくは [LICENSE-CONTENT.md](LICENSE-CONTENT.md) と [LICENSE](LICENSE)。
