@@ -147,6 +147,31 @@ Google Play の進め方の案：
 4. 対象の年齢は「保護者と子ども」にし、Google ドライブへの保存（ログイン）は、保護者が開く設定の奥に置く（子どもがログインに触れない形。R-15 にも合う）。端末の識別子を送らない・広告なし・追跡なしは、いまの作りのままで満たす。
 5. Bubblewrap で包み、assetlinks.json を置き、ストアの説明とプライバシーの説明（site/privacy.html）とデータの安全性の欄を書く。
 
+### 8.1 (b) 個人事業の D-U-N-S 番号で組織のアカウントにするのに要ること（2026-11-21 に調べた）
+
+施主「b に必要なことを調べて」。法人も個人事業の届出もないところから、屋号で個人事業を始め、東京商工リサーチ（TSR）で D-U-N-S 番号を取り、Google Play の組織のアカウントで出す場合です。
+
+**公開されるもの（いちばん大事）**：組織のアカウントでは、法的な名称・D-U-N-S 番号・**法的な住所**・開発者のメール・開発者の電話が公開されます。住所は国だけとは書かれておらず、全体が出ると読むのが安全です。収益化しなくても出ます（個人のアカウントで住所の全体が出るのは収益化したときだけ）。つまり (b) は、氏名を屋号に替える代わりに、**事業所の住所・電話・メールを公開する**ことになります。自宅を事業所にすれば、自宅の住所が出ます。
+
+| 段 | すること | 費用 | 日数 | 誰が |
+|---|---|---|---|---|
+| 1 | 屋号と事業所の住所を決める。住所は D&B の決まりで実際の拠点に限られ、Google に公開される。バーチャルオフィスが通るかは公式の記載がなく不明（実体のない住所は断られるおそれ）。自宅を出したくなければ、実際に使う事務所（コワーキングなど）を借りる | 0 円（事務所は別） | — | 施主 |
+| 2 | 開業届を所轄の税務署へ（e-Tax か書面）。期限は開業した年の確定申告の期限まで。控えを残す（TSR への屋号の証明になる） | 記載なし | — | 施主 |
+| 3 | TSR の D-U-N-S Number 検索サイトで、既にないか検索し、なければ発番を申し込む。個人事業主は登録の対象で、商号の欄は屋号。屋号の証明（開業届の控えなど 1 つ）と在籍の書類（名刺など）を付け、カードを登録する | 無償なら 0 円、急ぐなら 15,000 円（税別） | 無償は 30 営業日（約 1.5 か月）、有償は 7 営業日 | 施主 |
+| 4 | D&B に載った英語の名称と住所を確かめる。違えば TSR で直す | 0 円 | 約 7 営業日 | 施主 |
+| 5 | Play Console で組織のアカウントを作る。名称と住所は D&B と完全に一致させる（ずれると制限やアプリの削除）。組織の電話（D&B などに載るもの）とウェブサイト、開発者のメールと電話の確認、代表者の身分証、住所の証明（公共料金・銀行の明細・賃貸の契約など）。EEA と英国に出さないなら「トレーダーでない」と宣言できる | US$25 | — | 施主 |
+| 6 | 組織のアカウントには、新しい個人のアカウントの「12 人が 14 日試す」決まりはかからない | — | — | — |
+| 7 | 続く義務：事業をする人は、申告が要らなくても帳簿を付けて残す（白色でも）。売上がないときの確定申告の要否は国税庁のページに直接の文がなく、税務署に確かめる。国民健康保険に入っている人は、所得が 0 でも住民税の申告をしないと軽減の判定ができない（区の案内） | — | — | 施主 |
+
+合計の目安：US$25 ＋ 0〜15,000 円（税別、事務所代は別）、約 1.5〜2 か月（D-U-N-S の 30 営業日が長い）。
+
+**まだ分からないこと**（申し込む前に、Google Play のサポートか TSR に問い合わせて確かめる）
+- Google が日本の個人事業主の D-U-N-S を組織として受けるか。日本の開発者向けの説明に「法人番号公表サイトの画面を出す」という項目があり、法人番号のない個人事業主が通るかが読み取れない。
+- 屋号なしで取れるか。代表者の氏名が D&B や Google で見えるか。
+- バーチャルオフィスの住所が通るか。
+
+**代わりに法人を作る場合**：合同会社は登録免許税が 6 万円から（資本金 × 0.7%）、定款の認証は要らず、数日〜2 週間ほどで登記できます。ただし、赤字でも法人住民税の均等割がかかり（東京 23 区で年 7 万円という解説あり、公式の額は未確認）、代表者が報酬を受けると社会保険に入る義務があります。無料の学習アプリのためだけには重い、と考えます。
+
 - Q6（施主）Google Play に公開する名前：(a) 個人のアカウントで出し、法的な氏名がストアに出ることを受け入れる、(b) 個人事業などで D-U-N-S 番号を取り、組織のアカウントで出す（取れる条件は確かめる）、(c) Google Play は見送る。
 
 ## 出典（2026-11-21 に取得。どれも各社の公式の文書）
@@ -167,5 +192,11 @@ Google Play の進め方の案：
 | Apple の審査の決まり 4.2、Apple Developer Program の年会費（US$99、個人は法的な氏名） | https://developer.apple.com/app-store/review/guidelines/ 、https://developer.apple.com/support/enrollment/ |
 | Microsoft Store の登録（個人も会社も無料）と PWA の出し方 | https://learn.microsoft.com/en-us/windows/apps/publish/partner-center/open-a-developer-account 、https://learn.microsoft.com/en-us/microsoft-edge/progressive-web-apps/how-to/microsoft-store |
 | 世界の携帯の OS の割合（2026 年 10 月、Android 72.36%、iOS 27.61%） | https://gs.statcounter.com/os-market-share/mobile/worldwide |
-
+| Play の組織のアカウントで公開される情報、D&B との一致、確認の書類 | https://support.google.com/googleplay/android-developer/answer/13628312 、https://support.google.com/googleplay/android-developer/answer/13634081 、https://support.google.com/googleplay/android-developer/answer/13634888 |
+| トレーダーかどうかの宣言 | https://support.google.com/googleplay/android-developer/answer/17594752 |
+| TSR の D-U-N-S の取り方（個人事業主は屋号で、書類、無償 30 営業日・有償 15,000 円で 7 営業日） | https://www.tsr-net.co.jp/static/product_info/images/DSS/UserGuide.pdf （2025-07 版）、https://www.tsr-net.co.jp/release/detail/1201991_1522.html （2025-11 の料金改定）、https://www.tsr-net.co.jp/service/detail/get-a-duns-number.html |
+| Google 向けの D-U-N-S の FAQ（実際の拠点の住所で登録、英語の名称で照合） | https://www.tsr-net.co.jp/service/common/pdf/DunsFAQforGoogle.pdf （2024-09） |
+| D&B の D-U-N-S（Google の開発者向けも無料、だれでも番号を検索できる） | https://www.dnb.com/duns/get-a-duns.html 、https://www.dnb.com/en-us/smb/duns/duns-lookup.html |
+| 開業届、青色申告、確定申告、帳簿の義務 | https://www.nta.go.jp/taxes/tetsuzuki/shinsei/annai/shinkoku/annai/04.htm 、https://www.nta.go.jp/taxes/shiraberu/taxanswer/shotoku/2090.htm 、https://www.nta.go.jp/taxes/shiraberu/taxanswer/shotoku/2070.htm 、https://www.nta.go.jp/taxes/shiraberu/taxanswer/shotoku/2020.htm 、https://www.nta.go.jp/taxes/shiraberu/shinkoku/kojin_jigyo/index.htm |
+| 登録免許税（合同会社 6 万円から） | https://www.nta.go.jp/taxes/shiraberu/taxanswer/inshi/7191.htm |
 送る量は、この日の site/ のファイルを gzip -9 で縮めて測りました（合計 1,025,403 バイト）。
