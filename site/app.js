@@ -208,6 +208,10 @@
         case 'w':
           // 1 文字の大文字は変数として斜体（W = 仕事、E = エネルギー）。単位（10 W、単位は W）は立体のまま
           if (/^[A-Z]$/.test(a.v) && !unitAt(x, i) && !UPRIGHT.test(a.v)) return `<i class="v">${esc(a.v)}</i>${t}`;
+          // 大文字の並び（AB、AI、ABC）は、どの字も同じ文で 1 字の変数として出ていれば、積や点の名前として 1 字ずつ斜体にする（D-237）。
+          // かっこが続く名前（GL(n、SO(3)）、下付きの数字や電荷が続く化学式（NH₃）、略号は立体のまま
+          if (/^[A-Z]{2,4}$/.test(a.v) && !CAPS_UPRIGHT.test(a.v) && !(x[i + 1] && x[i + 1].k === 'g') && !/^[₀-₉⁺⁻]/.test(a.t || '')
+            && [...a.v].every(ch => CAPS_CTX.has(ch))) return [...a.v].map(ch => `<i class="v">${ch}</i>`).join('') + t;
           return (/^[a-z]{1,3}$/.test(a.v) && !unitAt(x, i) && !UPRIGHT.test(a.v) && !/^d[a-z]$/.test(a.v) ? letters(a.v) : esc(a.v)) + t;
         case 'n': case 's': return esc(a.v) + t;
         case 'gr': return `<i class="v">${esc(a.v)}</i>${t}`;
@@ -296,7 +300,14 @@
     }
     return out.map((x, i) => (i && !x.li && !out[i - 1].li ? '\n' : '') + x.h).join('');
   };
-  const fmt = s => { const m = markMat(markGloss(s)); return listify(kindify(putMat(glossHtml(mx(m.text)), m.mats))); };
+  // 文の中で 1 字の変数として出る大文字（大文字の並びを斜体にするかを決める。D-237）
+  let CAPS_CTX = new Set();
+  const CAPS_UPRIGHT = /^(GL|SL|SO|SU|PSL|PGL|DNA|RNA|ATP|ADP|AMP|NAD|GTP|LED|GPS|CPU|USB|SI|ISO)$/;
+  const fmt = s => {
+    const prev = CAPS_CTX;
+    CAPS_CTX = new Set(String(s ?? '').match(/(?<![A-Za-z])[A-Z](?![A-Za-z])/g) || []);
+    try { const m = markMat(markGloss(s)); return listify(kindify(putMat(glossHtml(mx(m.text)), m.mats))); } finally { CAPS_CTX = prev; }
+  };
   // 単元の記号（A-024 など）を、その単元のページへのリンクにする（ヒント・見どころ・手本）
   // ヒントは文か、{text, svg}（図の付いたヒント、D-129）。text は文と同じに組み、svg は文の下に図として出す
   const hintText = h => (h && typeof h === 'object') ? (h.text || '') : (h || '');
