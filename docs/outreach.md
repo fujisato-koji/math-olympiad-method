@@ -128,6 +128,27 @@ traceable-design（組織のアカウントの下に同じ名前のリポジト�
   6. 英語の README を入口に書く（日本語の README へのリンク）。
 - 気をつけること：コミットの作者名（git の user.name）にも施主の名前が出ている。過去の履歴は変えず、これからの作者名を変えるかは施主が決める。
 
+## 8. アプリのストアに載せるか（施主「google play とかに乗る形にしなくていいか」、2026-11-21）
+
+いまの画面は PWA（ホーム画面に置けて、つながっていなくても動く）です。この PWA をそのまま包んでストアに出す方法があり、中身を直しても、ストアに出し直さずに新しい中身が届きます。
+
+| ストア | 包み方 | 費用 | 公開される名前 | 載せる条件と危うい所 | 推奨 |
+|---|---|---|---|---|---|
+| Google Play | Trusted Web Activity（Bubblewrap が作る署名済みの APK をそのまま出せる） | 登録は 1 回 US$25 | 個人のアカウントは、開発者名・**法的な氏名**・国・連絡のメールが公開される。組織のアカウントは D-U-N-S 番号が要る | ①サイトとアプリの結び付けのファイルを、住所の根 `/.well-known/assetlinks.json` に置く（GitHub の組織なら <組織>.github.io のリポジトリで置ける）。②2023-11-13 より後に作った個人のアカウントは、12 人以上が 14 日続けて試してからでないと本番に出せない。③子どもを対象に含めると Families の決まりがかかる（端末の識別子を送らない、子ども向けに認められた SDK だけ、プライバシーの説明、子ども向けに認められていない OAuth は使えない） | **載せる。ただし組織へ移したあと、日本語で小さく出したあと** |
+| Microsoft Store | PWABuilder で包む（コードの直しは要らない、審査は通常 24〜48 時間） | 個人も会社も登録は無料（新しい登録の流れで） | 未確認 | 使うのは PC が主 | 余力があれば。費用がかからず速い |
+| Apple App Store | 包むことはできる | 年 US$99 | 個人は法的な氏名が売り手として出る | 決まり 4.2 が「作り直しただけのウェブサイト」を越える機能を求めるので、包んだだけでは断られるおそれ。ビルドに Mac が要る | 見送る。iPhone では、Safari の「ホーム画面に追加」で同じ画面が使える |
+
+ストアに載せる利点は 3 つです。保護者が「算数 アプリ」とストアで探したときに見つかること、ストアに載っていることが安心の目印になること、ホーム画面に置かれやすいことです。いっぽう、ストアに載せても検索のページや再利用（第 3 節の A・B・D）の代わりにはならないので、段 0 の土台が先です。
+
+Google Play の進め方の案：
+1. 組織へ移して住所を決める（TWA は住所に結び付くので、あとで住所を変えるとアプリも出し直しになる）。
+2. 公開する名前を決める（下の Q6）。
+3. 日本語で小さく出すとき（段 1）に、試す人を 12 人以上集め、14 日続けて試してもらう。
+4. 対象の年齢は「保護者と子ども」にし、Google ドライブへの保存（ログイン）は、保護者が開く設定の奥に置く（子どもがログインに触れない形。R-15 にも合う）。端末の識別子を送らない・広告なし・追跡なしは、いまの作りのままで満たす。
+5. Bubblewrap で包み、assetlinks.json を置き、ストアの説明とプライバシーの説明（site/privacy.html）とデータの安全性の欄を書く。
+
+- Q6（施主）Google Play に公開する名前：(a) 個人のアカウントで出し、法的な氏名がストアに出ることを受け入れる、(b) 個人事業などで D-U-N-S 番号を取り、組織のアカウントで出す（取れる条件は確かめる）、(c) Google Play は見送る。
+
 ## 出典（2026-11-21 に取得。どれも各社の公式の文書）
 
 | 内容 | URL |
@@ -138,5 +159,13 @@ traceable-design（組織のアカウントの下に同じ名前のリポジト�
 | Google Drive API のスコープの分類（drive.file と drive.appdata は非機微） | https://developers.google.com/workspace/drive/api/guides/api-specific-auth |
 | 非機微のスコープだけならアプリの審査は要らない。ロゴと名前にはブランド確認 | https://support.google.com/cloud/answer/13463073 |
 | 未審査のアプリの 100 人の上限（機微か制限のスコープを使う未審査のアプリにかかる） | https://support.google.com/cloud/answer/7454865 |
+| Google Play の登録料と、個人・組織のアカウント（US$25、組織は D-U-N-S 番号が要る） | https://support.google.com/googleplay/android-developer/answer/6112435 、https://support.google.com/googleplay/android-developer/answer/13628312 |
+| 個人のアカウントで公開される情報（開発者名、法的な氏名、国、連絡のメール。収益化すると住所の全体） | https://support.google.com/googleplay/android-developer/answer/13628312 |
+| 新しい個人のアカウントの試しの決まり（12 人以上、14 日続けて） | https://support.google.com/googleplay/android-developer/answer/14151465 |
+| Google Play の Families の決まり | https://support.google.com/googleplay/android-developer/answer/9893335 |
+| Trusted Web Activity と assetlinks.json の置き場所（住所の根だけ） | https://developer.chrome.com/docs/android/trusted-web-activity/ 、https://developer.chrome.com/docs/android/trusted-web-activity/integration-guide |
+| Apple の審査の決まり 4.2、Apple Developer Program の年会費（US$99、個人は法的な氏名） | https://developer.apple.com/app-store/review/guidelines/ 、https://developer.apple.com/support/enrollment/ |
+| Microsoft Store の登録（個人も会社も無料）と PWA の出し方 | https://learn.microsoft.com/en-us/windows/apps/publish/partner-center/open-a-developer-account 、https://learn.microsoft.com/en-us/microsoft-edge/progressive-web-apps/how-to/microsoft-store |
+| 世界の携帯の OS の割合（2026 年 10 月、Android 72.36%、iOS 27.61%） | https://gs.statcounter.com/os-market-share/mobile/worldwide |
 
 送る量は、この日の site/ のファイルを gzip -9 で縮めて測りました（合計 1,025,403 バイト）。
