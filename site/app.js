@@ -134,6 +134,8 @@
       }
       if (c === '_' && s[i + 1] === '(') { const j = closeAt(s, i + 1); if (j > 0) { out.push({ k: 'sub', v: s.slice(i + 2, j) }); i = j + 1; continue; } }
       if (c === '_' && (m = /^[A-Za-z0-9]/.exec(s.slice(i + 1)))) { out.push({ k: 'sub', v: m[0] }); i += 2; continue; }
+      // 単元の記号（R-001 など、地図にあるもの）は 1 つの字句にする。数式として組むと R が斜体の変数になり、リンクも付かなかった（D-230）
+      if ((m = /^[A-Z]-\d{3}(?!\d)/.exec(rest)) && UNITS[m[0]]) { out.push({ k: 'u', v: m[0] }); i += m[0].length; continue; }
       if ((m = /^\d+(?:\.\d+)?/.exec(rest))) { const t = tail(i + m[0].length); out.push({ k: 'n', v: m[0], t }); i += m[0].length + t.length; continue; }
       if ((m = /^[A-Za-z]+/.exec(rest))) { const t = tail(i + m[0].length); out.push({ k: 'w', v: m[0], t }); i += m[0].length + t.length; continue; }
       if (/[α-ω]/.test(c) && c !== 'π') { const t = tail(i + 1); out.push({ k: 'gr', v: c, t }); i += 1 + t.length; continue; }
@@ -214,6 +216,8 @@
           const sub = a.num.some(t => t.k === 'sub' || (t.t && /[₀-₟]/.test(t.t)) || (t.k === 'g' && /[_₀-₉]/.test(t.v)));
           return `<span class="frac${sub ? ' frac-sub' : ''}" role="math" aria-label="${esc(raw(a.den))}ぶんの${esc(raw(a.num))}"><span>${part(a.num)}</span><span>${part(a.den)}</span></span>`;
         }
+        // 単元の記号：ヒント・見本ではその単元のページへのリンク（ホバーで題）、問題文では立体の字のまま
+        case 'u': return LINK_UNITS ? `<a class="ulink" href="#/unit/${a.v}" target="_blank" rel="noopener" title="${esc(UNITS[a.v].title)}">${a.v}</a>` : esc(a.v);
         case 'vec': return `<span class="vec">${letters(a.v)}${t}</span>`;
         // 根号は √ の字を使わず線で描く（字体によって √ と横線が離れるため）。中身の高さに合わせて伸びる
         case 'rt': return `<span class="sqrt" role="math" aria-label="ルート ${esc(a.v)}"><svg class="rt" viewBox="0 0 10 20" preserveAspectRatio="none" aria-hidden="true"><path d="M.4 12.2 2.6 10.8 5.4 19.6 10 0"/></svg><span class="rad">${mx(a.v, flat)}</span></span>${t}`;
@@ -267,7 +271,9 @@
   // ヒントは文か、{text, svg}（図の付いたヒント、D-129）。text は文と同じに組み、svg は文の下に図として出す
   const hintText = h => (h && typeof h === 'object') ? (h.text || '') : (h || '');
   const hintHtml = h => fmtLinks(hintText(h)) + (h && typeof h === 'object' && h.svg ? `<div class="fig fig-svg hint-fig" role="img" aria-label="ず">${h.svg}</div>` : '');
-  const fmtLinks = s => { const m = markMat(markGloss(s)); return kindify(putMat(glossHtml(mx(m.text).replace(/\b([A-Z])-(\d{3})\b/g, x => UNITS[x] ? `<a class="ulink" href="#/unit/${x}" target="_blank" rel="noopener">${x}</a>` : x)), m.mats)); };
+  // リンクは字句に分けるとき（lex の k: 'u'）に作る。前は数式を組んだあとの HTML に当てていて、R が斜体で包まれると当たらなかった（D-230）
+  let LINK_UNITS = false;
+  const fmtLinks = s => { LINK_UNITS = true; try { return fmt(s); } finally { LINK_UNITS = false; } };
   // 見本の説明は、長い文を文ごとに改行し、｜で囲んだ表を組む（D-067）。
   // 例：｜量｜記号｜意味｜ の行を続けると、見出しつきの表になる。
   const TB0 = String.fromCharCode(0xE004), TB1 = String.fromCharCode(0xE005);
@@ -2234,7 +2240,7 @@
         <div class="actions">${s.hints < 3 ? `<button class="pill" data-act="hint" type="button">ヒント ${s.hints + 1} / 3</button>` : ''}${dk}</div>`;
     }
     el.innerHTML = steps() + `<article class="card" id="card" data-qid="${esc(it.qid || '')}">
-      <span class="part">${esc(it.part === '離' ? '腕だめし' : it.part)}${tierHtml(it)}</span>${s.type === 'ri' && s.groupLabel ? `<span class="ri-scope">${esc(s.groupLabel)}</span>` : ''}${kindsHtml(it, u.stage <= 2)}<p class="q">${fmt(it.text)}</p>${body}</article>`;
+      <span class="part">${esc(it.part === '離' ? '腕だめし' : it.part)}${tierHtml(it)}</span>${s.type === 'ri' && s.groupLabel ? `<span class="ri-scope">${esc(s.groupLabel)}</span>` : ''}${kindsHtml(it, u.stage <= 2)}<p class="q">${it.part === '見本' ? fmtLinks(it.text) : fmt(it.text)}</p>${body}</article>`;
     figMath(el);
     tick();
   }
@@ -2252,7 +2258,7 @@
     const back = small ? 'いまの もんだいに もどる' : 'いまの問題にもどる';
     el.innerHTML = steps() + `<article class="card peek-card" id="card">
       <span class="part">${esc(it.part === '離' ? '腕だめし' : it.part)}<span class="muted">・${small ? `${s.peek + 1} もんめ` : `${s.peek + 1} 問目`}</span></span>
-      <p class="q">${fmt(it.text)}</p>${body}
+      <p class="q">${it.part === '見本' ? fmtLinks(it.text) : fmt(it.text)}</p>${body}
       <div class="actions"><button class="pill solid" data-act="peek-back" type="button">${back}</button></div></article>`;
     figMath(el);
     window.scrollTo({ top: 0, behavior: 'smooth' });

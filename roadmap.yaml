@@ -1379,7 +1379,8 @@ units:
   - {id: R-002, title: 剰余類とラグランジュの定理, level: 6, region: gunkantai, needs: [R-001], days: 12}
   - {id: R-003, title: 群作用, level: 6, region: gunkantai, needs: [R-001], days: 12, plan: [{導入: 群作用の定義と例}, {練習: 軌道と安定化群}, {練習: 軌道分解}, {練習: 軌道・安定化群の定理}, {練習: 共役作用と共役類}, {練習: 中心化群と類等式}, {練習: バーンサイドの補題}, {練習: 図形の対称群の作用}, {練習: 部分群への制限}, {わけ: 軌道・安定化群の定理とバーンサイドの補題}, {混ぜる: 群作用を合わせる}, {確認: 12 日分の確認}]}
   - {id: R-005, title: 置換の符号と交代群, level: 6, region: gunkantai, needs: [R-002], days: 12}
-  - {id: R-006, title: 行列群、結晶群と空間群（ビーベルバッハの定理）, level: 3, region: gunkantai, needs: [M-004, A-024], days: 12, plan: [{導入: 行列群}, {練習: 直交群と特殊直交群}, {練習: ユニタリ群と特殊ユニタリ群}, {練習: ローレンツ群}, {練習: 結晶群と点群}, {練習: 空間群}, {練習: ビーベルバッハの定理}, {練習: 表現と指標の入口}, {練習: 群の作用と対称性}, {わけ: 行列群と結晶群}, {混ぜる: 行列群・結晶群}, {確認: 12 日分の確認}]}
+  - {id: R-006, title: 行列群、結晶群と空間群（ビーベルバッハの定理）, level: 6, region: gunkantai, needs: [R-001, R-037], days: 12, plan: [{導入: 行列群}, {練習: 直交群と特殊直交群}, {練習: ユニタリ群と特殊ユニタリ群}, {練習: ローレンツ群}, {練習: 結晶群と点群}, {練習: 空間群}, {練習: ビーベルバッハの定理}, {練習: 表現と指標の入口}, {練習: 群の作用と対称性}, {わけ: 行列群と結晶群}, {混ぜる: 行列群・結晶群}, {確認: 12 日分の確認}]}
+  - {id: R-037, title: 行列群と点群の入口, level: 3, region: gunkantai, needs: [M-004, A-024], days: 11, plan: [{導入: GL と SL}, {練習: 直交行列と回転・鏡映}, {練習: ユニタリ行列と U(1)}, {練習: ローレンツ変換}, {練習: 点群の対称操作を数える}, {練習: 結晶点群とブラベー格子}, {練習: 置換行列と指標}, {練習: 軌道を数える}, {わけ: 行列式で群を見分ける}, {混ぜる: 行列群と点群}, {確認: 11 日分の確認}]}
   - {id: T-001, title: 位相空間, level: 6, region: iso, needs: [D-012, D-013], days: 12}
   - {id: T-002, title: 連結性と弧状連結性, level: 6, region: iso, needs: [T-001], days: 12}
   - {id: T-003, title: コンパクト性, level: 6, region: iso, needs: [T-001], days: 12}
@@ -1618,7 +1619,7 @@ units:
   - {id: W-034, title: 大気化学（オゾン層の生成と破壊、微量気体の反応、エーロゾル）, level: 5, region: chikyu-system, needs: [P-120, P-131, H-037, H-043], days: 9}
   - {id: F-053, title: 金融政策と中央銀行（ニューケインジアン・モデル、インフレ目標と政策金利の規則、波及の経路、量的緩和）, level: 5, region: keizai, needs: [F-025, F-026], days: 10}
   - {id: F-055, title: 従属性と極値（コピュラ、裾の従属、極値分布、裾の重さの尺度）, level: 5, region: keiryo-risk, needs: [S-003, F-017], days: 8}
-  - {id: H-050, title: 分子の対称性と分光学（点群と指標表、回転・振動・電子スペクトル、選択律、磁気共鳴、蛍光とりん光）, level: 4, region: butsuri-kagaku, needs: [H-045, H-041, R-006, P-079], days: 12}
+  - {id: H-050, title: 分子の対称性と分光学（点群と指標表、回転・振動・電子スペクトル、選択律、磁気共鳴、蛍光とりん光）, level: 4, region: butsuri-kagaku, needs: [H-045, H-041, R-037, P-079], days: 12}
   - {id: H-051, title: 統計熱力学と反応速度の理論（分配関数、平衡定数の分子論、ポテンシャルエネルギー面、遷移状態理論）, level: 6, region: butsuri-kagaku, needs: [P-049, H-036, H-037, H-045], days: 10}
   - {id: H-052, title: 触媒化学（有機金属錯体と触媒サイクル、クロスカップリング、メタセシス、固体触媒と吸着）, level: 3, region: muki, needs: [H-029, H-032], days: 10}
   - {id: H-053, title: 固体化学と結晶成長（状態図と固溶体、欠陥と不定比、固相反応、単結晶の育成）, level: 4, region: zairyo, needs: [H-049, H-036, P-092], days: 10}
@@ -1862,7 +1863,7 @@ units:
   - {id: N-055, title: p 進数と局所体, level: 6, region: daisuteki-seisuron, needs: [T-003, N-052, N-053, N-054], days: 12}
   - {id: N-058, title: 解析的整数論, level: 6, region: kaisekiteki-seisuron, needs: [N-037, N-038, N-047, N-048, N-049, N-050, D-030, D-031, D-032], days: 12}
   - {id: C-036, title: 加法的組合せ論, level: 6, region: kumiawase-daigaku, needs: [R-004, M-005, M-006, M-007, S-002, C-029], days: 12}
-  - {id: C-037, title: 代数的組合せ論, level: 4, region: kumiawase-daigaku, needs: [R-006], days: 12}
+  - {id: C-037, title: 代数的組合せ論, level: 4, region: kumiawase-daigaku, needs: [R-037], days: 12}
   - {id: C-038, title: 情報源符号化と通信路容量, level: 4, region: fugo, needs: [S-002, S-003], days: 12}
   - {id: C-039, title: 誤り訂正符号, level: 4, region: fugo, needs: [C-038], days: 12}
   - {id: C-040, title: 暗号, level: 4, region: fugo, needs: [C-038], days: 12}

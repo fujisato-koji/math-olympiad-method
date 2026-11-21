@@ -1663,8 +1663,10 @@ lines:
   A-024>R-001: {type: 土台, strength: 3, why: 写像と単射・全射を使う}
   R-001>R-002: {type: 深める, strength: 3, why: 部分群から剰余類へ}
   R-001>R-003: {type: 土台, strength: 3, why: 群の定義を土台に作用を定義}
-  M-004>R-006: {type: 道具, strength: 2, why: GL・SL・O を行列式で定める}
-  A-024>R-006: {type: 土台, strength: 2, why: 集合と写像の言葉で群を述べる}
+  M-004>R-037: {type: 道具, strength: 2, why: GL・SL・O を行列式で定める}
+  A-024>R-037: {type: 土台, strength: 2, why: 集合と写像の言葉で群を述べる}
+  R-001>R-006: {type: 土台, strength: 3, why: 群・部分群・準同型の定義と判定を行列群に使う}
+  R-037>R-006: {type: 土台, strength: 2, why: 行列群と点群を具体的に計算できることを前に置く}
   D-012>T-001: {type: 成熟, strength: 1, why: 名前だけで判断。収束の慣れ}
   D-013>T-001: {type: 一般化, strength: 3, why: 距離空間の一般化が位相空間}
   T-001>T-002: {type: 土台, strength: 3, why: 連結性は開集合で定義}
@@ -2248,7 +2250,7 @@ lines:
   F-017>F-055: {type: 道具, strength: 2, why: 損害分布と裾の重さを使う}
   H-045>H-050: {type: 土台, strength: 3, why: 分子軌道が電子スペクトルの土台}
   H-041>H-050: {type: 深める, strength: 3, why: 分光法を理論で深める}
-  R-006>H-050: {type: 道具, strength: 1, why: 点群と結晶群の関連。名前だけで判断}
+  R-037>H-050: {type: 道具, strength: 1, why: 点群の対称操作と指標を数える道具}
   P-079>H-050: {type: 土台, strength: 2, why: 遷移と選択則を分光に使う}
   P-049>H-051: {type: 土台, strength: 3, why: 分配関数がそのまま土台}
   H-036>H-051: {type: 土台, strength: 3, why: 熱力学量の分子論的説明の土台}
@@ -2592,7 +2594,7 @@ lines:
   M-007>C-036: {type: 道具, strength: 2, why: 固有値の技法を使う}
   S-002>C-036: {type: 道具, strength: 2, why: 母関数や確率の技法を使う}
   C-029>C-036: {type: 成熟, strength: 1, why: 名前だけで判断、グラフの慣れ}
-  R-006>C-037: {type: 道具, strength: 2, why: 行列群の表現を使う}
+  R-037>C-037: {type: 道具, strength: 2, why: 置換行列・指標・軌道を数える道具}
   S-002>C-038: {type: 土台, strength: 3, why: 離散確率変数でエントロピーを定義}
   S-003>C-038: {type: 道具, strength: 2, why: 連続分布の通信路容量で使う}
   C-038>C-039: {type: 土台, strength: 2, why: 通信路容量の考えを符号に使う}
