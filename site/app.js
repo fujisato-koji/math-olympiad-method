@@ -1866,18 +1866,14 @@
     ['system', '公理の組'], ['consequences', '系'], ['models', '公理を満たす例'], ['scope', '成り立つ範囲'], ['evidence', '確かめられた経緯'],
     ['data', 'もとのデータ'], ['background', '背景']];
   // ---- 誤りを知らせる（D-246、公開の段階 0 の 0-4）：場所を書き込んだ報告の下書きを開く ----
-  // フォーム（Google フォーム、アカウント不要。index.html の meta michisuji-report-form に、事前入力の住所の __PAGE__ と __WHERE__ を置く）と、
-  // GitHub の issue（.github/ISSUE_TEMPLATE/error.yml、項目 page と where を住所の問いで埋める）。フォームの住所が空のあいだは GitHub だけ
+  // GitHub の issue（.github/ISSUE_TEMPLATE/error.yml、項目 page と where を住所の問いで埋める）。Google フォームは施主が使いづらいとしてやめた
   const REPO = 'https://github.com/fujisato-koji/michisuji';
-  const REPORT_FORM = (document.querySelector('meta[name="michisuji-report-form"]') || {}).content || '';
   function reportHtml(ctx, small) {
     const page = location.origin + location.pathname + location.hash;
     const where = [ctx.unit && `単元 ${ctx.unit}`, ctx.day && `${ctx.day} 日目`, ctx.qid && `問題 ${ctx.qid}`,
       ctx.concept && `概念 ${ctx.concept}`, ctx.goal && `目標 ${ctx.goal}`].filter(Boolean).join('・');
     const gh = REPO + '/issues/new?' + new URLSearchParams({ template: 'error.yml', title: `[誤り] ${where}`, page, where });
-    const fm = REPORT_FORM && REPORT_FORM.replace('__PAGE__', encodeURIComponent(page)).replace('__WHERE__', encodeURIComponent(where));
-    const a = (href, t) => `<a href="${esc(href)}" target="_blank" rel="noopener">${t}</a>`;
-    return `<div class="report">${small ? 'まちがいを しらせる（おとなの かたへ）' : '誤りを知らせる'}：${fm ? a(fm, 'フォーム') + '・' : ''}${a(gh, 'GitHub')}</div>`;
+    return `<div class="report"><a href="${esc(gh)}" target="_blank" rel="noopener" title="GitHub に、場所を書き込んだ報告の下書きを開きます">${small ? 'まちがいを しらせる（おとなの かたへ）' : '誤りを知らせる'}</a></div>`;
   }
 
   function viewConcept(cid) {
