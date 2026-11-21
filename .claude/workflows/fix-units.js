@@ -46,12 +46,13 @@ const fixPrompt = id => `みちすじ（子どもが毎日少しずつ解く学�
 - ヒント：答える問題のヒント 3 段のうち、1〜2 段を図の付いたヒント（{text, svg}）にし、答えの手前までを絵で見せる（正解そのものは描かない）。図が助けにならない問題（式の変形だけなど）は文のままでよい。答えをほぼ言っているヒントは、見方・調べ方・一歩手前に直す。
 - 文：水準に合うことばと長さ（docs/thinking-levels.md の第 5 節：字の範囲・分かち書き・文体）。答えが 2 つになる問い、まぎれる選択肢を直す。水準の字の範囲より上の漢字（水準 5 まで）をかなに開く。
 - 答え：全部の答える問題を自分で解き、ファイルの答えと照らす。まちがいは直す。
+- 概念の目録：docs/problem-figures.md の「概念の目録」の決まりで、この単元が初めて教える概念を concepts/${id}.yaml に書く（もうあれば、足りない所を足し、まちがいを直す。D-240）。見本の本文とヒントで、その概念の名前を《名前》と書く。
 【守ること】
 - 長くかかる道具（tools/unitqc.py、tools/blind.py render）は Bash の timeout を 600000（10 分）にして動かす（時間切れで止めると画面なしの Edge が残り、PC のメモリを食う。D-137）。
 - 問題の数・日の並び・part・qid のもとは変えない。答えや問いの意味を変えた問題だけ、その id: の行を消す。kinds: [最難関] の問題は中身を変えない（答えのまちがいを見つけたら返す要約に書く）。
-- 書くのは units/${id}.yaml だけ。git の操作、tools/roadmap.py の build と check はしない（ほかの係とまざる）。下書きのスクリプトや控えは、自分の一時フォルダ（scratchpad）の中に ${id}/ を作ってそこだけに置き、終わったらその ${id}/ だけを消す。scratchpad のほかのファイルは主会話やほかの係のものなので、消さない・書きかえない。
+- 書くのは units/${id}.yaml と concepts/${id}.yaml だけ。git の操作、tools/roadmap.py の build と check はしない（ほかの係とまざる。目録の確かめの python tools/roadmap.py 2>&1 | grep 目録 だけは動かしてよい）。下書きのスクリプトや控えは、自分の一時フォルダ（scratchpad）の中に ${id}/ を作ってそこだけに置き、終わったらその ${id}/ だけを消す。scratchpad のほかのファイルは主会話やほかの係のものなので、消さない・書きかえない。
 - 確かめ：PYTHONIOENCODING=utf-8 python tools/unitqc.py ${id} で誤り 0、漢字 0 まで直す。できた PNG は全部 Read で見て、はみ出し・かさなり・何の絵かわからない図を直し、見たら python tools/unitqc.py --clean ${id} で消す（画像をためない）。
-【返すもの】10 行以内：足した図の数（見本・問題・ヒント）、直したヒントと文と漢字の数、見つけた答えのまちがい、最難関で気づいたこと、qc の結果。`
+【返すもの】10 行以内：足した図の数（見本・問題・ヒント）、直したヒントと文と漢字の数、見つけた答えのまちがい、最難関で気づいたこと、目録に書いた・直した概念の数、qc と目録の確かめの結果。`
 
 const solvePrompt = (id, t) => `あなたは、みちすじの単元 ${id} の問題を、答えを知らずに解く係。日本語で考え、答える。作業ツリーの根（いまの作業フォルダ）で動く。
 【守ること】長くかかる道具（tools/unitqc.py、tools/blind.py render）は Bash の timeout を 600000（10 分）にして動かす（時間切れで止めると画面なしの Edge が残り、PC のメモリを食う。D-137）。答えを見ない：units/、site/、docs/ のファイルは開かない・grep しない。tools/blind.py の key は使わない。ファイルを書き換えない。
@@ -91,12 +92,13 @@ const fixLight = id => `みちすじ（子どもが毎日少しずつ解く学�
 - 文：水準に合うことばと長さ（docs/thinking-levels.md の第 5 節：字の範囲・分かち書き・文体）。答えが 2 つになる問い、まぎれる選択肢を直す。水準の字の範囲より上の漢字（水準 5 まで）をかなに開く。
 - 答え：全部の答える問題を自分で解き、ファイルの答えと照らす。まちがいは直す。
 - 見本：見本の文と図が、同じ日の問題の答えをそのまま見せていないかを見る（R-003 で見本が同じ日の 3 問の答えを書いていた。D-193）。見せていれば、見本の例を別のものに替える。
+- 概念の目録：docs/problem-card.md の「概念の目録」で、この単元が初めて教える概念を concepts/${id}.yaml に書く（もうあれば足りない所を足し、まちがいを直す。D-240）。concepts/ のファイルは直に書く（組み立ての外）。確かめは grep 目録 で自分の記号の誤りと警告を 0 に。
 【守ること】
 - Bash の timeout は 600000（長い道具を時間切れで止めると画面なしの Edge が残る。D-137）。
 - 問題の数・日の並び・part・qid のもとは変えない。答えや問いの意味を変えた問題だけ、その id: の行を消す。kinds: [最難関] の問題は中身を変えない。
-- 直すのは置き場の head.yaml・day-n.yaml・ri.yaml で、直したら python tools/assemble.py ${id} で組み立てる（units/${id}.yaml を直に直さない。組み立てで上書きされる）。git の操作、build、check はしない。下書きは scratchpad の ${id}/ だけ。
+- 直すのは置き場の head.yaml・day-n.yaml・ri.yaml で、直したら python tools/assemble.py ${id} で組み立てる（units/${id}.yaml を直に直さない。組み立てで上書きされる）。ほかに書くのは concepts/${id}.yaml だけ。git の操作、build、check はしない（目録の確かめの python tools/roadmap.py 2>&1 | grep 目録 だけは動かしてよい）。下書きは scratchpad の ${id}/ だけ。
 - 確かめ：PYTHONIOENCODING=utf-8 python tools/unitqc.py --no-shot ${id}（誤り 0、漢字 0）と PYTHONIOENCODING=utf-8 python tools/figlint.py ${id}（図の直すところ 0）。画像は見ない。1 日分は 1 回の Write か少ない Edit で直し、何度も読み直さない。
-【返すもの】10 行以内：足した図の数（見本・問題・ヒント）、直したヒントと文と漢字の数、見つけた答えのまちがい、最難関で気づいたこと、qc と figlint の結果。`
+【返すもの】10 行以内：足した図の数（見本・問題・ヒント）、直したヒントと文と漢字の数、見つけた答えのまちがい、最難関で気づいたこと、目録に書いた・直した概念の数、qc と figlint と目録の確かめの結果。`
 const solveLight = id => solvePrompt(id, 'b')
   .replace(/2\. PYTHONIOENCODING=utf-8 python tools\/blind\.py render[^\n]*\n/, '2. 図は json の svg の中身（座標と文字）を読んで判断する。画像は作らない。\n')
   .replace(/5\. 見終わったら[^\n]*\n/, '')

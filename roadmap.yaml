@@ -805,7 +805,8 @@ units:
   - {id: D-004, title: 微分の考え（変化の割合と接線）, level: 4, region: bisekibun-nyumon, needs: [D-003], days: 8}
   - {id: D-005, title: 導関数の計算と関数のグラフ（微分法）, level: 4, region: bisekibun-nyumon, needs: [D-004, G-025], days: 8}
   - {id: D-006, title: 積分の考え（面積と原始関数、置換積分と部分積分）, level: 4, region: bisekibun-nyumon, needs: [D-005, A-037], days: 8}
-  - {id: M-001, title: 連立 1 次方程式と行列（高校）, level: 4, region: senkei-keisan, needs: [A-012, G-027], days: 8}
+  - {id: M-016, title: 行列の計算の入口（和と積、ベクトルを写す、単位行列と逆行列、転置）, level: 3, region: senkei-keisan, needs: [G-027], days: 7, plan: [{導入: 行列と成分、和とスカラー倍}, {練習: 行列の積}, {練習: 行列でベクトルを写す}, {練習: 単位行列と 2 次の逆行列}, {練習: 転置}, {わけ: 積の結合法則と、積の順で答えが変わるわけ}, {確認: 7 日分の確認}]}
+  - {id: M-001, title: 連立 1 次方程式と行列（高校）, level: 4, region: senkei-keisan, needs: [A-012, G-027, M-016], days: 8}
   - {id: M-002, title: 平面の線形変換と行列式, level: 4, region: senkei-keisan, needs: [M-001, G-025], days: 8}
   - {id: K-012, title: 計算という考え方と Python（簡単なアルゴリズムとデータ構造）, level: 3, region: programming, needs: [A-010, K-124], days: 8}
   - {id: K-013, title: オブジェクト指向プログラミング、テストとデバッグ, level: 4, region: programming, needs: [K-012], days: 8}
@@ -975,7 +976,7 @@ units:
   - {id: D-045, title: 高階線形常微分方程式, level: 4, region: bibun-hoteishiki, needs: [D-044], days: 8}
   - {id: D-046, title: 連立 1 階線形系と平衡点の相図, level: 4, region: bibun-hoteishiki, needs: [D-044, M-007], days: 8}
   - {id: M-003, title: 行列の演算と連立一次方程式（掃き出し法、階数、逆行列）, level: 5, region: senkei-keisan, needs: [M-002], days: 8, plan: [{導入: 行列の演算と連立一次方程式}, {練習: 掃き出し法}, {練習: 階数と解の存在}, {練習: 逆行列}, {練習: 3 次の行列式}, {わけ: 行基本変形と逆行列の性質}, {混ぜる: 連立方程式・逆行列・行列式}, {確認: 8 日分の確認}]}
-  - {id: M-004, title: 行列式, level: 3, region: senkei-keisan, needs: [G-027, A-015], days: 8, plan: [{導入: 行列式の定義と性質}, {練習: 行列式の性質}, {練習: 余因子展開}, {練習: 積の行列式と逆行列}, {練習: クラメルの公式と面積・体積}, {わけ: 行列式の性質}, {混ぜる: 行列式・逆行列・連立方程式}, {確認: 8 日分の確認}]}
+  - {id: M-004, title: 行列式, level: 3, region: senkei-keisan, needs: [G-027, A-015, M-016], days: 8, plan: [{導入: 行列式の定義と性質}, {練習: 行列式の性質}, {練習: 余因子展開}, {練習: 積の行列式と逆行列}, {練習: クラメルの公式と面積・体積}, {わけ: 行列式の性質}, {混ぜる: 行列式・逆行列・連立方程式}, {確認: 8 日分の確認}]}
   - {id: M-006, title: 内積空間（グラム–シュミット、直交行列とユニタリ行列）, level: 3, region: senkei-keisan, needs: [M-004], days: 8, plan: [{導入: 内積とノルム}, {練習: 直交と正規直交基底}, {練習: グラム–シュミット}, {練習: 直交行列}, {練習: ユニタリ行列}, {わけ: 内積の性質とグラム–シュミット}, {混ぜる: 内積・直交・ユニタリ}, {確認: 8 日分の確認}]}
   - {id: M-007, title: 固有値と対角化, level: 3, region: senkei-keisan, needs: [M-004], days: 8, plan: [{導入: 固有値と固有ベクトル}, {練習: 特性多項式}, {練習: 対角化}, {練習: 対称行列の対角化}, {練習: 行列のべき乗と応用}, {わけ: 固有値と対角化}, {混ぜる: 固有値・対角化・応用}, {確認: 8 日分の確認}]}
   - {id: M-010, title: 双線形形式と二次形式, level: 4, region: senkei-keisan, needs: [M-007], days: 8, plan: [{導入: 双線形形式}, {練習: 二次形式}, {練習: 対称行列と二次形式}, {練習: 正定値}, {練習: 標準形}, {わけ: 二次形式の対角化}, {混ぜる: 双線形・二次形式}, {確認: 8 日分の確認}]}

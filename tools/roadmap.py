@@ -142,8 +142,12 @@ def load():
     gfile = ROOT / "glossary.yaml"
     data["glossary"] = yload(gfile.read_text(encoding="utf-8")) if gfile.exists() else []
     # 概念の目録（D-231）：定義・定理・法則などを 1 つに 1 項目。原稿の《名前》が指す。種類ごとの欄と、使う概念の順を check が確かめる
-    cfile = ROOT / "concepts.yaml"
-    data["concepts"] = ((yload(cfile.read_text(encoding="utf-8")) or {}).get("concepts") or []) if cfile.exists() else []
+    # 初めて教える単元ごとに concepts/<単元>.yaml に分ける（D-240。並んで作る係と作業ツリーが 1 つのファイルでかち合わない）
+    data["concepts"], data["concept_file"] = [], {}
+    for cf in sorted((ROOT / "concepts").glob("*.yaml")):
+        for c in (yload(cf.read_text(encoding="utf-8")) or {}).get("concepts") or []:
+            data["concepts"].append(c)
+            data["concept_file"].setdefault(str(c.get("id")), cf.stem)
     return data, problems
 
 
@@ -353,30 +357,32 @@ def check(data, problems):
     for c in data.get("concepts", []):
         cid = c.get("id")
         if not cid or not re.fullmatch(r"[a-z0-9]+(-[a-z0-9]+)*", str(cid)):
-            errors.append(f"concepts.yaml: 記号の形が違う（{cid}）")
+            errors.append(f"目録: 記号の形が違う（{cid}）")
             continue
         if cid in concepts:
-            errors.append(f"concepts.yaml: 記号 {cid} が重なっている")
+            errors.append(f"目録: 記号 {cid} が重なっている")
         for k in ("name", "kind", "claim", "home"):
             if not c.get(k):
-                errors.append(f"concepts.yaml: {cid} に {k} が要る")
+                errors.append(f"目録: {cid} に {k} が要る")
         kind = c.get("kind")
         if kind not in need:
-            errors.append(f"concepts.yaml: {cid} の種類 {kind} がない")
+            errors.append(f"目録: {cid} の種類 {kind} がない")
         else:
             for k in need[kind]:
                 if not c.get(k):
-                    errors.append(f"concepts.yaml: {cid}（{kind}）に {k} が要る")
+                    errors.append(f"目録: {cid}（{kind}）に {k} が要る")
         h = c.get("home") or {}
+        if data.get("concept_file", {}).get(str(cid)) not in (None, h.get("unit")):
+            errors.append(f"目録: {cid} は初めて教える単元のファイル concepts/{h.get('unit')}.yaml に置く（いまは concepts/{data['concept_file'][str(cid)]}.yaml）")
         if h.get("unit") not in units:
-            errors.append(f"concepts.yaml: {cid} の初めて教える単元 {h.get('unit')} が地図にない")
+            errors.append(f"目録: {cid} の初めて教える単元 {h.get('unit')} が地図にない")
         elif not isinstance(h.get("day"), int) or not 1 <= h["day"] <= units[h["unit"]][2].get("days", 0):
-            errors.append(f"concepts.yaml: {cid} の初めて教える日 {h.get('day')} が {h['unit']} にない")
+            errors.append(f"目録: {cid} の初めて教える日 {h.get('day')} が {h['unit']} にない")
         for nm in [c.get("name")] + list(c.get("aka") or []):
             if not nm:
                 continue
             if nm in cname and cname[nm] != cid:
-                errors.append(f"concepts.yaml: 名前「{nm}」が {cname[nm]} と {cid} で重なっている")
+                errors.append(f"目録: 名前「{nm}」が {cname[nm]} と {cid} で重なっている")
             cname[nm] = cid
         concepts[cid] = c
     # 使う概念は、使う側より前に教える（C-6）：前提の道の上流の単元か、同じ単元の同じ日かそれより前。
@@ -391,12 +397,12 @@ def check(data, problems):
             if x in concepts:
                 hx = concepts[x].get("home") or {}
                 if not (hx.get("unit") in up or (hx.get("unit") == h["unit"] and isinstance(hx.get("day"), int) and hx["day"] <= h.get("day", 0))):
-                    errors.append(f"concepts.yaml: {cid}（{h['unit']} の {h.get('day')} 日目）が使う {x} は {hx.get('unit')} の {hx.get('day')} 日目で教えるので、前にない")
+                    errors.append(f"目録: {cid}（{h['unit']} の {h.get('day')} 日目）が使う {x} は {hx.get('unit')} の {hx.get('day')} 日目で教えるので、前にない")
             elif x in units:
                 if x != h["unit"] and x not in up:
                     cgaps.append(f"{cid}（{h['unit']}）→ {x}")
             else:
-                errors.append(f"concepts.yaml: {cid} の uses の {x} が、目録にも地図にもない")
+                errors.append(f"目録: {cid} の uses の {x} が、目録にも地図にもない")
     # 定義と定理を分ける（D-235）：定義の主張には名付けの言い方が要り、定理・法則の主張には名付けを入れない
     dmix = [f"{cid}（定義に名付けがない）" for cid, c in concepts.items() if c.get("kind") == "定義" and not re.search(r"(という|といい|と呼|と書|とする|とします|とは|と定め|と決め)", str(c.get("claim", "")))]
     dmix += [f"{cid}（{c['kind']}に名付けが混ざる）" for cid, c in concepts.items() if c.get("kind") in ("定理", "法則", "原理") and re.search(r"(といい|という。|と呼)", str(c.get("claim", "")))]
@@ -410,7 +416,7 @@ def check(data, problems):
         if state.get(x) == 2:
             return
         if state.get(x) == 1:
-            errors.append(f"concepts.yaml: 使う概念が輪になっている（{' → '.join(path + [x])}）")
+            errors.append(f"目録: 使う概念が輪になっている（{' → '.join(path + [x])}）")
             return
         state[x] = 1
         for y in concepts[x].get("uses") or []:
@@ -438,7 +444,7 @@ def check(data, problems):
         for s in strings(doc):
             for m in re.finditer(r"《([^》\n]+)》", s):
                 if m.group(1) not in gloss and m.group(1) not in cname:
-                    errors.append(f"units/{uid}.yaml: 用語《{m.group(1)}》が glossary.yaml にも concepts.yaml にもない")
+                    errors.append(f"units/{uid}.yaml: 用語《{m.group(1)}》が glossary.yaml にも目録（concepts/）にもない")
             # 積分区間は ∫(a→b) と書く。∫a^b は画面で上下の端に組めない
             for m in re.finditer(r"∫([^\s(]{1,12})\^([^\s,，。]{1,12})", s):
                 errors.append(f"units/{uid}.yaml: 積分区間は ∫(a→b) と書く（{m.group(0)}）")

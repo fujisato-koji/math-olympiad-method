@@ -52,17 +52,19 @@ const JUDGE = {
 
 const writePrompt = id => `みちすじ（子どもが毎日少しずつ解く学びの地図）の単元 ${id} に、まだ問題がない。新しく units/${id}.yaml を作る。日本語で考え、答える。作業ツリーの根（いまの作業フォルダ）で動く。
 まず docs/problem-figures.md を全部読み、その決まり（ファイルの形、日の並び、図とイラストの描き方、試しの審査で多かった指摘、確かめ）で書く。手本は units/H-002.yaml（水準 1、図の多い単元）と units/P-181.yaml（頭注と分かち書き）。roadmap.yaml で ${id} の行（題、水準、日数、前提）と前提の単元の題を見る。
-書くのは units/${id}.yaml だけ。git の操作、tools/roadmap.py の build と check はしない。下書きのスクリプトや控えは、自分の一時フォルダ（scratchpad）の中に ${id}/ を作ってそこだけに置き、終わったらその ${id}/ だけを消す。scratchpad のほかのファイルは主会話やほかの係のものなので、消さない・書きかえない。
+docs/problem-figures.md の「概念の目録」の決まりで、この単元が初めて教える概念を concepts/${id}.yaml に書く（D-240）。
+書くのは units/${id}.yaml と concepts/${id}.yaml だけ。git の操作、tools/roadmap.py の build と check はしない（目録の確かめの python tools/roadmap.py 2>&1 | grep 目録 だけは動かしてよい）。下書きのスクリプトや控えは、自分の一時フォルダ（scratchpad）の中に ${id}/ を作ってそこだけに置き、終わったらその ${id}/ だけを消す。scratchpad のほかのファイルは主会話やほかの係のものなので、消さない・書きかえない。
 確かめは PYTHONIOENCODING=utf-8 python tools/unitqc.py ${id}（誤り 0、漢字 0 まで）。長くかかる道具（tools/unitqc.py、tools/blind.py render）は Bash の timeout を 600000（10 分）にして動かす（時間切れで止めると画面なしの Edge が残り、PC のメモリを食う。D-137）。PNG は全部 Read で見て直し、見たら --clean で消す。全部の問題を自分で解き、答えが 1 つに決まること、ヒントが答えを書いていないことを確かめる。
 最後に、docs/problem-figures.md の「戻すもの」を返す。`
 
 const reviewPrompt = id => `みちすじの単元 ${id} の問題を、別の係が新しく作った（units/${id}.yaml）。審査してほしい。日本語で答える。ファイルは書かない（読むだけ）。作業ツリーの根で動く。
 まず docs/problem-figures.md を読む（何を目指したか）。単元ファイルを全部読み、全部の問題を自分で解く。図は PYTHONIOENCODING=utf-8 python tools/unitqc.py ${id} で PNG にして Read で見て、見たら --clean ${id} で消す。
-疑ってかかって見る：事実のまちがい、答えが 2 つになる問い、図と答えの食い違い（左右を反対にした図で ア・イ を入れかえ忘れる、など）、まぎれる選択肢、段に合わないことばや漢字（svg の中の文字も）、ヒントが答えを言っている、図が小さい・かさなる・何の絵かわからない、図がない見本、絵で見せられるのに文だけの問題。`
+疑ってかかって見る：事実のまちがい、答えが 2 つになる問い、図と答えの食い違い（左右を反対にした図で ア・イ を入れかえ忘れる、など）、まぎれる選択肢、段に合わないことばや漢字（svg の中の文字も）、ヒントが答えを言っている、図が小さい・かさなる・何の絵かわからない、図がない見本、絵で見せられるのに文だけの問題。
+concepts/${id}.yaml も読み、主張と証明・理由のまちがい、条件の抜け、見本との食い違い、入れ忘れた概念（見本で初めて教える定義・定理・法則）も見る。`
 
 const fixPrompt = (id, r) => `みちすじの単元 ${id} の問題（units/${id}.yaml）を、審査の係が見た。指摘を直してほしい。日本語で答える。作業ツリーの根で動く。
 まず docs/problem-figures.md を読む。審査の点：${JSON.stringify(r.scores)}。指摘：${JSON.stringify(r.fixes)}。
-指摘のうち正しいものを直す（まちがった指摘、正解を絵に描くことになる指摘は、わけを添えて直さない）。書くのは units/${id}.yaml だけ。git、build、check はしない。
+指摘のうち正しいものを直す（まちがった指摘、正解を絵に描くことになる指摘は、わけを添えて直さない）。書くのは units/${id}.yaml と concepts/${id}.yaml だけ。git、build、check はしない。
 直したら PYTHONIOENCODING=utf-8 python tools/unitqc.py ${id} で誤り 0・漢字 0 を確かめ、PNG を見て、見たら --clean で消す。最後に、直したこと・直さなかった指摘とわけ・qc の結果を 10 行以内で返す。`
 
 const solvePrompt = (id, t) => `あなたは、みちすじの単元 ${id} の問題を、答えを知らずに解く係。日本語で考え、答える。作業ツリーの根（いまの作業フォルダ）で動く。
@@ -97,7 +99,7 @@ const LINE = (args && args.line) || 1500
 const HOME = ROOT
   ? `最初に必ず cd ${ROOT} を実行し、最後までこのフォルダで動く（ほかの作業ツリーやフォルダへ移らない）。日本語で考え、答える。`
   : '作業ツリーの根（いまの作業フォルダ）で動き、ほかの作業ツリーやフォルダへ移らない。日本語で考え、答える。'
-const RUN = 'Bash の timeout は 600000 にする（長い道具を時間切れで止めると画面なしの Edge が残る。D-137）。git、tools/roadmap.py の build と check はしない。下書きのスクリプトは scratchpad の 記号/ だけに置き、ほかのファイルは消さない。'
+const RUN = 'Bash の timeout は 600000 にする（長い道具を時間切れで止めると画面なしの Edge が残る。D-137）。git、tools/roadmap.py の build と check はしない（目録の確かめの python tools/roadmap.py 2>&1 | grep 目録 だけは動かしてよい）。下書きのスクリプトは scratchpad の 記号/ だけに置き、ほかのファイルは消さない。'
 const LEAN = '道具の出力は要るところだけ読む（長くなるものは | head -c 3000 や grep で絞る）。画像は作らない・見ない。'
 const WORK = id => `置き場（python tools/assemble.py --dir ${id} で出る場所）`
 const MED = { model: 'sonnet', effort: 'medium' }, SON = { model: 'sonnet' }, HAI = { model: 'haiku' }
@@ -118,8 +120,9 @@ const writeL = id => `${HOME}
 3. ${WORK(id)}に head.yaml と day-1.yaml … を、1 日分ずつ 1 回の Write で書く。腕だめし（ri.yaml）は書かない（別の係）。
 4. PYTHONIOENCODING=utf-8 python tools/selfcheck.py ${id} で確かめ、誤り 0、漢字 0、図の直すところ 0 まで日のファイルを Edit で直す。ヒントの疑いと「…だけで通っている字」は 1 つずつ見て決める。
 5. 書いた問題を全部自分で解き、答えが 1 つに決まること、図と答えが合うこと、ヒントが答えを言わないことを確かめる。書いた日のファイルを何度も読み直さない。${LEAN}
+6. docs/problem-card.md の「概念の目録」で、この単元が初めて教える概念を concepts/${id}.yaml に書き、grep 目録 の確かめで自分の記号の誤りと警告を 0 にする（D-240）。
 ${RUN}
-返す（6 行以内）：日ごとの問題の数、図の数、selfcheck の結果、parts.py に足した部品、気になった点。`
+返す（6 行以内）：日ごとの問題の数、図の数、selfcheck の結果、parts.py に足した部品、目録に書いた概念の数、気になった点。`
 
 const reviewL = id => `${HOME}
 みちすじの単元 ${id} を別の係が新しく作った。全日を審査し、見つけたまちがいはその場で直す（抜き取りにしない。答えを見ない解き直しは、ヒントのよしあしや文と図の食い違いをすり抜けるため。D-201）。
@@ -127,6 +130,7 @@ const reviewL = id => `${HOME}
 2. 全部の問題を自分で解き、疑ってかかって見る：見本の文と図が、同じ日の問題の答えをそのまま見せていないか（R-003 で見本が共役類を 3 つとも書き、同じ日の 3 問の答えになっていた。D-193）、ヒントの図が問いの図の字を落として、輪や四角が何もない所を囲んでいないか（D-210）、問いの図が答えと逆の形や大小を描いていないか、事実と計算のまちがい、答えが 2 つ、図と答えの食い違い、図の字や数や比がそのまま答えになる、問いの文に答えが書いてある、文と図の数（箱、つぶ、高さ）が合わない、まぎれる選択肢、段に合わない字やことばや書き方、説明していない用語、ヒントが答えを言う・ヒントの図の輪や四角が答えを囲む・選択肢を消しすぎる（3 段で 2 つ以上、2 択で 1 つ）、図がない見本、段の子に難しすぎる・易しすぎる。数は python で確かめてよい。
 3. 直す前の出来に点を付ける（1〜5）。
 4. 直すべきものを、その日のファイルで Edit で直す（正解を絵に描く直しはしない。答えを変えたら check と paths も合わせる）。直したら PYTHONIOENCODING=utf-8 python tools/selfcheck.py ${id} で誤り 0・漢字 0・図 0。腕だめし（ri.yaml）は別の係が書いているので触らない。
+5. concepts/${id}.yaml も読み、主張と証明・理由のまちがい、条件の抜け、見本との食い違い、入れ忘れた概念を直す（D-240。決まりは docs/problem-figures.md の「概念の目録」）。直したら grep 目録 の確かめを 0 に。
 ${RUN}`
 
 const riL = id => `${HOME}
