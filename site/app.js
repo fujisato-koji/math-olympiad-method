@@ -266,7 +266,26 @@
     return { text, mats };
   }
   const putMat = (h, mats) => h.replace(matPlace, (m, i) => mats[Number(i)] ?? m);
-  const fmt = s => { const m = markMat(markGloss(s)); return kindify(putMat(glossHtml(mx(m.text)), m.mats)); };
+  // 行頭が ①〜⑳ か ・ の行は、折り返しが記号の後ろにそろう箇条書きに組む（施主「きちんと箇条書きにして見やすく」、D-232）。
+  // 箇条の行は block なので、前後の改行の字は出さない（white-space: pre-wrap で空行になるため）
+  const LI_HEAD = /^([①-⑳]|・)\s*/;
+  // 行頭が「証明：」か「わけ：」の行と、すぐ後ろに続く箇条は、開閉できる箱にまとめ、初めは閉じておく（施主「定理の証明とかは開閉可能に」、D-232）
+  const PROOF_HEAD = /^(証明|わけ)[：:]\s*/;
+  const listify = h => {
+    const lines = h.split('\n').map(line => { const m = LI_HEAD.exec(line); return m ? { li: true, h: `<span class="li"><span class="li-mark">${m[1]}</span>${line.slice(m[0].length)}</span>` } : { li: false, h: line }; });
+    const out = [];
+    for (let i = 0; i < lines.length; i++) {
+      const m = !lines[i].li && PROOF_HEAD.exec(lines[i].h);
+      if (!m) { out.push(lines[i]); continue; }
+      const lead = lines[i].h.slice(m[0].length), body = [];
+      let j = i + 1;
+      while (j < lines.length && lines[j].li) body.push(lines[j++].h);
+      out.push({ li: true, h: `<details class="proof"><summary>${m[1]}</summary>${lead ? `<span class="proof-lead">${lead}</span>` : ''}${body.join('')}</details>` });
+      i = j - 1;
+    }
+    return out.map((x, i) => (i && !x.li && !out[i - 1].li ? '\n' : '') + x.h).join('');
+  };
+  const fmt = s => { const m = markMat(markGloss(s)); return listify(kindify(putMat(glossHtml(mx(m.text)), m.mats))); };
   // 単元の記号（A-024 など）を、その単元のページへのリンクにする（ヒント・見どころ・手本）
   // ヒントは文か、{text, svg}（図の付いたヒント、D-129）。text は文と同じに組み、svg は文の下に図として出す
   const hintText = h => (h && typeof h === 'object') ? (h.text || '') : (h || '');
@@ -320,7 +339,7 @@
   const fmtExplain = s => {
     const t = markTable(s);
     const text = t.text.split('\n').map(line =>
-      line.length > 72 && !line.startsWith(TB0) ? line.replace(/。(?!$)/g, '。\n') : line
+      line.length > 72 && !line.startsWith(TB0) && !LI_HEAD.test(line) && !PROOF_HEAD.test(line) ? line.replace(/。(?!$)/g, '。\n') : line
     ).join('\n');
     return putTable(fmtLinks(text), t.tables);
   };
@@ -2240,7 +2259,7 @@
         <div class="actions">${s.hints < 3 ? `<button class="pill" data-act="hint" type="button">ヒント ${s.hints + 1} / 3</button>` : ''}${dk}</div>`;
     }
     el.innerHTML = steps() + `<article class="card" id="card" data-qid="${esc(it.qid || '')}">
-      <span class="part">${esc(it.part === '離' ? '腕だめし' : it.part)}${tierHtml(it)}</span>${s.type === 'ri' && s.groupLabel ? `<span class="ri-scope">${esc(s.groupLabel)}</span>` : ''}${kindsHtml(it, u.stage <= 2)}<p class="q">${it.part === '見本' ? fmtLinks(it.text) : fmt(it.text)}</p>${body}</article>`;
+      <span class="part">${esc(it.part === '離' ? '腕だめし' : it.part)}${tierHtml(it)}</span>${s.type === 'ri' && s.groupLabel ? `<span class="ri-scope">${esc(s.groupLabel)}</span>` : ''}${kindsHtml(it, u.stage <= 2)}<div class="q">${it.part === '見本' ? fmtLinks(it.text) : fmt(it.text)}</div>${body}</article>`;
     figMath(el);
     tick();
   }
@@ -2258,7 +2277,7 @@
     const back = small ? 'いまの もんだいに もどる' : 'いまの問題にもどる';
     el.innerHTML = steps() + `<article class="card peek-card" id="card">
       <span class="part">${esc(it.part === '離' ? '腕だめし' : it.part)}<span class="muted">・${small ? `${s.peek + 1} もんめ` : `${s.peek + 1} 問目`}</span></span>
-      <p class="q">${it.part === '見本' ? fmtLinks(it.text) : fmt(it.text)}</p>${body}
+      <div class="q">${it.part === '見本' ? fmtLinks(it.text) : fmt(it.text)}</div>${body}
       <div class="actions"><button class="pill solid" data-act="peek-back" type="button">${back}</button></div></article>`;
     figMath(el);
     window.scrollTo({ top: 0, behavior: 'smooth' });

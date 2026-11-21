@@ -149,7 +149,7 @@ body {
 }
 button, input { font: inherit; color: inherit; }
 a { color: inherit; }
-a.ulink { color: var(--c, #3466f0); text-decoration: underline; text-underline-offset: 2px; font-weight: 600; }
+a.ulink { color: var(--c, #3466f0); text-decoration: underline; text-underline-offset: 2px; font-weight: 600; white-space: nowrap; }
 .gloss { border-bottom: 1px dotted currentColor; cursor: help; }
 #gloss-tip {
   position: fixed; z-index: 2000; max-width: 320px; padding: 10px 12px; border-radius: 12px;
@@ -470,6 +470,15 @@ section.next { margin: 12px 0 36px; }  /* 単元のページの次の日（.day.
   text-align: center; margin: 18px 0 10px; padding: 18px; border-radius: 20px; background: var(--surface-2);
 }
 .explain { font-size: 20px; line-height: 1.8; margin: 14px 0 0; padding: 16px 18px; border-left: 6px solid var(--c); background: var(--surface-2); border-radius: 0 16px 16px 0; white-space: pre-wrap; }
+/* 箇条書き：行頭の ①〜⑳ と ・ の後ろに、折り返した行をそろえる（D-232） */
+.li { display: block; padding-left: 1.4em; text-indent: -1.4em; margin: .15em 0; }
+.li-mark { display: inline-block; width: 1.4em; text-indent: 0; }
+.li * { text-indent: 0; }  /* 箇条の字下げを、行列や分数（inline-block）の中に引き継がない */
+/* 証明とわけの開閉の箱（初めは閉じる。D-232） */
+details.proof { display: block; margin: .35em 0; padding: .25em .8em; border: 1px solid var(--line); border-radius: 12px; background: var(--surface-2); }
+details.proof > summary { cursor: pointer; font-size: .82em; font-weight: 700; color: var(--ink-2); letter-spacing: .08em; }
+details.proof[open] > summary { margin-bottom: .2em; }
+.proof-lead { display: block; }
 .explain table.tbl { border-collapse: collapse; margin: .5em 0 .7em; font-size: .9em; line-height: 1.5; white-space: normal; }
 .explain table.tbl th, .explain table.tbl td { border: 1px solid var(--line); padding: .35em .6em; text-align: left; vertical-align: top; }
 .explain table.tbl th { background: color-mix(in srgb, var(--c) 10%, var(--surface)); font-weight: 600; }
