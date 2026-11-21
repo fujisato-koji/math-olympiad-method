@@ -125,6 +125,18 @@ export async function open({ width = 1300, height = 860, port = 9200 + Math.floo
   await send('Network.setBypassServiceWorker', { bypass: true });
   await send('Emulation.setDeviceMetricsOverride', { width, height, deviceScaleFactor: 1, mobile: false });
   async function close() {
+    // まずブラウザ自身に閉じてもらう。Edge は立てたプロセスから本体を立て直し、元のプロセスはすぐ終わるので、
+    // 元の pid を木ごと taskkill しても本体が残っていた（1 回に 1 組、reap が止める 15 分後まで。2026-11-21）
+    if (version?.webSocketDebuggerUrl) {
+      try {
+        const bws = new WebSocket(version.webSocketDebuggerUrl);
+        await Promise.race([new Promise((res, rej) => { bws.addEventListener('open', res); bws.addEventListener('error', rej); }), sleep(3000)]);
+        if (bws.readyState === WebSocket.OPEN) {
+          bws.send(JSON.stringify({ id: 1, method: 'Browser.close' }));
+          await Promise.race([new Promise(r => bws.addEventListener('close', r)), sleep(5000)]);
+        }
+      } catch { /* もう止まっている */ }
+    }
     try { ws.close(); } catch { /* */ }
     kill(child);
     // ブラウザが本当に終わるのを待ってから、最大 30 秒まで消し直す（前は 5 秒であきらめ、プロフィールが残っていた。D-132）
