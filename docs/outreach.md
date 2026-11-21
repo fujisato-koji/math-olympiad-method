@@ -182,6 +182,8 @@ Google Play の進め方の案：
 - Teacher Approved は、決まりを守るアプリが評価を受ける意思を示せる（採るかは Google）。
 - 18 歳以上だけにすると決まりは軽くなるが、中身と食い違い、Google も申告を審査する。
 
+対応：対象の年齢は「子どもと大人」で申告する。ログインとご意見の箱を中立の年齢の画面の後ろに置いた（D-253）。データの安全性は、ご意見の文（そのほかの利用者が作った内容、任意）とページの数え（アプリの操作、分析）を申告し、ドライブへの保存は迷えば任意の収集として申告する（安全側）。
+
 出典：https://support.google.com/googleplay/android-developer/answer/9893335 、https://support.google.com/googleplay/android-developer/answer/9867159 、https://support.google.com/googleplay/android-developer/answer/10787469 、https://support.google.com/googleplay/android-developer/answer/12289447 （どれも 2026-11-21 取得）
 
 - Q6（施主）Google Play に公開する名前：(a) 個人のアカウントで出し、法的な氏名がストアに出ることを受け入れる、(b) 個人事業などで D-U-N-S 番号を取り、組織のアカウントで出す（取れる条件は確かめる）、(c) Google Play は見送る。

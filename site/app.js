@@ -845,7 +845,7 @@
     if (r.name === 'day') drawItem();
     if (pendingScroll != null) { const y = pendingScroll; pendingScroll = null; requestAnimationFrame(() => window.scrollTo(0, y)); }
     if (r.name === 'log') logScroll();
-    if (r.name === 'join') { const b = $('#btn-join'); if (b) b.addEventListener('click', () => joinOpen(r.file)); }
+    if (r.name === 'join') { const b = $('#btn-join'); if (b) b.addEventListener('click', () => withAge(() => joinOpen(r.file))); }
     window.scrollTo(0, 0);
   }
   // ほかの端末や家族の変更が入ったときの描き直し（D-061、施主「1 分に一回更新されるせいで 2D の地図を見ていると急に画面が引き戻される」）。
@@ -1880,6 +1880,48 @@
     window.addEventListener('hashchange', countPage);
   }
 
+  // ---- 年齢の画面（D-253、Google Play の Families の決まりの「中立の年齢の画面」）----
+  // ログイン（ドライブへの保存）とご意見の箱の前に、生まれた年と月を 1 回聞く（最初から入れておかない、年齢を偽らせない形）。
+  // 13 歳以上なら端末に「大人」とだけ覚え（年と月は残さない）、2 回目からは聞かない。前からログインしている端末も聞かない。
+  // 13 歳未満なら、その日のあいだは「おうちの人にしてもらってね」と出して止める。Google の窓は押したその場で開かないと
+  // ブラウザが止めるので、「次へ」を押したその場で続きの操作を呼ぶ
+  const AGE_KEY = 'michisuji.age';
+  const ageOk = () => load(AGE_KEY, '') === 'adult' || (typeof drive !== 'undefined' && drive.on);
+  const ageChild = () => { try { return sessionStorage.getItem(AGE_KEY) === 'child'; } catch { return false; } };
+  const AGE_CHILD = '13 歳未満の人は、おうちの人にしてもらってね。（13 さい みまんの ひとは、おうちの ひとに してもらってね。）';
+  function withAge(then) {
+    if (ageOk()) { then(); return; }
+    let d = $('#age-sheet');
+    if (!d) { d = document.createElement('dialog'); d.id = 'age-sheet'; d.className = 'sheet'; document.body.appendChild(d); }
+    const now = new Date(), y = now.getFullYear();
+    d.innerHTML = ageChild() ? `<h2>おうちの人と</h2><p>${AGE_CHILD}</p><div class="row"><button class="pill" type="button" data-age="close">とじる</button></div>`
+      : `<h2>生まれた年と月を教えてください</h2>
+      <p class="muted">ログインとご意見の箱を使う前に、1 回だけ聞いています。入れた年と月は残しません。（うまれた とし と つきを いれてね）</p>
+      <div class="row age-in"><input id="age-y" type="number" inputmode="numeric" min="1900" max="${y}" placeholder="年（例：1990）" aria-label="生まれた年">
+        <select id="age-m" aria-label="生まれた月"><option value="">月</option>${Array.from({ length: 12 }, (_, i) => `<option value="${i + 1}">${i + 1} 月</option>`).join('')}</select></div>
+      <p class="muted" id="age-msg" aria-live="polite"></p>
+      <div class="row"><button class="pill solid" type="button" data-age="ok">次へ</button><button class="pill" type="button" data-age="close">やめる</button></div>`;
+    d.onclick = e => {
+      e.stopPropagation();  // 続けて開くご意見の箱を、同じクリックが「箱の外を押した」として閉じないように
+      const b = e.target.closest('[data-age]');
+      if (!b) { if (e.target === d) d.close(); return; }
+      if (b.dataset.age === 'close') { d.close(); return; }
+      const by = parseInt($('#age-y').value, 10), bm = parseInt($('#age-m').value, 10);
+      if (!(by >= 1900 && by <= y && bm >= 1 && bm <= 12)) { $('#age-msg').textContent = '年と月を入れてください。'; return; }
+      const age = y - by - (now.getMonth() + 1 < bm ? 1 : 0);
+      if (age < 13) {
+        try { sessionStorage.setItem(AGE_KEY, 'child'); } catch { /* 覚えられなくても止める */ }
+        d.innerHTML = `<h2>おうちの人と</h2><p>${AGE_CHILD}</p><div class="row"><button class="pill" type="button" data-age="close">とじる</button></div>`;
+        return;
+      }
+      save(AGE_KEY, 'adult');
+      d.close();
+      then();  // 押したその場で続ける（Google の窓を開けるように）
+    };
+    d.showModal();
+    const yi = $('#age-y'); if (yi) yi.focus();
+  }
+
   // ---- 誤りを知らせる（D-246）とご意見の箱（D-247）----
   // 上の帯の吹き出しと、問題の札・単元・概念・目標のページの「誤りを知らせる」で、小さな箱を開く。書いた文を、ページの住所と場所の記号と
   // いっしょに、ご意見の置き場（feedback/worker.js、Cloudflare の D1）へ送る。アカウントは要らない。名前・メール・IP アドレスは残さない。
@@ -1937,9 +1979,9 @@
   }
   document.addEventListener('click', e => {
     const fbBtn = e.target.closest('#btn-fb');
-    if (fbBtn) { if ($('#fb')) fbClose(); else fbOpen('', placeOf(hereCtx())); return; }
+    if (fbBtn) { if ($('#fb')) fbClose(); else { const pl = placeOf(hereCtx()); withAge(() => fbOpen('', pl)); } return; }
     const rp = e.target.closest('[data-fb]');
-    if (rp) { e.preventDefault(); fbOpen(rp.dataset.fb, rp.dataset.place || ''); return; }
+    if (rp) { e.preventDefault(); const k = rp.dataset.fb, pl = rp.dataset.place || ''; withAge(() => fbOpen(k, pl)); return; }
     const x = e.target.closest('[data-fbx]');
     if (x) { if (x.dataset.fbx === 'send') fbSend(); else fbClose(); return; }
     if ($('#fb') && !e.target.closest('#fb')) fbClose();
@@ -3184,12 +3226,12 @@
     // Google のログインを先に読み込んでおく（押したその場で確認の窓を開けるように）
     if (window.DriveSync) DriveSync.init(CLIENT_ID, AUTH_URL).then(() => { if (drive.on) driveSync(false); })
       .catch(() => { if (drive.on) { driveState = navigator.onLine === false ? 'offline' : 'err'; driveChip(); } });
-    const go = () => driveSync(true);
+    const go = () => withAge(() => driveSync(true));
     $('#btn-sync').addEventListener('click', go);
     $('#btn-drive-in').addEventListener('click', go);
     $('#btn-drive-now').addEventListener('click', go);
-    $('#btn-drive-take').addEventListener('click', driveTake);
-    $('#btn-family-share').addEventListener('click', familyShare);
+    $('#btn-drive-take').addEventListener('click', () => withAge(driveTake));
+    $('#btn-family-share').addEventListener('click', () => withAge(familyShare));
     $('#btn-family-open').addEventListener('click', familyOpen);
     $('#btn-family-leave').addEventListener('click', familyLeave);
     $('#btn-menu').addEventListener('click', refreshFamily);

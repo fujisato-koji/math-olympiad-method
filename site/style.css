@@ -1304,3 +1304,10 @@ a.gloss.concept { color: inherit; }
 .vf-blind .vf-dot { background: var(--ok); }
 .vf-human .vf-dot { background: #4a7bd8; }
 .ask-card .ask-note { margin: 14px 0 0; font-size: 12px; color: var(--star-muted); line-height: 1.6; }
+
+/* 年齢の画面（D-253） */
+#age-sheet .age-in { display: flex; gap: 8px; flex-wrap: wrap; }
+#age-sheet input, #age-sheet select {
+  font: inherit; font-size: 16px; padding: 8px 12px; border-radius: 10px; border: 1px solid var(--line); background: var(--bg); color: var(--ink);
+}
+#age-sheet input { width: 11em; }
