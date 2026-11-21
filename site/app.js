@@ -246,8 +246,11 @@
     ? `<a class="gloss concept" tabindex="0" data-c="${CNAME[t]}" href="#/c/${CNAME[t]}" target="_blank" rel="noopener">${esc(label)}</a>`
     : `<span class="gloss concept" tabindex="0" data-c="${CNAME[t]}">${esc(label)}</span>`;
   const GS = '\uE000', GE = '\uE001';
-  const markGloss = s => String(s ?? '').replace(/《([^》\n]+)》/g, (m, t) => GLOSS[t] || CNAME[t] ? GS + t + GE : m);
-  const glossHtml = h => h.replace(/\uE000([^\uE001]*)\uE001/g, (m, t) => CNAME[t] ? conceptHtml(t) : `<span class="gloss" tabindex="0" data-g="${esc(t)}">${esc(t)}</span>`);
+  // 目印の中には語そのものでなく番号を置く。語を置くと、数式の組みが中の n や R を斜体にして、語が表と合わなくなっていた（D-235）
+  const GTERMS = [], GINDEX = new Map();
+  const gtermIndex = t => { if (!GINDEX.has(t)) { GINDEX.set(t, GTERMS.length); GTERMS.push(t); } return GINDEX.get(t); };
+  const markGloss = s => String(s ?? '').replace(/《([^》\n]+)》/g, (m, t) => GLOSS[t] || CNAME[t] ? GS + gtermIndex(t) + GE : m);
+  const glossHtml = h => h.replace(/\uE000(\d+)\uE001/g, (m, i) => { const t = GTERMS[+i]; return CNAME[t] ? conceptHtml(t) : `<span class="gloss" tabindex="0" data-g="${esc(t)}">${esc(t)}</span>`; });
   // 行列：(a b；c d) の書き方を、行と列に組む（D-064）。；が行の切れ目、空白か「、」が列の切れ目。
   // 成分が式のときは「、」で区切る（M-002 の約束）。組めない形は、そのまま文字で残す。
   const MAT0 = String.fromCharCode(0xE002), MAT1 = String.fromCharCode(0xE003);

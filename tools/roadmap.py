@@ -397,6 +397,11 @@ def check(data, problems):
                     cgaps.append(f"{cid}（{h['unit']}）→ {x}")
             else:
                 errors.append(f"concepts.yaml: {cid} の uses の {x} が、目録にも地図にもない")
+    # 定義と定理を分ける（D-235）：定義の主張には名付けの言い方が要り、定理・法則の主張には名付けを入れない
+    dmix = [f"{cid}（定義に名付けがない）" for cid, c in concepts.items() if c.get("kind") == "定義" and not re.search(r"(という|といい|と呼|と書|とする|とします|とは|と定め|と決め)", str(c.get("claim", "")))]
+    dmix += [f"{cid}（{c['kind']}に名付けが混ざる）" for cid, c in concepts.items() if c.get("kind") in ("定理", "法則", "原理") and re.search(r"(といい|という。|と呼)", str(c.get("claim", "")))]
+    if dmix:
+        print("警告: 目録の定義と定理が混ざっている " + str(len(dmix)) + "：" + "、".join(dmix))
     if cgaps:
         print(f"警告: 目録の概念が、前提の道にない単元を使う {len(cgaps)}：" + "、".join(cgaps[:8]) + ("…" if len(cgaps) > 8 else ""))
     # 使う概念の輪がないこと
