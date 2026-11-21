@@ -4,7 +4,8 @@
 
 ## 知らせ方
 
-- **まちがいを見つけたとき**：問題やページの下の「誤りを知らせる」を押すと、GitHub に、場所（ページの住所、単元・日・問題の記号）を書き込んだ報告の下書きが開きます。直に開くなら [誤りの報告](https://github.com/fujisato-koji/michisuji/issues/new?template=error.yml)。GitHub のアカウントが要り、だれでも読める公開の場所です。
+- **気づいたこと・まちがい**：画面の上の吹き出しのボタンか、問題やページの下の「誤りを知らせる」を押すと、小さな箱が開きます。ひとこと書いて送るだけです（アカウントは要りません。ページの住所と単元・日・問題の記号を自動で添えます。名前・メール・IP アドレスは残しません）。
+- **詳しく書きたいとき（協力者）**：箱の中の「GitHub で詳しく書く」か、[誤りの報告](https://github.com/fujisato-koji/michisuji/issues/new?template=error.yml)。GitHub のアカウントが要り、だれでも読める公開の場所です。
 - **星や目標を足したい、前提や水準を直したいとき**：[星の追加・前提の直し](https://github.com/fujisato-koji/michisuji/issues/new?template=star.yml)。
 
 報告には、子どもの名前・学年・答案の写真など、個人がわかることは書かないでください。
@@ -32,7 +33,7 @@
 
 Michisuji (https://michisuji.app/) maps the knowledge you need as a sky of stars and lays out the path in prerequisite order. The content is made with AI and checked by AI and people, so errors remain — please report them.
 
-- Errors: use "誤りを知らせる" at the bottom of a problem or page (it pre-fills the location), or open an [error report](https://github.com/fujisato-koji/michisuji/issues/new?template=error.yml).
+- Errors and comments: use the speech-bubble button at the top or "誤りを知らせる" at the bottom of a problem or page — a small box opens; no account needed (the location is attached; no name, email or IP address is stored). For detailed reports, open an [error report](https://github.com/fujisato-koji/michisuji/issues/new?template=error.yml).
 - New stars, goals or prerequisite fixes: open a [map proposal](https://github.com/fujisato-koji/michisuji/issues/new?template=star.yml).
 - Only repeatable, verifiable knowledge is included (no literature, religion, politics or art). Please add sources for factual corrections.
 - Do not include personal information about children.

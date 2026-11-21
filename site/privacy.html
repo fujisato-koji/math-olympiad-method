@@ -21,10 +21,10 @@
 <body>
 <main>
   <h1>プライバシー</h1>
-  <p class="muted">みちすじ（<a href="./">https://michisuji.app/</a>）・2026 年 11 月 9 日（ログインを保つサーバを足した）</p>
+  <p class="muted">みちすじ（<a href="./">https://michisuji.app/</a>）・2026 年 11 月 21 日（ご意見の箱を足した）</p>
 
   <h2>こちらは記録を受け取りません</h2>
-  <p>みちすじには、記録を受け取るサーバがありません。解いた問題、済んだ単元、呼び名などの記録は、次のどれかにだけ置きます。</p>
+  <p>みちすじには、学びの記録を受け取るサーバがありません（ご意見の箱に書いた文だけは受け取ります。下の「ご意見を送るとき」）。解いた問題、済んだ単元、呼び名などの記録は、次のどれかにだけ置きます。</p>
   <ul>
     <li>使っている端末のブラウザの中（ログインしないとき）</li>
     <li>ログインした人の Google ドライブの、このページ専用の隠しフォルダ（Google でログインしたとき）</li>
@@ -58,17 +58,19 @@
   <h2>ほかに使うもの</h2>
   <p>画面の字は Google Fonts から、ログインの部品は Google から読み込みます。そのとき、Google のサーバに端末の IP アドレスなどが伝わります。広告、アクセス解析、外部の追跡は使っていません。</p>
 
-  <h2>誤りを知らせるとき</h2>
-  <p>問題やページの下の「誤りを知らせる」から、場所（ページの住所、単元・日・問題の記号）を書き込んだ報告の下書きが開きます。報告は GitHub の issue に書きます。issue は、だれでも読める公開の場所です（GitHub のアカウントが要ります）。子どもの名前・学年・答案の写真など、個人がわかることは書かないでください。</p>
+  <h2>ご意見を送るとき</h2>
+  <p>上の吹き出しのボタンや、問題やページの下の「誤りを知らせる」から送った文は、作った人の Cloudflare のアカウントの置き場（D1）に貯まり、作った人が読んで直しに使います。いっしょに残すのは、そのページの住所、単元・日・問題などの記号、受けた時刻です。名前、メールアドレス、IP アドレスは残しません（送りすぎを止めるため、日ごとに変わり IP アドレスに戻せない印だけを残します）。子どもの名前や学校など、だれかがわかることは書かないでください。消してほしいときは、送った日時と文を添えて、もう一度ご意見でお知らせください。</p>
+  <p>箱の中の「GitHub で詳しく書く」から書いた報告は、GitHub の issue（だれでも読める公開の場所、GitHub のアカウントが要る）になります。</p>
 
   <h2>問い合わせ</h2>
   <p><a href="https://github.com/fujisato-koji/michisuji/issues" target="_blank" rel="noopener">GitHub の issues</a> にお書きください。</p>
 
   <section class="en" lang="en">
     <h1>Privacy</h1>
-    <p class="muted">Michisuji · 9 November 2026</p>
-    <p>Michisuji has no server that receives your records. Your learning records stay in your browser on your device, or, if you sign in with Google, in a hidden app-specific folder in your own Google Drive (or, if you share with family, in a shared file in the Drive of the person who shared). We never receive your records.</p>
+    <p class="muted">Michisuji · 21 November 2026</p>
+    <p>Michisuji has no server that receives your learning records. Your learning records stay in your browser on your device, or, if you sign in with Google, in a hidden app-specific folder in your own Google Drive (or, if you share with family, in a shared file in the Drive of the person who shared). We never receive your records.</p>
     <p>When you sign in, we request only the Google Drive scopes <code>drive.appdata</code> (the app's own hidden data) and <code>drive.file</code> (files the app created or that you picked), and nothing else in your Drive. If you share your records with family, a file named "みちすじの記録" is created in your Drive and shared with the address you enter; they open it with the Google file picker. The access token is kept only in the browser tab and expires after about one hour. To keep you signed in, a small server on Cloudflare Workers exchanges the sign-in code for tokens and renews the access token; it stores nothing and your records never pass through it. The refresh token is kept on your device, encrypted so that only that server can open it, and is deleted when you press "ログアウト" (log out). Cloudflare receives your IP address when the server is used. Your email address may be shown on screen to tell you which account is in use; it is not sent anywhere.</p>
+    <p>Feedback you send from the speech-bubble button or "誤りを知らせる" is stored in the operator's Cloudflare database (D1) with the page address, the unit/day/problem codes and the time. We do not store your name, email or IP address (only a daily-changing mark that cannot be turned back into an IP address, to stop flooding). Please do not write anything that identifies a child.</p>
     <p>To delete your data, use "この人の記録を消す" in the record menu, and delete the app's hidden data under "Manage apps" in Google Drive settings. You can revoke access at <a href="https://myaccount.google.com/permissions" target="_blank" rel="noopener">your Google Account permissions</a>. Fonts and the sign-in library are loaded from Google. No ads, analytics or trackers are used. Contact: <a href="https://github.com/fujisato-koji/michisuji/issues" target="_blank" rel="noopener">GitHub issues</a>.</p>
   </section>
 </main>

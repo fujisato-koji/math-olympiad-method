@@ -1274,7 +1274,26 @@ a.gloss.concept { color: inherit; }
   .path-step { grid-template-columns: 1fr; gap: 4px; }
 }
 
-/* 誤りを知らせる（D-246）：問題の札・単元・概念・目標のページの下に小さく */
+/* 誤りを知らせる（D-246）：問題の札・単元・概念・目標のページの下に小さく。押すとご意見の箱（D-247） */
 .report { margin-top: 14px; font-size: 12px; color: var(--muted); text-align: right; }
-.report a { color: var(--muted); text-decoration: underline; text-underline-offset: 2px; }
-.report a:hover, .report a:focus-visible { color: var(--ink); }
+.report button { font: inherit; color: var(--muted); background: none; border: 0; padding: 2px 0; cursor: pointer; text-decoration: underline; text-underline-offset: 2px; }
+.report button:hover, .report button:focus-visible { color: var(--ink); }
+
+/* ご意見の箱（D-247）：上の帯の吹き出しの下に開く */
+.fb {
+  position: fixed; z-index: 40; top: calc(var(--bar-h, 61px) + 8px); right: max(16px, env(safe-area-inset-right));
+  width: min(380px, calc(100vw - 32px)); padding: 14px; border-radius: 14px;
+  background: var(--surface); color: var(--ink); border: 1px solid var(--line); box-shadow: 0 16px 40px rgba(0, 0, 0, .22);
+}
+.fb-h { font-weight: 700; font-size: 15px; }
+.fb-place { margin-top: 4px; font-size: 12px; color: var(--muted); }
+.fb textarea {
+  display: block; width: 100%; margin-top: 10px; padding: 10px 12px; border-radius: 10px; resize: vertical; min-height: 92px;
+  font: inherit; font-size: 15px; line-height: 1.6; color: var(--ink); background: var(--bg); border: 1px solid var(--line); outline: none;
+}
+.fb textarea:focus { border-color: var(--ink-2); }
+.fb-note { margin-top: 6px; font-size: 12px; color: var(--muted); line-height: 1.6; }
+.fb-act { display: flex; align-items: center; justify-content: flex-end; gap: 8px; margin-top: 10px; }
+.fb-gh { margin-right: auto; font-size: 12px; color: var(--muted); }
+.fb-msg { margin-top: 8px; font-size: 13px; min-height: 1em; }
+.fb-msg:empty { display: none; }

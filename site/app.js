@@ -1865,16 +1865,77 @@
   const CSECS = [['sketch', '筋道'], ['why', 'なぜこう定めるか'], ['examples', '例'], ['nonexamples', '例でないもの'], ['proof', '証明'],
     ['system', '公理の組'], ['consequences', '系'], ['models', '公理を満たす例'], ['scope', '成り立つ範囲'], ['evidence', '確かめられた経緯'],
     ['data', 'もとのデータ'], ['background', '背景']];
-  // ---- 誤りを知らせる（D-246、公開の段階 0 の 0-4）：場所を書き込んだ報告の下書きを開く ----
-  // GitHub の issue（.github/ISSUE_TEMPLATE/error.yml、項目 page と where を住所の問いで埋める）。Google フォームは施主が使いづらいとしてやめた
+  // ---- 誤りを知らせる（D-246）とご意見の箱（D-247）----
+  // 上の帯の吹き出しと、問題の札・単元・概念・目標のページの「誤りを知らせる」で、小さな箱を開く。書いた文を、ページの住所と場所の記号と
+  // いっしょに、ご意見の置き場（feedback/worker.js、Cloudflare の D1）へ送る。アカウントは要らない。名前・メール・IP アドレスは残さない。
+  // 詳しく書く人（協力者）には、箱の中から GitHub の issue（.github/ISSUE_TEMPLATE/error.yml、page と where を住所の問いで埋める）を開ける
   const REPO = 'https://github.com/fujisato-koji/michisuji';
+  const FEEDBACK = (document.querySelector('meta[name="michisuji-feedback"]') || {}).content || '';
+  const placeOf = ctx => [ctx.unit && `単元 ${ctx.unit}`, ctx.day && `${ctx.day} 日目`, ctx.qid && `問題 ${ctx.qid}`,
+    ctx.concept && `概念 ${ctx.concept}`, ctx.goal && `目標 ${ctx.goal}`].filter(Boolean).join('・');
   function reportHtml(ctx, small) {
-    const page = location.origin + location.pathname + location.hash;
-    const where = [ctx.unit && `単元 ${ctx.unit}`, ctx.day && `${ctx.day} 日目`, ctx.qid && `問題 ${ctx.qid}`,
-      ctx.concept && `概念 ${ctx.concept}`, ctx.goal && `目標 ${ctx.goal}`].filter(Boolean).join('・');
-    const gh = REPO + '/issues/new?' + new URLSearchParams({ template: 'error.yml', title: `[誤り] ${where}`, page, where });
-    return `<div class="report"><a href="${esc(gh)}" target="_blank" rel="noopener" title="GitHub に、場所を書き込んだ報告の下書きを開きます">${small ? 'まちがいを しらせる（おとなの かたへ）' : '誤りを知らせる'}</a></div>`;
+    return `<div class="report"><button type="button" data-fb="誤り" data-place="${esc(placeOf(ctx))}">${small ? 'まちがいを しらせる' : '誤りを知らせる'}</button></div>`;
   }
+  // いまのページの場所（上の帯の吹き出しから開いたとき）
+  function hereCtx() {
+    const r = parse(), ctx = {};
+    if (r.id && UNITS[r.id]) ctx.unit = r.id;
+    if (r.name === 'day') { ctx.day = r.day; const it = session && session.items && session.items[session.idx]; if (it && it.qid) ctx.qid = it.qid; }
+    if (r.name === 'c') ctx.concept = r.cid;
+    if (r.name === 'goal') ctx.goal = r.goal;
+    return ctx;
+  }
+  function fbOpen(kind, place) {
+    fbClose();
+    const r = parse(), small = r.id && UNITS[r.id] && UNITS[r.id].level <= 2 && (r.name === 'day' || r.name === 'unit');
+    const page = location.origin + location.pathname + location.hash;
+    const gh = REPO + '/issues/new?' + new URLSearchParams({ template: 'error.yml', title: `[誤り] ${place}`, page, where: place });
+    const box = document.createElement('div');
+    box.className = 'fb'; box.id = 'fb'; box.setAttribute('role', 'dialog'); box.setAttribute('aria-label', 'ご意見を送る');
+    box.dataset.kind = kind || ''; box.dataset.place = place || ''; box.dataset.page = page;
+    box.innerHTML = `
+      <div class="fb-h">${kind === '誤り' ? (small ? 'まちがいを しらせる' : '誤りを知らせる') : (small ? 'きづいた ことを おしえてね' : 'ご意見を送る')}</div>
+      ${place ? `<div class="fb-place">${esc(place)}</div>` : ''}
+      <textarea id="fb-text" maxlength="1000" rows="4" placeholder="${kind === '誤り' ? (small ? 'どこが ちがうか かいてね' : 'どこが、どうちがうか') : (small ? 'なんでも かいてね' : '気づいたこと、わかりにくい所、ほしいもの など')}"></textarea>
+      <div class="fb-note">${small ? 'なまえや がっこうは かかないでね。' : '名前や学校など、だれかがわかることは書かないでください。このページの住所といっしょに送ります。'}</div>
+      <div class="fb-act"><a class="fb-gh" href="${esc(gh)}" target="_blank" rel="noopener">GitHub で詳しく書く</a>
+        <button class="pill" type="button" data-fbx="close">${small ? 'やめる' : 'やめる'}</button>
+        <button class="pill solid" type="button" data-fbx="send">${small ? 'おくる' : '送る'}</button></div>
+      <div class="fb-msg" id="fb-msg" aria-live="polite"></div>`;
+    document.body.appendChild(box);
+    $('#fb-text').focus();
+  }
+  function fbClose() { const b = $('#fb'); if (b) b.remove(); }
+  async function fbSend() {
+    const box = $('#fb'), ta = $('#fb-text'), msg = $('#fb-msg');
+    if (!box || !ta) return;
+    const text = ta.value.trim();
+    if (!text) { msg.textContent = 'ひとこと書いてから送ってください。'; ta.focus(); return; }
+    if (!FEEDBACK) { msg.textContent = '送り先がありません。GitHub で詳しく書くを使ってください。'; return; }
+    const btn = box.querySelector('[data-fbx="send"]');
+    btn.disabled = true; msg.textContent = '送っています…';
+    try {
+      const r = await fetch(FEEDBACK, { method: 'POST', headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ text, page: box.dataset.page, place: box.dataset.place, kind: box.dataset.kind }) });
+      if (r.ok) { msg.textContent = '届きました。ありがとうございます。'; ta.disabled = true; setTimeout(() => { if ($('#fb') === box) fbClose(); }, 1800); return; }
+      msg.textContent = r.status === 429 ? '今日はたくさん届いています。また明日お願いします。' : r.status === 413 ? '長すぎます（1,000 字まで）。' : '送れませんでした。もう一度押してください。';
+    } catch { msg.textContent = 'つながっていないようです。つながってから、もう一度押してください。'; }
+    btn.disabled = false;
+  }
+  document.addEventListener('click', e => {
+    const fbBtn = e.target.closest('#btn-fb');
+    if (fbBtn) { if ($('#fb')) fbClose(); else fbOpen('', placeOf(hereCtx())); return; }
+    const rp = e.target.closest('[data-fb]');
+    if (rp) { e.preventDefault(); fbOpen(rp.dataset.fb, rp.dataset.place || ''); return; }
+    const x = e.target.closest('[data-fbx]');
+    if (x) { if (x.dataset.fbx === 'send') fbSend(); else fbClose(); return; }
+    if ($('#fb') && !e.target.closest('#fb')) fbClose();
+  });
+  document.addEventListener('keydown', e => {
+    if (!$('#fb')) return;
+    if (e.key === 'Escape') { fbClose(); return; }
+    if (e.key === 'Enter' && (e.ctrlKey || e.metaKey) && e.target.id === 'fb-text') { e.preventDefault(); fbSend(); }
+  });
 
   function viewConcept(cid) {
     const c = CONCEPTS[cid], h = c.home || {}, u = UNITS[h.unit];

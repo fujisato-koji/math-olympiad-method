@@ -1,0 +1,14 @@
+# ご意見の箱（D-247）。読み方と片付け方は docs/feedback.md
+name = "michisuji-feedback"
+main = "worker.js"
+compatibility_date = "2026-09-01"
+workers_dev = true
+
+# 公開してよい値。塩はここに書かず、Cloudflare の secret（FEEDBACK_SALT）に入れる
+[vars]
+ALLOWED_ORIGINS = "https://michisuji.app https://fujisato-koji.github.io"
+
+[[d1_databases]]
+binding = "DB"
+database_name = "michisuji-feedback"
+database_id = "afd289a9-c396-4ca0-9812-81ba8cb3d49a"

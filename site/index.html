@@ -22,6 +22,7 @@
 <meta name="google-api-key" content="AIzaSyCHW7q0u-f-2Ufjal6lPmzoKv9bdtG6RTo">
 <meta name="google-client-id" content="318786454851-4tk1ab9apqofhpd1rqbg4e2uk63gsvof.apps.googleusercontent.com">
 <!-- ログインを保つサーバ（auth/worker.js、D-058）の住所。空なら、ログインは約 1 時間で切れる -->
+<meta name="michisuji-feedback" content="https://michisuji-feedback.fujisato-koji.workers.dev/">
 <meta name="michisuji-auth" content="https://michisuji-auth.fujisato-koji.workers.dev">
 </head>
 <body>
@@ -39,6 +40,9 @@
   <div class="tools">
     <button id="btn-sync" class="pill sync-chip" type="button" hidden><span class="sd"></span><span class="t">保存済み</span></button>
     <button id="btn-who" class="pill who-chip" type="button" title="だれの記録か（押すと切り替え）"></button>
+    <button id="btn-fb" class="icon" type="button" aria-label="ご意見を送る" title="ご意見を送る">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 5.5h14a1.5 1.5 0 0 1 1.5 1.5v8a1.5 1.5 0 0 1-1.5 1.5H10l-4.5 3.5V16.5H5A1.5 1.5 0 0 1 3.5 15V7A1.5 1.5 0 0 1 5 5.5z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/></svg>
+    </button>
     <button id="btn-music" class="icon" type="button" aria-label="音楽" title="音楽">
       <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 18V6l10-2v12" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><circle cx="6.5" cy="18" r="2.5" fill="currentColor"/><circle cx="16.5" cy="16" r="2.5" fill="currentColor"/></svg>
     </button>
