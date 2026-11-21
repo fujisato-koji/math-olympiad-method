@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>このサイトについて — みちすじ</title>
+<meta name="description" content="みちすじは、やりたいことに要る知識の全体を星の地図で見渡し、前提の順に学ぶためのサイトです。個人が AI を使って作り、保守しています。">
+<meta property="og:title" content="このサイトについて — みちすじ">
+<meta property="og:image" content="https://michisuji.app/og.jpg">
+<link rel="icon" href="icons/icon-192.png">
+<style>
+  :root { --bg: #f6f3ec; --ink: #1c2230; --muted: #5a6172; --line: #e4ded1; --card: #fffdf9; }
+  @media (prefers-color-scheme: dark) { :root { --bg: #0d1220; --ink: #e8ecff; --muted: #a9b1d6; --line: #26304f; --card: #141b33; } }
+  body { margin: 0; background: var(--bg); color: var(--ink); font: 16px/1.8 "Zen Maru Gothic", "Hiragino Sans", "Yu Gothic UI", "Meiryo", system-ui, sans-serif; }
+  main { max-width: 760px; margin: 0 auto; padding: 32px 16px 64px; }
+  h1 { font-size: 26px; margin: 0 0 4px; }
+  h2 { font-size: 18px; margin: 28px 0 6px; }
+  p, li { color: var(--ink); }
+  .muted { color: var(--muted); font-size: 14px; }
+  section.en { margin-top: 40px; padding-top: 16px; border-top: 1px solid var(--line); }
+  a { color: inherit; }
+</style>
+</head>
+<body>
+<main>
+  <h1>このサイトについて</h1>
+  <p class="muted">みちすじ（<a href="./">https://michisuji.app/</a>）・2026 年 11 月 21 日</p>
+
+  <h2>みちすじとは</h2>
+  <p>やりたいことに要る知識の全体を、星の地図で見渡し、前提の順に学ぶためのサイトです。ものを数えるところから研究の最前線まで、数学・自然科学・工学・計算・医学・統計などの単元を「星」にして、前提のつながりで並べています。やりたいこと（試験・大会・仕事・賞など）を選ぶと、そこまでの道筋が見えます。</p>
+  <p>対象は子どもに限りません。何かをやりたい人が、要る知識の全体を最初から見渡せることを目指しています。くり返し確かめられる知識だけを入れ、文学・宗教・政治・芸術は入れていません。</p>
+
+  <h2>作った人</h2>
+  <p>藤里 公司（ふじさと こうじ）。博士（工学）。</p>
+  <p>大学院ではロケットの燃料を研究しました。そのあと十年ほど、民間でロケットの開発に携わりました。担当したのは推進系、機体全体の設計、プロジェクトマネジメントです。いまは国内の射場で、安全の仕事をしています。</p>
+  <p>みちすじは個人の制作で、勤務先の業務ではありません。</p>
+
+  <h2>AI で作り、AI で保守する</h2>
+  <p>地図・問題・説明は、AI（Anthropic の Claude）を使って作りました。かかった費用は数千円です。似た試みは、作ったあとの保守が続かずに止まることが多いので、直しや足しも AI で行い、保守の手間と費用を低く抑えることを前提にしています。</p>
+  <p>AI で作った中身には、まちがいが混じります。どこまで確かめたかを、単元のページに「確かめ」として出しています（問題がまだない／答えを確かめの式で確かめた／答えを見ない AI の解き直しで確かめた／人が確かめた）。地図の前提と水準も AI が付けたもので、どの分野も専門家の確認はまだです。</p>
+
+  <h2>一緒に育てる</h2>
+  <p>まちがいや足りない所に気づいたら、画面の上の吹き出しのボタンか、問題やページの下の「誤りを知らせる」から教えてください。詳しい直しや、星・目標を足す提案も、同じ箱で受けます。作り方とデータは <a href="https://github.com/fujisato-koji/michisuji" target="_blank" rel="noopener">GitHub</a> で公開しています。</p>
+
+  <h2>ライセンスとプライバシー</h2>
+  <p>中身は <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noopener">CC BY 4.0</a>、コードは MIT です。出典を書けば、作り変えも商用も含めて自由に使えます。学びの記録は受け取りません（<a href="privacy.html">プライバシー</a>）。</p>
+
+  <section class="en" lang="en">
+    <h1>About</h1>
+    <p>Michisuji maps the knowledge you need for what you want to do as a sky of stars — from counting to the research frontier across mathematics, the natural sciences, engineering, computing, medicine and statistics — and shows the path in prerequisite order. It is not only for children: anyone who wants to do something can see the whole of what they need from the start. Only repeatable, verifiable knowledge is included.</p>
+    <h2>About the author</h2>
+    <p>Koji Fujisato, Ph.D. in Engineering. After doctoral research on rocket propellants, he spent about ten years developing rockets in the private sector, working on propulsion, vehicle design and project management. He now works on range safety at a spaceport in Japan.</p>
+    <p>Michisuji is a personal project, not part of his employer's business.</p>
+    <p>The map, problems and explanations were made with AI (Anthropic's Claude) for a few thousand yen, and are maintained with AI to keep the cost low. AI-made content contains errors; each unit shows how far it has been checked, and no field has been reviewed by experts yet. Please report errors with the speech-bubble button. Content is CC BY 4.0, code is MIT.</p>
+  </section>
+</main>
+</body>
+</html>
