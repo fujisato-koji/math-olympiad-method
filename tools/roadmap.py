@@ -141,6 +141,9 @@ def load():
     # 用語の説明（D-063）。原稿の《用語》を確かめるための唯一の情報源
     gfile = ROOT / "glossary.yaml"
     data["glossary"] = yload(gfile.read_text(encoding="utf-8")) if gfile.exists() else []
+    # 概念の目録（D-231）：定義・定理・法則などを 1 つに 1 項目。原稿の《名前》が指す。種類ごとの欄と、使う概念の順を check が確かめる
+    cfile = ROOT / "concepts.yaml"
+    data["concepts"] = ((yload(cfile.read_text(encoding="utf-8")) or {}).get("concepts") or []) if cfile.exists() else []
     return data, problems
 
 
@@ -342,6 +345,76 @@ def check(data, problems):
             errors.append(f"glossary.yaml: {term} の単元 {g['unit']} が地図にない")
         gloss[term] = g
 
+    # 概念の目録（D-231）。種類ごとに要る欄（docs/concepts.md の第 3 節）
+    need = {"定義": ["why"], "公理": ["system", "consequences"], "定理": ["proof"], "法則": ["scope", "evidence"], "原理": ["scope", "evidence"],
+            "経験則": ["data", "scope"], "実験式": ["data", "scope"], "モデル": ["scope"], "近似": ["scope"], "予想": ["evidence"], "仮説": ["evidence"],
+            "約束": [], "方法": []}
+    concepts, cname = {}, {}
+    for c in data.get("concepts", []):
+        cid = c.get("id")
+        if not cid or not re.fullmatch(r"[a-z0-9]+(-[a-z0-9]+)*", str(cid)):
+            errors.append(f"concepts.yaml: 記号の形が違う（{cid}）")
+            continue
+        if cid in concepts:
+            errors.append(f"concepts.yaml: 記号 {cid} が重なっている")
+        for k in ("name", "kind", "claim", "home"):
+            if not c.get(k):
+                errors.append(f"concepts.yaml: {cid} に {k} が要る")
+        kind = c.get("kind")
+        if kind not in need:
+            errors.append(f"concepts.yaml: {cid} の種類 {kind} がない")
+        else:
+            for k in need[kind]:
+                if not c.get(k):
+                    errors.append(f"concepts.yaml: {cid}（{kind}）に {k} が要る")
+        h = c.get("home") or {}
+        if h.get("unit") not in units:
+            errors.append(f"concepts.yaml: {cid} の初めて教える単元 {h.get('unit')} が地図にない")
+        elif not isinstance(h.get("day"), int) or not 1 <= h["day"] <= units[h["unit"]][2].get("days", 0):
+            errors.append(f"concepts.yaml: {cid} の初めて教える日 {h.get('day')} が {h['unit']} にない")
+        for nm in [c.get("name")] + list(c.get("aka") or []):
+            if not nm:
+                continue
+            if nm in cname and cname[nm] != cid:
+                errors.append(f"concepts.yaml: 名前「{nm}」が {cname[nm]} と {cid} で重なっている")
+            cname[nm] = cid
+        concepts[cid] = c
+    # 使う概念は、使う側より前に教える（C-6）：前提の道の上流の単元か、同じ単元の同じ日かそれより前。
+    # 目録の外の単元を使うのに、その単元が前提の道にないときは、地図の前提の抜けとして警告にまとめる
+    cgaps = []
+    for cid, c in concepts.items():
+        h = c.get("home") or {}
+        if h.get("unit") not in units:
+            continue
+        up = ups(h["unit"])
+        for x in c.get("uses") or []:
+            if x in concepts:
+                hx = concepts[x].get("home") or {}
+                if not (hx.get("unit") in up or (hx.get("unit") == h["unit"] and isinstance(hx.get("day"), int) and hx["day"] <= h.get("day", 0))):
+                    errors.append(f"concepts.yaml: {cid}（{h['unit']} の {h.get('day')} 日目）が使う {x} は {hx.get('unit')} の {hx.get('day')} 日目で教えるので、前にない")
+            elif x in units:
+                if x != h["unit"] and x not in up:
+                    cgaps.append(f"{cid}（{h['unit']}）→ {x}")
+            else:
+                errors.append(f"concepts.yaml: {cid} の uses の {x} が、目録にも地図にもない")
+    if cgaps:
+        print(f"警告: 目録の概念が、前提の道にない単元を使う {len(cgaps)}：" + "、".join(cgaps[:8]) + ("…" if len(cgaps) > 8 else ""))
+    # 使う概念の輪がないこと
+    state = {}
+    def cvisit(x, path):
+        if state.get(x) == 2:
+            return
+        if state.get(x) == 1:
+            errors.append(f"concepts.yaml: 使う概念が輪になっている（{' → '.join(path + [x])}）")
+            return
+        state[x] = 1
+        for y in concepts[x].get("uses") or []:
+            if y in concepts:
+                cvisit(y, path + [x])
+        state[x] = 2
+    for cid in concepts:
+        cvisit(cid, [])
+
     def strings(x):
         if isinstance(x, str):
             yield x
@@ -359,8 +432,8 @@ def check(data, problems):
             continue
         for s in strings(doc):
             for m in re.finditer(r"《([^》\n]+)》", s):
-                if m.group(1) not in gloss:
-                    errors.append(f"units/{uid}.yaml: 用語《{m.group(1)}》が glossary.yaml にない")
+                if m.group(1) not in gloss and m.group(1) not in cname:
+                    errors.append(f"units/{uid}.yaml: 用語《{m.group(1)}》が glossary.yaml にも concepts.yaml にもない")
             # 積分区間は ∫(a→b) と書く。∫a^b は画面で上下の端に組めない
             for m in re.finditer(r"∫([^\s(]{1,12})\^([^\s,，。]{1,12})", s):
                 errors.append(f"units/{uid}.yaml: 積分区間は ∫(a→b) と書く（{m.group(0)}）")
@@ -770,8 +843,18 @@ def build(data, problems):
                       "units": sorted(gu.get(g["id"], [])), "items": items,
                       **({"choiceUnits": sorted(gc[g["id"]] - gu[g["id"]])} if gc.get(g["id"], set()) - gu.get(g["id"], set()) else {})})
     split_content(out_units)
+    cons = [dict(c) for c in data.get("concepts", [])]
+    cname = {nm: c["id"] for c in cons for nm in [c.get("name")] + list(c.get("aka") or []) if nm}
+    used_in = {c["id"]: set() for c in cons}
+    for uid, doc in problems.items():
+        for m in re.finditer(r"《([^》\n]+)》", json.dumps(doc, ensure_ascii=False)):
+            if m.group(1) in cname:
+                used_in[cname[m.group(1)]].add(uid)
+    for c in cons:
+        c["used_in"] = sorted(used_in[c["id"]] - {(c.get("home") or {}).get("unit")})
+        c["used_by"] = sorted(x["id"] for x in cons if c["id"] in (x.get("uses") or []))
     payload = {"lanes": data["lanes"], "regions": data.get("regions", []), "kinds": data["kinds"], "fields": fields, "rows": rows,
-               "glossary": data.get("glossary", []),
+               "glossary": data.get("glossary", []), "concepts": cons,
                "goals": goals, "levels": data["levels"],
                "combLayer": combination.layer(data["units"], data.get("catalog", []), comb), "goalKinds": list(GOAL_KINDS), "goalFields": list(GOAL_FIELDS), "units": out_units, "renamed": data["renamed"]}
     js = "// tools/roadmap.py build が roadmap.yaml と units/ から作る。手で直さない。\n"

@@ -1202,3 +1202,14 @@ sup.m, sub.m { font-size: .72em; line-height: 0; }
   .lg .lg-row .us { grid-column: 1 / -1; }
   .lg .lg-row .us:empty { display: none; }
 }
+
+/* 概念のページと、文の中の概念の語（D-231） */
+.concept-head .c-claim { margin: 14px 0 4px; padding: 14px 18px; font-size: 20px; line-height: 1.8; background: var(--surface-2); border-left: 6px solid var(--c); border-radius: 0 14px 14px 0; white-space: pre-wrap; }
+.c-sec { margin: 18px 0; }
+.c-sec > h2, .c-sec > summary { font-size: 14px; font-weight: 700; color: var(--ink-2); letter-spacing: .1em; margin: 0 0 6px; }
+.c-sec > summary { cursor: pointer; }
+details.c-proof { border: 1px solid var(--line); border-radius: 12px; padding: 10px 16px; background: var(--surface-2); }
+.c-body { font-size: 18px; line-height: 1.8; white-space: pre-wrap; }
+.gloss.concept { text-decoration: underline dotted; text-underline-offset: 3px; }
+a.gloss.concept { color: inherit; }
+.tip-kind { font-size: .78em; padding: 1px 6px; margin-right: 6px; border-radius: 6px; border: 1px solid currentColor; }

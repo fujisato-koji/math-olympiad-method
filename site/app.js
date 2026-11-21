@@ -237,9 +237,17 @@
   // 字面を走査すると「原子核」の「核」と「準同型の核」を区別できない。どの意味で使ったかは原稿側で決める。
   // 用語集は glossary.yaml が唯一の情報源。ここにない語を《》で囲むと、roadmap.py check が誤りとして報告する。
   const GLOSS = Object.fromEntries((R.glossary || []).map(g => [g.term, g]));
+  // 概念の目録（D-231）：記号で引く表と、名前・別名で引く表。《名前》が目録にあれば、用語集より先に概念として扱う
+  const CONCEPTS = Object.fromEntries((R.concepts || []).map(c => [c.id, c]));
+  const CNAME = {};
+  (R.concepts || []).forEach(c => [c.name, ...(c.aka || [])].forEach(n => { if (n) CNAME[n] = c.id; }));
+  // 概念の語：ヒントと見本ではページへのリンク（別のタブ）、問題文ではホバーだけ（解いている途中で飛ばない、D-230 と同じ）
+  const conceptHtml = (t, label = t) => LINK_UNITS
+    ? `<a class="gloss concept" tabindex="0" data-c="${CNAME[t]}" href="#/c/${CNAME[t]}" target="_blank" rel="noopener">${esc(label)}</a>`
+    : `<span class="gloss concept" tabindex="0" data-c="${CNAME[t]}">${esc(label)}</span>`;
   const GS = '\uE000', GE = '\uE001';
-  const markGloss = s => String(s ?? '').replace(/《([^》\n]+)》/g, (m, t) => GLOSS[t] ? GS + t + GE : m);
-  const glossHtml = h => h.replace(/\uE000([^\uE001]*)\uE001/g, (m, t) => `<span class="gloss" tabindex="0" data-g="${esc(t)}">${esc(t)}</span>`);
+  const markGloss = s => String(s ?? '').replace(/《([^》\n]+)》/g, (m, t) => GLOSS[t] || CNAME[t] ? GS + t + GE : m);
+  const glossHtml = h => h.replace(/\uE000([^\uE001]*)\uE001/g, (m, t) => CNAME[t] ? conceptHtml(t) : `<span class="gloss" tabindex="0" data-g="${esc(t)}">${esc(t)}</span>`);
   // 行列：(a b；c d) の書き方を、行と列に組む（D-064）。；が行の切れ目、空白か「、」が列の切れ目。
   // 成分が式のときは「、」で区切る（M-002 の約束）。組めない形は、そのまま文字で残す。
   const MAT0 = String.fromCharCode(0xE002), MAT1 = String.fromCharCode(0xE003);
@@ -321,7 +329,7 @@
   }
   const putTable = (h, tables) => h.replace(tbPlace, (m, i) => tables[Number(i)] ?? m);
   // 説明文の「素性」：定義・定理・法則・公理・公式・原理・性質・約束・予想・モデル・近似・方法・現象・仮説（D-067）
-  const KIND_NAMES = ['定義', '定理', '法則', '公理', '公式', '原理', '性質', '約束', '予想', 'モデル', '近似', '方法', '現象', '仮説'];
+  const KIND_NAMES = ['定義', '定理', '法則', '公理', '公式', '原理', '性質', '約束', '予想', 'モデル', '近似', '方法', '現象', '仮説', '経験則', '実験式'];
   const KIND_ALT = KIND_NAMES.join('|');
   const KIND_BRACKET = new RegExp('【(' + KIND_ALT + ')】', 'g');
   const KIND_NAMED = new RegExp('([一-龯\u30A0-\u30FFA-Za-z0-9・ー]+)の(' + KIND_ALT + ')', 'g');
@@ -333,7 +341,7 @@
         // 名前全体が用語集にあるときだけ、名前全体にホバー説明を付ける。
         // 用語集にない名前は、普通の文としてそのまま出す（「定理」だけのラベルにしない）。
         const full = name + 'の' + k;
-        return GLOSS[full] ? `<span class="gloss" tabindex="0" data-g="${esc(full)}">${esc(full)}</span>` : `${name}の${k}`;
+        return CNAME[full] ? conceptHtml(full) : GLOSS[full] ? `<span class="gloss" tabindex="0" data-g="${esc(full)}">${esc(full)}</span>` : `${name}の${k}`;
       });
   }
   const fmtExplain = s => {
@@ -353,11 +361,19 @@
     return glossTip;
   }
   function showGloss(g) {
-    const item = GLOSS[g.dataset.g];
-    if (!item) return;
     const tip = glossTipEl();
-    const u = item.unit && UNITS[item.unit] ? `<a class="u" href="#/unit/${item.unit}" target="_blank" rel="noopener">${esc(item.unit)} ${esc(UNITS[item.unit].title)}</a>` : '';
-    tip.innerHTML = `<div>${esc(item.text)}</div>${u}`;
+    if (g.dataset.c) {
+      // 概念のホバー：種類と主張、くわしいページへ（D-231）
+      const c = CONCEPTS[g.dataset.c];
+      if (!c) return;
+      const more = c.kind === '定理' ? '証明' : c.kind === '定義' ? 'なぜこう定めるか' : c.kind === '公理' ? '公理の組と系' : '成り立つ範囲';
+      tip.innerHTML = `<div><b class="tip-kind">${esc(c.kind)}</b>${fmt(c.claim)}</div><a class="u" href="#/c/${c.id}" target="_blank" rel="noopener">${esc(more)}・背景 →</a>`;
+    } else {
+      const item = GLOSS[g.dataset.g];
+      if (!item) return;
+      const u = item.unit && UNITS[item.unit] ? `<a class="u" href="#/unit/${item.unit}" target="_blank" rel="noopener">${esc(item.unit)} ${esc(UNITS[item.unit].title)}</a>` : '';
+      tip.innerHTML = `<div>${esc(item.text)}</div>${u}`;
+    }
     tip.classList.add('on');
     const r = g.getBoundingClientRect(), w = tip.offsetWidth, h = tip.offsetHeight;
     const left = Math.min(Math.max(8, r.left + r.width / 2 - w / 2), window.innerWidth - w - 8);
@@ -726,6 +742,7 @@
     if (p[0] === 'goal' && GOAL_SETS[p[1]]) return { name: 'goal', goal: p[1] };
     if (p[0] === 'comb') return { name: 'comb' };
     if (p[0] === 'log') return { name: 'log' };
+    if (p[0] === 'c' && CONCEPTS[p[1]]) return { name: 'c', cid: p[1], id: (CONCEPTS[p[1]].home || {}).unit };
     if (p[0] === 'join' && p[1]) return { name: 'join', file: p[1] };
     return { name: 'map' };
   }
@@ -739,6 +756,7 @@
     if (r.name === 'join') parts.push(['', '共有の記録']);
     if (r.name === 'level' && THINK[r.level]) parts.push(['', `水準 ${r.level} ${THINK[r.level].name}`]);
     if (r.id) parts.push([`#/unit/${r.id}`, UNITS[r.id].title]);
+    if (r.name === 'c') parts.push(['', CONCEPTS[r.cid].name]);
     if (r.name === 'day') parts.push(['', r.type === 'review' ? '確かめ' : r.type === 'look' ? 'ふりかえり' : r.type === 'ri' ? '腕だめし' : r.type === 'extra' ? `${r.day} 日目のおさらい` : `${r.day} 日目`]);
     return parts.map(([href, t, sel], i) => i === parts.length - 1
       ? `<span class="here">${esc(t)}</span>`
@@ -760,6 +778,7 @@
     : r.name === 'unit' ? viewUnit(r.id)
     : r.name === 'day' ? viewDay(r.id, r.day, r.type, r.group, r.start)
     : r.name === 'goal' ? viewGoal(r.goal) : r.name === 'comb' ? viewComb() : r.name === 'join' ? viewJoin(r.file) : r.name === 'log' ? viewLog()
+    : r.name === 'c' ? viewConcept(r.cid)
     : '';  // 地図は 3D と 2D の画面だけ（D-080、施主「あゆみ以下のページは削除」「3D もはずしてください」）
   function render() {
     const r = parse(), view = $('#view');
@@ -1789,6 +1808,36 @@
   }
 
   // ---- 単元：日の路線 ----
+  // 概念のページ（D-231）：種類の札、主張、種類ごとの中身（証明は開閉の箱）、背景、使う概念、この概念を使うもの、初めて教える日
+  const CSECS = [['sketch', '筋道'], ['why', 'なぜこう定めるか'], ['examples', '例'], ['nonexamples', '例でないもの'], ['proof', '証明'],
+    ['system', '公理の組'], ['consequences', '系'], ['models', '公理を満たす例'], ['scope', '成り立つ範囲'], ['evidence', '確かめられた経緯'],
+    ['data', 'もとのデータ'], ['background', '背景']];
+  function viewConcept(cid) {
+    const c = CONCEPTS[cid], h = c.home || {}, u = UNITS[h.unit];
+    const chip = x => CONCEPTS[x] ? `<a class="from" href="#/c/${x}">${esc(CONCEPTS[x].name)}</a>`
+      : UNITS[x] ? `<a class="from" href="#/unit/${x}" style="${lc(UNITS[x].lane)}">${x} ${esc(UNITS[x].title)}</a>` : `<span class="from">${esc(x)}</span>`;
+    const sec = ([k, label]) => {
+      const v = c[k];
+      if (!v || (Array.isArray(v) && !v.length)) return '';
+      const body = fmtLinks(Array.isArray(v) ? v.map(x => '・' + x).join('\n') : String(v));
+      return k === 'proof' ? `<details class="c-sec c-proof"><summary>${label}</summary><div class="c-body">${body}</div></details>`
+        : `<section class="c-sec"><h2>${label}</h2><div class="c-body">${body}</div></section>`;
+    };
+    const users = [...(c.used_by || []), ...(c.used_in || [])];
+    const src = (c.sources || []).map(s => typeof s === 'string' ? esc(s)
+      : s.url ? `<a href="${esc(s.url)}" target="_blank" rel="noopener">${esc(s.title || s.url)}</a>${s.accessed ? `<span class="muted">（${esc(s.accessed)}）</span>` : ''}` : esc(s.title || '')).join('\n');
+    return `
+    <section class="unit-head concept-head" style="${u ? lc(u.lane) : ''}">
+      <div class="eyebrow">${kindSpan(c.kind)}${u ? `　<a href="#/day/${h.unit}/${h.day}">${h.unit} ${esc(u.title)}・${h.day} 日目で教える</a>` : ''}</div>
+      <h1>${esc(c.name)}</h1>
+      ${(c.aka || []).length ? `<div class="row muted">別名：${c.aka.map(esc).join('、')}</div>` : ''}
+      <div class="c-claim">${fmtLinks(c.claim)}</div>
+    </section>
+    ${CSECS.map(sec).join('')}
+    <section class="c-sec"><h2>使う概念</h2><div class="row">${(c.uses || []).map(chip).join('') || '<span class="muted">なし</span>'}</div></section>
+    <section class="c-sec"><h2>この概念を使うもの</h2><div class="row">${users.map(chip).join('') || '<span class="muted">まだない</span>'}</div></section>
+    ${src ? `<section class="c-sec"><h2>出典</h2><div class="c-body">${src}</div></section>` : ''}`;
+  }
   function viewUnit(id) {
     const u = UNITS[id], st = status(id), r = progress.units[id] || {}, ns = nextStep(id);
     const chip = x => `<a class="from" href="#/unit/${x}" style="${lc(UNITS[x].lane)}">${x} ${esc(UNITS[x].title)}</a>`;
