@@ -1,5 +1,5 @@
 # 概念の目録（D-231）。1 つの概念に 1 項目。種類ごとに要る欄は docs/concepts.md の第 3 節。
-# 試し（2026-11-21、D-235 で定義と定理を分けた）：R-006 の 1 日目と、それが使う M-004・R-001 の 27 項目。書く係と確かめる係（Sonnet）が書き、取りまとめが当てた。
+# 試し（2026-11-21、D-235 で定義と定理を分け、D-236 で定義を 1 か所にまとめた）：R-006 の 1 日目と、それが使う M-004・R-001 の 25 項目。書く係と確かめる係（Sonnet）が書き、取りまとめが当てた。
 concepts:
 - id: det-2x2
   name: 2 次の行列式
@@ -371,18 +371,21 @@ concepts:
   uses: [associativity, identity-element, inverse-element]
   home: {unit: R-001, day: 1}
   background: この定理のおかげで、群の要素 a の逆元を「a の逆元」と定冠詞つきで呼べて、a⁻¹ と書ける（たし算の群では −a）。結合法則がないと成り立たない。
-- id: gl-set
-  name: GL(n, R)
+- id: general-linear-group
+  name: 一般線形群
+  aka: ['GL(n, R)']
   kind: 定義
-  claim: n を正の整数とし、成分が実数の n×n の行列全体を Mₙ(R) と書く。行列式が 0 でない行列の全体を GL(n, R) と書く。すなわち GL(n, R) = {A ∈ Mₙ(R) | det A ≠ 0} とする。
+  claim: n を正の整数とし、成分が実数の n×n の行列全体を Mₙ(R) と書く。行列式が 0 でない行列の全体 GL(n, R) = {A ∈ Mₙ(R) | det A ≠ 0} に、行列の積を演算として考えたものを、一般線形群といい、GL(n, R) と書く。
   why: '群には《逆元》が要る。行列の積での逆元は逆行列で、逆行列をもつのは行列式が 0 でないときだけである（《逆行列の存在条件》）。そこで「行列式が 0 でない」で行列を集めると、逆行列をもつ行列をちょうど全部集めたものになる。ほかの決め方とのちがいは次のとおりである。Mₙ(R) 全体では、行列式 0 の行列に逆行列がなく、積について群にならない。行列式が 1 のものだけ集めると、より小さな集合（《SL(n, R)》）になる。
 
-    ここで決めたのは集合だけである。行列の積について群であることは、定理《GL(n, R) は群》で示す。'
+    名前に「群」と入っていても、この定義は名前を付けるだけで、群であることは言わない。それは定理《GL(n, R) は群》で示す。'
   examples: [(2 0；0 1)：行列式 2, (1 0；0 −1)：行列式 −1, (1 1；0 1)：行列式 1, 単位行列 I：行列式 1]
   nonexamples: [(1 1；1 1)：行列式 0, (1 0；0 0)：行列式 0, 零行列：行列式 0]
   uses: [det-2x2, invertibility-det-criterion]
   home: {unit: R-006, day: 1}
-  background: M-004 で示すのは 2×2 の場合で、n×n の行列式の性質（積の定理、逆行列の存在条件）は、まだ目録に項目がない（docs/concepts.md の 6.5）。
+  background: 'GL は general linear（一般線形）の頭文字。幾何では、GL(n, R) の行列は、空間をつぶさない（次元を落とさない）n 次元の 1 次変換を表す。行列式の絶対値が面積（体積）の倍率、符号が向きである（《面積の倍率としての行列式》）。複素数の成分の GL(n, C) や、ベクトル空間 V の GL(V) も同じように決める。
+
+    M-004 で示すのは 2×2 の場合で、n×n の行列式の性質（積の定理、逆行列の存在条件）は、まだ目録に項目がない（docs/concepts.md の 6.5）。'
 - id: gl-is-group
   name: GL(n, R) は群
   kind: 定理
@@ -405,35 +408,30 @@ concepts:
     ④ A ∈ GL(n, R) とする。det A ≠ 0 なので、《逆行列の存在条件》より逆行列 A⁻¹ があり、AA⁻¹ = A⁻¹A = I。《逆行列の行列式》より det(A⁻¹) = 1/det A ≠ 0。よって A⁻¹ ∈ GL(n, R)（逆元がある）。
 
     ⑤ ①〜④ で《群》の 4 つの条件が成り立つ。'
-  uses: [group, closure, associativity, identity-element, inverse-element, gl-set, det-product, det-inverse, invertibility-det-criterion, M-003]
+  uses: [group, closure, associativity, identity-element, inverse-element, general-linear-group, det-product, det-inverse, invertibility-det-criterion, M-003]
   home: {unit: R-006, day: 1}
   background: 'GL(n, R) はふつう非可換である（n ≥ 2 では AB ≠ BA となる行列がある）。群であることが分かって初めて、《行列群》の「GL の部分群」という言い方ができる。複素数の成分の GL(n, C) でも、証明はそのまま通る。
 
     M-004 で示すのは 2×2 の場合で、n×n の行列式の性質（積の定理、逆行列の存在条件）は、まだ目録に項目がない（docs/concepts.md の 6.5）。'
-- id: general-linear-group
-  name: 一般線形群
+- id: special-linear-group
+  name: 特殊線形群
+  aka: ['SL(n, R)']
   kind: 定義
-  claim: 定理《GL(n, R) は群》により、《GL(n, R)》は行列の積について群になる。この群を一般線形群といい、同じ記号 GL(n, R) で表す。
-  why: 「一般線形群」の「群」は、群であることを示してから付ける名前である。集合 GL(n, R) を決めること（定義）、それが群であることを示すこと（定理）、その群に名前を付けること（定義）を分けておくと、名前が証明を先取りしない。
-  uses: [gl-is-group, gl-set]
-  home: {unit: R-006, day: 1}
-  background: GL は general linear（一般線形）の頭文字。幾何では、GL(n, R) の行列は、空間をつぶさない（次元を落とさない）n 次元の 1 次変換を表す。行列式の絶対値が面積（体積）の倍率、符号が向きである（《面積の倍率としての行列式》）。複素数の成分の GL(n, C) や、ベクトル空間 V の GL(V) も同じように決める。
-- id: sl-set
-  name: SL(n, R)
-  kind: 定義
-  claim: n を正の整数とする。《GL(n, R)》のうち、行列式が 1 の行列の全体を SL(n, R) と書く。すなわち SL(n, R) = {A ∈ GL(n, R) | det A = 1} とする。
+  claim: n を正の整数とする。《一般線形群》GL(n, R) のうち、行列式が 1 の行列の全体 SL(n, R) = {A ∈ GL(n, R) | det A = 1} に、行列の積を演算として考えたものを、特殊線形群といい、SL(n, R) と書く。
   why: '行列式の絶対値は面積（体積）の倍率、符号は向きを表す（《面積の倍率としての行列式》）。行列式が 1 の行列は、面積（体積）も向きもかえない 1 次変換を表す。区別したいのは、行列式が 1 のものと、行列式が 1 か −1 のものである。後者は面積をかえないが、向きを裏返す変換（行列式 −1）を含む。向きまでたもつ変換だけを集めたいので「1」と決める。det A = 1 なら det A ≠ 0 なので、A ∈ GL(n, R) は自動的に成り立つ。
 
-    ここで決めたのは集合だけである。行列の積について群であることは、定理《SL(n, R) は GL(n, R) の部分群》で示す。'
+    名前に「群」と入っていても、この定義は名前を付けるだけで、群であることは言わない。それは定理《SL(n, R) は GL(n, R) の部分群》で示す。'
   examples: [(1 1；0 1)：行列式 1, (1 2；0 1)：行列式 1, (0 −1；1 0)：行列式 1（90° の回転）, 単位行列 I]
   nonexamples: [(1 0；0 −1)：行列式 −1（向きが裏返る）, (2 0；0 1)：行列式 2（面積が 2 倍）, (1 1；1 1)：行列式 0（GL にも入らない）]
-  uses: [gl-set, det-area-scale, det-2x2]
+  uses: [general-linear-group, det-area-scale, det-2x2]
   home: {unit: R-006, day: 1}
-  background: M-004 で示すのは 2×2 の場合で、n×n の行列式の性質（積の定理、逆行列の存在条件）は、まだ目録に項目がない（docs/concepts.md の 6.5）。
+  background: 'SL は special linear（特殊線形）の頭文字。SL(n, R) は、行列式を GL(n, R) から 0 でない実数のかけ算の群への対応と見たときの、単位元（1）に写るものの全体（核）になっている。複素数の成分の SL(n, C) も同じように決める。
+
+    M-004 で示すのは 2×2 の場合で、n×n の行列式の性質（積の定理、逆行列の存在条件）は、まだ目録に項目がない（docs/concepts.md の 6.5）。'
 - id: sl-is-subgroup
   name: SL(n, R) は GL(n, R) の部分群
   kind: 定理
-  claim: n を正の整数とする。《SL(n, R)》は、行列の積について、《一般線形群》GL(n, R) の《部分群》である。
+  claim: n を正の整数とする。《特殊線形群》SL(n, R) は、行列の積について、《一般線形群》GL(n, R) の《部分群》である。
   sketch: 部分群の判定法の 3 条件を確かめる。I が入る、積の行列式は 1 の積で 1、逆行列の行列式は 1 の逆数で 1。
   proof: 'GL(n, R) は《GL(n, R) は群》で、行列の積について群であり、単位元は I である。SL(n, R) ⊂ GL(n, R) について、《部分群の判定法》の 3 つを確かめる。
 
@@ -444,19 +442,11 @@ concepts:
     ③ 逆元で閉じている：A ∈ SL(n, R) とする。A⁻¹ ∈ GL(n, R) で、《逆行列の行列式》より det(A⁻¹) = 1/det A = 1。よって A⁻¹ ∈ SL(n, R)。
 
     ④ ①〜③ より、判定法から SL(n, R) は GL(n, R) の部分群である。'
-  uses: [subgroup-test, subgroup, gl-is-group, general-linear-group, sl-set, det-product, det-inverse, invertibility-det-criterion]
+  uses: [subgroup-test, subgroup, gl-is-group, general-linear-group, special-linear-group, det-product, det-inverse, invertibility-det-criterion]
   home: {unit: R-006, day: 1}
   background: '図の 1 つの例（ある A、B で面積が 1 のままだった）からは言えない。どの A、B でも言えることを、行列式の積と逆数で示すのが要点である。別の見方では、det が GL(n, R) から 0 でない実数のかけ算の群への準同型で、SL(n, R) はその核になる。準同型の核が部分群になることは R-001 で習う。
 
     M-004 で示すのは 2×2 の場合で、n×n の行列式の性質（積の定理、逆行列の存在条件）は、まだ目録に項目がない（docs/concepts.md の 6.5）。'
-- id: special-linear-group
-  name: 特殊線形群
-  kind: 定義
-  claim: 定理《SL(n, R) は GL(n, R) の部分群》により、《SL(n, R)》は行列の積について群になる。この群を特殊線形群といい、同じ記号 SL(n, R) で表す。
-  why: 《一般線形群》と同じく、「群」の名前は、部分群であることを示してから付ける。
-  uses: [sl-is-subgroup, sl-set]
-  home: {unit: R-006, day: 1}
-  background: SL は special linear（特殊線形）の頭文字。SL(n, R) は、行列式を GL(n, R) から 0 でない実数のかけ算の群への対応と見たときの、単位元（1）に写るものの全体（核）になっている。複素数の成分の SL(n, C) も同じように決める。
 - id: matrix-group
   name: 行列群
   aka: [線形群]
@@ -481,7 +471,7 @@ concepts:
     ④ G は I を含むので空でなく、積について閉じていて、どの A ∈ G についても A⁻¹ ∈ G である。《部分群の判定法》より、G は GL(n, R) の部分群である。
 
     ⑤ 逆に、H を GL(n, R) の部分群とし、H の単位元を e とする。e·e = e の両辺に、左から GL(n, R) での e の逆元をかけると e = I である。H は積について閉じ、結合法則を満たし、どの要素にも H の中に逆元があるので、I を単位元として群の 4 つの条件を満たす。よって H は n 次の行列群である。'
-  uses: [matrix-group, general-linear-group, subgroup, subgroup-test, det-product, inverse-uniqueness]
+  uses: [matrix-group, general-linear-group, subgroup, subgroup-test, det-product, inverse-uniqueness, gl-is-group]
   home: {unit: R-006, day: 1}
   background: 'R-006 の 1 日目の見本は、行列群を「単位行列 I を単位元として群の条件を満たす正方行列の集まり」と決める。教科書によっては「GL(n, R) の部分群」と決めるが、この定理から、2 つの決め方は同じものを指す。
 
