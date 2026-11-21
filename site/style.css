@@ -1273,3 +1273,8 @@ a.gloss.concept { color: inherit; }
 @media (max-width: 480px) {
   .path-step { grid-template-columns: 1fr; gap: 4px; }
 }
+
+/* 誤りを知らせる（D-246）：問題の札・単元・概念・目標のページの下に小さく */
+.report { margin-top: 14px; font-size: 12px; color: var(--muted); text-align: right; }
+.report a { color: var(--muted); text-decoration: underline; text-underline-offset: 2px; }
+.report a:hover, .report a:focus-visible { color: var(--ink); }

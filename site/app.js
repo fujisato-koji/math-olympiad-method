@@ -1865,6 +1865,21 @@
   const CSECS = [['sketch', '筋道'], ['why', 'なぜこう定めるか'], ['examples', '例'], ['nonexamples', '例でないもの'], ['proof', '証明'],
     ['system', '公理の組'], ['consequences', '系'], ['models', '公理を満たす例'], ['scope', '成り立つ範囲'], ['evidence', '確かめられた経緯'],
     ['data', 'もとのデータ'], ['background', '背景']];
+  // ---- 誤りを知らせる（D-246、公開の段階 0 の 0-4）：場所を書き込んだ報告の下書きを開く ----
+  // フォーム（Google フォーム、アカウント不要。index.html の meta michisuji-report-form に、事前入力の住所の __PAGE__ と __WHERE__ を置く）と、
+  // GitHub の issue（.github/ISSUE_TEMPLATE/error.yml、項目 page と where を住所の問いで埋める）。フォームの住所が空のあいだは GitHub だけ
+  const REPO = 'https://github.com/fujisato-koji/michisuji';
+  const REPORT_FORM = (document.querySelector('meta[name="michisuji-report-form"]') || {}).content || '';
+  function reportHtml(ctx, small) {
+    const page = location.origin + location.pathname + location.hash;
+    const where = [ctx.unit && `単元 ${ctx.unit}`, ctx.day && `${ctx.day} 日目`, ctx.qid && `問題 ${ctx.qid}`,
+      ctx.concept && `概念 ${ctx.concept}`, ctx.goal && `目標 ${ctx.goal}`].filter(Boolean).join('・');
+    const gh = REPO + '/issues/new?' + new URLSearchParams({ template: 'error.yml', title: `[誤り] ${where}`, page, where });
+    const fm = REPORT_FORM && REPORT_FORM.replace('__PAGE__', encodeURIComponent(page)).replace('__WHERE__', encodeURIComponent(where));
+    const a = (href, t) => `<a href="${esc(href)}" target="_blank" rel="noopener">${t}</a>`;
+    return `<div class="report">${small ? 'まちがいを しらせる（おとなの かたへ）' : '誤りを知らせる'}：${fm ? a(fm, 'フォーム') + '・' : ''}${a(gh, 'GitHub')}</div>`;
+  }
+
   function viewConcept(cid) {
     const c = CONCEPTS[cid], h = c.home || {}, u = UNITS[h.unit];
     const chip = x => CONCEPTS[x] ? `<a class="from" href="#/c/${x}">${esc(CONCEPTS[x].name)}</a>`
@@ -1889,7 +1904,8 @@
     ${CSECS.map(sec).join('')}
     <section class="c-sec"><h2>使う概念</h2><div class="row">${(c.uses || []).map(chip).join('') || '<span class="muted">なし</span>'}</div></section>
     <section class="c-sec"><h2>この概念を使うもの</h2><div class="row">${users.map(chip).join('') || '<span class="muted">まだない</span>'}</div></section>
-    ${src ? `<section class="c-sec"><h2>出典</h2><div class="c-body">${src}</div></section>` : ''}`;
+    ${src ? `<section class="c-sec"><h2>出典</h2><div class="c-body">${src}</div></section>` : ''}
+    ${reportHtml({ concept: cid })}`;
   }
   function viewUnit(id) {
     const u = UNITS[id], st = status(id), r = progress.units[id] || {}, ns = nextStep(id);
@@ -1910,6 +1926,7 @@
       ${opens.length ? `<div class="row">この先 ${opens.map(v => chip(v.id)).join('')}</div>` : ''}
       ${topicsHtml(topicsOf(id))}
       ${combHtml(u)}
+      ${reportHtml({ unit: id })}
     </section>
     ${(() => {
       const s = ancestors(id);
@@ -2149,6 +2166,7 @@
         <div><span class="k">見込み</span><b>残り 約 ${f.est}</b><span class="u">日</span></div>
       </div>
       <div class="row"><button class="pill solid" type="button" data-goal="${id}" data-go="#/">この目標の道だけで地図を見る</button></div>
+      ${reportHtml({ goal: id })}
     </section>
     ${pathHtml(set)}
     <section class="next">
@@ -2454,7 +2472,7 @@
         <div class="actions">${s.hints < 3 ? `<button class="pill" data-act="hint" type="button">ヒント ${s.hints + 1} / 3</button>` : ''}${dk}</div>`;
     }
     el.innerHTML = steps() + `<article class="card" id="card" data-qid="${esc(it.qid || '')}">
-      <span class="part">${esc(it.part === '離' ? '腕だめし' : it.part)}${tierHtml(it)}</span>${s.type === 'ri' && s.groupLabel ? `<span class="ri-scope">${esc(s.groupLabel)}</span>` : ''}${kindsHtml(it, u.stage <= 2)}<div class="q">${it.part === '見本' ? fmtLinks(it.text) : fmt(it.text)}</div>${body}</article>`;
+      <span class="part">${esc(it.part === '離' ? '腕だめし' : it.part)}${tierHtml(it)}</span>${s.type === 'ri' && s.groupLabel ? `<span class="ri-scope">${esc(s.groupLabel)}</span>` : ''}${kindsHtml(it, u.stage <= 2)}<div class="q">${it.part === '見本' ? fmtLinks(it.text) : fmt(it.text)}</div>${body}${reportHtml({ unit: s.id, day: s.n, qid: it.qid }, u.level <= 2)}</article>`;
     figMath(el);
     tick();
   }

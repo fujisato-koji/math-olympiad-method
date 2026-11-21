@@ -1,0 +1,40 @@
+name: 星の追加・前提の直し
+description: 単元（星）や目標を足す、前提・水準・分野を直す提案
+title: "[地図] "
+labels: ["地図"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        みちすじには、くり返し確かめられる知識だけを入れています（文学・宗教・政治・芸術は入れません）。
+        置き換えられた昔の分野や手法も入れず、いまの最前線につながるものを選んでいます。
+  - type: dropdown
+    id: kind
+    attributes:
+      label: 種類
+      options:
+        - 星（単元）を足す
+        - 前提を足す・外す
+        - 水準を見直す
+        - 分野を見直す
+        - 目標（試験・大会・仕事・賞）を足す
+        - そのほか
+    validations:
+      required: true
+  - type: input
+    id: target
+    attributes:
+      label: 関係する単元や目標
+      description: 記号（M-004 など）か名前。わからなければ空でかまいません
+  - type: textarea
+    id: proposal
+    attributes:
+      label: 提案
+      description: 何を、どう変えるとよいか
+    validations:
+      required: true
+  - type: textarea
+    id: sources
+    attributes:
+      label: わけと出典
+      description: 教科書・課程表・試験の範囲・論文など、確かめられる資料があると判断しやすくなります

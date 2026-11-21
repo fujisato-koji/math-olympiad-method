@@ -1,0 +1,45 @@
+name: 誤りの報告
+description: 問題・答え・ヒント・説明・概念・地図のまちがいを知らせる
+title: "[誤り] "
+labels: ["誤り"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        みちすじは AI で作り、AI と人が確かめています。まちがいを見つけたら教えてください。
+        **子どもの名前・学年・答案の写真など、個人がわかることは書かないでください。** issue はだれでも読める公開の場所です。
+  - type: input
+    id: page
+    attributes:
+      label: ページの住所
+      description: 画面の「誤りを知らせる」から開くと、自動で入ります
+  - type: input
+    id: where
+    attributes:
+      label: 場所
+      description: 単元・日・問題・概念・目標の記号（画面から開くと自動で入ります）
+  - type: dropdown
+    id: kind
+    attributes:
+      label: 種類
+      options:
+        - 答えのまちがい
+        - 問題文・図のまちがい
+        - ヒントが答えを言っている
+        - 説明・定義・定理のまちがい
+        - 前提・水準・地図のまちがい
+        - 字・表記
+        - そのほか
+    validations:
+      required: true
+  - type: textarea
+    id: what
+    attributes:
+      label: どこが、どうまちがっているか
+    validations:
+      required: true
+  - type: textarea
+    id: fix
+    attributes:
+      label: 直し方と出典（わかれば）
+      description: 事実の直しは、教科書・論文・公式の資料などの出典があると確かめやすくなります
