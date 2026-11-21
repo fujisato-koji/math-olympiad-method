@@ -43,7 +43,7 @@
 - **ログイン**：Google のコードの方式（`initCodeClient`、ポップアップ）。Google の部品は、この方式ではログインのたびに同意の画面を出し、更新の鍵を必ず付ける（`access_type=offline`、`prompt=consent`）。そのため、ログインのたびに同意の画面が出るが、ログインは端末ごとに一度だけ。
 - **塊の置き場所**：端末のブラウザの localStorage（`michisuji.gkeep`）。サーバの住所（workers.dev）と画面（github.io）は別のサイトで、ブラウザによっては cookie を置けないので、cookie は使わない。
 - **塊の鍵**：AES-GCM。鍵はクライアント シークレットから HKDF で導く（入れていただく秘密を 1 つにするため）。シークレットを替えると、すべての端末の塊が開けなくなり、各端末で一度ログインし直す。
-- **受ける相手**：公開ページ（`https://fujisato-koji.github.io`）からの呼び出しだけ（`ALLOWED_ORIGINS`）。ブラウザの外からは Origin を偽れるが、塊がなければ何も取れない。
+- **受ける相手**：公開ページ（`https://michisuji.app`。前の住所 `https://fujisato-koji.github.io` も残す、D-243）からの呼び出しだけ（`ALLOWED_ORIGINS`）。ブラウザの外からは Origin を偽れるが、塊がなければ何も取れない。
 - **ログインが切れるとき**：Google アカウントの設定で許可を取り消したとき、更新の鍵を 6 か月使わなかったとき、同じ人が 100 回を超えてログインしたとき（古い鍵から使えなくなる）。サーバが断ると、画面は塊を捨てて札を「ログイン」にし、ログインの窓を自動で出す（D-059）。
 - **ログアウト**：この端末の塊を捨てるだけで、Google の許可は取り消さない（取り消すと、ほかの端末もログインし直しになる）。すべての端末でやめるときは、Google アカウントのサードパーティ アクセスで取り消す。
 - **前の方式に戻す**：`site/index.html` の `<meta name="michisuji-auth">` を空にすると、前のトークンの方式（約 1 時間で切れる）に戻る。
@@ -72,14 +72,14 @@
 2. 「API とサービス」→「ライブラリ」で **Google Drive API** を探し、「有効にする」。
 3. 「Google Auth Platform」（以前の「OAuth 同意画面」）を開き、「開始」を押す。
    - **ブランディング**：アプリ名「みちすじ」、ユーザー サポートのメール（ご自分）、デベロッパーの連絡先のメール（ご自分）。
-     - アプリのホームページ：`https://fujisato-koji.github.io/math-olympiad-method/`
-     - プライバシー ポリシー：`https://fujisato-koji.github.io/math-olympiad-method/privacy.html`
-     - 承認済みドメイン：`fujisato-koji.github.io`（入れられなければ空のままで進める）
+     - アプリのホームページ：`https://michisuji.app/`
+     - プライバシー ポリシー：`https://michisuji.app/privacy.html`
+     - 承認済みドメイン：`michisuji.app`（先に Google Search Console で所有を確かめる）と `fujisato-koji.github.io`
    - **対象**：「外部」。公開の状態は、はじめは「テスト中」のままにし、「テストユーザー」にご自分とご家族の Google アカウントを足す（テスト中は、ここに足した人だけがログインできる）。
    - **データアクセス**：「スコープを追加または削除」で `.../auth/drive.appdata`（Google ドライブのアプリ自身の設定データの表示と管理）を選ぶ。
 4. 「クライアント」→「クライアントを作成」。
    - 種類：**ウェブ アプリケーション**、名前：`みちすじ`
-   - 承認済みの JavaScript 生成元：`https://fujisato-koji.github.io`（手元で確かめるなら `http://localhost:8765` も）
+   - 承認済みの JavaScript 生成元：`https://michisuji.app` と `https://fujisato-koji.github.io`（承認済みのリダイレクト URI にも `https://michisuji.app`）（手元で確かめるなら `http://localhost:8765` も）
    - 承認済みのリダイレクト URI：要らない（空のまま）
 5. 作られた **クライアント ID**（`…apps.googleusercontent.com` で終わる文字列）を Claude に渡す。`index.html` に入れて公開する。クライアント ID は画面に書く公開の値なので、渡しても問題ない。**クライアント シークレットは渡さない**（ログインを保つときに、ご自分で Cloudflare に入れる。上の「施主にお願いすること」）。
 6. **家族と共有するための設定**（D-052）：

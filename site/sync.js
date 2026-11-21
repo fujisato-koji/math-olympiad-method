@@ -189,7 +189,7 @@
     let l = await readLink();
     if (!l || !l.fileId) {
       const id = await create({ name: SHARED_NAME, mimeType: 'application/json',
-        description: 'みちすじ（https://fujisato-koji.github.io/math-olympiad-method/）の記録。家族と共有しています。' }, JSON.stringify(data));
+        description: 'みちすじ（https://michisuji.app/）の記録。家族と共有しています。' }, JSON.stringify(data));
       await writeLink({ fileId: id, mine: true });
       l = link;
     }
