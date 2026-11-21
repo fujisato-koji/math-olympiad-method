@@ -8,7 +8,7 @@
 - 添えるもの：ページの住所（#/ のあとを含む）、場所（単元・日・問題・概念・目標の記号）、種類（「誤りを知らせる」から開いたら「誤り」）。
 - 置き場：Cloudflare Workers の `michisuji-feedback`（`feedback/worker.js`、https://michisuji-feedback.fujisato-koji.workers.dev ）と D1 の `michisuji-feedback`（表 `notes`、`feedback/schema.sql`）。施主の Cloudflare のアカウント、無料の枠。
 - 守ること：名前・メール・IP アドレスは残さない。送りすぎを止めるため、IP と UTC の日付と秘密の塩（secret の `FEEDBACK_SALT`）の SHA-256 の頭 16 字（`who`）だけを残す。日ごとに変わり、IP に戻せない。1 つの印から 1 日 20 通、1 通 1,000 字まで。受けるのは `ALLOWED_ORIGINS`（https://michisuji.app と前の住所）からだけ。
-- 協力者が詳しく書くときは、箱の中の「GitHub で詳しく書く」から issue（`.github/ISSUE_TEMPLATE/error.yml`）を開く。
+- 箱から GitHub へは飛ばさない（施主「フィードバックで github に飛ばす機能はいらない」）。GitHub の issue のひな形（`.github/ISSUE_TEMPLATE/`）は、リポジトリを直に見に来た人のために残す。
 
 ## 読み方と片付け方（取りまとめ）
 

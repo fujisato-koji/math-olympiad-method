@@ -5,7 +5,7 @@
 ## 知らせ方
 
 - **気づいたこと・まちがい**：画面の上の吹き出しのボタンか、問題やページの下の「誤りを知らせる」を押すと、小さな箱が開きます。ひとこと書いて送るだけです（アカウントは要りません。ページの住所と単元・日・問題の記号を自動で添えます。名前・メール・IP アドレスは残しません）。
-- **詳しく書きたいとき（協力者）**：箱の中の「GitHub で詳しく書く」か、[誤りの報告](https://github.com/fujisato-koji/michisuji/issues/new?template=error.yml)。GitHub のアカウントが要り、だれでも読める公開の場所です。
+- **GitHub で書きたいとき（協力者）**：[誤りの報告](https://github.com/fujisato-koji/michisuji/issues/new?template=error.yml)。GitHub のアカウントが要り、だれでも読める公開の場所です。
 - **星や目標を足したい、前提や水準を直したいとき**：[星の追加・前提の直し](https://github.com/fujisato-koji/michisuji/issues/new?template=star.yml)。
 
 報告には、子どもの名前・学年・答案の写真など、個人がわかることは書かないでください。

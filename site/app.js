@@ -1883,8 +1883,7 @@
   // ---- 誤りを知らせる（D-246）とご意見の箱（D-247）----
   // 上の帯の吹き出しと、問題の札・単元・概念・目標のページの「誤りを知らせる」で、小さな箱を開く。書いた文を、ページの住所と場所の記号と
   // いっしょに、ご意見の置き場（feedback/worker.js、Cloudflare の D1）へ送る。アカウントは要らない。名前・メール・IP アドレスは残さない。
-  // 詳しく書く人（協力者）には、箱の中から GitHub の issue（.github/ISSUE_TEMPLATE/error.yml、page と where を住所の問いで埋める）を開ける
-  const REPO = 'https://github.com/fujisato-koji/michisuji';
+  // 箱から GitHub へは飛ばさない（施主「フィードバックで github に飛ばす機能はいらない」）
   const FEEDBACK = (document.querySelector('meta[name="michisuji-feedback"]') || {}).content || '';
   const placeOf = ctx => [ctx.unit && `単元 ${ctx.unit}`, ctx.day && `${ctx.day} 日目`, ctx.qid && `問題 ${ctx.qid}`,
     ctx.concept && `概念 ${ctx.concept}`, ctx.goal && `目標 ${ctx.goal}`].filter(Boolean).join('・');
@@ -1904,7 +1903,6 @@
     fbClose();
     const r = parse(), small = r.id && UNITS[r.id] && UNITS[r.id].level <= 2 && (r.name === 'day' || r.name === 'unit');
     const page = location.origin + location.pathname + location.hash;
-    const gh = REPO + '/issues/new?' + new URLSearchParams({ template: 'error.yml', title: `[誤り] ${place}`, page, where: place });
     const box = document.createElement('div');
     box.className = 'fb'; box.id = 'fb'; box.setAttribute('role', 'dialog'); box.setAttribute('aria-label', 'ご意見を送る');
     box.dataset.kind = kind || ''; box.dataset.place = place || ''; box.dataset.page = page;
@@ -1913,7 +1911,7 @@
       ${place ? `<div class="fb-place">${esc(place)}</div>` : ''}
       <textarea id="fb-text" maxlength="1000" rows="4" placeholder="${kind === '誤り' ? (small ? 'どこが ちがうか かいてね' : 'どこが、どうちがうか') : (small ? 'なんでも かいてね' : '気づいたこと、わかりにくい所、ほしいもの など')}"></textarea>
       <div class="fb-note">${small ? 'なまえや がっこうは かかないでね。' : '名前や学校など、だれかがわかることは書かないでください。このページの住所といっしょに送ります。'}</div>
-      <div class="fb-act"><a class="fb-gh" href="${esc(gh)}" target="_blank" rel="noopener">GitHub で詳しく書く</a>
+      <div class="fb-act">
         <button class="pill" type="button" data-fbx="close">${small ? 'やめる' : 'やめる'}</button>
         <button class="pill solid" type="button" data-fbx="send">${small ? 'おくる' : '送る'}</button></div>
       <div class="fb-msg" id="fb-msg" aria-live="polite"></div>`;
@@ -1926,7 +1924,7 @@
     if (!box || !ta) return;
     const text = ta.value.trim();
     if (!text) { msg.textContent = 'ひとこと書いてから送ってください。'; ta.focus(); return; }
-    if (!FEEDBACK) { msg.textContent = '送り先がありません。GitHub で詳しく書くを使ってください。'; return; }
+    if (!FEEDBACK) { msg.textContent = '送り先がありません。'; return; }
     const btn = box.querySelector('[data-fbx="send"]');
     btn.disabled = true; msg.textContent = '送っています…';
     try {
