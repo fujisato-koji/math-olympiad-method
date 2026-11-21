@@ -1865,6 +1865,21 @@
   const CSECS = [['sketch', '筋道'], ['why', 'なぜこう定めるか'], ['examples', '例'], ['nonexamples', '例でないもの'], ['proof', '証明'],
     ['system', '公理の組'], ['consequences', '系'], ['models', '公理を満たす例'], ['scope', '成り立つ範囲'], ['evidence', '確かめられた経緯'],
     ['data', 'もとのデータ'], ['background', '背景']];
+  // ---- アクセスの数え（D-249、公開の段階 0 の 0-7）：GoatCounter。クッキーを使わず、IP も残さない ----
+  // index.html の meta michisuji-count に数えの住所（https://<名前>.goatcounter.com/count）を入れたときだけ読み込む。空なら何もしない。
+  // 画面は #/ で移るので、読み込みと #/ の移りごとに、住所の道筋（#/ のあとを含む、問いの文字列は入れない）を 1 回数える（GoatCounter の SPA の例）
+  const COUNT = (document.querySelector('meta[name="michisuji-count"]') || {}).content || '';
+  const countPage = () => { try { window.goatcounter && window.goatcounter.count && window.goatcounter.count({ path: location.pathname + location.hash }); } catch { /* 数えられなくても画面は続ける */ } };
+  const countEvent = name => { try { window.goatcounter && window.goatcounter.count && window.goatcounter.count({ path: name, event: true }); } catch { /* 同上 */ } };
+  if (COUNT) {
+    window.goatcounter = { no_onload: true };
+    const sc = document.createElement('script');
+    sc.async = true; sc.src = 'https://gc.zgo.at/count.js'; sc.dataset.goatcounter = COUNT;
+    sc.addEventListener('load', countPage);
+    document.head.appendChild(sc);
+    window.addEventListener('hashchange', countPage);
+  }
+
   // ---- 誤りを知らせる（D-246）とご意見の箱（D-247）----
   // 上の帯の吹き出しと、問題の札・単元・概念・目標のページの「誤りを知らせる」で、小さな箱を開く。書いた文を、ページの住所と場所の記号と
   // いっしょに、ご意見の置き場（feedback/worker.js、Cloudflare の D1）へ送る。アカウントは要らない。名前・メール・IP アドレスは残さない。
@@ -1917,7 +1932,7 @@
     try {
       const r = await fetch(FEEDBACK, { method: 'POST', headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ text, page: box.dataset.page, place: box.dataset.place, kind: box.dataset.kind }) });
-      if (r.ok) { msg.textContent = '届きました。ありがとうございます。'; ta.disabled = true; setTimeout(() => { if ($('#fb') === box) fbClose(); }, 1800); return; }
+      if (r.ok) { countEvent('ご意見-' + (box.dataset.kind || 'ひとこと')); msg.textContent = '届きました。ありがとうございます。'; ta.disabled = true; setTimeout(() => { if ($('#fb') === box) fbClose(); }, 1800); return; }
       msg.textContent = r.status === 429 ? '今日はたくさん届いています。また明日お願いします。' : r.status === 413 ? '長すぎます（1,000 字まで）。' : '送れませんでした。もう一度押してください。';
     } catch { msg.textContent = 'つながっていないようです。つながってから、もう一度押してください。'; }
     btn.disabled = false;
@@ -2209,6 +2224,7 @@
     }
     save(ASK_KEY, true); askOpen = false;
     const a = $('#ask'); if (a) a.remove();
+    if (kind === 'goal' || kind === 'unit' || kind === 'skip') countEvent('やりたいこと-' + { goal: '目標', unit: '星', skip: '眺める' }[kind]);
     if (kind === 'goal') location.hash = '#/goal/' + id;
     if (kind === 'unit') { askUnit = id; location.hash = '#/unit/' + id; }
   }
