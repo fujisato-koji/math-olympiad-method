@@ -1957,6 +1957,7 @@
       <h1>${esc(c.name)}</h1>
       ${(c.aka || []).length ? `<div class="row muted">別名：${c.aka.map(esc).join('、')}</div>` : ''}
       <div class="c-claim">${fmtLinks(c.claim)}</div>
+      <div class="row vf vf-ai"><span class="vf-dot" aria-hidden="true"></span>確かめ：AI が書き、別の AI が確かめた項目です（人の確認はまだ）</div>
     </section>
     ${CSECS.map(sec).join('')}
     <section class="c-sec"><h2>使う概念</h2><div class="row">${(c.uses || []).map(chip).join('') || '<span class="muted">なし</span>'}</div></section>
@@ -1964,6 +1965,18 @@
     ${src ? `<section class="c-sec"><h2>出典</h2><div class="c-body">${src}</div></section>` : ''}
     ${reportHtml({ concept: cid })}`;
   }
+  // ---- 確かめの段（D-248、公開の段階 0 の 0-5）：AI で作ったことと、どこまで確かめたかを正直に出す ----
+  // 段は tools/verification.py が履歴から決める（u.vf.s：ai・blind・human）。問題のない単元は段なし
+  const MAP_NOTE = '地図の前提と水準は AI が付けたもので、どの分野も専門家の確認はまだです。';
+  function vfHtml(u) {
+    const v = u.vf, s = v ? v.s : 'none';
+    const t = { none: '問題はまだありません（地図の位置と前提だけ）',
+      ai: 'AI が作りました。答えは確かめの式で確かめています（答えを見ない解き直しはまだ）',
+      blind: `AI が作り、答えを見ない AI の解き直しで確かめました${v && v.date ? `（${v.date}）` : ''}`,
+      human: `人が確かめました${v ? `（${[v.by, v.date].filter(Boolean).join('、')}${v.note ? `：${v.note}` : ''}）` : ''}` }[s];
+    return `<div class="row vf vf-${s}" title="${esc(MAP_NOTE)}"><span class="vf-dot" aria-hidden="true"></span>確かめ：${esc(t)}</div>`;
+  }
+
   function viewUnit(id) {
     const u = UNITS[id], st = status(id), r = progress.units[id] || {}, ns = nextStep(id);
     const chip = x => `<a class="from" href="#/unit/${x}" style="${lc(UNITS[x].lane)}">${x} ${esc(UNITS[x].title)}</a>`;
@@ -1977,6 +1990,7 @@
       <div class="eyebrow">${esc(LANES[u.lane].name)}の流れ・<a href="#/level/${u.level}">水準 ${u.level} ${esc((THINK[u.level] || {}).name || '')}</a>・${u.id}</div>
       <h1>${esc(u.title)}</h1>
       <div class="row"><span class="dot ${stateOf(id)}" style="${lc(u.lane)}"></span>${STATUS_NAME[stateOf(id)]}${r.done ? `（${r.done}）` : ''}${reviewNote ? `・${reviewNote}` : ''}</div>
+      ${vfHtml(u)}
       ${reviewDue ? `<div class="row"><a class="pill solid" href="#/review/${id}">確かめ（${RULE.reviewItems} 問） →</a></div>` : ''}
       <div class="row">${u.needs.length ? `前提 ${u.needs.map(chip).join('')}` : '前提なし'}</div>
       ${u.alt ? `<div class="row">代わりの前提 ${Object.entries(u.alt).map(([n, bs]) => `<span class="muted">${n} の代わりに</span>${bs.map(chip).join('')}`).join('')}</div>` : ''}
@@ -2164,6 +2178,7 @@
         <input class="ask-q" id="ask-q" type="search" placeholder="例：宇宙飛行士、ロケット、光合成、確率" autocomplete="off" aria-label="やりたいこと">
         <div class="ask-res" id="ask-res"></div>
         <div class="ask-ex">${ASK_EX.map(([g, t]) => `<button type="button" data-ask="goal" data-id="${g}">${esc(t)}</button>`).join('')}</div>
+        <p class="ask-note">中身は AI で作り、AI が確かめています。まちがいがあれば、上の吹き出しから教えてください。</p>
         <button class="ask-skip" type="button" data-ask="skip">地図を眺める</button>
       </div>
     </div>`;

@@ -143,6 +143,9 @@ def load():
     data["glossary"] = yload(gfile.read_text(encoding="utf-8")) if gfile.exists() else []
     # 概念の目録（D-231）：定義・定理・法則などを 1 つに 1 項目。原稿の《名前》が指す。種類ごとの欄と、使う概念の順を check が確かめる
     # 初めて教える単元ごとに concepts/<単元>.yaml に分ける（D-240。並んで作る係と作業ツリーが 1 つのファイルでかち合わない）
+    # 単元の確かめの段（D-248）：tools/verification.py が git の履歴から作る。blind は解き直し済み、human は人が確かめた
+    vfile = ROOT / "verification.yaml"
+    data["verification"] = (yload(vfile.read_text(encoding="utf-8")) or {}) if vfile.exists() else {}
     data["concepts"], data["concept_file"] = [], {}
     for cf in sorted((ROOT / "concepts").glob("*.yaml")):
         for c in (yload(cf.read_text(encoding="utf-8")) or {}).get("concepts") or []:
@@ -807,6 +810,12 @@ def split_content(out_units):
 
 
 def build(data, problems):
+    # 確かめの段（D-248）：人 > 解き直し > 確かめの式だけ。問題のない単元には付けない（画面が「問題はまだ」と出す）
+    vb, vh = (data.get("verification") or {}).get("blind") or {}, (data.get("verification") or {}).get("human") or {}
+    def vf_of(uid):
+        if uid in vh: return {"s": "human", **{k: str(v) for k, v in vh[uid].items() if k in ("by", "date", "note")}}
+        if uid in vb: return {"s": "blind", "date": str(vb[uid].get("date", ""))}
+        return {"s": "ai"}
     lanes = {l["id"]: l for l in data["lanes"]}
     out_units = []
     comb = combination.measure(data["units"])
@@ -837,6 +846,7 @@ def build(data, problems):
                           **({"measure": True} if u.get("measure") else {}),
                           **({"alt": u["alt"]} if u.get("alt") else {}),
                           **({"keys": u["keys"]} if u.get("keys") else {}),
+                          **({"vf": vf_of(u["id"])} if u["id"] in problems else {}),
                           **({"f": f_of[u["id"]], "s": s_of[u["id"]]} if u["id"] in f_of else {}),
                           **({"nw": [(NW.get(f"{n}>{u['id']}") or {}).get("strength", 2) for n in u["needs"]]} if u.get("needs") else {}),
                           "p": pos[u["id"]],
