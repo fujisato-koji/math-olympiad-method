@@ -166,6 +166,8 @@
   function fracs(x) {
     for (let k = 1; k < x.length - 1; k++) {
       if (x[k].k !== 't' || x[k].v !== '/' || !operand(x, k - 1) || !operand(x, k + 1)) continue;
+      // 剰余の形 Z/4Z（分子の大文字が、分母の数のすぐ後にもう一度来る）は、分数にせず斜線のまま組む
+      if (x[k - 1].k === 'w' && /^[A-Z]$/.test(x[k - 1].v) && x[k + 1].k === 'n' && x[k + 2] && x[k + 2].k === 'w' && x[k + 2].v === x[k - 1].v) continue;
       let a = k - 1, b = k + 1;
       while (a > 0 && (operand(x, a - 1) || (x[a].k === 'g' && x[a - 1].k === 'w' && x[a - 1].v.length === 1))) a--;
       // 分母は 1 つの字句と、続く肩だけ（f(x) のような関数の形は、名前とかっこをまとめる）。1/2x は 1/2 と x とみる。
