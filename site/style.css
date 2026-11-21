@@ -1213,3 +1213,8 @@ details.c-proof { border: 1px solid var(--line); border-radius: 12px; padding: 1
 .gloss.concept { text-decoration: underline dotted; text-underline-offset: 3px; }
 a.gloss.concept { color: inherit; }
 .tip-kind { font-size: .78em; padding: 1px 6px; margin-right: 6px; border-radius: 6px; border: 1px solid currentColor; }
+
+/* 文の中のリンクで移った先の「もどる」（D-238） */
+.backbar { margin: 6px 0 10px; }
+.back-link { display: inline-block; padding: 7px 16px; border-radius: 999px; background: var(--surface-2); border: 1px solid var(--line); color: var(--ink); text-decoration: none; font-size: 15px; font-weight: 600; }
+.back-link:hover { border-color: var(--ink-2); }

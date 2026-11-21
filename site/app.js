@@ -221,7 +221,7 @@
           return `<span class="frac${sub ? ' frac-sub' : ''}" role="math" aria-label="${esc(raw(a.den))}ぶんの${esc(raw(a.num))}"><span>${part(a.num)}</span><span>${part(a.den)}</span></span>`;
         }
         // 単元の記号：ヒント・見本ではその単元のページへのリンク（ホバーで題）、問題文では立体の字のまま
-        case 'u': return LINK_UNITS ? `<a class="ulink" href="#/unit/${a.v}" target="_blank" rel="noopener" title="${esc(UNITS[a.v].title)}">${a.v}</a>` : esc(a.v);
+        case 'u': return LINK_UNITS ? `<a class="ulink" href="#/unit/${a.v}" title="${esc(UNITS[a.v].title)}">${a.v}</a>` : esc(a.v);
         case 'vec': return `<span class="vec">${letters(a.v)}${t}</span>`;
         // 根号は √ の字を使わず線で描く（字体によって √ と横線が離れるため）。中身の高さに合わせて伸びる
         case 'rt': return `<span class="sqrt" role="math" aria-label="ルート ${esc(a.v)}"><svg class="rt" viewBox="0 0 10 20" preserveAspectRatio="none" aria-hidden="true"><path d="M.4 12.2 2.6 10.8 5.4 19.6 10 0"/></svg><span class="rad">${mx(a.v, flat)}</span></span>${t}`;
@@ -245,9 +245,9 @@
   const CONCEPTS = Object.fromEntries((R.concepts || []).map(c => [c.id, c]));
   const CNAME = {};
   (R.concepts || []).forEach(c => [c.name, ...(c.aka || [])].forEach(n => { if (n) CNAME[n] = c.id; }));
-  // 概念の語：ヒントと見本ではページへのリンク（別のタブ）、問題文ではホバーだけ（解いている途中で飛ばない、D-230 と同じ）
+  // 概念の語：ヒントと見本ではページへのリンク（同じ画面で移り、もどれる。D-238）、問題文ではホバーだけ（解いている途中で飛ばない、D-230 と同じ）
   const conceptHtml = (t, label = t) => LINK_UNITS
-    ? `<a class="gloss concept" tabindex="0" data-c="${CNAME[t]}" href="#/c/${CNAME[t]}" target="_blank" rel="noopener">${esc(label)}</a>`
+    ? `<a class="gloss concept" tabindex="0" data-c="${CNAME[t]}" href="#/c/${CNAME[t]}">${esc(label)}</a>`
     : `<span class="gloss concept" tabindex="0" data-c="${CNAME[t]}">${esc(label)}</span>`;
   const GS = '\uE000', GE = '\uE001';
   // 目印の中には語そのものでなく番号を置く。語を置くと、数式の組みが中の n や R を斜体にして、語が表と合わなくなっていた（D-235）
@@ -381,11 +381,11 @@
       const c = CONCEPTS[g.dataset.c];
       if (!c) return;
       const more = c.kind === '定理' ? '証明' : c.kind === '定義' ? 'なぜこう定めるか' : c.kind === '公理' ? '公理の組と系' : '成り立つ範囲';
-      tip.innerHTML = `<div><b class="tip-kind">${esc(c.kind)}</b>${fmt(c.claim)}</div><a class="u" href="#/c/${c.id}" target="_blank" rel="noopener">${esc(more)}・背景 →</a>`;
+      tip.innerHTML = `<div><b class="tip-kind">${esc(c.kind)}</b>${fmt(c.claim)}</div><a class="u" href="#/c/${c.id}">${esc(more)}・背景 →</a>`;
     } else {
       const item = GLOSS[g.dataset.g];
       if (!item) return;
-      const u = item.unit && UNITS[item.unit] ? `<a class="u" href="#/unit/${item.unit}" target="_blank" rel="noopener">${esc(item.unit)} ${esc(UNITS[item.unit].title)}</a>` : '';
+      const u = item.unit && UNITS[item.unit] ? `<a class="u" href="#/unit/${item.unit}">${esc(item.unit)} ${esc(UNITS[item.unit].title)}</a>` : '';
       tip.innerHTML = `<div>${esc(item.text)}</div>${u}`;
     }
     tip.classList.add('on');
@@ -788,6 +788,24 @@
   });
 
   let session = null;
+  // 文の中のリンクで移ったときの戻り先（D-238）。同じ画面で移り、「もどる」かブラウザの戻るで、もとのページのもとの位置へ。
+  // 日のページを離れても、解いている途中（何問目か、開いたヒント）を残しておき、戻ったら続きから
+  const linkStack = [];
+  let linkRestore = null, pendingScroll = null;
+  document.addEventListener('click', e => {
+    const a = e.target.closest && e.target.closest('a.ulink, a.gloss.concept, #gloss-tip a.u, .c-sec a.from, .concept-head .eyebrow a');
+    if (!a) return;
+    const to = a.getAttribute('href');
+    if (!to || !to.startsWith('#/') || to === location.hash) return;
+    linkStack.push({ from: location.hash || '#/', to, scroll: window.scrollY, session });
+    if (linkStack.length > 30) linkStack.shift();
+    hideGloss();
+  });
+  const pageLabel = h => {
+    const p = h.replace(/^#\/?/, '').split('/').map(decodeURIComponent);
+    return p[0] === 'day' && UNITS[p[1]] ? `${UNITS[p[1]].title}・${p[2] || 1} 日目`
+      : p[0] === 'unit' && UNITS[p[1]] ? UNITS[p[1]].title : p[0] === 'c' && CONCEPTS[p[1]] ? CONCEPTS[p[1]].name : 'もとのページ';
+  };
   const viewHtml = r => r.name === 'level' ? viewLevel(r.level)
     : r.name === 'unit' ? viewUnit(r.id)
     : r.name === 'day' ? viewDay(r.id, r.day, r.type, r.group, r.start)
@@ -796,6 +814,10 @@
     : '';  // 地図は 3D と 2D の画面だけ（D-080、施主「あゆみ以下のページは削除」「3D もはずしてください」）
   function render() {
     const r = parse(), view = $('#view');
+    const here = location.hash || '#/';
+    const top0 = linkStack[linkStack.length - 1];
+    if (top0 && top0.from === here) { linkRestore = linkStack.pop(); pendingScroll = linkRestore.scroll; }  // 戻った（もどる・ブラウザの戻る）
+    else if (top0 && top0.to !== here) linkStack.length = 0;  // ほかへ移ったら、戻り先を捨てる
     if (r.name !== 'day') session = null;
     // 日のページは、その単元の問題の中身を読み込んでから描く。前提の単元も裏で読む（「わからない」のときのふりかえりの候補に使う。D-190）
     if (r.name === 'day' && !LOADED[r.id] && UNITS[r.id].c) {
@@ -810,6 +832,8 @@
     if (r.name === 'day') (UNITS[r.id].needs || []).forEach(n => loadUnit(n).catch(() => {}));
     Music.scene(r.name === 'day' ? 'play' : 'map');
     view.innerHTML = viewHtml(r);
+    const top = linkStack[linkStack.length - 1];
+    if (top && top.to === here && r.name !== 'map') view.insertAdjacentHTML('afterbegin', `<div class="backbar"><a class="back-link" href="${esc(top.from)}">← もどる（${esc(pageLabel(top.from))}）</a></div>`);
     view.hidden = r.name === 'map';  // 地図の下は空（D-080）。空の余白でページが縦にはみ出さないようにする
     document.body.dataset.page = r.name;  // 地図ではヘッダーの帯をやめ、夜空の上に浮かせる（D-106）
     view.classList.remove('enter'); void view.offsetWidth; view.classList.add('enter');
@@ -819,6 +843,7 @@
     $('#crumbs').innerHTML = crumbs(r);
     document.title = (r.name === 'map' ? '' : $('#crumbs .here').textContent + ' — ') + 'みちすじ';
     if (r.name === 'day') drawItem();
+    if (pendingScroll != null) { const y = pendingScroll; pendingScroll = null; requestAnimationFrame(() => window.scrollTo(0, y)); }
     if (r.name === 'log') logScroll();
     if (r.name === 'join') { const b = $('#btn-join'); if (b) b.addEventListener('click', () => joinOpen(r.file)); }
     window.scrollTo(0, 0);
@@ -2050,6 +2075,12 @@
   // ---- 今日の問題 ----
   function viewDay(id, n, type = 'day', group = 'order', start = 0) {
     const u = UNITS[id], d = u.days[n - 1];
+    const back = linkRestore && linkRestore.session;
+    linkRestore = null;
+    if (back && back.id === id && back.n === n && back.type === type) {  // リンクから戻った（D-238）
+      session = back;
+      return `<section class="play" id="play" style="${lc(u.lane)}"></section>`;
+    }
     let items = d.items || [];
     // おさらいの日は予備の問題、なければその日の問題をもう一度
     if (type === 'extra') items = d.extra && d.extra.length ? d.extra : items.filter(x => x.part !== '見本');
