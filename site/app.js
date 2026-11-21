@@ -1146,6 +1146,7 @@
     layer: svgi('<path d="M12 4l8.5 4.2L12 12.4 3.5 8.2z"/><path d="M3.5 12.2l8.5 4.2 8.5-4.2M3.5 16l8.5 4.2 8.5-4.2"/>'),
     full: svgi('<path d="M4 9V4h5M20 9V4h-5M4 15v5h5M20 15v5h-5"/>'),
     close: svgi('<path d="M6 6l12 12M18 6L6 18"/>'),
+    path: svgi('<circle cx="5" cy="18" r="2"/><circle cx="19" cy="6" r="2"/><path d="M7 18h5.5a3 3 0 0 0 0-6h-1a3 3 0 0 1 0-6H17"/>'),
   };
   // 地図の操作は下の浮いた帯にまとめる（D-106）。3D と 2D、目標の星座、分野、全画面。
   // 「全体」と「組み合わせの層」は外し、絞り込んでいるあいだは帯の上に札を出し、× で外す
@@ -1165,6 +1166,7 @@
             <button type="button" data-x="view" data-v="2d" aria-pressed="${X.view === '2d'}" title="2D の樹形図">2D</button>
           </div>
           <span class="xsep" aria-hidden="true"></span>
+          ${b('data-ask="open"', 'path', 'やりたいこと')}
           ${b('data-cos="goals"', 'stars', '星座', !!g)}
           ${b('data-x="fields"', 'fields', '分野', grp[0] !== 'all')}
           ${b('data-x="full"', 'full', '全画面')}
@@ -1184,6 +1186,7 @@
       <div class="cosmos-tip" id="cosmos-tip" hidden></div>
       <div class="cosmos-card" id="cosmos-card"${CARD ? '' : ' hidden'}>${CARD}</div>
       <div class="cosmos-hover" id="cosmos-hover" hidden></div>
+      ${askShown() ? askHtml() : ''}
     </div>`;
   }
   function syncBar() {
@@ -1576,6 +1579,8 @@
       if (X.sel === id && !combine.on) { location.hash = `#/unit/${id}`; return; }
       pick(id); return;
     }
+    const ak = e.target.closest('[data-ask]');
+    if (ak) { askAction(ak.dataset.ask, ak.dataset.id); return; }
     const xb = e.target.closest('[data-x]');
     if (xb) { xAction(xb.dataset.x, xb.dataset.v); return; }
     const cs = e.target.closest('[data-cos]');
@@ -1591,6 +1596,15 @@
   });
   // 星をさがす：題に言葉を含む星だけを光らせる。Enter で 1 つ目へ、もう一度 Enter で次へ、Shift+Enter で前へ、Esc で消す（D-123）
   let hitAt = -1;
+  $('#explore').addEventListener('input', e => { if (e.target.id === 'ask-q') askRender(e.target.value); });
+  $('#explore').addEventListener('keydown', e => {
+    if (e.target.id !== 'ask-q') return;
+    if (e.key === 'Escape') { askAction('skip'); return; }
+    if (e.key !== 'Enter') return;
+    e.preventDefault();
+    const h = askFind(e.target.value)[0];
+    if (h) askAction(h.k, h.id);
+  });
   $('#explore').addEventListener('input', e => {
     if (e.target.id !== 'cosmos-q') return;
     const q = e.target.value.trim().toLowerCase();
@@ -1897,6 +1911,10 @@
       ${topicsHtml(topicsOf(id))}
       ${combHtml(u)}
     </section>
+    ${(() => {
+      const s = ancestors(id);
+      return s.size > 1 ? `<details class="path-wrap"${askUnit === id ? ' open' : ''}><summary>ここまでの道筋（前提をたどって ${s.size} 単元・${pathSteps(s).length} 段）</summary>${pathHtml(s, { open: 99, title: '' })}</details>` : '';
+    })()}
     <div class="days" style="${lc(u.lane)}">${u.days.map((d, i) => {
       const n = i + 1, dr = r.days && r.days[n], skipped = (r.skip || []).includes(n);
       const isNext = ns.day === n && st !== 'later' && (ns.type === 'extra' || !dr || st === 'review');
@@ -2024,6 +2042,88 @@
       </article>`).join('')}</div>
       ${ps.length > shown.length ? `<p class="muted">ほか ${ps.length - shown.length} 問</p>` : ''}</section>`;
   }
+  // ---- 道筋（D-242、公開の段階 0 の 0-6）：目標や星までに要る単元を、前提の浅い順に段で並べる ----
+  // 段＝その集まりの中での前提の鎖の長さ。1 段目は集まりの中に前提がない単元（最初の一歩）。同じ段の中はどれからでも始められる
+  const ancestors = id => {
+    const s = new Set(), st = [id];
+    while (st.length) { const x = st.pop(); if (s.has(x) || !UNITS[x]) continue; s.add(x); st.push(...UNITS[x].needs); }
+    return s;
+  };
+  function pathSteps(set) {
+    const memo = {};
+    const d = id => {
+      if (memo[id]) return memo[id];
+      memo[id] = 1;  // 前提が輪になっていても止まる
+      memo[id] = 1 + Math.max(0, ...UNITS[id].needs.filter(x => set.has(x) && UNITS[x]).map(d));
+      return memo[id];
+    };
+    const steps = [];
+    for (const id of set) if (UNITS[id]) (steps[d(id) - 1] ||= []).push(id);
+    return steps.filter(Boolean).map(st => st.sort((a, b) => order(UNITS[a], UNITS[b])));
+  }
+  function pathHtml(set, { open = 5, title = '道筋', lead = '' } = {}) {
+    const steps = pathSteps(set), done = [...set].filter(isDone).length;
+    const chip = id => {
+      const u = UNITS[id], has = hasProblems(u);
+      return `<a class="from path-u${has ? '' : ' empty'}" href="#/unit/${id}" style="${lc(u.lane)}" title="${esc(u.title)}・水準 ${u.level}${has ? '' : '・問題はまだありません'}">${isDone(id) ? '✓ ' : ''}${esc(u.title.split('（')[0])}</a>`;
+    };
+    const row = (st, i) => `<li class="path-step${i === 0 ? ' first' : ''}"><span class="path-n">${i === 0 ? '最初の一歩' : `${i + 1} 段目`}</span><span class="path-us">${st.map(chip).join('')}</span></li>`;
+    const rest = steps.slice(open);
+    return `<section class="path">
+      ${title ? `<h2 class="section-title">${esc(title)}（${set.size} 単元・${steps.length} 段${done ? `・済 ${done}` : ''}）</h2>` : ''}
+      <p class="muted">前提の浅い順に並べています。同じ段の中は、どれからでも始められます。色のうすい単元は、まだ問題がありません（地図の位置と前提だけ）。</p>${lead}
+      <ol class="path-list">${steps.slice(0, open).map(row).join('')}</ol>
+      ${rest.length ? `<details class="path-more"><summary>残りの ${rest.length} 段（${rest.reduce((a, st) => a + st.length, 0)} 単元）</summary><ol class="path-list">${rest.map((st, j) => row(st, j + open)).join('')}</ol></details>` : ''}
+    </section>`;
+  }
+  // やりたいこと：初めて地図を開いた人に、やりたいこと（目標か星）を聞いて、道筋へ案内する。閉じたら覚え、帯の「やりたいこと」でまた開く
+  const ASK_KEY = 'michisuji.asked';
+  const ASK_EX = [['nasa-astronaut', '宇宙飛行士'], ['vehicle-engineer', 'ロケットをつくる'], ['imo', '数学オリンピック'],
+    ['deepmind-rs', 'AI の研究'], ['mrna-vaccine', 'ワクチンをつくる'], ['ecmwf-weather', '天気を予報する']].filter(([g]) => GOAL_SETS[g]);
+  let askOpen = false, askUnit = null;
+  const askShown = () => askOpen || !load(ASK_KEY, false);
+  function askHtml() {
+    return `<div class="ask" id="ask" role="dialog" aria-modal="true" aria-labelledby="ask-h">
+      <div class="ask-card">
+        <h2 id="ask-h">何をやりたいですか？</h2>
+        <p>選ぶと、そこまでに要る知識を、前提の順に道筋で見せます。</p>
+        <input class="ask-q" id="ask-q" type="search" placeholder="例：宇宙飛行士、ロケット、光合成、確率" autocomplete="off" aria-label="やりたいこと">
+        <div class="ask-res" id="ask-res"></div>
+        <div class="ask-ex">${ASK_EX.map(([g, t]) => `<button type="button" data-ask="goal" data-id="${g}">${esc(t)}</button>`).join('')}</div>
+        <button class="ask-skip" type="button" data-ask="skip">地図を眺める</button>
+      </div>
+    </div>`;
+  }
+  function askFind(q) {
+    q = q.trim().toLowerCase();
+    if (!q) return [];
+    const gs = GOALS.filter(g => [g.name, g.note, g.kind, g.field, ...(g.fields || [])].join(' ').toLowerCase().includes(q)).slice(0, 6)
+      .map(g => ({ k: 'goal', id: g.id, t: g.name, sub: '目標・' + g.kind }));
+    const us = R.units.filter(u => u.title.toLowerCase().includes(q)).sort(order).slice(0, 6)
+      .map(u => ({ k: 'unit', id: u.id, t: u.title.split('（')[0], sub: '星・' + LANES[u.lane].name + '・水準 ' + u.level, lane: u.lane }));
+    return [...gs, ...us];
+  }
+  function askRender(q) {
+    const box = $('#ask-res'); if (!box) return;
+    const hs = askFind(q);
+    box.innerHTML = !q.trim() ? '' : hs.length ? hs.map(h => `<button type="button" data-ask="${h.k}" data-id="${h.id}"${h.lane ? ` style="${lc(h.lane)}"` : ''}><span class="t">${esc(h.t)}</span><span class="sub">${esc(h.sub)}</span></button>`).join('')
+      : '<p class="muted">見つかりません。ほかの言葉で探すか、下の例から選んでください。</p>';
+  }
+  function askAction(kind, id) {
+    Music.tap();
+    if (kind === 'open') {
+      askOpen = true;
+      const c = $('#cosmos');
+      if (c && !$('#ask')) { c.insertAdjacentHTML('beforeend', askHtml()); }
+      const q = $('#ask-q'); if (q) q.focus();
+      return;
+    }
+    save(ASK_KEY, true); askOpen = false;
+    const a = $('#ask'); if (a) a.remove();
+    if (kind === 'goal') location.hash = '#/goal/' + id;
+    if (kind === 'unit') { askUnit = id; location.hash = '#/unit/' + id; }
+  }
+
   function viewGoal(id) {
     const g = GOALS.find(x => x.id === id), set = GOAL_SETS[id], st = goalStats(g), f = forecast(x => set.has(x));
     const next = R.units.filter(u => set.has(u.id) && ['ready', 'doing', 'review'].includes(status(u.id))).sort(order);
@@ -2050,6 +2150,7 @@
       </div>
       <div class="row"><button class="pill solid" type="button" data-goal="${id}" data-go="#/">この目標の道だけで地図を見る</button></div>
     </section>
+    ${pathHtml(set)}
     <section class="next">
       <h2>次に進める単元</h2>
       <div class="next-list">${next.slice(0, 8).map(u => `
